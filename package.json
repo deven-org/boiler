@@ -4,7 +4,7 @@
   "description": "Component Library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commitlint": "commitlint -c -e"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/orivaa/BO1LER/issues"
   },
-  "homepage": "https://github.com/orivaa/BO1LER#readme"
+  "homepage": "https://github.com/orivaa/BO1LER#readme",
+  "devDependencies": {
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "husky": "^8.0.3",
+    "release-please": "^15.1.1"
+  }
 }
