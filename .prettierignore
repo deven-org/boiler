@@ -1,0 +1,25 @@
+# images
+*.png
+*.svg
+*.ico
+
+# ignore
+.gitignore
+.prettierignore
+
+# lock
+package-lock.json
+
+# static folders
+build/
+dist/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# misc
+*.sh
+*.xlsx
+*.pdf
+*.snap
