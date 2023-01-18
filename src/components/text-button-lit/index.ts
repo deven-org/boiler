@@ -6,7 +6,12 @@ export class SimpleGreeting extends LitElement {
   // Define scoped styles right with your component, in plain CSS
   static styles = css`
     :host {
-      color: blue;
+      color: var(--example-color);
+    }
+
+    .text {
+      padding: var(--example-spacing);
+      background: lime;
     }
   `;
 
@@ -16,6 +21,6 @@ export class SimpleGreeting extends LitElement {
 
   // Render the UI as a function of component state
   render() {
-    return html`<p>Hello, ${this.name}!</p>`;
+    return html`<p class="text">Hello, ${this.name}!</p>`;
   }
 }
