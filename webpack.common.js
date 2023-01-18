@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: ['./src/index.ts', './src/foundation/index.scss'],
   mode: 'development',
   devtool: 'source-map',
   optimization: {

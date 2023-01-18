@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function rem($px) {
+  @return #{math.div($px, 16px)}rem;
+}
+
+:root {
+  --example-spacing: #{rem(16px)};
+}
