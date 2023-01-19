@@ -19,6 +19,11 @@ export class SimpleGreeting extends LitElement {
   @property()
   name?: string = 'World';
 
+  testFunction() {
+    const test = 'Test';
+    console.log(test);
+  }
+
   // Render the UI as a function of component state
   render() {
     return html`<p class="text">Hello, ${this.name}!</p>`;
