@@ -1,2 +1,1 @@
-import './components/text-button/index.ts';
-import './components/text-button-lit/index.ts';
+import './components/boiler-text-button/index.ts';
