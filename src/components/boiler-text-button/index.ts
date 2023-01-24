@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { IconMapping, IconType } from '../../foundation/icons';
 
 @customElement('boiler-text-button')
 export class BoilerTextButton extends LitElement {
@@ -9,8 +10,9 @@ export class BoilerTextButton extends LitElement {
       border: 0;
       padding: 0 var(--example-spacing);
       height: 40px;
-      background: var(--example-purple);
-      color: white;
+
+      background-image: var(--boiler-chevron-down);
+      color: lime;
       height: 40px;
       border-radius: 9999px;
       font-size: 14px;
@@ -27,9 +29,13 @@ export class BoilerTextButton extends LitElement {
 
   @property() label = 'Button Label';
   @property() onClick: HTMLButtonElement['onclick'];
+  @property() icon?: IconType;
 
   render() {
-    return html`<button class="boiler-text-button" @click="${this.onClick}">${this.label}</button>`;
+    return html`<button class="boiler-text-button boiler-chevron-down" @click="${this.onClick}">
+      <span>${this.label}</span>
+      ${this.icon && IconMapping[this.icon]}
+    </button>`;
   }
 }
 
@@ -37,12 +43,12 @@ export class BoilerTextButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'boiler-text-button': Pick<BoilerTextButton, 'onClick' | 'label'>;
+    'boiler-text-button': Pick<BoilerTextButton, 'onClick' | 'label' | 'icon'>;
   }
 
   namespace JSX {
     interface IntrinsicElements {
-      'boiler-text-button': Pick<BoilerTextButton, 'onClick' | 'label'>;
+      'boiler-text-button': Pick<BoilerTextButton, 'onClick' | 'label' | 'icon'>;
     }
   }
 }
