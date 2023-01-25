@@ -13,7 +13,10 @@
     "format:eslint": "eslint --ext .ts . --fix --ignore-path .gitignore",
     "lint:prettier": "prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format:prettier": "prettier \"**/*.ts\" --write --ignore-path .gitignore",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "doc:install": "deven-documentation-skeleton install",
+    "doc:check": "deven-documentation-skeleton check",
+    "doc:update": "deven-documentation-skeleton update"
   },
   "repository": {
     "type": "git",
@@ -57,6 +60,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "deven-documentation-skeleton": "^1.5.0",
     "eslint": "^8.32.0",
     "eslint-plugin-lit": "^1.8.2",
     "eslint-plugin-lit-a11y": "^1.1.0-next.1",
