@@ -25,4 +25,5 @@ module.exports = {
     '@typescript-eslint/no-namespace': 'off',
   },
   settings: {},
+  ignorePatterns: ['utils/create-icons-index.mjs'],
 };

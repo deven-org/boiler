@@ -16,7 +16,8 @@
     "build-storybook": "build-storybook",
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
-    "doc:update": "deven-documentation-skeleton update"
+    "doc:update": "deven-documentation-skeleton update",
+    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icons -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write"
   },
   "repository": {
     "type": "git",
@@ -72,6 +73,7 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "lodash.camelcase": "4.3.0",
     "mini-css-extract-plugin": "^2.7.2",
     "prettier": "2.8.3",
     "react": "^18.0.0",
@@ -80,10 +82,12 @@
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
+    "svgo": "^3.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "chalk": "^5.2.0"
   },
   "dependencies": {
     "lit": "^2.6.1"

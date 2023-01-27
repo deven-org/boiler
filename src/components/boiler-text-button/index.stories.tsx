@@ -8,9 +8,12 @@ export default {
   args: {
     label: 'Name',
     onClick: () => console.log('onClick'),
+    icon: 'boilerChevronDownGreen',
   },
 };
 
-const BoilerTextButtonStory: Story = (args) => <boiler-text-button label={args.label} onClick={args.onClick} />;
+const BoilerTextButtonStory: Story<JSX.IntrinsicElements['boiler-text-button']> = (args) => (
+  <boiler-text-button {...args} />
+);
 export const BoilerTextButton = BoilerTextButtonStory.bind({});
 BoilerTextButton.storyName = 'BoilerTextButton';
