@@ -1,0 +1,41 @@
+/**
+ * Do not edit directly
+ * Generated on Wed, 01 Feb 2023 14:06:01 GMT
+ */
+
+:root {
+  // BREAKPOINTS
+
+  // SCSS VARIABLES
+
+  $boiler-breakpoint-xs: 0px;
+  $boiler-breakpoint-s: 375px;
+  $boiler-breakpoint-m: 768px;
+  $boiler-breakpoint-l: 1024px;
+  $boiler-breakpoint-xl: 1440px;
+  $boiler-breakpoint-xxl: 1920px;
+
+  --boiler-breakpoint-xs: 0px;
+  --boiler-breakpoint-s: 375px;
+  --boiler-breakpoint-m: 768px;
+  --boiler-breakpoint-l: 1024px;
+  --boiler-breakpoint-xl: 1440px;
+  --boiler-breakpoint-xxl: 1920px;
+
+  // SPACINGS
+
+  --boiler-spacing-500: 36px;
+  --boiler-spacing-050: 4px;
+
+  @media (min-width: $boiler-breakpoint-l) {
+    --boiler-spacing-500: 40px;
+  }
+
+  @media (min-width: $boiler-breakpoint-xl) {
+    --boiler-spacing-500: 52px;
+  }
+
+  @media (min-width: $boiler-breakpoint-xxl) {
+    --boiler-spacing-500: 68px;
+  }
+}
