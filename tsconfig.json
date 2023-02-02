@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "declaration": true,
+    "declarationDir": "./types",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "module": "es6",
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true
   },
-  "exclude": [""]
+  "include": ["src"],
+  "exclude": ["*.stories.*"]
 }

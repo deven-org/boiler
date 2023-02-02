@@ -23,6 +23,8 @@ module.exports = {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
   },
   settings: {},
   ignorePatterns: ['utils/create-icons-index.mjs', 'figma-design-tokens'],
