@@ -8,10 +8,8 @@ export class BoilerTextButton extends LitElement {
     .boiler-text-button {
       cursor: pointer;
       border: 0;
-      padding: 0 var(--example-spacing);
+      padding: 0 var(--boiler-spacing-600);
       height: 40px;
-
-      background-image: var(--boiler-chevron-down);
       color: lime;
       height: 40px;
       border-radius: 9999px;

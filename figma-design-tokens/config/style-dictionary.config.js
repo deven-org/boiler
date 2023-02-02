@@ -1,7 +1,7 @@
 require('./_foundation-format.js');
 
 module.exports = {
-  source: ['figma-design-tokens/input/tokens.json'],
+  source: ['figma-design-tokens/input/tokens.normalized.json'],
   platforms: {
     scss: {
       transforms: ['attribute/cti', 'name/cti/kebab'],
@@ -9,7 +9,7 @@ module.exports = {
       buildPath: 'figma-design-tokens/',
       files: [
         {
-          destination: 'output/foundation.scss',
+          destination: '../src/foundation/foundation.scss',
           format: 'foundation',
         },
       ],

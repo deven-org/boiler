@@ -18,7 +18,9 @@
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
     "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icons -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
-    "style-dictionary:transform": "style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./figma-design-tokens/output/foundation.scss --write"
+    "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/_normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
+    "style-dictionary": "style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/foundation.scss --write",
+    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary"
   },
   "repository": {
     "type": "git",
