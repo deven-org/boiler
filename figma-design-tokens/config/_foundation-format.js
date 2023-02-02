@@ -9,10 +9,10 @@ const { fileHeader } = StyleDictionary.formatHelpers;
   | | \ \_/ / | |_/ / |___  | |/ /\ \_/ / |\  || |___ 
   \_/  \___/  \____/\____/  |___/  \___/\_| \_/\____/     
   
-  - breakpoints need to be the css variables and not hardcoded ⛔ 
+  - breakpoints need to be the css variables and not hardcoded  ✅ 
   - the way we prefix the var in the template string with "--" or "$" is maybe not the best solution. ⛔
   - we should probably split the logic into multiple files ⛔
-  - before style-dictionary runs, the figma json needs to be transformed so that the UNI nodes disappear. ⛔
+  - before style-dictionary runs, the figma json needs to be transformed so that the UNI nodes disappear.  ✅
   - implement better error handling and console.logs for information ⛔
 */
 
@@ -29,6 +29,7 @@ StyleDictionary.registerFormat({
       bpXXL: [],
     };
 
+    console.log(`\n🧑‍🍳 creating tokens... 🧑‍🍳 \n`);
     dictionary.allTokens.forEach((token, index) => {
       const { category, type, item } = token.attributes;
 
@@ -71,17 +72,11 @@ StyleDictionary.registerFormat({
       }
     });
 
-    console.log('🧮 creating breakpoints...\n', breakpoints);
-    console.log('🧮 creating spacings...\n', spacings);
-
-    const generateMediaquery = (breakpoint, group) => {
+    const generateMediaquery = (breakpoint, group) =>
       // if group in spacings object is empty, we don't need a media-query
-
-      console.log(breakpoint, group);
-      return group.length > 0
+      group.length > 0
         ? `@media (min-width: $boiler-breakpoint-${breakpoint}) {\n ${group.map((item) => item).join('\n')}\n}`
         : '';
-    };
 
     const breakpointsTemplate = `
     \n
@@ -92,8 +87,8 @@ StyleDictionary.registerFormat({
 
     const spacingsTemplate = `\n// SPACINGS \n\n
     ${spacings.bpXS.map((item) => item).join('\n')}\n
-    ${generateMediaquery('sm', spacings.bpSM)}\n
-    ${generateMediaquery('md', spacings.bpMD)}\n
+    ${generateMediaquery('s', spacings.bpSM)}\n
+    ${generateMediaquery('m', spacings.bpMD)}\n
     ${generateMediaquery('l', spacings.bpLG)}\n
     ${generateMediaquery('xl', spacings.bpXL)}\n
     ${generateMediaquery('xxl', spacings.bpXXL)}
