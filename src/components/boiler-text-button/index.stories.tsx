@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import {BoilerTextButtonReact} from './indexReact';
+import { BoilerTextButtonReact } from './indexReact';
 
 export default {
   title: 'BoilerTextButton',
@@ -11,8 +11,6 @@ export default {
   },
 };
 
-const BoilerTextButtonStory: Story = (args) => (
-  <BoilerTextButtonReact {...args}/>
-);
+const BoilerTextButtonStory: Story = (args) => <BoilerTextButtonReact {...args} />;
 export const BoilerTextButton = BoilerTextButtonStory.bind({});
 BoilerTextButton.storyName = 'BoilerTextButton';

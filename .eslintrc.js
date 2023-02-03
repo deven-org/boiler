@@ -4,7 +4,7 @@ module.exports = {
   // Specifies the ESLint parser
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    project: ['./tsconfig.eslint.json'],
     ecmaVersion: 2022,
     // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
@@ -27,5 +27,5 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
   },
   settings: {},
-  ignorePatterns: ['utils/create-icons-index.mjs', 'figma-design-tokens'],
+  ignorePatterns: ['utils/create-icons-index.mjs', 'figma-design-tokens', 'types/', '*.svg', '*.scss', '*.css'],
 };

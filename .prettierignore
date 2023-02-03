@@ -13,6 +13,7 @@ package-lock.json
 # static folders
 build/
 dist/
+types/
 
 # System Files
 .DS_Store
