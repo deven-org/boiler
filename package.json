@@ -7,12 +7,13 @@
     "commitlint": "commitlint -c -e",
     "start": "start-storybook -p 1337",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "build:types": "rimraf types && tsc --emitDeclarationOnly",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
-    "lint:eslint": "eslint --ext .ts . --ignore-path .gitignore",
-    "format:eslint": "eslint --ext .ts . --fix --ignore-path .gitignore",
-    "lint:prettier": "prettier \"**/*.ts\" --check --ignore-path .gitignore",
-    "format:prettier": "prettier \"**/*.ts\" --write --ignore-path .gitignore",
+    "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
+    "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
+    "lint:prettier": "prettier \"**/*.{ts,tsx}\" --check",
+    "format:prettier": "prettier \"**/*.{ts,tsx}\" --write",
     "build-storybook": "build-storybook",
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
@@ -38,7 +39,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": [
+    "*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write",
       "git add"
@@ -94,6 +95,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@lit-labs/react": "^1.1.1",
     "lit": "^2.6.1"
   }
 }

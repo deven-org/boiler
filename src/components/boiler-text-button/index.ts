@@ -36,17 +36,3 @@ export class BoilerTextButton extends LitElement {
     </button>`;
   }
 }
-
-// Todo: We need a better way of creating a type for BoilerTextButton
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'boiler-text-button': Pick<BoilerTextButton, 'onClick' | 'label' | 'icon'>;
-  }
-
-  namespace JSX {
-    interface IntrinsicElements {
-      'boiler-text-button': Pick<BoilerTextButton, 'onClick' | 'label' | 'icon'>;
-    }
-  }
-}
