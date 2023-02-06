@@ -19,9 +19,10 @@
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
     "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icons -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
-    "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/_normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
-    "style-dictionary": "style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/foundation.scss --write",
-    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary"
+    "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
+    "style-dictionary": "rimraf src/foundation/scss && style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/scss/*.scss --write",
+    "generate-index-scss": "node figma-design-tokens/config/generate-index-scss.mjs && prettier ./src/foundation/scss/index.scss --write",
+    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary && npm run generate-index-scss"
   },
   "repository": {
     "type": "git",
@@ -79,6 +80,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "lodash.camelcase": "4.3.0",
+    "lodash.kebabcase": "4.1.1",
     "mini-css-extract-plugin": "^2.7.2",
     "prettier": "2.8.3",
     "react": "^18.0.0",
