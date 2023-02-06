@@ -1,0 +1,43 @@
+@use 'sass:math';
+@use 'breakpoints' as *;
+
+/**
+ * Do not edit directly
+ * Generated on Mon, 06 Feb 2023 14:45:05 GMT
+ */
+
+:root {
+  --blr-spacing-100: 80px;
+  --blr-spacing-150: 12px;
+  --blr-spacing-200: 16px;
+  --blr-spacing-300: 24px;
+  --blr-spacing-400: 28px;
+  --blr-spacing-500: 36px;
+  --blr-spacing-600: 40px;
+  --blr-spacing-050: 4px;
+
+  @media (min-width: $blr-breakpoint-s) {
+    --blr-spacing-100: 8px;
+  }
+
+  @media (min-width: $blr-breakpoint-m) {
+    --blr-spacing-600: 48px;
+  }
+
+  @media (min-width: $blr-breakpoint-l) {
+    --blr-spacing-500: 40px;
+    --blr-spacing-600: 60px;
+  }
+
+  @media (min-width: $blr-breakpoint-xl) {
+    --blr-spacing-400: 32px;
+    --blr-spacing-500: 52px;
+    --blr-spacing-600: 80px;
+  }
+
+  @media (min-width: $blr-breakpoint-xxl) {
+    --blr-spacing-400: 44px;
+    --blr-spacing-500: 68px;
+    --blr-spacing-600: 100px;
+  }
+}

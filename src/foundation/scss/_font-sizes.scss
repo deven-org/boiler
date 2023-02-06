@@ -1,0 +1,31 @@
+@use 'sass:math';
+
+/**
+ * Do not edit directly
+ * Generated on Mon, 06 Feb 2023 14:45:05 GMT
+ */
+
+// Function to translate px to rem
+@function rem($px) {
+  @return #{math.div($px, 16px)}rem;
+}
+
+:root {
+  --blr-font-sizes-100: #{rem(16px)};
+  --blr-font-sizes-113: #{rem(18px)};
+  --blr-font-sizes-125: #{rem(20px)};
+  --blr-font-sizes-150: #{rem(24px)};
+  --blr-font-sizes-175: #{rem(28px)};
+  --blr-font-sizes-200: #{rem(32px)};
+  --blr-font-sizes-225: #{rem(36px)};
+  --blr-font-sizes-250: #{rem(40px)};
+  --blr-font-sizes-275: #{rem(44px)};
+  --blr-font-sizes-300: #{rem(48px)};
+  --blr-font-sizes-325: #{rem(52px)};
+  --blr-font-sizes-350: #{rem(56px)};
+  --blr-font-sizes-375: #{rem(60px)};
+  --blr-font-sizes-450: #{rem(72px)};
+  --blr-font-sizes-525: #{rem(84px)};
+  --blr-font-sizes-063: #{rem(10px)};
+  --blr-font-sizes-075: #{rem(12px)};
+}
