@@ -10,6 +10,6 @@ const files = fs
   .map((item) => item.replace('.scss', '').replace('_', ''))
   .map((item) => `@use './${item}';`);
 
-console.log(chalk.magentaBright('\n create foundation/scss/index.scss... \n'));
+console.log(chalk.magentaBright('👷 creates foundation/scss/index.scss... \n'));
 
 fs.writeFileSync(`${__dirname}/src/foundation/scss/index.scss`, files.join('\n'), 'utf-8');
