@@ -61,7 +61,7 @@ StyleDictionary.registerFormat({
 
     return (
       `@use 'sass:math';\n` +
-      `@use 'breakpoints' as *;\n\n` +
+      `@use 'breakpoints.generated' as *;\n\n` +
       fileHeader({ file }) +
       `:root {\n` +
       spacingsTemplate +

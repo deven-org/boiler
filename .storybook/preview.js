@@ -1,4 +1,4 @@
-import '../src/foundation/foundation.scss';
+import '../src/foundation/index.scss';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
