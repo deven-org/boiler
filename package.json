@@ -21,8 +21,8 @@
     "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icons -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
     "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
     "clear:generated-scss": "node figma-design-tokens/config/remove-scss-files.mjs",
-    "style-dictionary": "npm run clear:generated-scss && style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/scss/*.scss --write",
-    "generate-index-scss": "node figma-design-tokens/config/generate-index-scss.mjs && prettier ./src/foundation/scss/index.scss --write",
+    "style-dictionary": "npm run clear:generated-scss && style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/*.scss --write",
+    "generate-index-scss": "node figma-design-tokens/config/generate-index-scss.mjs && prettier ./src/foundation/index.scss --write",
     "tokens:generate": "npm run normalize:tokens && npm run style-dictionary && npm run generate-index-scss"
   },
   "repository": {

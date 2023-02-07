@@ -8,20 +8,20 @@ export class BoilerTextButton extends LitElement {
     .boiler-text-button {
       cursor: pointer;
       border: 0;
-      padding: 0 var(--boiler-spacing-600);
+      padding: 0 var(--blr-spacing-600);
       height: 40px;
-      color: lime;
+      color: var(--blr-color-progressive-red);
       height: 40px;
       border-radius: 9999px;
       font-size: 14px;
     }
 
     .boiler-text-button:hover {
-      background: #4b14b8;
+      background: var(--blr-color-neon-blue-100);
     }
 
     .boiler-text-button:active {
-      background: #380f8a;
+      background: var(--blr-color-neon-green-100);
     }
   `;
 
