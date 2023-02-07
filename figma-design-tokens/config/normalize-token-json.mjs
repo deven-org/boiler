@@ -16,10 +16,6 @@ const flattenedJson = { ...core, ...global };
 const string = JSON.stringify(flattenedJson);
 const modifiedJson = string.replaceAll('base}', 'base.value}');
 
-console.log(
-  chalk.cyanBright(
-    '\n🧹 NORMALIZE TOKEN.JSON FILE 🧹\nTaking original figma token.json file...\nNormalizing it to make it ready for style-dictionary..\n'
-  )
-);
+console.log(chalk.cyanBright('\n🧵🪡 normalize token.json...\n'));
 
 fs.writeFileSync(`${__dirname}/figma-design-tokens/input/tokens.normalized.json`, modifiedJson, 'utf-8');
