@@ -30,7 +30,7 @@ export class BoilerTextButton extends LitElement {
   @property() icon?: IconType;
 
   render() {
-    return html`<button class="boiler-text-button boiler-chevron-down" @click="${this.onClick}">
+    return html`<button class="boiler-text-button" @click="${this.onClick}">
       <span>${this.label}</span>
       ${this.icon && IconMapping[this.icon]}
     </button>`;

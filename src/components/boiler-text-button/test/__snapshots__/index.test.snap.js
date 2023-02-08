@@ -1,12 +1,21 @@
 /* @web/test-runner snapshot v1 */
 export const snapshots = {};
 
-snapshots["boiler-text-button renders boiler-text-button correctly"] = 
-`<button class="boiler-chevron-down boiler-text-button">
+snapshots["boiler-text-button renders correctly"] = 
+`<button class="boiler-text-button">
   <span>
-    Fkoo
+    TextButton Label
   </span>
 </button>
 `;
-/* end snapshot boiler-text-button renders boiler-text-button correctly */
+/* end snapshot boiler-text-button renders correctly */
+
+snapshots["boiler-text-button renders with icon"] = 
+`<button class="boiler-text-button">
+  <span>
+    TextButton Label
+  </span>
+</button>
+`;
+/* end snapshot boiler-text-button renders with icon */
 
