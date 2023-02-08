@@ -2,3 +2,8 @@ node_modules/
 dist/
 .eslintrc.js
 types/
+webpack.common.js
+webpack.prod.js
+svgo.config.js
+commitlint.config.js
+web-test-runner.config.js
