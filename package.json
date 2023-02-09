@@ -2,15 +2,17 @@
   "name": "bo1ler",
   "version": "0.0.1",
   "description": "Component Library",
-  "main": "index.js",
+  "main": "./dist/main.js",
+  "types": ".dist/types/index.d.js",
   "scripts": {
     "commitlint": "commitlint -c -e",
     "start": "start-storybook -p 1337",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "build:types": "rimraf types && tsc --emitDeclarationOnly",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
     "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
+    "lint:stylelint": "stylelint 'src/**/css.ts'",
     "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
     "lint:prettier": "prettier \"**/*.{ts,tsx}\" --check",
     "format:prettier": "prettier \"**/*.{ts,tsx}\" --write",
@@ -30,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orivaa/BO1LER.git"
+    "url": "git+https://github.com/deven-org/BO1LER-Kitchen/BO1LER.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/orivaa/BO1LER/issues"
+    "url": "https://github.com/deven-org/BO1LER-Kitchen/issues"
   },
-  "homepage": "https://github.com/orivaa/BO1LER#readme",
+  "homepage": "https://github.com/deven-org/BO1LER-Kitchen#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -57,6 +59,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
+    "@open-wc/testing": "3.1.7",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-links": "^6.5.15",
@@ -70,7 +73,6 @@
     "@typescript-eslint/parser": "^5.48.1",
     "@web/dev-server-esbuild": "^0.3.3",
     "@web/test-runner": "^0.15.0",
-    "@open-wc/testing": "3.1.7",
     "babel-loader": "^9.1.2",
     "chalk": "^5.2.0",
     "clean-webpack-plugin": "^4.0.0",
@@ -91,6 +93,7 @@
     "lodash.camelcase": "4.3.0",
     "lodash.kebabcase": "4.1.1",
     "mini-css-extract-plugin": "^2.7.2",
+    "postcss-lit": "^1.0.1",
     "prettier": "2.8.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -99,6 +102,8 @@
     "sass-loader": "^13.2.0",
     "style-dictionary": "^3.7.2",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
     "svgo": "^3.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
