@@ -27,14 +27,5 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
   },
   settings: {},
-  ignorePatterns: [
-    'utils/create-icons-index.mjs',
-    'figma-design-tokens',
-    'types/',
-    '*.svg',
-    '*.scss',
-    '*.css',
-    '*.md',
-    '*.config.mjs',
-  ],
+  ignorePatterns: ['utils/', 'figma-design-tokens', 'types/', '*.svg', '*.scss', '*.css', '*.md', '*.config.mjs'],
 };

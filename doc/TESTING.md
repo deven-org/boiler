@@ -19,10 +19,30 @@ We're using [web-test-runner](https://modern-web.dev/docs/test-runner/overview/)
 
 ## How to write tests
 
-### ... for Components
+### ... within the open-wc testing framework
 
 All tests need to be located within the component folder inside a `test` folder. Otherwise the test-runner won't be able to locate the test. [open-wc/testing](https://open-wc.org/docs/testing/testing-package/) offers various tools for testing, such as snapshot testing or accessibility testing of the web-component.
 
+### ... with pa11y-ci for accesibility testing
+
+For standard testing, you just have to run `npm run test:a11y`.
+
+Additionaly, if you want to write custom test cases, the file `src/components/pa11y-custom.config.js` exists. It allows you to add an array of additional `parameters` to the story you're going to test.
+
+```js
+{ story: 'boilertextbutton--boiler-text-button', parameters: ['icon:boilerChevronDownGreen'] }
+```
+
+While `story` names the story to test, the `parameters` come from the story url in storybook and represent the chosen controls of the story.
+
 ## How to run tests
 
-Here you should provide a guide on how to run the different tests you use. Write down the exact commands to use and where to execute them. You could also use the structure of your set up step-by-step guide from your Contribute page.
+### ... with pa11y-ci for accesibility testing
+
+1. **Run the `test:a11y`** command. This command consists of several tasks:
+
+   1. `build-storybook` builds a static storybook folder `storybook-static` in the root directory.
+   2. `sb extract` then extracts all available stories into a stories.json inside `storybook-static`.
+   3. Now the new `pa11y.ci` file is beeing created. It transforms the stories from `stories.json` into a list of urls of all components that are going to be tested.
+
+### ... within the open-wc testing framework
