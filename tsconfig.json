@@ -14,5 +14,5 @@
     "skipLibCheck": true
   },
   "include": ["src"],
-  "exclude": ["**/*.stories.tsx", "**/__snapshots__/*", "**/test/*"]
+  "exclude": ["**/*.stories.tsx", "**/__snapshots__/*", "**/test/*", "src/**/*.config.js"]
 }
