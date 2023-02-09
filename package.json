@@ -31,14 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orivaa/BO1LER.git"
+    "url": "git+https://github.com/deven-org/BO1LER-Kitchen/BO1LER.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/orivaa/BO1LER/issues"
+    "url": "https://github.com/deven-org/BO1LER-Kitchen/issues"
   },
-  "homepage": "https://github.com/orivaa/BO1LER#readme",
+  "homepage": "https://github.com/deven-org/BO1LER-Kitchen#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -46,7 +46,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run lint",
+      "eslint --fix",
+      "prettier --write",
       "git add"
     ]
   },
