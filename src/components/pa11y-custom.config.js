@@ -1,1 +1,1 @@
-module.exports = [{ story: 'boilertextbutton--boiler-text-button', parameters: ['icon:boilerChevronDownGreen'] }];
+module.exports = [{ story: 'blrtextbutton--blr-text-button', parameters: ['icon:boilerChevronDownGreen'] }];
