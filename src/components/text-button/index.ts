@@ -2,6 +2,7 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '../../foundation/icons';
 import { style } from './css';
+
 @customElement('boiler-text-button')
 export class BoilerTextButton extends LitElement {
   static styles = style;
