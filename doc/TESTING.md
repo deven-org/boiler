@@ -30,7 +30,7 @@ For standard testing, you just have to run `npm run test:a11y`.
 Additionaly, if you want to write custom test cases, the file `src/components/pa11y-custom.config.js` exists. It allows you to add an array of additional `parameters` to the story you're going to test.
 
 ```js
-{ story: 'boilertextbutton--boiler-text-button', parameters: ['icon:boilerChevronDownGreen'] }
+{ story: 'BlrTextButton--blr-text-button', parameters: ['icon:boilerChevronDownGreen'] }
 ```
 
 While `story` names the story to test, the `parameters` come from the story url in storybook and represent the chosen controls of the story.

@@ -1,4 +1,4 @@
-import './components/boiler-text-button/index.ts';
-export { BoilerTextButton } from './components/boiler-text-button';
+import './components/blr-text-button/index.ts';
+export { BlrTextButton } from './components/blr-text-button';
 export type { IconType } from './foundation/icons/index';
 export { IconMapping } from './foundation/icons/index';
