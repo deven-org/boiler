@@ -1,7 +1,7 @@
 import { css } from 'lit';
 
 export const style = css`
-  .boiler-text-button {
+  .blr-text-button {
     cursor: pointer;
     border: 0;
     padding: 0 var(--blr-spacing-600);
@@ -11,11 +11,15 @@ export const style = css`
     font-size: 14px;
   }
 
-  .boiler-text-button:hover {
+  .blr-text-button:disabled {
+    background: lime;
+  }
+
+  .blr-text-button:hover {
     background: var(--blr-color-neon-blue-100);
   }
 
-  .boiler-text-button:active {
+  .blr-text-button:active {
     background: var(--blr-color-neon-green-100);
   }
 `;

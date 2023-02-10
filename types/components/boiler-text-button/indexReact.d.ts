@@ -1,5 +1,5 @@
 import { EventName } from '@lit-labs/react';
-import { BoilerTextButton } from '.';
-export declare const BoilerTextButtonReact: import("@lit-labs/react").ReactWebComponent<BoilerTextButton, {
+import { BlrTextButton } from '.';
+export declare const BlrTextButtonReact: import("@lit-labs/react").ReactWebComponent<BlrTextButton, {
     onClick: EventName<PointerEvent>;
 }>;

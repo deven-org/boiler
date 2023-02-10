@@ -1,11 +1,11 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BoilerTextButton } from '.';
+import { BlrTextButton } from '.';
 
-export const BoilerTextButtonReact = createComponent({
-  tagName: 'boiler-text-button',
-  elementClass: BoilerTextButton,
+export const BlrTextButtonReact = createComponent({
+  tagName: 'blr-text-button',
+  elementClass: BlrTextButton,
   react: React,
   events: {
     onClick: 'pointerdown' as EventName<PointerEvent>,

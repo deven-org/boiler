@@ -1,6 +1,7 @@
 import { LitElement } from 'lit';
-import { IconType } from '../../foundation/icons';
-export declare class BoilerTextButton extends LitElement {
+import { IconType } from '../../foundation/icons'; 
+
+export declare class BlrTextButton extends LitElement {
     static styles: import("lit").CSSResult;
     label: string;
     onClick: HTMLButtonElement['onclick'];
