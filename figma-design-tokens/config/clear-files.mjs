@@ -6,7 +6,7 @@ import chalk from 'chalk';
 
 console.log(chalk.blueBright('\n🗑️ removes generated files from foundation folder...\n'));
 
-globby(['./src/foundation/*', '!./src/foundation/README.md', '!./src/foundation/icons']).then(function then(paths) {
+globby(['./src/foundation/_tokens-generated/*']).then(function then(paths) {
   paths.map(function map(item) {
     rimraf.sync(item);
   });

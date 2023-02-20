@@ -1,8 +1,29 @@
-require('./formats');
+const kebabCase = require('lodash.kebabcase');
+const StyleDictionary = require('style-dictionary');
 
-// todo:
+const { minifyDictionary, fileHeader } = StyleDictionary.formatHelpers;
 
-// we need a clearer way to write the template(s)
+const types = [
+  'color',
+  'borderRadius',
+  'borderWidth',
+  'fontFamilies',
+  'fontWeights',
+  'lineHeights',
+  'fontSizes',
+  'spacing',
+  'pargraphSpacing',
+  'letterSpacing',
+];
+
+StyleDictionary.registerFormat({
+  name: 'custom/format/semantic-tokens',
+  formatter: function ({ dictionary, file }) {
+    return (
+      fileHeader({ file }) + 'export const semanticTokens = ' + JSON.stringify(minifyDictionary(dictionary.tokens))
+    );
+  },
+});
 
 module.exports = {
   source: ['figma-design-tokens/input/tokens.normalized.json'],
@@ -12,25 +33,22 @@ module.exports = {
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
       files: [
+        ...types.map((type) => ({
+          format: 'css/variables',
+          destination: `../src/foundation/_tokens-generated/_${kebabCase(type)}.generated.scss`,
+          filter: (token) => token.attributes.category === 'core' && token.attributes.type === type,
+        })),
+      ],
+    },
+    js: {
+      transforms: ['attribute/cti', 'name/cti/pascal'],
+      prefix: 'blr',
+      buildPath: 'figma-design-tokens/',
+      files: [
         {
-          format: 'custom/format/breakpoints',
-          destination: '../src/foundation/_breakpoints.generated.scss',
-          filter: (token) => token.attributes.category === 'core' && token.attributes.type === 'breakpoint',
-        },
-        {
-          format: 'custom/format/font-sizes',
-          destination: '../src/foundation/_font-sizes.generated.scss',
-          filter: (token) => token.attributes.category === 'core' && token.attributes.type === 'fontSizes',
-        },
-        {
-          format: 'custom/format/colors',
-          destination: '../src/foundation/_colors.generated.scss',
-          filter: (token) => token.attributes.category === 'core' && token.attributes.type === 'color',
-        },
-        {
-          format: 'custom/format/spacings',
-          destination: '../src/foundation/_spacings.generated.scss',
-          filter: (token) => token.attributes.category === 'spacing',
+          format: 'custom/format/semantic-tokens',
+          destination: '../src/foundation/_tokens-generated/semantic-tokens.generated.js',
+          filter: (token) => token.attributes.category === 'semantic',
         },
       ],
     },
