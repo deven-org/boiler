@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const style = css`
+export const styleCustom = css`
   .blr-text-button {
     cursor: pointer;
     border: 0;
