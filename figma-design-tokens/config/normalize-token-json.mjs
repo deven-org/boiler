@@ -4,6 +4,12 @@ import TokenJson from '../input/tokens.json' assert { type: 'json' };
 import chalk from 'chalk';
 
 const __dirname = path.resolve();
+
+// TODO: currently we're only using core and sem
+// TODO: currently we're only using core and sem
+// TODO: currently we're only using core and sem
+// TODO: currently we're only using core and sem
+
 const core = TokenJson.BLR_COR;
 const sem = TokenJson.BLR_SEM;
 const modifiedSemString = JSON.stringify(sem)

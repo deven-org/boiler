@@ -6,7 +6,7 @@ const __dirname = path.resolve();
 
 const files = fs
   .readdirSync(`${__dirname}/src/foundation/_tokens-generated`)
-  .filter((item) => item.endsWith('.scss'))
+  .filter((item) => item.endsWith('generated.scss'))
   .map((item) => item.replace('.scss', '').replace('_', ''))
   .map((item) => `@use './${item}';`);
 
