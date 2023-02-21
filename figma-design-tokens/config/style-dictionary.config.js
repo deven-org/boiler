@@ -1,5 +1,6 @@
 const kebabCase = require('lodash.kebabcase');
 const StyleDictionary = require('style-dictionary');
+require('./transforms/font-weight');
 
 const { minifyDictionary, fileHeader } = StyleDictionary.formatHelpers;
 
@@ -56,7 +57,7 @@ module.exports = {
       ],
     },
     js: {
-      transforms: ['attribute/cti', 'name/cti/pascal', 'multiplies-values-in-strings'],
+      transforms: ['attribute/cti', 'name/cti/pascal', 'multiplies-values-in-strings', 'transform/font-weight'],
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
       files: [
