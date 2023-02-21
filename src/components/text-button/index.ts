@@ -15,10 +15,16 @@ export class BlrTextButton extends LitElement {
   @property() icon?: IconType;
   @property() disabled?: boolean;
   @property() buttonId?: string;
-  @property() variant?: 'primary' | 'secondary' | 'cta' = 'primary';
+  @property() variant?: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
+  @property() size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
 
   render() {
-    const classes = classnames('blr-semantic-action', `blr-semantic-action-${this.variant}`, 'blr-text-button');
+    const classes = classnames(
+      'blr-semantic-action',
+      `blr-semantic-action-${this.variant}`,
+      `blr-semantic-action-${this.size}`,
+      'blr-text-button'
+    );
     return html`<button
       class=${classes}
       @click="${this.onClick}"
