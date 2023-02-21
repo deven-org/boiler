@@ -19,9 +19,24 @@ const types = [
 StyleDictionary.registerFormat({
   name: 'custom/format/semantic-tokens',
   formatter: function ({ dictionary, file }) {
-    return (
-      fileHeader({ file }) + 'export const semanticTokens = ' + JSON.stringify(minifyDictionary(dictionary.tokens))
-    );
+    const tokenObj = dictionary.tokens;
+    return fileHeader({ file }) + 'export const semanticTokens = ' + JSON.stringify(minifyDictionary(tokenObj));
+  },
+});
+
+StyleDictionary.registerTransform({
+  type: `value`,
+  name: `multiplies-values-in-strings`,
+  transitive: true,
+  matcher: (token) => typeof token.value === 'string' && token.value.includes('*'),
+  transformer: (token) => {
+    const parts = token.value.split('*').map((str) => parseFloat(str.trim()));
+
+    const result = parts.reduce((total, value) => {
+      return total * value;
+    }, 1);
+
+    return `${result}px`;
   },
 });
 
@@ -41,7 +56,7 @@ module.exports = {
       ],
     },
     js: {
-      transforms: ['attribute/cti', 'name/cti/pascal'],
+      transforms: ['attribute/cti', 'name/cti/pascal', 'multiplies-values-in-strings'],
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
       files: [
