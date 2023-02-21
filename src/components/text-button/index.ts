@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import classnames from 'classnames';
+import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
@@ -15,18 +15,14 @@ export class BlrTextButton extends LitElement {
   @property() icon?: IconType;
   @property() disabled?: boolean;
   @property() buttonId?: string;
-  @property() variant?: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
+  @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
   @property() size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
 
   render() {
-    const classes = classnames(
-      'blr-semantic-action',
-      `blr-semantic-action-${this.variant}`,
-      `blr-semantic-action-${this.size}`,
-      'blr-text-button'
-    );
+    const classes = { [`${this.variant}`]: this.variant, [`${this.size}`]: this.size, disabled: this.disabled };
+
     return html`<button
-      class=${classes}
+      class="blr-semantic-action ${classMap(classes)} blr-text-button"
       @click="${this.onClick}"
       @blur="${this.onBlur}"
       ?disabled="${this.disabled}"

@@ -7,7 +7,16 @@ export default {
   title: 'BlrTextButton',
 };
 
-export const BlrTextButton = ({ label, onClick, onBlur, icon, disabled, buttonId }: BlrTextButtonClass) =>
+export const BlrTextButton = ({
+  label,
+  onClick,
+  onBlur,
+  icon,
+  disabled,
+  buttonId,
+  variant,
+  size,
+}: BlrTextButtonClass) =>
   html`
     <blr-text-button
       label=${label}
@@ -16,6 +25,8 @@ export const BlrTextButton = ({ label, onClick, onBlur, icon, disabled, buttonId
       .onClick=${onClick}
       .onBlur=${onBlur}
       .disabled=${disabled}
+      .variant=${variant}
+      .size=${size}
       class="example-layout-class"
     ></blr-text-button>
   `;
@@ -29,5 +40,6 @@ BlrTextButton.args = {
   icon: 'boilerChevronDown',
   disabled: false,
   buttonId: 'button-id',
-  variant: 'primary',
+  variant: 'cta',
+  size: 'md',
 };

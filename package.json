@@ -112,7 +112,6 @@
   },
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
-    "classnames": "^2.3.2",
     "lit": "^2.6.1"
   }
 }
