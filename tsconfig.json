@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
+    "outDir": "./dist",
     "noImplicitAny": true,
     "declaration": true,
     "declarationDir": "./types",
