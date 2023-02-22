@@ -16,53 +16,53 @@
             "type": "color"
           }
         },
-        "purple": {
+        "pink": {
           "100": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.100}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.100}%)",
             "type": "color"
           },
           "200": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.200}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.200}%)",
             "type": "color"
           },
           "300": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.300}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.300}%)",
             "type": "color"
           },
           "400": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.400}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.400}%)",
             "type": "color"
           },
           "500": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.500}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.500}%)",
             "type": "color"
           },
           "600": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.600}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.600}%)",
             "type": "color"
           },
           "700": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.700}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.700}%)",
             "type": "color"
           },
           "800": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.800}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.800}%)",
             "type": "color"
           },
           "900": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.900}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.900}%)",
             "type": "color"
           },
           "950": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.950}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.950}%)",
             "type": "color"
           },
           "999": {
-            "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.999}%)",
+            "value": "hsla({core.color.pink.HUE}, {core.color.pink.SAT}%, {core.color.LGT.999}%)",
             "type": "color"
           },
           "HUE": {
-            "value": "260",
+            "value": "300",
             "type": "color"
           },
           "SAT": {
@@ -716,19 +716,19 @@
       "CTA": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{core.color.purple.500}",
+            "value": "{core.color.pink.500}",
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.purple.400}",
+            "value": "{core.color.pink.400}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.purple.300}",
+            "value": "{core.color.pink.300}",
             "type": "color"
           },
           "Focus": {
-            "value": "{core.color.purple.500}",
+            "value": "{core.color.pink.500}",
             "type": "color"
           },
           "Disabled": {
@@ -736,7 +736,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{core.color.purple.500}",
+            "value": "{core.color.pink.500}",
             "type": "color"
           }
         },
@@ -1900,7 +1900,7 @@
     "DOC": {
       "slider-hue": {
         "purple": {
-          "value": "{core.color.purple.HUE}+2",
+          "value": "{core.color.pink.HUE}+2",
           "type": "spacing"
         },
         "azure": {
@@ -1930,7 +1930,7 @@
       },
       "slider-sat": {
         "purple": {
-          "value": "360  / 100 * {core.color.purple.SAT} + 2",
+          "value": "360  / 100 * {core.color.pink.SAT} + 2",
           "type": "spacing"
         },
         "azure": {
