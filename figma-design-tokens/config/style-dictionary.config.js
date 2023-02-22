@@ -1,11 +1,7 @@
 const kebabCase = require('lodash.kebabcase');
 const StyleDictionary = require('style-dictionary');
-require('./transforms/font-weight');
-require('./transforms/resolve-math');
-require('./transforms/transform-dimension');
-require('./transforms/str-replace-pxpx');
-
 const { minifyDictionary, fileHeader } = StyleDictionary.formatHelpers;
+require('./transforms/index');
 
 const types = [
   'color',
