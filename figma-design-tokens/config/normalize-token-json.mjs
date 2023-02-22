@@ -5,25 +5,18 @@ import chalk from 'chalk';
 
 const __dirname = path.resolve();
 
-// TODO: currently we're only using core and sem
-// TODO: currently we're only using core and sem
-// TODO: currently we're only using core and sem
-// TODO: currently we're only using core and sem
-
 const core = TokenJson.BLR_COR;
 const sem = TokenJson.BLR_SEM;
-const modifiedSemString = JSON.stringify(sem)
-  .replaceAll('{Label', '{semantic.Label')
-  .replaceAll('{Action', '{semantic.Action');
-const semModified = JSON.parse(modifiedSemString);
+const comp = TokenJson.BLR_CMP;
 
-if (typeof core == 'undefined' || typeof sem === 'undefined') {
+if (typeof core == 'undefined' || typeof sem === 'undefined' || typeof comp === 'undefined') {
   throw new Error(chalk.redBright('token.json has wrong format.'));
 }
 
-const flattenedJson = { ...core, semantic: semModified };
-
-const string = JSON.stringify(flattenedJson);
+const flattenedJson = { ...core, semantic: sem, component: comp };
+const string = JSON.stringify(flattenedJson)
+  .replaceAll('{Label', '{semantic.Label')
+  .replaceAll('{Action', '{semantic.Action');
 
 console.log(chalk.cyanBright('\n🧵🪡 normalize token.json...\n'));
 

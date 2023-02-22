@@ -102,7 +102,7 @@ export const action = css`
   }
 
   .blr-semantic-action.sm {
-    height: ${unsafeCSS(XS.Height)};
+    height: ${unsafeCSS(SM.Height)};
     font-family: ${unsafeCSS(SM.Label.fontFamily)};
     font-weight: ${unsafeCSS(SM.Label.fontWeight)};
     line-height: ${unsafeCSS(SM.Label.lineHeight)};
@@ -110,7 +110,7 @@ export const action = css`
   }
 
   .blr-semantic-action.md {
-    height: ${unsafeCSS(XS.Height)};
+    height: ${unsafeCSS(MD.Height)};
     font-family: ${unsafeCSS(MD.Label.fontFamily)};
     font-weight: ${unsafeCSS(MD.Label.fontWeight)};
     line-height: ${unsafeCSS(MD.Label.lineHeight)};
@@ -118,7 +118,7 @@ export const action = css`
   }
 
   .blr-semantic-action.lg {
-    height: ${unsafeCSS(XS.Height)};
+    height: ${unsafeCSS(LG.Height)};
     font-family: ${unsafeCSS(LG.Label.fontFamily)};
     font-weight: ${unsafeCSS(LG.Label.fontWeight)};
     line-height: ${unsafeCSS(LG.Label.lineHeight)};
@@ -126,7 +126,7 @@ export const action = css`
   }
 
   .blr-semantic-action.xl {
-    height: ${unsafeCSS(XS.Height)};
+    height: ${unsafeCSS(XL.Height)};
     font-family: ${unsafeCSS(XL.Label.fontFamily)};
     font-weight: ${unsafeCSS(XL.Label.fontWeight)};
     line-height: ${unsafeCSS(XL.Label.lineHeight)};

@@ -870,5 +870,107 @@
         }
       }
     }
+  },
+  "component": {
+    "Action": {
+      "TextButton": {
+        "XS": {
+          "Padding": { "value": "0 {core.spacing.SP-150}px", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-050}px", "type": "spacing" }
+        },
+        "SM": {
+          "Padding": { "value": "0 {core.spacing.SP-150}px", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-050}px", "type": "spacing" }
+        },
+        "MD": {
+          "Padding": { "value": "0 {core.spacing.SP-200}px", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-050}px", "type": "spacing" }
+        },
+        "LG": {
+          "Padding": { "value": "0 {core.spacing.SP-300}px", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-100}px", "type": "spacing" }
+        },
+        "XL": {
+          "Padding": { "value": "0 {core.spacing.SP-500}px", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-100}px", "type": "spacing" }
+        }
+      },
+      "IconButton": {
+        "XS": {
+          "Width": { "value": "{semantic.Action.XS.Height}", "type": "sizing" },
+          "Padding": { "value": "0", "type": "spacing" },
+          "Gap": { "value": "0", "type": "spacing" }
+        },
+        "SM": {
+          "Width": { "value": "{semantic.Action.SM.Height}", "type": "sizing" },
+          "Padding": { "value": "0", "type": "spacing" },
+          "Gap": { "value": "0", "type": "spacing" }
+        },
+        "MD": {
+          "Width": { "value": "{semantic.Action.MD.Height}", "type": "sizing" },
+          "Padding": { "value": "0", "type": "spacing" },
+          "Gap": { "value": "0", "type": "spacing" }
+        },
+        "LG": {
+          "Width": { "value": "{semantic.Action.LG.Height}", "type": "sizing" },
+          "Padding": { "value": "0", "type": "spacing" },
+          "Gap": { "value": "0", "type": "spacing" }
+        },
+        "XL": {
+          "Width": { "value": "{semantic.Action.XL.Height}", "type": "sizing" },
+          "Padding": { "value": "0", "type": "spacing" },
+          "Gap": { "value": "0", "type": "spacing" }
+        }
+      },
+      "IconDropdown": {
+        "XS": {
+          "Width": { "value": "{semantic.Action.XS.Height}", "type": "sizing" },
+          "Padding": { "value": "0 1 0 3", "type": "spacing" },
+          "Gap": { "value": "0", "type": "spacing" }
+        },
+        "SM": {
+          "Width": { "value": "{semantic.Action.SM.Height}", "type": "sizing" },
+          "Padding": { "value": "0 2 0 4", "type": "spacing" },
+          "Gap": { "value": "2", "type": "spacing" }
+        },
+        "MD": {
+          "Width": { "value": "{semantic.Action.MD.Height}", "type": "sizing" },
+          "Padding": { "value": "0 4 0 6", "type": "spacing" },
+          "Gap": { "value": "2", "type": "spacing" }
+        },
+        "LG": {
+          "Width": { "value": "{semantic.Action.LG.Height}", "type": "sizing" },
+          "Padding": { "value": "0 0 0 8", "type": "spacing" },
+          "Gap": { "value": "4", "type": "spacing" }
+        },
+        "XL": {
+          "Width": { "value": "{semantic.Action.XL.Height}", "type": "sizing" },
+          "Padding": { "value": "0 0 0 16", "type": "spacing" },
+          "Gap": { "value": "4", "type": "spacing" }
+        }
+      },
+      "TextDropdown": {
+        "XS": {
+          "Padding": { "value": "0 {core.spacing.SP-100} 0 {core.spacing.SP-150}", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-025}px", "type": "spacing" }
+        },
+        "SM": {
+          "Padding": { "value": "0 {core.spacing.SP-100} 0 {core.spacing.SP-150}", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-025}px", "type": "spacing" }
+        },
+        "MD": {
+          "Padding": { "value": "0 {core.spacing.SP-150} 0 {core.spacing.SP-200}", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-025}px", "type": "spacing" }
+        },
+        "LG": {
+          "Padding": { "value": "0 {core.spacing.SP-250} 0 {core.spacing.SP-300}", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-050}px", "type": "spacing" }
+        },
+        "XL": {
+          "Padding": { "value": "0 {core.spacing.SP-400} 0 {core.spacing.SP-500}", "type": "spacing" },
+          "Gap": { "value": "{core.spacing.SP-050}px", "type": "spacing" }
+        }
+      }
+    }
   }
 }

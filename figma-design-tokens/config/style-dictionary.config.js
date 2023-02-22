@@ -17,11 +17,12 @@ const types = [
 ];
 
 StyleDictionary.registerFormat({
-  name: 'custom/format/semantic-tokens',
+  name: 'custom/format/tokens',
   formatter: function ({ dictionary, file }) {
     const tokenObj = dictionary.tokens;
+    const tokenName = Object.keys(tokenObj).toString();
 
-    return fileHeader({ file }) + 'export const semanticTokens = ' + JSON.stringify(minifyDictionary(tokenObj));
+    return fileHeader({ file }) + `export const ${tokenName}Tokens = ` + JSON.stringify(minifyDictionary(tokenObj));
   },
 });
 
@@ -53,9 +54,14 @@ module.exports = {
       buildPath: 'figma-design-tokens/',
       files: [
         {
-          format: 'custom/format/semantic-tokens',
+          format: 'custom/format/tokens',
           destination: '../src/foundation/_tokens-generated/semantic-tokens.generated.js',
           filter: (token) => token.attributes.category === 'semantic',
+        },
+        {
+          format: 'custom/format/tokens',
+          destination: '../src/foundation/_tokens-generated/component-tokens.generated.js',
+          filter: (token) => token.attributes.category === 'component',
         },
       ],
     },
