@@ -4,10 +4,11 @@ import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
+import { textButton } from '../../foundation/component-tokens/action';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
-  static styles = [styleCustom, action];
+  static styles = [styleCustom, action, textButton];
 
   @property() label = 'Button Label';
   @property() onClick: HTMLButtonElement['onclick'];
@@ -22,7 +23,7 @@ export class BlrTextButton extends LitElement {
     const classes = { [`${this.variant}`]: this.variant, [`${this.size}`]: this.size, disabled: this.disabled };
 
     return html`<button
-      class="blr-semantic-action ${classMap(classes)} blr-text-button"
+      class="blr-semantic-action blr-text-button ${classMap(classes)}"
       @click="${this.onClick}"
       @blur="${this.onBlur}"
       ?disabled="${this.disabled}"
