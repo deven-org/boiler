@@ -18,9 +18,12 @@ fs.readdir(iconDir, (err, files) => {
     if (file.endsWith('.svg')) {
       const name = camelCase(path.parse(file).name);
       const data = fs.readFileSync(`${iconDir}/${file}`, 'utf8');
+      // adds a class attribute to the svg string
+      const withClassAttribute = data.replace('fill="currentColor"', 'class="${className}" fill="currentColor"');
 
-      icons.push({ name, data });
-      iconTemplateStrings.push(`const ${name} =  html\`${data}\`; \n`);
+      icons.push({ name, withClassAttribute });
+
+      iconTemplateStrings.push(`const ${name} = (className: string) => html\`${withClassAttribute}\`; \n`);
     }
   });
 
@@ -32,7 +35,7 @@ fs.readdir(iconDir, (err, files) => {
   import { html } from 'lit'; \n
   ${iconTemplateStrings.join('\n')}
 
-  export const IconMapping = { ${icons.map((icon) => icon.name).join(',\n')} } as const;
+  export const IconMapping = { ${icons.map((icon) => icon.name).join(',\n')} };
   export type IconType = keyof typeof IconMapping;
   `;
 
