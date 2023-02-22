@@ -787,7 +787,7 @@
             "value": "{core.color.coolgray.600}",
             "type": "color"
           },
-          "loading": {
+          "Loading": {
             "value": "{core.color.neutral.white}",
             "type": "color"
           }
