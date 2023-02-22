@@ -1613,27 +1613,25 @@
         "type": "typography"
       }
     },
-    "Status": {
-      "Loader": {
+    "Feedback": {
+      "Background": {
         "Default": {
-          "BG": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, 0.2)",
-            "type": "color"
-          },
-          "FG": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.400}%, 1)",
-            "type": "color"
-          }
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, 0.2)",
+          "type": "color"
         },
         "Inverted": {
-          "BG": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 0.2)",
-            "type": "color"
-          },
-          "FG": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 1)",
-            "type": "color"
-          }
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 0.2)",
+          "type": "color"
+        }
+      },
+      "Fill": {
+        "Default": {
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.400}%, 1)",
+          "type": "color"
+        },
+        "Inverted": {
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 1)",
+          "type": "color"
         }
       }
     }
