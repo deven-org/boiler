@@ -1634,6 +1634,18 @@
           "type": "color"
         }
       }
+    },
+    "Global": {
+      "Focus": {
+        "Border": {
+          "value": "{core.color.neutral.black}",
+          "type": "color"
+        },
+        "BorderWidth": {
+          "value": "2",
+          "type": "borderWidth"
+        }
+      }
     }
   },
   "BLR_CMP": {
