@@ -29,7 +29,7 @@ export class BlrTextButton extends LitElement {
       id=${this.buttonId}
     >
       <span>${this.label}</span>
-      ${this.icon && IconMapping[this.icon]}
+      ${this.icon && IconMapping[this.icon]('icon')}
     </button>`;
   }
 }

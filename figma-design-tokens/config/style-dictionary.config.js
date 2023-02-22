@@ -20,6 +20,7 @@ StyleDictionary.registerFormat({
   name: 'custom/format/semantic-tokens',
   formatter: function ({ dictionary, file }) {
     const tokenObj = dictionary.tokens;
+
     return fileHeader({ file }) + 'export const semanticTokens = ' + JSON.stringify(minifyDictionary(tokenObj));
   },
 });
