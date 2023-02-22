@@ -1,6 +1,9 @@
 const kebabCase = require('lodash.kebabcase');
 const StyleDictionary = require('style-dictionary');
 require('./transforms/font-weight');
+require('./transforms/resolve-math');
+require('./transforms/transform-dimension');
+require('./transforms/str-replace-pxpx');
 
 const { minifyDictionary, fileHeader } = StyleDictionary.formatHelpers;
 
@@ -25,22 +28,6 @@ StyleDictionary.registerFormat({
   },
 });
 
-StyleDictionary.registerTransform({
-  type: `value`,
-  name: `multiplies-values-in-strings`,
-  transitive: true,
-  matcher: (token) => typeof token.value === 'string' && token.value.includes('*'),
-  transformer: (token) => {
-    const parts = token.value.split('*').map((str) => parseFloat(str.trim()));
-
-    const result = parts.reduce((total, value) => {
-      return total * value;
-    }, 1);
-
-    return `${result}px`;
-  },
-});
-
 module.exports = {
   source: ['figma-design-tokens/input/tokens.normalized.json'],
   platforms: {
@@ -57,7 +44,14 @@ module.exports = {
       ],
     },
     js: {
-      transforms: ['attribute/cti', 'name/cti/pascal', 'multiplies-values-in-strings', 'transform/font-weight'],
+      transforms: [
+        'attribute/cti',
+        'name/cti/pascal',
+        'transform/resolveMath',
+        'transform/size/px',
+        'transform/strReplace',
+        'transform/font-weight',
+      ],
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
       files: [
