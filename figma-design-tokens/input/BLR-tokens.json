@@ -1687,7 +1687,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.spacing.SP-100}px",
+            "value": "{core.spacing.SP-100}",
             "type": "spacing"
           }
         },
@@ -1697,7 +1697,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.spacing.SP-100}px",
+            "value": "{core.spacing.SP-100}",
             "type": "spacing"
           }
         }
@@ -1869,7 +1869,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "0 {core.spacing.SP-150} 0 {core.spacing.SP-200}",
+            "value": "0 {core.spacing.SP-150} 0 {core.spacing.SP-250}",
             "type": "spacing"
           },
           "Gap": {
@@ -1879,11 +1879,11 @@
         },
         "LG": {
           "Padding": {
-            "value": "0 {core.spacing.SP-250} 0 {core.spacing.SP-300}",
+            "value": "0 {core.spacing.SP-200} 0 {core.spacing.SP-300}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.spacing.SP-050}px",
+            "value": "{core.spacing.SP-025}",
             "type": "spacing"
           }
         },
@@ -1893,7 +1893,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.spacing.SP-050}px",
+            "value": "{core.spacing.SP-025}",
             "type": "spacing"
           }
         }
