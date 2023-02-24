@@ -1,6 +1,6 @@
 import { html } from 'lit';
 
-const boilerChevronDownGreen = (className: string) =>
+const boilerChevronDownXs = (className: string) =>
   html`<svg
     class="${className}"
     fill="currentColor"
@@ -13,7 +13,7 @@ const boilerChevronDownGreen = (className: string) =>
     <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 " />
   </svg>`;
 
-const boilerChevronDown = (className: string) =>
+const boilerChevronDownGreenXl = (className: string) =>
   html`<svg
     class="${className}"
     fill="currentColor"
@@ -26,5 +26,5 @@ const boilerChevronDown = (className: string) =>
     <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 " />
   </svg>`;
 
-export const IconMapping = { boilerChevronDownGreen, boilerChevronDown };
+export const IconMapping = { boilerChevronDownXs, boilerChevronDownGreenXl };
 export type IconType = keyof typeof IconMapping;

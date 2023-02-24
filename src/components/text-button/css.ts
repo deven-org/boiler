@@ -7,9 +7,7 @@ export const styleCustom = css`
     cursor: pointer;
   }
 
-  .blr-text-button .icon {
+  .blr-text-button .blr-text-button-icon {
     flex-shrink: 0;
-    width: 12px;
-    height: 12px;
   }
 `;

@@ -1,10 +1,11 @@
 import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconMapping, IconType } from '../../foundation/icons';
+import { IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
 import { textButton } from '../../foundation/component-tokens/action';
+import { SizesType } from '../../globals/types';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -17,7 +18,7 @@ export class BlrTextButton extends LitElement {
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
-  @property() size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+  @property() size?: SizesType = 'md';
 
   render() {
     const classes = { [`${this.variant}`]: this.variant, [`${this.size}`]: this.size, disabled: this.disabled };
@@ -30,7 +31,7 @@ export class BlrTextButton extends LitElement {
       id=${this.buttonId}
     >
       <span>${this.label}</span>
-      ${this.icon && IconMapping[this.icon]('icon')}
+      ${this.icon && html`<blr-icon name="${this.icon}" class="blr-text-button-icon"></blr-icon>`}
     </button>`;
   }
 }
