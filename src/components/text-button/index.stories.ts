@@ -37,7 +37,7 @@ BlrTextButton.args = {
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  icon: 'boilerChevronDown',
+  icon: 'boilerChevronDownXs',
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
