@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('./Source_Sans_Pro/SourceSansPro-Regular.ttf') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* add new font faces a they are needed by design... */
