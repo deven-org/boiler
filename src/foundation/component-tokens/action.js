@@ -1,5 +1,5 @@
 import { css, unsafeCSS } from 'lit';
-import { componentTokens } from '../_tokens-generated/component-tokens.generated';
+import { componentTokens } from '../_tokens-generated/index.generated';
 
 const { TextButton } = componentTokens.component.Action;
 
