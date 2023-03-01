@@ -28,8 +28,8 @@
     "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
     "clear:generated-files": "node figma-design-tokens/config/clear-files.mjs",
     "style-dictionary": "npm run clear:generated-files && style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/_tokens-generated/* --write",
-    "generate-index-scss": "node figma-design-tokens/config/generate-index-scss.mjs && prettier ./src/foundation/_tokens-generated/index.generated.scss --write",
-    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary && npm run generate-index-scss"
+    "generate-index-files": "node figma-design-tokens/config/generate-index-files.mjs && prettier ./src/foundation/_tokens-generated/index.generated.scss --write && prettier ./src/foundation/_tokens-generated/index.generated.js --write",
+    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary && npm run generate-index-files"
   },
   "repository": {
     "type": "git",

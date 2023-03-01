@@ -4,7 +4,6 @@ const { minifyDictionary, fileHeader } = StyleDictionary.formatHelpers;
 require('./transforms/index');
 
 const types = [
-  'color',
   'borderRadius',
   'borderWidth',
   'fontFamilies',
@@ -39,6 +38,21 @@ module.exports = {
           destination: `../src/foundation/_tokens-generated/_${kebabCase(type)}.generated.scss`,
           filter: (token) => token.attributes.category === 'core' && token.attributes.type === type,
         })),
+        {
+          format: 'css/variables',
+          destination: `../src/foundation/_tokens-generated/_color.generated.scss`,
+          filter: (token) => {
+            const isCore = token.attributes.category === 'core';
+            const isColor = token.attributes.type === 'color';
+
+            // We want to filter out some base color values that the final colors are made of.
+            // We don't need them as css variables.
+            const isLgt = token.attributes.item === 'LGT';
+            const isSat = ['HUE', 'SAT'].includes(token.attributes.subitem);
+
+            return isCore && isColor && !isSat && !isLgt;
+          },
+        },
       ],
     },
     js: {
@@ -55,12 +69,12 @@ module.exports = {
       files: [
         {
           format: 'custom/format/tokens',
-          destination: '../src/foundation/_tokens-generated/semantic-tokens.generated.js',
+          destination: '../src/foundation/_tokens-generated/__semantic-tokens.generated.js',
           filter: (token) => token.attributes.category === 'semantic',
         },
         {
           format: 'custom/format/tokens',
-          destination: '../src/foundation/_tokens-generated/component-tokens.generated.js',
+          destination: '../src/foundation/_tokens-generated/__component-tokens.generated.js',
           filter: (token) => token.attributes.category === 'component',
         },
       ],
