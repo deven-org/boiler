@@ -30,7 +30,7 @@ module.exports = {
   source: ['figma-design-tokens/input/tokens.normalized.json'],
   platforms: {
     scss: {
-      transforms: ['attribute/cti', 'name/cti/kebab'],
+      transforms: ['attribute/cti', 'name/cti/kebab', 'transform/resolveMath', 'transform/size/px'],
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
       files: [
