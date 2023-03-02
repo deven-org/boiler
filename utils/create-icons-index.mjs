@@ -16,7 +16,8 @@ fs.readdir(iconDir, (err, files) => {
 
   files.forEach((file) => {
     if (file.endsWith('.svg')) {
-      const name = camelCase(path.parse(file).name);
+      const withPrefix = `blr${path.parse(file).name}`;
+      const name = camelCase(withPrefix);
       const data = fs.readFileSync(`${iconDir}/${file}`, 'utf8');
       // adds a class attribute to the svg string
       const withClassAttribute = data.replace('fill="currentColor"', 'class="${className}" fill="currentColor"');
@@ -37,6 +38,7 @@ fs.readdir(iconDir, (err, files) => {
 
   export const IconMapping = { ${icons.map((icon) => icon.name).join(',\n')} };
   export type IconType = keyof typeof IconMapping;
+  export const IconKeys = Object.keys(IconMapping);
   `;
 
   fs.writeFileSync(`${iconDir}/index.ts`, template, 'utf-8');

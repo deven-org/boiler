@@ -24,7 +24,7 @@
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
-    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icons -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
+    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icon-set -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
     "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
     "clear:generated-files": "node figma-design-tokens/config/clear-files.mjs",
     "style-dictionary": "npm run clear:generated-files && style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/_tokens-generated/* --write",

@@ -4,7 +4,7 @@ export const styleCustom = css`
   /* correct icon sizes will come from figma soon. this will probably also be outsourced to a component token */
 
   :host {
-    line-height: 0;
+    display: inline-flex;
   }
 
   .blr-icon.xs {
