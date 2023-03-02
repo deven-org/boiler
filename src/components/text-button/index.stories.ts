@@ -1,10 +1,16 @@
 import { html } from 'lit-html';
-
-import './index';
 import { BlrTextButton as BlrTextButtonClass } from './index';
+import { IconKeys } from '../../foundation/icons';
+import './index';
 
 export default {
   title: 'BlrTextButton',
+  argTypes: {
+    icon: {
+      options: IconKeys,
+      control: { type: 'select' },
+    },
+  },
 };
 
 export const BlrTextButton = ({
@@ -37,7 +43,7 @@ BlrTextButton.args = {
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  icon: 'boilerChevronDownXs',
+  icon: 'blrChevronDownMd',
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',

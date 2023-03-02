@@ -13,5 +13,5 @@ export const BlrIcon = ({ name }: BlrIconClass) =>
 BlrIcon.storyName = 'BlrIcon';
 
 BlrIcon.args = {
-  name: 'boilerChevronDownXs',
+  name: 'blr360Lg',
 };
