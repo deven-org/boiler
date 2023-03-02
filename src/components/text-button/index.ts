@@ -19,9 +19,15 @@ export class BlrTextButton extends LitElement {
   @property() buttonId?: string;
   @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
   @property() size?: SizesType = 'md';
+  @property() iconPosition?: 'left' | 'right' = 'right';
 
   render() {
-    const classes = { [`${this.variant}`]: this.variant, [`${this.size}`]: this.size, disabled: this.disabled };
+    const classes = {
+      [`${this.variant}`]: this.variant,
+      [`${this.size}`]: this.size,
+      disabled: this.disabled,
+      [`icon-${this.iconPosition}`]: this.iconPosition,
+    };
 
     return html`<button
       class="blr-semantic-action blr-text-button ${classMap(classes)}"
@@ -31,7 +37,7 @@ export class BlrTextButton extends LitElement {
       id=${this.buttonId}
     >
       <span>${this.label}</span>
-      ${this.icon && html`<blr-icon name="${this.icon}" class="blr-text-button-icon"></blr-icon>`}
+      ${this.icon && html`<blr-icon name="${this.icon}" class="blr-text-button-icon" aria-hidden></blr-icon>`}
     </button>`;
   }
 }
