@@ -7,12 +7,12 @@ import './index';
 export default {
   title: 'BlrTextButton',
   argTypes: {
-    icon: {
-      options: IconKeys,
+    leadingIcon: {
+      options: [undefined, ...IconKeys],
       control: { type: 'select' },
     },
-    iconPosition: {
-      options: ['left', 'right'],
+    trailingIcon: {
+      options: [undefined, ...IconKeys],
       control: { type: 'select' },
     },
     size: {
@@ -30,24 +30,24 @@ export const BlrTextButton = ({
   label,
   onClick,
   onBlur,
-  icon,
   disabled,
   buttonId,
   variant,
   size,
-  iconPosition,
+  leadingIcon,
+  trailingIcon,
 }: BlrTextButtonClass) =>
   html`
     <blr-text-button
       .label=${label}
-      .icon=${icon}
+      .leadingIcon=${leadingIcon}
+      .trailingIcon=${trailingIcon}
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
-      .iconPosition=${iconPosition}
       class="example-layout-class"
     ></blr-text-button>
   `;
@@ -58,7 +58,8 @@ BlrTextButton.args = {
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  icon: 'blrChevronDownMd',
+  leadingIcon: 'undefined',
+  trailingIcon: 'blrChevronDownMd',
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',

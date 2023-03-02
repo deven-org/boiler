@@ -14,19 +14,18 @@ export class BlrTextButton extends LitElement {
   @property() label = 'Button Label';
   @property() onClick: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() icon?: IconType;
+  @property() leadingIcon?: IconType;
+  @property() trailingIcon?: IconType;
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
   @property() size?: SizesType = 'md';
-  @property() iconPosition?: 'left' | 'right' = 'right';
 
   render() {
     const classes = {
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size,
       disabled: this.disabled,
-      [`icon-${this.iconPosition}`]: this.iconPosition,
     };
 
     return html`<button
@@ -36,8 +35,11 @@ export class BlrTextButton extends LitElement {
       ?disabled="${this.disabled}"
       id=${this.buttonId}
     >
+      ${this.leadingIcon &&
+      html`<blr-icon name="${this.leadingIcon}" class="blr-text-button-icon" aria-hidden></blr-icon>`}
       <span>${this.label}</span>
-      ${this.icon && html`<blr-icon name="${this.icon}" class="blr-text-button-icon" aria-hidden></blr-icon>`}
+      ${this.trailingIcon &&
+      html`<blr-icon name="${this.trailingIcon}" class="blr-text-button-icon" aria-hidden></blr-icon>`}
     </button>`;
   }
 }
