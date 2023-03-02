@@ -10,4 +10,8 @@ export const styleCustom = css`
   .blr-text-button .blr-text-button-icon {
     flex-shrink: 0;
   }
+
+  .blr-text-button.icon-left {
+    flex-direction: row-reverse;
+  }
 `;
