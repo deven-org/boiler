@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import TokenJson from '../input/BLR-tokens.json' assert { type: 'json' };
+import TokenJson from '../../input/BLR-tokens.json' assert { type: 'json' };
 import chalk from 'chalk';
 
 const __dirname = path.resolve();
