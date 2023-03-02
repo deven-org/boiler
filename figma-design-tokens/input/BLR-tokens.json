@@ -708,6 +708,18 @@
           "value": "1.6%",
           "type": "letterSpacing"
         }
+      },
+      "sizing": {
+        "sz-0125": {
+          "value": "{core.dimension.d-0125}",
+          "type": "sizing"
+        }
+      },
+      "dimension": {
+        "d-0125": {
+          "value": "0.125rem",
+          "type": "dimension"
+        }
       }
     }
   },
