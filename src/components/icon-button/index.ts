@@ -4,18 +4,19 @@ import { customElement, property } from 'lit/decorators.js';
 import { IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
+
+// component token needs to be switched with iconButton
 import { textButton } from '../../foundation/component-tokens/action';
 import { SizesType } from '../../globals/types';
 
-@customElement('blr-text-button')
-export class BlrTextButton extends LitElement {
+@customElement('blr-icon-button')
+export class BlrIconButton extends LitElement {
   static styles = [styleCustom, action, textButton];
 
-  @property() label = 'Button Label';
+  @property() arialabel: string;
+  @property() iconName: IconType;
   @property() onClick: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: IconType;
-  @property() trailingIcon?: IconType;
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
@@ -29,15 +30,14 @@ export class BlrTextButton extends LitElement {
     };
 
     return html`<button
+      aria-label="${this.ariaLabel}"
       class="blr-semantic-action blr-text-button ${classMap(classes)}"
       @click="${this.onClick}"
       @blur="${this.onBlur}"
       ?disabled="${this.disabled}"
       id=${this.buttonId}
     >
-      ${this.leadingIcon && html`<blr-icon name="${this.leadingIcon}" aria-hidden></blr-icon>`}
-      <span>${this.label}</span>
-      ${this.trailingIcon && html`<blr-icon name="${this.trailingIcon}" aria-hidden></blr-icon>`}
+      <blr-icon name="${this.iconName}" aria-hidden></blr-icon>
     </button>`;
   }
 }
