@@ -29,7 +29,13 @@ module.exports = {
   source: ['figma-design-tokens/input/tokens.normalized.json'],
   platforms: {
     scss: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'transform/resolveMath', 'transform/size/px'],
+      transforms: [
+        'attribute/cti',
+        'name/cti/kebab',
+        'transform/resolveMath',
+        'transform/size/px',
+        'transform/font-to-rem',
+      ],
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
       files: [
@@ -63,6 +69,7 @@ module.exports = {
         'transform/size/px',
         'transform/strReplace',
         'transform/font-weight',
+        'transform/font-to-rem',
       ],
       prefix: 'blr',
       buildPath: 'figma-design-tokens/',
