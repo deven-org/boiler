@@ -20,4 +20,4 @@ const string = JSON.stringify(flattenedJson)
 
 console.log(chalk.cyanBright('\n🧵🪡 normalize token.json...\n'));
 
-fs.writeFileSync(`${__dirname}/figma-design-tokens/input/tokens.normalized.json`, string, 'utf-8');
+fs.writeFileSync(`${__dirname}/input/tokens.normalized.json`, string, 'utf-8');

@@ -26,7 +26,7 @@ StyleDictionary.registerFormat({
 });
 
 module.exports = {
-  source: ['figma-design-tokens/input/tokens.normalized.json'],
+  source: ['input/tokens.normalized.json'],
   platforms: {
     scss: {
       transforms: [
@@ -37,16 +37,16 @@ module.exports = {
         'transform/font-to-rem',
       ],
       prefix: 'blr',
-      buildPath: 'figma-design-tokens/',
+      buildPath: '../../src/foundation/_tokens-generated/',
       files: [
         ...types.map((type) => ({
           format: 'css/variables',
-          destination: `../src/foundation/_tokens-generated/_${kebabCase(type)}.generated.scss`,
+          destination: `_${kebabCase(type)}.generated.scss`,
           filter: (token) => token.attributes.category === 'core' && token.attributes.type === type,
         })),
         {
           format: 'css/variables',
-          destination: `../src/foundation/_tokens-generated/_color.generated.scss`,
+          destination: `_color.generated.scss`,
           filter: (token) => {
             const isCore = token.attributes.category === 'core';
             const isColor = token.attributes.type === 'color';
@@ -72,16 +72,16 @@ module.exports = {
         'transform/font-to-rem',
       ],
       prefix: 'blr',
-      buildPath: 'figma-design-tokens/',
+      buildPath: '../../src/foundation/_tokens-generated/',
       files: [
         {
           format: 'custom/format/tokens',
-          destination: '../src/foundation/_tokens-generated/__semantic-tokens.generated.js',
+          destination: '__semantic-tokens.generated.js',
           filter: (token) => token.attributes.category === 'semantic',
         },
         {
           format: 'custom/format/tokens',
-          destination: '../src/foundation/_tokens-generated/__component-tokens.generated.js',
+          destination: '__component-tokens.generated.js',
           filter: (token) => token.attributes.category === 'component',
         },
       ],

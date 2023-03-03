@@ -1,9 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import chalk from 'chalk';
 
-const __dirname = path.resolve();
-const files = fs.readdirSync(`${__dirname}/src/foundation/_tokens-generated`);
+const files = fs.readdirSync(`../../src/foundation/_tokens-generated`);
 
 const convertToCamelCase = (item) => {
   let convertedString = item;
@@ -30,7 +28,7 @@ const exportsPart = filteredJsFiles.map(
   (item) => `export {${convertToCamelCase(item)}Wrapped as ${convertToCamelCase(item)}}`
 );
 
-const fileOutPut = `import {wrapValuesWithCss} from '../../../figma-design-tokens/config/wrap-values-with-css.mjs';
+const fileOutPut = `import {wrapValuesWithCss} from '@boiler/figma-design-tokens/config/wrap-values-with-css.mjs';
     ${importsPart.join('\n')}
 
     ${constsPart.join('\n')}
@@ -38,7 +36,7 @@ const fileOutPut = `import {wrapValuesWithCss} from '../../../figma-design-token
     ${exportsPart.join('\n')}`;
 
 console.log(chalk.magentaBright('👷 creates foundation/_tokens-generated/index.generated.scss... \n'));
-fs.writeFileSync(`${__dirname}/src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
+fs.writeFileSync(`../../src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
 
 console.log(chalk.cyanBright('👷 creates foundation/_tokens-generated/index.generated.js... \n'));
-fs.writeFileSync(`${__dirname}/src/foundation/_tokens-generated/index.generated.js`, fileOutPut, 'utf-8');
+fs.writeFileSync(`../../src/foundation/_tokens-generated/index.generated.js`, fileOutPut, 'utf-8');
