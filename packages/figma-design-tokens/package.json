@@ -1,0 +1,20 @@
+{
+  "name": "@boiler/figma-design-tokens",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "normalize:tokens": "node --experimental-json-modules ./config/normalize-token-json.mjs",
+    "postnormalize:tokens": "prettier ./input/tokens.normalized.json --write",
+    "style-dictionary": "rimraf ./src/foundation/_tokens-generated/* && style-dictionary build --config ./config/style-dictionary.config.js",
+    "generate-index-files": "node ./config/generate-index-files.mjs",
+    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary && npm run generate-index-files",
+    "posttokens:generate": "prettier ../../src/foundation/_tokens-generated/* --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "style-dictionary": "^3.7.2",
+    "@tokens-studio/sd-transforms": "^0.4.3",
+    "lodash.kebabcase": "4.1.1"
+  }
+}
