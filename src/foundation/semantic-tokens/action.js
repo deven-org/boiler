@@ -1,4 +1,4 @@
-import { css, unsafeCSS } from 'lit';
+import { css } from 'lit';
 import { semanticTokens } from '../_tokens-generated/index.generated';
 
 const { BorderRadius, BorderWidth, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
@@ -6,168 +6,168 @@ const { BorderRadius, BorderWidth, CTA, Primary, Secondary, Silent, XS, SM, MD, 
 
 export const action = css`
   .blr-semantic-action {
-    border-radius: ${unsafeCSS(BorderRadius)};
-    border-width: ${unsafeCSS(BorderWidth.Rest)};
+    border-radius: ${BorderRadius};
+    border-width: ${BorderWidth.Rest};
   }
 
   .blr-semantic-action.cta {
-    background-color: ${unsafeCSS(CTA.SurfaceFill.Rest)};
-    border-color: ${unsafeCSS(CTA.SurfaceStroke.Rest)};
-    color: ${unsafeCSS(CTA.Icon.Rest)};
+    background-color: ${CTA.SurfaceFill.Rest};
+    border-color: ${CTA.SurfaceStroke.Rest};
+    color: ${CTA.Icon.Rest};
   }
 
   .blr-semantic-action.cta:hover {
-    background-color: ${unsafeCSS(CTA.SurfaceFill.Hover)};
+    background-color: ${CTA.SurfaceFill.Hover};
   }
 
   .blr-semantic-action.cta:active {
-    background-color: ${unsafeCSS(CTA.SurfaceFill.Pressed)};
+    background-color: ${CTA.SurfaceFill.Pressed};
   }
 
   .blr-semantic-action.cta:disabled {
-    background-color: ${unsafeCSS(CTA.SurfaceFill.Disabled)};
-    color: ${unsafeCSS(CTA.Icon.Disabled)};
+    background-color: ${CTA.SurfaceFill.Disabled};
+    color: ${CTA.Icon.Disabled};
   }
 
   .blr-semantic-action.primary {
-    background-color: ${unsafeCSS(Primary.SurfaceFill.Rest)};
-    border-color: ${unsafeCSS(Primary.SurfaceStroke.Rest)};
-    color: ${unsafeCSS(Primary.Icon.Rest)};
+    background-color: ${Primary.SurfaceFill.Rest};
+    border-color: ${Primary.SurfaceStroke.Rest};
+    color: ${Primary.Icon.Rest};
   }
 
   .blr-semantic-action.primary:hover {
-    background-color: ${unsafeCSS(Primary.SurfaceFill.Hover)};
+    background-color: ${Primary.SurfaceFill.Hover};
   }
 
   .blr-semantic-action.primary:active {
-    background-color: ${unsafeCSS(Primary.SurfaceFill.Pressed)};
+    background-color: ${Primary.SurfaceFill.Pressed};
   }
 
   .blr-semantic-action.primary:disabled {
-    background-color: ${unsafeCSS(Primary.SurfaceFill.Disabled)};
-    color: ${unsafeCSS(Primary.Icon.Disabled)};
+    background-color: ${Primary.SurfaceFill.Disabled};
+    color: ${Primary.Icon.Disabled};
   }
 
   .blr-semantic-action.secondary {
-    background-color: ${unsafeCSS(Secondary.SurfaceFill.Rest)};
-    border-color: ${unsafeCSS(Secondary.SurfaceStroke.Rest)};
-    color: ${unsafeCSS(Secondary.Icon.Rest)};
+    background-color: ${Secondary.SurfaceFill.Rest};
+    border-color: ${Secondary.SurfaceStroke.Rest};
+    color: ${Secondary.Icon.Rest};
   }
 
   .blr-semantic-action.secondary:hover {
-    background-color: ${unsafeCSS(Secondary.SurfaceFill.Hover)};
-    border-color: ${unsafeCSS(Secondary.SurfaceStroke.Hover)};
-    color: ${unsafeCSS(Secondary.Icon.Hover)};
+    background-color: ${Secondary.SurfaceFill.Hover};
+    border-color: ${Secondary.SurfaceStroke.Hover};
+    color: ${Secondary.Icon.Hover};
   }
 
   .blr-semantic-action.secondary:active {
-    background-color: ${unsafeCSS(Secondary.SurfaceFill.Pressed)};
-    border-color: ${unsafeCSS(Secondary.SurfaceStroke.Pressed)};
-    color: ${unsafeCSS(Secondary.Icon.Pressed)};
+    background-color: ${Secondary.SurfaceFill.Pressed};
+    border-color: ${Secondary.SurfaceStroke.Pressed};
+    color: ${Secondary.Icon.Pressed};
   }
 
   .blr-semantic-action.secondary:disabled {
-    background-color: ${unsafeCSS(Secondary.SurfaceFill.Disabled)};
-    border-color: ${unsafeCSS(Secondary.SurfaceStroke.Disabled)};
-    color: ${unsafeCSS(Secondary.Icon.Disabled)};
+    background-color: ${Secondary.SurfaceFill.Disabled};
+    border-color: ${Secondary.SurfaceStroke.Disabled};
+    color: ${Secondary.Icon.Disabled};
   }
 
   .blr-semantic-action.silent {
-    background-color: ${unsafeCSS(Silent.SurfaceFill.Rest)};
-    border-color: ${unsafeCSS(Silent.SurfaceStroke.Rest)};
-    color: ${unsafeCSS(Silent.Icon.Rest)};
+    background-color: ${Silent.SurfaceFill.Rest};
+    border-color: ${Silent.SurfaceStroke.Rest};
+    color: ${Silent.Icon.Rest};
   }
 
   .blr-semantic-action.silent:hover {
-    background-color: ${unsafeCSS(Silent.SurfaceFill.Hover)};
-    color: ${unsafeCSS(Silent.Icon.Hover)};
+    background-color: ${Silent.SurfaceFill.Hover};
+    color: ${Silent.Icon.Hover};
   }
 
   .blr-semantic-action.silent:active {
-    background-color: ${unsafeCSS(Silent.SurfaceFill.Pressed)};
-    color: ${unsafeCSS(Silent.Icon.Pressed)};
+    background-color: ${Silent.SurfaceFill.Pressed};
+    color: ${Silent.Icon.Pressed};
   }
 
   .blr-semantic-action.silent:disabled {
-    background-color: ${unsafeCSS(Silent.SurfaceFill.Pressed)};
-    color: ${unsafeCSS(Silent.Icon.Disabled)};
+    background-color: ${Silent.SurfaceFill.Pressed};
+    color: ${Silent.Icon.Disabled};
   }
 
   .blr-semantic-action.xs {
-    height: ${unsafeCSS(XS.Height)};
-    font-family: ${unsafeCSS(XS.Label.fontFamily)};
-    font-weight: ${unsafeCSS(XS.Label.fontWeight)};
-    line-height: ${unsafeCSS(XS.Label.lineHeight)};
-    font-size: ${unsafeCSS(XS.Label.fontSize)};
+    height: ${XS.Height};
+    font-family: ${XS.Label.fontFamily};
+    font-weight: ${XS.Label.fontWeight};
+    line-height: ${XS.Label.lineHeight};
+    font-size: ${XS.Label.fontSize};
   }
 
   .blr-semantic-action.sm {
-    height: ${unsafeCSS(SM.Height)};
-    font-family: ${unsafeCSS(SM.Label.fontFamily)};
-    font-weight: ${unsafeCSS(SM.Label.fontWeight)};
-    line-height: ${unsafeCSS(SM.Label.lineHeight)};
-    font-size: ${unsafeCSS(SM.Label.fontSize)};
+    height: ${SM.Height};
+    font-family: ${SM.Label.fontFamily};
+    font-weight: ${SM.Label.fontWeight};
+    line-height: ${SM.Label.lineHeight};
+    font-size: ${SM.Label.fontSize};
   }
 
   .blr-semantic-action.md {
-    height: ${unsafeCSS(MD.Height)};
-    font-family: ${unsafeCSS(MD.Label.fontFamily)};
-    font-weight: ${unsafeCSS(MD.Label.fontWeight)};
-    line-height: ${unsafeCSS(MD.Label.lineHeight)};
-    font-size: ${unsafeCSS(MD.Label.fontSize)};
+    height: ${MD.Height};
+    font-family: ${MD.Label.fontFamily};
+    font-weight: ${MD.Label.fontWeight};
+    line-height: ${MD.Label.lineHeight};
+    font-size: ${MD.Label.fontSize};
   }
 
   .blr-semantic-action.lg {
-    height: ${unsafeCSS(LG.Height)};
-    font-family: ${unsafeCSS(LG.Label.fontFamily)};
-    font-weight: ${unsafeCSS(LG.Label.fontWeight)};
-    line-height: ${unsafeCSS(LG.Label.lineHeight)};
-    font-size: ${unsafeCSS(LG.Label.fontSize)};
+    height: ${LG.Height};
+    font-family: ${LG.Label.fontFamily};
+    font-weight: ${LG.Label.fontWeight};
+    line-height: ${LG.Label.lineHeight};
+    font-size: ${LG.Label.fontSize};
   }
 
   .blr-semantic-action.xl {
-    height: ${unsafeCSS(XL.Height)};
-    font-family: ${unsafeCSS(XL.Label.fontFamily)};
-    font-weight: ${unsafeCSS(XL.Label.fontWeight)};
-    line-height: ${unsafeCSS(XL.Label.lineHeight)};
-    font-size: ${unsafeCSS(XL.Label.fontSize)};
+    height: ${XL.Height};
+    font-family: ${XL.Label.fontFamily};
+    font-weight: ${XL.Label.fontWeight};
+    line-height: ${XL.Label.lineHeight};
+    font-size: ${XL.Label.fontSize};
   }
 
   .blr-semantic-action.destructive {
-    background-color: ${unsafeCSS(Destructive.SurfaceFill.Rest)};
-    border-color: ${unsafeCSS(Destructive.SurfaceStroke.Rest)};
-    color: ${unsafeCSS(Destructive.Icon.Rest)};
+    background-color: ${Destructive.SurfaceFill.Rest};
+    border-color: ${Destructive.SurfaceStroke.Rest};
+    color: ${Destructive.Icon.Rest};
   }
 
   .blr-semantic-action.destructive:hover {
-    background-color: ${unsafeCSS(Destructive.SurfaceFill.Hover)};
+    background-color: ${Destructive.SurfaceFill.Hover};
   }
 
   .blr-semantic-action.destructive:active {
-    background-color: ${unsafeCSS(Destructive.SurfaceFill.Pressed)};
+    background-color: ${Destructive.SurfaceFill.Pressed};
   }
 
   .blr-semantic-action.destructive:disabled {
-    background-color: ${unsafeCSS(Destructive.SurfaceFill.Disabled)};
-    color: ${unsafeCSS(Destructive.Icon.Disabled)};
+    background-color: ${Destructive.SurfaceFill.Disabled};
+    color: ${Destructive.Icon.Disabled};
   }
 
   .blr-semantic-action.encourage {
-    background-color: ${unsafeCSS(Encourage.SurfaceFill.Rest)};
-    border-color: ${unsafeCSS(Encourage.SurfaceStroke.Rest)};
-    color: ${unsafeCSS(Encourage.Icon.Rest)};
+    background-color: ${Encourage.SurfaceFill.Rest};
+    border-color: ${Encourage.SurfaceStroke.Rest};
+    color: ${Encourage.Icon.Rest};
   }
 
   .blr-semantic-action.encourage:hover {
-    background-color: ${unsafeCSS(Encourage.SurfaceFill.Hover)};
+    background-color: ${Encourage.SurfaceFill.Hover};
   }
 
   .blr-semantic-action.encourage:active {
-    background-color: ${unsafeCSS(Encourage.SurfaceFill.Pressed)};
+    background-color: ${Encourage.SurfaceFill.Pressed};
   }
 
   .blr-semantic-action.encourage:disabled {
-    background-color: ${unsafeCSS(Encourage.SurfaceFill.Disabled)};
-    color: ${unsafeCSS(Encourage.Icon.Disabled)};
+    background-color: ${Encourage.SurfaceFill.Disabled};
+    color: ${Encourage.Icon.Disabled};
   }
 `;
