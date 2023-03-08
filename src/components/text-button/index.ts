@@ -5,7 +5,7 @@ import { IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
 import { textButton } from '../../foundation/component-tokens/action';
-import { SizesType } from '../../globals/types';
+import { ActionVariants, SizesType } from '../../globals/types';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -18,7 +18,7 @@ export class BlrTextButton extends LitElement {
   @property() trailingIcon?: IconType;
   @property() disabled?: boolean;
   @property() buttonId?: string;
-  @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
+  @property() variant: ActionVariants = 'primary';
   @property() size?: SizesType = 'md';
 
   render() {
