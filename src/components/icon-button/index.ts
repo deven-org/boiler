@@ -7,7 +7,7 @@ import { action } from '../../foundation/semantic-tokens/action';
 
 // component token needs to be switched with iconButton
 import { textButton } from '../../foundation/component-tokens/action';
-import { SizesType } from '../../globals/types';
+import { ActionVariants, SizesType } from '../../globals/types';
 
 @customElement('blr-icon-button')
 export class BlrIconButton extends LitElement {
@@ -19,7 +19,7 @@ export class BlrIconButton extends LitElement {
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() disabled?: boolean;
   @property() buttonId?: string;
-  @property() variant: 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage' = 'primary';
+  @property() variant: ActionVariants = 'primary';
   @property() size?: SizesType = 'md';
 
   render() {
