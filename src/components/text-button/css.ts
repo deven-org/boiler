@@ -8,6 +8,10 @@ export const styleCustom = css`
     outline-offset: -2px;
   }
 
+  .blr-text-button:disabled {
+    pointer-events: none;
+  }
+
   .blr-text-button:focus {
     /*  Component Tokens for Outline are missing */
     /* Need to make sure we meet AA requirements with this custom outline */

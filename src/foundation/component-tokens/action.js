@@ -1,7 +1,7 @@
 import { css } from 'lit';
 import { componentTokens } from '../_tokens-generated/index.generated';
 
-const { TextButton } = componentTokens.component.Action;
+const { TextButton, IconButton } = componentTokens.component.Action;
 
 export const textButton = css`
   .blr-text-button.xs {
@@ -27,5 +27,27 @@ export const textButton = css`
   .blr-text-button.xl {
     padding: ${TextButton.XL.Padding};
     gap: ${TextButton.XL.Gap};
+  }
+`;
+
+export const iconButton = css`
+  .blr-icon-button.xs {
+    min-width: ${IconButton.XS.Width};
+  }
+
+  .blr-icon-button.sm {
+    min-width: ${IconButton.SM.Width};
+  }
+
+  .blr-icon-button.md {
+    min-width: ${IconButton.MD.Width};
+  }
+
+  .blr-icon-button.lg {
+    min-width: ${IconButton.LG.Width};
+  }
+
+  .blr-icon-button.xl {
+    min-width: ${IconButton.XL.Width};
   }
 `;
