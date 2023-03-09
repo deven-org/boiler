@@ -1225,86 +1225,6 @@
           }
         }
       },
-      "BorderRadius": {
-        "value": "{core.borderRadius.MD}",
-        "type": "borderRadius"
-      },
-      "BorderWidth": {
-        "Rest": {
-          "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
-        },
-        "Hover": {
-          "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
-        },
-        "Pressed": {
-          "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
-        },
-        "Focus": {
-          "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
-        },
-        "Disabled": {
-          "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
-        },
-        "Loading": {
-          "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
-        }
-      },
-      "XS": {
-        "Height": {
-          "value": "{core.spacing.SP-250}px",
-          "type": "sizing"
-        },
-        "Label": {
-          "value": "{Label.XS}",
-          "type": "typography"
-        }
-      },
-      "SM": {
-        "Height": {
-          "value": "{core.spacing.SP-300}px",
-          "type": "sizing"
-        },
-        "Label": {
-          "value": "{Label.MD}",
-          "type": "typography"
-        }
-      },
-      "MD": {
-        "Height": {
-          "value": "{core.spacing.SP-400}px",
-          "type": "sizing"
-        },
-        "Label": {
-          "value": "{Label.MD}",
-          "type": "typography"
-        }
-      },
-      "LG": {
-        "Height": {
-          "value": "{core.spacing.SP-500}px",
-          "type": "sizing"
-        },
-        "Label": {
-          "value": "{Label.LG}",
-          "type": "typography"
-        }
-      },
-      "XL": {
-        "Height": {
-          "value": "{core.spacing.SP-700}px",
-          "type": "sizing"
-        },
-        "Label": {
-          "value": "{Label.LG}",
-          "type": "typography"
-        }
-      },
       "Destructive": {
         "SurfaceFill": {
           "Rest": {
@@ -1515,6 +1435,86 @@
             "value": "{core.color.neutral.white}",
             "type": "color"
           }
+        }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.MD}",
+        "type": "borderRadius"
+      },
+      "BorderWidth": {
+        "Rest": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "Hover": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "Pressed": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "Focus": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "Disabled": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "Loading": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        }
+      },
+      "XS": {
+        "Height": {
+          "value": "{core.sizing.SZ-250}px",
+          "type": "sizing"
+        },
+        "Label": {
+          "value": "{Label.XS}",
+          "type": "typography"
+        }
+      },
+      "SM": {
+        "Height": {
+          "value": "{core.sizing.SZ-300}px",
+          "type": "sizing"
+        },
+        "Label": {
+          "value": "{Label.MD}",
+          "type": "typography"
+        }
+      },
+      "MD": {
+        "Height": {
+          "value": "{core.sizing.SZ-400}px",
+          "type": "sizing"
+        },
+        "Label": {
+          "value": "{Label.MD}",
+          "type": "typography"
+        }
+      },
+      "LG": {
+        "Height": {
+          "value": "{core.sizing.SZ-500}px",
+          "type": "sizing"
+        },
+        "Label": {
+          "value": "{Label.LG}",
+          "type": "typography"
+        }
+      },
+      "XL": {
+        "Height": {
+          "value": "{core.sizing.SZ-700}px",
+          "type": "sizing"
+        },
+        "Label": {
+          "value": "{Label.LG}",
+          "type": "typography"
         }
       }
     },
