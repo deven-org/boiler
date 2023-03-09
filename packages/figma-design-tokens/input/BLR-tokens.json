@@ -1970,6 +1970,40 @@
           }
         }
       }
+    },
+    "ui": {
+      "icon": {
+        "xxs": {
+          "value": "{core.sizing.SZ-100}",
+          "type": "sizing",
+          "description": "size of xxs icon"
+        },
+        "xs": {
+          "value": "{core.sizing.SZ-150}",
+          "type": "sizing",
+          "description": "size of xs icon"
+        },
+        "sm": {
+          "value": "{core.sizing.SZ-200}",
+          "type": "sizing",
+          "description": "size of sm icon"
+        },
+        "md": {
+          "value": "{core.sizing.SZ-300}",
+          "type": "sizing",
+          "description": "size of md icon"
+        },
+        "lg": {
+          "value": "{core.sizing.SZ-400}",
+          "type": "sizing",
+          "description": "size of lg icon"
+        },
+        "xl": {
+          "value": "{core.sizing.SZ-600}",
+          "type": "sizing",
+          "description": "size of xl icon"
+        }
+      }
     }
   },
   "BLR_ASS": {
