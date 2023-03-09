@@ -685,7 +685,7 @@
       },
       "fontSizes": {
         "50": {
-          "value": "{core.fontSizes.base}*0.5",
+          "value": "0.5rem",
           "type": "fontSizes"
         },
         "75": {
