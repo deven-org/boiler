@@ -1,74 +1,74 @@
 {
   "BLR_COR": {
     "core": {
-      "sizing": {
+      "sizing-px": {
         "base": {
           "value": "8",
           "type": "sizing",
           "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
         },
         "SZ-025": {
-          "value": "{core.sizing.base}*0.25",
+          "value": "{core.sizing-px.base}*0.25",
           "type": "sizing"
         },
         "SZ-050": {
-          "value": "{core.sizing.base}*0.5",
+          "value": "{core.sizing-px.base}*0.5",
           "type": "sizing"
         },
         "SZ-100": {
-          "value": "{core.sizing.base}*1",
+          "value": "{core.sizing-px.base}*1",
           "type": "sizing"
         },
         "SZ-150": {
-          "value": "{core.sizing.base}*1.5",
+          "value": "{core.sizing-px.base}*1.5",
           "type": "sizing"
         },
         "SZ-200": {
-          "value": "{core.sizing.base}*2",
+          "value": "{core.sizing-px.base}*2",
           "type": "sizing"
         },
         "SZ-250": {
-          "value": "{core.sizing.base}*2.5",
+          "value": "{core.sizing-px.base}*2.5",
           "type": "sizing"
         },
         "SZ-300": {
-          "value": "{core.sizing.base}*3",
+          "value": "{core.sizing-px.base}*3",
           "type": "sizing"
         },
         "SZ-400": {
-          "value": "{core.sizing.base}*4",
+          "value": "{core.sizing-px.base}*4",
           "type": "sizing"
         },
         "SZ-500": {
-          "value": "{core.sizing.base}*5",
+          "value": "{core.sizing-px.base}*5",
           "type": "sizing"
         },
         "SZ-600": {
-          "value": "{core.sizing.base}*6",
+          "value": "{core.sizing-px.base}*6",
           "type": "sizing"
         },
         "SZ-700": {
-          "value": "{core.sizing.base}*7",
+          "value": "{core.sizing-px.base}*7",
           "type": "sizing"
         },
         "SZ-800": {
-          "value": "{core.sizing.base}*8",
+          "value": "{core.sizing-px.base}*8",
           "type": "sizing"
         },
         "SZ-900": {
-          "value": "{core.sizing.base}*9",
+          "value": "{core.sizing-px.base}*9",
           "type": "sizing"
         },
         "SZ-1000": {
-          "value": "{core.sizing.base}*10",
+          "value": "{core.sizing-px.base}*10",
           "type": "sizing"
         },
         "SZ-2000": {
-          "value": "{core.sizing.base}*20",
+          "value": "{core.sizing-px.base}*20",
           "type": "sizing"
         },
         "SZ-3000": {
-          "value": "{core.sizing.base}*30",
+          "value": "{core.sizing-px.base}*30",
           "type": "sizing"
         }
       },
@@ -777,6 +777,14 @@
           "type": "letterSpacing"
         }
       }
+    },
+    "dimension": {
+      "rem": {
+        "50": {
+          "value": "0.5rem",
+          "type": "dimension"
+        }
+      }
     }
   },
   "BLR_SEM": {
@@ -1465,7 +1473,7 @@
       },
       "XS": {
         "Height": {
-          "value": "{core.sizing.SZ-250}px",
+          "value": "{core.sizing-px.SZ-250}px",
           "type": "sizing"
         },
         "Label": {
@@ -1475,7 +1483,7 @@
       },
       "SM": {
         "Height": {
-          "value": "{core.sizing.SZ-300}px",
+          "value": "{core.sizing-px.SZ-300}px",
           "type": "sizing"
         },
         "Label": {
@@ -1485,7 +1493,7 @@
       },
       "MD": {
         "Height": {
-          "value": "{core.sizing.SZ-400}px",
+          "value": "{core.sizing-px.SZ-400}px",
           "type": "sizing"
         },
         "Label": {
@@ -1495,7 +1503,7 @@
       },
       "LG": {
         "Height": {
-          "value": "{core.sizing.SZ-500}px",
+          "value": "{core.sizing-px.SZ-500}px",
           "type": "sizing"
         },
         "Label": {
@@ -1505,7 +1513,7 @@
       },
       "XL": {
         "Height": {
-          "value": "{core.sizing.SZ-700}px",
+          "value": "{core.sizing-px.SZ-700}px",
           "type": "sizing"
         },
         "Label": {
@@ -1970,32 +1978,32 @@
     "ui": {
       "icon": {
         "xxs": {
-          "value": "{core.sizing.SZ-100}",
+          "value": "{core.sizing-px.SZ-100}",
           "type": "sizing",
           "description": "size of xxs icon"
         },
         "xs": {
-          "value": "{core.sizing.SZ-150}",
+          "value": "{core.sizing-px.SZ-150}",
           "type": "sizing",
           "description": "size of xs icon"
         },
         "sm": {
-          "value": "{core.sizing.SZ-200}",
+          "value": "{core.sizing-px.SZ-200}",
           "type": "sizing",
           "description": "size of sm icon"
         },
         "md": {
-          "value": "{core.sizing.SZ-300}",
+          "value": "{core.sizing-px.SZ-300}",
           "type": "sizing",
           "description": "size of md icon"
         },
         "lg": {
-          "value": "{core.sizing.SZ-400}",
+          "value": "{core.sizing-px.SZ-400}",
           "type": "sizing",
           "description": "size of lg icon"
         },
         "xl": {
-          "value": "{core.sizing.SZ-600}",
+          "value": "{core.sizing-px.SZ-600}",
           "type": "sizing",
           "description": "size of xl icon"
         }
