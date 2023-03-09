@@ -505,67 +505,67 @@
             "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
           },
           "SP-025": {
-            "value":"{core.dimension.spacing.base}*0.25px",
+            "value":"{core.dimension.PX.base}*0.25px",
             "type": "dimension"
           },
           "SP-050": {
-            "value": "{core.dimension.spacing.base}*0.5px",
+            "value": "{core.dimension.PX.base}*0.5px",
             "type": "dimension"
           },
           "SZ-100": {
-            "value": "{core.dimension.spacing.base}*1px",
+            "value": "{core.dimension.PX.base}*1px",
             "type": "dimension"
           },
           "SZ-150": {
-            "value": "{core.dimension.spacing.base}*1.5px",
+            "value": "{core.dimension.PX.base}*1.5px",
             "type": "dimension"
           },
           "SZ-200": {
-            "value": "{core.dimension.spacing.base}*2px",
+            "value": "{core.dimension.PX.base}*2px",
             "type": "dimension"
           },
           "SZ-250": {
-            "value": "{core.dimension.spacing.base}*2.5px",
+            "value": "{core.dimension.PX.base}*2.5px",
             "type": "dimension"
           },
           "SZ-300": {
-            "value": "{core.dimension.spacing.base}*3px",
+            "value": "{core.dimension.PX.base}*3px",
             "type": "dimension"
           },
           "SZ-400": {
-            "value": "{core.dimension.spacing.base}*4px",
+            "value": "{core.dimension.PX.base}*4px",
             "type": "dimension"
           },
           "SZ-500": {
-            "value": "{core.dimension.spacing.base}*5px",
+            "value": "{core.dimension.PX.base}*5px",
             "type": "dimension"
           },
           "SZ-600": {
-            "value": "{core.dimension.spacing.base}*6px",
+            "value": "{core.dimension.PX.base}*6px",
             "type": "dimension"
           },
           "SZ-700": {
-            "value": "{core.dimension.spacing.base}*7px",
+            "value": "{core.dimension.PX.base}*7px",
             "type": "dimension"
           },
           "SZ-800": {
-            "value": "{core.dimension.spacing.base}*8px",
+            "value": "{core.dimension.PX.base}*8px",
             "type": "dimension"
           },
           "SZ-900": {
-            "value": "{core.dimension.spacing.base}*9px",
+            "value": "{core.dimension.PX.base}*9px",
             "type": "dimension"
           },
           "SZ-1000": {
-            "value": "{core.dimension.spacing.base}*10px",
+            "value": "{core.dimension.PX.base}*10px",
             "type": "dimension"
           },
           "SZ-2000": {
-            "value": "{core.dimension.spacing.base}*20px",
+            "value": "{core.dimension.PX.base}*20px",
             "type": "dimension"
           },
           "SZ-3000": {
-            "value": "{core.dimension.spacing.base}*30px",
+            "value": "{core.dimension.PX.base}*30px",
             "type": "dimension"
           }
         },
