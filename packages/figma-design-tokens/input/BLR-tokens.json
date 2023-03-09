@@ -1,6 +1,148 @@
 {
   "BLR_COR": {
-    "core": {   
+    "core": {
+      "sizing-px": {
+        "base": {
+          "value": "8",
+          "type": "sizing",
+          "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
+        },
+        "SZ-025": {
+          "value": "{core.sizing-px.base}*0.25",
+          "type": "sizing"
+        },
+        "SZ-050": {
+          "value": "{core.sizing-px.base}*0.5",
+          "type": "sizing"
+        },
+        "SZ-100": {
+          "value": "{core.sizing-px.base}*1",
+          "type": "sizing"
+        },
+        "SZ-150": {
+          "value": "{core.sizing-px.base}*1.5",
+          "type": "sizing"
+        },
+        "SZ-200": {
+          "value": "{core.sizing-px.base}*2",
+          "type": "sizing"
+        },
+        "SZ-250": {
+          "value": "{core.sizing-px.base}*2.5",
+          "type": "sizing"
+        },
+        "SZ-300": {
+          "value": "{core.sizing-px.base}*3",
+          "type": "sizing"
+        },
+        "SZ-400": {
+          "value": "{core.sizing-px.base}*4",
+          "type": "sizing"
+        },
+        "SZ-500": {
+          "value": "{core.sizing-px.base}*5",
+          "type": "sizing"
+        },
+        "SZ-600": {
+          "value": "{core.sizing-px.base}*6",
+          "type": "sizing"
+        },
+        "SZ-700": {
+          "value": "{core.sizing-px.base}*7",
+          "type": "sizing"
+        },
+        "SZ-800": {
+          "value": "{core.sizing-px.base}*8",
+          "type": "sizing"
+        },
+        "SZ-900": {
+          "value": "{core.sizing-px.base}*9",
+          "type": "sizing"
+        },
+        "SZ-1000": {
+          "value": "{core.sizing-px.base}*10",
+          "type": "sizing"
+        },
+        "SZ-2000": {
+          "value": "{core.sizing-px.base}*20",
+          "type": "sizing"
+        },
+        "SZ-3000": {
+          "value": "{core.sizing-px.base}*30",
+          "type": "sizing"
+        }
+      },
+      "spacing": {
+        "base": {
+          "value": "8",
+          "type": "spacing",
+          "description": "base token - do not consume directly, use actual spacing tokens (SP.025, SP,050...)"
+        },
+        "SP-025": {
+          "value": "{core.spacing.base}*0.25",
+          "type": "spacing"
+        },
+        "SP-050": {
+          "value": "{core.spacing.base}*0.5",
+          "type": "spacing"
+        },
+        "SP-100": {
+          "value": "{core.spacing.base}*1",
+          "type": "spacing"
+        },
+        "SP-150": {
+          "value": "{core.spacing.base}*1.5",
+          "type": "spacing"
+        },
+        "SP-200": {
+          "value": "{core.spacing.base}*2",
+          "type": "spacing"
+        },
+        "SP-250": {
+          "value": "{core.spacing.base}*2.5",
+          "type": "spacing"
+        },
+        "SP-300": {
+          "value": "{core.spacing.base}*3",
+          "type": "spacing"
+        },
+        "SP-400": {
+          "value": "{core.spacing.base}*4",
+          "type": "spacing"
+        },
+        "SP-500": {
+          "value": "{core.spacing.base}*5",
+          "type": "spacing"
+        },
+        "SP-600": {
+          "value": "{core.spacing.base}*6",
+          "type": "spacing"
+        },
+        "SP-700": {
+          "value": "{core.spacing.base}*7",
+          "type": "spacing"
+        },
+        "SP-800": {
+          "value": "{core.spacing.base}*8",
+          "type": "spacing"
+        },
+        "SP-900": {
+          "value": "{core.spacing.base}*9",
+          "type": "spacing"
+        },
+        "SP-1000": {
+          "value": "{core.spacing.base}*10",
+          "type": "spacing"
+        },
+        "SP-2000": {
+          "value": "{core.spacing.base}*20",
+          "type": "spacing"
+        },
+        "SP-3000": {
+          "value": "{core.spacing.base}*30",
+          "type": "spacing"
+        }
+      },
       "color": {
         "neutral": {
           "transparent": {
@@ -497,145 +639,6 @@
           "type": "borderWidth"
         }
       },
-      "dimension": {
-        "PX": {
-          "base": {
-            "value": "8",
-            "type": "sizing",
-            "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
-          },
-          "2": {
-            "value":"{core.dimension.PX.base}*0.5px",
-            "type": "sizing"
-          },
-          "4": {
-            "value": "{core.dimension.PX.base}*0.5px",
-            "type": "sizing"
-          },
-          "SZ-100": {
-            "value": "{core.dimension.PX.base}*1px",
-            "type": "sizing"
-          },
-          "SZ-150": {
-            "value": "{core.dimension.PX.base}*1.5px",
-            "type": "sizing"
-          },
-          "SZ-200": {
-            "value": "{core.dimension.PX.base}*2px",
-            "type": "sizing"
-          },
-          "SZ-250": {
-            "value": "{core.dimension.PX.base}*2.5px",
-            "type": "sizing"
-          },
-          "SZ-300": {
-            "value": "{core.dimension.PX.base}*3px",
-            "type": "sizing"
-          },
-          "SZ-400": {
-            "value": "{core.dimension.PX.base}*4px",
-            "type": "sizing"
-          },
-          "SZ-500": {
-            "value": "{core.dimension.PX.base}*5px",
-            "type": "sizing"
-          },
-          "SZ-600": {
-            "value": "{core.dimension.PX.base}*6px",
-            "type": "sizing"
-          },
-          "SZ-700": {
-            "value": "{core.dimension.PX.base}*7px",
-            "type": "sizing"
-          },
-          "SZ-800": {
-            "value": "{core.dimension.PX.base}*8px",
-            "type": "sizing"
-          },
-          "SZ-900": {
-            "value": "{core.dimension.PX.base}*9px",
-            "type": "sizing"
-          },
-          "SZ-1000": {
-            "value": "{core.dimension.PX.base}*10px",
-            "type": "sizing"
-          },
-          "SZ-2000": {
-            "value": "{core.dimension.PX.base}*20px",
-            "type": "sizing"
-          },
-          "SZ-3000": {
-            "value": "{core.dimension.PX.base}*30px",
-            "type": "sizing"
-          }
-        },
-        "REM": {
-          "2": {
-            "value": "0.125rem",
-            "type": "dimension"
-          },
-          "4": {
-            "value": "0.25rem",
-            "type": "dimension"
-          },
-          "8": {
-            "value": "0.5rem",
-            "type": "dimension"
-          },
-          "12": {
-            "value": "0.75rem",
-            "type": "dimension"
-          },
-          "16": {
-            "value": "1rem",
-            "type": "dimension"
-          },
-          "20": {
-            "value": "1.25rem",
-            "type": "dimension"
-          },
-          "24": {
-            "value": "1.25rem",
-            "type": "dimension"
-          },
-          "32": {
-            "value": "2rem",
-            "type": "dimension"
-          },
-          "40": {
-            "value": "2.5rem",
-            "type": "dimension"
-          },
-          "48": {
-            "value": "3rem",
-            "type": "dimension"
-          },
-          "56": {
-            "value": "3.5rem",
-            "type": "dimension"
-          },
-          "64": {
-            "value": "4rem",
-            "type": "dimension"
-          },
-          "72": {
-            "value": "4.5rem",
-            "type": "dimension"
-          },
-          "80": {
-            "value": "5rem",
-            "type": "dimension"
-          },
-          "160": {
-            "value": "10rem",
-            "type": "dimension"
-          },
-          "240": {
-            "value": "15rem",
-            "type": "dimension"
-          }
-        }
-      },
       "fontFamilies": {
         "Headlines": {
           "value": "\"Source Sans Pro\"",
@@ -772,6 +775,14 @@
         "extra-loose": {
           "value": "1.6%",
           "type": "letterSpacing"
+        }
+      }
+    },
+    "dimension": {
+      "rem": {
+        "50": {
+          "value": "0.5rem",
+          "type": "dimension"
         }
       }
     }
@@ -1462,7 +1473,7 @@
       },
       "XS": {
         "Height": {
-          "value": "{core.dimension.PX.20}",
+          "value": "{core.sizing-px.SZ-250}px",
           "type": "sizing"
         },
         "Label": {
@@ -1472,7 +1483,7 @@
       },
       "SM": {
         "Height": {
-          "value": "{core.dimension.PX.24}",
+          "value": "{core.sizing-px.SZ-300}px",
           "type": "sizing"
         },
         "Label": {
@@ -1482,7 +1493,7 @@
       },
       "MD": {
         "Height": {
-          "value": "{core.dimension.PX.32}",
+          "value": "{core.sizing-px.SZ-400}px",
           "type": "sizing"
         },
         "Label": {
@@ -1492,7 +1503,7 @@
       },
       "LG": {
         "Height": {
-          "value": "{core.dimension.PX.40}",
+          "value": "{core.sizing-px.SZ-500}px",
           "type": "sizing"
         },
         "Label": {
@@ -1502,7 +1513,7 @@
       },
       "XL": {
         "Height": {
-          "value": "{core.dimension.PX.56}",
+          "value": "{core.sizing-px.SZ-700}px",
           "type": "sizing"
         },
         "Label": {
@@ -1718,51 +1729,51 @@
       "TextButton": {
         "XS": {
           "Padding": {
-            "value": "0 {core.dimension.PX.12}",
+            "value": "0 {core.spacing.SP-150}px",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.4}",
+            "value": "{core.spacing.SP-050}px",
             "type": "spacing"
           }
         },
         "SM": {
           "Padding": {
-            "value": "0 {core.dimension.PX.12}",
+            "value": "0 {core.spacing.SP-150}px",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.4}",
+            "value": "{core.spacing.SP-050}px",
             "type": "spacing"
           }
         },
         "MD": {
           "Padding": {
-            "value": "0 {core.dimension.PX.16}",
+            "value": "0 {core.spacing.SP-200}px",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.4}",
+            "value": "{core.spacing.SP-050}px",
             "type": "spacing"
           }
         },
         "LG": {
           "Padding": {
-            "value": "0 {core.dimension.PX.24}",
+            "value": "0 {core.spacing.SP-300}px",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.8}",
+            "value": "{core.spacing.SP-100}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "0 {core.dimension.PX.40}",
+            "value": "0 {core.spacing.SP-500}px",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.8}",
+            "value": "{core.spacing.SP-100}",
             "type": "spacing"
           }
         }
@@ -1914,51 +1925,51 @@
       "TextDropdown": {
         "XS": {
           "Padding": {
-            "value": "0 {core.dimension.PX.8} 0 {core.dimension.PX.12}",
+            "value": "0 {core.spacing.SP-100} 0 {core.spacing.SP-150}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.2}",
+            "value": "{core.spacing.SP-025}px",
             "type": "spacing"
           }
         },
         "SM": {
           "Padding": {
-            "value": "0 {core.dimension.PX.8} 0 {core.dimension.PX.12}",
+            "value": "0 {core.spacing.SP-100} 0 {core.spacing.SP-150}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.2}",
+            "value": "{core.spacing.SP-025}px",
             "type": "spacing"
           }
         },
         "MD": {
           "Padding": {
-            "value": "0 {core.dimension.PX.12} 0 {core.dimension.PX.20}",
+            "value": "0 {core.spacing.SP-150} 0 {core.spacing.SP-250}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.2}",
+            "value": "{core.spacing.SP-025}px",
             "type": "spacing"
           }
         },
         "LG": {
           "Padding": {
-            "value": "0 {core.dimension.PX.16} 0 {core.dimension.PX.24}",
+            "value": "0 {core.spacing.SP-200} 0 {core.spacing.SP-300}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.2}",
+            "value": "{core.spacing.SP-025}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "0 {core.dimension.PX.32} 0 {core.dimension.PX.40}",
+            "value": "0 {core.spacing.SP-400} 0 {core.spacing.SP-500}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimension.PX.2}",
+            "value": "{core.spacing.SP-025}",
             "type": "spacing"
           }
         }
@@ -1967,32 +1978,32 @@
     "ui": {
       "icon": {
         "xxs": {
-          "value": "{core.dimension.PX.8}",
+          "value": "{core.sizing-px.SZ-100}",
           "type": "sizing",
           "description": "size of xxs icon"
         },
         "xs": {
-          "value": "{core.dimension.PX.12}",
+          "value": "{core.sizing-px.SZ-150}",
           "type": "sizing",
           "description": "size of xs icon"
         },
         "sm": {
-          "value": "{core.dimension.PX.16}",
+          "value": "{core.sizing-px.SZ-200}",
           "type": "sizing",
           "description": "size of sm icon"
         },
         "md": {
-          "value": "{core.dimension.PX.24}",
+          "value": "{core.sizing-px.SZ-300}",
           "type": "sizing",
           "description": "size of md icon"
         },
         "lg": {
-          "value": "{core.dimension.PX.32}",
+          "value": "{core.sizing-px.SZ-400}",
           "type": "sizing",
           "description": "size of lg icon"
         },
         "xl": {
-          "value": "{core.dimension.PX.48}",
+          "value": "{core.sizing-px.SZ-600}",
           "type": "sizing",
           "description": "size of xl icon"
         }
