@@ -4,3 +4,4 @@ dist
 .eslintcache
 storybook-static
 src/foundation/_tokens-generated
+.vscode

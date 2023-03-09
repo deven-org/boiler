@@ -1,11 +1,12 @@
 {
-  "name": "bo1ler",
+  "name": "@boiler/boiler",
   "version": "0.0.1",
   "description": "Component Library",
   "main": "./dist/main.js",
   "types": ".dist/types/index.d.js",
   "scripts": {
     "commitlint": "commitlint -c -e",
+    "prestart": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
     "start": "start-storybook -p 1337",
     "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
     "build": "NODE_ENV=production webpack --config webpack.prod.js && npm run copy:static",
@@ -24,17 +25,15 @@
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
-    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icon-set -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
-    "normalize:tokens": "node --experimental-json-modules figma-design-tokens/config/normalize-token-json.mjs && prettier ./figma-design-tokens/input/tokens.normalized.json --write",
-    "clear:generated-files": "node figma-design-tokens/config/clear-files.mjs",
-    "style-dictionary": "npm run clear:generated-files && style-dictionary build --config ./figma-design-tokens/config/style-dictionary.config.js && prettier ./src/foundation/_tokens-generated/* --write",
-    "generate-index-files": "node figma-design-tokens/config/generate-index-files.mjs && prettier ./src/foundation/_tokens-generated/index.generated.scss --write && prettier ./src/foundation/_tokens-generated/index.generated.js --write",
-    "tokens:generate": "npm run normalize:tokens && npm run style-dictionary && npm run generate-index-files"
+    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icon-set -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deven-org/BO1LER-Kitchen/BO1LER.git"
   },
+  "workspaces": [
+    "./packages/*"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -54,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@boiler/figma-design-tokens": "0.0.1",
     "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-decorators": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
@@ -67,7 +67,6 @@
     "@storybook/cli": "^6.5.0",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/web-components": "^6.5.16",
-    "@tokens-studio/sd-transforms": "^0.4.3",
     "@types/react": "^18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
@@ -91,8 +90,6 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "lit-html": "^2.6.1",
-    "lodash.camelcase": "4.3.0",
-    "lodash.kebabcase": "4.1.1",
     "mini-css-extract-plugin": "^2.7.2",
     "pa11y-ci": "3.0.1",
     "postcss-lit": "^1.0.1",
@@ -102,7 +99,6 @@
     "release-please": "^15.1.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
-    "style-dictionary": "^3.7.2",
     "style-loader": "^3.3.1",
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
@@ -110,7 +106,8 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "lodash.camelcase": "4.3.0"
   },
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
