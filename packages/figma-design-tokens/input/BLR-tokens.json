@@ -498,17 +498,17 @@
         }
       },
       "dimension": {
-        "PX": {
+        "spacing": {
           "base": {
             "value": "8",
             "type": "variable",
             "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
           },
-          "2": {
+          "SP-025": {
             "value":"{core.dimension.PX.base}*0.25px",
             "type": "dimension"
           },
-          "4": {
+          "SP-050": {
             "value": "{core.dimension.PX.base}*0.5px",
             "type": "dimension"
           },
