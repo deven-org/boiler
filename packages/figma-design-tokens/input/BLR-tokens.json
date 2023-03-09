@@ -9,67 +9,67 @@
         },
         "SZ-025": {
           "value": "{core.sizing.base}*0.25",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-050": {
           "value": "{core.sizing.base}*0.5",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-100": {
           "value": "{core.sizing.base}*1",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-150": {
           "value": "{core.sizing.base}*1.5",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-200": {
           "value": "{core.sizing.base}*2",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-250": {
           "value": "{core.sizing.base}*2.5",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-300": {
           "value": "{core.sizing.base}*3",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-400": {
           "value": "{core.sizing.base}*4",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-500": {
           "value": "{core.sizing.base}*5",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-600": {
           "value": "{core.sizing.base}*6",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-700": {
           "value": "{core.sizing.base}*7",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-800": {
           "value": "{core.sizing.base}*8",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-900": {
           "value": "{core.sizing.base}*9",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-1000": {
           "value": "{core.sizing.base}*10",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-2000": {
           "value": "{core.sizing.base}*20",
-          "type": "spacing"
+          "type": "sizing"
         },
         "SZ-3000": {
           "value": "{core.sizing.base}*30",
-          "type": "spacing"
+          "type": "sizing"
         }
       },
       "spacing": {
