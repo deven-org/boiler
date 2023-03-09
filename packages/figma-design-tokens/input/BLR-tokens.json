@@ -1968,9 +1968,67 @@
           "type": "spacing"
         }
       },
-      "themeName": {
-        "value": "core",
-        "type": "other"
+      "legend": {
+        "legend-bg": {
+          "value": "#1a1a1a",
+          "type": "color"
+        },
+        "legend-border": {
+          "value": "#7b61ff",
+          "type": "color"
+        },
+        "legend-compName": {
+          "value": "#ffffff",
+          "type": "color"
+        },
+        "legend-numbers": {
+          "value": "#343434",
+          "type": "color"
+        },
+        "legend-label": {
+          "value": "#e6e6e6",
+          "type": "color"
+        },
+        "yellowComponent": {
+          "value": "#ffd614",
+          "type": "color"
+        },
+        "yellowContent": {
+          "value": "#faeeb6",
+          "type": "color"
+        },
+        "purpleComponent": {
+          "value": "#b37cfe",
+          "type": "color"
+        },
+        "purpleContent": {
+          "value": "#dfc8ff",
+          "type": "color"
+        },
+        "azureComponent": {
+          "value": "#1ea0ff",
+          "type": "color"
+        },
+        "azureContent": {
+          "value": "#95d1fc",
+          "type": "color"
+        },
+        "orangeContent": {
+          "value": "#ff8957",
+          "type": "color"
+        },
+        "greenContent": {
+          "value": "#0acf83",
+          "type": "color"
+        },
+        "spacings": {
+          "value": "#ff895780",
+          "type": "color"
+        },
+        "dimensions": {
+          "value": "#ef5533",
+          "type": "color"
+        }
       }
     }
   },
