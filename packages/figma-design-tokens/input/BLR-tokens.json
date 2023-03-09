@@ -501,72 +501,72 @@
         "PX": {
           "base": {
             "value": "8",
-            "type": "sizing",
+            "type": "variable",
             "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
           },
           "2": {
-            "value":"{core.dimension.PX.base}*0.5px",
-            "type": "sizing"
+            "value":"{core.dimension.PX.base}*0.25px",
+            "type": "dimension"
           },
           "4": {
             "value": "{core.dimension.PX.base}*0.5px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-100": {
             "value": "{core.dimension.PX.base}*1px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-150": {
             "value": "{core.dimension.PX.base}*1.5px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-200": {
             "value": "{core.dimension.PX.base}*2px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-250": {
             "value": "{core.dimension.PX.base}*2.5px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-300": {
             "value": "{core.dimension.PX.base}*3px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-400": {
             "value": "{core.dimension.PX.base}*4px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-500": {
             "value": "{core.dimension.PX.base}*5px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-600": {
             "value": "{core.dimension.PX.base}*6px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-700": {
             "value": "{core.dimension.PX.base}*7px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-800": {
             "value": "{core.dimension.PX.base}*8px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-900": {
             "value": "{core.dimension.PX.base}*9px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-1000": {
             "value": "{core.dimension.PX.base}*10px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-2000": {
             "value": "{core.dimension.PX.base}*20px",
-            "type": "sizing"
+            "type": "dimension"
           },
           "SZ-3000": {
             "value": "{core.dimension.PX.base}*30px",
-            "type": "sizing"
+            "type": "dimension"
           }
         },
         "REM": {
