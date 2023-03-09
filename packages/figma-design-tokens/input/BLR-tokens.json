@@ -602,7 +602,8 @@
       "spacing": {
         "base": {
           "value": "8",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "base token - do not consume directly, use actual spacing tokens (SP.025, SP,050...)"
         },
         "SP-025": {
           "value": "{core.spacing.base}*0.25",
@@ -710,15 +711,10 @@
         }
       },
       "sizing": {
-        "sz-0125": {
-          "value": "{core.dimension.d-0125}",
-          "type": "sizing"
-        }
-      },
-      "dimension": {
-        "d-0125": {
-          "value": "0.125rem",
-          "type": "dimension"
+        "base": {
+          "value": "8",
+          "type": "sizing",
+          "description": "base token - do not consume directly, use actual sizing tokens (SZ-025, SZ-050...)"
         }
       }
     }
