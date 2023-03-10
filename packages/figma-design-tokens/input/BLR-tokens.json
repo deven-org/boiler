@@ -1,7 +1,7 @@
 {
   "BLR_COR": {
     "core": {
-      "spacing": {
+      "px-dimensions": {
         "base": {
           "value": "8",
           "type": "variable",
@@ -69,6 +69,72 @@
         },
         "SP-3000": {
           "value": "{core.spacing.base}*30px",
+          "type": "dimension"
+        }
+      },
+      "rem-dimensions": {
+        "SP-REM-025": {
+          "value": "0.125rem",
+          "type": "dimension"
+        },
+        "SP-REM-050": {
+          "value": "0.25rem",
+          "type": "dimension"
+        },
+        "SP-REM-100": {
+          "value": "0.5rem",
+          "type": "dimension"
+        },
+        "SP-REM-150": {
+          "value": "0.75rem",
+          "type": "dimension"
+        },
+        "SP-REM-200": {
+          "value": "1rem",
+          "type": "dimension"
+        },
+        "SP-REM-250": {
+          "value": "1.25rem",
+          "type": "dimension"
+        },
+        "SP-REM-300": {
+          "value": "1.5rem",
+          "type": "dimension"
+        },
+        "SP-REM-400": {
+          "value": "2rem",
+          "type": "dimension"
+        },
+        "SP-REM-500": {
+          "value": "2.5rem",
+          "type": "dimension"
+        },
+        "SP-REM-600": {
+          "value": "3rem",
+          "type": "dimension"
+        },
+        "SP-REM-700": {
+          "value": "3.5rem",
+          "type": "dimension"
+        },
+        "SP-REM-800": {
+          "value": "4rem",
+          "type": "dimension"
+        },
+        "SP-REM-900": {
+          "value": "4.5rem",
+          "type": "dimension"
+        },
+        "SP-REM-1000": {
+          "value": "5rem",
+          "type": "dimension"
+        },
+        "SP-REM-2000": {
+          "value": "10rem",
+          "type": "dimension"
+        },
+        "SP-REM-3000": {
+          "value": "15rem",
           "type": "dimension"
         }
       },
