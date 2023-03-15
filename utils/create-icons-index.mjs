@@ -20,7 +20,7 @@ fs.readdir(iconDir, (err, files) => {
       const name = camelCase(withPrefix);
       const data = fs.readFileSync(`${iconDir}/${file}`, 'utf8');
       // adds a class attribute to the svg string
-      const withClassAttribute = data.replace('fill="currentColor"', 'class="${className}" fill="currentColor"');
+      const withClassAttribute = data.replace('<svg ', '<svg class="${className}" ');
 
       icons.push({ name, withClassAttribute });
 
