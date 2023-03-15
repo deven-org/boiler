@@ -5,6 +5,7 @@ module.exports = {
     'removeXMLNS',
     'removeXMLProcInst',
     'cleanupIds',
+    'removeDimensions',
     {
       name: 'convertColors',
       params: {

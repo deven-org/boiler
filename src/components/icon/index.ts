@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { icon } from '../../foundation/component-tokens/ui';
 import { IconMapping, IconType } from '../../foundation/icons';
 import { Sizes } from '../../globals/constants';
 import { styleCustom } from './css';
 
 @customElement('blr-icon')
 export class BlrIcon extends LitElement {
-  // component token for icon-component will follow.
-  static styles = [styleCustom];
+  static styles = [styleCustom, icon];
 
   @property() name: IconType;
 
