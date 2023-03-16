@@ -3,5 +3,5 @@ dist
 .DS_Store
 .eslintcache
 storybook-static
-src/foundation/_tokens-generated
+packages/ui-library/src/foundation/_tokens-generated
 .vscode
