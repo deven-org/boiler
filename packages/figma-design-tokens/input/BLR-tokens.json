@@ -1940,7 +1940,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "0 4 0 6",
+            "value": "{core.rem-dimensions.8} {core.rem-dimensions.2} {core.rem-dimensions.8} {core.rem-dimensions.4}",
             "type": "spacing"
           },
           "Gap": {
