@@ -1940,11 +1940,11 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.8} {core.rem-dimensions.2} {core.rem-dimensions.8} {core.rem-dimensions.4}",
+            "value": "{core.rem-dimensions.8} {core.rem-dimensions.1} {core.rem-dimensions.8} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "2",
+            "value": "0",
             "type": "spacing"
           }
         },
@@ -1954,11 +1954,11 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "0 0 0 8",
+            "value": "{core.rem-dimensions.8} {core.rem-dimensions.0} {core.rem-dimensions.8} {core.rem-dimensions.2}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "4",
+            "value": "-{core.rem-dimensions.2}",
             "type": "spacing"
           }
         },
