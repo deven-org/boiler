@@ -670,11 +670,15 @@
           "type": "lineHeights"
         },
         "Normal": {
-          "value": "140%",
+          "value": "150%",
           "type": "lineHeights"
         },
         "Loose": {
           "value": "160%",
+          "type": "lineHeights"
+        },
+        "UltraTight": {
+          "value": "100%",
           "type": "lineHeights"
         }
       },
@@ -1671,7 +1675,7 @@
           "fontFamily": "{core.fontFamilies.Text}",
           "fontWeight": "{core.fontWeights.Text.SemiBold}",
           "lineHeight": "{core.lineHeights.Normal}",
-          "fontSize": "{core.fontSizes.87}"
+          "fontSize": "{core.fontSizes.100}"
         },
         "type": "typography"
       }
@@ -1716,11 +1720,11 @@
       "TextButton": {
         "XS": {
           "Padding": {
-            "value": "4.5px {core.px-dimensions.SP-150}",
+            "value": "{core.rem-dimensions.SP-REM-050} {core.px-dimensions.SP-150}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}px",
+            "value": "{core.px-dimensions.SP-050}",
             "type": "spacing"
           }
         },
@@ -1730,7 +1734,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}px",
+            "value": "{core.px-dimensions.SP-050}",
             "type": "spacing"
           }
         },
@@ -1740,7 +1744,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}px",
+            "value": "{core.px-dimensions.SP-050}",
             "type": "spacing"
           }
         },
@@ -1750,7 +1754,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-100}",
+            "value": "{core.px-dimensions.SP-050}",
             "type": "spacing"
           }
         },
@@ -1760,7 +1764,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-100}",
+            "value": "{core.px-dimensions.SP-050}",
             "type": "spacing"
           }
         }
@@ -1772,7 +1776,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "0",
+            "value": "0.375rem",
             "type": "spacing"
           },
           "Gap": {
@@ -1912,11 +1916,11 @@
       "TextDropdown": {
         "XS": {
           "Padding": {
-            "value": "4.5px {core.px-dimensions.SP-100} 4.5px {core.px-dimensions.SP-150}",
+            "value": "{core.rem-dimensions.SP-REM-050} {core.px-dimensions.SP-100} {core.rem-dimensions.SP-REM-050} {core.px-dimensions.SP-150}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}px",
+            "value": "{core.px-dimensions.SP-025}",
             "type": "spacing"
           }
         },
@@ -1926,7 +1930,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}px",
+            "value": "{core.px-dimensions.SP-025}",
             "type": "spacing"
           }
         },
@@ -1936,7 +1940,7 @@
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}px",
+            "value": "{core.px-dimensions.SP-025}",
             "type": "spacing"
           }
         },
