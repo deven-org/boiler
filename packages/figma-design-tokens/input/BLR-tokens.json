@@ -1535,50 +1535,30 @@
         }
       },
       "XS": {
-        "Height": {
-          "value": "{core.px-dimensions.20}px",
-          "type": "sizing"
-        },
         "Label": {
           "value": "{Label.XS}",
           "type": "typography"
         }
       },
       "SM": {
-        "Height": {
-          "value": "{core.px-dimensions.24}px",
-          "type": "sizing"
-        },
         "Label": {
           "value": "{Label.MD}",
           "type": "typography"
         }
       },
       "MD": {
-        "Height": {
-          "value": "{core.px-dimensions.32}px",
-          "type": "sizing"
-        },
         "Label": {
           "value": "{Label.MD}",
           "type": "typography"
         }
       },
       "LG": {
-        "Height": {
-          "value": "{core.px-dimensions.40}px",
-          "type": "sizing"
-        },
         "Label": {
           "value": "{Label.LG}",
           "type": "typography"
         }
       },
       "XL": {
-        "Height": {
-          "value": "{core.px-dimensions.56}px",
-          "type": "sizing"
-        },
         "Label": {
           "value": "{Label.LG}",
           "type": "typography"
@@ -1843,10 +1823,6 @@
       },
       "IconButton": {
         "XS": {
-          "Width": {
-            "value": "{Action.XS.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.6}",
             "type": "spacing"
@@ -1857,10 +1833,6 @@
           }
         },
         "SM": {
-          "Width": {
-            "value": "{Action.SM.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.6}",
             "type": "spacing"
@@ -1871,10 +1843,6 @@
           }
         },
         "MD": {
-          "Width": {
-            "value": "{Action.MD.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.8}",
             "type": "spacing"
@@ -1885,10 +1853,6 @@
           }
         },
         "LG": {
-          "Width": {
-            "value": "{Action.LG.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.8}",
             "type": "spacing"
@@ -1899,10 +1863,6 @@
           }
         },
         "XL": {
-          "Width": {
-            "value": "{Action.XL.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.12}",
             "type": "spacing"
@@ -1915,10 +1875,6 @@
       },
       "IconDropdown": {
         "XS": {
-          "Width": {
-            "value": "{Action.XS.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.6} {core.rem-dimensions.1} {core.rem-dimensions.6} {core.rem-dimensions.3}",
             "type": "spacing"
@@ -1929,10 +1885,6 @@
           }
         },
         "SM": {
-          "Width": {
-            "value": "{Action.SM.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.6} {core.rem-dimensions.1} {core.rem-dimensions.6} {core.rem-dimensions.3}",
             "type": "spacing"
@@ -1943,10 +1895,6 @@
           }
         },
         "MD": {
-          "Width": {
-            "value": "{Action.MD.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.8} {core.rem-dimensions.1} {core.rem-dimensions.8} {core.rem-dimensions.3}",
             "type": "spacing"
@@ -1957,10 +1905,6 @@
           }
         },
         "LG": {
-          "Width": {
-            "value": "{Action.LG.Height}",
-            "type": "sizing"
-          },
           "Padding": {
             "value": "{core.rem-dimensions.8} {core.rem-dimensions.0} {core.rem-dimensions.8} {core.rem-dimensions.2}",
             "type": "spacing"
@@ -1971,12 +1915,8 @@
           }
         },
         "XL": {
-          "Width": {
-            "value": "{Action.XL.Height}",
-            "type": "sizing"
-          },
           "Padding": {
-            "value": "{core.rem-dimensions.12} {core.rem-dimensions.1} {core.rem-dimensions.12} {core.rem-dimensions.3}",
+            "value": "{core.rem-dimensions.12} {core.rem-dimensions.0} {core.rem-dimensions.12} {core.rem-dimensions.4}",
             "type": "spacing"
           },
           "Gap": {
@@ -2041,32 +1981,32 @@
     "ui": {
       "icon": {
         "xxs": {
-          "value": "{core.px-dimensions.8}",
+          "value": "{core.rem-dimensions.8}",
           "type": "sizing",
           "description": "size of xxs icon"
         },
         "xs": {
-          "value": "{core.px-dimensions.12}",
+          "value": "{core.rem-dimensions.12}",
           "type": "sizing",
           "description": "size of xs icon"
         },
         "sm": {
-          "value": "{core.px-dimensions.16}",
+          "value": "{core.rem-dimensions.16}",
           "type": "sizing",
           "description": "size of sm icon"
         },
         "md": {
-          "value": "{core.px-dimensions.24}",
+          "value": "{core.rem-dimensions.24}",
           "type": "sizing",
           "description": "size of md icon"
         },
         "lg": {
-          "value": "{core.px-dimensions.32}",
+          "value": "{core.rem-dimensions.32}",
           "type": "sizing",
           "description": "size of lg icon"
         },
         "xl": {
-          "value": "{core.px-dimensions.48}",
+          "value": "{core.rem-dimensions.48}",
           "type": "sizing",
           "description": "size of xl icon"
         }
