@@ -8,6 +8,7 @@
     "commitlint": "commitlint -c -e",
     "prestart": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
     "start": "start-storybook -p 1337",
+    "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
     "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
     "build": "NODE_ENV=production webpack --config webpack.prod.js && npm run copy:static",
     "build:types": "rimraf types && tsc --emitDeclarationOnly",
@@ -32,7 +33,7 @@
     "url": "git+https://github.com/deven-org/BO1LER-Kitchen/BO1LER.git"
   },
   "workspaces": [
-    "./packages/*"
+    "packages/*"
   ],
   "author": "",
   "license": "ISC",
@@ -53,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@boiler/react-example-app": "0.0.1",
     "@boiler/figma-design-tokens": "0.0.1",
     "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-decorators": "^7.20.7",
@@ -96,7 +98,6 @@
     "prettier": "2.8.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "release-please": "^15.1.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
