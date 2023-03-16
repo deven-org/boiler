@@ -1968,11 +1968,11 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "0 0 0 16",
+            "value": "{core.rem-dimensions.12} {core.rem-dimensions.2} {core.rem-dimensions.12} {core.rem-dimensions.4}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "4",
+            "value": "0",
             "type": "spacing"
           }
         }
