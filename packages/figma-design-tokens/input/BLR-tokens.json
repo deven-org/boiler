@@ -805,19 +805,15 @@
       },
       "pargraphSpacing": {
         "50": {
-          "value": "{core.pargraphSpacing.base}*0.5",
+          "value": "0.5rem",
           "type": "paragraphSpacing"
         },
         "100": {
-          "value": "{core.pargraphSpacing.base}*1",
+          "value": "1rem",
           "type": "paragraphSpacing"
         },
         "none": {
           "value": "0",
-          "type": "paragraphSpacing"
-        },
-        "base": {
-          "value": "16",
           "type": "paragraphSpacing"
         }
       },
