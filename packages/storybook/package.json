@@ -1,0 +1,19 @@
+{
+  "name": "@boiler/storybook",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "start-storybook -p 1337"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@boiler/ui-library": "^0.0.1",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/cli": "^6.5.0",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/web-components": "^6.5.16"
+  }
+}

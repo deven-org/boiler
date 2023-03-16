@@ -37,7 +37,7 @@ module.exports = {
         'transform/font-to-rem',
       ],
       prefix: 'blr',
-      buildPath: '../../src/foundation/_tokens-generated/',
+      buildPath: '../ui-library/src/foundation/_tokens-generated/',
       files: [
         ...types.map((type) => ({
           format: 'css/variables',
@@ -72,7 +72,7 @@ module.exports = {
         'transform/font-to-rem',
       ],
       prefix: 'blr',
-      buildPath: '../../src/foundation/_tokens-generated/',
+      buildPath: '../ui-library/src/foundation/_tokens-generated/',
       files: [
         {
           format: 'custom/format/tokens',
