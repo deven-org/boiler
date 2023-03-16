@@ -2,147 +2,203 @@
   "BLR_COR": {
     "core": {
       "px-dimensions": {
+        "0": {
+          "value": "0px",
+          "type": "dimension"
+        },
+        "1": {
+          "value": "1px",
+          "type": "dimension"
+        },
+        "2": {
+          "value": "{core.px-dimensions.base}*0.25px",
+          "type": "dimension"
+        },
+        "3": {
+          "value": "3px",
+          "type": "dimension"
+        },
+        "4": {
+          "value": "{core.px-dimensions.base}*0.5px",
+          "type": "dimension"
+        },
+        "5": {
+          "value": "5px",
+          "type": "dimension"
+        },
+        "6": {
+          "value": "{core.px-dimensions.base}*0.75px",
+          "type": "dimension"
+        },
+        "8": {
+          "value": "{core.px-dimensions.base}*1px",
+          "type": "dimension"
+        },
+        "10": {
+          "value": "10px",
+          "type": "dimension"
+        },
+        "12": {
+          "value": "{core.px-dimensions.base}*1.5px",
+          "type": "dimension"
+        },
+        "14": {
+          "value": "14px",
+          "type": "dimension"
+        },
+        "16": {
+          "value": "{core.px-dimensions.base}*2px",
+          "type": "dimension"
+        },
+        "20": {
+          "value": "{core.px-dimensions.base}*2.5px",
+          "type": "dimension"
+        },
+        "24": {
+          "value": "{core.px-dimensions.base}*3px",
+          "type": "dimension"
+        },
+        "32": {
+          "value": "{core.px-dimensions.base}*4px",
+          "type": "dimension"
+        },
+        "40": {
+          "value": "{core.px-dimensions.base}*5px",
+          "type": "dimension"
+        },
+        "48": {
+          "value": "{core.px-dimensions.base}*6px",
+          "type": "dimension"
+        },
+        "56": {
+          "value": "{core.px-dimensions.base}*7px",
+          "type": "dimension"
+        },
+        "64": {
+          "value": "{core.px-dimensions.base}*8px",
+          "type": "dimension"
+        },
+        "72": {
+          "value": "{core.px-dimensions.base}*9px",
+          "type": "dimension"
+        },
+        "80": {
+          "value": "{core.px-dimensions.base}*10px",
+          "type": "dimension"
+        },
+        "160": {
+          "value": "{core.px-dimensions.base}*20px",
+          "type": "dimension"
+        },
+        "240": {
+          "value": "{core.px-dimensions.base}*30px",
+          "type": "dimension"
+        },
         "base": {
           "value": "8",
           "type": "variable",
           "description": "base token for spacing tokens (SP.025, SP,050...)"
         },
-        "SP-025": {
-          "value": "{core.px-dimensions.base}*0.25px",
-          "type": "dimension"
-        },
-        "SP-050": {
-          "value": "{core.px-dimensions.base}*0.5px",
-          "type": "dimension"
-        },
-        "SP-075": {
-          "value": "{core.px-dimensions.base}*0.75px",
-          "type": "dimension"
-        },
-        "SP-100": {
-          "value": "{core.px-dimensions.base}*1px",
-          "type": "dimension"
-        },
-        "SP-150": {
-          "value": "{core.px-dimensions.base}*1.5px",
-          "type": "dimension"
-        },
-        "SP-200": {
-          "value": "{core.px-dimensions.base}*2px",
-          "type": "dimension"
-        },
-        "SP-250": {
-          "value": "{core.px-dimensions.base}*2.5px",
-          "type": "dimension"
-        },
-        "SP-300": {
-          "value": "{core.px-dimensions.base}*3px",
-          "type": "dimension"
-        },
-        "SP-400": {
-          "value": "{core.px-dimensions.base}*4px",
-          "type": "dimension"
-        },
-        "SP-500": {
-          "value": "{core.px-dimensions.base}*5px",
-          "type": "dimension"
-        },
-        "SP-600": {
-          "value": "{core.px-dimensions.base}*6px",
-          "type": "dimension"
-        },
-        "SP-700": {
-          "value": "{core.px-dimensions.base}*7px",
-          "type": "dimension"
-        },
-        "SP-800": {
-          "value": "{core.px-dimensions.base}*8px",
-          "type": "dimension"
-        },
-        "SP-900": {
-          "value": "{core.px-dimensions.base}*9px",
-          "type": "dimension"
-        },
-        "SP-1000": {
-          "value": "{core.px-dimensions.base}*10px",
-          "type": "dimension"
-        },
-        "SP-2000": {
-          "value": "{core.px-dimensions.base}*20px",
-          "type": "dimension"
-        },
-        "SP-3000": {
-          "value": "{core.px-dimensions.base}*30px",
+        "0,5": {
+          "value": "0.5px",
           "type": "dimension"
         }
       },
       "rem-dimensions": {
-        "SP-REM-025": {
+        "0": {
+          "value": "0rem",
+          "type": "dimension"
+        },
+        "1": {
+          "value": "0.0625rem",
+          "type": "dimension"
+        },
+        "2": {
           "value": "0.125rem",
           "type": "dimension"
         },
-        "SP-REM-050": {
+        "3": {
+          "value": "0.1875rem",
+          "type": "dimension"
+        },
+        "4": {
           "value": "0.25rem",
           "type": "dimension"
         },
-        "SP-REM-075": {
+        "5": {
+          "value": "0.3125rem",
+          "type": "dimension"
+        },
+        "6": {
           "value": "0.375rem",
           "type": "dimension"
         },
-        "SP-REM-100": {
+        "8": {
           "value": "0.5rem",
           "type": "dimension"
         },
-        "SP-REM-150": {
+        "10": {
+          "value": "0.625rem",
+          "type": "dimension"
+        },
+        "12": {
           "value": "0.75rem",
           "type": "dimension"
         },
-        "SP-REM-200": {
+        "14": {
+          "value": "0.875rem",
+          "type": "dimension"
+        },
+        "16": {
           "value": "1rem",
           "type": "dimension"
         },
-        "SP-REM-250": {
+        "20": {
           "value": "1.25rem",
           "type": "dimension"
         },
-        "SP-REM-300": {
+        "24": {
           "value": "1.5rem",
           "type": "dimension"
         },
-        "SP-REM-400": {
+        "32": {
           "value": "2rem",
           "type": "dimension"
         },
-        "SP-REM-500": {
+        "40": {
           "value": "2.5rem",
           "type": "dimension"
         },
-        "SP-REM-600": {
+        "48": {
           "value": "3rem",
           "type": "dimension"
         },
-        "SP-REM-700": {
+        "56": {
           "value": "3.5rem",
           "type": "dimension"
         },
-        "SP-REM-800": {
+        "64": {
           "value": "4rem",
           "type": "dimension"
         },
-        "SP-REM-900": {
+        "72": {
           "value": "4.5rem",
           "type": "dimension"
         },
-        "SP-REM-1000": {
+        "80": {
           "value": "5rem",
           "type": "dimension"
         },
-        "SP-REM-2000": {
+        "160": {
           "value": "10rem",
           "type": "dimension"
         },
-        "SP-REM-3000": {
+        "240": {
           "value": "15rem",
+          "type": "dimension"
+        },
+        "0,5": {
+          "value": "1/32rem",
           "type": "dimension"
         }
       },
@@ -1472,7 +1528,7 @@
       },
       "XS": {
         "Height": {
-          "value": "{core.px-dimensions.SP-250}px",
+          "value": "{core.px-dimensions.20}px",
           "type": "sizing"
         },
         "Label": {
@@ -1482,7 +1538,7 @@
       },
       "SM": {
         "Height": {
-          "value": "{core.px-dimensions.SP-300}px",
+          "value": "{core.px-dimensions.24}px",
           "type": "sizing"
         },
         "Label": {
@@ -1492,7 +1548,7 @@
       },
       "MD": {
         "Height": {
-          "value": "{core.px-dimensions.SP-400}px",
+          "value": "{core.px-dimensions.32}px",
           "type": "sizing"
         },
         "Label": {
@@ -1502,7 +1558,7 @@
       },
       "LG": {
         "Height": {
-          "value": "{core.px-dimensions.SP-500}px",
+          "value": "{core.px-dimensions.40}px",
           "type": "sizing"
         },
         "Label": {
@@ -1512,7 +1568,7 @@
       },
       "XL": {
         "Height": {
-          "value": "{core.px-dimensions.SP-700}px",
+          "value": "{core.px-dimensions.56}px",
           "type": "sizing"
         },
         "Label": {
@@ -1728,51 +1784,51 @@
       "TextButton": {
         "XS": {
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-050} {core.px-dimensions.SP-150}",
+            "value": "{core.rem-dimensions.4} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "SM": {
           "Padding": {
-            "value": "3.5px {core.px-dimensions.SP-150}",
+            "value": "3.5px {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "MD": {
           "Padding": {
-            "value": "7.5px {core.px-dimensions.SP-200}",
+            "value": "7.5px {core.px-dimensions.16}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "LG": {
           "Padding": {
-            "value": "10px {core.px-dimensions.SP-300}",
+            "value": "10px {core.px-dimensions.24}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "18px {core.px-dimensions.SP-500}",
+            "value": "18px {core.px-dimensions.40}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-050}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         }
@@ -1784,7 +1840,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-075}",
+            "value": "{core.rem-dimensions.6}",
             "type": "spacing"
           },
           "Gap": {
@@ -1798,7 +1854,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-075}",
+            "value": "{core.rem-dimensions.6}",
             "type": "spacing"
           },
           "Gap": {
@@ -1812,7 +1868,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-100}",
+            "value": "{core.rem-dimensions.8}",
             "type": "spacing"
           },
           "Gap": {
@@ -1826,7 +1882,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-100}",
+            "value": "{core.rem-dimensions.8}",
             "type": "spacing"
           },
           "Gap": {
@@ -1840,7 +1896,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-150}",
+            "value": "{core.rem-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
@@ -1856,7 +1912,7 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "0 1 0 3",
+            "value": "{core.rem-dimensions.6} {core.rem-dimensions.1} {core.rem-dimensions.6} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
@@ -1924,51 +1980,51 @@
       "TextDropdown": {
         "XS": {
           "Padding": {
-            "value": "{core.rem-dimensions.SP-REM-050} {core.px-dimensions.SP-100} {core.rem-dimensions.SP-REM-050} {core.px-dimensions.SP-150}",
+            "value": "{core.rem-dimensions.4} {core.px-dimensions.8} {core.rem-dimensions.4} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "SM": {
           "Padding": {
-            "value": "3.5px {core.px-dimensions.SP-100} 3.5px {core.px-dimensions.SP-150}",
+            "value": "3.5px {core.px-dimensions.8} 3.5px {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "MD": {
           "Padding": {
-            "value": "7.5px {core.px-dimensions.SP-150} 7.5px {core.px-dimensions.SP-250}",
+            "value": "7.5px {core.px-dimensions.12} 7.5px {core.px-dimensions.20}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "LG": {
           "Padding": {
-            "value": "10px {core.px-dimensions.SP-200} 10px {core.px-dimensions.SP-300}",
+            "value": "10px {core.px-dimensions.16} 10px {core.px-dimensions.24}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "18px {core.px-dimensions.SP-400} 18px {core.px-dimensions.SP-500}",
+            "value": "18px {core.px-dimensions.32} 18px {core.px-dimensions.40}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.px-dimensions.SP-025}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         }
@@ -1977,32 +2033,32 @@
     "ui": {
       "icon": {
         "xxs": {
-          "value": "{core.px-dimensions.SP-100}",
+          "value": "{core.px-dimensions.8}",
           "type": "sizing",
           "description": "size of xxs icon"
         },
         "xs": {
-          "value": "{core.px-dimensions.SP-150}",
+          "value": "{core.px-dimensions.12}",
           "type": "sizing",
           "description": "size of xs icon"
         },
         "sm": {
-          "value": "{core.px-dimensions.SP-200}",
+          "value": "{core.px-dimensions.16}",
           "type": "sizing",
           "description": "size of sm icon"
         },
         "md": {
-          "value": "{core.px-dimensions.SP-300}",
+          "value": "{core.px-dimensions.24}",
           "type": "sizing",
           "description": "size of md icon"
         },
         "lg": {
-          "value": "{core.px-dimensions.SP-400}",
+          "value": "{core.px-dimensions.32}",
           "type": "sizing",
           "description": "size of lg icon"
         },
         "xl": {
-          "value": "{core.px-dimensions.SP-600}",
+          "value": "{core.px-dimensions.48}",
           "type": "sizing",
           "description": "size of xl icon"
         }
