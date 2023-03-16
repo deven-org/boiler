@@ -1,7 +1,7 @@
 import fs from 'fs';
 import chalk from 'chalk';
 
-const files = fs.readdirSync(`../../src/foundation/_tokens-generated`);
+const files = fs.readdirSync(`../ui-library/src/foundation/_tokens-generated`);
 
 const convertToCamelCase = (item) => {
   let convertedString = item;
@@ -36,7 +36,7 @@ const fileOutPut = `import {wrapValuesWithCss} from '@boiler/figma-design-tokens
     ${exportsPart.join('\n')}`;
 
 console.log(chalk.magentaBright('👷 creates foundation/_tokens-generated/index.generated.scss... \n'));
-fs.writeFileSync(`../../src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
+fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
 
 console.log(chalk.cyanBright('👷 creates foundation/_tokens-generated/index.generated.js... \n'));
-fs.writeFileSync(`../../src/foundation/_tokens-generated/index.generated.js`, fileOutPut, 'utf-8');
+fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.js`, fileOutPut, 'utf-8');

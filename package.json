@@ -7,10 +7,10 @@
   "scripts": {
     "commitlint": "commitlint -c -e",
     "prestart": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
-    "start": "start-storybook -p 1337",
+    "start": "npm run start --workspace=@boiler/storybook",
     "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
-    "build": "NODE_ENV=production webpack --config webpack.prod.js && npm run copy:static",
-    "build:types": "rimraf types && tsc --emitDeclarationOnly",
+    "build": "npm run build --workspace=@boiler/ui-library",
+    "build:types": "npm run build:types --workspace=@boiler/ui-library",
     "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
     "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
