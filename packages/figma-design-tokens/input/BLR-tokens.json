@@ -11,7 +11,7 @@
           "type": "dimension"
         },
         "2": {
-          "value": "{core.px-dimensions.base}*0.25px",
+          "value": "2px",
           "type": "dimension"
         },
         "3": {
@@ -19,7 +19,7 @@
           "type": "dimension"
         },
         "4": {
-          "value": "{core.px-dimensions.base}*0.5px",
+          "value": "4px",
           "type": "dimension"
         },
         "5": {
@@ -27,7 +27,7 @@
           "type": "dimension"
         },
         "6": {
-          "value": "{core.px-dimensions.base}*0.75px",
+          "value": "6px",
           "type": "dimension"
         },
         "7": {
@@ -35,7 +35,7 @@
           "type": "dimension"
         },
         "8": {
-          "value": "{core.px-dimensions.base}*1px",
+          "value": "8px",
           "type": "dimension"
         },
         "10": {
@@ -43,7 +43,7 @@
           "type": "dimension"
         },
         "12": {
-          "value": "{core.px-dimensions.base}*1.5px",
+          "value": "12px",
           "type": "dimension"
         },
         "14": {
@@ -51,57 +51,52 @@
           "type": "dimension"
         },
         "16": {
-          "value": "{core.px-dimensions.base}*2px",
+          "value": "16px",
           "type": "dimension"
         },
         "20": {
-          "value": "{core.px-dimensions.base}*2.5px",
+          "value": "20px",
           "type": "dimension"
         },
         "24": {
-          "value": "{core.px-dimensions.base}*3px",
+          "value": "24px",
           "type": "dimension"
         },
         "32": {
-          "value": "{core.px-dimensions.base}*4px",
+          "value": "32px",
           "type": "dimension"
         },
         "40": {
-          "value": "{core.px-dimensions.base}*5px",
+          "value": "40px",
           "type": "dimension"
         },
         "48": {
-          "value": "{core.px-dimensions.base}*6px",
+          "value": "48px",
           "type": "dimension"
         },
         "56": {
-          "value": "{core.px-dimensions.base}*7px",
+          "value": "56px",
           "type": "dimension"
         },
         "64": {
-          "value": "{core.px-dimensions.base}*8px",
+          "value": "64px",
           "type": "dimension"
         },
         "72": {
-          "value": "{core.px-dimensions.base}*9px",
+          "value": "72px",
           "type": "dimension"
         },
         "80": {
-          "value": "{core.px-dimensions.base}*10px",
+          "value": "80px",
           "type": "dimension"
         },
         "160": {
-          "value": "{core.px-dimensions.base}*20px",
+          "value": "160px",
           "type": "dimension"
         },
         "240": {
-          "value": "{core.px-dimensions.base}*30px",
+          "value": "240px",
           "type": "dimension"
-        },
-        "base": {
-          "value": "8",
-          "type": "variable",
-          "description": "base token for spacing tokens (SP.025, SP,050...)"
         },
         "0,5": {
           "value": "0.5px",
@@ -206,7 +201,7 @@
           "type": "dimension"
         },
         "0,5": {
-          "value": "1/32rem",
+          "value": "0.03125rem",
           "type": "dimension"
         }
       },
