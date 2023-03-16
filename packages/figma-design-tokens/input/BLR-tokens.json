@@ -1716,7 +1716,7 @@
       "TextButton": {
         "XS": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-150}px",
+            "value": "4.5px {core.px-dimensions.SP-150}",
             "type": "spacing"
           },
           "Gap": {
@@ -1726,7 +1726,7 @@
         },
         "SM": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-150}px",
+            "value": "3.5px {core.px-dimensions.SP-150}",
             "type": "spacing"
           },
           "Gap": {
@@ -1736,7 +1736,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-200}px",
+            "value": "7.5px {core.px-dimensions.SP-200}",
             "type": "spacing"
           },
           "Gap": {
@@ -1746,7 +1746,7 @@
         },
         "LG": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-300}px",
+            "value": "10px {core.px-dimensions.SP-300}",
             "type": "spacing"
           },
           "Gap": {
@@ -1756,7 +1756,7 @@
         },
         "XL": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-500}px",
+            "value": "18px {core.px-dimensions.SP-500}",
             "type": "spacing"
           },
           "Gap": {
@@ -1912,7 +1912,7 @@
       "TextDropdown": {
         "XS": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-100} 0 {core.px-dimensions.SP-150}",
+            "value": "4.5px {core.px-dimensions.SP-100} 4.5px {core.px-dimensions.SP-150}",
             "type": "spacing"
           },
           "Gap": {
@@ -1922,7 +1922,7 @@
         },
         "SM": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-100} 0 {core.px-dimensions.SP-150}",
+            "value": "3.5px {core.px-dimensions.SP-100} 3.5px {core.px-dimensions.SP-150}",
             "type": "spacing"
           },
           "Gap": {
@@ -1932,7 +1932,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-150} 0 {core.px-dimensions.SP-250}",
+            "value": "7.5px {core.px-dimensions.SP-150} 7.5px {core.px-dimensions.SP-250}",
             "type": "spacing"
           },
           "Gap": {
@@ -1942,7 +1942,7 @@
         },
         "LG": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-200} 0 {core.px-dimensions.SP-300}",
+            "value": "10px {core.px-dimensions.SP-200} 10px {core.px-dimensions.SP-300}",
             "type": "spacing"
           },
           "Gap": {
@@ -1952,7 +1952,7 @@
         },
         "XL": {
           "Padding": {
-            "value": "0 {core.px-dimensions.SP-400} 0 {core.px-dimensions.SP-500}",
+            "value": "18px {core.px-dimensions.SP-400} 18px {core.px-dimensions.SP-500}",
             "type": "spacing"
           },
           "Gap": {
