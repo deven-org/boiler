@@ -1926,11 +1926,11 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "0 2 0 4",
+            "value": "{core.rem-dimensions.6} {core.rem-dimensions.1} {core.rem-dimensions.6} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "2",
+            "value": "0",
             "type": "spacing"
           }
         },
