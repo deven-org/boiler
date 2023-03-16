@@ -30,6 +30,10 @@
           "value": "{core.px-dimensions.base}*0.75px",
           "type": "dimension"
         },
+        "7": {
+          "value": "7px",
+          "type": "dimension"
+        },
         "8": {
           "value": "{core.px-dimensions.base}*1px",
           "type": "dimension"
@@ -131,6 +135,10 @@
         },
         "6": {
           "value": "0.375rem",
+          "type": "dimension"
+        },
+        "7": {
+          "value": "0.4375rem",
           "type": "dimension"
         },
         "8": {
@@ -1794,7 +1802,7 @@
         },
         "SM": {
           "Padding": {
-            "value": "3.5px {core.px-dimensions.12}",
+            "value": "{core.rem-dimensions.3} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
@@ -1804,7 +1812,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "7.5px {core.px-dimensions.16}",
+            "value": "{core.rem-dimensions.7} {core.px-dimensions.16}",
             "type": "spacing"
           },
           "Gap": {
@@ -1814,7 +1822,7 @@
         },
         "LG": {
           "Padding": {
-            "value": "10px {core.px-dimensions.24}",
+            "value": "{core.rem-dimensions.8} {core.px-dimensions.24}",
             "type": "spacing"
           },
           "Gap": {
@@ -1824,7 +1832,7 @@
         },
         "XL": {
           "Padding": {
-            "value": "18px {core.px-dimensions.40}",
+            "value": "{core.rem-dimensions.16} {core.px-dimensions.40}",
             "type": "spacing"
           },
           "Gap": {
@@ -1968,11 +1976,11 @@
             "type": "sizing"
           },
           "Padding": {
-            "value": "{core.rem-dimensions.12} {core.rem-dimensions.2} {core.rem-dimensions.12} {core.rem-dimensions.4}",
+            "value": "{core.rem-dimensions.12} {core.rem-dimensions.1} {core.rem-dimensions.12} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "0",
+            "value": "-{core.rem-dimensions.4}",
             "type": "spacing"
           }
         }
@@ -1990,7 +1998,7 @@
         },
         "SM": {
           "Padding": {
-            "value": "3.5px {core.px-dimensions.8} 3.5px {core.px-dimensions.12}",
+            "value": "{core.rem-dimensions.3} {core.px-dimensions.8} {core.rem-dimensions.3} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
@@ -2000,7 +2008,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "7.5px {core.px-dimensions.12} 7.5px {core.px-dimensions.20}",
+            "value": "{core.rem-dimensions.7} {core.px-dimensions.12} {core.rem-dimensions.7} {core.px-dimensions.20}",
             "type": "spacing"
           },
           "Gap": {
@@ -2010,7 +2018,7 @@
         },
         "LG": {
           "Padding": {
-            "value": "10px {core.px-dimensions.16} 10px {core.px-dimensions.24}",
+            "value": "{core.rem-dimensions.8} {core.px-dimensions.16} {core.rem-dimensions.8} {core.px-dimensions.24}",
             "type": "spacing"
           },
           "Gap": {
@@ -2020,7 +2028,7 @@
         },
         "XL": {
           "Padding": {
-            "value": "18px {core.px-dimensions.32} 18px {core.px-dimensions.40}",
+            "value": "{core.rem-dimensions.16} {core.px-dimensions.32} {core.rem-dimensions.16} {core.px-dimensions.40}",
             "type": "spacing"
           },
           "Gap": {
