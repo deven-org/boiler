@@ -743,10 +743,6 @@
         "Loose": {
           "value": "160%",
           "type": "lineHeights"
-        },
-        "UltraTight": {
-          "value": "100%",
-          "type": "lineHeights"
         }
       },
       "fontSizes": {
