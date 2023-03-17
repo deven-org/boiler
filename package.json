@@ -20,7 +20,7 @@
     "lint:prettier": "prettier \"**/*.{ts,tsx}\" --check",
     "format:prettier": "prettier \"**/*.{ts,tsx}\" --write",
     "build-storybook": "build-storybook",
-    "test": "wtr --config web-test-runner.config.mjs",
+    "test": "npm run test --workspace=@boiler/ui-library",
     "test:update-snapshots": "npm run test -- --update-snapshots",
     "test:a11y": "build-storybook && sb extract ./storybook-static && node --experimental-json-modules utils/create-pa11y-config.mjs && pa11y-ci --config ./.pa11yci",
     "doc:install": "deven-documentation-skeleton install",

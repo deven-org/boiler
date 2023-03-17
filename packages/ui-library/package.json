@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.prod.js && npm run copy:static",
-    "build:types": "rimraf types && tsc --emitDeclarationOnly"
+    "build:types": "rimraf types && tsc --emitDeclarationOnly",
+    "test": "wtr --config web-test-runner.config.mjs",
+    "test:update-snapshots": "npm run test -- --update-snapshots"
   },
   "author": "",
   "license": "ISC",
