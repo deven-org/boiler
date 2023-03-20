@@ -13,6 +13,7 @@ export class BlrIconLink extends LitElement {
 
   @property() arialabel: string;
   @property() iconName: IconType;
+  @property() loading: boolean;
   @property() href: string;
   @property() target?: string;
   @property() onClick?: HTMLLinkElement['onclick'];
@@ -31,12 +32,15 @@ export class BlrIconLink extends LitElement {
       aria-label="${this.ariaLabel}"
       class="blr-semantic-action blr-icon-link blr-icon-button ${classMap(classes)}"
       href="${this.href}"
+      loading=${this.loading}
       target="${this.target}"
       @click="${this.onClick}"
       @blur="${this.onBlur}"
       id=${this.linkId}
     >
+    ${this.loading ? html `<blr-loader .size="${this.size}"></blr-loader>` : html `
       <blr-icon name="${this.iconName}" aria-hidden></blr-icon>
+      `}
     </a>`;
   }
 }
