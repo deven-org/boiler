@@ -26,6 +26,7 @@ export const BlrIconButton = ({
   ariaLabel,
   onClick,
   onBlur,
+  loading,
   disabled,
   buttonId,
   variant,
@@ -39,6 +40,7 @@ export const BlrIconButton = ({
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
+      .loading=${loading}
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
@@ -53,6 +55,7 @@ BlrIconButton.args = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   iconName: 'blrChevronDownMd',
+  loading: false,
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',

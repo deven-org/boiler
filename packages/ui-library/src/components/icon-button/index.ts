@@ -5,6 +5,7 @@ import { IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
 import { iconButton } from '../../foundation/component-tokens/action';
+import { BlrLoader } from '../loader';
 import { ActionVariants, SizesType } from '../../globals/types';
 
 @customElement('blr-icon-button')
@@ -15,6 +16,7 @@ export class BlrIconButton extends LitElement {
   @property() iconName: IconType;
   @property() onClick: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
+  @property() loading: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariants = 'primary';
@@ -35,7 +37,9 @@ export class BlrIconButton extends LitElement {
       ?disabled="${this.disabled}"
       id=${this.buttonId}
     >
+      ${this.loading ? html `<blr-loader></blr-loader>` : html `
       <blr-icon name="${this.iconName}" aria-hidden></blr-icon>
+      `}
     </button>`;
   }
 }

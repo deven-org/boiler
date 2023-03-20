@@ -30,6 +30,7 @@ export const BlrTextButton = ({
   label,
   onClick,
   onBlur,
+  loading,
   disabled,
   buttonId,
   variant,
@@ -45,6 +46,7 @@ export const BlrTextButton = ({
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
+      .loading=${loading}
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
@@ -60,6 +62,7 @@ BlrTextButton.args = {
   onBlur: () => console.log('onBlur'),
   leadingIcon: 'undefined',
   trailingIcon: 'blrChevronDownMd',
+  loading: false,
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
