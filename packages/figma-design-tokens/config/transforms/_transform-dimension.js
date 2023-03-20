@@ -5,6 +5,8 @@ StyleDictionary.registerTransform({
   name: 'transform/size/px',
   type: 'value',
   transitive: true,
-  matcher: (token) => ['sizing', 'spacing', 'borderRadius', 'borderWidth', 'dimension'].includes(token.type),
+  matcher: (token) =>
+    ['sizing', 'spacing', 'borderRadius', 'borderWidth', 'dimension'].includes(token.type) &&
+    !token.value.includes('rem'),
   transformer: (token) => transformDimension(token.value),
 });
