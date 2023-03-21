@@ -9,25 +9,24 @@ export class BlrLoader extends LitElement {
   static styles = [styleCustom];
 
   @property() arialabel: string;
-  @property() disabled?: boolean;
   @property() size?: SizesType = 'md';
 
   render() {
     const classes = {
       [`${this.size}`]: this.size,
-      disabled: this.disabled,
     };
 
     const getIconSize = (iconSize: string) => {
       return iconSize.charAt(0).toUpperCase() + iconSize.slice(1);
-    }
+    };
 
-    return html`<div
-        aria-label="${this.ariaLabel}"
-        class="blr-loader ${classMap(classes)}"
-        ?disabled="${this.disabled}"
-    >
-      <blr-icon name="blrLoadingSpinner${getIconSize(this.size)}" class="loading-spinner" size="${this.size}" aria-hidden></blr-icon>
-    </div>`
+    return html`<div aria-label="${this.ariaLabel}" class="blr-loader ${classMap(classes)}">
+      <blr-icon
+        name="blrLoadingSpinner${getIconSize(this.size)}"
+        class="loading-spinner"
+        size="${this.size}"
+        aria-hidden
+      ></blr-icon>
+    </div>`;
   }
 }

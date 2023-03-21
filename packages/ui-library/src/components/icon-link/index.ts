@@ -38,9 +38,9 @@ export class BlrIconLink extends LitElement {
       @blur="${this.onBlur}"
       id=${this.linkId}
     >
-    ${this.loading ? html `<blr-loader .size="${this.size}"></blr-loader>` : html `
-      <blr-icon name="${this.iconName}" aria-hidden></blr-icon>
-      `}
+      ${this.loading
+        ? html`<blr-loader .size="${this.size}"></blr-loader>`
+        : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}
     </a>`;
   }
 }
