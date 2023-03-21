@@ -13,21 +13,11 @@ export default {
   },
 };
 
-export const BlrLoader = ({
-  disabled,
-  size,
-}: BlrLoaderClass) =>
-  html`
-    <blr-loader
-      .disabled=${disabled}
-      .size=${size}
-      class="example-layout-class"
-    ></blr-loader>
-  `;
+export const BlrLoader = ({ size }: BlrLoaderClass) =>
+  html` <blr-loader .size=${size} class="example-layout-class"></blr-loader> `;
 
 BlrLoader.storyName = 'BlrLoader';
 
 BlrLoader.args = {
-  disabled: false,
-  size: 'md'
+  size: 'md',
 };
