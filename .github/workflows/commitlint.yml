@@ -1,4 +1,4 @@
-name: CI
+name: Commit lint
 
 on: [push, pull_request]
 
@@ -10,7 +10,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
+          node-version: '18.x'
 
       - name: Checkout code
         uses: actions/checkout@v2
