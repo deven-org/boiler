@@ -1998,6 +1998,140 @@
           "description": "size of xl icon"
         }
       }
+    },
+    "feedback": {
+      "loader": {
+        "sm": {
+          "background": {
+            "default": {
+              "value": {
+                "color": "{Feedback.Background.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{Feedback.Background.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "foreground": {
+            "default": {
+              "value": {
+                "color": "{Feedback.Fill.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{Feedback.Fill.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "sizing": {
+            "value": "{core.rem-dimensions.16}",
+            "type": "sizing"
+          },
+          "padding": {
+            "value": "{core.rem-dimensions.1}",
+            "type": "spacing"
+          }
+        },
+        "md": {
+          "sizing": {
+            "value": "{core.rem-dimensions.24}",
+            "type": "sizing"
+          },
+          "background": {
+            "default": {
+              "value": {
+                "color": "{Feedback.Background.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{Feedback.Background.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "foreground": {
+            "default": {
+              "value": {
+                "color": "{Feedback.Fill.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{Feedback.Fill.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          }
+        },
+        "lg": {
+          "background": {
+            "default": {
+              "value": {
+                "color": "{Feedback.Background.Default}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{Feedback.Background.Inverted}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "foreground": {
+            "default": {
+              "value": {
+                "color": "{Feedback.Fill.Default}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{Feedback.Fill.Inverted}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "sizing": {
+            "value": "{core.rem-dimensions.32}",
+            "type": "sizing"
+          }
+        }
+      }
     }
   },
   "BLR_ASS": {
