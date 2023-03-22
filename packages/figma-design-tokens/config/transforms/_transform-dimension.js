@@ -6,7 +6,6 @@ StyleDictionary.registerTransform({
   type: 'value',
   transitive: true,
   matcher: (token) =>
-    ['sizing', 'spacing', 'borderRadius', 'borderWidth', 'dimension'].includes(token.type) &&
-    !token.value.includes('rem'),
+    ['sizing', 'spacing', 'borderRadius', 'borderWidth'].includes(token.type) && !token.value.includes('rem'),
   transformer: (token) => transformDimension(token.value),
 });
