@@ -2048,6 +2048,10 @@
           }
         },
         "md": {
+          "padding": {
+            "value": "{core.rem-dimensions.3}",
+            "type": "spacing"
+          },
           "sizing": {
             "value": "{core.rem-dimensions.24}",
             "type": "sizing"
@@ -2090,6 +2094,10 @@
           }
         },
         "lg": {
+          "padding": {
+            "value": "{core.rem-dimensions.2}",
+            "type": "spacing"
+          },
           "background": {
             "default": {
               "value": {
