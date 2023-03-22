@@ -5,6 +5,11 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.prod.js && npm run copy:static",
     "build:types": "rimraf types && tsc --emitDeclarationOnly",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
+    "lint:stylelint": "stylelint 'src/**/css.ts'",
+    "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
     "test": "wtr --config web-test-runner.config.mjs",
     "test:update-snapshots": "npm run test -- --update-snapshots"
   },

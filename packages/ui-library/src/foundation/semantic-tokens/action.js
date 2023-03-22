@@ -94,7 +94,6 @@ export const action = css`
   }
 
   .blr-semantic-action.xs {
-    min-height: ${XS.Height};
     font-family: ${XS.Label.fontFamily};
     font-weight: ${XS.Label.fontWeight};
     line-height: ${XS.Label.lineHeight};
@@ -102,7 +101,6 @@ export const action = css`
   }
 
   .blr-semantic-action.sm {
-    min-height: ${SM.Height};
     font-family: ${SM.Label.fontFamily};
     font-weight: ${SM.Label.fontWeight};
     line-height: ${SM.Label.lineHeight};
@@ -110,7 +108,6 @@ export const action = css`
   }
 
   .blr-semantic-action.md {
-    min-height: ${MD.Height};
     font-family: ${MD.Label.fontFamily};
     font-weight: ${MD.Label.fontWeight};
     line-height: ${MD.Label.lineHeight};
@@ -118,7 +115,6 @@ export const action = css`
   }
 
   .blr-semantic-action.lg {
-    min-height: ${LG.Height};
     font-family: ${LG.Label.fontFamily};
     font-weight: ${LG.Label.fontWeight};
     line-height: ${LG.Label.lineHeight};
@@ -126,7 +122,6 @@ export const action = css`
   }
 
   .blr-semantic-action.xl {
-    min-height: ${XL.Height};
     font-family: ${XL.Label.fontFamily};
     font-weight: ${XL.Label.fontWeight};
     line-height: ${XL.Label.lineHeight};

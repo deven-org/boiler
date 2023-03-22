@@ -3,5 +3,8 @@
   "singleQuote": true,
   "semi": true,
   "tabWidth": 2,
-  "endOfLine": "lf"
+  "arrowParens": "always",
+  "quoteProps": "consistent",
+  "endOfLine": "lf",
+  "proseWrap": "always"
 }
