@@ -1,7 +1,7 @@
 import { css } from 'lit';
 import { componentTokens } from '../_tokens-generated/index.generated';
 
-const { TextButton, IconButton } = componentTokens.component.Action;
+const { TextButton, IconButton, TextInput } = componentTokens.component.Action;
 
 export const textButton = css`
   .blr-text-button.xs {
@@ -49,5 +49,27 @@ export const iconButton = css`
 
   .blr-icon-button.xl {
     min-width: ${IconButton.XL.Width};
+  }
+`;
+
+export const textInput = css`
+  .blr-text-input.xs {
+    min-width: ${TextInput.XS.Width};
+  }
+
+  .blr-text-input.sm {
+    min-width: ${TextInput.SM.Width};
+  }
+
+  .blr-text-input.md {
+    min-width: ${TextInput.MD.Width};
+  }
+
+  .blr-text-input.lg {
+    min-width: ${TextInput.LG.Width};
+  }
+
+  .blr-text-input.xl {
+    min-width: ${TextInput.XL.Width};
   }
 `;
