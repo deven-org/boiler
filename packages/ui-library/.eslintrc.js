@@ -27,5 +27,5 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'off',
   },
   settings: {},
-  ignorePatterns: ['utils/', 'figma-design-tokens', 'types/', '*.svg', '*.scss', '*.css', '*.md', '*.config.mjs'],
+  ignorePatterns: ['utils/', 'figma-design-tokens', 'types/', '*.svg', '*.scss', '*.css', '*.md', '*.config.mjs', '.*'],
 };

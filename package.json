@@ -11,11 +11,11 @@
     "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
     "build": "npm run build --workspace=@boiler/ui-library",
     "build:types": "npm run build:types --workspace=@boiler/ui-library",
-    "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
-    "format": "npm run format:eslint && npm run format:prettier",
-    "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
-    "lint:stylelint": "stylelint 'src/**/css.ts'",
-    "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
+    "lint": "npm run lint --workspace=@boiler/ui-library",
+    "format": "npm run format:eslint --workspace=@boiler/ui-library && npm run format:prettier --workspace=@boiler/ui-library",
+    "lint:eslint": "npm run lint:eslint --workspace=@boiler/ui-library",
+    "lint:stylelint": "npm run lint:stylelint --workspace=@boiler/ui-library",
+    "format:eslint": "npm run format:eslint --workspace=@boiler/ui-library",
     "lint:prettier": "prettier \"**/*.{ts,tsx}\" --check",
     "format:prettier": "prettier \"**/*.{ts,tsx}\" --write",
     "build-storybook": "build-storybook",
@@ -44,6 +44,7 @@
   "lint-staged": {
     "**/*.{ts,tsx}": [
       "eslint --fix",
+      "stylelint",
       "prettier --write"
     ]
   },
