@@ -1023,6 +1023,130 @@
         "lg": { "value": "{core.rem-dimensions.32}", "type": "sizing", "description": "size of lg icon" },
         "xl": { "value": "{core.rem-dimensions.48}", "type": "sizing", "description": "size of xl icon" }
       }
+    },
+    "feedback": {
+      "loader": {
+        "sm": {
+          "background": {
+            "default": {
+              "value": {
+                "color": "{semantic.Feedback.Background.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{semantic.Feedback.Background.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "foreground": {
+            "default": {
+              "value": {
+                "color": "{semantic.Feedback.Fill.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{semantic.Feedback.Fill.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "sizing": { "value": "{core.rem-dimensions.16}", "type": "sizing" },
+          "padding": { "value": "{core.rem-dimensions.1}", "type": "spacing" }
+        },
+        "md": {
+          "background": {
+            "default": {
+              "value": {
+                "color": "{semantic.Feedback.Background.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{semantic.Feedback.Background.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "foreground": {
+            "default": {
+              "value": {
+                "color": "{semantic.Feedback.Fill.Default}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{semantic.Feedback.Fill.Inverted}",
+                "width": "{core.px-dimensions.2}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "sizing": { "value": "{core.rem-dimensions.24}", "type": "sizing" },
+          "padding": { "value": "{core.rem-dimensions.2}", "type": "spacing" }
+        },
+        "lg": {
+          "background": {
+            "default": {
+              "value": {
+                "color": "{semantic.Feedback.Background.Default}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{semantic.Feedback.Background.Inverted}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "foreground": {
+            "default": {
+              "value": {
+                "color": "{semantic.Feedback.Fill.Default}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "inverted": {
+              "value": {
+                "color": "{semantic.Feedback.Fill.Inverted}",
+                "width": "{core.px-dimensions.3}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "sizing": { "value": "{core.rem-dimensions.32}", "type": "sizing" },
+          "padding": { "value": "{core.rem-dimensions.3}", "type": "spacing" }
+        }
+      }
     }
   }
 }
