@@ -1,0 +1,19 @@
+# name: eslint
+
+# on: [push, pull_request]
+
+# jobs:
+#   eslint:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - uses: actions/checkout@v2
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Eslint
+#         uses: wagoid/eslint-pr-action@v1
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           eslint_args: '--ext .js,.jsx,.ts,.tsx'

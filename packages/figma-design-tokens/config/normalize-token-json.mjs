@@ -16,6 +16,7 @@ if (typeof core == 'undefined' || typeof sem === 'undefined' || typeof comp === 
 const flattenedJson = { ...core, semantic: sem, component: comp };
 const string = JSON.stringify(flattenedJson)
   .replaceAll('{Label', '{semantic.Label')
+  .replaceAll('{Feedback', '{semantic.Feedback')
   .replaceAll('{Action', '{semantic.Action');
 
 console.log(chalk.cyanBright('\n🧵🪡 normalize token.json...\n'));

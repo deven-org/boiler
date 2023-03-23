@@ -1,22 +1,21 @@
 {
   "name": "@boiler/boiler",
   "version": "0.0.1",
-  "description": "Component Library",
-  "main": "./dist/main.js",
-  "types": ".dist/types/index.d.js",
+  "description": "Monorepo for the B01LER Design System",
+  "main": "",
+  "types": "",
   "scripts": {
-    "commitlint": "commitlint -c -e",
     "prestart": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
     "start": "npm run start --workspace=@boiler/storybook",
     "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
     "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
     "build": "npm run build --workspace=@boiler/ui-library",
     "build:types": "npm run build:types --workspace=@boiler/ui-library",
-    "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
-    "format": "npm run format:eslint && npm run format:prettier",
-    "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
-    "lint:stylelint": "stylelint 'src/**/css.ts'",
-    "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
+    "lint": "npm run lint --workspace=@boiler/ui-library",
+    "format": "npm run format:eslint --workspace=@boiler/ui-library && npm run format:prettier --workspace=@boiler/ui-library",
+    "lint:eslint": "npm run lint:eslint --workspace=@boiler/ui-library",
+    "lint:stylelint": "npm run lint:stylelint --workspace=@boiler/ui-library",
+    "format:eslint": "npm run format:eslint --workspace=@boiler/ui-library",
     "lint:prettier": "prettier \"**/*.{ts,tsx}\" --check",
     "format:prettier": "prettier \"**/*.{ts,tsx}\" --write",
     "build-storybook": "build-storybook",
@@ -26,7 +25,8 @@
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
-    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icon-set -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write"
+    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icon-set -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -41,16 +41,11 @@
     "url": "https://github.com/deven-org/BO1LER-Kitchen/issues"
   },
   "homepage": "https://github.com/deven-org/BO1LER-Kitchen#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "**/*.{ts,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "stylelint",
+      "prettier --write"
     ]
   },
   "devDependencies": {
@@ -63,12 +58,6 @@
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
     "@open-wc/testing": "3.1.7",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/cli": "^6.5.0",
-    "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/web-components": "^6.5.16",
     "@types/react": "^18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
@@ -89,7 +78,7 @@
     "eslint-webpack-plugin": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^7.3.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
     "lit-html": "^2.6.1",
     "mini-css-extract-plugin": "^2.7.2",

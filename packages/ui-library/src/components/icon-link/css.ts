@@ -6,6 +6,8 @@ export const styleCustom = css`
     justify-content: center;
     display: inline-flex;
     cursor: pointer;
+    padding-right: 3px;
+    padding-left: 3px;
   }
 
   .blr-icon-button:focus {

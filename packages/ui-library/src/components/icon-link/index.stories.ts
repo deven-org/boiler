@@ -58,7 +58,7 @@ BlrIconLink.args = {
   onBlur: () => console.log('onBlur'),
   loading: false,
   iconName: 'blrChevronDownMd',
-  linkId: 'button-id',
+  linkId: 'link-id',
   variant: 'cta',
   size: 'md',
   href: '#',
