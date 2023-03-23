@@ -69,7 +69,6 @@ module.exports = {
         'transform/size/px',
         'transform/strReplace',
         'transform/font-weight',
-        'transform/font-to-rem',
       ],
       prefix: 'blr',
       buildPath: '../ui-library/src/foundation/_tokens-generated/',
