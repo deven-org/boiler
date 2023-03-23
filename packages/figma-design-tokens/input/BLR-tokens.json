@@ -1552,7 +1552,7 @@
         }
       }
     },
-    "Headline": {
+    "UI/Headline": {
       "H1": {
         "value": {
           "fontFamily": "{core.fontFamilies.Headlines}",
@@ -1608,7 +1608,7 @@
         "type": "typography"
       }
     },
-    "Paragraph": {
+    "UI/Paragraph": {
       "XS": {
         "Regular": {
           "value": {
@@ -2048,7 +2048,6 @@
           }
         },
         "md": {
-          
           "background": {
             "default": {
               "value": {
@@ -2277,6 +2276,12 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": ["BLR_COR", "BLR_SEM", "BLR_CMP", "BLR_ASS", "DOC"]
+    "tokenSetOrder": [
+      "BLR_COR",
+      "BLR_SEM",
+      "BLR_CMP",
+      "BLR_ASS",
+      "DOC"
+    ]
   }
 }
