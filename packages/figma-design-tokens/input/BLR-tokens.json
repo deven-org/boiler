@@ -1807,6 +1807,18 @@
           "type": "borderWidth"
         }
       }
+    },
+    "Forms": {
+      "caption": {
+        "error": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "hint": {
+          "value": "{core.color.coolgray.300}",
+          "type": "color"
+        }
+      }
     }
   },
   "BLR_CMP": {
