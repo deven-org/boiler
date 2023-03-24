@@ -5,3 +5,4 @@ dist
 storybook-static
 _tokens-generated
 .vscode
+.idea
