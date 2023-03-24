@@ -10,18 +10,20 @@ export class BlrLoader extends LitElement {
   static styles = [styleCustom, loadingSpinner];
 
   @property() size?: FeedbackSizesType = 'md';
-  @property() variant: ActionVariants = 'primary';
+  @property() variant?: ActionVariants = 'primary';
   @property() loaderVariant?: FeedbackVariants;
 
   render() {
-    const loaderVariant = this.variant === 'secondary' || this.variant === 'silent' ? 'default' : 'inverted';
+    if (!this.loaderVariant) {
+      this.loaderVariant = this.variant === 'secondary' || this.variant === 'silent' ? 'default' : 'inverted';
+    }
 
     const classes = {
-      [`${loaderVariant}`]: loaderVariant,
+      [`${this.loaderVariant}`]: this.loaderVariant,
       [`${this.size}`]: this.size,
     };
 
-    return html`<div class="blr-loader ${loaderVariant}">
+    return html`<div class="blr-loader ${this.loaderVariant}">
       <div class="blr-loading-spinner ${classMap(classes)}"></div>
     </div>`;
   }
