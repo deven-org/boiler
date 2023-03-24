@@ -10,19 +10,19 @@ export default {
       options: FeedbackSizes,
       control: { type: 'select' },
     },
-    variant: {
+    loaderVariant: {
       options: ['default', 'inverted'],
       control: { type: 'select' },
     },
   },
 };
 
-export const BlrLoader = ({ size, variant }: BlrLoaderClass) =>
-  html` <blr-loader .size=${size} .variant=${variant}></blr-loader> `;
+export const BlrLoader = ({ size, loaderVariant }: BlrLoaderClass) =>
+  html` <blr-loader .size=${size} .loaderVariant=${loaderVariant}></blr-loader> `;
 
 BlrLoader.storyName = 'BlrLoader';
 
 BlrLoader.args = {
   size: 'md',
-  variant: 'default',
+  loaderVariant: 'default',
 };
