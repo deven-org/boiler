@@ -13,13 +13,16 @@ export class BlrLoader extends LitElement {
   @property() variant?: ActionVariants = 'primary';
   @property() loaderVariant?: FeedbackVariants;
 
-  render() {
+  setDefaultLoaderVariant() {
     if (!this.loaderVariant) {
-      this.loaderVariant = this.variant === 'secondary' || this.variant === 'silent' ? 'default' : 'inverted';
+      return this.variant === 'secondary' || this.variant === 'silent' ? 'default' : 'inverted';
+    } else {
+      return this.loaderVariant;
     }
-
+  }
+  render() {
     const classes = {
-      [`${this.loaderVariant}`]: this.loaderVariant,
+      [this.setDefaultLoaderVariant()]: this.setDefaultLoaderVariant(),
       [`${this.size}`]: this.size,
     };
 
