@@ -2,31 +2,27 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './css';
-import { SizesType } from '../../globals/types';
+import { loadingSpinner } from '../../foundation/component-tokens/feedback';
+import { ActionVariants, FeedbackSizesType, FeedbackVariants } from '../../globals/types';
 
 @customElement('blr-loader')
 export class BlrLoader extends LitElement {
-  static styles = [styleCustom];
+  static styles = [styleCustom, loadingSpinner];
 
-  @property() arialabel: string;
-  @property() size?: SizesType = 'md';
+  @property() size?: FeedbackSizesType = 'md';
+  @property() variant: ActionVariants = 'primary';
+  @property() loaderVariant?: FeedbackVariants;
 
   render() {
+    const loaderVariant = this.variant === 'secondary' || this.variant === 'silent' ? 'default' : 'inverted';
+
     const classes = {
+      [`${loaderVariant}`]: loaderVariant,
       [`${this.size}`]: this.size,
     };
 
-    const getIconSize = (iconSize: string) => {
-      return iconSize.charAt(0).toUpperCase() + iconSize.slice(1);
-    };
-
-    return html`<div aria-label="${this.ariaLabel}" class="blr-loader ${classMap(classes)}">
-      <blr-icon
-        name="blrLoadingSpinner${getIconSize(this.size)}"
-        class="loading-spinner"
-        size="${this.size}"
-        aria-hidden
-      ></blr-icon>
+    return html`<div class="blr-loader ${loaderVariant}">
+      <div class="blr-loading-spinner ${classMap(classes)}"></div>
     </div>`;
   }
 }

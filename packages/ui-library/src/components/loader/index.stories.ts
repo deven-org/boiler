@@ -1,23 +1,28 @@
 import { html } from 'lit-html';
 import { BlrLoader as BlrLoaderClass } from './index';
-import { Sizes } from '../../globals/constants';
+import { FeedbackSizes } from '../../globals/constants';
 import './index';
 
 export default {
   title: 'BlrLoader',
   argTypes: {
     size: {
-      options: Sizes,
+      options: FeedbackSizes,
+      control: { type: 'select' },
+    },
+    variant: {
+      options: ['default', 'inverted'],
       control: { type: 'select' },
     },
   },
 };
 
-export const BlrLoader = ({ size }: BlrLoaderClass) =>
-  html` <blr-loader .size=${size} class="example-layout-class"></blr-loader> `;
+export const BlrLoader = ({ size, variant }: BlrLoaderClass) =>
+  html` <blr-loader .size=${size} .variant=${variant}></blr-loader> `;
 
 BlrLoader.storyName = 'BlrLoader';
 
 BlrLoader.args = {
   size: 'md',
+  variant: 'default',
 };

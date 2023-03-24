@@ -37,7 +37,7 @@ export class BlrTextButton extends LitElement {
       id=${this.buttonId}
     >
       ${this.loading
-        ? html`<blr-loader .size="${this.size}"></blr-loader>`
+        ? html`<blr-loader .size="${this.size}" .variant="${this.variant}"></blr-loader>`
         : html`
             ${this.leadingIcon && html`<blr-icon name="${this.leadingIcon}" aria-hidden></blr-icon>`}
             <span>${this.label}</span>

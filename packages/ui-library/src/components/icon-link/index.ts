@@ -39,7 +39,7 @@ export class BlrIconLink extends LitElement {
       id=${this.linkId}
     >
       ${this.loading
-        ? html`<blr-loader .size="${this.size}"></blr-loader>`
+        ? html`<blr-loader .size="${this.size}" .variant="${this.variant}"></blr-loader>`
         : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}
     </a>`;
   }
