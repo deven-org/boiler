@@ -3,13 +3,12 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
-import { textInput } from '../../foundation/component-tokens/action';
+//import { textInput } from '../../foundation/component-tokens/action';
 import { SizesType, InputTypes } from '../../globals/types';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, action, textInput];
-
+  static styles = [styleCustom, action];
 
   @property() textInputId: string;
   @property() type: InputTypes;
@@ -26,7 +25,6 @@ export class BlrTextInput extends LitElement {
   @property() maxLength: number;
   @property() minLength: number;
   @property() pattern: string;
-  
 
   render() {
     const classes = {
@@ -35,24 +33,23 @@ export class BlrTextInput extends LitElement {
     };
 
     return html`
-    <input
-      class="blr-text-input ${classMap(classes)}"
-      id=${this.textInputId}
-      type="${this.type}"
-      inputName="${this.inputName}"
-      inputValue="${this.inputValue}"
-      placeholder="${this.placeholder}"
-      defaultValue="${this.defaultValue}"
-      ?disabled="${this.disabled}"
-      ?required="${this.required}"
-      @input="${this.onChange}"
-      @blur="${this.onBlur}"
-      @focus="${this.onFocus}"
-      maxLength="${this.maxLength}"
-      minLength="${this.minLength}"
-      pattern="${this.pattern}"
-
-    />
-`;
+      <input
+        class="blr-text-input ${classMap(classes)}"
+        id=${this.textInputId}
+        type="${this.type}"
+        inputName="${this.inputName}"
+        inputValue="${this.inputValue}"
+        placeholder="${this.placeholder}"
+        defaultValue="${this.defaultValue}"
+        ?disabled="${this.disabled}"
+        ?required="${this.required}"
+        @input="${this.onChange}"
+        @blur="${this.onBlur}"
+        @focus="${this.onFocus}"
+        maxlength="${this.maxLength}"
+        minlength="${this.minLength}"
+        pattern="${this.pattern}"
+      />
+    `;
   }
 }
