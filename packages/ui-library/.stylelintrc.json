@@ -1,4 +1,15 @@
 {
   "extends": "stylelint-config-standard",
-  "customSyntax": "postcss-lit"
+  "customSyntax": "postcss-lit",
+  "rules": {
+    "comment-empty-line-before": null,
+    "at-rule-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "property-no-vendor-prefix": null,
+    "alpha-value-notation": null,
+    "value-keyword-case": ["lower", { "ignoreProperties": ["--font-family-sans"] }],
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "value-no-vendor-prefix": null
+  }
 }

@@ -3,6 +3,8 @@ import { componentTokens } from '../_tokens-generated/index.generated';
 
 const { TextButton, IconButton, TextInput } = componentTokens.component.Action;
 
+console.log(TextButton);
+
 export const textButton = css`
   .blr-text-button.xs {
     padding: ${TextButton.XS.Padding};
@@ -32,23 +34,23 @@ export const textButton = css`
 
 export const iconButton = css`
   .blr-icon-button.xs {
-    min-width: ${IconButton.XS.Width};
+    padding: ${IconButton.XS.Padding};
   }
 
   .blr-icon-button.sm {
-    min-width: ${IconButton.SM.Width};
+    padding: ${IconButton.SM.Padding};
   }
 
   .blr-icon-button.md {
-    min-width: ${IconButton.MD.Width};
+    padding: ${IconButton.MD.Padding};
   }
 
   .blr-icon-button.lg {
-    min-width: ${IconButton.LG.Width};
+    padding: ${IconButton.LG.Padding};
   }
 
   .blr-icon-button.xl {
-    min-width: ${IconButton.XL.Width};
+    padding: ${IconButton.XL.Padding};
   }
 `;
 

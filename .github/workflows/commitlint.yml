@@ -1,6 +1,6 @@
-name: CI
+name: Commit lint
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   default:
@@ -10,7 +10,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
+          node-version: '18.x'
 
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,6 +22,10 @@ jobs:
         run: |
           npm install conventional-changelog-conventionalcommits
           npm install commitlint@latest
+
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: npx commitlint --from HEAD~1 --to HEAD --verbose
 
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
