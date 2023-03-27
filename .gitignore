@@ -4,3 +4,4 @@ dist
 .eslintcache
 storybook-static
 _tokens-generated
+tokens.normalized.json

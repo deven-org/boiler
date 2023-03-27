@@ -24,7 +24,7 @@
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
-    "compile:icons": "rimraf src/foundation/icons && svgo -f assets/icon-set -o src/foundation/icons --config svgo.config.js && node ./utils/create-icons-index.mjs && prettier ./src/foundation/icons/index.ts --write",
+    "compile:icons": "npm run compile:icons --workspace=@boiler/icons",
     "tokens:generate": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
     "prepare": "husky install"
   },
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/deven-org/BO1LER-Kitchen#readme",
   "lint-staged": {
-    "**/*.{ts,tsx}": [
+    "packages/ui-library/**/*.{ts,tsx}": [
       "eslint --fix",
       "stylelint",
       "prettier --write"

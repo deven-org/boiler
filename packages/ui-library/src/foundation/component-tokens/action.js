@@ -3,8 +3,6 @@ import { componentTokens } from '../_tokens-generated/index.generated';
 
 const { TextButton, IconButton } = componentTokens.component.Action;
 
-console.log(TextButton);
-
 export const textButton = css`
   .blr-text-button.xs {
     padding: ${TextButton.XS.Padding};

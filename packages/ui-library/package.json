@@ -19,6 +19,7 @@
     "@boiler/figma-design-tokens": "0.0.1"
   },
   "dependencies": {
+    "@boiler/icons": "0.0.1",
     "@lit-labs/react": "^1.1.1",
     "lit": "^2.6.1"
   }

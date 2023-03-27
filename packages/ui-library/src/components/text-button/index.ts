@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconType } from '../../foundation/icons';
+import { IconType } from '@boiler/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
 import { textButton } from '../../foundation/component-tokens/action';
