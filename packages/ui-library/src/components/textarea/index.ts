@@ -4,10 +4,11 @@ import { FormSizesType } from '../../globals/types';
 import { styleCustom } from '../textarea/css';
 import { classMap } from 'lit/directives/class-map.js';
 import { IconType } from '../../foundation/icons';
+import { textarea } from '../../foundation/component-tokens/form';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
-  static styles = [styleCustom];
+  static styles = [styleCustom, textarea];
   @property() textareaId: string;
   @property() label: string;
   @property() size?: FormSizesType = 'md';
@@ -27,7 +28,7 @@ export class BlrTextarea extends LitElement {
 
     return html` <label>${this.label}</label>
       <textarea
-        class="blr-semantic-action blr-text-area ${classMap(classes)}"
+        class="blr-textarea ${classMap(classes)}"
         textareaId="${this.textareaId}"
         size="${this.size}"
         minlength="${this.minLength}"
