@@ -19,6 +19,7 @@ export class BlrTextarea extends LitElement {
   @property() required?: boolean;
   @property() disabled?: boolean;
   @property() hintMessage?: string;
+  @property() hasError?: boolean;
 
   render() {
     const classes = {
@@ -37,7 +38,12 @@ export class BlrTextarea extends LitElement {
         placeholder="${this.placeholder}"
         required="${this.required}"
         ?disabled="${this.disabled}"
+        hasError="${this.hasError}"
       ></textarea>
-      <p><blr-icon name="blr360Lg" aria-hidden></blr-icon>${this.required ? this.errorMessage : this.hintMessage}</p>`;
+      <p>
+        <blr-icon name="blr360Lg" aria-hidden></blr-icon>${this.required || this.hasError
+          ? this.errorMessage
+          : this.hintMessage}
+      </p>`;
   }
 }

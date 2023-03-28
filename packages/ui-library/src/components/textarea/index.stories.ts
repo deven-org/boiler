@@ -24,6 +24,7 @@ export const BlrTextarea = ({
   required,
   disabled,
   hintMessage,
+  hasError,
 }: BlrTextareaClass) =>
   html`
     <blr-textarea
@@ -37,6 +38,7 @@ export const BlrTextarea = ({
       .required=${required}
       .disabled=${disabled}
       .hintMessage=${hintMessage}
+      .hasError=${hasError}
       class="example-layout-class"
     ></blr-textarea>
   `;
@@ -54,4 +56,5 @@ BlrTextarea.args = {
   required: false,
   disabled: false,
   hintMessage: 'Context',
+  hasError: false,
 };
