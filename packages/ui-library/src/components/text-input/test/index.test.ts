@@ -8,7 +8,7 @@ describe('blr-text-input', () => {
       <blr-text-input      
       type="text"
       textInputId="text-Input-id"
-      inputName="Test Input Name"
+      label="Test Input Name"
       placeholder="Test Placeholder 2"
       defaultValue="Test defaultValue"
       disabled="false"

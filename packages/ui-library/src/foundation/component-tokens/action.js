@@ -51,25 +51,3 @@ export const iconButton = css`
     padding: ${IconButton.XL.Padding};
   }
 `;
-
-/* export const textInput = css`
-  .blr-text-input.xs {
-    min-width: ${TextInput.XS.Width};
-  }
-
-  .blr-text-input.sm {
-    min-width: ${TextInput.SM.Width};
-  }
-
-  .blr-text-input.md {
-    min-width: ${TextInput.MD.Width};
-  }
-
-  .blr-text-input.lg {
-    min-width: ${TextInput.LG.Width};
-  }
-
-  .blr-text-input.xl {
-    min-width: ${TextInput.XL.Width};
-  }
-`; */

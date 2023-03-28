@@ -15,11 +15,10 @@ export default {
 
 export const BlrTextInput = ({
   textInputId,
-  inputName,
+  label,
   type,
-  inputValue,
+  value,
   placeholder,
-  defaultValue,
   disabled,
   size,
   required,
@@ -29,15 +28,17 @@ export const BlrTextInput = ({
   maxLength,
   minLength,
   pattern,
+  errorMessage,
+  hint,
+  hasError,
 }: BlrTextInputClass) =>
   html`
     <blr-text-input
       .textInputId=${textInputId}
-      .inputName=${inputName}
+      .label=${label}
       .type=${type}
-      .inputValue=${inputValue}
+      .value=${value}
       .placeholder=${placeholder}
-      .defaultValue=${defaultValue}
       .disabled=${disabled}
       .size=${size}
       .required=${required}
@@ -47,6 +48,9 @@ export const BlrTextInput = ({
       .maxLength=${maxLength}
       .minLength=${minLength}
       .pattern=${pattern}
+      .errorMessage=${errorMessage}
+      .hint=${hint}
+      .hasError=${hasError}
       class="example-layout-class"
     ></blr-text-input>
   `;
@@ -54,19 +58,21 @@ export const BlrTextInput = ({
 BlrTextInput.storyName = 'BlrTextInput';
 
 BlrTextInput.args = {
-  inputName: 'Text Input',
+  label: 'Text Input',
   type: 'text',
-  inputValue: 'Story book Text Input',
+  value: 'Story book Text Input',
   placeholder: 'Test placeholder',
-  defaultValue: '',
   onChange: () => console.log('onChange'),
   onBlur: () => console.log('onBlur'),
   onFocus: () => console.log('onFocus'),
   disabled: false,
   required: false,
   textInputId: 'text-input-id',
-  maxLength: '200px',
-  minLength: '50px',
+  maxLength: '200',
+  minLength: '50',
   size: 'md',
-  pattern: ''
+  pattern: '',
+  errorMessage: 'This is error message',
+  hint: 'Feild is used for hint',
+  hasError: false,
 };
