@@ -14,6 +14,8 @@ export class BlrTextarea extends LitElement {
   @property() size?: FormSizesType = 'md';
   @property() minLength?: number;
   @property() maxLength?: number;
+  @property() cols?: number;
+  @property() rows?: number;
   @property() errorMessage?: string;
   @property() placeholder?: string;
   @property() required?: boolean;
@@ -38,6 +40,8 @@ export class BlrTextarea extends LitElement {
         size="${this.size}"
         minlength="${this.minLength}"
         maxLenght="${this.maxLength}"
+        cols="${this.cols}"
+        rows="${this.rows}"
         errorMessage="${this.errorMessage}"
         placeholder="${this.placeholder}"
         required="${this.required}"
@@ -47,10 +51,6 @@ export class BlrTextarea extends LitElement {
         @focus="${this.onFocus}"
         @select="${this.onSelect}"
       ></textarea>
-      <p>
-        <blr-icon name="blr360Lg" aria-hidden></blr-icon>${this.required || this.hasError
-          ? this.errorMessage
-          : this.hintMessage}
-      </p>`;
+      <p><blr-icon name="blr360Lg" aria-hidden></blr-icon>${this.hasError ? this.errorMessage : this.hintMessage}</p>`;
   }
 }

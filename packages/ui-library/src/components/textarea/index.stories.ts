@@ -19,6 +19,8 @@ export const BlrTextarea = ({
   size,
   minLength,
   maxLength,
+  cols,
+  rows,
   errorMessage,
   placeholder,
   required,
@@ -36,6 +38,8 @@ export const BlrTextarea = ({
       .size=${size}
       .minLength=${minLength}
       .maxLength=${maxLength}
+      .cols=${cols}
+      .rows=${rows}
       .errorMessage=${errorMessage}
       .placeholder=${placeholder}
       .required=${required}
@@ -57,6 +61,8 @@ BlrTextarea.args = {
   size: 'md',
   minLength: '0',
   maxLength: '500',
+  cols: '20',
+  rows: '10',
   errorMessage: 'Please type something',
   placeholder: 'Type your message here ..',
   required: false,
