@@ -25,6 +25,9 @@ export const BlrTextarea = ({
   disabled,
   hintMessage,
   hasError,
+  onChange,
+  onFocus,
+  onSelect,
 }: BlrTextareaClass) =>
   html`
     <blr-textarea
@@ -39,6 +42,9 @@ export const BlrTextarea = ({
       .disabled=${disabled}
       .hintMessage=${hintMessage}
       .hasError=${hasError}
+      .onChange=${onChange}
+      .onFocus=${onFocus}
+      .onSelect=${onSelect}
       class="example-layout-class"
     ></blr-textarea>
   `;
@@ -57,4 +63,7 @@ BlrTextarea.args = {
   disabled: false,
   hintMessage: 'Context',
   hasError: false,
+  onChange: () => console.log('onChange'),
+  onFocus: () => console.log('onFocus'),
+  onSelect: () => console.log('onSelect'),
 };

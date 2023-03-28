@@ -20,6 +20,10 @@ export class BlrTextarea extends LitElement {
   @property() disabled?: boolean;
   @property() hintMessage?: string;
   @property() hasError?: boolean;
+  @property() onChange?: HTMLElement['oninput'];
+  @property() onFocus?: HTMLElement['focus'];
+  @property() onSelect?: HTMLElement['onselect'];
+  @property() onClick?: HTMLElement['onselect'];
 
   render() {
     const classes = {
@@ -39,6 +43,9 @@ export class BlrTextarea extends LitElement {
         required="${this.required}"
         ?disabled="${this.disabled}"
         hasError="${this.hasError}"
+        @input="${this.onChange}"
+        @focus="${this.onFocus}"
+        @select="${this.onSelect}"
       ></textarea>
       <p>
         <blr-icon name="blr360Lg" aria-hidden></blr-icon>${this.required || this.hasError
