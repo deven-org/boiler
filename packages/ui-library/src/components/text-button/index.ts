@@ -3,8 +3,8 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { IconType } from '@boiler/icons';
 import { styleCustom } from './css';
-import { action } from '../../foundation/semantic-tokens/action';
-import { textButton } from '../../foundation/component-tokens/action';
+import { action } from '../../foundation/semantic-tokens/action.css';
+import { textButton } from '../../foundation/component-tokens/action.css';
 import { ActionVariants, SizesType } from '../../globals/types';
 
 @customElement('blr-text-button')

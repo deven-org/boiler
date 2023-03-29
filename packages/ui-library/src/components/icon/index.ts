@@ -1,9 +1,9 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { icon } from '../../foundation/component-tokens/ui';
+import { icon } from '../../foundation/component-tokens/ui.css';
 import { IconMapping, IconType } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
-import { styleCustom } from './css';
+import { styleCustom } from './index.css';
 
 @customElement('blr-icon')
 export class BlrIcon extends LitElement {
