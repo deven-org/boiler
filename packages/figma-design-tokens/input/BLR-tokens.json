@@ -1,7 +1,7 @@
 {
   "BLR_COR": {
     "core": {
-      "dimensionPX": {
+      "px-dimensions": {
         "0": {
           "value": "0px",
           "type": "dimension"
@@ -103,7 +103,7 @@
           "type": "dimension"
         }
       },
-      "dimensionREM": {
+      "rem-dimensions": {
         "0": {
           "value": "0rem",
           "type": "dimension"
@@ -1809,158 +1809,158 @@
       }
     },
     "Forms": {
-      "Caption": {
-        "Error": {
+      "caption": {
+        "error": {
           "value": "{core.color.crimson.500}",
           "type": "color"
         },
-        "Hint": {
+        "hint": {
           "value": "{core.color.coolgray.300}",
           "type": "color"
         },
-        "Default": {
+        "default": {
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
         },
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+        "margin": {
+          "value": "{core.rem-dimensions.8} {core.px-dimensions.0} {core.rem-dimensions.0} {core.px-dimensions.0}",
           "type": "spacing"
         },
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+        "padding": {
+          "value": "{core.rem-dimensions.0} {core.px-dimensions.0}",
           "type": "spacing"
         },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
+        "item-spacing": {
+          "value": "{core.rem-dimensions.2}",
           "type": "spacing"
         }
       },
-      "Label": {
-        "Rest": {
+      "label": {
+        "rest": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Hover": {
+        "hover": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Focus": {
+        "focus": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Disabled": {
+        "disabled": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Error": {
+        "error": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "ReadOnly": {
+        "read-only": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Default": {
+        "default": {
           "value": "{core.typography.sourceSansPro.semibold.75}",
           "type": "typography"
         },
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+        "padding": {
+          "value": "{core.rem-dimensions.0} {core.px-dimensions.0}",
           "type": "spacing"
         }
       },
-      "UserInput": {
-        "Rest": {
+      "user-input": {
+        "rest": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Hover": {
+        "hover": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Focus": {
+        "focus": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Disabled": {
+        "disabled": {
           "value": "{core.color.coolgray.500}",
           "type": "color"
         },
-        "Error": {
+        "error": {
           "value": "{core.color.crimson.300}",
           "type": "color"
         },
-        "ReadOnly": {
+        "read-only": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "Default": {
+        "default": {
           "value": "{core.typography.sourceSansPro.regular.100}",
           "type": "typography"
         }
       },
-      "Placeholder": {
-        "Rest": {
+      "placeholder": {
+        "rest": {
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "Hover": {
+        "hover": {
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "Focus": {
+        "focus": {
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "Disabled": {
+        "disabled": {
           "value": "{core.color.coolgray.500}",
           "type": "color"
         },
-        "Error": {
+        "error": {
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "ReadOnly": {
+        "read-only": {
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "Default": {
+        "default": {
           "value": "{core.typography.sourceSansPro.regular.100}",
           "type": "typography"
         }
       },
-      "SurfaceFill": {
-        "Rest": {
+      "surface-fill": {
+        "rest": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "Hover": {
+        "hover": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "Focus": {
+        "focus": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "Disabled": {
+        "disabled": {
           "value": "{core.color.coolgray.900}",
           "type": "color"
         },
-        "Error": {
+        "error": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "ReadOnly": {
+        "read-only": {
           "value": "{core.color.coolgray.500}",
           "type": "color"
         }
       },
-      "InputBorderRadius": {
+      "input-border-radius": {
         "value": "{core.borderRadius.MD}",
         "type": "borderRadius"
       },
-      "Input": {
-        "Rest": {
+      "input": {
+        "rest": {
           "value": {
             "color": "{core.color.coolgray.700}",
             "width": "1",
@@ -1968,7 +1968,7 @@
           },
           "type": "border"
         },
-        "Hover": {
+        "hover": {
           "value": {
             "color": "{core.color.coolgray.700}",
             "width": "1",
@@ -1976,7 +1976,7 @@
           },
           "type": "border"
         },
-        "Focus": {
+        "focus": {
           "value": {
             "color": "{core.color.coolgray.100}",
             "width": "2",
@@ -1984,7 +1984,7 @@
           },
           "type": "border"
         },
-        "Disabled": {
+        "disabled": {
           "value": {
             "color": "{core.color.coolgray.800}",
             "width": "1",
@@ -1992,7 +1992,7 @@
           },
           "type": "border"
         },
-        "Error": {
+        "error": {
           "value": {
             "color": "{core.color.red.500}",
             "width": "1",
@@ -2000,7 +2000,7 @@
           },
           "type": "border"
         },
-        "ReadOnly": {
+        "read-only": {
           "value": {
             "color": "{core.color.coolgray.700}",
             "width": "1",
@@ -2008,12 +2008,12 @@
           },
           "type": "border"
         },
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+        "margin": {
+          "value": "{core.rem-dimensions.8} {core.px-dimensions.0} {core.rem-dimensions.0} {core.px-dimensions.0}",
           "type": "spacing"
         },
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+        "padding": {
+          "value": "{core.rem-dimensions.8} {core.px-dimensions.12}",
           "type": "spacing"
         }
       }
@@ -2024,51 +2024,51 @@
       "TextButton": {
         "XS": {
           "Padding": {
-            "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
+            "value": "{core.rem-dimensions.4} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "SM": {
           "Padding": {
-            "value": "{core.dimensionREM.3} {core.dimensionPX.12}",
+            "value": "{core.rem-dimensions.3} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "MD": {
           "Padding": {
-            "value": "{core.dimensionREM.7} {core.dimensionPX.16}",
+            "value": "{core.rem-dimensions.7} {core.px-dimensions.16}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "LG": {
           "Padding": {
-            "value": "{core.dimensionREM.8} {core.dimensionPX.24}",
+            "value": "{core.rem-dimensions.8} {core.px-dimensions.24}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "{core.dimensionREM.16} {core.dimensionPX.40}",
+            "value": "{core.rem-dimensions.16} {core.px-dimensions.40}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.px-dimensions.4}",
             "type": "spacing"
           }
         }
@@ -2076,7 +2076,7 @@
       "IconButton": {
         "XS": {
           "Padding": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.rem-dimensions.6}",
             "type": "spacing"
           },
           "Gap": {
@@ -2086,7 +2086,7 @@
         },
         "SM": {
           "Padding": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.rem-dimensions.6}",
             "type": "spacing"
           },
           "Gap": {
@@ -2096,7 +2096,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.rem-dimensions.8}",
             "type": "spacing"
           },
           "Gap": {
@@ -2106,7 +2106,7 @@
         },
         "LG": {
           "Padding": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.rem-dimensions.8}",
             "type": "spacing"
           },
           "Gap": {
@@ -2116,7 +2116,7 @@
         },
         "XL": {
           "Padding": {
-            "value": "{core.dimensionREM.12}",
+            "value": "{core.rem-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
@@ -2128,7 +2128,7 @@
       "IconDropdown": {
         "XS": {
           "Padding": {
-            "value": "{core.dimensionREM.6} {core.dimensionREM.1} {core.dimensionREM.6} {core.dimensionREM.3}",
+            "value": "{core.rem-dimensions.6} {core.rem-dimensions.1} {core.rem-dimensions.6} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
@@ -2138,7 +2138,7 @@
         },
         "SM": {
           "Padding": {
-            "value": "{core.dimensionREM.6} {core.dimensionREM.1} {core.dimensionREM.6} {core.dimensionREM.3}",
+            "value": "{core.rem-dimensions.6} {core.rem-dimensions.1} {core.rem-dimensions.6} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
@@ -2148,7 +2148,7 @@
         },
         "MD": {
           "Padding": {
-            "value": "{core.dimensionREM.8} {core.dimensionREM.1} {core.dimensionREM.8} {core.dimensionREM.3}",
+            "value": "{core.rem-dimensions.8} {core.rem-dimensions.1} {core.rem-dimensions.8} {core.rem-dimensions.3}",
             "type": "spacing"
           },
           "Gap": {
@@ -2158,21 +2158,21 @@
         },
         "LG": {
           "Padding": {
-            "value": "{core.dimensionREM.8} {core.dimensionREM.0} {core.dimensionREM.8} {core.dimensionREM.2}",
+            "value": "{core.rem-dimensions.8} {core.rem-dimensions.0} {core.rem-dimensions.8} {core.rem-dimensions.2}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "-{core.dimensionREM.2}",
+            "value": "-{core.rem-dimensions.2}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "{core.dimensionREM.12} {core.dimensionREM.0} {core.dimensionREM.12} {core.dimensionREM.4}",
+            "value": "{core.rem-dimensions.12} {core.rem-dimensions.0} {core.rem-dimensions.12} {core.rem-dimensions.4}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "-{core.dimensionREM.4}",
+            "value": "-{core.rem-dimensions.4}",
             "type": "spacing"
           }
         }
@@ -2180,227 +2180,227 @@
       "TextDropdown": {
         "XS": {
           "Padding": {
-            "value": "{core.dimensionREM.4} {core.dimensionPX.8} {core.dimensionREM.4} {core.dimensionPX.12}",
+            "value": "{core.rem-dimensions.4} {core.px-dimensions.8} {core.rem-dimensions.4} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "SM": {
           "Padding": {
-            "value": "{core.dimensionREM.3} {core.dimensionPX.8} {core.dimensionREM.3} {core.dimensionPX.12}",
+            "value": "{core.rem-dimensions.3} {core.px-dimensions.8} {core.rem-dimensions.3} {core.px-dimensions.12}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "MD": {
           "Padding": {
-            "value": "{core.dimensionREM.7} {core.dimensionPX.12} {core.dimensionREM.7} {core.dimensionPX.20}",
+            "value": "{core.rem-dimensions.7} {core.px-dimensions.12} {core.rem-dimensions.7} {core.px-dimensions.20}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "LG": {
           "Padding": {
-            "value": "{core.dimensionREM.8} {core.dimensionPX.16} {core.dimensionREM.8} {core.dimensionPX.24}",
+            "value": "{core.rem-dimensions.8} {core.px-dimensions.16} {core.rem-dimensions.8} {core.px-dimensions.24}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         },
         "XL": {
           "Padding": {
-            "value": "{core.dimensionREM.16} {core.dimensionPX.32} {core.dimensionREM.16} {core.dimensionPX.40}",
+            "value": "{core.rem-dimensions.16} {core.px-dimensions.32} {core.rem-dimensions.16} {core.px-dimensions.40}",
             "type": "spacing"
           },
           "Gap": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.px-dimensions.2}",
             "type": "spacing"
           }
         }
       }
     },
-    "UI": {
-      "Icon": {
-        "XXS": {
-          "value": "{core.dimensionREM.8}",
+    "ui": {
+      "icon": {
+        "xxs": {
+          "value": "{core.rem-dimensions.8}",
           "type": "sizing",
-          "description": "size of XXS icon"
+          "description": "size of xxs icon"
         },
-        "XS": {
-          "value": "{core.dimensionREM.12}",
+        "xs": {
+          "value": "{core.rem-dimensions.12}",
           "type": "sizing",
-          "description": "size of XS icon"
+          "description": "size of xs icon"
         },
-        "SM": {
-          "value": "{core.dimensionREM.16}",
+        "sm": {
+          "value": "{core.rem-dimensions.16}",
           "type": "sizing",
-          "description": "size of SM icon"
+          "description": "size of sm icon"
         },
-        "MD": {
-          "value": "{core.dimensionREM.24}",
+        "md": {
+          "value": "{core.rem-dimensions.24}",
           "type": "sizing",
-          "description": "size of MD icon"
+          "description": "size of md icon"
         },
-        "LG": {
-          "value": "{core.dimensionREM.32}",
+        "lg": {
+          "value": "{core.rem-dimensions.32}",
           "type": "sizing",
-          "description": "size of LG icon"
+          "description": "size of lg icon"
         },
-        "XL": {
-          "value": "{core.dimensionREM.48}",
+        "xl": {
+          "value": "{core.rem-dimensions.48}",
           "type": "sizing",
-          "description": "size of XL icon"
+          "description": "size of xl icon"
         }
       }
     },
-    "Feedback": {
-      "Loader": {
-        "SM": {
-          "Background": {
-            "Default": {
+    "feedback": {
+      "loader": {
+        "sm": {
+          "background": {
+            "default": {
               "value": {
                 "color": "{Feedback.Background.Default}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Inverted": {
+            "inverted": {
               "value": {
                 "color": "{Feedback.Background.Inverted}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Foreground": {
-            "Default": {
+          "foreground": {
+            "default": {
               "value": {
                 "color": "{Feedback.Fill.Default}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Inverted": {
+            "inverted": {
               "value": {
                 "color": "{Feedback.Fill.Inverted}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Sizing": {
-            "value": "{core.dimensionREM.16}",
+          "sizing": {
+            "value": "{core.rem-dimensions.16}",
             "type": "sizing"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.1}",
+          "padding": {
+            "value": "{core.rem-dimensions.1}",
             "type": "spacing"
           }
         },
-        "MD": {
-          "Background": {
-            "Default": {
+        "md": {
+          "background": {
+            "default": {
               "value": {
                 "color": "{Feedback.Background.Default}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Inverted": {
+            "inverted": {
               "value": {
                 "color": "{Feedback.Background.Inverted}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Foreground": {
-            "Default": {
+          "foreground": {
+            "default": {
               "value": {
                 "color": "{Feedback.Fill.Default}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Inverted": {
+            "inverted": {
               "value": {
                 "color": "{Feedback.Fill.Inverted}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{core.px-dimensions.2}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Sizing": {
-            "value": "{core.dimensionREM.24}",
+          "sizing": {
+            "value": "{core.rem-dimensions.24}",
             "type": "sizing"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.2}",
+          "padding": {
+            "value": "{core.rem-dimensions.2}",
             "type": "spacing"
           }
         },
-        "LG": {
-          "Background": {
-            "Default": {
+        "lg": {
+          "background": {
+            "default": {
               "value": {
                 "color": "{Feedback.Background.Default}",
-                "width": "{core.dimensionPX.3}",
+                "width": "{core.px-dimensions.3}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Inverted": {
+            "inverted": {
               "value": {
                 "color": "{Feedback.Background.Inverted}",
-                "width": "{core.dimensionPX.3}",
+                "width": "{core.px-dimensions.3}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Foreground": {
-            "Default": {
+          "foreground": {
+            "default": {
               "value": {
                 "color": "{Feedback.Fill.Default}",
-                "width": "{core.dimensionPX.3}",
+                "width": "{core.px-dimensions.3}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Inverted": {
+            "inverted": {
               "value": {
                 "color": "{Feedback.Fill.Inverted}",
-                "width": "{core.dimensionPX.3}",
+                "width": "{core.px-dimensions.3}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Sizing": {
-            "value": "{core.dimensionREM.32}",
+          "sizing": {
+            "value": "{core.rem-dimensions.32}",
             "type": "sizing"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.3}",
+          "padding": {
+            "value": "{core.rem-dimensions.3}",
             "type": "spacing"
           }
         }
