@@ -32,6 +32,7 @@ export const BlrIconButton = ({
   variant,
   size,
   iconName,
+  loadingStatus,
 }: BlrIconButtonClass) =>
   html`
     <blr-icon-button
@@ -44,6 +45,7 @@ export const BlrIconButton = ({
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
+      .loadingStatus=${loadingStatus}
       class="example-layout-class"
     ></blr-icon-button>
   `;
@@ -60,4 +62,5 @@ BlrIconButton.args = {
   buttonId: 'button-id',
   variant: 'cta',
   size: 'md',
+  loadingStatus: 'Loading',
 };

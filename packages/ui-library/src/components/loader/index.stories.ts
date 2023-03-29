@@ -17,12 +17,13 @@ export default {
   },
 };
 
-export const BlrLoader = ({ size, loaderVariant }: BlrLoaderClass) =>
-  html` <blr-loader .size=${size} .loaderVariant=${loaderVariant}></blr-loader> `;
+export const BlrLoader = ({ size, loaderVariant, loadingStatus }: BlrLoaderClass) =>
+  html` <blr-loader .size=${size} .loaderVariant=${loaderVariant} .loadingStatus=${loadingStatus}></blr-loader> `;
 
 BlrLoader.storyName = 'BlrLoader';
 
 BlrLoader.args = {
   size: 'md',
   loaderVariant: 'default',
+  loadingStatus: 'Loading',
 };

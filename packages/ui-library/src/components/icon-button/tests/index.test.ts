@@ -9,6 +9,7 @@ const props = {
   iconName: 'blrChevronDownMd',
   variant: 'cta',
   size: 'md',
+  loadingStatus: 'loading',
 };
 
 describe('blr-icon-button', () => {
@@ -22,6 +23,7 @@ describe('blr-icon-button', () => {
       variant=${props.variant}
       size=${props.size}
       class="example-layout-class"
+      loadingStatus=${props.loadingStatus}
     ></blr-icon-button>
     `);
 

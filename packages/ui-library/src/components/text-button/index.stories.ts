@@ -37,6 +37,7 @@ export const BlrTextButton = ({
   size,
   leadingIcon,
   trailingIcon,
+  loadingStatus,
 }: BlrTextButtonClass) =>
   html`
     <blr-text-button
@@ -50,6 +51,7 @@ export const BlrTextButton = ({
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
+      .loadingStatus=${loadingStatus}
       class="example-layout-class"
     ></blr-text-button>
   `;
@@ -68,4 +70,5 @@ BlrTextButton.args = {
   variant: 'cta',
   size: 'md',
   iconPosition: 'left',
+  loadingStatus: 'Loading',
 };

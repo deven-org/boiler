@@ -9,6 +9,7 @@ const props = {
   iconName: 'blrChevronDownMd',
   variant: 'cta',
   size: 'md',
+  loading: false,
 };
 
 describe('blr-icon-link', () => {
@@ -23,6 +24,7 @@ describe('blr-icon-link', () => {
       class="example-layout-class"
       href="#"
       target="_blank"
+      loading=${props.loading}
     ></blr-icon-link>
     `);
 

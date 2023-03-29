@@ -33,6 +33,7 @@ export const BlrIconLink = ({
   iconName,
   href,
   target,
+  loadingStatus,
 }: BlrIconLinkClass) =>
   html`
     <blr-icon-link
@@ -46,6 +47,7 @@ export const BlrIconLink = ({
       .size=${size}
       .target=${target}
       .href=${href}
+      .loadingStatus=${loadingStatus}
       class="example-layout-class"
     ></blr-icon-link>
   `;
@@ -63,4 +65,5 @@ BlrIconLink.args = {
   size: 'md',
   href: '#',
   target: '_self',
+  loadingStatus: 'Loading',
 };

@@ -5,7 +5,6 @@ import { IconType } from '../../foundation/icons';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
 import { iconButton } from '../../foundation/component-tokens/action';
-import { BlrLoader } from '../loader';
 import { ActionVariants, SizesType } from '../../globals/types';
 
 @customElement('blr-icon-button')
@@ -21,6 +20,7 @@ export class BlrIconButton extends LitElement {
   @property() buttonId?: string;
   @property() variant: ActionVariants = 'primary';
   @property() size?: SizesType = 'md';
+  @property() loadingStatus: string;
 
   render() {
     const classes = {
@@ -38,7 +38,11 @@ export class BlrIconButton extends LitElement {
       id=${this.buttonId}
     >
       ${this.loading
-        ? html`<blr-loader .size="${this.size}" .variant="${this.variant}"></blr-loader>`
+        ? html`<blr-loader
+            .size="${this.size}"
+            .variant="${this.variant}"
+            .loadingStatus="${this.loadingStatus}"
+          ></blr-loader>`
         : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}
     </button>`;
   }

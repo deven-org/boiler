@@ -21,6 +21,7 @@ export class BlrIconLink extends LitElement {
   @property() linkId?: string;
   @property() variant: ActionVariants = 'primary';
   @property() size?: SizesType = 'md';
+  @property() loadingStatus: string;
 
   render() {
     const classes = {
@@ -39,7 +40,11 @@ export class BlrIconLink extends LitElement {
       id=${this.linkId}
     >
       ${this.loading
-        ? html`<blr-loader .size="${this.size}" .variant="${this.variant}"></blr-loader>`
+        ? html`<blr-loader
+            .size="${this.size}"
+            .variant="${this.variant}"
+            .loadingStatus="${this.loadingStatus}"
+          ></blr-loader>`
         : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}
     </a>`;
   }

@@ -12,6 +12,7 @@ export class BlrLoader extends LitElement {
   @property() size?: FeedbackSizesType = 'md';
   @property() variant?: ActionVariants = 'primary';
   @property() loaderVariant?: FeedbackVariants;
+  @property() loadingStatus: string;
 
   setDefaultLoaderVariant() {
     if (!this.loaderVariant) {
@@ -26,7 +27,12 @@ export class BlrLoader extends LitElement {
       [`${this.size}`]: this.size,
     };
 
-    return html`<div class="blr-loader ${this.loaderVariant}">
+    return html`<div
+      class="blr-loader ${this.loaderVariant}"
+      role="status"
+      aria-live="polite"
+      aria-label="${this.loadingStatus}"
+    >
       <div class="blr-loading-spinner ${classMap(classes)}"></div>
     </div>`;
   }
