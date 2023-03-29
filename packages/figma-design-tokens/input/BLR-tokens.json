@@ -1830,7 +1830,7 @@
           "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         },
-        "item-spacing": {
+        "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
         }
