@@ -1868,7 +1868,27 @@
       "UserInput": {
         "Default": {
           "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography"
+          "type": "typography",
+          "Rest": {
+            "value": "{core.color.coolgray.100}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{core.color.coolgray.100}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{core.color.coolgray.100}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{core.color.coolgray.600}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{core.color.coolgray.100}",
+            "type": "color"
+          }
         },
         "Error": {
           "Rest": {
@@ -1884,7 +1904,27 @@
       "Placeholder": {
         "Default": {
           "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography"
+          "type": "typography",
+          "Rest": {
+            "value": "{core.color.coolgray.700}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{core.color.coolgray.700}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{core.color.coolgray.700}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{core.color.coolgray.600}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{core.color.coolgray.700}",
+            "type": "color"
+          }
         },
         "Error": {
           "Rest": {
