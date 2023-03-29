@@ -1867,8 +1867,8 @@
       },
       "UserInput": {
         "Default": {
-          "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography",
+          "value": "{core.color.coolgray.100}",
+          "type": "color",
           "Rest": {
             "value": "{core.color.coolgray.100}",
             "type": "color"
@@ -1903,8 +1903,8 @@
       },
       "Placeholder": {
         "Default": {
-          "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography",
+          "value": "{core.color.coolgray.100}",
+          "type": "color",
           "Rest": {
             "value": "{core.color.coolgray.700}",
             "type": "color"
