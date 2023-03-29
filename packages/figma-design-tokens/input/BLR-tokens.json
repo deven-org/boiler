@@ -1897,6 +1897,10 @@
             "value": "{core.color.crimson.300}",
             "type": "color"
           }
+        },
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.100}",
+          "type": "typography"
         }
       },
       "Placeholder": {
@@ -1935,6 +1939,10 @@
             "value": "{core.color.coolgray.700}",
             "type": "color"
           }
+        },
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.100}",
+          "type": "typography"
         }
       },
       "SurfaceFill": {
