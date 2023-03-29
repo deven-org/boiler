@@ -15,6 +15,18 @@ const form = {
       height: '300px',
     },
   },
+
+  label: {
+    sm: {
+      fontsize: '8px',
+    },
+    md: {
+      fontsize: '12px'
+    },
+    lg: {
+      fontsize: '16px'
+    },
+  },
 };
 
 export const textarea = css`
@@ -31,5 +43,18 @@ export const textarea = css`
   .blr-textarea.lg {
     width: ${unsafeCSS(form.textarea.lg.width)};
     height: ${unsafeCSS(form.textarea.lg.height)};
+  }
+`;
+export const label = css`
+  .blr-form-label.sm {
+    font-size: ${unsafeCSS(form.label.sm)};
+  }
+
+  .blr-form-label.md {
+    font-size: ${unsafeCSS(form.label.md)};
+  }
+
+  .blr-form-label.lg {
+    font-size: ${unsafeCSS(form.label.lg)};
   }
 `;
