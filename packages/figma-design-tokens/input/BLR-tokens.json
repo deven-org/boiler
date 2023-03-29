@@ -1818,7 +1818,7 @@
           "value": "{core.color.coolgray.300}",
           "type": "color"
         },
-        "Default": {
+        "DefaultType": {
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
         },
@@ -1867,8 +1867,6 @@
       },
       "UserInput": {
         "Default": {
-          "value": "{core.color.coolgray.100}",
-          "type": "color",
           "Rest": {
             "value": "{core.color.coolgray.100}",
             "type": "color"
@@ -1903,8 +1901,6 @@
       },
       "Placeholder": {
         "Default": {
-          "value": "{core.color.coolgray.100}",
-          "type": "color",
           "Rest": {
             "value": "{core.color.coolgray.700}",
             "type": "color"
