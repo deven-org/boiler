@@ -12,7 +12,7 @@ export class BlrTextButton extends LitElement {
   static styles = [styleCustom, action, textButton];
 
   @property() label = 'Button Label';
-  @property() onClick: HTMLButtonElement['onclick'];
+  @property() onClick!: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() leadingIcon?: IconType;
   @property() trailingIcon?: IconType;
@@ -22,14 +22,13 @@ export class BlrTextButton extends LitElement {
   @property() size?: SizesType = 'md';
 
   render() {
-    const classes = {
+    const classes = classMap({
       [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size,
-      disabled: this.disabled,
-    };
+      [`${this.size}`]: this.size || 'md',
+    });
 
     return html`<button
-      class="blr-semantic-action blr-text-button ${classMap(classes)}"
+      class="blr-semantic-action blr-text-button ${classes}"
       @click="${this.onClick}"
       @blur="${this.onBlur}"
       ?disabled="${this.disabled}"

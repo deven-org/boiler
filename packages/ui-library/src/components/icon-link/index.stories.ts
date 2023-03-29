@@ -55,7 +55,7 @@ BlrIconLink.args = {
   ariaLabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  iconName: 'blrChevronDownMd',
+  iconName: 'blr360Md',
   linkId: 'link-id',
   variant: 'cta',
   size: 'md',

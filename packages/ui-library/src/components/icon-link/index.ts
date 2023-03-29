@@ -11,9 +11,9 @@ import { ActionVariants, SizesType } from '../../globals/types';
 export class BlrIconLink extends LitElement {
   static styles = [styleCustom, action, iconButton];
 
-  @property() arialabel: string;
-  @property() iconName: IconType;
-  @property() href: string;
+  @property() arialabel!: string;
+  @property() iconName!: IconType;
+  @property() href!: string;
   @property() target?: string;
   @property() onClick?: HTMLLinkElement['onclick'];
   @property() onBlur?: HTMLLinkElement['onblur'];
@@ -22,14 +22,14 @@ export class BlrIconLink extends LitElement {
   @property() size?: SizesType = 'md';
 
   render() {
-    const classes = {
+    const classes = classMap({
       [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size,
-    };
+      [`${this.size}`]: this.size || 'md',
+    });
 
     return html`<a
       aria-label="${this.ariaLabel}"
-      class="blr-semantic-action blr-icon-link blr-icon-button ${classMap(classes)}"
+      class="blr-semantic-action blr-icon-link blr-icon-button ${classes}"
       href="${this.href}"
       target="${this.target}"
       @click="${this.onClick}"

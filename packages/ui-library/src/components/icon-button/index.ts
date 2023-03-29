@@ -11,9 +11,9 @@ import { ActionVariants, SizesType } from '../../globals/types';
 export class BlrIconButton extends LitElement {
   static styles = [styleCustom, action, iconButton];
 
-  @property() arialabel: string;
-  @property() iconName: IconType;
-  @property() onClick: HTMLButtonElement['onclick'];
+  @property() arialabel!: string;
+  @property() iconName!: IconType;
+  @property() onClick!: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() disabled?: boolean;
   @property() buttonId?: string;
@@ -21,15 +21,14 @@ export class BlrIconButton extends LitElement {
   @property() size?: SizesType = 'md';
 
   render() {
-    const classes = {
+    const classes = classMap({
       [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size,
-      disabled: this.disabled,
-    };
+      [`${this.size}`]: this.size || 'md',
+    });
 
     return html`<button
       aria-label="${this.ariaLabel}"
-      class="blr-semantic-action blr-icon-button ${classMap(classes)}"
+      class="blr-semantic-action blr-icon-button ${classes}"
       @click="${this.onClick}"
       @blur="${this.onBlur}"
       ?disabled="${this.disabled}"
