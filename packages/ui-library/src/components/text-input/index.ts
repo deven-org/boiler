@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action';
-import { textInput } from '../../foundation/component-tokens/input';
+import { textInput } from '../../foundation/semantic-tokens/form';
 import { SizesType, InputTypes } from '../../globals/types';
 
 @customElement('blr-text-input')
