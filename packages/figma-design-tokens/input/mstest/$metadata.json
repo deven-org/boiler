@@ -1,8 +1,8 @@
 {
   "tokenSetOrder": [
-    "core/BLR_COR",
-    "semantics/BLR_CMP",
+    "BLR_COR",
     "semantics/BLR_SEM",
+    "semantics/BLR_CMP",
     "other/BLR_ASS",
     "other/DOC"
   ]
