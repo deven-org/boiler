@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrIconLink as BlrIconLinkClass } from './index';
-import { IconKeys } from '../../foundation/icons';
+import { IconKeys } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
 import './index';
 
@@ -54,7 +55,7 @@ BlrIconLink.args = {
   ariaLabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  iconName: 'blrChevronDownMd',
+  iconName: 'blr360Md',
   linkId: 'link-id',
   variant: 'cta',
   size: 'md',

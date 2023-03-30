@@ -28,7 +28,7 @@ const exportsPart = filteredJsFiles.map(
   (item) => `export {${convertToCamelCase(item)}Wrapped as ${convertToCamelCase(item)}}`
 );
 
-const fileOutPut = `import {wrapValuesWithCss} from '@boiler/figma-design-tokens/config/wrap-values-with-css.mjs';
+const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css.mjs';
     ${importsPart.join('\n')}
 
     ${constsPart.join('\n')}

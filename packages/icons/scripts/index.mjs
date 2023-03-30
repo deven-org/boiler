@@ -4,7 +4,7 @@ import camelCase from 'lodash.camelcase';
 import chalk from 'chalk';
 
 const __dirname = path.resolve();
-const iconDir = `${__dirname}/src/foundation/icons`;
+const iconDir = `${__dirname}/icons-optimized`;
 
 fs.readdir(iconDir, (err, files) => {
   if (err) {
@@ -41,5 +41,5 @@ fs.readdir(iconDir, (err, files) => {
   export const IconKeys = Object.keys(IconMapping);
   `;
 
-  fs.writeFileSync(`${iconDir}/index.ts`, template, 'utf-8');
+  fs.writeFileSync(`${iconDir}/icons.ts`, template, 'utf-8');
 });

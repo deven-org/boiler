@@ -1,5 +1,5 @@
 import { LitElement } from 'lit';
-import { IconType } from '../../foundation/icons'; 
+import { IconType } from '@boiler/icons'; 
 
 export declare class BlrTextButton extends LitElement {
     static styles: import("lit").CSSResult;

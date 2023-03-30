@@ -1,6 +1,6 @@
 import fs from 'fs';
 import extract from '../storybook-static/stories.json' assert { type: 'json' };
-import CustomPa11yConfigs from '../src/components/pa11y-custom.config.js';
+import CustomPa11yConfigs from '@boiler/ui-library/src/components/pa11y-custom.config.js';
 
 const storyUrls = (stringArr) => stringArr.map((str) => `http://localhost:1337/iframe.html?id=${str}&viewMode=story`);
 const customStoryUrls = (customArr) =>

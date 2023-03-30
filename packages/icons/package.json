@@ -1,0 +1,13 @@
+{
+  "name": "@boiler/icons",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "svgo:icons": "svgo -f icon-set -o icons-optimized --config svgo.config.js",
+    "precompile:icons": "rimraf icons",
+    "compile:icons": "npm run svgo:icons && node scripts/index.mjs",
+    "postcompile:icons": "prettier ./icons-optimized/icons.ts --write"
+  }
+}
