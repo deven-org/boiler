@@ -10,6 +10,9 @@
         }
     },
     "urls": [
+        "http://localhost:1337/iframe.html?id=blriconbutton--blr-icon-button&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blriconlink--blr-icon-link&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blricon--blr-icon&viewMode=story",
         "http://localhost:1337/iframe.html?id=blrtextbutton--blr-text-button&viewMode=story",
         "http://localhost:1337/iframe.html?id=blrtextbutton--blr-text-button&args=icon:boilerChevronDownGreen&viewMode=story"
     ]

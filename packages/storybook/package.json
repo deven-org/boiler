@@ -3,7 +3,13 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "start": "start-storybook -p 1337"
+    "prestart": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
+    "start": "start-storybook -p 1337",
+    "prebuild:static": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
+    "build:static": "build-storybook && sb extract ./storybook-static",
+    "create-config:pa11y": "node --experimental-json-modules utils/create-pa11y-config.mjs",
+    "pretest:a11y": "npm run build:static && npm run create-config:pa11y",
+    "test:a11y": "pa11y-ci --config ./.pa11yci"
   },
   "author": "",
   "license": "ISC",

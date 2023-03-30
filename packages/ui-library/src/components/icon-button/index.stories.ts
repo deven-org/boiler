@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrIconButton as BlrIconButtonClass } from './index';
-import { IconKeys } from '../../foundation/icons';
+import { IconKeys } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
 import './index';
 

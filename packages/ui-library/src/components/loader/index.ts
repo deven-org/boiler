@@ -12,7 +12,7 @@ export class BlrLoader extends LitElement {
   @property() size?: FeedbackSizesType = 'md';
   @property() variant?: ActionVariants = 'primary';
   @property() loaderVariant?: FeedbackVariants;
-  @property() loadingStatus: string;
+  @property() loadingStatus!: string;
 
   setDefaultLoaderVariant() {
     if (!this.loaderVariant) {
@@ -22,10 +22,10 @@ export class BlrLoader extends LitElement {
     }
   }
   render() {
-    const classes = {
+    const classes = classMap({
       [this.setDefaultLoaderVariant()]: this.setDefaultLoaderVariant(),
-      [`${this.size}`]: this.size,
-    };
+      [`${this.size}`]: this.size || 'md',
+    });
 
     return html`<div
       class="blr-loader ${this.loaderVariant}"
@@ -33,7 +33,7 @@ export class BlrLoader extends LitElement {
       aria-live="polite"
       aria-label="${this.loadingStatus}"
     >
-      <div class="blr-loading-spinner ${classMap(classes)}"></div>
+      <div class="blr-loading-spinner ${classes}"></div>
     </div>`;
   }
 }
