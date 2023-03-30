@@ -10,20 +10,14 @@ export class BlrLoader extends LitElement {
   static styles = [styleCustom, loadingSpinner];
 
   @property() size?: FeedbackSizesType = 'md';
-  @property() variant?: ActionVariants = 'primary';
+  @property() variant?: ActionVariants;
   @property() loaderVariant?: FeedbackVariants;
   @property() loadingStatus!: string;
 
-  setDefaultLoaderVariant() {
-    if (!this.loaderVariant) {
-      return this.variant === 'secondary' || this.variant === 'silent' ? 'default' : 'inverted';
-    } else {
-      return this.loaderVariant;
-    }
-  }
   render() {
     const classes = classMap({
-      [this.setDefaultLoaderVariant()]: this.setDefaultLoaderVariant(),
+      [`${this.variant}`]: this.variant || '',
+      [`${this.loaderVariant}`]: this.loaderVariant || '',
       [`${this.size}`]: this.size || 'md',
     });
 

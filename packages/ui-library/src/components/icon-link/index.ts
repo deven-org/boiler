@@ -6,6 +6,7 @@ import { styleCustom } from './index.css';
 import { action } from '../../foundation/semantic-tokens/action.css';
 import { iconButton } from '../../foundation/component-tokens/action.css';
 import { ActionVariants, SizesType } from '../../globals/types';
+import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 
 @customElement('blr-icon-link')
 export class BlrIconLink extends LitElement {
@@ -29,6 +30,8 @@ export class BlrIconLink extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const loaderVariant = determineLoaderVariant(this.variant);
+
     return html`<a
       aria-label="${this.ariaLabel}"
       class="blr-semantic-action blr-icon-link blr-icon-button ${classes}"
@@ -42,7 +45,7 @@ export class BlrIconLink extends LitElement {
       ${this.loading
         ? html`<blr-loader
             .size="${this.size}"
-            .variant="${this.variant}"
+            .variant="${loaderVariant}"
             .loadingStatus="${this.loadingStatus}"
           ></blr-loader>`
         : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}

@@ -6,6 +6,7 @@ import { styleCustom } from './css';
 import { action } from '../../foundation/semantic-tokens/action.css';
 import { textButton } from '../../foundation/component-tokens/action.css';
 import { ActionVariants, SizesType } from '../../globals/types';
+import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -16,18 +17,20 @@ export class BlrTextButton extends LitElement {
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() leadingIcon?: IconType;
   @property() trailingIcon?: IconType;
-  @property() loading: boolean;
+  @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariants = 'primary';
   @property() size?: SizesType = 'md';
-  @property() loadingStatus: string;
+  @property() loadingStatus!: string;
 
   render() {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size || 'md',
     });
+
+    const loaderVariant = determineLoaderVariant(this.variant);
 
     return html`<button
       class="blr-semantic-action blr-text-button ${classes}"
@@ -39,7 +42,7 @@ export class BlrTextButton extends LitElement {
       ${this.loading
         ? html`<blr-loader
             .size="${this.size}"
-            .variant="${this.variant}"
+            .variant="${loaderVariant}"
             .loadingStatus="${this.loadingStatus}"
           ></blr-loader>`
         : html`

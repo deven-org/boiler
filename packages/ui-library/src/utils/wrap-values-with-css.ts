@@ -1,9 +1,9 @@
 import { css, unsafeCSS } from 'lit';
 
-export const wrapValuesWithCss = (obj) => {
+export const wrapValuesWithCss = (obj: any) => {
   // Iterate over each key-value pair in the object
-  for (let key in obj) {
-    let value = obj[key];
+  for (const key in obj) {
+    const value = obj[key];
     // If the value is an object, recursively call the function
     if (typeof value === 'object') {
       obj[key] = wrapValuesWithCss(value);
