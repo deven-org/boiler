@@ -1830,7 +1830,7 @@
           "value": "{core.rem-dimensions.0} {core.px-dimensions.0}",
           "type": "spacing"
         },
-        "item-spacing": {
+        "item_spacing": {
           "value": "{core.rem-dimensions.2}",
           "type": "spacing"
         }
@@ -1856,7 +1856,7 @@
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
-        "read-only": {
+        "read_only": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
@@ -1869,7 +1869,7 @@
           "type": "spacing"
         }
       },
-      "user-input": {
+      "user_input": {
         "rest": {
           "value": "{core.color.neutral.black}",
           "type": "color"
@@ -1890,7 +1890,7 @@
           "value": "{core.color.crimson.300}",
           "type": "color"
         },
-        "read-only": {
+        "read_only": {
           "value": "{core.color.neutral.black}",
           "type": "color"
         },
@@ -1920,7 +1920,7 @@
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "read-only": {
+        "read_only": {
           "value": "{core.color.coolgray.700}",
           "type": "color"
         },
@@ -1929,7 +1929,7 @@
           "type": "typography"
         }
       },
-      "surface-fill": {
+      "surface_fill": {
         "rest": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
@@ -1950,12 +1950,12 @@
           "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "read-only": {
+        "read_only": {
           "value": "{core.color.coolgray.500}",
           "type": "color"
         }
       },
-      "input-border-radius": {
+      "input_border_radius": {
         "value": "{core.borderRadius.MD}",
         "type": "borderRadius"
       },
@@ -2000,7 +2000,7 @@
           },
           "type": "border"
         },
-        "read-only": {
+        "read_only": {
           "value": {
             "color": "{core.color.coolgray.700}",
             "width": "1",
@@ -2541,12 +2541,6 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": [
-      "BLR_COR",
-      "BLR_SEM",
-      "BLR_CMP",
-      "BLR_ASS",
-      "DOC"
-    ]
+    "tokenSetOrder": ["BLR_COR", "BLR_SEM", "BLR_CMP", "BLR_ASS", "DOC"]
   }
 }
