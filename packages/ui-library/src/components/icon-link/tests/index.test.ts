@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/await-thenable */
 import '../index';
 import { fixture, expect } from '@open-wc/testing';

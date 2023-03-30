@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { IconKeys } from '../../foundation/icons';
+import { IconKeys } from '@boiler/icons';
 
 import './index';
 import { BlrIcon as BlrIconClass } from './index';

@@ -2,18 +2,18 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "outDir": "./dist",
-    "noImplicitAny": true,
     "declaration": true,
     "declarationDir": "./types",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "module": "es6",
-    "target": "es5",
+    "module": "ESNext",
+    "target": "ESNext",
     "jsx": "react",
     "allowJs": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strict": true
   },
   "include": ["src"],
-  "exclude": ["**/*.stories.tsx", "**/__snapshots__/*", "**/test/*", "src/**/*.config.js"]
+  "exclude": ["**/*.stories.ts", "**/__snapshots__/*", "**/test/*", "src/**/*.config.js"]
 }
