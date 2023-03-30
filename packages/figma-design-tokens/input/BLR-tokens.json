@@ -1796,18 +1796,6 @@
         }
       }
     },
-    "Global": {
-      "Focus": {
-        "Border": {
-          "value": "{core.color.neutral.black}",
-          "type": "color"
-        },
-        "BorderWidth": {
-          "value": "2",
-          "type": "borderWidth"
-        }
-      }
-    },
     "Forms": {
       "Caption": {
         "Error": {
@@ -2102,6 +2090,16 @@
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
         }
+      }
+    },
+    "Global": {
+      "Focus": {
+        "value": {
+          "color": "{core.color.neutral.black}",
+          "width": "{core.borderWidth.Bold}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     }
   },
