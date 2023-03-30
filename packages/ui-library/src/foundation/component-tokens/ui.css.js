@@ -1,36 +1,36 @@
 import { css } from 'lit';
 import { componentTokens } from '../_tokens-generated/index.generated';
 
-const { ui } = componentTokens.component;
+const { UI } = componentTokens.component;
 
 export const icon = css`
   .blr-icon.xxs {
-    width: ${ui.icon.xxs};
-    height: ${ui.icon.xxs};
+    width: ${UI.Icon.XXS};
+    height: ${UI.Icon.XXS};
   }
 
   .blr-icon.xs {
-    width: ${ui.icon.xs};
-    height: ${ui.icon.xs};
+    width: ${UI.Icon.XS};
+    height: ${UI.Icon.XS};
   }
 
   .blr-icon.sm {
-    width: ${ui.icon.sm};
-    height: ${ui.icon.sm};
+    width: ${UI.Icon.SM};
+    height: ${UI.Icon.SM};
   }
 
   .blr-icon.md {
-    width: ${ui.icon.md};
-    height: ${ui.icon.md};
+    width: ${UI.Icon.MD};
+    height: ${UI.Icon.MD};
   }
 
   .blr-icon.lg {
-    width: ${ui.icon.lg};
-    height: ${ui.icon.lg};
+    width: ${UI.Icon.LG};
+    height: ${UI.Icon.LG};
   }
 
   .blr-icon.xl {
-    width: ${ui.icon.xl};
-    height: ${ui.icon.xl};
+    width: ${UI.Icon.XL};
+    height: ${UI.Icon.XL};
   }
 `;
