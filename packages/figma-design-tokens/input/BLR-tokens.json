@@ -1822,10 +1822,6 @@
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
         },
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
@@ -1835,33 +1831,45 @@
           "type": "spacing"
         }
       },
+      "CaptionSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
       "Label": {
         "Rest": {
-          "value": "{core.color.neutral.black}",
+          "value": "{core.color.coolgray.100}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.neutral.black}",
+          "value": "{core.color.coolgray.100}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.neutral.black}",
+          "value": "{core.color.coolgray.100}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.neutral.black}",
+          "value": "{core.color.coolgray.100}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{core.color.neutral.black}",
+          "value": "{core.color.coolgray.100}",
           "type": "color"
         },
         "Default": {
           "value": "{core.typography.sourceSansPro.semibold.75}",
           "type": "typography"
-        },
+        }
+      },
+      "LabelSlot": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
           "type": "spacing"
         }
       },
@@ -2030,14 +2038,6 @@
             "type": "border"
           }
         },
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
         "Error": {
           "Rest": {
             "value": {
@@ -2063,6 +2063,44 @@
             },
             "type": "border"
           }
+        }
+      },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "InputField": {
+        "Padding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        }
+      },
+      "LabelAppendix": {
+        "Rest": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "Focus": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "ReadOnly": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "Default": {
+          "value": "{core.typography.sourceSansPro.regular.75}",
+          "type": "typography"
         }
       }
     }
