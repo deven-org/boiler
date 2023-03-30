@@ -2090,6 +2090,24 @@
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
         }
+      },
+      "InputIcon": {
+        "Rest": {
+          "value": "{core.color.coolgray.700}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{core.color.coolgray.400}",
+          "type": "color"
+        },
+        "Hover-copy": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "Error": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        }
       }
     },
     "Global": {
