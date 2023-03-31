@@ -28,7 +28,7 @@ const exportsPart = filteredJsFiles.map(
   (item) => `export {${convertToCamelCase(item)}Wrapped as ${convertToCamelCase(item)}}`
 );
 
-const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css.mjs';
+const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css';
     ${importsPart.join('\n')}
 
     ${constsPart.join('\n')}
@@ -38,5 +38,5 @@ const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-wit
 console.log(chalk.magentaBright('👷 creates foundation/_tokens-generated/index.generated.scss... \n'));
 fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
 
-console.log(chalk.cyanBright('👷 creates foundation/_tokens-generated/index.generated.js... \n'));
-fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.js`, fileOutPut, 'utf-8');
+console.log(chalk.cyanBright('👷 creates foundation/_tokens-generated/index.generated.ts... \n'));
+fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.ts`, fileOutPut, 'utf-8');
