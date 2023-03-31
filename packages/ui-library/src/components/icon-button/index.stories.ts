@@ -27,11 +27,13 @@ export const BlrIconButton = ({
   ariaLabel,
   onClick,
   onBlur,
+  loading,
   disabled,
   buttonId,
   variant,
   size,
   iconName,
+  loadingStatus,
 }: BlrIconButtonClass) =>
   html`
     <blr-icon-button
@@ -40,9 +42,11 @@ export const BlrIconButton = ({
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
+      .loading=${loading}
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
+      .loadingStatus=${loadingStatus}
       class="example-layout-class"
     ></blr-icon-button>
   `;
@@ -54,8 +58,10 @@ BlrIconButton.args = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   iconName: 'blrChevronDownMd',
+  loading: false,
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
   size: 'md',
+  loadingStatus: 'Loading',
 };

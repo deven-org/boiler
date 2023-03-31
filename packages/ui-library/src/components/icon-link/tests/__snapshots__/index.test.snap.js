@@ -7,13 +7,11 @@ snapshots["blr-icon-link renders correctly"] =
   class="blr-icon-button blr-icon-link blr-semantic-action cta md"
   href="#"
   id="id"
+  loading="false"
   target="_blank"
 >
-  <blr-icon
-    aria-hidden=""
-    name="blrChevronDownMd"
-  >
-  </blr-icon>
+  <blr-loader>
+  </blr-loader>
 </a>
 `;
 /* end snapshot blr-icon-link renders correctly */

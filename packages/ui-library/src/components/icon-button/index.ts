@@ -6,6 +6,7 @@ import { styleCustom } from './index.css';
 import { action } from '../../foundation/semantic-tokens/action.css';
 import { iconButton } from '../../foundation/component-tokens/action.css';
 import { ActionVariants, SizesType } from '../../globals/types';
+import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 
 @customElement('blr-icon-button')
 export class BlrIconButton extends LitElement {
@@ -15,16 +16,20 @@ export class BlrIconButton extends LitElement {
   @property() iconName!: IconType;
   @property() onClick!: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
+  @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariants = 'primary';
   @property() size?: SizesType = 'md';
+  @property() loadingStatus!: string;
 
   render() {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size || 'md',
     });
+
+    const loaderVariant = determineLoaderVariant(this.variant);
 
     return html`<button
       aria-label="${this.ariaLabel}"
@@ -34,7 +39,13 @@ export class BlrIconButton extends LitElement {
       ?disabled="${this.disabled}"
       id=${this.buttonId}
     >
-      <blr-icon name="${this.iconName}" aria-hidden></blr-icon>
+      ${this.loading
+        ? html`<blr-loader
+            .size="${this.size}"
+            .variant="${loaderVariant}"
+            .loadingStatus="${this.loadingStatus}"
+          ></blr-loader>`
+        : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}
     </button>`;
   }
 }

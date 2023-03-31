@@ -27,12 +27,14 @@ export const BlrIconLink = ({
   ariaLabel,
   onClick,
   onBlur,
+  loading,
   linkId,
   variant,
   size,
   iconName,
   href,
   target,
+  loadingStatus,
 }: BlrIconLinkClass) =>
   html`
     <blr-icon-link
@@ -41,10 +43,12 @@ export const BlrIconLink = ({
       .linkId=${linkId}
       .onClick=${onClick}
       .onBlur=${onBlur}
+      .loading=${loading}
       .variant=${variant}
       .size=${size}
       .target=${target}
       .href=${href}
+      .loadingStatus=${loadingStatus}
       class="example-layout-class"
     ></blr-icon-link>
   `;
@@ -55,10 +59,12 @@ BlrIconLink.args = {
   ariaLabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
+  loading: false,
   iconName: 'blr360Md',
   linkId: 'link-id',
   variant: 'cta',
   size: 'md',
   href: '#',
   target: '_self',
+  loadingStatus: 'Loading',
 };
