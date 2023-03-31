@@ -19,7 +19,7 @@ export class BlrLoader extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
-    return html`<div class="blr-loader" role="status" aria-live="polite" aria-label="${this.loadingStatus}">
+    return html` <div class="blr-loader" role="status" aria-live="polite" aria-label="${this.loadingStatus}">
       <div class="blr-loading-spinner ${classes}"></div>
     </div>`;
   }

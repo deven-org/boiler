@@ -2,7 +2,7 @@ import { css } from 'lit';
 import { componentTokens, semanticTokens } from '../_tokens-generated/index.generated';
 
 const { Background, Fill } = semanticTokens.semantic.Feedback;
-const { sm, md, lg } = componentTokens.component.feedback.loader;
+const { SM, MD, LG } = componentTokens.component.Feedback.Loader;
 
 export const loadingSpinner = css`
   .blr-loading-spinner {
@@ -24,33 +24,33 @@ export const loadingSpinner = css`
   .blr-loading-spinner.default {
     border: ${Background.Default};
     border-bottom-color: ${Fill.Default};
-    border-style: ${sm.background.default.style};
+    border-style: ${SM.Background.Default.style};
   }
 
   .blr-loading-spinner.inverted {
     border: ${Background.Inverted};
     border-bottom-color: ${Fill.Inverted};
-    border-style: ${sm.background.inverted.style};
+    border-style: ${SM.Background.Inverted.style};
   }
 
   .blr-loading-spinner.sm {
-    width: ${sm.sizing};
-    height: ${sm.sizing};
-    padding: ${sm.padding};
-    border-width: ${sm.background.default.width};
+    width: ${SM.Sizing};
+    height: ${SM.Sizing};
+    padding: ${SM.Padding};
+    border-width: ${SM.Background.Default.width};
   }
 
   .blr-loading-spinner.md {
-    width: ${md.sizing};
-    height: ${md.sizing};
-    padding: ${md.padding};
-    border-width: ${md.background.default.width};
+    width: ${MD.Sizing};
+    height: ${MD.Sizing};
+    padding: ${MD.Padding};
+    border-width: ${MD.Background.Default.width};
   }
 
   .blr-loading-spinner.lg {
-    width: ${lg.sizing};
-    height: ${lg.sizing};
-    padding: ${lg.padding};
-    border-width: ${lg.background.default.width};
+    width: ${LG.Sizing};
+    height: ${LG.Sizing};
+    padding: ${LG.Padding};
+    border-width: ${LG.Background.Default.width};
   }
 `;
