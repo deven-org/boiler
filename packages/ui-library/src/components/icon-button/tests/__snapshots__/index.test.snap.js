@@ -4,7 +4,7 @@ export const snapshots = {};
 snapshots["blr-icon-button renders correctly"] = 
 `<button
   aria-label=""
-  class="blr-icon-button blr-semantic-action cta disabled md"
+  class="blr-icon-button blr-semantic-action cta md"
   disabled=""
   id="id"
 >
