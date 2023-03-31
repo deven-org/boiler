@@ -10,20 +10,20 @@ export default {
       options: FeedbackSizes,
       control: { type: 'select' },
     },
-    loaderVariant: {
+    variant: {
       options: ['default', 'inverted'],
       control: { type: 'select' },
     },
   },
 };
 
-export const BlrLoader = ({ size, loaderVariant, loadingStatus }: BlrLoaderClass) =>
-  html` <blr-loader .size=${size} .loaderVariant=${loaderVariant} .loadingStatus=${loadingStatus}></blr-loader> `;
+export const BlrLoader = ({ size, variant, loadingStatus }: BlrLoaderClass) =>
+  html` <blr-loader .size=${size} .variant=${variant} .loadingStatus=${loadingStatus}></blr-loader> `;
 
 BlrLoader.storyName = 'BlrLoader';
 
 BlrLoader.args = {
   size: 'md',
-  loaderVariant: 'default',
+  variant: 'default',
   loadingStatus: 'Loading',
 };
