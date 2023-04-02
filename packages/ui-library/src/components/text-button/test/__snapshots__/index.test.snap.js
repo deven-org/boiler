@@ -3,7 +3,7 @@ export const snapshots = {};
 
 snapshots["blr-text-button renders correctly"] = 
 `<button
-  class="blr-semantic-action blr-text-button disabled md primary"
+  class="blr-semantic-action blr-text-button md primary"
   disabled=""
   id="id"
 >
