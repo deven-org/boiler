@@ -1,4 +1,4 @@
-import { wrapValuesWithCss } from '../../utils/wrap-values-with-css.mjs';
+import { wrapValuesWithCss } from '../../utils/wrap-values-with-css';
 import { allTokens } from './__all-tokens.generated.js';
 import { componentTokens } from './__component-tokens.generated.js';
 import { semanticTokens } from './__semantic-tokens.generated.js';

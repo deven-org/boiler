@@ -2,7 +2,7 @@ import { css } from 'lit';
 import { semanticTokens } from '../_tokens-generated/index.generated';
 
 const { BorderRadius, BorderWidth, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
-  semanticTokens.semantic.Action;
+  semanticTokens.Action;
 
 export const action = css`
   .blr-semantic-action {

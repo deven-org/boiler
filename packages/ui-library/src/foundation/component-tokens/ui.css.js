@@ -1,7 +1,7 @@
 import { css } from 'lit';
 import { componentTokens } from '../_tokens-generated/index.generated';
 
-const { UI } = componentTokens.component;
+const { UI } = componentTokens;
 
 export const icon = css`
   .blr-icon.xxs {
