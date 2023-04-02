@@ -1,7 +1,7 @@
 import { css } from 'lit';
 import { componentTokens } from '../_tokens-generated/index.generated';
 
-const { TextButton, IconButton } = componentTokens.component.Action;
+const { TextButton, IconButton } = componentTokens.Action;
 
 export const textButton = css`
   .blr-text-button.xs {
