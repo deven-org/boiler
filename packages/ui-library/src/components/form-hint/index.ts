@@ -1,18 +1,22 @@
 import { html } from 'lit';
-import { IconType } from '@boiler/icons';
+import { classMap } from 'lit/directives/class-map.js';
+
+type HintVariant = 'hint' | 'error';
 
 type FormHintType = {
-  hintText: string;
-  iconName?: IconType;
-  errorText?: string;
-  hasError?: string;
+  message: string;
+  variant: HintVariant;
 };
 
-export const BlrFormHint = ({ hintText, iconName, errorText, hasError }: FormHintType) => {
+export const BlrFormHint = ({ message, variant }: FormHintType) => {
+  const classes = classMap({
+    [`${variant}`]: variant,
+  });
+
   return html`
-    <span class="blr-hint-error ${hasError ? 'blr-error' : 'blr-hint'}">
-      <blr-icon name="${iconName}"></blr-icon>
-      <span>${hasError ? errorText : hintText}</span>
+    <span class="blr-form-hint ${classes}">
+      <blr-icon name="${variant === 'error' ? 'blr360Xl' : 'blr360Xl'}"></blr-icon>
+      <span>${message}</span>
     </span>
   `;
 };
