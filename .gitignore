@@ -3,5 +3,3 @@ dist
 .DS_Store
 .eslintcache
 storybook-static
-_tokens-generated
-tokens.normalized.json

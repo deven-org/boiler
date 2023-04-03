@@ -1,0 +1,32 @@
+name: Build design tokens
+
+on:
+  push:
+    branches:
+      - design
+  pull_request:
+    branches:
+      - design
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm ci
+      - name: Generate tokens
+        run: npm run tokens:generate
+      - name: Commit changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "feat(tokens): updates tokens"
+          git push origin HEAD:${{ github.ref }}

@@ -31,12 +31,14 @@ export const BlrTextButton = ({
   label,
   onClick,
   onBlur,
+  loading,
   disabled,
   buttonId,
   variant,
   size,
   leadingIcon,
   trailingIcon,
+  loadingStatus,
 }: BlrTextButtonClass) =>
   html`
     <blr-text-button
@@ -46,9 +48,11 @@ export const BlrTextButton = ({
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
+      .loading=${loading}
       .disabled=${disabled}
       .variant=${variant}
       .size=${size}
+      .loadingStatus=${loadingStatus}
       class="example-layout-class"
     ></blr-text-button>
   `;
@@ -61,9 +65,11 @@ BlrTextButton.args = {
   onBlur: () => console.log('onBlur'),
   leadingIcon: 'undefined',
   trailingIcon: 'blrChevronDownMd',
+  loading: false,
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
   size: 'md',
   iconPosition: 'left',
+  loadingStatus: 'Loading',
 };

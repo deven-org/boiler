@@ -10,23 +10,60 @@ const types = [
   'fontWeights',
   'lineHeights',
   'fontSizes',
-  'spacing',
   'pargraphSpacing',
   'letterSpacing',
 ];
 
+const semanticTypes = [
+  'CTA',
+  'Primary',
+  'Secondary',
+  'Silent',
+  'Destructive',
+  'Encourage',
+  'BorderRadius',
+  'BorderWidth',
+  'XS',
+  'SM',
+  'MD',
+  'LG',
+  'XL',
+  'Background',
+  'Fill',
+  'Caption',
+  'CaptionSlot',
+  'Label',
+  'LabelSlot',
+  'UserInput',
+  'Placeholder',
+  'SurfaceFill',
+  'InputBorderRadius',
+  'Input',
+  'InputSlot',
+  'InputField',
+  'LabelAppendix',
+  'InputIcon',
+];
+const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader'];
+
 StyleDictionary.registerFormat({
-  name: 'custom/format/tokens',
+  name: 'custom/format/semanticTokens',
   formatter: function ({ dictionary, file }) {
     const tokenObj = dictionary.tokens;
-    const tokenName = Object.keys(tokenObj).toString();
+    return fileHeader({ file }) + `export const semanticTokens = ` + JSON.stringify(minifyDictionary(tokenObj));
+  },
+});
 
-    return fileHeader({ file }) + `export const ${tokenName}Tokens = ` + JSON.stringify(minifyDictionary(tokenObj));
+StyleDictionary.registerFormat({
+  name: 'custom/format/componentTokens',
+  formatter: function ({ dictionary, file }) {
+    const tokenObj = dictionary.tokens;
+    return fileHeader({ file }) + `export const componentTokens = ` + JSON.stringify(minifyDictionary(tokenObj));
   },
 });
 
 module.exports = {
-  source: ['input/tokens.normalized.json'],
+  source: ['input/tokens/**/*.json'],
   platforms: {
     scss: {
       transforms: [
@@ -70,18 +107,27 @@ module.exports = {
         'transform/strReplace',
         'transform/font-weight',
       ],
-      prefix: 'blr',
       buildPath: '../ui-library/src/foundation/_tokens-generated/',
       files: [
         {
-          format: 'custom/format/tokens',
+          format: 'custom/format/semanticTokens',
           destination: '__semantic-tokens.generated.js',
-          filter: (token) => token.attributes.category === 'semantic',
+          filter: (token) => {
+            const typeToFilter = semanticTypes;
+            return typeToFilter.includes(token.attributes.type);
+          },
         },
         {
-          format: 'custom/format/tokens',
+          format: 'custom/format/componentTokens',
           destination: '__component-tokens.generated.js',
-          filter: (token) => token.attributes.category === 'component',
+          filter: (token) => {
+            const typeToFilter = componentTypes;
+            return typeToFilter.includes(token.attributes.type);
+          },
+        },
+        {
+          format: 'javascript/object',
+          destination: '__all-tokens.generated.js',
         },
       ],
     },
