@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 02 Apr 2023 17:16:28 GMT
+ * Generated on Mon, 03 Apr 2023 18:53:38 GMT
  */
 
 var _styleDictionary = {
@@ -8704,11 +8704,7 @@ var _styleDictionary = {
       SM: {
         Background: {
           Default: {
-            value: {
-              color: 'hsla(220, 85%, 60%, 0.2)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 60%, 0.2)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8731,11 +8727,7 @@ var _styleDictionary = {
             path: ['Feedback', 'Loader', 'SM', 'Background', 'Default'],
           },
           Inverted: {
-            value: {
-              color: 'hsla(220, 85%, 99%, 0.2)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 99%, 0.2)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8760,11 +8752,7 @@ var _styleDictionary = {
         },
         Foreground: {
           Default: {
-            value: {
-              color: 'hsla(220, 85%, 40%, 1)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 40%, 1)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8787,11 +8775,7 @@ var _styleDictionary = {
             path: ['Feedback', 'Loader', 'SM', 'Foreground', 'Default'],
           },
           Inverted: {
-            value: {
-              color: 'hsla(220, 85%, 99%, 1)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 99%, 1)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8854,11 +8838,7 @@ var _styleDictionary = {
       MD: {
         Background: {
           Default: {
-            value: {
-              color: 'hsla(220, 85%, 60%, 0.2)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 60%, 0.2)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8881,11 +8861,7 @@ var _styleDictionary = {
             path: ['Feedback', 'Loader', 'MD', 'Background', 'Default'],
           },
           Inverted: {
-            value: {
-              color: 'hsla(220, 85%, 99%, 0.2)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 99%, 0.2)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8910,11 +8886,7 @@ var _styleDictionary = {
         },
         Foreground: {
           Default: {
-            value: {
-              color: 'hsla(220, 85%, 40%, 1)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 40%, 1)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -8937,11 +8909,7 @@ var _styleDictionary = {
             path: ['Feedback', 'Loader', 'MD', 'Foreground', 'Default'],
           },
           Inverted: {
-            value: {
-              color: 'hsla(220, 85%, 99%, 1)',
-              width: '2px',
-              style: 'solid',
-            },
+            value: '2px solid hsla(220, 85%, 99%, 1)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -9004,11 +8972,7 @@ var _styleDictionary = {
       LG: {
         Background: {
           Default: {
-            value: {
-              color: 'hsla(220, 85%, 60%, 0.2)',
-              width: '3px',
-              style: 'solid',
-            },
+            value: '3px solid hsla(220, 85%, 60%, 0.2)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -9031,11 +8995,7 @@ var _styleDictionary = {
             path: ['Feedback', 'Loader', 'LG', 'Background', 'Default'],
           },
           Inverted: {
-            value: {
-              color: 'hsla(220, 85%, 99%, 0.2)',
-              width: '3px',
-              style: 'solid',
-            },
+            value: '3px solid hsla(220, 85%, 99%, 0.2)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -9060,11 +9020,7 @@ var _styleDictionary = {
         },
         Foreground: {
           Default: {
-            value: {
-              color: 'hsla(220, 85%, 40%, 1)',
-              width: '3px',
-              style: 'solid',
-            },
+            value: '3px solid hsla(220, 85%, 40%, 1)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -9087,11 +9043,7 @@ var _styleDictionary = {
             path: ['Feedback', 'Loader', 'LG', 'Foreground', 'Default'],
           },
           Inverted: {
-            value: {
-              color: 'hsla(220, 85%, 99%, 1)',
-              width: '3px',
-              style: 'solid',
-            },
+            value: '3px solid hsla(220, 85%, 99%, 1)',
             type: 'border',
             filePath: 'input/tokens/semantics/BLR_CMP.json',
             isSource: true,
@@ -9977,11 +9929,7 @@ var _styleDictionary = {
     Input: {
       Default: {
         Rest: {
-          value: {
-            color: 'hsla(220, 10%, 70%) ',
-            width: '1',
-            style: 'solid',
-          },
+          value: '1px solid hsla(220, 10%, 70%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10003,11 +9951,7 @@ var _styleDictionary = {
           path: ['Forms', 'Input', 'Default', 'Rest'],
         },
         Hover: {
-          value: {
-            color: 'hsla(220, 10%, 70%) ',
-            width: '1',
-            style: 'solid',
-          },
+          value: '1px solid hsla(220, 10%, 70%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10029,11 +9973,7 @@ var _styleDictionary = {
           path: ['Forms', 'Input', 'Default', 'Hover'],
         },
         Focus: {
-          value: {
-            color: 'hsla(220, 10%, 10%) ',
-            width: '2',
-            style: 'solid',
-          },
+          value: '2px solid hsla(220, 10%, 10%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10055,11 +9995,7 @@ var _styleDictionary = {
           path: ['Forms', 'Input', 'Default', 'Focus'],
         },
         Disabled: {
-          value: {
-            color: 'hsla(220, 10%, 80%) ',
-            width: '1',
-            style: 'solid',
-          },
+          value: '1px solid hsla(220, 10%, 80%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10081,11 +10017,7 @@ var _styleDictionary = {
           path: ['Forms', 'Input', 'Default', 'Disabled'],
         },
         ReadOnly: {
-          value: {
-            color: '#00000000#',
-            width: '1',
-            style: 'solid',
-          },
+          value: '1px solid #00000000#',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10109,11 +10041,7 @@ var _styleDictionary = {
       },
       Error: {
         Rest: {
-          value: {
-            color: 'hsla(350, 80%, 50%) ',
-            width: '1',
-            style: 'solid',
-          },
+          value: '1px solid hsla(350, 80%, 50%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10135,11 +10063,7 @@ var _styleDictionary = {
           path: ['Forms', 'Input', 'Error', 'Rest'],
         },
         Hover: {
-          value: {
-            color: 'hsla(350, 80%, 50%) ',
-            width: '1',
-            style: 'solid',
-          },
+          value: '1px solid hsla(350, 80%, 50%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10161,11 +10085,7 @@ var _styleDictionary = {
           path: ['Forms', 'Input', 'Error', 'Hover'],
         },
         Focus: {
-          value: {
-            color: 'hsla(350, 80%, 50%) ',
-            width: '2',
-            style: 'solid',
-          },
+          value: '2px solid hsla(350, 80%, 50%) ',
           type: 'border',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
@@ -10408,11 +10328,7 @@ var _styleDictionary = {
   },
   'Global': {
     Focus: {
-      value: {
-        color: '#000',
-        width: '2px',
-        style: 'solid',
-      },
+      value: '2px solid #000',
       type: 'border',
       filePath: 'input/tokens/semantics/BLR_SEM.json',
       isSource: true,

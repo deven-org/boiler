@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 02 Apr 2023 17:16:28 GMT
+ * Generated on Mon, 03 Apr 2023 18:53:38 GMT
  */
 
 export const semanticTokens = {
@@ -272,16 +272,16 @@ export const semanticTokens = {
     InputBorderRadius: '4px',
     Input: {
       Default: {
-        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2', style: 'solid' },
-        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1', style: 'solid' },
-        ReadOnly: { color: '#00000000#', width: '1', style: 'solid' },
+        Rest: '1px solid hsla(220, 10%, 70%) ',
+        Hover: '1px solid hsla(220, 10%, 70%) ',
+        Focus: '2px solid hsla(220, 10%, 10%) ',
+        Disabled: '1px solid hsla(220, 10%, 80%) ',
+        ReadOnly: '1px solid #00000000#',
       },
       Error: {
-        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1', style: 'solid' },
-        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1', style: 'solid' },
-        Focus: { color: 'hsla(350, 80%, 50%) ', width: '2', style: 'solid' },
+        Rest: '1px solid hsla(350, 80%, 50%) ',
+        Hover: '1px solid hsla(350, 80%, 50%) ',
+        Focus: '2px solid hsla(350, 80%, 50%) ',
       },
     },
     InputSlot: { Margin: '0.5rem 0px 0rem 0px' },

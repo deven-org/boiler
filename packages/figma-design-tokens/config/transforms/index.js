@@ -4,6 +4,7 @@ const resolveMath = require('./_resolve-math');
 const StrReplacePxDuplicate = require('./_str-replace-pxpx');
 const transformDimension = require('./_transform-dimension');
 const transformFontToRem = require('./_font-to-rem');
+const flattenBorderComposite = require('./_flatten-border-composite');
 
 module.exports = {
   fontWeight,
@@ -11,4 +12,5 @@ module.exports = {
   StrReplacePxDuplicate,
   transformDimension,
   transformFontToRem,
+  flattenBorderComposite,
 };

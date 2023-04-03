@@ -106,6 +106,7 @@ module.exports = {
         'transform/size/px',
         'transform/strReplace',
         'transform/font-weight',
+        'transform/composite/token/border/flatten',
       ],
       buildPath: '../ui-library/src/foundation/_tokens-generated/',
       files: [
