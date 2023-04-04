@@ -1106,11 +1106,19 @@
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.400}",
+        "value": "{core.color.coolgray.700}",
         "type": "color"
       },
-      "Hover-copy": {
-        "value": "{core.color.coolgray.100}",
+      "Focus": {
+        "value": "{core.color.coolgray.700}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{core.color.coolgray.700}",
+        "type": "color"
+      },
+      "ReadOnly": {
+        "value": "{core.color.coolgray.700}",
         "type": "color"
       },
       "Error": {
