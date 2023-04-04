@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 02 Apr 2023 18:17:01 GMT
+ * Generated on Tue, 04 Apr 2023 08:01:34 GMT
  */
 
 export const semanticTokens = {
@@ -295,10 +295,12 @@ export const semanticTokens = {
       Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
     },
     InputIcon: {
-      'Rest': 'hsla(220, 10%, 70%) ',
-      'Hover': 'hsla(220, 10%, 40%) ',
-      'Hover-copy': 'hsla(220, 10%, 10%) ',
-      'Error': 'hsla(350, 80%, 50%) ',
+      Rest: 'hsla(220, 10%, 70%) ',
+      Hover: 'hsla(220, 10%, 70%) ',
+      Focus: 'hsla(220, 10%, 70%) ',
+      Disabled: 'hsla(220, 10%, 70%) ',
+      ReadOnly: 'hsla(220, 10%, 70%) ',
+      Error: 'hsla(350, 80%, 50%) ',
     },
   },
 };

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 02 Apr 2023 18:17:01 GMT
+ * Generated on Tue, 04 Apr 2023 08:01:34 GMT
  */
 
 var _styleDictionary = {
@@ -10336,7 +10336,7 @@ var _styleDictionary = {
       },
     },
     InputIcon: {
-      'Rest': {
+      Rest: {
         value: 'hsla(220, 10%, 70%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
@@ -10353,13 +10353,13 @@ var _styleDictionary = {
         },
         path: ['Forms', 'InputIcon', 'Rest'],
       },
-      'Hover': {
-        value: 'hsla(220, 10%, 40%) ',
+      Hover: {
+        value: 'hsla(220, 10%, 70%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.400}',
+          value: '{core.color.coolgray.700}',
           type: 'color',
         },
         name: 'FormsInputIconHover',
@@ -10370,24 +10370,58 @@ var _styleDictionary = {
         },
         path: ['Forms', 'InputIcon', 'Hover'],
       },
-      'Hover-copy': {
-        value: 'hsla(220, 10%, 10%) ',
+      Focus: {
+        value: 'hsla(220, 10%, 70%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.100}',
+          value: '{core.color.coolgray.700}',
           type: 'color',
         },
-        name: 'FormsInputIconHoverCopy',
+        name: 'FormsInputIconFocus',
         attributes: {
           category: 'Forms',
           type: 'InputIcon',
-          item: 'Hover-copy',
+          item: 'Focus',
         },
-        path: ['Forms', 'InputIcon', 'Hover-copy'],
+        path: ['Forms', 'InputIcon', 'Focus'],
       },
-      'Error': {
+      Disabled: {
+        value: 'hsla(220, 10%, 70%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.700}',
+          type: 'color',
+        },
+        name: 'FormsInputIconDisabled',
+        attributes: {
+          category: 'Forms',
+          type: 'InputIcon',
+          item: 'Disabled',
+        },
+        path: ['Forms', 'InputIcon', 'Disabled'],
+      },
+      ReadOnly: {
+        value: 'hsla(220, 10%, 70%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.700}',
+          type: 'color',
+        },
+        name: 'FormsInputIconReadOnly',
+        attributes: {
+          category: 'Forms',
+          type: 'InputIcon',
+          item: 'ReadOnly',
+        },
+        path: ['Forms', 'InputIcon', 'ReadOnly'],
+      },
+      Error: {
         value: 'hsla(350, 80%, 50%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
