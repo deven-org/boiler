@@ -1,19 +1,21 @@
 import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { styleCustom } from './css';
-import { action } from '../../foundation/semantic-tokens/action';
-import { textInput } from '../../foundation/semantic-tokens/form';
+import { styleCustom } from './index.css';
+import { textInput } from '../../foundation/semantic-tokens/form.css';
 import { SizesType, InputTypes } from '../../globals/types';
+import { BlrFormLabel } from '../form-label';
+import { BlrFormHint } from '../form-hint';
+import { IconType } from '@boiler/icons';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, action, textInput];
+  static styles = [styleCustom, textInput];
 
-  @property() textInputId: string;
-  @property() type: InputTypes;
-  @property() label: string;
-  @property() value: string;
+  @property() textInputId!: string;
+  @property() type!: InputTypes;
+  @property() label!: string;
+  @property() value!: string;
   @property() placeholder?: string;
   @property() disabled?: boolean;
   @property() size?: SizesType = 'md';
@@ -21,24 +23,25 @@ export class BlrTextInput extends LitElement {
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property() maxLength: number;
-  @property() minLength: number;
-  @property() pattern: string;
+  @property() maxLength?: number;
+  @property() minLength?: number;
+  @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() hint: string;
+  @property() hint?: string;
+  @property() hintIcon?: IconType;
 
   render() {
-    const classes = {
-      [`${this.size}`]: this.size,
-      disabled: this.disabled,
-    };
+    const classes = classMap({
+      [`${this.size}`]: this.size || 'md',
+      [`${this.disabled}`]: this.disabled || false,
+    });
 
     return html`
-      <div class="blr-input ${classMap(classes)}">
-        <span class="blr-text-label">${this.label}</span>
+      <div class="blr-input ${classes}">
+        ${BlrFormLabel({ labelText: this.label })}
         <input
-          class="blr-text-input "
+          class="blr-text-input ${this.hasError ? 'inputerror' : 'default'}"
           id=${this.textInputId}
           type="${this.type}"
           value="${this.value}"
@@ -53,10 +56,11 @@ export class BlrTextInput extends LitElement {
           pattern="${this.pattern}"
           hasError="${this.hasError}"
         />
-        <span class="blr-hint-error ${this.hasError ? 'blr-error' : 'blr-hint'}">
-          <blr-icon name="blr360Sm"></blr-icon>
-          <span>${this.hasError ? this.errorMessage : this.hint}</span>
-        </span>
+        ${BlrFormHint({
+          message: this.hasError ? this.errorMessage : this.hint,
+          variant: this.hasError ? 'error' : 'hint',
+          iconName: this.hintIcon,
+        })}
       </div>
     `;
   }

@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTextInput as BlrTextInputClass } from './index';
-import { Sizes } from '../../globals/constants';
+import { Sizes, InputTypes } from '../../globals/constants';
+import { IconKeys } from '@boiler/icons';
 import './index';
 
 export default {
@@ -8,6 +10,14 @@ export default {
   argTypes: {
     size: {
       options: Sizes,
+      control: { type: 'select' },
+    },
+    type: {
+      options: InputTypes,
+      control: { type: 'select' },
+    },
+    hintIcon: {
+      options: [undefined, ...IconKeys],
       control: { type: 'select' },
     },
   },
@@ -30,6 +40,7 @@ export const BlrTextInput = ({
   pattern,
   errorMessage,
   hint,
+  hintIcon,
   hasError,
 }: BlrTextInputClass) =>
   html`
@@ -50,6 +61,7 @@ export const BlrTextInput = ({
       .pattern=${pattern}
       .errorMessage=${errorMessage}
       .hint=${hint}
+      .hintIcon=${hintIcon}
       .hasError=${hasError}
       class="example-layout-class"
     ></blr-text-input>
@@ -73,6 +85,7 @@ BlrTextInput.args = {
   size: 'md',
   pattern: '',
   errorMessage: 'This is error message',
-  hint: 'Feild is used for hint',
+  hint: 'Field is used for hint',
+  hintIcon: 'blr360Sm',
   hasError: false,
 };

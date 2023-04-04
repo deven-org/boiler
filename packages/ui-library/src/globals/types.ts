@@ -1,4 +1,4 @@
-import { FeedbackSizes, Sizes } from './constants';
+import { FeedbackSizes, Sizes, InputTypes } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
 
@@ -8,4 +8,4 @@ export type FeedbackVariants = 'default' | 'inverted';
 
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 
-export type InputTypes = 'text' | 'password' | 'email' | 'number';
+export type InputTypes = (typeof InputTypes)[number];
