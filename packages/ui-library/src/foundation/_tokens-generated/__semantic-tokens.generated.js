@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 14:17:36 GMT
+ * Generated on Wed, 05 Apr 2023 14:41:43 GMT
  */
 
 export const semanticTokens = {
@@ -272,16 +272,16 @@ export const semanticTokens = {
     InputBorderRadius: '4px',
     Input: {
       Default: {
-        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2', style: 'solid' },
-        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1', style: 'solid' },
-        ReadOnly: { color: '#00000000#', width: '1', style: 'solid' },
+        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
+        ReadOnly: { color: '#00000000', width: '1px', style: 'solid' },
       },
       Error: {
-        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1', style: 'solid' },
-        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1', style: 'solid' },
-        Focus: { color: 'hsla(350, 80%, 50%) ', width: '2', style: 'solid' },
+        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
       },
     },
     InputSlot: { Margin: '0rem 0px 0rem 0px' },

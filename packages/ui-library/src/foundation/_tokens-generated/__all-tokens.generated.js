@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 14:17:36 GMT
+ * Generated on Wed, 05 Apr 2023 14:41:43 GMT
  */
 
 var _styleDictionary = {
@@ -10129,7 +10129,7 @@ var _styleDictionary = {
         Rest: {
           value: {
             color: 'hsla(220, 10%, 70%) ',
-            width: '1',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10137,8 +10137,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.coolgray.700}',
-              width: '1',
+              color: '{Forms.SurfaceStroke.Default.Rest}',
+              width: '{core.borderWidth.Medium}',
               style: 'solid',
             },
             type: 'border',
@@ -10155,7 +10155,7 @@ var _styleDictionary = {
         Hover: {
           value: {
             color: 'hsla(220, 10%, 70%) ',
-            width: '1',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10163,8 +10163,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.coolgray.700}',
-              width: '1',
+              color: '{Forms.SurfaceStroke.Default.Hover}',
+              width: '{core.borderWidth.Medium}',
               style: 'solid',
             },
             type: 'border',
@@ -10181,7 +10181,7 @@ var _styleDictionary = {
         Focus: {
           value: {
             color: 'hsla(220, 10%, 10%) ',
-            width: '2',
+            width: '2px',
             style: 'solid',
           },
           type: 'border',
@@ -10190,7 +10190,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Global.Focus}',
-              width: '2',
+              width: '{core.borderWidth.Bold}',
               style: 'solid',
             },
             type: 'border',
@@ -10207,7 +10207,7 @@ var _styleDictionary = {
         Disabled: {
           value: {
             color: 'hsla(220, 10%, 80%) ',
-            width: '1',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10215,8 +10215,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.coolgray.800}',
-              width: '1',
+              color: '{Forms.SurfaceStroke.Default.Disabled}',
+              width: '{core.borderWidth.Medium}',
               style: 'solid',
             },
             type: 'border',
@@ -10232,8 +10232,8 @@ var _styleDictionary = {
         },
         ReadOnly: {
           value: {
-            color: '#00000000#',
-            width: '1',
+            color: '#00000000',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10241,8 +10241,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.neutral.transparent}#',
-              width: '1',
+              color: '{Forms.SurfaceStroke.Default.ReadOnly}',
+              width: '{core.borderWidth.Medium}',
               style: 'solid',
             },
             type: 'border',
@@ -10261,7 +10261,7 @@ var _styleDictionary = {
         Rest: {
           value: {
             color: 'hsla(350, 80%, 50%) ',
-            width: '1',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10269,8 +10269,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.crimson.500}',
-              width: '1',
+              color: '{Forms.SurfaceStroke.Error.Rest}',
+              width: '{core.borderWidth.Medium}',
               style: 'solid',
             },
             type: 'border',
@@ -10287,7 +10287,7 @@ var _styleDictionary = {
         Hover: {
           value: {
             color: 'hsla(350, 80%, 50%) ',
-            width: '1',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10295,8 +10295,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.crimson.500}',
-              width: '1',
+              color: '{Forms.SurfaceStroke.Error.Hover}',
+              width: '{core.borderWidth.Medium}',
               style: 'solid',
             },
             type: 'border',
@@ -10312,8 +10312,8 @@ var _styleDictionary = {
         },
         Focus: {
           value: {
-            color: 'hsla(350, 80%, 50%) ',
-            width: '2',
+            color: 'hsla(220, 10%, 10%) ',
+            width: '2px',
             style: 'solid',
           },
           type: 'border',
@@ -10321,8 +10321,8 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.crimson.500}',
-              width: '2',
+              color: '{Forms.SurfaceStroke.Default.Focus}',
+              width: '{core.borderWidth.Bold}',
               style: 'solid',
             },
             type: 'border',
