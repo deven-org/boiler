@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 15:24:47 GMT
+ * Generated on Wed, 05 Apr 2023 15:28:31 GMT
  */
 
 var _styleDictionary = {
@@ -9226,42 +9226,202 @@ var _styleDictionary = {
     },
   },
   'Forms': {
-    Caption: {
-      Error: {
-        value: 'hsla(350, 80%, 50%) ',
+    Label: {
+      Rest: {
+        value: 'hsla(220, 10%, 10%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.crimson.500}',
+          value: '{core.color.coolgray.100}',
           type: 'color',
         },
-        name: 'FormsCaptionError',
+        name: 'FormsLabelRest',
         attributes: {
           category: 'Forms',
-          type: 'Caption',
-          item: 'Error',
+          type: 'Label',
+          item: 'Rest',
         },
-        path: ['Forms', 'Caption', 'Error'],
+        path: ['Forms', 'Label', 'Rest'],
       },
-      Hint: {
-        value: 'hsla(220, 10%, 30%) ',
+      Hover: {
+        value: 'hsla(220, 10%, 10%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.300}',
+          value: '{core.color.coolgray.100}',
           type: 'color',
         },
-        name: 'FormsCaptionHint',
+        name: 'FormsLabelHover',
         attributes: {
           category: 'Forms',
-          type: 'Caption',
-          item: 'Hint',
+          type: 'Label',
+          item: 'Hover',
         },
-        path: ['Forms', 'Caption', 'Hint'],
+        path: ['Forms', 'Label', 'Hover'],
       },
-      DefaultType: {
+      Focus: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelFocus',
+        attributes: {
+          category: 'Forms',
+          type: 'Label',
+          item: 'Focus',
+        },
+        path: ['Forms', 'Label', 'Focus'],
+      },
+      Disabled: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelDisabled',
+        attributes: {
+          category: 'Forms',
+          type: 'Label',
+          item: 'Disabled',
+        },
+        path: ['Forms', 'Label', 'Disabled'],
+      },
+      Default: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 600,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.semibold.75}',
+          type: 'typography',
+        },
+        name: 'FormsLabelDefault',
+        attributes: {
+          category: 'Forms',
+          type: 'Label',
+          item: 'Default',
+        },
+        path: ['Forms', 'Label', 'Default'],
+      },
+      ReadOnly: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelReadOnly',
+        attributes: {
+          category: 'Forms',
+          type: 'Label',
+          item: 'ReadOnly',
+        },
+        path: ['Forms', 'Label', 'ReadOnly'],
+      },
+    },
+    LabelAppendix: {
+      Rest: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixRest',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Rest',
+        },
+        path: ['Forms', 'LabelAppendix', 'Rest'],
+      },
+      Hover: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixHover',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Hover',
+        },
+        path: ['Forms', 'LabelAppendix', 'Hover'],
+      },
+      Focus: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixFocus',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Focus',
+        },
+        path: ['Forms', 'LabelAppendix', 'Focus'],
+      },
+      Disabled: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixDisabled',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Disabled',
+        },
+        path: ['Forms', 'LabelAppendix', 'Disabled'],
+      },
+      ReadOnly: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixReadOnly',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'ReadOnly',
+        },
+        path: ['Forms', 'LabelAppendix', 'ReadOnly'],
+      },
+      Default: {
         value: {
           fontFamily: '"Source Sans Pro" ',
           fontWeight: 400,
@@ -9275,13 +9435,13 @@ var _styleDictionary = {
           value: '{core.typography.sourceSansPro.regular.75}',
           type: 'typography',
         },
-        name: 'FormsCaptionDefaultType',
+        name: 'FormsLabelAppendixDefault',
         attributes: {
           category: 'Forms',
-          type: 'Caption',
-          item: 'DefaultType',
+          type: 'LabelAppendix',
+          item: 'Default',
         },
-        path: ['Forms', 'Caption', 'DefaultType'],
+        path: ['Forms', 'LabelAppendix', 'Default'],
       },
     },
     MD: {
@@ -9472,79 +9632,45 @@ var _styleDictionary = {
         },
       },
     },
-    Label: {
-      Rest: {
-        value: 'hsla(220, 10%, 10%) ',
+    Caption: {
+      Error: {
+        value: 'hsla(350, 80%, 50%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.100}',
+          value: '{core.color.crimson.500}',
           type: 'color',
         },
-        name: 'FormsLabelRest',
+        name: 'FormsCaptionError',
         attributes: {
           category: 'Forms',
-          type: 'Label',
-          item: 'Rest',
+          type: 'Caption',
+          item: 'Error',
         },
-        path: ['Forms', 'Label', 'Rest'],
+        path: ['Forms', 'Caption', 'Error'],
       },
-      Hover: {
-        value: 'hsla(220, 10%, 10%) ',
+      Hint: {
+        value: 'hsla(220, 10%, 30%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.100}',
+          value: '{core.color.coolgray.300}',
           type: 'color',
         },
-        name: 'FormsLabelHover',
+        name: 'FormsCaptionHint',
         attributes: {
           category: 'Forms',
-          type: 'Label',
-          item: 'Hover',
+          type: 'Caption',
+          item: 'Hint',
         },
-        path: ['Forms', 'Label', 'Hover'],
+        path: ['Forms', 'Caption', 'Hint'],
       },
-      Focus: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelFocus',
-        attributes: {
-          category: 'Forms',
-          type: 'Label',
-          item: 'Focus',
-        },
-        path: ['Forms', 'Label', 'Focus'],
-      },
-      Disabled: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelDisabled',
-        attributes: {
-          category: 'Forms',
-          type: 'Label',
-          item: 'Disabled',
-        },
-        path: ['Forms', 'Label', 'Disabled'],
-      },
-      Default: {
+      DefaultType: {
         value: {
           fontFamily: '"Source Sans Pro" ',
-          fontWeight: 600,
+          fontWeight: 400,
           lineHeight: '150%',
           fontSize: '0.75rem',
         },
@@ -9552,33 +9678,16 @@ var _styleDictionary = {
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.typography.sourceSansPro.semibold.75}',
+          value: '{core.typography.sourceSansPro.regular.75}',
           type: 'typography',
         },
-        name: 'FormsLabelDefault',
+        name: 'FormsCaptionDefaultType',
         attributes: {
           category: 'Forms',
-          type: 'Label',
-          item: 'Default',
+          type: 'Caption',
+          item: 'DefaultType',
         },
-        path: ['Forms', 'Label', 'Default'],
-      },
-      ReadOnly: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelReadOnly',
-        attributes: {
-          category: 'Forms',
-          type: 'Label',
-          item: 'ReadOnly',
-        },
-        path: ['Forms', 'Label', 'ReadOnly'],
+        path: ['Forms', 'Caption', 'DefaultType'],
       },
     },
     UserInput: {
@@ -10391,115 +10500,6 @@ var _styleDictionary = {
           },
           path: ['Forms', 'Input', 'Error', 'Focus'],
         },
-      },
-    },
-    LabelAppendix: {
-      Rest: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixRest',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Rest',
-        },
-        path: ['Forms', 'LabelAppendix', 'Rest'],
-      },
-      Hover: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixHover',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Hover',
-        },
-        path: ['Forms', 'LabelAppendix', 'Hover'],
-      },
-      Focus: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixFocus',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Focus',
-        },
-        path: ['Forms', 'LabelAppendix', 'Focus'],
-      },
-      Disabled: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixDisabled',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Disabled',
-        },
-        path: ['Forms', 'LabelAppendix', 'Disabled'],
-      },
-      ReadOnly: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixReadOnly',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'ReadOnly',
-        },
-        path: ['Forms', 'LabelAppendix', 'ReadOnly'],
-      },
-      Default: {
-        value: {
-          fontFamily: '"Source Sans Pro" ',
-          fontWeight: 400,
-          lineHeight: '150%',
-          fontSize: '0.75rem',
-        },
-        type: 'typography',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.typography.sourceSansPro.regular.75}',
-          type: 'typography',
-        },
-        name: 'FormsLabelAppendixDefault',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Default',
-        },
-        path: ['Forms', 'LabelAppendix', 'Default'],
       },
     },
     InputIcon: {

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 15:24:47 GMT
+ * Generated on Wed, 05 Apr 2023 15:28:31 GMT
  */
 
 export const semanticTokens = {
@@ -226,10 +226,21 @@ export const semanticTokens = {
     Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(220, 85%, 99%, 1)' },
   },
   Forms: {
-    Caption: {
-      Error: 'hsla(350, 80%, 50%) ',
-      Hint: 'hsla(220, 10%, 30%) ',
-      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+    Label: {
+      Rest: 'hsla(220, 10%, 10%) ',
+      Hover: 'hsla(220, 10%, 10%) ',
+      Focus: 'hsla(220, 10%, 10%) ',
+      Disabled: 'hsla(220, 10%, 10%) ',
+      Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      ReadOnly: 'hsla(220, 10%, 10%) ',
+    },
+    LabelAppendix: {
+      Rest: 'hsla(220, 10%, 10%) ',
+      Hover: 'hsla(220, 10%, 10%) ',
+      Focus: 'hsla(220, 10%, 10%) ',
+      Disabled: 'hsla(220, 10%, 10%) ',
+      ReadOnly: 'hsla(220, 10%, 10%) ',
+      Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
     },
     MD: {
       Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
@@ -244,13 +255,10 @@ export const semanticTokens = {
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px' },
     },
-    Label: {
-      Rest: 'hsla(220, 10%, 10%) ',
-      Hover: 'hsla(220, 10%, 10%) ',
-      Focus: 'hsla(220, 10%, 10%) ',
-      Disabled: 'hsla(220, 10%, 10%) ',
-      Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      ReadOnly: 'hsla(220, 10%, 10%) ',
+    Caption: {
+      Error: 'hsla(350, 80%, 50%) ',
+      Hint: 'hsla(220, 10%, 30%) ',
+      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
     },
     UserInput: {
       Default: {
@@ -290,14 +298,6 @@ export const semanticTokens = {
         Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
         Focus: { color: 'hsla(220, 10%, 10%) ', width: '1px', style: 'solid' },
       },
-    },
-    LabelAppendix: {
-      Rest: 'hsla(220, 10%, 10%) ',
-      Hover: 'hsla(220, 10%, 10%) ',
-      Focus: 'hsla(220, 10%, 10%) ',
-      Disabled: 'hsla(220, 10%, 10%) ',
-      ReadOnly: 'hsla(220, 10%, 10%) ',
-      Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
     },
     InputIcon: {
       Rest: 'hsla(220, 10%, 70%) ',
