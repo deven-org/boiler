@@ -1012,7 +1012,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{core.color.coolgray.100}",
+            "color": "{Global.Focus}",
             "width": "2",
             "style": "solid"
           },
@@ -1129,12 +1129,8 @@
   },
   "Global": {
     "Focus": {
-      "value": {
-        "color": "{core.color.neutral.black}",
-        "width": "{core.borderWidth.Bold}",
-        "style": "solid"
-      },
-      "type": "border"
+      "value": "{core.color.coolgray.100}",
+      "type": "color"
     }
   }
 }
