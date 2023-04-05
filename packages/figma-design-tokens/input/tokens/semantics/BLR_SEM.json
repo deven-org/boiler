@@ -806,16 +806,54 @@
     }
   },
   "Forms": {
-    "Caption": {
-      "Error": {
-        "value": "{core.color.crimson.500}",
+    "Label": {
+      "Rest": {
+        "value": "{core.color.coolgray.100}",
         "type": "color"
       },
-      "Hint": {
-        "value": "{core.color.coolgray.300}",
+      "Hover": {
+        "value": "{core.color.coolgray.100}",
         "type": "color"
       },
-      "DefaultType": {
+      "Focus": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Default": {
+        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "type": "typography"
+      },
+      "ReadOnly": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      }
+    },
+    "LabelAppendix": {
+      "Rest": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Hover": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Focus": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "ReadOnly": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Default": {
         "value": "{core.typography.sourceSansPro.regular.75}",
         "type": "typography"
       }
@@ -872,54 +910,16 @@
         }
       }
     },
-    "Label": {
-      "Rest": {
-        "value": "{core.color.coolgray.100}",
+    "Caption": {
+      "Error": {
+        "value": "{core.color.crimson.500}",
         "type": "color"
       },
-      "Hover": {
-        "value": "{core.color.coolgray.100}",
+      "Hint": {
+        "value": "{core.color.coolgray.300}",
         "type": "color"
       },
-      "Focus": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Default": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
-        "type": "typography"
-      },
-      "ReadOnly": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      }
-    },
-    "LabelAppendix": {
-      "Rest": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Hover": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Default": {
+      "DefaultType": {
         "value": "{core.typography.sourceSansPro.regular.75}",
         "type": "typography"
       }
