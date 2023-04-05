@@ -670,7 +670,7 @@
         "type": "borderWidth"
       },
       "Focus": {
-        "value": "{core.borderWidth.Medium}",
+        "value": "{core.borderWidth.None}",
         "type": "borderWidth"
       },
       "Disabled": {
