@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 14:41:43 GMT
+ * Generated on Wed, 05 Apr 2023 15:24:47 GMT
  */
 
 export const semanticTokens = {
@@ -230,19 +230,28 @@ export const semanticTokens = {
       Error: 'hsla(350, 80%, 50%) ',
       Hint: 'hsla(220, 10%, 30%) ',
       DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      Padding: '0rem 0px',
-      ItemSpacing: '0.125rem',
     },
-    CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+    MD: {
+      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
+      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      UserInput: {
+        DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      },
+      Placeholder: {
+        DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      },
+      InputSlot: { Margin: '0rem 0px 0rem 0px' },
+      InputField: { Padding: '0.5rem 12px' },
+    },
     Label: {
       Rest: 'hsla(220, 10%, 10%) ',
       Hover: 'hsla(220, 10%, 10%) ',
       Focus: 'hsla(220, 10%, 10%) ',
       Disabled: 'hsla(220, 10%, 10%) ',
-      ReadOnly: 'hsla(220, 10%, 10%) ',
       Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      ReadOnly: 'hsla(220, 10%, 10%) ',
     },
-    LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
     UserInput: {
       Default: {
         Rest: 'hsla(220, 10%, 10%) ',
@@ -252,7 +261,6 @@ export const semanticTokens = {
         ReadOnly: 'hsla(220, 10%, 10%) ',
       },
       Error: { Rest: 'hsla(350, 80%, 30%) ', Hover: 'hsla(350, 80%, 30%) ' },
-      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
     },
     Placeholder: {
       Default: {
@@ -263,7 +271,6 @@ export const semanticTokens = {
         ReadOnly: 'hsla(220, 10%, 70%) ',
       },
       Error: { Rest: 'hsla(220, 10%, 70%) ', Hover: 'hsla(220, 10%, 70%) ', Focus: 'hsla(220, 10%, 70%) ' },
-      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
     },
     SurfaceFill: {
       Default: { Rest: '#FFF', Hover: '#FFF', Focus: '#FFF', Disabled: 'hsla(220, 10%, 90%) ', ReadOnly: '#00000000' },
@@ -281,11 +288,9 @@ export const semanticTokens = {
       Error: {
         Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
         Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+        Focus: { color: 'hsla(220, 10%, 10%) ', width: '1px', style: 'solid' },
       },
     },
-    InputSlot: { Margin: '0rem 0px 0rem 0px' },
-    InputField: { Padding: '0.5rem 12px' },
     LabelAppendix: {
       Rest: 'hsla(220, 10%, 10%) ',
       Hover: 'hsla(220, 10%, 10%) ',

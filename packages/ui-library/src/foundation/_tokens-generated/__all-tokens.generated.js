@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 14:41:43 GMT
+ * Generated on Wed, 05 Apr 2023 15:24:47 GMT
  */
 
 var _styleDictionary = {
@@ -9283,58 +9283,193 @@ var _styleDictionary = {
         },
         path: ['Forms', 'Caption', 'DefaultType'],
       },
-      Padding: {
-        value: '0rem 0px',
-        type: 'spacing',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.dimensionREM.0} {core.dimensionPX.0}',
-          type: 'spacing',
-        },
-        name: 'FormsCaptionPadding',
-        attributes: {
-          category: 'Forms',
-          type: 'Caption',
-          item: 'Padding',
-        },
-        path: ['Forms', 'Caption', 'Padding'],
-      },
-      ItemSpacing: {
-        value: '0.125rem',
-        type: 'spacing',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.dimensionREM.2}',
-          type: 'spacing',
-        },
-        name: 'FormsCaptionItemSpacing',
-        attributes: {
-          category: 'Forms',
-          type: 'Caption',
-          item: 'ItemSpacing',
-        },
-        path: ['Forms', 'Caption', 'ItemSpacing'],
-      },
     },
-    CaptionSlot: {
-      Margin: {
-        value: '0.5rem 0px 0rem 0px',
-        type: 'spacing',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+    MD: {
+      Caption: {
+        Padding: {
+          value: '0rem 0px',
           type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsMdCaptionPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'Caption',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'MD', 'Caption', 'Padding'],
         },
-        name: 'FormsCaptionSlotMargin',
-        attributes: {
-          category: 'Forms',
-          type: 'CaptionSlot',
-          item: 'Margin',
+        ItemSpacing: {
+          value: '0.125rem',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.2}',
+            type: 'spacing',
+          },
+          name: 'FormsMdCaptionItemSpacing',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'Caption',
+            subitem: 'ItemSpacing',
+          },
+          path: ['Forms', 'MD', 'Caption', 'ItemSpacing'],
         },
-        path: ['Forms', 'CaptionSlot', 'Margin'],
+      },
+      CaptionSlot: {
+        Margin: {
+          value: '0.5rem 0px 0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsMdCaptionSlotMargin',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'CaptionSlot',
+            subitem: 'Margin',
+          },
+          path: ['Forms', 'MD', 'CaptionSlot', 'Margin'],
+        },
+      },
+      LabelSlot: {
+        Padding: {
+          value: '0rem 0px 8px ',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}',
+            type: 'spacing',
+          },
+          name: 'FormsMdLabelSlotPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'LabelSlot',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'MD', 'LabelSlot', 'Padding'],
+        },
+        ItemSpacing: {
+          value: '4px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionPX.4}',
+            type: 'spacing',
+          },
+          name: 'FormsMdLabelSlotItemSpacing',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'LabelSlot',
+            subitem: 'ItemSpacing',
+          },
+          path: ['Forms', 'MD', 'LabelSlot', 'ItemSpacing'],
+        },
+      },
+      UserInput: {
+        DefaultType: {
+          value: {
+            fontFamily: '"Source Sans Pro" ',
+            fontWeight: 400,
+            lineHeight: '150%',
+            fontSize: '1rem',
+          },
+          type: 'typography',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.typography.sourceSansPro.regular.100}',
+            type: 'typography',
+          },
+          name: 'FormsMdUserInputDefaultType',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'UserInput',
+            subitem: 'DefaultType',
+          },
+          path: ['Forms', 'MD', 'UserInput', 'DefaultType'],
+        },
+      },
+      Placeholder: {
+        DefaultType: {
+          value: {
+            fontFamily: '"Source Sans Pro" ',
+            fontWeight: 400,
+            lineHeight: '150%',
+            fontSize: '1rem',
+          },
+          type: 'typography',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.typography.sourceSansPro.regular.100}',
+            type: 'typography',
+          },
+          name: 'FormsMdPlaceholderDefaultType',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'Placeholder',
+            subitem: 'DefaultType',
+          },
+          path: ['Forms', 'MD', 'Placeholder', 'DefaultType'],
+        },
+      },
+      InputSlot: {
+        Margin: {
+          value: '0rem 0px 0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsMdInputSlotMargin',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'InputSlot',
+            subitem: 'Margin',
+          },
+          path: ['Forms', 'MD', 'InputSlot', 'Margin'],
+        },
+      },
+      InputField: {
+        Padding: {
+          value: '0.5rem 12px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.8} {core.dimensionPX.12}',
+            type: 'spacing',
+          },
+          name: 'FormsMdInputFieldPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'InputField',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'MD', 'InputField', 'Padding'],
+        },
       },
     },
     Label: {
@@ -9406,23 +9541,6 @@ var _styleDictionary = {
         },
         path: ['Forms', 'Label', 'Disabled'],
       },
-      ReadOnly: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelReadOnly',
-        attributes: {
-          category: 'Forms',
-          type: 'Label',
-          item: 'ReadOnly',
-        },
-        path: ['Forms', 'Label', 'ReadOnly'],
-      },
       Default: {
         value: {
           fontFamily: '"Source Sans Pro" ',
@@ -9445,41 +9563,22 @@ var _styleDictionary = {
         },
         path: ['Forms', 'Label', 'Default'],
       },
-    },
-    LabelSlot: {
-      Padding: {
-        value: '0rem 0px 8px ',
-        type: 'spacing',
+      ReadOnly: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}',
-          type: 'spacing',
+          value: '{core.color.coolgray.100}',
+          type: 'color',
         },
-        name: 'FormsLabelSlotPadding',
+        name: 'FormsLabelReadOnly',
         attributes: {
           category: 'Forms',
-          type: 'LabelSlot',
-          item: 'Padding',
+          type: 'Label',
+          item: 'ReadOnly',
         },
-        path: ['Forms', 'LabelSlot', 'Padding'],
-      },
-      ItemSpacing: {
-        value: '4px',
-        type: 'spacing',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.dimensionPX.4}',
-          type: 'spacing',
-        },
-        name: 'FormsLabelSlotItemSpacing',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelSlot',
-          item: 'ItemSpacing',
-        },
-        path: ['Forms', 'LabelSlot', 'ItemSpacing'],
+        path: ['Forms', 'Label', 'ReadOnly'],
       },
     },
     UserInput: {
@@ -9612,28 +9711,6 @@ var _styleDictionary = {
           },
           path: ['Forms', 'UserInput', 'Error', 'Hover'],
         },
-      },
-      DefaultType: {
-        value: {
-          fontFamily: '"Source Sans Pro" ',
-          fontWeight: 400,
-          lineHeight: '150%',
-          fontSize: '1rem',
-        },
-        type: 'typography',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.typography.sourceSansPro.regular.100}',
-          type: 'typography',
-        },
-        name: 'FormsUserInputDefaultType',
-        attributes: {
-          category: 'Forms',
-          type: 'UserInput',
-          item: 'DefaultType',
-        },
-        path: ['Forms', 'UserInput', 'DefaultType'],
       },
     },
     Placeholder: {
@@ -9784,28 +9861,6 @@ var _styleDictionary = {
           },
           path: ['Forms', 'Placeholder', 'Error', 'Focus'],
         },
-      },
-      DefaultType: {
-        value: {
-          fontFamily: '"Source Sans Pro" ',
-          fontWeight: 400,
-          lineHeight: '150%',
-          fontSize: '1rem',
-        },
-        type: 'typography',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.typography.sourceSansPro.regular.100}',
-          type: 'typography',
-        },
-        name: 'FormsPlaceholderDefaultType',
-        attributes: {
-          category: 'Forms',
-          type: 'Placeholder',
-          item: 'DefaultType',
-        },
-        path: ['Forms', 'Placeholder', 'DefaultType'],
       },
     },
     SurfaceFill: {
@@ -10138,7 +10193,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Default.Rest}',
-              width: '{core.borderWidth.Medium}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10164,7 +10219,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Default.Hover}',
-              width: '{core.borderWidth.Medium}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10190,7 +10245,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Global.Focus}',
-              width: '{core.borderWidth.Bold}',
+              width: '{core.dimensionPX.2}',
               style: 'solid',
             },
             type: 'border',
@@ -10216,7 +10271,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Default.Disabled}',
-              width: '{core.borderWidth.Medium}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10242,7 +10297,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Default.ReadOnly}',
-              width: '{core.borderWidth.Medium}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10270,7 +10325,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Error.Rest}',
-              width: '{core.borderWidth.Medium}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10296,7 +10351,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Error.Hover}',
-              width: '{core.borderWidth.Medium}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10313,7 +10368,7 @@ var _styleDictionary = {
         Focus: {
           value: {
             color: 'hsla(220, 10%, 10%) ',
-            width: '2px',
+            width: '1px',
             style: 'solid',
           },
           type: 'border',
@@ -10322,7 +10377,7 @@ var _styleDictionary = {
           original: {
             value: {
               color: '{Forms.SurfaceStroke.Default.Focus}',
-              width: '{core.borderWidth.Bold}',
+              width: '{core.dimensionPX.1}',
               style: 'solid',
             },
             type: 'border',
@@ -10336,44 +10391,6 @@ var _styleDictionary = {
           },
           path: ['Forms', 'Input', 'Error', 'Focus'],
         },
-      },
-    },
-    InputSlot: {
-      Margin: {
-        value: '0rem 0px 0rem 0px',
-        type: 'spacing',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
-          type: 'spacing',
-        },
-        name: 'FormsInputSlotMargin',
-        attributes: {
-          category: 'Forms',
-          type: 'InputSlot',
-          item: 'Margin',
-        },
-        path: ['Forms', 'InputSlot', 'Margin'],
-      },
-    },
-    InputField: {
-      Padding: {
-        value: '0.5rem 12px',
-        type: 'spacing',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.dimensionREM.8} {core.dimensionPX.12}',
-          type: 'spacing',
-        },
-        name: 'FormsInputFieldPadding',
-        attributes: {
-          category: 'Forms',
-          type: 'InputField',
-          item: 'Padding',
-        },
-        path: ['Forms', 'InputField', 'Padding'],
       },
     },
     LabelAppendix: {
