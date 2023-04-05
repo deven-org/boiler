@@ -898,6 +898,32 @@
         "type": "color"
       }
     },
+    "LabelAppendix": {
+      "Rest": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Hover": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Focus": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "ReadOnly": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Default": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      }
+    },
     "UserInput": {
       "Default": {
         "Rest": {
@@ -1120,32 +1146,7 @@
         }
       }
     },
-    "LabelAppendix": {
-      "Rest": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Hover": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "Default": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
-        "type": "typography"
-      }
-    },
+
     "InputIcon": {
       "Rest": {
         "value": "{core.color.coolgray.700}",
