@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 13:59:36 GMT
+ * Generated on Wed, 05 Apr 2023 14:17:36 GMT
  */
 
 export const semanticTokens = {
@@ -242,7 +242,7 @@ export const semanticTokens = {
       ReadOnly: 'hsla(220, 10%, 10%) ',
       Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
     },
-    LabelSlot: { Padding: '0rem 0px', ItemSpacing: '4px' },
+    LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
     UserInput: {
       Default: {
         Rest: 'hsla(220, 10%, 10%) ',
@@ -284,7 +284,7 @@ export const semanticTokens = {
         Focus: { color: 'hsla(350, 80%, 50%) ', width: '2', style: 'solid' },
       },
     },
-    InputSlot: { Margin: '0.5rem 0px 0rem 0px' },
+    InputSlot: { Margin: '0rem 0px 0rem 0px' },
     InputField: { Padding: '0.5rem 12px' },
     LabelAppendix: {
       Rest: 'hsla(220, 10%, 10%) ',

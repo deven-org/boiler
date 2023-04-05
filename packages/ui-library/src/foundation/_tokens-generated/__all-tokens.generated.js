@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 13:59:36 GMT
+ * Generated on Wed, 05 Apr 2023 14:17:36 GMT
  */
 
 var _styleDictionary = {
@@ -9448,12 +9448,12 @@ var _styleDictionary = {
     },
     LabelSlot: {
       Padding: {
-        value: '0rem 0px',
+        value: '0rem 0px 8px ',
         type: 'spacing',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.dimensionREM.0} {core.dimensionPX.0}',
+          value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}',
           type: 'spacing',
         },
         name: 'FormsLabelSlotPadding',
@@ -10340,12 +10340,12 @@ var _styleDictionary = {
     },
     InputSlot: {
       Margin: {
-        value: '0.5rem 0px 0rem 0px',
+        value: '0rem 0px 0rem 0px',
         type: 'spacing',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+          value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
           type: 'spacing',
         },
         name: 'FormsInputSlotMargin',
