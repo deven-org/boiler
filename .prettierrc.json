@@ -6,5 +6,13 @@
   "arrowParens": "always",
   "quoteProps": "consistent",
   "endOfLine": "lf",
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": "*.css.js",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

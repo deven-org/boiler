@@ -35,13 +35,6 @@
     "url": "https://github.com/deven-org/BO1LER-Kitchen/issues"
   },
   "homepage": "https://github.com/deven-org/BO1LER-Kitchen#readme",
-  "lint-staged": {
-    "packages/ui-library/**/*.{ts,tsx}": [
-      "eslint --fix",
-      "stylelint",
-      "prettier --write"
-    ]
-  },
   "devDependencies": {
     "@boiler/react-example-app": "0.0.1",
     "@boiler/figma-design-tokens": "0.0.1",
