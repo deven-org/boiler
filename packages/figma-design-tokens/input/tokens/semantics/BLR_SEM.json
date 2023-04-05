@@ -1167,7 +1167,7 @@
   },
   "Global": {
     "Focus": {
-      "value": "#17191c",
+      "value": "{core.color.coolgray.100}",
       "type": "color"
     }
   }
