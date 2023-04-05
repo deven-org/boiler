@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 09:38:46 GMT
+ * Generated on Wed, 05 Apr 2023 09:40:24 GMT
  */
 
 var _styleDictionary = {
@@ -10030,7 +10030,7 @@ var _styleDictionary = {
         },
         Focus: {
           value: {
-            color: 'hsla(220, 10%, 10%) ',
+            color: '#17191c',
             width: '2',
             style: 'solid',
           },
@@ -10442,12 +10442,12 @@ var _styleDictionary = {
   },
   'Global': {
     Focus: {
-      value: 'hsla(220, 10%, 10%) ',
+      value: '#17191c',
       type: 'color',
       filePath: 'input/tokens/semantics/BLR_SEM.json',
       isSource: true,
       original: {
-        value: '{core.color.coolgray.100}',
+        value: '#17191c',
         type: 'color',
       },
       name: 'GlobalFocus',
