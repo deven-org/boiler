@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 04 Apr 2023 08:01:34 GMT
+ * Generated on Wed, 05 Apr 2023 09:04:03 GMT
  */
 
 export const semanticTokens = {
@@ -214,7 +214,7 @@ export const semanticTokens = {
       },
     },
     BorderRadius: '4px',
-    BorderWidth: { Rest: '1px', Hover: '1px', Pressed: '1px', Focus: '1px', Disabled: '1px', Loading: '1px' },
+    BorderWidth: { Rest: '1px', Hover: '1px', Pressed: '1px', Focus: '0px', Disabled: '1px', Loading: '1px' },
     XS: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' } },
     SM: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
     MD: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 04 Apr 2023 08:01:34 GMT
+ * Generated on Wed, 05 Apr 2023 09:04:03 GMT
  */
 
 var _styleDictionary = {
@@ -8081,12 +8081,12 @@ var _styleDictionary = {
         path: ['Action', 'BorderWidth', 'Pressed'],
       },
       Focus: {
-        value: '1px',
+        value: '0px',
         type: 'borderWidth',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.borderWidth.Medium}',
+          value: '{core.borderWidth.None}',
           type: 'borderWidth',
         },
         name: 'ActionBorderWidthFocus',
