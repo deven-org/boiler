@@ -988,6 +988,44 @@
         }
       }
     },
+    "SurfaceStroke": {
+      "Default": {
+        "Rest": {
+          "value": "{Forms.Placeholder.Default.Rest}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{Forms.Placeholder.Default.Hover}",
+          "type": "color"
+        },
+        "Focus": {
+          "value": "{Global.Focus}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{core.color.coolgray.800}",
+          "type": "color"
+        },
+        "ReadOnly": {
+          "value": "{core.color.neutral.transparent}",
+          "type": "color"
+        }
+      },
+      "Error": {
+        "Rest": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "Focus": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        }
+      }
+    },
     "InputBorderRadius": {
       "value": "{core.borderRadius.MD}",
       "type": "borderRadius"
@@ -1124,44 +1162,6 @@
       "Error": {
         "value": "{core.color.crimson.500}",
         "type": "color"
-      }
-    },
-    "SurfaceStroke": {
-      "Default": {
-        "Rest": {
-          "value": "{Forms.Placeholder.Default.Rest}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{Forms.Placeholder.Default.Hover}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{Global.Focus}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{core.color.coolgray.800}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color"
-        }
-      },
-      "Error": {
-        "Rest": {
-          "value": "{core.color.crimson.500}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{core.color.crimson.500}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{core.color.crimson.500}",
-          "type": "color"
-        }
       }
     }
   },
