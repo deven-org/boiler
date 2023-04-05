@@ -818,20 +818,58 @@
       "DefaultType": {
         "value": "{core.typography.sourceSansPro.regular.75}",
         "type": "typography"
-      },
-      "Padding": {
-        "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-        "type": "spacing"
-      },
-      "ItemSpacing": {
-        "value": "{core.dimensionREM.2}",
-        "type": "spacing"
       }
     },
-    "CaptionSlot": {
-      "Margin": {
-        "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-        "type": "spacing"
+    "MD": {
+      "Caption": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        }
+      },
+      "CaptionSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        }
+      },
+      "UserInput": {
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.100}",
+          "type": "typography"
+        }
+      },
+      "Placeholder": {
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.100}",
+          "type": "typography"
+        }
+      },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "InputField": {
+        "Padding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        }
       }
     },
     "Label": {
@@ -851,23 +889,13 @@
         "value": "{core.color.coolgray.100}",
         "type": "color"
       },
-      "ReadOnly": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
       "Default": {
         "value": "{core.typography.sourceSansPro.semibold.75}",
         "type": "typography"
-      }
-    },
-    "LabelSlot": {
-      "Padding": {
-        "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
-        "type": "spacing"
       },
-      "ItemSpacing": {
-        "value": "{core.dimensionPX.4}",
-        "type": "spacing"
+      "ReadOnly": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
       }
     },
     "UserInput": {
@@ -902,10 +930,6 @@
           "value": "{core.color.crimson.300}",
           "type": "color"
         }
-      },
-      "DefaultType": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
-        "type": "typography"
       }
     },
     "Placeholder": {
@@ -944,10 +968,6 @@
           "value": "{core.color.coolgray.700}",
           "type": "color"
         }
-      },
-      "DefaultType": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
-        "type": "typography"
       }
     },
     "SurfaceFill": {
@@ -1035,7 +1055,7 @@
         "Rest": {
           "value": {
             "color": "{Forms.SurfaceStroke.Default.Rest}",
-            "width": "{core.borderWidth.Medium}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
@@ -1043,7 +1063,7 @@
         "Hover": {
           "value": {
             "color": "{Forms.SurfaceStroke.Default.Hover}",
-            "width": "{core.borderWidth.Medium}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
@@ -1051,7 +1071,7 @@
         "Focus": {
           "value": {
             "color": "{Global.Focus}",
-            "width": "{core.borderWidth.Bold}",
+            "width": "{core.dimensionPX.2}",
             "style": "solid"
           },
           "type": "border"
@@ -1059,7 +1079,7 @@
         "Disabled": {
           "value": {
             "color": "{Forms.SurfaceStroke.Default.Disabled}",
-            "width": "{core.borderWidth.Medium}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
@@ -1067,7 +1087,7 @@
         "ReadOnly": {
           "value": {
             "color": "{Forms.SurfaceStroke.Default.ReadOnly}",
-            "width": "{core.borderWidth.Medium}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
@@ -1077,7 +1097,7 @@
         "Rest": {
           "value": {
             "color": "{Forms.SurfaceStroke.Error.Rest}",
-            "width": "{core.borderWidth.Medium}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
@@ -1085,7 +1105,7 @@
         "Hover": {
           "value": {
             "color": "{Forms.SurfaceStroke.Error.Hover}",
-            "width": "{core.borderWidth.Medium}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
@@ -1093,23 +1113,11 @@
         "Focus": {
           "value": {
             "color": "{Forms.SurfaceStroke.Default.Focus}",
-            "width": "{core.borderWidth.Bold}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"
         }
-      }
-    },
-    "InputSlot": {
-      "Margin": {
-        "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-        "type": "spacing"
-      }
-    },
-    "InputField": {
-      "Padding": {
-        "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
-        "type": "spacing"
       }
     },
     "LabelAppendix": {
