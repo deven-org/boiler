@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 09:40:24 GMT
+ * Generated on Wed, 05 Apr 2023 13:59:36 GMT
  */
 
 var _styleDictionary = {
@@ -9958,6 +9958,156 @@ var _styleDictionary = {
         },
       },
     },
+    SurfaceStroke: {
+      Default: {
+        Rest: {
+          value: 'hsla(220, 10%, 70%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{Forms.Placeholder.Default.Rest}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeDefaultRest',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Default',
+            subitem: 'Rest',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Default', 'Rest'],
+        },
+        Hover: {
+          value: 'hsla(220, 10%, 70%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{Forms.Placeholder.Default.Hover}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeDefaultHover',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Default',
+            subitem: 'Hover',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Default', 'Hover'],
+        },
+        Focus: {
+          value: 'hsla(220, 10%, 10%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{Global.Focus}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeDefaultFocus',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Default',
+            subitem: 'Focus',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Default', 'Focus'],
+        },
+        Disabled: {
+          value: 'hsla(220, 10%, 80%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.color.coolgray.800}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeDefaultDisabled',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Default',
+            subitem: 'Disabled',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Default', 'Disabled'],
+        },
+        ReadOnly: {
+          value: '#00000000',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.color.neutral.transparent}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeDefaultReadOnly',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Default',
+            subitem: 'ReadOnly',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Default', 'ReadOnly'],
+        },
+      },
+      Error: {
+        Rest: {
+          value: 'hsla(350, 80%, 50%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.color.crimson.500}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeErrorRest',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Error',
+            subitem: 'Rest',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Error', 'Rest'],
+        },
+        Hover: {
+          value: 'hsla(350, 80%, 50%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.color.crimson.500}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeErrorHover',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Error',
+            subitem: 'Hover',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Error', 'Hover'],
+        },
+        Focus: {
+          value: 'hsla(350, 80%, 50%) ',
+          type: 'color',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.color.crimson.500}',
+            type: 'color',
+          },
+          name: 'FormsSurfaceStrokeErrorFocus',
+          attributes: {
+            category: 'Forms',
+            type: 'SurfaceStroke',
+            item: 'Error',
+            subitem: 'Focus',
+          },
+          path: ['Forms', 'SurfaceStroke', 'Error', 'Focus'],
+        },
+      },
+    },
     InputBorderRadius: {
       value: '4px',
       type: 'borderRadius',
@@ -10030,7 +10180,7 @@ var _styleDictionary = {
         },
         Focus: {
           value: {
-            color: '#17191c',
+            color: 'hsla(220, 10%, 10%) ',
             width: '2',
             style: 'solid',
           },
@@ -10442,12 +10592,12 @@ var _styleDictionary = {
   },
   'Global': {
     Focus: {
-      value: '#17191c',
+      value: 'hsla(220, 10%, 10%) ',
       type: 'color',
       filePath: 'input/tokens/semantics/BLR_SEM.json',
       isSource: true,
       original: {
-        value: '#17191c',
+        value: '{core.color.coolgray.100}',
         type: 'color',
       },
       name: 'GlobalFocus',

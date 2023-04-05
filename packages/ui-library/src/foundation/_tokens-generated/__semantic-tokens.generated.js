@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 09:40:24 GMT
+ * Generated on Wed, 05 Apr 2023 13:59:36 GMT
  */
 
 export const semanticTokens = {
@@ -274,7 +274,7 @@ export const semanticTokens = {
       Default: {
         Rest: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
         Hover: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Focus: { color: '#17191c', width: '2', style: 'solid' },
+        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2', style: 'solid' },
         Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1', style: 'solid' },
         ReadOnly: { color: '#00000000#', width: '1', style: 'solid' },
       },
