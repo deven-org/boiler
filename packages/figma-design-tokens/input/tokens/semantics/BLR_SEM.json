@@ -1146,7 +1146,6 @@
         }
       }
     },
-
     "InputIcon": {
       "Rest": {
         "value": "{core.color.coolgray.700}",
@@ -1171,6 +1170,34 @@
       "Error": {
         "value": "{core.color.crimson.500}",
         "type": "color"
+      }
+    },
+    "LG": {
+      "UserInput": {
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.125}",
+          "type": "typography"
+        }
+      },
+      "Placeholder": {
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.125}",
+          "type": "typography"
+        }
+      }
+    },
+    "SM": {
+      "UserInput": {
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.87}",
+          "type": "typography"
+        }
+      },
+      "Placeholder": {
+        "DefaultType": {
+          "value": "{core.typography.sourceSansPro.regular.87}",
+          "type": "typography"
+        }
       }
     }
   },
