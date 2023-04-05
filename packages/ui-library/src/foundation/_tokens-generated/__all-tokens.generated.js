@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 09:04:03 GMT
+ * Generated on Wed, 05 Apr 2023 09:36:26 GMT
  */
 
 var _styleDictionary = {
@@ -10039,7 +10039,7 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{core.color.coolgray.100}',
+              color: '{Global.Focus}',
               width: '2',
               style: 'solid',
             },
@@ -10442,21 +10442,13 @@ var _styleDictionary = {
   },
   'Global': {
     Focus: {
-      value: {
-        color: '#000',
-        width: '2px',
-        style: 'solid',
-      },
-      type: 'border',
+      value: 'hsla(220, 10%, 10%) ',
+      type: 'color',
       filePath: 'input/tokens/semantics/BLR_SEM.json',
       isSource: true,
       original: {
-        value: {
-          color: '{core.color.neutral.black}',
-          width: '{core.borderWidth.Bold}',
-          style: 'solid',
-        },
-        type: 'border',
+        value: '{core.color.coolgray.100}',
+        type: 'color',
       },
       name: 'GlobalFocus',
       attributes: {
