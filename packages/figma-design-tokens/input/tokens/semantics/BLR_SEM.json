@@ -1034,16 +1034,16 @@
       "Default": {
         "Rest": {
           "value": {
-            "color": "{core.color.coolgray.700}",
-            "width": "1",
+            "color": "{Forms.SurfaceStroke.Default.Rest}",
+            "width": "{core.borderWidth.Medium}",
             "style": "solid"
           },
           "type": "border"
         },
         "Hover": {
           "value": {
-            "color": "{core.color.coolgray.700}",
-            "width": "1",
+            "color": "{Forms.SurfaceStroke.Default.Hover}",
+            "width": "{core.borderWidth.Medium}",
             "style": "solid"
           },
           "type": "border"
@@ -1051,23 +1051,23 @@
         "Focus": {
           "value": {
             "color": "{Global.Focus}",
-            "width": "2",
+            "width": "{core.borderWidth.Bold}",
             "style": "solid"
           },
           "type": "border"
         },
         "Disabled": {
           "value": {
-            "color": "{core.color.coolgray.800}",
-            "width": "1",
+            "color": "{Forms.SurfaceStroke.Default.Disabled}",
+            "width": "{core.borderWidth.Medium}",
             "style": "solid"
           },
           "type": "border"
         },
         "ReadOnly": {
           "value": {
-            "color": "{core.color.neutral.transparent}#",
-            "width": "1",
+            "color": "{Forms.SurfaceStroke.Default.ReadOnly}",
+            "width": "{core.borderWidth.Medium}",
             "style": "solid"
           },
           "type": "border"
@@ -1076,24 +1076,24 @@
       "Error": {
         "Rest": {
           "value": {
-            "color": "{core.color.crimson.500}",
-            "width": "1",
+            "color": "{Forms.SurfaceStroke.Error.Rest}",
+            "width": "{core.borderWidth.Medium}",
             "style": "solid"
           },
           "type": "border"
         },
         "Hover": {
           "value": {
-            "color": "{core.color.crimson.500}",
-            "width": "1",
+            "color": "{Forms.SurfaceStroke.Error.Hover}",
+            "width": "{core.borderWidth.Medium}",
             "style": "solid"
           },
           "type": "border"
         },
         "Focus": {
           "value": {
-            "color": "{core.color.crimson.500}",
-            "width": "2",
+            "color": "{Forms.SurfaceStroke.Default.Focus}",
+            "width": "{core.borderWidth.Bold}",
             "style": "solid"
           },
           "type": "border"
