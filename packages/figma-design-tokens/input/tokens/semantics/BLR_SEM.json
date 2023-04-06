@@ -1384,16 +1384,12 @@
     },
     "SM": {
       "UserInput": {
-        "DefaultType": {
-          "value": "{core.typography.sourceSansPro.regular.87}",
-          "type": "typography"
-        }
+        "value": "{core.typography.sourceSansPro.regular.87}",
+        "type": "typography"
       },
       "Placeholder": {
-        "DefaultType": {
-          "value": "{core.typography.sourceSansPro.regular.87}",
-          "type": "typography"
-        }
+        "value": "{core.typography.sourceSansPro.regular.87}",
+        "type": "typography"
       }
     },
     "MD": {
@@ -1424,16 +1420,12 @@
         }
       },
       "UserInput": {
-        "DefaultType": {
-          "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography"
-        }
+        "value": "{core.typography.sourceSansPro.regular.100}",
+        "type": "typography"
       },
       "Placeholder": {
-        "DefaultType": {
-          "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography"
-        }
+        "value": "{core.typography.sourceSansPro.regular.100}",
+        "type": "typography"
       },
       "InputSlot": {
         "Margin": {
@@ -1450,16 +1442,12 @@
     },
     "LG": {
       "UserInput": {
-        "DefaultType": {
-          "value": "{core.typography.sourceSansPro.regular.125}",
-          "type": "typography"
-        }
+        "value": "{core.typography.sourceSansPro.regular.125}",
+        "type": "typography"
       },
       "Placeholder": {
-        "DefaultType": {
-          "value": "{core.typography.sourceSansPro.regular.125}",
-          "type": "typography"
-        }
+        "value": "{core.typography.sourceSansPro.regular.125}",
+        "type": "typography"
       }
     }
   },
