@@ -104,6 +104,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Primary": {
@@ -210,6 +258,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Secondary": {
@@ -320,6 +416,54 @@
           "value": "{core.color.azure.500}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Silent": {
@@ -438,6 +582,54 @@
           "value": "{core.color.azure.500}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Destructive": {
@@ -544,6 +736,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Encourage": {
@@ -650,6 +890,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "BorderRadius": {
