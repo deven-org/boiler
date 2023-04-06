@@ -125,10 +125,6 @@ module.exports = {
             return typeToFilter.includes(token.attributes.type);
           },
         },
-        {
-          format: 'javascript/object',
-          destination: '__all-tokens.generated.js',
-        },
       ],
     },
   },
