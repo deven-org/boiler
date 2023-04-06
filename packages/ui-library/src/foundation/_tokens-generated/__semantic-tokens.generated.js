@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:51:22 GMT
+ * Generated on Thu, 06 Apr 2023 13:07:29 GMT
  */
 
 export const semanticTokens = {
@@ -331,7 +331,7 @@ export const semanticTokens = {
       Error: {
         Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
         Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
       },
     },
     InputIcon: {

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:51:22 GMT
+ * Generated on Thu, 06 Apr 2023 13:07:29 GMT
  */
 
 var _styleDictionary = {
@@ -11272,7 +11272,7 @@ var _styleDictionary = {
         },
         Focus: {
           value: {
-            color: 'hsla(220, 10%, 10%) ',
+            color: 'hsla(350, 80%, 50%) ',
             width: '1px',
             style: 'solid',
           },
@@ -11281,7 +11281,7 @@ var _styleDictionary = {
           isSource: true,
           original: {
             value: {
-              color: '{Forms.SurfaceStroke.Default.Focus}',
+              color: '{Forms.SurfaceStroke.Error.Focus}',
               width: '{core.dimensionPX.1}',
               style: 'solid',
             },
