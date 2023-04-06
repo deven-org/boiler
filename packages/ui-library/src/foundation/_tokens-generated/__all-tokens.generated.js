@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 15:28:31 GMT
+ * Generated on Thu, 06 Apr 2023 12:31:08 GMT
  */
 
 var _styleDictionary = {
@@ -10623,6 +10623,30 @@ var _styleDictionary = {
         type: 'Focus',
       },
       path: ['Global', 'Focus'],
+    },
+    FocusBorder: {
+      value: {
+        color: 'hsla(220, 10%, 10%) ',
+        width: '2px',
+        style: 'solid',
+      },
+      type: 'border',
+      filePath: 'input/tokens/semantics/BLR_SEM.json',
+      isSource: true,
+      original: {
+        value: {
+          color: '{Global.Focus}',
+          width: '{core.dimensionPX.2}',
+          style: 'solid',
+        },
+        type: 'border',
+      },
+      name: 'GlobalFocusBorder',
+      attributes: {
+        category: 'Global',
+        type: 'FocusBorder',
+      },
+      path: ['Global', 'FocusBorder'],
     },
   },
 };
