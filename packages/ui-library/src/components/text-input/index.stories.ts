@@ -3,6 +3,7 @@ import { html } from 'lit-html';
 import { BlrTextInput as BlrTextInputClass } from './index';
 import { Sizes, InputTypes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
+import { action } from '@storybook/addon-actions';
 import './index';
 
 export default {
@@ -32,11 +33,7 @@ export const BlrTextInput = ({
   disabled,
   size,
   required,
-  onChange,
-  onBlur,
-  onFocus,
   maxLength,
-  minLength,
   pattern,
   errorMessage,
   hint,
@@ -53,11 +50,10 @@ export const BlrTextInput = ({
       .disabled=${disabled}
       .size=${size}
       .required=${required}
-      .onChange=${onChange}
-      .onBlur=${onBlur}
-      .onFocus=${onFocus}
+      .onChange=${action('onChange')}
+      .onBlur=${action('onBlur')}
+      .onFocus=${action('onFocus')}
       .maxLength=${maxLength}
-      .minLength=${minLength}
       .pattern=${pattern}
       .errorMessage=${errorMessage}
       .hint=${hint}
@@ -72,18 +68,12 @@ BlrTextInput.storyName = 'BlrTextInput';
 BlrTextInput.args = {
   label: 'Text Input',
   type: 'text',
-  value: 'Story book Text Input',
+  value: '',
   placeholder: 'Test placeholder',
-  onChange: () => console.log('onChange'),
-  onBlur: () => console.log('onBlur'),
-  onFocus: () => console.log('onFocus'),
   disabled: false,
   required: false,
-  textInputId: 'text-input-id',
   maxLength: '200',
-  minLength: '50',
   size: 'md',
-  pattern: '',
   errorMessage: 'This is error message',
   hint: 'Field is used for hint',
   hintIcon: 'blr360Sm',

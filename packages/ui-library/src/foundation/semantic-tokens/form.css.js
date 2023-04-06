@@ -51,6 +51,7 @@ export const textInput = css`
     flex-direction: row;
     align-items: flex-start;
     padding: ${Forms.InputField.Padding};
+    position: relative;
   }
 
   .blr-text-input:hover {
@@ -74,17 +75,17 @@ export const textInput = css`
     border-color: ${Forms.Input.Default.Focus.color};
   }
 
-  .blr-text-input.inputerror {
+  .blr-text-input.error-input {
     border-width: ${Forms.Input.Error.Rest.width};
     border-style: ${Forms.Input.Error.Rest.style};
     border-color: ${Forms.Input.Error.Rest.color};
   }
-  .blr-text-input.inputerror:hover {
+  .blr-text-input.error-input:hover {
     border-width: ${Forms.Input.Error.Hover.width};
     border-style: ${Forms.Input.Error.Hover.style};
     border-color: ${Forms.Input.Error.Hover.color};
   }
-  .blr-text-input.inputerror:focus {
+  .blr-text-input.error-input:focus {
     border-width: ${Forms.Input.Error.Focus.width};
     border-style: ${Forms.Input.Error.Focus.style};
     border-color: ${Forms.Input.Error.Focus.color};

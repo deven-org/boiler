@@ -24,7 +24,6 @@ export class BlrTextInput extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() maxLength?: number;
-  @property() minLength?: number;
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
@@ -34,14 +33,19 @@ export class BlrTextInput extends LitElement {
   render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
-      [`${this.disabled}`]: this.disabled || false,
+      [`disabled`]: this.disabled || false,
+    });
+
+    const inputclasses = classMap({
+      [`error`]: this.hasError || false,
+      [`error-input`]: this.hasError || false,
     });
 
     return html`
       <div class="blr-input ${classes}">
         ${BlrFormLabel({ labelText: this.label })}
         <input
-          class="blr-text-input ${this.hasError ? 'inputerror' : 'default'}"
+          class="blr-text-input ${inputclasses}"
           id=${this.textInputId}
           type="${this.type}"
           value="${this.value}"
@@ -52,7 +56,6 @@ export class BlrTextInput extends LitElement {
           @blur="${this.onBlur}"
           @focus="${this.onFocus}"
           maxlength="${this.maxLength}"
-          minlength="${this.minLength}"
           pattern="${this.pattern}"
           hasError="${this.hasError}"
         />
