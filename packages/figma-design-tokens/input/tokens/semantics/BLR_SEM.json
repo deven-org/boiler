@@ -1400,7 +1400,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Forms.SurfaceStroke.Default.Focus}",
+            "color": "{Forms.SurfaceStroke.Error.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
