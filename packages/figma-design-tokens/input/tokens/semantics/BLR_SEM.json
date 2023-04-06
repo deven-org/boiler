@@ -944,32 +944,6 @@
       "value": "{core.borderRadius.MD}",
       "type": "borderRadius"
     },
-    "BorderWidth": {
-      "Rest": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Hover": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Pressed": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Focus": {
-        "value": "{core.borderWidth.None}",
-        "type": "borderWidth"
-      },
-      "Disabled": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Loading": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      }
-    },
     "XS": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.50}",
