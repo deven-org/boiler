@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:46:18 GMT
+ * Generated on Thu, 06 Apr 2023 12:51:22 GMT
  */
 
 var _styleDictionary = {
@@ -8927,110 +8927,6 @@ var _styleDictionary = {
         type: 'BorderRadius',
       },
       path: ['Action', 'BorderRadius'],
-    },
-    BorderWidth: {
-      Rest: {
-        value: '1px',
-        type: 'borderWidth',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.borderWidth.Medium}',
-          type: 'borderWidth',
-        },
-        name: 'ActionBorderWidthRest',
-        attributes: {
-          category: 'Action',
-          type: 'BorderWidth',
-          item: 'Rest',
-        },
-        path: ['Action', 'BorderWidth', 'Rest'],
-      },
-      Hover: {
-        value: '1px',
-        type: 'borderWidth',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.borderWidth.Medium}',
-          type: 'borderWidth',
-        },
-        name: 'ActionBorderWidthHover',
-        attributes: {
-          category: 'Action',
-          type: 'BorderWidth',
-          item: 'Hover',
-        },
-        path: ['Action', 'BorderWidth', 'Hover'],
-      },
-      Pressed: {
-        value: '1px',
-        type: 'borderWidth',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.borderWidth.Medium}',
-          type: 'borderWidth',
-        },
-        name: 'ActionBorderWidthPressed',
-        attributes: {
-          category: 'Action',
-          type: 'BorderWidth',
-          item: 'Pressed',
-        },
-        path: ['Action', 'BorderWidth', 'Pressed'],
-      },
-      Focus: {
-        value: '0px',
-        type: 'borderWidth',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.borderWidth.None}',
-          type: 'borderWidth',
-        },
-        name: 'ActionBorderWidthFocus',
-        attributes: {
-          category: 'Action',
-          type: 'BorderWidth',
-          item: 'Focus',
-        },
-        path: ['Action', 'BorderWidth', 'Focus'],
-      },
-      Disabled: {
-        value: '1px',
-        type: 'borderWidth',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.borderWidth.Medium}',
-          type: 'borderWidth',
-        },
-        name: 'ActionBorderWidthDisabled',
-        attributes: {
-          category: 'Action',
-          type: 'BorderWidth',
-          item: 'Disabled',
-        },
-        path: ['Action', 'BorderWidth', 'Disabled'],
-      },
-      Loading: {
-        value: '1px',
-        type: 'borderWidth',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.borderWidth.Medium}',
-          type: 'borderWidth',
-        },
-        name: 'ActionBorderWidthLoading',
-        attributes: {
-          category: 'Action',
-          type: 'BorderWidth',
-          item: 'Loading',
-        },
-        path: ['Action', 'BorderWidth', 'Loading'],
-      },
     },
     XS: {
       Label: {

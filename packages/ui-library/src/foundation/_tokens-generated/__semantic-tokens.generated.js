@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:46:18 GMT
+ * Generated on Thu, 06 Apr 2023 12:51:22 GMT
  */
 
 export const semanticTokens = {
@@ -250,7 +250,6 @@ export const semanticTokens = {
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
-    BorderWidth: { Rest: '1px', Hover: '1px', Pressed: '1px', Focus: '0px', Disabled: '1px', Loading: '1px' },
     XS: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' } },
     SM: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
     MD: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
