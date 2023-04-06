@@ -1362,11 +1362,11 @@
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{core.color.coolgray.600}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{core.color.coolgray.500}",
         "type": "color"
       },
       "Disabled": {
