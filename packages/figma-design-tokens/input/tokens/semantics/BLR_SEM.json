@@ -104,6 +104,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.CTA.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Primary": {
@@ -210,6 +258,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.Primary.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.Primary.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.Primary.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.Primary.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.Primary.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Secondary": {
@@ -320,6 +416,54 @@
           "value": "{core.color.azure.500}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.Secondary.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.Secondary.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.Secondary.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.Secondary.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.Secondary.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Silent": {
@@ -438,6 +582,54 @@
           "value": "{core.color.azure.500}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.Silent.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.Silent.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.Silent.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.Silent.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.Silent.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Destructive": {
@@ -544,6 +736,54 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.Destructive.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.Destructive.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.Destructive.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.Destructive.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.Destructive.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "Encourage": {
@@ -650,37 +890,59 @@
           "value": "{core.color.neutral.white}",
           "type": "color"
         }
+      },
+      "Rest": {
+        "value": {
+          "color": "{Action.Encourage.SurfaceStroke.Rest}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Hover": {
+        "value": {
+          "color": "{Action.Encourage.SurfaceStroke.Hover}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Pressed": {
+        "value": {
+          "color": "{Action.Encourage.SurfaceStroke.Pressed}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Focus": {
+        "value": {
+          "color": "{Global.Focus}",
+          "width": "{core.dimensionPX.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Disabled": {
+        "value": {
+          "color": "{Action.Encourage.SurfaceStroke.Disabled}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "Loading": {
+        "value": {
+          "color": "{Action.Encourage.SurfaceStroke.Loading}",
+          "width": "{core.dimensionPX.1}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     },
     "BorderRadius": {
       "value": "{core.borderRadius.MD}",
       "type": "borderRadius"
-    },
-    "BorderWidth": {
-      "Rest": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Hover": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Pressed": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Focus": {
-        "value": "{core.borderWidth.None}",
-        "type": "borderWidth"
-      },
-      "Disabled": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      },
-      "Loading": {
-        "value": "{core.borderWidth.Medium}",
-        "type": "borderWidth"
-      }
     },
     "XS": {
       "Label": {
@@ -1086,7 +1348,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Forms.SurfaceStroke.Default.Focus}",
+            "color": "{Forms.SurfaceStroke.Error.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -1205,6 +1467,14 @@
     "Focus": {
       "value": "{core.color.coolgray.100}",
       "type": "color"
+    },
+    "FocusBorder": {
+      "value": {
+        "color": "{Global.Focus}",
+        "width": "{core.dimensionPX.2}",
+        "style": "solid"
+      },
+      "type": "border"
     }
   }
 }

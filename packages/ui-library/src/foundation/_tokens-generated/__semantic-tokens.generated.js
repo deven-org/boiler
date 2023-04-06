@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Apr 2023 15:28:31 GMT
+ * Generated on Thu, 06 Apr 2023 13:07:29 GMT
  */
 
 export const semanticTokens = {
@@ -38,6 +38,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Primary: {
       SurfaceFill: {
@@ -72,6 +78,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Secondary: {
       SurfaceFill: {
@@ -107,6 +119,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
+      Rest: { color: 'hsla(220, 85%, 50%) ', width: '1px', style: 'solid' },
+      Hover: { color: 'hsla(220, 85%, 40%) ', width: '1px', style: 'solid' },
+      Pressed: { color: 'hsla(220, 85%, 30%) ', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
+      Loading: { color: 'hsla(220, 85%, 50%) ', width: '1px', style: 'solid' },
     },
     Silent: {
       SurfaceFill: {
@@ -144,6 +162,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Destructive: {
       SurfaceFill: {
@@ -178,6 +202,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Encourage: {
       SurfaceFill: {
@@ -212,9 +242,14 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
-    BorderWidth: { Rest: '1px', Hover: '1px', Pressed: '1px', Focus: '0px', Disabled: '1px', Loading: '1px' },
     XS: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' } },
     SM: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
     MD: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
@@ -296,7 +331,7 @@ export const semanticTokens = {
       Error: {
         Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
         Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
       },
     },
     InputIcon: {
