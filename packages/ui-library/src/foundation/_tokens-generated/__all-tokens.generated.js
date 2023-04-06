@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:36:21 GMT
+ * Generated on Thu, 06 Apr 2023 12:46:18 GMT
  */
 
 var _styleDictionary = {
@@ -6321,7 +6321,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Rest}',
+            color: '{Action.Primary.SurfaceStroke.Rest}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6346,7 +6346,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Hover}',
+            color: '{Action.Primary.SurfaceStroke.Hover}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6371,7 +6371,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            color: '{Action.Primary.SurfaceStroke.Pressed}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6421,7 +6421,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            color: '{Action.Primary.SurfaceStroke.Disabled}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6446,7 +6446,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Loading}',
+            color: '{Action.Primary.SurfaceStroke.Loading}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6928,7 +6928,7 @@ var _styleDictionary = {
       },
       Rest: {
         value: {
-          color: '#00000000',
+          color: 'hsla(220, 85%, 50%) ',
           width: '1px',
           style: 'solid',
         },
@@ -6937,7 +6937,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Rest}',
+            color: '{Action.Secondary.SurfaceStroke.Rest}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6953,7 +6953,7 @@ var _styleDictionary = {
       },
       Hover: {
         value: {
-          color: '#00000000',
+          color: 'hsla(220, 85%, 40%) ',
           width: '1px',
           style: 'solid',
         },
@@ -6962,7 +6962,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Hover}',
+            color: '{Action.Secondary.SurfaceStroke.Hover}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -6978,7 +6978,7 @@ var _styleDictionary = {
       },
       Pressed: {
         value: {
-          color: '#00000000',
+          color: 'hsla(220, 85%, 30%) ',
           width: '1px',
           style: 'solid',
         },
@@ -6987,7 +6987,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            color: '{Action.Secondary.SurfaceStroke.Pressed}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7028,7 +7028,7 @@ var _styleDictionary = {
       },
       Disabled: {
         value: {
-          color: '#00000000',
+          color: 'hsla(220, 10%, 80%) ',
           width: '1px',
           style: 'solid',
         },
@@ -7037,7 +7037,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            color: '{Action.Secondary.SurfaceStroke.Disabled}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7053,7 +7053,7 @@ var _styleDictionary = {
       },
       Loading: {
         value: {
-          color: '#00000000',
+          color: 'hsla(220, 85%, 50%) ',
           width: '1px',
           style: 'solid',
         },
@@ -7062,7 +7062,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Loading}',
+            color: '{Action.Secondary.SurfaceStroke.Loading}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7588,7 +7588,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Rest}',
+            color: '{Action.Silent.SurfaceStroke.Rest}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7613,7 +7613,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Hover}',
+            color: '{Action.Silent.SurfaceStroke.Hover}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7638,7 +7638,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            color: '{Action.Silent.SurfaceStroke.Pressed}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7688,7 +7688,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            color: '{Action.Silent.SurfaceStroke.Disabled}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -7713,7 +7713,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Loading}',
+            color: '{Action.Silent.SurfaceStroke.Loading}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8180,7 +8180,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Rest}',
+            color: '{Action.Destructive.SurfaceStroke.Rest}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8205,7 +8205,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Hover}',
+            color: '{Action.Destructive.SurfaceStroke.Hover}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8230,7 +8230,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            color: '{Action.Destructive.SurfaceStroke.Pressed}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8280,7 +8280,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            color: '{Action.Destructive.SurfaceStroke.Disabled}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8305,7 +8305,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Loading}',
+            color: '{Action.Destructive.SurfaceStroke.Loading}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8772,7 +8772,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Rest}',
+            color: '{Action.Encourage.SurfaceStroke.Rest}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8797,7 +8797,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Hover}',
+            color: '{Action.Encourage.SurfaceStroke.Hover}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8822,7 +8822,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            color: '{Action.Encourage.SurfaceStroke.Pressed}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8872,7 +8872,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            color: '{Action.Encourage.SurfaceStroke.Disabled}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },
@@ -8897,7 +8897,7 @@ var _styleDictionary = {
         isSource: true,
         original: {
           value: {
-            color: '{Action.CTA.SurfaceStroke.Loading}',
+            color: '{Action.Encourage.SurfaceStroke.Loading}',
             width: '{core.dimensionPX.1}',
             style: 'solid',
           },

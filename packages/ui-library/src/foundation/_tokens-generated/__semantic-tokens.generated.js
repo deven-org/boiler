@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:36:21 GMT
+ * Generated on Thu, 06 Apr 2023 12:46:18 GMT
  */
 
 export const semanticTokens = {
@@ -119,12 +119,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Rest: { color: 'hsla(220, 85%, 50%) ', width: '1px', style: 'solid' },
+      Hover: { color: 'hsla(220, 85%, 40%) ', width: '1px', style: 'solid' },
+      Pressed: { color: 'hsla(220, 85%, 30%) ', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
-      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
+      Loading: { color: 'hsla(220, 85%, 50%) ', width: '1px', style: 'solid' },
     },
     Silent: {
       SurfaceFill: {
