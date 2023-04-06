@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:31:08 GMT
+ * Generated on Thu, 06 Apr 2023 12:36:21 GMT
  */
 
 var _styleDictionary = {
@@ -5718,6 +5718,156 @@ var _styleDictionary = {
           path: ['Action', 'CTA', 'Label', 'Loading'],
         },
       },
+      Rest: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Rest}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionCtaRest',
+        attributes: {
+          category: 'Action',
+          type: 'CTA',
+          item: 'Rest',
+        },
+        path: ['Action', 'CTA', 'Rest'],
+      },
+      Hover: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Hover}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionCtaHover',
+        attributes: {
+          category: 'Action',
+          type: 'CTA',
+          item: 'Hover',
+        },
+        path: ['Action', 'CTA', 'Hover'],
+      },
+      Pressed: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionCtaPressed',
+        attributes: {
+          category: 'Action',
+          type: 'CTA',
+          item: 'Pressed',
+        },
+        path: ['Action', 'CTA', 'Pressed'],
+      },
+      Focus: {
+        value: {
+          color: 'hsla(220, 10%, 10%) ',
+          width: '2px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Global.Focus}',
+            width: '{core.dimensionPX.2}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionCtaFocus',
+        attributes: {
+          category: 'Action',
+          type: 'CTA',
+          item: 'Focus',
+        },
+        path: ['Action', 'CTA', 'Focus'],
+      },
+      Disabled: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionCtaDisabled',
+        attributes: {
+          category: 'Action',
+          type: 'CTA',
+          item: 'Disabled',
+        },
+        path: ['Action', 'CTA', 'Disabled'],
+      },
+      Loading: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Loading}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionCtaLoading',
+        attributes: {
+          category: 'Action',
+          type: 'CTA',
+          item: 'Loading',
+        },
+        path: ['Action', 'CTA', 'Loading'],
+      },
     },
     Primary: {
       SurfaceFill: {
@@ -6159,6 +6309,156 @@ var _styleDictionary = {
           },
           path: ['Action', 'Primary', 'Label', 'Loading'],
         },
+      },
+      Rest: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Rest}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionPrimaryRest',
+        attributes: {
+          category: 'Action',
+          type: 'Primary',
+          item: 'Rest',
+        },
+        path: ['Action', 'Primary', 'Rest'],
+      },
+      Hover: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Hover}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionPrimaryHover',
+        attributes: {
+          category: 'Action',
+          type: 'Primary',
+          item: 'Hover',
+        },
+        path: ['Action', 'Primary', 'Hover'],
+      },
+      Pressed: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionPrimaryPressed',
+        attributes: {
+          category: 'Action',
+          type: 'Primary',
+          item: 'Pressed',
+        },
+        path: ['Action', 'Primary', 'Pressed'],
+      },
+      Focus: {
+        value: {
+          color: 'hsla(220, 10%, 10%) ',
+          width: '2px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Global.Focus}',
+            width: '{core.dimensionPX.2}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionPrimaryFocus',
+        attributes: {
+          category: 'Action',
+          type: 'Primary',
+          item: 'Focus',
+        },
+        path: ['Action', 'Primary', 'Focus'],
+      },
+      Disabled: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionPrimaryDisabled',
+        attributes: {
+          category: 'Action',
+          type: 'Primary',
+          item: 'Disabled',
+        },
+        path: ['Action', 'Primary', 'Disabled'],
+      },
+      Loading: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Loading}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionPrimaryLoading',
+        attributes: {
+          category: 'Action',
+          type: 'Primary',
+          item: 'Loading',
+        },
+        path: ['Action', 'Primary', 'Loading'],
       },
     },
     Secondary: {
@@ -6625,6 +6925,156 @@ var _styleDictionary = {
           },
           path: ['Action', 'Secondary', 'Label', 'Loading'],
         },
+      },
+      Rest: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Rest}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSecondaryRest',
+        attributes: {
+          category: 'Action',
+          type: 'Secondary',
+          item: 'Rest',
+        },
+        path: ['Action', 'Secondary', 'Rest'],
+      },
+      Hover: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Hover}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSecondaryHover',
+        attributes: {
+          category: 'Action',
+          type: 'Secondary',
+          item: 'Hover',
+        },
+        path: ['Action', 'Secondary', 'Hover'],
+      },
+      Pressed: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSecondaryPressed',
+        attributes: {
+          category: 'Action',
+          type: 'Secondary',
+          item: 'Pressed',
+        },
+        path: ['Action', 'Secondary', 'Pressed'],
+      },
+      Focus: {
+        value: {
+          color: 'hsla(220, 10%, 10%) ',
+          width: '2px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Global.Focus}',
+            width: '{core.dimensionPX.2}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSecondaryFocus',
+        attributes: {
+          category: 'Action',
+          type: 'Secondary',
+          item: 'Focus',
+        },
+        path: ['Action', 'Secondary', 'Focus'],
+      },
+      Disabled: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSecondaryDisabled',
+        attributes: {
+          category: 'Action',
+          type: 'Secondary',
+          item: 'Disabled',
+        },
+        path: ['Action', 'Secondary', 'Disabled'],
+      },
+      Loading: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Loading}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSecondaryLoading',
+        attributes: {
+          category: 'Action',
+          type: 'Secondary',
+          item: 'Loading',
+        },
+        path: ['Action', 'Secondary', 'Loading'],
       },
     },
     Silent: {
@@ -7127,6 +7577,156 @@ var _styleDictionary = {
           path: ['Action', 'Silent', 'Label', 'Loading'],
         },
       },
+      Rest: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Rest}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSilentRest',
+        attributes: {
+          category: 'Action',
+          type: 'Silent',
+          item: 'Rest',
+        },
+        path: ['Action', 'Silent', 'Rest'],
+      },
+      Hover: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Hover}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSilentHover',
+        attributes: {
+          category: 'Action',
+          type: 'Silent',
+          item: 'Hover',
+        },
+        path: ['Action', 'Silent', 'Hover'],
+      },
+      Pressed: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSilentPressed',
+        attributes: {
+          category: 'Action',
+          type: 'Silent',
+          item: 'Pressed',
+        },
+        path: ['Action', 'Silent', 'Pressed'],
+      },
+      Focus: {
+        value: {
+          color: 'hsla(220, 10%, 10%) ',
+          width: '2px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Global.Focus}',
+            width: '{core.dimensionPX.2}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSilentFocus',
+        attributes: {
+          category: 'Action',
+          type: 'Silent',
+          item: 'Focus',
+        },
+        path: ['Action', 'Silent', 'Focus'],
+      },
+      Disabled: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSilentDisabled',
+        attributes: {
+          category: 'Action',
+          type: 'Silent',
+          item: 'Disabled',
+        },
+        path: ['Action', 'Silent', 'Disabled'],
+      },
+      Loading: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Loading}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionSilentLoading',
+        attributes: {
+          category: 'Action',
+          type: 'Silent',
+          item: 'Loading',
+        },
+        path: ['Action', 'Silent', 'Loading'],
+      },
     },
     Destructive: {
       SurfaceFill: {
@@ -7569,6 +8169,156 @@ var _styleDictionary = {
           path: ['Action', 'Destructive', 'Label', 'Loading'],
         },
       },
+      Rest: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Rest}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionDestructiveRest',
+        attributes: {
+          category: 'Action',
+          type: 'Destructive',
+          item: 'Rest',
+        },
+        path: ['Action', 'Destructive', 'Rest'],
+      },
+      Hover: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Hover}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionDestructiveHover',
+        attributes: {
+          category: 'Action',
+          type: 'Destructive',
+          item: 'Hover',
+        },
+        path: ['Action', 'Destructive', 'Hover'],
+      },
+      Pressed: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionDestructivePressed',
+        attributes: {
+          category: 'Action',
+          type: 'Destructive',
+          item: 'Pressed',
+        },
+        path: ['Action', 'Destructive', 'Pressed'],
+      },
+      Focus: {
+        value: {
+          color: 'hsla(220, 10%, 10%) ',
+          width: '2px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Global.Focus}',
+            width: '{core.dimensionPX.2}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionDestructiveFocus',
+        attributes: {
+          category: 'Action',
+          type: 'Destructive',
+          item: 'Focus',
+        },
+        path: ['Action', 'Destructive', 'Focus'],
+      },
+      Disabled: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionDestructiveDisabled',
+        attributes: {
+          category: 'Action',
+          type: 'Destructive',
+          item: 'Disabled',
+        },
+        path: ['Action', 'Destructive', 'Disabled'],
+      },
+      Loading: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Loading}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionDestructiveLoading',
+        attributes: {
+          category: 'Action',
+          type: 'Destructive',
+          item: 'Loading',
+        },
+        path: ['Action', 'Destructive', 'Loading'],
+      },
     },
     Encourage: {
       SurfaceFill: {
@@ -8010,6 +8760,156 @@ var _styleDictionary = {
           },
           path: ['Action', 'Encourage', 'Label', 'Loading'],
         },
+      },
+      Rest: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Rest}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionEncourageRest',
+        attributes: {
+          category: 'Action',
+          type: 'Encourage',
+          item: 'Rest',
+        },
+        path: ['Action', 'Encourage', 'Rest'],
+      },
+      Hover: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Hover}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionEncourageHover',
+        attributes: {
+          category: 'Action',
+          type: 'Encourage',
+          item: 'Hover',
+        },
+        path: ['Action', 'Encourage', 'Hover'],
+      },
+      Pressed: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Pressed}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionEncouragePressed',
+        attributes: {
+          category: 'Action',
+          type: 'Encourage',
+          item: 'Pressed',
+        },
+        path: ['Action', 'Encourage', 'Pressed'],
+      },
+      Focus: {
+        value: {
+          color: 'hsla(220, 10%, 10%) ',
+          width: '2px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Global.Focus}',
+            width: '{core.dimensionPX.2}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionEncourageFocus',
+        attributes: {
+          category: 'Action',
+          type: 'Encourage',
+          item: 'Focus',
+        },
+        path: ['Action', 'Encourage', 'Focus'],
+      },
+      Disabled: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Disabled}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionEncourageDisabled',
+        attributes: {
+          category: 'Action',
+          type: 'Encourage',
+          item: 'Disabled',
+        },
+        path: ['Action', 'Encourage', 'Disabled'],
+      },
+      Loading: {
+        value: {
+          color: '#00000000',
+          width: '1px',
+          style: 'solid',
+        },
+        type: 'border',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: {
+            color: '{Action.CTA.SurfaceStroke.Loading}',
+            width: '{core.dimensionPX.1}',
+            style: 'solid',
+          },
+          type: 'border',
+        },
+        name: 'ActionEncourageLoading',
+        attributes: {
+          category: 'Action',
+          type: 'Encourage',
+          item: 'Loading',
+        },
+        path: ['Action', 'Encourage', 'Loading'],
       },
     },
     BorderRadius: {

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 12:31:08 GMT
+ * Generated on Thu, 06 Apr 2023 12:36:21 GMT
  */
 
 export const semanticTokens = {
@@ -38,6 +38,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Primary: {
       SurfaceFill: {
@@ -72,6 +78,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Secondary: {
       SurfaceFill: {
@@ -107,6 +119,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Silent: {
       SurfaceFill: {
@@ -144,6 +162,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Destructive: {
       SurfaceFill: {
@@ -178,6 +202,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Encourage: {
       SurfaceFill: {
@@ -212,6 +242,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
     BorderWidth: { Rest: '1px', Hover: '1px', Pressed: '1px', Focus: '0px', Disabled: '1px', Loading: '1px' },
