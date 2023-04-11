@@ -14,10 +14,8 @@ export class BlrIcon extends LitElement {
   @property() size!: SizesType;
 
   render() {
-    // const suffix = Sizes.find((item) => this.icon.toLowerCase().endsWith(item));
-
     if (IconMapping.hasOwnProperty(this.icon) && typeof IconMapping[this.icon] === 'function') {
-      return html`${IconMapping[this.icon](`blr-icon ${this.size}`)}`;
+      return html`${IconMapping[this.icon](`blr-icon ${this.size.toLowerCase()}`)}`;
     } else {
       return nothing;
     }

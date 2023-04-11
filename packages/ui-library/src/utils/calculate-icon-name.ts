@@ -7,25 +7,28 @@ const hasIconSize = (icon: string) => {
   if (IconKeys.includes(icon)) {
     return true;
   }
+  return false;
 };
 
 const getSizeSubstitute = (icon: string) => {
-  const subIndex =
+  const iconIndex =
     IconKeys[
       IconKeys.findIndex((i) => {
         return i.startsWith(icon);
       }, icon)
     ];
-  const foundSize = subIndex.match(capturingRegex);
+  const foundSize = iconIndex.match(capturingRegex);
   if (foundSize && foundSize.groups) {
     return foundSize.groups.size.toLowerCase();
   }
 };
 
 export const calculateIconName = (icon: IconType, size: SizesType) => {
-  return hasIconSize(icon)
-    ? `${icon.toString()}${size.charAt(0).toUpperCase() + size.slice(1)}`
-    : getIconReplacement(icon);
+  if (!icon) {
+    return undefined;
+  }
+  const formattedIcon = `${icon.toString()}${size.charAt(0).toUpperCase() + size.slice(1)}`;
+  return hasIconSize(formattedIcon) ? formattedIcon : getIconReplacement(icon);
 };
 
 export const getIconReplacement = (icon: IconType) => {

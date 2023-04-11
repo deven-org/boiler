@@ -4,12 +4,14 @@ import { BlrIconLink as BlrIconLinkClass } from './index';
 import { IconKeys } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
 import './index';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getIconName } from '../../utils/get-icon-name';
 
 export default {
   title: 'BlrIconLink',
   argTypes: {
-    iconName: {
-      options: [undefined, ...IconKeys],
+    icon: {
+      options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     size: {
@@ -31,7 +33,7 @@ export const BlrIconLink = ({
   linkId,
   variant,
   size,
-  iconName,
+  icon,
   href,
   target,
   loadingStatus,
@@ -39,7 +41,7 @@ export const BlrIconLink = ({
   html`
     <blr-icon-link
       .ariaLabel=${ariaLabel}
-      .iconName=${iconName}
+      .icon=${calculateIconName(icon, size)}
       .linkId=${linkId}
       .onClick=${onClick}
       .onBlur=${onBlur}
@@ -60,7 +62,7 @@ BlrIconLink.args = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   loading: false,
-  iconName: 'blr360Md',
+  icon: 'blr360',
   linkId: 'link-id',
   variant: 'cta',
   size: 'md',

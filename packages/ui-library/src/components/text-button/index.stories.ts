@@ -4,16 +4,18 @@ import { BlrTextButton as BlrTextButtonClass } from './index';
 import { IconKeys } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
 import './index';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getIconName } from '../../utils/get-icon-name';
 
 export default {
   title: 'BlrTextButton',
   argTypes: {
     leadingIcon: {
-      options: [undefined, ...IconKeys],
+      options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     trailingIcon: {
-      options: [undefined, ...IconKeys],
+      options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     size: {
@@ -43,8 +45,8 @@ export const BlrTextButton = ({
   html`
     <blr-text-button
       .label=${label}
-      .leadingIcon=${leadingIcon}
-      .trailingIcon=${trailingIcon}
+      .leadingIcon=${calculateIconName(leadingIcon, size)}
+      .trailingIcon=${calculateIconName(trailingIcon, size)}
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
@@ -64,7 +66,7 @@ BlrTextButton.args = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: 'undefined',
-  trailingIcon: 'blrChevronDownMd',
+  trailingIcon: 'blrChevronDown',
   loading: false,
   disabled: false,
   buttonId: 'button-id',
