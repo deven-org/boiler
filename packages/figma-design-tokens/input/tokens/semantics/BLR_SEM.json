@@ -1170,6 +1170,44 @@
       "Placeholder": {
         "value": "{core.typography.sourceSansPro.regular.87}",
         "type": "typography"
+      },
+      "Caption": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        }
+      },
+      "CaptionSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        }
+      },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "InputField": {
+        "Padding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        }
       }
     },
     "LG": {
