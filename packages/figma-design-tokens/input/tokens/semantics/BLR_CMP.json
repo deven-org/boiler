@@ -484,5 +484,27 @@
         }
       }
     }
+  },
+  "Forms": {
+    "TextArea": {
+      "MD": {
+        "MinHeight": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
+        }
+      },
+      "SM": {
+        "MinHeight": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
+        }
+      },
+      "LG": {
+        "MinHeight": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
+        }
+      }
+    }
   }
 }
