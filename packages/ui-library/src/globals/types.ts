@@ -9,3 +9,8 @@ export type FeedbackVariants = 'default' | 'inverted';
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 
 export type InputTypes = (typeof InputTypes)[number];
+
+export type RadioOption = {
+  label: string;
+  value: string;
+};
