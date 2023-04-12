@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 11:41:46 GMT
+ * Generated on Wed, 12 Apr 2023 12:47:45 GMT
  */
 
 export const semanticTokens = {
@@ -250,47 +250,55 @@ export const semanticTokens = {
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
-    XS: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' } },
-    SM: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
-    MD: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
-    LG: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' } },
-    XL: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' } },
+    XS: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' },
+      LoaderSize: 'SM',
+    },
+    SM: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LoaderSize: 'SM',
+    },
+    MD: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LoaderSize: 'MD',
+    },
+    LG: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' },
+      LoaderSize: 'MD',
+    },
+    XL: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' },
+      LoaderSize: 'LG',
+    },
   },
   Feedback: {
     Background: { Default: 'hsla(220, 85%, 60%, 0.2)', Inverted: 'hsla(220, 85%, 99%, 0.2)' },
     Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(220, 85%, 99%, 1)' },
   },
   Forms: {
-    Label: {
-      Rest: 'hsla(220, 10%, 10%) ',
-      Hover: 'hsla(220, 10%, 10%) ',
-      Focus: 'hsla(220, 10%, 10%) ',
-      Disabled: 'hsla(220, 10%, 10%) ',
-      ReadOnly: 'hsla(220, 10%, 10%) ',
-    },
-    MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
-      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
-      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
-      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
-      InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.5rem 12px' },
-    },
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
-      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
+      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.5rem 12px' },
+      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+    },
+    MD: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
+      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      InputSlot: { Margin: '0rem 0px 0rem 0px' },
+      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
     },
     LG: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
@@ -298,11 +306,18 @@ export const semanticTokens = {
       CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1.25rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1.25rem' },
-      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
+      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.5rem 12px' },
+      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+    },
+    Label: {
+      Rest: 'hsla(220, 10%, 10%) ',
+      Hover: 'hsla(220, 10%, 10%) ',
+      Focus: 'hsla(220, 10%, 10%) ',
+      Disabled: 'hsla(220, 10%, 10%) ',
+      ReadOnly: 'hsla(220, 10%, 10%) ',
     },
     LabelAppendix: {
       Rest: 'hsla(220, 10%, 10%) ',
