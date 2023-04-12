@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 10:36:39 GMT
+ * Generated on Wed, 12 Apr 2023 10:39:55 GMT
  */
 
 var _styleDictionary = {
@@ -10467,6 +10467,142 @@ var _styleDictionary = {
           item: 'Placeholder',
         },
         path: ['Forms', 'SM', 'Placeholder'],
+      },
+      Caption: {
+        Padding: {
+          value: '0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsSmCaptionPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'Caption',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'SM', 'Caption', 'Padding'],
+        },
+        ItemSpacing: {
+          value: '0.125rem',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.2}',
+            type: 'spacing',
+          },
+          name: 'FormsSmCaptionItemSpacing',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'Caption',
+            subitem: 'ItemSpacing',
+          },
+          path: ['Forms', 'SM', 'Caption', 'ItemSpacing'],
+        },
+      },
+      CaptionSlot: {
+        Margin: {
+          value: '0.5rem 0px 0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsSmCaptionSlotMargin',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'CaptionSlot',
+            subitem: 'Margin',
+          },
+          path: ['Forms', 'SM', 'CaptionSlot', 'Margin'],
+        },
+      },
+      LabelSlot: {
+        Padding: {
+          value: '0rem 0px 8px ',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}',
+            type: 'spacing',
+          },
+          name: 'FormsSmLabelSlotPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'LabelSlot',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'SM', 'LabelSlot', 'Padding'],
+        },
+        ItemSpacing: {
+          value: '4px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionPX.4}',
+            type: 'spacing',
+          },
+          name: 'FormsSmLabelSlotItemSpacing',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'LabelSlot',
+            subitem: 'ItemSpacing',
+          },
+          path: ['Forms', 'SM', 'LabelSlot', 'ItemSpacing'],
+        },
+      },
+      InputSlot: {
+        Margin: {
+          value: '0rem 0px 0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsSmInputSlotMargin',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'InputSlot',
+            subitem: 'Margin',
+          },
+          path: ['Forms', 'SM', 'InputSlot', 'Margin'],
+        },
+      },
+      InputField: {
+        Padding: {
+          value: '0.5rem 12px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.8} {core.dimensionPX.12}',
+            type: 'spacing',
+          },
+          name: 'FormsSmInputFieldPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'SM',
+            item: 'InputField',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'SM', 'InputField', 'Padding'],
+        },
       },
     },
     LG: {

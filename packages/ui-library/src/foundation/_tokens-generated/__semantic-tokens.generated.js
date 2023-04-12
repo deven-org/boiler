@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 10:36:39 GMT
+ * Generated on Wed, 12 Apr 2023 10:39:55 GMT
  */
 
 export const semanticTokens = {
@@ -286,6 +286,11 @@ export const semanticTokens = {
       CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
+      Caption: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
+      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      InputSlot: { Margin: '0rem 0px 0rem 0px' },
+      InputField: { Padding: '0.5rem 12px' },
     },
     LG: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
