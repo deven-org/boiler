@@ -45,6 +45,10 @@ export class BlrTextInput extends LitElement {
   };
 
   protected render() {
+    const toggleInputType = () => {
+      this.currentType = this.currentType === 'password' ? 'text' : 'password';
+    };
+
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
     const classes = classMap({
@@ -83,19 +87,19 @@ export class BlrTextInput extends LitElement {
         <div class="blr-input-inner-container">
           <input
             class="blr-form-element ${inputClasses}"
-            id=${this.textInputId || nothing}
-            type=${getType()}
-            value=${this.value}
-            placeholder=${this.placeholder || nothing}
-            ?disabled=${this.disabled}
-            ?readonly=${this.readonly}
-            ?required=${this.required}
+            id=${this.textInputId}
+            type="${this.currentType}"
+            value="${this.value}"
+            placeholder="${this.placeholder}"
+            ?disabled="${this.disabled}"
+            ?readonly="${this.readonly}"
+            ?required="${this.required}"
             @input=${this.onChange}
             @blur=${this.onBlur}
             @focus=${this.onFocus}
-            maxlength=${this.maxLength}
-            hasError=${this.hasError}
-            pattern=${this.pattern || nothing}
+            maxlength="${this.maxLength}"
+            pattern="${this.pattern}"
+            hasError="${this.hasError}"
           />
 
           ${this.showInputIcon && !wasInitialPasswordField
@@ -109,16 +113,15 @@ export class BlrTextInput extends LitElement {
               })}`
             : nothing}
           ${wasInitialPasswordField
-            ? html`${BlrIconRenderFunction({
-                icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
-                name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
-                size: this.size,
-                classMap: inputClasses,
-                hideAria: true,
-                disablePointerEvents: false,
-                onClick: () => this.togglePassword(),
-              })}`
-            : nothing}
+            ? html`<blr-icon
+                class="blr-input-icon ${inputClasses}"
+                @click=${toggleInputType}
+                icon="${getPasswordIcon()}"
+                size="sm"
+                name="${getPasswordIcon()}"
+                aria-hidden
+              ></blr-icon>`
+            : html``}
         </div>
         ${this.showHint
           ? html`
@@ -140,7 +143,6 @@ export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
 export const BlrTextInputRenderFunction = ({
   textInputId,
   type,
-  hasLabel,
   label,
   labelAppendix,
   value,
@@ -153,6 +155,7 @@ export const BlrTextInputRenderFunction = ({
   onBlur,
   onFocus,
   maxLength,
+  pattern,
   hasError,
   errorMessage,
   showInputIcon,
@@ -160,32 +163,30 @@ export const BlrTextInputRenderFunction = ({
   showHint,
   hintText,
   hintIcon,
-  pattern,
 }: BlrTextInputType) => {
   return html`<blr-text-input
-    class="example-layout-class"
     .textInputId=${textInputId}
-    .type=${type}
-    .hasLabel=${hasLabel}
     .label=${label}
     .labelAppendix=${labelAppendix}
+    .showInputIcon=${showInputIcon}
+    .inputIcon=${inputIcon}
+    .type=${type}
     .value=${value}
     .placeholder=${placeholder}
     .disabled=${disabled}
-    .readonly=${readonly}
     .size=${size}
     .required=${required}
+    .readonly=${readonly}
     .onChange=${onChange}
     .onBlur=${onBlur}
     .onFocus=${onFocus}
     .maxLength=${maxLength}
+    .pattern=${pattern}
     .errorMessage=${errorMessage}
-    .showInputIcon=${showInputIcon}
-    .inputIcon=${inputIcon}
     .showHint=${showHint}
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
-    .pattern=${pattern}
-  ></blr-input>`;
+    class="example-layout-class"
+  ></blr-text-input>`;
 };
