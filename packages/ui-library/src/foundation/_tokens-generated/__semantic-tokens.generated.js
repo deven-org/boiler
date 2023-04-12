@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 15:46:21 GMT
+ * Generated on Wed, 12 Apr 2023 16:05:58 GMT
  */
 
 export const semanticTokens = {
@@ -286,7 +286,7 @@ export const semanticTokens = {
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      InputField: { Padding: '0.25rem 12px', IconSize: 'MD' },
     },
     MD: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },

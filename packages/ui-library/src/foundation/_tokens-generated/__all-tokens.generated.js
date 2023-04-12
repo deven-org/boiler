@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 15:46:21 GMT
+ * Generated on Wed, 12 Apr 2023 16:05:58 GMT
  */
 
 var _styleDictionary = {
@@ -10804,12 +10804,12 @@ var _styleDictionary = {
       },
       InputField: {
         Padding: {
-          value: '0.5rem 12px',
+          value: '0.25rem 12px',
           type: 'spacing',
           filePath: 'input/tokens/semantics/BLR_SEM.json',
           isSource: true,
           original: {
-            value: '{core.dimensionREM.8} {core.dimensionPX.12}',
+            value: '{core.dimensionREM.4} {core.dimensionPX.12}',
             type: 'spacing',
           },
           name: 'FormsSmInputFieldPadding',
