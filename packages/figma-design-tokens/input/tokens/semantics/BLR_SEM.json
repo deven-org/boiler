@@ -1109,7 +1109,7 @@
         "value": "{core.typography.sourceSansPro.regular.87}",
         "type": "typography"
       },
-      "Caption": {
+      "CaptionComponent": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
@@ -1117,7 +1117,9 @@
         "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
-        },
+        }
+      },
+      "Caption": {
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
@@ -1169,7 +1171,7 @@
         "value": "{core.typography.sourceSansPro.regular.75}",
         "type": "typography"
       },
-      "Caption": {
+      "CaptionComponent": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
@@ -1177,7 +1179,9 @@
         "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
-        },
+        }
+      },
+      "Caption": {
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
@@ -1245,7 +1249,7 @@
         "value": "{core.typography.sourceSansPro.regular.125}",
         "type": "typography"
       },
-      "Caption": {
+      "CaptionComponent": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
@@ -1253,7 +1257,9 @@
         "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
-        },
+        }
+      },
+      "Caption": {
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
