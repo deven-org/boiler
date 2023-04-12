@@ -948,30 +948,50 @@
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.50}",
         "type": "typography"
+      },
+      "LoaderSize": {
+        "value": "SM",
+        "type": "componentConfig"
       }
     },
     "SM": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.75}",
         "type": "typography"
+      },
+      "LoaderSize": {
+        "value": "SM",
+        "type": "componentConfig"
       }
     },
     "MD": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.75}",
         "type": "typography"
+      },
+      "LoaderSize": {
+        "value": "MD",
+        "type": "componentConfig"
       }
     },
     "LG": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.100}",
         "type": "typography"
+      },
+      "LoaderSize": {
+        "value": "MD",
+        "type": "componentConfig"
       }
     },
     "XL": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.100}",
         "type": "typography"
+      },
+      "LoaderSize": {
+        "value": "LG",
+        "type": "componentConfig"
       }
     }
   },
