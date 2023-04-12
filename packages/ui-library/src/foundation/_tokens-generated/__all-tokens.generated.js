@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 10:39:55 GMT
+ * Generated on Wed, 12 Apr 2023 11:41:46 GMT
  */
 
 var _styleDictionary = {
@@ -4547,6 +4547,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'TextButton', 'XS', 'Gap'],
         },
+        IconSize: {
+          value: 'XXS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XXS',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextButtonXsIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextButton',
+            item: 'XS',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'TextButton', 'XS', 'IconSize'],
+        },
       },
       SM: {
         Padding: {
@@ -4584,6 +4602,24 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'TextButton', 'SM', 'Gap'],
+        },
+        IconSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextButtonSmIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextButton',
+            item: 'SM',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'TextButton', 'SM', 'IconSize'],
         },
       },
       MD: {
@@ -4623,6 +4659,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'TextButton', 'MD', 'Gap'],
         },
+        IconSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextButtonMdIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextButton',
+            item: 'MD',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'TextButton', 'MD', 'IconSize'],
+        },
       },
       LG: {
         Padding: {
@@ -4661,6 +4715,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'TextButton', 'LG', 'Gap'],
         },
+        IconSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextButtonLgIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextButton',
+            item: 'LG',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'TextButton', 'LG', 'IconSize'],
+        },
       },
       XL: {
         Padding: {
@@ -4698,6 +4770,24 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'TextButton', 'XL', 'Gap'],
+        },
+        IconSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextButtonXlIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextButton',
+            item: 'XL',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'TextButton', 'XL', 'IconSize'],
         },
       },
     },
@@ -4739,6 +4829,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'IconButton', 'XS', 'Gap'],
         },
+        IconSize: {
+          value: 'XXS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XXS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconButtonXsIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconButton',
+            item: 'XS',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconButton', 'XS', 'IconSize'],
+        },
       },
       SM: {
         Padding: {
@@ -4776,6 +4884,24 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'IconButton', 'SM', 'Gap'],
+        },
+        IconSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconButtonSmIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconButton',
+            item: 'SM',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconButton', 'SM', 'IconSize'],
         },
       },
       MD: {
@@ -4815,6 +4941,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'IconButton', 'MD', 'Gap'],
         },
+        IconSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconButtonMdIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconButton',
+            item: 'MD',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconButton', 'MD', 'IconSize'],
+        },
       },
       LG: {
         Padding: {
@@ -4853,6 +4997,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'IconButton', 'LG', 'Gap'],
         },
+        IconSize: {
+          value: 'MD',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'MD',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconButtonLgIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconButton',
+            item: 'LG',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconButton', 'LG', 'IconSize'],
+        },
       },
       XL: {
         Padding: {
@@ -4890,6 +5052,24 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'IconButton', 'XL', 'Gap'],
+        },
+        IconSize: {
+          value: 'LG',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'LG',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconButtonXlIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconButton',
+            item: 'XL',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconButton', 'XL', 'IconSize'],
         },
       },
     },
@@ -4931,6 +5111,42 @@ var _styleDictionary = {
           },
           path: ['Action', 'IconDropdown', 'XS', 'Gap'],
         },
+        IconSize: {
+          value: 'XXS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XXS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownXsIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'XS',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconDropdown', 'XS', 'IconSize'],
+        },
+        ChevronSize: {
+          value: 'XXS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XXS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownXsChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'XS',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'IconDropdown', 'XS', 'ChevronSize'],
+        },
       },
       SM: {
         Padding: {
@@ -4968,6 +5184,42 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'IconDropdown', 'SM', 'Gap'],
+        },
+        IconSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownSmIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'SM',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconDropdown', 'SM', 'IconSize'],
+        },
+        ChevronSize: {
+          value: 'XXS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XXS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownSmChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'SM',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'IconDropdown', 'SM', 'ChevronSize'],
         },
       },
       MD: {
@@ -5007,6 +5259,42 @@ var _styleDictionary = {
           },
           path: ['Action', 'IconDropdown', 'MD', 'Gap'],
         },
+        IconSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownMdIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'MD',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconDropdown', 'MD', 'IconSize'],
+        },
+        ChevronSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownMdChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'MD',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'IconDropdown', 'MD', 'ChevronSize'],
+        },
       },
       LG: {
         Padding: {
@@ -5045,6 +5333,42 @@ var _styleDictionary = {
           },
           path: ['Action', 'IconDropdown', 'LG', 'Gap'],
         },
+        IconSize: {
+          value: 'MD',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'MD',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownLgIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'LG',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconDropdown', 'LG', 'IconSize'],
+        },
+        ChevronSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownLgChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'LG',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'IconDropdown', 'LG', 'ChevronSize'],
+        },
       },
       XL: {
         Padding: {
@@ -5082,6 +5406,42 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'IconDropdown', 'XL', 'Gap'],
+        },
+        IconSize: {
+          value: 'LG',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'LG',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownXlIconSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'XL',
+            subitem: 'IconSize',
+          },
+          path: ['Action', 'IconDropdown', 'XL', 'IconSize'],
+        },
+        ChevronSize: {
+          value: 'MD',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'MD',
+            type: 'componentConfig',
+          },
+          name: 'ActionIconDropdownXlChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'IconDropdown',
+            item: 'XL',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'IconDropdown', 'XL', 'ChevronSize'],
         },
       },
     },
@@ -5123,6 +5483,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'TextDropdown', 'XS', 'Gap'],
         },
+        ChevronSize: {
+          value: 'XXS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XXS',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextDropdownXsChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextDropdown',
+            item: 'XS',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'TextDropdown', 'XS', 'ChevronSize'],
+        },
       },
       SM: {
         Padding: {
@@ -5160,6 +5538,24 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'TextDropdown', 'SM', 'Gap'],
+        },
+        ChevronSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextDropdownSmChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextDropdown',
+            item: 'SM',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'TextDropdown', 'SM', 'ChevronSize'],
         },
       },
       MD: {
@@ -5199,6 +5595,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'TextDropdown', 'MD', 'Gap'],
         },
+        ChevronSize: {
+          value: 'XS',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'XS',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextDropdownMdChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextDropdown',
+            item: 'MD',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'TextDropdown', 'MD', 'ChevronSize'],
+        },
       },
       LG: {
         Padding: {
@@ -5237,6 +5651,24 @@ var _styleDictionary = {
           },
           path: ['Action', 'TextDropdown', 'LG', 'Gap'],
         },
+        ChevronSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextDropdownLgChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextDropdown',
+            item: 'LG',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'TextDropdown', 'LG', 'ChevronSize'],
+        },
       },
       XL: {
         Padding: {
@@ -5274,6 +5706,24 @@ var _styleDictionary = {
             subitem: 'Gap',
           },
           path: ['Action', 'TextDropdown', 'XL', 'Gap'],
+        },
+        ChevronSize: {
+          value: 'MD',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: 'MD',
+            type: 'componentConfig',
+          },
+          name: 'ActionTextDropdownXlChevronSize',
+          attributes: {
+            category: 'Action',
+            type: 'TextDropdown',
+            item: 'XL',
+            subitem: 'ChevronSize',
+          },
+          path: ['Action', 'TextDropdown', 'XL', 'ChevronSize'],
         },
       },
     },

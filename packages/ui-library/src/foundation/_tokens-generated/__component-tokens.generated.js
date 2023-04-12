@@ -1,30 +1,30 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 10:39:55 GMT
+ * Generated on Wed, 12 Apr 2023 11:41:46 GMT
  */
 
 export const componentTokens = {
   Action: {
     TextButton: {
-      XS: { Padding: '0.25rem 12px', Gap: '4px' },
-      SM: { Padding: '0.188rem 12px', Gap: '4px' },
-      MD: { Padding: '0.438rem 16px', Gap: '4px' },
-      LG: { Padding: '0.5rem 24px', Gap: '4px' },
-      XL: { Padding: '1rem 40px', Gap: '4px' },
+      XS: { Padding: '0.25rem 12px', Gap: '4px', IconSize: 'XXS' },
+      SM: { Padding: '0.188rem 12px', Gap: '4px', IconSize: 'XS' },
+      MD: { Padding: '0.438rem 16px', Gap: '4px', IconSize: 'XS' },
+      LG: { Padding: '0.5rem 24px', Gap: '4px', IconSize: 'SM' },
+      XL: { Padding: '1rem 40px', Gap: '4px', IconSize: 'SM' },
     },
     IconButton: {
-      XS: { Padding: '0.375rem', Gap: '0px' },
-      SM: { Padding: '0.375rem', Gap: '0px' },
-      MD: { Padding: '0.5rem', Gap: '0px' },
-      LG: { Padding: '0.5rem', Gap: '0px' },
-      XL: { Padding: '0.75rem', Gap: '0px' },
+      XS: { Padding: '0.375rem', Gap: '0px', IconSize: 'XXS' },
+      SM: { Padding: '0.375rem', Gap: '0px', IconSize: 'XS' },
+      MD: { Padding: '0.5rem', Gap: '0px', IconSize: 'SM' },
+      LG: { Padding: '0.5rem', Gap: '0px', IconSize: 'MD' },
+      XL: { Padding: '0.75rem', Gap: '0px', IconSize: 'LG' },
     },
     IconDropdown: {
-      XS: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', Gap: '0px' },
-      SM: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', Gap: '0px' },
-      MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', Gap: '0px' },
-      LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', Gap: '-0.125rem' },
-      XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', Gap: '-0.25rem' },
+      XS: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', Gap: '0px', IconSize: 'XXS', ChevronSize: 'XXS' },
+      SM: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', Gap: '0px', IconSize: 'XS', ChevronSize: 'XXS' },
+      MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', Gap: '0px', IconSize: 'SM', ChevronSize: 'XS' },
+      LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', Gap: '-0.125rem', IconSize: 'MD', ChevronSize: 'SM' },
+      XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', Gap: '-0.25rem', IconSize: 'LG', ChevronSize: 'MD' },
     },
   },
   UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
