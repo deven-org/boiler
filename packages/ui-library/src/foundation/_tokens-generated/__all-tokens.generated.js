@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 12:47:45 GMT
+ * Generated on Wed, 12 Apr 2023 14:00:10 GMT
  */
 
 var _styleDictionary = {
@@ -10668,7 +10668,7 @@ var _styleDictionary = {
         },
         path: ['Forms', 'SM', 'Placeholder'],
       },
-      Caption: {
+      CaptionComponent: {
         Padding: {
           value: '0rem 0px',
           type: 'spacing',
@@ -10678,14 +10678,14 @@ var _styleDictionary = {
             value: '{core.dimensionREM.0} {core.dimensionPX.0}',
             type: 'spacing',
           },
-          name: 'FormsSmCaptionPadding',
+          name: 'FormsSmCaptionComponentPadding',
           attributes: {
             category: 'Forms',
             type: 'SM',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'Padding',
           },
-          path: ['Forms', 'SM', 'Caption', 'Padding'],
+          path: ['Forms', 'SM', 'CaptionComponent', 'Padding'],
         },
         ItemSpacing: {
           value: '0.125rem',
@@ -10696,15 +10696,17 @@ var _styleDictionary = {
             value: '{core.dimensionREM.2}',
             type: 'spacing',
           },
-          name: 'FormsSmCaptionItemSpacing',
+          name: 'FormsSmCaptionComponentItemSpacing',
           attributes: {
             category: 'Forms',
             type: 'SM',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'ItemSpacing',
           },
-          path: ['Forms', 'SM', 'Caption', 'ItemSpacing'],
+          path: ['Forms', 'SM', 'CaptionComponent', 'ItemSpacing'],
         },
+      },
+      Caption: {
         IconSize: {
           value: 'SM',
           type: 'componentConfig',
@@ -10908,7 +10910,7 @@ var _styleDictionary = {
         },
         path: ['Forms', 'MD', 'CaptionText'],
       },
-      Caption: {
+      CaptionComponent: {
         Padding: {
           value: '0rem 0px',
           type: 'spacing',
@@ -10918,14 +10920,14 @@ var _styleDictionary = {
             value: '{core.dimensionREM.0} {core.dimensionPX.0}',
             type: 'spacing',
           },
-          name: 'FormsMdCaptionPadding',
+          name: 'FormsMdCaptionComponentPadding',
           attributes: {
             category: 'Forms',
             type: 'MD',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'Padding',
           },
-          path: ['Forms', 'MD', 'Caption', 'Padding'],
+          path: ['Forms', 'MD', 'CaptionComponent', 'Padding'],
         },
         ItemSpacing: {
           value: '0.125rem',
@@ -10936,15 +10938,17 @@ var _styleDictionary = {
             value: '{core.dimensionREM.2}',
             type: 'spacing',
           },
-          name: 'FormsMdCaptionItemSpacing',
+          name: 'FormsMdCaptionComponentItemSpacing',
           attributes: {
             category: 'Forms',
             type: 'MD',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'ItemSpacing',
           },
-          path: ['Forms', 'MD', 'Caption', 'ItemSpacing'],
+          path: ['Forms', 'MD', 'CaptionComponent', 'ItemSpacing'],
         },
+      },
+      Caption: {
         IconSize: {
           value: 'SM',
           type: 'componentConfig',
@@ -11236,7 +11240,7 @@ var _styleDictionary = {
         },
         path: ['Forms', 'LG', 'Placeholder'],
       },
-      Caption: {
+      CaptionComponent: {
         Padding: {
           value: '0rem 0px',
           type: 'spacing',
@@ -11246,14 +11250,14 @@ var _styleDictionary = {
             value: '{core.dimensionREM.0} {core.dimensionPX.0}',
             type: 'spacing',
           },
-          name: 'FormsLgCaptionPadding',
+          name: 'FormsLgCaptionComponentPadding',
           attributes: {
             category: 'Forms',
             type: 'LG',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'Padding',
           },
-          path: ['Forms', 'LG', 'Caption', 'Padding'],
+          path: ['Forms', 'LG', 'CaptionComponent', 'Padding'],
         },
         ItemSpacing: {
           value: '0.125rem',
@@ -11264,15 +11268,17 @@ var _styleDictionary = {
             value: '{core.dimensionREM.2}',
             type: 'spacing',
           },
-          name: 'FormsLgCaptionItemSpacing',
+          name: 'FormsLgCaptionComponentItemSpacing',
           attributes: {
             category: 'Forms',
             type: 'LG',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'ItemSpacing',
           },
-          path: ['Forms', 'LG', 'Caption', 'ItemSpacing'],
+          path: ['Forms', 'LG', 'CaptionComponent', 'ItemSpacing'],
         },
+      },
+      Caption: {
         IconSize: {
           value: 'SM',
           type: 'componentConfig',
