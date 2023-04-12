@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 14:00:10 GMT
+ * Generated on Wed, 12 Apr 2023 14:19:38 GMT
  */
 
 export const semanticTokens = {
@@ -279,11 +279,10 @@ export const semanticTokens = {
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
-      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
-      Caption: { IconSize: 'SM' },
+      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
@@ -292,9 +291,8 @@ export const semanticTokens = {
     MD: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
-      Caption: { IconSize: 'SM' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      CaptionComponent: { Padding: '0rem 0px', IconSize: 'SM', ItemSpacing: '0.125rem' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
@@ -305,11 +303,10 @@ export const semanticTokens = {
     LG: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      CaptionText: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1.25rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1.25rem' },
-      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem' },
-      Caption: { IconSize: 'SM' },
+      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },

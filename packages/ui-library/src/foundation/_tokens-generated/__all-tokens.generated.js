@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 14:00:10 GMT
+ * Generated on Wed, 12 Apr 2023 14:19:38 GMT
  */
 
 var _styleDictionary = {
@@ -10602,7 +10602,7 @@ var _styleDictionary = {
         },
         path: ['Forms', 'SM', 'LabelAppendix'],
       },
-      CaptionText: {
+      Caption: {
         value: {
           fontFamily: '"Source Sans Pro" ',
           fontWeight: 400,
@@ -10616,13 +10616,13 @@ var _styleDictionary = {
           value: '{core.typography.sourceSansPro.regular.75}',
           type: 'typography',
         },
-        name: 'FormsSmCaptionText',
+        name: 'FormsSmCaption',
         attributes: {
           category: 'Forms',
           type: 'SM',
-          item: 'CaptionText',
+          item: 'Caption',
         },
-        path: ['Forms', 'SM', 'CaptionText'],
+        path: ['Forms', 'SM', 'Caption'],
       },
       UserInput: {
         value: {
@@ -10705,8 +10705,6 @@ var _styleDictionary = {
           },
           path: ['Forms', 'SM', 'CaptionComponent', 'ItemSpacing'],
         },
-      },
-      Caption: {
         IconSize: {
           value: 'SM',
           type: 'componentConfig',
@@ -10716,14 +10714,14 @@ var _styleDictionary = {
             value: 'SM',
             type: 'componentConfig',
           },
-          name: 'FormsSmCaptionIconSize',
+          name: 'FormsSmCaptionComponentIconSize',
           attributes: {
             category: 'Forms',
             type: 'SM',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'IconSize',
           },
-          path: ['Forms', 'SM', 'Caption', 'IconSize'],
+          path: ['Forms', 'SM', 'CaptionComponent', 'IconSize'],
         },
       },
       CaptionSlot: {
@@ -10888,7 +10886,7 @@ var _styleDictionary = {
         },
         path: ['Forms', 'MD', 'LabelAppendix'],
       },
-      CaptionText: {
+      Caption: {
         value: {
           fontFamily: '"Source Sans Pro" ',
           fontWeight: 400,
@@ -10902,13 +10900,13 @@ var _styleDictionary = {
           value: '{core.typography.sourceSansPro.regular.75}',
           type: 'typography',
         },
-        name: 'FormsMdCaptionText',
+        name: 'FormsMdCaption',
         attributes: {
           category: 'Forms',
           type: 'MD',
-          item: 'CaptionText',
+          item: 'Caption',
         },
-        path: ['Forms', 'MD', 'CaptionText'],
+        path: ['Forms', 'MD', 'Caption'],
       },
       CaptionComponent: {
         Padding: {
@@ -10929,6 +10927,24 @@ var _styleDictionary = {
           },
           path: ['Forms', 'MD', 'CaptionComponent', 'Padding'],
         },
+        IconSize: {
+          value: 'SM',
+          type: 'componentConfig',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: 'SM',
+            type: 'componentConfig',
+          },
+          name: 'FormsMdCaptionComponentIconSize',
+          attributes: {
+            category: 'Forms',
+            type: 'MD',
+            item: 'CaptionComponent',
+            subitem: 'IconSize',
+          },
+          path: ['Forms', 'MD', 'CaptionComponent', 'IconSize'],
+        },
         ItemSpacing: {
           value: '0.125rem',
           type: 'spacing',
@@ -10946,26 +10962,6 @@ var _styleDictionary = {
             subitem: 'ItemSpacing',
           },
           path: ['Forms', 'MD', 'CaptionComponent', 'ItemSpacing'],
-        },
-      },
-      Caption: {
-        IconSize: {
-          value: 'SM',
-          type: 'componentConfig',
-          filePath: 'input/tokens/semantics/BLR_SEM.json',
-          isSource: true,
-          original: {
-            value: 'SM',
-            type: 'componentConfig',
-          },
-          name: 'FormsMdCaptionIconSize',
-          attributes: {
-            category: 'Forms',
-            type: 'MD',
-            item: 'Caption',
-            subitem: 'IconSize',
-          },
-          path: ['Forms', 'MD', 'Caption', 'IconSize'],
         },
       },
       CaptionSlot: {
@@ -11174,7 +11170,7 @@ var _styleDictionary = {
         },
         path: ['Forms', 'LG', 'LabelAppendix'],
       },
-      CaptionText: {
+      Caption: {
         value: {
           fontFamily: '"Source Sans Pro" ',
           fontWeight: 400,
@@ -11188,13 +11184,13 @@ var _styleDictionary = {
           value: '{core.typography.sourceSansPro.regular.75}',
           type: 'typography',
         },
-        name: 'FormsLgCaptionText',
+        name: 'FormsLgCaption',
         attributes: {
           category: 'Forms',
           type: 'LG',
-          item: 'CaptionText',
+          item: 'Caption',
         },
-        path: ['Forms', 'LG', 'CaptionText'],
+        path: ['Forms', 'LG', 'Caption'],
       },
       UserInput: {
         value: {
@@ -11277,8 +11273,6 @@ var _styleDictionary = {
           },
           path: ['Forms', 'LG', 'CaptionComponent', 'ItemSpacing'],
         },
-      },
-      Caption: {
         IconSize: {
           value: 'SM',
           type: 'componentConfig',
@@ -11288,14 +11282,14 @@ var _styleDictionary = {
             value: 'SM',
             type: 'componentConfig',
           },
-          name: 'FormsLgCaptionIconSize',
+          name: 'FormsLgCaptionComponentIconSize',
           attributes: {
             category: 'Forms',
             type: 'LG',
-            item: 'Caption',
+            item: 'CaptionComponent',
             subitem: 'IconSize',
           },
-          path: ['Forms', 'LG', 'Caption', 'IconSize'],
+          path: ['Forms', 'LG', 'CaptionComponent', 'IconSize'],
         },
       },
       CaptionSlot: {
