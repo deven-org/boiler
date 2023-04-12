@@ -1097,7 +1097,7 @@
         "value": "{core.typography.sourceSansPro.regular.75}",
         "type": "typography"
       },
-      "CaptionText": {
+      "Caption": {
         "value": "{core.typography.sourceSansPro.regular.75}",
         "type": "typography"
       },
@@ -1117,14 +1117,14 @@
         "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
-        }
-      },
-      "Caption": {
+        },
+
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
         }
       },
+
       "CaptionSlot": {
         "Margin": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
