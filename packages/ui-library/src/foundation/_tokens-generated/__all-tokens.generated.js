@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Apr 2023 13:07:29 GMT
+ * Generated on Wed, 12 Apr 2023 10:36:39 GMT
  */
 
 var _styleDictionary = {
@@ -10091,28 +10091,6 @@ var _styleDictionary = {
         },
         path: ['Forms', 'Label', 'Disabled'],
       },
-      Default: {
-        value: {
-          fontFamily: '"Source Sans Pro" ',
-          fontWeight: 600,
-          lineHeight: '150%',
-          fontSize: '0.75rem',
-        },
-        type: 'typography',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.typography.sourceSansPro.semibold.75}',
-          type: 'typography',
-        },
-        name: 'FormsLabelDefault',
-        attributes: {
-          category: 'Forms',
-          type: 'Label',
-          item: 'Default',
-        },
-        path: ['Forms', 'Label', 'Default'],
-      },
       ReadOnly: {
         value: 'hsla(220, 10%, 10%) ',
         type: 'color',
@@ -10131,93 +10109,30 @@ var _styleDictionary = {
         path: ['Forms', 'Label', 'ReadOnly'],
       },
     },
-    LabelAppendix: {
-      Rest: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
+    MD: {
+      Label: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 600,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
+          value: '{core.typography.sourceSansPro.semibold.75}',
+          type: 'typography',
         },
-        name: 'FormsLabelAppendixRest',
+        name: 'FormsMdLabel',
         attributes: {
           category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Rest',
+          type: 'MD',
+          item: 'Label',
         },
-        path: ['Forms', 'LabelAppendix', 'Rest'],
+        path: ['Forms', 'MD', 'Label'],
       },
-      Hover: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixHover',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Hover',
-        },
-        path: ['Forms', 'LabelAppendix', 'Hover'],
-      },
-      Focus: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixFocus',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Focus',
-        },
-        path: ['Forms', 'LabelAppendix', 'Focus'],
-      },
-      Disabled: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixDisabled',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Disabled',
-        },
-        path: ['Forms', 'LabelAppendix', 'Disabled'],
-      },
-      ReadOnly: {
-        value: 'hsla(220, 10%, 10%) ',
-        type: 'color',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.color.coolgray.100}',
-          type: 'color',
-        },
-        name: 'FormsLabelAppendixReadOnly',
-        attributes: {
-          category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'ReadOnly',
-        },
-        path: ['Forms', 'LabelAppendix', 'ReadOnly'],
-      },
-      Default: {
+      LabelAppendix: {
         value: {
           fontFamily: '"Source Sans Pro" ',
           fontWeight: 400,
@@ -10231,16 +10146,36 @@ var _styleDictionary = {
           value: '{core.typography.sourceSansPro.regular.75}',
           type: 'typography',
         },
-        name: 'FormsLabelAppendixDefault',
+        name: 'FormsMdLabelAppendix',
         attributes: {
           category: 'Forms',
-          type: 'LabelAppendix',
-          item: 'Default',
+          type: 'MD',
+          item: 'LabelAppendix',
         },
-        path: ['Forms', 'LabelAppendix', 'Default'],
+        path: ['Forms', 'MD', 'LabelAppendix'],
       },
-    },
-    MD: {
+      CaptionText: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.75}',
+          type: 'typography',
+        },
+        name: 'FormsMdCaptionText',
+        attributes: {
+          category: 'Forms',
+          type: 'MD',
+          item: 'CaptionText',
+        },
+        path: ['Forms', 'MD', 'CaptionText'],
+      },
       Caption: {
         Padding: {
           value: '0rem 0px',
@@ -10338,54 +10273,48 @@ var _styleDictionary = {
         },
       },
       UserInput: {
-        DefaultType: {
-          value: {
-            fontFamily: '"Source Sans Pro" ',
-            fontWeight: 400,
-            lineHeight: '150%',
-            fontSize: '1rem',
-          },
-          type: 'typography',
-          filePath: 'input/tokens/semantics/BLR_SEM.json',
-          isSource: true,
-          original: {
-            value: '{core.typography.sourceSansPro.regular.100}',
-            type: 'typography',
-          },
-          name: 'FormsMdUserInputDefaultType',
-          attributes: {
-            category: 'Forms',
-            type: 'MD',
-            item: 'UserInput',
-            subitem: 'DefaultType',
-          },
-          path: ['Forms', 'MD', 'UserInput', 'DefaultType'],
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '1rem',
         },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.100}',
+          type: 'typography',
+        },
+        name: 'FormsMdUserInput',
+        attributes: {
+          category: 'Forms',
+          type: 'MD',
+          item: 'UserInput',
+        },
+        path: ['Forms', 'MD', 'UserInput'],
       },
       Placeholder: {
-        DefaultType: {
-          value: {
-            fontFamily: '"Source Sans Pro" ',
-            fontWeight: 400,
-            lineHeight: '150%',
-            fontSize: '1rem',
-          },
-          type: 'typography',
-          filePath: 'input/tokens/semantics/BLR_SEM.json',
-          isSource: true,
-          original: {
-            value: '{core.typography.sourceSansPro.regular.100}',
-            type: 'typography',
-          },
-          name: 'FormsMdPlaceholderDefaultType',
-          attributes: {
-            category: 'Forms',
-            type: 'MD',
-            item: 'Placeholder',
-            subitem: 'DefaultType',
-          },
-          path: ['Forms', 'MD', 'Placeholder', 'DefaultType'],
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '1rem',
         },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.100}',
+          type: 'typography',
+        },
+        name: 'FormsMdPlaceholder',
+        attributes: {
+          category: 'Forms',
+          type: 'MD',
+          item: 'Placeholder',
+        },
+        path: ['Forms', 'MD', 'Placeholder'],
       },
       InputSlot: {
         Margin: {
@@ -10428,6 +10357,453 @@ var _styleDictionary = {
         },
       },
     },
+    SM: {
+      Label: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 600,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.semibold.75}',
+          type: 'typography',
+        },
+        name: 'FormsSmLabel',
+        attributes: {
+          category: 'Forms',
+          type: 'SM',
+          item: 'Label',
+        },
+        path: ['Forms', 'SM', 'Label'],
+      },
+      LabelAppendix: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.75}',
+          type: 'typography',
+        },
+        name: 'FormsSmLabelAppendix',
+        attributes: {
+          category: 'Forms',
+          type: 'SM',
+          item: 'LabelAppendix',
+        },
+        path: ['Forms', 'SM', 'LabelAppendix'],
+      },
+      CaptionText: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.75}',
+          type: 'typography',
+        },
+        name: 'FormsSmCaptionText',
+        attributes: {
+          category: 'Forms',
+          type: 'SM',
+          item: 'CaptionText',
+        },
+        path: ['Forms', 'SM', 'CaptionText'],
+      },
+      UserInput: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.875rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.87}',
+          type: 'typography',
+        },
+        name: 'FormsSmUserInput',
+        attributes: {
+          category: 'Forms',
+          type: 'SM',
+          item: 'UserInput',
+        },
+        path: ['Forms', 'SM', 'UserInput'],
+      },
+      Placeholder: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.875rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.87}',
+          type: 'typography',
+        },
+        name: 'FormsSmPlaceholder',
+        attributes: {
+          category: 'Forms',
+          type: 'SM',
+          item: 'Placeholder',
+        },
+        path: ['Forms', 'SM', 'Placeholder'],
+      },
+    },
+    LG: {
+      Label: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 600,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.semibold.75}',
+          type: 'typography',
+        },
+        name: 'FormsLgLabel',
+        attributes: {
+          category: 'Forms',
+          type: 'LG',
+          item: 'Label',
+        },
+        path: ['Forms', 'LG', 'Label'],
+      },
+      LabelAppendix: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.75}',
+          type: 'typography',
+        },
+        name: 'FormsLgLabelAppendix',
+        attributes: {
+          category: 'Forms',
+          type: 'LG',
+          item: 'LabelAppendix',
+        },
+        path: ['Forms', 'LG', 'LabelAppendix'],
+      },
+      CaptionText: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '0.75rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.75}',
+          type: 'typography',
+        },
+        name: 'FormsLgCaptionText',
+        attributes: {
+          category: 'Forms',
+          type: 'LG',
+          item: 'CaptionText',
+        },
+        path: ['Forms', 'LG', 'CaptionText'],
+      },
+      UserInput: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '1.25rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.125}',
+          type: 'typography',
+        },
+        name: 'FormsLgUserInput',
+        attributes: {
+          category: 'Forms',
+          type: 'LG',
+          item: 'UserInput',
+        },
+        path: ['Forms', 'LG', 'UserInput'],
+      },
+      Placeholder: {
+        value: {
+          fontFamily: '"Source Sans Pro" ',
+          fontWeight: 400,
+          lineHeight: '150%',
+          fontSize: '1.25rem',
+        },
+        type: 'typography',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.typography.sourceSansPro.regular.125}',
+          type: 'typography',
+        },
+        name: 'FormsLgPlaceholder',
+        attributes: {
+          category: 'Forms',
+          type: 'LG',
+          item: 'Placeholder',
+        },
+        path: ['Forms', 'LG', 'Placeholder'],
+      },
+      Caption: {
+        Padding: {
+          value: '0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsLgCaptionPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'Caption',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'LG', 'Caption', 'Padding'],
+        },
+        ItemSpacing: {
+          value: '0.125rem',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.2}',
+            type: 'spacing',
+          },
+          name: 'FormsLgCaptionItemSpacing',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'Caption',
+            subitem: 'ItemSpacing',
+          },
+          path: ['Forms', 'LG', 'Caption', 'ItemSpacing'],
+        },
+      },
+      CaptionSlot: {
+        Margin: {
+          value: '0.5rem 0px 0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsLgCaptionSlotMargin',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'CaptionSlot',
+            subitem: 'Margin',
+          },
+          path: ['Forms', 'LG', 'CaptionSlot', 'Margin'],
+        },
+      },
+      LabelSlot: {
+        Padding: {
+          value: '0rem 0px 8px ',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}',
+            type: 'spacing',
+          },
+          name: 'FormsLgLabelSlotPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'LabelSlot',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'LG', 'LabelSlot', 'Padding'],
+        },
+        ItemSpacing: {
+          value: '4px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionPX.4}',
+            type: 'spacing',
+          },
+          name: 'FormsLgLabelSlotItemSpacing',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'LabelSlot',
+            subitem: 'ItemSpacing',
+          },
+          path: ['Forms', 'LG', 'LabelSlot', 'ItemSpacing'],
+        },
+      },
+      InputSlot: {
+        Margin: {
+          value: '0rem 0px 0rem 0px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}',
+            type: 'spacing',
+          },
+          name: 'FormsLgInputSlotMargin',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'InputSlot',
+            subitem: 'Margin',
+          },
+          path: ['Forms', 'LG', 'InputSlot', 'Margin'],
+        },
+      },
+      InputField: {
+        Padding: {
+          value: '0.5rem 12px',
+          type: 'spacing',
+          filePath: 'input/tokens/semantics/BLR_SEM.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.8} {core.dimensionPX.12}',
+            type: 'spacing',
+          },
+          name: 'FormsLgInputFieldPadding',
+          attributes: {
+            category: 'Forms',
+            type: 'LG',
+            item: 'InputField',
+            subitem: 'Padding',
+          },
+          path: ['Forms', 'LG', 'InputField', 'Padding'],
+        },
+      },
+    },
+    LabelAppendix: {
+      Rest: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixRest',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Rest',
+        },
+        path: ['Forms', 'LabelAppendix', 'Rest'],
+      },
+      Hover: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixHover',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Hover',
+        },
+        path: ['Forms', 'LabelAppendix', 'Hover'],
+      },
+      Focus: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixFocus',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Focus',
+        },
+        path: ['Forms', 'LabelAppendix', 'Focus'],
+      },
+      Disabled: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixDisabled',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'Disabled',
+        },
+        path: ['Forms', 'LabelAppendix', 'Disabled'],
+      },
+      ReadOnly: {
+        value: 'hsla(220, 10%, 10%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.100}',
+          type: 'color',
+        },
+        name: 'FormsLabelAppendixReadOnly',
+        attributes: {
+          category: 'Forms',
+          type: 'LabelAppendix',
+          item: 'ReadOnly',
+        },
+        path: ['Forms', 'LabelAppendix', 'ReadOnly'],
+      },
+    },
     Caption: {
       Error: {
         value: 'hsla(350, 80%, 50%) ',
@@ -10462,28 +10838,6 @@ var _styleDictionary = {
           item: 'Hint',
         },
         path: ['Forms', 'Caption', 'Hint'],
-      },
-      DefaultType: {
-        value: {
-          fontFamily: '"Source Sans Pro" ',
-          fontWeight: 400,
-          lineHeight: '150%',
-          fontSize: '0.75rem',
-        },
-        type: 'typography',
-        filePath: 'input/tokens/semantics/BLR_SEM.json',
-        isSource: true,
-        original: {
-          value: '{core.typography.sourceSansPro.regular.75}',
-          type: 'typography',
-        },
-        name: 'FormsCaptionDefaultType',
-        attributes: {
-          category: 'Forms',
-          type: 'Caption',
-          item: 'DefaultType',
-        },
-        path: ['Forms', 'Caption', 'DefaultType'],
       },
     },
     UserInput: {
@@ -11317,12 +11671,12 @@ var _styleDictionary = {
         path: ['Forms', 'InputIcon', 'Rest'],
       },
       Hover: {
-        value: 'hsla(220, 10%, 70%) ',
+        value: 'hsla(220, 10%, 60%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.700}',
+          value: '{core.color.coolgray.600}',
           type: 'color',
         },
         name: 'FormsInputIconHover',
@@ -11334,12 +11688,12 @@ var _styleDictionary = {
         path: ['Forms', 'InputIcon', 'Hover'],
       },
       Focus: {
-        value: 'hsla(220, 10%, 70%) ',
+        value: 'hsla(220, 10%, 50%) ',
         type: 'color',
         filePath: 'input/tokens/semantics/BLR_SEM.json',
         isSource: true,
         original: {
-          value: '{core.color.coolgray.700}',
+          value: '{core.color.coolgray.500}',
           type: 'color',
         },
         name: 'FormsInputIconFocus',
@@ -11349,6 +11703,23 @@ var _styleDictionary = {
           item: 'Focus',
         },
         path: ['Forms', 'InputIcon', 'Focus'],
+      },
+      Pressed: {
+        value: 'hsla(220, 10%, 60%) ',
+        type: 'color',
+        filePath: 'input/tokens/semantics/BLR_SEM.json',
+        isSource: true,
+        original: {
+          value: '{core.color.coolgray.600}',
+          type: 'color',
+        },
+        name: 'FormsInputIconPressed',
+        attributes: {
+          category: 'Forms',
+          type: 'InputIcon',
+          item: 'Pressed',
+        },
+        path: ['Forms', 'InputIcon', 'Pressed'],
       },
       Disabled: {
         value: 'hsla(220, 10%, 70%) ',
