@@ -59,6 +59,11 @@ export class BlrTextInput extends LitElement {
           pattern="${this.pattern}"
           hasError="${this.hasError}"
         />
+        <blr-icon
+          class="blr-input-icon ${inputclasses}"
+          name="${this.hasError ? 'blrFlagSm' : this.hintIcon}"
+          aria-hidden
+        ></blr-icon>
         ${BlrFormHint({
           message: this.hasError ? this.errorMessage : this.hint,
           variant: this.hasError ? 'error' : 'hint',

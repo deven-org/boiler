@@ -10,7 +10,7 @@ export default {
   title: 'BlrTextInput',
   argTypes: {
     size: {
-      options: Sizes,
+      options: Sizes.filter((x) => x != 'xxs'),
       control: { type: 'select' },
     },
     type: {
