@@ -1118,13 +1118,11 @@
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
         },
-
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
         }
       },
-
       "CaptionSlot": {
         "Margin": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -1261,7 +1259,6 @@
           "type": "componentConfig"
         }
       },
-
       "CaptionSlot": {
         "Margin": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -1564,7 +1561,7 @@
         "Focus": {
           "value": {
             "color": "{Forms.SurfaceStroke.Error.Focus}",
-            "width": "{core.dimensionPX.1}",
+            "width": "{core.dimensionPX.2}",
             "style": "solid"
           },
           "type": "border"
