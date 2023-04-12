@@ -1085,13 +1085,151 @@
         "value": "{core.color.coolgray.100}",
         "type": "color"
       },
-      "Default": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
-        "type": "typography"
-      },
       "ReadOnly": {
         "value": "{core.color.coolgray.100}",
         "type": "color"
+      }
+    },
+    "MD": {
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      },
+      "CaptionText": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      },
+      "Caption": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        }
+      },
+      "CaptionSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        }
+      },
+      "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.100}",
+        "type": "typography"
+      },
+      "Placeholder": {
+        "value": "{core.typography.sourceSansPro.regular.100}",
+        "type": "typography"
+      },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "InputField": {
+        "Padding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        }
+      }
+    },
+    "SM": {
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      },
+      "CaptionText": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      },
+      "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.87}",
+        "type": "typography"
+      },
+      "Placeholder": {
+        "value": "{core.typography.sourceSansPro.regular.87}",
+        "type": "typography"
+      }
+    },
+    "LG": {
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      },
+      "CaptionText": {
+        "value": "{core.typography.sourceSansPro.regular.75}",
+        "type": "typography"
+      },
+      "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.125}",
+        "type": "typography"
+      },
+      "Placeholder": {
+        "value": "{core.typography.sourceSansPro.regular.125}",
+        "type": "typography"
+      },
+      "Caption": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        }
+      },
+      "CaptionSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        }
+      },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "InputField": {
+        "Padding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        }
       }
     },
     "LabelAppendix": {
@@ -1114,10 +1252,6 @@
       "ReadOnly": {
         "value": "{core.color.coolgray.100}",
         "type": "color"
-      },
-      "Default": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
-        "type": "typography"
       }
     },
     "Caption": {
@@ -1128,10 +1262,6 @@
       "Hint": {
         "value": "{core.color.coolgray.300}",
         "type": "color"
-      },
-      "DefaultType": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
-        "type": "typography"
       }
     },
     "UserInput": {
@@ -1384,112 +1514,6 @@
       "Error": {
         "value": "{core.color.crimson.500}",
         "type": "color"
-      }
-    },
-    "SM": {
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
-        "type": "typography"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
-        "type": "typography"
-      }
-    },
-    "MD": {
-      "Caption": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        }
-      },
-      "CaptionSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        }
-      },
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
-        "type": "typography"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
-        "type": "typography"
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "InputField": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        }
-      }
-    },
-    "LG": {
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
-        "type": "typography"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
-        "type": "typography"
-      },
-      "Caption": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        }
-      },
-      "CaptionSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        }
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "InputField": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        }
       }
     }
   },
