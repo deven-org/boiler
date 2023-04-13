@@ -44,7 +44,8 @@ const semanticTypes = [
   'LabelAppendix',
   'InputIcon',
 ];
-const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader'];
+
+const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea'];
 
 StyleDictionary.registerFormat({
   name: 'custom/format/semanticTokens',
@@ -59,6 +60,14 @@ StyleDictionary.registerFormat({
   formatter: function ({ dictionary, file }) {
     const tokenObj = dictionary.tokens;
     return fileHeader({ file }) + `export const componentTokens = ` + JSON.stringify(minifyDictionary(tokenObj));
+  },
+});
+
+StyleDictionary.registerFormat({
+  name: 'custom/format/componentConfig',
+  formatter: function ({ dictionary, file }) {
+    const tokenObj = dictionary.tokens;
+    return fileHeader({ file }) + `export const componentConfig = ` + JSON.stringify(minifyDictionary(tokenObj));
   },
 });
 
@@ -122,7 +131,14 @@ module.exports = {
           destination: '__component-tokens.generated.js',
           filter: (token) => {
             const typeToFilter = componentTypes;
-            return typeToFilter.includes(token.attributes.type);
+            return typeToFilter.includes(token.attributes.type) && token.type !== 'componentConfig';
+          },
+        },
+        {
+          format: 'custom/format/componentConfig',
+          destination: 'config-tokens/__component-config.generated.js',
+          filter: (token) => {
+            return token.type === 'componentConfig';
           },
         },
       ],
