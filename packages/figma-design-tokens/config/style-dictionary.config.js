@@ -44,7 +44,8 @@ const semanticTypes = [
   'LabelAppendix',
   'InputIcon',
 ];
-const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader'];
+
+const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea'];
 
 StyleDictionary.registerFormat({
   name: 'custom/format/semanticTokens',
