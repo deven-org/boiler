@@ -62,6 +62,14 @@ StyleDictionary.registerFormat({
   },
 });
 
+StyleDictionary.registerFormat({
+  name: 'custom/format/componentConfig',
+  formatter: function ({ dictionary, file }) {
+    const tokenObj = dictionary.tokens;
+    return fileHeader({ file }) + `export const componentConfig = ` + JSON.stringify(minifyDictionary(tokenObj));
+  },
+});
+
 module.exports = {
   source: ['input/tokens/**/*.json'],
   platforms: {
@@ -123,6 +131,13 @@ module.exports = {
           filter: (token) => {
             const typeToFilter = componentTypes;
             return typeToFilter.includes(token.attributes.type);
+          },
+        },
+        {
+          format: 'custom/format/componentConfig',
+          destination: 'config-tokens/__component-config.generated.js',
+          filter: (token) => {
+            return token.type === 'componentConfig';
           },
         },
       ],

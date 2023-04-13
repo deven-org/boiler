@@ -1,13 +1,13 @@
 import { css } from "lit";
 import { semanticTokens } from "../_tokens-generated/index.generated";
 
-const { BorderRadius, BorderWidth, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
+const { BorderRadius, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
   semanticTokens.Action;
 
 export const action = css`
   .blr-semantic-action {
     border-radius: ${BorderRadius};
-    border-width: ${BorderWidth.Rest};
+    border-width: ${CTA.Rest.width};
   }
 
   .blr-semantic-action.cta {
