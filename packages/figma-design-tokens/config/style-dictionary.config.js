@@ -130,7 +130,7 @@ module.exports = {
           destination: '__component-tokens.generated.js',
           filter: (token) => {
             const typeToFilter = componentTypes;
-            return typeToFilter.includes(token.attributes.type);
+            return typeToFilter.includes(token.attributes.type) && token.type !== 'componentConfig';
           },
         },
         {
