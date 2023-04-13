@@ -4,7 +4,6 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { textInput } from '../../foundation/semantic-tokens/form.css';
 import { RadioOption, SizesType } from '../../globals/types';
-import { BlrFormLabel } from '../form-label';
 
 @customElement('blr-radio-input')
 export class BlrRadioInput extends LitElement {
@@ -39,10 +38,10 @@ export class BlrRadioInput extends LitElement {
     });
 
     return html`
-      <div class="blr-input ${classes}">
+      <div class="blr-radio-input ${classes}">
         <input
           id=${this.id}
-          class="blr-radio-input ${inputclasses}"
+          class="${inputclasses}"
           type="radio"
           name="${this.label}"
           value="${this.name}"

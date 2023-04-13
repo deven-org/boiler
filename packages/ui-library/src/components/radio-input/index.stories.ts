@@ -50,7 +50,7 @@ BlrRadioInput.args = {
   disabled: false,
   required: false,
   size: 'md',
-  errorMessage: 'This is error message',
+  errorMessage: 'This is an error message',
   hasError: false,
   options: [
     { label: 'Option 1', value: 'option1' },
