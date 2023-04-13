@@ -14,7 +14,7 @@ export const styleCustom = css`
     padding: 0;
   }
 
-  .blr-radio-input input[type='radio']::checked + label::before {
+  .blr-radio-input input[type='radio']:checked + label:before {
     background-color: #3197ee;
     box-shadow: inset 0 0 0 4px #f4f4f4;
   }
@@ -36,7 +36,7 @@ export const styleCustom = css`
     transition: all 250ms ease;
   }
 
-  .blr-radio-input input[type='radio']::disabled + label:before {
+  .blr-radio-input input[type='radio']:disabled + label:before {
     box-shadow: inset 0 0 0 4px #f4f4f4;
     border-color: #b4b4b4;
     background: #b4b4b4;

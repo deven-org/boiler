@@ -2,12 +2,11 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { textInput } from '../../foundation/semantic-tokens/form.css';
 import { RadioOption, SizesType } from '../../globals/types';
 
 @customElement('blr-radio-input')
 export class BlrRadioInput extends LitElement {
-  static styles = [styleCustom, textInput];
+  static styles = [styleCustom];
 
   @property() id!: string;
   @property() textInputId!: string;
