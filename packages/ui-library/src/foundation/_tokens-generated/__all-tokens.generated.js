@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Apr 2023 16:05:58 GMT
+ * Generated on Thu, 13 Apr 2023 08:05:10 GMT
  */
 
 var _styleDictionary = {
@@ -10557,6 +10557,68 @@ var _styleDictionary = {
     },
   },
   'Forms': {
+    TextArea: {
+      MD: {
+        MinHeight: {
+          value: '5rem',
+          type: 'sizing',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.80}',
+            type: 'sizing',
+          },
+          name: 'FormsTextAreaMdMinHeight',
+          attributes: {
+            category: 'Forms',
+            type: 'TextArea',
+            item: 'MD',
+            subitem: 'MinHeight',
+          },
+          path: ['Forms', 'TextArea', 'MD', 'MinHeight'],
+        },
+      },
+      SM: {
+        MinHeight: {
+          value: '5rem',
+          type: 'sizing',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.80}',
+            type: 'sizing',
+          },
+          name: 'FormsTextAreaSmMinHeight',
+          attributes: {
+            category: 'Forms',
+            type: 'TextArea',
+            item: 'SM',
+            subitem: 'MinHeight',
+          },
+          path: ['Forms', 'TextArea', 'SM', 'MinHeight'],
+        },
+      },
+      LG: {
+        MinHeight: {
+          value: '5rem',
+          type: 'sizing',
+          filePath: 'input/tokens/semantics/BLR_CMP.json',
+          isSource: true,
+          original: {
+            value: '{core.dimensionREM.80}',
+            type: 'sizing',
+          },
+          name: 'FormsTextAreaLgMinHeight',
+          attributes: {
+            category: 'Forms',
+            type: 'TextArea',
+            item: 'LG',
+            subitem: 'MinHeight',
+          },
+          path: ['Forms', 'TextArea', 'LG', 'MinHeight'],
+        },
+      },
+    },
     SM: {
       Label: {
         value: {
