@@ -1,9 +1,9 @@
-name: eslint
+name: Test
 
 on: [push, pull_request]
 
 jobs:
-  eslint:
+  snapshot-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,5 +31,5 @@ jobs:
       - name: Install modules
         run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run Snapshot Tests
+        run: npm run test

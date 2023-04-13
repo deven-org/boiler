@@ -14,11 +14,32 @@ jobs:
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
       contents: write
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install dependencies
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Get node version
+        id: node
+        run: |
+          echo "::set-output name=version::$(node -v)"
+
+      - name: Get node_modules cache
+        uses: actions/cache@v3.0.2
+        id: node_modules
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
+
+      - name: Install modules
         run: npm ci
+
       - name: Generate tokens
         run: npm run tokens:generate
       - name: Commit changes
