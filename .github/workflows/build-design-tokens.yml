@@ -3,10 +3,10 @@ name: Build design tokens
 on:
   push:
     branches:
-      - design
+      - 'design/*'
   pull_request:
     branches:
-      - design
+      - 'design/*'
 
 jobs:
   build:
