@@ -7,9 +7,10 @@
     "declaration-empty-line-before": null,
     "property-no-vendor-prefix": null,
     "alpha-value-notation": null,
-    "value-keyword-case": ["lower", { "ignoreProperties": ["--font-family-sans"] }],
+    "value-keyword-case": ["lower", { "ignoreProperties": ["--font-family-sans"], "ignoreKeywords": ["/POSTCSS/"] }],
     "selector-class-pattern": null,
     "no-descending-specificity": null,
-    "value-no-vendor-prefix": null
+    "value-no-vendor-prefix": null,
+    "font-family-name-quotes": null
   }
 }

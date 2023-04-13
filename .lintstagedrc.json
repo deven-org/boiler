@@ -1,0 +1,1 @@
+{ "packages/ui-library/**/*.{ts,tsx,js}": ["eslint --fix", "stylelint", "prettier --write"] }
