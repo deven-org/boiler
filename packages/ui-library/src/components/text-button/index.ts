@@ -21,7 +21,7 @@ export class BlrTextButton extends LitElement {
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariants = 'primary';
-  @property() size?: SizesType = 'md';
+  @property() size!: SizesType;
   @property() loadingStatus!: string;
 
   render() {
@@ -46,9 +46,11 @@ export class BlrTextButton extends LitElement {
             .loadingStatus="${this.loadingStatus}"
           ></blr-loader>`
         : html`
-            ${this.leadingIcon && html`<blr-icon name="${this.leadingIcon}" aria-hidden></blr-icon>`}
+            ${this.leadingIcon &&
+            html`<blr-icon icon="${this.leadingIcon}" size="${this.size}" aria-hidden></blr-icon>`}
             <span>${this.label}</span>
-            ${this.trailingIcon && html`<blr-icon name="${this.trailingIcon}" aria-hidden></blr-icon>`}
+            ${this.trailingIcon &&
+            html`<blr-icon icon="${this.trailingIcon}" size="${this.size}" aria-hidden></blr-icon>`}
           `}
     </button>`;
   }

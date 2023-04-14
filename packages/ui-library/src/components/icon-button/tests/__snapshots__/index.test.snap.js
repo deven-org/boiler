@@ -1,8 +1,7 @@
 /* @web/test-runner snapshot v1 */
 export const snapshots = {};
 
-snapshots["blr-icon-button renders correctly"] = 
-`<button
+snapshots['blr-icon-button renders correctly'] = `<button
   aria-label=""
   class="blr-icon-button blr-semantic-action cta md"
   disabled=""
@@ -10,10 +9,10 @@ snapshots["blr-icon-button renders correctly"] =
 >
   <blr-icon
     aria-hidden=""
-    name="blrChevronDownMd"
+    icon="blrChevronDown"
+    size="md"
   >
   </blr-icon>
 </button>
 `;
 /* end snapshot blr-icon-button renders correctly */
-
