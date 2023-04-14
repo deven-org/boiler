@@ -32,6 +32,10 @@ export const radioInput = css`
     border-radius: ${InputBorderRadius};
   }
 
+  .blr-input.vertical {
+    flex-direction: column;
+  }
+
   .blr-input.sm {
     min-width: ${unsafeCSS(forms.textinput.sm.width)};
     font-family: ${SM.UserInput.fontFamily}, sans-serif;
@@ -102,6 +106,37 @@ export const radioInput = css`
     display: flex;
     flex-direction: row;
   }
+
+  /* stylelint-disable */
+
+  .blr-form-hint.sm {
+    padding: ${SM.CaptionComponent.Padding};
+    font-weight: ${SM.Caption.fontWeight};
+    font-size: ${SM.Caption.fontSize};
+    line-height: ${SM.Caption.lineHeight};
+    item-spacing: ${SM.CaptionComponent.ItemSpacing};
+    margin: ${SM.CaptionSlot.Margin};
+  }
+
+  .blr-form-hint.md {
+    padding: ${MD.CaptionComponent.Padding};
+    font-weight: ${MD.Caption.fontWeight};
+    font-size: ${MD.Caption.fontSize};
+    line-height: ${MD.Caption.lineHeight};
+    item-spacing: ${MD.CaptionComponent.ItemSpacing};
+    margin: ${MD.CaptionSlot.Margin};
+  }
+
+  .blr-form-hint.lg {
+    padding: ${LG.CaptionComponent.Padding};
+    font-weight: ${LG.Caption.fontWeight};
+    font-size: ${LG.Caption.fontSize};
+    line-height: ${LG.Caption.lineHeight};
+    item-spacing: ${LG.CaptionComponent.ItemSpacing};
+    margin: ${LG.CaptionSlot.Margin};
+  }
+
+  /* stylelint-enable */
 
   .error {
     color: ${Caption.Error};

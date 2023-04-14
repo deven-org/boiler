@@ -3,6 +3,7 @@ import { BlrRadioInputGroup as BlrRadioInputGroupClass } from './index';
 import { Sizes } from '../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import './index';
+import { IconKeys } from '@boiler/icons';
 
 export default {
   title: 'BlrRadioInputGroup',
@@ -12,21 +13,27 @@ export default {
       control: { type: 'select' },
     },
     options: { control: 'array' },
+    layout: { control: 'radio', options: ['horizontal', 'vertical'] },
+    hintIcon: {
+      options: [undefined, ...IconKeys],
+      control: { type: 'select' },
+    },
   },
 };
 
 export const BlrRadioInputGroup = ({
   textInputId,
   label,
-  value,
   disabled,
   invalid,
   size,
   required,
   errorMessage,
-  hasError,
   hideLabel,
   options,
+  layout,
+  hint,
+  hintIcon,
 }: BlrRadioInputGroupClass) =>
   html`
     <blr-radio-input-group
@@ -40,9 +47,11 @@ export const BlrRadioInputGroup = ({
       .onBlur=${action('onBlur')}
       .onFocus=${action('onFocus')}
       .errorMessage=${errorMessage}
-      .hasError=${hasError}
       .hideLabel=${hideLabel}
       .options=${options}
+      .layout=${layout}
+      .hint=${hint}
+      .hintIcon=${hintIcon}
       class="example-layout-class"
     ></blr-radio-input>
   `;
@@ -56,11 +65,14 @@ BlrRadioInputGroup.args = {
   required: false,
   size: 'md',
   errorMessage: 'This is an error message',
-  hasError: false,
   hideLabel: false,
   options: [
     { label: 'Option 1', value: 'option1' },
     { label: 'Option 2', value: 'option2' },
     { label: 'Option 3', value: 'option3' },
   ],
+  layout: 'horizontal',
+  hint: 'Field is used for hint',
+  hintIcon: 'blrInfoSm',
+  hasError: false,
 };
