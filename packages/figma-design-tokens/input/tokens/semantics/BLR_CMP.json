@@ -504,12 +504,6 @@
           "value": "{core.dimensionREM.112}",
           "type": "sizing"
         }
-      },
-      "SurfaceStroke": {
-        "ReadOnly": {
-          "value": "{Inter.Global.ReadOnly.SurfaceStroke}",
-          "type": "color"
-        }
       }
     },
     "Input": {
