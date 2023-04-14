@@ -1,0 +1,32 @@
+{
+  "Inter": {
+    "Global": {
+      "Focus": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Error": {
+        "Text": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "UserInput": {
+          "value": "{core.color.crimson.300}",
+          "type": "color"
+        },
+        "Border": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "SurfaceFill": {
+          "value": "{core.color.neutral.white}",
+          "type": "color"
+        },
+        "Placeholder": {
+          "value": "{core.color.coolgray.700}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

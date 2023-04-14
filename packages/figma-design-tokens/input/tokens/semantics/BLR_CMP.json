@@ -495,13 +495,13 @@
       },
       "SM": {
         "MinHeight": {
-          "value": "{core.dimensionREM.80}",
+          "value": "{core.dimensionREM.64}",
           "type": "sizing"
         }
       },
       "LG": {
         "MinHeight": {
-          "value": "{core.dimensionREM.80}",
+          "value": "{core.dimensionREM.112}",
           "type": "sizing"
         }
       }
