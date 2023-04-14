@@ -1437,7 +1437,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{core.color.neutral.transparent}",
+          "value": "{Inter.Global.ReadOnly.SurfaceFill}",
           "type": "color"
         }
       },
@@ -1562,6 +1562,16 @@
           "value": {
             "color": "{Forms.SurfaceStroke.Error.Focus}",
             "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      },
+      "TextArea-copy": {
+        "ReadOnly": {
+          "value": {
+            "color": "{Forms.TextArea.SurfaceStroke.ReadOnly}",
+            "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
           "type": "border"

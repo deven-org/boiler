@@ -504,6 +504,24 @@
           "value": "{core.dimensionREM.112}",
           "type": "sizing"
         }
+      },
+      "SurfaceStroke": {
+        "ReadOnly": {
+          "value": "{Inter.Global.ReadOnly.SurfaceStroke}",
+          "type": "color"
+        }
+      }
+    },
+    "Input": {
+      "TextArea": {
+        "ReadOnly": {
+          "value": {
+            "color": "{Forms.TextArea.SurfaceStroke.ReadOnly}",
+            "width": "{core.dimensionPX.1}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
       }
     }
   }
