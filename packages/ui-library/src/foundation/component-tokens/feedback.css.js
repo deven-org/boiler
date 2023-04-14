@@ -1,5 +1,5 @@
-import { css } from 'lit';
-import { componentTokens, semanticTokens } from '../_tokens-generated/index.generated';
+import { css } from "lit";
+import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
 const { Background, Fill } = semanticTokens.Feedback;
 const { SM, MD, LG } = componentTokens.Feedback.Loader;
@@ -16,6 +16,7 @@ export const loadingSpinner = css`
     0% {
       transform: rotate(0deg);
     }
+
     100% {
       transform: rotate(360deg);
     }
