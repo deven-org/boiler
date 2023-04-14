@@ -23,7 +23,7 @@ const getSizeSubstitute = (icon: string) => {
   }
 };
 
-export const calculateIconName = (icon: IconType, size: SizesType) => {
+export const calculateIconName = (icon: string, size: SizesType) => {
   if (!icon) {
     return undefined;
   }
@@ -31,7 +31,7 @@ export const calculateIconName = (icon: IconType, size: SizesType) => {
   return hasIconSize(formattedIcon) ? formattedIcon : getIconReplacement(icon);
 };
 
-export const getIconReplacement = (icon: IconType) => {
+export const getIconReplacement = (icon: string) => {
   const sizeSubstitute = getSizeSubstitute(icon);
   return sizeSubstitute
     ? `${icon.toString()}${sizeSubstitute.charAt(0).toUpperCase() + sizeSubstitute.slice(1)}`

@@ -1,11 +1,10 @@
-const capturingRegex = /(?<size>Xxs|Xs|Sm|Md|Lg|Xl)/;
+const capturingRegex = /(?<size>Xxs|Xs|Sm|Md|Lg|Xl)$/;
 
 const removeIconSizes = (icons: string[]) => {
   return icons.map((icon: string) => {
     const found = icon.match(capturingRegex);
-    if (found && found.groups) {
-      const size = found.groups.size;
-      return icon.replace(size, '');
+    if (found && found.index) {
+      return icon.substring(0, found.index);
     } else {
       return icons;
     }
