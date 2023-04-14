@@ -14,7 +14,7 @@
         "type": "color"
       },
       "Placeholder": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{core.color.coolgray.700}",
         "type": "color"
       },
       "UserInput": {
