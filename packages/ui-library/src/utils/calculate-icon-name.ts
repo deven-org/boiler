@@ -1,14 +1,9 @@
-import { IconKeys, IconType } from '@boiler/icons';
+import { IconKeys } from '@boiler/icons';
 import { SizesType } from '../globals/types';
 
 const capturingRegex = /(?<size>Xxs|Xs|Sm|Md|Lg|Xl)/;
 
-const hasIconSize = (icon: string) => {
-  if (IconKeys.includes(icon)) {
-    return true;
-  }
-  return false;
-};
+const hasIconSize = (icon: string) => IconKeys.includes(icon);
 
 const getSizeSubstitute = (icon: string) => {
   const iconIndex =

@@ -15,8 +15,8 @@ export class BlrTextButton extends LitElement {
   @property() label = 'Button Label';
   @property() onClick!: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon!: IconType;
-  @property() trailingIcon!: IconType;
+  @property() leadingIcon?: IconType;
+  @property() trailingIcon?: IconType;
   @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
