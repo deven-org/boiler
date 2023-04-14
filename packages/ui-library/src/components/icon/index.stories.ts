@@ -4,7 +4,8 @@ import { IconKeys, IconType } from '@boiler/icons';
 import './index';
 import { BlrIcon as BlrIconClass } from './index';
 import { Sizes } from '../../globals/constants';
-import { SizesType } from '../../globals/types';
+import { getIconName } from '../../utils/get-icon-name';
+import { calculateIconName } from '../../utils/calculate-icon-name';
 
 export default {
   title: 'BlrIcon',
@@ -16,18 +17,19 @@ export default {
   },
 };
 
-const filteredIcons = (icons: string[], size: SizesType) => {
-  const formattedSize = size.charAt(0).toUpperCase() + size.slice(1);
-  return icons.filter((icon: string) => icon.endsWith(formattedSize));
-};
+const allIcons = getIconName(IconKeys);
 
 export const BlrIcon = ({ size }: BlrIconClass) =>
   html` <div class="icon-gallery row-fluid">
     <ul class="icon-gallery icon-thumbnails">
-      ${filteredIcons(IconKeys, size).map((icon) => {
+      ${allIcons.map((icon) => {
         return html` <li>
-          <span class="icon-tooltip">${icon}</span>
-          <blr-icon icon="${icon}" size="${size}" class="icon-gallery-layout"></blr-icon>
+          <blr-icon
+            icon="${calculateIconName(icon as string, size)}"
+            size="${size}"
+            class="icon-gallery-layout"
+          ></blr-icon>
+          <span class="icon-label">${icon}</span>
         </li>`;
       })}
     </ul>
