@@ -13,14 +13,14 @@ export class BlrIconLink extends LitElement {
   static styles = [styleCustom, action, iconButton];
 
   @property() arialabel!: string;
-  @property() iconName!: IconType;
+  @property() icon!: IconType;
   @property() href!: string;
   @property() target?: string;
   @property() onClick?: HTMLLinkElement['onclick'];
   @property() onBlur?: HTMLLinkElement['onblur'];
   @property() linkId?: string;
   @property() variant: ActionVariants = 'primary';
-  @property() size?: SizesType = 'md';
+  @property() size!: SizesType;
   @property() loading!: boolean;
   @property() loadingStatus!: string;
 
@@ -48,7 +48,7 @@ export class BlrIconLink extends LitElement {
             .variant="${loaderVariant}"
             .loadingStatus="${this.loadingStatus}"
           ></blr-loader>`
-        : html` <blr-icon name="${this.iconName}" aria-hidden></blr-icon> `}
+        : html` <blr-icon icon="${this.icon}" size="${this.size}" aria-hidden></blr-icon> `}
     </a>`;
   }
 }
