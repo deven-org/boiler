@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 14 Apr 2023 14:39:47 GMT
+ * Generated on Fri, 14 Apr 2023 15:05:05 GMT
  */
 
 export const componentTokens = {
@@ -68,5 +68,12 @@ export const componentTokens = {
       },
     },
   },
-  Forms: { TextArea: { MD: { MinHeight: '5rem' }, SM: { MinHeight: '4rem' }, LG: { MinHeight: '7rem' } } },
+  Forms: {
+    TextArea: {
+      MD: { MinHeight: '5rem' },
+      SM: { MinHeight: '4rem' },
+      LG: { MinHeight: '7rem' },
+      SurfaceStroke: { ReadOnly: 'hsla(220, 10%, 90%) ' },
+    },
+  },
 };

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 14 Apr 2023 14:39:47 GMT
+ * Generated on Fri, 14 Apr 2023 15:05:05 GMT
  */
 
 export const semanticTokens = {
@@ -276,6 +276,22 @@ export const semanticTokens = {
     Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(220, 85%, 99%, 1)' },
   },
   Forms: {
+    Input: {
+      'TextArea': { ReadOnly: { color: 'hsla(220, 10%, 90%) ', width: '1px', style: 'solid' } },
+      'Default': {
+        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
+        ReadOnly: { color: '#00000000', width: '1px', style: 'solid' },
+      },
+      'Error': {
+        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(350, 80%, 50%) ', width: '2px', style: 'solid' },
+      },
+      'TextArea-copy': { ReadOnly: { color: 'hsla(220, 10%, 90%) ', width: '1px', style: 'solid' } },
+    },
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
@@ -348,24 +364,16 @@ export const semanticTokens = {
       Error: { Rest: 'hsla(220, 10%, 70%) ', Hover: 'hsla(220, 10%, 70%) ', Focus: 'hsla(220, 10%, 70%) ' },
     },
     SurfaceFill: {
-      Default: { Rest: '#FFF', Hover: '#FFF', Focus: '#FFF', Disabled: 'hsla(220, 10%, 90%) ', ReadOnly: '#00000000' },
+      Default: {
+        Rest: '#FFF',
+        Hover: '#FFF',
+        Focus: '#FFF',
+        Disabled: 'hsla(220, 10%, 90%) ',
+        ReadOnly: 'hsla(220, 10%, 99%) ',
+      },
       Error: { Rest: '#FFF', Hover: '#FFF', Focus: '#FFF' },
     },
     InputBorderRadius: '4px',
-    Input: {
-      Default: {
-        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
-        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
-        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
-        ReadOnly: { color: '#00000000', width: '1px', style: 'solid' },
-      },
-      Error: {
-        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
-        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(350, 80%, 50%) ', width: '2px', style: 'solid' },
-      },
-    },
     InputIcon: {
       Rest: 'hsla(220, 10%, 70%) ',
       Hover: 'hsla(220, 10%, 60%) ',
