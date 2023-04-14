@@ -1,0 +1,80 @@
+{
+  "Inter": {
+    "Global": {
+      "Focus": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Label": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "LabelAppendix": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Placeholder": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "UserInput": {
+        "value": "{core.color.coolgray.100}",
+        "type": "color"
+      },
+      "Hint": {
+        "value": "{core.color.coolgray.300}",
+        "type": "color"
+      },
+      "Error": {
+        "SurfaceFill": {
+          "value": "{core.color.neutral.white}",
+          "type": "color"
+        },
+        "SurfaceStroke": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "Text": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "UserInput": {
+          "value": "{core.color.crimson.300}",
+          "type": "color"
+        },
+        "Placeholder": {
+          "value": "{core.color.coolgray.700}",
+          "type": "color"
+        }
+      },
+      "Disabled": {
+        "SurfaceFill": {
+          "value": "{core.color.coolgray.900}",
+          "type": "color"
+        },
+        "SurfaceStroke": {
+          "value": "{core.color.coolgray.800}",
+          "type": "color"
+        },
+        "Placeholder": {
+          "value": "{core.color.coolgray.800}",
+          "type": "color"
+        },
+        "UserInput": {
+          "value": "{core.color.coolgray.800}",
+          "type": "color"
+        }
+      },
+      "ReadOnly": {
+        "SurfaceFill": {
+          "value": "{core.color.coolgray.999}",
+          "type": "color"
+        },
+        "SurfaceStroke": {
+          "value": "{core.color.coolgray.900}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}
