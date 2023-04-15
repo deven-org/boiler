@@ -9,6 +9,10 @@
         "Gap": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XXS",
+          "type": "componentConfig"
         }
       },
       "SM": {
@@ -19,6 +23,10 @@
         "Gap": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XS",
+          "type": "componentConfig"
         }
       },
       "MD": {
@@ -29,6 +37,10 @@
         "Gap": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XS",
+          "type": "componentConfig"
         }
       },
       "LG": {
@@ -39,6 +51,10 @@
         "Gap": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "SM",
+          "type": "componentConfig"
         }
       },
       "XL": {
@@ -49,6 +65,10 @@
         "Gap": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "SM",
+          "type": "componentConfig"
         }
       }
     },
@@ -61,6 +81,10 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XXS",
+          "type": "componentConfig"
         }
       },
       "SM": {
@@ -71,6 +95,10 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XS",
+          "type": "componentConfig"
         }
       },
       "MD": {
@@ -81,6 +109,10 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "SM",
+          "type": "componentConfig"
         }
       },
       "LG": {
@@ -91,6 +123,10 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "MD",
+          "type": "componentConfig"
         }
       },
       "XL": {
@@ -101,6 +137,10 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "LG",
+          "type": "componentConfig"
         }
       }
     },
@@ -113,6 +153,14 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XXS",
+          "type": "componentConfig"
+        },
+        "ChevronSize": {
+          "value": "XXS",
+          "type": "componentConfig"
         }
       },
       "SM": {
@@ -123,6 +171,14 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "XS",
+          "type": "componentConfig"
+        },
+        "ChevronSize": {
+          "value": "XXS",
+          "type": "componentConfig"
         }
       },
       "MD": {
@@ -133,6 +189,14 @@
         "Gap": {
           "value": "0",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "SM",
+          "type": "componentConfig"
+        },
+        "ChevronSize": {
+          "value": "XS",
+          "type": "componentConfig"
         }
       },
       "LG": {
@@ -143,6 +207,14 @@
         "Gap": {
           "value": "-{core.dimensionREM.2}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "MD",
+          "type": "componentConfig"
+        },
+        "ChevronSize": {
+          "value": "SM",
+          "type": "componentConfig"
         }
       },
       "XL": {
@@ -153,6 +225,14 @@
         "Gap": {
           "value": "-{core.dimensionREM.4}",
           "type": "spacing"
+        },
+        "IconSize": {
+          "value": "LG",
+          "type": "componentConfig"
+        },
+        "ChevronSize": {
+          "value": "MD",
+          "type": "componentConfig"
         }
       }
     },
@@ -165,6 +245,10 @@
         "Gap": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "ChevronSize": {
+          "value": "XXS",
+          "type": "componentConfig"
         }
       },
       "SM": {
@@ -175,6 +259,10 @@
         "Gap": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "ChevronSize": {
+          "value": "XS",
+          "type": "componentConfig"
         }
       },
       "MD": {
@@ -185,6 +273,10 @@
         "Gap": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "ChevronSize": {
+          "value": "XS",
+          "type": "componentConfig"
         }
       },
       "LG": {
@@ -195,6 +287,10 @@
         "Gap": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "ChevronSize": {
+          "value": "SM",
+          "type": "componentConfig"
         }
       },
       "XL": {
@@ -205,6 +301,10 @@
         "Gap": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "ChevronSize": {
+          "value": "MD",
+          "type": "componentConfig"
         }
       }
     }
@@ -381,6 +481,28 @@
         "Padding": {
           "value": "{core.dimensionREM.3}",
           "type": "spacing"
+        }
+      }
+    }
+  },
+  "Forms": {
+    "TextArea": {
+      "MD": {
+        "MinHeight": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
+        }
+      },
+      "SM": {
+        "MinHeight": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
+        }
+      },
+      "LG": {
+        "MinHeight": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
         }
       }
     }

@@ -1,208 +1,203 @@
-import { css, unsafeCSS } from 'lit';
-import { semanticTokens } from '../_tokens-generated/index.generated';
+import { css, unsafeCSS } from "lit";
+import { semanticTokens } from "../_tokens-generated/index.generated";
 
 const { Forms } = semanticTokens;
 
 const forms = {
   textinput: {
-    xs: {
-      width: '150px',
-    },
-    sm: {
-      width: '200px',
-    },
-    md: {
-      width: '250px',
-    },
-    lg: {
-      width: '300px',
-    },
-    xl: {
-      width: '350px',
-    },
-  },
-  label: {
-    sm: {
-      fontsize: '8px',
-    },
-    md: {
-      fontsize: '12px',
-    },
-    lg: {
-      fontsize: '16px',
-    },
+    minWidth: "300px",
   },
 };
 
 export const textInput = css`
-.blr-input.xs {
-  max-width: ${unsafeCSS(forms.textinput.xs.width)};
-}
-.blr-input.sm {
-    max-width: ${unsafeCSS(forms.textinput.sm.width)};
-  }
-
-  .blr-input.md {
-    max-width: ${unsafeCSS(forms.textinput.md.width)};
-  }
-
-  .blr-input.lg {
-    max-width: ${unsafeCSS(forms.textinput.lg.width)};
-  }
-  .blr-input.xl {
-    max-width: ${unsafeCSS(forms.textinput.xl.width)};
-  }
-  .blr-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    font-family: ${Forms.UserInput.DefaultType.fontFamily};
-  }
-
   .blr-text-input {
-    font-weight: ${Forms.UserInput.DefaultType.fontWeight};
-    font-size: ${Forms.UserInput.DefaultType.fontSize};
+    font-weight: ${Forms.MD.UserInput.fontWeight};
+    font-size: ${Forms.MD.UserInput.fontSize};
+    font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
     border-width: ${Forms.Input.Default.Rest.width};
     border-style: ${Forms.Input.Default.Rest.style};
     border-color: ${Forms.Input.Default.Rest.color};
     border-radius: ${Forms.InputBorderRadius};
-    width: 100%;
-    padding: ${Forms.InputField.Padding};
-    
-  }
+    min-width: ${unsafeCSS(forms.textinput.minWidth)};
+    padding: ${Forms.MD.InputField.Padding};
 
-  .blr-text-input::placeholder {
-    color: ${Forms.Placeholder.Default.Rest};
-  }
+    &::placeholder {
+      color: ${Forms.Placeholder.Default.Rest};
+    }
 
-  .blr-text-input:hover {
-    border-width: ${Forms.Input.Default.Hover.width};
-    border-style: ${Forms.Input.Default.Hover.style};
-    border-color: ${Forms.Input.Default.Hover.color};
+    &:hover {
+      border-width: ${Forms.Input.Default.Hover.width};
+      border-style: ${Forms.Input.Default.Hover.style};
+      border-color: ${Forms.Input.Default.Hover.color};
 
-  }
+      &::placeholder {
+        color: ${Forms.Placeholder.Default.Hover};
+      }
+    }
 
-  .blr-text-input::placeholder:hover {
-    color: ${Forms.Placeholder.Default.Hover};
-  }
+    &[readonly] {
+      border-width: ${Forms.Input.Default.ReadOnly.width};
+      border-style: ${Forms.Input.Default.ReadOnly.style};
+      border-color: ${Forms.Input.Default.ReadOnly.color};
 
-  .blr-text-input[readonly] {
-    border-width: ${Forms.Input.Default.ReadOnly.width};
-    border-style: ${Forms.Input.Default.ReadOnly.style};
-    border-color: ${Forms.Input.Default.ReadOnly.color};
-    
-  }
+      &::placeholder {
+        color: ${Forms.Placeholder.Default.ReadOnly};
+      }
+    }
 
-  .blr-text-input[readonly]::placeholder {
-    color: ${Forms.Placeholder.Default.ReadOnly};
-  }
+    &:disabled {
+      border-width: ${Forms.Input.Default.Disabled.width};
+      border-style: ${Forms.Input.Default.Disabled.style};
+      border-color: ${Forms.Input.Default.Disabled.color};
 
-  .blr-text-input:disabled {
-    border-width: ${Forms.Input.Default.Disabled.width};
-    border-style: ${Forms.Input.Default.Disabled.style};
-    border-color: ${Forms.Input.Default.Disabled.color};
-    
-  }
+      &::placeholder {
+        color: ${Forms.Placeholder.Default.Disabled};
+      }
+    }
 
-  .blr-text-input::placeholder:disabled {
-    color: ${Forms.Placeholder.Default.Disabled};
-  }
+    &:focus {
+      border-width: ${Forms.Input.Default.Focus.width};
+      border-style: ${Forms.Input.Default.Focus.style};
+      border-color: ${Forms.Input.Default.Focus.color};
 
-  .blr-text-input:focus {
-    border-width: ${Forms.Input.Default.Focus.width};
-    border-style: ${Forms.Input.Default.Focus.style};
-    border-color: ${Forms.Input.Default.Focus.color};
+      &::placeholder {
+        color: ${Forms.Placeholder.Default.Focus};
+      }
+    }
 
-  }
+    &.error-input {
+      border-width: ${Forms.Input.Error.Rest.width};
+      border-style: ${Forms.Input.Error.Rest.style};
+      border-color: ${Forms.Input.Error.Rest.color};
 
-  .blr-text-input::placeholder:focus {
-    color: ${Forms.Placeholder.Default.Focus};
-  }
+      &::placeholder {
+        color: ${Forms.Placeholder.Error.Rest};
+      }
 
-  .blr-text-input.error-input {
-    border-width: ${Forms.Input.Error.Rest.width};
-    border-style: ${Forms.Input.Error.Rest.style};
-    border-color: ${Forms.Input.Error.Rest.color};
-    
-  }
+      &:hover {
+        border-width: ${Forms.Input.Error.Hover.width};
+        border-style: ${Forms.Input.Error.Hover.style};
+        border-color: ${Forms.Input.Error.Hover.color};
 
-  .blr-text-input.error-input::placeholder {
-    color: ${Forms.Placeholder.Error.Rest};
-  }
+        &::placeholder {
+          color: ${Forms.Placeholder.Error.Hover};
+        }
+      }
 
-  .blr-text-input.error-input:hover {
-    border-width: ${Forms.Input.Error.Hover.width};
-    border-style: ${Forms.Input.Error.Hover.style};
-    border-color: ${Forms.Input.Error.Hover.color};
-    ::placeholder {
-      color: ${Forms.Placeholder.Error.Hover};
+      &:focus {
+        border-width: ${Forms.Input.Error.Focus.width};
+        border-style: ${Forms.Input.Error.Focus.style};
+        border-color: ${Forms.Input.Error.Focus.color};
+
+        &::placeholder {
+          color: ${Forms.Placeholder.Error.Focus};
+        }
+      }
+    }
+
+    &.lg {
+      font-weight: ${Forms.LG.UserInput.fontWeight};
+      font-size: ${Forms.LG.UserInput.fontSize};
+      font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
+      padding: ${Forms.LG.InputField.Padding};
+    }
+
+    &.sm {
+      font-weight: ${Forms.SM.UserInput.fontWeight};
+      font-size: ${Forms.SM.UserInput.fontSize};
+      font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
+      padding: ${Forms.SM.InputField.Padding};
     }
   }
 
-  
-  .blr-text-input.error-input:focus {
-    border-width: ${Forms.Input.Error.Focus.width};
-    border-style: ${Forms.Input.Error.Focus.style};
-    border-color: ${Forms.Input.Error.Focus.color};
-    ::placeholder {
-      color: ${Forms.Placeholder.Error.Focus};
+  .blr-input-icon {
+    position: absolute;
+    top: 2.25rem;
+    left: ${unsafeCSS(forms.textinput.minWidth)};
+
+    &.sm {
+      top: 2rem;
+    }
+
+    &.lg {
+      top: 2.5rem;
     }
   }
 
   .blr-form-hint {
     display: flex;
     flex-direction: row;
-    padding: ${Forms.Caption.Padding};
-    font-weight: ${Forms.Caption.DefaultType.fontWeight};
-    font-size: ${Forms.Caption.DefaultType.fontSize};
-    line-height: ${Forms.Caption.DefaultType.lineHeight};
-    item-spacing: ${Forms.Caption.ItemSpacing};
-    margin: ${Forms.CaptionSlot.Margin};
-  }
+    padding: ${Forms.MD.CaptionComponent.Padding};
+    font-weight: ${Forms.MD.Caption.fontWeight};
+    font-size: ${Forms.MD.Caption.fontSize};
+    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.Caption.lineHeight};
+    margin: ${Forms.MD.CaptionSlot.Margin};
 
-  .blr-form-label.sm {
-    font-size: ${unsafeCSS(forms.label.sm)};
-  }
+    &.sm {
+      padding: ${Forms.SM.CaptionComponent.Padding};
+      font-weight: ${Forms.SM.Caption.fontWeight};
+      font-size: ${Forms.SM.Caption.fontSize};
+      font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+      line-height: ${Forms.SM.Caption.lineHeight};
+      margin: ${Forms.SM.CaptionSlot.Margin};
+    }
 
-  .blr-form-label.md {
-    font-size: ${unsafeCSS(forms.label.md)};
-  }
-
-  .blr-form-label.lg {
-    font-size: ${unsafeCSS(forms.label.lg)};
+    &.lg {
+      padding: ${Forms.LG.CaptionComponent.Padding};
+      font-weight: ${Forms.LG.Caption.fontWeight};
+      font-size: ${Forms.LG.Caption.fontSize};
+      font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
+      line-height: ${Forms.LG.Caption.lineHeight};
+      margin: ${Forms.LG.CaptionSlot.Margin};
+    }
   }
 
   .blr-form-label {
-    padding: ${Forms.LabelSlot.Padding}
-    font-weight: ${Forms.Label.Default.fontWeight};
-    font-size: ${Forms.Label.Default.fontSize};
-    item-spacing: ${Forms.LabelSlot.ItemSpacing};
-    line-height: ${Forms.Label.Default.lineHeight};
-    color: ${Forms.Label.Rest}
+    padding: ${Forms.MD.LabelSlot.Padding};
+    font-weight: ${Forms.MD.Label.fontWeight};
+    font-size: ${Forms.MD.Label.fontSize};
+    font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.Label.lineHeight};
+    color: ${Forms.Label.Rest};
+
+    &:focus {
+      color: ${Forms.Label.Focus};
+    }
+
+    &:hover {
+      color: ${Forms.Label.Hover};
+    }
+
+    &:disabled {
+      color: ${Forms.Label.Disabled};
+    }
+
+    &[readonly] {
+      color: ${Forms.Label.ReadOnly};
+    }
+
+    &.sm {
+      padding: ${Forms.SM.LabelSlot.Padding};
+      font-weight: ${Forms.SM.Label.fontWeight};
+      font-size: ${Forms.SM.Label.fontSize};
+      font-family: ${Forms.SM.Label.fontFamily}, sans-serif;
+      line-height: ${Forms.SM.Label.lineHeight};
+      color: ${Forms.Label.Rest};
+    }
+
+    &.lg {
+      padding: ${Forms.LG.LabelSlot.Padding};
+      font-weight: ${Forms.LG.Label.fontWeight};
+      font-size: ${Forms.LG.Label.fontSize};
+      font-family: ${Forms.LG.Label.fontFamily}, sans-serif;
+      line-height: ${Forms.LG.Label.lineHeight};
+      color: ${Forms.Label.Rest};
+    }
   }
 
-  .blr-input-icon {
-    position: absolute;
-    top: 1.75rem;
-    right: -1rem;
-    fill: var(--omrs-color-ink-medium-contrast);
-  }
-
-  .blr-form-label:focus {
-    color: ${Forms.Label.Focus}
-  }
-  
-  .blr-form-label:hover {
-    color: ${Forms.Label.Hover} 
-  }
-  
-  .blr-form-label:disabled {
-    color: ${Forms.Label.Disabled} 
-  }
-
-  .blr-form-label[readonly] {
-    color: ${Forms.Label.ReadOnly} 
+  .blr-caption-text {
+    padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
   }
 
   .error {

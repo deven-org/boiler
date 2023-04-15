@@ -1,13 +1,13 @@
-import { css } from 'lit';
-import { semanticTokens } from '../_tokens-generated/index.generated';
+import { css } from "lit";
+import { semanticTokens } from "../_tokens-generated/index.generated";
 
-const { BorderRadius, BorderWidth, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
+const { BorderRadius, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
   semanticTokens.Action;
 
 export const action = css`
   .blr-semantic-action {
     border-radius: ${BorderRadius};
-    border-width: ${BorderWidth.Rest};
+    border-width: ${CTA.Rest.width};
   }
 
   .blr-semantic-action.cta {
@@ -94,35 +94,35 @@ export const action = css`
   }
 
   .blr-semantic-action.xs {
-    font-family: ${XS.Label.fontFamily};
+    font-family: ${XS.Label.fontFamily}, sans-serif;
     font-weight: ${XS.Label.fontWeight};
     line-height: ${XS.Label.lineHeight};
     font-size: ${XS.Label.fontSize};
   }
 
   .blr-semantic-action.sm {
-    font-family: ${SM.Label.fontFamily};
+    font-family: ${SM.Label.fontFamily}, sans-serif;
     font-weight: ${SM.Label.fontWeight};
     line-height: ${SM.Label.lineHeight};
     font-size: ${SM.Label.fontSize};
   }
 
   .blr-semantic-action.md {
-    font-family: ${MD.Label.fontFamily};
+    font-family: ${MD.Label.fontFamily}, sans-serif;
     font-weight: ${MD.Label.fontWeight};
     line-height: ${MD.Label.lineHeight};
     font-size: ${MD.Label.fontSize};
   }
 
   .blr-semantic-action.lg {
-    font-family: ${LG.Label.fontFamily};
+    font-family: ${LG.Label.fontFamily}, sans-serif;
     font-weight: ${LG.Label.fontWeight};
     line-height: ${LG.Label.lineHeight};
     font-size: ${LG.Label.fontSize};
   }
 
   .blr-semantic-action.xl {
-    font-family: ${XL.Label.fontFamily};
+    font-family: ${XL.Label.fontFamily}, sans-serif;
     font-weight: ${XL.Label.fontWeight};
     line-height: ${XL.Label.lineHeight};
     font-size: ${XL.Label.fontSize};

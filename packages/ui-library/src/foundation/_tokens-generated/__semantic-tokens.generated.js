@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 02 Apr 2023 17:16:28 GMT
+ * Generated on Thu, 13 Apr 2023 10:59:48 GMT
  */
 
 export const semanticTokens = {
@@ -38,6 +38,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Primary: {
       SurfaceFill: {
@@ -72,6 +78,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Secondary: {
       SurfaceFill: {
@@ -107,6 +119,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
+      Rest: { color: 'hsla(220, 85%, 50%) ', width: '1px', style: 'solid' },
+      Hover: { color: 'hsla(220, 85%, 40%) ', width: '1px', style: 'solid' },
+      Pressed: { color: 'hsla(220, 85%, 30%) ', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
+      Loading: { color: 'hsla(220, 85%, 50%) ', width: '1px', style: 'solid' },
     },
     Silent: {
       SurfaceFill: {
@@ -144,6 +162,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%) ',
         Loading: 'hsla(220, 85%, 50%) ',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Destructive: {
       SurfaceFill: {
@@ -178,6 +202,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Encourage: {
       SurfaceFill: {
@@ -212,37 +242,91 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 60%) ',
         Loading: '#FFF',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+      Disabled: { color: '#00000000', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
-    BorderWidth: { Rest: '1px', Hover: '1px', Pressed: '1px', Focus: '1px', Disabled: '1px', Loading: '1px' },
-    XS: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' } },
-    SM: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
-    MD: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' } },
-    LG: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' } },
-    XL: { Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' } },
+    XS: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.5rem' },
+      LoaderSize: 'SM',
+    },
+    SM: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LoaderSize: 'SM',
+    },
+    MD: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LoaderSize: 'MD',
+    },
+    LG: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' },
+      LoaderSize: 'MD',
+    },
+    XL: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' },
+      LoaderSize: 'LG',
+    },
   },
   Feedback: {
     Background: { Default: 'hsla(220, 85%, 60%, 0.2)', Inverted: 'hsla(220, 85%, 99%, 0.2)' },
     Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(220, 85%, 99%, 1)' },
   },
   Forms: {
-    Caption: {
-      Error: 'hsla(350, 80%, 50%) ',
-      Hint: 'hsla(220, 10%, 30%) ',
-      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      Padding: '0rem 0px',
-      ItemSpacing: '0.125rem',
+    SM: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
+      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.875rem' },
+      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
+      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      InputSlot: { Margin: '0rem 0px 0rem 0px' },
+      InputField: { Padding: '0.25rem 12px', IconSize: 'MD' },
     },
-    CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+    MD: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      CaptionComponent: { Padding: '0rem 0px', IconSize: 'SM', ItemSpacing: '0.125rem' },
+      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      InputSlot: { Margin: '0rem 0px 0rem 0px' },
+      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+    },
+    LG: {
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1.25rem' },
+      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1.25rem' },
+      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
+      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
+      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      InputSlot: { Margin: '0rem 0px 0rem 0px' },
+      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+    },
     Label: {
       Rest: 'hsla(220, 10%, 10%) ',
       Hover: 'hsla(220, 10%, 10%) ',
       Focus: 'hsla(220, 10%, 10%) ',
       Disabled: 'hsla(220, 10%, 10%) ',
       ReadOnly: 'hsla(220, 10%, 10%) ',
-      Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
     },
-    LabelSlot: { Padding: '0rem 0px', ItemSpacing: '4px' },
+    LabelAppendix: {
+      Rest: 'hsla(220, 10%, 10%) ',
+      Hover: 'hsla(220, 10%, 10%) ',
+      Focus: 'hsla(220, 10%, 10%) ',
+      Disabled: 'hsla(220, 10%, 10%) ',
+      ReadOnly: 'hsla(220, 10%, 10%) ',
+    },
+    Caption: { Error: 'hsla(350, 80%, 50%) ', Hint: 'hsla(220, 10%, 30%) ' },
     UserInput: {
       Default: {
         Rest: 'hsla(220, 10%, 10%) ',
@@ -252,7 +336,6 @@ export const semanticTokens = {
         ReadOnly: 'hsla(220, 10%, 10%) ',
       },
       Error: { Rest: 'hsla(350, 80%, 30%) ', Hover: 'hsla(350, 80%, 30%) ' },
-      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
     },
     Placeholder: {
       Default: {
@@ -263,7 +346,6 @@ export const semanticTokens = {
         ReadOnly: 'hsla(220, 10%, 70%) ',
       },
       Error: { Rest: 'hsla(220, 10%, 70%) ', Hover: 'hsla(220, 10%, 70%) ', Focus: 'hsla(220, 10%, 70%) ' },
-      DefaultType: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
     },
     SurfaceFill: {
       Default: { Rest: '#FFF', Hover: '#FFF', Focus: '#FFF', Disabled: 'hsla(220, 10%, 90%) ', ReadOnly: '#00000000' },
@@ -272,33 +354,26 @@ export const semanticTokens = {
     InputBorderRadius: '4px',
     Input: {
       Default: {
-        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2', style: 'solid' },
-        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1', style: 'solid' },
-        ReadOnly: { color: '#00000000#', width: '1', style: 'solid' },
+        Rest: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(220, 10%, 70%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(220, 10%, 10%) ', width: '2px', style: 'solid' },
+        Disabled: { color: 'hsla(220, 10%, 80%) ', width: '1px', style: 'solid' },
+        ReadOnly: { color: '#00000000', width: '1px', style: 'solid' },
       },
       Error: {
-        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1', style: 'solid' },
-        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1', style: 'solid' },
-        Focus: { color: 'hsla(350, 80%, 50%) ', width: '2', style: 'solid' },
+        Rest: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(350, 80%, 50%) ', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(350, 80%, 50%) ', width: '2px', style: 'solid' },
       },
     },
-    InputSlot: { Margin: '0.5rem 0px 0rem 0px' },
-    InputField: { Padding: '0.5rem 12px' },
-    LabelAppendix: {
-      Rest: 'hsla(220, 10%, 10%) ',
-      Hover: 'hsla(220, 10%, 10%) ',
-      Focus: 'hsla(220, 10%, 10%) ',
-      Disabled: 'hsla(220, 10%, 10%) ',
-      ReadOnly: 'hsla(220, 10%, 10%) ',
-      Default: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-    },
     InputIcon: {
-      'Rest': 'hsla(220, 10%, 70%) ',
-      'Hover': 'hsla(220, 10%, 40%) ',
-      'Hover-copy': 'hsla(220, 10%, 10%) ',
-      'Error': 'hsla(350, 80%, 50%) ',
+      Rest: 'hsla(220, 10%, 70%) ',
+      Hover: 'hsla(220, 10%, 60%) ',
+      Focus: 'hsla(220, 10%, 50%) ',
+      Pressed: 'hsla(220, 10%, 60%) ',
+      Disabled: 'hsla(220, 10%, 70%) ',
+      ReadOnly: 'hsla(220, 10%, 70%) ',
+      Error: 'hsla(350, 80%, 50%) ',
     },
   },
 };

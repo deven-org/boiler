@@ -13,7 +13,7 @@ export class BlrTextInput extends LitElement {
   static styles = [styleCustom, textInput];
 
   @property() textInputId!: string;
-  @property() type!: InputTypes;
+  @property() type: InputTypes = 'text';
   @property() label!: string;
   @property() value!: string;
   @property() placeholder?: string;
@@ -30,6 +30,10 @@ export class BlrTextInput extends LitElement {
   @property() hint?: string;
   @property() hintIcon?: IconType;
 
+  toggleInputType() {
+    this.type = this.type === 'password' ? 'text' : 'password';
+  }
+
   render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
@@ -39,6 +43,7 @@ export class BlrTextInput extends LitElement {
     const inputclasses = classMap({
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
+      [`${this.size}`]: this.size || 'md',
     });
 
     return html`
@@ -61,7 +66,8 @@ export class BlrTextInput extends LitElement {
         />
         <blr-icon
           class="blr-input-icon ${inputclasses}"
-          name="${this.hasError ? 'blrFlagSm' : this.hintIcon}"
+          @click=${this.toggleInputType}
+          name="${this.type.includes('password') ? 'blrEyeSm' : this.hasError ? 'blrFlagSm' : this.hintIcon}"
           aria-hidden
         ></blr-icon>
         ${BlrFormHint({

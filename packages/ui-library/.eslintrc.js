@@ -10,5 +10,5 @@ module.exports = {
 
   plugins: ['@typescript-eslint'],
   extends: ['../eslint-config-boiler'],
-  ignorePatterns: ['types/', '*.svg', '*.scss', '*.css', '*.md', '*.config.mjs', '.*'],
+  ignorePatterns: ['types/', '*.svg', '*.scss', '*.css', '*.md', '*.config.mjs', '.*', 'webpack*.js'],
 };
