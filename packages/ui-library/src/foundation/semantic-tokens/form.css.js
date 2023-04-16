@@ -69,6 +69,7 @@ export const textInput = css`
       border-width: ${Forms.Input.Error.Rest.width};
       border-style: ${Forms.Input.Error.Rest.style};
       border-color: ${Forms.Input.Error.Rest.color};
+      outline-color: ${Forms.Input.Error.Rest.color};
 
       &::placeholder {
         color: ${Forms.Placeholder.Error.Rest};
@@ -78,6 +79,7 @@ export const textInput = css`
         border-width: ${Forms.Input.Error.Hover.width};
         border-style: ${Forms.Input.Error.Hover.style};
         border-color: ${Forms.Input.Error.Hover.color};
+        outline-color: ${Forms.Input.Error.Hover.color};
 
         &::placeholder {
           color: ${Forms.Placeholder.Error.Hover};
@@ -88,6 +90,7 @@ export const textInput = css`
         border-width: ${Forms.Input.Error.Focus.width};
         border-style: ${Forms.Input.Error.Focus.style};
         border-color: ${Forms.Input.Error.Focus.color};
+        outline-color: ${Forms.Input.Error.Focus.color};
 
         &::placeholder {
           color: ${Forms.Placeholder.Error.Focus};
