@@ -20,15 +20,18 @@
       "Alt": {
         "Label": {
           "value": "{core.color.coolgray.100}",
-          "type": "color"
+          "type": "color",
+          "description": "Forms"
         },
         "LabelAppendix": {
           "value": "{core.color.coolgray.100}",
-          "type": "color"
+          "type": "color",
+          "description": "Forms"
         },
         "UserInput": {
           "value": "{core.color.coolgray.100}",
-          "type": "color"
+          "type": "color",
+          "description": "Forms"
         }
       },
       "Error": {
