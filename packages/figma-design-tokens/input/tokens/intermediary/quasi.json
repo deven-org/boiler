@@ -1,6 +1,10 @@
 {
   "Inter": {
     "Global": {
+      "Primary": {
+        "value": "{core.color.azure.500}",
+        "type": "color"
+      },
       "Focus": {
         "value": "{core.color.coolgray.100}",
         "type": "color"
