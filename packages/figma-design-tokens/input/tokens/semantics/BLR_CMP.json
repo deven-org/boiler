@@ -505,18 +505,6 @@
           "type": "sizing"
         }
       }
-    },
-    "Input": {
-      "TextArea": {
-        "ReadOnly": {
-          "value": {
-            "color": "{Forms.TextArea.SurfaceStroke.ReadOnly}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        }
-      }
     }
   }
 }
