@@ -157,7 +157,7 @@
     "Primary": {
       "SurfaceFill": {
         "Rest": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Hover": {
@@ -169,7 +169,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Disabled": {
@@ -177,7 +177,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         }
       },
@@ -341,7 +341,7 @@
       },
       "SurfaceStroke": {
         "Rest": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Hover": {
@@ -353,7 +353,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Disabled": {
@@ -361,13 +361,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         }
       },
       "Icon": {
         "Rest": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Hover": {
@@ -379,7 +379,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Disabled": {
@@ -387,13 +387,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         }
       },
       "Label": {
         "Rest": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Hover": {
@@ -405,7 +405,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Disabled": {
@@ -413,7 +413,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         }
       },
@@ -533,7 +533,7 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Hover": {
@@ -545,7 +545,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Disabled": {
@@ -553,13 +553,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         }
       },
       "Label": {
         "Rest": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Hover": {
@@ -571,7 +571,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         },
         "Disabled": {
@@ -579,7 +579,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.azure.500}",
+          "value": "{Inter.Global.Primary}",
           "type": "color"
         }
       },
@@ -1294,88 +1294,88 @@
     },
     "Label": {
       "Rest": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{Inter.Global.Label}",
         "type": "color"
       }
     },
     "Caption": {
       "Error": {
-        "value": "{core.color.crimson.500}",
+        "value": "{Inter.Global.Error.Text}",
         "type": "color"
       },
       "Hint": {
-        "value": "{core.color.coolgray.300}",
+        "value": "{Inter.Global.Hint}",
         "type": "color"
       }
     },
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{core.color.coolgray.100}",
+          "value": "{Inter.Global.UserInput}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.coolgray.100}",
+          "value": "{Inter.Global.UserInput}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.coolgray.100}",
+          "value": "{Inter.Global.UserInput}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{Inter.Global.Disabled.UserInput}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{core.color.coolgray.100}",
+          "value": "{Inter.Global.UserInput}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{core.color.crimson.300}",
+          "value": "{Inter.Global.Error.UserInput}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.crimson.300}",
+          "value": "{Inter.Global.Error.UserInput}",
           "type": "color"
         }
       }
@@ -1383,37 +1383,37 @@
     "Placeholder": {
       "Default": {
         "Rest": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Placeholder}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{Inter.Global.Disabled.Placeholder}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Placeholder}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Error.Placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Error.Placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{Inter.Global.Error.Placeholder}",
           "type": "color"
         }
       }
@@ -1443,15 +1443,15 @@
       },
       "Error": {
         "Rest": {
-          "value": "{core.color.neutral.white}",
+          "value": "{Inter.Global.Error.SurfaceFill}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.neutral.white}",
+          "value": "{Inter.Global.Error.SurfaceFill}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.neutral.white}",
+          "value": "{Inter.Global.Error.SurfaceFill}",
           "type": "color"
         }
       }
@@ -1481,15 +1481,15 @@
       },
       "Error": {
         "Rest": {
-          "value": "{core.color.crimson.500}",
+          "value": "{Inter.Global.Error.SurfaceStroke}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.crimson.500}",
+          "value": "{Inter.Global.Error.SurfaceStroke}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.crimson.500}",
+          "value": "{Inter.Global.Error.SurfaceStroke}",
           "type": "color"
         }
       }
@@ -1611,7 +1611,7 @@
   },
   "Global": {
     "Focus": {
-      "value": "{core.color.coolgray.100}",
+      "value": "{Inter.Global.Focus}",
       "type": "color"
     },
     "FocusBorder": {
