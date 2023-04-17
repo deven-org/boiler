@@ -9,25 +9,27 @@
         "value": "{core.color.coolgray.100}",
         "type": "color"
       },
-      "Label": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "LabelAppendix": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
       "Placeholder": {
         "value": "{core.color.coolgray.700}",
-        "type": "color"
-      },
-      "UserInput": {
-        "value": "{core.color.coolgray.100}",
         "type": "color"
       },
       "Hint": {
         "value": "{core.color.coolgray.300}",
         "type": "color"
+      },
+      "Alt": {
+        "Label": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "LabelAppendix": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        },
+        "UserInput": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color"
+        }
       },
       "Error": {
         "SurfaceFill": {

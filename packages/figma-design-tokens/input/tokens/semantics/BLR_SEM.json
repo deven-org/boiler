@@ -1294,45 +1294,45 @@
     },
     "Label": {
       "Rest": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "Hover": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "Focus": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "Hover": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "Focus": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{Inter.Global.Label}",
+        "value": "{Inter.Global.Alt.Label}",
         "type": "color"
       }
     },
@@ -1349,15 +1349,15 @@
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{Inter.Global.UserInput}",
+          "value": "{Inter.Global.Alt.UserInput}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.UserInput}",
+          "value": "{Inter.Global.Alt.UserInput}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.UserInput}",
+          "value": "{Inter.Global.Alt.UserInput}",
           "type": "color"
         },
         "Disabled": {
@@ -1365,7 +1365,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Global.UserInput}",
+          "value": "{Inter.Global.Alt.UserInput}",
           "type": "color"
         }
       },
