@@ -157,7 +157,7 @@
     "Primary": {
       "SurfaceFill": {
         "Rest": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Hover": {
@@ -169,7 +169,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Disabled": {
@@ -177,7 +177,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         }
       },
@@ -341,7 +341,7 @@
       },
       "SurfaceStroke": {
         "Rest": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Hover": {
@@ -353,7 +353,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Disabled": {
@@ -361,13 +361,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         }
       },
       "Icon": {
         "Rest": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Hover": {
@@ -379,7 +379,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Disabled": {
@@ -387,13 +387,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         }
       },
       "Label": {
         "Rest": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Hover": {
@@ -405,7 +405,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Disabled": {
@@ -413,7 +413,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         }
       },
@@ -533,7 +533,7 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Hover": {
@@ -545,7 +545,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Disabled": {
@@ -553,13 +553,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         }
       },
       "Label": {
         "Rest": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Hover": {
@@ -571,7 +571,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         },
         "Disabled": {
@@ -579,7 +579,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.Main.Color}",
+          "value": "{Inter.Action.Main.Color}",
           "type": "color"
         }
       },
@@ -1294,51 +1294,51 @@
     },
     "Label": {
       "Rest": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "Hover": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "Focus": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "Hover": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "Focus": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{Inter.Global.Alt.Label}",
+        "value": "{Inter.Forms.Label}",
         "type": "color"
       }
     },
     "Caption": {
       "Error": {
-        "value": "{Inter.Global.Error.Text}",
+        "value": "{Inter.Forms.Error.Text}",
         "type": "color"
       },
       "Hint": {
@@ -1349,33 +1349,33 @@
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{Inter.Global.Alt.UserInput}",
+          "value": "{Inter.Forms.UserInput}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.Alt.UserInput}",
+          "value": "{Inter.Forms.UserInput}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Alt.UserInput}",
+          "value": "{Inter.Forms.UserInput}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{Inter.Global.Disabled.UserInput}",
+          "value": "{Inter.Forms.Disabled.UserInput}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Global.Alt.UserInput}",
+          "value": "{Inter.Forms.UserInput}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Global.Error.UserInput}",
+          "value": "{Inter.Forms.Error.UserInput}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.Error.UserInput}",
+          "value": "{Inter.Forms.Error.UserInput}",
           "type": "color"
         }
       }
@@ -1383,37 +1383,37 @@
     "Placeholder": {
       "Default": {
         "Rest": {
-          "value": "{Inter.Global.Placeholder}",
+          "value": "{Inter.Forms.Placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.Placeholder}",
+          "value": "{Inter.Forms.Placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Placeholder}",
+          "value": "{Inter.Forms.Placeholder}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{Inter.Global.Disabled.Placeholder}",
+          "value": "{Inter.Forms.Disabled.Placeholder}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Global.Placeholder}",
+          "value": "{Inter.Forms.Placeholder}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Global.Error.Placeholder}",
+          "value": "{Inter.Forms.Error.Placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.Error.Placeholder}",
+          "value": "{Inter.Forms.Error.Placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Error.Placeholder}",
+          "value": "{Inter.Forms.Error.Placeholder}",
           "type": "color"
         }
       }
@@ -1437,21 +1437,21 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Global.ReadOnly.SurfaceFill}",
+          "value": "{Inter.Forms.ReadOnly.SurfaceFill}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Global.Error.SurfaceFill}",
+          "value": "{Inter.Forms.Error.SurfaceFill}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.Error.SurfaceFill}",
+          "value": "{Inter.Forms.Error.SurfaceFill}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Error.SurfaceFill}",
+          "value": "{Inter.Forms.Error.SurfaceFill}",
           "type": "color"
         }
       }
@@ -1481,15 +1481,15 @@
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Global.Error.SurfaceStroke}",
+          "value": "{Inter.Forms.Error.SurfaceStroke}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Global.Error.SurfaceStroke}",
+          "value": "{Inter.Forms.Error.SurfaceStroke}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.Error.SurfaceStroke}",
+          "value": "{Inter.Forms.Error.SurfaceStroke}",
           "type": "color"
         }
       }
