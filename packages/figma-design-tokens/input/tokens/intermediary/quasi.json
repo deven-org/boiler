@@ -4,15 +4,15 @@
       "brand": {
         "primary": {
           "rest": {
-            "value": "{core.color.azure.500}",
+            "value": "{core.color.azure.500.solid}",
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.azure.400}",
+            "value": "{core.color.azure.400.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.azure.300}",
+            "value": "{core.color.azure.300.solid}",
             "type": "color"
           }
         },
@@ -32,15 +32,15 @@
         },
         "secondary": {
           "Rest": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
             "type": "color"
           },
           "Hover": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.700}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.700}%, {Action.Secondary.SurfaceFill.Alpha})",
             "type": "color"
           },
           "Pressed": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Secondary.SurfaceFill.Alpha})",
             "type": "color"
           }
         },
@@ -63,154 +63,163 @@
             "value": "{core.color.crimson.500}",
             "type": "color"
           },
-          "Hover": {
-            "value": "{core.color.crimson.400}",
-            "type": "color"
+          "Focus": {
+            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "Hover": {
+              "value": "{core.color.crimson.400}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{core.color.crimson.300}",
+              "type": "color"
+            }
           },
-          "Pressed": {
-            "value": "{core.color.crimson.300}",
-            "type": "color"
-          }
-        },
-        "encourage": {
-          "Rest": {
-            "value": "{core.color.limegreen.400}",
-            "type": "color"
+          "encourage": {
+            "Rest": {
+              "value": "{core.color.limegreen.400}",
+              "Disabled": {
+                "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+                "type": "color"
+              },
+              "Loading": {
+                "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+                "Hover": {
+                  "value": "{core.color.limegreen.300}",
+                  "type": "color"
+                },
+                "Pressed": {
+                  "value": "{core.color.limegreen.200}",
+                  "type": "color"
+                }
+              }
+            },
+            "disabled": {
+              "alpha": {
+                "value": "{core.color.coolgray.800.solid}",
+                "type": "color"
+              },
+              "beta": {
+                "value": "{core.color.coolgray.800.solid}",
+                "type": "color"
+              },
+              "gamma": {
+                "value": "{core.color.coolgray.900}",
+                "type": "color"
+              }
+            },
+            "readonly": {
+              "value": "{core.color.coolgray.999.solid}",
+              "type": "color"
+            },
+            "default": {
+              "value": "{core.color.neutral.white}",
+              "type": "color"
+            }
           },
-          "Hover": {
-            "value": "{core.color.limegreen.300}",
-            "type": "color"
+          "text": {
+            "onDefault": {
+              "hint": {
+                "value": "{core.color.coolgray.300.solid}",
+                "type": "color"
+              },
+              "placeholder": {
+                "value": "{core.color.coolgray.700.solid}",
+                "type": "color"
+              },
+              "alpha": {
+                "value": "{core.color.coolgray.100.opa0}",
+                "type": "color",
+                "description": "Forms"
+              },
+              "error": {
+                "alpha": {
+                  "value": "{core.color.crimson.500}",
+                  "type": "color"
+                },
+                "beta": {
+                  "value": "{core.color.crimson.300}",
+                  "type": "color"
+                }
+              }
+            },
+            "onbrand": {
+              "alpha": {
+                "value": "{core.color.neutral.white}",
+                "type": "color"
+              },
+              "beta": {
+                "Rest": {
+                  "value": "{q.surface.brand.primary.rest}",
+                  "type": "color"
+                },
+                "Hover": {
+                  "value": "{core.color.azure.400.solid}",
+                  "type": "color"
+                },
+                "Pressed": {
+                  "value": "{core.color.azure.300.solid}",
+                  "type": "color"
+                }
+              }
+            },
+            "onDisabled": {
+              "alpha": {
+                "value": "{core.color.coolgray.600}",
+                "type": "color"
+              },
+              "beta": {
+                "value": "{core.color.coolgray.800}",
+                "type": "color"
+              }
+            }
           },
-          "Pressed": {
-            "value": "{core.color.limegreen.200}",
-            "type": "color"
-          }
-        }
-      },
-      "disabled": {
-        "alpha": {
-          "value": "{core.color.coolgray.800}",
-          "type": "color"
-        },
-        "beta": {
-          "value": "{core.color.coolgray.800}",
-          "type": "color"
-        },
-        "gamma": {
-          "value": "{core.color.coolgray.900}",
-          "type": "color"
-        }
-      },
-      "readonly": {
-        "value": "{core.color.coolgray.999}",
-        "type": "color"
-      },
-      "default": {
-        "value": "{core.color.neutral.white}",
-        "type": "color"
-      }
-    },
-    "text": {
-      "onDefault": {
-        "hint": {
-          "value": "{core.color.coolgray.300}",
-          "type": "color"
-        },
-        "placeholder": {
-          "value": "{core.color.coolgray.700}",
-          "type": "color"
-        },
-        "alpha": {
-          "value": "{core.color.coolgray.100}",
-          "type": "color",
-          "description": "Forms"
-        },
-        "error": {
-          "alpha": {
-            "value": "{core.color.crimson.500}",
-            "type": "color"
-          },
-          "beta": {
-            "value": "{core.color.crimson.300}",
-            "type": "color"
-          }
-        }
-      },
-      "onbrand": {
-        "alpha": {
-          "value": "{core.color.neutral.white}",
-          "type": "color"
-        },
-        "beta": {
-          "Rest": {
-            "value": "{q.surface.brand.primary.rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{core.color.azure.400}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{core.color.azure.300}",
-            "type": "color"
-          }
-        }
-      },
-      "onDisabled": {
-        "alpha": {
-          "value": "{core.color.coolgray.600}",
-          "type": "color"
-        },
-        "beta": {
-          "value": "{core.color.coolgray.800}",
-          "type": "color"
-        }
-      }
-    },
-    "stroke": {
-      "focus": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      },
-      "disabled": {
-        "value": "{core.color.coolgray.800}",
-        "type": "color"
-      },
-      "readOnly": {
-        "value": "{core.color.coolgray.900}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.crimson.500}",
-        "type": "color"
-      },
-      "brand": {
-        "alpha": {
-          "Rest": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{core.color.neutral.transparent}",
-            "type": "color"
-          }
-        },
-        "beta": {
-          "Rest": {
-            "value": "{q.surface.brand.primary.rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{core.color.azure.400}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{core.color.azure.300}",
-            "type": "color"
+          "stroke": {
+            "focus": {
+              "value": "{core.color.coolgray.100.opa0}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{core.color.coolgray.800.solid}",
+              "type": "color"
+            },
+            "readOnly": {
+              "value": "{core.color.coolgray.900.solid}",
+              "type": "color"
+            },
+            "error": {
+              "value": "{core.color.crimson.500}",
+              "type": "color"
+            },
+            "brand": {
+              "alpha": {
+                "Rest": {
+                  "value": "{core.color.neutral.transparent}",
+                  "type": "color"
+                },
+                "Hover": {
+                  "value": "{core.color.neutral.transparent}",
+                  "type": "color"
+                },
+                "Pressed": {
+                  "value": "{core.color.neutral.transparent}",
+                  "type": "color"
+                }
+              },
+              "beta": {
+                "Rest": {
+                  "value": "{q.surface.brand.primary.rest}",
+                  "type": "color"
+                },
+                "Hover": {
+                  "value": "{core.color.azure.400}",
+                  "type": "color"
+                },
+                "Pressed": {
+                  "value": "{core.color.azure.300}",
+                  "type": "color"
+                }
+              }
+            }
           }
         }
       }
