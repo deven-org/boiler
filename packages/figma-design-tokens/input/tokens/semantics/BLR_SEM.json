@@ -1338,7 +1338,7 @@
     },
     "Caption": {
       "Error": {
-        "value": "{q.text.error.alpha}",
+        "value": "{q.text.onDefault.error.alpha}",
         "type": "color"
       },
       "Hint": {
@@ -1371,11 +1371,11 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.text.error.beta}",
+          "value": "{q.text.onDefault.error.beta}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.error.beta}",
+          "value": "{q.text.onDefault.error.beta}",
           "type": "color"
         }
       }
@@ -1475,7 +1475,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.stroke.focus.Forms.ReadOnly.SurfaceStroke}",
+          "value": "{q.stroke.readOnly}",
           "type": "color"
         }
       },
@@ -1601,7 +1601,7 @@
   },
   "Global": {
     "Focus": {
-      "value": "{q.stroke.focus.Global.Focus}",
+      "value": "{q.stroke.focus}",
       "type": "color"
     },
     "FocusBorder": {
