@@ -1,28 +1,26 @@
 {
   "Inter": {
-    "Action": {
-      "Main": {
-        "Color": {
-          "value": "{core.color.azure.500}",
-          "type": "color"
-        },
-        "Label": {
-          "value": "{core.color.neutral.white}",
-          "type": "color"
-        },
-        "Icon": {
-          "value": "{core.color.neutral.white}",
-          "type": "color"
-        }
-      }
-    },
     "Global": {
+      "MainColor": {
+        "value": "{core.color.azure.500}",
+        "type": "color"
+      },
       "Hint": {
         "value": "{core.color.coolgray.300}",
         "type": "color"
       },
       "Focus": {
         "value": "{core.color.coolgray.100}",
+        "type": "color"
+      }
+    },
+    "Action": {
+      "Label": {
+        "value": "{core.color.neutral.white}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{core.color.neutral.white}",
         "type": "color"
       }
     },
