@@ -161,11 +161,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.40.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.30.solid}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -345,11 +345,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.40.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.30.solid}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -371,11 +371,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.40.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.30.solid}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -397,11 +397,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.40.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.30.solid}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -537,11 +537,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.40.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.30.solid}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -563,11 +563,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.40.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.30.solid}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
