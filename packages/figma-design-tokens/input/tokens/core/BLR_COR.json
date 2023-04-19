@@ -376,55 +376,55 @@
         }
       },
       "azure": {
-        "30": {
+        "300": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.300}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "40": {
+        "400": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.400}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "50": {
+        "500": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.500}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "60": {
+        "600": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "70": {
+        "700": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.700}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "80": {
+        "800": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "90": {
+        "900": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.900}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "95": {
+        "950": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.950}%, {core.color.ref.alpha.100})",
             "type": "color"
           }
         },
-        "99": {
+        "990": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.999}%, {core.color.ref.alpha.100})",
             "type": "color"
