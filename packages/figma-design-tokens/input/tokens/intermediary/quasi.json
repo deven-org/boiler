@@ -1,98 +1,124 @@
 {
-  "Inter": {
-    "Global": {
-      "MainColor": {
-        "value": "{core.color.azure.500}",
-        "type": "color"
+  "q": {
+    "surface": {
+      "brand": {
+        "primary": {
+          "rest": {
+            "value": "{core.color.azure.500}",
+            "type": "color"
+          }
+        }
       },
-      "Hint": {
-        "value": "{core.color.coolgray.300}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color"
-      }
-    },
-    "Action": {
-      "Label": {
-        "value": "{core.color.neutral.white}",
-        "type": "color"
-      },
-      "Icon": {
-        "value": "{core.color.neutral.white}",
-        "type": "color"
-      }
-    },
-    "Forms": {
-      "Placeholder": {
-        "value": "{core.color.coolgray.700}",
-        "type": "color"
-      },
-      "Label": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "LabelAppendix": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "UserInput": {
-        "value": "{core.color.coolgray.100}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "Error": {
-        "SurfaceFill": {
+      "error": {
+        "alpha": {
           "value": "{core.color.neutral.white}",
-          "type": "color"
-        },
-        "SurfaceStroke": {
-          "value": "{core.color.crimson.500}",
-          "type": "color"
-        },
-        "Text": {
-          "value": "{core.color.crimson.500}",
-          "type": "color"
-        },
-        "UserInput": {
-          "value": "{core.color.crimson.300}",
-          "type": "color"
-        },
-        "Placeholder": {
-          "value": "{core.color.coolgray.700}",
           "type": "color"
         }
       },
       "Disabled": {
-        "SurfaceFill": {
-          "value": "{core.color.coolgray.900}",
+        "value": "{core.color.coolgray.900}",
+        "type": "color"
+      },
+      "readonly": {
+        "value": "{core.color.coolgray.999}",
+        "type": "color"
+      }
+    },
+    "text": {
+      "onDefault": {
+        "hint": {
+          "value": "{core.color.coolgray.300}",
           "type": "color"
         },
-        "SurfaceStroke": {
-          "value": "{core.color.coolgray.800}",
+        "placeholder": {
+          "value": "{core.color.coolgray.700}",
           "type": "color"
         },
-        "Placeholder": {
-          "value": "{core.color.coolgray.800}",
-          "type": "color"
-        },
-        "UserInput": {
-          "value": "{core.color.coolgray.800}",
-          "type": "color"
+        "alpha": {
+          "value": "{core.color.coolgray.100}",
+          "type": "color",
+          "description": "Forms"
         }
       },
-      "ReadOnly": {
-        "SurfaceFill": {
-          "value": "{core.color.coolgray.999}",
+      "onbrand": {
+        "alpha": {
+          "value": "{core.color.neutral.white}",
           "type": "color"
         },
-        "SurfaceStroke": {
-          "value": "{core.color.coolgray.900}",
+        "": {
+          "beta": {
+            "Rest": {
+              "value": "{q.surface.brand.primary.rest}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{core.color.azure.400}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{core.color.azure.300}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{q.surface.brand.primary.rest}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{core.color.coolgray.800}",
+              "type": "color"
+            },
+            "Loading": {
+              "value": "{q.surface.brand.primary.rest}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "error": {
+        "alpha": {
+          "value": "{core.color.crimson.500}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.crimson.300}",
           "type": "color"
         }
+      }
+    },
+    "stroke": {
+      "focus": {
+        "Global": {
+          "Focus": {
+            "value": "{core.color.coolgray.100}",
+            "type": "color"
+          }
+        },
+        "Forms": {
+          "Disabled": {
+            "SurfaceStroke": {
+              "value": "{core.color.coolgray.800}",
+              "type": "color"
+            },
+            "Placeholder": {
+              "value": "{core.color.coolgray.800}",
+              "type": "color"
+            },
+            "UserInput": {
+              "value": "{core.color.coolgray.800}",
+              "type": "color"
+            }
+          },
+          "ReadOnly": {
+            "SurfaceStroke": {
+              "value": "{core.color.coolgray.900}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "error": {
+        "value": "{core.color.crimson.500}",
+        "type": "color"
       }
     }
   }

@@ -157,7 +157,7 @@
     "Primary": {
       "SurfaceFill": {
         "Rest": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Hover": {
@@ -169,7 +169,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -177,7 +177,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         }
       },
@@ -341,7 +341,7 @@
       },
       "SurfaceStroke": {
         "Rest": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Hover": {
@@ -353,7 +353,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -361,13 +361,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         }
       },
       "Icon": {
         "Rest": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Hover": {
@@ -379,7 +379,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -387,13 +387,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         }
       },
       "Label": {
         "Rest": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Hover": {
@@ -405,7 +405,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -413,7 +413,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         }
       },
@@ -533,7 +533,7 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Hover": {
@@ -545,7 +545,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -553,13 +553,13 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         }
       },
       "Label": {
         "Rest": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Hover": {
@@ -571,7 +571,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -579,7 +579,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "{Inter.Global.MainColor}",
+          "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         }
       },
@@ -1294,55 +1294,55 @@
     },
     "Label": {
       "Rest": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "Focus": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "Focus": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{Inter.Forms.Label}",
+        "value": "{q.text.onDefault.alpha}",
         "type": "color"
       }
     },
     "Caption": {
       "Error": {
-        "value": "{Inter.Forms.Error.Text}",
+        "value": "{q.text.error.alpha}",
         "type": "color"
       },
       "Hint": {
-        "value": "{Inter.Global.Hint}",
+        "value": "{q.text.onDefault.hint}",
         "type": "color"
       }
     },
@@ -1361,7 +1361,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{Inter.Forms.Disabled.UserInput}",
+          "value": "{q.stroke.focus.Forms.Disabled.UserInput}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1371,11 +1371,11 @@
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Forms.Error.UserInput}",
+          "value": "{q.text.error.beta}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.Error.UserInput}",
+          "value": "{q.text.error.beta}",
           "type": "color"
         }
       }
@@ -1383,23 +1383,23 @@
     "Placeholder": {
       "Default": {
         "Rest": {
-          "value": "{Inter.Forms.Placeholder}",
+          "value": "{q.text.onDefault.placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.Placeholder}",
+          "value": "{q.text.onDefault.placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Forms.Placeholder}",
+          "value": "{q.text.onDefault.placeholder}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{Inter.Forms.Disabled.Placeholder}",
+          "value": "{q.stroke.focus.Forms.Disabled.Placeholder}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Forms.Placeholder}",
+          "value": "{q.text.onDefault.placeholder}",
           "type": "color"
         }
       },
@@ -1437,21 +1437,21 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Forms.ReadOnly.SurfaceFill}",
+          "value": "{q.surface.readonly}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Forms.Error.SurfaceFill}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.Error.SurfaceFill}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Forms.Error.SurfaceFill}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         }
       }
@@ -1475,21 +1475,21 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Forms.ReadOnly.SurfaceStroke}",
+          "value": "{q.stroke.focus.Forms.ReadOnly.SurfaceStroke}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Forms.Error.SurfaceStroke}",
+          "value": "{q.stroke.error}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.Error.SurfaceStroke}",
+          "value": "{q.stroke.error}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Forms.Error.SurfaceStroke}",
+          "value": "{q.stroke.error}",
           "type": "color"
         }
       }
@@ -1601,7 +1601,7 @@
   },
   "Global": {
     "Focus": {
-      "value": "{Inter.Global.Focus}",
+      "value": "{q.stroke.focus.Global.Focus}",
       "type": "color"
     },
     "FocusBorder": {
