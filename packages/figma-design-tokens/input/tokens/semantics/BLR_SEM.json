@@ -19,7 +19,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -71,7 +71,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -97,7 +97,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -173,7 +173,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -225,7 +225,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -251,7 +251,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -357,7 +357,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -383,7 +383,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -409,7 +409,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -549,7 +549,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -575,7 +575,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -651,7 +651,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -703,7 +703,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -729,7 +729,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -805,7 +805,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -857,7 +857,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -883,7 +883,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -1433,7 +1433,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.900}",
+          "value": "{core.color.coolgray.900.solid}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1471,7 +1471,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1570,27 +1570,27 @@
     },
     "InputIcon": {
       "Rest": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{core.color.coolgray.700.solid}",
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.600}",
+        "value": "{core.color.coolgray.600.opa0}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.500}",
+        "value": "{core.color.coolgray.500.solid}",
         "type": "color"
       },
       "Pressed": {
-        "value": "{core.color.coolgray.600}",
+        "value": "{core.color.coolgray.600.opa0}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{core.color.coolgray.700.solid}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{core.color.coolgray.700.solid}",
         "type": "color"
       },
       "Error": {

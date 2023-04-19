@@ -63,16 +63,16 @@
       },
       "disabled": {
         "alpha": {
-          "value": "{core.color.coolgray.900}",
+          "value": "{core.color.coolgray.900.solid}",
           "type": "color"
         },
         "beta": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         }
       },
       "readonly": {
-        "value": "{core.color.coolgray.999}",
+        "value": "{core.color.coolgray.999.solid}",
         "type": "color"
       },
       "default": {
@@ -83,15 +83,15 @@
     "text": {
       "onDefault": {
         "hint": {
-          "value": "{core.color.coolgray.300}",
+          "value": "{core.color.coolgray.300.solid}",
           "type": "color"
         },
         "placeholder": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color"
         },
         "alpha": {
-          "value": "{core.color.coolgray.100}",
+          "value": "{core.color.coolgray.100.opa0}",
           "type": "color",
           "description": "Forms"
         },
@@ -129,15 +129,15 @@
     },
     "stroke": {
       "focus": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{core.color.coolgray.100.opa0}",
         "type": "color"
       },
       "disabled": {
-        "value": "{core.color.coolgray.800}",
+        "value": "{core.color.coolgray.800.solid}",
         "type": "color"
       },
       "readOnly": {
-        "value": "{core.color.coolgray.900}",
+        "value": "{core.color.coolgray.900.solid}",
         "type": "color"
       },
       "error": {
@@ -192,7 +192,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -218,7 +218,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -272,7 +272,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -298,7 +298,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -326,7 +326,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -352,7 +352,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -378,7 +378,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -470,7 +470,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -496,7 +496,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -524,7 +524,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -576,7 +576,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -602,7 +602,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -630,7 +630,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -682,7 +682,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
@@ -708,7 +708,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.opa0}",
           "type": "color"
         },
         "Loading": {
