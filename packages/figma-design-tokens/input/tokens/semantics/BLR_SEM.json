@@ -311,27 +311,27 @@
     "Secondary": {
       "SurfaceFill": {
         "Rest": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
           "type": "color"
         },
         "Hover": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.700}%, {Action.Secondary.SurfaceFill.Alpha})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.700}%, {Action.Secondary.SurfaceFill.Alpha})",
           "type": "color"
         },
         "Pressed": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Secondary.SurfaceFill.Alpha})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Secondary.SurfaceFill.Alpha})",
           "type": "color"
         },
         "Focus": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
           "type": "color"
         },
         "Disabled": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
           "type": "color"
         },
         "Loading": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {Action.Secondary.SurfaceFill.Alpha})",
           "type": "color"
         },
         "Alpha": {
@@ -469,19 +469,19 @@
     "Silent": {
       "SurfaceFill": {
         "Rest": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.AlphaRest})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Silent.SurfaceFill.AlphaRest})",
           "type": "color"
         },
         "Hover": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.AlphaHover})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Silent.SurfaceFill.AlphaHover})",
           "type": "color"
         },
         "Pressed": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.AlphaPressed})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Silent.SurfaceFill.AlphaPressed})",
           "type": "color"
         },
         "Focus": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.AlphaRest})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Silent.SurfaceFill.AlphaRest})",
           "type": "color"
         },
         "Disabled": {
@@ -489,7 +489,7 @@
           "type": "color"
         },
         "Loading": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.AlphaRest})",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {Action.Silent.SurfaceFill.AlphaRest})",
           "type": "color"
         },
         "AlphaRest": {
@@ -1068,21 +1068,21 @@
   "Feedback": {
     "Background": {
       "Default": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, 0.2)",
+        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, 0.2)",
         "type": "color"
       },
       "Inverted": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 0.2)",
+        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.999}%, 0.2)",
         "type": "color"
       }
     },
     "Fill": {
       "Default": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.400}%, 1)",
+        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.400}%, 1)",
         "type": "color"
       },
       "Inverted": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 1)",
+        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.999}%, 1)",
         "type": "color"
       }
     }

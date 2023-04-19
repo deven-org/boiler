@@ -229,47 +229,47 @@
       },
       "purple": {
         "100": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.purple.HUE}, {core.color.purple.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -283,47 +283,47 @@
       },
       "azure": {
         "100": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -337,47 +337,47 @@
       },
       "coolgray": {
         "100": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -391,47 +391,47 @@
       },
       "limegreen": {
         "100": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.limegreen.HUE}, {core.color.limegreen.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -445,47 +445,47 @@
       },
       "gold": {
         "100": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.gold.HUE}, {core.color.gold.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -499,47 +499,47 @@
       },
       "crimson": {
         "100": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.crimson.HUE}, {core.color.crimson.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -553,47 +553,47 @@
       },
       "red": {
         "100": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.100}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.100}%)",
           "type": "color"
         },
         "200": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.200}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.200}%)",
           "type": "color"
         },
         "300": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.300}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.300}%)",
           "type": "color"
         },
         "400": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.400}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.400}%)",
           "type": "color"
         },
         "500": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.500}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.500}%)",
           "type": "color"
         },
         "600": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.600}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.600}%)",
           "type": "color"
         },
         "700": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.700}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.700}%)",
           "type": "color"
         },
         "800": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.800}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.800}%)",
           "type": "color"
         },
         "900": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.900}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.900}%)",
           "type": "color"
         },
         "950": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.950}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.950}%)",
           "type": "color"
         },
         "999": {
-          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.LGT.999}%)",
+          "value": "hsla({core.color.red.HUE}, {core.color.red.SAT}%, {core.color.ref.lght.999}%)",
           "type": "color"
         },
         "HUE": {
@@ -605,50 +605,52 @@
           "type": "color"
         }
       },
-      "LGT": {
-        "100": {
-          "value": "10",
-          "type": "color"
-        },
-        "200": {
-          "value": "20",
-          "type": "color"
-        },
-        "300": {
-          "value": "30",
-          "type": "color"
-        },
-        "400": {
-          "value": "40",
-          "type": "color"
-        },
-        "500": {
-          "value": "50",
-          "type": "color"
-        },
-        "600": {
-          "value": "60",
-          "type": "color"
-        },
-        "700": {
-          "value": "70",
-          "type": "color"
-        },
-        "800": {
-          "value": "80",
-          "type": "color"
-        },
-        "900": {
-          "value": "90",
-          "type": "color"
-        },
-        "950": {
-          "value": "95",
-          "type": "color"
-        },
-        "999": {
-          "value": "99",
-          "type": "color"
+      "ref": {
+        "lght": {
+          "100": {
+            "value": "10",
+            "type": "color"
+          },
+          "200": {
+            "value": "20",
+            "type": "color"
+          },
+          "300": {
+            "value": "30",
+            "type": "color"
+          },
+          "400": {
+            "value": "40",
+            "type": "color"
+          },
+          "500": {
+            "value": "50",
+            "type": "color"
+          },
+          "600": {
+            "value": "60",
+            "type": "color"
+          },
+          "700": {
+            "value": "70",
+            "type": "color"
+          },
+          "800": {
+            "value": "80",
+            "type": "color"
+          },
+          "900": {
+            "value": "90",
+            "type": "color"
+          },
+          "950": {
+            "value": "95",
+            "type": "color"
+          },
+          "999": {
+            "value": "99",
+            "type": "color"
+          }
         }
       }
     },
