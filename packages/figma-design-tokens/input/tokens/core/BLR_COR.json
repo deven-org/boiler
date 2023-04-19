@@ -381,7 +381,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.100}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.100}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -428,7 +427,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.200}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.200}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -475,7 +473,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.300}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.300}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -522,7 +519,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.400}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.400}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -569,7 +565,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.500}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.500}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -616,7 +611,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.600}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -663,7 +657,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.700}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.700}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -710,7 +703,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.800}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -757,7 +749,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.900}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.900}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -804,7 +795,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.950}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.0})",
             "type": "color"
@@ -851,7 +841,6 @@
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.999}%, {core.color.ref.alpha.100})",
             "type": "color"
           },
-
           "opa0": {
             "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.0})",
             "type": "color"
