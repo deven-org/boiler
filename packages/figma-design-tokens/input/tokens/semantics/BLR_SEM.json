@@ -1052,21 +1052,21 @@
   "Feedback": {
     "Background": {
       "Default": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, 0.2)",
+        "value": "{core.color.azure.600.opa20}",
         "type": "color"
       },
       "Inverted": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 0.2)",
+        "value": "{core.color.white.opa20}",
         "type": "color"
       }
     },
     "Fill": {
       "Default": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.400}%, 1)",
+        "value": "{core.color.azure.400.solid}",
         "type": "color"
       },
       "Inverted": {
-        "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.999}%, 1)",
+        "value": "{core.color.white.solid}",
         "type": "color"
       }
     }
@@ -1333,23 +1333,23 @@
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.focus.Forms.Disabled.UserInput}",
+          "value": "{q.text.ondisabled.gamma}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         }
       },
@@ -1379,7 +1379,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.focus.Forms.Disabled.Placeholder}",
+          "value": "{q.text.ondisabled.placeholder}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1389,15 +1389,15 @@
       },
       "Error": {
         "Rest": {
-          "value": "{Inter.Forms.Error.Placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.Error.Placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Forms.Error.Placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         }
       }
@@ -1405,19 +1405,19 @@
     "SurfaceFill": {
       "Default": {
         "Rest": {
-          "value": "{core.color.white.solid}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.white.solid}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.white.solid}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.900.solid}",
+          "value": "{q.surface.disabled.gamma}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1427,15 +1427,15 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.default}",
           "type": "color"
         }
       }
