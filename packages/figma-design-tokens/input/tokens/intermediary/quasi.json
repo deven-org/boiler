@@ -4,29 +4,29 @@
       "brand": {
         "primary": {
           "rest": {
-            "value": "{core.color.azure.500}",
+            "value": "{core.color.azure.500.solid}",
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.azure.400}",
+            "value": "{core.color.azure.400.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.azure.300}",
+            "value": "{core.color.azure.300.solid}",
             "type": "color"
           }
         },
         "cta": {
           "Rest": {
-            "value": "{core.color.purple.500}",
+            "value": "{core.color.purple.500.solid}",
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.purple.400}",
+            "value": "{core.color.purple.400.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.purple.300}",
+            "value": "{core.color.purple.300.solid}",
             "type": "color"
           }
         },
@@ -60,49 +60,49 @@
         },
         "destructive": {
           "Rest": {
-            "value": "{core.color.crimson.500}",
+            "value": "{core.color.crimson.500.solid}",
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.crimson.400}",
+            "value": "{core.color.crimson.400.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.crimson.300}",
+            "value": "{core.color.crimson.300.solid}",
             "type": "color"
           }
         },
         "encourage": {
           "Rest": {
-            "value": "{core.color.limegreen.400}",
+            "value": "{core.color.limegreen.400.solid}",
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.limegreen.300}",
+            "value": "{core.color.limegreen.300.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.limegreen.200}",
+            "value": "{core.color.limegreen.200.solid}",
             "type": "color"
           }
         }
       },
       "disabled": {
         "alpha": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "beta": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "gamma": {
-          "value": "{core.color.coolgray.900}",
+          "value": "{core.color.coolgray.900.solid}",
           "type": "color"
         }
       },
       "readonly": {
-        "value": "{core.color.coolgray.999}",
+        "value": "{core.color.coolgray.999.solid}",
         "type": "color"
       },
       "default": {
@@ -113,25 +113,25 @@
     "text": {
       "onDefault": {
         "hint": {
-          "value": "{core.color.coolgray.300}",
+          "value": "{core.color.coolgray.300.solid}",
           "type": "color"
         },
         "placeholder": {
-          "value": "{core.color.coolgray.700}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color"
         },
         "alpha": {
-          "value": "{core.color.coolgray.100}",
+          "value": "{core.color.coolgray.100.solid}",
           "type": "color",
           "description": "Forms"
         },
         "error": {
           "alpha": {
-            "value": "{core.color.crimson.500}",
+            "value": "{core.color.crimson.500.solid}",
             "type": "color"
           },
           "beta": {
-            "value": "{core.color.crimson.300}",
+            "value": "{core.color.crimson.300.solid}",
             "type": "color"
           }
         }
@@ -147,41 +147,41 @@
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.azure.400}",
+            "value": "{core.color.azure.400.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.azure.300}",
+            "value": "{core.color.azure.300.solid}",
             "type": "color"
           }
         }
       },
       "onDisabled": {
         "alpha": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "beta": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         }
       }
     },
     "stroke": {
       "focus": {
-        "value": "{core.color.coolgray.100}",
+        "value": "{core.color.coolgray.100.solid}",
         "type": "color"
       },
       "disabled": {
-        "value": "{core.color.coolgray.800}",
+        "value": "{core.color.coolgray.800.solid}",
         "type": "color"
       },
       "readOnly": {
-        "value": "{core.color.coolgray.900}",
+        "value": "{core.color.coolgray.900.solid}",
         "type": "color"
       },
       "error": {
-        "value": "{core.color.crimson.500}",
+        "value": "{core.color.crimson.500.solid}",
         "type": "color"
       },
       "brand": {
@@ -205,11 +205,11 @@
             "type": "color"
           },
           "Hover": {
-            "value": "{core.color.azure.400}",
+            "value": "{core.color.azure.400.solid}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{core.color.azure.300}",
+            "value": "{core.color.azure.300.solid}",
             "type": "color"
           }
         }
