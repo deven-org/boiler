@@ -924,7 +924,6 @@
         "type": "border"
       }
     },
-
     "BorderRadius": {
       "value": "{core.borderRadius.MD}",
       "type": "borderRadius"
@@ -1406,15 +1405,15 @@
     "SurfaceFill": {
       "Default": {
         "Rest": {
-          "value": "{core.color.neutral.white}",
+          "value": "{core.color.white.solid}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.neutral.white}",
+          "value": "{core.color.white.solid}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.neutral.white}",
+          "value": "{core.color.white.solid}",
           "type": "color"
         },
         "Disabled": {

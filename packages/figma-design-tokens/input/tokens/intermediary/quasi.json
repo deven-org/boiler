@@ -106,11 +106,11 @@
         "type": "color"
       },
       "default": {
-        "value": "{core.color.neutral.white}",
+        "value": "{core.color.white.solid}",
         "type": "color"
       },
       "error": {
-        "value": "{core.color.neutral.white}",
+        "value": "{core.color.white.solid}",
         "type": "color"
       }
     },
@@ -142,7 +142,7 @@
       },
       "onbrand": {
         "alpha": {
-          "value": "{core.color.neutral.white}",
+          "value": "{core.color.white.solid}",
           "type": "color"
         },
         "beta": {

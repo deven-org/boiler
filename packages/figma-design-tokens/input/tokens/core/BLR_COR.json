@@ -311,13 +311,113 @@
         "transparent": {
           "value": "#00000000",
           "type": "color"
-        },
-        "white": {
-          "value": "#FFF",
+        }
+      },
+      "white": {
+        "solid": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.100})",
           "type": "color"
         },
-        "black": {
-          "value": "#000",
+        "opa0": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.0})",
+          "type": "color"
+        },
+        "opa10": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.10})",
+          "type": "color"
+        },
+        "opa20": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.20})",
+          "type": "color"
+        },
+        "opa30": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.30})",
+          "type": "color"
+        },
+        "opa40": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.40})",
+          "type": "color"
+        },
+        "opa50": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.50})",
+          "type": "color"
+        },
+        "opa60": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.60})",
+          "type": "color"
+        },
+        "opa70": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.70})",
+          "type": "color"
+        },
+        "opa80": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.80})",
+          "type": "color"
+        },
+        "opa90": {
+          "value": "hsla({core.color.white.HUE}, {core.color.white.SAT}%, 100%, {core.color.ref.alpha.90})",
+          "type": "color"
+        },
+        "HUE": {
+          "value": "0",
+          "type": "color"
+        },
+        "SAT": {
+          "value": "0",
+          "type": "color"
+        }
+      },
+      "black": {
+        "solid": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.100})",
+          "type": "color"
+        },
+        "opa0": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.0})",
+          "type": "color"
+        },
+        "opa10": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.10})",
+          "type": "color"
+        },
+        "opa20": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.20})",
+          "type": "color"
+        },
+        "opa30": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.30})",
+          "type": "color"
+        },
+        "opa40": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.40})",
+          "type": "color"
+        },
+        "opa50": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.50})",
+          "type": "color"
+        },
+        "opa60": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.60})",
+          "type": "color"
+        },
+        "opa70": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.70})",
+          "type": "color"
+        },
+        "opa80": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.80})",
+          "type": "color"
+        },
+        "opa90": {
+          "value": "hsla({core.color.black.HUE}, {core.color.black.SAT}%, 0%, {core.color.ref.alpha.90})",
+          "type": "color"
+        },
+        "HUE": {
+          "value": "0",
+          "type": "color"
+        },
+        "SAT": {
+          "value": "0",
           "type": "color"
         }
       },
