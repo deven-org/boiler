@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 19 Apr 2023 13:56:42 GMT
+ * Generated on Thu, 20 Apr 2023 16:39:53 GMT
  */
 
 export const componentTokens = {
@@ -32,36 +32,36 @@ export const componentTokens = {
     Loader: {
       SM: {
         Background: {
-          Default: { color: 'hsla(220, 85%, 60%, 0.2)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 0.2)', width: '2px', style: 'solid' },
+          Default: { color: 'hsla(220, 85%, 60%,0.2) ', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 0.2)', width: '2px', style: 'solid' },
         },
         Foreground: {
           Default: { color: 'hsla(220, 85%, 40%, 1)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 1)', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
         },
         Sizing: '1rem',
         Padding: '0.063rem',
       },
       MD: {
         Background: {
-          Default: { color: 'hsla(220, 85%, 60%, 0.2)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 0.2)', width: '2px', style: 'solid' },
+          Default: { color: 'hsla(220, 85%, 60%,0.2) ', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 0.2)', width: '2px', style: 'solid' },
         },
         Foreground: {
           Default: { color: 'hsla(220, 85%, 40%, 1)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 1)', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
         },
         Sizing: '1.5rem',
         Padding: '0.125rem',
       },
       LG: {
         Background: {
-          Default: { color: 'hsla(220, 85%, 60%, 0.2)', width: '3px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 0.2)', width: '3px', style: 'solid' },
+          Default: { color: 'hsla(220, 85%, 60%,0.2) ', width: '3px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 0.2)', width: '3px', style: 'solid' },
         },
         Foreground: {
           Default: { color: 'hsla(220, 85%, 40%, 1)', width: '3px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 1)', width: '3px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 1)', width: '3px', style: 'solid' },
         },
         Sizing: '2rem',
         Padding: '0.188rem',
