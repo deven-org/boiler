@@ -1298,7 +1298,7 @@
             "type": "color"
           }
         },
-        "990": {
+        "999": {
           "solid": {
             "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.ref.lght.999}%, {core.color.ref.alpha.100})",
             "type": "color"
@@ -2377,7 +2377,7 @@
           }
         },
         "HUE": {
-          "value": "50",
+          "value": "100",
           "type": "color"
         },
         "SAT": {
