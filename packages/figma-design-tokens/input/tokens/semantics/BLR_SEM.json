@@ -3,7 +3,7 @@
     "CTA": {
       "SurfaceFill": {
         "Rest": {
-          "value": "{core.color.purple.500}",
+          "value": "{core.color.purple.500.solid}",
           "type": "color"
         },
         "Hover": {
@@ -11,19 +11,19 @@
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.purple.300}",
+          "value": "{core.color.purple.300.solid}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.purple.500}",
+          "value": "{core.color.purple.500.solid}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.purple.500}",
+          "value": "{core.color.purple.500.solid}",
           "type": "color"
         }
       },
@@ -71,7 +71,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -97,7 +97,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -161,11 +161,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.400}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.300}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -173,7 +173,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -225,7 +225,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -251,7 +251,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -345,11 +345,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.400}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.300}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -357,7 +357,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -371,11 +371,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.400}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.300}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -383,7 +383,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -397,11 +397,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.400}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.300}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -409,7 +409,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -537,11 +537,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.400}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.300}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -549,7 +549,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -563,11 +563,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.azure.400}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.azure.300}",
+          "value": "{core.color.azure.300.solid}",
           "type": "color"
         },
         "Focus": {
@@ -575,7 +575,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -635,27 +635,27 @@
     "Destructive": {
       "SurfaceFill": {
         "Rest": {
-          "value": "{core.color.crimson.500}",
+          "value": "{core.color.crimson.500.solid}",
           "type": "color"
         },
         "Hover": {
-          "value": "{core.color.crimson.400}",
+          "value": "{core.color.crimson.400.solid}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{core.color.crimson.300}",
+          "value": "{core.color.crimson.300.solid}",
           "type": "color"
         },
         "Focus": {
-          "value": "{core.color.crimson.500}",
+          "value": "{core.color.crimson.500.solid}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
-          "value": "{core.color.crimson.500}",
+          "value": "{core.color.crimson.500.solid}",
           "type": "color"
         }
       },
@@ -703,7 +703,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -729,7 +729,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -805,7 +805,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "Loading": {
@@ -857,7 +857,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -883,7 +883,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "Loading": {
@@ -1433,7 +1433,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.900}",
+          "value": "{core.color.coolgray.900.solid}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1471,7 +1471,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1574,15 +1574,15 @@
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.600}",
+        "value": "{core.color.coolgray.600.solid}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.500}",
+        "value": "{core.color.coolgray.500.solid}",
         "type": "color"
       },
       "Pressed": {
-        "value": "{core.color.coolgray.600}",
+        "value": "{core.color.coolgray.600.solid}",
         "type": "color"
       },
       "Disabled": {
@@ -1594,7 +1594,7 @@
         "type": "color"
       },
       "Error": {
-        "value": "{core.color.crimson.500}",
+        "value": "{core.color.crimson.500.solid}",
         "type": "color"
       }
     }
