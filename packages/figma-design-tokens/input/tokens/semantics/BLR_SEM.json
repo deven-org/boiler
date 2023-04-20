@@ -1294,55 +1294,55 @@
     },
     "Label": {
       "Rest": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{q.text.onDefault.alpha}",
+        "value": "{q.text.ondefault.alpha}",
         "type": "color"
       }
     },
     "Caption": {
       "Error": {
-        "value": "{q.text.onDefault.error.alpha}",
+        "value": "{q.text.ondefault.error.alpha}",
         "type": "color"
       },
       "Hint": {
-        "value": "{q.text.onDefault.hint}",
+        "value": "{q.text.ondefault.hint}",
         "type": "color"
       }
     },
@@ -1371,11 +1371,11 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.text.onDefault.error.beta}",
+          "value": "{q.text.ondefault.error.beta}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onDefault.error.beta}",
+          "value": "{q.text.ondefault.error.beta}",
           "type": "color"
         }
       }
@@ -1383,15 +1383,15 @@
     "Placeholder": {
       "Default": {
         "Rest": {
-          "value": "{q.text.onDefault.placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onDefault.placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onDefault.placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         },
         "Disabled": {
@@ -1399,7 +1399,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.text.onDefault.placeholder}",
+          "value": "{q.text.ondefault.placeholder}",
           "type": "color"
         }
       },

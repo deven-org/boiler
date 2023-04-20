@@ -32,29 +32,29 @@
         },
         "secondary": {
           "rest": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.800}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "value": "{core.color.azure.800.opa30}",
             "type": "color"
           },
           "hover": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.700}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "value": "{core.color.azure.700.opa30}",
             "type": "color"
           },
           "pressed": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Secondary.SurfaceFill.Alpha})",
+            "value": "{core.color.azure.600.opa30}",
             "type": "color"
           }
         },
         "silent": {
           "rest": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.Alpharest})",
+            "value": "{core.color.azure.600.opa0}",
             "type": "color"
           },
           "pressed": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.Alphapressed})",
+            "value": "{core.color.azure.600.opa10}",
             "type": "color"
           },
           "hover": {
-            "value": "hsla({core.color.azure.HUE}, {core.color.azure.SAT}%, {core.color.LGT.600}%, {Action.Silent.SurfaceFill.Alphahover})",
+            "value": "{core.color.azure.600.opa20}",
             "type": "color"
           }
         },
@@ -115,7 +115,7 @@
       }
     },
     "text": {
-      "onDefault": {
+      "ondefault": {
         "hint": {
           "value": "{core.color.coolgray.300.solid}",
           "type": "color"
