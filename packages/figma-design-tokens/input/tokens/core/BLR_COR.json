@@ -893,7 +893,7 @@
       },
       "coolgray": {
         "100": {
-          "solid": {
+          "solidd": {
             "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.100}%,{core.color.ref.alpha.100})",
             "type": "color"
           },
