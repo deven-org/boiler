@@ -1345,23 +1345,23 @@
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.focus.Forms.Disabled.UserInput}",
+          "value": "{q.text.ondisabled.gamma}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Inter.Forms.UserInput}",
+          "value": "{q.text.ondefault.alpha}",
           "type": "color"
         }
       },
