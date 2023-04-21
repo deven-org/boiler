@@ -1455,7 +1455,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{core.color.coolgray.800.solid}",
+          "value": "{q.stroke.disabled}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1554,10 +1554,14 @@
     },
     "InputIcon": {
       "Rest": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{q.icon.ondefault.alpha}",
         "type": "color"
       },
       "Hover": {
+        "value": "{core.color.coolgray.600.solid}",
+        "type": "color"
+      },
+      "Pressed": {
         "value": "{core.color.coolgray.600.solid}",
         "type": "color"
       },
@@ -1565,16 +1569,8 @@
         "value": "{core.color.coolgray.500.solid}",
         "type": "color"
       },
-      "Pressed": {
-        "value": "{core.color.coolgray.600.solid}",
-        "type": "color"
-      },
       "Disabled": {
-        "value": "{core.color.coolgray.700}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{Forms.InputIcon.Rest}",
         "type": "color"
       },
       "Error": {

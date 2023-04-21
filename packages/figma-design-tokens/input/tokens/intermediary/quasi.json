@@ -230,6 +230,74 @@
           }
         }
       }
+    },
+    "icon": {
+      "ondefault": {
+        "alpha": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.coolgray.600.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "value": "{core.color.coolgray.500.solid}",
+          "type": "color"
+        },
+        "hint": {
+          "value": "{core.color.coolgray.300.solid}",
+          "type": "color"
+        },
+        "error": {
+          "alpha": {
+            "value": "{core.color.crimson.500.solid}",
+            "type": "color"
+          },
+          "beta": {
+            "value": "{core.color.crimson.300.solid}",
+            "type": "color"
+          }
+        }
+      },
+      "onbrand": {
+        "alpha": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "beta": {
+          "rest": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{core.color.azure.400.solid}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{core.color.azure.300.solid}",
+            "type": "color"
+          }
+        }
+      },
+      "ondisabled": {
+        "alpha": {
+          "value": "{core.color.coolgray.600.solid}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.coolgray.800.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "value": "{core.color.coolgray.800.solid}",
+          "type": "color"
+        },
+        "placeholder": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        }
+      }
     }
   }
 }
