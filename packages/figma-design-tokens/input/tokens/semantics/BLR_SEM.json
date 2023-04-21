@@ -1558,23 +1558,23 @@
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.600.solid}",
+        "value": "{q.icon.ondefault.beta}",
         "type": "color"
       },
       "Pressed": {
-        "value": "{core.color.coolgray.600.solid}",
+        "value": "{q.icon.ondefault.beta}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.500.solid}",
+        "value": "{q.icon.ondefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{Forms.InputIcon.Rest}",
+        "value": "{q.icon.ondisabled.beta}",
         "type": "color"
       },
       "Error": {
-        "value": "{core.color.crimson.500.solid}",
+        "value": "{q.icon.ondefault.error.alpha}",
         "type": "color"
       }
     }
