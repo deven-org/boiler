@@ -233,10 +233,6 @@
         "alpha": {
           "value": "{core.color.coolgray.800.solid}",
           "type": "color"
-        },
-        "beta": {
-          "value": "{core.color.coolgray.900.solid}",
-          "type": "color"
         }
       },
       "onerror": {

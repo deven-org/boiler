@@ -327,7 +327,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.disabled.beta}",
           "type": "color"
         },
         "Loading": {
@@ -353,7 +353,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled.alpha}",
+          "value": "{q.stroke.disabled.beta}",
           "type": "color"
         },
         "Loading": {
@@ -481,7 +481,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.disabled.beta}",
           "type": "color"
         },
         "Loading": {
