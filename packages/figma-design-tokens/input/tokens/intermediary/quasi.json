@@ -1,32 +1,26 @@
 {
   "q": {
     "surface": {
-      "global": {
-        "readonly": {
-          "value": "{core.color.coolgray.999.solid}",
+      "default": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "readonly": {
+        "value": "{core.color.coolgray.999.solid}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{core.color.crimson.800.opa10}",
+        "type": "color"
+      },
+      "disabled": {
+        "alpha": {
+          "value": "{core.color.coolgray.900.solid}",
           "type": "color"
         },
-        "default": {
-          "value": "{core.color.white.solid}",
+        "beta": {
+          "value": "{core.color.coolgray.800.opa0}",
           "type": "color"
-        },
-        "error": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        },
-        "disabled": {
-          "alpha": {
-            "value": "{core.color.coolgray.800.solid}",
-            "type": "color"
-          },
-          "beta": {
-            "value": "{core.color.coolgray.800.opa0}",
-            "type": "color"
-          },
-          "gamma": {
-            "value": "{core.color.coolgray.900.solid}",
-            "type": "color"
-          }
         }
       },
       "brand": {
@@ -117,30 +111,30 @@
       }
     },
     "stroke": {
-      "global": {
-        "focus": {
-          "value": "{core.color.coolgray.100.solid}",
+      "default": {
+        "value": "{core.color.coolgray.700.solid}",
+        "type": "color"
+      },
+      "readonly": {
+        "value": "{core.color.coolgray.900.solid}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{core.color.crimson.500.solid}",
+        "type": "color"
+      },
+      "focus": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "disabled": {
+        "alpha": {
+          "value": "{core.color.coolgray.800.opa0}",
           "type": "color"
         },
-        "disabled": {
+        "beta": {
           "value": "{core.color.coolgray.800.solid}",
           "type": "color"
-        },
-        "readonly": {
-          "value": "{core.color.coolgray.900.solid}",
-          "type": "color"
-        }
-      },
-      "ondefault": {
-        "alpha": {
-          "value": "{core.color.coolgray.700.solid}",
-          "type": "color"
-        },
-        "error": {
-          "alpha": {
-            "value": "{core.color.crimson.500.solid}",
-            "type": "color"
-          }
         }
       },
       "brand": {
@@ -176,6 +170,11 @@
     },
     "text": {
       "ondefault": {
+        "default": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
         "hint": {
           "value": "{core.color.coolgray.300.solid}",
           "type": "color"
@@ -183,21 +182,6 @@
         "placeholder": {
           "value": "{core.color.coolgray.700.solid}",
           "type": "color"
-        },
-        "alpha": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color",
-          "description": "Forms"
-        },
-        "error": {
-          "alpha": {
-            "value": "{core.color.crimson.500.solid}",
-            "type": "color"
-          },
-          "beta": {
-            "value": "{core.color.crimson.300.solid}",
-            "type": "color"
-          }
         }
       },
       "onbrand": {
@@ -222,19 +206,21 @@
       },
       "ondisabled": {
         "alpha": {
-          "value": "{core.color.coolgray.600.solid}",
-          "type": "color"
-        },
-        "beta": {
-          "value": "{core.color.coolgray.700.solid}",
-          "type": "color"
-        },
-        "gamma": {
           "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
-        "placeholder": {
-          "value": "{core.color.coolgray.700.solid}",
+        "beta": {
+          "value": "{core.color.coolgray.900.solid}",
+          "type": "color"
+        }
+      },
+      "error": {
+        "alpha": {
+          "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.crimson.300.solid}",
           "type": "color"
         }
       }

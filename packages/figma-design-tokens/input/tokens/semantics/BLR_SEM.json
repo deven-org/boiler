@@ -19,7 +19,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.alpha}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -45,7 +45,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -173,7 +173,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.alpha}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -199,7 +199,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -327,7 +327,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.alpha}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -353,7 +353,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -481,7 +481,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.alpha}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -507,7 +507,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -635,7 +635,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.alpha}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -661,7 +661,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -789,7 +789,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.alpha}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -815,7 +815,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -1278,45 +1278,45 @@
     },
     "Label": {
       "Rest": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{q.text.ondefault.alpha}",
+        "value": "{q.text.ondefault.default}",
         "type": "color"
       }
     },
@@ -1333,23 +1333,23 @@
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{q.text.ondefault.alpha}",
+          "value": "{q.text.ondefault.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.ondefault.alpha}",
+          "value": "{q.text.ondefault.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.ondefault.alpha}",
+          "value": "{q.text.ondefault.default}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.gamma}",
+          "value": "{q.text.ondisabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.text.ondefault.alpha}",
+          "value": "{q.text.ondefault.default}",
           "type": "color"
         }
       },
@@ -1405,37 +1405,37 @@
     "SurfaceFill": {
       "Default": {
         "Rest": {
-          "value": "{q.surface.global.default}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.global.default}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.global.default}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.global.disabled.gamma}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.surface.global.readonly}",
+          "value": "{q.surface.readonly}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{q.surface.global.default}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.global.default}",
+          "value": "{q.surface.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.global.default}",
+          "value": "{q.surface.default}",
           "type": "color"
         }
       }
@@ -1443,11 +1443,11 @@
     "SurfaceStroke": {
       "Default": {
         "Rest": {
-          "value": "{q.stroke.ondefault.alpha}",
+          "value": "{q.stroke.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.stroke.ondefault.alpha}",
+          "value": "{q.stroke.default}",
           "type": "color"
         },
         "Focus": {
@@ -1455,25 +1455,25 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.global.disabled}",
+          "value": "{q.stroke.disabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.stroke.global.readonly}",
+          "value": "{q.stroke.readonly}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{q.stroke.ondefault.error.alpha}",
+          "value": "{q.stroke.error}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.stroke.ondefault.error.alpha}",
+          "value": "{q.stroke.error}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.stroke.ondefault.error.alpha}",
+          "value": "{q.stroke.error}",
           "type": "color"
         }
       }
@@ -1581,7 +1581,7 @@
   },
   "Global": {
     "Focus": {
-      "value": "{q.stroke.global.focus}",
+      "value": "{q.stroke.focus}",
       "type": "color"
     },
     "FocusBorder": {
