@@ -87,31 +87,33 @@
           }
         }
       },
-      "disabled": {
-        "alpha": {
-          "value": "{core.color.coolgray.800.solid}",
+      "global": {
+        "disabled": {
+          "alpha": {
+            "value": "{core.color.coolgray.800.solid}",
+            "type": "color"
+          },
+          "beta": {
+            "value": "{core.color.coolgray.800.opa0}",
+            "type": "color"
+          },
+          "gamma": {
+            "value": "{core.color.coolgray.900.solid}",
+            "type": "color"
+          }
+        },
+        "readonly": {
+          "value": "{core.color.coolgray.999.solid}",
           "type": "color"
         },
-        "beta": {
-          "value": "{core.color.coolgray.800.opa0}",
+        "default": {
+          "value": "{core.color.white.solid}",
           "type": "color"
         },
-        "gamma": {
-          "value": "{core.color.coolgray.900.solid}",
+        "error": {
+          "value": "{core.color.white.solid}",
           "type": "color"
         }
-      },
-      "readonly": {
-        "value": "{core.color.coolgray.999.solid}",
-        "type": "color"
-      },
-      "default": {
-        "value": "{core.color.white.solid}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.white.solid}",
-        "type": "color"
       }
     },
     "stroke": {
@@ -237,7 +239,6 @@
         }
       }
     },
-
     "icon": {
       "ondefault": {
         "alpha": {

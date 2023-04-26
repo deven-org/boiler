@@ -19,7 +19,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.global.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -173,7 +173,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.global.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -327,7 +327,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.global.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -481,7 +481,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.global.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -635,7 +635,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.global.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -789,7 +789,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.global.disabled.alpha}",
           "type": "color"
         },
         "Loading": {
@@ -1405,37 +1405,37 @@
     "SurfaceFill": {
       "Default": {
         "Rest": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.global.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.global.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.global.default}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.surface.disabled.gamma}",
+          "value": "{q.surface.global.disabled.gamma}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.surface.readonly}",
+          "value": "{q.surface.global.readonly}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.global.default}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.global.default}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.global.default}",
           "type": "color"
         }
       }
