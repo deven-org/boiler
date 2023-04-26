@@ -1580,15 +1580,47 @@
     },
     "control": {
       "selected": {
-        "foreground": {
+        "background": {
           "rest": {
             "value": "{q.surface.brand.primary.rest}",
             "type": "color"
+          },
+          "hover": {
+            "value": "{q.surface.brand.primary.hover}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{q.surface.brand.primary.pressed}",
+            "type": "color"
+          },
+          "disabled": {
+            "value": "{q.surface.disabled.alpha}",
+            "type": "color"
+          },
+          "readonly": {
+            "value": "{q.surface.readonly}",
+            "type": "color"
           }
         },
-        "background": {
+        "foreground": {
           "rest": {
             "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color"
+          },
+          "readonly": {
+            "value": "{q.content.onreadonly.alpha}",
             "type": "color"
           }
         }
