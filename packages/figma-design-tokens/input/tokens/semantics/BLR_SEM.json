@@ -1431,11 +1431,11 @@
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.error}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.error}",
           "type": "color"
         }
       }
