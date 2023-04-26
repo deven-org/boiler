@@ -233,6 +233,10 @@
         "alpha": {
           "value": "{core.color.coolgray.800.solid}",
           "type": "color"
+        },
+        "inverted": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
         }
       },
       "onerror": {
