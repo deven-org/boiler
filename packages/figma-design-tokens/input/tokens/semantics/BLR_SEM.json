@@ -1285,6 +1285,10 @@
         "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
+      "Pressed": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
       "Focus": {
         "value": "{q.content.ondefault.alpha}",
         "type": "color"
@@ -1304,6 +1308,10 @@
         "type": "color"
       },
       "Hover": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Pressed": {
         "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
@@ -1337,6 +1345,10 @@
           "type": "color"
         },
         "Hover": {
+          "value": "{q.content.ondefault.alpha}",
+          "type": "color"
+        },
+        "Pressed": {
           "value": "{q.content.ondefault.alpha}",
           "type": "color"
         },
@@ -1374,6 +1386,10 @@
           "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         },
+        "Pressed": {
+          "value": "{q.content.ondefault.gamma.rest}",
+          "type": "color"
+        },
         "Focus": {
           "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
@@ -1396,6 +1412,10 @@
           "value": "{q.content.onerror.gamma}",
           "type": "color"
         },
+        "Pressed": {
+          "value": "{q.content.onerror.gamma}",
+          "type": "color"
+        },
         "Focus": {
           "value": "{q.content.onerror.gamma}",
           "type": "color"
@@ -1409,6 +1429,10 @@
           "type": "color"
         },
         "Hover": {
+          "value": "{q.surface.default}",
+          "type": "color"
+        },
+        "Pressed": {
           "value": "{q.surface.default}",
           "type": "color"
         },
@@ -1434,6 +1458,10 @@
           "value": "{q.surface.error}",
           "type": "color"
         },
+        "Pressed": {
+          "value": "{q.surface.error}",
+          "type": "color"
+        },
         "Focus": {
           "value": "{q.surface.error}",
           "type": "color"
@@ -1447,6 +1475,10 @@
           "type": "color"
         },
         "Hover": {
+          "value": "{q.stroke.default}",
+          "type": "color"
+        },
+        "Pressed": {
           "value": "{q.stroke.default}",
           "type": "color"
         },
@@ -1469,6 +1501,10 @@
           "type": "color"
         },
         "Hover": {
+          "value": "{q.stroke.error}",
+          "type": "color"
+        },
+        "Pressed": {
           "value": "{q.stroke.error}",
           "type": "color"
         },
@@ -1561,12 +1597,12 @@
         "value": "{q.content.ondefault.gamma.hover}",
         "type": "color"
       },
-      "Focus": {
-        "value": "{q.content.ondefault.gamma.rest}",
-        "type": "color"
-      },
       "Pressed": {
         "value": "{q.content.ondefault.gamma.pressed}",
+        "type": "color"
+      },
+      "Focus": {
+        "value": "{q.content.ondefault.gamma.rest}",
         "type": "color"
       },
       "Disabled": {
@@ -1592,12 +1628,16 @@
           "value": "{q.surface.brand.primary.pressed}",
           "type": "color"
         },
+        "Focus": {
+          "value": "{q.surface.brand.primary.rest}",
+          "type": "color"
+        },
         "Disabled": {
           "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.surface.disabled.alpha}",
+          "value": "{q.surface.readonly}",
           "type": "color"
         }
       },
@@ -1614,12 +1654,16 @@
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
+        "Focus": {
+          "value": "{q.content.onbrand.alpha}",
+          "type": "color"
+        },
         "Disabled": {
-          "value": "{q.content.ondisabled.inverted}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.content.ondisabled.inverted}",
+          "value": "{q.content.onreadonly.alpha}",
           "type": "color"
         }
       }
