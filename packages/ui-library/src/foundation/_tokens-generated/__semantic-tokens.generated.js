@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 Apr 2023 12:48:20 GMT
+ * Generated on Wed, 26 Apr 2023 13:01:45 GMT
  */
 
 export const semanticTokens = {
@@ -91,7 +91,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 70%,0.3) ',
         Pressed: 'hsla(220, 85%, 60%,0.3) ',
         Focus: 'hsla(220, 85%, 80%,0.3) ',
-        Disabled: 'hsla(220, 10%, 90%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: 'hsla(220, 85%, 80%,0.3) ',
       },
       SurfaceStroke: {
@@ -99,7 +99,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 80%,0) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       Icon: {
@@ -122,7 +122,7 @@ export const semanticTokens = {
       Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
       Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
       Loading: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
     },
     Silent: {
@@ -131,7 +131,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 60%,0.2) ',
         Pressed: 'hsla(220, 85%, 60%,0.1) ',
         Focus: 'hsla(220, 85%, 60%,0) ',
-        Disabled: 'hsla(220, 10%, 90%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: 'hsla(220, 85%, 60%,0) ',
       },
       SurfaceStroke: {
@@ -162,7 +162,7 @@ export const semanticTokens = {
       Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
       Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
       Loading: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
     },
     Destructive: {
