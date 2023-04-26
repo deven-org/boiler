@@ -180,25 +180,31 @@
       }
     },
     "stroke": {
-      "focus": {
-        "value": "{core.color.coolgray.100.solid}",
-        "type": "color"
+      "global": {
+        "focus": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{core.color.coolgray.800.solid}",
+          "type": "color"
+        },
+        "readonly": {
+          "value": "{core.color.coolgray.900.solid}",
+          "type": "color"
+        }
       },
-      "default": {
-        "value": "{core.color.coolgray.700.solid}",
-        "type": "color"
-      },
-      "disabled": {
-        "value": "{core.color.coolgray.800.solid}",
-        "type": "color"
-      },
-      "readonly": {
-        "value": "{core.color.coolgray.900.solid}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.crimson.500.solid}",
-        "type": "color"
+      "ondefault": {
+        "alpha": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
+        "error": {
+          "alpha": {
+            "value": "{core.color.crimson.500.solid}",
+            "type": "color"
+          }
+        }
       },
       "brand": {
         "alpha": {

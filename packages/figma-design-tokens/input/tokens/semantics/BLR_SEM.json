@@ -45,7 +45,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "Loading": {
@@ -199,7 +199,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "Loading": {
@@ -353,7 +353,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "Loading": {
@@ -507,7 +507,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "Loading": {
@@ -661,7 +661,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "Loading": {
@@ -815,7 +815,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "Loading": {
@@ -1455,25 +1455,25 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{q.stroke.global.disabled}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.stroke.readonly}",
+          "value": "{q.stroke.global.readonly}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{q.stroke.error}",
+          "value": "{q.stroke.ondefault.error.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.stroke.error}",
+          "value": "{q.stroke.ondefault.error.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.stroke.error}",
+          "value": "{q.stroke.ondefault.error.alpha}",
           "type": "color"
         }
       }
@@ -1581,7 +1581,7 @@
   },
   "Global": {
     "Focus": {
-      "value": "{q.stroke.focus}",
+      "value": "{q.stroke.global.focus}",
       "type": "color"
     },
     "FocusBorder": {
