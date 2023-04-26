@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 Apr 2023 14:29:41 GMT
+ * Generated on Wed, 26 Apr 2023 15:01:54 GMT
  */
 
 export const semanticTokens = {
@@ -311,6 +311,7 @@ export const semanticTokens = {
     Label: {
       Rest: 'hsla(220, 10%, 10%,1) ',
       Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
       Focus: 'hsla(220, 10%, 10%,1) ',
       Disabled: 'hsla(220, 10%, 10%,1) ',
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
@@ -318,6 +319,7 @@ export const semanticTokens = {
     LabelAppendix: {
       Rest: 'hsla(220, 10%, 10%,1) ',
       Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
       Focus: 'hsla(220, 10%, 10%,1) ',
       Disabled: 'hsla(220, 10%, 10%,1) ',
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
@@ -327,6 +329,7 @@ export const semanticTokens = {
       Default: {
         Rest: 'hsla(220, 10%, 10%,1) ',
         Hover: 'hsla(220, 10%, 10%,1) ',
+        Pressed: 'hsla(220, 10%, 10%,1) ',
         Focus: 'hsla(220, 10%, 10%,1) ',
         Disabled: 'hsla(220, 10%, 80%,1) ',
         ReadOnly: 'hsla(220, 10%, 10%,1) ',
@@ -337,21 +340,33 @@ export const semanticTokens = {
       Default: {
         Rest: 'hsla(220, 10%, 70%,1) ',
         Hover: 'hsla(220, 10%, 70%,1) ',
+        Pressed: 'hsla(220, 10%, 70%,1) ',
         Focus: 'hsla(220, 10%, 70%,1) ',
         Disabled: 'hsla(220, 10%, 80%,1) ',
         ReadOnly: 'hsla(220, 10%, 70%,1) ',
       },
-      Error: { Rest: 'hsla(220, 10%, 70%,1) ', Hover: 'hsla(220, 10%, 70%,1) ', Focus: 'hsla(220, 10%, 70%,1) ' },
+      Error: {
+        Rest: 'hsla(220, 10%, 70%,1) ',
+        Hover: 'hsla(220, 10%, 70%,1) ',
+        Pressed: 'hsla(220, 10%, 70%,1) ',
+        Focus: 'hsla(220, 10%, 70%,1) ',
+      },
     },
     SurfaceFill: {
       Default: {
         Rest: 'hsla(0, 0%, 100%, 1)',
         Hover: 'hsla(0, 0%, 100%, 1)',
+        Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
         Disabled: 'hsla(220, 10%, 90%,1) ',
         ReadOnly: 'hsla(220, 10%, 99%,1) ',
       },
-      Error: { Rest: 'hsla(350, 80%, 80%,0.1) ', Hover: 'hsla(350, 80%, 80%,0.1) ', Focus: 'hsla(350, 80%, 80%,0.1) ' },
+      Error: {
+        Rest: 'hsla(350, 80%, 80%,0.1) ',
+        Hover: 'hsla(350, 80%, 80%,0.1) ',
+        Pressed: 'hsla(350, 80%, 80%,0.1) ',
+        Focus: 'hsla(350, 80%, 80%,0.1) ',
+      },
     },
     InputBorderRadius: '4px',
     Input: {
@@ -371,8 +386,8 @@ export const semanticTokens = {
     InputIcon: {
       Rest: 'hsla(220, 10%, 70%,1) ',
       Hover: 'hsla(220, 10%, 60%,1) ',
-      Focus: 'hsla(220, 10%, 70%,1) ',
       Pressed: 'hsla(220, 10%, 50%,1) ',
+      Focus: 'hsla(220, 10%, 70%,1) ',
       Disabled: 'hsla(220, 10%, 80%,1) ',
       Error: 'hsla(350, 80%, 50%,1) ',
     },
