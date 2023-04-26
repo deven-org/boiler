@@ -1554,31 +1554,27 @@
     },
     "InputIcon": {
       "Rest": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{q.icon.ondefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{core.color.coolgray.600.solid}",
+        "value": "{q.icon.ondefault.beta}",
         "type": "color"
       },
       "Focus": {
-        "value": "{core.color.coolgray.500.solid}",
+        "value": "{q.icon.ondefault.gamma}",
         "type": "color"
       },
       "Pressed": {
-        "value": "{core.color.coolgray.600.solid}",
+        "value": "{q.icon.ondefault.beta}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{core.color.coolgray.700}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{core.color.coolgray.700}",
+        "value": "{q.icon.ondisabled.beta}",
         "type": "color"
       },
       "Error": {
-        "value": "{core.color.crimson.500.solid}",
+        "value": "{q.icon.ondefault.error.alpha}",
         "type": "color"
       }
     }
