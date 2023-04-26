@@ -526,6 +526,10 @@
             "type": "spacing"
           }
         }
+      },
+      "ControlBorderRadius": {
+        "value": "{core.borderRadius.Round}",
+        "type": "borderRadius"
       }
     }
   }
