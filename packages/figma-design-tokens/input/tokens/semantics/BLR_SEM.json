@@ -81,27 +81,27 @@
       },
       "Label": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -235,27 +235,27 @@
       },
       "Label": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -389,27 +389,27 @@
       },
       "Label": {
         "Rest": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.beta.hover}",
+          "value": "{q.content.onbrand.beta.hover}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.beta.pressed}",
+          "value": "{q.content.onbrand.beta.pressed}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         }
       },
@@ -543,27 +543,27 @@
       },
       "Label": {
         "Rest": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.beta.hover}",
+          "value": "{q.content.onbrand.beta.hover}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.beta.pressed}",
+          "value": "{q.content.onbrand.beta.pressed}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         }
       },
@@ -697,27 +697,27 @@
       },
       "Label": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -851,27 +851,27 @@
       },
       "Label": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -1278,78 +1278,78 @@
     },
     "Label": {
       "Rest": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       }
     },
     "LabelAppendix": {
       "Rest": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },
       "ReadOnly": {
-        "value": "{q.text.ondefault.default}",
+        "value": "{q.content.ondefault.alpha}",
         "type": "color"
       }
     },
     "Caption": {
       "Error": {
-        "value": "{q.text.ondefault.error.alpha}",
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       },
       "Hint": {
-        "value": "{q.text.ondefault.hint}",
+        "value": "{q.content.ondefault.beta}",
         "type": "color"
       }
     },
     "UserInput": {
       "Default": {
         "Rest": {
-          "value": "{q.text.ondefault.default}",
+          "value": "{q.content.ondefault.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.ondefault.default}",
+          "value": "{q.content.ondefault.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.ondefault.default}",
+          "value": "{q.content.ondefault.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.text.ondefault.default}",
+          "value": "{q.content.ondefault.alpha}",
           "type": "color"
         }
       },
@@ -1367,15 +1367,15 @@
     "Placeholder": {
       "Default": {
         "Rest": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Disabled": {
@@ -1383,21 +1383,21 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.ondefault.placeholder}",
+          "value": "{q.content.ondefault.gamma.rest}",
           "type": "color"
         }
       }
