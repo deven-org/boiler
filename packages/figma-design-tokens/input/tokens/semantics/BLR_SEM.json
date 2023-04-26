@@ -1597,7 +1597,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.surface.readonly}",
+          "value": "{q.surface.disabled.alpha}",
           "type": "color"
         }
       },
@@ -1615,11 +1615,11 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.content.ondisabled.alpha}",
+          "value": "{q.content.ondisabled.inverted}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.content.onreadonly.alpha}",
+          "value": "{q.content.ondisabled.inverted}",
           "type": "color"
         }
       }
