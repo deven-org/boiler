@@ -1577,6 +1577,22 @@
         "value": "{q.content.onerror.beta}",
         "type": "color"
       }
+    },
+    "control": {
+      "selected": {
+        "foreground": {
+          "rest": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          }
+        },
+        "background": {
+          "rest": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          }
+        }
+      }
     }
   },
   "Global": {
