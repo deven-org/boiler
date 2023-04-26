@@ -55,27 +55,27 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.icon.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -209,27 +209,27 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.icon.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -363,27 +363,27 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.icon.onbrand.beta.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.beta.hover}",
+          "value": "{q.icon.onbrand.beta.hover}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.beta.pressed}",
+          "value": "{q.icon.onbrand.beta.pressed}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.icon.onbrand.beta.rest}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.icon.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.icon.onbrand.beta.rest}",
           "type": "color"
         }
       },
@@ -517,27 +517,27 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.icon.onbrand.beta.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.beta.hover}",
+          "value": "{q.icon.onbrand.beta.hover}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.beta.pressed}",
+          "value": "{q.icon.onbrand.beta.pressed}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.icon.onbrand.beta.rest}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.icon.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.beta.rest}",
+          "value": "{q.icon.onbrand.beta.rest}",
           "type": "color"
         }
       },
@@ -671,27 +671,27 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.icon.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -825,27 +825,27 @@
       },
       "Icon": {
         "Rest": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.alpha}",
+          "value": "{q.icon.ondisabled.alpha}",
           "type": "color"
         },
         "Loading": {
-          "value": "{q.text.onbrand.alpha}",
+          "value": "{q.icon.onbrand.alpha}",
           "type": "color"
         }
       },
@@ -1455,7 +1455,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1554,27 +1554,31 @@
     },
     "InputIcon": {
       "Rest": {
-        "value": "{q.icon.ondefault.alpha}",
+        "value": "{core.color.coolgray.700}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.icon.ondefault.beta}",
-        "type": "color"
-      },
-      "Pressed": {
-        "value": "{q.icon.ondefault.beta}",
+        "value": "{core.color.coolgray.600.solid}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.icon.ondefault.alpha}",
+        "value": "{core.color.coolgray.500.solid}",
+        "type": "color"
+      },
+      "Pressed": {
+        "value": "{core.color.coolgray.600.solid}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.icon.ondisabled.beta}",
+        "value": "{core.color.coolgray.700}",
+        "type": "color"
+      },
+      "ReadOnly": {
+        "value": "{core.color.coolgray.700}",
         "type": "color"
       },
       "Error": {
-        "value": "{q.icon.ondefault.error.alpha}",
+        "value": "{core.color.crimson.500.solid}",
         "type": "color"
       }
     }
