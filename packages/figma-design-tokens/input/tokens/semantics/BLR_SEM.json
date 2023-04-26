@@ -1379,7 +1379,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.text.ondisabled.placeholder}",
+          "value": "{q.content.ondisabled.beta}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1389,15 +1389,15 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.content.ondefault.gamma.rest}",
+          "value": "{q.content.onerror.gamma}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.content.ondefault.gamma.rest}",
+          "value": "{q.content.onerror.gamma}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.content.ondefault.gamma.rest}",
+          "value": "{q.content.onerror.gamma}",
           "type": "color"
         }
       }
@@ -1427,7 +1427,7 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.surface.default}",
+          "value": "{q.surface.error}",
           "type": "color"
         },
         "Hover": {
