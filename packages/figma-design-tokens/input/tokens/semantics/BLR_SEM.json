@@ -1443,11 +1443,11 @@
     "SurfaceStroke": {
       "Default": {
         "Rest": {
-          "value": "{Forms.Placeholder.Default.Rest}",
+          "value": "{q.stroke.ondefault.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Forms.Placeholder.Default.Hover}",
+          "value": "{q.stroke.ondefault.alpha}",
           "type": "color"
         },
         "Focus": {
