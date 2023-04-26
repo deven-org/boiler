@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 Apr 2023 09:42:36 GMT
+ * Generated on Wed, 26 Apr 2023 12:48:20 GMT
  */
 
 export const semanticTokens = {
@@ -11,7 +11,7 @@ export const semanticTokens = {
         Hover: 'hsla(260, 85%, 40%, 1)',
         Pressed: 'hsla(260, 85%, 30%, 1)',
         Focus: 'hsla(260, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(260, 85%, 50%, 1)',
       },
       SurfaceStroke: {
@@ -19,7 +19,7 @@ export const semanticTokens = {
         Hover: '#00000000',
         Pressed: '#00000000',
         Focus: '#00000000',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: '#00000000',
       },
       Icon: {
@@ -27,7 +27,7 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Label: {
@@ -35,14 +35,14 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Primary: {
@@ -51,7 +51,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       SurfaceStroke: {
@@ -59,7 +59,7 @@ export const semanticTokens = {
         Hover: '#00000000',
         Pressed: '#00000000',
         Focus: '#00000000',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: '#00000000',
       },
       Icon: {
@@ -67,7 +67,7 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Label: {
@@ -75,14 +75,14 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Secondary: {
@@ -91,7 +91,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 70%,0.3) ',
         Pressed: 'hsla(220, 85%, 60%,0.3) ',
         Focus: 'hsla(220, 85%, 80%,0.3) ',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(220, 85%, 80%,0.3) ',
       },
       SurfaceStroke: {
@@ -99,7 +99,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       Icon: {
@@ -107,7 +107,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       Label: {
@@ -115,14 +115,14 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       Rest: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
       Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
       Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
     },
     Silent: {
@@ -131,7 +131,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 60%,0.2) ',
         Pressed: 'hsla(220, 85%, 60%,0.1) ',
         Focus: 'hsla(220, 85%, 60%,0) ',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(220, 85%, 60%,0) ',
       },
       SurfaceStroke: {
@@ -139,7 +139,7 @@ export const semanticTokens = {
         Hover: '#00000000',
         Pressed: '#00000000',
         Focus: '#00000000',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: '#00000000',
       },
       Icon: {
@@ -147,7 +147,7 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       Label: {
@@ -155,14 +155,14 @@ export const semanticTokens = {
         Hover: 'hsla(220, 85%, 40%, 1)',
         Pressed: 'hsla(220, 85%, 30%, 1)',
         Focus: 'hsla(220, 85%, 50%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
       Rest: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
       Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
       Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
     },
     Destructive: {
@@ -171,7 +171,7 @@ export const semanticTokens = {
         Hover: 'hsla(350, 80%, 40%,1) ',
         Pressed: 'hsla(350, 80%, 30%,1) ',
         Focus: 'hsla(350, 80%, 50%,1) ',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(350, 80%, 50%,1) ',
       },
       SurfaceStroke: {
@@ -179,7 +179,7 @@ export const semanticTokens = {
         Hover: '#00000000',
         Pressed: '#00000000',
         Focus: '#00000000',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: '#00000000',
       },
       Icon: {
@@ -187,7 +187,7 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Label: {
@@ -195,14 +195,14 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Encourage: {
@@ -211,7 +211,7 @@ export const semanticTokens = {
         Hover: 'hsla(100, 80%, 30%,1) ',
         Pressed: 'hsla(100, 80%, 20%,1) ',
         Focus: 'hsla(100, 80%, 40%,1) ',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(100, 80%, 40%,1) ',
       },
       SurfaceStroke: {
@@ -219,7 +219,7 @@ export const semanticTokens = {
         Hover: '#00000000',
         Pressed: '#00000000',
         Focus: '#00000000',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: '#00000000',
       },
       Icon: {
@@ -227,7 +227,7 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Label: {
@@ -235,14 +235,14 @@ export const semanticTokens = {
         Hover: 'hsla(0, 0%, 100%, 1)',
         Pressed: 'hsla(0, 0%, 100%, 1)',
         Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 60%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
@@ -338,7 +338,7 @@ export const semanticTokens = {
         Rest: 'hsla(220, 10%, 70%,1) ',
         Hover: 'hsla(220, 10%, 70%,1) ',
         Focus: 'hsla(220, 10%, 70%,1) ',
-        Disabled: 'hsla(220, 10%, 70%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
         ReadOnly: 'hsla(220, 10%, 70%,1) ',
       },
       Error: { Rest: 'hsla(220, 10%, 70%,1) ', Hover: 'hsla(220, 10%, 70%,1) ', Focus: 'hsla(220, 10%, 70%,1) ' },
@@ -351,7 +351,7 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 90%,1) ',
         ReadOnly: 'hsla(220, 10%, 99%,1) ',
       },
-      Error: { Rest: 'hsla(0, 0%, 100%, 1)', Hover: 'hsla(0, 0%, 100%, 1)', Focus: 'hsla(0, 0%, 100%, 1)' },
+      Error: { Rest: 'hsla(350, 80%, 80%,0.1) ', Hover: 'hsla(350, 80%, 80%,0.1) ', Focus: 'hsla(350, 80%, 80%,0.1) ' },
     },
     InputBorderRadius: '4px',
     Input: {
@@ -371,9 +371,9 @@ export const semanticTokens = {
     InputIcon: {
       Rest: 'hsla(220, 10%, 70%,1) ',
       Hover: 'hsla(220, 10%, 60%,1) ',
-      Focus: 'hsla(220, 10%, 50%,1) ',
-      Pressed: 'hsla(220, 10%, 60%,1) ',
-      Disabled: 'hsla(220, 10%, 70%,1) ',
+      Focus: 'hsla(220, 10%, 70%,1) ',
+      Pressed: 'hsla(220, 10%, 50%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
       Error: 'hsla(350, 80%, 50%,1) ',
     },
   },
