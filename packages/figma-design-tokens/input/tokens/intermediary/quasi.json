@@ -172,10 +172,6 @@
         "gamma": {
           "value": "{core.color.coolgray.800.solid}",
           "type": "color"
-        },
-        "placeholder": {
-          "value": "{core.color.coolgray.700.solid}",
-          "type": "color"
         }
       }
     },
@@ -245,6 +241,10 @@
           "value": "{core.color.coolgray.500.solid}",
           "type": "color"
         },
+        "placeholder": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
         "hint": {
           "value": "{core.color.coolgray.300.solid}",
           "type": "color"
@@ -291,10 +291,6 @@
         },
         "gamma": {
           "value": "{core.color.coolgray.800.solid}",
-          "type": "color"
-        },
-        "placeholder": {
-          "value": "{core.color.coolgray.700.solid}",
           "type": "color"
         }
       }
