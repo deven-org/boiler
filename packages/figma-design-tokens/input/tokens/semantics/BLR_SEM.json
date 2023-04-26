@@ -1578,47 +1578,47 @@
         "type": "color"
       }
     },
-    "control": {
-      "background": {
-        "rest": {
+    "Control": {
+      "Background": {
+        "Rest": {
           "value": "{q.surface.brand.primary.rest}",
           "type": "color"
         },
-        "hover": {
+        "Hover": {
           "value": "{q.surface.brand.primary.hover}",
           "type": "color"
         },
-        "pressed": {
+        "Pressed": {
           "value": "{q.surface.brand.primary.pressed}",
           "type": "color"
         },
-        "disabled": {
+        "Disabled": {
           "value": "{q.surface.disabled.alpha}",
           "type": "color"
         },
-        "readonly": {
+        "ReadOnly": {
           "value": "{q.surface.readonly}",
           "type": "color"
         }
       },
-      "foreground": {
-        "rest": {
+      "Foreground": {
+        "Rest": {
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
-        "hover": {
+        "Hover": {
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
-        "pressed": {
+        "Pressed": {
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         },
-        "disabled": {
+        "Disabled": {
           "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
-        "readonly": {
+        "ReadOnly": {
           "value": "{q.content.onreadonly.alpha}",
           "type": "color"
         }
