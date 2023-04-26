@@ -505,6 +505,100 @@
           "type": "sizing"
         }
       }
+    },
+    "Radio": {
+      "Control": {
+        "SM": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "Background": {
+            "Unselected": {
+              "Rest": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              }
+            },
+            "Selected": {
+              "Rest": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "Hover": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "Pressed": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "Focus": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "Disabled": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "ReadOnly": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              }
+            }
+          },
+          "Foreground": {
+            "Unselected": {
+              "Rest": {
+                "value": "{core.dimensionPX.14}",
+                "type": "sizing"
+              }
+            },
+            "Selected": {
+              "Rest": {
+                "value": "{core.dimensionPX.6}",
+                "type": "sizing"
+              },
+              "Hover": {
+                "value": "{core.dimensionPX.8}",
+                "type": "sizing"
+              },
+              "Pressed": {
+                "value": "{core.dimensionPX.10}",
+                "type": "sizing"
+              },
+              "Focus": {
+                "value": "{core.dimensionPX.6}",
+                "type": "sizing"
+              },
+              "Disabled": {
+                "value": "{core.dimensionPX.6}",
+                "type": "sizing"
+              },
+              "ReadOnly": {
+                "value": "{core.dimensionPX.6}",
+                "type": "sizing"
+              }
+            }
+          }
+        },
+        "MD": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "LG": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        }
+      },
+      "ControlBorderRadius": {
+        "value": "{core.borderRadius.Round}",
+        "type": "borderRadius"
+      }
     }
   }
 }
