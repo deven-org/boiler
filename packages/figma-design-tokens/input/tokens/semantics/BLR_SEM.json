@@ -1349,17 +1349,17 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.content.ondefault.alpha}",
+          "value": "{q.content.onreadonly.alpha}",
           "type": "color"
         }
       },
       "Error": {
         "Rest": {
-          "value": "{q.text.ondefault.error.beta}",
+          "value": "{q.content.onerror.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.text.ondefault.error.beta}",
+          "value": "{q.content.onerror.alpha}",
           "type": "color"
         }
       }
@@ -1379,11 +1379,11 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.content.ondisabled.beta}",
+          "value": "{q.content.ondisabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{q.content.ondefault.gamma.rest}",
+          "value": "{q.content.onreadonly.gamma}",
           "type": "color"
         }
       },
@@ -1451,11 +1451,11 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{Global.Focus}",
+          "value": "{q.stroke.focus}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{q.stroke.disabled.alpha}",
+          "value": "{q.stroke.disabled.beta}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1554,27 +1554,27 @@
     },
     "InputIcon": {
       "Rest": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondefault.gamma.rest}",
         "type": "color"
       },
       "Hover": {
-        "value": "{q.content.ondefault.beta}",
+        "value": "{q.content.ondefault.gamma.hover}",
         "type": "color"
       },
       "Focus": {
-        "value": "{q.content.ondefault.gamma}",
+        "value": "{q.content.ondefault.gamma.rest}",
         "type": "color"
       },
       "Pressed": {
-        "value": "{q.content.ondefault.beta}",
+        "value": "{q.content.ondefault.gamma.pressed}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondisabled.beta}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "Error": {
-        "value": "{q.content.ondefault.error.alpha}",
+        "value": "{q.content.onerror.beta}",
         "type": "color"
       }
     }
