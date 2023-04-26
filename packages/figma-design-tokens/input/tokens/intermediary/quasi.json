@@ -1,6 +1,34 @@
 {
   "q": {
     "surface": {
+      "global": {
+        "readonly": {
+          "value": "{core.color.coolgray.999.solid}",
+          "type": "color"
+        },
+        "default": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "disabled": {
+          "alpha": {
+            "value": "{core.color.coolgray.800.solid}",
+            "type": "color"
+          },
+          "beta": {
+            "value": "{core.color.coolgray.800.opa0}",
+            "type": "color"
+          },
+          "gamma": {
+            "value": "{core.color.coolgray.900.solid}",
+            "type": "color"
+          }
+        }
+      },
       "brand": {
         "primary": {
           "rest": {
@@ -83,34 +111,6 @@
           },
           "pressed": {
             "value": "{core.color.limegreen.200.solid}",
-            "type": "color"
-          }
-        }
-      },
-      "global": {
-        "readonly": {
-          "value": "{core.color.coolgray.999.solid}",
-          "type": "color"
-        },
-        "default": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        },
-        "error": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        },
-        "disabled": {
-          "alpha": {
-            "value": "{core.color.coolgray.800.solid}",
-            "type": "color"
-          },
-          "beta": {
-            "value": "{core.color.coolgray.800.opa0}",
-            "type": "color"
-          },
-          "gamma": {
-            "value": "{core.color.coolgray.900.solid}",
             "type": "color"
           }
         }
