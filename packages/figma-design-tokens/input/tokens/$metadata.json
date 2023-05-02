@@ -1,6 +1,7 @@
 {
   "tokenSetOrder": [
     "core/BLR_COR",
+    "intermediary/quasi",
     "semantics/BLR_SEM",
     "semantics/BLR_CMP",
     "other/BLR_ASS",
