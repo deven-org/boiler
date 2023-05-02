@@ -26,7 +26,7 @@
       "brand": {
         "primary": {
           "rest": {
-            "value": "{core.color.azure.500.solid}",
+            "value": "{core.color.crimson.500.solid}",
             "type": "color"
           },
           "hover": {
