@@ -7,7 +7,6 @@ import { RadioOption, SizesType } from '../../globals/types';
 import { BlrFormLabel } from '../form-label';
 import { BlrFormHint } from '../form-hint';
 import { IconType } from '@boiler/icons';
-import { textInput } from '../../foundation/semantic-tokens/form.css';
 
 @customElement('blr-radio-input-group')
 export class BlrRadioInputGroup extends LitElement {
@@ -20,7 +19,7 @@ export class BlrRadioInputGroup extends LitElement {
   @property() name!: string;
   @property() invalid?: boolean;
   @property() disabled?: boolean;
-  @property() size?: SizesType = 'md';
+  @property() size!: SizesType;
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -30,7 +29,7 @@ export class BlrRadioInputGroup extends LitElement {
   @property() options!: RadioOption[];
   @property() layout!: boolean;
   @property() hint?: string;
-  @property() hintIcon?: IconType;
+  @property() hintIcon!: IconType;
 
   render() {
     const classes = classMap({
@@ -71,6 +70,7 @@ export class BlrRadioInputGroup extends LitElement {
         message: this.invalid ? this.errorMessage : this.hint,
         variant: this.invalid ? 'error' : 'hint',
         iconName: this.hintIcon,
+        size: this.size,
       })}
     `;
   }

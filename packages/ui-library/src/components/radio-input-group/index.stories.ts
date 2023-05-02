@@ -1,21 +1,23 @@
 import { html } from 'lit-html';
 import { BlrRadioInputGroup as BlrRadioInputGroupClass } from './index';
-import { Sizes } from '../../globals/constants';
+import { RadioInputSizes, Sizes } from '../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import './index';
 import { IconKeys } from '@boiler/icons';
+import { getIconName } from '../../utils/get-icon-name';
+import { calculateIconName } from '../../utils/calculate-icon-name';
 
 export default {
   title: 'BlrRadioInputGroup',
   argTypes: {
     size: {
-      options: Sizes,
+      options: RadioInputSizes,
       control: { type: 'select' },
     },
     options: { control: 'array' },
     layout: { control: 'radio', options: ['horizontal', 'vertical'] },
     hintIcon: {
-      options: [undefined, ...IconKeys],
+      options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
   },
@@ -51,7 +53,7 @@ export const BlrRadioInputGroup = ({
       .options=${options}
       .layout=${layout}
       .hint=${hint}
-      .hintIcon=${hintIcon}
+      .hintIcon=${calculateIconName(hintIcon, size)}
       class="example-layout-class"
     ></blr-radio-input>
   `;
@@ -73,6 +75,5 @@ BlrRadioInputGroup.args = {
   ],
   layout: 'horizontal',
   hint: 'Field is used for hint',
-  hintIcon: 'blrInfoSm',
-  hasError: false,
+  hintIcon: 'blrInfo',
 };
