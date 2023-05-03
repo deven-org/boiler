@@ -34,7 +34,7 @@
             "type": "color"
           },
           "pressed": {
-            "value": "{core.color.azure.200.solid}",
+            "value": "{core.color.azure.300.solid}",
             "type": "color"
           }
         },
