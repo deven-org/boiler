@@ -1445,11 +1445,11 @@
           }
         },
         "HUE": {
-          "value": "160",
+          "value": "50",
           "type": "color"
         },
         "SAT": {
-          "value": "85",
+          "value": "54",
           "type": "color"
         }
       },

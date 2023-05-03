@@ -925,7 +925,7 @@
       }
     },
     "BorderRadius": {
-      "value": "{core.borderRadius.MD}",
+      "value": "{core.borderRadius.XL}",
       "type": "borderRadius"
     },
     "XS": {
@@ -1677,7 +1677,7 @@
     "FocusBorder": {
       "value": {
         "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.2}",
+        "width": "{core.dimensionPX.3}",
         "style": "solid"
       },
       "type": "border"
