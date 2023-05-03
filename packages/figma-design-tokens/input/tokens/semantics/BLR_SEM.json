@@ -970,7 +970,7 @@
     },
     "XL": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100}",
+        "value": "{core.typography.sourceSansPro.semibold.125}",
         "type": "typography"
       },
       "LoaderSize": {
