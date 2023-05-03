@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 03 May 2023 13:39:40 GMT
+ * Generated on Wed, 03 May 2023 16:42:43 GMT
  */
 
 export const semanticTokens = {
@@ -263,7 +263,7 @@ export const semanticTokens = {
       LoaderSize: 'MD',
     },
     XL: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1.25rem' },
       LoaderSize: 'LG',
     },
   },
