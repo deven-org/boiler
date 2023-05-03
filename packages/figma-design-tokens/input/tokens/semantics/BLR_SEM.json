@@ -925,7 +925,7 @@
       }
     },
     "BorderRadius": {
-      "value": "{core.borderRadius.XL}",
+      "value": "{core.borderRadius.MD}",
       "type": "borderRadius"
     },
     "XS": {
