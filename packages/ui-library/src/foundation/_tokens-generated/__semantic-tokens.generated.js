@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 03 May 2023 13:32:56 GMT
+ * Generated on Wed, 03 May 2023 13:39:40 GMT
  */
 
 export const semanticTokens = {
@@ -49,7 +49,7 @@ export const semanticTokens = {
       SurfaceFill: {
         Rest: 'hsla(220, 54%, 50%, 1)',
         Hover: 'hsla(220, 54%, 40%, 1)',
-        Pressed: 'hsla(220, 54%, 20%, 1)',
+        Pressed: 'hsla(220, 54%, 30%, 1)',
         Focus: 'hsla(220, 54%, 50%, 1)',
         Disabled: 'hsla(220, 10%, 90%,1) ',
         Loading: 'hsla(220, 54%, 50%, 1)',
