@@ -842,43 +842,43 @@
             "type": "color"
           },
           "opa0": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.0})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.0})",
             "type": "color"
           },
           "opa10": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.10})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.10})",
             "type": "color"
           },
           "opa20": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.20})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.20})",
             "type": "color"
           },
           "opa30": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.30})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.30})",
             "type": "color"
           },
           "opa40": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.40})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.40})",
             "type": "color"
           },
           "opa50": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.50})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.50})",
             "type": "color"
           },
           "opa60": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.60})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.60})",
             "type": "color"
           },
           "opa70": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.70})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.70})",
             "type": "color"
           },
           "opa80": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.80})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.80})",
             "type": "color"
           },
           "opa90": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.90})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.950}%,{core.color.ref.alpha.90})",
             "type": "color"
           }
         },
@@ -888,43 +888,43 @@
             "type": "color"
           },
           "opa0": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.0})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.0})",
             "type": "color"
           },
           "opa10": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.10})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.10})",
             "type": "color"
           },
           "opa20": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.20})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.20})",
             "type": "color"
           },
           "opa30": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.30})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.30})",
             "type": "color"
           },
           "opa40": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.40})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.40})",
             "type": "color"
           },
           "opa50": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.50})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.50})",
             "type": "color"
           },
           "opa60": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.60})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.60})",
             "type": "color"
           },
           "opa70": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.70})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.70})",
             "type": "color"
           },
           "opa80": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.80})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.80})",
             "type": "color"
           },
           "opa90": {
-            "value": "hsla({core.color.coolgray.HUE}, {core.color.coolgray.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.90})",
+            "value": "hsla({core.color.cyan.HUE}, {core.color.cyan.SAT}%, {core.color.ref.lght.999}%,{core.color.ref.alpha.90})",
             "type": "color"
           }
         },
