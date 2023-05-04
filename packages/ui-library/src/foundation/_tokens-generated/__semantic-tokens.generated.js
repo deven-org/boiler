@@ -1,18 +1,18 @@
 /**
  * Do not edit directly
- * Generated on Thu, 04 May 2023 11:42:58 GMT
+ * Generated on Thu, 04 May 2023 11:45:37 GMT
  */
 
 export const semanticTokens = {
   Action: {
     CTA: {
       SurfaceFill: {
-        Rest: 'hsla(260, 85%, 50%, 1)',
-        Hover: 'hsla(260, 85%, 40%, 1)',
-        Pressed: 'hsla(260, 85%, 30%, 1)',
-        Focus: 'hsla(260, 85%, 50%, 1)',
+        Rest: 'hsla(180, 50%, 50%, 1)',
+        Hover: 'hsla(180, 50%, 40%, 1)',
+        Pressed: 'hsla(180, 50%, 30%, 1)',
+        Focus: 'hsla(180, 50%, 50%, 1)',
         Disabled: 'hsla(220, 10%, 90%,1) ',
-        Loading: 'hsla(260, 85%, 50%, 1)',
+        Loading: 'hsla(180, 50%, 50%, 1)',
       },
       SurfaceStroke: {
         Rest: '#00000000',
