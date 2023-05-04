@@ -40,15 +40,15 @@
         },
         "cta": {
           "rest": {
-            "value": "{core.color.cyan.500.solid}",
+            "value": "{core.color.purple.500.solid}",
             "type": "color"
           },
           "hover": {
-            "value": "{core.color.cyan.400.solid}",
+            "value": "{core.color.purple.400.solid}",
             "type": "color"
           },
           "pressed": {
-            "value": "{core.color.cyan.300.solid}",
+            "value": "{core.color.purple.300.solid}",
             "type": "color"
           }
         },

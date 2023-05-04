@@ -2,7 +2,7 @@
   "DOC": {
     "slider-hue": {
       "purple": {
-        "value": "{core.color.cyan.HUE}+2",
+        "value": "{core.color.purple.HUE}+2",
         "type": "spacing"
       },
       "azure": {
@@ -32,7 +32,7 @@
     },
     "slider-sat": {
       "purple": {
-        "value": "360  / 100 * {core.color.cyan.SAT} + 2",
+        "value": "360  / 100 * {core.color.purple.SAT} + 2",
         "type": "spacing"
       },
       "azure": {
