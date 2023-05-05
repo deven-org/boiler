@@ -62,7 +62,7 @@
             "type": "color"
           },
           "pressed": {
-            "value": "{core.color.azure.600.opa30}",
+            "value": "{core.color.azure.600.opa50}",
             "type": "color"
           }
         },

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 Apr 2023 17:05:25 GMT
+ * Generated on Thu, 04 May 2023 14:45:36 GMT
  */
 
 export const semanticTokens = {
@@ -89,7 +89,7 @@ export const semanticTokens = {
       SurfaceFill: {
         Rest: 'hsla(220, 85%, 80%,0.3) ',
         Hover: 'hsla(220, 85%, 70%,0.3) ',
-        Pressed: 'hsla(220, 85%, 60%,0.3) ',
+        Pressed: 'hsla(220, 85%, 60%,0.5) ',
         Focus: 'hsla(220, 85%, 80%,0.3) ',
         Disabled: 'hsla(220, 10%, 80%,0) ',
         Loading: 'hsla(220, 85%, 80%,0.3) ',
@@ -158,12 +158,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 85%, 50%, 1)',
       },
-      Rest: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
-      Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
-      Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-      Loading: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Destructive: {
       SurfaceFill: {
@@ -263,7 +263,7 @@ export const semanticTokens = {
       LoaderSize: 'MD',
     },
     XL: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '1.25rem' },
       LoaderSize: 'LG',
     },
   },
