@@ -1373,6 +1373,10 @@
         "Hover": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
+        },
+        "Pressed": {
+          "value": "{q.content.onerror.alpha}",
+          "type": "color"
         }
       }
     },
@@ -1536,6 +1540,14 @@
           },
           "type": "border"
         },
+        "Pressed": {
+          "value": {
+            "color": "{Forms.SurfaceStroke.Default.Pressed}",
+            "width": "{core.dimensionPX.1}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
         "Focus": {
           "value": {
             "color": "{Global.Focus}",
@@ -1573,6 +1585,14 @@
         "Hover": {
           "value": {
             "color": "{Forms.SurfaceStroke.Error.Hover}",
+            "width": "{core.dimensionPX.1}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Pressed": {
+          "value": {
+            "color": "{Forms.SurfaceStroke.Error.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
