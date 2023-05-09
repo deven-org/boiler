@@ -1373,6 +1373,10 @@
         "Hover": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
+        },
+        "Pressed": {
+          "value": "{q.content.onerror.alpha}",
+          "type": "color"
         }
       }
     },
