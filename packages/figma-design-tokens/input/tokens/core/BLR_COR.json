@@ -4130,6 +4130,18 @@
       "Loose": {
         "value": "160%",
         "type": "lineHeights"
+      },
+      "fix_1_rem": {
+        "value": "1rem",
+        "type": "lineHeights"
+      },
+      "fix_1,25_rem": {
+        "value": "1.25rem",
+        "type": "lineHeights"
+      },
+      "fix_1,5_rem": {
+        "value": "1.5rem",
+        "type": "lineHeights"
       }
     },
     "fontSizes": {
