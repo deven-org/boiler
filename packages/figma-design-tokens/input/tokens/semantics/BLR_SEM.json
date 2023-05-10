@@ -1718,7 +1718,7 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
