@@ -1184,11 +1184,11 @@
         }
       },
       "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "InputSlot": {
@@ -1222,11 +1222,11 @@
         "type": "typography"
       },
       "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
