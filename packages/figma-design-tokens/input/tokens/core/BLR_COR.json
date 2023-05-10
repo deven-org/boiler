@@ -4321,6 +4321,15 @@
               "fontSize": "{core.fontSizes.100}"
             },
             "type": "typography"
+          },
+          "125FixHeight": {
+            "value": {
+              "fontFamily": "{core.fontFamilies.Text}",
+              "fontWeight": "{core.fontWeights.Regular}",
+              "lineHeight": "{core.lineHeights.fix_1,5_rem}",
+              "fontSize": "{core.fontSizes.125}"
+            },
+            "type": "typography"
           }
         },
         "semibold": {
@@ -4402,6 +4411,15 @@
               "fontWeight": "{core.fontWeights.SemiBold}",
               "lineHeight": "{core.lineHeights.fix_1,25_rem}",
               "fontSize": "{core.fontSizes.100}"
+            },
+            "type": "typography"
+          },
+          "125FixHeight": {
+            "value": {
+              "fontFamily": "{core.fontFamilies.Text}",
+              "fontWeight": "{core.fontWeights.SemiBold}",
+              "lineHeight": "{core.lineHeights.fix_1,5_rem}",
+              "fontSize": "{core.fontSizes.125}"
             },
             "type": "typography"
           }
