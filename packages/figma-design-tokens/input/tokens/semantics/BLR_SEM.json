@@ -1089,6 +1089,10 @@
         "value": "{core.typography.sourceSansPro.regular.87}",
         "type": "typography"
       },
+      "LabelNextToControl": {
+        "value": "{core.typography.sourceSansPro.regular.87}",
+        "type": "typography"
+      },
       "Placeholder": {
         "value": "{core.typography.sourceSansPro.regular.87}",
         "type": "typography"
@@ -1187,6 +1191,10 @@
         "value": "{core.typography.sourceSansPro.regular.100}",
         "type": "typography"
       },
+      "LabelNextToControl": {
+        "value": "{core.typography.sourceSansPro.regular.100}",
+        "type": "typography"
+      },
       "Placeholder": {
         "value": "{core.typography.sourceSansPro.regular.100}",
         "type": "typography"
@@ -1222,6 +1230,10 @@
         "type": "typography"
       },
       "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.125}",
+        "type": "typography"
+      },
+      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.125}",
         "type": "typography"
       },
