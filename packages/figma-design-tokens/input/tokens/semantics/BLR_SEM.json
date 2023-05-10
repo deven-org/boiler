@@ -1267,7 +1267,7 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
           "type": "spacing"
         },
         "IconSize": {

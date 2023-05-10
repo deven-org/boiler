@@ -45,7 +45,7 @@
       },
       "LG": {
         "Padding": {
-          "value": "{core.dimensionREM.10} {core.dimensionPX.24}",
+          "value": "{core.dimensionREM.8} {core.dimensionPX.24}",
           "type": "spacing"
         },
         "Gap": {
@@ -281,7 +281,7 @@
       },
       "LG": {
         "Padding": {
-          "value": "{core.dimensionREM.10} {core.dimensionPX.16} {core.dimensionREM.10} {core.dimensionPX.24}",
+          "value": "{core.dimensionREM.8} {core.dimensionPX.16} {core.dimensionREM.8} {core.dimensionPX.24}",
           "type": "spacing"
         },
         "Gap": {

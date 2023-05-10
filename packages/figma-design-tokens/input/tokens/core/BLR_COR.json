@@ -4317,7 +4317,7 @@
             "value": {
               "fontFamily": "{core.fontFamilies.Text}",
               "fontWeight": "{core.fontWeights.Regular}",
-              "lineHeight": "{core.lineHeights.fix_1,25_rem}",
+              "lineHeight": "{core.lineHeights.fix_1,5_rem}",
               "fontSize": "{core.fontSizes.100}"
             },
             "type": "typography"
@@ -4409,7 +4409,7 @@
             "value": {
               "fontFamily": "{core.fontFamilies.Text}",
               "fontWeight": "{core.fontWeights.SemiBold}",
-              "lineHeight": "{core.lineHeights.fix_1,25_rem}",
+              "lineHeight": "{core.lineHeights.fix_1,5_rem}",
               "fontSize": "{core.fontSizes.100}"
             },
             "type": "typography"
