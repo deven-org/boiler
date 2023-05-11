@@ -1389,6 +1389,10 @@
         "Pressed": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
+        },
+        "Focused": {
+          "value": "{q.content.onerror.alpha}",
+          "type": "color"
         }
       }
     },
