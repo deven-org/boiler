@@ -557,6 +557,14 @@
             "Hover": {
               "value": "{core.dimensionPX.14}",
               "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            },
+            "Error": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
             }
           },
           "Selected": {
@@ -606,7 +614,7 @@
     },
     "Checkbox": {
       "ControlBorderRadius": {
-        "value": "{core.borderRadius.MD}",
+        "value": "{core.borderRadius.SM}",
         "type": "borderRadius"
       }
     }
