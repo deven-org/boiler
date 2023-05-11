@@ -378,21 +378,21 @@
       "Border": {
         "Rest": {
           "value": {
-            "color": "{Action.Stepper.Button.SurfaceStroke.Rest}",
+            "color": "{Action.StepperButton.SurfaceStroke.Rest}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
         },
         "Hover": {
           "value": {
-            "color": "{Action.Stepper.Button.SurfaceStroke.Hover}",
+            "color": "{Action.StepperButton.SurfaceStroke.Hover}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
         },
         "Pressed": {
           "value": {
-            "color": "{Action.Stepper.Button.SurfaceStroke.Pressed}",
+            "color": "{Action.StepperButton.SurfaceStroke.Pressed}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
@@ -403,7 +403,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Action.Stepper.Button.SurfaceStroke.Disabled}",
+            "color": "{Action.StepperButton.SurfaceStroke.Disabled}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
@@ -441,6 +441,10 @@
       }
     },
     "StepperCombo": {
+      "Divider": {
+        "value": "{core.color.coolgray.800.opa30}",
+        "type": "color"
+      },
       "SM": {
         "Vertical": {
           "Width": {
