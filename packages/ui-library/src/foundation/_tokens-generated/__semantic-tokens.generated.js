@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 11 May 2023 08:00:04 GMT
+ * Generated on Thu, 11 May 2023 10:31:14 GMT
  */
 
 export const semanticTokens = {
@@ -347,7 +347,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         ReadOnly: 'hsla(220, 10%, 10%,1) ',
       },
-      Error: { Rest: 'hsla(350, 80%, 30%,1) ', Hover: 'hsla(350, 80%, 30%,1) ', Pressed: 'hsla(350, 80%, 30%,1) ' },
+      Error: {
+        Rest: 'hsla(350, 80%, 30%,1) ',
+        Hover: 'hsla(350, 80%, 30%,1) ',
+        Pressed: 'hsla(350, 80%, 30%,1) ',
+        Focused: 'hsla(350, 80%, 30%,1) ',
+      },
     },
     Placeholder: {
       Default: {
