@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 04 May 2023 14:45:36 GMT
+ * Generated on Thu, 11 May 2023 14:04:25 GMT
  */
 
 export const semanticTokens = {
@@ -334,7 +334,7 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         ReadOnly: 'hsla(220, 10%, 10%,1) ',
       },
-      Error: { Rest: 'hsla(350, 80%, 30%,1) ', Hover: 'hsla(350, 80%, 30%,1) ' },
+      Error: { Rest: 'hsla(350, 80%, 30%,1) ', Hover: 'hsla(350, 80%, 30%,1) ', Pressed: 'hsla(350, 80%, 30%,1) ' },
     },
     Placeholder: {
       Default: {
@@ -373,6 +373,7 @@ export const semanticTokens = {
       Default: {
         Rest: { color: 'hsla(220, 10%, 70%,1) ', width: '1px', style: 'solid' },
         Hover: { color: 'hsla(220, 10%, 70%,1) ', width: '1px', style: 'solid' },
+        Pressed: { color: 'hsla(220, 10%, 70%,1) ', width: '1px', style: 'solid' },
         Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
         Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
         ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
@@ -380,6 +381,7 @@ export const semanticTokens = {
       Error: {
         Rest: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
         Hover: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
+        Pressed: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
         Focus: { color: 'hsla(350, 80%, 50%,1) ', width: '2px', style: 'solid' },
       },
     },
