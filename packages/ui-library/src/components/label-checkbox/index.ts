@@ -31,24 +31,24 @@ export class BlrLabelCheckbox extends LitElement {
 
   render() {
     const classes = classMap({
-      [`${this.size}`]: this.size || 'md',
+      // [`${this.size}`]: this.size ?? 'md',
       checked: Boolean(this.checked),
     });
 
-    // eslint-disable-next-line lit-a11y/click-events-have-key-events
-    return html`<label
-        class="blr-semantic-action blr-label-checkbox ${classes}"
-        @click="${this.toogle}"
+    return html`<span class="blr-semantic-action blr-label-checkbox ${classes}">
+      <label for="peter" @click="${this.toogle}" @keydown="">${this.label}</label>
+
+      <input
+        type="checkbox"
+        id="peter"
+        name="scales"
+        ${this.checked ? 'checked' : ''}
         @change="${this.onChange}"
         @focus="${this.onFocus}"
         @blur="${this.onBlur}"
         ?disabled="${this.disabled}"
         ?checked="${this.checked}"
-        for="peter"
-      >
-        ${this.label}
-      </label>
-
-      <input type="checkbox" id="peter" name="scales" ${this.checked ? 'checked' : ''} />`;
+      />
+    </span>`;
   }
 }

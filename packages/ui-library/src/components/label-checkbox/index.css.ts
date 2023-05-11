@@ -2,7 +2,7 @@
 import { css } from 'nested-css-to-flat/lit-css';
 
 export const styleCustom = css`
-  :host {
+  .blr-label-checkbox {
     & > input {
       all: initial;
     }
@@ -14,6 +14,10 @@ export const styleCustom = css`
       height: 10px;
       border-radius: 5px;
       border: 1px solid black;
+    }
+
+    &.checked > label::after {
+      background-color: black;
     }
   }
 `;
