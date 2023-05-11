@@ -460,7 +460,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "0, {core.dimensionREM.8}",
+              "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
             }
           }
@@ -472,7 +472,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "{core.dimensionREM.8}, 0",
+              "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
           }
@@ -486,7 +486,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "0, {core.dimensionREM.8}",
+              "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
             }
           }
@@ -498,7 +498,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "{core.dimensionREM.8}, 0",
+              "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
           }
@@ -512,7 +512,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "0, {core.dimensionREM.8}",
+              "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
             }
           }
@@ -524,7 +524,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "{core.dimensionREM.8}, 0",
+              "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
           }
