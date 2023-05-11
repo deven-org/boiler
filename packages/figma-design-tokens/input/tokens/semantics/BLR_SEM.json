@@ -930,7 +930,7 @@
     },
     "XS": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.50}",
+        "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -940,7 +940,7 @@
     },
     "SM": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -950,7 +950,7 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -960,7 +960,7 @@
     },
     "LG": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100}",
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -970,7 +970,7 @@
     },
     "XL": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.125}",
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -1086,7 +1086,7 @@
         "type": "typography"
       },
       "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "LabelNextToControl": {
@@ -1094,7 +1094,7 @@
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1135,7 +1135,7 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
           "type": "spacing"
         },
         "IconSize": {
@@ -1188,7 +1188,7 @@
         }
       },
       "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "LabelNextToControl": {
@@ -1196,7 +1196,7 @@
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "InputSlot": {
@@ -1230,7 +1230,7 @@
         "type": "typography"
       },
       "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "LabelNextToControl": {
@@ -1238,7 +1238,7 @@
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1279,7 +1279,7 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
           "type": "spacing"
         },
         "IconSize": {
