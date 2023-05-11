@@ -443,7 +443,14 @@
     "StepperCombo": {
       "Divider": {
         "value": "{core.color.coolgray.800.opa30}",
-        "type": "color"
+        "type": "color",
+        "Border": {
+          "value": {
+            "color": "{Action.StepperCombo.Divider}",
+            "width": "{core.dimensionPX.1}"
+          },
+          "type": "border"
+        }
       },
       "SM": {
         "Vertical": {
@@ -462,6 +469,12 @@
           "Width": {
             "value": "{core.dimensionREM.64}",
             "type": "sizing"
+          },
+          "Divider": {
+            "Padding": {
+              "value": "{core.dimensionREM.8}, 0",
+              "type": "spacing"
+            }
           }
         }
       },
@@ -482,6 +495,12 @@
           "Width": {
             "value": "{core.dimensionREM.80}",
             "type": "sizing"
+          },
+          "Divider": {
+            "Padding": {
+              "value": "{core.dimensionREM.8}, 0",
+              "type": "spacing"
+            }
           }
         }
       },
@@ -502,6 +521,12 @@
           "Width": {
             "value": "{core.dimensionREM.96}",
             "type": "sizing"
+          },
+          "Divider": {
+            "Padding": {
+              "value": "{core.dimensionREM.8}, 0",
+              "type": "spacing"
+            }
           }
         }
       }
