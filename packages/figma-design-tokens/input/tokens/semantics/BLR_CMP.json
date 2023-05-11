@@ -414,18 +414,30 @@
           "Sizing": {
             "value": "{core.dimensionREM.16}",
             "type": "sizing"
+          },
+          "IconSize": {
+            "value": "SM",
+            "type": "componentConfig"
           }
         },
         "MD": {
           "Sizing": {
             "value": "{core.dimensionREM.20}",
             "type": "sizing"
+          },
+          "IconSize": {
+            "value": "SM",
+            "type": "componentConfig"
           }
         },
         "LG": {
           "Sizing": {
             "value": "{core.dimensionREM.28}",
             "type": "sizing"
+          },
+          "IconSize": {
+            "value": "MD",
+            "type": "componentConfig"
           }
         }
       }
