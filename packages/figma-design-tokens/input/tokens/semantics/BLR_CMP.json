@@ -411,33 +411,85 @@
           }
         },
         "SM": {
-          "Sizing": {
-            "value": "{core.dimensionREM.16}",
-            "type": "sizing"
-          },
           "IconSize": {
             "value": "SM",
             "type": "componentConfig"
           }
         },
         "MD": {
-          "Sizing": {
-            "value": "{core.dimensionREM.20}",
-            "type": "sizing"
-          },
           "IconSize": {
             "value": "SM",
             "type": "componentConfig"
           }
         },
         "LG": {
-          "Sizing": {
-            "value": "{core.dimensionREM.28}",
-            "type": "sizing"
-          },
           "IconSize": {
             "value": "MD",
             "type": "componentConfig"
+          }
+        }
+      }
+    },
+    "StepperButton": {
+      "SM": {
+        "Sizing": {
+          "value": "{core.dimensionREM.16}",
+          "type": "sizing"
+        }
+      },
+      "MD": {
+        "Sizing": {
+          "value": "{core.dimensionREM.20}",
+          "type": "sizing"
+        }
+      },
+      "LG": {
+        "Sizing": {
+          "value": "{core.dimensionREM.28}",
+          "type": "sizing"
+        }
+      }
+    },
+    "StepperCombo": {
+      "SM": {
+        "Vertical": {
+          "Width": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing"
+          }
+        },
+        "Horizontal": {
+          "Width": {
+            "value": "{core.dimensionREM.64}",
+            "type": "sizing"
+          }
+        }
+      },
+      "MD": {
+        "Vertical": {
+          "Width": {
+            "value": "{core.dimensionREM.40}",
+            "type": "sizing"
+          }
+        },
+        "Horizontal": {
+          "Width": {
+            "value": "{core.dimensionREM.80}",
+            "type": "sizing"
+          }
+        }
+      },
+      "LG": {
+        "Vertical": {
+          "Width": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing"
+          }
+        },
+        "Horizontal": {
+          "Width": {
+            "value": "{core.dimensionREM.96}",
+            "type": "sizing"
           }
         }
       }

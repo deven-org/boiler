@@ -93,6 +93,10 @@
         "value": "80px",
         "type": "dimension"
       },
+      "96": {
+        "value": "96px",
+        "type": "dimension"
+      },
       "112": {
         "value": "112px",
         "type": "dimension"
@@ -201,6 +205,10 @@
       },
       "80": {
         "value": "5rem",
+        "type": "dimension"
+      },
+      "96": {
+        "value": "6rem",
         "type": "dimension"
       },
       "112": {
