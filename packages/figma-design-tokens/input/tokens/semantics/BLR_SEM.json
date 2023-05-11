@@ -1675,6 +1675,10 @@
         "ReadOnly": {
           "value": "{q.surface.disabled.alpha}",
           "type": "color"
+        },
+        "Error": {
+          "value": "{q.stroke.error}",
+          "type": "color"
         }
       },
       "Foreground": {
@@ -1700,6 +1704,10 @@
         },
         "ReadOnly": {
           "value": "{q.content.ondisabled.inverted}",
+          "type": "color"
+        },
+        "Error": {
+          "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
       }
