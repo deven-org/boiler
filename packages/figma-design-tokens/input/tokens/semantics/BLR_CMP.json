@@ -449,7 +449,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "0, {core.dimensionsREM.8}",
+              "value": "0, {core.dimensionREM.8}",
               "type": "spacing"
             }
           }
@@ -469,7 +469,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "0, {core.dimensionsREM.8}",
+              "value": "0, {core.dimensionREM.8}",
               "type": "spacing"
             }
           }
@@ -489,7 +489,7 @@
           },
           "Divider": {
             "Padding": {
-              "value": "0, {core.dimensionsREM.8}",
+              "value": "0, {core.dimensionREM.8}",
               "type": "spacing"
             }
           }
