@@ -307,6 +307,83 @@
           "type": "componentConfig"
         }
       }
+    },
+    "StepperButton": {
+      "SurfaceFill": {
+        "Rest": {
+          "value": "{q.surface.brand.silent.rest}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{q.surface.brand.silent.hover}",
+          "type": "color"
+        },
+        "Pressed": {
+          "value": "{q.surface.brand.silent.pressed}",
+          "type": "color"
+        },
+        "Focus": {
+          "value": "{q.surface.brand.silent.rest}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{q.surface.disabled.beta}",
+          "type": "color"
+        }
+      },
+      "SurfaceStroke": {
+        "Rest": {
+          "value": "{q.stroke.brand.alpha.rest}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{q.stroke.brand.alpha.hover}",
+          "type": "color"
+        },
+        "Pressed": {
+          "value": "{q.stroke.brand.alpha.pressed}",
+          "type": "color"
+        },
+        "Focus": {
+          "value": "{q.stroke.brand.alpha.rest}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{q.stroke.disabled.alpha}",
+          "type": "color"
+        }
+      },
+      "Icon": {
+        "Rest": {
+          "value": "{q.content.onbrand.beta.rest}",
+          "type": "color"
+        },
+        "Hover": {
+          "value": "{q.content.onbrand.beta.hover}",
+          "type": "color"
+        },
+        "Pressed": {
+          "value": "{q.content.onbrand.beta.pressed}",
+          "type": "color"
+        },
+        "Focus": {
+          "value": "{q.content.onbrand.beta.rest}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{q.content.ondisabled.alpha}",
+          "type": "color"
+        }
+      },
+      "Border": {
+        "Rest": {
+          "value": {
+            "color": "{Action.StepperButton.SurfaceStroke.Rest}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        }
+      }
     }
   },
   "UI": {
