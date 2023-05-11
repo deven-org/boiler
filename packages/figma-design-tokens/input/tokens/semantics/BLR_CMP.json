@@ -382,6 +382,34 @@
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
+        },
+        "Hover": {
+          "value": {
+            "color": "{Action.StepperButton.SurfaceStroke.Hover}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        },
+        "Pressed": {
+          "value": {
+            "color": "{Action.StepperButton.SurfaceStroke.Pressed}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        },
+        "Focused": {
+          "value": {
+            "color": "{Action.StepperButton.SurfaceStroke.Focused}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        },
+        "Disabled": {
+          "value": {
+            "color": "{Action.StepperButton.SurfaceStroke.Disabled}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
         }
       }
     }
