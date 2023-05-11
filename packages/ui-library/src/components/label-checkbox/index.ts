@@ -14,31 +14,41 @@ export class BlrLabelCheckbox extends LitElement {
   static styles = [styleCustom /* action, textButton */];
 
   @property() label = 'CheckyMcCheckboxFace';
-  @property() onClick!: HTMLButtonElement['onclick'];
+  @property() onClick?: HTMLButtonElement['onclick'];
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() onChange?: HTMLButtonElement['onchange'];
   @property() disabled?: boolean;
   @property() checked?: boolean;
   @property() size!: SizesType;
-  @property() loadingStatus!: string;
+
+  toogle(event: MouseEvent) {
+    this.checked = !this.checked;
+    if (this.onClick) {
+      this.onClick(event);
+    }
+  }
 
   render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
+      checked: Boolean(this.checked),
     });
 
     // eslint-disable-next-line lit-a11y/click-events-have-key-events
     return html`<label
-      class="blr-semantic-action blr-label-checkbox ${classes}"
-      @click="${this.onClick}"
-      @change="${this.onChange}"
-      @focus="${this.onFocus}"
-      @blur="${this.onBlur}"
-      ?disabled="${this.disabled}"
-      ?checked="${this.checked}"
-    >
-      ${this.label}
-    </label>`;
+        class="blr-semantic-action blr-label-checkbox ${classes}"
+        @click="${this.toogle}"
+        @change="${this.onChange}"
+        @focus="${this.onFocus}"
+        @blur="${this.onBlur}"
+        ?disabled="${this.disabled}"
+        ?checked="${this.checked}"
+        for="peter"
+      >
+        ${this.label}
+      </label>
+
+      <input type="checkbox" id="peter" name="scales" ${this.checked ? 'checked' : ''} />`;
   }
 }
