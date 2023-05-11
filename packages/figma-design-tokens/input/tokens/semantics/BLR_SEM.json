@@ -1736,6 +1736,10 @@
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
         "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
+        "type": "color"
       }
     }
   },
