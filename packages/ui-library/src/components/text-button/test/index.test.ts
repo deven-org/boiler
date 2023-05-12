@@ -7,8 +7,8 @@ describe('blr-text-button', () => {
     const element = await fixture(`
       <blr-text-button      
       label="Label"
-      leadingIcon="blrChevronDownMd"
-      trailingIcon="blrChevronDownMd"
+      leadingIcon="blrChevronDown"
+      trailingIcon="blrChevronDown"
       buttonId="id"
       disabled="true"
       variant="primary"

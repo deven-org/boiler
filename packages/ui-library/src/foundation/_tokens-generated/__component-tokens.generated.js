@@ -1,14 +1,14 @@
 /**
  * Do not edit directly
- * Generated on Thu, 13 Apr 2023 10:59:48 GMT
+ * Generated on Thu, 11 May 2023 14:13:01 GMT
  */
 
 export const componentTokens = {
   Action: {
     TextButton: {
       XS: { Padding: '0.25rem 12px', Gap: '4px' },
-      SM: { Padding: '0.188rem 12px', Gap: '4px' },
-      MD: { Padding: '0.438rem 16px', Gap: '4px' },
+      SM: { Padding: '0.25rem 12px', Gap: '4px' },
+      MD: { Padding: '0.5rem 16px', Gap: '4px' },
       LG: { Padding: '0.5rem 24px', Gap: '4px' },
       XL: { Padding: '1rem 40px', Gap: '4px' },
     },
@@ -32,41 +32,41 @@ export const componentTokens = {
     Loader: {
       SM: {
         Background: {
-          Default: { color: 'hsla(220, 85%, 60%, 0.2)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 0.2)', width: '2px', style: 'solid' },
+          Default: { color: 'hsla(220, 85%, 60%,0.2) ', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 0.2)', width: '2px', style: 'solid' },
         },
         Foreground: {
           Default: { color: 'hsla(220, 85%, 40%, 1)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 1)', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
         },
         Sizing: '1rem',
         Padding: '0.063rem',
       },
       MD: {
         Background: {
-          Default: { color: 'hsla(220, 85%, 60%, 0.2)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 0.2)', width: '2px', style: 'solid' },
+          Default: { color: 'hsla(220, 85%, 60%,0.2) ', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 0.2)', width: '2px', style: 'solid' },
         },
         Foreground: {
           Default: { color: 'hsla(220, 85%, 40%, 1)', width: '2px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 1)', width: '2px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
         },
         Sizing: '1.5rem',
         Padding: '0.125rem',
       },
       LG: {
         Background: {
-          Default: { color: 'hsla(220, 85%, 60%, 0.2)', width: '3px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 0.2)', width: '3px', style: 'solid' },
+          Default: { color: 'hsla(220, 85%, 60%,0.2) ', width: '3px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 0.2)', width: '3px', style: 'solid' },
         },
         Foreground: {
           Default: { color: 'hsla(220, 85%, 40%, 1)', width: '3px', style: 'solid' },
-          Inverted: { color: 'hsla(220, 85%, 99%, 1)', width: '3px', style: 'solid' },
+          Inverted: { color: 'hsla(0, 0%, 100%, 1)', width: '3px', style: 'solid' },
         },
         Sizing: '2rem',
         Padding: '0.188rem',
       },
     },
   },
-  Forms: { TextArea: { MD: { MinHeight: '5rem' }, SM: { MinHeight: '5rem' }, LG: { MinHeight: '5rem' } } },
+  Forms: { TextArea: { MD: { MinHeight: '5rem' }, SM: { MinHeight: '4rem' }, LG: { MinHeight: '7rem' } } },
 };

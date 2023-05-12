@@ -7,7 +7,7 @@ const props = {
   ariaLabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  iconName: 'blrChevronDownMd',
+  icon: 'blrChevronDown',
   variant: 'cta',
   size: 'md',
   loadingStatus: 'loading',
@@ -18,11 +18,11 @@ describe('blr-icon-button', () => {
     const element = await fixture(`
     <blr-icon-button
       ariaLabel=${props.ariaLabel}
-      iconName=${props.iconName}
+      icon=${props.icon}
+      size=${props.size}
       buttonId="id"
       disabled="false"
       variant=${props.variant}
-      size=${props.size}
       class="example-layout-class"
       loadingStatus=${props.loadingStatus}
     ></blr-icon-button>

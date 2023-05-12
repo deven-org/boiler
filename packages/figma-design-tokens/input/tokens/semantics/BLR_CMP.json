@@ -17,7 +17,7 @@
       },
       "SM": {
         "Padding": {
-          "value": "{core.dimensionREM.3} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
           "type": "spacing"
         },
         "Gap": {
@@ -31,7 +31,7 @@
       },
       "MD": {
         "Padding": {
-          "value": "{core.dimensionREM.7} {core.dimensionPX.16}",
+          "value": "{core.dimensionREM.8} {core.dimensionPX.16}",
           "type": "spacing"
         },
         "Gap": {
@@ -253,7 +253,7 @@
       },
       "SM": {
         "Padding": {
-          "value": "{core.dimensionREM.3} {core.dimensionPX.8} {core.dimensionREM.3} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.4} {core.dimensionPX.8} {core.dimensionREM.4} {core.dimensionPX.12}",
           "type": "spacing"
         },
         "Gap": {
@@ -267,7 +267,7 @@
       },
       "MD": {
         "Padding": {
-          "value": "{core.dimensionREM.7} {core.dimensionPX.12} {core.dimensionREM.7} {core.dimensionPX.20}",
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12} {core.dimensionREM.8} {core.dimensionPX.20}",
           "type": "spacing"
         },
         "Gap": {
@@ -495,15 +495,149 @@
       },
       "SM": {
         "MinHeight": {
-          "value": "{core.dimensionREM.80}",
+          "value": "{core.dimensionREM.64}",
           "type": "sizing"
         }
       },
       "LG": {
         "MinHeight": {
-          "value": "{core.dimensionREM.80}",
+          "value": "{core.dimensionREM.112}",
           "type": "sizing"
         }
+      }
+    },
+    "Radio": {
+      "Control": {
+        "SM": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "Background": {
+          "Selected": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          },
+          "Unselected": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          }
+        },
+        "Foreground": {
+          "Unselected": {
+            "Rest": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            }
+          },
+          "Selected": {
+            "Rest": {
+              "value": "{core.dimensionPX.6}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.8}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.10}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.6}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.6}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.6}",
+              "type": "sizing"
+            }
+          }
+        },
+        "MD": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "LG": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        }
+      },
+      "ControlBorderRadius": {
+        "value": "{core.borderRadius.Round}",
+        "type": "borderRadius"
       }
     }
   }

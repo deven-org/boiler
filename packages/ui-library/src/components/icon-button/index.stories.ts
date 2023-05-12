@@ -4,12 +4,14 @@ import { BlrIconButton as BlrIconButtonClass } from './index';
 import { IconKeys } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
 import './index';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getIconName } from '../../utils/get-icon-name';
 
 export default {
   title: 'BlrIconButton',
   argTypes: {
-    iconName: {
-      options: [undefined, ...IconKeys],
+    icon: {
+      options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     size: {
@@ -32,13 +34,13 @@ export const BlrIconButton = ({
   buttonId,
   variant,
   size,
-  iconName,
+  icon,
   loadingStatus,
 }: BlrIconButtonClass) =>
   html`
     <blr-icon-button
       .ariaLabel=${ariaLabel}
-      .iconName=${iconName}
+      .icon=${calculateIconName(icon, size)}
       .buttonId=${buttonId}
       .onClick=${onClick}
       .onBlur=${onBlur}
@@ -57,7 +59,7 @@ BlrIconButton.args = {
   ariaLabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  iconName: 'blrChevronDownMd',
+  icon: 'blrChevronDown',
   loading: false,
   disabled: false,
   buttonId: 'button-id',
