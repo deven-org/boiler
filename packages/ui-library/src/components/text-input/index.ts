@@ -2,15 +2,15 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { textInput } from '../../foundation/semantic-tokens/form.css';
-import { SizesType, InputTypes } from '../../globals/types';
+import { form } from '../../foundation/semantic-tokens/form.css';
+import { InputTypes, FormSizesType } from '../../globals/types';
 import { BlrFormLabel } from '../form-label';
 import { BlrFormHint } from '../form-hint';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, textInput];
+  static styles = [styleCustom, form];
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
@@ -18,7 +18,7 @@ export class BlrTextInput extends LitElement {
   @property() value!: string;
   @property() placeholder?: string;
   @property() disabled?: boolean;
-  @property() size?: SizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -50,7 +50,7 @@ export class BlrTextInput extends LitElement {
       <div class="blr-input ${classes}">
         ${BlrFormLabel({ labelText: this.label })}
         <input
-          class="blr-text-input ${inputclasses}"
+          class="blr-form-element ${inputclasses}"
           id=${this.textInputId}
           type="${this.type}"
           value="${this.value}"

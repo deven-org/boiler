@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTextInput as BlrTextInputClass } from './index';
-import { Sizes, InputTypes } from '../../globals/constants';
+import { FormSizes, InputTypes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
 import { action } from '@storybook/addon-actions';
 import './index';
@@ -10,7 +10,7 @@ export default {
   title: 'BlrTextInput',
   argTypes: {
     size: {
-      options: Sizes.filter((x) => x != 'xxs'),
+      options: FormSizes,
       control: { type: 'select' },
     },
     type: {

@@ -1,5 +1,6 @@
-import { css, unsafeCSS } from "lit";
+import { unsafeCSS } from "lit";
 import { semanticTokens } from "../_tokens-generated/index.generated";
+import { css } from "nested-css-to-flat/lit-css";
 
 const { Forms } = semanticTokens;
 
@@ -9,8 +10,8 @@ const forms = {
   },
 };
 
-export const textInput = css`
-  .blr-text-input {
+export const form = css`
+  .blr-form-element {
     font-weight: ${Forms.MD.UserInput.fontWeight};
     font-size: ${Forms.MD.UserInput.fontSize};
     font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
