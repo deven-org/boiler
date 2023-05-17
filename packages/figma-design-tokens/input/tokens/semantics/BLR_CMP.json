@@ -507,13 +507,21 @@
       }
     },
     "Radio": {
-      "Control": {
-        "SM": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
+      "SM": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
         },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.2} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Control": {
         "Background": {
           "Unselected": {
             "Rest": {
@@ -593,23 +601,39 @@
               "type": "sizing"
             }
           }
-        },
-        "MD": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
-        },
-        "LG": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
         }
       },
       "ControlBorderRadius": {
         "value": "{core.borderRadius.Round}",
         "type": "borderRadius"
+      },
+      "MD": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.3} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
       }
     },
     "Checkbox": {
@@ -617,24 +641,46 @@
         "value": "{core.borderRadius.SM}",
         "type": "borderRadius"
       },
-      "Control": {
-        "SM": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
+      "SM": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
         },
-        "MD": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
         },
-        "LG": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
+        "LabelMargin": {
+          "value": "{core.dimensionPX.2} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "MD": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.3} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
         }
       }
     }
