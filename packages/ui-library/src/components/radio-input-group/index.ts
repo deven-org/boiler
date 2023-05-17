@@ -2,8 +2,8 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { radioInput } from '../../foundation/semantic-tokens/radioInputTemp.css';
-import { RadioOption, SizesType } from '../../globals/types';
+import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
+import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormLabel } from '../form-label';
 import { BlrFormHint } from '../form-hint';
 import { IconType } from '@boiler/icons';
@@ -19,7 +19,7 @@ export class BlrRadioInputGroup extends LitElement {
   @property() name!: string;
   @property() invalid?: boolean;
   @property() disabled?: boolean;
-  @property() size!: SizesType;
+  @property() size!: InputSizesType;
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -44,8 +44,8 @@ export class BlrRadioInputGroup extends LitElement {
     };
 
     return html`
-      <fieldset class="blr-input ${classes}">
-        ${this.hideLabel ? `` : html`<legend>${BlrFormLabel({ labelText: this.label })}</legend>`}
+      <fieldset class="blr-radio-input-group ${classes}">
+        ${this.hideLabel ? `` : html`<legend>${BlrFormLabel({ labelText: this.label, labelSize: this.size })}</legend>`}
         ${this.options &&
         this.options.map((option: RadioOption) => {
           const id = calculateOptionId(option.label);

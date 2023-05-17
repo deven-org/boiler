@@ -2,11 +2,14 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { RadioOption, SizesType } from '../../globals/types';
+import { InputSizesType, RadioOption } from '../../globals/types';
+import { form } from '../../foundation/semantic-tokens/form.css';
+import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
+import { BlrFormLabel } from '../form-label';
 
 @customElement('blr-radio-input')
 export class BlrRadioInput extends LitElement {
-  static styles = [styleCustom];
+  static styles = [styleCustom, form, radioInput];
 
   @property() id!: string;
   @property() textInputId!: string;
@@ -15,8 +18,9 @@ export class BlrRadioInput extends LitElement {
   @property() value!: string;
   @property() name!: string;
   @property() disabled?: boolean;
+  @property() readonly?: boolean;
   @property() checked?: boolean;
-  @property() size?: SizesType = 'md';
+  @property() size?: InputSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -29,6 +33,7 @@ export class BlrRadioInput extends LitElement {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
+      [`readonly`]: this.readonly || false,
     });
 
     const inputclasses = classMap({
@@ -37,7 +42,7 @@ export class BlrRadioInput extends LitElement {
     });
 
     return html`
-      <div class="blr-radio-input ${classes}">
+      <div class="blr-form-element blr-radio-input ${classes}">
         <input
           id=${this.id}
           class="${inputclasses}"
@@ -47,13 +52,14 @@ export class BlrRadioInput extends LitElement {
           ?disabled="${this.disabled}"
           ?checked="${this.checked}"
           ?required="${this.required}"
+          ?readonly="${this.readonly}"
           @input="${this.onChange}"
           @blur="${this.onBlur}"
           @focus="${this.onFocus}"
           hasError="${this.hasError}"
           invalid="{invalid}"
         />
-        <label for=${this.id}>${this.label}</label><br />
+        ${BlrFormLabel({ labelText: this.label, labelSize: this.size || 'md' })}
       </div>
     `;
   }

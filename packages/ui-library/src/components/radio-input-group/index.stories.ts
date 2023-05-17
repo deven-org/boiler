@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { BlrRadioInputGroup as BlrRadioInputGroupClass } from './index';
-import { RadioInputSizes, Sizes } from '../../globals/constants';
+import { InputSizes } from '../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import './index';
 import { IconKeys } from '@boiler/icons';
@@ -11,7 +11,7 @@ export default {
   title: 'BlrRadioInputGroup',
   argTypes: {
     size: {
-      options: RadioInputSizes,
+      options: InputSizes,
       control: { type: 'select' },
     },
     options: { control: 'array' },
@@ -55,7 +55,7 @@ export const BlrRadioInputGroup = ({
       .hint=${hint}
       .hintIcon=${calculateIconName(hintIcon, size)}
       class="example-layout-class"
-    ></blr-radio-input>
+    ></blr-radio-input-group>
   `;
 
 BlrRadioInputGroup.storyName = 'BlrRadioInputGroup';
@@ -65,6 +65,7 @@ BlrRadioInputGroup.args = {
   disabled: false,
   invalid: false,
   required: false,
+  readonly: false,
   size: 'md',
   errorMessage: 'This is an error message',
   hideLabel: false,

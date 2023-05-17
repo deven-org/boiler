@@ -1,10 +1,10 @@
 import { css, unsafeCSS } from "lit";
 import { semanticTokens } from "../_tokens-generated/index.generated";
 
-const { Caption, SM, MD, LG, Input, InputBorderRadius } = semanticTokens.Forms;
+const { Caption, Control, SM, MD, LG, Input, InputBorderRadius } = semanticTokens.Forms;
 
-const forms = {
-  textinput: {
+const sizes = {
+  radioinput: {
     sm: {
       width: "50px",
       height: "100px",
@@ -21,7 +21,8 @@ const forms = {
 };
 
 export const radioInput = css`
-  .blr-input {
+  /* stylelint-disable */
+  .blr-radio-input-group {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -32,44 +33,77 @@ export const radioInput = css`
     border-radius: ${InputBorderRadius};
   }
 
-  .blr-input.vertical {
+  .blr-radio-input-group.vertical {
     flex-direction: column;
   }
 
-  .blr-input.sm {
-    min-width: ${unsafeCSS(forms.textinput.sm.width)};
+  .blr-radio-input input {
+    display: none;
+  }
+
+  .blr-radio-input label {
+    display: flex;
+    align-items: center;
+    &::before {
+      display: flex;
+      flex-shrink: 0;
+      content: "";
+      background-color: #fff;
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 50%;
+      margin-right: 0.375em;
+      transition: 0.25s ease;
+      box-shadow: inset 0 0 0 0.125em ${Control.Background.Rest};
+    }
+  }
+
+  .blr-radio-input.sm {
+    min-width: ${unsafeCSS(sizes.radioinput.sm.width)};
     font-family: ${SM.UserInput.fontFamily}, sans-serif;
     font-weight: ${SM.UserInput.fontWeight};
     font-size: ${SM.UserInput.fontSize};
     padding: ${SM.InputField.Padding};
   }
 
-  .blr-input.md {
-    min-width: ${unsafeCSS(forms.textinput.md.width)};
+  .blr-radio-input.md {
+    min-width: ${unsafeCSS(sizes.radioinput.md.width)};
     font-family: ${MD.UserInput.fontFamily}, sans-serif;
     font-weight: ${MD.UserInput.fontWeight};
     font-size: ${MD.UserInput.fontSize};
     padding: ${MD.InputField.Padding};
   }
 
-  .blr-input.lg {
-    min-width: ${unsafeCSS(forms.textinput.lg.width)};
+  .blr-radio-input.lg {
+    min-width: ${unsafeCSS(sizes.radioinput.lg.width)};
     font-family: ${LG.UserInput.fontFamily}, sans-serif;
     font-weight: ${LG.UserInput.fontWeight};
     font-size: ${LG.UserInput.fontSize};
     padding: ${LG.InputField.Padding};
   }
 
-  .blr-input:hover {
-    border-width: ${Input.Default.Hover.width};
-    border-style: ${Input.Default.Hover.style};
-    border-color: ${Input.Default.Hover.color};
+  .blr-radio-input:hover label {
+    &::before {
+      box-shadow: inset 0 0 0 0.125em ${Control.Background.Hover};
+    }
   }
 
-  .blr-input[readonly] {
-    border-width: ${Input.Default.ReadOnly.width};
-    border-style: ${Input.Default.ReadOnly.style};
-    border-color: ${Input.Default.ReadOnly.color};
+  .blr-radio-input:active label {
+    &::before {
+      box-shadow: inset 0 0 0 0.125em ${Control.Background.Pressed};
+    }
+  }
+
+  .blr-radio-input:focus label {
+    &::before {
+      box-shadow: inset 0 0 0 0.125em ${Control.Background.Focus};
+    }
+  }
+
+  .blr-radio-input.readonly label {
+    &::before {
+      box-shadow: inset 0 0 0 0.125em ${Control.Background.ReadOnly};
+    }
   }
 
   .blr-input:disabled {
@@ -107,8 +141,6 @@ export const radioInput = css`
     flex-direction: row;
   }
 
-  /* stylelint-disable */
-
   .blr-form-hint.sm {
     padding: ${SM.CaptionComponent.Padding};
     font-weight: ${SM.Caption.fontWeight};
@@ -136,8 +168,6 @@ export const radioInput = css`
     margin: ${LG.CaptionSlot.Margin};
   }
 
-  /* stylelint-enable */
-
   .error {
     color: ${Caption.Error};
   }
@@ -145,4 +175,5 @@ export const radioInput = css`
   .hint {
     color: ${Caption.Hint};
   }
+  /* stylelint-enable */
 `;

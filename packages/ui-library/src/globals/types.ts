@@ -1,4 +1,4 @@
-import { FeedbackSizes, Sizes, InputTypes } from './constants';
+import { FeedbackSizes, Sizes, InputTypes, InputSizes } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
 
@@ -9,6 +9,8 @@ export type FeedbackVariants = 'default' | 'inverted';
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 
 export type InputTypes = (typeof InputTypes)[number];
+
+export type InputSizesType = (typeof InputSizes)[number];
 
 export type RadioOption = {
   label: string;

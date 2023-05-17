@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { BlrRadioInput as BlrRadioInputClass } from './index';
-import { Sizes } from '../../globals/constants';
+import { InputSizes } from '../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import './index';
 
@@ -8,7 +8,7 @@ export default {
   title: 'BlrRadioInput',
   argTypes: {
     size: {
-      options: Sizes,
+      options: InputSizes,
       control: { type: 'select' },
     },
     options: { control: 'array' },
@@ -22,6 +22,7 @@ export const BlrRadioInput = ({
   disabled,
   size,
   required,
+  readonly,
   errorMessage,
   hasError,
   options,
@@ -33,6 +34,7 @@ export const BlrRadioInput = ({
       .disabled=${disabled}
       .size=${size}
       .required=${required}
+      .readonly=${readonly}
       .onChange=${action('onChange')}
       .onBlur=${action('onBlur')}
       .onFocus=${action('onFocus')}
@@ -49,6 +51,7 @@ BlrRadioInput.args = {
   label: 'Radio Input',
   disabled: false,
   required: false,
+  readonly: false,
   size: 'md',
   errorMessage: 'This is an error message',
   hasError: false,
