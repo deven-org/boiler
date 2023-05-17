@@ -62,7 +62,7 @@
             "type": "color"
           },
           "pressed": {
-            "value": "{core.color.azure.600.opa30}",
+            "value": "{core.color.azure.600.opa50}",
             "type": "color"
           }
         },
@@ -71,11 +71,11 @@
             "value": "{core.color.azure.600.opa0}",
             "type": "color"
           },
-          "pressed": {
+          "hover": {
             "value": "{core.color.azure.600.opa10}",
             "type": "color"
           },
-          "hover": {
+          "pressed": {
             "value": "{core.color.azure.600.opa20}",
             "type": "color"
           }

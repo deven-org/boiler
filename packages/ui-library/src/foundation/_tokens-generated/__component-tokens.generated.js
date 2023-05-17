@@ -1,14 +1,14 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 Apr 2023 17:05:25 GMT
+ * Generated on Thu, 11 May 2023 14:13:01 GMT
  */
 
 export const componentTokens = {
   Action: {
     TextButton: {
       XS: { Padding: '0.25rem 12px', Gap: '4px' },
-      SM: { Padding: '0.188rem 12px', Gap: '4px' },
-      MD: { Padding: '0.438rem 16px', Gap: '4px' },
+      SM: { Padding: '0.25rem 12px', Gap: '4px' },
+      MD: { Padding: '0.5rem 16px', Gap: '4px' },
       LG: { Padding: '0.5rem 24px', Gap: '4px' },
       XL: { Padding: '1rem 40px', Gap: '4px' },
     },

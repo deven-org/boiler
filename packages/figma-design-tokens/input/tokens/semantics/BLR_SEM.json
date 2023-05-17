@@ -569,7 +569,7 @@
       },
       "Rest": {
         "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Rest}",
+          "color": "{Action.Silent.SurfaceStroke.Rest}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -577,7 +577,7 @@
       },
       "Hover": {
         "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Hover}",
+          "color": "{Action.Silent.SurfaceStroke.Hover}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -585,7 +585,7 @@
       },
       "Pressed": {
         "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Pressed}",
+          "color": "{Action.Silent.SurfaceStroke.Pressed}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -601,7 +601,7 @@
       },
       "Disabled": {
         "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Disabled}",
+          "color": "{Action.Silent.SurfaceStroke.Disabled}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -609,7 +609,7 @@
       },
       "Loading": {
         "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Loading}",
+          "color": "{Action.Silent.SurfaceStroke.Loading}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -930,7 +930,7 @@
     },
     "XS": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.50}",
+        "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -940,7 +940,7 @@
     },
     "SM": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -950,7 +950,7 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -960,7 +960,7 @@
     },
     "LG": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100}",
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -970,7 +970,7 @@
     },
     "XL": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100}",
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -1086,11 +1086,15 @@
         "type": "typography"
       },
       "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+        "type": "typography"
+      },
+      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.87}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1131,7 +1135,7 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
           "type": "spacing"
         },
         "IconSize": {
@@ -1184,11 +1188,15 @@
         }
       },
       "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+        "type": "typography"
+      },
+      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.100}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "InputSlot": {
@@ -1222,11 +1230,15 @@
         "type": "typography"
       },
       "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+        "type": "typography"
+      },
+      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.125}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1267,7 +1279,7 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
+          "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
           "type": "spacing"
         },
         "IconSize": {
@@ -1371,6 +1383,14 @@
           "type": "color"
         },
         "Hover": {
+          "value": "{q.content.onerror.alpha}",
+          "type": "color"
+        },
+        "Pressed": {
+          "value": "{q.content.onerror.alpha}",
+          "type": "color"
+        },
+        "Focused": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
         }
@@ -1536,6 +1556,14 @@
           },
           "type": "border"
         },
+        "Pressed": {
+          "value": {
+            "color": "{Forms.SurfaceStroke.Default.Pressed}",
+            "width": "{core.dimensionPX.1}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
         "Focus": {
           "value": {
             "color": "{Global.Focus}",
@@ -1573,6 +1601,14 @@
         "Hover": {
           "value": {
             "color": "{Forms.SurfaceStroke.Error.Hover}",
+            "width": "{core.dimensionPX.1}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Pressed": {
+          "value": {
+            "color": "{Forms.SurfaceStroke.Error.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -1639,6 +1675,10 @@
         "ReadOnly": {
           "value": "{q.surface.disabled.alpha}",
           "type": "color"
+        },
+        "Error": {
+          "value": "{q.stroke.error}",
+          "type": "color"
         }
       },
       "Foreground": {
@@ -1665,7 +1705,41 @@
         "ReadOnly": {
           "value": "{q.content.ondisabled.inverted}",
           "type": "color"
+        },
+        "Error": {
+          "value": "{q.content.onbrand.alpha}",
+          "type": "color"
         }
+      }
+    },
+    "LabelNextToControl": {
+      "Rest": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Hover": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Pressed": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Focus": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{q.content.ondisabled.alpha}",
+        "type": "color"
+      },
+      "ReadOnly": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
+        "type": "color"
       }
     }
   },
@@ -1677,7 +1751,7 @@
     "FocusBorder": {
       "value": {
         "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.2}",
+        "width": "{core.dimensionPX.3}",
         "style": "solid"
       },
       "type": "border"
