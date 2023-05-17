@@ -476,6 +476,15 @@
               "type": "spacing"
             }
           }
+        },
+        "Divider": {
+          "Border": {
+            "value": {
+              "color": "{Action.StepperCombo.Divider}",
+              "width": "{core.dimensionPX.1}"
+            },
+            "type": "border"
+          }
         }
       },
       "MD": {
@@ -502,6 +511,15 @@
               "type": "spacing"
             }
           }
+        },
+        "Divider": {
+          "Border": {
+            "value": {
+              "color": "{Action.StepperCombo.Divider}",
+              "width": "{core.dimensionPX.1}"
+            },
+            "type": "border"
+          }
         }
       },
       "LG": {
@@ -527,6 +545,15 @@
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
+          }
+        },
+        "Divider": {
+          "Border": {
+            "value": {
+              "color": "{Action.StepperCombo.Divider}",
+              "width": "{core.dimensionPX.1}"
+            },
+            "type": "border"
           }
         }
       }
