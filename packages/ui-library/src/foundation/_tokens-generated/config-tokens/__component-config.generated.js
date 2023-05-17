@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 17 May 2023 13:56:01 GMT
+ * Generated on Wed, 17 May 2023 14:06:13 GMT
  */
 
 export const componentConfig = {
@@ -33,6 +33,7 @@ export const componentConfig = {
       LG: { ChevronSize: 'SM' },
       XL: { ChevronSize: 'MD' },
     },
+    StepperButton: { SM: { IconSize: 'SM' }, MD: { IconSize: 'SM' }, LG: { IconSize: 'MD' } },
     XS: { LoaderSize: 'SM' },
     SM: { LoaderSize: 'SM' },
     MD: { LoaderSize: 'MD' },
