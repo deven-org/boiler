@@ -931,7 +931,6 @@
     "XS": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
-        "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -941,7 +940,6 @@
     },
     "SM": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
       },
@@ -953,7 +951,6 @@
     "MD": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -964,7 +961,6 @@
     "LG": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -974,7 +970,6 @@
     },
     "XL": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
       },
@@ -1095,15 +1090,10 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.87}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
@@ -1131,9 +1121,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1145,7 +1141,6 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
           "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
           "type": "spacing"
         },
@@ -1192,9 +1187,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1203,15 +1204,10 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.100}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
@@ -1250,15 +1246,10 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
-      },
-      "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.125}",
         "type": "typography"
       },
       "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
@@ -1286,9 +1277,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1300,7 +1297,6 @@
       },
       "InputField": {
         "Padding": {
-          "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
           "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
           "type": "spacing"
         },
@@ -1409,10 +1405,6 @@
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.content.onerror.alpha}",
-          "type": "color"
-        },
-        "Focused": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
         },
