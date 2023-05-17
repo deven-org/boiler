@@ -616,6 +616,26 @@
       "ControlBorderRadius": {
         "value": "{core.borderRadius.SM}",
         "type": "borderRadius"
+      },
+      "Control": {
+        "SM": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "MD": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "LG": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        }
       }
     }
   }
