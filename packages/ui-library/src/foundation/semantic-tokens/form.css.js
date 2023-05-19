@@ -168,6 +168,9 @@ export const form = css`
     line-height: ${Forms.LG.Caption.lineHeight};
     margin: ${Forms.LG.CaptionSlot.Margin};
   }
+  .blr-caption-text {
+    padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
+  }
 }
 .blr-form-label {
   padding: ${Forms.MD.LabelSlot.Padding};
@@ -227,9 +230,6 @@ export const form = css`
     line-height: ${Forms.LG.LabelAppendix.lineHeight};
   }
 
-.blr-caption-text {
-  padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
-}
 .error {
   color: ${Forms.Caption.Error};
 }
