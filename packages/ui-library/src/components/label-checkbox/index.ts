@@ -14,12 +14,12 @@ export class BlrLabelCheckbox extends LitElement {
 
   @property() label?: string;
   @property() checkInputId!: string;
-  @property() onFocus?: HTMLButtonElement['onfocus'];
-  @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() onChange?: HTMLButtonElement['onchange'];
   @property() disabled?: boolean;
   @property() checked?: boolean;
   @property() size!: SizesType;
+  @property() onFocus?: HTMLButtonElement['onfocus'];
+  @property() onBlur?: HTMLButtonElement['onblur'];
+  @property() onChange?: HTMLButtonElement['onchange'];
 
   @state() protected checkedState = false;
   @state() protected focusState = false;
