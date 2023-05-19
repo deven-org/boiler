@@ -21,8 +21,13 @@ export class BlrLabelCheckbox extends LitElement {
   @property() checked?: boolean;
   @property() size!: SizesType;
 
-  @state() protected checkedState = Boolean(this.checked);
+  @state() protected checkedState = false;
   @state() protected focusState = false;
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.checkedState = Boolean(this.checked);
+  }
 
   handleChange(event: Event) {
     if (!this.disabled) {

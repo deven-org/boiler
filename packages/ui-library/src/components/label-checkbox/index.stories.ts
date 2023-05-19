@@ -24,6 +24,7 @@ export const BlrLabelCheckbox = ({
   onChange,
   disabled,
   size,
+  checked,
 }: BlrLabelCheckboxClass) =>
   html`
     <blr-label-checkbox
@@ -33,6 +34,7 @@ export const BlrLabelCheckbox = ({
       .onBlur=${onBlur}
       .onChange=${onChange}
       .disabled=${disabled}
+      .checked=${checked}
       .size=${size}
       class="example-layout-class"
     ></blr-label-checkbox>
@@ -52,5 +54,6 @@ BlrLabelCheckbox.args = {
   onFocus: logEventType,
   onBlur: logEventType,
   disabled: false,
+  checked: false,
   size: 'md',
 };
