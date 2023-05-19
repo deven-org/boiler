@@ -4,16 +4,15 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 
 import { BlrFormLabel } from '../form-label';
+import { SizesType } from '../../globals/types';
 
 import { styleCustom } from './index.css';
-
-import { SizesType } from '../../globals/types';
 
 @customElement('blr-label-checkbox')
 export class BlrLabelCheckbox extends LitElement {
   static styles = [styleCustom];
 
-  @property() label = 'CheckyMcCheckboxFace';
+  @property() label?: string;
   @property() checkInputId!: string;
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -51,27 +50,29 @@ export class BlrLabelCheckbox extends LitElement {
 
   render() {
     const classes = classMap({
-      checked: this.checkedState,
-      focus: this.focusState,
+      'blr-semantic-action': true,
+      'blr-label-checkbox': true,
+      'checked': this.checkedState,
+      'focus': this.focusState,
+      'disabled': Boolean(this.disabled),
     });
 
     return html`<span
-      class="blr-semantic-action blr-label-checkbox ${classes}"
+      class=${classes}
       tabindex="-1"
-      @focus="${this.handleFocus}"
-      @blur="${this.handleBlur}"
-      @keyup="${this.handleKeyUp}"
+      @focus=${this.handleFocus}
+      @blur=${this.handleBlur}
+      @keyup=${this.handleKeyUp}
     >
-      ${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}
+      ${this.label ? html`${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}` : ''}
 
       <input
         type="checkbox"
-        id="${this.checkInputId || nothing}"
-        name="${this.checkInputId || nothing}"
-        ${this.checkedState ? 'checked' : ''}
-        @change="${this.handleChange}"
-        ?disabled="${this.disabled}"
-        ?checked="${this.checkedState}"
+        id=${this.checkInputId || nothing}
+        name=${this.checkInputId || nothing}
+        @change=${this.handleChange}
+        ?disabled=${this.disabled}
+        ?checked=${this.checkedState}
       />
     </span>`;
   }
