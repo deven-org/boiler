@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, nothing } from 'lit';
 
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
@@ -8,7 +8,6 @@ import { BlrFormLabel } from '../form-label';
 import { styleCustom } from './index.css';
 
 import { SizesType } from '../../globals/types';
-import { ifNotEmptyString } from '../../utils/if-not-empty-string';
 
 // import { action } from '../../foundation/semantic-tokens/action.css';
 // import { labelCheckbox } from '../../foundation/component-tokens/action.css';
@@ -19,7 +18,6 @@ export class BlrLabelCheckbox extends LitElement {
 
   @property() label = 'CheckyMcCheckboxFace';
   @property() checkInputId!: string;
-  @property() onClick?: HTMLButtonElement['onclick'];
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() onChange?: HTMLButtonElement['onchange'];
@@ -28,12 +26,36 @@ export class BlrLabelCheckbox extends LitElement {
   @property() size!: SizesType;
 
   @state() protected checkedState = Boolean(this.checked);
+  @state() protected focusState = false;
 
-  toogle(event: MouseEvent) {
+  handleChange(event: Event) {
     if (!this.disabled) {
       this.checkedState = !this.checkedState;
-      if (this.onClick) {
-        this.onClick(event);
+      if (this.onChange) {
+        this.onChange(event);
+      }
+    }
+  }
+
+  handleFocus(event: FocusEvent) {
+    this.focusState = true;
+    if (this.onFocus) {
+      this.onFocus(event);
+    }
+  }
+
+  handleBlur(event: FocusEvent) {
+    this.focusState = false;
+    if (this.onBlur) {
+      this.onBlur(event);
+    }
+  }
+
+  handleKeyUp(event: KeyboardEvent) {
+    if (!this.disabled && event.code === 'Space') {
+      this.checkedState = !this.checkedState;
+      if (this.onChange) {
+        this.onChange(event);
       }
     }
   }
@@ -42,22 +64,26 @@ export class BlrLabelCheckbox extends LitElement {
     const classes = classMap({
       // [`${this.size}`]: this.size ?? 'md',
       checked: this.checkedState,
+      focus: this.focusState,
     });
 
-    return html`<span class="blr-semantic-action blr-label-checkbox ${classes}">
+    return html`<span
+      class="blr-semantic-action blr-label-checkbox ${classes}"
+      tabindex="-1"
+      @focus="${this.handleFocus}"
+      @blur="${this.handleBlur}"
+      @keyup="${this.handleKeyUp}"
+    >
       ${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}
 
       <input
         type="checkbox"
-        id="${ifNotEmptyString(this.checkInputId)}"
-        @click="${this.toogle}"
-        @keydown=""
+        id="${this.checkInputId || nothing}"
+        name="${this.checkInputId || nothing}"
         ${this.checkedState ? 'checked' : ''}
-        @change="${this.onChange}"
-        @focus="${this.onFocus}"
-        @blur="${this.onBlur}"
+        @change="${this.handleChange}"
         ?disabled="${this.disabled}"
-        ?checked="${this.checked}"
+        ?checked="${this.checkedState}"
       />
     </span>`;
   }

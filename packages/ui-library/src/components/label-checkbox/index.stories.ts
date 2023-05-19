@@ -19,7 +19,6 @@ export default {
 export const BlrLabelCheckbox = ({
   label,
   checkInputId,
-  onClick,
   onBlur,
   onFocus,
   onChange,
@@ -30,7 +29,6 @@ export const BlrLabelCheckbox = ({
     <blr-label-checkbox
       .label=${label}
       .checkInputId=${checkInputId}
-      .onClick=${onClick}
       .onFocus=${onFocus}
       .onBlur=${onBlur}
       .onChange=${onChange}
