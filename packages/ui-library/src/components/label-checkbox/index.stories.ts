@@ -49,7 +49,6 @@ const logEventType = (event: Event) => {
 BlrLabelCheckbox.args = {
   label: 'McCheckyTheCheckboxFace',
   checkInputId: 'Checky',
-  onClick: logEventType,
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
