@@ -3,8 +3,6 @@ import { css } from 'nested-css-to-flat/lit-css';
 
 export const styleCustom = css`
   .blr-label-checkbox {
-    all: initial;
-
     & > input {
       all: initial;
       display: inline-block;
