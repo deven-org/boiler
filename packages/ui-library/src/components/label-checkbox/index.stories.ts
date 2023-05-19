@@ -36,7 +36,6 @@ export const BlrLabelCheckbox = ({
       .disabled=${disabled}
       .checked=${checked}
       .size=${size}
-      class="example-layout-class"
     ></blr-label-checkbox>
   `;
 
