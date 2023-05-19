@@ -1,5 +1,4 @@
-import { html } from 'lit';
-import { ifNotEmptyString } from '../../utils/if-not-empty-string';
+import { html, nothing } from 'lit';
 
 type FormLabelType = {
   labelText: string;
@@ -9,7 +8,7 @@ type FormLabelType = {
 
 export const BlrFormLabel = ({ labelText, forInputId, labelAppendix: additionalInfo }: FormLabelType) => {
   return html`
-    <label class="blr-form-label" for="${ifNotEmptyString(forInputId)}">
+    <label class="blr-form-label" for="${forInputId || nothing}">
       ${labelText}
       <span class="blr-form-label-appendix">${additionalInfo}</span>
     </label>
