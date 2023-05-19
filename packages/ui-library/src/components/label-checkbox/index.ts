@@ -46,13 +46,6 @@ export class BlrLabelCheckbox extends LitElement {
     this.onBlur?.(event);
   }
 
-  handleKeyUp(event: KeyboardEvent) {
-    if (!this.disabled && event.code === 'Space') {
-      this.checkedState = !this.checkedState;
-      this.onChange?.(event);
-    }
-  }
-
   render() {
     const classes = classMap({
       'blr-semantic-action': true,
@@ -62,13 +55,7 @@ export class BlrLabelCheckbox extends LitElement {
       'disabled': Boolean(this.disabled),
     });
 
-    return html`<span
-      class=${classes}
-      tabindex="-1"
-      @focus=${this.handleFocus}
-      @blur=${this.handleBlur}
-      @keyup=${this.handleKeyUp}
-    >
+    return html`<span class=${classes}>
       ${this.label ? html`${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}` : nothing}
 
       <input
@@ -76,6 +63,8 @@ export class BlrLabelCheckbox extends LitElement {
         id=${this.checkInputId || nothing}
         name=${this.checkInputId || nothing}
         @change=${this.handleChange}
+        @focus=${this.handleFocus}
+        @blur=${this.handleBlur}
         ?disabled=${this.disabled}
         ?checked=${this.checkedState}
       />
