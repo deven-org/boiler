@@ -69,7 +69,7 @@ export class BlrLabelCheckbox extends LitElement {
       @blur=${this.handleBlur}
       @keyup=${this.handleKeyUp}
     >
-      ${this.label ? html`${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}` : ''}
+      ${this.label ? html`${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}` : nothing}
 
       <input
         type="checkbox"
