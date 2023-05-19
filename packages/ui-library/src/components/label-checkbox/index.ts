@@ -9,12 +9,9 @@ import { styleCustom } from './index.css';
 
 import { SizesType } from '../../globals/types';
 
-// import { action } from '../../foundation/semantic-tokens/action.css';
-// import { labelCheckbox } from '../../foundation/component-tokens/action.css';
-
 @customElement('blr-label-checkbox')
 export class BlrLabelCheckbox extends LitElement {
-  static styles = [styleCustom /* action, textButton */];
+  static styles = [styleCustom];
 
   @property() label = 'CheckyMcCheckboxFace';
   @property() checkInputId!: string;
@@ -31,38 +28,29 @@ export class BlrLabelCheckbox extends LitElement {
   handleChange(event: Event) {
     if (!this.disabled) {
       this.checkedState = !this.checkedState;
-      if (this.onChange) {
-        this.onChange(event);
-      }
+      this.onChange?.(event);
     }
   }
 
   handleFocus(event: FocusEvent) {
     this.focusState = true;
-    if (this.onFocus) {
-      this.onFocus(event);
-    }
+    this.onFocus?.(event);
   }
 
   handleBlur(event: FocusEvent) {
     this.focusState = false;
-    if (this.onBlur) {
-      this.onBlur(event);
-    }
+    this.onBlur?.(event);
   }
 
   handleKeyUp(event: KeyboardEvent) {
     if (!this.disabled && event.code === 'Space') {
       this.checkedState = !this.checkedState;
-      if (this.onChange) {
-        this.onChange(event);
-      }
+      this.onChange?.(event);
     }
   }
 
   render() {
     const classes = classMap({
-      // [`${this.size}`]: this.size ?? 'md',
       checked: this.checkedState,
       focus: this.focusState,
     });
