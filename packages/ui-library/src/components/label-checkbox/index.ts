@@ -62,11 +62,11 @@ export class BlrLabelCheckbox extends LitElement {
         type="checkbox"
         id=${this.checkInputId || nothing}
         name=${this.checkInputId || nothing}
+        disabled=${this.disabled || nothing}
+        checked=${this.checkedState || nothing}
         @change=${this.handleChange}
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
-        ?disabled=${this.disabled}
-        ?checked=${this.checkedState}
       />
     </span>`;
   }
