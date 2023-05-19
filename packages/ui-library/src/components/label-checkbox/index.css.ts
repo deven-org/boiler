@@ -19,8 +19,12 @@ export const styleCustom = css`
       background-color: black;
     }
 
-    &.focus > input {
+    &.focus:not(.disabled) > input {
       outline: 1px solid red;
+    }
+
+    &.disabled {
+      opacity: 0.25;
     }
   }
 `;
