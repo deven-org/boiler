@@ -43,7 +43,7 @@ export const BlrLabelCheckbox = ({
 BlrLabelCheckbox.storyName = 'BlrLabelCheckbox';
 
 const logEventType = (event: Event) => {
-  console.log(event.type);
+  console.log('storybook:story:logEventType', event.type);
 };
 
 BlrLabelCheckbox.args = {
