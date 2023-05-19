@@ -18,6 +18,10 @@ export default {
       options: InputTypes,
       control: { type: 'select' },
     },
+    inputIcon: {
+      options: [...getIconName(IconKeys)],
+      control: { type: 'select' },
+    },
     hintIcon: {
       options: [...getIconName(IconKeys)],
       control: { type: 'select' },
@@ -77,10 +81,11 @@ export const BlrTextInput = ({
 BlrTextInput.storyName = 'BlrTextInput';
 
 BlrTextInput.args = {
+  textInputId: 'Input ID',
   label: 'Label',
   labelAppendix: '(Optional)',
   showInputIcon: true,
-  inputIcon: 'blr360Sm',
+  inputIcon: 'blr360',
   type: 'text',
   value: '',
   placeholder: 'Test placeholder',

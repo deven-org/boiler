@@ -130,6 +130,11 @@ export const form = css`
   margin-left: -25px;
   color: ${Forms.Placeholder.Default.Rest};
 }
+
+.blr-input-icon.error {
+    color: ${Forms.Input.Error.Rest.color};
+}
+
 .blr-input-inner-container {
   display: flex;
   justify-content: space-between;
@@ -170,6 +175,9 @@ export const form = css`
   }
   .blr-caption-text {
     padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
+  }
+  &.error {
+    color: ${Forms.Caption.Error};
   }
 }
 .blr-form-label {
