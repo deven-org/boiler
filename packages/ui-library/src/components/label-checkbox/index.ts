@@ -1,10 +1,14 @@
 import { LitElement, html } from 'lit';
+
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
+
+import { BlrFormLabel } from '../form-label';
 
 import { styleCustom } from './index.css';
 
 import { SizesType } from '../../globals/types';
+import { ifNotEmptyString } from '../../utils/if-not-empty-string';
 
 // import { action } from '../../foundation/semantic-tokens/action.css';
 // import { labelCheckbox } from '../../foundation/component-tokens/action.css';
@@ -14,6 +18,7 @@ export class BlrLabelCheckbox extends LitElement {
   static styles = [styleCustom /* action, textButton */];
 
   @property() label = 'CheckyMcCheckboxFace';
+  @property() checkInputId!: string;
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -22,27 +27,32 @@ export class BlrLabelCheckbox extends LitElement {
   @property() checked?: boolean;
   @property() size!: SizesType;
 
+  @state() protected checkedState = Boolean(this.checked);
+
   toogle(event: MouseEvent) {
-    this.checked = !this.checked;
-    if (this.onClick) {
-      this.onClick(event);
+    if (!this.disabled) {
+      this.checkedState = !this.checkedState;
+      if (this.onClick) {
+        this.onClick(event);
+      }
     }
   }
 
   render() {
     const classes = classMap({
       // [`${this.size}`]: this.size ?? 'md',
-      checked: Boolean(this.checked),
+      checked: this.checkedState,
     });
 
     return html`<span class="blr-semantic-action blr-label-checkbox ${classes}">
-      <label for="peter" @click="${this.toogle}" @keydown="">${this.label}</label>
+      ${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}
 
       <input
         type="checkbox"
-        id="peter"
-        name="scales"
-        ${this.checked ? 'checked' : ''}
+        id="${ifNotEmptyString(this.checkInputId)}"
+        @click="${this.toogle}"
+        @keydown=""
+        ${this.checkedState ? 'checked' : ''}
         @change="${this.onChange}"
         @focus="${this.onFocus}"
         @blur="${this.onBlur}"

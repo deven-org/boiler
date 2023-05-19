@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
+import { html } from 'lit';
+
 import { BlrLabelCheckbox as BlrLabelCheckboxClass } from './index';
 
 import { Sizes } from '../../globals/constants';
@@ -17,6 +18,7 @@ export default {
 
 export const BlrLabelCheckbox = ({
   label,
+  checkInputId,
   onClick,
   onBlur,
   onFocus,
@@ -27,10 +29,13 @@ export const BlrLabelCheckbox = ({
   html`
     <blr-label-checkbox
       .label=${label}
+      .checkInputId=${checkInputId}
       .onClick=${onClick}
       .onFocus=${onFocus}
       .onBlur=${onBlur}
       .onChange=${onChange}
+      .disabled=${disabled}
+      .size=${size}
       class="example-layout-class"
     ></blr-label-checkbox>
   `;
@@ -43,6 +48,7 @@ const logEventType = (event: Event) => {
 
 BlrLabelCheckbox.args = {
   label: 'Checky',
+  checkInputId: 'Checky',
   onClick: logEventType,
   onChange: logEventType,
   onFocus: logEventType,
