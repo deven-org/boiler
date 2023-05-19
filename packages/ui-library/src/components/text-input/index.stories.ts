@@ -5,6 +5,7 @@ import { FormSizes, InputTypes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
 import { action } from '@storybook/addon-actions';
 import './index';
+import { getIconName } from '../../utils/get-icon-name';
 
 export default {
   title: 'BlrTextInput',
@@ -18,7 +19,7 @@ export default {
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [undefined, ...IconKeys],
+      options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
   },
@@ -27,16 +28,21 @@ export default {
 export const BlrTextInput = ({
   textInputId,
   label,
+  labelAppendix,
+  showInputIcon,
+  inputIcon,
   type,
   value,
   placeholder,
   disabled,
   size,
   required,
+  readonly,
   maxLength,
   pattern,
   errorMessage,
-  hint,
+  showHint,
+  hintText,
   hintIcon,
   hasError,
 }: BlrTextInputClass) =>
@@ -44,19 +50,24 @@ export const BlrTextInput = ({
     <blr-text-input
       .textInputId=${textInputId}
       .label=${label}
+      .labelAppendix=${labelAppendix}
+      .showInputIcon=${showInputIcon}
+      .inputIcon=${inputIcon}
       .type=${type}
       .value=${value}
       .placeholder=${placeholder}
       .disabled=${disabled}
       .size=${size}
       .required=${required}
+      .readonly=${readonly}
       .onChange=${action('onChange')}
       .onBlur=${action('onBlur')}
       .onFocus=${action('onFocus')}
       .maxLength=${maxLength}
       .pattern=${pattern}
       .errorMessage=${errorMessage}
-      .hint=${hint}
+      .showHint=${showHint}
+      .hintText=${hintText}
       .hintIcon=${hintIcon}
       .hasError=${hasError}
       class="example-layout-class"
@@ -66,16 +77,21 @@ export const BlrTextInput = ({
 BlrTextInput.storyName = 'BlrTextInput';
 
 BlrTextInput.args = {
-  label: 'Text Input',
+  label: 'Label',
+  labelAppendix: '(Optional)',
+  showInputIcon: true,
+  inputIcon: 'blr360Sm',
   type: 'text',
   value: '',
   placeholder: 'Test placeholder',
   disabled: false,
   required: false,
+  readonly: false,
   maxLength: '200',
   size: 'md',
   errorMessage: 'This is error message',
-  hint: 'Field is used for hint',
-  hintIcon: 'blr360Sm',
+  showHint: true,
+  hintText: 'Field is used for hint',
+  hintIcon: 'blrInfo',
   hasError: false,
 };
