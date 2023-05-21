@@ -8,7 +8,7 @@ type FormLabelType = {
 
 export const BlrFormLabel = ({ labelText, forInputId, labelAppendix: additionalInfo }: FormLabelType) => {
   return html`
-    <label class="blr-form-label" for="${forInputId || nothing}">
+    <label class="blr-form-label" for=${forInputId || nothing}>
       ${labelText}
       <span class="blr-form-label-appendix">${additionalInfo}</span>
     </label>
