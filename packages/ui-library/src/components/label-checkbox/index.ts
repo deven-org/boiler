@@ -3,7 +3,7 @@ import { customElement, property, state } from 'lit/decorators';
 import { classMap } from 'lit/directives/class-map';
 
 import { BlrFormLabel } from '../form-label';
-import { SizesType } from '../../globals/types';
+import { FormSizesType } from '../../globals/types';
 
 import { styleCustom } from './index.css';
 
@@ -17,7 +17,7 @@ export class BlrLabelCheckbox extends LitElement {
   @property() disabled?: boolean;
   @property() checked?: boolean;
 
-  @property() size!: SizesType;
+  @property() size!: FormSizesType;
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -58,7 +58,9 @@ export class BlrLabelCheckbox extends LitElement {
     });
 
     return html`<span class=${classes}>
-      ${this.label ? html`${BlrFormLabel({ labelText: this.label, forInputId: this.checkInputId })}` : nothing}
+      ${this.label
+        ? html`${BlrFormLabel({ labelText: this.label, labelSize: this.size, forValue: this.checkInputId })}`
+        : nothing}
 
       <input
         type="checkbox"
