@@ -1,7 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
-
-import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators';
+import { classMap } from 'lit/directives/class-map';
 
 import { BlrFormLabel } from '../form-label';
 import { SizesType } from '../../globals/types';
