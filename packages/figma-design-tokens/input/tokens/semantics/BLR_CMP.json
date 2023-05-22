@@ -411,7 +411,7 @@
       },
       "SM": {
         "Sizing": {
-          "value": "{core.dimensionREM.16}",
+          "value": "{core.dimensionREM.32}",
           "type": "sizing"
         },
         "IconSize": {
@@ -421,7 +421,7 @@
       },
       "MD": {
         "Sizing": {
-          "value": "{core.dimensionREM.20}",
+          "value": "{core.dimensionREM.40}",
           "type": "sizing"
         },
         "IconSize": {
@@ -431,7 +431,7 @@
       },
       "LG": {
         "Sizing": {
-          "value": "{core.dimensionREM.28}",
+          "value": "{core.dimensionREM.48}",
           "type": "sizing"
         },
         "IconSize": {
