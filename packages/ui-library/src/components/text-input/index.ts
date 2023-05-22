@@ -58,7 +58,7 @@ export class BlrTextInput extends LitElement {
     });
 
     const getPasswordIcon = () => {
-      return this.currentType.includes('password') ? 'blrCloseSm' : 'blrEyeSm';
+      return this.currentType.includes('password') ? 'blrEyeSm' : 'blrCloseSm';
     };
 
     return html`
