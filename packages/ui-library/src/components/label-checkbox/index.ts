@@ -6,10 +6,11 @@ import { BlrFormLabel } from '../form-label';
 import { FormSizesType } from '../../globals/types';
 
 import { styleCustom } from './index.css';
+import { form } from '../../foundation/semantic-tokens/form.css';
 
 @customElement('blr-label-checkbox')
 export class BlrLabelCheckbox extends LitElement {
-  static styles = [styleCustom];
+  static styles = [styleCustom, form];
 
   @property() label?: string;
   @property() checkInputId!: string;
@@ -17,7 +18,7 @@ export class BlrLabelCheckbox extends LitElement {
   @property() disabled?: boolean;
   @property() checked?: boolean;
 
-  @property() size!: FormSizesType;
+  @property() size: FormSizesType = 'md';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -59,7 +60,7 @@ export class BlrLabelCheckbox extends LitElement {
 
     return html`<span class=${classes}>
       ${this.label
-        ? html`${BlrFormLabel({ labelText: this.label, labelSize: this.size, forValue: this.checkInputId })}`
+        ? html`${BlrFormLabel({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
         : nothing}
 
       <input
