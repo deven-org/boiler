@@ -79,10 +79,12 @@ export const form = css`
   }
 
   &.error-input {
+    background-color: ${Forms.SurfaceFill.Error.Rest};
     border-width: ${Forms.Input.Error.Rest.width};
     border-style: ${Forms.Input.Error.Rest.style};
     border-color: ${Forms.Input.Error.Rest.color};
     outline-color: ${Forms.Input.Error.Rest.color};
+    color: ${Forms.UserInput.Error.Rest};
 
     &::placeholder {
       color: ${Forms.Placeholder.Error.Rest};

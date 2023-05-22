@@ -39,6 +39,11 @@ export class BlrTextInput extends LitElement {
 
   @state() protected currentType: InputTypes = this.type;
 
+  connectedCallback() {
+    super.connectedCallback();
+    this.currentType = this.type;
+  }
+
   toggleInputType() {
     this.currentType = this.currentType === 'password' ? 'text' : 'password';
   }
@@ -99,9 +104,9 @@ export class BlrTextInput extends LitElement {
             ? html`<blr-icon
                 class="blr-input-icon ${inputClasses}"
                 @click=${this.toggleInputType}
-                icon="${this.hasError ? 'blrInfoSm' : getPasswordIcon()}"
+                icon="${getPasswordIcon()}"
                 size="sm"
-                name="${this.hasError ? 'blrInfoSm' : getPasswordIcon()}"
+                name="${getPasswordIcon()}"
                 aria-hidden
               ></blr-icon>`
             : html``}
