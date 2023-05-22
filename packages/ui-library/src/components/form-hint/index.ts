@@ -1,22 +1,25 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
+import { InputSizesType } from '../../globals/types';
 
 type HintVariant = 'hint' | 'error';
 
 type FormHintType = {
-  message: string;
+  message?: string;
+  iconName?: string;
   variant: HintVariant;
+  size: InputSizesType;
 };
 
-export const BlrFormHint = ({ message, variant }: FormHintType) => {
+export const BlrFormHint = ({ message, variant, iconName, size }: FormHintType) => {
   const classes = classMap({
     [`${variant}`]: variant,
   });
 
   return html`
     <span class="blr-form-hint ${classes}">
-      <blr-icon name="${variant === 'error' ? 'blr360Xl' : 'blr360Xl'}"></blr-icon>
-      <span>${message}</span>
+      <blr-icon icon="${iconName}" size="${size}" aria-hidden></blr-icon>
+      <span class="blr-caption-text">${message}</span>
     </span>
   `;
 };

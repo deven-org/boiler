@@ -24,6 +24,7 @@
   "dependencies": {
     "@boiler/icons": "0.0.1",
     "@lit-labs/react": "^1.1.1",
-    "lit": "^2.6.1"
+    "lit": "^2.6.1",
+    "nested-css-to-flat": "^1.0.5"
   }
 }
