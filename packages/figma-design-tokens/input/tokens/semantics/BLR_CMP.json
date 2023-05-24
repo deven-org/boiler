@@ -776,6 +776,32 @@
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
             }
+          },
+          "Indeterminate": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
           }
         },
         "Foreground": {
@@ -832,6 +858,32 @@
             },
             "ReadOnly": {
               "value": "{core.dimensionPX.6}",
+              "type": "sizing"
+            }
+          },
+          "Indeterminate": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
               "type": "sizing"
             }
           }
