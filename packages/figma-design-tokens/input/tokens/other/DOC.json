@@ -120,6 +120,10 @@
       "dimensions": {
         "value": "#ef5533",
         "type": "color"
+      },
+      "test": {
+        "value": "#ef5533",
+        "type": "color"
       }
     }
   }
