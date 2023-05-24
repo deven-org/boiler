@@ -757,15 +757,23 @@
       }
     },
     "Radio": {
-      "Control": {
-        "SM": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
+      "SM": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
         },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.2} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Control": {
         "Background": {
-          "Selected": {
+          "Unselected": {
             "Rest": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
@@ -789,9 +797,13 @@
             "ReadOnly": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
+            },
+            "Error": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
             }
           },
-          "Unselected": {
+          "Selected": {
             "Rest": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
@@ -843,6 +855,10 @@
             "ReadOnly": {
               "value": "{core.dimensionPX.14}",
               "type": "sizing"
+            },
+            "Error": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
             }
           },
           "Selected": {
@@ -871,23 +887,257 @@
               "type": "sizing"
             }
           }
-        },
-        "MD": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
-        },
-        "LG": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          }
         }
       },
       "ControlBorderRadius": {
         "value": "{core.borderRadius.Round}",
         "type": "borderRadius"
+      },
+      "MD": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.3} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      }
+    },
+    "Checkbox": {
+      "ControlBorderRadius": {
+        "value": "{core.borderRadius.SM}",
+        "type": "borderRadius"
+      },
+      "SM": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.2} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "MD": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "ControlMargin": {
+          "value": "{core.dimensionPX.3} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "LabelMargin": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Control": {
+        "Background": {
+          "Unselected": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Error": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          },
+          "Selected": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          },
+          "Indeterminate": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          }
+        },
+        "Foreground": {
+          "Unselected": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Error": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          },
+          "Selected": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          },
+          "Indeterminate": {
+            "Rest": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Hover": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
+            }
+          }
+        }
       }
     }
   }
