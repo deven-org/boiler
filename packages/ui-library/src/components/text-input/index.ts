@@ -1,25 +1,28 @@
 import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
-import { InputTypes, InputSizesType } from '../../globals/types';
+import { InputTypes, FormSizesType } from '../../globals/types';
 import { BlrFormLabel } from '../form-label';
 import { BlrFormHint } from '../form-hint';
 import { IconType } from '@boiler/icons';
-import { semanticTokens } from '../../foundation/_tokens-generated/index.generated';
+import { iconButton } from '../../foundation/component-tokens/action.css';
+import { calculateIconName } from '../../utils/calculate-icon-name';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, form];
+  static styles = [styleCustom, form, iconButton];
 
   @property() textInputId!: string;
-  @property() type!: InputTypes;
+  @property() type: InputTypes = 'text';
   @property() label!: string;
+  @property() labelAppendix?: string;
   @property() value!: string;
   @property() placeholder?: string;
   @property() disabled?: boolean;
-  @property() size?: InputSizesType = 'md';
+  @property() readonly?: boolean;
+  @property() size: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -28,43 +31,96 @@ export class BlrTextInput extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() hint?: string;
-  @property() hintIcon?: IconType;
+  @property() showInputIcon = true;
+  @property() inputIcon: IconType = 'blr360Sm';
+  @property() showHint = true;
+  @property() hintText?: string;
+  @property() hintIcon: IconType = 'blrInfoSm';
+
+  @state() protected currentType: InputTypes = this.type;
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.currentType = this.type;
+  }
+
+  toggleInputType() {
+    this.currentType = this.currentType === 'password' ? 'text' : 'password';
+  }
 
   render() {
+    const wasInitialPasswordField = Boolean(this.type === 'password');
+
     const classes = classMap({
-      [`${this.size}`]: this.size || 'md',
+      [`${this.size}`]: this.size,
       [`disabled`]: this.disabled || false,
     });
 
-    const inputclasses = classMap({
+    const inputClasses = classMap({
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
+      [`${this.size}`]: this.size,
     });
+
+    const getPasswordIcon = () => {
+      return this.currentType.includes('password') ? 'blrEyeSm' : 'blrCloseSm';
+    };
 
     return html`
       <div class="blr-input ${classes}">
-        ${BlrFormLabel({ labelText: this.label, labelSize: this.size || 'md' })}
-        <input
-          class="blr-text-input ${inputclasses}"
-          id=${this.textInputId}
-          type="${this.type}"
-          value="${this.value}"
-          placeholder="${this.placeholder}"
-          ?disabled="${this.disabled}"
-          ?required="${this.required}"
-          @input="${this.onChange}"
-          @blur="${this.onBlur}"
-          @focus="${this.onFocus}"
-          maxlength="${this.maxLength}"
-          pattern="${this.pattern}"
-          hasError="${this.hasError}"
-        />
-        ${BlrFormHint({
-          message: this.hasError ? this.errorMessage : this.hint,
-          variant: this.hasError ? 'error' : 'hint',
-          iconName: this.hintIcon,
+        ${BlrFormLabel({
+          labelText: this.label,
+          labelSize: this.size,
+          labelAppendix: this.labelAppendix,
+          forValue: this.textInputId,
         })}
+        <div class="blr-input-inner-container">
+          <input
+            class="blr-form-element ${inputClasses}"
+            id=${this.textInputId}
+            type="${this.currentType}"
+            value="${this.value}"
+            placeholder="${this.placeholder}"
+            ?disabled="${this.disabled}"
+            ?readonly="${this.readonly}"
+            ?required="${this.required}"
+            @input="${this.onChange}"
+            @blur="${this.onBlur}"
+            @focus="${this.onFocus}"
+            maxlength="${this.maxLength}"
+            pattern="${this.pattern}"
+            hasError="${this.hasError}"
+          />
+
+          ${this.showInputIcon && !wasInitialPasswordField
+            ? html`<blr-icon
+                class="blr-input-icon ${inputClasses}"
+                icon="${this.hasError ? 'blrInfoSm' : calculateIconName(this.inputIcon, this.size)}"
+                size="sm"
+                aria-hidden
+              ></blr-icon>`
+            : html``}
+          ${wasInitialPasswordField
+            ? html`<blr-icon
+                class="blr-input-icon ${inputClasses}"
+                @click=${this.toggleInputType}
+                icon="${getPasswordIcon()}"
+                size="sm"
+                name="${getPasswordIcon()}"
+                aria-hidden
+              ></blr-icon>`
+            : html``}
+        </div>
+        ${this.showHint
+          ? html`
+              ${BlrFormHint({
+                message: this.hasError ? this.errorMessage : this.hintText,
+                variant: this.hasError ? 'error' : 'hint',
+                iconName: calculateIconName(this.hintIcon, this.size),
+                size: this.size,
+              })}
+            `
+          : html``}
       </div>
     `;
   }
