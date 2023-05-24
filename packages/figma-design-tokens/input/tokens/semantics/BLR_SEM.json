@@ -1121,9 +1121,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1181,9 +1187,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1265,9 +1277,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
