@@ -44,7 +44,11 @@ export class BlrRadioInputGroup extends LitElement {
     };
     return html`
       <fieldset class="blr-radio-input-group ${classes}">
-        ${this.hideLabel ? `` : html`<legend>${BlrFormLabel({ labelText: this.label, labelSize: this.size, forValue: this.textInputId, })}</legend>`}
+        ${this.hideLabel
+          ? ``
+          : html`<legend>
+              ${BlrFormLabel({ labelText: this.label, labelSize: this.size, forValue: this.textInputId })}
+            </legend>`}
         ${this.options &&
         this.options.map((option: RadioOption) => {
           const id = calculateOptionId(option.label);
