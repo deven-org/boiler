@@ -127,6 +127,10 @@
         "value": "{core.color.crimson.500.solid}",
         "type": "color"
       },
+      "warning": {
+        "value": "{core.color.gold.500.solid}",
+        "type": "color"
+      },
       "focus": {
         "value": "{core.color.coolgray.100.solid}",
         "type": "color"
@@ -199,10 +203,6 @@
         },
         "error": {
           "value": "{core.color.crimson.500.solid}",
-          "type": "color"
-        },
-        "warning": {
-          "value": "{core.color.gold.500.solid}",
           "type": "color"
         }
       },

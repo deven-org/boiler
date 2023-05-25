@@ -1754,9 +1754,39 @@
     }
   },
   "Feedback": {
-    "Surface": {
-      "Warning": {
-        "value": "{core.color.gold.500.opa10}",
+    "Warning": {
+      "Surface": {
+        "value": "{q.surface.warning}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{q.stroke.warning}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.onwarning.alpha}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.onwarning.beta}",
+        "type": "color"
+      }
+    },
+    "Error": {
+      "Surface": {
+        "value": "{q.surface.error}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{q.stroke.error}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.onerror.alpha}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.onerror.beta}",
         "type": "color"
       }
     }
