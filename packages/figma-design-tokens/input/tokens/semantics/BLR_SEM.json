@@ -1754,6 +1754,24 @@
     }
   },
   "Feedback": {
+    "Neutral": {
+      "Surface": {
+        "value": "{q.surface.default}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{core.color.neutral.transparent}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.ondefault.beta}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.ondefault.beta}",
+        "type": "color"
+      }
+    },
     "Warning": {
       "Surface": {
         "value": "{q.surface.warning}",
@@ -1814,24 +1832,6 @@
             "type": "color"
           }
         }
-      }
-    },
-    "Neutral": {
-      "Surface": {
-        "value": "{q.surface.default}",
-        "type": "color"
-      },
-      "SurfaceStroke": {
-        "value": "{core.color.neutral.transparent}",
-        "type": "color"
-      },
-      "Text": {
-        "value": "{q.content.ondefault.beta}",
-        "type": "color"
-      },
-      "Icon": {
-        "value": "{q.content.ondefault.beta}",
-        "type": "color"
       }
     }
   }
