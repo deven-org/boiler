@@ -1826,11 +1826,11 @@
         "type": "color"
       },
       "Text": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondefault.beta}",
         "type": "color"
       },
       "Icon": {
-        "value": "{q.content.onerror.beta}",
+        "value": "{q.content.ondefault.beta}",
         "type": "color"
       }
     }

@@ -737,19 +737,31 @@
     "Counter": {
       "SM": {
         "ItemSpacing": {
-          "value": "{core.dimensionPX.0}",
+          "value": "{core.dimensionPX.2}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
           "type": "spacing"
         }
       },
       "MD": {
+        "Padding": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
+          "type": "spacing"
+        },
         "ItemSpacing": {
-          "value": "{core.dimensionPX.0}",
+          "value": "{core.dimensionPX.2}",
           "type": "spacing"
         }
       },
       "LG": {
+        "Padding": {
+          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
+          "type": "spacing"
+        },
         "ItemSpacing": {
-          "value": "{core.dimensionPX.0}",
+          "value": "{core.dimensionPX.2}",
           "type": "spacing"
         }
       }
