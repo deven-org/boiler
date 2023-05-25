@@ -599,7 +599,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.Background.Default}",
+              "color": "{Feedback.Loader.Background.Default}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -607,7 +607,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Background.Inverted}",
+              "color": "{Feedback.Loader.Background.Inverted}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -617,7 +617,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.Fill.Default}",
+              "color": "{Feedback.Loader.Fill.Default}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -625,7 +625,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Fill.Inverted}",
+              "color": "{Feedback.Loader.Fill.Inverted}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -645,7 +645,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.Background.Default}",
+              "color": "{Feedback.Loader.Background.Default}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -653,7 +653,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Background.Inverted}",
+              "color": "{Feedback.Loader.Background.Inverted}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -663,7 +663,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.Fill.Default}",
+              "color": "{Feedback.Loader.Fill.Default}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -671,7 +671,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Fill.Inverted}",
+              "color": "{Feedback.Loader.Fill.Inverted}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -691,7 +691,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.Background.Default}",
+              "color": "{Feedback.Loader.Background.Default}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -699,7 +699,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Background.Inverted}",
+              "color": "{Feedback.Loader.Background.Inverted}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -709,7 +709,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.Fill.Default}",
+              "color": "{Feedback.Loader.Fill.Default}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -717,7 +717,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Fill.Inverted}",
+              "color": "{Feedback.Loader.Fill.Inverted}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -731,6 +731,26 @@
         "Padding": {
           "value": "{core.dimensionREM.3}",
           "type": "spacing"
+        }
+      },
+      "Background": {
+        "Default": {
+          "value": "{core.color.azure.600.opa20}",
+          "type": "color"
+        },
+        "Inverted": {
+          "value": "{core.color.white.opa20}",
+          "type": "color"
+        }
+      },
+      "Fill": {
+        "Default": {
+          "value": "{core.color.azure.400.solid}",
+          "type": "color"
+        },
+        "Inverted": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
         }
       }
     }
