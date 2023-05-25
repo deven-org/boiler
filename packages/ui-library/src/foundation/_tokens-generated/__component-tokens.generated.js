@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 25 May 2023 12:40:25 GMT
+ * Generated on Thu, 25 May 2023 13:21:13 GMT
  */
 
 export const componentTokens = {
@@ -66,8 +66,6 @@ export const componentTokens = {
         Sizing: '2rem',
         Padding: '0.188rem',
       },
-      Background: { Default: 'hsla(220, 85%, 60%,0.2) ', Inverted: 'hsla(0, 0%, 100%, 0.2)' },
-      Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(0, 0%, 100%, 1)' },
     },
   },
   Forms: { TextArea: { MD: { MinHeight: '5rem' }, SM: { MinHeight: '4rem' }, LG: { MinHeight: '7rem' } } },
