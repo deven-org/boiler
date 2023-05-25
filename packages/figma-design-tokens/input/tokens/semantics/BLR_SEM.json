@@ -1790,7 +1790,7 @@
         "type": "color"
       }
     },
-    "Informative": {
+    "brand": {
       "Default": {
         "Shape": {
           "Background": {
@@ -1814,6 +1814,24 @@
             "type": "color"
           }
         }
+      }
+    },
+    "Neutral": {
+      "Surface": {
+        "value": "{q.surface.default}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{core.color.neutral.transparent}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.onerror.beta}",
+        "type": "color"
       }
     }
   }

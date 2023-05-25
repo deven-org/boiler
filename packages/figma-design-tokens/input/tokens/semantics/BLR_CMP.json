@@ -599,7 +599,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.Informative.Default.Shape.Background}",
+              "color": "{Feedback.brand.Default.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -607,7 +607,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Informative.Inverted.Shape.Background}",
+              "color": "{Feedback.brand.Inverted.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -617,7 +617,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.Informative.Default.Shape.Foreground}",
+              "color": "{Feedback.brand.Default.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -625,7 +625,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Informative.Inverted.Shape.Foreground}",
+              "color": "{Feedback.brand.Inverted.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -645,7 +645,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.Informative.Default.Shape.Background}",
+              "color": "{Feedback.brand.Default.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -653,7 +653,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Informative.Inverted.Shape.Background}",
+              "color": "{Feedback.brand.Inverted.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -663,7 +663,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.Informative.Default.Shape.Foreground}",
+              "color": "{Feedback.brand.Default.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -671,7 +671,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Informative.Inverted.Shape.Foreground}",
+              "color": "{Feedback.brand.Inverted.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -691,7 +691,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.Informative.Default.Shape.Background}",
+              "color": "{Feedback.brand.Default.Shape.Background}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -699,7 +699,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Informative.Inverted.Shape.Background}",
+              "color": "{Feedback.brand.Inverted.Shape.Background}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -709,7 +709,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.Informative.Default.Shape.Foreground}",
+              "color": "{Feedback.brand.Default.Shape.Foreground}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -717,7 +717,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.Informative.Inverted.Shape.Foreground}",
+              "color": "{Feedback.brand.Inverted.Shape.Foreground}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -730,6 +730,26 @@
         },
         "Padding": {
           "value": "{core.dimensionREM.3}",
+          "type": "spacing"
+        }
+      }
+    },
+    "Counter": {
+      "SM": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "MD": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.0}",
           "type": "spacing"
         }
       }
