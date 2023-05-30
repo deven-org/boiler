@@ -73,6 +73,8 @@ export class BlrLabelCheckbox extends LitElement {
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
       />
+
+      <input type="text" />
     </span>`;
   }
 }

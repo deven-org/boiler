@@ -11,18 +11,20 @@ export const styleCustom = css`
       border-radius: 2px;
       border: 1px solid black;
       outline-offset: 2px;
-    }
 
-    &.checked > input {
-      background-color: black;
-    }
+      background-color: transparent;
 
-    &.focus:not(.disabled) > input {
-      outline: 1px solid red;
-    }
+      &:checked {
+        background-color: black;
+      }
 
-    &.disabled {
-      opacity: 0.25;
+      &:focus {
+        outline: 1px solid red;
+      }
+
+      &:disabled {
+        opacity: 0.25;
+      }
     }
   }
 `;
