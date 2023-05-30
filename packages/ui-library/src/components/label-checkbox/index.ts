@@ -41,10 +41,6 @@ export class BlrLabelCheckbox extends LitElement {
     });
 
     return html`<span class=${classes}>
-      ${this.label
-        ? html`${BlrFormLabel({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
-        : nothing}
-
       <input
         type="checkbox"
         id=${this.checkInputId || nothing}
@@ -55,6 +51,9 @@ export class BlrLabelCheckbox extends LitElement {
         @focus=${this.onFocus}
         @blur=${this.onBlur}
       />
+      ${this.label
+        ? html`${BlrFormLabel({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
+        : nothing}
     </span>`;
   }
 }
