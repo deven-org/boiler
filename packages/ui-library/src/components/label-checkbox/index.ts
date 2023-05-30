@@ -25,7 +25,7 @@ export class BlrLabelCheckbox extends LitElement {
   @property() onChange?: HTMLButtonElement['onchange'];
 
   @state() protected checkedState = false;
-  @state() protected focusState = false;
+  // @state() protected focusState = false;
 
   connectedCallback() {
     super.connectedCallback();
@@ -39,23 +39,23 @@ export class BlrLabelCheckbox extends LitElement {
     }
   }
 
-  handleFocus(event: FocusEvent) {
-    this.focusState = true;
-    this.onFocus?.(event);
-  }
+  // handleFocus(event: FocusEvent) {
+  //   this.focusState = true;
+  //   this.onFocus?.(event);
+  // }
 
-  handleBlur(event: FocusEvent) {
-    this.focusState = false;
-    this.onBlur?.(event);
-  }
+  // handleBlur(event: FocusEvent) {
+  //   this.focusState = false;
+  //   this.onBlur?.(event);
+  // }
 
   render() {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-label-checkbox': true,
-      'checked': this.checkedState,
-      'focus': this.focusState,
-      'disabled': Boolean(this.disabled),
+      // 'checked': this.checkedState,
+      // 'focus': this.focusState,
+      // 'disabled': Boolean(this.disabled),
     });
 
     return html`<span class=${classes}>
@@ -70,11 +70,9 @@ export class BlrLabelCheckbox extends LitElement {
         disabled=${this.disabled || nothing}
         checked=${this.checkedState || nothing}
         @change=${this.handleChange}
-        @focus=${this.handleFocus}
-        @blur=${this.handleBlur}
+        @focus=${this.onFocus}
+        @blur=${this.onBlur}
       />
-
-      <input type="text" />
     </span>`;
   }
 }
