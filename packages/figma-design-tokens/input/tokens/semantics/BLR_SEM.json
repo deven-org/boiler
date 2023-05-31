@@ -1648,63 +1648,97 @@
     },
     "Control": {
       "Background": {
-        "Rest": {
-          "value": "{q.surface.brand.primary.rest}",
-          "type": "color"
+        "Fill": {
+          "Rest": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{q.surface.brand.primary.hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{q.surface.brand.primary.pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.surface.disabled.alpha}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{q.surface.disabled.alpha}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{q.stroke.error}",
+            "type": "color"
+          }
         },
-        "Hover": {
-          "value": "{q.surface.brand.primary.hover}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.surface.brand.primary.pressed}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{q.surface.brand.primary.rest}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{q.surface.disabled.alpha}",
-          "type": "color"
-        },
-        "Error": {
-          "value": "{q.stroke.error}",
-          "type": "color"
+        "Stroke": {
+          "Rest": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{q.surface.brand.primary.hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{q.surface.brand.primary.pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.surface.disabled.alpha}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{q.surface.disabled.alpha}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{q.stroke.error}",
+            "type": "color"
+          }
         }
       },
       "Foreground": {
-        "Rest": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.content.ondisabled.inverted}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{q.content.ondisabled.inverted}",
-          "type": "color"
-        },
-        "Error": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
+        "Fill": {
+          "Rest": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.inverted}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{q.content.ondisabled.inverted}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{q.content.onbrand.alpha}",
+            "type": "color"
+          }
         }
       }
     },
@@ -1741,7 +1775,7 @@
     "Controls": {
       "Rest": {
         "value": {
-          "color": "{Forms.Control.Background.Rest}",
+          "color": "{Forms.Control.Background.Fill.Rest}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -1749,7 +1783,7 @@
       },
       "Hover": {
         "value": {
-          "color": "{Forms.Control.Background.Hover}",
+          "color": "{Forms.Control.Background.Fill.Hover}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -1757,7 +1791,7 @@
       },
       "Pressed": {
         "value": {
-          "color": "{Forms.Control.Background.Pressed}",
+          "color": "{Forms.Control.Background.Fill.Pressed}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -1765,7 +1799,7 @@
       },
       "Focus": {
         "value": {
-          "color": "{Forms.Control.Background.Focus}",
+          "color": "{Forms.Control.Background.Fill.Focus}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -1773,7 +1807,7 @@
       },
       "Disabled": {
         "value": {
-          "color": "{Forms.Control.Background.Disabled}",
+          "color": "{Forms.Control.Background.Fill.Disabled}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -1781,7 +1815,7 @@
       },
       "ReadOnly": {
         "value": {
-          "color": "{Forms.Control.Background.ReadOnly}",
+          "color": "{Forms.Control.Background.Fill.ReadOnly}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
@@ -1789,7 +1823,7 @@
       },
       "Error": {
         "value": {
-          "color": "{Forms.Control.Background.Error}",
+          "color": "{Forms.Control.Background.Fill.Error}",
           "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
