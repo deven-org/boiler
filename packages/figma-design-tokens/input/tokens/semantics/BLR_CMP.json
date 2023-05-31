@@ -1083,6 +1083,66 @@
             "Error": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
+            },
+            "Fill": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color"
+              },
+              "Error": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.surface.brand.primary.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.surface.brand.primary.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color"
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
+                "type": "color"
+              }
             }
           },
           "Selected": {
@@ -1234,6 +1294,80 @@
             "Error": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
+            },
+            "Fill": {
+              "Rest": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              }
             }
           },
           "Selected": {
@@ -1289,6 +1423,43 @@
               "Error": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{core.color.neutral.transparent}",
+                "type": "color",
+                "description": "also applies to indeterminate"
               }
             }
           },
