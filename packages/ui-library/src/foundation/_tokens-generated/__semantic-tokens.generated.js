@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 31 May 2023 08:54:03 GMT
+ * Generated on Wed, 31 May 2023 09:13:14 GMT
  */
 
 export const semanticTokens = {
@@ -400,6 +400,15 @@ export const semanticTokens = {
         Hover: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
         Pressed: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
         Focus: { color: 'hsla(350, 80%, 50%,1) ', width: '2px', style: 'solid' },
+      },
+      Controls: {
+        Rest: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
+        Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
+        Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
+        Focus: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
+        Disabled: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
+        ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
+        Error: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
       },
     },
     InputIcon: {
