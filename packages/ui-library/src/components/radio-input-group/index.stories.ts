@@ -27,6 +27,7 @@ export const BlrRadioInputGroup = ({
   textInputId,
   label,
   disabled,
+  readonly,
   invalid,
   size,
   required,
@@ -42,6 +43,7 @@ export const BlrRadioInputGroup = ({
       .textInputId=${textInputId}
       .label=${label}
       .disabled=${disabled}
+      .readonly=${readonly}
       .invalid=${invalid}
       .size=${size}
       .required=${required}
@@ -63,9 +65,9 @@ BlrRadioInputGroup.storyName = 'BlrRadioInputGroup';
 BlrRadioInputGroup.args = {
   label: 'Radio Input',
   disabled: false,
+  readonly: false,
   invalid: false,
   required: false,
-  readonly: false,
   size: 'md',
   errorMessage: 'This is an error message',
   hideLabel: false,

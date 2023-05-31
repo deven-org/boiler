@@ -5,7 +5,6 @@ import { styleCustom } from './index.css';
 import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormLabel } from '../form-label';
-import { BlrFormHint } from '../form-hint';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio-input-group')
@@ -19,6 +18,7 @@ export class BlrRadioInputGroup extends LitElement {
   @property() name!: string;
   @property() invalid?: boolean;
   @property() disabled?: boolean;
+  @property() readonly?: boolean;
   @property() size!: InputSizesType;
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
@@ -35,6 +35,7 @@ export class BlrRadioInputGroup extends LitElement {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`${this.disabled}`]: this.disabled || false,
+      [`${this.readonly}`]: this.readonly || false,
       [`error-input`]: this.invalid || false,
       [`${this.layout}`]: this.layout,
     });
@@ -60,8 +61,9 @@ export class BlrRadioInputGroup extends LitElement {
                 name="${this.label}"
                 value="${option.value}"
                 ?disabled="${this.disabled}"
+                ?readonly="${this.readonly}"
                 ?aria-disabled="${this.disabled}"
-                invalid="${this.invalid}"
+                ?invalid="${this.invalid}"
                 ?aria-invalid="${this.invalid}"
               />
               <label for=${id} invalid="${this.invalid}">${option.label}</label><br />
@@ -69,12 +71,6 @@ export class BlrRadioInputGroup extends LitElement {
           `;
         })}
       </fieldset>
-      ${BlrFormHint({
-        message: this.invalid ? this.errorMessage : this.hint,
-        variant: this.invalid ? 'error' : 'hint',
-        iconName: this.hintIcon,
-        size: this.size,
-      })}
     `;
   }
 }

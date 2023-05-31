@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 17 May 2023 13:11:31 GMT
+ * Generated on Wed, 31 May 2023 15:48:27 GMT
  */
 
 export const semanticTokens = {
@@ -267,10 +267,6 @@ export const semanticTokens = {
       LoaderSize: 'LG',
     },
   },
-  Feedback: {
-    Background: { Default: 'hsla(220, 85%, 60%,0.2) ', Inverted: 'hsla(0, 0%, 100%, 0.2)' },
-    Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(0, 0%, 100%, 1)' },
-  },
   Forms: {
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
@@ -286,7 +282,8 @@ export const semanticTokens = {
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      LabelSlot: { Padding: '0rem 0px 8px ' },
+      FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
     },
@@ -296,7 +293,8 @@ export const semanticTokens = {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       CaptionComponent: { Padding: '0rem 0px', IconSize: 'SM', ItemSpacing: '0.125rem' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      LabelSlot: { Padding: '0rem 0px 8px ' },
+      FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       LabelNextToControl: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
@@ -317,7 +315,8 @@ export const semanticTokens = {
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
       CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ', ItemSpacing: '4px' },
+      LabelSlot: { Padding: '0rem 0px 8px ' },
+      FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
     },
@@ -430,6 +429,15 @@ export const semanticTokens = {
         ReadOnly: 'hsla(0, 0%, 100%, 1)',
         Error: 'hsla(0, 0%, 100%, 1)',
       },
+    },
+    LabelNextToControl: {
+      Rest: 'hsla(220, 10%, 10%,1) ',
+      Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
+      Focus: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
+      ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 80%, 50%,1) ',
     },
   },
 };

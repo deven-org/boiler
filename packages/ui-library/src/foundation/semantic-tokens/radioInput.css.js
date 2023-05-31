@@ -1,7 +1,8 @@
 import { css, unsafeCSS } from "lit";
-import { semanticTokens } from "../_tokens-generated/index.generated";
+import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
-const { Caption, Control, SM, MD, LG, Input, InputBorderRadius } = semanticTokens.Forms;
+const { Caption, Control, SM, MD, LG, Input, LabelNextToControl } = semanticTokens.Forms;
+const { Radio } = componentTokens.Forms;
 
 const sizes = {
   radioinput: {
@@ -30,32 +31,76 @@ export const radioInput = css`
     border-width: ${Input.Default.Rest.width};
     border-style: ${Input.Default.Rest.style};
     border-color: ${Input.Default.Rest.color};
-    border-radius: ${InputBorderRadius};
+    .blr-radio-input {
+      display: flex;
+      > input {
+        appearance: none;
+        display: flex;
+        flex-shrink: 0; d
+        background-color: rgb(255, 255, 255);
+        width: ${Radio.Control.Background.Unselected.Rest};
+        height: ${Radio.Control.Background.Unselected.Rest};
+        margin-right: ${Radio.SM.ItemSpacing};
+        transition: all 0.25s ease 0s;
+        border: 2px solid ${Control.Background.Rest};
+        border-radius: ${Radio.ControlBorderRadius};
+        + label {
+          transition: all 0.25s ease 0s;
+        }
+        &:checked {
+          background: ${Radio.Control.Background.Fill.Rest};
+        }
+        &:hover {
+          border: 2px solid ${Control.Background.Hover};
+          width: ${Radio.Control.Background.Unselected.Hover};
+          height: ${Radio.Control.Background.Unselected.Hover};
+          + label {
+            color: ${LabelNextToControl.Hover};
+          }
+        }
+        &:active {
+          border: 2px solid ${Control.Background.Pressed};
+          width: ${Radio.Control.Background.Unselected.Pressed};
+          height: ${Radio.Control.Background.Unselected.Pressed};
+          + label {
+            color: ${LabelNextToControl.Pressed};
+          }
+        }
+        &[readonly] {
+          border: 2px solid ${Control.Background.ReadOnly};
+          width: ${Radio.Control.Background.Unselected.ReadOnly};
+          height: ${Radio.Control.Background.Unselected.ReadOnly};
+          + label {
+            color: ${LabelNextToControl.ReadOnly};
+          }
+        }
+        &:disabled {
+          border: 2px solid ${Control.Background.Disabled};
+          width: ${Radio.Control.Background.Unselected.Disabled};
+          height: ${Radio.Control.Background.Unselected.Disabled};
+          + label {
+            color: ${LabelNextToControl.Disabled};
+          }
+        }
+        &:focus {
+          border: 2px solid ${Control.Background.Focus};
+          width: ${Radio.Control.Background.Unselected.Focus};
+          height: ${Radio.Control.Background.Unselected.Focus};
+        }
+        &.error-input {
+
+        }
+      }
+    }
   }
 
   .blr-radio-input-group.vertical {
     flex-direction: column;
   }
 
-  .blr-radio-input input {
-    display: none;
-  }
-
   .blr-radio-input label {
     display: flex;
     align-items: center;
-    &::before {
-      display: flex;
-      flex-shrink: 0;
-      content: "";
-      background-color: #fff;
-      width: 1.5em;
-      height: 1.5em;
-      border-radius: 50%;
-      margin-right: 0.375em;
-      transition: 0.25s ease;
-      box-shadow: inset 0 0 0 0.125em ${Control.Background.Rest};
-    }
   }
 
   .blr-radio-input.sm {
@@ -82,11 +127,6 @@ export const radioInput = css`
     padding: ${LG.InputField.Padding};
   }
 
-  .blr-radio-input:hover label {
-    &::before {
-      box-shadow: inset 0 0 0 0.125em ${Control.Background.Hover};
-    }
-  }
 
   .blr-radio-input:active label {
     &::before {

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 17 May 2023 13:11:31 GMT
+ * Generated on Wed, 31 May 2023 15:48:27 GMT
  */
 
 export const componentTokens = {
@@ -27,7 +27,6 @@ export const componentTokens = {
       XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', Gap: '-0.25rem' },
     },
   },
-  UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
   Feedback: {
     Loader: {
       SM: {
@@ -68,5 +67,88 @@ export const componentTokens = {
       },
     },
   },
-  Forms: { TextArea: { MD: { MinHeight: '5rem' }, SM: { MinHeight: '4rem' }, LG: { MinHeight: '7rem' } } },
+  Forms: {
+    TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
+    Radio: {
+      SM: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '2px 0px 0px 0px' },
+      MD: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      LG: { ItemSpacing: '4px', ControlMargin: '3px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      Control: {
+        Background: {
+          Unselected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+            Error: '16px',
+          },
+          Selected: { Rest: '16px', Hover: '16px', Pressed: '16px', Focus: '16px', Disabled: '16px', ReadOnly: '16px' },
+        },
+        Foreground: {
+          Unselected: {
+            Rest: '14px',
+            Hover: '14px',
+            Pressed: '14px',
+            Focus: '14px',
+            Disabled: '14px',
+            ReadOnly: '14px',
+            Error: '14px',
+          },
+          Selected: { Rest: '6px', Hover: '8px', Pressed: '10px', Focus: '6px', Disabled: '6px', ReadOnly: '6px' },
+        },
+      },
+      ControlBorderRadius: '9999px',
+    },
+    Checkbox: {
+      SM: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '2px 0px 0px 0px' },
+      MD: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      LG: { ItemSpacing: '4px', ControlMargin: '3px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      Control: {
+        Background: {
+          Unselected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+            Error: '16px',
+          },
+          Selected: { Rest: '16px', Hover: '16px', Pressed: '16px', Focus: '16px', Disabled: '16px', ReadOnly: '16px' },
+          Indeterminate: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+          },
+        },
+        Foreground: {
+          Unselected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+            Error: '16px',
+          },
+          Selected: { Rest: '16px', Hover: '16px', Pressed: '16px', Focus: '16px', Disabled: '16px', ReadOnly: '16px' },
+          Indeterminate: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+          },
+        },
+      },
+      ControlBorderRadius: '2px',
+    },
+  },
+  UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
 };
