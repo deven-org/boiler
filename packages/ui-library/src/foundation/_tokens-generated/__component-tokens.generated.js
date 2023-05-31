@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 24 May 2023 15:53:00 GMT
+ * Generated on Thu, 25 May 2023 14:16:55 GMT
  */
 
 export const componentTokens = {
@@ -27,7 +27,6 @@ export const componentTokens = {
       XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', Gap: '-0.25rem' },
     },
   },
-  UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
   Feedback: {
     Loader: {
       SM: {
@@ -68,5 +67,6 @@ export const componentTokens = {
       },
     },
   },
-  Forms: { TextArea: { MD: { MinHeight: '5rem' }, SM: { MinHeight: '4rem' }, LG: { MinHeight: '7rem' } } },
+  Forms: { TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } } },
+  UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
 };

@@ -9,6 +9,10 @@
         "value": "{core.color.coolgray.999.solid}",
         "type": "color"
       },
+      "warning": {
+        "value": "{core.color.gold.500.opa10}",
+        "type": "color"
+      },
       "error": {
         "value": "{core.color.crimson.800.opa10}",
         "type": "color"
@@ -121,6 +125,10 @@
       },
       "error": {
         "value": "{core.color.crimson.500.solid}",
+        "type": "color"
+      },
+      "warning": {
+        "value": "{core.color.gold.500.solid}",
         "type": "color"
       },
       "focus": {
@@ -246,6 +254,20 @@
         },
         "beta": {
           "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        }
+      },
+      "onwarning": {
+        "alpha": {
+          "value": "{core.color.gold.200.solid}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.gold.500.solid}",
           "type": "color"
         },
         "gamma": {

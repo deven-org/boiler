@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 24 May 2023 15:53:00 GMT
+ * Generated on Thu, 25 May 2023 14:16:55 GMT
  */
 
 export const semanticTokens = {
@@ -266,10 +266,6 @@ export const semanticTokens = {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
       LoaderSize: 'LG',
     },
-  },
-  Feedback: {
-    Background: { Default: 'hsla(220, 85%, 60%,0.2) ', Inverted: 'hsla(0, 0%, 100%, 0.2)' },
-    Fill: { Default: 'hsla(220, 85%, 40%, 1)', Inverted: 'hsla(0, 0%, 100%, 1)' },
   },
   Forms: {
     SM: {

@@ -1049,28 +1049,6 @@
       }
     }
   },
-  "Feedback": {
-    "Background": {
-      "Default": {
-        "value": "{core.color.azure.600.opa20}",
-        "type": "color"
-      },
-      "Inverted": {
-        "value": "{core.color.white.opa20}",
-        "type": "color"
-      }
-    },
-    "Fill": {
-      "Default": {
-        "value": "{core.color.azure.400.solid}",
-        "type": "color"
-      },
-      "Inverted": {
-        "value": "{core.color.white.solid}",
-        "type": "color"
-      }
-    }
-  },
   "Forms": {
     "SM": {
       "Label": {
@@ -1773,6 +1751,88 @@
         "style": "solid"
       },
       "type": "border"
+    }
+  },
+  "Feedback": {
+    "Neutral": {
+      "Surface": {
+        "value": "{q.surface.default}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{core.color.neutral.transparent}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.ondefault.beta}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.ondefault.beta}",
+        "type": "color"
+      }
+    },
+    "Warning": {
+      "Surface": {
+        "value": "{q.surface.warning}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{q.stroke.warning}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.onwarning.alpha}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.onwarning.beta}",
+        "type": "color"
+      }
+    },
+    "Error": {
+      "Surface": {
+        "value": "{q.surface.error}",
+        "type": "color"
+      },
+      "SurfaceStroke": {
+        "value": "{q.stroke.error}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{q.content.onerror.alpha}",
+        "type": "color"
+      },
+      "Icon": {
+        "value": "{q.content.onerror.beta}",
+        "type": "color"
+      }
+    },
+    "brand": {
+      "Default": {
+        "Shape": {
+          "Background": {
+            "value": "{core.color.azure.600.opa20}",
+            "type": "color"
+          },
+          "Foreground": {
+            "value": "{core.color.azure.400.solid}",
+            "type": "color"
+          }
+        }
+      },
+      "Inverted": {
+        "Shape": {
+          "Background": {
+            "value": "{core.color.white.opa20}",
+            "type": "color"
+          },
+          "Foreground": {
+            "value": "{core.color.white.solid}",
+            "type": "color"
+          }
+        }
+      }
     }
   }
 }
