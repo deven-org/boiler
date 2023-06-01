@@ -1188,32 +1188,32 @@
               "Rest": {
                 "value": "{q.surface.brand.primary.rest}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Rest"
+                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Rest\n//\nalso applies to indeterminate"
               },
               "Hover": {
                 "value": "{q.surface.brand.primary.hover}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Hover"
+                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Hover\n//\nalso applies to indeterminate"
               },
               "Pressed": {
                 "value": "{q.surface.brand.primary.pressed}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Pressed\nalso applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Pressed\n//\nalso applies to indeterminate"
               },
               "Focus": {
                 "value": "{q.surface.brand.primary.rest}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Focus\nalso applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Focus\n//\nalso applies to indeterminate"
               },
               "Disabled": {
                 "value": "{q.surface.disabled.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Disabled\nalso applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Disabled\n//\nalso applies to indeterminate"
               },
               "ReadOnly": {
                 "value": "{q.surface.disabled.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.ReadOnly\nalso applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Background.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
               },
               "Error": {
                 "value": "{q.stroke.error}",
@@ -1225,12 +1225,12 @@
               "Rest": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Rest\nalso applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
               },
               "Hover": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Hover\nalso applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
               },
               "Pressed": {
                 "value": "{core.color.neutral.transparent}",
