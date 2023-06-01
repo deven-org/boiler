@@ -16,6 +16,7 @@ export class BlrTextInput extends LitElement {
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
+  @property() showLabel = true;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -68,12 +69,14 @@ export class BlrTextInput extends LitElement {
 
     return html`
       <div class="blr-input ${classes}">
-        ${BlrFormLabel({
-          labelText: this.label,
-          labelSize: this.size,
-          labelAppendix: this.labelAppendix,
-          forValue: this.textInputId,
-        })}
+        ${this.showLabel
+          ? html` ${BlrFormLabel({
+              labelText: this.label,
+              labelSize: this.size,
+              labelAppendix: this.labelAppendix,
+              forValue: this.textInputId,
+            })}`
+          : html``}
         <div class="blr-input-inner-container">
           <input
             class="blr-form-element ${inputClasses}"

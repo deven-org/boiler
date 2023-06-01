@@ -33,6 +33,7 @@ export const BlrTextInput = ({
   textInputId,
   label,
   labelAppendix,
+  showLabel,
   showInputIcon,
   inputIcon,
   type,
@@ -55,6 +56,7 @@ export const BlrTextInput = ({
       .textInputId=${textInputId}
       .label=${label}
       .labelAppendix=${labelAppendix}
+      .showLabel=${showLabel}
       .showInputIcon=${showInputIcon}
       .inputIcon=${inputIcon}
       .type=${type}
@@ -84,6 +86,7 @@ BlrTextInput.args = {
   textInputId: 'Input ID',
   label: 'Label',
   labelAppendix: '(Optional)',
+  showLabel: true,
   showInputIcon: true,
   inputIcon: 'blr360',
   type: 'text',
