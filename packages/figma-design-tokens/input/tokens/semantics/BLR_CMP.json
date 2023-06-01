@@ -1419,68 +1419,75 @@
             "Fill": {
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Rest\n//\nalso applies to indeterminate"
               },
               "Hover": {
                 "value": "{q.content.onbrand.alpha}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Hover\n//\nalso applies to indeterminate"
               },
               "Pressed": {
                 "value": "{q.content.onbrand.alpha}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Pressed\n//\nalso applies to indeterminate"
               },
               "Focus": {
                 "value": "{q.content.onbrand.alpha}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Focus\n//\nalso applies to indeterminate"
               },
               "Disabled": {
                 "value": "{q.content.ondisabled.inverted}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Disabled\n//\nalso applies to indeterminate"
               },
               "ReadOnly": {
                 "value": "{q.content.ondisabled.inverted}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
               },
               "Error": {
                 "value": "{q.content.onbrand.alpha}",
-                "type": "color"
+                "type": "color",
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Error\n//\nalso applies to indeterminate"
               }
             },
             "Stroke": {
               "Rest": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
               },
               "Hover": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
               },
               "Pressed": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
               },
               "Focus": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
               },
               "Disabled": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
               },
               "ReadOnly": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
               },
               "Error": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Error\n//\nalso applies to indeterminate"
               }
             }
           },
