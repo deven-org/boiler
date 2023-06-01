@@ -1003,6 +1003,64 @@
               "type": "color"
             }
           }
+        },
+        "Unselected": {
+          "Rest": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.Rest}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Hover": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.Hover}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.Pressed}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Focus": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.Focus}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.Disabled}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "ReadOnly": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.ReadOnly}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Forms.Control.Background.Fill.Error}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "ControlBorderRadius": {
@@ -1521,129 +1579,69 @@
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
+        },
+        "Unselected": {
+          "Rest": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Rest}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Hover": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Hover}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Focus": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "ReadOnly": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Error}",
+              "width": "{core.dimensionPX.1}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "ControlBorderRadius": {
         "value": "{core.borderRadius.SM}",
         "type": "borderRadius"
-      }
-    },
-    "Controls": {
-      "Checkbox": {
-        "Rest": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Rest}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Hover}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Pressed}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Focus}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Disabled}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "ReadOnly": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.ReadOnly}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Error": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Error}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        }
-      },
-      "Radio": {
-        "Rest": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Rest}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Hover}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Pressed}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Focus}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Disabled}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "ReadOnly": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.ReadOnly}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Error": {
-          "value": {
-            "color": "{Forms.Control.Background.Fill.Error}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        }
       }
     }
   },
