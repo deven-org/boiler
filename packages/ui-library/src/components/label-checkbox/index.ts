@@ -2,15 +2,16 @@ import { LitElement, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
-import { BlrFormLabel } from '../form-label';
+import { BlrFormLabelInline } from '../form-label-inline';
 import { FormSizesType } from '../../globals/types';
 
 import { styleCustom } from './index.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
+import { checkboxStyles } from '../../foundation/component-tokens/checkbox.css';
 
 @customElement('blr-label-checkbox')
 export class BlrLabelCheckbox extends LitElement {
-  static styles = [styleCustom, form];
+  static styles = [styleCustom, form, checkboxStyles];
 
   @property() label?: string;
   @property() checkInputId!: string;
@@ -52,7 +53,7 @@ export class BlrLabelCheckbox extends LitElement {
         @blur=${this.onBlur}
       />
       ${this.label
-        ? html`${BlrFormLabel({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
+        ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
         : nothing}
     </span>`;
   }

@@ -9,12 +9,8 @@ export const styleCustom = css`
     & > input {
       all: initial;
       display: inline-block;
-      width: 16px;
-      height: 16px;
-      border-radius: 2px;
       border: 1px solid black;
       outline-offset: 2px;
-
       background-color: transparent;
 
       &:checked {
