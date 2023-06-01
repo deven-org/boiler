@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { InputSizesType } from '../../globals/types';
+import { InputSizesType } from '../../../globals/types';
 
 type HintVariant = 'hint' | 'error';
 
