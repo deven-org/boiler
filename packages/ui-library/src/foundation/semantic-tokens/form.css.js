@@ -183,11 +183,14 @@ export const form = css`
   }
 }
 .blr-form-label {
+  display: flex;
+  align-items: center;
   padding: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.Label.fontWeight};
   font-size: ${Forms.MD.Label.fontSize};
   font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
   line-height: ${Forms.MD.Label.lineHeight};
+  gap: ${Forms.MD.FormsLabelComponent.ItemSpacing};
   color: ${Forms.Label.Rest};
   &:focus {
     color: ${Forms.Label.Focus};
@@ -207,6 +210,7 @@ export const form = css`
     font-size: ${Forms.SM.Label.fontSize};
     font-family: ${Forms.SM.Label.fontFamily}, sans-serif;
     line-height: ${Forms.SM.Label.lineHeight};
+    gap: ${Forms.SM.FormsLabelComponent.ItemSpacing};
     color: ${Forms.Label.Rest};
   }
   &.lg {
@@ -216,6 +220,7 @@ export const form = css`
     font-family: ${Forms.LG.Label.fontFamily}, sans-serif;
     line-height: ${Forms.LG.Label.lineHeight};
     color: ${Forms.Label.Rest};
+    gap: ${Forms.LG.FormsLabelComponent.ItemSpacing};
   }
 }
 .blr-form-label-appendix {
