@@ -151,7 +151,6 @@ export const form = css`
 }
 .blr-form-hint {
   display: flex;
-  flex-direction: row;
   align-items: center;
   padding: ${Forms.MD.CaptionComponent.Padding};
   font-weight: ${Forms.MD.Caption.fontWeight};
@@ -159,6 +158,8 @@ export const form = css`
   font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
   line-height: ${Forms.MD.Caption.lineHeight};
   margin: ${Forms.MD.CaptionSlot.Margin};
+  gap: ${Forms.MD.CaptionComponent.ItemSpacing};
+  color: ${Forms.Caption.Hint};
   &.sm {
     padding: ${Forms.SM.CaptionComponent.Padding};
     font-weight: ${Forms.SM.Caption.fontWeight};
@@ -166,6 +167,7 @@ export const form = css`
     font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
     line-height: ${Forms.SM.Caption.lineHeight};
     margin: ${Forms.SM.CaptionSlot.Margin};
+    gap: ${Forms.SM.CaptionComponent.ItemSpacing};
   }
   &.lg {
     padding: ${Forms.LG.CaptionComponent.Padding};
@@ -174,6 +176,7 @@ export const form = css`
     font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
     line-height: ${Forms.LG.Caption.lineHeight};
     margin: ${Forms.LG.CaptionSlot.Margin};
+    gap: ${Forms.LG.CaptionComponent.ItemSpacing};
   }
   .blr-caption-text {
     padding-left: ${Forms.MD.LabelSlot.ItemSpacing};

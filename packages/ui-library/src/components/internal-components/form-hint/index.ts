@@ -14,6 +14,7 @@ type FormHintType = {
 export const BlrFormHint = ({ message, variant, iconName, size }: FormHintType) => {
   const classes = classMap({
     [`${variant}`]: variant,
+    [`${size}`]: size,
   });
 
   return html`
