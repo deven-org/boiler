@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { InputSizesType } from '../../globals/types';
+import { InputSizesType } from '../../../globals/types';
 
 type HintVariant = 'hint' | 'error';
 
@@ -14,6 +14,7 @@ type FormHintType = {
 export const BlrFormHint = ({ message, variant, iconName, size }: FormHintType) => {
   const classes = classMap({
     [`${variant}`]: variant,
+    [`${size}`]: size,
   });
 
   return html`
