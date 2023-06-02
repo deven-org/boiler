@@ -1141,7 +1141,7 @@
         "Unselected": {
           "Rest": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.Rest}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Rest}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -1149,7 +1149,7 @@
           },
           "Hover": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.Hover}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Hover}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -1157,7 +1157,7 @@
           },
           "Pressed": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.Pressed}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Pressed}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -1165,7 +1165,7 @@
           },
           "Focus": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.Focus}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Focus}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -1173,7 +1173,7 @@
           },
           "Disabled": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.Disabled}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Disabled}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -1181,7 +1181,7 @@
           },
           "ReadOnly": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.ReadOnly}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.ReadOnly}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -1189,7 +1189,7 @@
           },
           "Error": {
             "value": {
-              "color": "{Forms.Control.Background.Fill.Error}",
+              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Error}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
