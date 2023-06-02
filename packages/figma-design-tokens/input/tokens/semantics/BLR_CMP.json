@@ -1272,11 +1272,6 @@
                 "value": "{q.surface.disabled.alpha}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
-              },
-              "Error": {
-                "value": "{q.stroke.error}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Error\n//\nalso applies to indeterminate"
               }
             },
             "Stroke": {
@@ -1309,11 +1304,6 @@
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
-              },
-              "Error": {
-                "value": "{core.color.neutral.transparent}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Error\n//\nalso applies to indeterminate"
               }
             }
           },
@@ -1504,11 +1494,6 @@
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
-              },
-              "Error": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Error\n//\nalso applies to indeterminate"
               }
             },
             "Stroke": {
@@ -1541,11 +1526,6 @@
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
-              },
-              "Error": {
-                "value": "{core.color.neutral.transparent}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Error\n//\nalso applies to indeterminate"
               }
             }
           },
