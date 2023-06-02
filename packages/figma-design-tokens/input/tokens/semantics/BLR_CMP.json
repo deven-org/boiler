@@ -565,7 +565,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.brand.Default.Shape.Background}",
+              "color": "{Feedback.Brand.Default.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -573,7 +573,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.brand.Inverted.Shape.Background}",
+              "color": "{Feedback.Brand.Inverted.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -583,7 +583,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.brand.Default.Shape.Foreground}",
+              "color": "{Feedback.Brand.Default.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -591,7 +591,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.brand.Inverted.Shape.Foreground}",
+              "color": "{Feedback.Brand.Inverted.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -611,7 +611,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.brand.Default.Shape.Background}",
+              "color": "{Feedback.Brand.Default.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -619,7 +619,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.brand.Inverted.Shape.Background}",
+              "color": "{Feedback.Brand.Inverted.Shape.Background}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -629,7 +629,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.brand.Default.Shape.Foreground}",
+              "color": "{Feedback.Brand.Default.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -637,7 +637,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.brand.Inverted.Shape.Foreground}",
+              "color": "{Feedback.Brand.Inverted.Shape.Foreground}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -657,7 +657,7 @@
         "Background": {
           "Default": {
             "value": {
-              "color": "{Feedback.brand.Default.Shape.Background}",
+              "color": "{Feedback.Brand.Default.Shape.Background}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -665,7 +665,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.brand.Inverted.Shape.Background}",
+              "color": "{Feedback.Brand.Inverted.Shape.Background}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -675,7 +675,7 @@
         "Foreground": {
           "Default": {
             "value": {
-              "color": "{Feedback.brand.Default.Shape.Foreground}",
+              "color": "{Feedback.Brand.Default.Shape.Foreground}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
@@ -683,7 +683,7 @@
           },
           "Inverted": {
             "value": {
-              "color": "{Feedback.brand.Inverted.Shape.Foreground}",
+              "color": "{Feedback.Brand.Inverted.Shape.Foreground}",
               "width": "{core.dimensionPX.3}",
               "style": "solid"
             },
