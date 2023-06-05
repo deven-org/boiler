@@ -46,9 +46,9 @@ export class BlrSelect extends LitElement {
     });
 
     const inputClasses = classMap({
-      [`error`]: this.hasError || false,
-      [`error-input`]: this.hasError || false,
-      [`${this.size}`]: this.size,
+      'error': this.hasError || false,
+      'error-input': this.hasError || false,
+      [`${this.size}`]: this.size || 'md',
     });
 
     let icon = html``;
@@ -84,8 +84,8 @@ export class BlrSelect extends LitElement {
             class="blr-form-element ${inputClasses}"
             id=${this.selectId || nothing}
             name=${this.name || nothing}
-            disabled=${this.disabled || nothing}
-            required=${this.required || nothing}
+            ?disabled=${this.disabled}
+            ?required=${this.required}
             @change=${this.onChange}
           >
             ${this.options?.map((opt: Option) => {
@@ -93,8 +93,8 @@ export class BlrSelect extends LitElement {
                 class="blr-select-option"
                 id=${opt.value}
                 value=${opt.value}
-                selected=${opt.selected || nothing}
-                disabled=${opt.disabled || nothing}
+                ?selected=${opt.selected}
+                ?disabled=${opt.disabled}
               >
                 ${opt.label}
               </option>`;
