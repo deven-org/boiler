@@ -90,8 +90,6 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
     for="text-Input-id"
   >
     Test Input Name
-    <span class="blr-form-label-appendix md">
-    </span>
   </label>
   <div class="blr-input-inner-container">
     <input
@@ -114,7 +112,7 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
     >
     </blr-icon>
   </div>
-  <span class="blr-form-hint hint md">
+  <span class="blr-form-hint hint">
     <blr-icon
       aria-hidden=""
       icon="blrInfoSmSm"
