@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
+import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType } from '../../globals/types';
@@ -11,6 +11,7 @@ import { BlrIconRenderFunction } from '../icon';
 import { IconType } from '@boiler/icons';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
+import { DirectiveResult } from 'lit-html/directive';
 
 type Option = {
   value: string;
@@ -39,6 +40,26 @@ export class BlrSelect extends LitElement {
   @property() showTrailingIcon?: boolean;
   @property() trailingIcon: IconType = 'blr360Sm';
 
+  renderTrailingIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
+    if (this.showTrailingIcon) {
+      if (this.hasError) {
+        return html`${BlrIconRenderFunction({ icon: 'blrErrorFilledSm', size: this.size, classMap: classes })}`;
+      } else {
+        const trailingIcon = calculateIconName(this.trailingIcon, this.size);
+
+        if (trailingIcon !== undefined) {
+          return html`${BlrIconRenderFunction({
+            icon: trailingIcon as IconType,
+            size: this.size,
+            classMap: classes,
+          })}`;
+        }
+      }
+    }
+
+    return nothing;
+  }
+
   render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
@@ -50,24 +71,6 @@ export class BlrSelect extends LitElement {
       'error-input': this.hasError || false,
       [`${this.size}`]: this.size || 'md',
     });
-
-    let icon = html``;
-
-    if (this.showTrailingIcon) {
-      if (this.hasError) {
-        icon = html`${BlrIconRenderFunction({ icon: 'blrErrorFilledSm', size: this.size, classMap: inputClasses })}`;
-      } else {
-        const trailingIcon = calculateIconName(this.trailingIcon, this.size);
-
-        if (trailingIcon !== undefined) {
-          icon = html`${BlrIconRenderFunction({
-            icon: trailingIcon as IconType,
-            size: this.size,
-            classMap: inputClasses,
-          })}`;
-        }
-      }
-    }
 
     return html`
       <div class="blr-select ${classes}">
@@ -101,7 +104,7 @@ export class BlrSelect extends LitElement {
             })}
           </select>
 
-          ${icon}
+          ${this.renderTrailingIcon(inputClasses)}
         </div>
         ${BlrFormHint({
           message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
