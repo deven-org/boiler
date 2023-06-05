@@ -5,6 +5,9 @@ import { styleCustom } from './index.css';
 import { FormSizesType } from '../../globals/types';
 import { BlrFormLabel } from '../internal-components/form-label';
 import { BlrFormHint } from '../internal-components/form-hint';
+
+import { BlrIconRenderFunction } from '../icon';
+
 import { IconType } from '@boiler/icons';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -48,6 +51,24 @@ export class BlrSelect extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    let icon = html``;
+
+    if (this.showTrailingIcon) {
+      if (this.hasError) {
+        icon = html`${BlrIconRenderFunction({ icon: 'blrErrorFilledSm', size: this.size, classMap: inputClasses })}`;
+      } else {
+        const trailingIcon = calculateIconName(this.trailingIcon, this.size);
+
+        if (trailingIcon !== undefined) {
+          icon = html`${BlrIconRenderFunction({
+            icon: trailingIcon as IconType,
+            size: this.size,
+            classMap: inputClasses,
+          })}`;
+        }
+      }
+    }
+
     return html`
       <div class="blr-select ${classes}">
         ${this.hasLabel
@@ -79,14 +100,8 @@ export class BlrSelect extends LitElement {
               </option>`;
             })}
           </select>
-          ${this.showTrailingIcon
-            ? html`<blr-icon
-                class="blr-input-icon ${inputClasses}"
-                icon="${this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.trailingIcon, this.size)}"
-                size="${this.size}"
-                aria-hidden
-              ></blr-icon>`
-            : nothing}
+
+          ${icon}
         </div>
         ${BlrFormHint({
           message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',

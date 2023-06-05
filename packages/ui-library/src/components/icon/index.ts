@@ -5,6 +5,8 @@ import { icon } from '../../foundation/component-tokens/ui.css';
 // import { Sizes } from '../../globals/constants';
 import { styleCustom } from './index.css';
 import { SizesType } from '../../globals/types';
+import { DirectiveResult } from 'lit-html/directive';
+import { ClassMapDirective } from 'lit-html/directives/class-map';
 
 @customElement('blr-icon')
 export class BlrIcon extends LitElement {
@@ -21,3 +23,13 @@ export class BlrIcon extends LitElement {
     }
   }
 }
+
+type BlrIconType = {
+  icon: IconType;
+  size: SizesType;
+  classMap?: DirectiveResult<typeof ClassMapDirective>;
+};
+
+export const BlrIconRenderFunction = ({ icon, size, classMap }: BlrIconType) => {
+  return html`<blr-icon class="blr-input-icon ${classMap}" icon=${icon} size=${size}></blr-icon>`;
+};
