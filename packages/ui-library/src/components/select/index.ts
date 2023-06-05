@@ -82,7 +82,7 @@ export class BlrSelect extends LitElement {
           ${this.showTrailingIcon
             ? html`<blr-icon
                 class="blr-input-icon ${inputClasses}"
-                icon="${this.hasError ? 'blrInfoSm' : calculateIconName(this.trailingIcon, this.size)}"
+                icon="${this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.trailingIcon, this.size)}"
                 size="${this.size}"
                 aria-hidden
               ></blr-icon>`
