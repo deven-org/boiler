@@ -15,6 +15,12 @@ export default {
       control: { type: 'select' },
     },
   },
+  parameters: {
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+  },
 };
 
 const allIcons = getIconName(IconKeys);

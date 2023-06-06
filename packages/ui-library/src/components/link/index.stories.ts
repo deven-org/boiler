@@ -35,6 +35,12 @@ export default {
       control: { type: 'select' },
     },
   },
+  parameters: {
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+  },
 };
 export const BlrLink = ({
   label,
