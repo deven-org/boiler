@@ -35,6 +35,12 @@ export default {
       description: '(@change)="onChange($event)"',
     },
   },
+  parameters: {
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+    viewMode: 'docs',
+  },
 };
 
 export const BlrSelect = ({
