@@ -7,6 +7,7 @@ import { styleCustom } from './index.css';
 import { SizesType } from '../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
+import { styleMap } from 'lit-html/directives/style-map';
 
 @customElement('blr-icon')
 export class BlrIcon extends LitElement {
@@ -28,8 +29,29 @@ type BlrIconType = {
   icon?: IconType;
   size: SizesType;
   classMap?: DirectiveResult<typeof ClassMapDirective>;
+  onClick?: HTMLElement['onclick'];
+  ariaHidden?: boolean;
+  name?: string;
+  disablePointerEvents?: boolean;
 };
 
-export const BlrIconRenderFunction = ({ icon, size, classMap }: BlrIconType) => {
-  return html`<blr-icon class="blr-input-icon ${classMap}" icon=${icon || nothing} size=${size}></blr-icon>`;
+export const BlrIconRenderFunction = ({
+  icon,
+  size,
+  classMap,
+  onClick,
+  ariaHidden,
+  name,
+  disablePointerEvents,
+}: BlrIconType) => {
+  classMap;
+  return html`<blr-icon
+    class="blr-input-icon ${classMap}"
+    icon=${icon || nothing}
+    size=${size}
+    name=${name || nothing}
+    aria-hidden=${ariaHidden || nothing}
+    @click=${onClick}
+    style=${disablePointerEvents ? styleMap({ pointerEvents: 'none' }) : nothing}
+  ></blr-icon>`;
 };
