@@ -45,15 +45,11 @@ export class BlrSelect extends LitElement {
       if (this.hasError) {
         return html`${BlrIconRenderFunction({ icon: 'blrErrorFilledSm', size: this.size, classMap: classes })}`;
       } else {
-        const trailingIcon = calculateIconName(this.trailingIcon, this.size);
-
-        if (trailingIcon !== undefined) {
-          return html`${BlrIconRenderFunction({
-            icon: trailingIcon as IconType,
-            size: this.size,
-            classMap: classes,
-          })}`;
-        }
+        return html`${BlrIconRenderFunction({
+          icon: calculateIconName(this.trailingIcon, this.size),
+          size: this.size,
+          classMap: classes,
+        })}`;
       }
     }
 

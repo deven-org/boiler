@@ -25,11 +25,11 @@ export class BlrIcon extends LitElement {
 }
 
 type BlrIconType = {
-  icon: IconType;
+  icon?: IconType;
   size: SizesType;
   classMap?: DirectiveResult<typeof ClassMapDirective>;
 };
 
 export const BlrIconRenderFunction = ({ icon, size, classMap }: BlrIconType) => {
-  return html`<blr-icon class="blr-input-icon ${classMap}" icon=${icon} size=${size}></blr-icon>`;
+  return html`<blr-icon class="blr-input-icon ${classMap}" icon=${icon || nothing} size=${size}></blr-icon>`;
 };
