@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrSelect as BlrSelectClass } from './index';
+import { BlrSelectRenderFunction, BlrSelectType } from './index';
 import { FormSizes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
 import { getIconName } from '../../utils/get-icon-name';
@@ -54,27 +54,26 @@ export const BlrSelect = ({
   trailingIcon,
   hasLabel,
   label,
-}: BlrSelectClass) =>
+}: BlrSelectType) =>
   html`
-    <blr-select
-      .selectId=${selectId}
-      .name=${name}
-      .disabled=${disabled}
-      .size=${size}
-      .required=${required}
-      .onChange=${onChange}
-      .errorMessage=${errorMessage}
-      .hint=${hint}
-      .hintIcon=${hintIcon}
-      .hasError=${hasError}
-      .options=${options}
-      .labelAppendix=${labelAppendix}
-      .showTrailingIcon=${showTrailingIcon}
-      .trailingIcon=${trailingIcon}
-      .hasLabel=${hasLabel}
-      .label=${label}
-      class="example-layout-class"
-    ></blr-select>
+    ${BlrSelectRenderFunction({
+      selectId,
+      onChange,
+      name,
+      options,
+      disabled,
+      size,
+      required,
+      errorMessage,
+      hint,
+      hintIcon,
+      hasError,
+      labelAppendix,
+      showTrailingIcon,
+      trailingIcon,
+      hasLabel,
+      label,
+    })}
   `;
 
 BlrSelect.storyName = 'BlrSelect';

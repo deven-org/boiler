@@ -7,6 +7,7 @@ import { Sizes } from '../../globals/constants';
 import { getIconName } from '../../utils/get-icon-name';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { classMap } from 'lit/directives/class-map.js';
+
 export default {
   title: 'BlrIcon',
   argTypes: {

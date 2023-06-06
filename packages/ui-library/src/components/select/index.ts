@@ -6,12 +6,11 @@ import { FormSizesType } from '../../globals/types';
 import { BlrFormLabel } from '../internal-components/form-label';
 import { BlrFormHint } from '../internal-components/form-hint';
 
-import { BlrIconRenderFunction } from '../icon';
-
 import { IconType } from '@boiler/icons';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
+import { BlrIconRenderFunction } from '../icon';
 
 type Option = {
   value: string;
@@ -19,6 +18,7 @@ type Option = {
   selected?: boolean;
   disabled?: boolean;
 };
+
 @customElement('blr-select')
 export class BlrSelect extends LitElement {
   static styles = [styleCustom, form];
@@ -40,15 +40,23 @@ export class BlrSelect extends LitElement {
   @property() showTrailingIcon?: boolean;
   @property() trailingIcon: IconType = 'blr360Sm';
 
-  renderTrailingIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
+  protected renderTrailingIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     if (this.showTrailingIcon) {
       if (this.hasError) {
-        return html`${BlrIconRenderFunction({ icon: 'blrErrorFilledSm', size: this.size, classMap: classes })}`;
+        return html`${BlrIconRenderFunction({
+          icon: 'blrErrorFilledSm',
+          size: this.size,
+          classMap: classes,
+          hideAria: true,
+          disablePointerEvents: true,
+        })}`;
       } else {
         return html`${BlrIconRenderFunction({
           icon: calculateIconName(this.trailingIcon, this.size),
           size: this.size,
           classMap: classes,
+          hideAria: true,
+          disablePointerEvents: true,
         })}`;
       }
     }
@@ -56,7 +64,7 @@ export class BlrSelect extends LitElement {
     return nothing;
   }
 
-  render() {
+  protected render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       disabled: this.disabled || false,
@@ -112,3 +120,44 @@ export class BlrSelect extends LitElement {
     `;
   }
 }
+
+export type BlrSelectType = Omit<BlrSelect, keyof LitElement>;
+
+export const BlrSelectRenderFunction = ({
+  selectId,
+  labelAppendix,
+  name,
+  hasLabel,
+  label,
+  disabled,
+  size,
+  required,
+  onChange,
+  options,
+  hasError,
+  errorMessage,
+  hint,
+  hintIcon,
+  showTrailingIcon,
+  trailingIcon,
+}: BlrSelectType) => {
+  return html`<blr-select
+    class="example-layout-class"
+    .selectId=${selectId}
+    .name=${name}
+    .disabled=${disabled}
+    .size=${size}
+    .required=${required}
+    .onChange=${onChange}
+    .errorMessage=${errorMessage}
+    .hint=${hint}
+    .hintIcon=${hintIcon}
+    .hasError=${hasError}
+    .options=${options}
+    .labelAppendix=${labelAppendix}
+    .showTrailingIcon=${showTrailingIcon}
+    .trailingIcon=${trailingIcon}
+    .hasLabel=${hasLabel}
+    .label=${label}
+  ></blr-select>`;
+};
