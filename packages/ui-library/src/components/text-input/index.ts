@@ -38,16 +38,11 @@ export class BlrTextInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
 
-  @state() protected currentType: InputTypes = this.type;
+  @state() protected showPassword = false;
 
-  connectedCallback() {
-    super.connectedCallback();
-    this.currentType = this.type;
-  }
-
-  toggleInputType() {
-    this.currentType = this.currentType === 'password' ? 'text' : 'password';
-  }
+  togglePassword = () => {
+    return (this.showPassword = !this.showPassword);
+  };
 
   render() {
     const wasInitialPasswordField = Boolean(this.type === 'password');
@@ -64,7 +59,15 @@ export class BlrTextInput extends LitElement {
     });
 
     const getPasswordIcon = () => {
-      return this.currentType.includes('password') ? 'blrEyeSm' : 'blrCloseSm';
+      return this.showPassword === true ? 'blrEyeSm' : 'blrCloseSm';
+    };
+
+    const getType = () => {
+      if (this.type === 'password') {
+        return this.showPassword ? 'text' : 'password';
+      } else {
+        return this.type;
+      }
     };
 
     return html`
@@ -81,7 +84,7 @@ export class BlrTextInput extends LitElement {
           <input
             class="blr-form-element ${inputClasses}"
             id=${this.textInputId}
-            type="${this.currentType}"
+            type=${getType()}
             value="${this.value}"
             placeholder="${this.placeholder}"
             ?disabled="${this.disabled}"
@@ -106,7 +109,7 @@ export class BlrTextInput extends LitElement {
           ${wasInitialPasswordField
             ? html`<blr-icon
                 class="blr-input-icon ${inputClasses}"
-                @click=${this.toggleInputType}
+                @click=${this.togglePassword}
                 icon="${getPasswordIcon()}"
                 size="sm"
                 name="${getPasswordIcon()}"
