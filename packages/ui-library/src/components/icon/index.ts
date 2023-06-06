@@ -43,7 +43,6 @@ export const BlrIconRenderFunction = ({
   name,
   disablePointerEvents,
 }: BlrIconType) => {
-  classMap;
   return html`<blr-icon
     class="blr-input-icon ${classMap}"
     .icon=${icon || nothing}
