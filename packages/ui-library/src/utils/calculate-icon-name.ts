@@ -22,13 +22,22 @@ export const calculateIconName = (icon: string | undefined, size: SizesType) => 
   if (!icon) {
     return undefined;
   }
-  const formattedIcon = `${icon.toString()}${size.charAt(0).toUpperCase() + size.slice(1)}` as IconType;
-  return hasIconSize(formattedIcon) ? formattedIcon : getIconReplacement(icon);
+  const formattedIconKey = icon.toString() + size.charAt(0).toUpperCase() + size.slice(1);
+
+  if (IconKeys.indexOf(formattedIconKey) !== -1 && hasIconSize(formattedIconKey)) {
+    return formattedIconKey as IconType;
+  } else {
+    return getIconReplacement(icon);
+  }
 };
 
 export const getIconReplacement = (icon: string): IconType | undefined => {
   const sizeSubstitute = getSizeSubstitute(icon);
-  return sizeSubstitute
-    ? (`${icon.toString()}${sizeSubstitute.charAt(0).toUpperCase() + sizeSubstitute.slice(1)}` as IconType)
-    : undefined;
+  const iconKey = icon.toString() + sizeSubstitute?.charAt(0).toUpperCase() + sizeSubstitute?.slice(1);
+
+  if (IconKeys.indexOf(iconKey) !== -1 && sizeSubstitute) {
+    return iconKey as IconType;
+  }
+
+  return undefined;
 };
