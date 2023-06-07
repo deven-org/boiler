@@ -110,9 +110,9 @@ export class BlrTextInput extends LitElement {
             ? html`<blr-icon
                 class="blr-input-icon ${inputClasses}"
                 @click=${this.togglePassword}
-                icon="${getPasswordIcon()}"
+                icon="${this.hasError ? 'blrErrorFilledSm' : getPasswordIcon()}"
                 size="sm"
-                name="${getPasswordIcon()}"
+                name="${this.hasError ? 'blrErrorFilledSm' : getPasswordIcon()}"
                 aria-hidden
               ></blr-icon>`
             : html``}
