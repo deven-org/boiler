@@ -5,7 +5,7 @@ import { styleCustom } from './index.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
-import { BlrFormLabel } from '../form-label';
+import { BlrFormLabel } from '../internal-components/form-label';
 
 @customElement('blr-radio-input')
 export class BlrRadioInput extends LitElement {

@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
-import { BlrFormLabel } from '../form-label';
+import { BlrFormLabel } from '../internal-components/form-label';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio-input-group')
