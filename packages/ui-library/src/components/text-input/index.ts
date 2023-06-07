@@ -123,7 +123,7 @@ export class BlrTextInput extends LitElement {
                 message: this.hasError ? this.errorMessage : this.hintText,
                 variant: this.hasError ? 'error' : 'hint',
                 iconName: calculateIconName(this.hintIcon, this.size),
-                size: this.size,
+                size: 'sm',
               })}
             `
           : html``}
