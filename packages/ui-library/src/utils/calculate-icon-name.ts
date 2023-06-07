@@ -18,7 +18,7 @@ const getSizeSubstitute = (icon: string) => {
   }
 };
 
-export const calculateIconName = (icon: string, size: SizesType) => {
+export const calculateIconName = (icon: string | undefined, size: SizesType) => {
   if (!icon) {
     return undefined;
   }

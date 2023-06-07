@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextButton as BlrTextButtonClass } from './index';
+import { RelTypes, Sizes, TargetTypes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
-import { Sizes } from '../../globals/constants';
+import { BlrLink as BlrLinkClass } from './index';
 import './index';
-import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getIconName } from '../../utils/get-icon-name';
+import { calculateIconName } from '../../utils/calculate-icon-name';
 
 export default {
-  title: 'BlrTextButton',
+  title: 'BlrLink',
   argTypes: {
     leadingIcon: {
       options: [undefined, ...getIconName(IconKeys)],
@@ -16,6 +16,14 @@ export default {
     },
     trailingIcon: {
       options: [undefined, ...getIconName(IconKeys)],
+      control: { type: 'select' },
+    },
+    rel: {
+      options: [undefined, ...RelTypes],
+      control: { type: 'select' },
+    },
+    target: {
+      options: [undefined, ...TargetTypes],
       control: { type: 'select' },
     },
     size: {
@@ -34,50 +42,59 @@ export default {
     viewMode: 'docs',
   },
 };
-
-export const BlrTextButton = ({
+export const BlrLink = ({
   label,
+  ariaLabel,
   onClick,
   onBlur,
-  loading,
   disabled,
-  buttonId,
-  variant,
+  linkId,
+  href,
+  target,
+  rel,
   size,
   leadingIcon,
+  loading,
   trailingIcon,
   loadingStatus,
-}: BlrTextButtonClass) =>
+  variant,
+}: BlrLinkClass) =>
   html`
-    <blr-text-button
+    <blr-link
       .label=${label}
-      .leadingIcon=${calculateIconName(leadingIcon, size)}
-      .trailingIcon=${calculateIconName(trailingIcon, size)}
-      .buttonId=${buttonId}
+      .aria-label="${ariaLabel}"
       .onClick=${onClick}
       .onBlur=${onBlur}
-      .loading=${loading}
       .disabled=${disabled}
-      .variant=${variant}
+      .linkId=${linkId}
+      .href=${href}
+      .target=${target}
+      .rel=${rel}
       .size=${size}
       .loadingStatus=${loadingStatus}
+      .loading=${loading}
+      .leadingIcon=${calculateIconName(leadingIcon, size)}
+      .trailingIcon=${calculateIconName(trailingIcon, size)}
+      .variant=${variant}
       class="example-layout-class"
-    ></blr-text-button>
+    >
+    </blr-link>
   `;
-
-BlrTextButton.storyName = 'BlrTextButton';
-
-BlrTextButton.args = {
-  label: 'Button',
+BlrLink.storyName = 'BlrLink';
+BlrLink.args = {
+  label: 'Link',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
   trailingIcon: 'blrChevronDown',
-  loading: false,
-  disabled: false,
-  buttonId: 'button-id',
-  variant: 'cta',
   size: 'md',
   iconPosition: 'left',
   loadingStatus: 'Loading',
+  loading: false,
+  disabled: false,
+  variant: 'cta',
+  linkId: 'link-id',
+  href: '#',
+  target: '_self',
+  rel: 'nofollow',
 };
