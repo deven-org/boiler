@@ -25,6 +25,9 @@ export default {
       options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
+    pattern: {
+      description: 'Please enter valid RegEx',
+    },
   },
   parameters: {
     previewTabs: {
@@ -55,6 +58,7 @@ export const BlrTextInput = ({
   hintIcon,
   hasError,
   togglePassword,
+  pattern,
 }: BlrTextInputType) =>
   html`
     ${BlrTextInputRenderFunction({
@@ -78,6 +82,7 @@ export const BlrTextInput = ({
       hintIcon,
       hasError,
       togglePassword,
+      pattern,
     })}
   `;
 
@@ -103,4 +108,5 @@ BlrTextInput.args = {
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',
   hasError: false,
+  pattern: '',
 };

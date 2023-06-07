@@ -36,6 +36,7 @@ export class BlrTextInput extends LitElement {
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
+  @property() pattern?: RegExp;
 
   @state() protected showPassword = false;
 
@@ -84,23 +85,24 @@ export class BlrTextInput extends LitElement {
             class="blr-form-element ${inputClasses}"
             id=${this.textInputId || nothing}
             type=${getType()}
-            value="${this.value}"
-            placeholder="${this.placeholder || nothing}"
-            ?disabled="${this.disabled}"
-            ?readonly="${this.readonly}"
-            ?required="${this.required}"
-            @input="${this.onChange}"
-            @blur="${this.onBlur}"
-            @focus="${this.onFocus}"
-            maxlength="${this.maxLength}"
-            hasError="${this.hasError}"
+            value=${this.value}
+            placeholder=${this.placeholder || nothing}
+            ?disabled=${this.disabled}
+            ?readonly=${this.readonly}
+            ?required=${this.required}
+            @input=${this.onChange}
+            @blur=${this.onBlur}
+            @focus=${this.onFocus}
+            maxlength=${this.maxLength}
+            hasError=${this.hasError}
+            pattern=${this.pattern || nothing}
           />
 
           ${this.showInputIcon && !wasInitialPasswordField
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
                 name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
-                size: 'sm',
+                size: this.size,
                 classMap: inputClasses,
                 hideAria: true,
                 disablePointerEvents: true,
@@ -110,7 +112,7 @@ export class BlrTextInput extends LitElement {
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
                 name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
-                size: 'sm',
+                size: this.size,
                 classMap: inputClasses,
                 hideAria: true,
                 disablePointerEvents: false,
@@ -158,6 +160,7 @@ export const BlrTextInputRenderFunction = ({
   showHint,
   hintText,
   hintIcon,
+  pattern,
 }: BlrTextInputType) => {
   return html`<blr-text-input
     class="example-layout-class"
@@ -183,5 +186,6 @@ export const BlrTextInputRenderFunction = ({
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
+    .pattern=${pattern}
   ></blr-input>`;
 };

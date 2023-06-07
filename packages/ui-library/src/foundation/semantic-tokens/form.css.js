@@ -14,17 +14,12 @@ export const form = css`
 .blr-form-element {
   all: initial;
   color: ${Forms.UserInput.Default.Rest};
-  font-weight: ${Forms.MD.UserInput.fontWeight};
-  font-size: ${Forms.MD.UserInput.fontSize};
-  line-height: ${Forms.MD.UserInput.lineHeight};
-  font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
   border-width: ${Forms.Input.Default.Focus.width};
   border-style: ${Forms.Input.Default.Rest.style};
   border-color: transparent;
   outline: ${Forms.Input.Default.Rest.width} ${Forms.Input.Default.Rest.style} ${Forms.Input.Default.Rest.color};
   border-radius: ${Forms.InputBorderRadius};
   min-width: ${unsafeCSS(forms.textinput.minWidth)};
-  padding: ${Forms.MD.InputField.Padding};
   box-sizing: border-box;
   color: ${Forms.UserInput.Default.Rest};
   background-color: ${Forms.SurfaceFill.Default.Rest};
@@ -156,18 +151,28 @@ export const form = css`
     }
   }
 
-  &.lg {
-    font-weight: ${Forms.LG.UserInput.fontWeight};
-    font-size: ${Forms.LG.UserInput.fontSize};
-    font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.LG.InputField.Padding};
-  }
-
   &.sm {
     font-weight: ${Forms.SM.UserInput.fontWeight};
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
     padding: ${Forms.SM.InputField.Padding};
+    line-height: ${Forms.SM.UserInput.lineHeight};
+  }
+
+  &.md {
+    font-weight: ${Forms.MD.UserInput.fontWeight};
+    font-size: ${Forms.MD.UserInput.fontSize};
+    font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
+    padding: ${Forms.MD.InputField.Padding};
+    line-height: ${Forms.MD.UserInput.lineHeight};
+  }
+
+  &.lg {
+    font-weight: ${Forms.LG.UserInput.fontWeight};
+    font-size: ${Forms.LG.UserInput.fontSize};
+    font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
+    padding: ${Forms.LG.InputField.Padding};
+    line-height: ${Forms.LG.UserInput.lineHeight};
   }
 }
 
