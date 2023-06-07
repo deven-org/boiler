@@ -12,6 +12,8 @@ const forms = {
 
 export const form = css`
 .blr-form-element {
+  all: initial;
+  color: ${Forms.UserInput.Default.Rest};
   font-weight: ${Forms.MD.UserInput.fontWeight};
   font-size: ${Forms.MD.UserInput.fontSize};
   line-height: ${Forms.MD.UserInput.lineHeight};
@@ -170,7 +172,15 @@ export const form = css`
 }
 
 .blr-input-icon {
-  margin-left: -25px;
+  &.sm {
+    margin-left: -25px;
+  }
+  &.md {
+    margin-left: -32px;
+  }
+  &.lg {
+    margin-left: -40px;
+  }
   color: ${Forms.Placeholder.Default.Rest};
 }
 
@@ -190,6 +200,7 @@ export const form = css`
     padding-bottom: ${Forms.LG.LabelSlot.Padding};
   }
 }
+
 .blr-form-hint {
   display: flex;
   align-items: center;
@@ -268,21 +279,21 @@ export const form = css`
   }
 }
 .blr-form-label-appendix {
-  padding-left: ${Forms.MD.LabelSlot.Padding};
+  padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
   font-weight: ${Forms.MD.LabelAppendix.fontWeight};
   font-size: ${Forms.MD.LabelAppendix.fontSize};
   font-family: ${Forms.MD.LabelAppendix.fontFamily}, sans-serif;
   line-height: ${Forms.MD.LabelAppendix.lineHeight};
   color: ${Forms.LabelAppendix.Rest};
   &.sm {
-    padding-left: ${Forms.SM.LabelSlot.Padding};
+    padding-left: ${Forms.SM.LabelSlot.ItemSpacing};
     font-weight: ${Forms.SM.LabelAppendix.fontWeight};
     font-size: ${Forms.SM.LabelAppendix.fontSize};
     font-family: ${Forms.MD.LabelAppendix.fontFamily}, sans-serif;
     line-height: ${Forms.MD.LabelAppendix.lineHeight};
   }
   &.lg {
-    padding-left: ${Forms.LG.LabelSlot.Padding};
+    padding-left: ${Forms.LG.LabelSlot.ItemSpacing};
     font-weight: ${Forms.LG.LabelAppendix.fontWeight};
     font-size: ${Forms.LG.LabelAppendix.fontSize};
     font-family: ${Forms.LG.LabelAppendix.fontFamily}, sans-serif;
