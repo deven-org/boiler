@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextInput as BlrTextInputClass } from './index';
+import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
 import { FormSizes, InputTypes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
-import { action } from '@storybook/addon-actions';
 import './index';
 import { getIconName } from '../../utils/get-icon-name';
 
@@ -39,7 +38,7 @@ export const BlrTextInput = ({
   textInputId,
   label,
   labelAppendix,
-  showLabel,
+  hasLabel,
   showInputIcon,
   inputIcon,
   type,
@@ -50,40 +49,36 @@ export const BlrTextInput = ({
   required,
   readonly,
   maxLength,
-  pattern,
   errorMessage,
   showHint,
   hintText,
   hintIcon,
   hasError,
-}: BlrTextInputClass) =>
+  togglePassword,
+}: BlrTextInputType) =>
   html`
-    <blr-text-input
-      .textInputId=${textInputId}
-      .label=${label}
-      .labelAppendix=${labelAppendix}
-      .showLabel=${showLabel}
-      .showInputIcon=${showInputIcon}
-      .inputIcon=${inputIcon}
-      .type=${type}
-      .value=${value}
-      .placeholder=${placeholder}
-      .disabled=${disabled}
-      .size=${size}
-      .required=${required}
-      .readonly=${readonly}
-      .onChange=${action('onChange')}
-      .onBlur=${action('onBlur')}
-      .onFocus=${action('onFocus')}
-      .maxLength=${maxLength}
-      .pattern=${pattern}
-      .errorMessage=${errorMessage}
-      .showHint=${showHint}
-      .hintText=${hintText}
-      .hintIcon=${hintIcon}
-      .hasError=${hasError}
-      class="example-layout-class"
-    ></blr-text-input>
+    ${BlrTextInputRenderFunction({
+      textInputId,
+      label,
+      labelAppendix,
+      hasLabel,
+      showInputIcon,
+      inputIcon,
+      type,
+      value,
+      placeholder,
+      disabled,
+      size,
+      required,
+      readonly,
+      maxLength,
+      errorMessage,
+      showHint,
+      hintText,
+      hintIcon,
+      hasError,
+      togglePassword,
+    })}
   `;
 
 BlrTextInput.storyName = 'BlrTextInput';
@@ -92,7 +87,7 @@ BlrTextInput.args = {
   textInputId: 'Input ID',
   label: 'Label',
   labelAppendix: '(Optional)',
-  showLabel: true,
+  hasLabel: true,
   showInputIcon: true,
   inputIcon: 'blr360',
   type: 'text',

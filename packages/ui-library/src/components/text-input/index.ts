@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -7,16 +7,16 @@ import { InputTypes, FormSizesType } from '../../globals/types';
 import { BlrFormLabel } from '../internal-components/form-label';
 import { BlrFormHint } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
-import { iconButton } from '../../foundation/component-tokens/action.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
+import { BlrIconRenderFunction } from '../icon';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, form, iconButton];
+  static styles = [styleCustom, form];
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
-  @property() showLabel = true;
+  @property() hasLabel = true;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -29,7 +29,6 @@ export class BlrTextInput extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() maxLength?: number;
-  @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() showInputIcon = true;
@@ -44,7 +43,7 @@ export class BlrTextInput extends LitElement {
     return (this.showPassword = !this.showPassword);
   };
 
-  render() {
+  protected render() {
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
     const classes = classMap({
@@ -72,7 +71,7 @@ export class BlrTextInput extends LitElement {
 
     return html`
       <div class="blr-input ${classes}">
-        ${this.showLabel
+        ${this.hasLabel
           ? html` ${BlrFormLabel({
               labelText: this.label,
               labelSize: this.size,
@@ -83,10 +82,10 @@ export class BlrTextInput extends LitElement {
         <div class="blr-input-inner-container">
           <input
             class="blr-form-element ${inputClasses}"
-            id=${this.textInputId}
+            id=${this.textInputId || nothing}
             type=${getType()}
             value="${this.value}"
-            placeholder="${this.placeholder}"
+            placeholder="${this.placeholder || nothing}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
             ?required="${this.required}"
@@ -94,28 +93,30 @@ export class BlrTextInput extends LitElement {
             @blur="${this.onBlur}"
             @focus="${this.onFocus}"
             maxlength="${this.maxLength}"
-            pattern="${this.pattern}"
             hasError="${this.hasError}"
           />
 
           ${this.showInputIcon && !wasInitialPasswordField
-            ? html`<blr-icon
-                class="blr-input-icon ${inputClasses}"
-                icon="${this.hasError ? 'blrInfoSm' : calculateIconName(this.inputIcon, this.size)}"
-                size="sm"
-                aria-hidden
-              ></blr-icon>`
-            : html``}
+            ? html`${BlrIconRenderFunction({
+                icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
+                name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
+                size: 'sm',
+                classMap: inputClasses,
+                hideAria: true,
+                disablePointerEvents: true,
+              })}`
+            : nothing}
           ${wasInitialPasswordField
-            ? html`<blr-icon
-                class="blr-input-icon ${inputClasses}"
-                @click=${this.togglePassword}
-                icon="${this.hasError ? 'blrErrorFilledSm' : getPasswordIcon()}"
-                size="sm"
-                name="${this.hasError ? 'blrErrorFilledSm' : getPasswordIcon()}"
-                aria-hidden
-              ></blr-icon>`
-            : html``}
+            ? html`${BlrIconRenderFunction({
+                icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
+                name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
+                size: 'sm',
+                classMap: inputClasses,
+                hideAria: true,
+                disablePointerEvents: false,
+                onClick: () => this.togglePassword(),
+              })}`
+            : nothing}
         </div>
         ${this.showHint
           ? html`
@@ -126,8 +127,61 @@ export class BlrTextInput extends LitElement {
                 size: 'sm',
               })}
             `
-          : html``}
+          : nothing}
       </div>
     `;
   }
 }
+
+export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
+
+export const BlrTextInputRenderFunction = ({
+  textInputId,
+  type,
+  hasLabel,
+  label,
+  labelAppendix,
+  value,
+  placeholder,
+  disabled,
+  readonly,
+  size,
+  required,
+  onChange,
+  onBlur,
+  onFocus,
+  maxLength,
+  hasError,
+  errorMessage,
+  showInputIcon,
+  inputIcon,
+  showHint,
+  hintText,
+  hintIcon,
+}: BlrTextInputType) => {
+  return html`<blr-text-input
+    class="example-layout-class"
+    .textInputId=${textInputId}
+    .type=${type}
+    .hasLabel=${hasLabel}
+    .label=${label}
+    .labelAppendix=${labelAppendix}
+    .value=${value}
+    .placeholder=${placeholder}
+    .disabled=${disabled}
+    .readonly=${readonly}
+    .size=${size}
+    .required=${required}
+    .onChange=${onChange}
+    .onBlur=${onBlur}
+    .onFocus=${onFocus}
+    .maxLength=${maxLength}
+    .errorMessage=${errorMessage}
+    .showInputIcon=${showInputIcon}
+    .inputIcon=${inputIcon}
+    .showHint=${showHint}
+    .hintText=${hintText}
+    .hintIcon=${hintIcon}
+    .hasError=${hasError}
+  ></blr-input>`;
+};
