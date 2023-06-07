@@ -59,7 +59,7 @@ export class BlrTextInput extends LitElement {
     });
 
     const getPasswordIcon = () => {
-      return this.showPassword === true ? 'blrEyeSm' : 'blrCloseSm';
+      return this.showPassword === true ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
     const getType = () => {
