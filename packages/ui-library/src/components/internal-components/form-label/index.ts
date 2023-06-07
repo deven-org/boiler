@@ -1,4 +1,4 @@
-import { html } from 'lit';
+import { html, nothing } from 'lit';
 import { InputSizesType } from '../../../globals/types';
 
 type FormLabelType = {
@@ -17,7 +17,7 @@ export const BlrFormLabel = ({
   return html`
     <label class="blr-form-label ${size}" for=${forValue}>
       ${labelText}
-      <span class="blr-form-label-appendix ${size}">${additionalInfo}</span>
+      ${additionalInfo ? html`<span class="blr-form-label-appendix ${size}">${additionalInfo}</span>` : nothing}
     </label>
   `;
 };
