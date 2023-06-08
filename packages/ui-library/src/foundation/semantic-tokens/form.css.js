@@ -270,6 +270,27 @@ export const form = css`
     gap: ${Forms.LG.FormsLabelComponent.ItemSpacing};
   }
 }
+
+.blr-form-label-inline {
+  font-weight: ${Forms.MD.LabelNextToControl.fontWeight};
+  font-size: ${Forms.MD.LabelNextToControl.fontSize};
+  font-family: ${Forms.MD.LabelNextToControl.fontFamily}, sans-serif;
+  line-height: ${Forms.MD.LabelNextToControl.lineHeight};
+  color: ${Forms.LabelNextToControl.Rest};
+  &.sm {
+    font-weight: ${Forms.SM.LabelNextToControl.fontWeight};
+    font-size: ${Forms.SM.LabelNextToControl.fontSize};
+    font-family: ${Forms.SM.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${Forms.SM.LabelNextToControl.lineHeight};
+  }
+  &.lg {
+    font-weight: ${Forms.LG.LabelNextToControl.fontWeight};
+    font-size: ${Forms.LG.LabelNextToControl.fontSize};
+    font-family: ${Forms.LG.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${Forms.LG.LabelNextToControl.lineHeight};
+  }
+}
+
 .blr-form-label-appendix {
   padding-left: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.LabelAppendix.fontWeight};

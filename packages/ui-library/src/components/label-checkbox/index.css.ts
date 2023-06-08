@@ -9,9 +9,6 @@ export const styleCustom = css`
     & > input {
       all: initial;
       display: inline-block;
-      border: 1px solid black;
-      outline-offset: 2px;
-      background-color: transparent;
 
       &:checked {
         background-color: black;
@@ -19,10 +16,6 @@ export const styleCustom = css`
 
       &:focus {
         outline: 1px solid red;
-      }
-
-      &:disabled {
-        opacity: 0.25;
       }
     }
   }
