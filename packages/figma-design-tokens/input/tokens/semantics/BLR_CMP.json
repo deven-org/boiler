@@ -1885,6 +1885,62 @@
             "type": "color",
             "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
           }
+        },
+        "Rest": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.Rest}",
+            "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Hover": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.Hover}",
+            "width": "{core.dimensionPX.4}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Pressed": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.Pressed}",
+            "width": "{core.dimensionPX.4}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Focus": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.Focus}",
+            "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Disabled": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.Disabled}",
+            "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "ReadOnly": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.ReadOnly}",
+            "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Error": {
+          "value": {
+            "color": "{Forms.Slider.Knob.Stroke.Error}",
+            "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
         }
       }
     }
