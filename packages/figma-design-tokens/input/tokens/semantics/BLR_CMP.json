@@ -1640,76 +1640,66 @@
           "Unselected": {
             "Fill": {
               "Rest": {
-                "value": "{core.color.neutral.transparent}",
+                "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Rest"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{core.color.neutral.transparent}",
+                "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Hover"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{core.color.neutral.transparent}",
+                "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Pressed"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{core.color.neutral.transparent}",
+                "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Focus"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{core.color.neutral.transparent}",
+                "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Disabled"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{core.color.neutral.transparent}",
+                "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.ReadOnly"
-              },
-              "Error": {
-                "value": "{core.color.neutral.transparent}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Error"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
               }
             },
             "Stroke": {
               "Rest": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Rest"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
               },
               "Hover": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Hover"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Pressed"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Focus"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Disabled"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{core.color.neutral.transparent}",
-                "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
             }
           },
@@ -1718,64 +1708,64 @@
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Rest\n//\nalso applies to indeterminate"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Hover\n//\nalso applies to indeterminate"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Pressed\n//\nalso applies to indeterminate"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Focus\n//\nalso applies to indeterminate"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Disabled\n//\nalso applies to indeterminate"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
               }
             },
             "Stroke": {
               "Rest": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
               },
               "Hover": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
             }
           }
