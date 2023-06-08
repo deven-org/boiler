@@ -1,7 +1,11 @@
-import { IconKeys } from '@boiler/icons';
+import { IconKeys, IconType } from '@boiler/icons';
 import { SizesType } from '../globals/types';
+import { Sizes } from '../globals/constants';
 
-const capturingRegex = /(?<size>Xxs|Xs|Sm|Md|Lg|Xl)/;
+// 'Xxs|Xs|Sm|Md|Lg|Xl' but from same source as the type def
+const keyws = Sizes.map((a) => a.charAt(0).toUpperCase() + a.substring(1)).join('|');
+// /(?<size>Xxs|Xs|Sm|Md|Lg|Xl)/;
+const capturingRegex = new RegExp('(?<size>' + keyws + ')');
 
 const hasIconSize = (icon: string) => IconKeys.includes(icon);
 
@@ -18,17 +22,26 @@ const getSizeSubstitute = (icon: string) => {
   }
 };
 
-export const calculateIconName = (icon: string, size: SizesType) => {
+export const calculateIconName = (icon: string | undefined, size: SizesType) => {
   if (!icon) {
     return undefined;
   }
-  const formattedIcon = `${icon.toString()}${size.charAt(0).toUpperCase() + size.slice(1)}`;
-  return hasIconSize(formattedIcon) ? formattedIcon : getIconReplacement(icon);
+  const formattedIconKey = icon.toString() + size.charAt(0).toUpperCase() + size.slice(1);
+
+  if (IconKeys.indexOf(formattedIconKey) !== -1 && hasIconSize(formattedIconKey)) {
+    return formattedIconKey as IconType;
+  } else {
+    return getIconReplacement(icon);
+  }
 };
 
-export const getIconReplacement = (icon: string) => {
+export const getIconReplacement = (icon: string): IconType | undefined => {
   const sizeSubstitute = getSizeSubstitute(icon);
-  return sizeSubstitute
-    ? `${icon.toString()}${sizeSubstitute.charAt(0).toUpperCase() + sizeSubstitute.slice(1)}`
-    : 'Icon Does not exist in this size';
+  const iconKey = icon.toString() + sizeSubstitute?.charAt(0).toUpperCase() + sizeSubstitute?.slice(1);
+
+  if (IconKeys.indexOf(iconKey) !== -1 && sizeSubstitute) {
+    return iconKey as IconType;
+  }
+
+  return undefined;
 };
