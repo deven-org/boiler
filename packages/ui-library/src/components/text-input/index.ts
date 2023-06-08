@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -99,7 +99,7 @@ export class BlrTextInput extends LitElement {
                 size="sm"
                 aria-hidden
               ></blr-icon>`
-            : nothing}
+            : html``}
           ${wasInitialPasswordField
             ? html`<blr-icon
                 class="blr-input-icon ${inputClasses}"
@@ -109,7 +109,7 @@ export class BlrTextInput extends LitElement {
                 name="${getPasswordIcon()}"
                 aria-hidden
               ></blr-icon>`
-            : nothing}
+            : html``}
         </div>
         ${this.showHint
           ? html`
@@ -120,7 +120,7 @@ export class BlrTextInput extends LitElement {
                 size: this.size,
               })}
             `
-          : nothing}
+          : html``}
       </div>
     `;
   }

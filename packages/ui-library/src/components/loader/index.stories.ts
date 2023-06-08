@@ -15,12 +15,6 @@ export default {
       control: { type: 'select' },
     },
   },
-  parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-    viewMode: 'docs',
-  },
 };
 
 export const BlrLoader = ({ size, variant, loadingStatus }: BlrLoaderClass) =>
