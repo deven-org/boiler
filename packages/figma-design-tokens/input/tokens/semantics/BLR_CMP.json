@@ -1572,66 +1572,66 @@
           "Selected": {
             "Fill": {
               "Rest": {
-                "value": "{q.surface.brand.primary.rest}",
+                "value": "{q.surface.brand.encourage.rest}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Rest\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
               },
               "Hover": {
-                "value": "{q.surface.brand.primary.hover}",
+                "value": "{q.surface.brand.encourage.hover}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Hover\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{q.surface.brand.primary.pressed}",
+                "value": "{q.surface.brand.encourage.pressed}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Pressed\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
               },
               "Focus": {
-                "value": "{q.surface.brand.primary.rest}",
+                "value": "{q.surface.brand.encourage.rest}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Focus\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{q.surface.disabled.alpha}",
+                "value": "{q.content.ondisabled.alpha}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Disabled\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{q.surface.disabled.alpha}",
+                "value": "{q.content.onreadonly.gamma}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
               }
             },
             "Stroke": {
               "Rest": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Rest"
               },
               "Hover": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Hover"
               },
               "Pressed": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Pressed"
               },
               "Focus": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Focus"
               },
               "Disabled": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.ReadOnly"
               }
             }
           }
