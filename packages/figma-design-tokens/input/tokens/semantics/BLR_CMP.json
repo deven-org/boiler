@@ -1540,37 +1540,32 @@
               "Rest": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Rest"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Rest"
               },
               "Hover": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Hover"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Hover"
               },
               "Pressed": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Pressed"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Pressed"
               },
               "Focus": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Focus"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Focus"
               },
               "Disabled": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Disabled"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
                 "value": "{core.color.neutral.transparent}",
                 "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{core.color.neutral.transparent}",
-                "type": "color",
-                "description": "also applies to indeterminate"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Unselected.Stroke.ReadOnly"
               }
             }
           },
