@@ -2084,7 +2084,7 @@
     },
     "Select": {
       "SM": {
-        "InputPadding": {
+        "InputFieldPadding": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.12}",
           "type": "spacing"
         },
