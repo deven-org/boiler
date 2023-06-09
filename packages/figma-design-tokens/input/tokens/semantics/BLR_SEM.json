@@ -1746,7 +1746,7 @@
         "type": "color"
       }
     },
-    "brand": {
+    "Brand": {
       "Default": {
         "Shape": {
           "Background": {
