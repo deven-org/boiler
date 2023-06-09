@@ -2092,6 +2092,26 @@
           "value": "{core.dimensionPX.12}",
           "type": "spacing"
         }
+      },
+      "MD": {
+        "InputFieldPadding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        },
+        "IconPaddingRight": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "InputFieldPadding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.16}",
+          "type": "spacing"
+        },
+        "IconPaddingRight": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing"
+        }
       }
     }
   },
