@@ -1952,32 +1952,32 @@
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
             },
             "Stroke": {
@@ -2018,32 +2018,32 @@
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
             },
             "Stroke": {
