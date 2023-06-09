@@ -1809,6 +1809,18 @@
         "value": "{core.borderRadius.SM}",
         "type": "borderRadius"
       }
+    },
+    "Select": {
+      "SM": {
+        "InputPadding": {
+          "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.12}",
+          "type": "spacing"
+        },
+        "IconPaddingRight": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing"
+        }
+      }
     }
   },
   "UI": {
