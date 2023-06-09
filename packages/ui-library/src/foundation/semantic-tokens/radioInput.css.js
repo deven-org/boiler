@@ -33,59 +33,116 @@ export const radioInput = css`
     border-color: ${Input.Default.Rest.color};
     .blr-radio-input {
       display: flex;
+      + label {
+        transition: all 0.25s ease 0s;
+        display: flex;
+        align-items: center;
+        font-family: ${MD.LabelNextToControl.fontFamily};
+        font-weight: ${MD.LabelNextToControl.fontWeight};
+        line-height: ${MD.LabelNextToControl.lineHeight};
+        font-size: ${MD.LabelNextToControl.fontSize};
+        color: ${LabelNextToControl.Rest}
+        margin: ${Radio.MD.ControlMargin}
+      }
       > input {
         appearance: none;
         display: flex;
-        flex-shrink: 0; d
-        background-color: rgb(255, 255, 255);
+        background-color: ${Radio.Control.Background.Unselected.Fill.Rest};
         width: ${Radio.Control.Background.Unselected.Rest};
         height: ${Radio.Control.Background.Unselected.Rest};
         margin-right: ${Radio.SM.ItemSpacing};
         transition: all 0.25s ease 0s;
-        border: 2px solid ${Control.Background.Rest};
         border-radius: ${Radio.ControlBorderRadius};
-        + label {
-          transition: all 0.25s ease 0s;
-        }
-        &:checked {
-          background: ${Radio.Control.Background.Fill.Rest};
+        display: grid;
+        place-content: center;
+        padding: ${Radio.SM.ControlMargin};
+        &::before {
+          content: '';
+          background-color: ${Radio.Control.Foreground.Unselected.Fill.Rest};
+          width: ${Radio.Control.Foreground.Unselected.Rest};
+          height: ${Radio.Control.Foreground.Unselected.Rest};
+          border-radius: ${Radio.ControlBorderRadius};
         }
         &:hover {
-          border: 2px solid ${Control.Background.Hover};
+          background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
           width: ${Radio.Control.Background.Unselected.Hover};
           height: ${Radio.Control.Background.Unselected.Hover};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.Hover};
+            width: ${Radio.Control.Foreground.Unselected.Hover};
+            height: ${Radio.Control.Foreground.Unselected.Hover};
+          }
           + label {
-            color: ${LabelNextToControl.Hover};
+            color: ${LabelNextToControl.Hover}
           }
         }
         &:active {
-          border: 2px solid ${Control.Background.Pressed};
+          background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
           width: ${Radio.Control.Background.Unselected.Pressed};
           height: ${Radio.Control.Background.Unselected.Pressed};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.Pressed};
+            width: ${Radio.Control.Foreground.Unselected.Pressed};
+            height: ${Radio.Control.Foreground.Unselected.Pressed};
+          }
           + label {
-            color: ${LabelNextToControl.Pressed};
+            color: ${LabelNextToControl.Pressed}
           }
         }
         &[readonly] {
-          border: 2px solid ${Control.Background.ReadOnly};
+          background-color: ${Radio.Control.Background.Unselected.Fill.ReadOnly};
           width: ${Radio.Control.Background.Unselected.ReadOnly};
           height: ${Radio.Control.Background.Unselected.ReadOnly};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.ReadOnly};
+            width: ${Radio.Control.Foreground.Unselected.ReadOnly};
+            height: ${Radio.Control.Foreground.Unselected.ReadOnly};
+          }
           + label {
-            color: ${LabelNextToControl.ReadOnly};
+            color: ${LabelNextToControl.ReadOnly}
           }
         }
         &:disabled {
-          border: 2px solid ${Control.Background.Disabled};
+          background-color: ${Radio.Control.Background.Unselected.Fill.Disabled};
           width: ${Radio.Control.Background.Unselected.Disabled};
           height: ${Radio.Control.Background.Unselected.Disabled};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.Disabled};
+            width: ${Radio.Control.Foreground.Unselected.Disabled};
+            height: ${Radio.Control.Foreground.Unselected.Disabled};
+          }
           + label {
-            color: ${LabelNextToControl.Disabled};
+            color: ${LabelNextToControl.Disabled}
           }
         }
         &:focus {
-          border: 2px solid ${Control.Background.Focus};
+          background-color: ${Radio.Control.Background.Unselected.Fill.Focus};
           width: ${Radio.Control.Background.Unselected.Focus};
           height: ${Radio.Control.Background.Unselected.Focus};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
+            width: ${Radio.Control.Foreground.Unselected.Focus};
+            height: ${Radio.Control.Foreground.Unselected.Focus};
+            outline: black solid 2px;
+            outline-offset: 2px;
+          }
+          + label {
+            color: ${LabelNextToControl.Focus}
+          }
+        }
+        &:checked {
+          background-color: ${Radio.Control.Background.Selected.Fill.Rest};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Selected.Fill.Rest};
+            width: ${Radio.Control.Foreground.Selected.Rest};
+            height: ${Radio.Control.Foreground.Selected.Rest};
+          }
         }
         &.error-input {
 
@@ -96,11 +153,6 @@ export const radioInput = css`
 
   .blr-radio-input-group.vertical {
     flex-direction: column;
-  }
-
-  .blr-radio-input label {
-    display: flex;
-    align-items: center;
   }
 
   .blr-radio-input.sm {
@@ -130,19 +182,19 @@ export const radioInput = css`
 
   .blr-radio-input:active label {
     &::before {
-      box-shadow: inset 0 0 0 0.125em ${Control.Background.Pressed};
+      box-shadow: inset 0 0 0 0.125em black;
     }
   }
 
   .blr-radio-input:focus label {
     &::before {
-      box-shadow: inset 0 0 0 0.125em ${Control.Background.Focus};
+      box-shadow: inset 0 0 0 0.125em black;
     }
   }
 
   .blr-radio-input.readonly label {
     &::before {
-      box-shadow: inset 0 0 0 0.125em ${Control.Background.ReadOnly};
+      box-shadow: inset 0 0 0 0.125em black;
     }
   }
 
@@ -215,5 +267,5 @@ export const radioInput = css`
   .hint {
     color: ${Caption.Hint};
   }
-  /* stylelint-enable */
+  /* stylelint-ensable */
 `;

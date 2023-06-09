@@ -32,7 +32,6 @@ export const BlrRadioInputGroup = ({
   size,
   required,
   errorMessage,
-  hideLabel,
   options,
   layout,
   hint,
@@ -51,7 +50,6 @@ export const BlrRadioInputGroup = ({
       .onBlur=${action('onBlur')}
       .onFocus=${action('onFocus')}
       .errorMessage=${errorMessage}
-      .hideLabel=${hideLabel}
       .options=${options}
       .layout=${layout}
       .hint=${hint}
@@ -70,7 +68,6 @@ BlrRadioInputGroup.args = {
   required: false,
   size: 'md',
   errorMessage: 'This is an error message',
-  hideLabel: false,
   options: [
     { label: 'Option 1', value: 'option1' },
     { label: 'Option 2', value: 'option2' },

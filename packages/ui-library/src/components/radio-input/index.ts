@@ -59,7 +59,7 @@ export class BlrRadioInput extends LitElement {
           hasError="${this.hasError}"
           invalid="{invalid}"
         />
-        ${BlrFormLabel({ labelText: this.label, labelSize: this.size || 'md' })}
+        ${BlrFormLabel({ labelText: this.label, labelSize: this.size || 'md', forValue: this.id })}
       </div>
     `;
   }
