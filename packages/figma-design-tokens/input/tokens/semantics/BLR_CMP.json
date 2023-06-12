@@ -2105,7 +2105,7 @@
       },
       "LG": {
         "InputFieldPadding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.16}",
+          "value": "{core.dimensionREM.12} {core.dimensionPX.48} {core.dimensionREM.12} {core.dimensionPX.16}",
           "type": "spacing"
         },
         "IconPaddingRight": {
