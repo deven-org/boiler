@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 16 Jun 2023 11:23:57 GMT
+ * Generated on Mon, 12 Jun 2023 11:22:55 GMT
  */
 
 export const componentTokens = {
@@ -70,9 +70,9 @@ export const componentTokens = {
   Forms: {
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
     Radio: {
-      SM: { ItemSpacing: '8px', ControlMargin: '0.125rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
-      MD: { ItemSpacing: '8px', ControlMargin: '0.25rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
-      LG: { ItemSpacing: '8px', ControlMargin: '0.438rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
+      SM: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '2px 0px 0px 0px' },
+      MD: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      LG: { ItemSpacing: '4px', ControlMargin: '3px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
       Control: {
         Background: {
           Unselected: {
@@ -193,210 +193,19 @@ export const componentTokens = {
       ControlBorderRadius: '9999px',
     },
     Checkbox: {
-      SM: {
-        ItemSpacing: '8px',
-        ControlMargin: '0.125rem 0px 0rem 0px',
-        LabelMargin: '0rem 0px 0rem 0px',
-        Control: {
-          Background: {
-            Sizing: {
-              Unselected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-              Selected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-              },
-              Indeterminate: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-              },
-            },
-          },
-          Foreground: {
-            Sizing: {
-              Unselected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-              Selected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-              Indeterminate: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-            },
-          },
-        },
-      },
-      MD: {
-        ItemSpacing: '8px',
-        ControlMargin: '0.25rem 0px 0rem 0px',
-        LabelMargin: '0rem 0px 0rem 0px',
-        Control: {
-          Background: {
-            Sizing: {
-              Unselected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-              Selected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-              },
-              Indeterminate: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-              },
-            },
-          },
-          Foreground: {
-            Sizing: {
-              Unselected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-              Selected: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-              Indeterminate: {
-                Rest: '16px',
-                Hover: '16px',
-                Pressed: '16px',
-                Focus: '16px',
-                Disabled: '16px',
-                ReadOnly: '16px',
-                Error: '16px',
-              },
-            },
-          },
-        },
-      },
-      LG: {
-        ItemSpacing: '8px',
-        ControlMargin: '0.375rem 0px 0rem 0px',
-        LabelMargin: '0rem 0px 0rem 0px',
-        Control: {
-          Background: {
-            Sizing: {
-              Unselected: {
-                Rest: '20px',
-                Hover: '20px',
-                Pressed: '20px',
-                Focus: '20px',
-                Disabled: '20px',
-                ReadOnly: '20px',
-                Error: '20px',
-              },
-              Selected: {
-                Rest: '20px',
-                Hover: '20px',
-                Pressed: '20px',
-                Focus: '20px',
-                Disabled: '20px',
-                ReadOnly: '20px',
-              },
-              Indeterminate: {
-                Rest: '20px',
-                Hover: '20px',
-                Pressed: '20px',
-                Focus: '20px',
-                Disabled: '20px',
-                ReadOnly: '20px',
-              },
-            },
-          },
-          Foreground: {
-            Sizing: {
-              Unselected: {
-                Rest: '20px',
-                Hover: '20px',
-                Pressed: '20px',
-                Focus: '20px',
-                Disabled: '20px',
-                ReadOnly: '20px',
-                Error: '20px',
-              },
-              Selected: {
-                Rest: '20px',
-                Hover: '20px',
-                Pressed: '20px',
-                Focus: '20px',
-                Disabled: '20px',
-                ReadOnly: '20px',
-                Error: '20px',
-              },
-              Indeterminate: {
-                Rest: '20px',
-                Hover: '20px',
-                Pressed: '20px',
-                Focus: '20px',
-                Disabled: '20px',
-                ReadOnly: '20px',
-                Error: '20px',
-              },
-            },
-          },
-        },
-      },
+      SM: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '2px 0px 0px 0px' },
+      MD: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      LG: { ItemSpacing: '4px', ControlMargin: '3px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
       Control: {
         Background: {
           Unselected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+            Error: '16px',
             Fill: {
               Rest: 'hsla(0, 0%, 100%, 1)',
               Hover: 'hsla(0, 0%, 100%, 1)',
@@ -411,12 +220,18 @@ export const componentTokens = {
               Hover: 'hsla(220, 85%, 40%, 1)',
               Pressed: 'hsla(220, 85%, 30%, 1)',
               Focus: 'hsla(220, 85%, 50%, 1)',
-              Disabled: 'hsla(220, 10%, 80%,1) ',
+              Disabled: 'hsla(220, 10%, 90%,1) ',
               ReadOnly: 'hsla(220, 10%, 90%,1) ',
               Error: 'hsla(350, 80%, 50%,1) ',
             },
           },
           Selected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
             Fill: {
               Rest: 'hsla(220, 85%, 50%, 1)',
               Hover: 'hsla(220, 85%, 40%, 1)',
@@ -434,9 +249,24 @@ export const componentTokens = {
               ReadOnly: '#00000000',
             },
           },
+          Indeterminate: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+          },
         },
         Foreground: {
           Unselected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+            Error: '16px',
             Fill: {
               Rest: '#00000000',
               Hover: '#00000000',
@@ -457,6 +287,12 @@ export const componentTokens = {
             },
           },
           Selected: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
             Fill: {
               Rest: 'hsla(0, 0%, 100%, 1)',
               Hover: 'hsla(0, 0%, 100%, 1)',
@@ -474,13 +310,21 @@ export const componentTokens = {
               ReadOnly: '#00000000',
             },
           },
+          Indeterminate: {
+            Rest: '16px',
+            Hover: '16px',
+            Pressed: '16px',
+            Focus: '16px',
+            Disabled: '16px',
+            ReadOnly: '16px',
+          },
         },
         Unselected: {
           Rest: { color: 'hsla(220, 85%, 50%, 1)', width: '1px', style: 'solid' },
           Hover: { color: 'hsla(220, 85%, 40%, 1)', width: '1px', style: 'solid' },
           Pressed: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
           Focus: { color: 'hsla(220, 85%, 30%, 1)', width: '1px', style: 'solid' },
-          Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+          Disabled: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
           ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
           Error: { color: 'hsla(350, 80%, 50%,1) ', width: '1px', style: 'solid' },
         },
