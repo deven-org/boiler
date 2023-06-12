@@ -8,11 +8,6 @@ export const styleCustom = css`
 
     & > input {
       all: initial;
-      display: inline-block;
-
-      &:checked {
-        background-color: black;
-      }
 
       &:focus {
         outline: 1px solid red;

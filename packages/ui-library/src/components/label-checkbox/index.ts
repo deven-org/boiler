@@ -18,6 +18,7 @@ export class BlrLabelCheckbox extends LitElement {
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
+  @property() hasError?: boolean;
 
   @property() size: FormSizesType = 'md';
 
@@ -39,9 +40,10 @@ export class BlrLabelCheckbox extends LitElement {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-label-checkbox': true,
+      [`error`]: this.hasError || false,
     });
 
-    return html`<span class=${classes}>
+    return html`<div class=${classes}>
       <input
         type="checkbox"
         id=${this.checkInputId || nothing}
@@ -51,10 +53,11 @@ export class BlrLabelCheckbox extends LitElement {
         @change=${this.handleChange}
         @focus=${this.onFocus}
         @blur=${this.onBlur}
+        hasError="${this.hasError}"
       />
       ${this.label
         ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
         : nothing}
-    </span>`;
+    </div>`;
   }
 }
