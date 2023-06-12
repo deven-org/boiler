@@ -12,6 +12,8 @@ const forms = {
 
 export const form = css`
 .blr-form-element {
+  all: initial;
+  color: ${Forms.UserInput.Default.Rest};
   font-weight: ${Forms.MD.UserInput.fontWeight};
   font-size: ${Forms.MD.UserInput.fontSize};
   font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
@@ -62,6 +64,8 @@ export const form = css`
     border-width: ${Forms.Input.Default.Disabled.width};
     border-style: ${Forms.Input.Default.Disabled.style};
     border-color: ${Forms.Input.Default.Disabled.color};
+    background-color: ${Forms.SurfaceFill.Default.Disabled};
+    color: ${Forms.UserInput.Default.Disabled};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Disabled};
