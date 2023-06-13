@@ -133,6 +133,8 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
     for="text-Input-id"
   >
     Test Input Name
+    <span class="blr-form-label-appendix md">
+    </span>
   </label>
   <div class="blr-input-inner-container">
     <input
@@ -155,11 +157,6 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
     >
     </blr-icon>
   </div>
-  <span class="blr-form-hint hint sm">
-    <blr-icon
-      aria-hidden=""
-      icon="blrInfoSmSm"
-      size="sm"
   <span class="blr-form-hint hint md">
     <blr-icon
       aria-hidden=""
@@ -173,45 +170,8 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
 </div>
 `;
 /* end snapshot blr-text-input renders correctly */
-snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled md">
-  <label
-    class="blr-form-label md"
-    for="text-Input-id"
-  >
-    Test Input Name
-  </label>
-  <div class="blr-input-inner-container">
-    <input
-      class="blr-form-element md"
-      disabled=""
-      haserror=""
-      id="text-Input-id"
-      maxlength="200"
-      placeholder="Test Placeholder 2"
-      required=""
-      type="text"
-      value=""
-    >
-    <blr-icon
-      aria-hidden="true"
-      class="blr-input-icon md"
-      style="pointer-events:none;"
-    >
-    </blr-icon>
-  </div>
-  <span class="blr-form-hint hint sm">
-    <blr-icon
-      aria-hidden=""
-      icon=""
-      size="sm"
-    >
-    </blr-icon>
-    <span class="blr-caption-text">
-    </span>
-  </span>
-</div>
-`;
-snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled md">
+snapshots["blr-text-input renders correctly"] = 
+`<div class="blr-input disabled md">
   <label
     class="blr-form-label md"
     for="text-Input-id"
@@ -242,7 +202,7 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
   <span class="blr-form-hint hint sm">
     <blr-icon
       aria-hidden=""
-      icon="blrInfoSmSm"
+      icon=""
       size="sm"
     >
     </blr-icon>
@@ -252,3 +212,4 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
 </div>
 `;
 /* end snapshot blr-text-input renders correctly */
+

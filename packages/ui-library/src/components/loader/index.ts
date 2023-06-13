@@ -15,12 +15,24 @@ export class BlrLoader extends LitElement {
 
   render() {
     const classes = classMap({
+      'blr-loading-spinner': true,
       [`${this.variant}`]: this.variant || '',
       [`${this.size}`]: this.size || 'md',
     });
 
-    return html` <div class="blr-loader" role="status" aria-live="polite" aria-label="${this.loadingStatus}">
-      <div class="blr-loading-spinner ${classes}"></div>
+    return html`<div class="blr-loader" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}>
+      <div class=${classes}></div>
     </div>`;
   }
 }
+
+export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;
+
+export const BlrLoaderFunction = ({ variant, size, loadingStatus }: BlrLoaderType) => {
+  return html`<blr-loader
+    class="example-layout-class"
+    .variant=${variant}
+    .size=${size}
+    .loadingStatus=${loadingStatus}
+  ></blr-select>`;
+};
