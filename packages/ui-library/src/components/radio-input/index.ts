@@ -42,7 +42,7 @@ export class BlrRadioInput extends LitElement {
     });
 
     return html`
-      <div class="blr-form-element blr-radio-input ${classes}">
+      <div class="blr-radio-input ${classes}">
         <input
           id=${this.id}
           class="${inputclasses}"

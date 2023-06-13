@@ -18,7 +18,6 @@ export default {
 export const BlrRadioInput = ({
   textInputId,
   label,
-  value,
   disabled,
   size,
   required,
