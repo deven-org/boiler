@@ -29,12 +29,6 @@ export default {
       description: 'Please enter valid RegEx',
     },
   },
-  parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-    viewMode: 'docs',
-  },
 };
 
 export const BlrTextInput = ({

@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { IconType } from '@boiler/icons';
@@ -32,20 +32,20 @@ export class BlrIconButton extends LitElement {
     const loaderVariant = determineLoaderVariant(this.variant);
 
     return html`<button
+      aria-label="${this.ariaLabel}"
       class="blr-semantic-action blr-icon-button ${classes}"
-      id=${this.buttonId || nothing}
-      @click=${this.onClick}
-      @blur=${this.onBlur}
-      ?disabled=${this.disabled}
-      aria-label=${this.ariaLabel || nothing}
+      @click="${this.onClick}"
+      @blur="${this.onBlur}"
+      ?disabled="${this.disabled}"
+      id=${this.buttonId}
     >
       ${this.loading
         ? html`<blr-loader
-            .size=${this.size}
-            .variant=${loaderVariant}
-            .loadingStatus=${this.loadingStatus}
+            .size="${this.size}"
+            .variant="${loaderVariant}"
+            .loadingStatus="${this.loadingStatus}"
           ></blr-loader>`
-        : html`<blr-icon icon=${this.icon} size=${this.size} aria-hidden></blr-icon>`}
+        : html`<blr-icon icon="${this.icon}" size="${this.size}" aria-hidden></blr-icon>`}
     </button>`;
   }
 }

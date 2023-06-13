@@ -129,7 +129,7 @@ export class BlrTextInput extends LitElement {
                 size: 'sm',
               })}
             `
-          : nothing}
+          : html``}
       </div>
     `;
   }
