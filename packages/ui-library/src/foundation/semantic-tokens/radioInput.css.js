@@ -1,10 +1,10 @@
-import { css, unsafeCSS } from "lit";
+import { css } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
 const { Caption, Control, SM, MD, LG, Input, LabelNextToControl } = semanticTokens.Forms;
 const { Radio } = componentTokens.Forms;
 
-export const radioInput = css`
+export const radio = css`
   /* stylelint-disable */
   .blr-radio-input-group {
     display: flex;
@@ -24,8 +24,6 @@ export const radioInput = css`
       display: flex;
       align-items: center;
       color: ${LabelNextToControl.Rest};
-      margin: ${Radio.MD.ControlMargin};
-      margin-left: ${Radio.MD.ItemSpacing};
     }
     > input {
       appearance: none;
@@ -49,6 +47,8 @@ export const radioInput = css`
         font-weight: ${SM.LabelNextToControl.fontWeight};
         font-size: ${SM.LabelNextToControl.fontSize};
         line-height: ${SM.LabelNextToControl.lineHeight};
+        margin: ${Radio.SM.ControlMargin};
+        margin-left: ${Radio.SM.ItemSpacing};
       }
     }
     &.md {
@@ -57,6 +57,8 @@ export const radioInput = css`
         font-weight: ${MD.LabelNextToControl.fontWeight};
         font-size: ${MD.LabelNextToControl.fontSize};
         line-height: ${MD.LabelNextToControl.lineHeight};
+        margin: ${Radio.MD.ControlMargin};
+        margin-left: ${Radio.MD.ItemSpacing};
       }
     }
     &.lg {
@@ -65,6 +67,8 @@ export const radioInput = css`
         font-weight: ${LG.LabelNextToControl.fontWeight};
         font-size: ${LG.LabelNextToControl.fontSize};
         line-height: ${LG.LabelNextToControl.lineHeight};
+        margin: ${Radio.LG.ControlMargin};
+        margin-left: ${Radio.LG.ItemSpacing};
       }
     }
     &:not(.error-input) {
@@ -224,55 +228,6 @@ export const radioInput = css`
       }
     }
   }
-}
-
-
-.blr-radio-input:active label {
-  &::before {
-    box-shadow: inset 0 0 0 0.125em black;
-  }
-}
-
-.blr-radio-input:focus label {
-  &::before {
-    box-shadow: inset 0 0 0 0.125em black;
-  }
-}
-
-.blr-radio-input.readonly label {
-  &::before {
-    box-shadow: inset 0 0 0 0.125em black;
-  }
-}
-
-.blr-input:disabled {
-  border-width: ${Input.Default.Disabled.width};
-  border-style: ${Input.Default.Disabled.style};
-  border-color: ${Input.Default.Disabled.color};
-}
-
-.blr-input:focus {
-  border-width: ${Input.Default.Focus.width};
-  border-style: ${Input.Default.Focus.style};
-  border-color: ${Input.Default.Focus.color};
-}
-
-.blr-input.error-input {
-  border-width: ${Input.Error.Rest.width};
-  border-style: ${Input.Error.Rest.style};
-  border-color: ${Input.Error.Rest.color};
-}
-
-.blr-input.error-input:hover {
-  border-width: ${Input.Error.Hover.width};
-  border-style: ${Input.Error.Hover.style};
-  border-color: ${Input.Error.Hover.color};
-}
-
-.blr-input.error-input:focus {
-  border-width: ${Input.Error.Focus.width};
-  border-style: ${Input.Error.Focus.style};
-  border-color: ${Input.Error.Focus.color};
 }
 
 .blr-form-hint {

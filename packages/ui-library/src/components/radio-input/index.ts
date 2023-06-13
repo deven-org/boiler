@@ -4,16 +4,14 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { form } from '../../foundation/semantic-tokens/form.css';
-import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
+import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { BlrFormLabel } from '../internal-components/form-label';
 
-@customElement('blr-radio-input')
-export class BlrRadioInput extends LitElement {
-  static styles = [styleCustom, form, radioInput];
+@customElement('blr-radio')
+export class BlrRadio extends LitElement {
+  static styles = [styleCustom, form, radio];
 
-  @property() id!: string;
-  @property() textInputId!: string;
-  @property() type!: string;
+  @property() radioId!: string;
   @property() label!: string;
   @property() value!: string;
   @property() name!: string;
@@ -29,7 +27,7 @@ export class BlrRadioInput extends LitElement {
   @property() errorMessage?: string;
   @property() options!: RadioOption[];
 
-  render() {
+  protected render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
@@ -42,13 +40,13 @@ export class BlrRadioInput extends LitElement {
     });
 
     return html`
-      <div class="blr-radio-input ${classes}">
+      <div class="blr-radio ${classes}">
         <input
-          id=${this.id}
+          id=${this.radioId}
           class="${inputclasses}"
           type="radio"
-          name="${this.label}"
-          value="${this.name}"
+          name="${this.name}"
+          value="${this.value}"
           ?disabled="${this.disabled}"
           ?checked="${this.checked}"
           ?required="${this.required}"
@@ -64,3 +62,40 @@ export class BlrRadioInput extends LitElement {
     `;
   }
 }
+
+export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
+
+export const BlrRadioRenderFunction = ({
+  radioId,
+  value,
+  name,
+  label,
+  disabled,
+  size,
+  required,
+  readonly,
+  onChange,
+  onBlur,
+  onFocus,
+  errorMessage,
+  hasError,
+  options,
+}: BlrRadioType) => {
+  return html`<blr-radio
+    .radioId=${radioId}
+    .label=${label}
+    .name=${name}
+    .value=${value}
+    .disabled=${disabled}
+    .size=${size}
+    .required=${required}
+    .readonly=${readonly}
+    .onChange=${onChange}
+    .onBlur=${onBlur}
+    .onFocus=${onFocus}
+    .errorMessage=${errorMessage}
+    .hasError=${hasError}
+    .options=${options}
+    class="example-layout-class"
+  ></blr-radio>`;
+};

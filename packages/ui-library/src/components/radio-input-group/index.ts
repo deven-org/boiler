@@ -2,13 +2,13 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
+import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio-input-group')
-export class BlrRadioInputGroup extends LitElement {
-  static styles = [styleCustom, radioInput];
+export class BlrRadioGroup extends LitElement {
+  static styles = [styleCustom, radio];
 
   @property() textInputId!: string;
   @property() type!: string;
@@ -54,6 +54,7 @@ export class BlrRadioInputGroup extends LitElement {
                 type="radio"
                 name=${this.label}
                 value=${option.value}
+                label=${option.label}
                 ?disabled=${this.disabled}
                 ?readonly=${this.readonly}
                 ?aria-disabled=${this.disabled}
