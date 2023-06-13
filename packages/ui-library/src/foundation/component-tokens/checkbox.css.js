@@ -51,6 +51,28 @@ export const checkboxStyles = css`
         border-style: ${Checkbox.Control.Unselected.Rest.style};
         border-width: ${Checkbox.Control.Unselected.Rest.width};
         background-color: ${Checkbox.Control.Background.Selected.Fill.Rest};
+
+        &:hover {
+          height: ${Checkbox.Control.Background.Selected.Hover};
+          width: ${Checkbox.Control.Background.Selected.Hover};
+          border-style: ${Checkbox.Control.Unselected.Hover.style};
+          border-width: ${Checkbox.Control.Unselected.Hover.width};
+          border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
+          background-color: ${Checkbox.Control.Background.Selected.Fill.Hover};
+        }
+
+        &:active {
+          height: ${Checkbox.Control.Background.Selected.Pressed};
+          width: ${Checkbox.Control.Background.Selected.Pressed};
+          border-style: ${Checkbox.Control.Unselected.Pressed.style};
+          border-width: ${Checkbox.Control.Unselected.Pressed.width};
+          border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
+          background-color: ${Checkbox.Control.Background.Selected.Fill.Pressed};
+        }
+
+        &:disabled {
+          background-color: ${Checkbox.Control.Background.Selected.Fill.Disabled};
+        }
       }
 
       &:disabled {

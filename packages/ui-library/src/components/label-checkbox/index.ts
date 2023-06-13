@@ -18,6 +18,7 @@ export class BlrLabelCheckbox extends LitElement {
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
+  @property() indeterminate?: boolean;
   @property() hasError?: boolean;
 
   @property() size: FormSizesType = 'md';
@@ -48,8 +49,9 @@ export class BlrLabelCheckbox extends LitElement {
         type="checkbox"
         id=${this.checkInputId || nothing}
         name=${this.checkInputId || nothing}
-        disabled=${this.disabled || nothing}
-        checked=${this.checked || nothing}
+        ?disabled=${this.disabled || nothing}
+        .checked=${this.checked || nothing}
+        .indeterminate="${this.indeterminate || nothing}"
         @change=${this.handleChange}
         @focus=${this.onFocus}
         @blur=${this.onBlur}
