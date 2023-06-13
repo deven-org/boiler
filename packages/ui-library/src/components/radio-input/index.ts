@@ -43,19 +43,18 @@ export class BlrRadio extends LitElement {
       <div class="blr-radio ${classes}">
         <input
           id=${this.radioId}
-          class="${inputclasses}"
+          class=${inputclasses}
           type="radio"
-          name="${this.name}"
-          value="${this.value}"
-          ?disabled="${this.disabled}"
-          ?checked="${this.checked}"
-          ?required="${this.required}"
-          ?readonly="${this.readonly}"
-          @input="${this.onChange}"
-          @blur="${this.onBlur}"
-          @focus="${this.onFocus}"
-          hasError="${this.hasError}"
-          invalid="{invalid}"
+          name=${this.name}
+          value=${this.value}
+          ?disabled=${this.disabled}
+          ?checked=${this.checked}
+          ?required=${this.required}
+          ?readonly=${this.readonly}
+          @input=${this.onChange}
+          @blur=${this.onBlur}
+          @focus=${this.onFocus}
+          hasError=${this.hasError}
         />
         ${BlrFormLabel({ labelText: this.label, labelSize: this.size || 'md', forValue: this.id })}
       </div>

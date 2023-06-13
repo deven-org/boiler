@@ -6,7 +6,7 @@ import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { IconType } from '@boiler/icons';
 
-@customElement('blr-radio-input-group')
+@customElement('blr-radio-group')
 export class BlrRadioGroup extends LitElement {
   static styles = [styleCustom, radio];
 
@@ -43,7 +43,7 @@ export class BlrRadioGroup extends LitElement {
       return label.replace(/ /g, '_').toLowerCase();
     };
     return html`
-      <div class="blr-radio-input-group ${classes}">
+      <div class="blr-radio-group ${classes}">
         ${this.options &&
         this.options.map((option: RadioOption) => {
           const id = calculateOptionId(option.label);

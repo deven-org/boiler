@@ -38,7 +38,7 @@ export const BlrRadioGroup = ({
   hintIcon,
 }: BlrRadioGroupClass) =>
   html`
-    <blr-radio-input-group
+    <blr-radio-group
       .textInputId=${textInputId}
       .label=${label}
       .disabled=${disabled}
@@ -55,7 +55,7 @@ export const BlrRadioGroup = ({
       .hint=${hint}
       .hintIcon=${calculateIconName(hintIcon, size)}
       class="example-layout-class"
-    ></blr-radio-input-group>
+    ></blr-radio-group>
   `;
 
 BlrRadioGroup.storyName = 'BlrRadio';

@@ -1,12 +1,12 @@
 import { css } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
-const { Caption, Control, SM, MD, LG, Input, LabelNextToControl } = semanticTokens.Forms;
+const { Caption, SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 const { Radio } = componentTokens.Forms;
 
 export const radio = css`
   /* stylelint-disable */
-  .blr-radio-input-group {
+  .blr-radio-group {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
