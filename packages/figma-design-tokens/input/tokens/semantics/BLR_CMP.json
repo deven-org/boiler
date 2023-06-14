@@ -1942,6 +1942,30 @@
           },
           "type": "border"
         }
+      },
+      "Track": {
+        "Stroke": {
+          "Active": {
+            "Default": {
+              "value": "{q.content.onbrand.beta.rest}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.content.ondisabled.alpha}",
+              "type": "color"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": "{q.surface.brand.secondary.rest}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.surface.disabled.alpha}",
+              "type": "color"
+            }
+          }
+        }
       }
     }
   },
