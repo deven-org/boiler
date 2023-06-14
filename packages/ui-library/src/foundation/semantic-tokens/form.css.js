@@ -54,7 +54,7 @@ export const form = css`
   }
 
   &[readonly] {
-    border-width: ${Forms.Input.Default.Focus.width};
+    border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.ReadOnly.style};
     border-color: transparent;
     outline: ${Forms.Input.Default.Hover.width} ${Forms.Input.Default.ReadOnly.style} ${
@@ -69,7 +69,7 @@ export const form = css`
   }
 
   &:disabled {
-    border-width: ${Forms.Input.Default.Focus.width};
+    border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.Disabled.style};
     border-color: transparent;
     outline: ${Forms.Input.Default.Disabled.width} ${Forms.Input.Default.Disabled.style} ${
