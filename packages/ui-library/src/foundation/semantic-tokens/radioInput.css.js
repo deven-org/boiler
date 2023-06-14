@@ -82,99 +82,59 @@ export const radio = css`
           height: ${Radio.Control.Foreground.Unselected.Rest};
         }
         &:hover {
-          background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
-          width: ${Radio.Control.Background.Unselected.Hover};
-          height: ${Radio.Control.Background.Unselected.Hover};
-          &::before {
-            content: '';
-            background-color: ${Radio.Control.Foreground.Unselected.Fill.Hover};
-            width: ${Radio.Control.Foreground.Unselected.Hover};
-            height: ${Radio.Control.Foreground.Unselected.Hover};
-          }
-          + label {
-            color: ${LabelNextToControl.Hover}
+          &:not(:disabled) {
+            &:not(:readonly) {
+              background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
+              width: ${Radio.Control.Background.Unselected.Hover};
+              height: ${Radio.Control.Background.Unselected.Hover};
+              &::before {
+                content: '';
+                background-color: ${Radio.Control.Foreground.Unselected.Fill.Hover};
+                width: ${Radio.Control.Foreground.Unselected.Hover};
+                height: ${Radio.Control.Foreground.Unselected.Hover};
+              }
+              + label {
+                color: ${LabelNextToControl.Hover}
+              }
+            }
           }
         }
         &:active {
-          background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
-          width: ${Radio.Control.Background.Unselected.Pressed};
-          height: ${Radio.Control.Background.Unselected.Pressed};
-          &::before {
-            content: '';
-            background-color: ${Radio.Control.Foreground.Unselected.Fill.Pressed};
-            width: ${Radio.Control.Foreground.Unselected.Pressed};
-            height: ${Radio.Control.Foreground.Unselected.Pressed};
-          }
-          + label {
-            color: ${LabelNextToControl.Pressed}
+          &:not(:disabled) {
+            &:not(:readonly) {
+              background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
+              width: ${Radio.Control.Background.Unselected.Pressed};
+              height: ${Radio.Control.Background.Unselected.Pressed};
+              &::before {
+                content: '';
+                background-color: ${Radio.Control.Foreground.Unselected.Fill.Pressed};
+                width: ${Radio.Control.Foreground.Unselected.Pressed};
+                height: ${Radio.Control.Foreground.Unselected.Pressed};
+              }
+              + label {
+                color: ${LabelNextToControl.Pressed}
+              }
+            }
           }
         }
-          &:focus {
-            background-color: ${Radio.Control.Background.Unselected.Fill.Focus};
-            width: ${Radio.Control.Background.Unselected.Focus};
-            height: ${Radio.Control.Background.Unselected.Focus};
-            outline: black solid 2px;
-            outline-offset: 2px;
-            &::before {
-              content: '';
-              background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
-              width: ${Radio.Control.Foreground.Unselected.Focus};
-              height: ${Radio.Control.Foreground.Unselected.Focus};
-            }
-            + label {
-              color: ${LabelNextToControl.Focus}
-            }
-        }
-        &:checked {
-          background-color: ${Radio.Control.Background.Selected.Fill.Rest};
-          &::before {
-            content: '';
-            background-color: ${Radio.Control.Foreground.Selected.Fill.Rest};
-            width: ${Radio.Control.Foreground.Selected.Rest};
-            height: ${Radio.Control.Foreground.Selected.Rest};
-          }
-          &:hover {
-            background-color: ${Radio.Control.Background.Selected.Fill.Hover};
-            width: ${Radio.Control.Background.Selected.Hover};
-            height: ${Radio.Control.Background.Selected.Hover};
-            &::before {
-              content: '';
-              background-color: ${Radio.Control.Foreground.Selected.Fill.Hover};
-              width: ${Radio.Control.Foreground.Selected.Hover};
-              height: ${Radio.Control.Foreground.Selected.Hover};
-            }
-          }
-          &:active {
-            background-color: ${Radio.Control.Background.Selected.Fill.Pressed};
-            width: ${Radio.Control.Background.Selected.Pressed};
-            height: ${Radio.Control.Background.Selected.Pressed};
-            &::before {
-              content: '';
-              background-color: ${Radio.Control.Foreground.Selected.Fill.Pressed};
-              width: ${Radio.Control.Foreground.Selected.Pressed};
-              height: ${Radio.Control.Foreground.Selected.Pressed};
-            }
-          }
-          &:disabled {
-            background-color: ${Radio.Control.Background.Selected.Fill.Disabled};
-            width: ${Radio.Control.Background.Selected.Disabled};
-            height: ${Radio.Control.Background.Selected.Disabled};
-            &::before {
-              content: '';
-              background-color: ${Radio.Control.Foreground.Selected.Fill.Disabled};
-              width: ${Radio.Control.Foreground.Selected.Disabled};
-              height: ${Radio.Control.Foreground.Selected.Disabled};
-            }
-          }
-          &:readonly {
-            background-color: ${Radio.Control.Background.Selected.Fill.ReadOnly};
-            width: ${Radio.Control.Background.Selected.ReadOnly};
-            height: ${Radio.Control.Background.Selected.ReadOnly};
-            &::before {
-              content: '';
-              background-color: ${Radio.Control.Foreground.Selected.Fill.ReadOnly};
-              width: ${Radio.Control.Foreground.Selected.ReadOnly};
-              height: ${Radio.Control.Foreground.Selected.ReadOnly};
+        &:focus {
+          &:not(:disabled) {
+            &:not(:readonly) {
+              background-color: ${Radio.Control.Background.Unselected.Fill.Focus};
+              width: ${Radio.Control.Background.Unselected.Focus};
+              height: ${Radio.Control.Background.Unselected.Focus};
+              outline: black solid 2px;
+              outline-offset: 2px;
+              outline-color: ${Radio.Control.Background.Unselected.Stroke};
+              &::before {
+                content: '';
+                background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
+                width: ${Radio.Control.Foreground.Unselected.Focus};
+                height: ${Radio.Control.Foreground.Unselected.Focus};
+              }
+              + label {
+                color: ${LabelNextToControl.Focus}
+              }
             }
           }
         }
