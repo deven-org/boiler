@@ -24,7 +24,6 @@ export class BlrRadio extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
-  @property() errorMessage?: string;
   @property() options!: RadioOption[];
 
   protected render() {
@@ -76,7 +75,6 @@ export const BlrRadioRenderFunction = ({
   onChange,
   onBlur,
   onFocus,
-  errorMessage,
   hasError,
   options,
 }: BlrRadioType) => {
@@ -92,7 +90,6 @@ export const BlrRadioRenderFunction = ({
     .onChange=${onChange}
     .onBlur=${onBlur}
     .onFocus=${onFocus}
-    .errorMessage=${errorMessage}
     .hasError=${hasError}
     .options=${options}
     class="example-layout-class"

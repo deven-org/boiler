@@ -23,13 +23,9 @@ export class BlrRadioGroup extends LitElement {
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property() errorMessage?: string;
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
   @property() layout!: boolean;
-  @property() hint?: string;
-  @property() hintIcon!: IconType;
-
   render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
