@@ -1367,32 +1367,32 @@
             },
             "Stroke": {
               "Rest": {
-                "value": "{q.surface.brand.primary.rest}",
+                "value": "{q.stroke.brand.beta.rest}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
               },
               "Hover": {
-                "value": "{q.surface.brand.primary.hover}",
+                "value": "{q.stroke.brand.beta.hover}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
-                "value": "{q.surface.brand.primary.pressed}",
+                "value": "{q.stroke.brand.beta.pressed}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
-                "value": "{q.surface.brand.primary.rest}",
+                "value": "{q.stroke.brand.beta.rest}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
-                "value": "{q.surface.disabled.alpha}",
+                "value": "{q.stroke.disabled.beta}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
-                "value": "{q.surface.disabled.alpha}",
+                "value": "{q.stroke.readonly}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
               },
