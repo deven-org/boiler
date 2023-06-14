@@ -4,6 +4,7 @@ import { css } from "nested-css-to-flat/lit-css";
 
 const { Checkbox } = componentTokens.Forms;
 const { Forms } = semanticTokens;
+// const { FocusBorder } = semanticTokens.Global;
 
 export const checkboxStyles = css`
   .blr-label-checkbox {
@@ -70,12 +71,31 @@ export const checkboxStyles = css`
           background-color: ${Checkbox.Control.Background.Selected.Fill.Pressed};
         }
 
-        &:disabled {
+        &[disabled] {
           background-color: ${Checkbox.Control.Background.Selected.Fill.Disabled};
+        }
+
+        &[readonly] {
+          background-color: ${Checkbox.Control.Background.Selected.Fill.ReadOnly};
         }
       }
 
-      &:disabled {
+      &:focus {
+        height: ${Checkbox.Control.Background.Unselected.Focus};
+        width: ${Checkbox.Control.Background.Unselected.Focus};
+        outline: 1px solid black;
+      }
+
+      &[readonly] {
+        height: ${Checkbox.Control.Background.Unselected.ReadOnly};
+        width: ${Checkbox.Control.Background.Unselected.ReadOnly};
+        border-style: ${Checkbox.Control.Unselected.ReadOnly.style};
+        border-width: ${Checkbox.Control.Unselected.ReadOnly.width};
+        border-color: ${Checkbox.Control.Background.Unselected.Stroke.ReadOnly};
+        background-color: ${Checkbox.Control.Background.Unselected.Fill.ReadOnly};
+      }
+
+      &[disabled] {
         height: ${Checkbox.Control.Background.Unselected.Disabled};
         width: ${Checkbox.Control.Background.Unselected.Disabled};
         border-style: ${Checkbox.Control.Unselected.Disabled.style};
@@ -96,24 +116,10 @@ export const checkboxStyles = css`
         border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
         background-color: ${Checkbox.Control.Background.Unselected.Fill.Pressed};
       }
-
-      &:focus {
-        height: ${Checkbox.Control.Background.Unselected.Focus};
-        width: ${Checkbox.Control.Background.Unselected.Focus};
-        border-style: ${Checkbox.Control.Unselected.Focus.style};
-        border-width: ${Checkbox.Control.Unselected.Focus.width};
-        border-color: ${Checkbox.Control.Background.Unselected.Stroke.Focus};
-        background-color: ${Checkbox.Control.Background.Unselected.Fill.Focus};
-      }
-
-      &[readonly] {
-        height: ${Checkbox.Control.Background.Unselected.ReadOnly};
-        width: ${Checkbox.Control.Background.Unselected.ReadOnly};
-        border-style: ${Checkbox.Control.Unselected.ReadOnly.style};
-        border-width: ${Checkbox.Control.Unselected.ReadOnly.width};
-        border-color: ${Checkbox.Control.Background.Unselected.Stroke.ReadOnly};
-        background-color: ${Checkbox.Control.Background.Unselected.Fill.ReadOnly};
-      }
     }
   }
 `;
+
+// outline-style: ${FocusBorder.style};
+// outline-width: ${FocusBorder.width};
+// outline-color: ${FocusBorder.color};

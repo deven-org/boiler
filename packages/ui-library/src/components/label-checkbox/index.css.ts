@@ -22,7 +22,7 @@ export const styleCustom = css`
       }
 
       &:focus {
-        outline: 1px solid red;
+        outline-offset: 2px;
       }
     }
   }

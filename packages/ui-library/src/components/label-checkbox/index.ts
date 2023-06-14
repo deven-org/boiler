@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, query } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { BlrFormLabelInline } from '../form-label-inline';
@@ -13,12 +13,16 @@ import { checkboxStyles } from '../../foundation/component-tokens/checkbox.css';
 export class BlrLabelCheckbox extends LitElement {
   static styles = [styleCustom, form, checkboxStyles];
 
+  @query('input')
+  protected _checkboxNode!: HTMLInputElement;
+
   @property() label?: string;
   @property() checkInputId!: string;
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
   @property() indeterminate?: boolean;
+  @property() readonly?: boolean;
   @property() hasError?: boolean;
 
   @property() size: FormSizesType = 'md';
@@ -51,7 +55,8 @@ export class BlrLabelCheckbox extends LitElement {
         name=${this.checkInputId || nothing}
         ?disabled=${this.disabled || nothing}
         .checked=${this.checked || nothing}
-        .indeterminate="${this.indeterminate || nothing}"
+        .indeterminate=${this.indeterminate || nothing}
+        ?readonly=${this.readonly || nothing}
         @change=${this.handleChange}
         @focus=${this.onFocus}
         @blur=${this.onBlur}

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 12 Jun 2023 11:22:55 GMT
+ * Generated on Tue, 13 Jun 2023 13:14:54 GMT
  */
 
 export const semanticTokens = {
@@ -419,5 +419,9 @@ export const semanticTokens = {
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
       Error: 'hsla(350, 80%, 50%,1) ',
     },
+  },
+  Global: {
+    Focus: 'hsla(220, 10%, 10%,1) ',
+    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '3px', style: 'solid' },
   },
 };

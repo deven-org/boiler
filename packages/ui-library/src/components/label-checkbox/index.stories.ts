@@ -25,6 +25,8 @@ export const BlrLabelCheckbox = ({
   disabled,
   size,
   checked,
+  indeterminate,
+  readonly,
   hasError,
 }: BlrLabelCheckboxClass) =>
   html`
@@ -36,6 +38,8 @@ export const BlrLabelCheckbox = ({
       .onChange=${onChange}
       .disabled=${disabled}
       .checked=${checked}
+      .indeterminate=${indeterminate}
+      .readonly=${readonly}
       .size=${size}
       .hasError=${hasError}
     ></blr-label-checkbox>
@@ -50,11 +54,13 @@ const logEventType = (event: Event) => {
 BlrLabelCheckbox.args = {
   label: 'Checkbox Option',
   checkInputId: 'Checky',
+  disabled: false,
+  checked: false,
+  indeterminate: false,
+  readonly: false,
+  hasError: false,
+  size: 'md',
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
-  disabled: false,
-  checked: false,
-  hasError: false,
-  size: 'md',
 };

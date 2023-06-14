@@ -13,5 +13,6 @@
     "value-no-vendor-prefix": null,
     "font-family-name-quotes": null,
     "string-quotes": "single"
-  }
+  },
+  "ignoreShorthands": ["outline"]
 }
