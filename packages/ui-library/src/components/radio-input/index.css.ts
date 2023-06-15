@@ -1,7 +1,7 @@
 import { css } from 'lit';
 
 export const styleCustom = css`
-  .blr-radio-input:disabled {
+  .blr-radio:disabled {
     pointer-events: none;
   }
 `;

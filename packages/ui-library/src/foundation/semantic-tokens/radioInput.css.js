@@ -16,7 +16,7 @@ export const radio = css`
     }
   }
 
-  .blr-radio-input {
+  .blr-radio {
     display: flex;
     align-items: center;
     > label {
@@ -34,7 +34,6 @@ export const radio = css`
       border-radius: ${Radio.ControlBorderRadius};
       display: grid;
       place-content: center;
-      padding: ${Radio.MD.ControlMargin};
       &::before {
         content: '';
         transition: all 0.25s ease 0s;
@@ -118,23 +117,71 @@ export const radio = css`
           }
         }
         &:focus {
-          &:not(:disabled) {
-            &:not(:readonly) {
-              background-color: ${Radio.Control.Background.Unselected.Fill.Focus};
-              width: ${Radio.Control.Background.Unselected.Focus};
-              height: ${Radio.Control.Background.Unselected.Focus};
-              outline: black solid 2px;
-              outline-offset: 2px;
-              outline-color: ${Radio.Control.Background.Unselected.Stroke};
-              &::before {
-                content: '';
-                background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
-                width: ${Radio.Control.Foreground.Unselected.Focus};
-                height: ${Radio.Control.Foreground.Unselected.Focus};
-              }
-              + label {
-                color: ${LabelNextToControl.Focus}
-              }
+          background-color: ${Radio.Control.Background.Unselected.Fill.Focus};
+          width: ${Radio.Control.Background.Unselected.Focus};
+          height: ${Radio.Control.Background.Unselected.Focus};
+          outline: black solid 2px;
+          outline-offset: 2px;
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
+            width: ${Radio.Control.Foreground.Unselected.Focus};
+            height: ${Radio.Control.Foreground.Unselected.Focus};
+          }
+          + label {
+            color: ${LabelNextToControl.Focus}
+          }
+        }
+        &:checked {
+          background-color: ${Radio.Control.Background.Selected.Fill.Rest};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Selected.Fill.Rest};
+            width: ${Radio.Control.Foreground.Selected.Rest};
+            height: ${Radio.Control.Foreground.Selected.Rest};
+          }
+          &:hover {
+            background-color: ${Radio.Control.Background.Selected.Fill.Hover};
+            width: ${Radio.Control.Background.Selected.Hover};
+            height: ${Radio.Control.Background.Selected.Hover};
+            &::before {
+              content: '';
+              background-color: ${Radio.Control.Foreground.Selected.Fill.Hover};
+              width: ${Radio.Control.Foreground.Selected.Hover};
+              height: ${Radio.Control.Foreground.Selected.Hover};
+            }
+          }
+          &:active {
+            background-color: ${Radio.Control.Background.Selected.Fill.Pressed};
+            width: ${Radio.Control.Background.Selected.Pressed};
+            height: ${Radio.Control.Background.Selected.Pressed};
+            &::before {
+              content: '';
+              background-color: ${Radio.Control.Foreground.Selected.Fill.Pressed};
+              width: ${Radio.Control.Foreground.Selected.Pressed};
+              height: ${Radio.Control.Foreground.Selected.Pressed};
+            }
+          }
+          &:disabled {
+            background-color: ${Radio.Control.Background.Selected.Fill.Disabled};
+            width: ${Radio.Control.Background.Selected.Disabled};
+            height: ${Radio.Control.Background.Selected.Disabled};
+            &::before {
+              content: '';
+              background-color: ${Radio.Control.Foreground.Selected.Fill.Disabled};
+              width: ${Radio.Control.Foreground.Selected.Disabled};
+              height: ${Radio.Control.Foreground.Selected.Disabled};
+            }
+          }
+          &:readonly {
+            background-color: ${Radio.Control.Background.Selected.Fill.ReadOnly};
+            width: ${Radio.Control.Background.Selected.ReadOnly};
+            height: ${Radio.Control.Background.Selected.ReadOnly};
+            &::before {
+              content: '';
+              background-color: ${Radio.Control.Foreground.Selected.Fill.ReadOnly};
+              width: ${Radio.Control.Foreground.Selected.ReadOnly};
+              height: ${Radio.Control.Foreground.Selected.ReadOnly};
             }
           }
         }
@@ -189,46 +236,6 @@ export const radio = css`
     }
   }
 }
-
-.blr-form-hint {
-  display: flex;
-  flex-direction: row;
-}
-
-.blr-form-hint.sm {
-  padding: ${SM.CaptionComponent.Padding};
-  font-weight: ${SM.Caption.fontWeight};
-  font-size: ${SM.Caption.fontSize};
-  line-height: ${SM.Caption.lineHeight};
-  item-spacing: ${SM.CaptionComponent.ItemSpacing};
-  margin: ${SM.CaptionSlot.Margin};
-}
-
-.blr-form-hint.md {
-  padding: ${MD.CaptionComponent.Padding};
-  font-weight: ${MD.Caption.fontWeight};
-  font-size: ${MD.Caption.fontSize};
-  line-height: ${MD.Caption.lineHeight};
-  item-spacing: ${MD.CaptionComponent.ItemSpacing};
-  margin: ${MD.CaptionSlot.Margin};
-}
-
-.blr-form-hint.lg {
-  padding: ${LG.CaptionComponent.Padding};
-  font-weight: ${LG.Caption.fontWeight};
-  font-size: ${LG.Caption.fontSize};
-  line-height: ${LG.Caption.lineHeight};
-  item-spacing: ${LG.CaptionComponent.ItemSpacing};
-  margin: ${LG.CaptionSlot.Margin};
-}
-
-.error {
-  color: ${Caption.Error};
-}
-
-.hint {
-  color: ${Caption.Hint};
-}  
 
   /* stylelint-ensable */
 `;

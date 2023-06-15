@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 08 Jun 2023 13:33:57 GMT
+ * Generated on Wed, 14 Jun 2023 14:56:42 GMT
  */
 
 export const componentTokens = {
@@ -70,9 +70,9 @@ export const componentTokens = {
   Forms: {
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
     Radio: {
-      SM: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '2px 0px 0px 0px' },
-      MD: { ItemSpacing: '4px', ControlMargin: '0px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
-      LG: { ItemSpacing: '4px', ControlMargin: '3px 0px 0px 0px', LabelMargin: '0px 0px 0px 0px' },
+      SM: { ItemSpacing: '8px', ControlMargin: '0.125rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
+      MD: { ItemSpacing: '8px', ControlMargin: '0.25rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
+      LG: { ItemSpacing: '8px', ControlMargin: '0.438rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
       Control: {
         Background: {
           Unselected: {

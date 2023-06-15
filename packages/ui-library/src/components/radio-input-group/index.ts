@@ -4,7 +4,6 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
-import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio-group')
 export class BlrRadioGroup extends LitElement {
@@ -17,6 +16,7 @@ export class BlrRadioGroup extends LitElement {
   @property() name!: string;
   @property() invalid?: boolean;
   @property() disabled?: boolean;
+  @property() checked?: boolean;
   @property() readonly?: boolean;
   @property() size!: InputSizesType;
   @property() required?: boolean;
@@ -44,7 +44,7 @@ export class BlrRadioGroup extends LitElement {
         this.options.map((option: RadioOption) => {
           const id = calculateOptionId(option.label);
           return html`
-            <div class="blr-radio-input ${classes}">
+            <div class="blr-radio ${classes}">
               <input
                 id=${id}
                 type="radio"

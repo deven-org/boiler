@@ -24,13 +24,14 @@ export class BlrRadio extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
-  @property() options!: RadioOption[];
+  @property() option!: RadioOption;
 
   protected render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
       [`readonly`]: this.readonly || false,
+      [`checked`]: this.readonly || false,
     });
 
     const inputclasses = classMap({
@@ -69,6 +70,7 @@ export const BlrRadioRenderFunction = ({
   name,
   label,
   disabled,
+  checked,
   size,
   required,
   readonly,
@@ -76,7 +78,7 @@ export const BlrRadioRenderFunction = ({
   onBlur,
   onFocus,
   hasError,
-  options,
+  option,
 }: BlrRadioType) => {
   return html`<blr-radio
     .radioId=${radioId}
@@ -84,6 +86,7 @@ export const BlrRadioRenderFunction = ({
     .name=${name}
     .value=${value}
     .disabled=${disabled}
+    .checked=${checked}
     .size=${size}
     .required=${required}
     .readonly=${readonly}
@@ -91,7 +94,7 @@ export const BlrRadioRenderFunction = ({
     .onBlur=${onBlur}
     .onFocus=${onFocus}
     .hasError=${hasError}
-    .options=${options}
+    .option=${option}
     class="example-layout-class"
   ></blr-radio>`;
 };

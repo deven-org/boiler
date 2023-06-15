@@ -4,7 +4,7 @@ import { createComponent, EventName } from '@lit-labs/react';
 import { BlrRadioGroup } from '.';
 
 export const BlrRadioInputReact = createComponent({
-  tagName: 'blr-radio-input',
+  tagName: 'blr-radio',
   elementClass: BlrRadioGroup,
   react: React,
   events: {
