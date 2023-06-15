@@ -1945,8 +1945,30 @@
           }
         },
         "Sizing": {
-          "value": "{core.dimensionPX.14}",
-          "type": "sizing"
+          "Rest": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Hover": {
+            "value": "{core.dimensionPX.20}",
+            "type": "sizing"
+          },
+          "Pressed": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Focus": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Disabled": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Readonly": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          }
         }
       },
       "Track": {
