@@ -1811,7 +1811,7 @@
       }
     },
     "Slider": {
-      "Knob": {
+      "Thumb": {
         "Fill": {
           "Rest": {
             "value": "{q.surface.default}",
@@ -1886,61 +1886,63 @@
             "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
           }
         },
-        "Rest": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.Rest}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
+        "Border": {
+          "Rest": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Rest}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
           },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.Hover}",
-            "width": "{core.dimensionPX.4}",
-            "style": "solid"
+          "Hover": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Hover}",
+              "width": "{core.dimensionPX.4}",
+              "style": "solid"
+            },
+            "type": "border"
           },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.Pressed}",
-            "width": "{core.dimensionPX.4}",
-            "style": "solid"
+          "Pressed": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Pressed}",
+              "width": "{core.dimensionPX.4}",
+              "style": "solid"
+            },
+            "type": "border"
           },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.Focus}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
+          "Focus": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Focus}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
           },
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.Disabled}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
+          "Disabled": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Disabled}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
           },
-          "type": "border"
-        },
-        "ReadOnly": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.ReadOnly}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
+          "ReadOnly": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.ReadOnly}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
           },
-          "type": "border"
-        },
-        "Error": {
-          "value": {
-            "color": "{Forms.Slider.Knob.Stroke.Error}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
-          },
-          "type": "border"
+          "Error": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Error}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "Track": {
@@ -1971,7 +1973,7 @@
             "Default": {
               "value": {
                 "color": "{Forms.Slider.Track.Stroke.Active.Default}",
-                "width": "4",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -1979,7 +1981,7 @@
             "Mute": {
               "value": {
                 "color": "{Forms.Slider.Track.Stroke.Active.Mute}",
-                "width": "4",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -1989,7 +1991,7 @@
             "Default": {
               "value": {
                 "color": "{Forms.Slider.Track.Stroke.Inactive.Default}",
-                "width": "4",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -1997,7 +1999,7 @@
             "Mute": {
               "value": {
                 "color": "{Forms.Slider.Track.Stroke.Inactive.Mute}",
-                "width": "4",
+                "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -2047,6 +2049,44 @@
             "Mute": {
               "value": "{q.surface.default}",
               "type": "color"
+            }
+          }
+        },
+        "Border": {
+          "Active": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Active.Default}",
+                "width": "{core.dimensionPX.1}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Active.Mute}",
+                "width": "{core.dimensionPX.1}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Inactive.Default}",
+                "width": "{core.dimensionPX.1}1",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Inactive.Mute}",
+                "width": "{core.dimensionPX.1}",
+                "style": "solid"
+              },
+              "type": "border"
             }
           }
         }
