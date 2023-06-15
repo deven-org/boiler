@@ -1261,11 +1261,11 @@
           "type": "spacing"
         },
         "ControlMargin": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.2} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         },
         "LabelMargin": {
-          "value": "{core.dimensionPX.2} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         }
       },
@@ -1275,11 +1275,11 @@
           "type": "spacing"
         },
         "ControlMargin": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.4} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         },
         "LabelMargin": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         }
       },
@@ -1289,11 +1289,11 @@
           "type": "spacing"
         },
         "ControlMargin": {
-          "value": "{core.dimensionPX.3} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.7} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         },
         "LabelMargin": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         }
       },
