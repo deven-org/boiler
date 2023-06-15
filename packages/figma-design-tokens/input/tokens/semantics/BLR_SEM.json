@@ -1094,7 +1094,7 @@
             "type": "spacing"
           }
         },
-        "CaptionLableWrapper": {
+        "CaptionLabelWrapper": {
           "Padding": {
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
@@ -1166,7 +1166,7 @@
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
         },
-        "CaptionLableWrapper": {
+        "CaptionLabelWrapper": {
           "Padding": {
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
@@ -1268,7 +1268,7 @@
           "value": "SM",
           "type": "componentConfig"
         },
-        "CaptionLableWrapper": {
+        "CaptionLabelWrapper": {
           "Padding": {
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
