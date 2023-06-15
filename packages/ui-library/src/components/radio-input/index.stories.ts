@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
 import { BlrRadio as BlrRadioClass } from './index';
 import { InputSizes } from '../../globals/constants';
-import { action } from '@storybook/addon-actions';
 import './index';
 
 export default {
@@ -12,15 +11,12 @@ export default {
       control: { type: 'select' },
     },
     option: { control: 'array' },
-    layout: { control: 'radio', options: ['horizontal', 'vertical'] },
   },
 };
 
 export const BlrRadio = ({
   radioId,
-  value,
   name,
-  label,
   disabled,
   checked,
   size,
@@ -29,7 +25,7 @@ export const BlrRadio = ({
   onChange,
   onBlur,
   onFocus,
-  hasError,
+  invalid,
   option,
 }: BlrRadioClass) =>
   html`
@@ -39,13 +35,14 @@ export const BlrRadio = ({
       .value=${option.value}
       .label=${option.label}
       .disabled=${disabled}
-      .readonly=${readonly}
-      .hasError=${hasError}
-      .size=${size}
+      .checked=${checked}
       .required=${required}
-      .onChange=${action('onChange')}
-      .onBlur=${action('onBlur')}
-      .onFocus=${action('onFocus')}
+      .readonly=${readonly}
+      .invalid=${invalid}
+      .size=${size}
+      .onChange=${onChange}
+      .onBlur=${onBlur}
+      .onFocus=${onFocus}
       .option=${option}
       class="example-layout-class"
     ></blr-radio>
@@ -55,11 +52,11 @@ BlrRadio.storyName = 'BlrRadio';
 
 BlrRadio.args = {
   name: 'Radio Input',
+  checked: false,
   disabled: false,
   readonly: false,
   invalid: false,
   required: false,
   size: 'md',
   option: { label: 'Option 1', value: 'option1' },
-  layout: 'horizontal',
 };

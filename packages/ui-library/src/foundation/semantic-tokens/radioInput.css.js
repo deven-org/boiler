@@ -1,7 +1,7 @@
 import { css } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
-const { Caption, SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 const { Radio } = componentTokens.Forms;
 
 export const radio = css`
@@ -82,7 +82,7 @@ export const radio = css`
         }
         &:hover {
           &:not(:disabled) {
-            &:not(:readonly) {
+            &:not(:[readonly]) {
               background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
               width: ${Radio.Control.Background.Unselected.Hover};
               height: ${Radio.Control.Background.Unselected.Hover};
@@ -100,7 +100,7 @@ export const radio = css`
         }
         &:active {
           &:not(:disabled) {
-            &:not(:readonly) {
+            &:not(:[readonly]) {
               background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
               width: ${Radio.Control.Background.Unselected.Pressed};
               height: ${Radio.Control.Background.Unselected.Pressed};
@@ -173,7 +173,7 @@ export const radio = css`
               height: ${Radio.Control.Foreground.Selected.Disabled};
             }
           }
-          &:readonly {
+          &[readonly] {
             background-color: ${Radio.Control.Background.Selected.Fill.ReadOnly};
             width: ${Radio.Control.Background.Selected.ReadOnly};
             height: ${Radio.Control.Background.Selected.ReadOnly};
