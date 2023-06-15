@@ -1965,6 +1965,44 @@
               "type": "color"
             }
           }
+        },
+        "Border": {
+          "Active": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Active.Default}",
+                "width": "4",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Active.Mute}",
+                "width": "4",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Inactive.Default}",
+                "width": "4",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Inactive.Mute}",
+                "width": "4",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          }
         }
       },
       "TickMark": {
