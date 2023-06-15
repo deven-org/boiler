@@ -1943,6 +1943,10 @@
             },
             "type": "border"
           }
+        },
+        "Sizing": {
+          "value": "{core.dimensionPX.14}",
+          "type": "sizing"
         }
       },
       "Track": {
@@ -2089,6 +2093,16 @@
               "type": "border"
             }
           }
+        }
+      },
+      "Legend": {
+        "Default": {
+          "value": "{q.content.ondefault.beta}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{q.content.ondisabled.alpha}",
+          "type": "color"
         }
       }
     }
