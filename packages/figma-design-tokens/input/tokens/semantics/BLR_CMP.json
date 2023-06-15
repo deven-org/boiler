@@ -1267,6 +1267,188 @@
         "LabelMargin": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
+        },
+        "Control": {
+          "Background": {
+            "Sizing": {
+              "Unselected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Selected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Indeterminate": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              }
+            }
+          },
+          "Foreground": {
+            "Sizing": {
+              "Unselected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Selected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Indeterminate": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              }
+            }
+          }
         }
       },
       "MD": {
@@ -1281,6 +1463,188 @@
         "LabelMargin": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
+        },
+        "Control": {
+          "Background": {
+            "Sizing": {
+              "Unselected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Selected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Indeterminate": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              }
+            }
+          },
+          "Foreground": {
+            "Sizing": {
+              "Unselected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Selected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Indeterminate": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              }
+            }
+          }
         }
       },
       "LG": {
@@ -1295,39 +1659,193 @@
         "LabelMargin": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
+        },
+        "Control": {
+          "Background": {
+            "Sizing": {
+              "Unselected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Selected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Indeterminate": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              }
+            }
+          },
+          "Foreground": {
+            "Sizing": {
+              "Unselected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Selected": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              },
+              "Indeterminate": {
+                "Rest": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.16}",
+                  "type": "sizing"
+                }
+              }
+            }
+          }
         }
       },
       "Control": {
         "Background": {
           "Unselected": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Error": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
             "Fill": {
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
@@ -1404,30 +1922,6 @@
             }
           },
           "Selected": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
             "Fill": {
               "Rest": {
                 "value": "{q.surface.brand.primary.rest}",
@@ -1492,64 +1986,10 @@
                 "description": "Forms.Checkbox.Control.Background.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
               }
             }
-          },
-          "Indeterminate": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            }
           }
         },
         "Foreground": {
           "Unselected": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Error": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
             "Fill": {
               "Rest": {
                 "value": "{q.surface.none}",
@@ -1626,30 +2066,6 @@
             }
           },
           "Selected": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
             "Fill": {
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
@@ -1713,32 +2129,6 @@
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
               }
-            }
-          },
-          "Indeterminate": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
             }
           }
         },
