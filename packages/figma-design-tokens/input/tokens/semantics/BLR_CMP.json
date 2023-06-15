@@ -1257,7 +1257,7 @@
     "Checkbox": {
       "SM": {
         "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
+          "value": "{core.dimensionPX.8}",
           "type": "spacing"
         },
         "ControlMargin": {
@@ -1271,7 +1271,7 @@
       },
       "MD": {
         "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
+          "value": "{core.dimensionPX.8}",
           "type": "spacing"
         },
         "ControlMargin": {
@@ -1285,7 +1285,7 @@
       },
       "LG": {
         "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
+          "value": "{core.dimensionPX.8}",
           "type": "spacing"
         },
         "ControlMargin": {

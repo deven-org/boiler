@@ -1685,7 +1685,7 @@
     "FocusBorder": {
       "value": {
         "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.3}",
+        "width": "{core.dimensionPX.2}",
         "style": "solid"
       },
       "type": "border"
