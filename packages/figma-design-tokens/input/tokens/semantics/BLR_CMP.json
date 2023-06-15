@@ -1653,7 +1653,7 @@
           "type": "spacing"
         },
         "ControlMargin": {
-          "value": "{core.dimensionREM.7} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "value": "{core.dimensionREM.6} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         },
         "LabelMargin": {
