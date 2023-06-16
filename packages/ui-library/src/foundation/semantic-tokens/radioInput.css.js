@@ -1,11 +1,10 @@
-import { css } from "lit";
+import { css, unsafeCSS } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
 const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 const { Radio } = componentTokens.Forms;
 
 export const radio = css`
-  /* stylelint-disable */
   .blr-radio-group {
     display: flex;
     flex-direction: row;
@@ -18,18 +17,19 @@ export const radio = css`
 
   .blr-radio {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    max-width: 120px;
     > label {
       transition: all 0.25s ease 0s;
       display: flex;
       align-items: center;
       color: ${LabelNextToControl.Rest};
+      max-width: 70px;
     }
     > input {
       appearance: none;
       display: flex;
       margin: 0px;
-      margin-right: ${Radio.MD.ItemSpacing};
       transition: all 0.25s ease 0s;
       border-radius: ${Radio.ControlBorderRadius};
       display: grid;
@@ -41,32 +41,38 @@ export const radio = css`
       }
     }
     &.sm {
+      > input {
+        margin: ${Radio.SM.ControlMargin};
+      }
       > label {
         font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
         font-weight: ${SM.LabelNextToControl.fontWeight};
         font-size: ${SM.LabelNextToControl.fontSize};
         line-height: ${SM.LabelNextToControl.lineHeight};
-        margin: ${Radio.SM.ControlMargin};
-        margin-left: ${Radio.SM.ItemSpacing};
+        margin: ${Radio.SM.ItemSpacing};
       }
     }
     &.md {
+      > input {
+        margin: ${Radio.MD.ControlMargin};
+      }
       > label {
         font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
         font-weight: ${MD.LabelNextToControl.fontWeight};
         font-size: ${MD.LabelNextToControl.fontSize};
         line-height: ${MD.LabelNextToControl.lineHeight};
-        margin: ${Radio.MD.ControlMargin};
-        margin-left: ${Radio.MD.ItemSpacing};
+        margin-left: ${Radio.SM.ItemSpacing};
       }
     }
     &.lg {
+      > input {
+        margin: ${Radio.LG.ControlMargin};
+      }
       > label {
         font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
         font-weight: ${LG.LabelNextToControl.fontWeight};
         font-size: ${LG.LabelNextToControl.fontSize};
         line-height: ${LG.LabelNextToControl.lineHeight};
-        margin: ${Radio.LG.ControlMargin};
         margin-left: ${Radio.LG.ItemSpacing};
       }
     }
@@ -74,7 +80,9 @@ export const radio = css`
       > input {
         background-color: ${Radio.Control.Background.Unselected.Fill.Rest};
         width: ${Radio.Control.Background.Unselected.Rest};
+        min-width: ${Radio.Control.Background.Unselected.Rest};
         height: ${Radio.Control.Background.Unselected.Rest};
+        min-height: ${Radio.Control.Background.Unselected.Rest};
         &::before {
           background-color: ${Radio.Control.Foreground.Unselected.Fill.Rest};
           width: ${Radio.Control.Foreground.Unselected.Rest};
@@ -236,6 +244,4 @@ export const radio = css`
     }
   }
 }
-
-  /* stylelint-ensable */
 `;

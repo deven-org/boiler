@@ -30,6 +30,7 @@ export class BlrRadio extends LitElement {
       [`disabled`]: this.disabled || false,
       [`readonly`]: this.readonly || false,
       [`checked`]: this.checked || false,
+      [`error-input`]: this.invalid || false,
     });
 
     const inputclasses = classMap({

@@ -5,17 +5,14 @@ import { fixture, expect } from '@open-wc/testing';
 describe('blr-radio', () => {
   it('renders correctly', async () => {
     const element = await fixture(`
-    <blr-radio
-      .radioId="test-id"
-      .label="Option 1"
-      .name="Radio Input"
-      .value="option1"
-      .size="md"
-      .errorMessage="This is an error message"
-      .hasError="false"
-      .options="test"
-      class="example-layout-class"
-    ></blr-radio>
+      <blr-radio      
+      type="radio"
+      radioId="option_1"
+      label="Test Input Name"
+      disabled="false"
+      required="true"
+      size="md"
+      class="example-layout-class" ></blr-select>
     `);
 
     await expect(element).shadowDom.to.equalSnapshot();
