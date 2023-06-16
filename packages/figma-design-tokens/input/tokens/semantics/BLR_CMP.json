@@ -1448,6 +1448,10 @@
                 }
               }
             }
+          },
+          "IconSize": {
+            "value": "SM",
+            "type": "componentConfig"
           }
         }
       },
@@ -1644,6 +1648,10 @@
                 }
               }
             }
+          },
+          "IconSize": {
+            "value": "SM",
+            "type": "componentConfig"
           }
         }
       },
@@ -1840,6 +1848,10 @@
                 }
               }
             }
+          },
+          "IconSize": {
+            "value": "Custom (20px)",
+            "type": "componentConfig"
           }
         }
       },
@@ -2131,10 +2143,6 @@
               }
             }
           }
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig"
         },
         "Unselected": {
           "Rest": {
