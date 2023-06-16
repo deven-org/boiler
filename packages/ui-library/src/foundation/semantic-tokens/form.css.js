@@ -204,7 +204,6 @@ export const form = css`
 }
 .blr-form-hint {
   display: flex;
-  align-items: center;
   padding: ${Forms.MD.CaptionComponent.Padding};
   font-weight: ${Forms.MD.Caption.fontWeight};
   font-size: ${Forms.MD.Caption.fontSize};
@@ -239,6 +238,7 @@ export const form = css`
   }
 }
 .blr-form-label {
+  display: inline-block;
   padding: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.Label.fontWeight};
   font-size: ${Forms.MD.Label.fontSize};
