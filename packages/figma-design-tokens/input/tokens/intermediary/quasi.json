@@ -17,6 +17,10 @@
         "value": "{core.color.crimson.800.opa10}",
         "type": "color"
       },
+      "none": {
+        "value": "{core.color.neutral.transparent}",
+        "type": "color"
+      },
       "disabled": {
         "alpha": {
           "value": "{core.color.coolgray.900.solid}",
@@ -133,6 +137,10 @@
       },
       "focus": {
         "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "none": {
+        "value": "{core.color.neutral.transparent}",
         "type": "color"
       },
       "disabled": {
