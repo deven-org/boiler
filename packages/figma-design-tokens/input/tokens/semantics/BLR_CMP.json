@@ -1665,83 +1665,83 @@
             "Sizing": {
               "Unselected": {
                 "Rest": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 }
               },
               "Selected": {
                 "Rest": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 }
               },
               "Indeterminate": {
                 "Rest": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 }
               }
@@ -1751,91 +1751,91 @@
             "Sizing": {
               "Unselected": {
                 "Rest": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 }
               },
               "Selected": {
                 "Rest": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 }
               },
               "Indeterminate": {
                 "Rest": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.16}",
+                  "value": "{core.dimensionPX.20}",
                   "type": "sizing"
                 }
               }
