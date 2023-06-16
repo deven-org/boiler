@@ -12,7 +12,8 @@ describe('blr-radio', () => {
       disabled="false"
       required="true"
       size="md"
-      class="example-layout-class" ></blr-select>
+      option="{label:'Test Input Name', value='test'}"
+      class="example-layout-class" ></blr-radio>
     `);
 
     await expect(element).shadowDom.to.equalSnapshot();

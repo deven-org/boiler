@@ -42,7 +42,7 @@ export class BlrRadio extends LitElement {
       return label.replace(/ /g, '_').toLowerCase();
     };
 
-    const id = calculateOptionId(this.option.label);
+    const id = this.option.label ? calculateOptionId(this.option.label) : '';
 
     return html`
       <div class="blr-radio ${classes}">
@@ -50,8 +50,8 @@ export class BlrRadio extends LitElement {
           id=${id || nothing}
           class=${inputclasses}
           type="radio"
-          name=${this.option.label}
-          value=${this.option.value}
+          name=${this.option.label || nothing}
+          value=${this.option.value || nothing}
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?aria-disabled=${this.disabled}
