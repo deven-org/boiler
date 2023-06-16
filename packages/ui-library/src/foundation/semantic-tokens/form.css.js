@@ -239,8 +239,6 @@ export const form = css`
   }
 }
 .blr-form-label {
-  display: flex;
-  align-items: center;
   padding: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.Label.fontWeight};
   font-size: ${Forms.MD.Label.fontSize};
