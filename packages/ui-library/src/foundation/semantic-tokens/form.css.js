@@ -13,6 +13,7 @@ const forms = {
 export const form = css`
 .blr-form-element {
   all: initial;
+  width: 100%;
   color: ${Forms.UserInput.Default.Rest};
   border-width: ${Forms.Input.Default.Rest.width};
   border-style: ${Forms.Input.Default.Rest.style};

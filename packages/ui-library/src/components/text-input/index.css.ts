@@ -2,10 +2,8 @@ import { css } from 'lit';
 
 export const styleCustom = css`
   .blr-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+    display: block;
+    width: 100%;
   }
 
   .blr-text-input:disabled {
