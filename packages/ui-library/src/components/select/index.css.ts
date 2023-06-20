@@ -3,7 +3,6 @@ import { css } from 'lit';
 export const styleCustom = css`
   .blr-select {
     display: block;
-    width: 100%;
     position: relative;
   }
 
