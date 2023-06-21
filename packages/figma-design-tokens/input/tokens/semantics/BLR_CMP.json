@@ -1254,6 +1254,306 @@
         "type": "borderRadius"
       }
     },
+    "ToggleSwitch": {
+      "A11yOffBorderRadius": {
+        "value": "{core.borderRadius.Round}",
+        "type": "borderRadius"
+      },
+      "Control": {
+        "Background": {
+          "Unselected": {
+            "Fill": {
+              "Rest": {
+                "value": "{q.content.ondefault.gamma.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.gamma.hover}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.gamma.pressed}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.gamma.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.onreadonly.gamma}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            }
+          },
+          "Selected": {
+            "Fill": {
+              "Rest": {
+                "value": "{q.surface.brand.encourage.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
+              },
+              "Hover": {
+                "value": "{q.surface.brand.encourage.hover}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.surface.brand.encourage.pressed}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
+              },
+              "Focus": {
+                "value": "{q.surface.brand.encourage.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.onreadonly.gamma}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            }
+          }
+        },
+        "Foreground": {
+          "Unselected": {
+            "Fill": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            }
+          },
+          "Selected": {
+            "Fill": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            },
+            "Stroke": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            }
+          }
+        },
+        "A11y": {
+          "Sizing": {
+            "On": {
+              "Width": {
+                "value": "{core.dimensionPX.1}",
+                "type": "sizing"
+              },
+              "Height": {
+                "value": "{core.dimensionREM.6}",
+                "type": "sizing"
+              }
+            },
+            "Off": {
+              "Width": {
+                "value": "{core.dimensionPX.6}",
+                "type": "sizing"
+              },
+              "Height": {
+                "value": "{core.dimensionREM.6}",
+                "type": "sizing"
+              }
+            }
+          }
+        }
+      }
+    },
     "Checkbox": {
       "SM": {
         "ItemSpacing": {
@@ -2206,302 +2506,6 @@
       "ControlBorderRadius": {
         "value": "{core.borderRadius.SM}",
         "type": "borderRadius"
-      }
-    },
-    "ToggleSwitch": {
-      "Control": {
-        "Background": {
-          "Unselected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.ondefault.gamma.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.ondefault.gamma.hover}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.ondefault.gamma.pressed}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.ondefault.gamma.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.onreadonly.gamma}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.surface.brand.encourage.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
-              },
-              "Hover": {
-                "value": "{q.surface.brand.encourage.hover}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.surface.brand.encourage.pressed}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
-              },
-              "Focus": {
-                "value": "{q.surface.brand.encourage.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.onreadonly.gamma}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          }
-        },
-        "Foreground": {
-          "Unselected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          }
-        },
-        "A11y": {
-          "Sizing": {
-            "On": {
-              "Width": {
-                "value": "{core.dimensionPX.1}",
-                "type": "sizing"
-              },
-              "Height": {
-                "value": "{core.dimensionREM.6}",
-                "type": "sizing"
-              }
-            },
-            "Off": {
-              "Width": {
-                "value": "{core.dimensionPX.6}",
-                "type": "sizing"
-              },
-              "Height": {
-                "value": "{core.dimensionREM.6}",
-                "type": "sizing"
-              }
-            }
-          }
-        }
       }
     },
     "Select": {
