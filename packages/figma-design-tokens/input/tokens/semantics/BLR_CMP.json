@@ -2477,6 +2477,30 @@
               }
             }
           }
+        },
+        "A11y": {
+          "Sizing": {
+            "On": {
+              "Width": {
+                "value": "{core.dimensionPX.1}",
+                "type": "sizing"
+              },
+              "Height": {
+                "value": "{core.dimensionREM.6}",
+                "type": "sizing"
+              }
+            },
+            "Off": {
+              "Width": {
+                "value": "{core.dimensionPX.6}",
+                "type": "sizing"
+              },
+              "Height": {
+                "value": "{core.dimensionREM.6}",
+                "type": "sizing"
+              }
+            }
+          }
         }
       }
     },
