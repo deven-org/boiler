@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 13 Jun 2023 13:14:54 GMT
+ * Generated on Wed, 21 Jun 2023 12:28:56 GMT
  */
 
 export const semanticTokens = {
@@ -280,7 +280,13 @@ export const semanticTokens = {
         fontSize: '0.875rem',
       },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
-      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
+      CaptionComponent: {
+        Padding: '0rem 0px',
+        ItemSpacing: '0.125rem',
+        IconSize: 'SM',
+        IconWrapper: { Padding: '0.063rem 0px' },
+        CaptionLabelWrapper: { Padding: '0rem 0px' },
+      },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ' },
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
@@ -291,7 +297,13 @@ export const semanticTokens = {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      CaptionComponent: { Padding: '0rem 0px', IconSize: 'SM', ItemSpacing: '0.125rem' },
+      CaptionComponent: {
+        Padding: '0rem 0px',
+        IconSize: 'SM',
+        ItemSpacing: '0.125rem',
+        CaptionLabelWrapper: { Padding: '0rem 0px' },
+        IconWrapper: { Padding: '0.063rem 0px' },
+      },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ' },
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
@@ -313,7 +325,13 @@ export const semanticTokens = {
         fontSize: '1.25rem',
       },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
-      CaptionComponent: { Padding: '0rem 0px', ItemSpacing: '0.125rem', IconSize: 'SM' },
+      CaptionComponent: {
+        Padding: '0rem 0px',
+        ItemSpacing: '0.125rem',
+        IconSize: 'SM',
+        CaptionLabelWrapper: { Padding: '0rem 0px' },
+        IconWrapper: { Padding: '0.063rem 0px' },
+      },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ' },
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
@@ -422,6 +440,6 @@ export const semanticTokens = {
   },
   Global: {
     Focus: 'hsla(220, 10%, 10%,1) ',
-    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '3px', style: 'solid' },
+    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
   },
 };
