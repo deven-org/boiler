@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
-import { BlrRadioGroup as BlrRadioGroupClass } from './index';
+import { BlrRadioGroupRenderFunction, BlrRadioGroupType } from './index';
 import { InputSizes } from '../../globals/constants';
-import { action } from '@storybook/addon-actions';
 import './index';
 
 export default {
@@ -17,34 +16,37 @@ export default {
 };
 
 export const BlrRadioGroup = ({
-  textInputId,
   label,
+  size,
   disabled,
+  required,
   readonly,
   invalid,
-  size,
-  required,
+  checked,
+  onChange,
+  onBlur,
+  onFocus,
+  hideLabel,
   options,
   layout,
-}: BlrRadioGroupClass) =>
+}: BlrRadioGroupType) =>
   html`
-    <blr-radio-group
-      .textInputId=${textInputId}
-      .label=${label}
-      .disabled=${disabled}
-      .readonly=${readonly}
-      .invalid=${invalid}
-      .size=${size}
-      .required=${required}
-      .onChange=${action('onChange')}
-      .onBlur=${action('onBlur')}
-      .onFocus=${action('onFocus')}
-      .options=${options}
-      .layout=${layout}
-      class="example-layout-class"
-    ></blr-radio-group>
+    ${BlrRadioGroupRenderFunction({
+      label,
+      size,
+      disabled,
+      required,
+      readonly,
+      invalid,
+      checked,
+      onChange,
+      onBlur,
+      onFocus,
+      hideLabel,
+      options,
+      layout,
+    })}
   `;
-
 BlrRadioGroup.storyName = 'BlrRadioGroup';
 
 BlrRadioGroup.args = {
@@ -54,6 +56,7 @@ BlrRadioGroup.args = {
   invalid: false,
   required: false,
   size: 'md',
+  checked: false,
   options: [
     { label: 'Option 1', value: 'option1' },
     { label: 'Option 2', value: 'option2' },

@@ -9,24 +9,21 @@ import { InputSizesType, RadioOption } from '../../globals/types';
 export class BlrRadioGroup extends LitElement {
   static styles = [styleCustom, radio];
 
-  @property() textInputId!: string;
-  @property() type!: string;
   @property() label!: string;
-  @property() value!: string;
-  @property() name!: string;
-  @property() invalid?: boolean;
+  @property() size: InputSizesType = 'md';
   @property() disabled?: boolean;
-  @property() checked?: boolean;
-  @property() readonly?: boolean;
-  @property() size!: InputSizesType;
   @property() required?: boolean;
+  @property() readonly?: boolean;
+  @property() invalid?: boolean;
+  @property() checked?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
   @property() layout!: boolean;
-  render() {
+
+  protected render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
@@ -65,3 +62,38 @@ export class BlrRadioGroup extends LitElement {
     `;
   }
 }
+
+export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
+
+export const BlrRadioGroupRenderFunction = ({
+  label,
+  size,
+  disabled,
+  required,
+  readonly,
+  invalid,
+  checked,
+  onChange,
+  onBlur,
+  onFocus,
+  hideLabel,
+  options,
+  layout,
+}: BlrRadioGroupType) => {
+  return html`<blr-radio-group
+    class="example-layout-class"
+    .label=${label}
+    .size=${size}
+    .disabled=${disabled}
+    .required=${required}
+    .readonly=${readonly}
+    .invalid=${invalid}
+    .checked=${checked}
+    @input=${onChange}
+    @blur=${onBlur}
+    @focus=${onFocus}
+    .hideLabel=${hideLabel}
+    .options=${options}
+    .layout=${layout}
+  ></blr-radio-group>`;
+};

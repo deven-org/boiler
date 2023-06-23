@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { BlrRadio as BlrRadioClass } from './index';
+import { BlrRadioRenderFunction, BlrRadioType } from './index';
 import { InputSizes } from '../../globals/constants';
 import './index';
 
@@ -15,8 +15,6 @@ export default {
 };
 
 export const BlrRadio = ({
-  radioId,
-  name,
   disabled,
   checked,
   size,
@@ -27,31 +25,25 @@ export const BlrRadio = ({
   onFocus,
   invalid,
   option,
-}: BlrRadioClass) =>
+}: BlrRadioType) =>
   html`
-    <blr-radio
-      .radioId=${radioId}
-      .name=${name}
-      .value=${option.value}
-      .label=${option.label}
-      .disabled=${disabled}
-      .checked=${checked}
-      .required=${required}
-      .readonly=${readonly}
-      .invalid=${invalid}
-      .size=${size}
-      .onChange=${onChange}
-      .onBlur=${onBlur}
-      .onFocus=${onFocus}
-      .option=${option}
-      class="example-layout-class"
-    ></blr-radio>
+    ${BlrRadioRenderFunction({
+      disabled,
+      checked,
+      size,
+      required,
+      readonly,
+      onChange,
+      onBlur,
+      onFocus,
+      invalid,
+      option,
+    })}
   `;
 
 BlrRadio.storyName = 'BlrRadio';
 
 BlrRadio.args = {
-  name: 'Radio Input',
   checked: false,
   disabled: false,
   readonly: false,

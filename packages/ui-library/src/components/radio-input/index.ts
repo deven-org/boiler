@@ -11,8 +11,6 @@ import { BlrFormLabel } from '../internal-components/form-label';
 export class BlrRadio extends LitElement {
   static styles = [styleCustom, form, radio];
 
-  @property() radioId!: string;
-  @property() name!: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
@@ -39,7 +37,9 @@ export class BlrRadio extends LitElement {
     });
 
     const calculateOptionId = (label: string) => {
-      return label.replace(/ /g, '_').toLowerCase();
+      if (label) {
+        return label.replace(/ /g, '_').toLowerCase();
+      }
     };
 
     const id = this.option.label ? calculateOptionId(this.option.label) : '';
@@ -64,8 +64,43 @@ export class BlrRadio extends LitElement {
           @focus=${this.onFocus}
           invalid=${this.invalid}
         />
-        ${BlrFormLabel({ labelText: this.option.label, labelSize: this.size || 'md', forValue: this.id })}
+        ${BlrFormLabel({
+          labelText: this.option.label,
+          labelSize: this.size || 'md',
+          forValue: calculateOptionId(this.option.label),
+        })}
       </div>
     `;
   }
 }
+
+export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
+
+export const BlrRadioRenderFunction = ({
+  disabled,
+  checked,
+  size,
+  required,
+  readonly,
+  onChange,
+  onBlur,
+  onFocus,
+  invalid,
+  option,
+}: BlrRadioType) => {
+  return html`<blr-radio
+    class="example-layout-class"
+    .value=${option.value}
+    .label=${option.label}
+    .disabled=${disabled}
+    .checked=${checked}
+    .required=${required}
+    .readonly=${readonly}
+    .invalid=${invalid}
+    .size=${size}
+    .onChange=${onChange}
+    .onBlur=${onBlur}
+    .onFocus=${onFocus}
+    .option=${option}
+  ></blr-radio>`;
+};
