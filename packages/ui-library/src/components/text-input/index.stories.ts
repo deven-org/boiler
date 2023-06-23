@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextInput as BlrTextInputClass } from './index';
+import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
 import { FormSizes, InputTypes } from '../../globals/constants';
 import { IconKeys } from '@boiler/icons';
-import { action } from '@storybook/addon-actions';
 import './index';
 import { getIconName } from '../../utils/get-icon-name';
 
@@ -37,51 +36,53 @@ export default {
 
 export const BlrTextInput = ({
   textInputId,
+  type,
   label,
   labelAppendix,
-  showInputIcon,
-  inputIcon,
-  type,
   value,
   placeholder,
   disabled,
+  readonly,
   size,
   required,
-  readonly,
+  onChange,
+  onBlur,
+  onFocus,
   maxLength,
   pattern,
+  hasError,
   errorMessage,
+  showInputIcon,
+  inputIcon,
   showHint,
   hintText,
   hintIcon,
-  hasError,
-}: BlrTextInputClass) =>
+}: BlrTextInputType) =>
   html`
-    <blr-text-input
-      .textInputId=${textInputId}
-      .label=${label}
-      .labelAppendix=${labelAppendix}
-      .showInputIcon=${showInputIcon}
-      .inputIcon=${inputIcon}
-      .type=${type}
-      .value=${value}
-      .placeholder=${placeholder}
-      .disabled=${disabled}
-      .size=${size}
-      .required=${required}
-      .readonly=${readonly}
-      .onChange=${action('onChange')}
-      .onBlur=${action('onBlur')}
-      .onFocus=${action('onFocus')}
-      .maxLength=${maxLength}
-      .pattern=${pattern}
-      .errorMessage=${errorMessage}
-      .showHint=${showHint}
-      .hintText=${hintText}
-      .hintIcon=${hintIcon}
-      .hasError=${hasError}
-      class="example-layout-class"
-    ></blr-text-input>
+    ${BlrTextInputRenderFunction({
+      textInputId,
+      type,
+      label,
+      labelAppendix,
+      value,
+      placeholder,
+      disabled,
+      readonly,
+      size,
+      required,
+      onChange,
+      onBlur,
+      onFocus,
+      maxLength,
+      pattern,
+      hasError,
+      errorMessage,
+      showInputIcon,
+      inputIcon,
+      showHint,
+      hintText,
+      hintIcon,
+    })}
   `;
 
 BlrTextInput.storyName = 'BlrTextInput';

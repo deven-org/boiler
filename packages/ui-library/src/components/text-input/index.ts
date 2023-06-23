@@ -44,11 +44,11 @@ export class BlrTextInput extends LitElement {
     this.currentType = this.type;
   }
 
-  toggleInputType() {
-    this.currentType = this.currentType === 'password' ? 'text' : 'password';
-  }
+  protected render() {
+    const toggleInputType = () => {
+      this.currentType = this.currentType === 'password' ? 'text' : 'password';
+    };
 
-  render() {
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
     const classes = classMap({
@@ -84,9 +84,9 @@ export class BlrTextInput extends LitElement {
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
             ?required="${this.required}"
-            @input="${this.onChange}"
-            @blur="${this.onBlur}"
-            @focus="${this.onFocus}"
+            @input=${this.onChange}
+            @blur=${this.onBlur}
+            @focus=${this.onFocus}
             maxlength="${this.maxLength}"
             pattern="${this.pattern}"
             hasError="${this.hasError}"
@@ -103,7 +103,7 @@ export class BlrTextInput extends LitElement {
           ${wasInitialPasswordField
             ? html`<blr-icon
                 class="blr-input-icon ${inputClasses}"
-                @click=${this.toggleInputType}
+                @click=${toggleInputType}
                 icon="${getPasswordIcon()}"
                 size="sm"
                 name="${getPasswordIcon()}"
@@ -125,3 +125,56 @@ export class BlrTextInput extends LitElement {
     `;
   }
 }
+
+export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
+
+export const BlrTextInputRenderFunction = ({
+  textInputId,
+  type,
+  label,
+  labelAppendix,
+  value,
+  placeholder,
+  disabled,
+  readonly,
+  size,
+  required,
+  onChange,
+  onBlur,
+  onFocus,
+  maxLength,
+  pattern,
+  hasError,
+  errorMessage,
+  showInputIcon,
+  inputIcon,
+  showHint,
+  hintText,
+  hintIcon,
+}: BlrTextInputType) => {
+  return html`<blr-text-input
+    .textInputId=${textInputId}
+    .label=${label}
+    .labelAppendix=${labelAppendix}
+    .showInputIcon=${showInputIcon}
+    .inputIcon=${inputIcon}
+    .type=${type}
+    .value=${value}
+    .placeholder=${placeholder}
+    .disabled=${disabled}
+    .size=${size}
+    .required=${required}
+    .readonly=${readonly}
+    .onChange=${onChange}
+    .onBlur=${onBlur}
+    .onFocus=${onFocus}
+    .maxLength=${maxLength}
+    .pattern=${pattern}
+    .errorMessage=${errorMessage}
+    .showHint=${showHint}
+    .hintText=${hintText}
+    .hintIcon=${hintIcon}
+    .hasError=${hasError}
+    class="example-layout-class"
+  ></blr-text-input>`;
+};

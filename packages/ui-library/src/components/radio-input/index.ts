@@ -37,9 +37,7 @@ export class BlrRadio extends LitElement {
     });
 
     const calculateOptionId = (label: string) => {
-      if (label) {
-        return label.replace(/ /g, '_').toLowerCase();
-      }
+      return label ? label.replace(/ /g, '_').toLowerCase() : '';
     };
 
     const id = this.option.label ? calculateOptionId(this.option.label) : '';
