@@ -1,4 +1,4 @@
-import { css, unsafeCSS } from "lit";
+import { css } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
 const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
@@ -18,13 +18,11 @@ export const radio = css`
   .blr-radio {
     display: flex;
     align-items: flex-start;
-    max-width: 120px;
     > label {
       transition: all 0.25s ease 0s;
       display: flex;
       align-items: center;
       color: ${LabelNextToControl.Rest};
-      max-width: 70px;
     }
     > input {
       appearance: none;
@@ -191,6 +189,21 @@ export const radio = css`
               width: ${Radio.Control.Foreground.Selected.ReadOnly};
               height: ${Radio.Control.Foreground.Selected.ReadOnly};
             }
+          }
+        }
+        &:disabled {
+          cursor: not-allowed;
+          background-color: ${Radio.Control.Background.Unselected.Fill.Disabled};
+          width: ${Radio.Control.Background.Unselected.Disabled};
+          height: ${Radio.Control.Background.Unselected.Disabled};
+          &::before {
+            content: '';
+            background-color: ${Radio.Control.Foreground.Unselected.Fill.Disabled};
+            width: ${Radio.Control.Foreground.Unselected.Disabled};
+            height: ${Radio.Control.Foreground.Unselected.Disabled};
+          }
+          + label {
+            cursor: not-allowed;
           }
         }
       } 

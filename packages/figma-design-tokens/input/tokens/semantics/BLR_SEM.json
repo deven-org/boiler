@@ -1087,6 +1087,18 @@
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
+        },
+        "IconWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         }
       },
       "CaptionSlot": {
@@ -1153,6 +1165,18 @@
         "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
+        },
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "IconWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         }
       },
       "CaptionSlot": {
@@ -1243,6 +1267,18 @@
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
+        },
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "IconWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         }
       },
       "CaptionSlot": {
@@ -1685,7 +1721,7 @@
     "FocusBorder": {
       "value": {
         "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.3}",
+        "width": "{core.dimensionPX.2}",
         "style": "solid"
       },
       "type": "border"
