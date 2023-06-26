@@ -39,10 +39,13 @@ export const form = css`
     }
   }
 
-  &:active{
+  &:active {
     border-width: ${Forms.Input.Default.Pressed.width};
     border-style: ${Forms.Input.Default.Pressed.style};
-    border-color: ${Forms.Input.Default.Pressed.color};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Pressed.width} ${Forms.Input.Default.Pressed.style} ${
+  Forms.Input.Default.Pressed.color
+};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Pressed};
@@ -52,8 +55,11 @@ export const form = css`
   &[readonly] {
     border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.ReadOnly.style};
-    border-color: ${Forms.Input.Default.ReadOnly.color};
     color: ${Forms.Placeholder.Default.ReadOnly};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Hover.width} ${Forms.Input.Default.ReadOnly.style} ${
+  Forms.Input.Default.ReadOnly.color
+};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.ReadOnly};
@@ -63,7 +69,10 @@ export const form = css`
   &:disabled {
     border-width: ${Forms.Input.Default.Disabled.width};
     border-style: ${Forms.Input.Default.Disabled.style};
-    border-color: ${Forms.Input.Default.Disabled.color};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Disabled.width} ${Forms.Input.Default.Disabled.style} ${
+  Forms.Input.Default.Disabled.color
+};
     background-color: ${Forms.SurfaceFill.Default.Disabled};
     color: ${Forms.UserInput.Default.Disabled};
 
@@ -73,9 +82,10 @@ export const form = css`
   }
 
   &:focus {
-    border-width: ${Forms.Input.Default.Focus.width};
-    border-style: ${Forms.Input.Default.Focus.style};
-    border-color: ${Forms.Input.Default.Focus.color};
+    border-width: ${Forms.Input.Default.Rest.width};
+    border-style: ${Forms.Input.Default.Rest.style};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Focus.width} ${Forms.Input.Default.Focus.style} ${Forms.Input.Default.Focus.color};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Focus};
@@ -106,10 +116,10 @@ export const form = css`
     }
 
     &:focus {
-      border-width: ${Forms.Input.Error.Focus.width};
-      border-style: ${Forms.Input.Error.Focus.style};
-      border-color: ${Forms.Input.Error.Focus.color};
-      outline-color: ${Forms.Input.Error.Focus.color};
+      border-width: ${Forms.Input.Error.Rest.width};
+      border-style: ${Forms.Input.Error.Rest.style};
+      border-color: transparent;
+      outline: ${Forms.Input.Error.Focus.width} ${Forms.Input.Error.Focus.style} ${Forms.Input.Error.Focus.color};
 
       &::placeholder {
         color: ${Forms.Placeholder.Error.Focus};
