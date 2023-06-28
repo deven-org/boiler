@@ -1528,27 +1528,37 @@
             }
           }
         },
-        "A11y": {
-          "Sizing": {
-            "On": {
-              "Width": {
-                "value": "{core.dimensionPX.1}",
-                "type": "sizing"
-              },
-              "Height": {
-                "value": "{core.dimensionREM.6}",
+        "LG": {
+          "Foreground": {
+            "Sizing": {
+              "Knob": {
+                "value": "{core.dimensionPX.24}",
                 "type": "sizing"
               }
+            }
+          }
+        }
+      },
+      "A11y": {
+        "Sizing": {
+          "On": {
+            "Width": {
+              "value": "{core.dimensionPX.1}",
+              "type": "sizing"
             },
-            "Off": {
-              "Width": {
-                "value": "{core.dimensionPX.6}",
-                "type": "sizing"
-              },
-              "Height": {
-                "value": "{core.dimensionREM.6}",
-                "type": "sizing"
-              }
+            "Height": {
+              "value": "{core.dimensionREM.6}",
+              "type": "sizing"
+            }
+          },
+          "Off": {
+            "Width": {
+              "value": "{core.dimensionPX.6}",
+              "type": "sizing"
+            },
+            "Height": {
+              "value": "{core.dimensionREM.6}",
+              "type": "sizing"
             }
           }
         }
