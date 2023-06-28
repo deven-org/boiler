@@ -1529,14 +1529,30 @@
           }
         },
         "SM": {
-          "Sizing": {
-            "A11yIcon": {
-              "value": "{core.dimensionPX.16}",
+          "A11yIcon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            }
+          },
+          "Knob": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            }
+          },
+          "Background": {
+            "Width": {
+              "value": "{core.dimensionREM.32}+ {core.dimensionREM.4}",
               "type": "sizing"
             },
-            "Knob": {
-              "value": "{core.dimensionPX.16}",
+            "Height": {
+              "value": "{core.dimensionREM.20}",
               "type": "sizing"
+            },
+            "Padding": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
             }
           }
         }
