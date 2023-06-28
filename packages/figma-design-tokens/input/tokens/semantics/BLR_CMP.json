@@ -1555,6 +1555,62 @@
               "type": "spacing"
             }
           }
+        },
+        "MD": {
+          "A11yIcon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            }
+          },
+          "Knob": {
+            "Sizing": {
+              "value": "{core.dimensionREM.20}",
+              "type": "sizing"
+            }
+          },
+          "Background": {
+            "Width": {
+              "value": "{core.dimensionREM.40} + {core.dimensionREM.4}",
+              "type": "sizing"
+            },
+            "Height": {
+              "value": "{core.dimensionREM.24}",
+              "type": "sizing"
+            },
+            "Padding": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            }
+          }
+        },
+        "LG": {
+          "A11yIcon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            }
+          },
+          "Knob": {
+            "Sizing": {
+              "value": "{core.dimensionREM.24}",
+              "type": "sizing"
+            }
+          },
+          "Background": {
+            "Width": {
+              "value": "{core.dimensionREM.48} + {core.dimensionREM.4}",
+              "type": "sizing"
+            },
+            "Height": {
+              "value": "{core.dimensionREM.28}",
+              "type": "sizing"
+            },
+            "Padding": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            }
+          }
         }
       }
     },
