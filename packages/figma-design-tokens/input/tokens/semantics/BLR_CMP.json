@@ -740,6 +740,12 @@
       "Content": {
         "value": "{q.content.oninverted.alpha}",
         "type": "color"
+      },
+      "ContentCol": {
+        "Padding": {
+          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
+          "type": "spacing"
+        }
       }
     }
   },
