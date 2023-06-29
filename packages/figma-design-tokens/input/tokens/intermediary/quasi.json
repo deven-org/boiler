@@ -294,7 +294,7 @@
           "description": "Forms"
         },
         "beta": {
-          "value": "{core.color.coolgray.800.solid}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color"
         },
         "gamma": {
