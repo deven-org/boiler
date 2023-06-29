@@ -2539,6 +2539,10 @@
             "Padding": {
               "value": "{core.dimensionPX.2}",
               "type": "spacing"
+            },
+            "Gap": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing"
             }
           },
           "IconContainer": {
@@ -2573,6 +2577,10 @@
             "Padding": {
               "value": "{core.dimensionPX.2}",
               "type": "spacing"
+            },
+            "Gap": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing"
             }
           },
           "IconContainer": {
@@ -2583,6 +2591,24 @@
           }
         },
         "LG": {
+          "Background": {
+            "Padding": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            },
+            "Gap": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing"
+            },
+            "Width": {
+              "value": "{core.dimensionREM.48} + {core.dimensionREM.4}",
+              "type": "sizing"
+            },
+            "Height": {
+              "value": "{core.dimensionREM.28}",
+              "type": "sizing"
+            }
+          },
           "A11yIcon": {
             "Sizing": {
               "value": "{core.dimensionREM.16}",
@@ -2593,20 +2619,6 @@
             "Sizing": {
               "value": "{core.dimensionREM.24}",
               "type": "sizing"
-            }
-          },
-          "Background": {
-            "Width": {
-              "value": "{core.dimensionREM.48} + {core.dimensionREM.4}",
-              "type": "sizing"
-            },
-            "Height": {
-              "value": "{core.dimensionREM.28}",
-              "type": "sizing"
-            },
-            "Padding": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing"
             }
           },
           "IconContainer": {
