@@ -5,6 +5,10 @@
         "value": "{core.color.white.solid}",
         "type": "color"
       },
+      "inverted": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
       "readonly": {
         "value": "{core.color.coolgray.999.solid}",
         "type": "color"
@@ -280,6 +284,35 @@
         },
         "gamma": {
           "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        }
+      },
+      "oninverted": {
+        "alpha": {
+          "value": "{core.color.white.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
+        "beta": {
+          "value": "{core.color.coolgray.800.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "rest": {
+            "value": "{core.color.coolgray.700.solid}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{core.color.coolgray.600.solid}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{core.color.coolgray.500.solid}",
+            "type": "color"
+          }
+        },
+        "error": {
+          "value": "{core.color.crimson.500.solid}",
           "type": "color"
         }
       }
