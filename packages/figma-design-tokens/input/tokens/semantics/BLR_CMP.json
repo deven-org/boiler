@@ -2540,6 +2540,12 @@
               "value": "{core.dimensionPX.2}",
               "type": "spacing"
             }
+          },
+          "IconContainer": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            }
           }
         },
         "MD": {
@@ -2568,6 +2574,12 @@
               "value": "{core.dimensionPX.2}",
               "type": "spacing"
             }
+          },
+          "IconContainer": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            }
           }
         },
         "LG": {
@@ -2594,6 +2606,12 @@
             },
             "Padding": {
               "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            }
+          },
+          "IconContainer": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionREM.3} + {core.dimensionREM.0,5}",
               "type": "spacing"
             }
           }
