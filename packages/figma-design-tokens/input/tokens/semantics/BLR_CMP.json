@@ -2550,6 +2550,10 @@
               "value": "{core.dimensionREM.2}",
               "type": "spacing"
             }
+          },
+          "LabelGap": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
           }
         },
         "MD": {
@@ -2588,6 +2592,10 @@
               "value": "{core.dimensionREM.2}",
               "type": "spacing"
             }
+          },
+          "LabelGap": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
           }
         },
         "LG": {
@@ -2626,6 +2634,10 @@
               "value": "{core.dimensionREM.3} + {core.dimensionREM.0,5}",
               "type": "spacing"
             }
+          },
+          "LabelGap": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
           }
         }
       }
