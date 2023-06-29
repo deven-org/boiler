@@ -2529,7 +2529,7 @@
           },
           "Background": {
             "Width": {
-              "value": "{core.dimensionREM.32}+ {core.dimensionREM.4}",
+              "value": "2.25rem",
               "type": "sizing"
             },
             "Height": {
@@ -2567,7 +2567,7 @@
           },
           "Background": {
             "Width": {
-              "value": "{core.dimensionREM.40} + {core.dimensionREM.4}",
+              "value": "2.75rem",
               "type": "sizing"
             },
             "Height": {
@@ -2597,7 +2597,7 @@
               "type": "spacing"
             },
             "Width": {
-              "value": "{core.dimensionREM.48} + {core.dimensionREM.4}",
+              "value": "3.25rem",
               "type": "sizing"
             },
             "Height": {
@@ -2619,7 +2619,7 @@
           },
           "IconContainer": {
             "PaddingLeftRight": {
-              "value": "{core.dimensionREM.3} + {core.dimensionREM.0,5}",
+              "value": "0.21875rem",
               "type": "spacing"
             }
           },
