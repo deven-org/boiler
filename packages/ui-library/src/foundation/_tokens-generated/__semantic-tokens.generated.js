@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 21 Jun 2023 13:01:19 GMT
+ * Generated on Thu, 29 Jun 2023 11:02:23 GMT
  */
 
 export const semanticTokens = {
