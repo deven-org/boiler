@@ -2633,17 +2633,29 @@
         "Gap": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing"
+        },
+        "ContentColGap": {
+          "value": "{core.dimensionREM.0}",
+          "type": "spacing"
         }
       },
       "MD": {
         "Gap": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing"
+        },
+        "ContentColGap": {
+          "value": "{core.dimensionREM.0}",
+          "type": "spacing"
         }
       },
       "LG": {
         "Gap": {
           "value": "{core.dimensionREM.8}",
+          "type": "spacing"
+        },
+        "ContentColGap": {
+          "value": "{core.dimensionREM.0}",
           "type": "spacing"
         }
       }
