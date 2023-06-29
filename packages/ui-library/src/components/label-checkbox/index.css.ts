@@ -4,7 +4,7 @@ import { css } from 'nested-css-to-flat/lit-css';
 export const styleCustom = css`
   .blr-label-checkbox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     & > input {
       all: initial;

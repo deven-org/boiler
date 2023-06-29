@@ -46,6 +46,7 @@ export class BlrLabelCheckbox extends LitElement {
       'blr-semantic-action': true,
       'blr-label-checkbox': true,
       [`error`]: this.hasError || false,
+      [`${this.size}`]: this.size || 'md',
     });
 
     return html`<div class=${classes}>

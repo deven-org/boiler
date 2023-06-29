@@ -9,6 +9,21 @@ const { Forms } = semanticTokens;
 export const checkboxStyles = css`
   .blr-label-checkbox {
     gap: ${Checkbox.MD.ItemSpacing};
+    > input {
+      margin: ${Checkbox.MD.ControlMargin};
+    }
+
+    &.sm {
+      > input {
+        margin: ${Checkbox.SM.ControlMargin};
+      }
+    }
+
+    &.lg {
+      > input {
+        margin: ${Checkbox.LG.ControlMargin};
+      }
+    }
 
     &.error {
       > input {
@@ -21,12 +36,40 @@ export const checkboxStyles = css`
         background-color: ${Checkbox.Control.Background.Unselected.Fill.Error};
       }
 
+      &.sm {
+        > input {
+          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Error};
+          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Error};
+        }
+      }
+
+      &.lg {
+        > input {
+          height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Error};
+          width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Error};
+        }
+      }
+
       .blr-form-label-inline {
         color: ${Forms.LabelNextToControl.Error};
       }
     }
 
     &:not(.error) {
+      &.sm {
+        > input {
+          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
+          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
+        }
+      }
+
+      &.lg {
+        > input {
+          height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
+          width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
+        }
+      }
+
       > input {
         position: relative;
         height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
@@ -38,8 +81,6 @@ export const checkboxStyles = css`
         background-color: ${Checkbox.Control.Background.Unselected.Fill.Rest};
 
         &:hover {
-          height: ${Checkbox.Control.Background.Unselected.Hover};
-          width: ${Checkbox.Control.Background.Unselected.Hover};
           border-style: ${Checkbox.Control.Unselected.Hover.style};
           border-width: ${Checkbox.Control.Unselected.Hover.width};
           border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
@@ -48,16 +89,12 @@ export const checkboxStyles = css`
 
         &:checked,
         &:indeterminate {
-          height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
-          width: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
           border-color: ${Checkbox.Control.Background.Selected.Stroke.Rest};
           border-style: ${Checkbox.Control.Unselected.Rest.style};
           border-width: ${Checkbox.Control.Unselected.Rest.width};
           background-color: ${Checkbox.Control.Background.Selected.Fill.Rest};
 
           &:hover {
-            height: ${Checkbox.MD.Control.Background.Sizing.Selected.Hover};
-            width: ${Checkbox.MD.Control.Background.Sizing.Selected.Hover};
             border-style: ${Checkbox.Control.Unselected.Hover.style};
             border-width: ${Checkbox.Control.Unselected.Hover.width};
             border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
@@ -65,8 +102,6 @@ export const checkboxStyles = css`
           }
 
           &:active {
-            height: ${Checkbox.MD.Control.Background.Sizing.Selected.Pressed};
-            width: ${Checkbox.MD.Control.Background.Sizing.Selected.Pressed};
             border-style: ${Checkbox.Control.Unselected.Pressed.style};
             border-width: ${Checkbox.Control.Unselected.Pressed.width};
             border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
@@ -74,8 +109,6 @@ export const checkboxStyles = css`
           }
 
           &[disabled] {
-            background-color: ${Checkbox.Control.Background.Selected.Fill.Disabled};
-            border-style: ${Checkbox.Control.Unselected.Disabled.style};
             border-width: ${Checkbox.Control.Unselected.Disabled.width};
             border-color: ${Checkbox.Control.Background.Selected.Stroke.Disabled};
           }
@@ -121,14 +154,10 @@ export const checkboxStyles = css`
         }
 
         &:focus {
-          height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Focus};
-          width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Focus};
           outline: 2px solid black;
         }
 
         &[readonly] {
-          height: ${Checkbox.MD.Control.Background.Sizing.Unselected.ReadOnly};
-          width: ${Checkbox.MD.Control.Background.Sizing.Unselected.ReadOnly};
           border-style: ${Checkbox.Control.Unselected.ReadOnly.style};
           border-width: ${Checkbox.Control.Unselected.ReadOnly.width};
           border-color: ${Checkbox.Control.Background.Unselected.Stroke.ReadOnly};
@@ -136,8 +165,6 @@ export const checkboxStyles = css`
         }
 
         &[disabled] {
-          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Disabled};
-          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Disabled};
           border-style: ${Checkbox.Control.Unselected.Disabled.style};
           border-width: ${Checkbox.Control.Unselected.Disabled.width};
           border-color: ${Checkbox.Control.Background.Unselected.Stroke.Disabled};
@@ -149,8 +176,6 @@ export const checkboxStyles = css`
         }
 
         &:active {
-          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
           border-style: ${Checkbox.Control.Unselected.Pressed.style};
           border-width: ${Checkbox.Control.Unselected.Pressed.width};
           border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};

@@ -272,6 +272,7 @@ export const form = css`
 }
 
 .blr-form-label-inline {
+  flex: 1;
   font-weight: ${Forms.MD.LabelNextToControl.fontWeight};
   font-size: ${Forms.MD.LabelNextToControl.fontSize};
   font-family: ${Forms.MD.LabelNextToControl.fontFamily}, sans-serif;
