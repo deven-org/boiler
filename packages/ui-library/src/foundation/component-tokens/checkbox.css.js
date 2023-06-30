@@ -109,8 +109,10 @@ export const checkboxStyles = css`
           }
 
           &[disabled] {
+            border-style: ${Checkbox.Control.Unselected.Disabled.style};
             border-width: ${Checkbox.Control.Unselected.Disabled.width};
             border-color: ${Checkbox.Control.Background.Selected.Stroke.Disabled};
+            background-color: ${Checkbox.Control.Background.Selected.Fill.Disabled};
           }
 
           &[readonly] {
