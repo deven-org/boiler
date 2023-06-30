@@ -140,18 +140,11 @@ export const checkboxStyles = css`
 
         &:checked {
           &::after {
-            content: "";
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='50' r='40' stroke='black' stroke-width='2' fill='red'/%3E%3Cpolyline points='20,20 40,25 60,40 80,120 120,140 200,180' style='fill:none;stroke:black;stroke-width:3'/%3E%3C/svg%3E ");
             display: block;
             position: absolute;
-            left: 5px;
-            top: 0;
-            width: 4px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+            width: 16px;
+            height: 16px;
           }
         }
 
