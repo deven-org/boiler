@@ -759,6 +759,32 @@
           },
           "type": "boxShadow"
         }
+      },
+      "NoseWrapper": {
+        "Left": {
+          "Padding": {
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "Right": {
+          "Padding": {
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "Top": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        },
+        "Bottom": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        }
       }
     }
   },
