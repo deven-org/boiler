@@ -811,9 +811,15 @@
     },
     "Radio": {
       "SM": {
+        "Gap": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "the spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
+        },
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.2} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -825,9 +831,15 @@
         }
       },
       "MD": {
+        "Gap": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "the spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
+        },
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.4} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -839,9 +851,15 @@
         }
       },
       "LG": {
+        "Gap": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "the spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
+        },
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.7} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -1311,13 +1329,15 @@
     },
     "Checkbox": {
       "SM": {
-        "ItemSpacingVertical": {
+        "Gap": {
           "value": "{core.dimensionPX.0}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
         },
-        "ItemSpacingHorizontal": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.2} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -1515,13 +1535,15 @@
         }
       },
       "LG": {
-        "ItemSpacingVertical": {
+        "Gap": {
           "value": "{core.dimensionPX.0}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
         },
-        "ItemSpacingHorizontal": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.6} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -1719,13 +1741,15 @@
         }
       },
       "MD": {
-        "ItemSpacingVertical": {
+        "Gap": {
           "value": "{core.dimensionPX.0}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
         },
-        "ItemSpacingHorizontal": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "the spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.4} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
