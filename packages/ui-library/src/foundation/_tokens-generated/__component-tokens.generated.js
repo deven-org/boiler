@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Jul 2023 13:28:07 GMT
+ * Generated on Wed, 05 Jul 2023 13:58:55 GMT
  */
 
 export const componentTokens = {
@@ -70,9 +70,9 @@ export const componentTokens = {
   Forms: {
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
     Radio: {
-      SM: { ItemSpacing: '8px', ControlMargin: '0.125rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
-      MD: { ItemSpacing: '8px', ControlMargin: '0.25rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
-      LG: { ItemSpacing: '8px', ControlMargin: '0.438rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
+      SM: { Gap: '0px', ItemSpacing: '8px', ControlMargin: '0.125rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
+      MD: { Gap: '0px', ItemSpacing: '8px', ControlMargin: '0.25rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
+      LG: { Gap: '0px', ItemSpacing: '8px', ControlMargin: '0.438rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
       Control: {
         Background: {
           Unselected: {
@@ -194,8 +194,8 @@ export const componentTokens = {
     },
     Checkbox: {
       SM: {
-        ItemSpacingVertical: '0px',
-        ItemSpacingHorizontal: '8px',
+        Gap: '0px',
+        ItemSpacing: '8px',
         ControlMargin: '0.125rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
         Control: {
@@ -262,8 +262,8 @@ export const componentTokens = {
         },
       },
       LG: {
-        ItemSpacingVertical: '0px',
-        ItemSpacingHorizontal: '8px',
+        Gap: '0px',
+        ItemSpacing: '8px',
         ControlMargin: '0.375rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
         Control: {
@@ -330,8 +330,8 @@ export const componentTokens = {
         },
       },
       MD: {
-        ItemSpacingVertical: '0px',
-        ItemSpacingHorizontal: '8px',
+        Gap: '0px',
+        ItemSpacing: '8px',
         ControlMargin: '0.25rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
         Control: {
