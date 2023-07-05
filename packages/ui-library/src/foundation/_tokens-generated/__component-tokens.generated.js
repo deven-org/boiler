@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 16 Jun 2023 11:23:57 GMT
+ * Generated on Wed, 05 Jul 2023 13:23:07 GMT
  */
 
 export const componentTokens = {
@@ -261,7 +261,7 @@ export const componentTokens = {
         },
       },
       MD: {
-        ItemSpacing: '8px',
+        ItemSpacingHorizontal: '8px',
         ControlMargin: '0.25rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
         Control: {
@@ -328,7 +328,7 @@ export const componentTokens = {
         },
       },
       LG: {
-        ItemSpacing: '8px',
+        ItemSpacingHorizontal: '8px',
         ControlMargin: '0.375rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
         Control: {
