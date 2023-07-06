@@ -1,32 +1,32 @@
-import { css } from 'lit';
-import { componentTokens } from '../_tokens-generated/index.generated';
+import { css } from "lit";
+import { componentTokens } from "../_tokens-generated/index.generated";
 
 const { TextButton, IconButton } = componentTokens.Action;
 
 export const textButton = css`
   .blr-text-button.xs {
     padding: ${TextButton.XS.Padding};
-    gap: ${TextButton.XS.Gap};
+    gap: ${TextButton.XS.ItemSpacing};
   }
 
   .blr-text-button.sm {
     padding: ${TextButton.SM.Padding};
-    gap: ${TextButton.SM.Gap};
+    gap: ${TextButton.SM.ItemSpacing};
   }
 
   .blr-text-button.md {
     padding: ${TextButton.MD.Padding};
-    gap: ${TextButton.MD.Gap};
+    gap: ${TextButton.MD.ItemSpacing};
   }
 
   .blr-text-button.lg {
     padding: ${TextButton.LG.Padding};
-    gap: ${TextButton.LG.Gap};
+    gap: ${TextButton.LG.ItemSpacing};
   }
 
   .blr-text-button.xl {
     padding: ${TextButton.XL.Padding};
-    gap: ${TextButton.XL.Gap};
+    gap: ${TextButton.XL.ItemSpacing};
   }
 `;
 
