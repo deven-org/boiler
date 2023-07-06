@@ -204,6 +204,7 @@ export const form = css`
 }
 .blr-form-hint {
   display: flex;
+  align-items: center;
   padding: ${Forms.MD.CaptionComponent.Padding};
   font-weight: ${Forms.MD.Caption.fontWeight};
   font-size: ${Forms.MD.Caption.fontSize};
