@@ -6,7 +6,7 @@
           "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
         },
@@ -20,7 +20,7 @@
           "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
         },
@@ -34,7 +34,7 @@
           "value": "{core.dimensionREM.8} {core.dimensionPX.16}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
         },
@@ -48,7 +48,7 @@
           "value": "{core.dimensionREM.8} {core.dimensionPX.24}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
         },
@@ -62,7 +62,7 @@
           "value": "{core.dimensionREM.16} {core.dimensionPX.40}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
         },
@@ -78,7 +78,7 @@
           "value": "{core.dimensionREM.6}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -92,7 +92,7 @@
           "value": "{core.dimensionREM.6}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -106,7 +106,7 @@
           "value": "{core.dimensionREM.8}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -120,7 +120,7 @@
           "value": "{core.dimensionREM.8}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -134,7 +134,7 @@
           "value": "{core.dimensionREM.12}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -150,7 +150,7 @@
           "value": "{core.dimensionREM.6} {core.dimensionREM.1} {core.dimensionREM.6} {core.dimensionREM.3}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -168,7 +168,7 @@
           "value": "{core.dimensionREM.6} {core.dimensionREM.1} {core.dimensionREM.6} {core.dimensionREM.3}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -186,7 +186,7 @@
           "value": "{core.dimensionREM.8} {core.dimensionREM.1} {core.dimensionREM.8} {core.dimensionREM.3}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "0",
           "type": "spacing"
         },
@@ -204,7 +204,7 @@
           "value": "{core.dimensionREM.8} {core.dimensionREM.0} {core.dimensionREM.8} {core.dimensionREM.2}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "-{core.dimensionREM.2}",
           "type": "spacing"
         },
@@ -222,7 +222,7 @@
           "value": "{core.dimensionREM.12} {core.dimensionREM.0} {core.dimensionREM.12} {core.dimensionREM.4}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "-{core.dimensionREM.4}",
           "type": "spacing"
         },
@@ -242,7 +242,7 @@
           "value": "{core.dimensionREM.4} {core.dimensionPX.8} {core.dimensionREM.4} {core.dimensionPX.12}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
         },
@@ -256,7 +256,7 @@
           "value": "{core.dimensionREM.4} {core.dimensionPX.8} {core.dimensionREM.4} {core.dimensionPX.12}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
         },
@@ -270,7 +270,7 @@
           "value": "{core.dimensionREM.8} {core.dimensionPX.12} {core.dimensionREM.8} {core.dimensionPX.20}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
         },
@@ -284,7 +284,7 @@
           "value": "{core.dimensionREM.8} {core.dimensionPX.16} {core.dimensionREM.8} {core.dimensionPX.24}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
         },
@@ -298,7 +298,7 @@
           "value": "{core.dimensionREM.16} {core.dimensionPX.32} {core.dimensionREM.16} {core.dimensionPX.40}",
           "type": "spacing"
         },
-        "Gap": {
+        "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
         },
@@ -731,14 +731,75 @@
           "type": "spacing"
         }
       }
+    },
+    "Tooltip": {
+      "SurfaceFill": {
+        "value": "{q.surface.inverted}",
+        "type": "color"
+      },
+      "Content": {
+        "value": "{q.content.oninverted.alpha}",
+        "type": "color"
+      },
+      "ContentCol": {
+        "Padding": {
+          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "Elevation": {
+        "1": {
+          "value": {
+            "x": "0",
+            "y": "2",
+            "blur": "4",
+            "spread": "0",
+            "color": "{core.color.coolgray.100.opa30}",
+            "type": "dropShadow"
+          },
+          "type": "boxShadow"
+        }
+      },
+      "NoseWrapper": {
+        "Left": {
+          "Padding": {
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "Right": {
+          "Padding": {
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "Top": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        },
+        "Bottom": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        }
+      }
     }
   },
   "Forms": {
     "Checkbox": {
       "SM": {
+        "Gap": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Controls the vertical spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
+        },
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.2} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -936,9 +997,15 @@
         }
       },
       "MD": {
+        "Gap": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Controls the vertical spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
+        },
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.4} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -1138,7 +1205,8 @@
       "LG": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+          "type": "spacing",
+          "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
         },
         "ControlMargin": {
           "value": "{core.dimensionREM.6} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",

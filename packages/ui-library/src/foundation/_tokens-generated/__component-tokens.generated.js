@@ -1,30 +1,30 @@
 /**
  * Do not edit directly
- * Generated on Thu, 29 Jun 2023 13:12:40 GMT
+ * Generated on Thu, 06 Jul 2023 11:05:26 GMT
  */
 
 export const componentTokens = {
   Action: {
     TextButton: {
-      XS: { Padding: '0.25rem 12px', Gap: '4px' },
-      SM: { Padding: '0.25rem 12px', Gap: '4px' },
-      MD: { Padding: '0.5rem 16px', Gap: '4px' },
-      LG: { Padding: '0.5rem 24px', Gap: '4px' },
-      XL: { Padding: '1rem 40px', Gap: '4px' },
+      XS: { Padding: '0.25rem 12px', ItemSpacing: '4px' },
+      SM: { Padding: '0.25rem 12px', ItemSpacing: '4px' },
+      MD: { Padding: '0.5rem 16px', ItemSpacing: '4px' },
+      LG: { Padding: '0.5rem 24px', ItemSpacing: '4px' },
+      XL: { Padding: '1rem 40px', ItemSpacing: '4px' },
     },
     IconButton: {
-      XS: { Padding: '0.375rem', Gap: '0px' },
-      SM: { Padding: '0.375rem', Gap: '0px' },
-      MD: { Padding: '0.5rem', Gap: '0px' },
-      LG: { Padding: '0.5rem', Gap: '0px' },
-      XL: { Padding: '0.75rem', Gap: '0px' },
+      XS: { Padding: '0.375rem', ItemSpacing: '0px' },
+      SM: { Padding: '0.375rem', ItemSpacing: '0px' },
+      MD: { Padding: '0.5rem', ItemSpacing: '0px' },
+      LG: { Padding: '0.5rem', ItemSpacing: '0px' },
+      XL: { Padding: '0.75rem', ItemSpacing: '0px' },
     },
     IconDropdown: {
-      XS: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', Gap: '0px' },
-      SM: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', Gap: '0px' },
-      MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', Gap: '0px' },
-      LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', Gap: '-0.125rem' },
-      XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', Gap: '-0.25rem' },
+      XS: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', ItemSpacing: '0px' },
+      SM: { Padding: '0.375rem 0.063rem 0.375rem 0.188rem', ItemSpacing: '0px' },
+      MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', ItemSpacing: '0px' },
+      LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', ItemSpacing: '-0.125rem' },
+      XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', ItemSpacing: '-0.25rem' },
     },
   },
   Feedback: {
@@ -70,6 +70,7 @@ export const componentTokens = {
   Forms: {
     Checkbox: {
       SM: {
+        Gap: '0px',
         ItemSpacing: '8px',
         ControlMargin: '0.125rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
@@ -137,6 +138,7 @@ export const componentTokens = {
         },
       },
       MD: {
+        Gap: '0px',
         ItemSpacing: '8px',
         ControlMargin: '0.25rem 0px 0rem 0px',
         LabelMargin: '0rem 0px 0rem 0px',
