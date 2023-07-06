@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 05 Jul 2023 14:50:19 GMT
+ * Generated on Thu, 06 Jul 2023 11:03:15 GMT
  */
 
 export const componentConfig = {
