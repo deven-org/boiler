@@ -949,7 +949,7 @@
           "type": "color"
         },
         "SAT": {
-          "value": "85",
+          "value": "50",
           "type": "color"
         }
       },
@@ -1465,7 +1465,7 @@
           "type": "color"
         },
         "SAT": {
-          "value": "85",
+          "value": "65",
           "type": "color"
         }
       },
@@ -2497,7 +2497,7 @@
           "type": "color"
         },
         "SAT": {
-          "value": "80",
+          "value": "65",
           "type": "color"
         }
       },
@@ -3529,7 +3529,7 @@
           "type": "color"
         },
         "SAT": {
-          "value": "80",
+          "value": "65",
           "type": "color"
         }
       },
