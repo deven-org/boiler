@@ -3,7 +3,7 @@ import { html } from 'lit';
 
 import { BlrLabelToggleSwitch as BlrLabelToggleSwitchClass } from './index';
 
-import { FormSizes } from '../../globals/constants';
+import { FormSizes, WrapperVariant } from '../../globals/constants';
 import './index';
 
 export default {
@@ -11,6 +11,10 @@ export default {
   argTypes: {
     size: {
       options: FormSizes,
+      control: { type: 'select' },
+    },
+    variant: {
+      options: WrapperVariant,
       control: { type: 'select' },
     },
   },
@@ -24,6 +28,7 @@ export const BlrLabelToggleSwitch = ({
   onChange,
   disabled,
   size,
+  variant,
   checked,
   indeterminate,
   readonly,
@@ -40,6 +45,7 @@ export const BlrLabelToggleSwitch = ({
     .indeterminate=${indeterminate}
     .readonly=${readonly}
     .size=${size}
+    .variant=${variant}
     .hasError=${hasError}
   ></blr-label-toggleswitch>
 `;
@@ -59,6 +65,7 @@ BlrLabelToggleSwitch.args = {
   readonly: false,
   hasError: false,
   size: 'md',
+  variant: 'leading',
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
