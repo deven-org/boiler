@@ -709,6 +709,32 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "Border": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Neutral.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Warning.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Error.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "MD": {
@@ -719,6 +745,32 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "Border": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Neutral.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Warning.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Error.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "LG": {
@@ -729,6 +781,32 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "Border": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Neutral.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Warning.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Error.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       }
     },
