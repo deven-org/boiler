@@ -142,7 +142,6 @@ export const checkboxStyles = css`
 
       > .toggle-switch-slider {
         &::after {
-          // eslint-disable-next-line
           content: "";
           position: absolute;
           background-color: white;
@@ -157,7 +156,6 @@ export const checkboxStyles = css`
 
       > .toggle-switch-unselect {
         &::after {
-          // eslint-disable-next-line
           content: "";
           position: absolute;
           border-right: 1px solid white;
@@ -166,7 +164,6 @@ export const checkboxStyles = css`
 
       > .toggle-switch-select {
         &::after {
-          // eslint-disable-next-line
           content: "";
           position: absolute;
           border-radius: 100%;

@@ -9,6 +9,7 @@ const { Forms } = semanticTokens;
 export const checkboxStyles = css`
   .blr-label-checkbox {
     gap: ${Checkbox.MD.ItemSpacing};
+
     > input {
       margin: ${Checkbox.MD.ControlMargin};
     }
