@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
+import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { BlrFormLabelInline } from '../form-label-inline';
@@ -32,6 +32,8 @@ export class BlrLabelToggleSwitch extends LitElement {
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() onChange?: HTMLButtonElement['onchange'];
 
+  @state() protected isSelected = this.checked;
+
   connectedCallback() {
     super.connectedCallback();
   }
@@ -39,6 +41,7 @@ export class BlrLabelToggleSwitch extends LitElement {
   handleChange(event: Event) {
     if (!this.disabled) {
       this.onChange?.(event);
+      this.isSelected = !this.isSelected;
     }
   }
 
@@ -47,19 +50,16 @@ export class BlrLabelToggleSwitch extends LitElement {
       'blr-semantic-action': true,
       'blr-label-toggleswitch': true,
       [`error`]: this.hasError || false,
+      [`disabled`]: this.disabled || false,
       [`${this.size}`]: this.size || 'md',
       [`${this.variant}`]: this.variant || 'leading',
     });
-
+    const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
     return html`<div class=${classes}>
       ${this.label
         ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
         : nothing}
-      <label
-        for=${this.checkInputId || nothing}
-        class="blr-label-checkbox-wrapper"
-        ?disabled=${this.disabled || nothing}
-      >
+      <label for=${this.checkInputId || nothing} class=${wrapperClass} ?disabled=${this.disabled || nothing}>
         <input
           type="checkbox"
           id=${this.checkInputId || nothing}

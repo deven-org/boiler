@@ -1,12 +1,9 @@
-// import { componentTokens } from "../_tokens-generated/index.generated";
-// import { semanticTokens } from "../_tokens-generated/__semantic-tokens.generated";
+import { componentTokens } from "../_tokens-generated/index.generated";
+import { semanticTokens } from "../_tokens-generated/__semantic-tokens.generated";
 import { css } from "nested-css-to-flat/lit-css";
 
-// const { Checkbox } = componentTokens.Forms;
-// const { Forms } = semanticTokens;
-// const { FocusBorder } = semanticTokens.Global;
-
-// Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed
+const { ToggleSwitch } = componentTokens.Forms;
+const { Forms } = semanticTokens;
 
 export const checkboxStyles = css`
   .blr-label-toggleswitch {
@@ -18,15 +15,21 @@ export const checkboxStyles = css`
       flex-direction: row;
     }
 
+    &.disabled {
+      > .blr-form-label-inline {
+        color: ${Forms.LabelNextToControl.Disabled};
+      }
+    }
+
     &.sm {
-      > .blr-label-checkbox-wrapper {
-        width: 36px;
-        height: 20px;
+      > .blr-label-switch-wrapper {
+        width: ${ToggleSwitch.Control.SM.Background.Width};
+        height: ${ToggleSwitch.Control.SM.Background.Height};
 
         > .toggle-switch-slider {
           &::after {
-            width: 16px;
-            height: 16px;
+            width: ${ToggleSwitch.Control.SM.Knob.Sizing};
+            height: ${ToggleSwitch.Control.SM.Knob.Sizing};
             top: 2px;
             left: 2px;
           }
@@ -57,14 +60,14 @@ export const checkboxStyles = css`
     }
 
     &.md {
-      > .blr-label-checkbox-wrapper {
-        width: 44px;
-        height: 24px;
+      > .blr-label-switch-wrapper {
+        width: ${ToggleSwitch.Control.MD.Background.Width};
+        height: ${ToggleSwitch.Control.MD.Background.Height};
 
         > .toggle-switch-slider {
           &::after {
-            width: 20px;
-            height: 20px;
+            width: ${ToggleSwitch.Control.MD.Knob.Sizing};
+            height: ${ToggleSwitch.Control.MD.Knob.Sizing};
             top: 2px;
             left: 2px;
           }
@@ -95,14 +98,14 @@ export const checkboxStyles = css`
     }
 
     &.lg {
-      > .blr-label-checkbox-wrapper {
-        width: 52px;
-        height: 28px;
+      > .blr-label-switch-wrapper {
+        width: ${ToggleSwitch.Control.LG.Background.Width};
+        height: ${ToggleSwitch.Control.LG.Background.Height};
 
         > .toggle-switch-slider {
           &::after {
-            width: 24px;
-            height: 24px;
+            width: ${ToggleSwitch.Control.LG.Knob.Sizing};
+            height: ${ToggleSwitch.Control.LG.Knob.Sizing};
             top: 2px;
             left: 2px;
           }
@@ -132,11 +135,18 @@ export const checkboxStyles = css`
       }
     }
 
-    > .blr-label-checkbox-wrapper {
-      background-color: #50a825;
+    > .blr-label-switch-wrapper {
       border-radius: 15px;
       position: relative;
       cursor: pointer;
+
+      &.wrapper-unselected {
+        background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Rest};
+      }
+
+      &.wrapper-selected {
+        background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Rest};
+      }
 
       > input {
         display: none;
@@ -146,21 +156,21 @@ export const checkboxStyles = css`
         &::after {
           content: "";
           position: absolute;
-          background-color: white;
+          background-color: ${ToggleSwitch.Control.Foreground.Unselected.Fill.Rest};
           border-radius: 50%;
           transition: transform 0.2s ease;
         }
       }
 
       > input:checked + .toggle-switch-slider::after {
-        background-color: white;
+        background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
       }
 
       > .toggle-switch-unselect {
         &::after {
           content: "";
           position: absolute;
-          border-right: 1px solid white;
+          border-right: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
         }
       }
 
@@ -169,72 +179,72 @@ export const checkboxStyles = css`
           content: "";
           position: absolute;
           border-radius: 100%;
-          border: 1px solid white;
+          border: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
         }
       }
     }
 
     &:not(.error) {
-      > .blr-label-checkbox-wrapper {
-        &:hover {
-          background-color: #3c7e1c;
+      > .blr-label-switch-wrapper {
+        > .blr-form-label-inline {
+          color: ${Forms.LabelNextToControl.Rest};
         }
 
-        &:active {
-          background-color: #285412;
+        &.wrapper-unselected {
+          background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Rest};
+
+          &:hover {
+            background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Hover};
+          }
+
+          &:active {
+            background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Hover};
+          }
+
+          &:focus {
+            background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
+            outline: 2px solid ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
+          }
+
+          &[disabled] {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Disabled};
+          }
+
+          &[readonly] {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.ReadOnly};
+          }
         }
 
-        &:focus {
-          background-color: #50a825;
-          outline: 2px solid black;
-        }
+        &.wrapper-selected {
+          background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Rest};
 
-        &[disabled] {
-          background-color: #ccc;
-        }
+          &:hover {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Hover};
+          }
 
-        &[readonly] {
-          background-color: #abb0ba;
-        }
+          &:active {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Focus};
+          }
 
-        > input:disabled + .toggle-switch-slider::after {
-          pointer-events: none;
-          opacity: 0.5;
-          background-color: white;
+          &:focus {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Focus};
+            outline: 2px solid ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
+          }
+
+          &[disabled] {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Disabled};
+          }
+
+          &[readonly] {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.ReadOnly};
+          }
         }
       }
     }
 
     &.error {
-      > .blr-label-checkbox-wrapper {
-        outline: 2px solid #ff0;
-
-        &:hover {
-          background-color: #3c7e1c;
-        }
-
-        &:active {
-          background-color: #285412;
-        }
-
-        &:focus {
-          background-color: #50a825;
-          outline: 2px solid black;
-        }
-
-        &[disabled] {
-          background-color: #ccc;
-        }
-
-        &[readonly] {
-          background-color: #abb0ba;
-        }
-
-        > input:disabled + .toggle-switch-slider::after {
-          pointer-events: none;
-          opacity: 0.5;
-          background-color: white;
-        }
+      .blr-form-label-inline {
+        color: ${Forms.LabelNextToControl.Error};
       }
     }
   }
