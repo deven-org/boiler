@@ -4,12 +4,12 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { form } from '../../foundation/semantic-tokens/form.css';
-import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
+import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { BlrFormLabel } from '../internal-components/form-label';
 
-@customElement('blr-radio-input')
-export class BlrRadioInput extends LitElement {
-  static styles = [styleCustom, form, radioInput];
+@customElement('blr-radio')
+export class BlrRadio extends LitElement {
+  static styles = [styleCustom, form, radio];
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
@@ -22,7 +22,7 @@ export class BlrRadioInput extends LitElement {
   @property() invalid?: boolean;
   @property() option!: RadioOption;
 
-  render() {
+  protected render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,

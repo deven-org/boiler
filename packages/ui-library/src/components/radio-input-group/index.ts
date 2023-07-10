@@ -2,16 +2,13 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { radioInput } from '../../foundation/semantic-tokens/radioInput.css';
+import { form } from '../../foundation/semantic-tokens/form.css';
+import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
-import { IconType } from '@boiler/icons';
 
-import { BlrFormHint } from '../internal-components/form-hint';
-import { BlrFormLabel } from '../internal-components/form-label';
-
-@customElement('blr-radio-input-group')
-export class BlrRadioInputGroup extends LitElement {
-  static styles = [styleCustom, radioInput];
+@customElement('blr-radio-group')
+export class BlrRadioGroup extends LitElement {
+  static styles = [styleCustom, form, radio];
 
   @property() label!: string;
   @property() size: InputSizesType = 'md';
@@ -41,35 +38,27 @@ export class BlrRadioInputGroup extends LitElement {
     };
     return html`
       <div class="blr-radio-group ${classes}">
-        ${
-          this.options &&
-          this.options.map((option: RadioOption) => {
-            const id = calculateOptionId(option.label);
-            return html`
-              <div class="blr-radio-input ${classes}">
-                <input
-                  id=${id}
-                  type="radio"
-                  name=${this.label}
-                  value=${option.value}
-                  ?disabled=${this.disabled}
-                  ?readonly=${this.readonly}
-                  ?aria-disabled=${this.disabled}
-                  ?invalid=${this.invalid}
-                  ?aria-invalid=${this.invalid}
-                />
-                <label for=${id} invalid="${this.invalid}">${option.label}</label><br />
-              </div>
-            `;
-          })
-        }
-      </fieldset>
-      ${BlrFormHint({
-        message: this.invalid ? this.errorMessage : this.hint,
-        variant: this.invalid ? 'error' : 'hint',
-        iconName: this.hintIcon,
-        size: this.size,
-      })}
+        ${this.options &&
+        this.options.map((option: RadioOption) => {
+          const id = calculateOptionId(option.label);
+          return html`
+            <div class="blr-radio ${classes}">
+              <input
+                id=${id}
+                type="radio"
+                name=${this.label}
+                value=${option.value}
+                ?disabled=${this.disabled}
+                ?readonly=${this.readonly}
+                ?aria-disabled=${this.disabled}
+                ?invalid=${this.invalid}
+                ?aria-invalid=${this.invalid}
+              />
+              <label for=${id} invalid="${this.invalid}">${option.label}</label><br />
+            </div>
+          `;
+        })}
+      </div>
     `;
   }
 }

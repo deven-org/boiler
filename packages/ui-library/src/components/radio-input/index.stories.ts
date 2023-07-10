@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import './index';
 
 export default {
-  title: 'BlrRadioInput',
+  title: 'BlrRadio',
   argTypes: {
     size: {
       options: InputSizes,
@@ -42,7 +42,7 @@ export const BlrRadio = ({
     })}
   `;
 
-BlrRadio.storyName = 'BlrRadioInput';
+BlrRadio.storyName = 'BlrRadio';
 
 BlrRadio.args = {
   checked: false,

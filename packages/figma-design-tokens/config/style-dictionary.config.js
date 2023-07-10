@@ -43,7 +43,8 @@ const semanticTypes = [
   'InputField',
   'LabelAppendix',
   'InputIcon',
-  'Control'
+  'Control',
+  'LabelNextToControl',
 ];
 
 const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea', 'Radio', 'Checkbox'];

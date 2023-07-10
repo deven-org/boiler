@@ -4,7 +4,7 @@ import { InputSizes } from '../../globals/constants';
 import './index';
 
 export default {
-  title: 'BlrRadioInputGroup',
+  title: 'BlrRadioGroup',
   argTypes: {
     size: {
       options: InputSizes,
@@ -49,7 +49,7 @@ export const BlrRadioGroup = ({
   `;
 BlrRadioGroup.storyName = 'BlrRadioGroup';
 
-BlrRadioInputGroup.args = {
+BlrRadioGroup.args = {
   label: 'Radio Input',
   disabled: false,
   invalid: false,
