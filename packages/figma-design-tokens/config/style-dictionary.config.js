@@ -48,7 +48,17 @@ const semanticTypes = [
   'FocusBorder',
 ];
 
-const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea', 'Radio', 'Checkbox'];
+const componentTypes = [
+  'TextButton',
+  'IconButton',
+  'IconDropdown',
+  'Icon',
+  'Loader',
+  'TextArea',
+  'Radio',
+  'Checkbox',
+  'ToggleSwitch',
+];
 
 StyleDictionary.registerFormat({
   name: 'custom/format/semanticTokens',
