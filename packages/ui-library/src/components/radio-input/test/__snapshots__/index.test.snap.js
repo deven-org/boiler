@@ -41,6 +41,7 @@ snapshots['blr-radio renders correctly'] = `<div class="blr-radio">
   <div class="disabled md radio-wrapper">
     <input
       aria-disabled=""
+      class="disabled md"
       disabled=""
       invalid=""
       required=""
