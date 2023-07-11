@@ -2601,5 +2601,11 @@
         "description": "size of XL icon"
       }
     }
+  },
+  "Tooltip": {
+    "ContentCol": {
+      "value": "{core.borderRadius.MD}",
+      "type": "borderRadius"
+    }
   }
 }
