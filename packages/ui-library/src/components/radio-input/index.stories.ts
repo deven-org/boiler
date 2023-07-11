@@ -25,6 +25,7 @@ export const BlrRadio = ({
   onFocus,
   invalid,
   option,
+  showHint,
 }: BlrRadioType) =>
   html`
     ${BlrRadioRenderFunction({
@@ -38,6 +39,7 @@ export const BlrRadio = ({
       onFocus,
       invalid,
       option,
+      showHint,
     })}
   `;
 
@@ -46,9 +48,11 @@ BlrRadio.storyName = 'BlrRadio';
 BlrRadio.args = {
   checked: false,
   disabled: false,
-  readonly: false,
-  invalid: false,
   required: false,
+  readonly: false,
   size: 'md',
-  option: { label: 'Option 1', value: 'option1' },
+  option: { label: 'Option 1', value: 'option1', hint: 'This is a small hint' },
+  showHint: true,
+  invalid: false,
+  hintIcon: '',
 };

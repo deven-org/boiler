@@ -47,7 +47,7 @@ const semanticTypes = [
   'LabelNextToControl'
 ];
 
-const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea', 'Radio', 'Checkbox'];
+const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea', 'Radio', 'Checkbox', 'Caption'];
 
 StyleDictionary.registerFormat({
   name: 'custom/format/semanticTokens',

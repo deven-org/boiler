@@ -14,13 +14,14 @@ export class BlrRadio extends LitElement {
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
-  @property() size?: InputSizesType = 'md';
+  @property() size: InputSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() invalid?: boolean;
   @property() option!: RadioOption;
+  @property() showHint = true;
 
   protected render() {
     const classes = classMap({
@@ -31,9 +32,8 @@ export class BlrRadio extends LitElement {
       [`error-input`]: this.invalid || false,
     });
 
-    const inputclasses = classMap({
-      [`error`]: this.invalid || false,
-      [`error-input`]: this.invalid || false,
+    const hintClasses = classMap({
+      [`${this.size}`]: this.size || 'md',
     });
 
     const calculateOptionId = (label: string) => {
@@ -43,30 +43,33 @@ export class BlrRadio extends LitElement {
     const id = this.option.label ? calculateOptionId(this.option.label) : '';
 
     return html`
-      <div class="blr-radio ${classes}">
-        <input
-          id=${id || nothing}
-          class=${inputclasses}
-          type="radio"
-          name=${this.option.label || nothing}
-          value=${this.option.value || nothing}
-          ?disabled=${this.disabled}
-          ?readonly=${this.readonly}
-          ?aria-disabled=${this.disabled}
-          ?invalid=${this.invalid}
-          ?aria-invalid=${this.invalid}
-          ?checked=${this.checked}
-          ?required=${this.required}
-          @input=${this.onChange}
-          @blur=${this.onBlur}
-          @focus=${this.onFocus}
-          invalid=${this.invalid}
-        />
-        ${BlrFormLabel({
-          labelText: this.option.label,
-          labelSize: this.size || 'md',
-          forValue: calculateOptionId(this.option.label),
-        })}
+      <div class="blr-radio">
+        <div class="radio-wrapper ${classes}">
+          <input
+            id=${id || nothing}
+            class=${classes}
+            type="radio"
+            name=${this.option.label || nothing}
+            value=${this.option.value || nothing}
+            ?disabled=${this.disabled}
+            ?readonly=${this.readonly}
+            ?aria-disabled=${this.disabled}
+            ?invalid=${this.invalid}
+            ?aria-invalid=${this.invalid}
+            ?checked=${this.checked}
+            ?required=${this.required}
+            @input=${this.onChange}
+            @blur=${this.onBlur}
+            @focus=${this.onFocus}
+            invalid=${this.invalid}
+          />
+          ${BlrFormLabel({
+            labelText: this.option.label,
+            labelSize: this.size || 'md',
+            forValue: calculateOptionId(this.option.label),
+          })}
+        </div>
+        ${this.showHint ? html` <p class="hint ${hintClasses}">${this.option.hint || nothing}</p> ` : html``}
       </div>
     `;
   }
@@ -85,6 +88,7 @@ export const BlrRadioRenderFunction = ({
   onFocus,
   invalid,
   option,
+  showHint,
 }: BlrRadioType) => {
   return html`<blr-radio
     class="example-layout-class"
@@ -100,5 +104,6 @@ export const BlrRadioRenderFunction = ({
     .onBlur=${onBlur}
     .onFocus=${onFocus}
     .option=${option}
+    .showHint=${showHint}
   ></blr-radio>`;
 };

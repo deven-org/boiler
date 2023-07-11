@@ -1,5 +1,5 @@
 import { IconKeys, IconType } from '@boiler/icons';
-import { SizesType } from '../globals/types';
+import { InputSizesType, SizesType } from '../globals/types';
 import { capturingRegex } from './capture-size-regex';
 
 const hasIconSize = (icon: string) => IconKeys.includes(icon);
@@ -17,7 +17,7 @@ const getSizeSubstitute = (icon: string) => {
   }
 };
 
-export const calculateIconName = (icon: string | undefined, size: SizesType) => {
+export const calculateIconName = (icon: string | undefined, size: InputSizesType | SizesType) => {
   if (!icon) {
     return undefined;
   }

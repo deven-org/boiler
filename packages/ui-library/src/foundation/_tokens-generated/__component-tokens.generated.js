@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 06 Jul 2023 11:57:28 GMT
+ * Generated on Tue, 11 Jul 2023 10:43:17 GMT
  */
 
 export const componentTokens = {
@@ -489,6 +489,7 @@ export const componentTokens = {
       ControlBorderRadius: '9999px',
     },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
+    Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 30%,1) ' },
   },
   UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
 };
