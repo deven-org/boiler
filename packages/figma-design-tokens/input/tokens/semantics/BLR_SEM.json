@@ -1060,7 +1060,7 @@
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
         "type": "typography"
       },
       "UserInput": {
@@ -1090,7 +1090,7 @@
         },
         "IconWrapper": {
           "Padding": {
-            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
           }
         },
@@ -1150,7 +1150,7 @@
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1174,7 +1174,7 @@
         },
         "IconWrapper": {
           "Padding": {
-            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0,5} {core.dimensionPX.0}",
             "type": "spacing"
           }
         }
@@ -1240,7 +1240,7 @@
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "UserInput": {
@@ -1276,7 +1276,7 @@
         },
         "IconWrapper": {
           "Padding": {
-            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
             "type": "spacing"
           }
         }
@@ -1338,11 +1338,15 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },
@@ -1364,11 +1368,15 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },
