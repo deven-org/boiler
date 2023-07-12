@@ -6,6 +6,9 @@ import { InputSizesType, RadioOption } from '../../globals/types';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { radio } from '../../foundation/semantic-tokens/radioInput.css';
 import { BlrFormLabel } from '../internal-components/form-label';
+import { BlrFormHint } from '../internal-components/form-hint';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio')
 export class BlrRadio extends LitElement {
@@ -22,18 +25,16 @@ export class BlrRadio extends LitElement {
   @property() invalid?: boolean;
   @property() option!: RadioOption;
   @property() showHint = true;
+  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() errorMessage?: string;
 
   protected render() {
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
       [`readonly`]: this.readonly || false,
-      [`checked`]: this.checked || false,
+      [`checked`]: this.checked || this.option.checked || false,
       [`error-input`]: this.invalid || false,
-    });
-
-    const hintClasses = classMap({
-      [`${this.size}`]: this.size || 'md',
     });
 
     const calculateOptionId = (label: string) => {
@@ -69,7 +70,16 @@ export class BlrRadio extends LitElement {
             forValue: calculateOptionId(this.option.label),
           })}
         </div>
-        ${this.showHint ? html` <p class="hint ${hintClasses}">${this.option.hint || nothing}</p> ` : html``}
+        ${this.showHint
+          ? html`
+              ${BlrFormHint({
+                message: (this.invalid ? this.errorMessage : this.option.hint) || '',
+                variant: this.invalid ? 'error' : 'hint',
+                size: 'sm',
+                iconName: calculateIconName(this.hintIcon, this.size),
+              })}
+            `
+          : html``}
       </div>
     `;
   }
@@ -89,6 +99,8 @@ export const BlrRadioRenderFunction = ({
   invalid,
   option,
   showHint,
+  hintIcon,
+  errorMessage,
 }: BlrRadioType) => {
   return html`<blr-radio
     class="example-layout-class"
@@ -105,5 +117,7 @@ export const BlrRadioRenderFunction = ({
     .onFocus=${onFocus}
     .option=${option}
     .showHint=${showHint}
+    .hintIcon=${hintIcon}
+    .errorMessage=${errorMessage}
   ></blr-radio>`;
 };

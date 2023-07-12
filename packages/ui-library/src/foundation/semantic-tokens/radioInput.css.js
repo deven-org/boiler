@@ -159,7 +159,8 @@ export const radio = css`
             }
           }
 
-          &.checked {
+          &.checked,
+          &:checked {
             background-color: ${Radio.Control.Background.Selected.Fill.Rest};
 
             &::before {
@@ -299,7 +300,8 @@ export const radio = css`
       }
     }
 
-    .hint {
+    .hint,
+    .blr-form-hint {
       margin: 0;
 
       &.sm {

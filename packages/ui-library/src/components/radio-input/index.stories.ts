@@ -2,6 +2,8 @@ import { html } from 'lit-html';
 import { BlrRadioRenderFunction, BlrRadioType } from './index';
 import { InputSizes } from '../../globals/constants';
 import './index';
+import { getIconName } from '../../utils/get-icon-name';
+import { IconKeys } from '@boiler/icons';
 
 export default {
   title: 'BlrRadio',
@@ -11,6 +13,10 @@ export default {
       control: { type: 'select' },
     },
     option: { control: 'array' },
+    hintIcon: {
+      options: [...getIconName(IconKeys)],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -26,6 +32,8 @@ export const BlrRadio = ({
   invalid,
   option,
   showHint,
+  hintIcon,
+  errorMessage,
 }: BlrRadioType) =>
   html`
     ${BlrRadioRenderFunction({
@@ -40,6 +48,8 @@ export const BlrRadio = ({
       invalid,
       option,
       showHint,
+      hintIcon,
+      errorMessage,
     })}
   `;
 
@@ -51,8 +61,9 @@ BlrRadio.args = {
   required: false,
   readonly: false,
   size: 'md',
-  option: { label: 'Option 1', value: 'option1', hint: 'This is a small hint' },
+  option: { label: 'Option 1', value: 'option1', hint: 'This is a small hint', checked: true },
   showHint: true,
   invalid: false,
-  hintIcon: '',
+  hintIcon: 'blrInfo',
+  errorMessage: 'This is a sample error message',
 };

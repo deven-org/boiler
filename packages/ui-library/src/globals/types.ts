@@ -12,4 +12,5 @@ export type RadioOption = {
   label: string;
   value: string;
   hint: string;
+  checked?: boolean;
 };
