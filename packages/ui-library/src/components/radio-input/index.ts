@@ -17,6 +17,7 @@ export class BlrRadio extends LitElement {
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
+  @property() name?: string;
   @property() size: InputSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
@@ -50,7 +51,7 @@ export class BlrRadio extends LitElement {
             id=${id || nothing}
             class=${classes}
             type="radio"
-            name=${this.option.label || nothing}
+            name=${this.name}
             value=${this.option.value || nothing}
             ?disabled=${this.disabled}
             ?readonly=${this.readonly}
@@ -91,6 +92,7 @@ export const BlrRadioRenderFunction = ({
   disabled,
   checked,
   size,
+  name,
   required,
   readonly,
   onChange,
@@ -105,7 +107,7 @@ export const BlrRadioRenderFunction = ({
   return html`<blr-radio
     class="example-layout-class"
     .value=${option.value}
-    .label=${option.label}
+    .name=${name}
     .disabled=${disabled}
     .checked=${checked}
     .required=${required}

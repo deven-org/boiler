@@ -25,6 +25,7 @@ export const BlrRadioGroup = ({
   label,
   size,
   disabled,
+  name,
   required,
   readonly,
   invalid,
@@ -44,6 +45,7 @@ export const BlrRadioGroup = ({
       label,
       size,
       disabled,
+      name,
       required,
       readonly,
       invalid,
@@ -64,6 +66,7 @@ BlrRadioGroup.storyName = 'BlrRadioGroup';
 BlrRadioGroup.args = {
   label: 'Radio Input',
   disabled: false,
+  name: 'Default Name',
   invalid: false,
   required: false,
   readonly: false,

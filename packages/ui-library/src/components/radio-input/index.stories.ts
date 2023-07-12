@@ -24,6 +24,7 @@ export const BlrRadio = ({
   disabled,
   checked,
   size,
+  name,
   required,
   readonly,
   onChange,
@@ -40,6 +41,7 @@ export const BlrRadio = ({
       disabled,
       checked,
       size,
+      name,
       required,
       readonly,
       onChange,
@@ -58,6 +60,7 @@ BlrRadio.storyName = 'BlrRadio';
 BlrRadio.args = {
   checked: false,
   disabled: false,
+  name: 'Default Name',
   required: false,
   readonly: false,
   size: 'md',

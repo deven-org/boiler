@@ -56,7 +56,7 @@ export class BlrRadioGroup extends LitElement {
                   id=${id}
                   class=${classes}
                   type="radio"
-                  name=${option.label || nothing}
+                  name=${this.label}
                   ?disabled=${this.disabled}
                   ?readonly=${this.readonly}
                   ?aria-disabled=${this.disabled}
@@ -99,6 +99,7 @@ export const BlrRadioGroupRenderFunction = ({
   label,
   size,
   disabled,
+  name,
   required,
   readonly,
   invalid,
@@ -117,6 +118,7 @@ export const BlrRadioGroupRenderFunction = ({
     class="example-layout-class"
     .label=${label}
     .size=${size}
+    .name=${name}
     .disabled=${disabled}
     .required=${required}
     .readonly=${readonly}
