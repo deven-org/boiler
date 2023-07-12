@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 12 Jul 2023 12:49:13 GMT
+ * Generated on Wed, 12 Jul 2023 13:01:58 GMT
  */
 
 export const semanticTokens = {
@@ -269,14 +269,14 @@ export const semanticTokens = {
   },
   Forms: {
     SM: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       LabelNextToControl: {
         fontFamily: '"Source Sans Pro" ',
         fontWeight: 400,
-        lineHeight: '150%',
+        lineHeight: '1rem',
         fontSize: '0.875rem',
       },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
@@ -294,8 +294,8 @@ export const semanticTokens = {
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
     },
     MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       CaptionComponent: {
         Padding: '0rem 0px',
@@ -308,20 +308,20 @@ export const semanticTokens = {
       LabelSlot: { Padding: '0rem 0px 8px ' },
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      LabelNextToControl: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      LabelNextToControl: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
     },
     LG: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
       LabelNextToControl: {
         fontFamily: '"Source Sans Pro" ',
         fontWeight: 400,
-        lineHeight: '150%',
+        lineHeight: '1.5rem',
         fontSize: '1.25rem',
       },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
