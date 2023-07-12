@@ -17,6 +17,7 @@ export class BlrRadioGroup extends LitElement {
   @property() label!: string;
   @property() size: InputSizesType = 'md';
   @property() disabled?: boolean;
+  @property() name?: string;
   @property() required?: boolean;
   @property() readonly?: boolean;
   @property() invalid?: boolean;
