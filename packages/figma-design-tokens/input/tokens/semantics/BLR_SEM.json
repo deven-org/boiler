@@ -1052,11 +1052,11 @@
   "Forms": {
     "SM": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
         "type": "typography"
       },
       "Caption": {
@@ -1068,7 +1068,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1142,11 +1142,11 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "Caption": {
@@ -1206,7 +1206,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1232,11 +1232,11 @@
     },
     "LG": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Caption": {
@@ -1248,7 +1248,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
