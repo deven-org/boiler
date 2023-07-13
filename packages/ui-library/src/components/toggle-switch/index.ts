@@ -48,8 +48,8 @@ export class BlrLabelToggleSwitch extends LitElement {
 
   handleChange(event: Event) {
     if (!this.disabled) {
-      this.onChange?.(event);
       this.isSelected = !this.isSelected;
+      this.onChange?.(event);
     }
   }
 
@@ -59,31 +59,39 @@ export class BlrLabelToggleSwitch extends LitElement {
       'blr-label-toggleswitch': true,
       [`error`]: this.hasError || false,
       [`disabled`]: this.disabled || false,
+      [`readonly`]: this.readonly || false,
       [`${this.size}`]: this.size || 'md',
       [`${this.variant}`]: this.variant || 'leading',
     });
     const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
     return html`<div class=${classes}>
-      ${this.label
-        ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
-        : nothing}
-      ${this.showHint
-        ? html`
-            ${BlrFormHint({
-              message: this.hasError ? this.errorMessage : this.hintText,
-              variant: this.hasError ? 'error' : 'hint',
-              iconName: calculateIconName(this.hintIcon, this.size),
-              size: 'sm',
-            })}
-          `
-        : html``}
-      <label for=${this.checkInputId || nothing} class=${wrapperClass} ?disabled=${this.disabled || nothing}>
+      <span class="toggle-content-col">
+        ${this.label
+          ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
+          : nothing}
+        ${this.showHint
+          ? html`
+              ${BlrFormHint({
+                message: this.hasError ? this.errorMessage : this.hintText,
+                variant: this.hasError ? 'error' : 'hint',
+                iconName: calculateIconName(this.hintIcon, this.size),
+                size: 'sm',
+              })}
+            `
+          : html``}
+      </span>
+      <label
+        for=${this.checkInputId || nothing}
+        class=${wrapperClass}
+        ?disabled=${this.disabled || nothing}
+        ?readonly=${this.readonly || nothing}
+      >
         <input
           type="checkbox"
           id=${this.checkInputId || nothing}
           name=${this.checkInputId || nothing}
           ?disabled=${this.disabled || nothing}
-          .checked=${this.checked || nothing}
+          .checked=${this.isSelected || nothing}
           .indeterminate=${this.indeterminate || nothing}
           ?readonly=${this.readonly || nothing}
           @change=${this.handleChange}

@@ -14,6 +14,7 @@ export const checkboxStyles = css`
 
     &.trailing {
       flex-direction: row;
+      justify-content: space-between;
     }
 
     &.disabled {
@@ -26,6 +27,7 @@ export const checkboxStyles = css`
       > .blr-label-switch-wrapper {
         width: ${ToggleSwitch.Control.SM.Background.Width};
         height: ${ToggleSwitch.Control.SM.Background.Height};
+        margin: ${ToggleSwitch.SM.Gap} 0;
 
         > .toggle-switch-slider {
           &::after {
@@ -64,6 +66,7 @@ export const checkboxStyles = css`
       > .blr-label-switch-wrapper {
         width: ${ToggleSwitch.Control.MD.Background.Width};
         height: ${ToggleSwitch.Control.MD.Background.Height};
+        margin: ${ToggleSwitch.MD.Gap} 0;
 
         > .toggle-switch-slider {
           &::after {
@@ -102,6 +105,7 @@ export const checkboxStyles = css`
       > .blr-label-switch-wrapper {
         width: ${ToggleSwitch.Control.LG.Background.Width};
         height: ${ToggleSwitch.Control.LG.Background.Height};
+        margin: ${ToggleSwitch.LG.Gap} 0;
 
         > .toggle-switch-slider {
           &::after {
@@ -210,10 +214,6 @@ export const checkboxStyles = css`
           &[disabled] {
             background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Disabled};
           }
-
-          &[readonly] {
-            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.ReadOnly};
-          }
         }
 
         &.wrapper-selected {
@@ -234,10 +234,6 @@ export const checkboxStyles = css`
 
           &[disabled] {
             background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Disabled};
-          }
-
-          &[readonly] {
-            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.ReadOnly};
           }
         }
       }
