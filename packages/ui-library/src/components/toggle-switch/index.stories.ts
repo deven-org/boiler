@@ -2,7 +2,9 @@
 import { html } from 'lit';
 
 import { BlrLabelToggleSwitch as BlrLabelToggleSwitchClass } from './index';
+import { IconKeys } from '@boiler/icons';
 
+import { getIconName } from '../../utils/get-icon-name';
 import { FormSizes, WrapperVariant } from '../../globals/constants';
 import './index';
 
@@ -11,6 +13,10 @@ export default {
   argTypes: {
     size: {
       options: FormSizes,
+      control: { type: 'select' },
+    },
+    hintIcon: {
+      options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     variant: {
@@ -32,6 +38,10 @@ export const BlrLabelToggleSwitch = ({
   checked,
   indeterminate,
   readonly,
+  errorMessage,
+  showHint,
+  hintText,
+  hintIcon,
   hasError,
 }: BlrLabelToggleSwitchClass) => html`
   <blr-label-toggleswitch
@@ -46,6 +56,10 @@ export const BlrLabelToggleSwitch = ({
     .readonly=${readonly}
     .size=${size}
     .variant=${variant}
+    .errorMessage=${errorMessage}
+    .showHint=${showHint}
+    .hintText=${hintText}
+    .hintIcon=${hintIcon}
     .hasError=${hasError}
   ></blr-label-toggleswitch>
 `;
@@ -65,6 +79,10 @@ BlrLabelToggleSwitch.args = {
   readonly: false,
   hasError: false,
   size: 'md',
+  errorMessage: 'This is error message',
+  showHint: true,
+  hintText: 'Field is used for hint',
+  hintIcon: 'blrInfo',
   variant: 'leading',
   onChange: logEventType,
   onFocus: logEventType,

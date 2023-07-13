@@ -4,6 +4,7 @@ import { css } from "nested-css-to-flat/lit-css";
 
 const { ToggleSwitch } = componentTokens.Forms;
 const { Forms } = semanticTokens;
+const { FocusBorder } = semanticTokens.Global;
 
 export const checkboxStyles = css`
   .blr-label-toggleswitch {
@@ -203,7 +204,7 @@ export const checkboxStyles = css`
 
           &:focus {
             background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
-            outline: 2px solid ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
+            outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
           }
 
           &[disabled] {
@@ -228,7 +229,7 @@ export const checkboxStyles = css`
 
           &:focus {
             background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Focus};
-            outline: 2px solid ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
+            outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
           }
 
           &[disabled] {
