@@ -14,11 +14,69 @@ export const styleCustom = css`
     margin-left: 0;
   }
 
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      margin: -8px 0 0;
+      border-radius: 50%;
+      background: #37adbf;
+      cursor: pointer;
+      border: 0 !important;
+    }
+
+    &::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      margin: -8px 0 0;
+      border-radius: 50%;
+      background: #37adbf;
+      cursor: pointer;
+      border: 0 !important;
+    }
+
+    &::-ms-thumb {
+      width: 18px;
+      height: 18px;
+      margin: -8px 0 0;
+      border-radius: 50%;
+      background: #37adbf;
+      cursor: pointer;
+      border: 0 !important;
+    }
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 2px;
+      cursor: pointer;
+      background: #b2b2b2;
+    }
+
+    &::-moz-range-track {
+      width: 100%;
+      height: 2px;
+      cursor: pointer;
+      background: #b2b2b2;
+    }
+
+    &::-ms-track {
+      width: 100%;
+      height: 2px;
+      cursor: pointer;
+      background: #b2b2b2;
+    }
+  }
+
   .input-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
   }
 
   .tick-wrapper {
@@ -35,6 +93,12 @@ export const styleCustom = css`
     cursor: pointer;
     outline: inherit;
     font-size: 24px;
+  }
+
+  .range {
+    appearance: none;
+    height: 4px;
+    border-radius: 2px;
   }
 
   .range__tick {
@@ -61,6 +125,13 @@ export const styleCustom = css`
     border: 0;
   }
 
+  .range__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .range__numbers {
     display: flex;
     justify-content: space-between;
@@ -78,5 +149,14 @@ export const styleCustom = css`
     height: 6px;
     width: 1px;
     background-color: grey;
+  }
+
+  .range__pip {
+    margin: -18px 0 10px;
+    width: 9px;
+    border: 1px solid #c7c7c7;
+    height: 9px;
+    background: rgb(255 255 255);
+    border-radius: 50%;
   }
 `;
