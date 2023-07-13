@@ -170,8 +170,7 @@ snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled 
 </div>
 `;
 /* end snapshot blr-text-input renders correctly */
-snapshots["blr-text-input renders correctly"] = 
-`<div class="blr-input disabled md">
+snapshots['blr-text-input renders correctly'] = `<div class="blr-input disabled md">
   <label
     class="blr-form-label md"
     for="text-Input-id"
@@ -199,7 +198,7 @@ snapshots["blr-text-input renders correctly"] =
     >
     </blr-icon>
   </div>
-  <span class="blr-form-hint hint sm">
+  <div class="blr-form-hint hint sm">
     <blr-icon
       aria-hidden=""
       icon=""
@@ -208,8 +207,7 @@ snapshots["blr-text-input renders correctly"] =
     </blr-icon>
     <span class="blr-caption-text">
     </span>
-  </span>
+  </div>
 </div>
 `;
 /* end snapshot blr-text-input renders correctly */
-

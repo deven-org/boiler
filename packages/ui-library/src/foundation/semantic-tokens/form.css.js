@@ -13,6 +13,7 @@ const forms = {
 export const form = css`
 .blr-form-element {
   all: initial;
+  width: 100%;
   color: ${Forms.UserInput.Default.Rest};
   border-width: ${Forms.Input.Default.Rest.width};
   border-style: ${Forms.Input.Default.Rest.style};
@@ -150,7 +151,7 @@ export const form = css`
     font-weight: ${Forms.SM.UserInput.fontWeight};
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.SM.InputField.Padding};
+    padding: ${Forms.Select.SM.InputFieldPadding};
     line-height: ${Forms.SM.UserInput.lineHeight};
   }
 
@@ -158,7 +159,7 @@ export const form = css`
     font-weight: ${Forms.MD.UserInput.fontWeight};
     font-size: ${Forms.MD.UserInput.fontSize};
     font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.MD.InputField.Padding};
+    padding:  ${Forms.Select.SM.InputFieldPadding};
     line-height: ${Forms.MD.UserInput.lineHeight};
   }
 
@@ -166,14 +167,23 @@ export const form = css`
     font-weight: ${Forms.LG.UserInput.fontWeight};
     font-size: ${Forms.LG.UserInput.fontSize};
     font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.LG.InputField.Padding};
+    padding:  ${Forms.Select.SM.InputFieldPadding};
     line-height: ${Forms.LG.UserInput.lineHeight};
   }
 }
 
 .blr-input-icon {
-  margin-left: -25px;
+  position: absolute;
   color: ${Forms.Placeholder.Default.Rest};
+  &.sm {
+    right: ${Forms.Select.SM.IconPaddingRight};
+  }
+  &.md {
+    right: ${Forms.Select.MD.IconPaddingRight};
+  }
+  &.lg {
+    right: ${Forms.Select.LG.IconPaddingRight};
+  }
 }
 
 .blr-input-icon.error {
@@ -229,8 +239,7 @@ export const form = css`
   }
 }
 .blr-form-label {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   padding: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.Label.fontWeight};
   font-size: ${Forms.MD.Label.fontSize};
