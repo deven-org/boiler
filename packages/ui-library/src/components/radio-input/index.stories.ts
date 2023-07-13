@@ -34,6 +34,7 @@ export const BlrRadio = ({
   option,
   showHint,
   hintIcon,
+  showErrorIcon,
   errorMessage,
 }: BlrRadioType) =>
   html`
@@ -51,6 +52,7 @@ export const BlrRadio = ({
       option,
       showHint,
       hintIcon,
+      showErrorIcon,
       errorMessage,
     })}
   `;
@@ -68,5 +70,6 @@ BlrRadio.args = {
   showHint: true,
   invalid: false,
   hintIcon: 'blrInfo',
+  showErrorIcon: true,
   errorMessage: 'This is a sample error message',
 };

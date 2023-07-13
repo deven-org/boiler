@@ -27,6 +27,7 @@ export class BlrRadio extends LitElement {
   @property() option!: RadioOption;
   @property() showHint = true;
   @property() hintIcon: IconType = 'blrInfoSm';
+  @property() showErrorIcon = true;
   @property() errorMessage?: string;
 
   protected render() {
@@ -77,7 +78,7 @@ export class BlrRadio extends LitElement {
                 message: (this.invalid ? this.errorMessage : this.option.hint) || '',
                 variant: this.invalid ? 'error' : 'hint',
                 size: 'sm',
-                iconName: calculateIconName(this.hintIcon, this.size),
+                iconName: this.showErrorIcon ? calculateIconName(this.hintIcon, this.size) : '',
               })}
             `
           : html``}
@@ -102,6 +103,7 @@ export const BlrRadioRenderFunction = ({
   option,
   showHint,
   hintIcon,
+  showErrorIcon,
   errorMessage,
 }: BlrRadioType) => {
   return html`<blr-radio
@@ -120,6 +122,7 @@ export const BlrRadioRenderFunction = ({
     .option=${option}
     .showHint=${showHint}
     .hintIcon=${hintIcon}
+    .showErrorIcon=${showErrorIcon}
     .errorMessage=${errorMessage}
   ></blr-radio>`;
 };

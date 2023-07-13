@@ -29,7 +29,6 @@ export const BlrRadioGroup = ({
   required,
   readonly,
   invalid,
-  checked,
   onChange,
   onBlur,
   onFocus,
@@ -38,7 +37,8 @@ export const BlrRadioGroup = ({
   layout,
   showHint,
   hintIcon,
-  errorMessage,
+  showErrorIcon,
+  groupErrorMessage,
 }: BlrRadioGroupType) =>
   html`
     ${BlrRadioGroupRenderFunction({
@@ -49,7 +49,6 @@ export const BlrRadioGroup = ({
       required,
       readonly,
       invalid,
-      checked,
       onChange,
       onBlur,
       onFocus,
@@ -58,7 +57,8 @@ export const BlrRadioGroup = ({
       layout,
       showHint,
       hintIcon,
-      errorMessage,
+      showErrorIcon,
+      groupErrorMessage,
     })}
   `;
 BlrRadioGroup.storyName = 'BlrRadioGroup';
@@ -71,7 +71,6 @@ BlrRadioGroup.args = {
   required: false,
   readonly: false,
   size: 'md',
-  checked: false,
   options: [
     { label: 'Multi-line option 1', value: 'option1', hint: 'Hint 1', checked: true },
     { label: 'Option 2', value: 'option2', hint: 'Hint 2' },
@@ -80,5 +79,6 @@ BlrRadioGroup.args = {
   layout: 'horizontal',
   showHint: true,
   hintIcon: 'blrInfo',
-  errorMessage: 'This is a sample error message',
+  showErrorIcon: true,
+  groupErrorMessage: 'This is a sample error message',
 };

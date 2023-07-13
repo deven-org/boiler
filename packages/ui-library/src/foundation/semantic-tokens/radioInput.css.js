@@ -1,15 +1,15 @@
 import { css } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
-const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+const { SM, MD, LG, LabelNextToControl, Caption } = semanticTokens.Forms;
 const { Radio } = componentTokens.Forms;
 
 export const radio = css`
   .blr-radio-group {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
     position: relative;
+    flex-flow: row wrap;
 
     &.vertical {
       flex-direction: column;
@@ -300,24 +300,30 @@ export const radio = css`
       }
     }
 
-    .hint,
     .blr-form-hint {
-      margin: 0;
+      margin-top: 0;
 
       &.sm {
         padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
         font-family: ${SM.Caption.fontFamily}, sans-serif;
+        font-size: ${SM.Caption.fontSize};
       }
 
       &.md {
         padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
         font-family: ${MD.Caption.fontFamily}, sans-serif;
+        font-size: ${MD.Caption.fontSize};
       }
 
       &.lg {
         padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
         font-family: ${LG.Caption.fontFamily}, sans-serif;
+        font-size: ${LG.Caption.fontSize};
       }
     }
+  }
+
+  .group-error {
+    width: 100%;
   }
 `;

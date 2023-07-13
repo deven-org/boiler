@@ -29,8 +29,9 @@ export class BlrRadioGroup extends LitElement {
   @property() options!: RadioOption[];
   @property() layout!: boolean;
   @property() showHint = true;
+  @property() showErrorIcon = true;
   @property() hintIcon: IconType = 'blrInfoSm';
-  @property() errorMessage?: string;
+  @property() groupErrorMessage?: string;
 
   protected render() {
     const classes = classMap({
@@ -79,8 +80,8 @@ export class BlrRadioGroup extends LitElement {
               ${this.showHint
                 ? html`
                     ${BlrFormHint({
-                      message: (this.invalid ? this.errorMessage : option.hint) || '',
-                      variant: this.invalid ? 'error' : 'hint',
+                      message: option.hint || '',
+                      variant: 'hint',
                       size: 'sm',
                       iconName: calculateIconName(this.hintIcon, this.size),
                     })}
@@ -89,6 +90,18 @@ export class BlrRadioGroup extends LitElement {
             </div>
           `;
         })}
+        <div class="group-error">
+          ${this.invalid
+            ? html`
+                ${BlrFormHint({
+                  message: this.groupErrorMessage || '',
+                  variant: 'error',
+                  size: 'sm',
+                  iconName: this.showErrorIcon ? calculateIconName(this.hintIcon, this.size) : '',
+                })}
+              `
+            : html``}
+        </div>
       </div>
     `;
   }
@@ -113,7 +126,8 @@ export const BlrRadioGroupRenderFunction = ({
   layout,
   showHint,
   hintIcon,
-  errorMessage,
+  showErrorIcon,
+  groupErrorMessage,
 }: BlrRadioGroupType) => {
   return html`<blr-radio-group
     class="example-layout-class"
@@ -133,6 +147,7 @@ export const BlrRadioGroupRenderFunction = ({
     .layout=${layout}
     .showHint=${showHint}
     .hintIcon=${hintIcon}
-    .errorMessage=${errorMessage}
+    .showErrorIcon=${showErrorIcon}
+    .groupErrorMessage=${groupErrorMessage}
   ></blr-radio-group>`;
 };
