@@ -44,7 +44,8 @@ const semanticTypes = [
   'LabelAppendix',
   'InputIcon',
   'Control',
-  'LabelNextToControl'
+  'LabelNextToControl',
+  'Select'
 ];
 
 const componentTypes = ['TextButton', 'IconButton', 'IconDropdown', 'Icon', 'Loader', 'TextArea', 'Radio', 'Checkbox', 'Caption'];

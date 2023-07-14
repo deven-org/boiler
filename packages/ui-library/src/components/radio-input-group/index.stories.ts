@@ -72,9 +72,9 @@ BlrRadioGroup.args = {
   readonly: false,
   size: 'md',
   options: [
-    { label: 'Multi-line option 1', value: 'option1', hint: 'Hint 1', checked: true },
-    { label: 'Option 2', value: 'option2', hint: 'Hint 2' },
-    { label: 'Option 3', value: 'option3', hint: 'Hint 3' },
+    { label: 'Multi-line option 1', value: 'option1', hint: 'Hint 1', errorMessage: 'Error Message 1' },
+    { label: 'Option 2', value: 'option2', hint: 'Hint 2', errorMessage: 'Error Message 2' },
+    { label: 'Option 3', value: 'option3', hint: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
   layout: 'horizontal',
   showHint: true,

@@ -18,9 +18,9 @@ export const BlrFormHint = ({ message, variant, iconName, size }: FormHintType) 
   });
 
   return html`
-    <span class="blr-form-hint ${classes}">
+    <div class="blr-form-hint ${classes}">
       <blr-icon icon="${iconName}" size="${size}" aria-hidden></blr-icon>
       <span class="blr-caption-text">${message}</span>
-    </span>
+    </div>
   `;
 };

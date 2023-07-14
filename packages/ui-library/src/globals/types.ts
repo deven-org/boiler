@@ -11,6 +11,7 @@ export type InputSizesType = (typeof InputSizes)[number];
 export type RadioOption = {
   label: string;
   value: string;
-  hint: string;
+  hint?: string;
+  errorMessage?: string;
   checked?: boolean;
 };

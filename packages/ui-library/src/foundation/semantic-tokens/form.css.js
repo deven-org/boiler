@@ -6,6 +6,7 @@ const { Forms } = semanticTokens;
 export const form = css`
 .blr-form-element {
   all: initial;
+  width: 100%;
   color: ${Forms.UserInput.Default.Rest};
   font-weight: ${Forms.MD.UserInput.fontWeight};
   font-size: ${Forms.MD.UserInput.fontSize};
@@ -127,8 +128,17 @@ export const form = css`
 }
 
 .blr-input-icon {
-  margin-left: -25px;
+  position: absolute;
   color: ${Forms.Placeholder.Default.Rest};
+  &.sm {
+    right: ${Forms.Select.SM.IconPaddingRight};
+  }
+  &.md {
+    right: ${Forms.Select.MD.IconPaddingRight};
+  }
+  &.lg {
+    right: ${Forms.Select.LG.IconPaddingRight};
+  }
 }
 
 .blr-input-icon.error {
@@ -184,8 +194,7 @@ export const form = css`
   }
 }
 .blr-form-label {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   padding: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.Label.fontWeight};
   font-size: ${Forms.MD.Label.fontSize};

@@ -35,7 +35,6 @@ export const BlrRadio = ({
   showHint,
   hintIcon,
   showErrorIcon,
-  errorMessage,
 }: BlrRadioType) =>
   html`
     ${BlrRadioRenderFunction({
@@ -53,7 +52,6 @@ export const BlrRadio = ({
       showHint,
       hintIcon,
       showErrorIcon,
-      errorMessage,
     })}
   `;
 
@@ -66,10 +64,15 @@ BlrRadio.args = {
   required: false,
   readonly: false,
   size: 'md',
-  option: { label: 'Option 1', value: 'option1', hint: 'This is a small hint', checked: true },
+  option: {
+    label: 'Option 1',
+    value: 'option1',
+    hint: 'This is a small hint',
+    checked: true,
+    errorMessage: 'This is a sample error message',
+  },
   showHint: true,
   invalid: false,
   hintIcon: 'blrInfo',
   showErrorIcon: true,
-  errorMessage: 'This is a sample error message',
 };
