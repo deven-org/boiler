@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 import './index';
-import { FormSizes } from '../../globals/constants';
+import { FormSizes, NumberFormats } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
@@ -27,8 +27,15 @@ export default {
     value: {
       control: { type: 'text' },
     },
+    unit: {
+      control: { type: 'text' },
+    },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    numberFormat: {
+      options: NumberFormats,
       control: { type: 'select' },
     },
   },
@@ -51,6 +58,10 @@ export const BlrNumberInput = ({
   numberInputId,
   theme,
   value,
+  showHint,
+  hintIcon,
+  numberFormat,
+  unit,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -67,6 +78,10 @@ export const BlrNumberInput = ({
       labelAppendix,
       numberInputId,
       value,
+      showHint,
+      hintIcon,
+      numberFormat,
+      unit,
     })}
   `;
 
@@ -74,6 +89,8 @@ BlrNumberInput.storyName = 'BlrNumberInput';
 
 BlrNumberInput.args = {
   value: undefined,
+  numberFormat: '%g',
+  unit: '',
   variant: 'mode1',
   theme: 'Light',
   hasLabel: true,

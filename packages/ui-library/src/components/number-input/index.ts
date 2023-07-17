@@ -18,6 +18,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { IconType, SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
+import { sprintf } from 'sprintf-js';
 
 type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
@@ -46,6 +47,8 @@ export class BlrNumberInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() value?: number;
+  @property() numberFormat!: string;
+  @property() unit?: string = 'kg';
 
   @property() theme: ThemeType = 'Light';
 
@@ -163,11 +166,10 @@ export class BlrNumberInput extends LitElement {
               ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
               ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
             `}
-
         <input
           class="${inputClasses}"
           type="number"
-          .value=${this.currentValue}
+          .value=${sprintf(this.numberFormat, this.currentValue)}
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
@@ -176,6 +178,7 @@ export class BlrNumberInput extends LitElement {
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
+        ${this.unit && html`<span>${this.unit}</span>`}
       </div>
     `;
   }
@@ -197,6 +200,8 @@ export const BlrNumberInputRenderFunction = ({
   numberInputId,
   value,
   theme,
+  numberFormat,
+  unit,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -212,5 +217,7 @@ export const BlrNumberInputRenderFunction = ({
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
+    .numberFormat="${numberFormat}"
+    .unit="${unit}"
   ></blr-number-input>`;
 };

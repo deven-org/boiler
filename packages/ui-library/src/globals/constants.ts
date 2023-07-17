@@ -21,3 +21,4 @@ export const TabAlignmentVariants = [
   'space-evenly',
 ] as const;
 export const OverflowVariants = ['wrap', 'browserOverflow', 'buttons'] as const;
+export const NumberFormats = ['%f', '%.1f', '%.2f', '%.3f', '%1.0f', '%-1f', '%g', '%e', '%E'] as const;
