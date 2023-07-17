@@ -1,11 +1,11 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrLabelToggleSwitch } from '.';
+import { BlrToggleSwitch } from '.';
 
 export const BlrLabelCheckboxReact = createComponent({
   tagName: 'blr-label-toggleswitch',
-  elementClass: BlrLabelToggleSwitch,
+  elementClass: BlrToggleSwitch,
   react: React,
   events: {
     onClick: 'pointerdown' as EventName<PointerEvent>,

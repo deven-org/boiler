@@ -13,7 +13,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { checkboxStyles } from '../../foundation/component-tokens/toogleswitch.css';
 
 @customElement('blr-label-toggleswitch')
-export class BlrLabelToggleSwitch extends LitElement {
+export class BlrToggleSwitch extends LitElement {
   static styles = [styleCustom, form, checkboxStyles];
 
   @query('input')
@@ -38,7 +38,14 @@ export class BlrLabelToggleSwitch extends LitElement {
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() onChange?: HTMLButtonElement['onchange'];
 
-  @state() protected isSelected = this.checked;
+  @state() isSelected = false;
+
+  // When the property is updated, set the isSelected state to the new value
+  updated(changedProperties: Map<string, boolean>) {
+    if (changedProperties.has('checked')) {
+      this.isSelected = this.checked || false;
+    }
+  }
 
   connectedCallback() {
     super.connectedCallback();

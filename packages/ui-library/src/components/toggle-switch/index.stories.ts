@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 
-import { BlrLabelToggleSwitch as BlrLabelToggleSwitchClass } from './index';
+import { BlrToggleSwitch as BlrToggleSwitchClass } from './index';
 import { IconKeys } from '@boiler/icons';
 
 import { getIconName } from '../../utils/get-icon-name';
@@ -9,7 +9,7 @@ import { FormSizes, WrapperVariant } from '../../globals/constants';
 import './index';
 
 export default {
-  title: 'BlrLabelToggleSwitch',
+  title: 'BlrToggleSwitch',
   argTypes: {
     size: {
       options: FormSizes,
@@ -26,7 +26,7 @@ export default {
   },
 };
 
-export const BlrLabelToggleSwitch = ({
+export const BlrToggleSwitch = ({
   label,
   checkInputId,
   onBlur,
@@ -41,7 +41,7 @@ export const BlrLabelToggleSwitch = ({
   hintText,
   hintIcon,
   hasError,
-}: BlrLabelToggleSwitchClass) => html`
+}: BlrToggleSwitchClass) => html`
   <blr-label-toggleswitch
     .label=${label}
     .checkInputId=${checkInputId}
@@ -60,13 +60,13 @@ export const BlrLabelToggleSwitch = ({
   ></blr-label-toggleswitch>
 `;
 
-BlrLabelToggleSwitch.storyName = 'BlrLabelToggleSwitch';
+BlrToggleSwitch.storyName = 'BlrToggleSwitch';
 
 const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);
 };
 
-BlrLabelToggleSwitch.args = {
+BlrToggleSwitch.args = {
   label: 'Toggle Switch Option',
   checkInputId: 'switch',
   disabled: false,
