@@ -823,6 +823,10 @@
         "Padding": {
           "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
           "type": "spacing"
+        },
+        "BorderRadius": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
         }
       },
       "Elevation": {
