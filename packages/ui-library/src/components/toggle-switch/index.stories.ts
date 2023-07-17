@@ -36,8 +36,6 @@ export const BlrLabelToggleSwitch = ({
   size,
   variant,
   checked,
-  indeterminate,
-  readonly,
   errorMessage,
   showHint,
   hintText,
@@ -52,8 +50,6 @@ export const BlrLabelToggleSwitch = ({
     .onChange=${onChange}
     .disabled=${disabled}
     .checked=${checked}
-    .indeterminate=${indeterminate}
-    .readonly=${readonly}
     .size=${size}
     .variant=${variant}
     .errorMessage=${errorMessage}
@@ -75,8 +71,6 @@ BlrLabelToggleSwitch.args = {
   checkInputId: 'switch',
   disabled: false,
   checked: false,
-  indeterminate: false,
-  readonly: false,
   hasError: false,
   size: 'md',
   errorMessage: 'This is error message',

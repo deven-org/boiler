@@ -24,8 +24,6 @@ export class BlrLabelToggleSwitch extends LitElement {
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
-  @property() indeterminate?: boolean;
-  @property() readonly?: boolean;
   @property() hasError?: boolean;
 
   @property() errorMessage?: string;
@@ -59,7 +57,6 @@ export class BlrLabelToggleSwitch extends LitElement {
       'blr-label-toggleswitch': true,
       [`error`]: this.hasError || false,
       [`disabled`]: this.disabled || false,
-      [`readonly`]: this.readonly || false,
       [`${this.size}`]: this.size || 'md',
       [`${this.variant}`]: this.variant || 'leading',
     });
@@ -80,20 +77,13 @@ export class BlrLabelToggleSwitch extends LitElement {
             `
           : html``}
       </span>
-      <label
-        for=${this.checkInputId || nothing}
-        class=${wrapperClass}
-        ?disabled=${this.disabled || nothing}
-        ?readonly=${this.readonly || nothing}
-      >
+      <label for=${this.checkInputId || nothing} class=${wrapperClass} ?disabled=${this.disabled || nothing}>
         <input
           type="checkbox"
           id=${this.checkInputId || nothing}
           name=${this.checkInputId || nothing}
           ?disabled=${this.disabled || nothing}
           .checked=${this.isSelected || nothing}
-          .indeterminate=${this.indeterminate || nothing}
-          ?readonly=${this.readonly || nothing}
           @change=${this.handleChange}
           @focus=${this.onFocus}
           @blur=${this.onBlur}
