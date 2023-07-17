@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 16 Jun 2023 09:57:16 GMT
+ * Generated on Mon, 17 Jul 2023 13:19:33 GMT
  */
 
 export const componentConfig = {
@@ -41,7 +41,11 @@ export const componentConfig = {
     XL: { LoaderSize: 'LG' },
   },
   Forms: {
-    Checkbox: { Control: { IconSize: 'SM' } },
+    Checkbox: {
+      SM: { Control: { IconSize: 'SM' } },
+      MD: { Control: { IconSize: 'SM' } },
+      LG: { Control: { IconSize: 'Custom 20px' } },
+    },
     SM: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
     MD: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
     LG: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
