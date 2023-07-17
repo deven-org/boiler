@@ -1,7 +1,7 @@
 import { css } from "lit";
 
 export const styleCustom = css`
-  .blr-input {
+  .blr-text-input {
     display: block;
     position: relative;
   }

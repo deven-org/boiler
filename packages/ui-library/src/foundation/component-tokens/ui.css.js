@@ -1,4 +1,5 @@
 import { css } from "lit";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: iconLight, tokenizedDark: iconDark } = renderThemedCssStrings((componentTokens) => {
@@ -48,6 +49,10 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
         border-top: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
         border-right: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
         height: 100%;
+
+        &.padding {
+          margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+        }
 
         &.margin {
           margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};

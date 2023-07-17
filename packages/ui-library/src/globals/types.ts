@@ -4,6 +4,7 @@ import {
   InputTypes,
   FormSizes,
   InputSizes,
+  DividerVariations,
   ActionVariants,
   FeedbackVariants,
   HintVariants,

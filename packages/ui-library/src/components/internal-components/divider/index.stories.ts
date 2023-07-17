@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { BlrDividerRenderFunction, BlrDividerType } from './index';
-import { DividerVariations, FormSizes } from '../../../globals/constants';
+import { DividerVariations } from '../../../globals/constants';
 import './index';
 
 import { calculateIconName } from '../../../utils/calculate-icon-name';
@@ -12,10 +12,6 @@ export default {
   argTypes: {
     dividerDirectionVariant: {
       options: DividerVariations,
-      control: { type: 'select' },
-    },
-    size: {
-      options: FormSizes,
       control: { type: 'select' },
     },
     theme: {
@@ -31,7 +27,7 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDividerType) => html`
+export const BlrDivider = ({ size, directionVariant, addMargin, theme }: BlrDividerType) => html`
   <style>
     .wrapper-vertical {
       position: relative;
@@ -52,10 +48,10 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDiv
     }
   </style>
 
-  <div class="wrapper-${dividerDirectionVariant}">
+  <div class="wrapper-${directionVariant}">
     <button class="test-button">
       ${BlrIconRenderFunction({
-        icon: calculateIconName(dividerDirectionVariant === 'horizontal' ? 'blrChevronUp' : 'blrMinus', 'sm'),
+        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronUp' : 'blrMinus', size),
         name: 'up',
         size: 'sm',
         hideAria: true,
@@ -64,15 +60,17 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDiv
     </button>
 
     ${BlrDividerRenderFunction({
-      dividerDirectionVariant,
-      addMargin,
       theme,
+      size,
+      directionVariant,
+      addMargin,
     })}
 
     <button class="test-button">
       ${BlrIconRenderFunction({
-        icon: calculateIconName(dividerDirectionVariant === 'horizontal' ? 'blrChevronDown' : 'blrPlus', 'sm'),
+        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronDown' : 'blrPlus', 'sm'),
         name: 'down',
+
         size: 'sm',
         hideAria: true,
         disablePointerEvents: true,
@@ -87,5 +85,5 @@ BlrDivider.args = {
   size: 'md',
   addMargin: false,
   theme: 'Light',
-  dividerDirectionVariant: 'vertical',
+  directionVariant: 'vertical',
 };

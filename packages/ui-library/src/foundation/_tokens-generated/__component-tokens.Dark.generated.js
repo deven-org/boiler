@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 17 Aug 2023 12:51:51 GMT
+ * Generated on Fri, 18 Aug 2023 10:05:19 GMT
  */
 
 export const componentTokens = {
@@ -654,6 +654,18 @@ export const componentTokens = {
       MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', ItemSpacing: '0px' },
       LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', ItemSpacing: '-0.125rem' },
       XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', ItemSpacing: '-0.25rem' },
+    },
+    StepperButton: {
+      Border: {
+        Rest: { color: '#00000000', width: '0px' },
+        Hover: { color: '#00000000', width: '0px' },
+        Pressed: { color: '#00000000', width: '0px' },
+        Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+        Disabled: { color: 'hsla(220, 10%, 30%,0) ', width: '0px' },
+      },
+      SM: { Width: '2rem' },
+      MD: { Width: '2.5rem' },
+      LG: { Width: '3rem' },
     },
     StepperCombo: {
       SM: {
