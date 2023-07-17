@@ -1,0 +1,290 @@
+import { LitElement, html, nothing } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, state } from 'lit/decorators.js';
+import { styleCustom } from './index.css';
+import { form } from '../../foundation/semantic-tokens/form.css';
+import { stepperCombo, stepperButton } from '../../foundation/component-tokens/action.css';
+import { action } from '../../foundation/semantic-tokens/action.css';
+import { DividerVariationTypes, FormSizesType, ActionVariantType } from '../../globals/types';
+import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
+import { IconType } from '@boiler/icons';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { BlrIconRenderFunction } from '../internal-components/icon';
+import { BlrDividerRenderFunction } from '../internal-components/divider';
+
+@customElement('blr-number-input')
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export class BlrNumberInput extends LitElement {
+  static styles = [styleCustom, form, stepperCombo, stepperButton, action];
+
+  @property() numberInputId!: string;
+  @property() hasLabel = true;
+  @property() label!: string;
+  @property() labelAppendix?: string;
+  @property() value!: string;
+  @property() placeholder?: string;
+  @property() disabled?: boolean;
+  @property() readonly?: boolean;
+  @property() size: FormSizesType = 'md';
+  @property() required?: boolean;
+  @property() onChange?: HTMLElement['oninput'];
+  @property() onBlur?: HTMLElement['blur'];
+  @property() onFocus?: HTMLElement['focus'];
+  @property() maxLength?: number;
+  @property() hasError?: boolean;
+  @property() errorMessage?: string;
+  @property() showHint = true;
+  @property() hintText?: string;
+  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() directionVariant: DividerVariationTypes = 'spaceBetween';
+  @property() variant: ActionVariantType = 'silent';
+
+  @state() protected counter = 0;
+
+  protected stepperUp() {
+    this.counter++;
+    // eslint-disable-next-line no-console
+    console.log('up');
+
+    this.requestUpdate();
+  }
+
+  protected stepperDown() {
+    this.counter--;
+    // eslint-disable-next-line no-console
+    console.log('down', this.counter);
+
+    this.requestUpdate();
+  }
+
+  protected connectedCallback() {
+    super.connectedCallback();
+    this.counter = Number(this.value) || 0;
+  }
+
+  protected render() {
+    const classes = classMap({
+      [`${this.size}`]: this.size,
+      [`${this.variant}`]: this.variant,
+      [`disabled`]: this.disabled || false,
+    });
+
+    const inputClasses = classMap({
+      [`error`]: this.hasError || false,
+      [`error-input`]: this.hasError || false,
+      [`${this.size}`]: this.size,
+    });
+
+    return html`
+      <div class="blr-number-input ${classes}">
+        ${
+          this.hasLabel
+            ? html`${BlrFormLabelRenderFunction({
+                labelText: this.label,
+                labelSize: this.size,
+                labelAppendix: this.labelAppendix,
+                forValue: this.numberInputId,
+              })}`
+            : nothing
+        }
+        <div class="blr-input-inner-container">
+          ${
+            this.directionVariant === 'spaceBetween'
+              ? html` <input
+                  class="blr-form-element spaceBetween ${inputClasses}"
+                  id=${this.numberInputId || nothing}
+                  type="number"
+                  value=${this.counter.toFixed(2)}
+                  placeholder=${this.placeholder || nothing}
+                  ?disabled=${this.disabled}
+                  ?readonly=${this.readonly}
+                  ?required=${this.required}
+                  @input=${this.onChange}
+                  @blur=${this.onBlur}
+                  @focus=${this.onFocus}
+                  maxlength=${this.maxLength}
+                  hasError=${this.hasError}
+                  directionVariant=${this.directionVariant}
+                  variant=${this.variant}
+                />`
+              : html`<input
+                  class="blr-form-element ${inputClasses}"
+                  id=${this.numberInputId || nothing}
+                  type="number"
+                  value=${this.counter.toFixed(2)}
+                  placeholder=${this.placeholder || nothing}
+                  ?disabled=${this.disabled}
+                  ?readonly=${this.readonly}
+                  ?required=${this.required}
+                  @input=${this.onChange}
+                  @blur=${this.onBlur}
+                  @focus=${this.onFocus}
+                  maxlength=${this.maxLength}
+                  hasError=${this.hasError}
+                  directionVariant=${this.directionVariant}
+                  variant=${this.variant}
+                />`
+          }
+          
+
+          
+            ${
+              this.directionVariant === 'horizontal'
+                ? html`
+                    <div class="blr-number-input-button-wrapper">
+                      <div class="wrapper-${this.directionVariant}">
+                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperUp}>
+                          ${BlrIconRenderFunction({
+                            icon: calculateIconName('blrChevronUp', this.size),
+                            name: 'up',
+                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            hideAria: true,
+                            disablePointerEvents: true,
+                          })}
+                        </button>
+
+                        ${BlrDividerRenderFunction({
+                          size: this.size,
+                          directionVariant: this.directionVariant,
+                        })}
+
+                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperDown}>
+                          ${BlrIconRenderFunction({
+                            icon: calculateIconName('blrChevronDown', this.size),
+                            name: 'down',
+                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            hideAria: true,
+                            disablePointerEvents: true,
+                          })}
+                        </button>
+                      </div>
+                    </div>
+                  `
+                : this.directionVariant === 'vertical'
+                ? html`
+                    <div class="blr-number-input-button-wrapper">
+                      <div class="wrapper-${this.directionVariant}">
+                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperDown}>
+                          ${BlrIconRenderFunction({
+                            icon: calculateIconName('blrMinus', this.size),
+                            name: 'up',
+                            //size: this.size,
+                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            hideAria: true,
+                            disablePointerEvents: true,
+                          })}
+                        </button>
+
+                        ${BlrDividerRenderFunction({
+                          size: this.size,
+                          directionVariant: this.directionVariant,
+                        })}
+
+                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperUp}>
+                          ${BlrIconRenderFunction({
+                            icon: calculateIconName('blrPlus', this.size),
+                            name: 'down',
+                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            hideAria: true,
+                            disablePointerEvents: true,
+                          })}
+                        </button>
+                      </div>
+                    </div>
+                  `
+                : html`
+                    <div class="left">
+                      <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperDown}>
+                        ${BlrIconRenderFunction({
+                          icon: calculateIconName('blrMinus', this.size),
+                          name: 'up',
+                          size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                          hideAria: true,
+                          disablePointerEvents: true,
+                        })}
+                      </button>
+                    </div>
+
+                    <div class="right">
+                      <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperUp}>
+                        ${BlrIconRenderFunction({
+                          icon: calculateIconName('blrPlus', this.size),
+                          name: 'down',
+                          size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                          hideAria: true,
+                          disablePointerEvents: true,
+                        })}
+                      </button>
+                    </div>
+                  `
+            }
+          </div>
+        </div>
+        ${
+          this.showHint
+            ? html`
+                ${BlrFormHintRenderFunction({
+                  message: this.hasError ? this.errorMessage : this.hintText,
+                  variant: this.hasError ? 'error' : 'hint',
+                  icon: calculateIconName(this.hintIcon, this.size),
+                  size: 'sm',
+                })}
+              `
+            : nothing
+        }
+      </div>
+    `;
+  }
+}
+
+export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement>;
+
+export const BlrNumberInputRenderFunction = ({
+  numberInputId,
+  hasLabel,
+  label,
+  labelAppendix,
+  value,
+  placeholder,
+  disabled,
+  readonly,
+  size,
+  required,
+  onChange,
+  onBlur,
+  onFocus,
+  maxLength,
+  hasError,
+  errorMessage,
+  showHint,
+  hintText,
+  hintIcon,
+  directionVariant,
+  variant,
+}: BlrNumberInputType) => {
+  return html`<blr-number-input
+    .numberInputId=${numberInputId}
+    .hasLabel=${hasLabel}
+    .label=${label}
+    .labelAppendix=${labelAppendix}
+    .value=${value}
+    .placeholder=${placeholder}
+    .disabled=${disabled}
+    .readonly=${readonly}
+    .size=${size}
+    .required=${required}
+    .onChange=${onChange}
+    .onBlur=${onBlur}
+    .onFocus=${onFocus}
+    .maxLength=${maxLength}
+    .errorMessage=${errorMessage}
+    .showHint=${showHint}
+    .hintText=${hintText}
+    .hintIcon=${hintIcon}
+    .hasError=${hasError}
+    .directionVariant=${directionVariant}
+    .variant=${variant}
+  ></blr-number-input>`;
+};

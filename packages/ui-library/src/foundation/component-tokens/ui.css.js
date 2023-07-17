@@ -1,4 +1,5 @@
 import { css } from "lit";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: iconLight, tokenizedDark: iconDark } = renderThemedCssStrings((componentTokens) => {
@@ -36,3 +37,17 @@ export const { tokenizedLight: iconLight, tokenizedDark: iconDark } = renderThem
     }
   `;
 });
+
+export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = renderThemedCssStrings(
+  (componentTokens) => {
+    const { UI } = componentTokens;
+
+    return css`
+      .blr-divider {
+        stroke: ${UI.Divider.Stroke};
+        border: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
+        height: 100%;
+      }
+    `;
+  }
+);

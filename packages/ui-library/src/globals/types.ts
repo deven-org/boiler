@@ -4,6 +4,7 @@ import {
   InputTypes,
   FormSizes,
   InputSizes,
+  DividerVariations,
   ActionVariants,
   FeedbackVariants,
   HintVariants,
@@ -31,3 +32,4 @@ export type RadioOption = {
 };
 export type WrapperVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
+export type DividerVariationTypes = (typeof DividerVariations)[number];

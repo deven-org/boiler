@@ -73,10 +73,11 @@ export class BlrTextInput extends LitElement {
       return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
-    return html`<style>
+    return html`
+      <style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <div class="blr-input ${classes}">
+      <div class="blr-text-input ${classes}">
         ${this.hasLabel
           ? html` ${BlrFormLabelRenderFunction({
               labelText: this.label,
@@ -139,7 +140,8 @@ export class BlrTextInput extends LitElement {
               `
             : nothing}
         </div>
-      </div> `;
+      </div>
+    `;
   }
 }
 
