@@ -441,24 +441,13 @@
       }
     },
     "StepperCombo": {
-      "Divider": {
-        "value": "{core.color.coolgray.800.opa30}",
-        "type": "color",
-        "Border": {
-          "value": {
-            "color": "{Action.StepperCombo.Divider}",
-            "width": "{core.dimensionPX.1}"
-          },
-          "type": "border"
-        }
-      },
       "SM": {
         "Vertical": {
           "Width": {
             "value": "{core.dimensionREM.32}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
@@ -470,20 +459,11 @@
             "value": "{core.dimensionREM.64}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
-          }
-        },
-        "Divider": {
-          "Border": {
-            "value": {
-              "color": "{Action.StepperCombo.Divider}",
-              "width": "{core.dimensionPX.1}"
-            },
-            "type": "border"
           }
         }
       },
@@ -493,7 +473,7 @@
             "value": "{core.dimensionREM.40}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
@@ -505,20 +485,11 @@
             "value": "{core.dimensionREM.80}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
-          }
-        },
-        "Divider": {
-          "Border": {
-            "value": {
-              "color": "{Action.StepperCombo.Divider}",
-              "width": "{core.dimensionPX.1}"
-            },
-            "type": "border"
           }
         }
       },
@@ -528,7 +499,7 @@
             "value": "{core.dimensionREM.48}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
@@ -540,20 +511,11 @@
             "value": "{core.dimensionREM.96}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
-          }
-        },
-        "Divider": {
-          "Border": {
-            "value": {
-              "color": "{Action.StepperCombo.Divider}",
-              "width": "{core.dimensionPX.1}"
-            },
-            "type": "border"
           }
         }
       }
