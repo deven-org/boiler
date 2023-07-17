@@ -761,6 +761,10 @@
         "Padding": {
           "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
           "type": "spacing"
+        },
+        "BorderRadius": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
         }
       },
       "Elevation": {
@@ -805,61 +809,6 @@
     }
   },
   "Forms": {
-    "Tooltip": {
-      "SurfaceFill": {
-        "value": "{q.surface.inverted}",
-        "type": "color"
-      },
-      "Content": {
-        "value": "{q.content.oninverted.alpha}",
-        "type": "color"
-      },
-      "ContentCol": {
-        "Padding": {
-          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "Elevation": {
-        "1": {
-          "value": {
-            "x": "0",
-            "y": "2",
-            "blur": "4",
-            "spread": "0",
-            "color": "{core.color.coolgray.100.opa30}",
-            "type": "dropShadow"
-          },
-          "type": "boxShadow"
-        }
-      },
-      "NoseWrapper": {
-        "Left": {
-          "Padding": {
-            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
-        "Right": {
-          "Padding": {
-            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
-        "Top": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
-            "type": "spacing"
-          }
-        },
-        "Bottom": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
-            "type": "spacing"
-          }
-        }
-      }
-    },
     "Checkbox": {
       "SM": {
         "Gap": {
@@ -2832,12 +2781,6 @@
         "type": "sizing",
         "description": "size of XL icon"
       }
-    }
-  },
-  "Tooltip": {
-    "ContentCol": {
-      "value": "{core.borderRadius.MD}",
-      "type": "borderRadius"
     }
   }
 }
