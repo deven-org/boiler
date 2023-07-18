@@ -3257,18 +3257,18 @@
         },
         "HighlightLine": {
           "SurfaceFill": {
-            "value": "{q.surface.brand.primary.rest}",
+            "value": "{q.content.ondefault.brand.rest}",
             "type": "color",
             "description": "Apply as fill on HightlightLine"
           },
-          "Active": {
+          "Selected": {
             "Opacity": {
               "value": "1",
               "type": "opacity",
               "description": "Controlls the visibility of the HighlightLine; Apply on selected / active tabs only. <HighlightLine>"
             }
           },
-          "InActive": {
+          "Unselected": {
             "Opacity": {
               "value": "0",
               "type": "opacity",
@@ -3340,6 +3340,34 @@
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
+          }
+        },
+        "Label": {
+          "Active": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color"
+          },
+          "Unselected": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color"
+          }
+        },
+        "Icon": {
+          "Active": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color"
+          },
+          "Unselected": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color"
           }
         }
       }
