@@ -3222,12 +3222,28 @@
   "Navigation": {
     "TabBar": {
       "Tab": {
-        "HighlightLine": {
-          "Height": {
-            "value": "{core.dimensionPX.2}",
-            "type": "sizing",
-            "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+        "SM": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+            }
           },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.4}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <contentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the HighlightLIne"
+            }
+          }
+        },
+        "HighlightLine": {
           "SurfaceFill": {
             "value": "{q.surface.brand.primary.rest}",
             "type": "color",
@@ -3245,6 +3261,24 @@
               "value": "0",
               "type": "opacity",
               "description": "Controlls the visibility of the Highlightbar; Apply on unselected / inactive and disabled tabs."
+            }
+          }
+        },
+        "MD": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+            }
+          }
+        },
+        "LG": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
             }
           }
         }
