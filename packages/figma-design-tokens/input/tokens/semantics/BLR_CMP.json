@@ -3227,19 +3227,31 @@
             "Height": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
           },
           "ContentCol": {
             "TopPadding": {
               "value": "{core.dimensionREM.4}",
               "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <contentCol>"
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
             },
             "ItemSpacing": {
               "value": "{core.dimensionREM.8}",
               "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the HighlightLIne"
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
           }
         },
@@ -3253,14 +3265,14 @@
             "Opacity": {
               "value": "1",
               "type": "opacity",
-              "description": "Controlls the visibility of the Highlightbar.\nUse on selected / active tabs only"
+              "description": "Controlls the visibility of the HighlightLine; Apply on selected / active tabs only. <HighlightLine>"
             }
           },
           "InActive": {
             "Opacity": {
               "value": "0",
               "type": "opacity",
-              "description": "Controlls the visibility of the Highlightbar; Apply on unselected / inactive and disabled tabs."
+              "description": "Controlls the visibility of the HighlightLine; Apply on unselected / inactive and disabled tabs. <HighlightLine>"
             }
           }
         },
@@ -3269,7 +3281,7 @@
             "Height": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
           }
         },
@@ -3278,7 +3290,7 @@
             "Height": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
           }
         }
