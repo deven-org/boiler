@@ -3408,6 +3408,56 @@
             "description": "Defines the color of the label of a tab. Apply on <label>"
           }
         }
+      },
+      "ButtonWrapper": {
+        "SM": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8} 0 0",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        },
+        "MD": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8} 0 0",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        },
+        "LG": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.12}",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.12}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        }
       }
     }
   }
