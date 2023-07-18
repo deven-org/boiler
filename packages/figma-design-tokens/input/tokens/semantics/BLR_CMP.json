@@ -3218,5 +3218,37 @@
         "type": "border"
       }
     }
+  },
+  "Navigation": {
+    "TabBar": {
+      "Tab": {
+        "HighlightLine": {
+          "Height": {
+            "value": "{core.dimensionPX.2}",
+            "type": "sizing",
+            "description": "Defines the thickness of the highlight line.\nApply on HighlightLine"
+          },
+          "SurfaceFill": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color",
+            "description": "Apply as fill on HightlightLine"
+          },
+          "Active": {
+            "Opacity": {
+              "value": "1",
+              "type": "opacity",
+              "description": "Controlls the visibility of the Highlightbar.\nUse on selected / active tabs only"
+            }
+          },
+          "InActive": {
+            "Opacity": {
+              "value": "0",
+              "type": "opacity",
+              "description": "Controlls the visibility of the Highlightbar; Apply on unselected / inactive and disabled tabs."
+            }
+          }
+        }
+      }
+    }
   }
 }
