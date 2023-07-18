@@ -14,13 +14,18 @@ export const radio = css`
     &.vertical {
       flex-direction: column;
     }
+    .group-error {
+      margin-top: 0.5rem;
+      display: block;
+      width: 100%;
+    }
   }
 
   .blr-radio {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    
     > .radio-wrapper {
       display: flex;
 
@@ -47,8 +52,10 @@ export const radio = css`
       }
 
       &.sm {
+        gap: ${Radio.SM.MainContainer.ItemSpacing};
+
         > input {
-          margin: ${Radio.SM.ControlMargin};
+          margin-top: ${Radio.SM.ControlWrapper.TopMargin};
         }
 
         > label {
@@ -56,13 +63,16 @@ export const radio = css`
           font-weight: ${SM.LabelNextToControl.fontWeight};
           font-size: ${SM.LabelNextToControl.fontSize};
           line-height: ${SM.LabelNextToControl.lineHeight};
-          margin-left: ${Radio.SM.ItemSpacing};
+          padding-top: ${Radio.SM.ContentCol.PaddingTop};
+          margin: ${Radio.SM.ContentCol.ItemSpacing};
         }
       }
 
       &.md {
+        gap: ${Radio.MD.MainContainer.ItemSpacing};
+
         > input {
-          margin: ${Radio.MD.ControlMargin};
+          margin-top: ${Radio.MD.ControlWrapper.TopMargin};
         }
 
         > label {
@@ -70,13 +80,16 @@ export const radio = css`
           font-weight: ${MD.LabelNextToControl.fontWeight};
           font-size: ${MD.LabelNextToControl.fontSize};
           line-height: ${MD.LabelNextToControl.lineHeight};
-          margin-left: ${Radio.SM.ItemSpacing};
+          padding-top: ${Radio.MD.ContentCol.PaddingTop};
+          margin: ${Radio.MD.ContentCol.ItemSpacing};
         }
       }
 
       &.lg {
+        gap: ${Radio.LG.MainContainer.ItemSpacing};
+
         > input {
-          margin: ${Radio.LG.ControlMargin};
+          margin-top: ${Radio.LG.ControlWrapper.TopMargin};
         }
 
         > label {
@@ -84,7 +97,9 @@ export const radio = css`
           font-weight: ${LG.LabelNextToControl.fontWeight};
           font-size: ${LG.LabelNextToControl.fontSize};
           line-height: ${LG.LabelNextToControl.lineHeight};
-          margin-left: ${Radio.LG.ItemSpacing};
+          margin-left: ${Radio.LG.ContentCol.ItemSpacing};
+          padding-top: ${Radio.LG.ContentCol.PaddingTop};
+          margin: ${Radio.LG.ContentCol.ItemSpacing};
         }
       }
 
@@ -242,7 +257,6 @@ export const radio = css`
           }
         }
       }
-
       &.error-input {
         > input {
           background-color: ${Radio.Control.Background.Unselected.Fill.Error};
@@ -298,8 +312,6 @@ export const radio = css`
           }
         }
       }
-    }
-
     .blr-form-hint {
       margin-top: 0;
 
@@ -321,9 +333,5 @@ export const radio = css`
         font-size: ${LG.Caption.fontSize};
       }
     }
-  }
-
-  .group-error {
-    width: 100%;
   }
 `;
