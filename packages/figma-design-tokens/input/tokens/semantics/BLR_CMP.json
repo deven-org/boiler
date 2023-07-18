@@ -3253,6 +3253,17 @@
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.12}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "XS",
+              "type": "componentConfig"
+            }
           }
         },
         "HighlightLine": {
@@ -3307,6 +3318,17 @@
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "SM",
+              "type": "componentConfig"
+            }
           }
         },
         "LG": {
@@ -3340,12 +3362,24 @@
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "SM",
+              "type": "componentConfig"
+            }
           }
         },
         "Label": {
           "Active": {
             "value": "{q.content.ondefault.brand.rest}",
-            "type": "color"
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
           },
           "Unselected": {
             "value": "{q.content.ondefault.alpha}",
@@ -3353,43 +3387,25 @@
           },
           "Disabled": {
             "value": "{q.content.ondisabled.alpha}",
-            "type": "color"
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
           }
         },
         "Icon": {
           "Active": {
             "value": "{q.content.ondefault.brand.rest}",
-            "type": "color"
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
           },
           "Unselected": {
             "value": "{q.content.ondefault.alpha}",
-            "type": "color"
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
           },
           "Disabled": {
             "value": "{q.content.ondisabled.alpha}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "Tabbar": {
-      "Tab": {
-        "SM": {
-          "IconSize": {
-            "value": "XS",
-            "type": "componentConfig"
-          }
-        },
-        "MD": {
-          "IconSize": {
-            "value": "SM",
-            "type": "componentConfig"
-          }
-        },
-        "LG": {
-          "IconSize": {
-            "value": "SM",
-            "type": "componentConfig"
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
           }
         }
       }
