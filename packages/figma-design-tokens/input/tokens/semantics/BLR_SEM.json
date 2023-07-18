@@ -1047,19 +1047,6 @@
           "type": "typography"
         }
       }
-    },
-    "Divider": {
-      "Stroke": {
-        "value": "{core.color.coolgray.800.opa30}",
-        "type": "color"
-      },
-      "Border": {
-        "value": {
-          "color": "{UI.Divider.Stroke}",
-          "width": "{core.dimensionPX.1}"
-        },
-        "type": "border"
-      }
     }
   },
   "Forms": {
