@@ -3371,6 +3371,28 @@
           }
         }
       }
+    },
+    "Tabbar": {
+      "Tab": {
+        "SM": {
+          "IconSize": {
+            "value": "XS",
+            "type": "componentConfig"
+          }
+        },
+        "MD": {
+          "IconSize": {
+            "value": "SM",
+            "type": "componentConfig"
+          }
+        },
+        "LG": {
+          "IconSize": {
+            "value": "SM",
+            "type": "componentConfig"
+          }
+        }
+      }
     }
   }
 }
