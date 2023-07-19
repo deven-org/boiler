@@ -114,7 +114,7 @@ export class BlrSelect extends LitElement {
           message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
           variant: this.hasError ? 'error' : 'hint',
           size: 'sm',
-          iconName: calculateIconName(this.hintIcon, this.size),
+          icon: calculateIconName(this.hintIcon, this.size),
         })}
       </div>
     `;

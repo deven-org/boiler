@@ -1,14 +1,7 @@
-import { unsafeCSS } from "lit";
 import { semanticTokens } from "../_tokens-generated/index.generated";
 import { css } from "nested-css-to-flat/lit-css";
 
 const { Forms } = semanticTokens;
-
-const forms = {
-  textinput: {
-    minWidth: "300px",
-  },
-};
 
 export const form = css`
 .blr-form-element {
@@ -19,7 +12,7 @@ export const form = css`
   border-style: ${Forms.Input.Default.Rest.style};
   border-color: ${Forms.Input.Default.Rest.color};
   border-radius: ${Forms.InputBorderRadius};
-  min-width: ${unsafeCSS(forms.textinput.minWidth)};
+
   box-sizing: border-box;
   color: ${Forms.UserInput.Default.Rest};
   background-color: ${Forms.SurfaceFill.Default.Rest};
@@ -43,9 +36,7 @@ export const form = css`
     border-width: ${Forms.Input.Default.Pressed.width};
     border-style: ${Forms.Input.Default.Pressed.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Pressed.width} ${Forms.Input.Default.Pressed.style} ${
-  Forms.Input.Default.Pressed.color
-};
+    outline: ${Forms.Input.Default.Pressed.width} ${Forms.Input.Default.Pressed.style} ${Forms.Input.Default.Pressed.color};
     color: ${Forms.UserInput.Default.Pressed};
     background-color: ${Forms.SurfaceFill.Default.Pressed};
 
@@ -58,9 +49,7 @@ export const form = css`
     border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.ReadOnly.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Hover.width} ${Forms.Input.Default.ReadOnly.style} ${
-  Forms.Input.Default.ReadOnly.color
-};
+    outline: ${Forms.Input.Default.Hover.width} ${Forms.Input.Default.ReadOnly.style} ${Forms.Input.Default.ReadOnly.color};
     color: ${Forms.UserInput.Default.ReadOnly};
     background-color: ${Forms.SurfaceFill.Default.ReadOnly};
 
@@ -73,9 +62,7 @@ export const form = css`
     border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.Disabled.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Disabled.width} ${Forms.Input.Default.Disabled.style} ${
-  Forms.Input.Default.Disabled.color
-};
+    outline: ${Forms.Input.Default.Disabled.width} ${Forms.Input.Default.Disabled.style} ${Forms.Input.Default.Disabled.color};
     color: ${Forms.UserInput.Default.Disabled};
     background-color: ${Forms.SurfaceFill.Default.Disabled};
 
@@ -205,6 +192,7 @@ export const form = css`
 .blr-form-hint {
   display: flex;
   align-items: center;
+  word-break: break-all;
   padding: ${Forms.MD.CaptionComponent.Padding};
   font-weight: ${Forms.MD.Caption.fontWeight};
   font-size: ${Forms.MD.Caption.fontSize};
