@@ -21,17 +21,10 @@ export const BlrFormHint = ({ message, variant, icon, size, children }: FormHint
   });
 
   return html`
-<<<<<<< HEAD
-    <div class="blr-form-hint ${classes}">
-      <blr-icon icon="${iconName}" size="${size}" aria-hidden></blr-icon>
-      <span class="blr-caption-text">${message}</span>
-    </div>
-=======
     <span class="blr-form-hint ${classes}">
       ${BlrIconRenderFunction({ icon, size, hideAria: true, disableDefaultClass: true })}
       <span class="blr-caption-text">${message}</span>
       ${children}
     </span>
->>>>>>> 194ae30 (feat(ui-library): create textarea)
   `;
 };
