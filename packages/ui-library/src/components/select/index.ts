@@ -3,14 +3,14 @@ import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType } from '../../globals/types';
-import { BlrFormLabel } from '../internal-components/form-label';
-import { BlrFormHint } from '../internal-components/form-hint';
+import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 
 import { IconType } from '@boiler/icons';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
-import { BlrIconRenderFunction } from '../icon';
+import { BlrIconRenderFunction } from '../internal-components/icon';
 
 type Option = {
   value: string;
@@ -76,10 +76,15 @@ export class BlrSelect extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const iconClasses = classMap({
+      'blr-input-icon': true,
+      [`${this.size}`]: this.size || 'md',
+    });
+
     return html`
       <div class="blr-select ${classes}">
         ${this.hasLabel
-          ? BlrFormLabel({
+          ? BlrFormLabelRenderFunction({
               labelText: this.label,
               labelAppendix: this.labelAppendix,
               labelSize: 'md',
@@ -108,9 +113,9 @@ export class BlrSelect extends LitElement {
             })}
           </select>
 
-          ${this.renderTrailingIcon(inputClasses)}
+          ${this.renderTrailingIcon(iconClasses)}
         </div>
-        ${BlrFormHint({
+        ${BlrFormHintRenderFunction({
           message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
           variant: this.hasError ? 'error' : 'hint',
           size: 'sm',
@@ -142,7 +147,6 @@ export const BlrSelectRenderFunction = ({
   trailingIcon,
 }: BlrSelectType) => {
   return html`<blr-select
-    class="example-layout-class"
     .selectId=${selectId}
     .name=${name}
     .disabled=${disabled}

@@ -1,9 +1,9 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
-import { icon } from '../../foundation/component-tokens/ui.css';
+import { icon } from '../../../foundation/component-tokens/ui.css';
 import { styleCustom } from './index.css';
-import { SizesType } from '../../globals/types';
+import { SizesType } from '../../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { styleMap } from 'lit/directives/style-map.js';
@@ -32,7 +32,6 @@ export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   hideAria?: boolean;
   name?: string;
   disablePointerEvents?: boolean;
-  disableDefaultClass?: boolean;
 };
 
 export const BlrIconRenderFunction = ({
@@ -43,10 +42,9 @@ export const BlrIconRenderFunction = ({
   hideAria,
   name,
   disablePointerEvents,
-  disableDefaultClass,
 }: BlrIconType) => {
   return html`<blr-icon
-    class="${disableDefaultClass ? '' : 'blr-input-icon'} ${classMap}"
+    class=${classMap}
     .icon=${icon || nothing}
     .size=${size}
     .name=${name || nothing}

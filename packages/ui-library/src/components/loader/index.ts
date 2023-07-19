@@ -3,17 +3,17 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { loadingSpinner } from '../../foundation/component-tokens/feedback.css';
-import { FeedbackSizesType, FeedbackVariants } from '../../globals/types';
+import { FeedbackSizesType, FeedbackVariantType } from '../../globals/types';
 
 @customElement('blr-loader')
 export class BlrLoader extends LitElement {
   static styles = [styleCustom, loadingSpinner];
 
   @property() size?: FeedbackSizesType = 'md';
-  @property() variant?: FeedbackVariants;
+  @property() variant?: FeedbackVariantType;
   @property() loadingStatus!: string;
 
-  render() {
+  protected render() {
     const classes = classMap({
       'blr-loading-spinner': true,
       [`${this.variant}`]: this.variant || '',
@@ -28,11 +28,6 @@ export class BlrLoader extends LitElement {
 
 export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;
 
-export const BlrLoaderFunction = ({ variant, size, loadingStatus }: BlrLoaderType) => {
-  return html`<blr-loader
-    class="example-layout-class"
-    .variant=${variant}
-    .size=${size}
-    .loadingStatus=${loadingStatus}
-  ></blr-select>`;
+export const BlrLoaderRenderFunction = ({ variant, size, loadingStatus }: BlrLoaderType) => {
+  return html`<blr-loader .variant=${variant} .size=${size} .loadingStatus=${loadingStatus}></blr-loader>`;
 };
