@@ -3218,5 +3218,247 @@
         "type": "border"
       }
     }
+  },
+  "Navigation": {
+    "TabBar": {
+      "Tab": {
+        "SM": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            }
+          },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.4}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.12}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "XS",
+              "type": "componentConfig"
+            }
+          }
+        },
+        "HighlightLine": {
+          "SurfaceFill": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Apply as fill on HightlightLine"
+          },
+          "Selected": {
+            "Opacity": {
+              "value": "1",
+              "type": "opacity",
+              "description": "Controlls the visibility of the HighlightLine; Apply on selected / active tabs only. <HighlightLine>"
+            }
+          },
+          "Unselected": {
+            "Opacity": {
+              "value": "0",
+              "type": "opacity",
+              "description": "Controlls the visibility of the HighlightLine; Apply on unselected / inactive and disabled tabs. <HighlightLine>"
+            }
+          }
+        },
+        "MD": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            }
+          },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "SM",
+              "type": "componentConfig"
+            }
+          }
+        },
+        "LG": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            }
+          },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "SM",
+              "type": "componentConfig"
+            }
+          }
+        },
+        "Label": {
+          "Active": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          },
+          "Unselected": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          }
+        },
+        "Icon": {
+          "Active": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          },
+          "Unselected": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          }
+        }
+      },
+      "ButtonWrapper": {
+        "SM": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8} 0 0",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        },
+        "MD": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8} 0 0",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        },
+        "LG": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.12}",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.12}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        }
+      }
+    }
   }
 }
