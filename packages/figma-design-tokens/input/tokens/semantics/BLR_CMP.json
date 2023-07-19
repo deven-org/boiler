@@ -856,7 +856,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.2}",
+            "value": "0",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -1256,7 +1256,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -2308,7 +2308,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{Forms.Checkbox.SM.ControlWrapper.TopMargin}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -2336,7 +2336,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{Forms.Checkbox.MD.ControlWrapper.TopMargin}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -2364,7 +2364,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{Forms.Checkbox.LG.ControlWrapper.TopMargin}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
