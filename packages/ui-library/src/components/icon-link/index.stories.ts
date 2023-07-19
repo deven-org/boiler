@@ -8,7 +8,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getIconName } from '../../utils/get-icon-name';
 
 export default {
-  title: 'BlrIconLink',
+  title: 'Design System/Web Components',
   argTypes: {
     icon: {
       options: [undefined, ...getIconName(IconKeys)],

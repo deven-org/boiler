@@ -9,7 +9,7 @@ import { getIconName } from '../../utils/get-icon-name';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'BlrTextarea',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: FormSizes,

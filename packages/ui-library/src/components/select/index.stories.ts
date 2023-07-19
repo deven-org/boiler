@@ -7,7 +7,7 @@ import { getIconName } from '../../utils/get-icon-name';
 import './index';
 
 export default {
-  title: 'BlrSelect',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: FormSizes,

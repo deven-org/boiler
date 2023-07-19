@@ -7,7 +7,7 @@ import './index';
 import { getIconName } from '../../utils/get-icon-name';
 
 export default {
-  title: 'BlrTextInput',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: FormSizes,

@@ -3,14 +3,14 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { loadingSpinner } from '../../foundation/component-tokens/feedback.css';
-import { FeedbackSizesType, FeedbackVariants } from '../../globals/types';
+import { FeedbackSizesType, FeedbackVariantType } from '../../globals/types';
 
 @customElement('blr-loader')
 export class BlrLoader extends LitElement {
   static styles = [styleCustom, loadingSpinner];
 
   @property() size?: FeedbackSizesType = 'md';
-  @property() variant?: FeedbackVariants;
+  @property() variant?: FeedbackVariantType;
   @property() loadingStatus!: string;
 
   render() {
@@ -34,5 +34,5 @@ export const BlrLoaderFunction = ({ variant, size, loadingStatus }: BlrLoaderTyp
     .variant=${variant}
     .size=${size}
     .loadingStatus=${loadingStatus}
-  ></blr-select>`;
+  ></blr-loader>`;
 };

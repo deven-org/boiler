@@ -5,13 +5,12 @@ import { styleCustom } from './index.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { textarea } from '../../foundation/component-tokens/form.css';
 import { counter } from '../../foundation/component-tokens/feedback.css';
-import { InputTypes, FormSizesType } from '../../globals/types';
-import { BlrFormLabel } from '../internal-components/form-label';
-import { BlrFormHint } from '../internal-components/form-hint';
+import { FormSizesType } from '../../globals/types';
+import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { iconButton } from '../../foundation/component-tokens/action.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
@@ -85,7 +84,7 @@ export class BlrTextarea extends LitElement {
 
     return html`
       <div class="${classes}">
-        ${BlrFormLabel({
+        ${BlrFormLabelRenderFunction({
           labelText: this.label,
           labelSize: this.size,
           labelAppendix: this.labelAppendix,
@@ -110,12 +109,14 @@ export class BlrTextarea extends LitElement {
           ${
             this.showHint
               ? html`
-                  ${BlrFormHint({
+                  ${BlrFormHintRenderFunction({
                     message: this.hasError ? this.errorMessage : this.hintText,
                     variant: this.hasError ? 'error' : 'hint',
                     icon: calculateIconName(this.hintIcon, this.size),
                     size: this.size,
-                    children: html`<div class="blr-counter ${counterClasses}">${this.count}/${this.maxLength}</div>`,
+                    childElement: html`<div class="blr-counter ${counterClasses}">
+                      ${this.count}/${this.maxLength}
+                    </div>`,
                   })}
                 `
               : html`<div class="blr-form-hint">

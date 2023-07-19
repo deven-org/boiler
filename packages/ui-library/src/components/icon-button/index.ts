@@ -5,7 +5,7 @@ import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { action } from '../../foundation/semantic-tokens/action.css';
 import { iconButton } from '../../foundation/component-tokens/action.css';
-import { ActionVariants, SizesType } from '../../globals/types';
+import { ActionVariantType, SizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 
 @customElement('blr-icon-button')
@@ -19,7 +19,7 @@ export class BlrIconButton extends LitElement {
   @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
-  @property() variant: ActionVariants = 'primary';
+  @property() variant: ActionVariantType = 'primary';
   @property() size!: SizesType;
   @property() loadingStatus!: string;
 
