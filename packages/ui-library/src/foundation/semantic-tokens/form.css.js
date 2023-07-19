@@ -12,17 +12,17 @@ const forms = {
 
 export const form = css`
 .blr-form-element {
-  font-weight: ${Forms.MD.UserInput.fontWeight};
-  font-size: ${Forms.MD.UserInput.fontSize};
-  font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
+  all: initial;
+  width: 100%;
+  color: ${Forms.UserInput.Default.Rest};
   border-width: ${Forms.Input.Default.Rest.width};
   border-style: ${Forms.Input.Default.Rest.style};
   border-color: ${Forms.Input.Default.Rest.color};
   border-radius: ${Forms.InputBorderRadius};
   min-width: ${unsafeCSS(forms.textinput.minWidth)};
-  padding: ${Forms.MD.InputField.Padding};
   box-sizing: border-box;
-
+  color: ${Forms.UserInput.Default.Rest};
+  background-color: ${Forms.SurfaceFill.Default.Rest};
   &::placeholder {
     color: ${Forms.Placeholder.Default.Rest};
   }
@@ -30,7 +30,9 @@ export const form = css`
   &:hover {
     border-width: ${Forms.Input.Default.Hover.width};
     border-style: ${Forms.Input.Default.Hover.style};
-    border-color: ${Forms.Input.Default.Hover.color};
+    border-color: ${Forms.Input.Default.Rest.color};
+    color: ${Forms.UserInput.Default.Hover};
+    background-color: ${Forms.SurfaceFill.Default.Hover};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Hover};
@@ -40,7 +42,12 @@ export const form = css`
   &:active{
     border-width: ${Forms.Input.Default.Pressed.width};
     border-style: ${Forms.Input.Default.Pressed.style};
-    border-color: ${Forms.Input.Default.Pressed.color};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Pressed.width} ${Forms.Input.Default.Pressed.style} ${
+  Forms.Input.Default.Pressed.color
+};
+    color: ${Forms.UserInput.Default.Pressed};
+    background-color: ${Forms.SurfaceFill.Default.Pressed};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Pressed};
@@ -50,8 +57,12 @@ export const form = css`
   &[readonly] {
     border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.ReadOnly.style};
-    border-color: ${Forms.Input.Default.ReadOnly.color};
-    color: ${Forms.Placeholder.Default.ReadOnly};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Hover.width} ${Forms.Input.Default.ReadOnly.style} ${
+  Forms.Input.Default.ReadOnly.color
+};
+    color: ${Forms.UserInput.Default.ReadOnly};
+    background-color: ${Forms.SurfaceFill.Default.ReadOnly};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.ReadOnly};
@@ -59,9 +70,14 @@ export const form = css`
   }
 
   &:disabled {
-    border-width: ${Forms.Input.Default.Disabled.width};
+    border-width: ${Forms.Input.Default.ReadOnly.width};
     border-style: ${Forms.Input.Default.Disabled.style};
-    border-color: ${Forms.Input.Default.Disabled.color};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Disabled.width} ${Forms.Input.Default.Disabled.style} ${
+  Forms.Input.Default.Disabled.color
+};
+    color: ${Forms.UserInput.Default.Disabled};
+    background-color: ${Forms.SurfaceFill.Default.Disabled};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Disabled};
@@ -69,9 +85,12 @@ export const form = css`
   }
 
   &:focus {
-    border-width: ${Forms.Input.Default.Focus.width};
-    border-style: ${Forms.Input.Default.Focus.style};
-    border-color: ${Forms.Input.Default.Focus.color};
+    border-width: ${Forms.Input.Default.Rest.width};
+    border-style: ${Forms.Input.Default.Rest.style};
+    border-color: transparent;
+    outline: ${Forms.Input.Default.Focus.width} ${Forms.Input.Default.Focus.style} ${Forms.Input.Default.Focus.color};
+    color: ${Forms.UserInput.Default.Focus};
+    background-color: ${Forms.SurfaceFill.Default.Focus};
 
     &::placeholder {
       color: ${Forms.Placeholder.Default.Focus};
@@ -79,12 +98,11 @@ export const form = css`
   }
 
   &.error-input {
-    background-color: ${Forms.SurfaceFill.Error.Rest};
     border-width: ${Forms.Input.Error.Rest.width};
     border-style: ${Forms.Input.Error.Rest.style};
     border-color: ${Forms.Input.Error.Rest.color};
-    outline-color: ${Forms.Input.Error.Rest.color};
     color: ${Forms.UserInput.Error.Rest};
+    background-color: ${Forms.SurfaceFill.Error.Rest};
 
     &::placeholder {
       color: ${Forms.Placeholder.Error.Rest};
@@ -94,18 +112,34 @@ export const form = css`
       border-width: ${Forms.Input.Error.Hover.width};
       border-style: ${Forms.Input.Error.Hover.style};
       border-color: ${Forms.Input.Error.Hover.color};
-      outline-color: ${Forms.Input.Error.Hover.color};
+      color: ${Forms.UserInput.Error.Hover};
+      background-color: ${Forms.SurfaceFill.Error.Hover};
 
       &::placeholder {
         color: ${Forms.Placeholder.Error.Hover};
       }
     }
 
+    &:active {
+      border-width: ${Forms.Input.Error.Pressed.width};
+      border-style: ${Forms.Input.Error.Pressed.style};
+      border-style: ${Forms.Input.Error.Pressed.color};
+      outline: ${Forms.Input.Error.Pressed.width} ${Forms.Input.Error.Pressed.style} ${Forms.Input.Error.Pressed.color};
+      color: ${Forms.UserInput.Error.Pressed};
+      background-color: ${Forms.SurfaceFill.Error.Pressed};
+
+      &::placeholder {
+        color: ${Forms.Placeholder.Error.Pressed};
+      }
+    }
+
     &:focus {
-      border-width: ${Forms.Input.Error.Focus.width};
-      border-style: ${Forms.Input.Error.Focus.style};
-      border-color: ${Forms.Input.Error.Focus.color};
-      outline-color: ${Forms.Input.Error.Focus.color};
+      border-width: ${Forms.Input.Error.Rest.width};
+      border-style: ${Forms.Input.Error.Rest.style};
+      border-color: transparent;
+      outline: ${Forms.Input.Error.Focus.width} ${Forms.Input.Error.Focus.style} ${Forms.Input.Error.Focus.color};
+      color: ${Forms.UserInput.Error.Focus};
+      background-color: ${Forms.SurfaceFill.Error.Focus};
 
       &::placeholder {
         color: ${Forms.Placeholder.Error.Focus};
@@ -113,24 +147,43 @@ export const form = css`
     }
   }
 
-  &.lg {
-    font-weight: ${Forms.LG.UserInput.fontWeight};
-    font-size: ${Forms.LG.UserInput.fontSize};
-    font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.LG.InputField.Padding};
-  }
-
   &.sm {
     font-weight: ${Forms.SM.UserInput.fontWeight};
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.SM.InputField.Padding};
+    padding: ${Forms.Select.SM.InputFieldPadding};
+    line-height: ${Forms.SM.UserInput.lineHeight};
+  }
+
+  &.md {
+    font-weight: ${Forms.MD.UserInput.fontWeight};
+    font-size: ${Forms.MD.UserInput.fontSize};
+    font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
+    padding:  ${Forms.Select.SM.InputFieldPadding};
+    line-height: ${Forms.MD.UserInput.lineHeight};
+  }
+
+  &.lg {
+    font-weight: ${Forms.LG.UserInput.fontWeight};
+    font-size: ${Forms.LG.UserInput.fontSize};
+    font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
+    padding:  ${Forms.Select.SM.InputFieldPadding};
+    line-height: ${Forms.LG.UserInput.lineHeight};
   }
 }
 
 .blr-input-icon {
-  margin-left: -25px;
+  position: absolute;
   color: ${Forms.Placeholder.Default.Rest};
+  &.sm {
+    right: ${Forms.Select.SM.IconPaddingRight};
+  }
+  &.md {
+    right: ${Forms.Select.MD.IconPaddingRight};
+  }
+  &.lg {
+    right: ${Forms.Select.LG.IconPaddingRight};
+  }
 }
 
 .blr-input-icon.error {
@@ -151,7 +204,6 @@ export const form = css`
 }
 .blr-form-hint {
   display: flex;
-  flex-direction: row;
   align-items: center;
   padding: ${Forms.MD.CaptionComponent.Padding};
   font-weight: ${Forms.MD.Caption.fontWeight};
@@ -159,6 +211,8 @@ export const form = css`
   font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
   line-height: ${Forms.MD.Caption.lineHeight};
   margin: ${Forms.MD.CaptionSlot.Margin};
+  gap: ${Forms.MD.CaptionComponent.ItemSpacing};
+  color: ${Forms.Caption.Hint};
   &.sm {
     padding: ${Forms.SM.CaptionComponent.Padding};
     font-weight: ${Forms.SM.Caption.fontWeight};
@@ -166,6 +220,7 @@ export const form = css`
     font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
     line-height: ${Forms.SM.Caption.lineHeight};
     margin: ${Forms.SM.CaptionSlot.Margin};
+    gap: ${Forms.SM.CaptionComponent.ItemSpacing};
   }
   &.lg {
     padding: ${Forms.LG.CaptionComponent.Padding};
@@ -174,6 +229,7 @@ export const form = css`
     font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
     line-height: ${Forms.LG.Caption.lineHeight};
     margin: ${Forms.LG.CaptionSlot.Margin};
+    gap: ${Forms.LG.CaptionComponent.ItemSpacing};
   }
   .blr-caption-text {
     padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
@@ -183,11 +239,7 @@ export const form = css`
   }
 }
 .blr-form-label {
-  padding: ${Forms.MD.LabelSlot.Padding};
-  font-weight: ${Forms.MD.Label.fontWeight};
-  font-size: ${Forms.MD.Label.fontSize};
-  font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
-  line-height: ${Forms.MD.Label.lineHeight};
+  display: inline-block;
   color: ${Forms.Label.Rest};
   &:focus {
     color: ${Forms.Label.Focus};
@@ -207,7 +259,16 @@ export const form = css`
     font-size: ${Forms.SM.Label.fontSize};
     font-family: ${Forms.SM.Label.fontFamily}, sans-serif;
     line-height: ${Forms.SM.Label.lineHeight};
+    gap: ${Forms.SM.FormsLabelComponent.ItemSpacing};
     color: ${Forms.Label.Rest};
+  }
+  &.md {
+    padding: ${Forms.MD.LabelSlot.Padding};
+    font-weight: ${Forms.MD.Label.fontWeight};
+    font-size: ${Forms.MD.Label.fontSize};
+    font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.Label.lineHeight};
+    gap: ${Forms.MD.FormsLabelComponent.ItemSpacing};
   }
   &.lg {
     padding: ${Forms.LG.LabelSlot.Padding};
@@ -216,6 +277,7 @@ export const form = css`
     font-family: ${Forms.LG.Label.fontFamily}, sans-serif;
     line-height: ${Forms.LG.Label.lineHeight};
     color: ${Forms.Label.Rest};
+    gap: ${Forms.LG.FormsLabelComponent.ItemSpacing};
   }
 }
 .blr-form-label-appendix {

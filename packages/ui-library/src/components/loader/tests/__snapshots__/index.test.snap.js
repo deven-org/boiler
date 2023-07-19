@@ -1,9 +1,8 @@
 /* @web/test-runner snapshot v1 */
 export const snapshots = {};
 
-snapshots["blr-icon-link renders correctly"] = 
-`<div
-  aria-label="Lo"
+snapshots['blr-icon-link renders correctly'] = `<div
+  aria-label=""
   aria-live="polite"
   class="blr-loader"
   role="status"
@@ -13,4 +12,3 @@ snapshots["blr-icon-link renders correctly"] =
 </div>
 `;
 /* end snapshot blr-icon-link renders correctly */
-

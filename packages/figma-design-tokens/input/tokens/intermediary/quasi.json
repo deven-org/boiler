@@ -5,12 +5,24 @@
         "value": "{core.color.white.solid}",
         "type": "color"
       },
+      "inverted": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
       "readonly": {
         "value": "{core.color.coolgray.999.solid}",
         "type": "color"
       },
+      "warning": {
+        "value": "{core.color.gold.500.opa10}",
+        "type": "color"
+      },
       "error": {
         "value": "{core.color.crimson.800.opa10}",
+        "type": "color"
+      },
+      "none": {
+        "value": "{core.color.neutral.transparent}",
         "type": "color"
       },
       "disabled": {
@@ -123,8 +135,16 @@
         "value": "{core.color.crimson.500.solid}",
         "type": "color"
       },
+      "warning": {
+        "value": "{core.color.gold.500.solid}",
+        "type": "color"
+      },
       "focus": {
         "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "none": {
+        "value": "{core.color.neutral.transparent}",
         "type": "color"
       },
       "disabled": {
@@ -196,6 +216,12 @@
         "error": {
           "value": "{core.color.crimson.500.solid}",
           "type": "color"
+        },
+        "brand": {
+          "rest": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          }
         }
       },
       "onreadonly": {
@@ -250,6 +276,49 @@
         },
         "gamma": {
           "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        }
+      },
+      "onwarning": {
+        "alpha": {
+          "value": "{core.color.gold.200.solid}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.gold.500.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        }
+      },
+      "oninverted": {
+        "alpha": {
+          "value": "{core.color.white.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
+        "beta": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "rest": {
+            "value": "{core.color.coolgray.700.solid}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{core.color.coolgray.600.solid}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{core.color.coolgray.500.solid}",
+            "type": "color"
+          }
+        },
+        "error": {
+          "value": "{core.color.crimson.500.solid}",
           "type": "color"
         }
       }

@@ -2,15 +2,16 @@ import { LitElement, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
-import { BlrFormLabel } from '../form-label';
-import { FormSizesType } from '../../globals/types';
+import { BlrFormLabel } from '../internal-components/form-label';
+import { InputSizesType } from '../../globals/types';
 
 import { styleCustom } from './index.css';
+import { checkbox } from '../../foundation/component-tokens/checkbox.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
 
 @customElement('blr-label-checkbox')
 export class BlrLabelCheckbox extends LitElement {
-  static styles = [styleCustom, form];
+  static styles = [styleCustom, form, checkbox];
 
   @property() label?: string;
   @property() checkInputId!: string;
@@ -18,7 +19,7 @@ export class BlrLabelCheckbox extends LitElement {
   @property() disabled?: boolean;
   @property() checked?: boolean;
 
-  @property() size: FormSizesType = 'md';
+  @property() size: InputSizesType = 'md';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -56,13 +57,10 @@ export class BlrLabelCheckbox extends LitElement {
       'checked': this.checkedState,
       'focus': this.focusState,
       'disabled': Boolean(this.disabled),
+      [`${this.size}`]: this.size,
     });
 
     return html`<span class=${classes}>
-      ${this.label
-        ? html`${BlrFormLabel({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
-        : nothing}
-
       <input
         type="checkbox"
         id=${this.checkInputId || nothing}
@@ -73,6 +71,11 @@ export class BlrLabelCheckbox extends LitElement {
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
       />
+      <div class="label-container">
+        ${this.label
+          ? html`${BlrFormLabel({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
+          : nothing}
+      </div>
     </span>`;
   }
 }

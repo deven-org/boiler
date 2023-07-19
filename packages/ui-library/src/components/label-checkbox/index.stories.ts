@@ -3,14 +3,14 @@ import { html } from 'lit';
 
 import { BlrLabelCheckbox as BlrLabelCheckboxClass } from './index';
 
-import { Sizes } from '../../globals/constants';
+import { InputSizes } from '../../globals/constants';
 import './index';
 
 export default {
   title: 'BlrLabelCheckbox',
   argTypes: {
     size: {
-      options: Sizes,
+      options: InputSizes,
       control: { type: 'select' },
     },
   },
@@ -46,8 +46,8 @@ const logEventType = (event: Event) => {
 };
 
 BlrLabelCheckbox.args = {
-  label: 'McCheckyTheCheckboxFace',
-  checkInputId: 'Checky',
+  label: 'Checkbox Label',
+  checkInputId: 'Check1',
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,

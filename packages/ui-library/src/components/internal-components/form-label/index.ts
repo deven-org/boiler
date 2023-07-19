@@ -1,5 +1,5 @@
 import { html, nothing } from 'lit';
-import { InputSizesType } from '../../globals/types';
+import { InputSizesType } from '../../../globals/types';
 
 type FormLabelType = {
   labelText: string;

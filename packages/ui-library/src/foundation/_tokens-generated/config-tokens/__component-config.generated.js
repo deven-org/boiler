@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 11 May 2023 14:13:01 GMT
+ * Generated on Wed, 19 Jul 2023 13:09:47 GMT
  */
 
 export const componentConfig = {
@@ -33,6 +33,7 @@ export const componentConfig = {
       LG: { ChevronSize: 'SM' },
       XL: { ChevronSize: 'MD' },
     },
+    StepperButton: { SM: { IconSize: 'SM' }, MD: { IconSize: 'SM' }, LG: { IconSize: 'MD' } },
     XS: { LoaderSize: 'SM' },
     SM: { LoaderSize: 'SM' },
     MD: { LoaderSize: 'MD' },
@@ -40,8 +41,22 @@ export const componentConfig = {
     XL: { LoaderSize: 'LG' },
   },
   Forms: {
+    Checkbox: {
+      SM: { Control: { IconSize: 'SM' } },
+      MD: { Control: { IconSize: 'SM' } },
+      LG: { Control: { IconSize: 'Custom 20px' } },
+    },
     SM: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
     MD: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
     LG: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
+  },
+  Navigation: {
+    TabBar: {
+      Tab: {
+        SM: { Icon: { SizeVariant: 'XS' } },
+        MD: { Icon: { SizeVariant: 'SM' } },
+        LG: { Icon: { SizeVariant: 'SM' } },
+      },
+    },
   },
 };

@@ -950,7 +950,7 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -1049,40 +1049,18 @@
       }
     }
   },
-  "Feedback": {
-    "Background": {
-      "Default": {
-        "value": "{core.color.azure.600.opa20}",
-        "type": "color"
-      },
-      "Inverted": {
-        "value": "{core.color.white.opa20}",
-        "type": "color"
-      }
-    },
-    "Fill": {
-      "Default": {
-        "value": "{core.color.azure.400.solid}",
-        "type": "color"
-      },
-      "Inverted": {
-        "value": "{core.color.white.solid}",
-        "type": "color"
-      }
-    }
-  },
   "Forms": {
     "SM": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
         "type": "typography"
       },
       "UserInput": {
@@ -1090,7 +1068,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1109,6 +1087,18 @@
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
+        },
+        "IconWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         }
       },
       "CaptionSlot": {
@@ -1121,9 +1111,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1146,15 +1142,15 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1169,6 +1165,18 @@
         "ItemSpacing": {
           "value": "{core.dimensionREM.2}",
           "type": "spacing"
+        },
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "IconWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0,5} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         }
       },
       "CaptionSlot": {
@@ -1181,9 +1189,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1192,7 +1206,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1218,15 +1232,15 @@
     },
     "LG": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "UserInput": {
@@ -1234,7 +1248,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1253,6 +1267,18 @@
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
+        },
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "IconWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         }
       },
       "CaptionSlot": {
@@ -1265,9 +1291,15 @@
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
-        },
+        }
+      },
+      "FormsLabelComponent": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -1306,11 +1338,15 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },
@@ -1332,11 +1368,15 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },
@@ -1650,68 +1690,6 @@
         "type": "color"
       }
     },
-    "Control": {
-      "Background": {
-        "Rest": {
-          "value": "{q.surface.brand.primary.rest}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{q.surface.brand.primary.hover}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.surface.brand.primary.pressed}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{q.surface.brand.primary.rest}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.surface.disabled.alpha}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{q.surface.disabled.alpha}",
-          "type": "color"
-        },
-        "Error": {
-          "value": "{q.stroke.error}",
-          "type": "color"
-        }
-      },
-      "Foreground": {
-        "Rest": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.content.ondisabled.inverted}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{q.content.ondisabled.inverted}",
-          "type": "color"
-        },
-        "Error": {
-          "value": "{q.content.onbrand.alpha}",
-          "type": "color"
-        }
-      }
-    },
     "LabelNextToControl": {
       "Rest": {
         "value": "{q.content.ondefault.alpha}",
@@ -1751,10 +1729,108 @@
     "FocusBorder": {
       "value": {
         "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.3}",
+        "width": "{core.dimensionPX.2}",
         "style": "solid"
       },
       "type": "border"
+    }
+  },
+  "Feedback": {
+    "Neutral": {
+      "Surface": {
+        "value": "{q.surface.default}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "SurfaceStroke": {
+        "value": "{core.color.neutral.transparent}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "Text": {
+        "value": "{q.content.ondefault.beta}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "Icon": {
+        "value": "{q.content.ondefault.beta}",
+        "type": "color",
+        "description": "Use on: Counter"
+      }
+    },
+    "Warning": {
+      "Surface": {
+        "value": "{q.surface.warning}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "SurfaceStroke": {
+        "value": "{q.stroke.warning}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "Text": {
+        "value": "{q.content.onwarning.alpha}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "Icon": {
+        "value": "{q.content.onwarning.beta}",
+        "type": "color",
+        "description": "Use on: Counter"
+      }
+    },
+    "Error": {
+      "Surface": {
+        "value": "{q.surface.error}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "SurfaceStroke": {
+        "value": "{q.stroke.error}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "Text": {
+        "value": "{q.content.onerror.alpha}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "Icon": {
+        "value": "{q.content.onerror.beta}",
+        "type": "color",
+        "description": "Use on: Counter"
+      }
+    },
+    "Brand": {
+      "Default": {
+        "Shape": {
+          "Background": {
+            "value": "{core.color.azure.600.opa20}",
+            "type": "color",
+            "description": "Use on: Loader"
+          },
+          "Foreground": {
+            "value": "{core.color.azure.400.solid}",
+            "type": "color",
+            "description": "Use on: Loader"
+          }
+        }
+      },
+      "Inverted": {
+        "Shape": {
+          "Background": {
+            "value": "{core.color.white.opa20}",
+            "type": "color",
+            "description": "Use on: Loader"
+          },
+          "Foreground": {
+            "value": "{core.color.white.solid}",
+            "type": "color",
+            "description": "Use on: Loader"
+          }
+        }
+      }
     }
   }
 }

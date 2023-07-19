@@ -1,7 +1,6 @@
 import { css } from "lit";
-import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
+import { componentTokens } from "../_tokens-generated/index.generated";
 
-const { Background, Fill } = semanticTokens.Feedback;
 const { SM, MD, LG } = componentTokens.Feedback.Loader;
 
 export const loadingSpinner = css`
@@ -10,6 +9,66 @@ export const loadingSpinner = css`
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
+
+    &.sm {
+      width: ${SM.Sizing};
+      height: ${SM.Sizing};
+      padding: ${SM.Padding};
+
+      &.default {
+        border-color: ${SM.Background.Default.color};
+        border-bottom-color: ${SM.Foreground.Default.color};
+        border-style: ${SM.Background.Default.style};
+        border-width: ${SM.Background.Default.width};
+      }
+
+      &.inverted {
+        border-color: ${SM.Background.Inverted.color};
+        border-bottom-color: ${SM.Foreground.Inverted.color};
+        border-style: ${SM.Background.Inverted.style};
+        border-width: ${SM.Background.Inverted.width};
+      }
+    }
+
+    &.md {
+      width: ${MD.Sizing};
+      height: ${MD.Sizing};
+      padding: ${MD.Padding};
+
+      &.default {
+        border-color: ${MD.Background.Default.color};
+        border-bottom-color: ${MD.Foreground.Default.color};
+        border-style: ${MD.Background.Default.style};
+        border-width: ${MD.Background.Default.width};
+      }
+
+      &.inverted {
+        border-color: ${MD.Background.Inverted.color};
+        border-style: ${MD.Background.Inverted.style};
+        border-bottom-color: ${MD.Foreground.Inverted.color};
+        border-width: ${MD.Background.Inverted.width};
+      }
+    }
+
+    &.lg {
+      width: ${LG.Sizing};
+      height: ${LG.Sizing};
+      padding: ${LG.Padding};
+
+      &.default {
+        border-color: ${LG.Background.Default.color};
+        border-bottom-color: ${LG.Foreground.Default.color};
+        border-style: ${LG.Background.Default.style};
+        border-width: ${LG.Background.Default.width};
+      }
+
+      &.inverted {
+        border-color: ${LG.Background.Inverted.color};
+        border-bottom-color: ${LG.Foreground.Inverted.color};
+        border-style: ${LG.Background.Inverted.style};
+        border-width: ${LG.Background.Inverted.width};
+      }
+    }
   }
 
   @keyframes rotation {
@@ -20,38 +79,5 @@ export const loadingSpinner = css`
     100% {
       transform: rotate(360deg);
     }
-  }
-
-  .blr-loading-spinner.default {
-    border: ${Background.Default};
-    border-bottom-color: ${Fill.Default};
-    border-style: ${SM.Background.Default.style};
-  }
-
-  .blr-loading-spinner.inverted {
-    border: ${Background.Inverted};
-    border-bottom-color: ${Fill.Inverted};
-    border-style: ${SM.Background.Inverted.style};
-  }
-
-  .blr-loading-spinner.sm {
-    width: ${SM.Sizing};
-    height: ${SM.Sizing};
-    padding: ${SM.Padding};
-    border-width: ${SM.Background.Default.width};
-  }
-
-  .blr-loading-spinner.md {
-    width: ${MD.Sizing};
-    height: ${MD.Sizing};
-    padding: ${MD.Padding};
-    border-width: ${MD.Background.Default.width};
-  }
-
-  .blr-loading-spinner.lg {
-    width: ${LG.Sizing};
-    height: ${LG.Sizing};
-    padding: ${LG.Padding};
-    border-width: ${LG.Background.Default.width};
   }
 `;
