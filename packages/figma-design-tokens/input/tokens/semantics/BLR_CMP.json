@@ -3189,7 +3189,7 @@
             }
           },
           "PaddingTop": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionREM.16}",
             "type": "spacing"
           }
         },
@@ -3199,7 +3199,71 @@
             "type": "spacing"
           },
           "PaddingTop": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        }
+      },
+      "MD": {
+        "RadioStack": {
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        }
+      },
+      "LG": {
+        "RadioStack": {
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
             "type": "spacing"
           }
         }
