@@ -2299,11 +2299,15 @@
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
         },
-        "MainContainer": {
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          },
+          "Padding": {
+            "value": "{core.dimensionREM.8} 0",
+            "type": "spacing"
           }
         },
         "ControlWrapper": {
@@ -2327,11 +2331,15 @@
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
         },
-        "MainContainer": {
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          },
+          "Padding": {
+            "value": "{core.dimensionREM.8} 0",
+            "type": "spacing"
           }
         },
         "ControlWrapper": {
@@ -2355,11 +2363,15 @@
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
         },
-        "MainContainer": {
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.12}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          },
+          "Padding": {
+            "value": "{core.dimensionREM.8} 0",
+            "type": "spacing"
           }
         },
         "ControlWrapper": {
