@@ -398,7 +398,6 @@ export const checkbox = css`
         }
 
         &:active {
-
         }
       }
     }
