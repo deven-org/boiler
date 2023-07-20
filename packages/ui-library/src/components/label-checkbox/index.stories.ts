@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 
-import { BlrLabelCheckbox as BlrLabelCheckboxClass } from './index';
+import { BlrCheckboxRenderFunction, BlrCheckboxType, BlrLabelCheckbox as BlrLabelCheckboxClass } from './index';
 
 import { InputSizes } from '../../globals/constants';
 import './index';
@@ -39,26 +39,28 @@ export const BlrLabelCheckbox = ({
   showHint,
   hintIcon,
   hintMessage,
-}: BlrLabelCheckboxClass) =>
+  handleChange,
+}: BlrCheckboxType) =>
   html`
-    <blr-label-checkbox
-      .label=${label}
-      .checkInputId=${checkInputId}
-      .onFocus=${onFocus}
-      .onBlur=${onBlur}
-      .onChange=${onChange}
-      .disabled=${disabled}
-      .checked=${checked}
-      .indeterminate=${indeterminate}
-      .readonly=${readonly}
-      .size=${size}
-      .hasError=${hasError}
-      .errorMessage=${errorMessage}
-      .errorIcon=${errorIcon}
-      .showHint=${showHint}
-      .hintIcon=${hintIcon}
-      .hintMessage=${hintMessage}
-    ></blr-label-checkbox>
+    ${BlrCheckboxRenderFunction({
+      label,
+      checkInputId,
+      onBlur,
+      onFocus,
+      onChange,
+      disabled,
+      size,
+      checked,
+      indeterminate,
+      readonly,
+      hasError,
+      errorMessage,
+      errorIcon,
+      showHint,
+      hintIcon,
+      hintMessage,
+      handleChange,
+    })}
   `;
 
 BlrLabelCheckbox.storyName = 'BlrLabelCheckbox';
