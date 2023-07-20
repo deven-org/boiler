@@ -950,7 +950,7 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
@@ -1052,15 +1052,15 @@
   "Forms": {
     "SM": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
         "type": "typography"
       },
       "UserInput": {
@@ -1068,7 +1068,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1090,7 +1090,7 @@
         },
         "IconWrapper": {
           "Padding": {
-            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
           }
         },
@@ -1142,15 +1142,15 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -1174,7 +1174,7 @@
         },
         "IconWrapper": {
           "Padding": {
-            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0,5} {core.dimensionPX.0}",
             "type": "spacing"
           }
         }
@@ -1206,7 +1206,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1232,15 +1232,15 @@
     },
     "LG": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
       },
       "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "UserInput": {
@@ -1248,7 +1248,7 @@
         "type": "typography"
       },
       "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125}",
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
       "Placeholder": {
@@ -1276,7 +1276,7 @@
         },
         "IconWrapper": {
           "Padding": {
-            "value": "{core.dimensionREM.1} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
             "type": "spacing"
           }
         }
@@ -1338,11 +1338,15 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },
@@ -1364,11 +1368,15 @@
         "type": "color"
       },
       "Disabled": {
-        "value": "{q.content.ondefault.alpha}",
+        "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
       "ReadOnly": {
         "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },

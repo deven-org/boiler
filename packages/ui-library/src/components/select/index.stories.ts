@@ -98,7 +98,7 @@ BlrSelect.args = {
   hint: 'Field is used for hint',
   hintIcon: 'blrInfo',
   selectId: 'Peter',
-  trailingIcon: 'blr360',
+  trailingIcon: 'blrChevronDown',
   options: [
     { value: 'uschi', label: 'Uschi', disabled: true },
     { value: '1', label: 'Option 1' },

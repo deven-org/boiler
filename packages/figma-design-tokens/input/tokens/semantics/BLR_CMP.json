@@ -441,24 +441,13 @@
       }
     },
     "StepperCombo": {
-      "Divider": {
-        "value": "{core.color.coolgray.800.opa30}",
-        "type": "color",
-        "Border": {
-          "value": {
-            "color": "{Action.StepperCombo.Divider}",
-            "width": "{core.dimensionPX.1}"
-          },
-          "type": "border"
-        }
-      },
       "SM": {
         "Vertical": {
           "Width": {
             "value": "{core.dimensionREM.32}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
@@ -470,20 +459,11 @@
             "value": "{core.dimensionREM.64}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
-          }
-        },
-        "Divider": {
-          "Border": {
-            "value": {
-              "color": "{Action.StepperCombo.Divider}",
-              "width": "{core.dimensionPX.1}"
-            },
-            "type": "border"
           }
         }
       },
@@ -493,7 +473,7 @@
             "value": "{core.dimensionREM.40}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
@@ -505,20 +485,11 @@
             "value": "{core.dimensionREM.80}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
-          }
-        },
-        "Divider": {
-          "Border": {
-            "value": {
-              "color": "{Action.StepperCombo.Divider}",
-              "width": "{core.dimensionPX.1}"
-            },
-            "type": "border"
           }
         }
       },
@@ -528,7 +499,7 @@
             "value": "{core.dimensionREM.48}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
@@ -540,20 +511,11 @@
             "value": "{core.dimensionREM.96}",
             "type": "sizing"
           },
-          "Divider": {
+          "DividerWrapper": {
             "Padding": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }
-          }
-        },
-        "Divider": {
-          "Border": {
-            "value": {
-              "color": "{Action.StepperCombo.Divider}",
-              "width": "{core.dimensionPX.1}"
-            },
-            "type": "border"
           }
         }
       }
@@ -709,6 +671,32 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "Border": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Neutral.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Warning.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Error.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "MD": {
@@ -719,6 +707,32 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "Border": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Neutral.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Warning.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Error.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       },
       "LG": {
@@ -729,6 +743,32 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        },
+        "Border": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Neutral.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Warning.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Error.SurfaceStroke}",
+              "width": "{core.borderWidth.Medium}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
         }
       }
     },
@@ -745,6 +785,10 @@
         "Padding": {
           "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
           "type": "spacing"
+        },
+        "BorderRadius": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
         }
       },
       "Elevation": {
@@ -791,23 +835,31 @@
   "Forms": {
     "Checkbox": {
       "SM": {
-        "Gap": {
-          "value": "{core.dimensionPX.0}",
-          "type": "spacing",
-          "description": "Controls the vertical spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
+        "ContentCol": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          }
         },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing",
-          "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+        "MainContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          }
         },
-        "ControlMargin": {
-          "value": "{core.dimensionREM.2} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "LabelMargin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
+        "ControlWrapper": {
+          "TopMargin": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          }
         },
         "Control": {
           "Background": {
@@ -997,24 +1049,6 @@
         }
       },
       "MD": {
-        "Gap": {
-          "value": "{core.dimensionPX.0}",
-          "type": "spacing",
-          "description": "Controls the vertical spacing between ControlLabelContainer and the Caption; applied to top (component) layer"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing",
-          "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
-        },
-        "ControlMargin": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "LabelMargin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
         "Control": {
           "Background": {
             "Sizing": {
@@ -1200,22 +1234,35 @@
             "value": "SM",
             "type": "componentConfig"
           }
+        },
+        "ContentCol": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          }
+        },
+        "MainContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          }
+        },
+        "ControlWrapper": {
+          "TopMargin": {
+            "value": "{core.dimensionREM.5}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          }
         }
       },
       "LG": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing",
-          "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
-        },
-        "ControlMargin": {
-          "value": "{core.dimensionREM.6} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "LabelMargin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
         "Control": {
           "Background": {
             "Sizing": {
@@ -1400,6 +1447,32 @@
           "IconSize": {
             "value": "Custom (20px)",
             "type": "componentConfig"
+          }
+        },
+        "ContentCol": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          }
+        },
+        "MainContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          }
+        },
+        "ControlWrapper": {
+          "TopMargin": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
           }
         }
       },
@@ -1757,48 +1830,6 @@
       }
     },
     "Radio": {
-      "SM": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "ControlMargin": {
-          "value": "{core.dimensionREM.2} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "LabelMargin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "MD": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "ControlMargin": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "LabelMargin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LG": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "ControlMargin": {
-          "value": "{core.dimensionREM.7} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "LabelMargin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "Control": {
         "Background": {
           "Unselected": {
@@ -2254,6 +2285,90 @@
       "ControlBorderRadius": {
         "value": "{core.borderRadius.Round}",
         "type": "borderRadius"
+      },
+      "SM": {
+        "ContentCol": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          }
+        },
+        "MainContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          }
+        },
+        "ControlWrapper": {
+          "TopMargin": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          }
+        }
+      },
+      "MD": {
+        "ContentCol": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          }
+        },
+        "MainContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          }
+        },
+        "ControlWrapper": {
+          "TopMargin": {
+            "value": "{core.dimensionREM.5}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          }
+        }
+      },
+      "LG": {
+        "ContentCol": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          }
+        },
+        "MainContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          }
+        },
+        "ControlWrapper": {
+          "TopMargin": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          }
+        }
       }
     },
     "Select": {
@@ -2727,6 +2842,334 @@
           "type": "spacing"
         }
       }
+    },
+    "Slider": {
+      "Thumb": {
+        "Fill": {
+          "Rest": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
+          },
+          "Hover": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
+          },
+          "Pressed": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
+          },
+          "Focus": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
+          },
+          "Disabled": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
+          },
+          "ReadOnly": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
+          },
+          "Error": {
+            "value": "{q.surface.error}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
+          }
+        },
+        "Stroke": {
+          "Rest": {
+            "value": "{q.stroke.brand.beta.rest}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
+          },
+          "Hover": {
+            "value": "{q.stroke.brand.beta.hover}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
+          },
+          "Pressed": {
+            "value": "{q.stroke.brand.beta.pressed}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
+          },
+          "Focus": {
+            "value": "{q.stroke.brand.beta.rest}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
+          },
+          "Disabled": {
+            "value": "{q.stroke.disabled.beta}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
+          },
+          "ReadOnly": {
+            "value": "{q.stroke.readonly}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
+          },
+          "Error": {
+            "value": "{q.stroke.error}",
+            "type": "color",
+            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
+          }
+        },
+        "Border": {
+          "Rest": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Rest}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Hover": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Hover}",
+              "width": "{core.dimensionPX.4}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Pressed}",
+              "width": "{core.dimensionPX.4}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Focus": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Focus}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Disabled}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "ReadOnly": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.ReadOnly}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
+          },
+          "Error": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.Stroke.Error}",
+              "width": "{core.dimensionPX.2}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
+        },
+        "Sizing": {
+          "Rest": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Hover": {
+            "value": "{core.dimensionPX.20}",
+            "type": "sizing"
+          },
+          "Pressed": {
+            "value": "{core.dimensionPX.20}",
+            "type": "sizing"
+          },
+          "Focus": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Disabled": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          },
+          "Readonly": {
+            "value": "{core.dimensionPX.14}",
+            "type": "sizing"
+          }
+        }
+      },
+      "Track": {
+        "Stroke": {
+          "Active": {
+            "Default": {
+              "value": "{q.content.onbrand.beta.rest}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.content.ondisabled.alpha}",
+              "type": "color"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": "{q.surface.brand.secondary.rest}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.surface.disabled.alpha}",
+              "type": "color"
+            }
+          }
+        },
+        "Border": {
+          "Active": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Active.Default}",
+                "width": "{core.dimensionPX.4}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Active.Mute}",
+                "width": "{core.dimensionPX.4}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Inactive.Default}",
+                "width": "{core.dimensionPX.4}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.Track.Stroke.Inactive.Mute}",
+                "width": "{core.dimensionPX.4}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          }
+        }
+      },
+      "TickMark": {
+        "Stroke": {
+          "Active": {
+            "Default": {
+              "value": "{q.content.onbrand.beta.rest}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.content.ondisabled.alpha}",
+              "type": "color"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": "{q.surface.brand.secondary.rest}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.surface.disabled.alpha}",
+              "type": "color"
+            }
+          }
+        },
+        "Fill": {
+          "Active": {
+            "Default": {
+              "value": "{q.surface.default}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.surface.default}",
+              "type": "color"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": "{q.surface.default}",
+              "type": "color"
+            },
+            "Mute": {
+              "value": "{q.surface.default}",
+              "type": "color"
+            }
+          }
+        },
+        "Border": {
+          "Active": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Active.Default}",
+                "width": "{core.dimensionPX.1}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Active.Mute}",
+                "width": "{core.dimensionPX.1}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          },
+          "Inactive": {
+            "Default": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Inactive.Default}",
+                "width": "{core.dimensionPX.1}1",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Mute": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.Stroke.Inactive.Mute}",
+                "width": "{core.dimensionPX.1}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
+          }
+        },
+        "Sizing": {
+          "value": "{core.dimensionPX.6}",
+          "type": "sizing"
+        }
+      },
+      "Legend": {
+        "Color": {
+          "Default": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color"
+          }
+        },
+        "Typography": {
+          "value": "{core.typography.sourceSansPro.regular.75}",
+          "type": "typography"
+        }
+      }
     }
   },
   "UI": {
@@ -2760,6 +3203,261 @@
         "value": "{core.dimensionREM.48}",
         "type": "sizing",
         "description": "size of XL icon"
+      }
+    },
+    "Divider": {
+      "Stroke": {
+        "value": "{core.color.coolgray.800.opa30}",
+        "type": "color"
+      },
+      "Border": {
+        "value": {
+          "color": "{UI.Divider.Stroke}",
+          "width": "{core.dimensionPX.1}"
+        },
+        "type": "border"
+      }
+    }
+  },
+  "Navigation": {
+    "TabBar": {
+      "Tab": {
+        "SM": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            }
+          },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.4}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.12}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "XS",
+              "type": "componentConfig"
+            }
+          }
+        },
+        "HighlightLine": {
+          "SurfaceFill": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Apply as fill on HightlightLine"
+          },
+          "Selected": {
+            "Opacity": {
+              "value": "1",
+              "type": "opacity",
+              "description": "Controlls the visibility of the HighlightLine; Apply on selected / active tabs only. <HighlightLine>"
+            }
+          },
+          "Unselected": {
+            "Opacity": {
+              "value": "0",
+              "type": "opacity",
+              "description": "Controlls the visibility of the HighlightLine; Apply on unselected / inactive and disabled tabs. <HighlightLine>"
+            }
+          }
+        },
+        "MD": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            }
+          },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "SM",
+              "type": "componentConfig"
+            }
+          }
+        },
+        "LG": {
+          "HighlightLine": {
+            "Height": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            }
+          },
+          "ContentCol": {
+            "TopPadding": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          },
+          "ContentRow": {
+            "PaddingLeftRight": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "ItemSpacing": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          },
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "SizeVariant": {
+              "value": "SM",
+              "type": "componentConfig"
+            }
+          }
+        },
+        "Label": {
+          "Active": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          },
+          "Unselected": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          }
+        },
+        "Icon": {
+          "Active": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          },
+          "Unselected": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>"
+          }
+        }
+      },
+      "ButtonWrapper": {
+        "SM": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8} 0 0",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        },
+        "MD": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8} 0 0",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        },
+        "LG": {
+          "Leading": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.12}",
+              "type": "spacing",
+              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          },
+          "Trailing": {
+            "Padding": {
+              "value": "0 0 0 {core.dimensionREM.12}",
+              "type": "spacing",
+              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+            }
+          }
+        }
       }
     }
   }

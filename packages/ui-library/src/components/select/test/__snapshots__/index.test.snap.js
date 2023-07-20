@@ -255,3 +255,45 @@ snapshots['blr-select renders correctly'] = `<div class="blr-select disabled md"
 </div>
 `;
 /* end snapshot blr-select renders correctly */
+snapshots['blr-select renders correctly'] = `<div class="blr-select disabled md">
+  <div class="blr-input-inner-container">
+    <select
+      class="blr-form-element md"
+      disabled=""
+      required=""
+    >
+    </select>
+  </div>
+  <div class="blr-form-hint hint sm">
+    <blr-icon
+      aria-hidden=""
+      icon=""
+      size="sm"
+    >
+    </blr-icon>
+    <span class="blr-caption-text">
+      This is dummy message
+    </span>
+  </div>
+</div>
+`;
+/* end snapshot blr-select renders correctly */
+snapshots['blr-select renders correctly'] = `<div class="blr-select disabled md">
+  <div class="blr-input-inner-container">
+    <select
+      class="blr-form-element md"
+      disabled=""
+      required=""
+    >
+    </select>
+  </div>
+  <span class="blr-form-hint hint sm">
+    <blr-icon aria-hidden="true">
+    </blr-icon>
+    <span class="blr-caption-text">
+      This is dummy message
+    </span>
+  </span>
+</div>
+`;
+/* end snapshot blr-select renders correctly */

@@ -216,6 +216,12 @@
         "error": {
           "value": "{core.color.crimson.500.solid}",
           "type": "color"
+        },
+        "brand": {
+          "rest": {
+            "value": "{q.surface.brand.primary.rest}",
+            "type": "color"
+          }
         }
       },
       "onreadonly": {

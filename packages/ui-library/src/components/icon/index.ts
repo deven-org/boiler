@@ -32,6 +32,7 @@ export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   hideAria?: boolean;
   name?: string;
   disablePointerEvents?: boolean;
+  disableDefaultClass?: boolean;
 };
 
 export const BlrIconRenderFunction = ({
@@ -42,9 +43,10 @@ export const BlrIconRenderFunction = ({
   hideAria,
   name,
   disablePointerEvents,
+  disableDefaultClass,
 }: BlrIconType) => {
   return html`<blr-icon
-    class="blr-input-icon ${classMap}"
+    class="${disableDefaultClass ? '' : 'blr-input-icon'} ${classMap}"
     .icon=${icon || nothing}
     .size=${size}
     .name=${name || nothing}

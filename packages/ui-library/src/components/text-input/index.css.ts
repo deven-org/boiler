@@ -2,9 +2,7 @@ import { css } from 'lit';
 
 export const styleCustom = css`
   .blr-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
     position: relative;
   }
 
