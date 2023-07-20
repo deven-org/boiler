@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 19 Jul 2023 13:09:47 GMT
+ * Generated on Thu, 20 Jul 2023 08:29:51 GMT
  */
 
 export const semanticTokens = {
@@ -268,11 +268,6 @@ export const semanticTokens = {
     },
   },
   Forms: {
-    Select: {
-      SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
-      MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
-      LG: { InputFieldPadding: '0.75rem 48px 0.75rem 16px', IconPaddingRight: '16px' },
-    },
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
@@ -435,5 +430,18 @@ export const semanticTokens = {
       Disabled: 'hsla(220, 10%, 80%,1) ',
       Error: 'hsla(350, 65%, 50%,1) ',
     },
+    LabelNextToControl: {
+      Rest: 'hsla(220, 10%, 10%,1) ',
+      Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
+      Focus: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
+      ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
+    },
+  },
+  Global: {
+    Focus: 'hsla(220, 10%, 10%,1) ',
+    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
   },
 };

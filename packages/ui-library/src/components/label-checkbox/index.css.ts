@@ -3,16 +3,27 @@ import { css } from 'nested-css-to-flat/lit-css';
 
 export const styleCustom = css`
   .blr-label-checkbox {
-    &.checked > input {
-      background-color: black;
-    }
+    display: flex;
+    align-items: flex-start;
 
-    &.focus:not(.disabled) > input {
-      outline: 1px solid red;
-    }
+    & > input {
+      all: initial;
 
-    &.disabled {
-      opacity: 0.25;
+      &:disabled + label {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      &:checked {
+        &:disabled + label {
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+      }
+
+      &:focus {
+        outline-offset: 2px;
+      }
     }
   }
 `;
