@@ -13,8 +13,8 @@ export const checkbox = css`
       color: ${LabelNextToControl.Rest};
     }
     .input-control {
+      position: relative;
       outline-offset: 2px;
-      appearance: none;
       transition: all 0.25s ease 0s;
       border-radius: ${Checkbox.ControlBorderRadius};
       background-color: ${Checkbox.Control.Background.Unselected.Fill.Rest};
@@ -69,6 +69,10 @@ export const checkbox = css`
             width: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
             height: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
           }
+          &:[readonly] {
+            width: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
+            height: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
+          }
         }
       }
     }
@@ -106,6 +110,10 @@ export const checkbox = css`
           &:disabled {
             width: ${Checkbox.MD.Control.Background.Sizing.Selected.Disabled};
             height: ${Checkbox.MD.Control.Background.Sizing.Selected.Disabled};
+          }
+          &:[readonly] {
+            width: ${Checkbox.MD.Control.Background.Sizing.Selected.ReadOnly};
+            height: ${Checkbox.MD.Control.Background.Sizing.Selected.ReadOnly};
           }
         }
       }
@@ -145,59 +153,25 @@ export const checkbox = css`
             width: ${Checkbox.LG.Control.Background.Sizing.Selected.Disabled};
             height: ${Checkbox.LG.Control.Background.Sizing.Selected.Disabled};
           }
+          &:[readonly] {
+            width: ${Checkbox.LG.Control.Background.Sizing.Selected.ReadOnly};
+            height: ${Checkbox.LG.Control.Background.Sizing.Selected.ReadOnly};
+          }
         }
       }
     }
   }
     &:not(.error) {
       .input-control {
-        &:disabled {
-          cursor: not-allowed;
-          background-color: ${Checkbox.Control.Background.Unselected.Fill.Disabled};
-          border-color: ${Checkbox.Control.Background.Unselected.Stroke.Disabled};
-          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Disabled};
-          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Disabled};
-        }
-        &:hover {
-          &:(:disabled [readonly]) {
-            background-color: ${Checkbox.Control.Background.Unselected.Fill.Hover};
-            border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
-            width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Hover};
-            height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Hover};
-          }
-        }
-        &:active {
-          &:not(:disabled, [readonly]) {
-            background-color: ${Checkbox.Control.Background.Unselected.Fill.Pressed};
-            border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
-            width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-            height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-          }
-        }
-        &:focus {
-          background-color: ${Checkbox.Control.Background.Unselected.Fill.Focus};
-          border-color: ${Checkbox.Control.Background.Unselected.Stroke.Focus};
-          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Focus};
-          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Focus};
-          outline: 2px solid black;
-        }
-        &[readonly] {
-          &:not(.checked) {
-          background-color: ${Checkbox.Control.Background.Unselected.Fill.ReadOnly};
-          border-color: ${Checkbox.Control.Background.Unselected.Stroke.ReadOnly};
-          width: ${Checkbox.SM.Control.Background.Sizing.Unselected.ReadOnly};
-          height: ${Checkbox.SM.Control.Background.Sizing.Unselected.ReadOnly};
-          }
-        }
         &:checked {
           background-color: ${Checkbox.Control.Background.Selected.Fill.Rest};
           &:disabled {
             background-color: ${Checkbox.Control.Background.Selected.Fill.Disabled};
             border-color: ${Checkbox.Control.Background.Selected.Stroke.Disabled};
-            width: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
-            min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
-            height: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
-            min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
+          }
+          &[readonly] {
+            background-color: ${Checkbox.Control.Background.Selected.Fill.ReadOnly};
+            border-color: ${Checkbox.Control.Background.Selected.Stroke.ReadOnly};
           }
           &:hover {
             &:not(:disabled, [readonly]) {
@@ -218,38 +192,104 @@ export const checkbox = css`
             &:not(:disabled, [readonly]) {
               background-color: ${Checkbox.Control.Background.Selected.Fill.Hover};
               border-color: ${Checkbox.Control.Background.Selected.Stroke.Hover};
-              width: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
-              min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
-              height: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
-              min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
             }
           }
           &:active {
             &:not(:disabled, [readonly]) {
               background-color: ${Checkbox.Control.Background.Selected.Fill.Pressed};
               border-color: ${Checkbox.Control.Background.Selected.Stroke.Pressed};
-              width: ${Checkbox.SM.Control.Background.Sizing.Selected.Pressed};
-              min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.Pressed};
-              height: ${Checkbox.SM.Control.Background.Sizing.Selected.Pressed};
-              min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Pressed};
             }
           }
           &:focus {
             background-color: ${Checkbox.Control.Background.Selected.Fill.Focus};
             border-color: ${Checkbox.Control.Background.Selected.Stroke.Focus};
-            width: ${Checkbox.SM.Control.Background.Sizing.Selected.Focus};
-            min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.Focus};
-            height: ${Checkbox.SM.Control.Background.Sizing.Selected.Focus};
-            min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Focus};
             outline: 2px solid black;
           }
-          &:[readonly] {
+          &:indeterminate {
             background-color: ${Checkbox.Control.Background.Selected.Fill.ReadOnly};
             border-color: ${Checkbox.Control.Background.Selected.Stroke.ReadOnly};
-            width: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
-            min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
-            height: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
-            min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
+            &::after {
+              content: "";
+              display: block;
+              width: 10px;
+              border-style: solid;
+              border-color: white;
+              border-width: 2px 0px 0px;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 0px;
+              right: 0px;
+              margin: 0px auto;
+            }
+          }
+        }
+        &:disabled {
+          cursor: not-allowed;
+          background-color: ${Checkbox.Control.Background.Unselected.Fill.Disabled};
+          border-color: ${Checkbox.Control.Background.Unselected.Stroke.Disabled};
+        }
+        &:hover {
+          &:(:disabled, [readonly]) {
+            background-color: ${Checkbox.Control.Background.Unselected.Fill.Hover};
+            border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
+          }
+        }
+        &:active {
+          &:not(:disabled, [readonly]) {
+            background-color: ${Checkbox.Control.Background.Unselected.Fill.Pressed};
+            border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
+          }
+        }
+        &:focus {
+          background-color: ${Checkbox.Control.Background.Unselected.Fill.Focus};
+          border-color: ${Checkbox.Control.Background.Unselected.Stroke.Focus};
+          outline: 2px solid black;
+        }
+        &[readonly] {
+          background-color: ${Checkbox.Control.Background.Unselected.Fill.ReadOnly};
+          border-color: ${Checkbox.Control.Background.Unselected.Stroke.ReadOnly};
+        }
+        &:indeterminate {
+          background-color: ${Checkbox.Control.Background.Selected.Fill.Rest};
+          border-color: ${Checkbox.Control.Background.Selected.Stroke.Rest};
+          &:hover {
+            &:not(:disabled, [readonly]) {
+              background-color: ${Checkbox.Control.Background.Selected.Fill.Hover};
+              border-color: ${Checkbox.Control.Background.Selected.Stroke.Hover};
+            }
+          }
+          &:active {
+            &:not(:disabled, [readonly]) {
+              background-color: ${Checkbox.Control.Background.Selected.Fill.Pressed};
+              border-color: ${Checkbox.Control.Background.Selected.Stroke.Pressed};
+            }
+          }
+          &:disabled {
+            background-color: ${Checkbox.Control.Background.Selected.Fill.Disabled};
+            border-color: ${Checkbox.Control.Background.Selected.Stroke.Disabled};
+          }
+          &:focus {
+            background-color: ${Checkbox.Control.Background.Selected.Fill.Focus};
+            border-color: ${Checkbox.Control.Background.Selected.Stroke.Focus};
+          }
+          &[readonly] {
+            background-color: ${Checkbox.Control.Background.Selected.Fill.ReadOnly};
+            border-color: ${Checkbox.Control.Background.Selected.Stroke.ReadOnly};
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            border-style: solid;
+            border-color: white;
+            border-width: 2px 0px 0px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0px;
+            right: 0px;
+            margin: 0px auto;
           }
         }
       }
@@ -279,131 +319,6 @@ export const checkbox = css`
         border-color: ${Checkbox.Control.Background.Unselected.Stroke.Error};
       }
     }
-
-      &.lg {
-        > input {
-          width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
-          min-width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
-          height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
-          min-height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
-          &:hover {
-            &:not(.disabled, .readonly) {
-              background-color: ${Checkbox.Control.Background.Unselected.Fill.Hover};
-              border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
-              width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Hover};
-              min-width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Hover};
-              height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Hover};
-              min-height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Hover};
-
-              + label {
-
-              }
-            }
-          }
-          &:active {
-            &:not(.disabled, .readonly) {
-              background-color: ${Checkbox.Control.Background.Unselected.Fill.Pressed};
-              border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
-              width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-              min-width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-              height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-              min-height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Pressed};
-
-              + label {
-
-              }
-            }
-          }
-          &:focus {
-            &:not(.disabled, .readonly) {
-              background-color: ${Checkbox.Control.Background.Unselected.Fill.Focus};
-              border-color: ${Checkbox.Control.Background.Unselected.Stroke.Focus};
-              width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Focus};
-              min-width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Focus};
-              height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Focus};
-              min-height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Focus};
-
-              + label {
-
-              }
-            }
-          }
-        }
-      }
-
-      > input {
-        position: relative;
-
-        &:hover {
-
-        }
-
-        &:checked,
-        &:indeterminate {
-
-
-          &:hover {
-
-          }
-
-          &:active {
-
-          }
-
-          &[disabled] {
-
-          }
-
-          &[readonly] {
-
-          }
-        }
-
-        &:indeterminate {
-          &::after {
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-style: solid;
-            border-color: white;
-            border-width: 2px 0 0;
-            position: absolute;
-            top: 7px;
-            left: 3px;
-          }
-        }
-
-        &:checked {
-          &::after {
-            display: block;
-            position: absolute;
-            width: 16px;
-            height: 16px;
-          }
-        }
-
-        &:focus {
-          outline: 2px solid black;
-        }
-
-        &[readonly] {
-
-        }
-
-        &[disabled] {
-
-          + label {
-          }
-        }
-
-        &:active {
-        }
-      }
     }
   }
 `;
-
-// outline-style: ${FocusBorder.style};
-// outline-width: ${FocusBorder.width};
-// outline-color: ${FocusBorder.color};

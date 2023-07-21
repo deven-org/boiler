@@ -57,6 +57,7 @@ export class BlrLabelCheckbox extends LitElement {
       [`disabled`]: this.disabled || false,
       [`checked`]: this.checked || false,
       [`readonly`]: this.readonly || false,
+      [`indeterminate`]: this.indeterminate || false,
       [`${this.size}`]: this.size || 'md',
     });
 

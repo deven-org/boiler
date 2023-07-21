@@ -19,6 +19,10 @@ export default {
       options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
+    hintIcon: {
+      options: [...getIconName(IconKeys)],
+      control: { type: 'select' },
+    },
   },
 };
 
