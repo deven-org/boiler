@@ -1,10 +1,11 @@
 {
   "tokenSetOrder": [
-    "core/BLR_COR",
-    "Inter/BLR_Light",
-    "Themes/BLR_SEM_Light",
-    "Themes/BLR_CMP_Light",
-    "Dimensions/BLR_SEM",
-    "Dimensions/BLR_CMP"
+    "core/COR",
+    "Inter/Light",
+    "Inter/Dark",
+    "Themes/SEM",
+    "Themes/CMP",
+    "Dimensions/SEM",
+    "Dimensions/CMP"
   ]
 }

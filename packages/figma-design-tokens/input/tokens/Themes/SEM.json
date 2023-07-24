@@ -104,54 +104,6 @@
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
-      },
-      "Rest": {
-        "value": {
-          "color": "{Action.CTA.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Action.CTA.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Action.CTA.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Action.CTA.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Action.CTA.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
       }
     },
     "Primary": {
@@ -258,54 +210,6 @@
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
-      },
-      "Rest": {
-        "value": {
-          "color": "{Action.Primary.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Action.Primary.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Action.Primary.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Action.Primary.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Action.Primary.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
       }
     },
     "Secondary": {
@@ -412,54 +316,6 @@
           "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         }
-      },
-      "Rest": {
-        "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Action.Secondary.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
       }
     },
     "Silent": {
@@ -566,54 +422,6 @@
           "value": "{q.content.onbrand.beta.rest}",
           "type": "color"
         }
-      },
-      "Rest": {
-        "value": {
-          "color": "{Action.Silent.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Action.Silent.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Action.Silent.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Action.Silent.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Action.Silent.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
       }
     },
     "Destructive": {
@@ -720,54 +528,6 @@
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
-      },
-      "Rest": {
-        "value": {
-          "color": "{Action.Destructive.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Action.Destructive.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Action.Destructive.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Action.Destructive.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Action.Destructive.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
       }
     },
     "Encourage": {
@@ -874,54 +634,6 @@
           "value": "{q.content.onbrand.alpha}",
           "type": "color"
         }
-      },
-      "Rest": {
-        "value": {
-          "color": "{Action.Encourage.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Action.Encourage.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Action.Encourage.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Action.Encourage.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Action.Encourage.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
       }
     }
   },
@@ -1180,92 +892,6 @@
         }
       }
     },
-    "Input": {
-      "Default": {
-        "Rest": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Rest}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Hover}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Pressed}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Global.Focus}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Disabled}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "ReadOnly": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.ReadOnly}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        }
-      },
-      "Error": {
-        "Rest": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Rest}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Hover}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Pressed}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Focus}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
-          },
-          "type": "border"
-        }
-      }
-    },
     "InputIcon": {
       "Rest": {
         "value": "{q.content.ondefault.gamma.rest}",
@@ -1327,14 +953,6 @@
     "Focus": {
       "value": "{q.stroke.focus}",
       "type": "color"
-    },
-    "FocusBorder": {
-      "value": {
-        "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.2}",
-        "style": "solid"
-      },
-      "type": "border"
     }
   },
   "Feedback": {
