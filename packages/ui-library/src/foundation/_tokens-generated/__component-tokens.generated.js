@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 24 Jul 2023 12:46:01 GMT
+ * Generated on Mon, 24 Jul 2023 12:51:40 GMT
  */
 
 export const componentTokens = {
@@ -318,6 +318,15 @@ export const componentTokens = {
         ControlWrapper: { TopMargin: '0.25rem' },
       },
       Control: {
+        Unselected: {
+          Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
+          Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
+          Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
+          Focus: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
+          Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+          ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
         Background: {
           Unselected: {
             Fill: {
@@ -397,15 +406,6 @@ export const componentTokens = {
               ReadOnly: '#00000000',
             },
           },
-        },
-        Unselected: {
-          Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
-          Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
-          Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
-          Focus: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
-          Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-          ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
-          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
         },
       },
       ControlBorderRadius: '2px',
