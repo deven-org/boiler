@@ -3217,6 +3217,38 @@
         },
         "type": "border"
       }
+    },
+    "ButtonGroup": {
+      "XS": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        }
+      },
+      "SM": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        }
+      },
+      "MD": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "LG": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "XL": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      }
     }
   },
   "Navigation": {
