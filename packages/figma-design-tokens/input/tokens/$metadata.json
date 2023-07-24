@@ -1,9 +1,11 @@
 {
   "tokenSetOrder": [
     "core/BLR_COR",
-    "intermediary/quasi",
-    "semantics/BLR_SEM",
-    "semantics/BLR_CMP",
+    "Inter/BLR_Light",
+    "Themes/BLR_SEM_Light",
+    "Themes/BLR_CMP_Light",
+    "Dimensions/BLR_SEM",
+    "Dimensions/BLR_CMP",
     "other/BLR_ASSETS",
     "other/DOC"
   ]
