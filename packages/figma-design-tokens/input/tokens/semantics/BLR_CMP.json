@@ -856,7 +856,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.2}",
+            "value": "0",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -1256,7 +1256,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -1470,7 +1470,7 @@
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.2}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -2299,16 +2299,20 @@
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
         },
-        "MainContainer": {
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          },
+          "Padding": {
+            "value": "{core.dimensionREM.8} 0",
+            "type": "spacing"
           }
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionREM.0}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -2327,16 +2331,20 @@
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
         },
-        "MainContainer": {
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          },
+          "Padding": {
+            "value": "{core.dimensionREM.8} 0",
+            "type": "spacing"
           }
         },
         "ControlWrapper": {
           "TopMargin": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -2355,11 +2363,15 @@
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
         },
-        "MainContainer": {
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.12}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+          },
+          "Padding": {
+            "value": "{core.dimensionREM.8} 0",
+            "type": "spacing"
           }
         },
         "ControlWrapper": {
@@ -3168,6 +3180,104 @@
         "Typography": {
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
+        }
+      }
+    },
+    "RadioGroup": {
+      "SM": {
+        "RadioStack": {
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        }
+      },
+      "MD": {
+        "RadioStack": {
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        }
+      },
+      "LG": {
+        "RadioStack": {
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
         }
       }
     }
