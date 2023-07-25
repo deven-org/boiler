@@ -196,7 +196,7 @@
           "description": "Forms"
         },
         "beta": {
-          "value": "{core.color.coolgray.300.solid}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color"
         },
         "gamma": {
@@ -267,7 +267,7 @@
       },
       "onerror": {
         "alpha": {
-          "value": "{core.color.crimson.300.solid}",
+          "value": "{core.color.crimson.600.solid}",
           "type": "color"
         },
         "beta": {
@@ -281,7 +281,7 @@
       },
       "onwarning": {
         "alpha": {
-          "value": "{core.color.gold.200.solid}",
+          "value": "{core.color.gold.500.solid}",
           "type": "color"
         },
         "beta": {
