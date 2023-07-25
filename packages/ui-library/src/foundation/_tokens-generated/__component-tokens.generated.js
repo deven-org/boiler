@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 25 Jul 2023 09:24:34 GMT
+ * Generated on Tue, 25 Jul 2023 10:58:42 GMT
  */
 
 export const componentTokens = {
@@ -28,6 +28,24 @@ export const componentTokens = {
     },
   },
   Feedback: {
+    Neutral: {
+      Surface: 'hsla(0, 0%, 100%, 1)',
+      SurfaceStroke: '#00000000',
+      Text: 'hsla(220, 10%, 30%,1) ',
+      Icon: 'hsla(220, 10%, 30%,1) ',
+    },
+    Warning: {
+      Surface: 'hsla(50, 80%, 50%,0.1) ',
+      SurfaceStroke: 'hsla(50, 80%, 50%,1) ',
+      Text: 'hsla(50, 80%, 20%,1) ',
+      Icon: 'hsla(50, 80%, 50%,1) ',
+    },
+    Error: {
+      Surface: 'hsla(350, 65%, 80%,0.1) ',
+      SurfaceStroke: 'hsla(350, 65%, 50%,1) ',
+      Text: 'hsla(350, 65%, 30%,1) ',
+      Icon: 'hsla(350, 65%, 50%,1) ',
+    },
     Loader: {
       SM: {
         Background: {
@@ -95,27 +113,100 @@ export const componentTokens = {
         },
       },
     },
-    Neutral: {
-      Surface: 'hsla(0, 0%, 100%, 1)',
-      SurfaceStroke: '#00000000',
-      Text: 'hsla(220, 10%, 30%,1) ',
-      Icon: 'hsla(220, 10%, 30%,1) ',
-    },
-    Warning: {
-      Surface: 'hsla(50, 80%, 50%,0.1) ',
-      SurfaceStroke: 'hsla(50, 80%, 50%,1) ',
-      Text: 'hsla(50, 80%, 20%,1) ',
-      Icon: 'hsla(50, 80%, 50%,1) ',
-    },
-    Error: {
-      Surface: 'hsla(350, 65%, 80%,0.1) ',
-      SurfaceStroke: 'hsla(350, 65%, 50%,1) ',
-      Text: 'hsla(350, 65%, 30%,1) ',
-      Icon: 'hsla(350, 65%, 50%,1) ',
-    },
   },
   Forms: {
     Checkbox: {
+      Control: {
+        Background: {
+          Unselected: {
+            Fill: {
+              Rest: 'hsla(0, 0%, 100%, 1)',
+              Hover: 'hsla(0, 0%, 100%, 1)',
+              Pressed: 'hsla(0, 0%, 100%, 1)',
+              Focus: 'hsla(0, 0%, 100%, 1)',
+              Disabled: 'hsla(0, 0%, 100%, 1)',
+              ReadOnly: 'hsla(0, 0%, 100%, 1)',
+              Error: 'hsla(0, 0%, 100%, 1)',
+            },
+            Stroke: {
+              Rest: 'hsla(220, 65%, 50%, 1)',
+              Hover: 'hsla(220, 65%, 40%, 1)',
+              Pressed: 'hsla(220, 65%, 30%, 1)',
+              Focus: 'hsla(220, 65%, 50%, 1)',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 90%,1) ',
+              Error: 'hsla(350, 65%, 50%,1) ',
+            },
+          },
+          Selected: {
+            Fill: {
+              Rest: 'hsla(220, 65%, 50%, 1)',
+              Hover: 'hsla(220, 65%, 40%, 1)',
+              Pressed: 'hsla(220, 65%, 30%, 1)',
+              Focus: 'hsla(220, 65%, 50%, 1)',
+              Disabled: 'hsla(220, 10%, 90%,1) ',
+              ReadOnly: 'hsla(220, 10%, 90%,1) ',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+            },
+          },
+        },
+        Foreground: {
+          Unselected: {
+            Fill: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+              Error: '#00000000',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+              Error: '#00000000',
+            },
+          },
+          Selected: {
+            Fill: {
+              Rest: 'hsla(0, 0%, 100%, 1)',
+              Hover: 'hsla(0, 0%, 100%, 1)',
+              Pressed: 'hsla(0, 0%, 100%, 1)',
+              Focus: 'hsla(0, 0%, 100%, 1)',
+              Disabled: 'hsla(0, 0%, 100%, 1)',
+              ReadOnly: 'hsla(0, 0%, 100%, 1)',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+            },
+          },
+        },
+        Unselected: {
+          Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
+          Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
+          Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
+          Focus: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
+          Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+          ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
+      },
       SM: {
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
         MainContainer: { ItemSpacing: '8px' },
@@ -317,38 +408,12 @@ export const componentTokens = {
         MainContainer: { ItemSpacing: '12px' },
         ControlWrapper: { TopMargin: '0.25rem' },
       },
+      ControlBorderRadius: '2px',
+    },
+    Radio: {
       Control: {
-        Unselected: {
-          Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
-          Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
-          Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
-          Focus: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
-          Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-          ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
-          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
-        },
         Background: {
           Unselected: {
-            Fill: {
-              Rest: 'hsla(0, 0%, 100%, 1)',
-              Hover: 'hsla(0, 0%, 100%, 1)',
-              Pressed: 'hsla(0, 0%, 100%, 1)',
-              Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(0, 0%, 100%, 1)',
-              ReadOnly: 'hsla(0, 0%, 100%, 1)',
-              Error: 'hsla(0, 0%, 100%, 1)',
-            },
-            Stroke: {
-              Rest: 'hsla(220, 65%, 50%, 1)',
-              Hover: 'hsla(220, 65%, 40%, 1)',
-              Pressed: 'hsla(220, 65%, 30%, 1)',
-              Focus: 'hsla(220, 65%, 50%, 1)',
-              Disabled: 'hsla(220, 10%, 80%,1) ',
-              ReadOnly: 'hsla(220, 10%, 90%,1) ',
-              Error: 'hsla(350, 65%, 50%,1) ',
-            },
-          },
-          Selected: {
             Fill: {
               Rest: 'hsla(220, 65%, 50%, 1)',
               Hover: 'hsla(220, 65%, 40%, 1)',
@@ -356,27 +421,7 @@ export const componentTokens = {
               Focus: 'hsla(220, 65%, 50%, 1)',
               Disabled: 'hsla(220, 10%, 90%,1) ',
               ReadOnly: 'hsla(220, 10%, 90%,1) ',
-            },
-            Stroke: {
-              Rest: '#00000000',
-              Hover: '#00000000',
-              Pressed: '#00000000',
-              Focus: '#00000000',
-              Disabled: '#00000000',
-              ReadOnly: '#00000000',
-            },
-          },
-        },
-        Foreground: {
-          Unselected: {
-            Fill: {
-              Rest: '#00000000',
-              Hover: '#00000000',
-              Pressed: '#00000000',
-              Focus: '#00000000',
-              Disabled: '#00000000',
-              ReadOnly: '#00000000',
-              Error: '#00000000',
+              Error: 'hsla(350, 65%, 50%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -387,33 +432,6 @@ export const componentTokens = {
               ReadOnly: '#00000000',
               Error: '#00000000',
             },
-          },
-          Selected: {
-            Fill: {
-              Rest: 'hsla(0, 0%, 100%, 1)',
-              Hover: 'hsla(0, 0%, 100%, 1)',
-              Pressed: 'hsla(0, 0%, 100%, 1)',
-              Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(0, 0%, 100%, 1)',
-              ReadOnly: 'hsla(0, 0%, 100%, 1)',
-            },
-            Stroke: {
-              Rest: '#00000000',
-              Hover: '#00000000',
-              Pressed: '#00000000',
-              Focus: '#00000000',
-              Disabled: '#00000000',
-              ReadOnly: '#00000000',
-            },
-          },
-        },
-      },
-      ControlBorderRadius: '2px',
-    },
-    Radio: {
-      Control: {
-        Background: {
-          Unselected: {
             Rest: '16px',
             Hover: '16px',
             Pressed: '16px',
@@ -421,6 +439,8 @@ export const componentTokens = {
             Disabled: '16px',
             ReadOnly: '16px',
             Error: '16px',
+          },
+          Selected: {
             Fill: {
               Rest: 'hsla(220, 65%, 50%, 1)',
               Hover: 'hsla(220, 65%, 40%, 1)',
@@ -428,7 +448,6 @@ export const componentTokens = {
               Focus: 'hsla(220, 65%, 50%, 1)',
               Disabled: 'hsla(220, 10%, 90%,1) ',
               ReadOnly: 'hsla(220, 10%, 90%,1) ',
-              Error: 'hsla(350, 65%, 50%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -437,43 +456,17 @@ export const componentTokens = {
               Focus: '#00000000',
               Disabled: '#00000000',
               ReadOnly: '#00000000',
-              Error: '#00000000',
             },
-          },
-          Selected: {
             Rest: '16px',
             Hover: '16px',
             Pressed: '16px',
             Focus: '16px',
             Disabled: '16px',
             ReadOnly: '16px',
-            Fill: {
-              Rest: 'hsla(220, 65%, 50%, 1)',
-              Hover: 'hsla(220, 65%, 40%, 1)',
-              Pressed: 'hsla(220, 65%, 30%, 1)',
-              Focus: 'hsla(220, 65%, 50%, 1)',
-              Disabled: 'hsla(220, 10%, 90%,1) ',
-              ReadOnly: 'hsla(220, 10%, 90%,1) ',
-            },
-            Stroke: {
-              Rest: '#00000000',
-              Hover: '#00000000',
-              Pressed: '#00000000',
-              Focus: '#00000000',
-              Disabled: '#00000000',
-              ReadOnly: '#00000000',
-            },
           },
         },
         Foreground: {
           Unselected: {
-            Rest: '14px',
-            Hover: '14px',
-            Pressed: '14px',
-            Focus: '14px',
-            Disabled: '14px',
-            ReadOnly: '14px',
-            Error: '14px',
             Fill: {
               Rest: 'hsla(0, 0%, 100%, 1)',
               Hover: 'hsla(0, 0%, 100%, 1)',
@@ -492,14 +485,15 @@ export const componentTokens = {
               ReadOnly: '#00000000',
               Error: '#00000000',
             },
+            Rest: '14px',
+            Hover: '14px',
+            Pressed: '14px',
+            Focus: '14px',
+            Disabled: '14px',
+            ReadOnly: '14px',
+            Error: '14px',
           },
           Selected: {
-            Rest: '6px',
-            Hover: '8px',
-            Pressed: '10px',
-            Focus: '6px',
-            Disabled: '6px',
-            ReadOnly: '6px',
             Fill: {
               Rest: 'hsla(0, 0%, 100%, 1)',
               Hover: 'hsla(0, 0%, 100%, 1)',
@@ -516,6 +510,12 @@ export const componentTokens = {
               Disabled: '#00000000',
               ReadOnly: '#00000000',
             },
+            Rest: '6px',
+            Hover: '8px',
+            Pressed: '10px',
+            Focus: '6px',
+            Disabled: '6px',
+            ReadOnly: '6px',
           },
         },
         Unselected: {

@@ -1,17 +1,11 @@
 /**
  * Do not edit directly
- * Generated on Tue, 25 Jul 2023 09:24:34 GMT
+ * Generated on Tue, 25 Jul 2023 10:58:42 GMT
  */
 
 export const semanticTokens = {
   Action: {
     CTA: {
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
       SurfaceFill: {
         Rest: 'hsla(260, 50%, 50%, 1)',
         Hover: 'hsla(260, 50%, 40%, 1)',
@@ -44,14 +38,14 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
-    },
-    Primary: {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
+    },
+    Primary: {
       SurfaceFill: {
         Rest: 'hsla(220, 65%, 50%, 1)',
         Hover: 'hsla(220, 65%, 40%, 1)',
@@ -84,14 +78,14 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Secondary: {
-      Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
-      Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
-      Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-      Loading: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
       SurfaceFill: {
         Rest: 'hsla(220, 65%, 80%,0.3) ',
         Hover: 'hsla(220, 65%, 70%,0.3) ',
@@ -124,14 +118,14 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 65%, 50%, 1)',
       },
+      Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
+      Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
+      Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
+      Loading: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
     },
     Silent: {
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
       SurfaceFill: {
         Rest: 'hsla(220, 65%, 60%,0) ',
         Hover: 'hsla(220, 65%, 60%,0.1) ',
@@ -164,14 +158,14 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 65%, 50%, 1)',
       },
-    },
-    Destructive: {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
+    },
+    Destructive: {
       SurfaceFill: {
         Rest: 'hsla(350, 65%, 50%,1) ',
         Hover: 'hsla(350, 65%, 40%,1) ',
@@ -204,14 +198,14 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
-    },
-    Encourage: {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
       Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
+    },
+    Encourage: {
       SurfaceFill: {
         Rest: 'hsla(100, 65%, 40%,1) ',
         Hover: 'hsla(100, 65%, 30%,1) ',
@@ -244,6 +238,12 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
+      Rest: { color: '#00000000', width: '1px', style: 'solid' },
+      Hover: { color: '#00000000', width: '1px', style: 'solid' },
+      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
+      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
+      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
+      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     BorderRadius: '4px',
     XS: {
@@ -268,6 +268,82 @@ export const semanticTokens = {
     },
   },
   Forms: {
+    Label: {
+      Rest: 'hsla(220, 10%, 10%,1) ',
+      Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
+      Focus: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
+      ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
+    },
+    LabelAppendix: {
+      Rest: 'hsla(220, 10%, 10%,1) ',
+      Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
+      Focus: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
+      ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
+    },
+    Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 30%,1) ' },
+    UserInput: {
+      Default: {
+        Rest: 'hsla(220, 10%, 10%,1) ',
+        Hover: 'hsla(220, 10%, 10%,1) ',
+        Pressed: 'hsla(220, 10%, 10%,1) ',
+        Focus: 'hsla(220, 10%, 10%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
+        ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      },
+      Error: {
+        Rest: 'hsla(350, 65%, 30%,1) ',
+        Hover: 'hsla(350, 65%, 30%,1) ',
+        Pressed: 'hsla(350, 65%, 30%,1) ',
+        Focused: 'hsla(350, 65%, 30%,1) ',
+      },
+    },
+    Placeholder: {
+      Default: {
+        Rest: 'hsla(220, 10%, 70%,1) ',
+        Hover: 'hsla(220, 10%, 70%,1) ',
+        Pressed: 'hsla(220, 10%, 70%,1) ',
+        Focus: 'hsla(220, 10%, 70%,1) ',
+        Disabled: 'hsla(220, 10%, 80%,1) ',
+        ReadOnly: 'hsla(220, 10%, 70%,1) ',
+      },
+      Error: {
+        Rest: 'hsla(220, 10%, 70%,1) ',
+        Hover: 'hsla(220, 10%, 70%,1) ',
+        Pressed: 'hsla(220, 10%, 70%,1) ',
+        Focus: 'hsla(220, 10%, 70%,1) ',
+      },
+    },
+    SurfaceFill: {
+      Default: {
+        Rest: 'hsla(0, 0%, 100%, 1)',
+        Hover: 'hsla(0, 0%, 100%, 1)',
+        Pressed: 'hsla(0, 0%, 100%, 1)',
+        Focus: 'hsla(0, 0%, 100%, 1)',
+        Disabled: 'hsla(220, 10%, 90%,1) ',
+        ReadOnly: 'hsla(220, 10%, 99%,1) ',
+      },
+      Error: {
+        Rest: 'hsla(350, 65%, 80%,0.1) ',
+        Hover: 'hsla(350, 65%, 80%,0.1) ',
+        Pressed: 'hsla(350, 65%, 80%,0.1) ',
+        Focus: 'hsla(350, 65%, 80%,0.1) ',
+      },
+    },
+    InputIcon: {
+      Rest: 'hsla(220, 10%, 70%,1) ',
+      Hover: 'hsla(220, 10%, 60%,1) ',
+      Pressed: 'hsla(220, 10%, 50%,1) ',
+      Focus: 'hsla(220, 10%, 70%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
+      ReadOnly: 'hsla(220, 10%, 70%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
+    },
     Select: {
       SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
       MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
@@ -359,81 +435,6 @@ export const semanticTokens = {
         Pressed: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
         Focus: { color: 'hsla(350, 65%, 50%,1) ', width: '2px', style: 'solid' },
       },
-    },
-    Label: {
-      Rest: 'hsla(220, 10%, 10%,1) ',
-      Hover: 'hsla(220, 10%, 10%,1) ',
-      Pressed: 'hsla(220, 10%, 10%,1) ',
-      Focus: 'hsla(220, 10%, 10%,1) ',
-      Disabled: 'hsla(220, 10%, 80%,1) ',
-      ReadOnly: 'hsla(220, 10%, 10%,1) ',
-      Error: 'hsla(350, 65%, 50%,1) ',
-    },
-    LabelAppendix: {
-      Rest: 'hsla(220, 10%, 10%,1) ',
-      Hover: 'hsla(220, 10%, 10%,1) ',
-      Pressed: 'hsla(220, 10%, 10%,1) ',
-      Focus: 'hsla(220, 10%, 10%,1) ',
-      Disabled: 'hsla(220, 10%, 80%,1) ',
-      ReadOnly: 'hsla(220, 10%, 10%,1) ',
-      Error: 'hsla(350, 65%, 50%,1) ',
-    },
-    Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 30%,1) ' },
-    UserInput: {
-      Default: {
-        Rest: 'hsla(220, 10%, 10%,1) ',
-        Hover: 'hsla(220, 10%, 10%,1) ',
-        Pressed: 'hsla(220, 10%, 10%,1) ',
-        Focus: 'hsla(220, 10%, 10%,1) ',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
-        ReadOnly: 'hsla(220, 10%, 10%,1) ',
-      },
-      Error: {
-        Rest: 'hsla(350, 65%, 30%,1) ',
-        Hover: 'hsla(350, 65%, 30%,1) ',
-        Pressed: 'hsla(350, 65%, 30%,1) ',
-        Focused: 'hsla(350, 65%, 30%,1) ',
-      },
-    },
-    Placeholder: {
-      Default: {
-        Rest: 'hsla(220, 10%, 70%,1) ',
-        Hover: 'hsla(220, 10%, 70%,1) ',
-        Pressed: 'hsla(220, 10%, 70%,1) ',
-        Focus: 'hsla(220, 10%, 70%,1) ',
-        Disabled: 'hsla(220, 10%, 80%,1) ',
-        ReadOnly: 'hsla(220, 10%, 70%,1) ',
-      },
-      Error: {
-        Rest: 'hsla(220, 10%, 70%,1) ',
-        Hover: 'hsla(220, 10%, 70%,1) ',
-        Pressed: 'hsla(220, 10%, 70%,1) ',
-        Focus: 'hsla(220, 10%, 70%,1) ',
-      },
-    },
-    SurfaceFill: {
-      Default: {
-        Rest: 'hsla(0, 0%, 100%, 1)',
-        Hover: 'hsla(0, 0%, 100%, 1)',
-        Pressed: 'hsla(0, 0%, 100%, 1)',
-        Focus: 'hsla(0, 0%, 100%, 1)',
-        Disabled: 'hsla(220, 10%, 90%,1) ',
-        ReadOnly: 'hsla(220, 10%, 99%,1) ',
-      },
-      Error: {
-        Rest: 'hsla(350, 65%, 80%,0.1) ',
-        Hover: 'hsla(350, 65%, 80%,0.1) ',
-        Pressed: 'hsla(350, 65%, 80%,0.1) ',
-        Focus: 'hsla(350, 65%, 80%,0.1) ',
-      },
-    },
-    InputIcon: {
-      Rest: 'hsla(220, 10%, 70%,1) ',
-      Hover: 'hsla(220, 10%, 60%,1) ',
-      Pressed: 'hsla(220, 10%, 50%,1) ',
-      Focus: 'hsla(220, 10%, 70%,1) ',
-      Disabled: 'hsla(220, 10%, 80%,1) ',
-      Error: 'hsla(350, 65%, 50%,1) ',
     },
   },
 };
