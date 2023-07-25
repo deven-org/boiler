@@ -3,8 +3,8 @@
     "core/COR",
     "Inter/Light",
     "Inter/Dark",
-    "Themes/SEM",
-    "Themes/CMP",
+    "Colors/SEM",
+    "Colors/CMP",
     "Dimensions/SEM",
     "Dimensions/CMP"
   ]

@@ -913,6 +913,10 @@
         "value": "{q.content.ondisabled.alpha}",
         "type": "color"
       },
+      "ReadOnly": {
+        "value": "{q.content.onreadonly.gamma}",
+        "type": "color"
+      },
       "Error": {
         "value": "{q.content.onerror.beta}",
         "type": "color"
