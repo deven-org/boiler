@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 18 Jul 2023 08:44:22 GMT
+ * Generated on Wed, 26 Jul 2023 09:30:42 GMT
  */
 
 export const semanticTokens = {
@@ -255,7 +255,7 @@ export const semanticTokens = {
       LoaderSize: 'SM',
     },
     MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
       LoaderSize: 'MD',
     },
     LG: {
@@ -297,6 +297,7 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
     },
     MD: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
@@ -317,6 +318,7 @@ export const semanticTokens = {
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
     },
     LG: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
@@ -342,6 +344,7 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
     },
     Label: {
       Rest: 'hsla(220, 10%, 10%,1) ',
@@ -444,5 +447,9 @@ export const semanticTokens = {
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
       Error: 'hsla(350, 65%, 50%,1) ',
     },
+  },
+  Global: {
+    Focus: 'hsla(220, 10%, 10%,1) ',
+    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
   },
 };

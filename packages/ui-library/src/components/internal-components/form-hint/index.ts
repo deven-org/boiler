@@ -1,26 +1,30 @@
-import { html } from 'lit';
+import { TemplateResult, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { InputSizesType } from '../../../globals/types';
+import { SizesType } from '../../../globals/types';
+import { BlrIconRenderFunction } from '../../icon';
+import { IconType } from '@boiler/icons';
 
 type HintVariant = 'hint' | 'error';
 
 type FormHintType = {
   message?: string;
-  iconName?: string;
+  icon: IconType | undefined;
   variant: HintVariant;
-  size: InputSizesType;
+  size: SizesType;
+  children?: TemplateResult<1>;
 };
 
-export const BlrFormHint = ({ message, variant, iconName, size }: FormHintType) => {
+export const BlrFormHint = ({ message, variant, icon, size, children }: FormHintType) => {
   const classes = classMap({
     [`${variant}`]: variant,
     [`${size}`]: size,
   });
 
   return html`
-    <div class="blr-form-hint ${classes}">
-      <blr-icon icon="${iconName}" size="${size}" aria-hidden></blr-icon>
+    <span class="blr-form-hint ${classes}">
+      ${icon ? html` ${BlrIconRenderFunction({ icon, size, hideAria: true, disableDefaultClass: true })} ` : html``}
       <span class="blr-caption-text">${message}</span>
-    </div>
+      ${children}
+    </span>
   `;
 };

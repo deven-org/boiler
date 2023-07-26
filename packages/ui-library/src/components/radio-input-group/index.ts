@@ -82,7 +82,7 @@ export class BlrRadioGroup extends LitElement {
                           message: option.hintMessage,
                           variant: 'hint',
                           size: this.size,
-                          iconName: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : '',
+                          icon: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : undefined,
                         })}
                       </div>
                     `
@@ -94,7 +94,7 @@ export class BlrRadioGroup extends LitElement {
                           message: option.errorMessage,
                           variant: 'error',
                           size: this.size,
-                          iconName: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : '',
+                          icon: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : undefined,
                         })}
                       </div>
                     `
@@ -103,14 +103,14 @@ export class BlrRadioGroup extends LitElement {
             </div>
           `;
         })}
-        <div class="group-error">
+        <div class="group-error ${classes}">
           ${this.hasError
             ? html`
                 ${BlrFormHint({
                   message: this.groupErrorMessage || '',
                   variant: 'error',
-                  size: 'sm',
-                  iconName: this.groupErrorIcon ? calculateIconName(this.groupErrorIcon, this.size) : '',
+                  size: this.size,
+                  icon: this.groupErrorIcon ? calculateIconName(this.groupErrorIcon, this.size) : undefined,
                 })}
               `
             : html``}

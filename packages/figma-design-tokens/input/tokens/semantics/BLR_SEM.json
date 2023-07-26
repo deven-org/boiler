@@ -1138,6 +1138,11 @@
           "value": "MD",
           "type": "componentConfig"
         }
+      },
+      "Legend": {
+        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+        "type": "typography",
+        "description": "Apply on forms group-legends eg.: <RadioGroup>"
       }
     },
     "MD": {
@@ -1228,6 +1233,11 @@
           "value": "MD",
           "type": "componentConfig"
         }
+      },
+      "Legend": {
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+        "type": "typography",
+        "description": "Apply on forms group-legends eg.: <RadioGroup>"
       }
     },
     "LG": {
@@ -1318,6 +1328,11 @@
           "value": "MD",
           "type": "componentConfig"
         }
+      },
+      "Legend": {
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+        "type": "typography",
+        "description": "Apply on forms group-legends eg.: <RadioGroup>"
       }
     },
     "Label": {
@@ -1704,6 +1719,24 @@
         "type": "color"
       },
       "Focus": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{q.content.ondisabled.alpha}",
+        "type": "color"
+      },
+      "ReadOnly": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{q.content.ondefault.error}",
+        "type": "color"
+      }
+    },
+    "Legend": {
+      "Default": {
         "value": "{q.content.ondefault.alpha}",
         "type": "color"
       },

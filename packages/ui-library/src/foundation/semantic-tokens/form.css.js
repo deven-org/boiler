@@ -16,7 +16,6 @@ export const form = css`
   border-style: ${Forms.Input.Default.Rest.style};
   border-color: ${Forms.Input.Default.Rest.color};
   border-radius: ${Forms.InputBorderRadius};
-  padding: ${Forms.MD.InputField.Padding};
   box-sizing: border-box;
 
   &::placeholder {
@@ -118,6 +117,7 @@ export const form = css`
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.SM.UserInput.lineHeight};
+    padding: ${Forms.SM.InputField.Padding};
   }
 
   &.md {
@@ -125,6 +125,7 @@ export const form = css`
     font-size: ${Forms.MD.UserInput.fontSize};
     font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.MD.UserInput.lineHeight};
+    padding: ${Forms.MD.InputField.Padding};
   }
 
   &.lg {
@@ -132,6 +133,7 @@ export const form = css`
     font-size: ${Forms.LG.UserInput.fontSize};
     font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.LG.UserInput.lineHeight};
+    padding: ${Forms.LG.InputField.Padding};
   }
 }
 
@@ -168,6 +170,7 @@ export const form = css`
 .blr-form-hint {
   display: flex;
   align-items: center;
+  word-break: break-all;
   padding: ${Forms.MD.CaptionComponent.Padding};
   font-weight: ${Forms.MD.Caption.fontWeight};
   font-size: ${Forms.MD.Caption.fontSize};

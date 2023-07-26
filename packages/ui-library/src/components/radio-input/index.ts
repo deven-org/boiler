@@ -74,7 +74,7 @@ export class BlrRadio extends LitElement {
                     message: this.option.hintMessage,
                     variant: 'hint',
                     size: this.size,
-                    iconName: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : '',
+                    icon: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : undefined,
                   })}
                 </div>
               `
@@ -86,7 +86,7 @@ export class BlrRadio extends LitElement {
                     message: this.option.errorMessage,
                     variant: 'error',
                     size: this.size,
-                    iconName: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : '',
+                    icon: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : undefined,
                   })}
                 </div>
               `

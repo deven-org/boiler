@@ -1,7 +1,7 @@
 import { css } from "lit";
 import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
-const { SM, MD, LG, LabelNextToControl, Caption } = semanticTokens.Forms;
+const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 const { Radio } = componentTokens.Forms;
 
 export const radio = css`
@@ -19,23 +19,38 @@ export const radio = css`
       margin-top: 0.5rem;
       display: block;
       width: 100%;
-      margin-left: calc(
-        1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.MainContainer.ItemSpacing} - 1px
-      );
+
+      &.sm {
+        margin-left: calc(
+          1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px
+        );
+      }
+
+      &.md {
+        margin-left: calc(
+          1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px
+        );
+      }
+
+      &.lg {
+        margin-left: calc(
+          1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px
+        );
+      }
     }
 
     &.sm {
-      gap: ${Radio.SM.MainContainer.ItemSpacing};
+      gap: ${Radio.SM.ContentRow.ItemSpacing};
       padding-top: ${Radio.SM.ContentCol.PaddingTop};
     }
 
     &.md {
-      gap: ${Radio.MD.MainContainer.ItemSpacing};
+      gap: ${Radio.MD.ContentRow.ItemSpacing};
       padding-top: ${Radio.MD.ContentCol.PaddingTop};
     }
 
     &.lg {
-      gap: ${Radio.LG.MainContainer.ItemSpacing};
+      gap: ${Radio.LG.ContentRow.ItemSpacing};
       padding-top: ${Radio.LG.ContentCol.PaddingTop};
     }
   }
@@ -79,7 +94,7 @@ export const radio = css`
     }
 
     &.sm {
-      gap: ${Radio.SM.MainContainer.ItemSpacing};
+      gap: ${Radio.SM.ContentRow.ItemSpacing};
 
       .input-control {
         margin-top: ${Radio.SM.ControlWrapper.TopMargin};
@@ -99,7 +114,7 @@ export const radio = css`
     }
 
     &.md {
-      gap: ${Radio.MD.MainContainer.ItemSpacing};
+      gap: ${Radio.MD.ContentRow.ItemSpacing};
 
       .input-control {
         margin-top: ${Radio.MD.ControlWrapper.TopMargin};
@@ -119,7 +134,7 @@ export const radio = css`
     }
 
     &.lg {
-      gap: ${Radio.LG.MainContainer.ItemSpacing};
+      gap: ${Radio.LG.ContentRow.ItemSpacing};
 
       .input-control {
         margin-top: ${Radio.LG.ControlWrapper.TopMargin};

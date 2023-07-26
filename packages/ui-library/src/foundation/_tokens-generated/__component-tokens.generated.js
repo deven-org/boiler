@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 18 Jul 2023 08:44:22 GMT
+ * Generated on Wed, 26 Jul 2023 09:30:42 GMT
  */
 
 export const componentTokens = {
@@ -66,13 +66,60 @@ export const componentTokens = {
         Padding: '0.188rem',
       },
     },
+    Counter: {
+      SM: {
+        Padding: '0px 4px',
+        ItemSpacing: '2px',
+        Border: {
+          Neutral: { color: '#00000000', width: '1px', style: 'solid' },
+          Warning: { color: 'hsla(50, 80%, 50%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
+      },
+      MD: {
+        Padding: '0px 4px',
+        ItemSpacing: '2px',
+        Border: {
+          Neutral: { color: '#00000000', width: '1px', style: 'solid' },
+          Warning: { color: 'hsla(50, 80%, 50%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
+      },
+      LG: {
+        Padding: '0px 4px',
+        ItemSpacing: '2px',
+        Border: {
+          Neutral: { color: '#00000000', width: '1px', style: 'solid' },
+          Warning: { color: 'hsla(50, 80%, 50%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
+      },
+    },
+    Neutral: {
+      Surface: 'hsla(0, 0%, 100%, 1)',
+      SurfaceStroke: '#00000000',
+      Text: 'hsla(220, 10%, 30%,1) ',
+      Icon: 'hsla(220, 10%, 30%,1) ',
+    },
+    Warning: {
+      Surface: 'hsla(50, 80%, 50%,0.1) ',
+      SurfaceStroke: 'hsla(50, 80%, 50%,1) ',
+      Text: 'hsla(50, 80%, 20%,1) ',
+      Icon: 'hsla(50, 80%, 50%,1) ',
+    },
+    Error: {
+      Surface: 'hsla(350, 65%, 80%,0.1) ',
+      SurfaceStroke: 'hsla(350, 65%, 50%,1) ',
+      Text: 'hsla(350, 65%, 30%,1) ',
+      Icon: 'hsla(350, 65%, 50%,1) ',
+    },
   },
   Forms: {
     Checkbox: {
       SM: {
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
         MainContainer: { ItemSpacing: '8px' },
-        ControlWrapper: { TopMargin: '0.125rem' },
+        ControlWrapper: { TopMargin: '0px' },
         Control: {
           Background: {
             Sizing: {
@@ -201,7 +248,7 @@ export const componentTokens = {
         },
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
         MainContainer: { ItemSpacing: '8px' },
-        ControlWrapper: { TopMargin: '0.313rem' },
+        ControlWrapper: { TopMargin: '0.25rem' },
       },
       LG: {
         Control: {
@@ -268,7 +315,7 @@ export const componentTokens = {
         },
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
         MainContainer: { ItemSpacing: '12px' },
-        ControlWrapper: { TopMargin: '0.25rem' },
+        ControlWrapper: { TopMargin: '0.125rem' },
       },
       Control: {
         Background: {
@@ -484,22 +531,21 @@ export const componentTokens = {
       ControlBorderRadius: '9999px',
       SM: {
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
-        MainContainer: { ItemSpacing: '8px' },
-        ControlWrapper: { TopMargin: '0.125rem' },
+        ContentRow: { ItemSpacing: '8px', Padding: '0.5rem 0' },
+        ControlWrapper: { TopMargin: '0rem' },
       },
       MD: {
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
-        MainContainer: { ItemSpacing: '8px' },
-        ControlWrapper: { TopMargin: '0.313rem' },
+        ContentRow: { ItemSpacing: '8px', Padding: '0.5rem 0' },
+        ControlWrapper: { TopMargin: '0.25rem' },
       },
       LG: {
         ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
-        MainContainer: { ItemSpacing: '12px' },
+        ContentRow: { ItemSpacing: '12px', Padding: '0.5rem 0' },
         ControlWrapper: { TopMargin: '0.25rem' },
       },
     },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
-    Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 30%,1) ' },
   },
   UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
 };
