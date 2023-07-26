@@ -97,7 +97,7 @@ export class BlrTextarea extends LitElement {
           rows="${this.rows || nothing}"
           placeholder="${this.placeholder || nothing}"
           ?required="${this.required}"
-          ?disabled="${this.disabled}"
+          disabled="${this.disabled}"
           @input="${this.onChange}"
           @focus="${this.onFocus}"
           @select="${this.onSelect}"

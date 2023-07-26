@@ -45,4 +45,34 @@ describe('blr-textarea', () => {
 
     expect(placeholder).to.be.equal(randomString);
   });
+
+  it('is is disabled when attribute disabled is set', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        disabled: true,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const disabled = textarea?.getAttribute('disabled');
+
+    // in html disabled will become an empty string when its true
+    expect(disabled).to.be.equal('');
+  });
+
+  it('is is disabled when attribute disabled is set', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        disabled: false,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const disabled = textarea?.getAttribute('disabled');
+
+    // in html disabled will become null when its false
+    expect(disabled).to.be.equal(null);
+  });
 });
