@@ -1,10 +1,9 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrIconButton as BlrIconButtonClass } from './index';
+import { BlrIconButtonType, BlrIconButtonRenderFunction } from './index';
 import { IconKeys } from '@boiler/icons';
 import { Sizes } from '../../globals/constants';
 import './index';
-import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getIconName } from '../../utils/get-icon-name';
 
 export default {
@@ -24,15 +23,12 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };
 
 export const BlrIconButton = ({
-  ariaLabel,
+  arialabel,
   onClick,
   onBlur,
   loading,
@@ -42,27 +38,26 @@ export const BlrIconButton = ({
   size,
   icon,
   loadingStatus,
-}: BlrIconButtonClass) =>
+}: BlrIconButtonType) =>
   html`
-    <blr-icon-button
-      .ariaLabel=${ariaLabel}
-      .icon=${calculateIconName(icon, size)}
-      .buttonId=${buttonId}
-      .onClick=${onClick}
-      .onBlur=${onBlur}
-      .loading=${loading}
-      .disabled=${disabled}
-      .variant=${variant}
-      .size=${size}
-      .loadingStatus=${loadingStatus}
-      class="example-layout-class"
-    ></blr-icon-button>
+    ${BlrIconButtonRenderFunction({
+      arialabel,
+      onClick,
+      onBlur,
+      loading,
+      disabled,
+      buttonId,
+      variant,
+      size,
+      icon,
+      loadingStatus,
+    })}
   `;
 
 BlrIconButton.storyName = 'BlrIconButton';
 
 BlrIconButton.args = {
-  ariaLabel: 'Button',
+  arialabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   icon: 'blrChevronDown',

@@ -30,9 +30,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };
@@ -57,7 +54,6 @@ export const BlrTextInput = ({
   hintText,
   hintIcon,
   hasError,
-  togglePassword,
   pattern,
 }: BlrTextInputType) =>
   html`
@@ -81,7 +77,6 @@ export const BlrTextInput = ({
       hintText,
       hintIcon,
       hasError,
-      togglePassword,
       pattern,
     })}
   `;
@@ -94,7 +89,7 @@ BlrTextInput.args = {
   labelAppendix: '(Optional)',
   hasLabel: true,
   showInputIcon: true,
-  inputIcon: 'blr360',
+  inputIcon: 'blr360Lg',
   type: 'text',
   value: '',
   placeholder: 'Test placeholder',

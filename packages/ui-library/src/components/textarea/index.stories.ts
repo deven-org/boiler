@@ -21,9 +21,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };
@@ -49,7 +46,6 @@ export const BlrTextarea = ({
   readonly,
   isResizeable,
   showHint,
-  minHeight,
   value,
 }: BlrTextareaType) =>
   html`
@@ -74,7 +70,6 @@ export const BlrTextarea = ({
       readonly,
       isResizeable,
       showHint,
-      minHeight,
       value,
     })}
   `;

@@ -7,6 +7,7 @@ import {
   ActionVariants,
   FeedbackVariants,
   HintVariants,
+  CounterVariants,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -14,6 +15,7 @@ export type SizesType = (typeof Sizes)[number];
 export type ActionVariantType = (typeof ActionVariants)[number];
 export type FeedbackVariantType = (typeof FeedbackVariants)[number];
 export type HintVariantType = (typeof HintVariants)[number];
+export type CounterVariantType = (typeof CounterVariants)[number];
 
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];

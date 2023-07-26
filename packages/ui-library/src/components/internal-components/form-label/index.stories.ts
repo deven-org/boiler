@@ -13,9 +13,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };

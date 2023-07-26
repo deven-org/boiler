@@ -147,7 +147,6 @@ export const BlrSelectRenderFunction = ({
   trailingIcon,
 }: BlrSelectType) => {
   return html`<blr-select
-    class="example-layout-class"
     .selectId=${selectId}
     .name=${name}
     .disabled=${disabled}

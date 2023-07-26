@@ -13,7 +13,7 @@ export class BlrLoader extends LitElement {
   @property() variant?: FeedbackVariantType;
   @property() loadingStatus!: string;
 
-  render() {
+  protected render() {
     const classes = classMap({
       'blr-loading-spinner': true,
       [`${this.variant}`]: this.variant || '',
@@ -28,11 +28,6 @@ export class BlrLoader extends LitElement {
 
 export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;
 
-export const BlrLoaderFunction = ({ variant, size, loadingStatus }: BlrLoaderType) => {
-  return html`<blr-loader
-    class="example-layout-class"
-    .variant=${variant}
-    .size=${size}
-    .loadingStatus=${loadingStatus}
-  ></blr-loader>`;
+export const BlrLoaderRenderFunction = ({ variant, size, loadingStatus }: BlrLoaderType) => {
+  return html`<blr-loader .variant=${variant} .size=${size} .loadingStatus=${loadingStatus}></blr-loader>`;
 };

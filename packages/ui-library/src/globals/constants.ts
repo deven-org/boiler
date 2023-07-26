@@ -7,3 +7,4 @@ export const InputTypes = ['text', 'email', 'number', 'password'] as const;
 export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destructive', 'encourage'] as const;
 export const FeedbackVariants = ['default', 'inverted'] as const;
 export const HintVariants = ['hint', 'error'] as const;
+export const CounterVariants = ['default', 'warn', 'error'] as const;

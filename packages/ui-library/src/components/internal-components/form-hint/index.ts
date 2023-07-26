@@ -4,7 +4,6 @@ import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, HintVariantType } from '../../../globals/types';
 import { BlrIconRenderFunction } from '../icon';
 import { IconType } from '@boiler/icons';
-import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { form } from '../../../foundation/semantic-tokens/form.css';
 
 @customElement('blr-form-hint')
@@ -25,7 +24,7 @@ export class BlrFormHint extends LitElement {
     });
 
     return html`<span class=${classes}>
-      ${BlrIconRenderFunction({ icon: calculateIconName(this.icon, this.size), size: this.size, hideAria: true })}
+      ${BlrIconRenderFunction({ icon: this.icon, size: this.size, hideAria: true })}
       <span class="blr-caption-text">${this.message}</span>
       ${this.childElement}
     </span>`;

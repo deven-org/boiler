@@ -40,7 +40,7 @@ export class BlrTextInput extends LitElement {
 
   @state() protected showPassword = false;
 
-  togglePassword = () => {
+  protected togglePassword = () => {
     return (this.showPassword = !this.showPassword);
   };
 
@@ -134,7 +134,7 @@ export class BlrTextInput extends LitElement {
                 size: 'sm',
               })}
             `
-          : html``}
+          : nothing}
       </div>
     `;
   }
@@ -168,7 +168,6 @@ export const BlrTextInputRenderFunction = ({
   pattern,
 }: BlrTextInputType) => {
   return html`<blr-text-input
-    class="example-layout-class"
     .textInputId=${textInputId}
     .type=${type}
     .hasLabel=${hasLabel}

@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { IconKeys } from '@boiler/icons';
 import { FormSizes, HintVariants } from '../../../globals/constants';
-import { getIconName } from '../../../utils/get-icon-name';
 import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
 
 import './index';
@@ -10,7 +9,7 @@ export default {
   title: 'Design System/Internal Components',
   argTypes: {
     icon: {
-      options: [undefined, ...getIconName(IconKeys)],
+      options: [undefined, IconKeys],
       control: { type: 'select' },
     },
     size: {
@@ -23,9 +22,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };
@@ -37,7 +33,7 @@ BlrFormHint.storyName = 'BlrFormHint';
 
 BlrFormHint.args = {
   message: 'hallo',
-  icon: 'blr360',
+  icon: 'blr360Lg',
   variant: 'hint',
   size: 'sm',
 };

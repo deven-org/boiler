@@ -9,7 +9,13 @@
   "proseWrap": "always",
   "overrides": [
     {
-      "files": "*.css.js",
+      "files": ["*.css.js"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.css.ts"],
       "options": {
         "singleQuote": false
       }

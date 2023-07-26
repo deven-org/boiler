@@ -39,7 +39,6 @@ export class BlrTextarea extends LitElement {
   @property() rows?: number;
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
-  @property() minHeight!: number;
 
   @state() protected count = 0;
 
@@ -94,7 +93,6 @@ export class BlrTextarea extends LitElement {
           class="blr-form-element blr-textarea ${textareaClasses}"
           id="${this.textareaId || nothing}"
           maxlength="${this.maxLength || nothing}"
-          minHeight="${this.minHeight || nothing}"
           cols="${this.cols || nothing}"
           rows="${this.rows || nothing}"
           placeholder="${this.placeholder || nothing}"
@@ -153,14 +151,12 @@ export const BlrTextareaRenderFunction = ({
   readonly,
   isResizeable,
   showHint,
-  minHeight,
   value,
 }: BlrTextareaType) => {
   return html`<blr-textarea
     .textareaId=${textareaId}
     .label=${label}
     .size=${size}
-    .minHeight=${minHeight}
     .maxLength=${maxLength}
     .cols=${cols}
     .rows=${rows}
