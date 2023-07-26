@@ -7,7 +7,7 @@ import './index';
 import { getIconName } from '../../utils/get-icon-name';
 
 export default {
-  title: 'BlrTextInput',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: FormSizes,
@@ -27,9 +27,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };
@@ -92,7 +89,7 @@ BlrTextInput.args = {
   label: 'Label',
   labelAppendix: '(Optional)',
   showInputIcon: true,
-  inputIcon: 'blr360',
+  inputIcon: 'blr360Lg',
   type: 'text',
   value: '',
   placeholder: 'Test placeholder',

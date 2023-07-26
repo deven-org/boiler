@@ -4,11 +4,12 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { InputTypes, FormSizesType } from '../../globals/types';
-import { BlrFormLabel } from '../internal-components/form-label';
-import { BlrFormHint } from '../internal-components/form-hint';
+import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { iconButton } from '../../foundation/component-tokens/action.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
+import { BlrIconRenderFunction } from '../internal-components/icon';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
@@ -36,13 +37,14 @@ export class BlrTextInput extends LitElement {
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
+  @property() showPassword!: boolean;
+  @property() hasLabel!: boolean;
 
   @state() protected currentType: InputTypes = this.type;
 
-  connectedCallback() {
-    super.connectedCallback();
-    this.currentType = this.type;
-  }
+  protected togglePassword = () => {
+    return (this.showPassword = !this.showPassword);
+  };
 
   protected render() {
     const toggleInputType = () => {
@@ -62,18 +64,25 @@ export class BlrTextInput extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    const iconClasses = classMap({
+      'blr-input-icon': true,
+      [`${this.size}`]: this.size,
+    });
+
     const getPasswordIcon = () => {
       return this.currentType.includes('password') ? 'blrEyeSm' : 'blrCloseSm';
     };
 
     return html`
       <div class="blr-input ${classes}">
-        ${BlrFormLabel({
-          labelText: this.label,
-          labelSize: this.size,
-          labelAppendix: this.labelAppendix,
-          forValue: this.textInputId,
-        })}
+        ${this.hasLabel
+          ? html` ${BlrFormLabelRenderFunction({
+              labelText: this.label,
+              labelSize: this.size,
+              labelAppendix: this.labelAppendix,
+              forValue: this.textInputId,
+            })}`
+          : html``}
         <div class="blr-input-inner-container">
           <input
             class="blr-form-element ${inputClasses}"
@@ -93,34 +102,37 @@ export class BlrTextInput extends LitElement {
           />
 
           ${this.showInputIcon && !wasInitialPasswordField
-            ? html`<blr-icon
-                class="blr-input-icon ${inputClasses}"
-                icon="${this.hasError ? 'blrInfoSm' : calculateIconName(this.inputIcon, this.size)}"
-                size="sm"
-                aria-hidden
-              ></blr-icon>`
-            : html``}
+            ? html`${BlrIconRenderFunction({
+                icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
+                name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
+                size: this.size,
+                classMap: iconClasses,
+                hideAria: true,
+                disablePointerEvents: true,
+              })}`
+            : nothing}
           ${wasInitialPasswordField
-            ? html`<blr-icon
-                class="blr-input-icon ${inputClasses}"
-                @click=${toggleInputType}
-                icon="${getPasswordIcon()}"
-                size="sm"
-                name="${getPasswordIcon()}"
-                aria-hidden
-              ></blr-icon>`
-            : html``}
+            ? html`${BlrIconRenderFunction({
+                icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
+                name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
+                size: this.size,
+                classMap: iconClasses,
+                hideAria: true,
+                disablePointerEvents: false,
+                onClick: () => this.togglePassword(),
+              })}`
+            : nothing}
         </div>
         ${this.showHint
           ? html`
-              ${BlrFormHint({
+              ${BlrFormHintRenderFunction({
                 message: this.hasError ? this.errorMessage : this.hintText,
                 variant: this.hasError ? 'error' : 'hint',
                 icon: calculateIconName(this.hintIcon, this.size),
                 size: 'sm',
               })}
             `
-          : html``}
+          : nothing}
       </div>
     `;
   }

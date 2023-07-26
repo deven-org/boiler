@@ -167,7 +167,7 @@ export const form = css`
     padding-bottom: ${Forms.LG.LabelSlot.Padding};
   }
 }
-.blr-form-hint {
+.blr-form-hint, .blr-counter {
   display: flex;
   align-items: center;
   word-break: break-all;
