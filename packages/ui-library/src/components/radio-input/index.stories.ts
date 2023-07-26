@@ -17,6 +17,10 @@ export default {
       options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
+    errorIcon: {
+      options: [...getIconName(IconKeys)],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -30,11 +34,11 @@ export const BlrRadio = ({
   onChange,
   onBlur,
   onFocus,
-  invalid,
+  hasError,
+  errorIcon,
   option,
   showHint,
   hintIcon,
-  showErrorIcon,
 }: BlrRadioType) =>
   html`
     ${BlrRadioRenderFunction({
@@ -47,11 +51,11 @@ export const BlrRadio = ({
       onChange,
       onBlur,
       onFocus,
-      invalid,
+      hasError,
+      errorIcon,
       option,
       showHint,
       hintIcon,
-      showErrorIcon,
     })}
   `;
 
@@ -67,12 +71,12 @@ BlrRadio.args = {
   option: {
     label: 'Option 1',
     value: 'option1',
-    hint: 'This is a small hint',
+    hintMessage: 'This is a sample hint message',
     checked: true,
     errorMessage: 'This is a sample error message',
   },
   showHint: true,
-  invalid: false,
-  hintIcon: 'blrInfo',
-  showErrorIcon: true,
+  hasError: false,
+  hintIcon: '',
+  errorIcon: '',
 };

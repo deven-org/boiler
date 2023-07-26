@@ -4,8 +4,8 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { form } from '../../foundation/semantic-tokens/form.css';
-import { radio } from '../../foundation/semantic-tokens/radioInput.css';
-import { BlrFormLabel } from '../internal-components/form-label';
+import { radio } from '../../foundation/component-tokens/radio.css';
+import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHint } from '../internal-components/form-hint';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { IconType } from '@boiler/icons';
@@ -23,11 +23,11 @@ export class BlrRadio extends LitElement {
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property() invalid?: boolean;
+  @property() hasError?: boolean;
+  @property() errorIcon?: IconType;
   @property() option!: RadioOption;
-  @property() showHint = true;
-  @property() hintIcon: IconType = 'blrInfoSm';
-  @property() showErrorIcon = true;
+  @property() showHint?: boolean;
+  @property() hintIcon?: IconType;
 
   protected render() {
     const classes = classMap({
@@ -35,56 +35,63 @@ export class BlrRadio extends LitElement {
       [`disabled`]: this.disabled || false,
       [`readonly`]: this.readonly || false,
       [`checked`]: this.checked || this.option.checked || false,
-      [`error-input`]: this.invalid || false,
+      [`error`]: this.hasError || false,
     });
 
     const calculateOptionId = (label: string) => {
       return label ? label.replace(/ /g, '_').toLowerCase() : '';
     };
 
-    const showIcon = () => {
-      return !this.invalid || (this.invalid && this.showErrorIcon);
-    };
-
     const id = this.option.label ? calculateOptionId(this.option.label) : '';
 
     return html`
-      <div class="blr-radio">
-        <div class="radio-wrapper ${classes}">
-          <input
-            id=${id || nothing}
-            class=${classes}
-            type="radio"
-            name=${this.name}
-            value=${this.option.value || nothing}
-            ?disabled=${this.disabled}
-            ?readonly=${this.readonly}
-            ?aria-disabled=${this.disabled}
-            ?invalid=${this.invalid}
-            ?aria-invalid=${this.invalid}
-            ?checked=${this.checked}
-            ?required=${this.required}
-            @input=${this.onChange}
-            @blur=${this.onBlur}
-            @focus=${this.onFocus}
-            invalid=${this.invalid}
-          />
-          ${BlrFormLabel({
-            labelText: this.option.label,
-            labelSize: this.size || 'md',
-            forValue: calculateOptionId(this.option.label),
-          })}
+      <div class="blr-radio ${classes}">
+        <input
+          id=${id || nothing}
+          class="${classes} input-control"
+          type="radio"
+          name=${this.name}
+          value=${this.option.value || nothing}
+          ?disabled=${this.disabled}
+          ?readonly=${this.readonly}
+          ?aria-disabled=${this.disabled}
+          invalid=${this.hasError}
+          ?aria-invalid=${this.hasError}
+          ?checked=${this.checked}
+          ?required=${this.required}
+          @input=${this.onChange}
+          @blur=${this.onBlur}
+          @focus=${this.onFocus}
+        />
+        <div class="label-wrapper">
+          ${this.option.label
+            ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
+            : nothing}
+          ${this.showHint
+            ? html`
+                <div class="hint-wrapper">
+                  ${BlrFormHint({
+                    message: this.option.hintMessage,
+                    variant: 'hint',
+                    size: this.size,
+                    iconName: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : '',
+                  })}
+                </div>
+              `
+            : html``}
+          ${this.hasError
+            ? html`
+                <div class="error-wrapper">
+                  ${BlrFormHint({
+                    message: this.option.errorMessage,
+                    variant: 'error',
+                    size: this.size,
+                    iconName: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : '',
+                  })}
+                </div>
+              `
+            : html``}
         </div>
-        ${this.showHint
-          ? html`
-              ${BlrFormHint({
-                message: (this.invalid ? this.option.errorMessage : this.option.hint) || '',
-                variant: this.invalid ? 'error' : 'hint',
-                size: 'sm',
-                iconName: showIcon() ? calculateIconName(this.hintIcon, this.size) : '',
-              })}
-            `
-          : html``}
       </div>
     `;
   }
@@ -102,11 +109,11 @@ export const BlrRadioRenderFunction = ({
   onChange,
   onBlur,
   onFocus,
-  invalid,
+  hasError,
   option,
   showHint,
   hintIcon,
-  showErrorIcon,
+  errorIcon,
 }: BlrRadioType) => {
   return html`<blr-radio
     class="example-layout-class"
@@ -116,14 +123,15 @@ export const BlrRadioRenderFunction = ({
     .checked=${checked}
     .required=${required}
     .readonly=${readonly}
-    .invalid=${invalid}
     .size=${size}
+    .hasError=${hasError}
+    .errorMessage=${option.errorMessage}
+    .errorIcon=${errorIcon}
     .onChange=${onChange}
     .onBlur=${onBlur}
     .onFocus=${onFocus}
     .option=${option}
     .showHint=${showHint}
     .hintIcon=${hintIcon}
-    .showErrorIcon=${showErrorIcon}
   ></blr-radio>`;
 };

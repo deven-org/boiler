@@ -950,7 +950,7 @@
     },
     "MD": {
       "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
       },
       "LoaderSize": {
