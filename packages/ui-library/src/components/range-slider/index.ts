@@ -88,7 +88,6 @@ export const BlrRangeSliderRenderFunction = ({
   zeroInclusive,
 }: BlrRangeSliderType) => {
   return html`<blr-range-slider
-    class="example-layout-class"
     .decrement=${decrement}
     .increment=${increment}
     .value=${value}

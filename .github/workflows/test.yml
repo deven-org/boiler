@@ -31,5 +31,5 @@ jobs:
       - name: Install modules
         run: npm ci
 
-      - name: Run Snapshot Tests
+      - name: Run Tests
         run: npm run test
