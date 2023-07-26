@@ -43,7 +43,9 @@ const semanticTypes = [
   'InputField',
   'LabelAppendix',
   'InputIcon',
-  'Select',
+  'LabelNextToControl',
+  'Focus',
+  'FocusBorder',
 ];
 
 const componentTypes = [

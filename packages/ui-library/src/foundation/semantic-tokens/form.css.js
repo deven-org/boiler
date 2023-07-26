@@ -1,4 +1,5 @@
 import { semanticTokens } from "../_tokens-generated/index.generated";
+
 import { css } from "nested-css-to-flat/lit-css";
 
 const { Forms } = semanticTokens;
@@ -138,7 +139,6 @@ export const form = css`
     font-weight: ${Forms.SM.UserInput.fontWeight};
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
-    padding: ${Forms.Select.SM.InputFieldPadding};
     line-height: ${Forms.SM.UserInput.lineHeight};
   }
 
@@ -146,7 +146,6 @@ export const form = css`
     font-weight: ${Forms.MD.UserInput.fontWeight};
     font-size: ${Forms.MD.UserInput.fontSize};
     font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
-    padding:  ${Forms.Select.SM.InputFieldPadding};
     line-height: ${Forms.MD.UserInput.lineHeight};
   }
 
@@ -154,7 +153,6 @@ export const form = css`
     font-weight: ${Forms.LG.UserInput.fontWeight};
     font-size: ${Forms.LG.UserInput.fontSize};
     font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
-    padding:  ${Forms.Select.SM.InputFieldPadding};
     line-height: ${Forms.LG.UserInput.lineHeight};
   }
 }
@@ -163,13 +161,13 @@ export const form = css`
   position: absolute;
   color: ${Forms.Placeholder.Default.Rest};
   &.sm {
-    right: ${Forms.Select.SM.IconPaddingRight};
+
   }
   &.md {
-    right: ${Forms.Select.MD.IconPaddingRight};
+
   }
   &.lg {
-    right: ${Forms.Select.LG.IconPaddingRight};
+
   }
 }
 
@@ -228,12 +226,6 @@ export const form = css`
 }
 .blr-form-label {
   display: inline-block;
-  padding: ${Forms.MD.LabelSlot.Padding};
-  font-weight: ${Forms.MD.Label.fontWeight};
-  font-size: ${Forms.MD.Label.fontSize};
-  font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
-  line-height: ${Forms.MD.Label.lineHeight};
-  gap: ${Forms.MD.FormsLabelComponent.ItemSpacing};
   color: ${Forms.Label.Rest};
   &:focus {
     color: ${Forms.Label.Focus};
@@ -256,6 +248,14 @@ export const form = css`
     gap: ${Forms.SM.FormsLabelComponent.ItemSpacing};
     color: ${Forms.Label.Rest};
   }
+  &.md {
+    padding: ${Forms.MD.LabelSlot.Padding};
+    font-weight: ${Forms.MD.Label.fontWeight};
+    font-size: ${Forms.MD.Label.fontSize};
+    font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.Label.lineHeight};
+    gap: ${Forms.MD.FormsLabelComponent.ItemSpacing};
+  }
   &.lg {
     padding: ${Forms.LG.LabelSlot.Padding};
     font-weight: ${Forms.LG.Label.fontWeight};
@@ -266,6 +266,29 @@ export const form = css`
     gap: ${Forms.LG.FormsLabelComponent.ItemSpacing};
   }
 }
+
+.blr-form-label-inline {
+  flex: 1;
+  &.sm {
+    font-weight: ${Forms.SM.LabelNextToControl.fontWeight};
+    font-size: ${Forms.SM.LabelNextToControl.fontSize};
+    font-family: ${Forms.SM.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${Forms.SM.LabelNextToControl.lineHeight};
+  }
+  &.md {
+    font-weight: ${Forms.MD.LabelNextToControl.fontWeight};
+    font-size: ${Forms.MD.LabelNextToControl.fontSize};
+    font-family: ${Forms.MD.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.LabelNextToControl.lineHeight};
+  }
+  &.lg {
+    font-weight: ${Forms.LG.LabelNextToControl.fontWeight};
+    font-size: ${Forms.LG.LabelNextToControl.fontSize};
+    font-family: ${Forms.LG.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${Forms.LG.LabelNextToControl.lineHeight};
+  }
+}
+
 .blr-form-label-appendix {
   padding-left: ${Forms.MD.LabelSlot.Padding};
   font-weight: ${Forms.MD.LabelAppendix.fontWeight};

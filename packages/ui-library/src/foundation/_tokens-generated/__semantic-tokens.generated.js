@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 24 Jul 2023 09:29:37 GMT
+ * Generated on Wed, 26 Jul 2023 14:07:00 GMT
  */
 
 export const semanticTokens = {
@@ -268,11 +268,6 @@ export const semanticTokens = {
     },
   },
   Forms: {
-    Select: {
-      SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
-      MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
-      LG: { InputFieldPadding: '0.75rem 48px 0.75rem 16px', IconPaddingRight: '16px' },
-    },
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
@@ -297,6 +292,7 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
     },
     MD: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
@@ -317,6 +313,7 @@ export const semanticTokens = {
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
     },
     LG: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
@@ -342,6 +339,7 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
     },
     Label: {
       Rest: 'hsla(220, 10%, 10%,1) ',
@@ -435,5 +433,18 @@ export const semanticTokens = {
       Disabled: 'hsla(220, 10%, 80%,1) ',
       Error: 'hsla(350, 65%, 50%,1) ',
     },
+    LabelNextToControl: {
+      Rest: 'hsla(220, 10%, 10%,1) ',
+      Hover: 'hsla(220, 10%, 10%,1) ',
+      Pressed: 'hsla(220, 10%, 10%,1) ',
+      Focus: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
+      ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
+    },
+  },
+  Global: {
+    Focus: 'hsla(220, 10%, 10%,1) ',
+    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
   },
 };

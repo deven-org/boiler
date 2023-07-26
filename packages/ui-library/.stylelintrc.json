@@ -11,6 +11,8 @@
     "selector-class-pattern": null,
     "no-descending-specificity": null,
     "value-no-vendor-prefix": null,
-    "font-family-name-quotes": null
-  }
+    "font-family-name-quotes": null,
+    "string-quotes": "single"
+  },
+  "ignoreShorthands": ["outline"]
 }
