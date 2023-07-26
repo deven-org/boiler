@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 20 Jul 2023 08:29:51 GMT
+ * Generated on Wed, 26 Jul 2023 14:07:00 GMT
  */
 
 export const semanticTokens = {
@@ -292,6 +292,7 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
     },
     MD: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
@@ -312,6 +313,7 @@ export const semanticTokens = {
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
     },
     LG: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
@@ -337,6 +339,7 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
     },
     Label: {
       Rest: 'hsla(220, 10%, 10%,1) ',

@@ -1,14 +1,13 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextButton as BlrTextButtonClass } from './index';
+import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { IconKeys } from '@boiler/icons';
-import { Sizes } from '../../globals/constants';
+import { FormSizes } from '../../globals/constants';
 import './index';
-import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getIconName } from '../../utils/get-icon-name';
 
 export default {
-  title: 'BlrTextButton',
+  title: 'Design System/Web Components',
   argTypes: {
     leadingIcon: {
       options: [undefined, ...getIconName(IconKeys)],
@@ -19,7 +18,7 @@ export default {
       control: { type: 'select' },
     },
     size: {
-      options: Sizes,
+      options: FormSizes,
       control: { type: 'select' },
     },
     variant: {
@@ -28,9 +27,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };
@@ -47,22 +43,21 @@ export const BlrTextButton = ({
   leadingIcon,
   trailingIcon,
   loadingStatus,
-}: BlrTextButtonClass) =>
+}: BlrTextButtonType) =>
   html`
-    <blr-text-button
-      .label=${label}
-      .leadingIcon=${calculateIconName(leadingIcon, size)}
-      .trailingIcon=${calculateIconName(trailingIcon, size)}
-      .buttonId=${buttonId}
-      .onClick=${onClick}
-      .onBlur=${onBlur}
-      .loading=${loading}
-      .disabled=${disabled}
-      .variant=${variant}
-      .size=${size}
-      .loadingStatus=${loadingStatus}
-      class="example-layout-class"
-    ></blr-text-button>
+    ${BlrTextButtonRenderFunction({
+      label,
+      onClick,
+      onBlur,
+      loading,
+      disabled,
+      buttonId,
+      variant,
+      size,
+      leadingIcon,
+      trailingIcon,
+      loadingStatus,
+    })}
   `;
 
 BlrTextButton.storyName = 'BlrTextButton';
@@ -78,6 +73,5 @@ BlrTextButton.args = {
   buttonId: 'button-id',
   variant: 'cta',
   size: 'md',
-  iconPosition: 'left',
   loadingStatus: 'Loading',
 };

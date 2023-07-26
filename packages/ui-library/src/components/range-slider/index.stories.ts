@@ -4,7 +4,7 @@ import { BlrRangeSliderType, BlrRangeSliderRenderFunction } from './index';
 import './index';
 
 export default {
-  title: 'BlrRangeSlider',
+  title: 'Design System/Web Components',
   argTypes: {
     stepFactor: {
       description: 'Please enter valid factor of the total steps eg: 5 of 50',
@@ -14,9 +14,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };

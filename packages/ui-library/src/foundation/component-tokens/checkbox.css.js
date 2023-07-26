@@ -5,9 +5,8 @@ const { Checkbox } = componentTokens.Forms;
 const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 
 export const checkbox = css`
-  .blr-label-checkbox {
+  .blr-checkbox {
     display: flex;
-    gap: ${Checkbox.SM.MainContainer.ItemSpacing};
     transition: all 0.25s ease 0s;
     .blr-form-label-inline {
       color: ${LabelNextToControl.Rest};
@@ -25,6 +24,9 @@ export const checkbox = css`
       flex-wrap: wrap;
       .hint-wrapper, .error-wrapper {
         flex-basis: 100%;
+        .blr-form-hint {
+          gap: 0px;
+        }
       }
     }
     &.disabled {
@@ -35,6 +37,7 @@ export const checkbox = css`
       }
     }
     &.sm {
+      gap: ${Checkbox.SM.MainContainer.ItemSpacing};
       .input-control {
         width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
         min-width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
@@ -77,6 +80,7 @@ export const checkbox = css`
       }
     }
     &.md {
+      gap: ${Checkbox.MD.MainContainer.ItemSpacing};
       .input-control {
         width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
         min-width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
@@ -119,6 +123,7 @@ export const checkbox = css`
       }
     }
     &.lg {
+      gap: ${Checkbox.LG.MainContainer.ItemSpacing};
       .input-control {
         width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
         min-width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
