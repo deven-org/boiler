@@ -5,7 +5,7 @@ const { Checkbox } = componentTokens.Forms;
 const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 
 export const checkbox = css`
-  .blr-label-checkbox {
+  .blr-checkbox {
     display: flex;
     transition: all 0.25s ease 0s;
     .blr-form-label-inline {

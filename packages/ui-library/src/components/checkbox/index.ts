@@ -8,12 +8,12 @@ import { FormSizesType } from '../../globals/types';
 import { styleCustom } from './index.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { checkbox } from '../../foundation/component-tokens/checkbox.css';
-import { BlrFormHint } from '../internal-components/form-hint';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { IconType } from '@boiler/icons';
 
-@customElement('blr-label-checkbox')
-export class BlrLabelCheckbox extends LitElement {
+@customElement('blr-checkbox')
+export class BlrCheckbox extends LitElement {
   static styles = [styleCustom, form, checkbox];
 
   @query('input')
@@ -52,7 +52,7 @@ export class BlrLabelCheckbox extends LitElement {
   protected render() {
     const classes = classMap({
       'blr-semantic-action': true,
-      'blr-label-checkbox': true,
+      'blr-checkbox': true,
       [`error`]: this.hasError || false,
       [`disabled`]: this.disabled || false,
       [`checked`]: this.checked || false,
@@ -61,10 +61,10 @@ export class BlrLabelCheckbox extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
-    return html`<div class=${classes}>
+    return html`<div class="${classes}">
       <input
         type="checkbox"
-        class="input-control"
+        class="blr-checkbox-element input-control"
         id=${this.checkInputId || nothing}
         name=${this.checkInputId || nothing}
         ?disabled=${this.disabled || nothing}
@@ -83,11 +83,11 @@ export class BlrLabelCheckbox extends LitElement {
         ${this.showHint
           ? html`
               <div class="hint-wrapper">
-                ${BlrFormHint({
+                ${BlrFormHintRenderFunction({
                   message: this.hintMessage,
                   variant: 'hint',
                   size: this.size,
-                  iconName: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : '',
+                  icon: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : undefined,
                 })}
               </div>
             `
@@ -95,11 +95,11 @@ export class BlrLabelCheckbox extends LitElement {
         ${this.hasError
           ? html`
               <div class="error-wrapper">
-                ${BlrFormHint({
+                ${BlrFormHintRenderFunction({
                   message: this.errorMessage,
                   variant: 'error',
                   size: this.size,
-                  iconName: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : '',
+                  icon: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : undefined,
                 })}
               </div>
             `
@@ -109,7 +109,7 @@ export class BlrLabelCheckbox extends LitElement {
   }
 }
 
-export type BlrCheckboxType = Omit<BlrLabelCheckbox, keyof LitElement>;
+export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;
 
 export const BlrCheckboxRenderFunction = ({
   label,
@@ -130,7 +130,7 @@ export const BlrCheckboxRenderFunction = ({
   hintMessage,
 }: BlrCheckboxType) => {
   return html`
-    <blr-label-checkbox
+    <blr-checkbox
       .label=${label}
       .checkInputId=${checkInputId}
       .onFocus=${onFocus}
@@ -147,6 +147,6 @@ export const BlrCheckboxRenderFunction = ({
       .showHint=${showHint}
       .hintIcon=${hintIcon}
       .hintMessage=${hintMessage}
-    ></blr-label-checkbox>
+    ></blr-checkbox>
   `;
 };

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 
-import { BlrCheckboxRenderFunction, BlrCheckboxType, BlrLabelCheckbox as BlrLabelCheckboxClass } from './index';
+import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
 
 import { InputSizes } from '../../globals/constants';
 import './index';
@@ -9,7 +9,7 @@ import { getIconName } from '../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';
 
 export default {
-  title: 'BlrLabelCheckbox',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: InputSizes,
@@ -26,7 +26,7 @@ export default {
   },
 };
 
-export const BlrLabelCheckbox = ({
+export const BlrCheckbox = ({
   label,
   checkInputId,
   onBlur,
@@ -67,13 +67,13 @@ export const BlrLabelCheckbox = ({
     })}
   `;
 
-BlrLabelCheckbox.storyName = 'BlrLabelCheckbox';
+BlrCheckbox.storyName = 'BlrCheckbox';
 
 const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);
 };
 
-BlrLabelCheckbox.args = {
+BlrCheckbox.args = {
   label: 'Checkbox Option',
   checkInputId: 'Checky',
   disabled: false,
