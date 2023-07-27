@@ -2,6 +2,7 @@
 import { IconKeys } from '@boiler/icons';
 import { FormSizes, HintVariants } from '../../../globals/constants';
 import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
+import { getIconName } from '../../../utils/get-icon-name';
 
 import './index';
 
@@ -9,7 +10,7 @@ export default {
   title: 'Design System/Internal Components',
   argTypes: {
     icon: {
-      options: [undefined, IconKeys],
+      options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     size: {
@@ -33,7 +34,7 @@ BlrFormHint.storyName = 'BlrFormHint';
 
 BlrFormHint.args = {
   message: 'hallo',
-  icon: 'blr360Lg',
+  icon: 'blr360',
   variant: 'hint',
   size: 'sm',
 };

@@ -189,36 +189,54 @@ export const form = css`
 }
 .blr-form-hint, .blr-counter {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   word-break: break-all;
-  padding: ${Forms.MD.CaptionComponent.Padding};
-  font-weight: ${Forms.MD.Caption.fontWeight};
-  font-size: ${Forms.MD.Caption.fontSize};
-  font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
-  line-height: ${Forms.MD.Caption.lineHeight};
-  margin: ${Forms.MD.CaptionSlot.Margin};
-  gap: ${Forms.MD.CaptionComponent.ItemSpacing};
-  color: ${Forms.Caption.Hint};
   &.sm {
     padding: ${Forms.SM.CaptionComponent.Padding};
-    font-weight: ${Forms.SM.Caption.fontWeight};
-    font-size: ${Forms.SM.Caption.fontSize};
-    font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
-    line-height: ${Forms.SM.Caption.lineHeight};
-    margin: ${Forms.SM.CaptionSlot.Margin};
     gap: ${Forms.SM.CaptionComponent.ItemSpacing};
+    .icon-wrapper {
+      padding: ${Forms.SM.CaptionComponent.IconWrapper.Padding}
+    }
+    .blr-caption-text {
+      font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+      font-weight: ${Forms.SM.Caption.fontWeight};
+      font-size: ${Forms.SM.Caption.fontSize};
+      font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+      line-height: ${Forms.SM.Caption.lineHeight};
+      padding: ${Forms.SM.CaptionComponent.CaptionLabelWrapper.Padding};
+    }
+  }
+  &.md {
+    padding: ${Forms.MD.CaptionComponent.Padding};
+    gap: ${Forms.MD.CaptionComponent.ItemSpacing};
+    .icon-wrapper {
+      padding: ${Forms.MD.CaptionComponent.IconWrapper.Padding}
+    }
+    .blr-caption-text {
+      font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+      font-weight: ${Forms.MD.Caption.fontWeight};
+      font-size: ${Forms.MD.Caption.fontSize};
+      line-height: ${Forms.MD.Caption.lineHeight};
+      padding: ${Forms.MD.CaptionComponent.CaptionLabelWrapper.Padding};
+    }
   }
   &.lg {
     padding: ${Forms.LG.CaptionComponent.Padding};
-    font-weight: ${Forms.LG.Caption.fontWeight};
-    font-size: ${Forms.LG.Caption.fontSize};
-    font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
-    line-height: ${Forms.LG.Caption.lineHeight};
-    margin: ${Forms.LG.CaptionSlot.Margin};
     gap: ${Forms.LG.CaptionComponent.ItemSpacing};
+    .icon-wrapper {
+      padding: ${Forms.LG.CaptionComponent.IconWrapper.Padding}
+    }
+    .blr-caption-text {
+      font-weight: ${Forms.LG.Caption.fontWeight};
+      font-size: ${Forms.LG.Caption.fontSize};
+      font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
+      line-height: ${Forms.LG.Caption.lineHeight};
+      padding: ${Forms.LG.CaptionComponent.CaptionLabelWrapper.Padding};
+    }
   }
   .blr-caption-text {
     padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
+    color: ${Forms.Caption.Hint};
   }
   &.error {
     color: ${Forms.Caption.Error};
