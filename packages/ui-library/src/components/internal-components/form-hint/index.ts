@@ -3,16 +3,17 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, HintVariantType } from '../../../globals/types';
 import { BlrIconRenderFunction } from '../icon';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { form } from '../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { counter } from '../../../foundation/component-tokens/feedback.css';
 
 @customElement('blr-form-hint')
 export class BlrFormHint extends LitElement {
-  static styles = [form];
+  static styles = [counter, form];
 
   @property() message?: string;
-  @property() icon?: IconType;
+  @property() icon?: SizelessIconType;
   @property() variant: HintVariantType = 'hint';
   @property() size: FormSizesType = 'md';
   @property() childElement?: TemplateResult<1>;
