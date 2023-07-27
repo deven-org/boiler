@@ -10,7 +10,6 @@ import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { iconButton } from '../../foundation/component-tokens/action.css';
-import { calculateIconName } from '../../utils/calculate-icon-name';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
@@ -110,7 +109,7 @@ export class BlrTextarea extends LitElement {
                   ${BlrFormHintRenderFunction({
                     message: this.hasError ? this.errorMessage : this.hintText,
                     variant: this.hasError ? 'error' : 'hint',
-                    icon: calculateIconName(this.hintIcon, this.size),
+                    icon: this.hintIcon,
                     size: this.size,
                     childElement: html`<div class="blr-counter ${counterClasses}">
                       ${this.count}/${this.maxLength}

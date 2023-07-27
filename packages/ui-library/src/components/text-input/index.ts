@@ -130,7 +130,7 @@ export class BlrTextInput extends LitElement {
               ${BlrFormHintRenderFunction({
                 message: this.hasError ? this.errorMessage : this.hintText,
                 variant: this.hasError ? 'error' : 'hint',
-                icon: calculateIconName(this.hintIcon, this.size),
+                icon: this.hintIcon,
                 size: 'sm',
               })}
             `

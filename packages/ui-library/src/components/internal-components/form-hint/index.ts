@@ -24,11 +24,23 @@ export class BlrFormHint extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    const iconClasses = classMap({
+      'blr-icon': true,
+      [`${this.size}`]: this.size || 'md',
+    });
+
     return html`<div class=${classes}>
       <div class="icon-wrapper">
-        ${BlrIconRenderFunction({ icon: calculateIconName(this.icon, 'sm'), size: 'sm', hideAria: true })}
+        ${BlrIconRenderFunction({
+          icon: calculateIconName(this.icon, 'sm'),
+          size: 'sm',
+          classMap: iconClasses,
+          hideAria: true,
+        })}
       </div>
-      <span class="blr-caption-text">${this.message}</span>
+      <div class="label-wrapper">
+        <span class="blr-caption-text">${this.message}</span>
+      </div>
       ${this.childElement}
     </div>`;
   }
