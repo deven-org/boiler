@@ -4,7 +4,7 @@ import { FeedbackSizes } from '../../globals/constants';
 import './index';
 
 export default {
-  title: 'BlrLoader',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: FeedbackSizes,
@@ -16,9 +16,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };

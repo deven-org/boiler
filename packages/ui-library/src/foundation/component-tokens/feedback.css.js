@@ -105,13 +105,15 @@ export const counter = css`
       gap: ${Counter.LG.ItemSpacing};
     }
 
-    &.limit-reached {
+    &.limit-reached,
+    &.error {
       color: ${Error.Text};
       border-color: ${Error.SurfaceStroke};
       background-color: ${Error.Surface};
     }
 
-    &.limit-close {
+    &.limit-close,
+    &.warn {
       color: ${Warning.Text};
       border-color: ${Warning.SurfaceStroke};
       background-color: ${Warning.Surface};

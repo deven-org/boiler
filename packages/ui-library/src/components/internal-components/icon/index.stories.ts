@@ -3,13 +3,13 @@ import { IconKeys } from '@boiler/icons';
 
 import './index';
 import { BlrIcon as BlrIconClass, BlrIconRenderFunction } from './index';
-import { Sizes } from '../../globals/constants';
-import { getIconName } from '../../utils/get-icon-name';
-import { calculateIconName } from '../../utils/calculate-icon-name';
+import { Sizes } from '../../../globals/constants';
+import { getIconName } from '../../../utils/get-icon-name';
+import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { classMap } from 'lit/directives/class-map.js';
 
 export default {
-  title: 'BlrIcon',
+  title: 'Design System/Internal Components',
   argTypes: {
     size: {
       options: Sizes,
@@ -17,9 +17,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };

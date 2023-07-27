@@ -1,8 +1,22 @@
-import { FeedbackSizes, Sizes, InputTypes, FormSizes, InputSizes } from './constants';
+import {
+  FeedbackSizes,
+  Sizes,
+  InputTypes,
+  FormSizes,
+  InputSizes,
+  ActionVariants,
+  FeedbackVariants,
+  HintVariants,
+  CounterVariants,
+} from './constants';
 
 export type SizesType = (typeof Sizes)[number];
-export type ActionVariants = 'primary' | 'secondary' | 'cta' | 'silent' | 'destructive' | 'encourage';
-export type FeedbackVariants = 'default' | 'inverted';
+
+export type ActionVariantType = (typeof ActionVariants)[number];
+export type FeedbackVariantType = (typeof FeedbackVariants)[number];
+export type HintVariantType = (typeof HintVariants)[number];
+export type CounterVariantType = (typeof CounterVariants)[number];
+
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];
 export type InputTypes = (typeof InputTypes)[number];
