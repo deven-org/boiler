@@ -42,25 +42,32 @@ export const BlrToggleSwitch = ({
   hintText,
   hintIcon,
   hasError,
-}: BlrToggleSwitchType) => html`
-  <blr-label-toggleswitch
-    .label=${label}
-    .checkInputId=${checkInputId}
-    .onFocus=${onFocus}
-    .onBlur=${onBlur}
-    .onChange=${onChange}
-    .disabled=${disabled}
-    .readonly=${readonly}
-    .checked=${checked}
-    .size=${size}
-    .variant=${variant}
-    .errorMessage=${errorMessage}
-    .showHint=${showHint}
-    .hintText=${hintText}
-    .hintIcon=${hintIcon}
-    .hasError=${hasError}
-  ></blr-label-toggleswitch>
-`;
+  isSelected,
+  updated,
+  handleChange,
+}: BlrToggleSwitchType) =>
+  html`
+    ${BlrToggleSwitchRenderFunction({
+      label,
+      checkInputId,
+      onBlur,
+      onFocus,
+      onChange,
+      disabled,
+      readonly,
+      size,
+      variant,
+      checked,
+      errorMessage,
+      showHint,
+      hintText,
+      hintIcon,
+      hasError,
+      isSelected,
+      updated,
+      handleChange,
+    })}
+  `;
 
 BlrToggleSwitch.storyName = 'BlrToggleSwitch';
 
