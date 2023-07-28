@@ -26,6 +26,7 @@ export class BlrFormHint extends LitElement {
 
     const iconClasses = classMap({
       'blr-icon': true,
+      [`${this.size}`]: this.size || 'md',
     });
 
     return html`<div class=${classes}>

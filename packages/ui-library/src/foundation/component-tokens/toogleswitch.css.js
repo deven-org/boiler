@@ -1,12 +1,12 @@
 import { componentTokens } from "../_tokens-generated/index.generated";
-import { semanticTokens } from "../_tokens-generated/__semantic-tokens.generated";
+import { semanticTokens } from "../_tokens-generated/index.generated";
 import { css } from "nested-css-to-flat/lit-css";
 
 const { ToggleSwitch } = componentTokens.Forms;
 const { Forms } = semanticTokens;
 const { FocusBorder } = semanticTokens.Global;
 
-export const checkboxStyles = css`
+export const toggleSwitch = css`
   .blr-label-toggleswitch {
     &.leading {
       flex-direction: column;
@@ -19,11 +19,26 @@ export const checkboxStyles = css`
 
     &.disabled {
       > .blr-form-label-inline {
-        color: ${Forms.LabelNextToControl.Disabled};
+        color: ${LabelNextToControl.Disabled};
+      }
+    }
+
+    > .toggle-content-col {
+      display: flex;
+      flex-direction: column;
+
+      > .blr-form-label-inline {
+        color: ${LabelNextToControl.Rest};
       }
     }
 
     &.sm {
+      gap: ${ToggleSwitch.SM.Gap};
+
+      > .toggle-content-col {
+        gap: ${ToggleSwitch.SM.ContentColGap};
+      }
+
       > .blr-label-switch-wrapper {
         width: ${ToggleSwitch.Control.SM.Background.Width};
         height: ${ToggleSwitch.Control.SM.Background.Height};
@@ -63,6 +78,12 @@ export const checkboxStyles = css`
     }
 
     &.md {
+      gap: ${ToggleSwitch.MD.Gap};
+
+      > .toggle-content-col {
+        gap: ${ToggleSwitch.MD.ContentColGap};
+      }
+
       > .blr-label-switch-wrapper {
         width: ${ToggleSwitch.Control.MD.Background.Width};
         height: ${ToggleSwitch.Control.MD.Background.Height};
@@ -102,6 +123,12 @@ export const checkboxStyles = css`
     }
 
     &.lg {
+      gap: ${ToggleSwitch.LG.Gap};
+
+      > .toggle-content-col {
+        gap: ${ToggleSwitch.LG.ContentColGap};
+      }
+
       > .blr-label-switch-wrapper {
         width: ${ToggleSwitch.Control.LG.Background.Width};
         height: ${ToggleSwitch.Control.LG.Background.Height};
@@ -192,7 +219,7 @@ export const checkboxStyles = css`
     &:not(.error) {
       > .blr-label-switch-wrapper {
         > .blr-form-label-inline {
-          color: ${Forms.LabelNextToControl.Rest};
+          color: ${LabelNextToControl.Rest};
         }
 
         &.wrapper-unselected {
@@ -241,7 +268,7 @@ export const checkboxStyles = css`
 
     &.error {
       .blr-form-label-inline {
-        color: ${Forms.LabelNextToControl.Error};
+        color: ${LabelNextToControl.Error};
       }
     }
   }

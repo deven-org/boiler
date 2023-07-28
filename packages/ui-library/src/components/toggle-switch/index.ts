@@ -7,14 +7,14 @@ import { BlrFormLabelInline } from '../form-label-inline';
 import { FormSizesType, WrapperVariant } from '../../globals/types';
 
 import { styleCustom } from './index.css';
-import { BlrFormHint } from '../internal-components/form-hint';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { form } from '../../foundation/semantic-tokens/form.css';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { checkboxStyles } from '../../foundation/component-tokens/toogleswitch.css';
+import { toggleSwitch } from '../../foundation/component-tokens/toogleswitch.css';
+import { checkbox } from '../../foundation/component-tokens/checkbox.css';
 
 @customElement('blr-label-toggleswitch')
 export class BlrToggleSwitch extends LitElement {
-  static styles = [styleCustom, form, checkboxStyles];
+  static styles = [styleCustom, form, toggleSwitch];
 
   @query('input')
   protected _checkboxNode!: HTMLInputElement;
@@ -75,10 +75,10 @@ export class BlrToggleSwitch extends LitElement {
           : nothing}
         ${this.showHint
           ? html`
-              ${BlrFormHint({
+              ${BlrFormHintRenderFunction({
                 message: this.hasError ? this.errorMessage : this.hintText,
                 variant: this.hasError ? 'error' : 'hint',
-                iconName: calculateIconName(this.hintIcon, this.size),
+                icon: this.hintIcon,
                 size: 'sm',
               })}
             `

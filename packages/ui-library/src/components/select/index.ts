@@ -118,7 +118,7 @@ export class BlrSelect extends LitElement {
         ${BlrFormHintRenderFunction({
           message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
           variant: this.hasError ? 'error' : 'hint',
-          size: this.size,
+          size: 'sm',
           icon: this.hintIcon,
         })}
       </div>

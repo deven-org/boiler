@@ -200,12 +200,12 @@ export const form = css`
   &.sm {
     padding: ${Forms.SM.CaptionComponent.Padding};
     gap: ${Forms.SM.CaptionComponent.ItemSpacing};
-    > .icon-wrapper {
+    .icon-wrapper {
       padding: ${Forms.SM.CaptionComponent.IconWrapper.Padding}
     }
-    > .label-wrapper {
+    .label-wrapper {
       padding: ${Forms.SM.CaptionComponent.CaptionLabelWrapper.Padding};
-      > .blr-caption-text {
+      .blr-caption-text {
         font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
         font-weight: ${Forms.SM.Caption.fontWeight};
         font-size: ${Forms.SM.Caption.fontSize};
@@ -217,12 +217,12 @@ export const form = css`
   &.md {
     padding: ${Forms.MD.CaptionComponent.Padding};
     gap: ${Forms.MD.CaptionComponent.ItemSpacing};
-    > .icon-wrapper {
+    .icon-wrapper {
       padding: ${Forms.MD.CaptionComponent.IconWrapper.Padding}
     }
-    > .label-wrapper {
+    .label-wrapper {
       padding: ${Forms.MD.CaptionComponent.CaptionLabelWrapper.Padding};
-      > .blr-caption-text {
+      .blr-caption-text {
         font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
         font-weight: ${Forms.MD.Caption.fontWeight};
         font-size: ${Forms.MD.Caption.fontSize};
@@ -233,12 +233,12 @@ export const form = css`
   &.lg {
     padding: ${Forms.LG.CaptionComponent.Padding};
     gap: ${Forms.LG.CaptionComponent.ItemSpacing};
-    > .icon-wrapper {
+    .icon-wrapper {
       padding: ${Forms.LG.CaptionComponent.IconWrapper.Padding}
     }
-    > .label-wrapper {
+    .label-wrapper {
       padding: ${Forms.LG.CaptionComponent.CaptionLabelWrapper.Padding};
-      > .blr-caption-text {
+      .blr-caption-text {
         font-weight: ${Forms.LG.Caption.fontWeight};
         font-size: ${Forms.LG.Caption.fontSize};
         font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;

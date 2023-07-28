@@ -9,7 +9,7 @@ import { FormSizes, WrapperVariant } from '../../globals/constants';
 import './index';
 
 export default {
-  title: 'BlrToggleSwitch',
+  title: 'Design System/Web Components',
   argTypes: {
     size: {
       options: FormSizes,
