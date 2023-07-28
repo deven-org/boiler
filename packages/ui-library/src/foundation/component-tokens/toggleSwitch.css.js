@@ -250,8 +250,7 @@ export const toggleSwitch = css`
 
           &:focus {
             background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
-            outline: ${FocusBorder.width} ${FocusBorder.style}
-              ${ToggleSwitch.Control.Background.Unselected.Stroke.Focus};
+            outline: ${FocusBorder.width} ${FocusBorder.style} ${ToggleSwitch.Control.Background.Unselected.Stroke.Focus};
           }
 
           &[disabled] {
