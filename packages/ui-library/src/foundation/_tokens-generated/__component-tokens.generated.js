@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 10 Jul 2023 08:49:58 GMT
+ * Generated on Fri, 28 Jul 2023 12:37:26 GMT
  */
 
 export const componentTokens = {
@@ -70,10 +70,9 @@ export const componentTokens = {
   Forms: {
     Checkbox: {
       SM: {
-        Gap: '0px',
-        ItemSpacing: '8px',
-        ControlMargin: '0.125rem 0px 0rem 0px',
-        LabelMargin: '0rem 0px 0rem 0px',
+        ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
+        MainContainer: { ItemSpacing: '8px' },
+        ControlWrapper: { TopMargin: '0px' },
         Control: {
           Background: {
             Sizing: {
@@ -138,10 +137,6 @@ export const componentTokens = {
         },
       },
       MD: {
-        Gap: '0px',
-        ItemSpacing: '8px',
-        ControlMargin: '0.25rem 0px 0rem 0px',
-        LabelMargin: '0rem 0px 0rem 0px',
         Control: {
           Background: {
             Sizing: {
@@ -204,11 +199,11 @@ export const componentTokens = {
             },
           },
         },
+        ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
+        MainContainer: { ItemSpacing: '8px' },
+        ControlWrapper: { TopMargin: '0.25rem' },
       },
       LG: {
-        ItemSpacing: '8px',
-        ControlMargin: '0.375rem 0px 0rem 0px',
-        LabelMargin: '0rem 0px 0rem 0px',
         Control: {
           Background: {
             Sizing: {
@@ -271,6 +266,9 @@ export const componentTokens = {
             },
           },
         },
+        ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
+        MainContainer: { ItemSpacing: '12px' },
+        ControlWrapper: { TopMargin: '0.125rem' },
       },
       Control: {
         Background: {
@@ -366,9 +364,6 @@ export const componentTokens = {
       ControlBorderRadius: '2px',
     },
     Radio: {
-      SM: { ItemSpacing: '8px', ControlMargin: '0.125rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
-      MD: { ItemSpacing: '8px', ControlMargin: '0.25rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
-      LG: { ItemSpacing: '8px', ControlMargin: '0.438rem 0px 0rem 0px', LabelMargin: '0rem 0px 0rem 0px' },
       Control: {
         Background: {
           Unselected: {
@@ -487,6 +482,21 @@ export const componentTokens = {
         },
       },
       ControlBorderRadius: '9999px',
+      SM: {
+        ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
+        ContentRow: { ItemSpacing: '8px', Padding: '0.5rem 0' },
+        ControlWrapper: { TopMargin: '0rem' },
+      },
+      MD: {
+        ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
+        ContentRow: { ItemSpacing: '8px', Padding: '0.5rem 0' },
+        ControlWrapper: { TopMargin: '0.25rem' },
+      },
+      LG: {
+        ContentCol: { ItemSpacing: '0px', PaddingTop: '0rem' },
+        ContentRow: { ItemSpacing: '12px', Padding: '0.5rem 0' },
+        ControlWrapper: { TopMargin: '0.25rem' },
+      },
     },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
     ToggleSwitch: {

@@ -5,6 +5,7 @@ import { FormSizesType, HintVariantType } from '../../../globals/types';
 import { BlrIconRenderFunction } from '../icon';
 import { IconType } from '@boiler/icons';
 import { form } from '../../../foundation/semantic-tokens/form.css';
+import { calculateIconName } from '../../../utils/calculate-icon-name';
 
 @customElement('blr-form-hint')
 export class BlrFormHint extends LitElement {
@@ -23,11 +24,24 @@ export class BlrFormHint extends LitElement {
       [`${this.size}`]: this.size,
     });
 
-    return html`<span class=${classes}>
-      ${BlrIconRenderFunction({ icon: this.icon, size: this.size, hideAria: true })}
-      <span class="blr-caption-text">${this.message}</span>
+    const iconClasses = classMap({
+      'blr-icon': true,
+    });
+
+    return html`<div class=${classes}>
+      <div class="icon-wrapper">
+        ${BlrIconRenderFunction({
+          icon: calculateIconName(this.icon, 'sm'),
+          size: 'sm',
+          classMap: iconClasses,
+          hideAria: true,
+        })}
+      </div>
+      <div class="label-wrapper">
+        <span class="blr-caption-text">${this.message}</span>
+      </div>
       ${this.childElement}
-    </span>`;
+    </div>`;
   }
 }
 

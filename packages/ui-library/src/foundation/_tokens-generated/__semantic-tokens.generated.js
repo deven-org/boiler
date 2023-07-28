@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 10 Jul 2023 08:49:58 GMT
+ * Generated on Fri, 28 Jul 2023 12:37:26 GMT
  */
 
 export const semanticTokens = {
@@ -255,7 +255,7 @@ export const semanticTokens = {
       LoaderSize: 'SM',
     },
     MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
       LoaderSize: 'MD',
     },
     LG: {
@@ -269,14 +269,14 @@ export const semanticTokens = {
   },
   Forms: {
     SM: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       LabelNextToControl: {
         fontFamily: '"Source Sans Pro" ',
         fontWeight: 400,
-        lineHeight: '150%',
+        lineHeight: '1rem',
         fontSize: '0.875rem',
       },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
@@ -284,7 +284,7 @@ export const semanticTokens = {
         Padding: '0rem 0px',
         ItemSpacing: '0.125rem',
         IconSize: 'SM',
-        IconWrapper: { Padding: '0.063rem 0px' },
+        IconWrapper: { Padding: '0rem 0px' },
         CaptionLabelWrapper: { Padding: '0rem 0px' },
       },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
@@ -292,36 +292,38 @@ export const semanticTokens = {
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
     },
     MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       CaptionComponent: {
         Padding: '0rem 0px',
         IconSize: 'SM',
         ItemSpacing: '0.125rem',
         CaptionLabelWrapper: { Padding: '0rem 0px' },
-        IconWrapper: { Padding: '0.063rem 0px' },
+        IconWrapper: { Padding: '0.031rem 0px' },
       },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ' },
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      LabelNextToControl: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '1rem' },
+      LabelNextToControl: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
     },
     LG: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '150%', fontSize: '0.75rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
+      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
+      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
       LabelNextToControl: {
         fontFamily: '"Source Sans Pro" ',
         fontWeight: 400,
-        lineHeight: '150%',
+        lineHeight: '1.5rem',
         fontSize: '1.25rem',
       },
       Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
@@ -330,29 +332,32 @@ export const semanticTokens = {
         ItemSpacing: '0.125rem',
         IconSize: 'SM',
         CaptionLabelWrapper: { Padding: '0rem 0px' },
-        IconWrapper: { Padding: '0.063rem 0px' },
+        IconWrapper: { Padding: '0.313rem 0px' },
       },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       LabelSlot: { Padding: '0rem 0px 8px ' },
       FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
       InputSlot: { Margin: '0rem 0px 0rem 0px' },
       InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
+      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
     },
     Label: {
       Rest: 'hsla(220, 10%, 10%,1) ',
       Hover: 'hsla(220, 10%, 10%,1) ',
       Pressed: 'hsla(220, 10%, 10%,1) ',
       Focus: 'hsla(220, 10%, 10%,1) ',
-      Disabled: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
     },
     LabelAppendix: {
       Rest: 'hsla(220, 10%, 10%,1) ',
       Hover: 'hsla(220, 10%, 10%,1) ',
       Pressed: 'hsla(220, 10%, 10%,1) ',
       Focus: 'hsla(220, 10%, 10%,1) ',
-      Disabled: 'hsla(220, 10%, 10%,1) ',
+      Disabled: 'hsla(220, 10%, 80%,1) ',
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
+      Error: 'hsla(350, 65%, 50%,1) ',
     },
     Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 30%,1) ' },
     UserInput: {

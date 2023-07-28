@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 10 Jul 2023 08:49:58 GMT
+ * Generated on Fri, 28 Jul 2023 12:37:26 GMT
  */
 
 export const componentConfig = {
@@ -49,5 +49,14 @@ export const componentConfig = {
     SM: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
     MD: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
     LG: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
+  },
+  Navigation: {
+    TabBar: {
+      Tab: {
+        SM: { Icon: { SizeVariant: 'XS' } },
+        MD: { Icon: { SizeVariant: 'SM' } },
+        LG: { Icon: { SizeVariant: 'SM' } },
+      },
+    },
   },
 };
