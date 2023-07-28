@@ -46,6 +46,10 @@ const semanticTypes = [
   'LabelNextToControl',
   'Focus',
   'FocusBorder',
+  'Feedback',
+  'Neutral',
+  'Warning',
+  'Error'
 ];
 
 const componentTypes = [
@@ -58,6 +62,8 @@ const componentTypes = [
   'Radio',
   'Checkbox',
   'ToggleSwitch',
+  'Feedback',
+  'Counter'
 ];
 
 StyleDictionary.registerFormat({

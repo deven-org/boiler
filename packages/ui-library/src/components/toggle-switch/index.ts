@@ -9,8 +9,7 @@ import { FormSizesType, WrapperVariant } from '../../globals/types';
 import { styleCustom } from './index.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { form } from '../../foundation/semantic-tokens/form.css';
-import { toggleSwitch } from '../../foundation/component-tokens/toogleswitch.css';
-import { checkbox } from '../../foundation/component-tokens/checkbox.css';
+import { toggleSwitch } from '../../foundation/component-tokens/toggleSwitch.css';
 
 @customElement('blr-label-toggleswitch')
 export class BlrToggleSwitch extends LitElement {
@@ -23,6 +22,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() checkInputId!: string;
 
   @property() disabled?: boolean;
+  @property() readonly?: boolean;
   @property() checked?: boolean;
   @property() hasError?: boolean;
 
@@ -58,12 +58,13 @@ export class BlrToggleSwitch extends LitElement {
     }
   }
 
-  render() {
+  protected render() {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-label-toggleswitch': true,
       [`error`]: this.hasError || false,
       [`disabled`]: this.disabled || false,
+      [`readonly`]: this.readonly || false,
       [`${this.size}`]: this.size || 'md',
       [`${this.variant}`]: this.variant || 'leading',
     });
@@ -84,12 +85,19 @@ export class BlrToggleSwitch extends LitElement {
             `
           : html``}
       </span>
-      <label for=${this.checkInputId || nothing} class=${wrapperClass} ?disabled=${this.disabled || nothing}>
+      <label
+        for=${this.checkInputId || nothing}
+        class=${wrapperClass}
+        ?disabled=${this.disabled || nothing}
+        ?readonly=${this.readonly || nothing}
+      >
         <input
           type="checkbox"
+          class="input-control"
           id=${this.checkInputId || nothing}
           name=${this.checkInputId || nothing}
           ?disabled=${this.disabled || nothing}
+          ?readonly=${this.readonly || nothing}
           .checked=${this.isSelected || nothing}
           @change=${this.handleChange}
           @focus=${this.onFocus}
@@ -104,3 +112,41 @@ export class BlrToggleSwitch extends LitElement {
     </div>`;
   }
 }
+
+export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
+
+export const BlrToggleSwitchRenderFunction = ({
+  label,
+  checkInputId,
+  onBlur,
+  onFocus,
+  onChange,
+  disabled,
+  readonly,
+  size,
+  variant,
+  checked,
+  errorMessage,
+  showHint,
+  hintText,
+  hintIcon,
+  hasError,
+}: BlrToggleSwitchType) => {
+  return html`<blr-label-toggleswitch
+    .label=${label}
+    .checkInputId=${checkInputId}
+    .onFocus=${onFocus}
+    .onBlur=${onBlur}
+    .onChange=${onChange}
+    .disabled=${disabled}
+    .readonly=${readonly}
+    .checked=${checked}
+    .size=${size}
+    .variant=${variant}
+    .errorMessage=${errorMessage}
+    .showHint=${showHint}
+    .hintText=${hintText}
+    .hintIcon=${hintIcon}
+    .hasError=${hasError}
+  ></blr-label-toggleswitch>`;
+};

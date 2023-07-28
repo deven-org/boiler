@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 28 Jul 2023 12:48:57 GMT
+ * Generated on Fri, 28 Jul 2023 13:57:27 GMT
  */
 
 export const componentTokens = {
@@ -64,6 +64,35 @@ export const componentTokens = {
         },
         Sizing: '2rem',
         Padding: '0.188rem',
+      },
+    },
+    Counter: {
+      SM: {
+        Padding: '0px 4px',
+        ItemSpacing: '2px',
+        Border: {
+          Neutral: { color: '#00000000', width: '1px', style: 'solid' },
+          Warning: { color: 'hsla(50, 80%, 50%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
+      },
+      MD: {
+        Padding: '0px 4px',
+        ItemSpacing: '2px',
+        Border: {
+          Neutral: { color: '#00000000', width: '1px', style: 'solid' },
+          Warning: { color: 'hsla(50, 80%, 50%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
+      },
+      LG: {
+        Padding: '0px 4px',
+        ItemSpacing: '2px',
+        Border: {
+          Neutral: { color: '#00000000', width: '1px', style: 'solid' },
+          Warning: { color: 'hsla(50, 80%, 50%,1) ', width: '1px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
+        },
       },
     },
   },

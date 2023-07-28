@@ -3,7 +3,7 @@ import { semanticTokens } from "../_tokens-generated/index.generated";
 import { css } from "nested-css-to-flat/lit-css";
 
 const { ToggleSwitch } = componentTokens.Forms;
-const { Forms } = semanticTokens;
+const { LabelNextToControl } = semanticTokens.Forms;
 const { FocusBorder } = semanticTokens.Global;
 
 export const toggleSwitch = css`
@@ -17,18 +17,78 @@ export const toggleSwitch = css`
       justify-content: space-between;
     }
 
-    &.disabled {
-      > .blr-form-label-inline {
-        color: ${LabelNextToControl.Disabled};
-      }
-    }
-
     > .toggle-content-col {
       display: flex;
       flex-direction: column;
 
       > .blr-form-label-inline {
         color: ${LabelNextToControl.Rest};
+      }
+    }
+
+    > .blr-label-switch-wrapper {
+      outline-offset: 2px;
+      border-radius: 15px;
+      position: relative;
+      cursor: pointer;
+
+      &.wrapper-unselected {
+        background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Rest};
+      }
+
+      &.wrapper-selected {
+        background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Rest};
+      }
+
+      > input {
+        display: none;
+      }
+
+      > .toggle-switch-slider {
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: ${ToggleSwitch.Control.Foreground.Unselected.Fill.Rest};
+          border-radius: 50%;
+          transition: transform 0.2s ease;
+        }
+      }
+
+      > input:checked + .toggle-switch-slider::after {
+        background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+      }
+
+      > .toggle-switch-unselect {
+        &::after {
+          content: "";
+          position: absolute;
+          border-right: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+        }
+      }
+
+      > .toggle-switch-select {
+        &::after {
+          content: "";
+          position: absolute;
+          border-radius: 100%;
+          border: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+        }
+      }
+    }
+
+    &.disabled {
+      > .toggle-content-col {
+        > .blr-form-label-inline {
+          color: ${LabelNextToControl.Disabled};
+        }
+      }
+    }
+
+    &.readonly {
+      > .toggle-content-col {
+        > .blr-form-label-inline {
+          color: ${LabelNextToControl.ReadOnly};
+        }
       }
     }
 
@@ -167,57 +227,12 @@ export const toggleSwitch = css`
       }
     }
 
-    > .blr-label-switch-wrapper {
-      border-radius: 15px;
-      position: relative;
-      cursor: pointer;
-
-      &.wrapper-unselected {
-        background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Rest};
-      }
-
-      &.wrapper-selected {
-        background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Rest};
-      }
-
-      > input {
-        display: none;
-      }
-
-      > .toggle-switch-slider {
-        &::after {
-          content: "";
-          position: absolute;
-          background-color: ${ToggleSwitch.Control.Foreground.Unselected.Fill.Rest};
-          border-radius: 50%;
-          transition: transform 0.2s ease;
-        }
-      }
-
-      > input:checked + .toggle-switch-slider::after {
-        background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
-      }
-
-      > .toggle-switch-unselect {
-        &::after {
-          content: "";
-          position: absolute;
-          border-right: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
-        }
-      }
-
-      > .toggle-switch-select {
-        &::after {
-          content: "";
-          position: absolute;
-          border-radius: 100%;
-          border: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
-        }
-      }
-    }
-
     &:not(.error) {
       > .blr-label-switch-wrapper {
+        &:focus {
+          outline: 2px solid black;
+        }
+
         > .blr-form-label-inline {
           color: ${LabelNextToControl.Rest};
         }
@@ -235,11 +250,16 @@ export const toggleSwitch = css`
 
           &:focus {
             background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Focus};
-            outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
+            outline: ${FocusBorder.width} ${FocusBorder.style}
+              ${ToggleSwitch.Control.Background.Unselected.Stroke.Focus};
           }
 
           &[disabled] {
-            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Disabled};
+            background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Disabled};
+          }
+
+          &[readonly] {
+            background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly};
           }
         }
 
@@ -256,11 +276,15 @@ export const toggleSwitch = css`
 
           &:focus {
             background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Focus};
-            outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
+            outline: ${FocusBorder.width} ${FocusBorder.style} ${ToggleSwitch.Control.Background.Selected.Stroke.Focus};
           }
 
           &[disabled] {
             background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Disabled};
+          }
+
+          &[readonly] {
+            background-color: ${ToggleSwitch.Control.Background.Selected.Fill.ReadOnly};
           }
         }
       }

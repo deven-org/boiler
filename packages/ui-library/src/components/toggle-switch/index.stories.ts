@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 
-import { BlrToggleSwitch as BlrToggleSwitchClass } from './index';
+import { BlrToggleSwitchRenderFunction, BlrToggleSwitchType } from './index';
 import { IconKeys } from '@boiler/icons';
 
 import { getIconName } from '../../utils/get-icon-name';
@@ -33,6 +33,7 @@ export const BlrToggleSwitch = ({
   onFocus,
   onChange,
   disabled,
+  readonly,
   size,
   variant,
   checked,
@@ -41,7 +42,7 @@ export const BlrToggleSwitch = ({
   hintText,
   hintIcon,
   hasError,
-}: BlrToggleSwitchClass) => html`
+}: BlrToggleSwitchType) => html`
   <blr-label-toggleswitch
     .label=${label}
     .checkInputId=${checkInputId}
@@ -49,6 +50,7 @@ export const BlrToggleSwitch = ({
     .onBlur=${onBlur}
     .onChange=${onChange}
     .disabled=${disabled}
+    .readonly=${readonly}
     .checked=${checked}
     .size=${size}
     .variant=${variant}
@@ -70,6 +72,7 @@ BlrToggleSwitch.args = {
   label: 'Toggle Switch Option',
   checkInputId: 'switch',
   disabled: false,
+  readonly: false,
   checked: false,
   hasError: false,
   size: 'md',
