@@ -19,14 +19,16 @@ export class BlrToggleSwitch extends LitElement {
   protected _checkboxNode!: HTMLInputElement;
 
   @property() label?: string;
+  @property() showLabel?: boolean;
+  @property() onLabel!: string;
+  @property() offLabel!: string;
+  @property() showStateLabel?: boolean;
   @property() checkInputId!: string;
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
-  @property() hasError?: boolean;
 
-  @property() errorMessage?: string;
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
@@ -62,53 +64,65 @@ export class BlrToggleSwitch extends LitElement {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-label-toggleswitch': true,
-      [`error`]: this.hasError || false,
       [`disabled`]: this.disabled || false,
       [`readonly`]: this.readonly || false,
       [`${this.size}`]: this.size || 'md',
       [`${this.variant}`]: this.variant || 'leading',
     });
     const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
+
     return html`<div class=${classes}>
       <span class="toggle-content-col">
-        ${this.label
-          ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
+        ${this.showLabel && this.label
+          ? html` ${BlrFormLabelInline({
+              labelText: this.label,
+              forValue: this.checkInputId,
+              labelSize: this.size,
+            })}`
           : nothing}
         ${this.showHint
           ? html`
               ${BlrFormHintRenderFunction({
-                message: this.hasError ? this.errorMessage : this.hintText,
-                variant: this.hasError ? 'error' : 'hint',
+                message: this.hintText,
+                variant: 'hint',
                 icon: this.hintIcon,
                 size: 'sm',
               })}
             `
           : html``}
       </span>
-      <label
-        for=${this.checkInputId || nothing}
-        class=${wrapperClass}
-        ?disabled=${this.disabled || nothing}
-        ?readonly=${this.readonly || nothing}
-      >
-        <input
-          type="checkbox"
-          class="input-control"
-          id=${this.checkInputId || nothing}
-          name=${this.checkInputId || nothing}
+      <div class="label-container">
+        <label
+          for=${this.checkInputId || nothing}
+          class=${wrapperClass}
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
-          .checked=${this.isSelected || nothing}
-          @change=${this.handleChange}
-          @focus=${this.onFocus}
-          @blur=${this.onBlur}
-          hasError="${this.hasError}"
-        />
-        <span class="toggle-switch-slider"> </span>
+        >
+          <input
+            type="checkbox"
+            class="input-control"
+            id=${this.checkInputId || nothing}
+            name=${this.checkInputId || nothing}
+            ?disabled=${this.disabled || nothing}
+            ?readonly=${this.readonly || nothing}
+            .checked=${this.isSelected || nothing}
+            @change=${this.handleChange}
+            @focus=${this.onFocus}
+            @blur=${this.onBlur}
+          />
+          <span class="toggle-switch-slider"> </span>
 
-        <span class="toggle-switch-unselect"></span>
-        <span class="toggle-switch-select"></span>
-      </label>
+          <span class="toggle-switch-unselect"></span>
+          <span class="toggle-switch-select"></span>
+        </label>
+        ${this.variant === 'leading' && this.showStateLabel
+          ? html` ${BlrFormLabelInline({
+              labelText: this.isSelected ? this.onLabel : this.offLabel,
+              forValue: this.checkInputId,
+              labelSize: this.size,
+            })}`
+          : nothing}
+      </div>
     </div>`;
   }
 }
@@ -117,6 +131,10 @@ export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
 
 export const BlrToggleSwitchRenderFunction = ({
   label,
+  showLabel,
+  onLabel,
+  offLabel,
+  showStateLabel,
   checkInputId,
   onBlur,
   onFocus,
@@ -126,14 +144,16 @@ export const BlrToggleSwitchRenderFunction = ({
   size,
   variant,
   checked,
-  errorMessage,
   showHint,
   hintText,
   hintIcon,
-  hasError,
 }: BlrToggleSwitchType) => {
   return html`<blr-label-toggleswitch
     .label=${label}
+    .showLabel=${showLabel}
+    .onLabel=${onLabel}
+    .offLabel=${offLabel}
+    .showStateLabel=${showStateLabel}
     .checkInputId=${checkInputId}
     .onFocus=${onFocus}
     .onBlur=${onBlur}
@@ -143,10 +163,8 @@ export const BlrToggleSwitchRenderFunction = ({
     .checked=${checked}
     .size=${size}
     .variant=${variant}
-    .errorMessage=${errorMessage}
     .showHint=${showHint}
     .hintText=${hintText}
     .hintIcon=${hintIcon}
-    .hasError=${hasError}
   ></blr-label-toggleswitch>`;
 };
