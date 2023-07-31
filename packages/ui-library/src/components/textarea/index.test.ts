@@ -75,4 +75,31 @@ describe('blr-textarea', () => {
     // in html disabled will become null when its false
     expect(disabled).to.be.equal(null);
   });
+
+  it('is having a a visible hint icon', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        showHint: true,
+        hintIcon: 'blrInfo',
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const formHint = querySelectorDeep('blr-form-hint', textarea?.getRootNode() as HTMLElement);
+    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
+
+    const rect = svg?.getBoundingClientRect();
+
+    expect(rect).have.property('width');
+    expect(rect).have.property('height');
+    // expect(rect).have.property('x');
+    // expect(rect).have.property('y');
+
+    expect(rect?.width).to.be.greaterThan(0);
+    expect(rect?.height).to.be.greaterThan(0);
+    // expect((rect?.x || 0) + (rect?.width || 0)).not.to.be.lessThan(0);
+    // expect((rect?.y || 0) + (rect?.height || 0)).not.to.be.lessThan(0);
+  });
 });

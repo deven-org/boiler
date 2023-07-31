@@ -178,6 +178,31 @@ export const form = css`
     padding-bottom: ${Forms.LG.LabelSlot.Padding};
   }
 }
+.blr-counter {
+  &.sm {
+    font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+    font-weight: ${Forms.SM.Caption.fontWeight};
+    font-size: ${Forms.SM.Caption.fontSize};
+    font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+    line-height: ${Forms.SM.Caption.lineHeight};
+  }
+
+  &.md {
+    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+    font-weight: ${Forms.MD.Caption.fontWeight};
+    font-size: ${Forms.MD.Caption.fontSize};
+    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.Caption.lineHeight};
+  }
+
+  &.md {
+    font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
+    font-weight: ${Forms.LG.Caption.fontWeight};
+    font-size: ${Forms.LG.Caption.fontSize};
+    font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
+    line-height: ${Forms.LG.Caption.lineHeight};
+  }
+}
 .blr-form-hint, .blr-counter {
   display: flex;
   align-items: flex-start;
