@@ -3,16 +3,17 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "style-dictionary": "rimraf ./src/foundation/_tokens-generated/* && style-dictionary build --config ./config/style-dictionary.config.js",
-    "generate-index-files": "node ./config/generate-index-files.mjs",
-    "tokens:generate": "npm run style-dictionary && npm run generate-index-files",
-    "posttokens:generate": "prettier ../ui-library/src/foundation/_tokens-generated/* --write"
+    "_style-dictionary": "rimraf ./src/foundation/_tokens-generated/* && style-dictionary build --config ./config/style-dictionary.config.js",
+    "_generate-index-files": "node ./config/generate-index-files.mjs",
+    "_tokens:generate": "npm run style-dictionary && npm run generate-index-files",
+    "_posttokens:generate": "prettier ../ui-library/src/foundation/_tokens-generated/* --write",
+    "tokens:generate": "rimraf ./src/foundation/_tokens-generated/* && style-dictionary build --config ./config/style-dictionary.config.cjs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "style-dictionary": "^3.7.2",
-    "@tokens-studio/sd-transforms": "^0.4.3",
+    "style-dictionary": "^3.8.0",
+    "@tokens-studio/sd-transforms": "^0.9.2",
     "lodash.kebabcase": "4.1.1"
   }
 }
