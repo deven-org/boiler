@@ -1,5 +1,5 @@
-import { css } from 'lit';
-import { componentTokens } from '../_tokens-generated/index.generated';
+import { css } from "lit";
+import { componentTokens } from "../_tokens-generated/index.Light.generated";
 
 const { UI } = componentTokens;
 

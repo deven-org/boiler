@@ -1,5 +1,5 @@
 import { css } from "lit";
-import { componentTokens } from "../_tokens-generated/index.generated";
+import { componentTokens } from "../_tokens-generated/index.Light.generated";
 
 const { Loader, Counter, Error, Warning, Neutral } = componentTokens.Feedback;
 

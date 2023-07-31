@@ -1,4 +1,4 @@
-import { semanticTokens } from "../_tokens-generated/index.generated";
+import { semanticTokens } from "../_tokens-generated/index.Light.generated";
 import { css } from "nested-css-to-flat/lit-css";
 
 const { Forms } = semanticTokens;

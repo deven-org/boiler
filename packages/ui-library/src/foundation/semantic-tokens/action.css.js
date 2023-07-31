@@ -1,5 +1,5 @@
 import { css } from "lit";
-import { semanticTokens } from "../_tokens-generated/index.generated";
+import { semanticTokens } from "../_tokens-generated/index.Light.generated";
 
 const { BorderRadius, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } =
   semanticTokens.Action;
