@@ -3,12 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "_style-dictionary": "rimraf ./src/foundation/_tokens-generated/* && style-dictionary build --config ./config/style-dictionary.config.js",
-    "_generate-index-files": "node ./config/generate-index-files.mjs",
-    "_tokens:generate": "npm run style-dictionary && npm run generate-index-files",
-    "_posttokens:generate": "prettier ../ui-library/src/foundation/_tokens-generated/* --write",
-    "__tokens:generate": "rimraf ./src/foundation/_tokens-generated/* && style-dictionary build --config ./config/style-dictionary.config.cjs",
-    "tokens:generate": "rimraf ./src/foundation/_tokens-generated/* && node ./config/build.cjs"
+    "generate-index-files": "node ./config/generate-index-files.mjs",
+    "tokens:generate": "rimraf ./src/foundation/_tokens-generated/* && node ./config/build.cjs && npm run generate-index-files",
+    "posttokens:generate": "prettier ../ui-library/src/foundation/_tokens-generated/* --write"
   },
   "author": "",
   "license": "ISC",
