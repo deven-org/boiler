@@ -1,17 +1,23 @@
 import { html } from 'lit-html';
 import { BlrLoader as BlrLoaderClass } from './index';
-import { FeedbackSizes } from '../../globals/constants';
+import { FeedbackVariants, FormSizes } from '../../globals/constants';
+
 import './index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
   argTypes: {
     size: {
-      options: FeedbackSizes,
+      options: FormSizes,
       control: { type: 'select' },
     },
     variant: {
-      options: ['default', 'inverted'],
+      options: FeedbackVariants,
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -26,6 +32,7 @@ export const BlrLoader = ({ size, variant, loadingStatus }: BlrLoaderClass) =>
 BlrLoader.storyName = 'BlrLoader';
 
 BlrLoader.args = {
+  theme: 'Light',
   size: 'md',
   variant: 'default',
   loadingStatus: 'Loading',

@@ -20,6 +20,7 @@ const sampleParams: BlrTextInputType = {
   hasLabel: true,
   showInputIcon: true,
   inputIcon: 'blr360Lg',
+  theme: 'Light',
 };
 
 describe('blr-text-input', () => {
@@ -52,7 +53,7 @@ describe('blr-text-input', () => {
     const element = await fixture(
       BlrTextInputRenderFunction({
         ...sampleParams,
-        type: 'password'
+        type: 'password',
       })
     );
 
@@ -73,7 +74,7 @@ describe('blr-text-input', () => {
     const element = await fixture(
       BlrTextInputRenderFunction({
         ...sampleParams,
-        hasLabel: false
+        hasLabel: false,
       })
     );
 

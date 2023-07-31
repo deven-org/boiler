@@ -21,6 +21,7 @@ const sampleParams: BlrSelectType = {
     { value: '2', label: 'Option 2', selected: true },
     { value: 'dieter', label: 'Dieter' },
   ],
+  theme: 'Light',
 };
 
 describe('blr-select', () => {

@@ -2,8 +2,8 @@ import { html } from 'lit-html';
 import { BlrRadioRenderFunction, BlrRadioType } from './index';
 import { InputSizes } from '../../globals/constants';
 import './index';
-import { getIconName } from '../../utils/get-icon-name';
-import { IconKeys } from '@boiler/icons';
+import { PureIconKeys } from '@boiler/icons';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components/Radio',
@@ -14,11 +14,15 @@ export default {
     },
     option: { control: 'array' },
     hintIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     errorIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -39,6 +43,7 @@ export const BlrRadio = ({
   option,
   showHint,
   hintIcon,
+  theme,
 }: BlrRadioType) =>
   html`
     ${BlrRadioRenderFunction({
@@ -56,12 +61,14 @@ export const BlrRadio = ({
       option,
       showHint,
       hintIcon,
+      theme,
     })}
   `;
 
 BlrRadio.storyName = 'BlrRadio';
 
 BlrRadio.args = {
+  theme: 'Light',
   checked: false,
   disabled: false,
   name: 'Default Name',

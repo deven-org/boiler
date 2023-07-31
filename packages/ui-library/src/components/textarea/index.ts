@@ -2,17 +2,18 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { form, textarea } from '../../foundation/semantic-tokens/form.css';
-import { counter } from '../../foundation/component-tokens/feedback.css';
+import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import { counterDark, counterLight } from '../../foundation/component-tokens/feedback.css';
 import { FormSizesType, WarningLimits } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
-import { iconButton } from '../../foundation/component-tokens/action.css';
+import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
-  static styles = [form, styleCustom, textarea, counter, iconButton];
+  static styles = [styleCustom];
 
   @property() textareaId!: string;
   @property() label!: string;
@@ -41,6 +42,8 @@ export class BlrTextarea extends LitElement {
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
 
+  @property() theme: ThemeType = 'Light';
+
   @state() protected count = 0;
 
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
@@ -62,6 +65,9 @@ export class BlrTextarea extends LitElement {
   }
 
   protected render() {
+    const dynamicStyles =
+      this.theme === 'Light' ? [formLight, counterLight, iconButtonLight] : [formDark, counterDark, iconButtonDark];
+
     const classes = classMap({
       [`${this.size}`]: this.size,
       [`error`]: this.hasError || false,
@@ -87,7 +93,9 @@ export class BlrTextarea extends LitElement {
           : false,
     });
 
-    return html`
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
       <div class="${classes} blr-textarea">
         <div class="label-wrapper">
           ${BlrFormLabelRenderFunction({
@@ -95,6 +103,7 @@ export class BlrTextarea extends LitElement {
             labelSize: this.size,
             labelAppendix: this.labelAppendix,
             forValue: this.textareaId,
+            theme: this.theme,
           })}
         </div>
         <div class="input-wrapper">
@@ -122,6 +131,7 @@ export class BlrTextarea extends LitElement {
                     variant: this.hasError ? 'error' : 'hint',
                     icon: this.hintIcon,
                     size: this.size,
+                    theme: this.theme,
                     childElement: html`<div class="blr-counter ${counterClasses}">
                       ${this.count}/${this.maxLength}
                     </div>`,
@@ -165,6 +175,7 @@ export const BlrTextareaRenderFunction = ({
   isResizeable,
   showHint,
   value,
+  theme,
 }: BlrTextareaType) => {
   return html`<blr-textarea
     class=${isResizeable ? nothing : `parent-width`}
@@ -192,5 +203,6 @@ export const BlrTextareaRenderFunction = ({
     .onSelect=${onSelect}
     .isResizeable=${isResizeable}
     .showHint=${showHint}
+    .theme=${theme}
   ></blr-textarea>`;
 };

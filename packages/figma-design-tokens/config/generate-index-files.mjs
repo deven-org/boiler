@@ -1,5 +1,6 @@
 import fs from 'fs';
 import chalk from 'chalk';
+import themes from './themes.cjs';
 
 const files = fs.readdirSync(`../ui-library/src/foundation/_tokens-generated`);
 
@@ -18,25 +19,38 @@ const cssFiles = files
   .map((item) => item.replace('.scss', '').replace('_', ''))
   .map((item) => `@use './${item}';`);
 
-const filteredJsFiles = files.filter((item) => item.endsWith('generated.js') && item.startsWith('__'));
-
-const importsPart = filteredJsFiles.map((item) => `import {${convertToCamelCase(item)}} from './${item}'`);
-const constsPart = filteredJsFiles.map(
-  (item) => `const ${convertToCamelCase(item)}Wrapped = wrapValuesWithCss(${convertToCamelCase(item)})`
-);
-const exportsPart = filteredJsFiles.map(
-  (item) => `export {${convertToCamelCase(item)}Wrapped as ${convertToCamelCase(item)}}`
-);
-
-const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css';
-    ${importsPart.join('\n')}
-
-    ${constsPart.join('\n')}
-    
-    ${exportsPart.join('\n')}`;
-
 console.log(chalk.magentaBright('👷 creates foundation/_tokens-generated/index.generated.scss... \n'));
 fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
 
-console.log(chalk.cyanBright('👷 creates foundation/_tokens-generated/index.generated.ts... \n'));
-fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.ts`, fileOutPut, 'utf-8');
+themes.array.map((theme) => {
+  console.log('\n==============================================');
+  console.log(`\nProcessing: [${theme}]`);
+
+  const filteredJsFiles = files.filter((item) => item.endsWith(theme + '.generated.js') && item.startsWith('__'));
+
+  const importsPart = filteredJsFiles.map(
+    (item) => `import {${convertToCamelCase(item.split('.')[0])}} from './${item}'`
+  );
+  const constsPart = filteredJsFiles.map(
+    (item) =>
+      `const ${convertToCamelCase(item.split('.')[0])}Wrapped = wrapValuesWithCss(${convertToCamelCase(
+        item.split('.')[0]
+      )})`
+  );
+  const exportsPart = filteredJsFiles.map(
+    (item) => `export {${convertToCamelCase(item.split('.')[0])}Wrapped as ${convertToCamelCase(item.split('.')[0])}}`
+  );
+
+  const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css';
+      ${importsPart.join('\n')}
+  
+      ${constsPart.join('\n')}
+      
+      ${exportsPart.join('\n')}`;
+
+  console.log(chalk.cyanBright(`👷 creates foundation/_tokens-generated/index.${theme}.generated.ts... \n`));
+  fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.${theme}.generated.ts`, fileOutPut, 'utf-8');
+});
+
+const themeFile = `export const Themes = [ "${ themes.array.join('", "') }" ] as const; export type ThemeType = (typeof Themes)[number];`;
+fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.themes.ts`, themeFile, 'utf-8');

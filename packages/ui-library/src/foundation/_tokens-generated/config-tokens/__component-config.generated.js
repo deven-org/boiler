@@ -1,9 +1,28 @@
 /**
  * Do not edit directly
- * Generated on Thu, 03 Aug 2023 13:00:20 GMT
+ * Generated on Fri, 04 Aug 2023 13:44:40 GMT
  */
 
 export const componentConfig = {
+  Forms: {
+    Checkbox: {
+      SM: { Control: { IconSize: 'SM' } },
+      MD: { Control: { IconSize: 'SM' } },
+      LG: { Control: { IconSize: 'Custom 20px' } },
+    },
+    SM: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
+    MD: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
+    LG: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
+  },
+  Navigation: {
+    TabBar: {
+      Tab: {
+        SM: { Icon: { SizeVariant: 'XS' } },
+        MD: { Icon: { SizeVariant: 'SM' } },
+        LG: { Icon: { SizeVariant: 'SM' } },
+      },
+    },
+  },
   Action: {
     TextButton: {
       XS: { IconSize: 'XXS' },
@@ -39,24 +58,5 @@ export const componentConfig = {
     MD: { LoaderSize: 'MD' },
     LG: { LoaderSize: 'MD' },
     XL: { LoaderSize: 'LG' },
-  },
-  Forms: {
-    Checkbox: {
-      SM: { Control: { IconSize: 'SM' } },
-      MD: { Control: { IconSize: 'SM' } },
-      LG: { Control: { IconSize: 'Custom 20px' } },
-    },
-    SM: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
-    MD: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
-    LG: { CaptionComponent: { IconSize: 'SM' }, InputField: { IconSize: 'MD' } },
-  },
-  Navigation: {
-    TabBar: {
-      Tab: {
-        SM: { Icon: { SizeVariant: 'XS' } },
-        MD: { Icon: { SizeVariant: 'SM' } },
-        LG: { Icon: { SizeVariant: 'SM' } },
-      },
-    },
   },
 };

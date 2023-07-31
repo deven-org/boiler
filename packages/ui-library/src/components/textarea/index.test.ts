@@ -21,6 +21,7 @@ const sampleParams: BlrTextareaType = {
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
+  theme: 'Light',
 };
 
 describe('blr-textarea', () => {

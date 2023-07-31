@@ -19,6 +19,7 @@ const sampleParams: BlrRadioType = {
   },
   showHint: true,
   hasError: false,
+  theme: 'Light',
 };
 
 describe('blr-radio', () => {

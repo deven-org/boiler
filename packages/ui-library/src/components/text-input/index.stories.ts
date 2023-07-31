@@ -2,9 +2,9 @@
 import { html } from 'lit-html';
 import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
 import { FormSizes, InputTypes } from '../../globals/constants';
-import { IconKeys } from '@boiler/icons';
+import { PureIconKeys } from '@boiler/icons';
 import './index';
-import { getIconName } from '../../utils/get-icon-name';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
@@ -18,11 +18,15 @@ export default {
       control: { type: 'select' },
     },
     inputIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -54,7 +58,8 @@ export const BlrTextInput = ({
   inputIcon,
   showHint,
   hintText,
-  hintIcon
+  hintIcon,
+  theme,
 }: BlrTextInputType) =>
   html`
     ${BlrTextInputRenderFunction({
@@ -80,13 +85,15 @@ export const BlrTextInput = ({
       inputIcon,
       showHint,
       hintText,
-      hintIcon
+      hintIcon,
+      theme,
     })}
   `;
 
 BlrTextInput.storyName = 'BlrTextInput';
 
 BlrTextInput.args = {
+  theme: 'Light',
   textInputId: 'Input ID',
   label: 'Label',
   hasLabel: true,
@@ -105,5 +112,5 @@ BlrTextInput.args = {
   showHint: true,
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',
-  hasError: false
+  hasError: false,
 };

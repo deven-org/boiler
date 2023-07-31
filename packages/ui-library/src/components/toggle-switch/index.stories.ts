@@ -2,11 +2,10 @@
 import { html } from 'lit';
 
 import { BlrToggleSwitchRenderFunction, BlrToggleSwitchType } from './index';
-import { IconKeys } from '@boiler/icons';
-
-import { getIconName } from '../../utils/get-icon-name';
+import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, WrapperVariant } from '../../globals/constants';
 import './index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
@@ -16,11 +15,15 @@ export default {
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     variant: {
       options: WrapperVariant,
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -45,6 +48,7 @@ export const BlrToggleSwitch = ({
   hintText,
   hintIcon,
   isSelected,
+  theme,
 }: BlrToggleSwitchType) =>
   html`
     ${BlrToggleSwitchRenderFunction({
@@ -66,6 +70,7 @@ export const BlrToggleSwitch = ({
       hintText,
       hintIcon,
       isSelected,
+      theme,
     })}
   `;
 
@@ -76,6 +81,7 @@ const logEventType = (event: Event) => {
 };
 
 BlrToggleSwitch.args = {
+  theme: 'Light',
   label: 'Toggle Switch Option',
   showLabel: true,
   onLabel: 'On',

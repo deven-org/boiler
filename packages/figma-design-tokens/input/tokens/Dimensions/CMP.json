@@ -309,90 +309,24 @@
       }
     },
     "StepperButton": {
-      "SurfaceFill": {
-        "Rest": {
-          "value": "{q.surface.brand.silent.rest}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{q.surface.brand.silent.hover}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.surface.brand.silent.pressed}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{q.surface.brand.silent.rest}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.surface.disabled.beta}",
-          "type": "color"
-        }
-      },
-      "SurfaceStroke": {
-        "Rest": {
-          "value": "{q.stroke.brand.alpha.rest}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{q.stroke.brand.alpha.hover}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.stroke.brand.alpha.pressed}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{Global.Focus}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.stroke.disabled.alpha}",
-          "type": "color"
-        }
-      },
-      "Icon": {
-        "Rest": {
-          "value": "{q.content.onbrand.beta.rest}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{q.content.onbrand.beta.hover}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{q.content.onbrand.beta.pressed}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{q.content.onbrand.beta.rest}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{q.content.ondisabled.alpha}",
-          "type": "color"
-        }
-      },
       "Border": {
         "Rest": {
           "value": {
-            "color": "{Action.StepperButton.SurfaceStroke.Rest}",
+            "color": "{Action.Silent.SurfaceStroke.Rest}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
         },
         "Hover": {
           "value": {
-            "color": "{Action.StepperButton.SurfaceStroke.Hover}",
+            "color": "{Action.Silent.SurfaceStroke.Hover}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
         },
         "Pressed": {
           "value": {
-            "color": "{Action.StepperButton.SurfaceStroke.Pressed}",
+            "color": "{Action.Silent.SurfaceStroke.Pressed}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
@@ -403,7 +337,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Action.StepperButton.SurfaceStroke.Disabled}",
+            "color": "{Action.Silent.SurfaceStroke.Disabled}",
             "width": "{core.borderWidth.None}"
           },
           "type": "border"
@@ -773,14 +707,6 @@
       }
     },
     "Tooltip": {
-      "SurfaceFill": {
-        "value": "{q.surface.inverted}",
-        "type": "color"
-      },
-      "Content": {
-        "value": "{q.content.oninverted.alpha}",
-        "type": "color"
-      },
       "ContentCol": {
         "Padding": {
           "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
@@ -789,19 +715,6 @@
         "BorderRadius": {
           "value": "{core.borderRadius.MD}",
           "type": "borderRadius"
-        }
-      },
-      "Elevation": {
-        "1": {
-          "value": {
-            "x": "0",
-            "y": "2",
-            "blur": "4",
-            "spread": "0",
-            "color": "{core.color.coolgray.100.opa30}",
-            "type": "dropShadow"
-          },
-          "type": "boxShadow"
         }
       },
       "NoseWrapper": {
@@ -1477,294 +1390,6 @@
         }
       },
       "Control": {
-        "Background": {
-          "Unselected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.brand.beta.rest}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.brand.beta.hover}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.brand.beta.pressed}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.brand.beta.rest}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.disabled.beta}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.readonly}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.error}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.surface.brand.primary.rest}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Rest\n//\nalso applies to indeterminate"
-              },
-              "Hover": {
-                "value": "{q.surface.brand.primary.hover}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Hover\n//\nalso applies to indeterminate"
-              },
-              "Pressed": {
-                "value": "{q.surface.brand.primary.pressed}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Pressed\n//\nalso applies to indeterminate"
-              },
-              "Focus": {
-                "value": "{q.surface.brand.primary.rest}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Focus\n//\nalso applies to indeterminate"
-              },
-              "Disabled": {
-                "value": "{q.surface.disabled.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.Disabled\n//\nalso applies to indeterminate"
-              },
-              "ReadOnly": {
-                "value": "{q.surface.disabled.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Background.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
-              }
-            }
-          }
-        },
-        "Foreground": {
-          "Unselected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.surface.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Error"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "also applies to indeterminate"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Rest\n//\nalso applies to indeterminate"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Hover\n//\nalso applies to indeterminate"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Pressed\n//\nalso applies to indeterminate"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Focus\n//\nalso applies to indeterminate"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.Disabled\n//\nalso applies to indeterminate"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
-              }
-            }
-          }
-        },
         "Unselected": {
           "Rest": {
             "value": {
@@ -1860,80 +1485,6 @@
             "Error": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
-            },
-            "Fill": {
-              "Rest": {
-                "value": "{q.surface.brand.primary.rest}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.surface.brand.primary.hover}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.surface.brand.primary.pressed}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.surface.brand.primary.rest}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.surface.disabled.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.surface.disabled.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.error}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Error"
-              }
             }
           },
           "Selected": {
@@ -1960,70 +1511,6 @@
             "ReadOnly": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
-            },
-            "Fill": {
-              "Rest": {
-                "value": "{q.surface.brand.primary.rest}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.surface.brand.primary.hover}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.surface.brand.primary.pressed}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.surface.brand.primary.rest}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.surface.disabled.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.surface.disabled.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.ReadOnly"
-              }
             }
           }
         },
@@ -2056,80 +1543,6 @@
             "Error": {
               "value": "{core.dimensionPX.14}",
               "type": "sizing"
-            },
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Error"
-              }
             }
           },
           "Selected": {
@@ -2156,70 +1569,6 @@
             "ReadOnly": {
               "value": "{core.dimensionPX.6}",
               "type": "sizing"
-            },
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Pressed"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.ReadOnly"
-              }
             }
           }
         },
@@ -2441,274 +1790,6 @@
         "type": "borderRadius"
       },
       "Control": {
-        "Background": {
-          "Unselected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.ondefault.gamma.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.ondefault.gamma.hover}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.ondefault.gamma.pressed}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.ondefault.gamma.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.onreadonly.gamma}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.surface.brand.encourage.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
-              },
-              "Hover": {
-                "value": "{q.surface.brand.encourage.hover}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.surface.brand.encourage.pressed}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
-              },
-              "Focus": {
-                "value": "{q.surface.brand.encourage.rest}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.onreadonly.gamma}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          }
-        },
-        "Foreground": {
-          "Unselected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
-              "Rest": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
-              },
-              "Hover": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
-              },
-              "Pressed": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
-              },
-              "Focus": {
-                "value": "{q.content.onbrand.alpha}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
-              },
-              "Disabled": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.content.ondisabled.inverted}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
-              }
-            }
-          }
-        },
         "SM": {
           "A11yIcon": {
             "Sizing": {
@@ -2857,80 +1938,6 @@
     },
     "Slider": {
       "Thumb": {
-        "Fill": {
-          "Rest": {
-            "value": "{q.surface.default}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
-          },
-          "Hover": {
-            "value": "{q.surface.default}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
-          },
-          "Pressed": {
-            "value": "{q.surface.default}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
-          },
-          "Focus": {
-            "value": "{q.surface.default}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
-          },
-          "Disabled": {
-            "value": "{q.surface.default}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
-          },
-          "ReadOnly": {
-            "value": "{q.surface.default}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
-          },
-          "Error": {
-            "value": "{q.surface.error}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
-          }
-        },
-        "Stroke": {
-          "Rest": {
-            "value": "{q.stroke.brand.beta.rest}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
-          },
-          "Hover": {
-            "value": "{q.stroke.brand.beta.hover}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
-          },
-          "Pressed": {
-            "value": "{q.stroke.brand.beta.pressed}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
-          },
-          "Focus": {
-            "value": "{q.stroke.brand.beta.rest}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
-          },
-          "Disabled": {
-            "value": "{q.stroke.disabled.beta}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
-          },
-          "ReadOnly": {
-            "value": "{q.stroke.readonly}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
-          },
-          "Error": {
-            "value": "{q.stroke.error}",
-            "type": "color",
-            "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
-          }
-        },
         "Border": {
           "Rest": {
             "value": {
@@ -3017,28 +2024,6 @@
         }
       },
       "Track": {
-        "Stroke": {
-          "Active": {
-            "Default": {
-              "value": "{q.content.onbrand.beta.rest}",
-              "type": "color"
-            },
-            "Mute": {
-              "value": "{q.content.ondisabled.alpha}",
-              "type": "color"
-            }
-          },
-          "Inactive": {
-            "Default": {
-              "value": "{q.surface.brand.secondary.rest}",
-              "type": "color"
-            },
-            "Mute": {
-              "value": "{q.surface.disabled.alpha}",
-              "type": "color"
-            }
-          }
-        },
         "Border": {
           "Active": {
             "Default": {
@@ -3079,50 +2064,6 @@
         }
       },
       "TickMark": {
-        "Stroke": {
-          "Active": {
-            "Default": {
-              "value": "{q.content.onbrand.beta.rest}",
-              "type": "color"
-            },
-            "Mute": {
-              "value": "{q.content.ondisabled.alpha}",
-              "type": "color"
-            }
-          },
-          "Inactive": {
-            "Default": {
-              "value": "{q.surface.brand.secondary.rest}",
-              "type": "color"
-            },
-            "Mute": {
-              "value": "{q.surface.disabled.alpha}",
-              "type": "color"
-            }
-          }
-        },
-        "Fill": {
-          "Active": {
-            "Default": {
-              "value": "{q.surface.default}",
-              "type": "color"
-            },
-            "Mute": {
-              "value": "{q.surface.default}",
-              "type": "color"
-            }
-          },
-          "Inactive": {
-            "Default": {
-              "value": "{q.surface.default}",
-              "type": "color"
-            },
-            "Mute": {
-              "value": "{q.surface.default}",
-              "type": "color"
-            }
-          }
-        },
         "Border": {
           "Active": {
             "Default": {
@@ -3167,16 +2108,6 @@
         }
       },
       "Legend": {
-        "Color": {
-          "Default": {
-            "value": "{q.content.ondefault.beta}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
-            "type": "color"
-          }
-        },
         "Typography": {
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
@@ -3316,10 +2247,6 @@
       }
     },
     "Divider": {
-      "Stroke": {
-        "value": "{core.color.coolgray.800.opa30}",
-        "type": "color"
-      },
       "Border": {
         "value": {
           "color": "{UI.Divider.Stroke}",
@@ -3409,11 +2336,6 @@
           }
         },
         "HighlightLine": {
-          "SurfaceFill": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Apply as fill on HightlightLine"
-          },
           "Selected": {
             "Opacity": {
               "value": "1",
@@ -3515,39 +2437,6 @@
               "value": "SM",
               "type": "componentConfig"
             }
-          }
-        },
-        "Label": {
-          "Active": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>"
-          },
-          "Unselected": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>"
-          }
-        },
-        "Icon": {
-          "Active": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>"
-          },
-          "Unselected": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>"
           }
         }
       },

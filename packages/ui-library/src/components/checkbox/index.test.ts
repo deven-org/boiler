@@ -18,6 +18,7 @@ const sampleParams: BlrCheckboxType = {
   showHint: false,
   hintMessage: 'This is a sample hint',
   hintIcon: undefined,
+  theme: 'Light',
 };
 
 describe('blr-checkbox', () => {
