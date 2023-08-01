@@ -43,7 +43,7 @@ export class BlrToggleSwitch extends LitElement {
   @state() isSelected = false;
 
   // When the property is updated, set the isSelected state to the new value
-  updated(changedProperties: Map<string, boolean>) {
+  protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('checked')) {
       this.isSelected = this.checked || false;
     }
@@ -53,7 +53,7 @@ export class BlrToggleSwitch extends LitElement {
     super.connectedCallback();
   }
 
-  handleChange(event: Event) {
+  protected handleChange(event: Event) {
     if (!this.disabled) {
       this.isSelected = !this.isSelected;
       this.onChange?.(event);
@@ -66,8 +66,8 @@ export class BlrToggleSwitch extends LitElement {
       'blr-label-toggleswitch': true,
       [`disabled`]: this.disabled || false,
       [`readonly`]: this.readonly || false,
-      [`${this.size}`]: this.size || 'md',
-      [`${this.variant}`]: this.variant || 'leading',
+      [`${this.size || 'md'}`]: this.size || 'md',
+      [`${this.variant || 'leading'}`]: this.variant || 'leading',
     });
     const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
 
@@ -77,16 +77,16 @@ export class BlrToggleSwitch extends LitElement {
           ? html` ${BlrFormLabelInline({
               labelText: this.label,
               forValue: this.checkInputId,
-              labelSize: this.size,
+              labelSize: this.size || 'md',
             })}`
-          : nothing}
+          : html``}
         ${this.showHint
           ? html`
               ${BlrFormHintRenderFunction({
                 message: this.hintText,
                 variant: 'hint',
                 icon: this.hintIcon,
-                size: 'sm',
+                size: this.size || 'sm',
               })}
             `
           : html``}
@@ -95,16 +95,16 @@ export class BlrToggleSwitch extends LitElement {
         <label
           for=${this.checkInputId || nothing}
           class=${wrapperClass}
-          ?disabled=${this.disabled || nothing}
-          ?readonly=${this.readonly || nothing}
+          ?disabled=${this.disabled}
+          ?readonly=${this.readonly}
         >
           <input
             type="checkbox"
             class="input-control"
             id=${this.checkInputId || nothing}
             name=${this.checkInputId || nothing}
-            ?disabled=${this.disabled || nothing}
-            ?readonly=${this.readonly || nothing}
+            ?disabled=${this.disabled}
+            ?readonly=${this.readonly}
             .checked=${this.isSelected || nothing}
             @change=${this.handleChange}
             @focus=${this.onFocus}
@@ -119,9 +119,9 @@ export class BlrToggleSwitch extends LitElement {
           ? html` ${BlrFormLabelInline({
               labelText: this.isSelected ? this.onLabel : this.offLabel,
               forValue: this.checkInputId,
-              labelSize: this.size,
+              labelSize: this.size || 'md',
             })}`
-          : nothing}
+          : html``}
       </div>
     </div>`;
   }

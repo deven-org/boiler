@@ -45,8 +45,6 @@ export const BlrToggleSwitch = ({
   hintText,
   hintIcon,
   isSelected,
-  updated,
-  handleChange,
 }: BlrToggleSwitchType) =>
   html`
     ${BlrToggleSwitchRenderFunction({
@@ -68,8 +66,6 @@ export const BlrToggleSwitch = ({
       hintText,
       hintIcon,
       isSelected,
-      updated,
-      handleChange,
     })}
   `;
 
