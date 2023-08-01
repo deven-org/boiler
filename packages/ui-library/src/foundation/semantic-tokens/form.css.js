@@ -1,17 +1,16 @@
-import { semanticTokens } from "../_tokens-generated/index.generated";
+import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
 import { css } from "nested-css-to-flat/lit-css";
 
 const { Forms } = semanticTokens;
+const { Select } = componentTokens.Forms;
 
 export const form = css`
 .blr-form-element {
   all: initial;
   width: 100%;
   color: ${Forms.UserInput.Default.Rest};
-  border-width: ${Forms.Input.Default.Rest.width};
-  border-style: ${Forms.Input.Default.Rest.style};
-  border-color: ${Forms.Input.Default.Rest.color};
+  border: ${Forms.Input.Default.Rest.width} ${Forms.Input.Default.Rest.style} ${Forms.Input.Default.Rest.color};
   border-radius: ${Forms.InputBorderRadius};
 
   box-sizing: border-box;
@@ -140,6 +139,7 @@ export const form = css`
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.SM.UserInput.lineHeight};
+    padding: ${Select.SM.InputFieldPadding};
   }
 
   &.md {
@@ -147,6 +147,7 @@ export const form = css`
     font-size: ${Forms.MD.UserInput.fontSize};
     font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.MD.UserInput.lineHeight};
+    padding: ${Select.MD.InputFieldPadding};
   }
 
   &.lg {
@@ -154,30 +155,70 @@ export const form = css`
     font-size: ${Forms.LG.UserInput.fontSize};
     font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.LG.UserInput.lineHeight};
+    padding: ${Select.LG.InputFieldPadding};
   }
-}
-
-.blr-input-icon {
-  position: absolute;
-  color: ${Forms.Placeholder.Default.Rest};
-}
-
-.blr-input-icon.error {
-    color: ${Forms.Input.Error.Rest.color};
 }
 
 .blr-input-inner-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: ${Forms.MD.LabelSlot.Padding};
+
+  .blr-input-icon {
+    position: absolute;
+    color: ${Forms.Placeholder.Default.Rest};
+  }
+
+  &.error-input {
+    .blr-input-icon {
+      color: ${Forms.Input.Error.Rest.color};
+    }
+  }
+
   &.sm {
     padding-bottom: ${Forms.SM.LabelSlot.Padding};
+    margin: ${Forms.SM.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.SM.IconPaddingRight};
+    }
   }
+
+  &.md {
+    padding-bottom: ${Forms.MD.LabelSlot.Padding};
+    margin: ${Forms.MD.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.MD.IconPaddingRight};
+    }
+  }
+
   &.lg {
     padding-bottom: ${Forms.LG.LabelSlot.Padding};
+    margin: ${Forms.LG.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.LG.IconPaddingRight};
+    }
   }
 }
+
+.hint-wrapper {
+  display: flex;
+
+  &.sm {
+    margin: ${Forms.SM.CaptionSlot.Margin};
+  }
+
+  &.md {
+    margin: ${Forms.MD.CaptionSlot.Margin};
+  }
+
+  &.lg {
+    margin: ${Forms.MD.CaptionSlot.Margin};
+  }
+}
+
 .blr-counter {
   &.sm {
     font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
@@ -225,12 +266,12 @@ export const form = css`
   &.sm {
     padding: ${Forms.SM.CaptionComponent.Padding};
     gap: ${Forms.SM.CaptionComponent.ItemSpacing};
-    > .icon-wrapper {
+    .icon-wrapper {
       padding: ${Forms.SM.CaptionComponent.IconWrapper.Padding}
     }
-    > .label-wrapper {
+    .label-wrapper {
       padding: ${Forms.SM.CaptionComponent.CaptionLabelWrapper.Padding};
-      > .blr-caption-text {
+      .blr-caption-text {
         font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
         font-weight: ${Forms.SM.Caption.fontWeight};
         font-size: ${Forms.SM.Caption.fontSize};
@@ -242,12 +283,12 @@ export const form = css`
   &.md {
     padding: ${Forms.MD.CaptionComponent.Padding};
     gap: ${Forms.MD.CaptionComponent.ItemSpacing};
-    > .icon-wrapper {
+    .icon-wrapper {
       padding: ${Forms.MD.CaptionComponent.IconWrapper.Padding}
     }
-    > .label-wrapper {
+    .label-wrapper {
       padding: ${Forms.MD.CaptionComponent.CaptionLabelWrapper.Padding};
-      > .blr-caption-text {
+      .blr-caption-text {
         font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
         font-weight: ${Forms.MD.Caption.fontWeight};
         font-size: ${Forms.MD.Caption.fontSize};
@@ -258,12 +299,12 @@ export const form = css`
   &.lg {
     padding: ${Forms.LG.CaptionComponent.Padding};
     gap: ${Forms.LG.CaptionComponent.ItemSpacing};
-    > .icon-wrapper {
+    .icon-wrapper {
       padding: ${Forms.LG.CaptionComponent.IconWrapper.Padding}
     }
-    > .label-wrapper {
+    .label-wrapper {
       padding: ${Forms.LG.CaptionComponent.CaptionLabelWrapper.Padding};
-      > .blr-caption-text {
+      .blr-caption-text {
         font-weight: ${Forms.LG.Caption.fontWeight};
         font-size: ${Forms.LG.Caption.fontSize};
         font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
@@ -273,7 +314,8 @@ export const form = css`
   }
 }
 .blr-form-label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   color: ${Forms.Label.Rest};
   &:focus {
     color: ${Forms.Label.Focus};
@@ -362,6 +404,7 @@ export const form = css`
 .error {
   color: ${Forms.Caption.Error};
 }
+
 .hint {
   color: ${Forms.Caption.Hint};
 }

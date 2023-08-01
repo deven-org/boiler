@@ -1,7 +1,8 @@
 import { css } from "lit";
-import { componentTokens } from "../_tokens-generated/index.generated";
+import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
-const { Loader, Counter, Error, Warning, Neutral } = componentTokens.Feedback;
+const { Loader, Counter } = componentTokens.Feedback;
+const { Error, Neutral, Warning } = semanticTokens.Feedback;
 
 export const loadingSpinner = css`
   .blr-loading-spinner {

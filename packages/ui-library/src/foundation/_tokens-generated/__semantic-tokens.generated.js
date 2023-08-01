@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Jul 2023 15:46:27 GMT
+ * Generated on Tue, 01 Aug 2023 10:44:33 GMT
  */
 
 export const semanticTokens = {
@@ -265,6 +265,26 @@ export const semanticTokens = {
     XL: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
       LoaderSize: 'LG',
+    },
+  },
+  Feedback: {
+    Neutral: {
+      Surface: 'hsla(0, 0%, 100%, 1)',
+      SurfaceStroke: '#00000000',
+      Text: 'hsla(220, 10%, 30%,1) ',
+      Icon: 'hsla(220, 10%, 30%,1) ',
+    },
+    Warning: {
+      Surface: 'hsla(50, 80%, 50%,0.1) ',
+      SurfaceStroke: 'hsla(50, 80%, 50%,1) ',
+      Text: 'hsla(50, 80%, 20%,1) ',
+      Icon: 'hsla(50, 80%, 50%,1) ',
+    },
+    Error: {
+      Surface: 'hsla(350, 65%, 80%,0.1) ',
+      SurfaceStroke: 'hsla(350, 65%, 50%,1) ',
+      Text: 'hsla(350, 65%, 30%,1) ',
+      Icon: 'hsla(350, 65%, 50%,1) ',
     },
   },
   Forms: {
