@@ -7,7 +7,7 @@ import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 
 import { IconType } from '@boiler/icons';
-import { form, select } from '../../foundation/semantic-tokens/form.css';
+import { form } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -21,7 +21,7 @@ type Option = {
 
 @customElement('blr-select')
 export class BlrSelect extends LitElement {
-  static styles = [styleCustom, form, select];
+  static styles = [styleCustom, form];
 
   @property() selectId!: string;
   @property() labelAppendix?: string;

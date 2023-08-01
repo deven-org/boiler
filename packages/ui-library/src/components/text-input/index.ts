@@ -85,7 +85,7 @@ export class BlrTextInput extends LitElement {
               forValue: this.textInputId,
             })}`
           : html``}
-        <div class="blr-input-inner-container">
+        <div class="blr-input-inner-container ${inputClasses}">
           <input
             class="blr-form-element ${inputClasses}"
             id=${this.textInputId || nothing}
@@ -125,16 +125,18 @@ export class BlrTextInput extends LitElement {
               })}`
             : nothing}
         </div>
-        ${this.showHint
-          ? html`
-              ${BlrFormHintRenderFunction({
-                message: this.hasError ? this.errorMessage : this.hintText,
-                variant: this.hasError ? 'error' : 'hint',
-                icon: this.hintIcon,
-                size: 'sm',
-              })}
-            `
-          : nothing}
+        <div class="hint-wrapper ${this.size}">
+          ${this.showHint
+            ? html`
+                ${BlrFormHintRenderFunction({
+                  message: this.hasError ? this.errorMessage : this.hintText,
+                  variant: this.hasError ? 'error' : 'hint',
+                  icon: this.hintIcon,
+                  size: 'sm',
+                })}
+              `
+            : nothing}
+        </div>
       </div>
     `;
   }

@@ -159,6 +159,66 @@ export const form = css`
   }
 }
 
+.blr-input-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .blr-input-icon {
+    position: absolute;
+    color: ${Forms.Placeholder.Default.Rest};
+  }
+
+  &.error-input {
+    .blr-input-icon {
+      color: ${Forms.Input.Error.Rest.color};
+    }
+  }
+
+  &.sm {
+    padding-bottom: ${Forms.SM.LabelSlot.Padding};
+    margin: ${Forms.SM.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.SM.IconPaddingRight};
+    }
+  }
+
+  &.md {
+    padding-bottom: ${Forms.MD.LabelSlot.Padding};
+    margin: ${Forms.MD.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.MD.IconPaddingRight};
+    }
+  }
+
+  &.lg {
+    padding-bottom: ${Forms.LG.LabelSlot.Padding};
+    margin: ${Forms.LG.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.LG.IconPaddingRight};
+    }
+  }
+}
+
+.hint-wrapper {
+  display: flex;
+
+  &.sm {
+    margin: ${Forms.SM.CaptionSlot.Margin};
+  }
+
+  &.md {
+    margin: ${Forms.MD.CaptionSlot.Margin};
+  }
+
+  &.lg {
+    margin: ${Forms.MD.CaptionSlot.Margin};
+  }
+}
+
 .blr-counter {
   &.sm {
     font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
@@ -348,66 +408,4 @@ export const form = css`
 .hint {
   color: ${Forms.Caption.Hint};
 }
-`;
-
-export const select = css`
-  .blr-input-inner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .blr-input-icon {
-      position: absolute;
-      color: ${Forms.Placeholder.Default.Rest};
-    }
-
-    &.error-input {
-      .blr-input-icon {
-        color: ${Forms.Input.Error.Rest.color};
-      }
-    }
-
-    &.sm {
-      padding-bottom: ${Forms.SM.LabelSlot.Padding};
-      margin: ${Forms.SM.InputSlot.Margin};
-
-      .blr-input-icon {
-        right: ${Select.SM.IconPaddingRight};
-      }
-    }
-
-    &.md {
-      padding-bottom: ${Forms.MD.LabelSlot.Padding};
-      margin: ${Forms.MD.InputSlot.Margin};
-
-      .blr-input-icon {
-        right: ${Select.MD.IconPaddingRight};
-      }
-    }
-
-    &.lg {
-      padding-bottom: ${Forms.LG.LabelSlot.Padding};
-      margin: ${Forms.LG.InputSlot.Margin};
-
-      .blr-input-icon {
-        right: ${Select.LG.IconPaddingRight};
-      }
-    }
-  }
-
-  .hint-wrapper {
-    display: flex;
-
-    &.sm {
-      margin: ${Forms.SM.CaptionSlot.Margin};
-    }
-
-    &.md {
-      margin: ${Forms.MD.CaptionSlot.Margin};
-    }
-
-    &.lg {
-      margin: ${Forms.MD.CaptionSlot.Margin};
-    }
-  }
 `;
