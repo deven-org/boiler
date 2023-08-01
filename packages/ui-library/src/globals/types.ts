@@ -29,3 +29,4 @@ export type RadioOption = {
   errorMessage?: string;
   checked?: boolean;
 };
+export type WrapperVariant = 'leading' | 'trailing';

@@ -1,8 +1,9 @@
-import { semanticTokens } from "../_tokens-generated/index.generated";
+import { componentTokens, semanticTokens } from "../_tokens-generated/index.generated";
 
 import { css } from "nested-css-to-flat/lit-css";
 
 const { Forms } = semanticTokens;
+const { Select } = componentTokens.Forms;
 
 export const form = css`
 .blr-form-element {
@@ -12,9 +13,7 @@ export const form = css`
   font-weight: ${Forms.MD.UserInput.fontWeight};
   font-size: ${Forms.MD.UserInput.fontSize};
   font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
-  border-width: ${Forms.Input.Default.Rest.width};
-  border-style: ${Forms.Input.Default.Rest.style};
-  border-color: ${Forms.Input.Default.Rest.color};
+  border: ${Forms.Input.Default.Rest.width} ${Forms.Input.Default.Rest.style} ${Forms.Input.Default.Rest.color};
   border-radius: ${Forms.InputBorderRadius};
   box-sizing: border-box;
 
@@ -117,7 +116,7 @@ export const form = css`
     font-size: ${Forms.SM.UserInput.fontSize};
     font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.SM.UserInput.lineHeight};
-    padding: ${Forms.SM.InputField.Padding};
+    padding: ${Select.SM.InputFieldPadding};
   }
 
   &.md {
@@ -125,7 +124,7 @@ export const form = css`
     font-size: ${Forms.MD.UserInput.fontSize};
     font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.MD.UserInput.lineHeight};
-    padding: ${Forms.MD.InputField.Padding};
+    padding: ${Select.MD.InputFieldPadding};
   }
 
   &.lg {
@@ -133,79 +132,167 @@ export const form = css`
     font-size: ${Forms.LG.UserInput.fontSize};
     font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
     line-height: ${Forms.LG.UserInput.lineHeight};
-    padding: ${Forms.LG.InputField.Padding};
+    padding: ${Select.LG.InputFieldPadding};
   }
-}
-
-.blr-input-icon {
-  position: absolute;
-  color: ${Forms.Placeholder.Default.Rest};
-  &.sm {
-
-  }
-  &.md {
-
-  }
-  &.lg {
-
-  }
-}
-
-.blr-input-icon.error {
-    color: ${Forms.Input.Error.Rest.color};
 }
 
 .blr-input-inner-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: ${Forms.MD.LabelSlot.Padding};
+
+  .blr-input-icon {
+    position: absolute;
+    color: ${Forms.Placeholder.Default.Rest};
+  }
+
+  &.error-input {
+    .blr-input-icon {
+      color: ${Forms.Input.Error.Rest.color};
+    }
+  }
+
   &.sm {
     padding-bottom: ${Forms.SM.LabelSlot.Padding};
+    margin: ${Forms.SM.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.SM.IconPaddingRight};
+    }
   }
+
+  &.md {
+    padding-bottom: ${Forms.MD.LabelSlot.Padding};
+    margin: ${Forms.MD.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.MD.IconPaddingRight};
+    }
+  }
+
   &.lg {
     padding-bottom: ${Forms.LG.LabelSlot.Padding};
+    margin: ${Forms.LG.InputSlot.Margin};
+
+    .blr-input-icon {
+      right: ${Select.LG.IconPaddingRight};
+    }
   }
 }
-.blr-form-hint, .blr-counter {
+
+.hint-wrapper {
   display: flex;
-  align-items: center;
-  word-break: break-all;
-  padding: ${Forms.MD.CaptionComponent.Padding};
-  font-weight: ${Forms.MD.Caption.fontWeight};
-  font-size: ${Forms.MD.Caption.fontSize};
-  font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
-  line-height: ${Forms.MD.Caption.lineHeight};
-  margin: ${Forms.MD.CaptionSlot.Margin};
-  gap: ${Forms.MD.CaptionComponent.ItemSpacing};
-  color: ${Forms.Caption.Hint};
+
   &.sm {
-    padding: ${Forms.SM.CaptionComponent.Padding};
+    margin: ${Forms.SM.CaptionSlot.Margin};
+  }
+
+  &.md {
+    margin: ${Forms.MD.CaptionSlot.Margin};
+  }
+
+  &.lg {
+    margin: ${Forms.MD.CaptionSlot.Margin};
+  }
+}
+
+.blr-counter {
+  &.sm {
+    font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
     font-weight: ${Forms.SM.Caption.fontWeight};
     font-size: ${Forms.SM.Caption.fontSize};
     font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
     line-height: ${Forms.SM.Caption.lineHeight};
-    margin: ${Forms.SM.CaptionSlot.Margin};
-    gap: ${Forms.SM.CaptionComponent.ItemSpacing};
   }
-  &.lg {
-    padding: ${Forms.LG.CaptionComponent.Padding};
+
+  &.md {
+    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+    font-weight: ${Forms.MD.Caption.fontWeight};
+    font-size: ${Forms.MD.Caption.fontSize};
+    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+    line-height: ${Forms.MD.Caption.lineHeight};
+  }
+
+  &.md {
+    font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
     font-weight: ${Forms.LG.Caption.fontWeight};
     font-size: ${Forms.LG.Caption.fontSize};
     font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
     line-height: ${Forms.LG.Caption.lineHeight};
-    margin: ${Forms.LG.CaptionSlot.Margin};
-    gap: ${Forms.LG.CaptionComponent.ItemSpacing};
   }
-  .blr-caption-text {
-    padding-left: ${Forms.MD.LabelSlot.ItemSpacing};
+}
+.blr-form-hint, .blr-counter {
+  display: flex;
+  align-items: flex-start;
+  word-break: break-all;
+  .label-wrapper {
+    padding: 0rem 0px;
+    display: flex;
+    .blr-caption-text {
+      color: ${Forms.Caption.Hint};
+    }
   }
   &.error {
     color: ${Forms.Caption.Error};
+    .label-wrapper {
+      .blr-caption-text {
+        color: ${Forms.Caption.Error};
+      }
+    }
+  }
+  &.sm {
+    padding: ${Forms.SM.CaptionComponent.Padding};
+    gap: ${Forms.SM.CaptionComponent.ItemSpacing};
+    .icon-wrapper {
+      padding: ${Forms.SM.CaptionComponent.IconWrapper.Padding}
+    }
+    .label-wrapper {
+      padding: ${Forms.SM.CaptionComponent.CaptionLabelWrapper.Padding};
+      .blr-caption-text {
+        font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+        font-weight: ${Forms.SM.Caption.fontWeight};
+        font-size: ${Forms.SM.Caption.fontSize};
+        font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
+        line-height: ${Forms.SM.Caption.lineHeight};
+      }
+    }
+  }
+  &.md {
+    padding: ${Forms.MD.CaptionComponent.Padding};
+    gap: ${Forms.MD.CaptionComponent.ItemSpacing};
+    .icon-wrapper {
+      padding: ${Forms.MD.CaptionComponent.IconWrapper.Padding}
+    }
+    .label-wrapper {
+      padding: ${Forms.MD.CaptionComponent.CaptionLabelWrapper.Padding};
+      .blr-caption-text {
+        font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
+        font-weight: ${Forms.MD.Caption.fontWeight};
+        font-size: ${Forms.MD.Caption.fontSize};
+        line-height: ${Forms.MD.Caption.lineHeight};
+      }
+    }
+  }
+  &.lg {
+    padding: ${Forms.LG.CaptionComponent.Padding};
+    gap: ${Forms.LG.CaptionComponent.ItemSpacing};
+    .icon-wrapper {
+      padding: ${Forms.LG.CaptionComponent.IconWrapper.Padding}
+    }
+    .label-wrapper {
+      padding: ${Forms.LG.CaptionComponent.CaptionLabelWrapper.Padding};
+      .blr-caption-text {
+        font-weight: ${Forms.LG.Caption.fontWeight};
+        font-size: ${Forms.LG.Caption.fontSize};
+        font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
+        line-height: ${Forms.LG.Caption.lineHeight};
+      }
+    }
   }
 }
 .blr-form-label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   color: ${Forms.Label.Rest};
   &:focus {
     color: ${Forms.Label.Focus};
@@ -294,6 +381,7 @@ export const form = css`
 .error {
   color: ${Forms.Caption.Error};
 }
+
 .hint {
   color: ${Forms.Caption.Hint};
 }

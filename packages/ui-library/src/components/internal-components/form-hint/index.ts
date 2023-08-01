@@ -3,15 +3,17 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, HintVariantType } from '../../../globals/types';
 import { BlrIconRenderFunction } from '../icon';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { form } from '../../../foundation/semantic-tokens/form.css';
+import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { counter } from '../../../foundation/component-tokens/feedback.css';
 
 @customElement('blr-form-hint')
 export class BlrFormHint extends LitElement {
-  static styles = [form];
+  static styles = [counter, form];
 
   @property() message?: string;
-  @property() icon?: IconType;
+  @property() icon?: SizelessIconType;
   @property() variant: HintVariantType = 'hint';
   @property() size: FormSizesType = 'md';
   @property() childElement?: TemplateResult<1>;
@@ -23,11 +25,25 @@ export class BlrFormHint extends LitElement {
       [`${this.size}`]: this.size,
     });
 
-    return html`<span class=${classes}>
-      ${BlrIconRenderFunction({ icon: this.icon, size: this.size, hideAria: true })}
-      <span class="blr-caption-text">${this.message}</span>
+    const iconClasses = classMap({
+      'blr-icon': true,
+      [`${this.size}`]: this.size || 'md',
+    });
+
+    return html`<div class=${classes}>
+      <div class="icon-wrapper">
+        ${BlrIconRenderFunction({
+          icon: calculateIconName(this.icon, 'sm'),
+          size: 'sm',
+          classMap: iconClasses,
+          hideAria: true,
+        })}
+      </div>
+      <div class="label-wrapper">
+        <span class="blr-caption-text">${this.message}</span>
+      </div>
       ${this.childElement}
-    </span>`;
+    </div>`;
   }
 }
 

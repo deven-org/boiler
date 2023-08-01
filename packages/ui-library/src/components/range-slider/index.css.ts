@@ -1,4 +1,4 @@
-import { css } from 'lit';
+import { css } from "lit";
 
 export const styleCustom = css`
   .single-range {
@@ -8,15 +8,15 @@ export const styleCustom = css`
     margin: 70px auto;
   }
 
-  input[type='range'] {
+  input[type="range"] {
     width: 100%;
     max-width: 100%;
     margin-left: 0;
   }
 
-  input[type='range'],
-  input[type='range']::-webkit-slider-runnable-track,
-  input[type='range']::-webkit-slider-thumb {
+  input[type="range"],
+  input[type="range"]::-webkit-slider-runnable-track,
+  input[type="range']::-webkit-slider-thumb {
     -webkit-appearance: none;
 
     &::-webkit-slider-thumb {
@@ -143,7 +143,7 @@ export const styleCustom = css`
   }
 
   .range__numbers p::before {
-    content: '';
+    content: "";
     display: block;
     margin: 0 auto 3px;
     height: 6px;

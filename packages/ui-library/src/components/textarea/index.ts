@@ -8,9 +8,8 @@ import { counter } from '../../foundation/component-tokens/feedback.css';
 import { FormSizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { iconButton } from '../../foundation/component-tokens/action.css';
-import { calculateIconName } from '../../utils/calculate-icon-name';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
@@ -34,7 +33,7 @@ export class BlrTextarea extends LitElement {
   @property() errorMessage?: string;
   @property() showHint = true;
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() isResizeable?: boolean;
   @property() rows?: number;
   @property() cols?: number;
@@ -110,7 +109,7 @@ export class BlrTextarea extends LitElement {
                   ${BlrFormHintRenderFunction({
                     message: this.hasError ? this.errorMessage : this.hintText,
                     variant: this.hasError ? 'error' : 'hint',
-                    icon: calculateIconName(this.hintIcon, this.size),
+                    icon: this.hintIcon,
                     size: this.size,
                     childElement: html`<div class="blr-counter ${counterClasses}">
                       ${this.count}/${this.maxLength}
@@ -118,10 +117,9 @@ export class BlrTextarea extends LitElement {
                   })}
                 `
               : html`<div class="blr-form-hint">
-                  <div class="brl-counter ${counterClasses}">${this.count}/${this.maxLength}</div>
+                  <div class="blr-counter ${counterClasses}">${this.count}/${this.maxLength}</div>
                 </div>`
           }
-
         </div>
       </div>
     `;

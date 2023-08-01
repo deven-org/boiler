@@ -43,6 +43,7 @@ export const checkbox = css`
         min-width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
         height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
         min-height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
+        margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
       }
       .label-wrapper {
         padding-top: ${Checkbox.SM.ContentCol.PaddingTop};
@@ -60,6 +61,7 @@ export const checkbox = css`
           min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
           height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
           min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
+          margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
           &:after {
             width: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
             height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
@@ -86,6 +88,7 @@ export const checkbox = css`
         min-width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
         height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
         min-height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
+        margin-top: ${Checkbox.MD.ControlWrapper.TopMargin};
       }
       .label-wrapper {
         padding-top: ${Checkbox.MD.ContentCol.PaddingTop};
@@ -103,6 +106,7 @@ export const checkbox = css`
           min-width: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
           height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
           min-height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
+          margin-top: ${Checkbox.MD.ControlWrapper.TopMargin};
           &:after {
             width: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
             height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
@@ -129,6 +133,7 @@ export const checkbox = css`
         min-width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
         height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
         min-height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
+        margin-top: ${Checkbox.LG.ControlWrapper.TopMargin};
       }
       .label-wrapper {
         padding-top: ${Checkbox.LG.ContentCol.PaddingTop};
@@ -146,6 +151,7 @@ export const checkbox = css`
           min-width: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
           height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
           min-height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
+          margin-top: ${Checkbox.LG.ControlWrapper.TopMargin};
           &:after {
             width: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
             height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};

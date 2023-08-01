@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 Jul 2023 09:30:42 GMT
+ * Generated on Tue, 01 Aug 2023 15:08:22 GMT
  */
 
 export const componentTokens = {
@@ -94,12 +94,6 @@ export const componentTokens = {
           Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
         },
       },
-    },
-    Neutral: {
-      Surface: 'hsla(0, 0%, 100%, 1)',
-      SurfaceStroke: '#00000000',
-      Text: 'hsla(220, 10%, 30%,1) ',
-      Icon: 'hsla(220, 10%, 30%,1) ',
     },
     Warning: {
       Surface: 'hsla(50, 80%, 50%,0.1) ',
@@ -545,7 +539,117 @@ export const componentTokens = {
         ControlWrapper: { TopMargin: '0.25rem' },
       },
     },
+    Select: {
+      SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
+      MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
+      LG: { InputFieldPadding: '0.75rem 48px 0.75rem 16px', IconPaddingRight: '16px' },
+    },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
+    ToggleSwitch: {
+      A11yOffBorderRadius: '9999px',
+      Control: {
+        Background: {
+          Unselected: {
+            Fill: {
+              Rest: 'hsla(220, 10%, 70%,1) ',
+              Hover: 'hsla(220, 10%, 60%,1) ',
+              Pressed: 'hsla(220, 10%, 50%,1) ',
+              Focus: 'hsla(220, 10%, 70%,1) ',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 70%,1) ',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+            },
+          },
+          Selected: {
+            Fill: {
+              Rest: 'hsla(100, 65%, 40%,1) ',
+              Hover: 'hsla(100, 65%, 30%,1) ',
+              Pressed: 'hsla(100, 65%, 20%,1) ',
+              Focus: 'hsla(100, 65%, 40%,1) ',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 70%,1) ',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+            },
+          },
+        },
+        Foreground: {
+          Unselected: {
+            Fill: {
+              Rest: 'hsla(0, 0%, 100%, 1)',
+              Hover: 'hsla(0, 0%, 100%, 1)',
+              Pressed: 'hsla(0, 0%, 100%, 1)',
+              Focus: 'hsla(0, 0%, 100%, 1)',
+              Disabled: 'hsla(0, 0%, 100%, 1)',
+              ReadOnly: 'hsla(0, 0%, 100%, 1)',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+            },
+          },
+          Selected: {
+            Fill: {
+              Rest: 'hsla(0, 0%, 100%, 1)',
+              Hover: 'hsla(0, 0%, 100%, 1)',
+              Pressed: 'hsla(0, 0%, 100%, 1)',
+              Focus: 'hsla(0, 0%, 100%, 1)',
+              Disabled: 'hsla(0, 0%, 100%, 1)',
+              ReadOnly: 'hsla(0, 0%, 100%, 1)',
+            },
+            Stroke: {
+              Rest: '#00000000',
+              Hover: '#00000000',
+              Pressed: '#00000000',
+              Focus: '#00000000',
+              Disabled: '#00000000',
+              ReadOnly: '#00000000',
+            },
+          },
+        },
+        SM: {
+          A11yIcon: { Sizing: '1rem' },
+          Knob: { Sizing: '1rem' },
+          Background: { Width: '2.25rem', Height: '1.25rem', Padding: '2px' },
+          IconContainer: { PaddingLeftRight: '0.125rem' },
+          LabelGap: '8px',
+        },
+        MD: {
+          A11yIcon: { Sizing: '1rem' },
+          Knob: { Sizing: '1.25rem' },
+          Background: { Width: '2.75rem', Height: '1.5rem', Padding: '2px' },
+          IconContainer: { PaddingLeftRight: '0.125rem' },
+          LabelGap: '8px',
+        },
+        LG: {
+          Background: { Padding: '2px', Width: '3.25rem', Height: '1.75rem' },
+          A11yIcon: { Sizing: '1rem' },
+          Knob: { Sizing: '1.5rem' },
+          IconContainer: { PaddingLeftRight: '0.219rem' },
+          LabelGap: '8px',
+        },
+      },
+      SM: { Gap: '0.5rem', ContentColGap: '0rem' },
+      MD: { Gap: '0.5rem', ContentColGap: '0rem' },
+      LG: { Gap: '0.5rem', ContentColGap: '0rem' },
+    },
   },
   UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
 };

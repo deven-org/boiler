@@ -9,7 +9,6 @@ import { styleCustom } from './index.css';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { checkbox } from '../../foundation/component-tokens/checkbox.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-import { calculateIconName } from '../../utils/calculate-icon-name';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-checkbox')
@@ -87,7 +86,7 @@ export class BlrCheckbox extends LitElement {
                   message: this.hintMessage,
                   variant: 'hint',
                   size: this.size,
-                  icon: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : undefined,
+                  icon: this.hintIcon ? this.hintIcon : undefined,
                 })}
               </div>
             `
@@ -99,7 +98,7 @@ export class BlrCheckbox extends LitElement {
                   message: this.errorMessage,
                   variant: 'error',
                   size: this.size,
-                  icon: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : undefined,
+                  icon: this.errorIcon ? this.errorIcon : undefined,
                 })}
               </div>
             `
