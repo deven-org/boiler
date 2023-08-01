@@ -7,7 +7,7 @@ import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 
 import { IconType } from '@boiler/icons';
-import { form } from '../../foundation/semantic-tokens/form.css';
+import { form, select } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -21,7 +21,7 @@ type Option = {
 
 @customElement('blr-select')
 export class BlrSelect extends LitElement {
-  static styles = [styleCustom, form];
+  static styles = [styleCustom, form, select];
 
   @property() selectId!: string;
   @property() labelAppendix?: string;
@@ -65,33 +65,28 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
-    const classes = classMap({
-      [`${this.size}`]: this.size || 'md',
-      disabled: this.disabled || false,
-    });
-
     const inputClasses = classMap({
       'error': this.hasError || false,
       'error-input': this.hasError || false,
-      [`${this.size}`]: this.size || 'md',
+      [`${this.size || 'md'}`]: this.size || 'md',
     });
 
     const iconClasses = classMap({
       'blr-input-icon': true,
-      [`${this.size}`]: this.size || 'md',
+      [`${this.size || 'md'}`]: this.size || 'md',
     });
 
     return html`
-      <div class="blr-select ${classes}">
+      <div class="blr-select">
         ${this.hasLabel
           ? BlrFormLabelRenderFunction({
               labelText: this.label,
               labelAppendix: this.labelAppendix,
-              labelSize: 'md',
+              labelSize: this.size,
               forValue: this.selectId,
             })
           : nothing}
-        <div class="blr-input-inner-container">
+        <div class="blr-input-inner-container ${inputClasses}">
           <select
             class="blr-form-element ${inputClasses}"
             id=${this.selectId || nothing}
@@ -115,12 +110,14 @@ export class BlrSelect extends LitElement {
 
           ${this.renderTrailingIcon(iconClasses)}
         </div>
-        ${BlrFormHintRenderFunction({
-          message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
-          variant: this.hasError ? 'error' : 'hint',
-          size: 'sm',
-          icon: this.hintIcon,
-        })}
+        <div class="hint-wrapper ${this.size}">
+          ${BlrFormHintRenderFunction({
+            message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
+            variant: this.hasError ? 'error' : 'hint',
+            size: 'sm',
+            icon: this.hintIcon,
+          })}
+        </div>
       </div>
     `;
   }

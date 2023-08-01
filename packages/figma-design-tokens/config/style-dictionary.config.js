@@ -63,7 +63,10 @@ const componentTypes = [
   'Checkbox',
   'ToggleSwitch',
   'Feedback',
-  'Counter'
+  'Counter',
+  'Error',
+  'Warning',
+  'Select'
 ];
 
 StyleDictionary.registerFormat({

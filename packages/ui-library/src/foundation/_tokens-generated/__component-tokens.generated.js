@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 28 Jul 2023 13:57:27 GMT
+ * Generated on Tue, 01 Aug 2023 10:44:33 GMT
  */
 
 export const componentTokens = {
@@ -94,6 +94,18 @@ export const componentTokens = {
           Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
         },
       },
+    },
+    Warning: {
+      Surface: 'hsla(50, 80%, 50%,0.1) ',
+      SurfaceStroke: 'hsla(50, 80%, 50%,1) ',
+      Text: 'hsla(50, 80%, 20%,1) ',
+      Icon: 'hsla(50, 80%, 50%,1) ',
+    },
+    Error: {
+      Surface: 'hsla(350, 65%, 80%,0.1) ',
+      SurfaceStroke: 'hsla(350, 65%, 50%,1) ',
+      Text: 'hsla(350, 65%, 30%,1) ',
+      Icon: 'hsla(350, 65%, 50%,1) ',
     },
   },
   Forms: {
@@ -526,6 +538,11 @@ export const componentTokens = {
         ContentRow: { ItemSpacing: '12px', Padding: '0.5rem 0' },
         ControlWrapper: { TopMargin: '0.25rem' },
       },
+    },
+    Select: {
+      SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
+      MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
+      LG: { InputFieldPadding: '0.75rem 48px 0.75rem 16px', IconPaddingRight: '16px' },
     },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
     ToggleSwitch: {
