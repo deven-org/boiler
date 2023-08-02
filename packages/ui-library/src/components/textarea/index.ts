@@ -2,10 +2,9 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { form } from '../../foundation/semantic-tokens/form.css';
-import { textarea } from '../../foundation/component-tokens/form.css';
+import { form, textarea } from '../../foundation/semantic-tokens/form.css';
 import { counter } from '../../foundation/component-tokens/feedback.css';
-import { FormSizesType } from '../../globals/types';
+import { FormSizesType, WarningLimits } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
@@ -28,6 +27,9 @@ export class BlrTextarea extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() maxLength?: number;
+  @property() warningLimitType: WarningLimits = 'warningLimitInt';
+  @property() warningLimitInt = 105;
+  @property() warningLimitPer = 75;
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
@@ -75,34 +77,43 @@ export class BlrTextarea extends LitElement {
     const counterClasses = classMap({
       [`${this.size}`]: this.size,
       ['limit-reached']: this.count >= (this.maxLength || 0),
-      ['limit-close']: this.maxLength
-        ? this.count >= (this.maxLength / 100) * 75 && this.count < this.maxLength
-        : false,
+      ['limit-close-int']:
+        this.maxLength && this.warningLimitType === 'warningLimitInt'
+          ? this.count >= this.warningLimitInt && this.count < this.maxLength
+          : false,
+      ['limit-close-per']:
+        this.maxLength && this.warningLimitType === 'warningLimitPer'
+          ? this.count >= (this.maxLength / 100) * this.warningLimitPer && this.count < this.maxLength
+          : false,
     });
 
     return html`
-      <div class="${classes}">
-        ${BlrFormLabelRenderFunction({
-          labelText: this.label,
-          labelSize: this.size,
-          labelAppendix: this.labelAppendix,
-          forValue: this.textareaId,
-        })}
-        <textarea
-          class="blr-form-element blr-textarea ${textareaClasses}"
-          id="${this.textareaId || nothing}"
-          maxlength="${this.maxLength || nothing}"
-          cols="${this.cols || nothing}"
-          rows="${this.rows || nothing}"
-          placeholder="${this.placeholder || nothing}"
-          ?required="${this.required}"
-          ?disabled="${this.disabled}"
-          @input="${this.onChange}"
-          @focus="${this.onFocus}"
-          @select="${this.onSelect}"
-          @keyup="${this.updateCounter}"
-        >${this.value}</textarea>
-
+      <div class="${classes} blr-textarea">
+        <div class="label-wrapper">
+          ${BlrFormLabelRenderFunction({
+            labelText: this.label,
+            labelSize: this.size,
+            labelAppendix: this.labelAppendix,
+            forValue: this.textareaId,
+          })}
+        </div>
+        <div class="input-wrapper">
+          <textarea
+            class="blr-form-element textarea-input-control ${textareaClasses}"
+            id="${this.textareaId || nothing}"
+            maxlength="${this.maxLength || nothing}"
+            cols="${this.cols || nothing}"
+            rows="${this.rows || nothing}"
+            placeholder="${this.placeholder || nothing}"
+            ?required="${this.required}"
+            ?disabled="${this.disabled}"
+            @input="${this.onChange}"
+            @focus="${this.onFocus}"
+            @select="${this.onSelect}"
+            @keyup="${this.updateCounter}"
+          >${this.value}</textarea>
+        </div>
+        <div class="hint-wrapper">
           ${
             this.showHint
               ? html`
@@ -120,6 +131,7 @@ export class BlrTextarea extends LitElement {
                   <div class="blr-counter ${counterClasses}">${this.count}/${this.maxLength}</div>
                 </div>`
           }
+          </div>
         </div>
       </div>
     `;
@@ -137,6 +149,9 @@ export const BlrTextareaRenderFunction = ({
   disabled,
   size,
   maxLength,
+  warningLimitType,
+  warningLimitInt,
+  warningLimitPer,
   cols,
   rows,
   errorMessage,
@@ -152,10 +167,14 @@ export const BlrTextareaRenderFunction = ({
   value,
 }: BlrTextareaType) => {
   return html`<blr-textarea
+    class=${isResizeable ? nothing : `parent-width`}
     .textareaId=${textareaId}
     .label=${label}
     .size=${size}
     .maxLength=${maxLength}
+    .warningLimitType=${warningLimitType}
+    .warningLimitInt=${warningLimitInt}
+    .warningLimitPer=${warningLimitPer}
     .cols=${cols}
     .rows=${rows}
     .value=${value}

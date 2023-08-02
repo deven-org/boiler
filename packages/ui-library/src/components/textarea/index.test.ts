@@ -18,16 +18,19 @@ const sampleParams: BlrTextareaType = {
   hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfoLg',
   showHint: true,
+  warningLimitType: 'warningLimitInt',
+  warningLimitInt: 105,
+  warningLimitPer: 75,
 };
 
 describe('blr-textarea', () => {
   it('is having a textarea containing the right className', async () => {
     const element = await fixture(BlrTextareaRenderFunction(sampleParams));
-
-    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
+    const textarea = querySelectorDeep('textarea', inputWrapper?.getRootNode() as HTMLElement);
     const className = textarea?.className;
 
-    expect(className).to.contain('blr-textarea');
+    expect(className).to.contain('textarea-input-control');
   });
 
   it('is is showing random placeholder', async () => {
@@ -94,12 +97,8 @@ describe('blr-textarea', () => {
 
     expect(rect).have.property('width');
     expect(rect).have.property('height');
-    // expect(rect).have.property('x');
-    // expect(rect).have.property('y');
 
     expect(rect?.width).to.be.greaterThan(0);
     expect(rect?.height).to.be.greaterThan(0);
-    // expect((rect?.x || 0) + (rect?.width || 0)).not.to.be.lessThan(0);
-    // expect((rect?.y || 0) + (rect?.height || 0)).not.to.be.lessThan(0);
   });
 });

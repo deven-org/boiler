@@ -2,159 +2,164 @@ import { componentTokens, semanticTokens } from "../_tokens-generated/index.gene
 
 import { css } from "nested-css-to-flat/lit-css";
 
-const { Forms } = semanticTokens;
-const { Select } = componentTokens.Forms;
+const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix } =
+  semanticTokens.Forms;
+const { Select, TextArea } = componentTokens.Forms;
 
 export const form = css`
 .blr-form-element {
   all: initial;
   width: 100%;
-  color: ${Forms.UserInput.Default.Rest};
-  border: ${Forms.Input.Default.Rest.width} ${Forms.Input.Default.Rest.style} ${Forms.Input.Default.Rest.color};
-  border-radius: ${Forms.InputBorderRadius};
+  color: ${UserInput.Default.Rest};
+  background-color: ${SurfaceFill.Default.Rest};
+  font-weight: ${MD.UserInput.fontWeight};
+  font-size: ${MD.UserInput.fontSize};
+  font-family: ${MD.UserInput.fontFamily}, sans-serif;
+  border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
+  border-radius: ${InputBorderRadius};
 
   box-sizing: border-box;
-  color: ${Forms.UserInput.Default.Rest};
-  background-color: ${Forms.SurfaceFill.Default.Rest};
+  color: ${UserInput.Default.Rest};
+  background-color: ${SurfaceFill.Default.Rest};
   &::placeholder {
-    color: ${Forms.Placeholder.Default.Rest};
+    color: ${Placeholder.Default.Rest};
   }
 
   &:hover {
-    border-width: ${Forms.Input.Default.Hover.width};
-    border-style: ${Forms.Input.Default.Hover.style};
-    border-color: ${Forms.Input.Default.Rest.color};
-    color: ${Forms.UserInput.Default.Hover};
-    background-color: ${Forms.SurfaceFill.Default.Hover};
+    border-width: ${Input.Default.Hover.width};
+    border-style: ${Input.Default.Hover.style};
+    border-color: ${Input.Default.Rest.color};
+    color: ${UserInput.Default.Hover};
+    background-color: ${SurfaceFill.Default.Hover};
 
     &::placeholder {
-      color: ${Forms.Placeholder.Default.Hover};
+      color: ${Placeholder.Default.Hover};
     }
   }
 
   &:active{
-    border-width: ${Forms.Input.Default.Pressed.width};
-    border-style: ${Forms.Input.Default.Pressed.style};
+    border-width: ${Input.Default.Pressed.width};
+    border-style: ${Input.Default.Pressed.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Pressed.width} ${Forms.Input.Default.Pressed.style} ${Forms.Input.Default.Pressed.color};
-    color: ${Forms.UserInput.Default.Pressed};
-    background-color: ${Forms.SurfaceFill.Default.Pressed};
+    outline: ${Input.Default.Pressed.width} ${Input.Default.Pressed.style} ${Input.Default.Pressed.color};
+    color: ${UserInput.Default.Pressed};
+    background-color: ${SurfaceFill.Default.Pressed};
 
     &::placeholder {
-      color: ${Forms.Placeholder.Default.Pressed};
+      color: ${Placeholder.Default.Pressed};
     }
   }
 
   &[readonly] {
-    border-width: ${Forms.Input.Default.ReadOnly.width};
-    border-style: ${Forms.Input.Default.ReadOnly.style};
+    border-width: ${Input.Default.ReadOnly.width};
+    border-style: ${Input.Default.ReadOnly.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Hover.width} ${Forms.Input.Default.ReadOnly.style} ${Forms.Input.Default.ReadOnly.color};
-    color: ${Forms.UserInput.Default.ReadOnly};
-    background-color: ${Forms.SurfaceFill.Default.ReadOnly};
+    outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
+    color: ${UserInput.Default.ReadOnly};
+    background-color: ${SurfaceFill.Default.ReadOnly};
 
     &::placeholder {
-      color: ${Forms.Placeholder.Default.ReadOnly};
+      color: ${Placeholder.Default.ReadOnly};
     }
   }
 
   &:disabled {
-    border-width: ${Forms.Input.Default.ReadOnly.width};
-    border-style: ${Forms.Input.Default.Disabled.style};
+    border-width: ${Input.Default.ReadOnly.width};
+    border-style: ${Input.Default.Disabled.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Disabled.width} ${Forms.Input.Default.Disabled.style} ${Forms.Input.Default.Disabled.color};
-    color: ${Forms.UserInput.Default.Disabled};
-    background-color: ${Forms.SurfaceFill.Default.Disabled};
+    outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
+    color: ${UserInput.Default.Disabled};
+    background-color: ${SurfaceFill.Default.Disabled};
 
     &::placeholder {
-      color: ${Forms.Placeholder.Default.Disabled};
+      color: ${Placeholder.Default.Disabled};
     }
   }
 
   &:focus {
-    border-width: ${Forms.Input.Default.Rest.width};
-    border-style: ${Forms.Input.Default.Rest.style};
+    border-width: ${Input.Default.Rest.width};
+    border-style: ${Input.Default.Rest.style};
     border-color: transparent;
-    outline: ${Forms.Input.Default.Focus.width} ${Forms.Input.Default.Focus.style} ${Forms.Input.Default.Focus.color};
-    color: ${Forms.UserInput.Default.Focus};
-    background-color: ${Forms.SurfaceFill.Default.Focus};
+    outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+    color: ${UserInput.Default.Focus};
+    background-color: ${SurfaceFill.Default.Focus};
 
     &::placeholder {
-      color: ${Forms.Placeholder.Default.Focus};
+      color: ${Placeholder.Default.Focus};
     }
   }
 
   &.error-input {
-    border-width: ${Forms.Input.Error.Rest.width};
-    border-style: ${Forms.Input.Error.Rest.style};
-    border-color: ${Forms.Input.Error.Rest.color};
-    color: ${Forms.UserInput.Error.Rest};
-    background-color: ${Forms.SurfaceFill.Error.Rest};
+    border-width: ${Input.Error.Rest.width};
+    border-style: ${Input.Error.Rest.style};
+    border-color: ${Input.Error.Rest.color};
+    color: ${UserInput.Error.Rest};
+    background-color: ${SurfaceFill.Error.Rest};
 
     &::placeholder {
-      color: ${Forms.Placeholder.Error.Rest};
+      color: ${Placeholder.Error.Rest};
     }
 
     &:hover {
-      border-width: ${Forms.Input.Error.Hover.width};
-      border-style: ${Forms.Input.Error.Hover.style};
-      border-color: ${Forms.Input.Error.Hover.color};
-      color: ${Forms.UserInput.Error.Hover};
-      background-color: ${Forms.SurfaceFill.Error.Hover};
+      border-width: ${Input.Error.Hover.width};
+      border-style: ${Input.Error.Hover.style};
+      border-color: ${Input.Error.Hover.color};
+      color: ${UserInput.Error.Hover};
+      background-color: ${SurfaceFill.Error.Hover};
 
       &::placeholder {
-        color: ${Forms.Placeholder.Error.Hover};
+        color: ${Placeholder.Error.Hover};
       }
     }
 
     &:active {
-      border-width: ${Forms.Input.Error.Pressed.width};
-      border-style: ${Forms.Input.Error.Pressed.style};
-      border-style: ${Forms.Input.Error.Pressed.color};
-      outline: ${Forms.Input.Error.Pressed.width} ${Forms.Input.Error.Pressed.style} ${Forms.Input.Error.Pressed.color};
-      color: ${Forms.UserInput.Error.Pressed};
-      background-color: ${Forms.SurfaceFill.Error.Pressed};
+      border-width: ${Input.Error.Pressed.width};
+      border-style: ${Input.Error.Pressed.style};
+      border-style: ${Input.Error.Pressed.color};
+      outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
+      color: ${UserInput.Error.Pressed};
+      background-color: ${SurfaceFill.Error.Pressed};
 
       &::placeholder {
-        color: ${Forms.Placeholder.Error.Pressed};
+        color: ${Placeholder.Error.Pressed};
       }
     }
 
     &:focus {
-      border-width: ${Forms.Input.Error.Rest.width};
-      border-style: ${Forms.Input.Error.Rest.style};
+      border-width: ${Input.Error.Rest.width};
+      border-style: ${Input.Error.Rest.style};
       border-color: transparent;
-      outline: ${Forms.Input.Error.Focus.width} ${Forms.Input.Error.Focus.style} ${Forms.Input.Error.Focus.color};
-      color: ${Forms.UserInput.Error.Focus};
-      background-color: ${Forms.SurfaceFill.Error.Focus};
+      outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+      color: ${UserInput.Error.Focus};
+      background-color: ${SurfaceFill.Error.Focus};
 
       &::placeholder {
-        color: ${Forms.Placeholder.Error.Focus};
+        color: ${Placeholder.Error.Focus};
       }
     }
   }
 
   &.sm {
-    font-weight: ${Forms.SM.UserInput.fontWeight};
-    font-size: ${Forms.SM.UserInput.fontSize};
-    font-family: ${Forms.SM.UserInput.fontFamily}, sans-serif;
-    line-height: ${Forms.SM.UserInput.lineHeight};
+    font-weight: ${SM.UserInput.fontWeight};
+    font-size: ${SM.UserInput.fontSize};
+    font-family: ${SM.UserInput.fontFamily}, sans-serif;
+    line-height: ${SM.UserInput.lineHeight};
     padding: ${Select.SM.InputFieldPadding};
   }
 
   &.md {
-    font-weight: ${Forms.MD.UserInput.fontWeight};
-    font-size: ${Forms.MD.UserInput.fontSize};
-    font-family: ${Forms.MD.UserInput.fontFamily}, sans-serif;
-    line-height: ${Forms.MD.UserInput.lineHeight};
+    font-weight: ${MD.UserInput.fontWeight};
+    font-size: ${MD.UserInput.fontSize};
+    font-family: ${MD.UserInput.fontFamily}, sans-serif;
+    line-height: ${MD.UserInput.lineHeight};
     padding: ${Select.MD.InputFieldPadding};
   }
 
   &.lg {
-    font-weight: ${Forms.LG.UserInput.fontWeight};
-    font-size: ${Forms.LG.UserInput.fontSize};
-    font-family: ${Forms.LG.UserInput.fontFamily}, sans-serif;
-    line-height: ${Forms.LG.UserInput.lineHeight};
+    font-weight: ${LG.UserInput.fontWeight};
+    font-size: ${LG.UserInput.fontSize};
+    font-family: ${LG.UserInput.fontFamily}, sans-serif;
+    line-height: ${LG.UserInput.lineHeight};
     padding: ${Select.LG.InputFieldPadding};
   }
 }
@@ -166,18 +171,18 @@ export const form = css`
 
   .blr-input-icon {
     position: absolute;
-    color: ${Forms.Placeholder.Default.Rest};
+    color: ${Placeholder.Default.Rest};
   }
 
   &.error-input {
     .blr-input-icon {
-      color: ${Forms.Input.Error.Rest.color};
+      color: ${Input.Error.Rest.color};
     }
   }
 
   &.sm {
-    padding-bottom: ${Forms.SM.LabelSlot.Padding};
-    margin: ${Forms.SM.InputSlot.Margin};
+    padding-bottom: ${SM.LabelSlot.Padding};
+    margin: ${SM.InputSlot.Margin};
 
     .blr-input-icon {
       right: ${Select.SM.IconPaddingRight};
@@ -185,8 +190,8 @@ export const form = css`
   }
 
   &.md {
-    padding-bottom: ${Forms.MD.LabelSlot.Padding};
-    margin: ${Forms.MD.InputSlot.Margin};
+    padding-bottom: ${MD.LabelSlot.Padding};
+    margin: ${MD.InputSlot.Margin};
 
     .blr-input-icon {
       right: ${Select.MD.IconPaddingRight};
@@ -194,8 +199,8 @@ export const form = css`
   }
 
   &.lg {
-    padding-bottom: ${Forms.LG.LabelSlot.Padding};
-    margin: ${Forms.LG.InputSlot.Margin};
+    padding-bottom: ${LG.LabelSlot.Padding};
+    margin: ${LG.InputSlot.Margin};
 
     .blr-input-icon {
       right: ${Select.LG.IconPaddingRight};
@@ -207,108 +212,118 @@ export const form = css`
   display: flex;
 
   &.sm {
-    margin: ${Forms.SM.CaptionSlot.Margin};
+    margin: ${SM.CaptionSlot.Margin};
   }
 
   &.md {
-    margin: ${Forms.MD.CaptionSlot.Margin};
+    margin: ${MD.CaptionSlot.Margin};
   }
 
   &.lg {
-    margin: ${Forms.MD.CaptionSlot.Margin};
+    margin: ${MD.CaptionSlot.Margin};
   }
 }
 
 .blr-counter {
   &.sm {
-    font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
-    font-weight: ${Forms.SM.Caption.fontWeight};
-    font-size: ${Forms.SM.Caption.fontSize};
-    font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
-    line-height: ${Forms.SM.Caption.lineHeight};
+    font-family: ${SM.Caption.fontFamily}, sans-serif;
+    font-weight: ${SM.Caption.fontWeight};
+    font-size: ${SM.Caption.fontSize};
+    font-family: ${SM.Caption.fontFamily}, sans-serif;
+    line-height: ${SM.Caption.lineHeight};
   }
 
   &.md {
-    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
-    font-weight: ${Forms.MD.Caption.fontWeight};
-    font-size: ${Forms.MD.Caption.fontSize};
-    font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
-    line-height: ${Forms.MD.Caption.lineHeight};
+    font-family: ${MD.Caption.fontFamily}, sans-serif;
+    font-weight: ${MD.Caption.fontWeight};
+    font-size: ${MD.Caption.fontSize};
+    font-family: ${MD.Caption.fontFamily}, sans-serif;
+    line-height: ${MD.Caption.lineHeight};
   }
 
-  &.md {
-    font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
-    font-weight: ${Forms.LG.Caption.fontWeight};
-    font-size: ${Forms.LG.Caption.fontSize};
-    font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
-    line-height: ${Forms.LG.Caption.lineHeight};
+  &.lg {
+    font-family: ${LG.Caption.fontFamily}, sans-serif;
+    font-weight: ${LG.Caption.fontWeight};
+    font-size: ${LG.Caption.fontSize};
+    font-family: ${LG.Caption.fontFamily}, sans-serif;
+    line-height: ${LG.Caption.lineHeight};
   }
 }
 .blr-form-hint, .blr-counter {
-  display: flex;
-  align-items: flex-start;
-  word-break: break-all;
-  .label-wrapper {
-    padding: 0rem 0px;
+  .hint-container {
     display: flex;
-    .blr-caption-text {
-      color: ${Forms.Caption.Hint};
+    align-items: flex-start;
+    word-break: break-all;
+    .label-wrapper {
+      padding: 0rem 0px;
+      display: flex;
+      .blr-caption-text {
+        color: ${Caption.Hint};
+      }
     }
   }
   &.error {
-    color: ${Forms.Caption.Error};
-    .label-wrapper {
-      .blr-caption-text {
-        color: ${Forms.Caption.Error};
+    color: ${Caption.Error};
+    .hint-container {
+      .label-wrapper {
+        .blr-caption-text {
+          color: ${Caption.Error};
+        }
       }
     }
   }
   &.sm {
-    padding: ${Forms.SM.CaptionComponent.Padding};
-    gap: ${Forms.SM.CaptionComponent.ItemSpacing};
-    .icon-wrapper {
-      padding: ${Forms.SM.CaptionComponent.IconWrapper.Padding}
-    }
-    .label-wrapper {
-      padding: ${Forms.SM.CaptionComponent.CaptionLabelWrapper.Padding};
-      .blr-caption-text {
-        font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
-        font-weight: ${Forms.SM.Caption.fontWeight};
-        font-size: ${Forms.SM.Caption.fontSize};
-        font-family: ${Forms.SM.Caption.fontFamily}, sans-serif;
-        line-height: ${Forms.SM.Caption.lineHeight};
+    .hint-container {
+      padding: ${SM.CaptionComponent.Padding};
+      gap: ${SM.CaptionComponent.ItemSpacing};
+      .icon-wrapper {
+        padding: ${SM.CaptionComponent.IconWrapper.Padding}
+      }
+      .label-wrapper {
+        padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
+        .blr-caption-text {
+          font-family: ${SM.Caption.fontFamily}, sans-serif;
+          font-weight: ${SM.Caption.fontWeight};
+          font-size: ${SM.Caption.fontSize};
+          font-family: ${SM.Caption.fontFamily}, sans-serif;
+          line-height: ${SM.Caption.lineHeight};
+        }
       }
     }
   }
   &.md {
-    padding: ${Forms.MD.CaptionComponent.Padding};
-    gap: ${Forms.MD.CaptionComponent.ItemSpacing};
-    .icon-wrapper {
-      padding: ${Forms.MD.CaptionComponent.IconWrapper.Padding}
-    }
-    .label-wrapper {
-      padding: ${Forms.MD.CaptionComponent.CaptionLabelWrapper.Padding};
-      .blr-caption-text {
-        font-family: ${Forms.MD.Caption.fontFamily}, sans-serif;
-        font-weight: ${Forms.MD.Caption.fontWeight};
-        font-size: ${Forms.MD.Caption.fontSize};
-        line-height: ${Forms.MD.Caption.lineHeight};
+    .hint-container {
+      padding: ${MD.CaptionComponent.Padding};
+      gap: ${MD.CaptionComponent.ItemSpacing};
+      .icon-wrapper {
+        padding: ${MD.CaptionComponent.IconWrapper.Padding}
+      }
+      .label-wrapper {
+        padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
+        .blr-caption-text {
+          font-family: ${MD.Caption.fontFamily}, sans-serif;
+          font-weight: ${MD.Caption.fontWeight};
+          font-size: ${MD.Caption.fontSize};
+          line-height: ${MD.Caption.lineHeight};
+        }
       }
     }
   }
   &.lg {
-    padding: ${Forms.LG.CaptionComponent.Padding};
-    gap: ${Forms.LG.CaptionComponent.ItemSpacing};
-    .icon-wrapper {
-      padding: ${Forms.LG.CaptionComponent.IconWrapper.Padding}
-    }
-    .label-wrapper {
-      padding: ${Forms.LG.CaptionComponent.CaptionLabelWrapper.Padding};
-      .blr-caption-text {
-        font-weight: ${Forms.LG.Caption.fontWeight};
-        font-size: ${Forms.LG.Caption.fontSize};
-        font-family: ${Forms.LG.Caption.fontFamily}, sans-serif;
-        line-height: ${Forms.LG.Caption.lineHeight};
+    .hint-container {
+      padding: ${LG.CaptionComponent.Padding};
+      gap: ${LG.CaptionComponent.ItemSpacing};
+      .icon-wrapper {
+        padding: ${LG.CaptionComponent.IconWrapper.Padding}
+      }
+      .label-wrapper {
+        padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
+        .blr-caption-text {
+          font-weight: ${LG.Caption.fontWeight};
+          font-size: ${LG.Caption.fontSize};
+          font-family: ${LG.Caption.fontFamily}, sans-serif;
+          line-height: ${LG.Caption.lineHeight};
+        }
       }
     }
   }
@@ -316,96 +331,154 @@ export const form = css`
 .blr-form-label {
   display: flex;
   align-items: center;
-  color: ${Forms.Label.Rest};
+  color: ${Label.Rest};
   &:focus {
-    color: ${Forms.Label.Focus};
+    color: ${Label.Focus};
   }
   &:hover {
-    color: ${Forms.Label.Hover};
+    color: ${Label.Hover};
   }
   &:disabled {
-    color: ${Forms.Label.Disabled};
+    color: ${Label.Disabled};
   }
   &[readonly] {
-    color: ${Forms.Label.ReadOnly};
+    color: ${Label.ReadOnly};
   }
   &.sm {
-    padding: ${Forms.SM.LabelSlot.Padding};
-    font-weight: ${Forms.SM.Label.fontWeight};
-    font-size: ${Forms.SM.Label.fontSize};
-    font-family: ${Forms.SM.Label.fontFamily}, sans-serif;
-    line-height: ${Forms.SM.Label.lineHeight};
-    gap: ${Forms.SM.FormsLabelComponent.ItemSpacing};
-    color: ${Forms.Label.Rest};
+    padding: ${SM.LabelSlot.Padding};
+    font-weight: ${SM.Label.fontWeight};
+    font-size: ${SM.Label.fontSize};
+    font-family: ${SM.Label.fontFamily}, sans-serif;
+    line-height: ${SM.Label.lineHeight};
+    gap: ${SM.FormsLabelComponent.ItemSpacing};
+    color: ${Label.Rest};
   }
   &.md {
-    padding: ${Forms.MD.LabelSlot.Padding};
-    font-weight: ${Forms.MD.Label.fontWeight};
-    font-size: ${Forms.MD.Label.fontSize};
-    font-family: ${Forms.MD.Label.fontFamily}, sans-serif;
-    line-height: ${Forms.MD.Label.lineHeight};
-    gap: ${Forms.MD.FormsLabelComponent.ItemSpacing};
+    padding: ${MD.LabelSlot.Padding};
+    font-weight: ${MD.Label.fontWeight};
+    font-size: ${MD.Label.fontSize};
+    font-family: ${MD.Label.fontFamily}, sans-serif;
+    line-height: ${MD.Label.lineHeight};
+    gap: ${MD.FormsLabelComponent.ItemSpacing};
   }
   &.lg {
-    padding: ${Forms.LG.LabelSlot.Padding};
-    font-weight: ${Forms.LG.Label.fontWeight};
-    font-size: ${Forms.LG.Label.fontSize};
-    font-family: ${Forms.LG.Label.fontFamily}, sans-serif;
-    line-height: ${Forms.LG.Label.lineHeight};
-    color: ${Forms.Label.Rest};
-    gap: ${Forms.LG.FormsLabelComponent.ItemSpacing};
+    padding: ${LG.LabelSlot.Padding};
+    font-weight: ${LG.Label.fontWeight};
+    font-size: ${LG.Label.fontSize};
+    font-family: ${LG.Label.fontFamily}, sans-serif;
+    line-height: ${LG.Label.lineHeight};
+    color: ${Label.Rest};
+    gap: ${LG.FormsLabelComponent.ItemSpacing};
   }
 }
 
 .blr-form-label-inline {
   flex: 1;
   &.sm {
-    font-weight: ${Forms.SM.LabelNextToControl.fontWeight};
-    font-size: ${Forms.SM.LabelNextToControl.fontSize};
-    font-family: ${Forms.SM.LabelNextToControl.fontFamily}, sans-serif;
-    line-height: ${Forms.SM.LabelNextToControl.lineHeight};
+    font-weight: ${SM.LabelNextToControl.fontWeight};
+    font-size: ${SM.LabelNextToControl.fontSize};
+    font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${SM.LabelNextToControl.lineHeight};
   }
   &.md {
-    font-weight: ${Forms.MD.LabelNextToControl.fontWeight};
-    font-size: ${Forms.MD.LabelNextToControl.fontSize};
-    font-family: ${Forms.MD.LabelNextToControl.fontFamily}, sans-serif;
-    line-height: ${Forms.MD.LabelNextToControl.lineHeight};
+    font-weight: ${MD.LabelNextToControl.fontWeight};
+    font-size: ${MD.LabelNextToControl.fontSize};
+    font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${MD.LabelNextToControl.lineHeight};
   }
   &.lg {
-    font-weight: ${Forms.LG.LabelNextToControl.fontWeight};
-    font-size: ${Forms.LG.LabelNextToControl.fontSize};
-    font-family: ${Forms.LG.LabelNextToControl.fontFamily}, sans-serif;
-    line-height: ${Forms.LG.LabelNextToControl.lineHeight};
+    font-weight: ${LG.LabelNextToControl.fontWeight};
+    font-size: ${LG.LabelNextToControl.fontSize};
+    font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
+    line-height: ${LG.LabelNextToControl.lineHeight};
   }
 }
 
 .blr-form-label-appendix {
-  padding-left: ${Forms.MD.LabelSlot.Padding};
-  font-weight: ${Forms.MD.LabelAppendix.fontWeight};
-  font-size: ${Forms.MD.LabelAppendix.fontSize};
-  font-family: ${Forms.MD.LabelAppendix.fontFamily}, sans-serif;
-  line-height: ${Forms.MD.LabelAppendix.lineHeight};
-  color: ${Forms.LabelAppendix.Rest};
+  padding-left: ${MD.LabelSlot.Padding};
+  font-weight: ${MD.LabelAppendix.fontWeight};
+  font-size: ${MD.LabelAppendix.fontSize};
+  font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
+  line-height: ${MD.LabelAppendix.lineHeight};
+  color: ${LabelAppendix.Rest};
   &.sm {
-    padding-left: ${Forms.SM.LabelSlot.Padding};
-    font-weight: ${Forms.SM.LabelAppendix.fontWeight};
-    font-size: ${Forms.SM.LabelAppendix.fontSize};
-    font-family: ${Forms.MD.LabelAppendix.fontFamily}, sans-serif;
-    line-height: ${Forms.MD.LabelAppendix.lineHeight};
+    padding-left: ${SM.LabelSlot.Padding};
+    font-weight: ${SM.LabelAppendix.fontWeight};
+    font-size: ${SM.LabelAppendix.fontSize};
+    font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
+    line-height: ${MD.LabelAppendix.lineHeight};
   }
   &.lg {
-    padding-left: ${Forms.LG.LabelSlot.Padding};
-    font-weight: ${Forms.LG.LabelAppendix.fontWeight};
-    font-size: ${Forms.LG.LabelAppendix.fontSize};
-    font-family: ${Forms.LG.LabelAppendix.fontFamily}, sans-serif;
-    line-height: ${Forms.LG.LabelAppendix.lineHeight};
+    padding-left: ${LG.LabelSlot.Padding};
+    font-weight: ${LG.LabelAppendix.fontWeight};
+    font-size: ${LG.LabelAppendix.fontSize};
+    font-family: ${LG.LabelAppendix.fontFamily}, sans-serif;
+    line-height: ${LG.LabelAppendix.lineHeight};
   }
 
 .error {
-  color: ${Forms.Caption.Error};
+  color: ${Caption.Error};
 }
 
 .hint {
-  color: ${Forms.Caption.Hint};
+  color: ${Caption.Hint};
 }
+`;
+
+export const textarea = css`
+  .blr-textarea {
+    &.sm {
+      .label-wrapper {
+        padding: ${SM.LabelSlot.Padding};
+      }
+
+      .input-wrapper {
+        margin: ${SM.InputSlot.Margin};
+
+        .textarea-input-control {
+          min-height: ${TextArea.SM.MinHeight};
+        }
+      }
+
+      .hint-wrapper {
+        margin: ${SM.CaptionSlot.Margin};
+      }
+    }
+
+    &.md {
+      .label-wrapper {
+        padding: ${MD.LabelSlot.Padding};
+      }
+
+      .input-wrapper {
+        margin: ${MD.InputSlot.Margin};
+
+        .textarea-input-control {
+          min-height: ${TextArea.MD.MinHeight};
+        }
+      }
+
+      .hint-wrapper {
+        margin: ${MD.CaptionSlot.Margin};
+      }
+    }
+
+    &.lg {
+      .label-wrapper {
+        padding: ${LG.LabelSlot.Padding};
+      }
+
+      .input-wrapper {
+        margin: ${LG.InputSlot.Margin};
+
+        .textarea-input-control {
+          min-height: ${TextArea.LG.MinHeight};
+        }
+      }
+
+      .hint-wrapper {
+        margin: ${LG.CaptionSlot.Margin};
+      }
+    }
+  }
 `;
