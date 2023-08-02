@@ -47,4 +47,39 @@ describe('blr-text-input', () => {
 
     expect(placeholder).to.be.equal(randomString);
   });
+
+  it('contains an eye icon when the input type is password', async () => {
+    const element = await fixture(
+      BlrTextInputRenderFunction({
+        ...sampleParams,
+        type: 'password'
+      })
+    );
+
+    const textInputContainer = querySelectorDeep('.blr-input-inner-container', element.getRootNode() as HTMLElement);
+    const passwordIcon = querySelectorDeep('blr-icon', textInputContainer?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', passwordIcon?.getRootNode() as HTMLElement);
+
+    const rect = svg?.getBoundingClientRect();
+
+    expect(rect).have.property('width');
+    expect(rect).have.property('height');
+
+    expect(rect?.width).to.be.greaterThan(0);
+    expect(rect?.height).to.be.greaterThan(0);
+  });
+
+  it('hides the label when "hasLabel" is false', async () => {
+    const element = await fixture(
+      BlrTextInputRenderFunction({
+        ...sampleParams,
+        hasLabel: false
+      })
+    );
+
+    const inputContainer = querySelectorDeep('.blr-input', element.getRootNode() as HTMLElement);
+    const label = querySelectorDeep('blr-form-label', inputContainer?.getRootNode() as HTMLElement);
+
+    expect(label).to.not.exist;
+  });
 });
