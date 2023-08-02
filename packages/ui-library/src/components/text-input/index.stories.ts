@@ -35,6 +35,7 @@ export const BlrTextInput = ({
   textInputId,
   type,
   label,
+  hasLabel,
   labelAppendix,
   value,
   placeholder,
@@ -53,13 +54,14 @@ export const BlrTextInput = ({
   inputIcon,
   showHint,
   hintText,
-  hintIcon,
+  hintIcon
 }: BlrTextInputType) =>
   html`
     ${BlrTextInputRenderFunction({
       textInputId,
       type,
       label,
+      hasLabel,
       labelAppendix,
       value,
       placeholder,
@@ -78,7 +80,7 @@ export const BlrTextInput = ({
       inputIcon,
       showHint,
       hintText,
-      hintIcon,
+      hintIcon
     })}
   `;
 
@@ -87,6 +89,7 @@ BlrTextInput.storyName = 'BlrTextInput';
 BlrTextInput.args = {
   textInputId: 'Input ID',
   label: 'Label',
+  hasLabel: true,
   labelAppendix: '(Optional)',
   showInputIcon: true,
   inputIcon: 'blr360Lg',
@@ -102,5 +105,5 @@ BlrTextInput.args = {
   showHint: true,
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',
-  hasError: false,
+  hasError: false
 };

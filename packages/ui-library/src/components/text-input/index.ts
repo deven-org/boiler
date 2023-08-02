@@ -37,19 +37,15 @@ export class BlrTextInput extends LitElement {
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
-  @property() showPassword!: boolean;
   @property() hasLabel!: boolean;
 
   @state() protected currentType: InputTypes = this.type;
 
   protected togglePassword = () => {
-    return (this.showPassword = !this.showPassword);
+    this.currentType = this.currentType === 'password' ? 'text' : 'password';
   };
 
   protected render() {
-    const toggleInputType = () => {
-      this.currentType = this.currentType === 'password' ? 'text' : 'password';
-    };
 
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
@@ -70,7 +66,7 @@ export class BlrTextInput extends LitElement {
     });
 
     const getPasswordIcon = () => {
-      return this.currentType.includes('password') ? 'blrEyeSm' : 'blrCloseSm';
+      return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
     return html`
@@ -146,6 +142,7 @@ export const BlrTextInputRenderFunction = ({
   textInputId,
   type,
   label,
+  hasLabel,
   labelAppendix,
   value,
   placeholder,
@@ -164,11 +161,12 @@ export const BlrTextInputRenderFunction = ({
   inputIcon,
   showHint,
   hintText,
-  hintIcon,
+  hintIcon
 }: BlrTextInputType) => {
   return html`<blr-text-input
     .textInputId=${textInputId}
     .label=${label}
+    .hasLabel=${hasLabel}
     .labelAppendix=${labelAppendix}
     .showInputIcon=${showInputIcon}
     .inputIcon=${inputIcon}
