@@ -54,7 +54,7 @@ export class BlrRadio extends LitElement {
           ?disabled=${this.disabled}
           ?readonly=${this.readonly}
           ?aria-disabled=${this.disabled}
-          invalid=${this.hasError}
+          ?invalid=${this.hasError}
           ?aria-invalid=${this.hasError}
           ?checked=${this.checked}
           ?required=${this.required}
@@ -77,7 +77,7 @@ export class BlrRadio extends LitElement {
                   })}
                 </div>
               `
-            : html``}
+            : nothing}
           ${this.hasError
             ? html`
                 <div class="error-wrapper">
@@ -89,7 +89,7 @@ export class BlrRadio extends LitElement {
                   })}
                 </div>
               `
-            : html``}
+            : nothing}
         </div>
       </div>
     `;
@@ -115,7 +115,6 @@ export const BlrRadioRenderFunction = ({
   errorIcon,
 }: BlrRadioType) => {
   return html`<blr-radio
-    class="example-layout-class"
     .value=${option.value}
     .name=${name}
     .disabled=${disabled}
