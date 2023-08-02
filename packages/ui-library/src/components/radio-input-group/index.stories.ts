@@ -6,7 +6,7 @@ import { getIconName } from '../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';
 
 export default {
-  title: 'BlrRadio',
+  title: 'Design System/Web Components/Radio',
   argTypes: {
     size: {
       options: InputSizes,
@@ -46,6 +46,7 @@ export const BlrRadioGroup = ({
   showHint,
   hintIcon,
   hideLabel,
+  showGroupErrorMessage,
   groupErrorMessage,
   groupErrorIcon,
 }: BlrRadioGroupType) =>
@@ -67,6 +68,7 @@ export const BlrRadioGroup = ({
       showHint,
       hintIcon,
       hideLabel,
+      showGroupErrorMessage,
       groupErrorMessage,
       groupErrorIcon,
     })}
@@ -88,6 +90,7 @@ BlrRadioGroup.args = {
   layout: 'horizontal',
   showHint: true,
   hintIcon: '',
+  showGroupErrorMessage: true,
   groupErrorMessage: 'This is a sample error message',
   groupErrorIcon: '',
 };

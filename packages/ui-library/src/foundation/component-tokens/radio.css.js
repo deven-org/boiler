@@ -35,17 +35,17 @@ export const radio = css`
 
     &.sm {
       gap: ${Radio.SM.ContentRow.ItemSpacing};
-      padding-top: ${Radio.SM.ContentCol.PaddingTop};
+      padding: ${Radio.SM.ContentRow.Padding};
     }
 
     &.md {
       gap: ${Radio.MD.ContentRow.ItemSpacing};
-      padding-top: ${Radio.MD.ContentCol.PaddingTop};
+      padding: ${Radio.MD.ContentRow.Padding};
     }
 
     &.lg {
       gap: ${Radio.LG.ContentRow.ItemSpacing};
-      padding-top: ${Radio.LG.ContentCol.PaddingTop};
+      padding: ${Radio.LG.ContentRow.Padding};
     }
   }
 
@@ -70,13 +70,16 @@ export const radio = css`
       place-content: center;
 
       &::before {
-        content: '';
+        content: "";
         transition: all 0.25s ease 0s;
         border-radius: ${Radio.ControlBorderRadius};
       }
     }
 
     .label-wrapper {
+      display: flex;
+      flex-direction: column;
+
       .hint-wrapper,
       .error-wrapper {
         flex-basis: 100%;
@@ -89,6 +92,7 @@ export const radio = css`
 
     &.sm {
       gap: ${Radio.SM.ContentRow.ItemSpacing};
+      padding: ${Radio.SM.ContentRow.Padding};
 
       .input-control {
         margin-top: ${Radio.SM.ControlWrapper.TopMargin};
@@ -97,6 +101,11 @@ export const radio = css`
       .label-wrapper {
         padding-top: ${Radio.SM.ContentCol.PaddingTop};
         gap: ${Radio.SM.ContentCol.ItemSpacing};
+
+        .hint-wrapper {
+          padding: ${SM.CaptionComponent.Padding};
+          gap: ${SM.CaptionComponent.ItemSpacing};
+        }
 
         .blr-form-label-inline {
           font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
@@ -109,6 +118,7 @@ export const radio = css`
 
     &.md {
       gap: ${Radio.MD.ContentRow.ItemSpacing};
+      padding: ${Radio.MD.ContentRow.Padding};
 
       .input-control {
         margin-top: ${Radio.MD.ControlWrapper.TopMargin};
@@ -117,6 +127,11 @@ export const radio = css`
       .label-wrapper {
         padding-top: ${Radio.MD.ContentCol.PaddingTop};
         gap: ${Radio.MD.ContentCol.ItemSpacing};
+
+        .hint-wrapper {
+          padding: ${MD.CaptionComponent.Padding};
+          gap: ${MD.CaptionComponent.ItemSpacing};
+        }
 
         .blr-form-label-inline {
           font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
@@ -129,6 +144,7 @@ export const radio = css`
 
     &.lg {
       gap: ${Radio.LG.ContentRow.ItemSpacing};
+      padding: ${Radio.LG.ContentRow.Padding};
 
       .input-control {
         margin-top: ${Radio.LG.ControlWrapper.TopMargin};
@@ -137,6 +153,11 @@ export const radio = css`
       .label-wrapper {
         padding-top: ${Radio.LG.ContentCol.PaddingTop};
         gap: ${Radio.LG.ContentCol.ItemSpacing};
+
+        .hint-wrapper {
+          padding: ${LG.CaptionComponent.Padding};
+          gap: ${LG.CaptionComponent.ItemSpacing};
+        }
 
         .blr-form-label-inline {
           font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
@@ -168,7 +189,7 @@ export const radio = css`
             height: ${Radio.Control.Background.Unselected.Hover};
 
             &::before {
-              content: '';
+              content: "";
               background-color: ${Radio.Control.Foreground.Unselected.Fill.Hover};
               width: ${Radio.Control.Foreground.Unselected.Hover};
               height: ${Radio.Control.Foreground.Unselected.Hover};
@@ -189,7 +210,7 @@ export const radio = css`
             height: ${Radio.Control.Background.Unselected.Pressed};
 
             &::before {
-              content: '';
+              content: "";
               background-color: ${Radio.Control.Foreground.Unselected.Fill.Pressed};
               width: ${Radio.Control.Foreground.Unselected.Pressed};
               height: ${Radio.Control.Foreground.Unselected.Pressed};
@@ -211,7 +232,7 @@ export const radio = css`
           outline-offset: 2px;
 
           &::before {
-            content: '';
+            content: "";
             background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
             width: ${Radio.Control.Foreground.Unselected.Focus};
             height: ${Radio.Control.Foreground.Unselected.Focus};
@@ -229,7 +250,7 @@ export const radio = css`
           background-color: ${Radio.Control.Background.Selected.Fill.Rest};
 
           &::before {
-            content: '';
+            content: "";
             background-color: ${Radio.Control.Foreground.Selected.Fill.Rest};
             width: ${Radio.Control.Foreground.Selected.Rest};
             height: ${Radio.Control.Foreground.Selected.Rest};
@@ -241,7 +262,7 @@ export const radio = css`
             height: ${Radio.Control.Background.Selected.Hover};
 
             &::before {
-              content: '';
+              content: "";
               background-color: ${Radio.Control.Foreground.Selected.Fill.Hover};
               width: ${Radio.Control.Foreground.Selected.Hover};
               height: ${Radio.Control.Foreground.Selected.Hover};
@@ -254,7 +275,7 @@ export const radio = css`
             height: ${Radio.Control.Background.Selected.Pressed};
 
             &::before {
-              content: '';
+              content: "";
               background-color: ${Radio.Control.Foreground.Selected.Fill.Pressed};
               width: ${Radio.Control.Foreground.Selected.Pressed};
               height: ${Radio.Control.Foreground.Selected.Pressed};
@@ -267,7 +288,7 @@ export const radio = css`
             height: ${Radio.Control.Background.Selected.Disabled};
 
             &::before {
-              content: '';
+              content: "";
               background-color: ${Radio.Control.Foreground.Selected.Fill.Disabled};
               width: ${Radio.Control.Foreground.Selected.Disabled};
               height: ${Radio.Control.Foreground.Selected.Disabled};
@@ -280,7 +301,7 @@ export const radio = css`
             height: ${Radio.Control.Background.Selected.ReadOnly};
 
             &::before {
-              content: '';
+              content: "";
               background-color: ${Radio.Control.Foreground.Selected.Fill.ReadOnly};
               width: ${Radio.Control.Foreground.Selected.ReadOnly};
               height: ${Radio.Control.Foreground.Selected.ReadOnly};
@@ -295,7 +316,7 @@ export const radio = css`
           height: ${Radio.Control.Background.Unselected.Disabled};
 
           &::before {
-            content: '';
+            content: "";
             background-color: ${Radio.Control.Foreground.Unselected.Fill.Disabled};
             width: ${Radio.Control.Foreground.Unselected.Disabled};
             height: ${Radio.Control.Foreground.Unselected.Disabled};
@@ -338,7 +359,7 @@ export const radio = css`
         height: ${Radio.Control.Background.Unselected.Disabled};
 
         &::before {
-          content: '';
+          content: "";
           background-color: ${Radio.Control.Foreground.Unselected.Fill.Disabled};
           width: ${Radio.Control.Foreground.Unselected.Disabled};
           height: ${Radio.Control.Foreground.Unselected.Disabled};
@@ -359,7 +380,7 @@ export const radio = css`
         height: ${Radio.Control.Background.Unselected.ReadOnly};
 
         &::before {
-          content: '';
+          content: "";
           background-color: ${Radio.Control.Foreground.Unselected.Fill.ReadOnly};
           width: ${Radio.Control.Foreground.Unselected.ReadOnly};
           height: ${Radio.Control.Foreground.Unselected.ReadOnly};

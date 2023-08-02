@@ -6,8 +6,7 @@ import { form } from '../../foundation/semantic-tokens/form.css';
 import { radio } from '../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormLabelInline } from '../form-label-inline';
-import { BlrFormHint } from '../internal-components/form-hint';
-import { calculateIconName } from '../../utils/calculate-icon-name';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio-group')
@@ -31,6 +30,7 @@ export class BlrRadioGroup extends LitElement {
   @property() showHint = true;
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() errorMessage?: string;
+  @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupErrorIcon?: IconType;
 
@@ -78,11 +78,11 @@ export class BlrRadioGroup extends LitElement {
                 ${this.showHint
                   ? html`
                       <div class="hint-wrapper">
-                        ${BlrFormHint({
+                        ${BlrFormHintRenderFunction({
                           message: option.hintMessage,
                           variant: 'hint',
                           size: this.size,
-                          icon: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : undefined,
+                          icon: this.hintIcon ? this.hintIcon : undefined,
                         })}
                       </div>
                     `
@@ -90,11 +90,11 @@ export class BlrRadioGroup extends LitElement {
                 ${this.hasError
                   ? html`
                       <div class="error-wrapper">
-                        ${BlrFormHint({
+                        ${BlrFormHintRenderFunction({
                           message: option.errorMessage,
                           variant: 'error',
                           size: this.size,
-                          icon: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : undefined,
+                          icon: this.errorIcon ? this.errorIcon : undefined,
                         })}
                       </div>
                     `
@@ -103,18 +103,19 @@ export class BlrRadioGroup extends LitElement {
             </div>
           `;
         })}
-        <div class="group-error ${classes}">
-          ${this.hasError
+
+          ${this.hasError && this.showGroupErrorMessage
             ? html`
-                ${BlrFormHint({
+              <div class="group-error ${classes}">
+                ${BlrFormHintRenderFunction({
                   message: this.groupErrorMessage || '',
                   variant: 'error',
                   size: this.size,
-                  icon: this.groupErrorIcon ? calculateIconName(this.groupErrorIcon, this.size) : undefined,
+                  icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
                 })}
+              </div>
               `
             : html``}
-        </div>
       </div>
     `;
   }
@@ -139,6 +140,7 @@ export const BlrRadioGroupRenderFunction = ({
   showHint,
   hintIcon,
   hideLabel,
+  showGroupErrorMessage,
   groupErrorMessage,
   groupErrorIcon,
 }: BlrRadioGroupType) => {
@@ -160,6 +162,7 @@ export const BlrRadioGroupRenderFunction = ({
     .showHint=${showHint}
     .hintIcon=${hintIcon}
     .hideLabel=${hideLabel}
+    .showGroupErrorMessage=${showGroupErrorMessage}
     .groupErrorMessage=${groupErrorMessage}
     .groupErrorIcon=${groupErrorIcon}
   ></blr-radio-group>`;

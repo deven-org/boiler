@@ -6,8 +6,7 @@ import { InputSizesType, RadioOption } from '../../globals/types';
 import { form } from '../../foundation/semantic-tokens/form.css';
 import { radio } from '../../foundation/component-tokens/radio.css';
 import { BlrFormLabelInline } from '../form-label-inline';
-import { BlrFormHint } from '../internal-components/form-hint';
-import { calculateIconName } from '../../utils/calculate-icon-name';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 
 @customElement('blr-radio')
@@ -70,11 +69,11 @@ export class BlrRadio extends LitElement {
           ${this.showHint
             ? html`
                 <div class="hint-wrapper">
-                  ${BlrFormHint({
+                  ${BlrFormHintRenderFunction({
                     message: this.option.hintMessage,
                     variant: 'hint',
                     size: this.size,
-                    icon: this.hintIcon ? calculateIconName(this.hintIcon, this.size) : undefined,
+                    icon: this.hintIcon ? this.hintIcon : undefined,
                   })}
                 </div>
               `
@@ -82,11 +81,11 @@ export class BlrRadio extends LitElement {
           ${this.hasError
             ? html`
                 <div class="error-wrapper">
-                  ${BlrFormHint({
+                  ${BlrFormHintRenderFunction({
                     message: this.option.errorMessage,
                     variant: 'error',
                     size: this.size,
-                    icon: this.errorIcon ? calculateIconName(this.errorIcon, this.size) : undefined,
+                    icon: this.errorIcon ? this.errorIcon : undefined,
                   })}
                 </div>
               `
