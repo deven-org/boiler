@@ -3475,8 +3475,228 @@ const blrEqualXxs = (className: string) =>
     />
   </svg>`;
 
-const blrEyeLg = (className: string) =>
+  const blrErrorFilledLg = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M16 3C8.8203 3 3 8.8203 3 16C3 23.1797 8.8203 29 16 29C23.1797 29 29 23.1797 29 16C29 8.8203 23.1797 3 16 3ZM14.9952 8.77269C14.9952 8.45359 15.2538 8.19491 15.5729 8.19491H16.427C16.7461 8.19491 17.0048 8.45359 17.0048 8.77269V18.3108C17.0048 18.6299 16.7461 18.8886 16.427 18.8886H15.5729C15.2538 18.8886 14.9952 18.6299 14.9952 18.3108V8.77269ZM14.7829 21.4885C14.7829 21.1694 15.0416 20.9107 15.3607 20.9107H16.6548C16.9739 20.9107 17.2326 21.1694 17.2326 21.4885V22.7256C17.2326 23.0447 16.9739 23.3034 16.6548 23.3034L15.3607 23.3034C15.0416 23.3034 14.7829 23.0447 14.7829 22.7256V21.4885Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrErrorFilledMd = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5ZM11.2657 6.7185C11.2657 6.48531 11.4547 6.29628 11.6879 6.29628H12.3121C12.5453 6.29628 12.7343 6.48531 12.7343 6.7185V13.6887C12.7343 13.9219 12.5453 14.1109 12.3121 14.1109H11.6879C11.4547 14.1109 11.2657 13.9219 11.2657 13.6887V6.7185ZM11.2657 16.0108C11.2657 15.7776 11.4547 15.5886 11.6879 15.5886H12.3121C12.5453 15.5886 12.7343 15.7776 12.7343 16.0108V16.6441C12.7343 16.8773 12.5453 17.0663 12.3121 17.0663H11.6879C11.4547 17.0663 11.2657 16.8773 11.2657 16.6441V16.0108Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrErrorFilledSm = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 16 16" fill="none">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M8.00001 1.59985C4.46538 1.59985 1.60001 4.46523 1.60001 7.99985C1.60001 11.5345 4.46538 14.3999 8.00001 14.3999C11.5346 14.3999 14.4 11.5345 14.4 7.99985C14.4 4.46523 11.5346 1.59985 8.00001 1.59985ZM7.50533 4.44178C7.50533 4.28469 7.63267 4.15734 7.78977 4.15734H8.21025C8.36734 4.15734 8.49469 4.28469 8.49469 4.44178V8.5477C8.49469 8.70479 8.36734 8.83214 8.21025 8.83214H7.78977C7.63268 8.83214 7.50533 8.70479 7.50533 8.5477V4.44178ZM7.42698 10.6909C7.42698 10.5338 7.55433 10.4065 7.71142 10.4065H8.27002C8.42711 10.4065 8.55446 10.5338 8.55446 10.6909V11.3212C8.55446 11.4783 8.42711 11.6057 8.27002 11.6057H7.71142C7.55433 11.6057 7.42698 11.4783 7.42698 11.3212V10.6909Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrErrorFilledXl = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 48 48" fill="none">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M24 4.6438C13.3099 4.6438 4.64392 13.3098 4.64392 23.9999C4.64392 34.69 13.3099 43.356 24 43.356C34.6901 43.356 43.3561 34.69 43.3561 23.9999C43.3561 13.3098 34.6901 4.6438 24 4.6438ZM22.5039 13.239C22.5039 12.7639 22.889 12.3788 23.3641 12.3788H24.6358C25.1109 12.3788 25.4961 12.7639 25.4961 13.239V27.4406C25.4961 27.9158 25.1109 28.3009 24.6358 28.3009H23.3641C22.889 28.3009 22.5039 27.9158 22.5039 27.4406V13.239ZM22.1879 32.1719C22.1879 31.6968 22.573 31.3117 23.0481 31.3117L24.975 31.3117C25.4501 31.3117 25.8352 31.6968 25.8352 32.1719V34.0139C25.8352 34.489 25.4501 34.8742 24.975 34.8742L23.0481 34.8742C22.573 34.8742 22.1879 34.489 22.1879 34.0139V32.1719Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrErrorFilledXs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 12 12" fill="none">
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5ZM5.65217 3.49815C5.65217 3.3877 5.74172 3.29815 5.85217 3.29815H6.14782C6.25828 3.29815 6.34782 3.3877 6.34782 3.49815L6.34782 6.38513C6.34782 6.49558 6.25828 6.58512 6.14782 6.58512H5.85217C5.74172 6.58512 5.65217 6.49558 5.65217 6.38513V3.49815ZM5.59708 7.89208C5.59708 7.78162 5.68663 7.69208 5.79708 7.69208H6.18985C6.30031 7.69208 6.38985 7.78162 6.38985 7.89208V8.33525C6.38985 8.44571 6.30031 8.53525 6.18985 8.53525H5.79708C5.68663 8.53525 5.59708 8.44571 5.59708 8.33525V7.89208Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrErrorFilledXxs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 8 8" fill="none">
+    <g clip-path="url(#a)">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M4 0.75C2.20507 0.75 0.75 2.20507 0.75 4C0.75 5.79493 2.20507 7.25 4 7.25C5.79493 7.25 7.25 5.79493 7.25 4C7.25 2.20507 5.79493 0.75 4 0.75ZM3.74879 2.19311C3.74879 2.11334 3.81346 2.04867 3.89324 2.04867H4.10676C4.18654 2.04867 4.25121 2.11334 4.25121 2.19311V4.27815C4.25121 4.35792 4.18654 4.42259 4.10676 4.42259H3.89324C3.81346 4.42259 3.74879 4.35792 3.74879 4.27815V2.19311ZM3.70901 5.3665C3.70901 5.28673 3.77368 5.22206 3.85345 5.22206H4.13711C4.21689 5.22206 4.28156 5.28673 4.28156 5.3665V5.68657C4.28156 5.76635 4.21689 5.83102 4.13711 5.83102H3.85345C3.77368 5.83102 3.70901 5.76635 3.70901 5.68657V5.3665Z"
+        fill="currentColor"
+      />
+    </g>
+    <defs>
+      <clipPath id="a"><rect width="8" height="8" fill="currentColor" /></clipPath>
+    </defs>
+  </svg>`;
+
+const blrErrorLg = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
+    <path
+      d="M16.12 17.4644V9.40442M4.03 16.1208C4.03 9.44364 9.44288 4.03076 16.12 4.03076C22.7971 4.03076 28.21 9.44364 28.21 16.1208C28.21 22.7979 22.7971 28.2108 16.12 28.2108C9.44288 28.2108 4.03 22.7979 4.03 16.1208ZM16.4558 22.8375V21.4941H15.7841V22.8375H16.4558Z"
+      stroke="currentColor"
+      stroke-width="1.34333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+
+const blrErrorMd = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
+    <path
+      d="M12.09 13.0986V7.05362M3.02249 12.0907C3.02249 7.08285 7.08215 3.02319 12.09 3.02319C17.0978 3.02319 21.1575 7.08285 21.1575 12.0907C21.1575 17.0985 17.0978 21.1582 12.09 21.1582C7.08215 21.1582 3.02249 17.0985 3.02249 12.0907ZM12.3418 17.1284V16.1209H11.8381V17.1284H12.3418Z"
+      stroke="currentColor"
+      stroke-width="1.0075"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+
+const blrErrorSm = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 16 16" fill="none">
+    <path
+      d="M8.05997 8.73185V4.70185M2.01498 8.06014C2.01498 4.72158 4.72142 2.01514 8.05998 2.01514C11.3985 2.01514 14.105 4.72158 14.105 8.06014C14.105 11.3987 11.3985 14.1051 8.05998 14.1051C4.72142 14.1051 2.01498 11.3987 2.01498 8.06014ZM8.22788 11.4184V10.7467H7.89205V11.4184H8.22788Z"
+      stroke="currentColor"
+      stroke-width="0.671667"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+
+const blrErrorXl = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 48 48" fill="none">
+    <path
+      d="M24.18 26.1972V14.1072M6.04498 24.1814C6.04498 14.1657 14.1643 6.04639 24.18 6.04639C34.1957 6.04639 42.315 14.1657 42.315 24.1814C42.315 34.1971 34.1957 42.3164 24.18 42.3164C14.1643 42.3164 6.04498 34.1971 6.04498 24.1814ZM24.6837 34.2568V32.2418L23.6762 32.2418V34.2568H24.6837Z"
+      stroke="currentColor"
+      stroke-width="2.015"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+
+const blrErrorXs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 12 12" fill="none">
+    <path
+      d="M6 6.50024V3.50024M1.5 6C1.5 3.51472 3.51472 1.5 6 1.5C8.48528 1.5 10.5 3.51472 10.5 6C10.5 8.48528 8.48528 10.5 6 10.5C3.51472 10.5 1.5 8.48528 1.5 6ZM6.12499 8.49975V7.99975H5.87499V8.49975H6.12499Z"
+      stroke="currentColor"
+      stroke-width="0.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+
+const blrErrorXxs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 8 8" fill="none">
+    <g clip-path="url(#a)">
+      <path
+        d="M4 4.33325V2.33325M1 4C1 2.34315 2.34315 1 4 1C5.65685 1 7 2.34315 7 4C7 5.65685 5.65685 7 4 7C2.34315 7 1 5.65685 1 4ZM4.08334 5.66675V5.33341H3.91667V5.66675H4.08334Z"
+        stroke="currentColor"
+        stroke-width="0.333333"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="a"><rect width="8" height="8" fill="currentColor" /></clipPath>
+    </defs>
+  </svg>`;  
+
+const blrEyeOffLg = (className: string) =>
+  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+    <g class="Size=lg">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.34"
+        d="M23.174 7.5 8.794 27.816m4.771-3.26c.814.2 1.667.313 2.555.313 5.782 0 10.106-4.813 11.559-6.67a1.154 1.154 0 0 0 0-1.436c-1.453-1.857-5.777-6.67-11.56-6.67-5.782 0-10.106 4.813-11.559 6.67a1.154 1.154 0 0 0 0 1.436c1.014 1.296 3.427 4.032 6.757 5.566m7.49-6.285a2.687 2.687 0 1 1-5.374 0 2.687 2.687 0 0 1 5.373 0Z"
+        class="vector"
+      />
+    </g>
+  </svg> `;
+
+const blrEyeOffMd = (className: string) =>
+  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <g class="Size=md">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.01"
+        d="M17.292 5.633 6.504 20.875m3.58-2.445c.61.149 1.25.234 1.916.234 4.338 0 7.582-3.611 8.672-5.004a.866.866 0 0 0 0-1.078C19.582 11.19 16.338 7.578 12 7.578c-4.338 0-7.582 3.612-8.672 5.004a.866.866 0 0 0 0 1.078c.76.972 2.57 3.024 5.07 4.176m5.617-4.715a2.015 2.015 0 1 1-4.03 0 2.015 2.015 0 0 1 4.03 0Z"
+        class="vector"
+      />
+    </g>
+  </svg> `;
+
+const blrEyeOffSm = (className: string) =>
+  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+    <g class="Size=sm">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width=".67"
+        d="m11.587 3.746-7.19 10.158m2.386-1.63c.407.1.833.157 1.277.157 2.891 0 5.053-2.407 5.78-3.335a.577.577 0 0 0 0-.718c-.726-.929-2.889-3.335-5.78-3.335-2.891 0-5.053 2.406-5.78 3.335a.577.577 0 0 0 0 .718c.507.648 1.714 2.016 3.379 2.783m3.744-3.143a1.343 1.343 0 1 1-2.686 0 1.343 1.343 0 0 1 2.686 0Z"
+        class="vector"
+      />
+    </g>
+  </svg> `;
+
+const blrEyeOffXl = (className: string) =>
+  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+    <g class="Size=xl">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2.01"
+        d="m34.761 11.281-21.57 30.475m7.156-4.889c1.221.298 2.501.468 3.832.468 8.674 0 15.16-7.22 17.34-10.004a1.732 1.732 0 0 0 0-2.155c-2.18-2.785-8.666-10.005-17.34-10.005S9.02 22.391 6.84 25.176a1.732 1.732 0 0 0 0 2.155c1.521 1.943 5.14 6.047 10.136 8.349m11.233-9.428a4.03 4.03 0 1 1-8.06 0 4.03 4.03 0 0 1 8.06 0Z"
+        class="vector"
+      />
+    </g>
+  </svg> `;
+
+const blrEyeOffXs = (className: string) =>
+  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+    <g class="Size=xs">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width=".5"
+        d="m8.626 2.785-5.353 7.562M5.05 9.134c.303.074.62.116.951.116 2.152 0 3.762-1.792 4.303-2.483a.43.43 0 0 0 0-.534C9.762 5.542 8.153 3.75 6 3.75c-2.152 0-3.762 1.792-4.303 2.483a.43.43 0 0 0 0 .534c.378.483 1.276 1.501 2.515 2.072M7 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+        class="vector"
+      />
+    </g>
+  </svg> `;
+
+const blrEyeOffXxs = (className: string) =>
+  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none" viewBox="0 0 8 8">
+    <g class="Size=xxs">
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width=".33"
+        d="M5.75 1.86 2.183 6.9m1.183-.808c.202.049.414.077.634.077 1.435 0 2.507-1.194 2.868-1.655a.286.286 0 0 0 0-.356C6.508 3.698 5.435 2.503 4 2.503c-1.435 0-2.507 1.194-2.868 1.655a.286.286 0 0 0 0 .356c.252.322.85 1 1.677 1.381m1.858-1.56a.667.667 0 1 1-1.334 0 .667.667 0 0 1 1.334 0Z"
+        class="vector"
+      />
+    </g>
+  </svg> `;
+
+const blrEyeOnLg = (className: string) =>
+  html`<svg class="${className}" width="32" height="32" viewBox="0 0 32 32" fill="none"xmlns="http://www.w3.org/2000/svg">
     <path
       d="M18.8067 17.4633C18.8067 18.9471 17.6038 20.1499 16.12 20.1499C14.6362 20.1499 13.4333 18.9471 13.4333 17.4633C13.4333 15.9795 14.6362 14.7766 16.12 14.7766C17.6038 14.7766 18.8067 15.9795 18.8067 17.4633Z"
       stroke="currentColor"
@@ -3491,10 +3711,10 @@ const blrEyeLg = (className: string) =>
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>`;
+  </svg> `;
 
-const blrEyeMd = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
+const blrEyeOnMd = (className: string) =>
+  html`<svg class="${className}" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M14.105 13.0972C14.105 14.21 13.2029 15.1122 12.09 15.1122C10.9772 15.1122 10.075 14.21 10.075 13.0972C10.075 11.9843 10.9772 11.0822 12.09 11.0822C13.2029 11.0822 14.105 11.9843 14.105 13.0972Z"
       stroke="currentColor"
@@ -3509,10 +3729,10 @@ const blrEyeMd = (className: string) =>
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>`;
+  </svg> `;
 
-const blrEyeSm = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 16 16" fill="none">
+const blrEyeOnSm = (className: string) =>
+  html`<svg class="${className}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M9.40332 8.73139C9.40332 9.4733 8.80189 10.0747 8.05999 10.0747C7.31809 10.0747 6.71666 9.4733 6.71666 8.73139C6.71666 7.98949 7.31809 7.38806 8.05999 7.38806C8.80189 7.38806 9.40332 7.98949 9.40332 8.73139Z"
       stroke="currentColor"
@@ -3527,10 +3747,10 @@ const blrEyeSm = (className: string) =>
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>`;
+  </svg> `;
 
-const blrEyeXl = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 48 48" fill="none">
+const blrEyeOnXl = (className: string) =>
+  html`<svg class="${className}" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M28.21 26.1943C28.21 28.42 26.4057 30.2243 24.18 30.2243C21.9543 30.2243 20.15 28.42 20.15 26.1943C20.15 23.9686 21.9543 22.1643 24.18 22.1643C26.4057 22.1643 28.21 23.9686 28.21 26.1943Z"
       stroke="currentColor"
@@ -3545,10 +3765,10 @@ const blrEyeXl = (className: string) =>
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>`;
+  </svg> `;
 
-const blrEyeXs = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 12 12" fill="none">
+const blrEyeOnXs = (className: string) =>
+  html`<svg class="${className}" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M7 6.49976C7 7.05204 6.55229 7.49976 6 7.49976C5.44772 7.49976 5 7.05204 5 6.49976C5 5.94747 5.44772 5.49976 6 5.49976C6.55229 5.49976 7 5.94747 7 6.49976Z"
       stroke="currentColor"
@@ -3563,10 +3783,10 @@ const blrEyeXs = (className: string) =>
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>`;
+  </svg> `;
 
-const blrEyeXxs = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 8 8" fill="none">
+const blrEyeOnXxs = (className: string) =>
+  html`<svg class="${className}" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M4.66667 4.33329C4.66667 4.70148 4.36819 4.99996 4 4.99996C3.63181 4.99996 3.33334 4.70148 3.33334 4.33329C3.33334 3.9651 3.63181 3.66663 4 3.66663C4.36819 3.66663 4.66667 3.9651 4.66667 4.33329Z"
       stroke="currentColor"
@@ -3581,7 +3801,7 @@ const blrEyeXxs = (className: string) =>
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>`;
+  </svg> `;
 
 const blrFlagLg = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
@@ -8256,12 +8476,30 @@ export const IconMapping = {
   blrEqualXl,
   blrEqualXs,
   blrEqualXxs,
-  blrEyeLg,
-  blrEyeMd,
-  blrEyeSm,
-  blrEyeXl,
-  blrEyeXs,
-  blrEyeXxs,
+  blrErrorFilledLg,
+  blrErrorFilledMd,
+  blrErrorFilledSm,
+  blrErrorFilledXl,
+  blrErrorFilledXs,
+  blrErrorFilledXxs,
+  blrErrorLg,
+  blrErrorMd,
+  blrErrorSm,
+  blrErrorXl,
+  blrErrorXs,
+  blrErrorXxs,
+  blrEyeOffLg,
+  blrEyeOffMd,
+  blrEyeOffSm,
+  blrEyeOffXl,
+  blrEyeOffXs,
+  blrEyeOffXxs,
+  blrEyeOnLg,
+  blrEyeOnMd,
+  blrEyeOnSm,
+  blrEyeOnXl,
+  blrEyeOnXs,
+  blrEyeOnXxs,
   blrFlagLg,
   blrFlagMd,
   blrFlagSm,

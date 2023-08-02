@@ -3657,7 +3657,7 @@ const blrEyeOffLg = (className: string) => html`<svg
 >
   <g class="Size=lg">
     <path
-      stroke="#000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="1.34"
@@ -3677,7 +3677,7 @@ const blrEyeOffMd = (className: string) => html`<svg
 >
   <g class="Size=md">
     <path
-      stroke="#000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="1.01"
@@ -3697,7 +3697,7 @@ const blrEyeOffSm = (className: string) => html`<svg
 >
   <g class="Size=sm">
     <path
-      stroke="#000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width=".67"
@@ -3717,7 +3717,7 @@ const blrEyeOffXl = (className: string) => html`<svg
 >
   <g class="Size=xl">
     <path
-      stroke="#000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2.01"
@@ -3737,7 +3737,7 @@ const blrEyeOffXs = (className: string) => html`<svg
 >
   <g class="Size=xs">
     <path
-      stroke="#000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width=".5"
@@ -3757,7 +3757,7 @@ const blrEyeOffXxs = (className: string) => html`<svg
 >
   <g class="Size=xxs">
     <path
-      stroke="#000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width=".33"
@@ -3777,14 +3777,14 @@ const blrEyeOnLg = (className: string) => html`<svg
 >
   <path
     d="M18.8067 17.4633C18.8067 18.9471 17.6038 20.1499 16.12 20.1499C14.6362 20.1499 13.4333 18.9471 13.4333 17.4633C13.4333 15.9795 14.6362 14.7766 16.12 14.7766C17.6038 14.7766 18.8067 15.9795 18.8067 17.4633Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="1.34333"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M16.12 10.075C10.3372 10.075 6.01298 14.8885 4.56025 16.745C4.22605 17.1721 4.22605 17.7545 4.56025 18.1816C6.01298 20.0381 10.3372 24.8516 16.12 24.8516C21.9028 24.8516 26.227 20.0381 27.6797 18.1816C28.0139 17.7545 28.0139 17.1721 27.6797 16.745C26.227 14.8885 21.9028 10.075 16.12 10.075Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="1.34333"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -3801,14 +3801,14 @@ const blrEyeOnMd = (className: string) => html`<svg
 >
   <path
     d="M14.105 13.0972C14.105 14.21 13.2029 15.1122 12.09 15.1122C10.9772 15.1122 10.075 14.21 10.075 13.0972C10.075 11.9843 10.9772 11.0822 12.09 11.0822C13.2029 11.0822 14.105 11.9843 14.105 13.0972Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="1.0075"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M12.09 7.55603C7.75288 7.55603 4.50974 11.1662 3.4202 12.5585C3.16955 12.8789 3.16955 13.3157 3.4202 13.636C4.50974 15.0284 7.75288 18.6385 12.09 18.6385C16.4271 18.6385 19.6703 15.0284 20.7598 13.636C21.0105 13.3157 21.0105 12.8789 20.7598 12.5585C19.6703 11.1662 16.4271 7.55603 12.09 7.55603Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="1.0075"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -3825,14 +3825,14 @@ const blrEyeOnSm = (className: string) => html`<svg
 >
   <path
     d="M9.40332 8.73139C9.40332 9.4733 8.80189 10.0747 8.05999 10.0747C7.31809 10.0747 6.71666 9.4733 6.71666 8.73139C6.71666 7.98949 7.31809 7.38806 8.05999 7.38806C8.80189 7.38806 9.40332 7.98949 9.40332 8.73139Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="0.671667"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M8.06 5.03735C5.16858 5.03735 3.00649 7.44411 2.28013 8.37236C2.11303 8.58591 2.11303 8.87713 2.28013 9.09068C3.00649 10.0189 5.16858 12.4257 8.06 12.4257C10.9514 12.4257 13.1135 10.0189 13.8399 9.09068C14.007 8.87713 14.007 8.58591 13.8399 8.37236C13.1135 7.44411 10.9514 5.03735 8.06 5.03735Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="0.671667"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -3849,14 +3849,14 @@ const blrEyeOnXl = (className: string) => html`<svg
 >
   <path
     d="M28.21 26.1943C28.21 28.42 26.4057 30.2243 24.18 30.2243C21.9543 30.2243 20.15 28.42 20.15 26.1943C20.15 23.9686 21.9543 22.1643 24.18 22.1643C26.4057 22.1643 28.21 23.9686 28.21 26.1943Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="2.015"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M24.18 15.1118C15.5057 15.1118 9.01945 22.3321 6.84036 25.1168C6.33906 25.7575 6.33906 26.6312 6.84036 27.2718C9.01945 30.0566 15.5057 37.2768 24.18 37.2768C32.8542 37.2768 39.3405 30.0566 41.5196 27.2718C42.0209 26.6312 42.0209 25.7575 41.5196 25.1168C39.3405 22.3321 32.8542 15.1118 24.18 15.1118Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="2.015"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -3873,14 +3873,14 @@ const blrEyeOnXs = (className: string) => html`<svg
 >
   <path
     d="M7 6.49976C7 7.05204 6.55229 7.49976 6 7.49976C5.44772 7.49976 5 7.05204 5 6.49976C5 5.94747 5.44772 5.49976 6 5.49976C6.55229 5.49976 7 5.94747 7 6.49976Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="0.5"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M6 3.75C3.84758 3.75 2.23808 5.54163 1.69737 6.23264C1.57297 6.3916 1.57297 6.6084 1.69737 6.76736C2.23808 7.45837 3.84758 9.25 6 9.25C8.15242 9.25 9.76192 7.45837 10.3026 6.76736C10.427 6.6084 10.427 6.3916 10.3026 6.23264C9.76191 5.54163 8.15242 3.75 6 3.75Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="0.5"
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -3897,14 +3897,14 @@ const blrEyeOnXxs = (className: string) => html`<svg
 >
   <path
     d="M4.66667 4.33329C4.66667 4.70148 4.36819 4.99996 4 4.99996C3.63181 4.99996 3.33334 4.70148 3.33334 4.33329C3.33334 3.9651 3.63181 3.66663 4 3.66663C4.36819 3.66663 4.66667 3.9651 4.66667 4.33329Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="0.333333"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M4 2.5C2.56506 2.5 1.49206 3.69442 1.13158 4.15509C1.04865 4.26107 1.04865 4.4056 1.13158 4.51158C1.49206 4.97225 2.56506 6.16667 4 6.16667C5.43494 6.16667 6.50794 4.97225 6.86842 4.51158C6.95135 4.4056 6.95135 4.26107 6.86842 4.15509C6.50794 3.69442 5.43494 2.5 4 2.5Z"
-    stroke="black"
+    stroke="currentColor"
     stroke-width="0.333333"
     stroke-linecap="round"
     stroke-linejoin="round"
