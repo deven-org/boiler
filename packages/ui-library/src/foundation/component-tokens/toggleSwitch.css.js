@@ -14,7 +14,8 @@ export const toggleSwitch = css`
 
     &.trailing {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     > .toggle-content-col {
