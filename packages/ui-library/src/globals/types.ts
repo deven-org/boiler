@@ -30,3 +30,4 @@ export type RadioOption = {
   checked?: boolean;
 };
 export type WrapperVariant = 'leading' | 'trailing';
+export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';

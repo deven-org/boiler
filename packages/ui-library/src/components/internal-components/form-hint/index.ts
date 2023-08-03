@@ -7,10 +7,11 @@ import { SizelessIconType } from '@boiler/icons';
 import { form } from '../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { counter } from '../../../foundation/component-tokens/feedback.css';
+import { styleCustom } from './index.css';
 
 @customElement('blr-form-hint')
 export class BlrFormHint extends LitElement {
-  static styles = [counter, form];
+  static styles = [counter, styleCustom, form];
 
   @property() message?: string;
   @property() icon?: SizelessIconType;
@@ -31,16 +32,18 @@ export class BlrFormHint extends LitElement {
     });
 
     return html`<div class=${classes}>
-      <div class="icon-wrapper">
-        ${BlrIconRenderFunction({
-          icon: calculateIconName(this.icon, 'sm'),
-          size: 'sm',
-          classMap: iconClasses,
-          hideAria: true,
-        })}
-      </div>
-      <div class="label-wrapper">
-        <span class="blr-caption-text">${this.message}</span>
+      <div class="hint-container">
+        <div class="icon-wrapper">
+          ${BlrIconRenderFunction({
+            icon: calculateIconName(this.icon, 'sm'),
+            size: 'sm',
+            classMap: iconClasses,
+            hideAria: true,
+          })}
+        </div>
+        <div class="label-wrapper">
+          <span class="blr-caption-text">${this.message}</span>
+        </div>
       </div>
       ${this.childElement}
     </div>`;

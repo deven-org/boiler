@@ -7,7 +7,11 @@ export const styleCustom = css`
     max-width: 100%;
   }
 
-  .blr-textarea {
+  :host(.parent-width) {
+    width: 100%;
+  }
+
+  .textarea-input-control {
     resize: none;
     display: block;
     max-width: 100%;
@@ -15,7 +19,7 @@ export const styleCustom = css`
     width: 100%;
   }
 
-  .blr-textarea.resizeable {
+  .textarea-input-control.resizeable {
     resize: both;
   }
 `;
