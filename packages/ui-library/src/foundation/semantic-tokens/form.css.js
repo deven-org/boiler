@@ -53,7 +53,7 @@ export const form = css`
   &[readonly] {
     border-width: ${Input.Default.ReadOnly.width};
     border-style: ${Input.Default.ReadOnly.style};
-    color: ${Forms.Placeholder.Default.ReadOnly};
+    color: ${Placeholder.Default.ReadOnly};
     border-color: transparent;
     outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
     color: ${UserInput.Default.ReadOnly};
