@@ -7,16 +7,16 @@ import { InputTypes, FormSizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
+import { iconButton } from '../../foundation/component-tokens/action.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, form];
+  static styles = [styleCustom, form, iconButton];
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
-  @property() hasLabel = true;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -29,6 +29,7 @@ export class BlrTextInput extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() maxLength?: number;
+  @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() showInputIcon = true;
@@ -36,15 +37,16 @@ export class BlrTextInput extends LitElement {
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
-  @property() pattern?: RegExp;
+  @property() hasLabel!: boolean;
 
-  @state() protected showPassword = false;
+  @state() protected currentType: InputTypes = this.type;
 
   protected togglePassword = () => {
-    return (this.showPassword = !this.showPassword);
+    this.currentType = this.currentType === 'password' ? 'text' : 'password';
   };
 
   protected render() {
+
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
     const classes = classMap({
@@ -64,15 +66,7 @@ export class BlrTextInput extends LitElement {
     });
 
     const getPasswordIcon = () => {
-      return this.showPassword === true ? 'blrEyeOffSm' : 'blrEyeOnSm';
-    };
-
-    const getType = () => {
-      if (this.type === 'password') {
-        return this.showPassword ? 'text' : 'password';
-      } else {
-        return this.type;
-      }
+      return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
     return html`
@@ -88,19 +82,19 @@ export class BlrTextInput extends LitElement {
         <div class="blr-input-inner-container ${inputClasses}">
           <input
             class="blr-form-element ${inputClasses}"
-            id=${this.textInputId || nothing}
-            type=${getType()}
-            value=${this.value}
-            placeholder=${this.placeholder || nothing}
-            ?disabled=${this.disabled}
-            ?readonly=${this.readonly}
-            ?required=${this.required}
+            id=${this.textInputId}
+            type="${this.currentType}"
+            value="${this.value}"
+            placeholder="${this.placeholder}"
+            ?disabled="${this.disabled}"
+            ?readonly="${this.readonly}"
+            ?required="${this.required}"
             @input=${this.onChange}
             @blur=${this.onBlur}
             @focus=${this.onFocus}
-            maxlength=${this.maxLength}
-            hasError=${this.hasError}
-            pattern=${this.pattern || nothing}
+            maxlength="${this.maxLength}"
+            pattern="${this.pattern}"
+            hasError="${this.hasError}"
           />
 
           ${this.showInputIcon && !wasInitialPasswordField
@@ -147,8 +141,8 @@ export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
 export const BlrTextInputRenderFunction = ({
   textInputId,
   type,
-  hasLabel,
   label,
+  hasLabel,
   labelAppendix,
   value,
   placeholder,
@@ -160,38 +154,39 @@ export const BlrTextInputRenderFunction = ({
   onBlur,
   onFocus,
   maxLength,
+  pattern,
   hasError,
   errorMessage,
   showInputIcon,
   inputIcon,
   showHint,
   hintText,
-  hintIcon,
-  pattern,
+  hintIcon
 }: BlrTextInputType) => {
   return html`<blr-text-input
     .textInputId=${textInputId}
-    .type=${type}
-    .hasLabel=${hasLabel}
     .label=${label}
+    .hasLabel=${hasLabel}
     .labelAppendix=${labelAppendix}
+    .showInputIcon=${showInputIcon}
+    .inputIcon=${inputIcon}
+    .type=${type}
     .value=${value}
     .placeholder=${placeholder}
     .disabled=${disabled}
-    .readonly=${readonly}
     .size=${size}
     .required=${required}
+    .readonly=${readonly}
     .onChange=${onChange}
     .onBlur=${onBlur}
     .onFocus=${onFocus}
     .maxLength=${maxLength}
+    .pattern=${pattern}
     .errorMessage=${errorMessage}
-    .showInputIcon=${showInputIcon}
-    .inputIcon=${inputIcon}
     .showHint=${showHint}
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
-    .pattern=${pattern}
-  ></blr-input>`;
+    class="example-layout-class"
+  ></blr-text-input>`;
 };

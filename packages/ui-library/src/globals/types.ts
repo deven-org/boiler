@@ -20,6 +20,14 @@ export type CounterVariantType = (typeof CounterVariants)[number];
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];
 export type InputTypes = (typeof InputTypes)[number];
+
 export type InputSizesType = (typeof InputSizes)[number];
+export type RadioOption = {
+  label: string;
+  value: string;
+  hintMessage?: string;
+  errorMessage?: string;
+  checked?: boolean;
+};
 export type WrapperVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';

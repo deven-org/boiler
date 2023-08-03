@@ -43,6 +43,8 @@ const semanticTypes = [
   'InputField',
   'LabelAppendix',
   'InputIcon',
+  'Control',
+  'Select',
   'LabelNextToControl',
   'Focus',
   'FocusBorder',

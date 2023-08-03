@@ -1,4 +1,4 @@
-import { css } from 'nested-css-to-flat/lit-css';
+import { css } from "nested-css-to-flat/lit-css";
 
 export const styleCustom = css`
   .blr-label-toggleswitch {

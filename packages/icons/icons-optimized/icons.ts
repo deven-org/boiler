@@ -3611,6 +3611,24 @@ const blrErrorXxs = (className: string) =>
     </defs>
   </svg>`;
 
+const blrEyeLg = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
+    <path
+      d="M18.8067 17.4633C18.8067 18.9471 17.6038 20.1499 16.12 20.1499C14.6362 20.1499 13.4333 18.9471 13.4333 17.4633C13.4333 15.9795 14.6362 14.7766 16.12 14.7766C17.6038 14.7766 18.8067 15.9795 18.8067 17.4633Z"
+      stroke="currentColor"
+      stroke-width="1.34333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M16.12 10.075C10.3372 10.075 6.01298 14.8885 4.56025 16.745C4.22605 17.1721 4.22605 17.7545 4.56025 18.1816C6.01298 20.0381 10.3372 24.8516 16.12 24.8516C21.9028 24.8516 26.227 20.0381 27.6797 18.1816C28.0139 17.7545 28.0139 17.1721 27.6797 16.745C26.227 14.8885 21.9028 10.075 16.12 10.075Z"
+      stroke="currentColor"
+      stroke-width="1.34333"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>`;
+
 const blrEyeMd = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
     <path
@@ -3629,127 +3647,271 @@ const blrEyeMd = (className: string) =>
     />
   </svg>`;
 
-const blrEyeOffLg = (className: string) =>
-  html`<svg class="${className}" fill="none" viewBox="0 0 32 32">
-    <g class="Size=lg">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.34"
-        d="M23.174 7.5 8.794 27.816m4.771-3.26c.814.2 1.667.313 2.555.313 5.782 0 10.106-4.813 11.559-6.67a1.154 1.154 0 0 0 0-1.436c-1.453-1.857-5.777-6.67-11.56-6.67-5.782 0-10.106 4.813-11.559 6.67a1.154 1.154 0 0 0 0 1.436c1.014 1.296 3.427 4.032 6.757 5.566m7.49-6.285a2.687 2.687 0 1 1-5.374 0 2.687 2.687 0 0 1 5.373 0Z"
-        class="vector"
-      />
-    </g>
-  </svg>`;
-
-const blrEyeOffMd = (className: string) =>
-  html`<svg class="${className}" fill="none" viewBox="0 0 24 24">
-    <g class="Size=md">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.01"
-        d="M17.292 5.633 6.504 20.875m3.58-2.445c.61.149 1.25.234 1.916.234 4.338 0 7.582-3.611 8.672-5.004a.866.866 0 0 0 0-1.078C19.582 11.19 16.338 7.578 12 7.578c-4.338 0-7.582 3.612-8.672 5.004a.866.866 0 0 0 0 1.078c.76.972 2.57 3.024 5.07 4.176m5.617-4.715a2.015 2.015 0 1 1-4.03 0 2.015 2.015 0 0 1 4.03 0Z"
-        class="vector"
-      />
-    </g>
-  </svg>`;
-
-const blrEyeOffSm = (className: string) =>
-  html`<svg class="${className}" fill="none" viewBox="0 0 16 16">
-    <g class="Size=sm">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width=".67"
-        d="m11.587 3.746-7.19 10.158m2.386-1.63c.407.1.833.157 1.277.157 2.891 0 5.053-2.407 5.78-3.335a.577.577 0 0 0 0-.718c-.726-.929-2.889-3.335-5.78-3.335-2.891 0-5.053 2.406-5.78 3.335a.577.577 0 0 0 0 .718c.507.648 1.714 2.016 3.379 2.783m3.744-3.143a1.343 1.343 0 1 1-2.686 0 1.343 1.343 0 0 1 2.686 0Z"
-        class="vector"
-      />
-    </g>
-  </svg>`;
-
-const blrEyeOffXl = (className: string) =>
-  html`<svg class="${className}" fill="none" viewBox="0 0 48 48">
-    <g class="Size=xl">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2.01"
-        d="m34.761 11.281-21.57 30.475m7.156-4.889c1.221.298 2.501.468 3.832.468 8.674 0 15.16-7.22 17.34-10.004a1.732 1.732 0 0 0 0-2.155c-2.18-2.785-8.666-10.005-17.34-10.005S9.02 22.391 6.84 25.176a1.732 1.732 0 0 0 0 2.155c1.521 1.943 5.14 6.047 10.136 8.349m11.233-9.428a4.03 4.03 0 1 1-8.06 0 4.03 4.03 0 0 1 8.06 0Z"
-        class="vector"
-      />
-    </g>
-  </svg>`;
-
-const blrEyeOffXs = (className: string) =>
-  html`<svg class="${className}" fill="none" viewBox="0 0 12 12">
-    <g class="Size=xs">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width=".5"
-        d="m8.626 2.785-5.353 7.562M5.05 9.134c.303.074.62.116.951.116 2.152 0 3.762-1.792 4.303-2.483a.43.43 0 0 0 0-.534C9.762 5.542 8.153 3.75 6 3.75c-2.152 0-3.762 1.792-4.303 2.483a.43.43 0 0 0 0 .534c.378.483 1.276 1.501 2.515 2.072M7 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
-        class="vector"
-      />
-    </g>
-  </svg>`;
-
-const blrEyeOffXxs = (className: string) =>
-  html`<svg class="${className}" fill="none" viewBox="0 0 8 8">
-    <g class="Size=xxs">
-      <path
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width=".33"
-        d="M5.75 1.86 2.183 6.9m1.183-.808c.202.049.414.077.634.077 1.435 0 2.507-1.194 2.868-1.655a.286.286 0 0 0 0-.356C6.508 3.698 5.435 2.503 4 2.503c-1.435 0-2.507 1.194-2.868 1.655a.286.286 0 0 0 0 .356c.252.322.85 1 1.677 1.381m1.858-1.56a.667.667 0 1 1-1.334 0 .667.667 0 0 1 1.334 0Z"
-        class="vector"
-      />
-    </g>
-  </svg>`;
-
-const blrEyeOnLg = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
+const blrEyeOffLg = (className: string) => html`<svg
+  class="${className}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  fill="none"
+  viewBox="0 0 32 32"
+>
+  <g class="Size=lg">
     <path
-      d="M18.8067 17.4633C18.8067 18.9471 17.6038 20.1499 16.12 20.1499C14.6362 20.1499 13.4333 18.9471 13.4333 17.4633C13.4333 15.9795 14.6362 14.7766 16.12 14.7766C17.6038 14.7766 18.8067 15.9795 18.8067 17.4633Z"
       stroke="currentColor"
-      stroke-width="1.34333"
       stroke-linecap="round"
       stroke-linejoin="round"
+      stroke-width="1.34"
+      d="M23.174 7.5 8.794 27.816m4.771-3.26c.814.2 1.667.313 2.555.313 5.782 0 10.106-4.813 11.559-6.67a1.154 1.154 0 0 0 0-1.436c-1.453-1.857-5.777-6.67-11.56-6.67-5.782 0-10.106 4.813-11.559 6.67a1.154 1.154 0 0 0 0 1.436c1.014 1.296 3.427 4.032 6.757 5.566m7.49-6.285a2.687 2.687 0 1 1-5.374 0 2.687 2.687 0 0 1 5.373 0Z"
+      class="vector"
     />
-    <path
-      d="M16.12 10.075C10.3372 10.075 6.01298 14.8885 4.56025 16.745C4.22605 17.1721 4.22605 17.7545 4.56025 18.1816C6.01298 20.0381 10.3372 24.8516 16.12 24.8516C21.9028 24.8516 26.227 20.0381 27.6797 18.1816C28.0139 17.7545 28.0139 17.1721 27.6797 16.745C26.227 14.8885 21.9028 10.075 16.12 10.075Z"
-      stroke="currentColor"
-      stroke-width="1.34333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>`;
+  </g>
+</svg> `;
 
-const blrEyeOnMd = (className: string) =>
-  html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
+const blrEyeOffMd = (className: string) => html`<svg
+  class="${className}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  fill="none"
+  viewBox="0 0 24 24"
+>
+  <g class="Size=md">
     <path
-      d="M14.105 13.0972C14.105 14.21 13.2029 15.1122 12.09 15.1122C10.9772 15.1122 10.075 14.21 10.075 13.0972C10.075 11.9843 10.9772 11.0822 12.09 11.0822C13.2029 11.0822 14.105 11.9843 14.105 13.0972Z"
       stroke="currentColor"
-      stroke-width="1.0075"
       stroke-linecap="round"
       stroke-linejoin="round"
+      stroke-width="1.01"
+      d="M17.292 5.633 6.504 20.875m3.58-2.445c.61.149 1.25.234 1.916.234 4.338 0 7.582-3.611 8.672-5.004a.866.866 0 0 0 0-1.078C19.582 11.19 16.338 7.578 12 7.578c-4.338 0-7.582 3.612-8.672 5.004a.866.866 0 0 0 0 1.078c.76.972 2.57 3.024 5.07 4.176m5.617-4.715a2.015 2.015 0 1 1-4.03 0 2.015 2.015 0 0 1 4.03 0Z"
+      class="vector"
     />
-    <path
-      d="M12.09 7.55603C7.75288 7.55603 4.50974 11.1662 3.4202 12.5585C3.16955 12.8789 3.16955 13.3157 3.4202 13.636C4.50974 15.0284 7.75288 18.6385 12.09 18.6385C16.4271 18.6385 19.6703 15.0284 20.7598 13.636C21.0105 13.3157 21.0105 12.8789 20.7598 12.5585C19.6703 11.1662 16.4271 7.55603 12.09 7.55603Z"
-      stroke="currentColor"
-      stroke-width="1.0075"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>`;
+  </g>
+</svg> `;
 
-const blrEyeOnSm = (className: string) =>
+const blrEyeOffSm = (className: string) => html`<svg
+  class="${className}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="16"
+  height="16"
+  fill="none"
+  viewBox="0 0 16 16"
+>
+  <g class="Size=sm">
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width=".67"
+      d="m11.587 3.746-7.19 10.158m2.386-1.63c.407.1.833.157 1.277.157 2.891 0 5.053-2.407 5.78-3.335a.577.577 0 0 0 0-.718c-.726-.929-2.889-3.335-5.78-3.335-2.891 0-5.053 2.406-5.78 3.335a.577.577 0 0 0 0 .718c.507.648 1.714 2.016 3.379 2.783m3.744-3.143a1.343 1.343 0 1 1-2.686 0 1.343 1.343 0 0 1 2.686 0Z"
+      class="vector"
+    />
+  </g>
+</svg> `;
+
+const blrEyeOffXl = (className: string) => html`<svg
+  class="${className}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="48"
+  height="48"
+  fill="none"
+  viewBox="0 0 48 48"
+>
+  <g class="Size=xl">
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2.01"
+      d="m34.761 11.281-21.57 30.475m7.156-4.889c1.221.298 2.501.468 3.832.468 8.674 0 15.16-7.22 17.34-10.004a1.732 1.732 0 0 0 0-2.155c-2.18-2.785-8.666-10.005-17.34-10.005S9.02 22.391 6.84 25.176a1.732 1.732 0 0 0 0 2.155c1.521 1.943 5.14 6.047 10.136 8.349m11.233-9.428a4.03 4.03 0 1 1-8.06 0 4.03 4.03 0 0 1 8.06 0Z"
+      class="vector"
+    />
+  </g>
+</svg> `;
+
+const blrEyeOffXs = (className: string) => html`<svg
+  class="${className}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="12"
+  height="12"
+  fill="none"
+  viewBox="0 0 12 12"
+>
+  <g class="Size=xs">
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width=".5"
+      d="m8.626 2.785-5.353 7.562M5.05 9.134c.303.074.62.116.951.116 2.152 0 3.762-1.792 4.303-2.483a.43.43 0 0 0 0-.534C9.762 5.542 8.153 3.75 6 3.75c-2.152 0-3.762 1.792-4.303 2.483a.43.43 0 0 0 0 .534c.378.483 1.276 1.501 2.515 2.072M7 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+      class="vector"
+    />
+  </g>
+</svg> `;
+
+const blrEyeOffXxs = (className: string) => html`<svg
+  class="${className}"
+  xmlns="http://www.w3.org/2000/svg"
+  width="8"
+  height="8"
+  fill="none"
+  viewBox="0 0 8 8"
+>
+  <g class="Size=xxs">
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width=".33"
+      d="M5.75 1.86 2.183 6.9m1.183-.808c.202.049.414.077.634.077 1.435 0 2.507-1.194 2.868-1.655a.286.286 0 0 0 0-.356C6.508 3.698 5.435 2.503 4 2.503c-1.435 0-2.507 1.194-2.868 1.655a.286.286 0 0 0 0 .356c.252.322.85 1 1.677 1.381m1.858-1.56a.667.667 0 1 1-1.334 0 .667.667 0 0 1 1.334 0Z"
+      class="vector"
+    />
+  </g>
+</svg> `;
+
+const blrEyeOnLg = (className: string) => html`<svg
+  class="${className}"
+  width="32"
+  height="32"
+  viewBox="0 0 32 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M18.8067 17.4633C18.8067 18.9471 17.6038 20.1499 16.12 20.1499C14.6362 20.1499 13.4333 18.9471 13.4333 17.4633C13.4333 15.9795 14.6362 14.7766 16.12 14.7766C17.6038 14.7766 18.8067 15.9795 18.8067 17.4633Z"
+    stroke="currentColor"
+    stroke-width="1.34333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M16.12 10.075C10.3372 10.075 6.01298 14.8885 4.56025 16.745C4.22605 17.1721 4.22605 17.7545 4.56025 18.1816C6.01298 20.0381 10.3372 24.8516 16.12 24.8516C21.9028 24.8516 26.227 20.0381 27.6797 18.1816C28.0139 17.7545 28.0139 17.1721 27.6797 16.745C26.227 14.8885 21.9028 10.075 16.12 10.075Z"
+    stroke="currentColor"
+    stroke-width="1.34333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg> `;
+
+const blrEyeOnMd = (className: string) => html`<svg
+  class="${className}"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14.105 13.0972C14.105 14.21 13.2029 15.1122 12.09 15.1122C10.9772 15.1122 10.075 14.21 10.075 13.0972C10.075 11.9843 10.9772 11.0822 12.09 11.0822C13.2029 11.0822 14.105 11.9843 14.105 13.0972Z"
+    stroke="currentColor"
+    stroke-width="1.0075"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M12.09 7.55603C7.75288 7.55603 4.50974 11.1662 3.4202 12.5585C3.16955 12.8789 3.16955 13.3157 3.4202 13.636C4.50974 15.0284 7.75288 18.6385 12.09 18.6385C16.4271 18.6385 19.6703 15.0284 20.7598 13.636C21.0105 13.3157 21.0105 12.8789 20.7598 12.5585C19.6703 11.1662 16.4271 7.55603 12.09 7.55603Z"
+    stroke="currentColor"
+    stroke-width="1.0075"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg> `;
+
+const blrEyeOnSm = (className: string) => html`<svg
+  class="${className}"
+  width="16"
+  height="16"
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M9.40332 8.73139C9.40332 9.4733 8.80189 10.0747 8.05999 10.0747C7.31809 10.0747 6.71666 9.4733 6.71666 8.73139C6.71666 7.98949 7.31809 7.38806 8.05999 7.38806C8.80189 7.38806 9.40332 7.98949 9.40332 8.73139Z"
+    stroke="currentColor"
+    stroke-width="0.671667"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M8.06 5.03735C5.16858 5.03735 3.00649 7.44411 2.28013 8.37236C2.11303 8.58591 2.11303 8.87713 2.28013 9.09068C3.00649 10.0189 5.16858 12.4257 8.06 12.4257C10.9514 12.4257 13.1135 10.0189 13.8399 9.09068C14.007 8.87713 14.007 8.58591 13.8399 8.37236C13.1135 7.44411 10.9514 5.03735 8.06 5.03735Z"
+    stroke="currentColor"
+    stroke-width="0.671667"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg> `;
+
+const blrEyeOnXl = (className: string) => html`<svg
+  class="${className}"
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M28.21 26.1943C28.21 28.42 26.4057 30.2243 24.18 30.2243C21.9543 30.2243 20.15 28.42 20.15 26.1943C20.15 23.9686 21.9543 22.1643 24.18 22.1643C26.4057 22.1643 28.21 23.9686 28.21 26.1943Z"
+    stroke="currentColor"
+    stroke-width="2.015"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M24.18 15.1118C15.5057 15.1118 9.01945 22.3321 6.84036 25.1168C6.33906 25.7575 6.33906 26.6312 6.84036 27.2718C9.01945 30.0566 15.5057 37.2768 24.18 37.2768C32.8542 37.2768 39.3405 30.0566 41.5196 27.2718C42.0209 26.6312 42.0209 25.7575 41.5196 25.1168C39.3405 22.3321 32.8542 15.1118 24.18 15.1118Z"
+    stroke="currentColor"
+    stroke-width="2.015"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg> `;
+
+const blrEyeOnXs = (className: string) => html`<svg
+  class="${className}"
+  width="12"
+  height="12"
+  viewBox="0 0 12 12"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M7 6.49976C7 7.05204 6.55229 7.49976 6 7.49976C5.44772 7.49976 5 7.05204 5 6.49976C5 5.94747 5.44772 5.49976 6 5.49976C6.55229 5.49976 7 5.94747 7 6.49976Z"
+    stroke="currentColor"
+    stroke-width="0.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M6 3.75C3.84758 3.75 2.23808 5.54163 1.69737 6.23264C1.57297 6.3916 1.57297 6.6084 1.69737 6.76736C2.23808 7.45837 3.84758 9.25 6 9.25C8.15242 9.25 9.76192 7.45837 10.3026 6.76736C10.427 6.6084 10.427 6.3916 10.3026 6.23264C9.76191 5.54163 8.15242 3.75 6 3.75Z"
+    stroke="currentColor"
+    stroke-width="0.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg> `;
+
+const blrEyeOnXxs = (className: string) => html`<svg
+  class="${className}"
+  width="8"
+  height="8"
+  viewBox="0 0 8 8"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M4.66667 4.33329C4.66667 4.70148 4.36819 4.99996 4 4.99996C3.63181 4.99996 3.33334 4.70148 3.33334 4.33329C3.33334 3.9651 3.63181 3.66663 4 3.66663C4.36819 3.66663 4.66667 3.9651 4.66667 4.33329Z"
+    stroke="currentColor"
+    stroke-width="0.333333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M4 2.5C2.56506 2.5 1.49206 3.69442 1.13158 4.15509C1.04865 4.26107 1.04865 4.4056 1.13158 4.51158C1.49206 4.97225 2.56506 6.16667 4 6.16667C5.43494 6.16667 6.50794 4.97225 6.86842 4.51158C6.95135 4.4056 6.95135 4.26107 6.86842 4.15509C6.50794 3.69442 5.43494 2.5 4 2.5Z"
+    stroke="currentColor"
+    stroke-width="0.333333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg> `;
+
+const blrEyeSm = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 16 16" fill="none">
     <path
       d="M9.40332 8.73139C9.40332 9.4733 8.80189 10.0747 8.05999 10.0747C7.31809 10.0747 6.71666 9.4733 6.71666 8.73139C6.71666 7.98949 7.31809 7.38806 8.05999 7.38806C8.80189 7.38806 9.40332 7.98949 9.40332 8.73139Z"
@@ -3767,7 +3929,7 @@ const blrEyeOnSm = (className: string) =>
     />
   </svg>`;
 
-const blrEyeOnXl = (className: string) =>
+const blrEyeXl = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 48 48" fill="none">
     <path
       d="M28.21 26.1943C28.21 28.42 26.4057 30.2243 24.18 30.2243C21.9543 30.2243 20.15 28.42 20.15 26.1943C20.15 23.9686 21.9543 22.1643 24.18 22.1643C26.4057 22.1643 28.21 23.9686 28.21 26.1943Z"
@@ -3785,7 +3947,7 @@ const blrEyeOnXl = (className: string) =>
     />
   </svg>`;
 
-const blrEyeOnXs = (className: string) =>
+const blrEyeXs = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 12 12" fill="none">
     <path
       d="M7 6.49976C7 7.05204 6.55229 7.49976 6 7.49976C5.44772 7.49976 5 7.05204 5 6.49976C5 5.94747 5.44772 5.49976 6 5.49976C6.55229 5.49976 7 5.94747 7 6.49976Z"
@@ -3803,7 +3965,7 @@ const blrEyeOnXs = (className: string) =>
     />
   </svg>`;
 
-const blrEyeOnXxs = (className: string) =>
+const blrEyeXxs = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 8 8" fill="none">
     <path
       d="M4.66667 4.33329C4.66667 4.70148 4.36819 4.99996 4 4.99996C3.63181 4.99996 3.33334 4.70148 3.33334 4.33329C3.33334 3.9651 3.63181 3.66663 4 3.66663C4.36819 3.66663 4.66667 3.9651 4.66667 4.33329Z"
@@ -8211,121 +8373,6 @@ const blrWiFiXxs = (className: string) =>
     />
   </svg>`;
 
-const PureIconKeys = [
-  'blr360',
-  'blrArrowDown',
-  'blrArrowLeft',
-  'blrArrowRight',
-  'blrArrowUp',
-  'blrBag',
-  'blrBook',
-  'blrBookmark',
-  'blrBriefcase',
-  'blrCalendar',
-  'blrCalendarToday',
-  'blrCamera',
-  'blrCart',
-  'blrChat',
-  'blrCheckmark',
-  'blrChevronDown',
-  'blrChevronLeft',
-  'blrChevronRight',
-  'blrChevronUp',
-  'blrClock0000',
-  'blrClock0030',
-  'blrClock0100',
-  'blrClock0130',
-  'blrClock0300',
-  'blrClock0330',
-  'blrClock0430',
-  'blrClock0500',
-  'blrClock0700',
-  'blrClock0730',
-  'blrClock0900',
-  'blrClock0930',
-  'blrClock1100',
-  'blrClock1130',
-  'blrClose',
-  'blrCloud',
-  'blrCloudUpload',
-  'blrCompass',
-  'blrCopy',
-  'blrCrop',
-  'blrDislike',
-  'blrDocumentNew',
-  'blrDocumentTwo',
-  'blrDownload',
-  'blrDrag',
-  'blrEnvelopeClosed',
-  'blrEnvelopeOpen',
-  'blrEqual',
-  'blrErrorFilled',
-  'blrError',
-  'blrEye',
-  'blrEyeOff',
-  'blrEyeOn',
-  'blrFlag',
-  'blrFolder',
-  'blrFolderOpen',
-  'blrFolderOpenSide',
-  'blrForward',
-  'blrGlobe',
-  'blrHeart',
-  'blrHome',
-  'blrImage',
-  'blrInboxMessageMail',
-  'blrInfo',
-  'blrLike',
-  'blrLinkBroken',
-  'blrLink',
-  'blrLockClosed',
-  'blrLockOpen',
-  'blrMenu',
-  'blrMicrophone',
-  'blrMinus',
-  'blrMoreHorizontal',
-  'blrMore',
-  'blrMoreVertical',
-  'blrMusic',
-  'blrNotificationBellOff',
-  'blrNotificationBellOn',
-  'blrPause',
-  'blrPen',
-  'blrPhoneIncomingCall',
-  'blrPhone',
-  'blrPhoneOutgoingCall',
-  'blrPin',
-  'blrPlane',
-  'blrPlay',
-  'blrPlus',
-  'blrPrinter',
-  'blrProfile',
-  'blrRefresh2',
-  'blrRefresh',
-  'blrResizeIn',
-  'blrResizeOut',
-  'blrScissors',
-  'blrSearch',
-  'blrSelectionBoxOff',
-  'blrSelectionBoxOn',
-  'blrSelectionOff',
-  'blrSelectionOn',
-  'blrSend',
-  'blrSettingsCog',
-  'blrShare',
-  'blrShoppingBasket',
-  'blroothie',
-  'blrSoundMax',
-  'blrSoundMin',
-  'blrStar',
-  'blrTag',
-  'blrTrash',
-  'blrUpload',
-  'blrVideoCamera',
-  'blrVideo',
-  'blrWiFi',
-];
-
 export const IconMapping = {
   blr360Lg,
   blr360Md,
@@ -8621,6 +8668,7 @@ export const IconMapping = {
   blrErrorXl,
   blrErrorXs,
   blrErrorXxs,
+  blrEyeLg,
   blrEyeMd,
   blrEyeOffLg,
   blrEyeOffMd,
@@ -8634,6 +8682,10 @@ export const IconMapping = {
   blrEyeOnXl,
   blrEyeOnXs,
   blrEyeOnXxs,
+  blrEyeSm,
+  blrEyeXl,
+  blrEyeXs,
+  blrEyeXxs,
   blrFlagLg,
   blrFlagMd,
   blrFlagSm,
@@ -8992,9 +9044,5 @@ export const IconMapping = {
   blrWiFiXs,
   blrWiFiXxs,
 };
-
 export type IconType = keyof typeof IconMapping;
 export const IconKeys = Object.keys(IconMapping);
-
-export type SizelessIconType = (typeof PureIconKeys)[number];
-export const SizelessIconKeys = PureIconKeys;

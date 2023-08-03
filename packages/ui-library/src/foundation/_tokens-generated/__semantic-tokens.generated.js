@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 01 Aug 2023 10:44:33 GMT
+ * Generated on Wed, 02 Aug 2023 07:13:34 GMT
  */
 
 export const semanticTokens = {
@@ -288,6 +288,11 @@ export const semanticTokens = {
     },
   },
   Forms: {
+    Select: {
+      SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
+      MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
+      LG: { InputFieldPadding: '0.75rem 48px 0.75rem 16px', IconPaddingRight: '16px' },
+    },
     SM: {
       Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
       LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
