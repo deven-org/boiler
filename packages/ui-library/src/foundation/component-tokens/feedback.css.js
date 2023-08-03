@@ -113,7 +113,8 @@ export const counter = css`
       background-color: ${Error.Surface};
     }
 
-    &.limit-close,
+    &.limit-close-int,
+    &.limit-close-per,
     &.warn {
       color: ${Warning.Text};
       border-color: ${Warning.SurfaceStroke};
