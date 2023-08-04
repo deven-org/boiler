@@ -4,6 +4,7 @@ import { InputSizes } from '../../globals/constants';
 import './index';
 import { getIconName } from '../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components/Radio',
@@ -24,6 +25,10 @@ export default {
     },
     groupErrorIcon: {
       options: [undefined, ...getIconName(IconKeys)],
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -49,6 +54,7 @@ export const BlrRadioGroup = ({
   showGroupErrorMessage,
   groupErrorMessage,
   groupErrorIcon,
+  theme,
 }: BlrRadioGroupType) =>
   html`
     ${BlrRadioGroupRenderFunction({
@@ -71,11 +77,13 @@ export const BlrRadioGroup = ({
       showGroupErrorMessage,
       groupErrorMessage,
       groupErrorIcon,
+      theme,
     })}
   `;
 BlrRadioGroup.storyName = 'BlrRadioGroup';
 
 BlrRadioGroup.args = {
+  theme: 'Light',
   disabled: false,
   name: 'Default Name',
   hasError: false,

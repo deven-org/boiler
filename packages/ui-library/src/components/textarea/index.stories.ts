@@ -3,10 +3,10 @@ import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 
 import { FormSizes } from '../../globals/constants';
-import { IconKeys } from '@boiler/icons';
+import { PureIconKeys } from '@boiler/icons';
 import './index';
-import { getIconName } from '../../utils/get-icon-name';
 import { action } from '@storybook/addon-actions';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
@@ -16,7 +16,7 @@ export default {
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     warningLimitType: {
@@ -44,6 +44,10 @@ export default {
       if: { arg: 'warningLimitType', eq: 'warningLimitPer' },
       description:
         'Please provide a percentage. Warning limit is calculated based on the percentage of the maximum length reached ((maximum length / 100) * percentage value)',
+    },
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
     },
   },
   parameters: {
@@ -76,6 +80,7 @@ export const BlrTextarea = ({
   isResizeable,
   showHint,
   value,
+  theme,
 }: BlrTextareaType) =>
   html`
     ${BlrTextareaRenderFunction({
@@ -103,12 +108,14 @@ export const BlrTextarea = ({
       isResizeable,
       showHint,
       value,
+      theme,
     })}
   `;
 
 BlrTextarea.storyName = 'BlrTextarea';
 
 BlrTextarea.args = {
+  theme: 'Light',
   textareaId: '#1',
   label: 'Label',
   labelAppendix: '(Optional)',

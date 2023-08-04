@@ -5,8 +5,8 @@ import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
 
 import { InputSizes } from '../../globals/constants';
 import './index';
-import { getIconName } from '../../utils/get-icon-name';
-import { IconKeys } from '@boiler/icons';
+import { PureIconKeys } from '@boiler/icons';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
@@ -16,13 +16,20 @@ export default {
       control: { type: 'select' },
     },
     errorIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+    },
+  },
+  parameters: {
+    viewMode: 'docs',
   },
 };
 
@@ -44,6 +51,7 @@ export const BlrCheckbox = ({
   hintIcon,
   hintMessage,
   handleChange,
+  theme,
 }: BlrCheckboxType) =>
   html`
     ${BlrCheckboxRenderFunction({
@@ -64,6 +72,7 @@ export const BlrCheckbox = ({
       hintIcon,
       hintMessage,
       handleChange,
+      theme,
     })}
   `;
 
@@ -74,6 +83,7 @@ const logEventType = (event: Event) => {
 };
 
 BlrCheckbox.args = {
+  theme: 'Light',
   label: 'Checkbox Option',
   checkInputId: 'Checky',
   disabled: false,

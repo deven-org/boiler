@@ -3,15 +3,16 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
-import { form } from '../../foundation/semantic-tokens/form.css';
-import { radio } from '../../foundation/component-tokens/radio.css';
+import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import { radioDark, radioLight } from '../../foundation/component-tokens/radio.css';
 import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-radio')
 export class BlrRadio extends LitElement {
-  static styles = [styleCustom, form, radio];
+  static styles = [styleCustom];
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
@@ -28,7 +29,11 @@ export class BlrRadio extends LitElement {
   @property() showHint?: boolean;
   @property() hintIcon?: IconType;
 
+  @property() theme: ThemeType = 'Light';
+
   protected render() {
+    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
+
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
@@ -43,7 +48,9 @@ export class BlrRadio extends LitElement {
 
     const id = this.option.label ? calculateOptionId(this.option.label) : '';
 
-    return html`
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
       <div class="blr-radio ${classes}">
         <input
           id=${id || nothing}
@@ -74,6 +81,7 @@ export class BlrRadio extends LitElement {
                     variant: 'hint',
                     size: this.size,
                     icon: this.hintIcon ? this.hintIcon : undefined,
+                    theme: this.theme,
                   })}
                 </div>
               `
@@ -86,13 +94,13 @@ export class BlrRadio extends LitElement {
                     variant: 'error',
                     size: this.size,
                     icon: this.errorIcon ? this.errorIcon : undefined,
+                    theme: this.theme,
                   })}
                 </div>
               `
             : nothing}
         </div>
-      </div>
-    `;
+      </div> `;
   }
 }
 
@@ -113,6 +121,7 @@ export const BlrRadioRenderFunction = ({
   showHint,
   hintIcon,
   errorIcon,
+  theme,
 }: BlrRadioType) => {
   return html`<blr-radio
     .value=${option.value}
@@ -131,5 +140,6 @@ export const BlrRadioRenderFunction = ({
     .option=${option}
     .showHint=${showHint}
     .hintIcon=${hintIcon}
+    .theme=${theme}
   ></blr-radio>`;
 };

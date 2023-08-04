@@ -7,6 +7,7 @@ const sampleParams: BlrLoaderType = {
   size: 'md',
   variant: 'default',
   loadingStatus: 'Loading',
+  theme: 'Light',
 };
 
 describe('blr-loader', () => {

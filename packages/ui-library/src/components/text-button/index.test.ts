@@ -12,6 +12,7 @@ const sampleParams: BlrTextButtonType = {
   variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
+  theme: 'Light',
 };
 
 describe('blr-text-button', () => {

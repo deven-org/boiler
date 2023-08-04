@@ -13,6 +13,7 @@ const sampleParams: BlrIconLinkType = {
   href: '#',
   target: '_self',
   loadingStatus: 'Loading',
+  theme: 'Light',
 };
 
 describe('blr-icon-link', () => {

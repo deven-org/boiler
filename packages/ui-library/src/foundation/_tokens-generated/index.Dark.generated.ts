@@ -1,6 +1,6 @@
 import { wrapValuesWithCss } from '../../utils/wrap-values-with-css';
-import { componentTokens } from './__component-tokens.generated.js';
-import { semanticTokens } from './__semantic-tokens.generated.js';
+import { componentTokens } from './__component-tokens.Dark.generated.js';
+import { semanticTokens } from './__semantic-tokens.Dark.generated.js';
 
 const componentTokensWrapped = wrapValuesWithCss(componentTokens);
 const semanticTokensWrapped = wrapValuesWithCss(semanticTokens);

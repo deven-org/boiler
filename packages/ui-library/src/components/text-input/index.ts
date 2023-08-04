@@ -2,18 +2,19 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { form } from '../../foundation/semantic-tokens/form.css';
+import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { InputTypes, FormSizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
-import { iconButton } from '../../foundation/component-tokens/action.css';
+import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
-  static styles = [styleCustom, form, iconButton];
+  static styles = [styleCustom];
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
@@ -39,6 +40,8 @@ export class BlrTextInput extends LitElement {
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() hasLabel!: boolean;
 
+  @property() theme: ThemeType = 'Light';
+
   @state() protected currentType: InputTypes = this.type;
 
   protected togglePassword = () => {
@@ -46,6 +49,7 @@ export class BlrTextInput extends LitElement {
   };
 
   protected render() {
+    const dynamicStyles = this.theme === 'Light' ? [formLight, iconButtonLight] : [formDark, iconButtonDark];
 
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
@@ -69,7 +73,9 @@ export class BlrTextInput extends LitElement {
       return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
-    return html`
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
       <div class="blr-input ${classes}">
         ${this.hasLabel
           ? html` ${BlrFormLabelRenderFunction({
@@ -77,6 +83,7 @@ export class BlrTextInput extends LitElement {
               labelSize: this.size,
               labelAppendix: this.labelAppendix,
               forValue: this.textInputId,
+              theme: this.theme,
             })}`
           : html``}
         <div class="blr-input-inner-container ${inputClasses}">
@@ -127,12 +134,12 @@ export class BlrTextInput extends LitElement {
                   variant: this.hasError ? 'error' : 'hint',
                   icon: this.hintIcon,
                   size: 'sm',
+                  theme: this.theme,
                 })}
               `
             : nothing}
         </div>
-      </div>
-    `;
+      </div> `;
   }
 }
 
@@ -161,7 +168,8 @@ export const BlrTextInputRenderFunction = ({
   inputIcon,
   showHint,
   hintText,
-  hintIcon
+  hintIcon,
+  theme,
 }: BlrTextInputType) => {
   return html`<blr-text-input
     .textInputId=${textInputId}
@@ -187,6 +195,6 @@ export const BlrTextInputRenderFunction = ({
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
-    class="example-layout-class"
+    .theme=${theme}
   ></blr-text-input>`;
 };

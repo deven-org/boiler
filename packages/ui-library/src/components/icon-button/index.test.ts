@@ -12,6 +12,7 @@ const sampleParams: BlrIconButtonType = {
   variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
+  theme: 'Light',
 };
 
 describe('blr-icon-button', () => {

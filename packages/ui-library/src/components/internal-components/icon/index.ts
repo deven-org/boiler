@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
-import { icon } from '../../../foundation/component-tokens/ui.css';
+import { iconLight } from '../../../foundation/component-tokens/ui.css';
 import { styleCustom } from './index.css';
 import { SizesType } from '../../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
@@ -10,7 +10,7 @@ import { styleMap } from 'lit/directives/style-map.js';
 
 @customElement('blr-icon')
 export class BlrIcon extends LitElement {
-  static styles = [styleCustom, icon];
+  static styles = [styleCustom, iconLight];
 
   @property() icon!: IconType;
   @property() size!: SizesType;

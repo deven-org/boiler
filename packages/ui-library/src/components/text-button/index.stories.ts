@@ -1,20 +1,20 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
-import { IconKeys } from '@boiler/icons';
-import { FormSizes } from '../../globals/constants';
+import { PureIconKeys } from '@boiler/icons';
+import { ActionVariants, FormSizes } from '../../globals/constants';
 import './index';
-import { getIconName } from '../../utils/get-icon-name';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
   argTypes: {
     leadingIcon: {
-      options: [undefined, ...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     trailingIcon: {
-      options: [undefined, ...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     size: {
@@ -22,7 +22,11 @@ export default {
       control: { type: 'select' },
     },
     variant: {
-      options: ['cta', 'primary', 'secondary', 'silent', 'destructive', 'encourage'],
+      options: ActionVariants,
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -43,6 +47,7 @@ export const BlrTextButton = ({
   leadingIcon,
   trailingIcon,
   loadingStatus,
+  theme,
 }: BlrTextButtonType) =>
   html`
     ${BlrTextButtonRenderFunction({
@@ -57,12 +62,14 @@ export const BlrTextButton = ({
       leadingIcon,
       trailingIcon,
       loadingStatus,
+      theme,
     })}
   `;
 
 BlrTextButton.storyName = 'BlrTextButton';
 
 BlrTextButton.args = {
+  theme: 'Light',
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),

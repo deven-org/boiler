@@ -3475,7 +3475,7 @@ const blrEqualXxs = (className: string) =>
     />
   </svg>`;
 
-  const blrErrorFilledLg = (className: string) =>
+const blrErrorFilledLg = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
     <path
       fill-rule="evenodd"
@@ -3609,10 +3609,17 @@ const blrErrorXxs = (className: string) =>
     <defs>
       <clipPath id="a"><rect width="8" height="8" fill="currentColor" /></clipPath>
     </defs>
-  </svg>`;  
+  </svg>`;
 
 const blrEyeOffLg = (className: string) =>
-  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+  html`<svg
+    class="${className}"
+    xmlns="http://www.w3.org/2000/svg"
+    width="32"
+    height="32"
+    fill="none"
+    viewBox="0 0 32 32"
+  >
     <g class="Size=lg">
       <path
         stroke="currentColor"
@@ -3626,7 +3633,14 @@ const blrEyeOffLg = (className: string) =>
   </svg> `;
 
 const blrEyeOffMd = (className: string) =>
-  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  html`<svg
+    class="${className}"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
     <g class="Size=md">
       <path
         stroke="currentColor"
@@ -3640,7 +3654,14 @@ const blrEyeOffMd = (className: string) =>
   </svg> `;
 
 const blrEyeOffSm = (className: string) =>
-  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+  html`<svg
+    class="${className}"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    fill="none"
+    viewBox="0 0 16 16"
+  >
     <g class="Size=sm">
       <path
         stroke="currentColor"
@@ -3654,7 +3675,14 @@ const blrEyeOffSm = (className: string) =>
   </svg> `;
 
 const blrEyeOffXl = (className: string) =>
-  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+  html`<svg
+    class="${className}"
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    fill="none"
+    viewBox="0 0 48 48"
+  >
     <g class="Size=xl">
       <path
         stroke="currentColor"
@@ -3668,7 +3696,14 @@ const blrEyeOffXl = (className: string) =>
   </svg> `;
 
 const blrEyeOffXs = (className: string) =>
-  html`<svg class="${className}" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+  html`<svg
+    class="${className}"
+    xmlns="http://www.w3.org/2000/svg"
+    width="12"
+    height="12"
+    fill="none"
+    viewBox="0 0 12 12"
+  >
     <g class="Size=xs">
       <path
         stroke="currentColor"
@@ -3696,7 +3731,14 @@ const blrEyeOffXxs = (className: string) =>
   </svg> `;
 
 const blrEyeOnLg = (className: string) =>
-  html`<svg class="${className}" width="32" height="32" viewBox="0 0 32 32" fill="none"xmlns="http://www.w3.org/2000/svg">
+  html`<svg
+    class="${className}"
+    width="32"
+    height="32"
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M18.8067 17.4633C18.8067 18.9471 17.6038 20.1499 16.12 20.1499C14.6362 20.1499 13.4333 18.9471 13.4333 17.4633C13.4333 15.9795 14.6362 14.7766 16.12 14.7766C17.6038 14.7766 18.8067 15.9795 18.8067 17.4633Z"
       stroke="currentColor"
@@ -3714,7 +3756,14 @@ const blrEyeOnLg = (className: string) =>
   </svg> `;
 
 const blrEyeOnMd = (className: string) =>
-  html`<svg class="${className}" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  html`<svg
+    class="${className}"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M14.105 13.0972C14.105 14.21 13.2029 15.1122 12.09 15.1122C10.9772 15.1122 10.075 14.21 10.075 13.0972C10.075 11.9843 10.9772 11.0822 12.09 11.0822C13.2029 11.0822 14.105 11.9843 14.105 13.0972Z"
       stroke="currentColor"
@@ -3732,7 +3781,14 @@ const blrEyeOnMd = (className: string) =>
   </svg> `;
 
 const blrEyeOnSm = (className: string) =>
-  html`<svg class="${className}" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  html`<svg
+    class="${className}"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M9.40332 8.73139C9.40332 9.4733 8.80189 10.0747 8.05999 10.0747C7.31809 10.0747 6.71666 9.4733 6.71666 8.73139C6.71666 7.98949 7.31809 7.38806 8.05999 7.38806C8.80189 7.38806 9.40332 7.98949 9.40332 8.73139Z"
       stroke="currentColor"
@@ -3750,7 +3806,14 @@ const blrEyeOnSm = (className: string) =>
   </svg> `;
 
 const blrEyeOnXl = (className: string) =>
-  html`<svg class="${className}" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  html`<svg
+    class="${className}"
+    width="48"
+    height="48"
+    viewBox="0 0 48 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M28.21 26.1943C28.21 28.42 26.4057 30.2243 24.18 30.2243C21.9543 30.2243 20.15 28.42 20.15 26.1943C20.15 23.9686 21.9543 22.1643 24.18 22.1643C26.4057 22.1643 28.21 23.9686 28.21 26.1943Z"
       stroke="currentColor"
@@ -3768,7 +3831,14 @@ const blrEyeOnXl = (className: string) =>
   </svg> `;
 
 const blrEyeOnXs = (className: string) =>
-  html`<svg class="${className}" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  html`<svg
+    class="${className}"
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M7 6.49976C7 7.05204 6.55229 7.49976 6 7.49976C5.44772 7.49976 5 7.05204 5 6.49976C5 5.94747 5.44772 5.49976 6 5.49976C6.55229 5.49976 7 5.94747 7 6.49976Z"
       stroke="currentColor"
@@ -8193,6 +8263,121 @@ const blrWiFiXxs = (className: string) =>
     />
   </svg>`;
 
+export const PureIconKeys = [
+  'blr360',
+  'blrArrowDown',
+  'blrArrowLeft',
+  'blrArrowRight',
+  'blrArrowUp',
+  'blrBag',
+  'blrBook',
+  'blrBookmark',
+  'blrBriefcase',
+  'blrCalendar',
+  'blrCalendarToday',
+  'blrCamera',
+  'blrCart',
+  'blrChat',
+  'blrCheckmark',
+  'blrChevronDown',
+  'blrChevronLeft',
+  'blrChevronRight',
+  'blrChevronUp',
+  'blrClock0000',
+  'blrClock0030',
+  'blrClock0100',
+  'blrClock0130',
+  'blrClock0300',
+  'blrClock0330',
+  'blrClock0430',
+  'blrClock0500',
+  'blrClock0700',
+  'blrClock0730',
+  'blrClock0900',
+  'blrClock0930',
+  'blrClock1100',
+  'blrClock1130',
+  'blrClose',
+  'blrCloud',
+  'blrCloudUpload',
+  'blrCompass',
+  'blrCopy',
+  'blrCrop',
+  'blrDislike',
+  'blrDocumentNew',
+  'blrDocumentTwo',
+  'blrDownload',
+  'blrDrag',
+  'blrEnvelopeClosed',
+  'blrEnvelopeOpen',
+  'blrEqual',
+  'blrErrorFilled',
+  'blrError',
+  'blrEye',
+  'blrEyeOff',
+  'blrEyeOn',
+  'blrFlag',
+  'blrFolder',
+  'blrFolderOpen',
+  'blrFolderOpenSide',
+  'blrForward',
+  'blrGlobe',
+  'blrHeart',
+  'blrHome',
+  'blrImage',
+  'blrInboxMessageMail',
+  'blrInfo',
+  'blrLike',
+  'blrLinkBroken',
+  'blrLink',
+  'blrLockClosed',
+  'blrLockOpen',
+  'blrMenu',
+  'blrMicrophone',
+  'blrMinus',
+  'blrMoreHorizontal',
+  'blrMore',
+  'blrMoreVertical',
+  'blrMusic',
+  'blrNotificationBellOff',
+  'blrNotificationBellOn',
+  'blrPause',
+  'blrPen',
+  'blrPhoneIncomingCall',
+  'blrPhone',
+  'blrPhoneOutgoingCall',
+  'blrPin',
+  'blrPlane',
+  'blrPlay',
+  'blrPlus',
+  'blrPrinter',
+  'blrProfile',
+  'blrRefresh2',
+  'blrRefresh',
+  'blrResizeIn',
+  'blrResizeOut',
+  'blrScissors',
+  'blrSearch',
+  'blrSelectionBoxOff',
+  'blrSelectionBoxOn',
+  'blrSelectionOff',
+  'blrSelectionOn',
+  'blrSend',
+  'blrSettingsCog',
+  'blrShare',
+  'blrShoppingBasket',
+  'blroothie',
+  'blrSoundMax',
+  'blrSoundMin',
+  'blrStar',
+  'blrTag',
+  'blrTrash',
+  'blrUpload',
+  'blrVideoCamera',
+  'blrVideo',
+  'blrWiFi',
+];
+
 export const IconMapping = {
   blr360Lg,
   blr360Md,
@@ -8858,5 +9043,7 @@ export const IconMapping = {
   blrWiFiXs,
   blrWiFiXxs,
 };
+
+export type SizelessIconType = (typeof PureIconKeys)[number];
 export type IconType = keyof typeof IconMapping;
 export const IconKeys = Object.keys(IconMapping);

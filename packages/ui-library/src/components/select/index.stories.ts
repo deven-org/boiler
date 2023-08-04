@@ -2,9 +2,9 @@
 import { html } from 'lit-html';
 import { BlrSelectRenderFunction, BlrSelectType } from './index';
 import { FormSizes } from '../../globals/constants';
-import { IconKeys } from '@boiler/icons';
-import { getIconName } from '../../utils/get-icon-name';
+import { PureIconKeys } from '@boiler/icons';
 import './index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
@@ -14,11 +14,11 @@ export default {
       control: { type: 'select' },
     },
     trailingIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [...getIconName(IconKeys)],
+      options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
     options: {
@@ -33,6 +33,10 @@ export default {
     onChange: {
       action: 'onChange',
       description: '(@change)="onChange($event)"',
+    },
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
     },
   },
   parameters: {
@@ -57,6 +61,7 @@ export const BlrSelect = ({
   trailingIcon,
   hasLabel,
   label,
+  theme,
 }: BlrSelectType) =>
   html`
     ${BlrSelectRenderFunction({
@@ -76,12 +81,14 @@ export const BlrSelect = ({
       trailingIcon,
       hasLabel,
       label,
+      theme,
     })}
   `;
 
 BlrSelect.storyName = 'BlrSelect';
 
 BlrSelect.args = {
+  theme: 'Light',
   name: 'Text Input',
   hasLabel: true,
   label: 'Label',

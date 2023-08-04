@@ -2,16 +2,17 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { form } from '../../foundation/semantic-tokens/form.css';
-import { radio } from '../../foundation/component-tokens/radio.css';
+import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import { radioDark, radioLight } from '../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-radio-group')
 export class BlrRadioGroup extends LitElement {
-  static styles = [styleCustom, form, radio];
+  static styles = [styleCustom];
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
@@ -34,7 +35,11 @@ export class BlrRadioGroup extends LitElement {
   @property() groupErrorMessage?: string;
   @property() groupErrorIcon?: IconType;
 
+  @property() theme: ThemeType = 'Light';
+
   protected render() {
+    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
+
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
@@ -48,7 +53,9 @@ export class BlrRadioGroup extends LitElement {
       return label.replace(/ /g, '_').toLowerCase();
     };
 
-    return html`
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
       <div class="blr-radio-group ${classes}">
         ${this.options &&
         this.options.map((option: RadioOption) => {
@@ -83,6 +90,7 @@ export class BlrRadioGroup extends LitElement {
                           variant: 'hint',
                           size: this.size,
                           icon: this.hintIcon ? this.hintIcon : undefined,
+                          theme: this.theme,
                         })}
                       </div>
                     `
@@ -95,6 +103,7 @@ export class BlrRadioGroup extends LitElement {
                           variant: 'error',
                           size: this.size,
                           icon: this.errorIcon ? this.errorIcon : undefined,
+                          theme: this.theme,
                         })}
                       </div>
                     `
@@ -103,21 +112,20 @@ export class BlrRadioGroup extends LitElement {
             </div>
           `;
         })}
-
-          ${this.hasError && this.showGroupErrorMessage
-            ? html`
+        ${this.hasError && this.showGroupErrorMessage
+          ? html`
               <div class="group-error ${classes}">
                 ${BlrFormHintRenderFunction({
                   message: this.groupErrorMessage || '',
                   variant: 'error',
                   size: this.size,
                   icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
+                  theme: this.theme,
                 })}
               </div>
-              `
-            : html``}
-      </div>
-    `;
+            `
+          : html``}
+      </div> `;
   }
 }
 
@@ -143,6 +151,7 @@ export const BlrRadioGroupRenderFunction = ({
   showGroupErrorMessage,
   groupErrorMessage,
   groupErrorIcon,
+  theme,
 }: BlrRadioGroupType) => {
   return html`<blr-radio-group
     class="example-layout-class"
@@ -165,5 +174,6 @@ export const BlrRadioGroupRenderFunction = ({
     .showGroupErrorMessage=${showGroupErrorMessage}
     .groupErrorMessage=${groupErrorMessage}
     .groupErrorIcon=${groupErrorIcon}
+    .theme=${theme}
   ></blr-radio-group>`;
 };
