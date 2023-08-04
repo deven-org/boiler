@@ -331,7 +331,7 @@ export const form = css`
 }
 .blr-form-label {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   color: ${Label.Rest};
   &:focus {
     color: ${Label.Focus};
