@@ -19,6 +19,7 @@ const sampleParams: BlrNumberInputType = {
   hasLabel: true,
   variant: 'silent',
   directionVariant: 'vertical',
+  theme: 'Light',
 };
 
 describe('blr-number-input', () => {

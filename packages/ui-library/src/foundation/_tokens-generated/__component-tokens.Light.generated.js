@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Aug 2023 15:57:09 GMT
+ * Generated on Mon, 07 Aug 2023 16:52:32 GMT
  */
 
 export const componentTokens = {
@@ -650,6 +650,32 @@ export const componentTokens = {
       MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', ItemSpacing: '0px' },
       LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', ItemSpacing: '-0.125rem' },
       XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', ItemSpacing: '-0.25rem' },
+    },
+    StepperButton: {
+      Border: {
+        Rest: { color: '#00000000', width: '0px' },
+        Hover: { color: '#00000000', width: '0px' },
+        Pressed: { color: '#00000000', width: '0px' },
+        Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
+        Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '0px' },
+      },
+      SM: { Width: '2rem' },
+      MD: { Width: '2.5rem' },
+      LG: { Width: '3rem' },
+    },
+    StepperCombo: {
+      SM: {
+        Vertical: { Width: '2rem', DividerWrapper: { Padding: '0 0.5rem' } },
+        Horizontal: { Width: '4rem', DividerWrapper: { Padding: '0.5rem 0' } },
+      },
+      MD: {
+        Vertical: { Width: '2.5rem', DividerWrapper: { Padding: '0 0.5rem' } },
+        Horizontal: { Width: '5rem', DividerWrapper: { Padding: '0.5rem 0' } },
+      },
+      LG: {
+        Vertical: { Width: '3rem', DividerWrapper: { Padding: '0 0.5rem' } },
+        Horizontal: { Width: '6rem', DividerWrapper: { Padding: '0.5rem 0' } },
+      },
     },
   },
 };

@@ -2,9 +2,14 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { form } from '../../foundation/semantic-tokens/form.css';
-import { stepperCombo, stepperButton } from '../../foundation/component-tokens/action.css';
-import { action } from '../../foundation/semantic-tokens/action.css';
+import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import {
+  stepperComboLight,
+  stepperButtonLight,
+  stepperComboDark,
+  stepperButtonDark,
+} from '../../foundation/component-tokens/action.css';
+import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { DividerVariationTypes, FormSizesType, ActionVariantType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
@@ -12,12 +17,13 @@ import { IconType } from '@boiler/icons';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { BlrDividerRenderFunction } from '../internal-components/divider';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-number-input')
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export class BlrNumberInput extends LitElement {
-  static styles = [styleCustom, form, stepperCombo, stepperButton, action];
+  static styles = [styleCustom];
 
   @property() numberInputId!: string;
   @property() hasLabel = true;
@@ -40,6 +46,8 @@ export class BlrNumberInput extends LitElement {
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() directionVariant: DividerVariationTypes = 'spaceBetween';
   @property() variant: ActionVariantType = 'silent';
+
+  @property() theme: ThemeType = 'Light';
 
   @state() protected counter = 0;
 
@@ -65,6 +73,11 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected render() {
+    const dynamicStyles =
+      this.theme === 'Light'
+        ? [formLight, stepperComboLight, stepperButtonLight, actionLight]
+        : [formDark, stepperComboDark, stepperButtonDark, actionDark];
+
     const classes = classMap({
       [`${this.size}`]: this.size,
       [`${this.variant}`]: this.variant,
@@ -77,7 +90,9 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
     });
 
-    return html`
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
       <div class="blr-number-input ${classes}">
         ${
           this.hasLabel
@@ -86,6 +101,7 @@ export class BlrNumberInput extends LitElement {
                 labelSize: this.size,
                 labelAppendix: this.labelAppendix,
                 forValue: this.numberInputId,
+                theme: this.theme,
               })}`
             : nothing
         }
@@ -230,6 +246,7 @@ export class BlrNumberInput extends LitElement {
                   variant: this.hasError ? 'error' : 'hint',
                   icon: calculateIconName(this.hintIcon, this.size),
                   size: 'sm',
+                  theme: this.theme,
                 })}
               `
             : nothing
@@ -263,6 +280,7 @@ export const BlrNumberInputRenderFunction = ({
   hintIcon,
   directionVariant,
   variant,
+  theme,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .numberInputId=${numberInputId}
@@ -286,5 +304,6 @@ export const BlrNumberInputRenderFunction = ({
     .hasError=${hasError}
     .directionVariant=${directionVariant}
     .variant=${variant}
+    .theme=${theme}
   ></blr-number-input>`;
 };

@@ -61,9 +61,10 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
   (componentTokens) => {
     const { StepperButton } = componentTokens.Action;
 
+    // this line broke the stepper button
+    // color: ${StepperButton.Icon.Rest};
     return css`
       .blr-stepper-button {
-        color: ${StepperButton.Icon.Rest};
         border-color: ${StepperButton.Border.Rest.color};
         border-width: ${StepperButton.Border.Rest.width};
       }

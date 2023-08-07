@@ -5,6 +5,7 @@ import { ActionVariants, DividerVariations, FormSizes } from '../../globals/cons
 import { IconKeys } from '@boiler/icons';
 import './index';
 import { getIconName } from '../../utils/get-icon-name';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
@@ -23,6 +24,10 @@ export default {
     },
     variant: {
       options: ActionVariants,
+      control: { type: 'select' },
+    },
+    theme: {
+      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -53,6 +58,7 @@ export const BlrNumberInput = ({
   hasError,
   variant,
   directionVariant,
+  theme,
 }: BlrNumberInputType) =>
   html`
     <style>
@@ -80,6 +86,7 @@ export const BlrNumberInput = ({
         hasError,
         variant,
         directionVariant,
+        theme,
       })}
     </div>
   `;
@@ -87,6 +94,7 @@ export const BlrNumberInput = ({
 BlrNumberInput.storyName = 'BlrNumberInput';
 
 BlrNumberInput.args = {
+  theme: 'Light',
   numberInputId: 'Input ID',
   label: 'Label',
   labelAppendix: '(Optional)',

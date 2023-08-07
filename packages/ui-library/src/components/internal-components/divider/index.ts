@@ -2,12 +2,12 @@ import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { DividerVariationTypes, FormSizesType } from '../../../globals/types';
-import { divider } from '../../../foundation/component-tokens/ui.css';
-import { stepperCombo } from '../../../foundation/component-tokens/action.css';
+import { dividerDark } from '../../../foundation/component-tokens/ui.css';
+import { stepperComboDark } from '../../../foundation/component-tokens/action.css';
 
 @customElement('blr-divider')
 export class BlrDivider extends LitElement {
-  static styles = [divider, stepperCombo];
+  static styles = [dividerDark, stepperComboDark];
 
   @property() size: FormSizesType = 'md';
   @property() directionVariant?: DividerVariationTypes = 'vertical';
