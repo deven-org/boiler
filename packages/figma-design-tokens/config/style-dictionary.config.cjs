@@ -75,6 +75,7 @@ const componentTypes = [
   'Select',
   'StepperButton',
   'StepperCombo',
+  'Divider',
 ];
 
 StyleDictionaryPackage.registerFormat({

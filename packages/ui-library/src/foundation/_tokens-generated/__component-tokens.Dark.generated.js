@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Aug 2023 16:52:31 GMT
+ * Generated on Mon, 07 Aug 2023 17:24:17 GMT
  */
 
 export const componentTokens = {
@@ -628,7 +628,10 @@ export const componentTokens = {
     },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
   },
-  UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
+  UI: {
+    Divider: { Stroke: 'hsla(220, 10%, 80%,0.3) ', Border: { color: 'hsla(220, 10%, 80%,0.3) ', width: '1px' } },
+    Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' },
+  },
   Action: {
     TextButton: {
       XS: { Padding: '0.25rem 12px', ItemSpacing: '4px' },
