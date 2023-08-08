@@ -16,9 +16,16 @@ export default {
       control: { type: 'select' },
     },
     hintIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
     },
+    hintText: {
+      if: { arg: 'showHint', eq: true },
+    },
+
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
+    },
+
     warningLimitType: {
       name: 'Warning Limit Type',
       options: ['warningLimitInt', 'warningLimitPer'],
@@ -128,16 +135,21 @@ BlrTextarea.args = {
   warningLimitPer: 75,
   cols: 20,
   rows: 5,
-  errorMessage: 'OMG it`s an error',
+
   placeholder: 'Type your message here ..',
   required: false,
   disabled: false,
   readonly: false,
-  hintText: 'Rindfleischetikettierungs',
-  hasError: false,
-  isResizeable: true,
-  hintIcon: 'blrInfo',
+
   showHint: true,
+  hintIcon: 'blrInfo',
+  hintText: 'Rindfleischetikettierungs',
+
+  hasError: false,
+  errorMessage: 'OMG it`s an error',
+
+  isResizeable: true,
+
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
