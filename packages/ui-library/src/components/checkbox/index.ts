@@ -72,7 +72,7 @@ export class BlrCheckbox extends LitElement {
       <div class="${classes}">
         <input
           type="checkbox"
-          class="blr-checkbox-element input-control"
+          class="input-control"
           id=${this.checkInputId || nothing}
           name=${this.checkInputId || nothing}
           ?disabled=${this.disabled}
@@ -96,6 +96,7 @@ export class BlrCheckbox extends LitElement {
                     variant: 'hint',
                     size: this.size,
                     icon: this.hintIcon ? this.hintIcon : undefined,
+                    theme: this.theme,
                   })}
                 </div>
               `
@@ -108,6 +109,7 @@ export class BlrCheckbox extends LitElement {
                     variant: 'error',
                     size: this.size,
                     icon: this.errorIcon ? this.errorIcon : undefined,
+                    theme: this.theme,
                   })}
                 </div>
               `

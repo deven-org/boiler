@@ -28,6 +28,6 @@ describe('blr-checkbox', () => {
     const checkbox = querySelectorDeep('input', element.getRootNode() as HTMLElement);
     const className = checkbox?.className;
 
-    expect(className).to.contain('blr-checkbox-element');
+    expect(className).to.contain('input-control');
   });
 });

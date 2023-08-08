@@ -4,12 +4,13 @@ import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { counterDark, counterLight } from '../../foundation/component-tokens/feedback.css';
-import { FormSizesType, WarningLimits } from '../../globals/types';
+import { CounterVariantType, FormSizesType, WarningLimits } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
 import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { BlrCounterRenderFunction } from '../internal-components/counter';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
@@ -64,6 +65,24 @@ export class BlrTextarea extends LitElement {
     }
   }
 
+  protected determinateCounterVariant(): CounterVariantType {
+    let counterVariant: CounterVariantType = 'default';
+
+    if (this.maxLength) {
+      if (this.warningLimitType === 'warningLimitPer' && this.count >= (this.maxLength / 100) * this.warningLimitPer) {
+        counterVariant = 'warn';
+      } else if (this.warningLimitType === 'warningLimitInt' && this.count >= this.warningLimitInt) {
+        counterVariant = 'warn';
+      }
+
+      if (this.count >= this.maxLength) {
+        counterVariant = 'error';
+      }
+    }
+
+    return counterVariant;
+  }
+
   protected render() {
     const dynamicStyles =
       this.theme === 'Light' ? [formLight, counterLight, iconButtonLight] : [formDark, counterDark, iconButtonDark];
@@ -80,18 +99,7 @@ export class BlrTextarea extends LitElement {
       [`resizeable`]: this.isResizeable || false,
     });
 
-    const counterClasses = classMap({
-      [`${this.size}`]: this.size,
-      ['limit-reached']: this.count >= (this.maxLength || 0),
-      ['limit-close-int']:
-        this.maxLength && this.warningLimitType === 'warningLimitInt'
-          ? this.count >= this.warningLimitInt && this.count < this.maxLength
-          : false,
-      ['limit-close-per']:
-        this.maxLength && this.warningLimitType === 'warningLimitPer'
-          ? this.count >= (this.maxLength / 100) * this.warningLimitPer && this.count < this.maxLength
-          : false,
-    });
+    const counterVariant = this.determinateCounterVariant();
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -132,14 +140,22 @@ export class BlrTextarea extends LitElement {
                     icon: this.hintIcon,
                     size: this.size,
                     theme: this.theme,
-                    childElement: html`<div class="blr-counter ${counterClasses}">
-                      ${this.count}/${this.maxLength}
-                    </div>`,
+                    childElement: html`${BlrCounterRenderFunction({
+                      variant: counterVariant,
+                      current: this.count,
+                      max: this.maxLength || 0,
+                      size: this.size,
+                      theme: this.theme,
+                    })}`,
                   })}
                 `
-              : html`<div class="blr-form-hint">
-                  <div class="blr-counter ${counterClasses}">${this.count}/${this.maxLength}</div>
-                </div>`
+              : html`${BlrCounterRenderFunction({
+                  variant: counterVariant,
+                  current: this.count,
+                  max: this.maxLength || 0,
+                  size: this.size,
+                  theme: this.theme,
+                })}`
           }
           </div>
         </div>
