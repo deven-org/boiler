@@ -10,7 +10,7 @@ import {
   stepperButtonDark,
 } from '../../foundation/component-tokens/action.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { DividerVariationTypes, FormSizesType, ActionVariantType } from '../../globals/types';
+import { DividerVariationTypes, FormSizesType, ActionVariantType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
@@ -18,6 +18,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { BlrDividerRenderFunction } from '../internal-components/divider';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-number-input')
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -93,6 +94,17 @@ export class BlrNumberInput extends LitElement {
       [`spaceBetween`]: this.spaceBetween || false,
     });
 
+    const stepperButtonClasses = classMap({
+      'blr-stepper-button': true,
+      'blr-semantic-action': true,
+      'silent': true,
+      [`${this.size}`]: this.size,
+    });
+
+    // console.log('StepperButton size for', this.size, getComponentConfigToken('StepperButton', this.size));
+
+    const stepperButtonSize = getComponentConfigToken('StepperButton', this.size).toLocaleLowerCase() as SizesType;
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -133,26 +145,25 @@ export class BlrNumberInput extends LitElement {
                   ? html`
                       <div class="blr-number-input-button-wrapper">
                         <div class="wrapper-${this.directionVariant}">
-                          <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperUp}>
+                          <button class=${stepperButtonClasses} @click=${this.stepperUp}>
                             ${BlrIconRenderFunction({
                               icon: calculateIconName('blrChevronUp', this.size),
                               name: 'up',
-                              size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                              size: stepperButtonSize,
                               hideAria: true,
                               disablePointerEvents: true,
                             })}
                           </button>
 
                           ${BlrDividerRenderFunction({
-                            size: this.size,
                             directionVariant: this.directionVariant,
                           })}
 
-                          <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperDown}>
+                          <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                             ${BlrIconRenderFunction({
                               icon: calculateIconName('blrChevronDown', this.size),
                               name: 'down',
-                              size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                              size: stepperButtonSize,
                               hideAria: true,
                               disablePointerEvents: true,
                             })}
@@ -162,11 +173,11 @@ export class BlrNumberInput extends LitElement {
                     `
                   : html`
                       <div class="left">
-                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperDown}>
+                        <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrMinus', this.size),
                             name: 'up',
-                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            size: stepperButtonSize,
                             hideAria: true,
                             disablePointerEvents: true,
                           })}
@@ -174,11 +185,11 @@ export class BlrNumberInput extends LitElement {
                       </div>
 
                       <div class="right">
-                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperUp}>
+                        <button class=${stepperButtonClasses} @click=${this.stepperUp}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrPlus', this.size),
                             name: 'down',
-                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            size: stepperButtonSize,
                             hideAria: true,
                             disablePointerEvents: true,
                           })}
@@ -188,27 +199,25 @@ export class BlrNumberInput extends LitElement {
                 : html`
                     <div class="blr-number-input-button-wrapper">
                       <div class="wrapper-${this.directionVariant}">
-                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperDown}>
+                        <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrMinus', this.size),
                             name: 'up',
-                            //size: this.size,
-                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            size: stepperButtonSize,
                             hideAria: true,
                             disablePointerEvents: true,
                           })}
                         </button>
 
                         ${BlrDividerRenderFunction({
-                          size: this.size,
                           directionVariant: this.directionVariant,
                         })}
 
-                        <button class="blr-stepper-button blr-semantic-action silent" @click=${this.stepperUp}>
+                        <button class=${stepperButtonClasses} @click=${this.stepperUp}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrPlus', this.size),
                             name: 'down',
-                            size: this.size === 'sm' || this.size === 'md' ? 'sm' : 'md',
+                            size: stepperButtonSize,
                             hideAria: true,
                             disablePointerEvents: true,
                           })}

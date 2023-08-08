@@ -136,6 +136,6 @@ BlrNumberInput.args = {
   hasError: false,
   pattern: '',
   directionVariant: 'horizontal',
-  spaceBetween: true,
+  spaceBetween: false,
   variant: 'silent',
 };

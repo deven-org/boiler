@@ -65,10 +65,14 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
     // color: ${StepperButton.Icon.Rest};
     return css`
       .blr-stepper-button {
+        all: initial;
         border-color: ${StepperButton.Border.Rest.color};
         border-width: ${StepperButton.Border.Rest.width};
+        line-height: 0 !important;
       }
+    `;
 
+    /*
       .blr-stepper-button.sm {
         width: ${StepperButton.SM.Width};
       }
@@ -80,7 +84,7 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
       .blr-stepper-button.lg {
         width: ${StepperButton.LG.Width};
       }
-    `;
+    */
   }
 );
 

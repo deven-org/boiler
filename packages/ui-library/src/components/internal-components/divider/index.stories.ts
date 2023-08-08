@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { BlrDividerRenderFunction, BlrDividerType } from './index';
-import { DividerVariations, FormSizes } from '../../../globals/constants';
+import { DividerVariations } from '../../../globals/constants';
 import './index';
 
 import { calculateIconName } from '../../../utils/calculate-icon-name';
@@ -9,10 +9,6 @@ import { BlrIconRenderFunction } from '../../internal-components/icon';
 export default {
   title: 'Design System/Internal Components',
   argTypes: {
-    size: {
-      options: FormSizes,
-      control: { type: 'select' },
-    },
     directionVariant: {
       options: DividerVariations,
       control: { type: 'select' },
@@ -26,7 +22,7 @@ export default {
   },
 };
 
-export const BlrDivider = ({ size, directionVariant }: BlrDividerType) => html`
+export const BlrDivider = ({ directionVariant }: BlrDividerType) => html`
   <style>
     .wrapper-vertical {
       position: relative;
@@ -45,24 +41,23 @@ export const BlrDivider = ({ size, directionVariant }: BlrDividerType) => html`
   <div class="wrapper-${directionVariant}">
     <button class="blr-stepper-button">
       ${BlrIconRenderFunction({
-        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronUp' : 'blrMinus', size),
+        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronUp' : 'blrMinus', 'sm'),
         name: 'up',
-        size,
+        size: 'sm',
         hideAria: true,
         disablePointerEvents: true,
       })}
     </button>
 
     ${BlrDividerRenderFunction({
-      size,
       directionVariant,
     })}
 
     <button class="blr-stepper-button">
       ${BlrIconRenderFunction({
-        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronDown' : 'blrPlus', size),
+        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronDown' : 'blrPlus', 'sm'),
         name: 'down',
-        size,
+        size: 'sm',
         hideAria: true,
         disablePointerEvents: true,
       })}
