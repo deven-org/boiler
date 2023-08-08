@@ -9,4 +9,4 @@ export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destruc
 export const FeedbackVariants = ['default', 'inverted'] as const;
 export const HintVariants = ['hint', 'error'] as const;
 export const CounterVariants = ['default', 'warn', 'error'] as const;
-export const DividerVariations = ['vertical', 'horizontal', 'spaceBetween'] as const;
+export const DividerVariations = ['vertical', 'horizontal'] as const;

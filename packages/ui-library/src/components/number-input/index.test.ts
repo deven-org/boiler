@@ -17,6 +17,7 @@ const sampleParams: BlrNumberInputType = {
   hintIcon: 'blrInfoLg',
   showHint: true,
   hasLabel: true,
+  spaceBetween: true,
   variant: 'silent',
   directionVariant: 'vertical',
   theme: 'Light',

@@ -18,10 +18,31 @@ export default {
       options: [...getIconName(IconKeys)],
       control: { type: 'select' },
     },
+    /*
     directionVariant: {
       options: DividerVariations,
       control: { type: 'select' },
     },
+    */
+
+    directionVariant: {
+      options: DividerVariations,
+      control: {
+        type: 'radio',
+        labels: {
+          horizontal: 'horizontal',
+          vertical: 'vertical',
+        },
+      },
+    },
+
+    // Only enabled if warningLimitType is Whole Number
+    spaceBetween: {
+      name: 'spaceBetween',
+      if: { arg: 'directionVariant', eq: 'horizontal' },
+      description: 'Changes button layout in horizontal mode',
+    },
+
     variant: {
       options: ActionVariants,
       control: { type: 'select' },
@@ -56,6 +77,7 @@ export const BlrNumberInput = ({
   hintText,
   hintIcon,
   hasError,
+  spaceBetween,
   variant,
   directionVariant,
   theme,
@@ -85,6 +107,7 @@ export const BlrNumberInput = ({
         hintIcon,
         hasError,
         variant,
+        spaceBetween,
         directionVariant,
         theme,
       })}
@@ -113,5 +136,6 @@ BlrNumberInput.args = {
   hasError: false,
   pattern: '',
   directionVariant: 'horizontal',
+  spaceBetween: true,
   variant: 'silent',
 };
