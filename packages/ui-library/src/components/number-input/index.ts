@@ -101,11 +101,14 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    /*
     const stepperComboClasses = classMap({
       'blr-stepper-combo': true,
       'vertical': this.dividerDirectionVariant === 'horizontal',
       'horizontal': this.dividerDirectionVariant === 'vertical',
     });
+    */
+
     //console.log(stepperComboClasses)
     // console.log('StepperButton size for', this.size, getComponentConfigToken('StepperButton', this.size));
 
@@ -151,7 +154,7 @@ export class BlrNumberInput extends LitElement {
                   ? html`
                       <div class="blr-number-input-button-wrapper">
                         <div
-                          class="blr-stepper-combo vertical ${stepperButtonSize} wrapper-${this
+                          class="blr-stepper-combo horizontal ${stepperButtonSize} wrapper-${this
                             .dividerDirectionVariant}"
                         >
                           <button class=${stepperButtonClasses} @click=${this.stepperUp}>
@@ -166,6 +169,7 @@ export class BlrNumberInput extends LitElement {
 
                           ${BlrDividerRenderFunction({
                             dividerDirectionVariant: this.dividerDirectionVariant,
+                            addPadding: false,
                           })}
 
                           <button class=${stepperButtonClasses} @click=${this.stepperDown}>
@@ -181,7 +185,10 @@ export class BlrNumberInput extends LitElement {
                       </div>
                     `
                   : html`
-                      <div class="left">
+                      <div
+                        class="left blr-stepper-combo horizontal-s ${stepperButtonSize} wrapper-${this
+                          .dividerDirectionVariant}"
+                      >
                         <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrMinus', this.size),
@@ -193,7 +200,10 @@ export class BlrNumberInput extends LitElement {
                         </button>
                       </div>
 
-                      <div class="right">
+                      <div
+                        class="right blr-stepper-combo horizontal-s ${stepperButtonSize} wrapper-${this
+                          .dividerDirectionVariant}"
+                      >
                         <button class=${stepperButtonClasses} @click=${this.stepperUp}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrPlus', this.size),
@@ -207,7 +217,9 @@ export class BlrNumberInput extends LitElement {
                     `
                 : html`
                     <div class="blr-number-input-button-wrapper">
-                      <div class="wrapper-${this.dividerDirectionVariant}">
+                      <div
+                        class="blr-stepper-combo vertical ${stepperButtonSize} wrapper-${this.dividerDirectionVariant}"
+                      >
                         <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrMinus', this.size),
@@ -220,9 +232,10 @@ export class BlrNumberInput extends LitElement {
 
                         ${BlrDividerRenderFunction({
                           dividerDirectionVariant: this.dividerDirectionVariant,
+                          addPadding: true,
                         })}
 
-                        <button class=${stepperButtonClasses} @click=${this.stepperUp}>
+                        <button class="${stepperButtonClasses}" @click=${this.stepperUp}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrPlus', this.size),
                             name: 'down',
@@ -237,19 +250,21 @@ export class BlrNumberInput extends LitElement {
             }
           </div>
         </div>
+        <div class="hint-wrapper ${this.size}">
         ${
           this.showHint
             ? html`
                 ${BlrFormHintRenderFunction({
                   message: this.hasError ? this.errorMessage : this.hintText,
                   variant: this.hasError ? 'error' : 'hint',
-                  icon: calculateIconName(this.hintIcon, this.size),
+                  icon: this.hintIcon,
                   size: 'sm',
                   theme: this.theme,
                 })}
               `
             : nothing
         }
+        </div>
       </div>
     `;
   }

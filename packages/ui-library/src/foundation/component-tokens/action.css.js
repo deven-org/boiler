@@ -69,10 +69,11 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
         border-color: ${StepperButton.Border.Rest.color};
         border-width: ${StepperButton.Border.Rest.width};
         line-height: 0 !important;
+        text-align: center;
       }
-
-      ${
-        "" /* .blr-stepper-button.sm {
+    `;
+    /*
+      .blr-stepper-button.sm {
         width: ${StepperButton.SM.Width};
       }
 
@@ -82,9 +83,8 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
 
       .blr-stepper-button.lg {
         width: ${StepperButton.LG.Width};
-      } */
       }
-    `;
+      */
   }
 );
 
@@ -98,33 +98,48 @@ export const { tokenizedLight: stepperComboLight, tokenizedDark: stepperComboDar
       }
 
       .blr-stepper-combo.horizontal.sm {
-        padding: ${StepperCombo.SM.Horizontal.DividerWrapper.Padding};
-        width: ${StepperCombo.SM.Horizontal.Width};
+        padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+        _width: ${StepperCombo.SM.Horizontal.Width};
+      }
+
+      .blr-stepper-combo.horizontal-s.sm {
+        padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+        _width: ${StepperCombo.SM.Horizontal.Width};
       }
 
       .blr-stepper-combo.vertical.sm {
         padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
-        width: ${StepperCombo.SM.Vertical.Width};
+        _width: ${StepperCombo.SM.Vertical.Width};
       }
 
       .blr-stepper-combo.horizontal.md {
-        padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
-        width: ${StepperCombo.MD.Horizontal.Width};
+        padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
+        _width: ${StepperCombo.MD.Horizontal.Width};
+      }
+
+      .blr-stepper-combo.horizontal-s.md {
+        padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
+        _width: ${StepperCombo.MD.Horizontal.Width};
       }
 
       .blr-stepper-combo.vertical.md {
-        padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
-        width: ${StepperCombo.MD.Vertical.Width};
+        padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
+        _width: ${StepperCombo.MD.Vertical.Width};
       }
 
       .blr-stepper-combo.horizontal.lg {
+        padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
+        _width: ${StepperCombo.LG.Horizontal.Width};
+      }
+
+      .blr-stepper-combo.horizontal-s.lg {
         padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
-        width: ${StepperCombo.LG.Horizontal.Width};
+        _width: ${StepperCombo.LG.Horizontal.Width};
       }
 
       .blr-stepper-combo.vertical.lg {
-        padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
-        width: ${StepperCombo.LG.Vertical.Width};
+        padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
+        _width: ${StepperCombo.LG.Vertical.Width};
       }
     `;
   }

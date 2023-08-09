@@ -22,7 +22,7 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant }: BlrDividerType) => html`
+export const BlrDivider = ({ dividerDirectionVariant, addPadding }: BlrDividerType) => html`
   <style>
     .wrapper-vertical {
       position: relative;
@@ -51,6 +51,7 @@ export const BlrDivider = ({ dividerDirectionVariant }: BlrDividerType) => html`
 
     ${BlrDividerRenderFunction({
       dividerDirectionVariant,
+      addPadding,
     })}
 
     <button class="blr-stepper-button">
@@ -69,5 +70,6 @@ BlrDivider.storyName = 'BlrDivider';
 
 BlrDivider.args = {
   size: 'md',
+  addPadding: false,
   dividerDirectionVariant: 'vertical',
 };

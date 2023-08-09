@@ -10,13 +10,14 @@ export class BlrDivider extends LitElement {
   static styles = [dividerDark, stepperComboDark];
 
   @property() dividerDirectionVariant?: DividerVariationTypes = 'vertical';
+  @property() addPadding = false;
 
   protected render() {
     const dividerClasses = classMap({
       [`${this.dividerDirectionVariant}`]: this.dividerDirectionVariant || 'horizontal',
     });
 
-    return html`<div class="blr-divider">
+    return html`<div class="blr-divider ${this.addPadding ? 'padding' : ''}">
       <div class=${dividerClasses}></div>
     </div>`;
   }
@@ -24,6 +25,9 @@ export class BlrDivider extends LitElement {
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
 
-export const BlrDividerRenderFunction = ({ dividerDirectionVariant }: BlrDividerType) => {
-  return html`<blr-divider .dividerDirectionVariant=${dividerDirectionVariant}></blr-divider>`;
+export const BlrDividerRenderFunction = ({ dividerDirectionVariant, addPadding }: BlrDividerType) => {
+  return html`<blr-divider
+    .addPadding=${addPadding}
+    .dividerDirectionVariant=${dividerDirectionVariant}
+  ></blr-divider>`;
 };

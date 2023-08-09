@@ -17,6 +17,14 @@ export default {
     hintIcon: {
       options: [...getIconName(IconKeys)],
       control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
+    },
+    hintText: {
+      if: { arg: 'showHint', eq: true },
+    },
+
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
     },
     /*
     dividerDirectionVariant: {
@@ -53,9 +61,6 @@ export default {
     },
   },
   parameters: {
-    previewTabs: {
-      canvas: { hidden: true },
-    },
     viewMode: 'docs',
   },
 };

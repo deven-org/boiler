@@ -41,12 +41,18 @@ export const { tokenizedLight: iconLight, tokenizedDark: iconDark } = renderThem
 export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = renderThemedCssStrings(
   (componentTokens) => {
     const { UI } = componentTokens;
+    const { StepperCombo } = componentTokens.Action;
 
     return css`
       .blr-divider {
         stroke: ${UI.Divider.Stroke};
-        border: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
+        border-top: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
+        border-right: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
         height: 100%;
+
+        &.padding {
+          margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+        }
       }
     `;
   }
