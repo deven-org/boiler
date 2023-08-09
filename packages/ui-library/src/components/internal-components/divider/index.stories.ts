@@ -9,7 +9,7 @@ import { BlrIconRenderFunction } from '../../internal-components/icon';
 export default {
   title: 'Design System/Internal Components',
   argTypes: {
-    directionVariant: {
+    dividerDirectionVariant: {
       options: DividerVariations,
       control: { type: 'select' },
     },
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-export const BlrDivider = ({ directionVariant }: BlrDividerType) => html`
+export const BlrDivider = ({ dividerDirectionVariant }: BlrDividerType) => html`
   <style>
     .wrapper-vertical {
       position: relative;
@@ -38,10 +38,10 @@ export const BlrDivider = ({ directionVariant }: BlrDividerType) => html`
     }
   </style>
 
-  <div class="wrapper-${directionVariant}">
+  <div class="wrapper-${dividerDirectionVariant}">
     <button class="blr-stepper-button">
       ${BlrIconRenderFunction({
-        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronUp' : 'blrMinus', 'sm'),
+        icon: calculateIconName(dividerDirectionVariant === 'horizontal' ? 'blrChevronUp' : 'blrMinus', 'sm'),
         name: 'up',
         size: 'sm',
         hideAria: true,
@@ -50,12 +50,12 @@ export const BlrDivider = ({ directionVariant }: BlrDividerType) => html`
     </button>
 
     ${BlrDividerRenderFunction({
-      directionVariant,
+      dividerDirectionVariant,
     })}
 
     <button class="blr-stepper-button">
       ${BlrIconRenderFunction({
-        icon: calculateIconName(directionVariant === 'horizontal' ? 'blrChevronDown' : 'blrPlus', 'sm'),
+        icon: calculateIconName(dividerDirectionVariant === 'horizontal' ? 'blrChevronDown' : 'blrPlus', 'sm'),
         name: 'down',
         size: 'sm',
         hideAria: true,
@@ -69,5 +69,5 @@ BlrDivider.storyName = 'BlrDivider';
 
 BlrDivider.args = {
   size: 'md',
-  directionVariant: 'vertical',
+  dividerDirectionVariant: 'vertical',
 };

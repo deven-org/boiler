@@ -9,11 +9,11 @@ import { stepperComboDark } from '../../../foundation/component-tokens/action.cs
 export class BlrDivider extends LitElement {
   static styles = [dividerDark, stepperComboDark];
 
-  @property() directionVariant?: DividerVariationTypes = 'vertical';
+  @property() dividerDirectionVariant?: DividerVariationTypes = 'vertical';
 
   protected render() {
     const dividerClasses = classMap({
-      [`${this.directionVariant}`]: this.directionVariant || 'horizontal',
+      [`${this.dividerDirectionVariant}`]: this.dividerDirectionVariant || 'horizontal',
     });
 
     return html`<div class="blr-divider">
@@ -24,6 +24,6 @@ export class BlrDivider extends LitElement {
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
 
-export const BlrDividerRenderFunction = ({ directionVariant }: BlrDividerType) => {
-  return html`<blr-divider .directionVariant=${directionVariant}></blr-divider>`;
+export const BlrDividerRenderFunction = ({ dividerDirectionVariant }: BlrDividerType) => {
+  return html`<blr-divider .dividerDirectionVariant=${dividerDirectionVariant}></blr-divider>`;
 };

@@ -47,7 +47,7 @@ export class BlrNumberInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
 
-  @property() directionVariant: DividerVariationTypes = 'horizontal';
+  @property() dividerDirectionVariant: DividerVariationTypes = 'horizontal';
   @property() variant: ActionVariantType = 'silent';
 
   @property() theme: ThemeType = 'Light';
@@ -101,6 +101,12 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    const stepperComboClasses = classMap({
+      'blr-stepper-combo': true,
+      'vertical': this.dividerDirectionVariant === 'horizontal',
+      'horizontal': this.dividerDirectionVariant === 'vertical',
+    });
+    //console.log(stepperComboClasses)
     // console.log('StepperButton size for', this.size, getComponentConfigToken('StepperButton', this.size));
 
     const stepperButtonSize = getComponentConfigToken('StepperButton', this.size).toLocaleLowerCase() as SizesType;
@@ -135,19 +141,22 @@ export class BlrNumberInput extends LitElement {
             @focus=${this.onFocus}
             maxlength=${this.maxLength}
             hasError=${this.hasError}
-            directionVariant=${this.directionVariant}
+            dividerDirectionVariant=${this.dividerDirectionVariant}
             variant=${this.variant}
           />`}
           
             ${
-              this.directionVariant === 'horizontal'
+              this.dividerDirectionVariant === 'horizontal'
                 ? this.spaceBetween === false
                   ? html`
                       <div class="blr-number-input-button-wrapper">
-                        <div class="wrapper-${this.directionVariant}">
+                        <div
+                          class="blr-stepper-combo vertical ${stepperButtonSize} wrapper-${this
+                            .dividerDirectionVariant}"
+                        >
                           <button class=${stepperButtonClasses} @click=${this.stepperUp}>
                             ${BlrIconRenderFunction({
-                              icon: calculateIconName('blrChevronUp', this.size),
+                              icon: calculateIconName('blrChevronUp', stepperButtonSize),
                               name: 'up',
                               size: stepperButtonSize,
                               hideAria: true,
@@ -156,12 +165,12 @@ export class BlrNumberInput extends LitElement {
                           </button>
 
                           ${BlrDividerRenderFunction({
-                            directionVariant: this.directionVariant,
+                            dividerDirectionVariant: this.dividerDirectionVariant,
                           })}
 
                           <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                             ${BlrIconRenderFunction({
-                              icon: calculateIconName('blrChevronDown', this.size),
+                              icon: calculateIconName('blrChevronDown', stepperButtonSize),
                               name: 'down',
                               size: stepperButtonSize,
                               hideAria: true,
@@ -198,7 +207,7 @@ export class BlrNumberInput extends LitElement {
                     `
                 : html`
                     <div class="blr-number-input-button-wrapper">
-                      <div class="wrapper-${this.directionVariant}">
+                      <div class="wrapper-${this.dividerDirectionVariant}">
                         <button class=${stepperButtonClasses} @click=${this.stepperDown}>
                           ${BlrIconRenderFunction({
                             icon: calculateIconName('blrMinus', this.size),
@@ -210,7 +219,7 @@ export class BlrNumberInput extends LitElement {
                         </button>
 
                         ${BlrDividerRenderFunction({
-                          directionVariant: this.directionVariant,
+                          dividerDirectionVariant: this.dividerDirectionVariant,
                         })}
 
                         <button class=${stepperButtonClasses} @click=${this.stepperUp}>
@@ -268,7 +277,7 @@ export const BlrNumberInputRenderFunction = ({
   showHint,
   hintText,
   hintIcon,
-  directionVariant,
+  dividerDirectionVariant,
   spaceBetween,
   variant,
   theme,
@@ -294,7 +303,7 @@ export const BlrNumberInputRenderFunction = ({
     .hintIcon=${hintIcon}
     .hasError=${hasError}
     .spaceBetween=${spaceBetween}
-    .directionVariant=${directionVariant}
+    .dividerDirectionVariant=${dividerDirectionVariant}
     .variant=${variant}
     .theme=${theme}
   ></blr-number-input>`;

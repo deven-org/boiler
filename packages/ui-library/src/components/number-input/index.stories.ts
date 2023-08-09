@@ -19,13 +19,13 @@ export default {
       control: { type: 'select' },
     },
     /*
-    directionVariant: {
+    dividerDirectionVariant: {
       options: DividerVariations,
       control: { type: 'select' },
     },
     */
 
-    directionVariant: {
+    dividerDirectionVariant: {
       options: DividerVariations,
       control: {
         type: 'radio',
@@ -39,7 +39,7 @@ export default {
     // Only enabled if warningLimitType is Whole Number
     spaceBetween: {
       name: 'spaceBetween',
-      if: { arg: 'directionVariant', eq: 'horizontal' },
+      if: { arg: 'dividerDirectionVariant', eq: 'horizontal' },
       description: 'Changes button layout in horizontal mode',
     },
 
@@ -79,7 +79,7 @@ export const BlrNumberInput = ({
   hasError,
   spaceBetween,
   variant,
-  directionVariant,
+  dividerDirectionVariant,
   theme,
 }: BlrNumberInputType) =>
   html`
@@ -108,7 +108,7 @@ export const BlrNumberInput = ({
         hasError,
         variant,
         spaceBetween,
-        directionVariant,
+        dividerDirectionVariant,
         theme,
       })}
     </div>
@@ -135,7 +135,7 @@ BlrNumberInput.args = {
   hintIcon: 'blrInfo',
   hasError: false,
   pattern: '',
-  directionVariant: 'horizontal',
+  dividerDirectionVariant: 'horizontal',
   spaceBetween: false,
   variant: 'silent',
 };

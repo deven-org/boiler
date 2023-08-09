@@ -19,7 +19,7 @@ const sampleParams: BlrNumberInputType = {
   hasLabel: true,
   spaceBetween: true,
   variant: 'silent',
-  directionVariant: 'vertical',
+  dividerDirectionVariant: 'vertical',
   theme: 'Light',
 };
 
