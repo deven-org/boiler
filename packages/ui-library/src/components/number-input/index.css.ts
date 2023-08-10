@@ -4,10 +4,9 @@ export const styleCustom = css`
   .grid {
     display: grid;
     grid-template-areas: "left center right";
+    grid-template-columns: fit-content(100%) 1fr fit-content(100%);
 
     &.mode1 {
-      grid-template-columns: fit-content(100%) 1fr fit-content(100%);
-
       .increment {
         grid-area: right;
       }
@@ -38,8 +37,6 @@ export const styleCustom = css`
     }
 
     &.mode3 {
-      grid-template-rows: auto auto;
-
       grid-template-columns: 1fr fit-content(100%) fit-content(100%);
 
       .increment {
