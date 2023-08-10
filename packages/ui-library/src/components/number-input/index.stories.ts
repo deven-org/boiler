@@ -1,62 +1,13 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
-import { ActionVariants, DividerVariations, FormSizes } from '../../globals/constants';
-import { IconKeys } from '@boiler/icons';
 import './index';
-import { getIconName } from '../../utils/get-icon-name';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components',
   argTypes: {
-    size: {
-      options: FormSizes,
-      control: { type: 'select' },
-    },
-    hintIcon: {
-      options: [...getIconName(IconKeys)],
-      control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
-    },
-    hintText: {
-      if: { arg: 'showHint', eq: true },
-    },
-
-    errorMessage: {
-      if: { arg: 'hasError', eq: true },
-    },
-    /*
-    dividerDirectionVariant: {
-      options: DividerVariations,
-      control: { type: 'select' },
-    },
-    */
-
-    dividerDirectionVariant: {
-      options: DividerVariations,
-      control: {
-        type: 'radio',
-        labels: {
-          horizontal: 'horizontal',
-          vertical: 'vertical',
-        },
-      },
-    },
-
-    // Only enabled if warningLimitType is Whole Number
-    spaceBetween: {
-      name: 'spaceBetween',
-      if: { arg: 'dividerDirectionVariant', eq: 'horizontal' },
-      description: 'Changes button layout in horizontal mode',
-    },
-
     variant: {
-      options: ActionVariants,
-      control: { type: 'select' },
-    },
-    theme: {
-      options: Themes,
+      options: ['mode1', 'mode2', 'mode3'],
       control: { type: 'select' },
     },
   },
@@ -65,30 +16,10 @@ export default {
   },
 };
 
-export const BlrNumberInput = ({}: BlrNumberInputType) => html` ${BlrNumberInputRenderFunction({})} `;
+export const BlrNumberInput = ({ variant }: BlrNumberInputType) => html` ${BlrNumberInputRenderFunction({ variant })} `;
 
 BlrNumberInput.storyName = 'BlrNumberInput';
 
 BlrNumberInput.args = {
-  theme: 'Light',
-  numberInputId: 'Input ID',
-  label: 'Label',
-  labelAppendix: '(Optional)',
-  hasLabel: true,
-  value: '',
-  placeholder: 'Test placeholder',
-  disabled: false,
-  required: false,
-  readonly: false,
-  maxLength: '200',
-  size: 'sm',
-  errorMessage: 'This is error message',
-  showHint: true,
-  hintText: 'Field is used for hint',
-  hintIcon: 'blrInfo',
-  hasError: false,
-  pattern: '',
-  dividerDirectionVariant: 'horizontal',
-  spaceBetween: false,
-  variant: 'silent',
+  variant: 'mode1',
 };
