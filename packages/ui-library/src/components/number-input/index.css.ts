@@ -3,19 +3,17 @@ import { css } from "nested-css-to-flat/lit-css";
 export const styleCustom = css`
   .grid {
     display: grid;
+    grid-template-areas: "left center right";
 
     &.mode1 {
-      grid-template-areas: "left center right";
       grid-template-columns: fit-content(100%) 1fr fit-content(100%);
 
       .increment {
         grid-area: right;
-        justify-self: end;
       }
 
       .decrement {
         grid-area: left;
-        justify-self: start;
       }
 
       .input {
@@ -24,17 +22,14 @@ export const styleCustom = css`
     }
 
     &.mode2 {
-      grid-template-areas: "left right right2";
       grid-template-columns: 1fr fit-content(100%) fit-content(100%);
 
       .increment {
-        grid-area: right2;
-        justify-self: end;
+        grid-area: right;
       }
 
       .decrement {
-        grid-area: right;
-        justify-self: start;
+        grid-area: center;
       }
 
       .input {
@@ -43,14 +38,12 @@ export const styleCustom = css`
     }
 
     &.mode3 {
-      grid-template-areas: "left right";
       grid-template-rows: auto auto;
 
       grid-template-columns: 1fr fit-content(100%) fit-content(100%);
 
       .increment {
         grid-area: right;
-        grid-row: 1;
         height: 10px;
       }
 
