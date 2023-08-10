@@ -65,59 +65,7 @@ export default {
   },
 };
 
-export const BlrNumberInput = ({
-  numberInputId,
-  label,
-  labelAppendix,
-  hasLabel,
-  value,
-  placeholder,
-  disabled,
-  size,
-  required,
-  readonly,
-  maxLength,
-  errorMessage,
-  showHint,
-  hintText,
-  hintIcon,
-  hasError,
-  spaceBetween,
-  variant,
-  dividerDirectionVariant,
-  theme,
-}: BlrNumberInputType) =>
-  html`
-    <style>
-      .wrapper {
-        width: 250px;
-      }
-    </style>
-    <div class="wrapper">
-      ${BlrNumberInputRenderFunction({
-        numberInputId,
-        label,
-        labelAppendix,
-        hasLabel,
-        value,
-        placeholder,
-        disabled,
-        size,
-        required,
-        readonly,
-        maxLength,
-        errorMessage,
-        showHint,
-        hintText,
-        hintIcon,
-        hasError,
-        variant,
-        spaceBetween,
-        dividerDirectionVariant,
-        theme,
-      })}
-    </div>
-  `;
+export const BlrNumberInput = ({}: BlrNumberInputType) => html` ${BlrNumberInputRenderFunction({})} `;
 
 BlrNumberInput.storyName = 'BlrNumberInput';
 

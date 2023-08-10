@@ -1,54 +1,36 @@
 import { css } from "lit";
 
 export const styleCustom = css`
-  .blr-number-input {
-    display: block;
-    position: relative;
-  }
+  .grid {
+    display: grid;
+    grid-template-areas: "left center right";
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+    &.mode1 {
+      .increment {
+        grid-area: right;
+      }
 
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
+      .decrement {
+        grid-area: left;
+      }
 
-  .blr-number-input:disabled {
-    pointer-events: none;
-  }
+      .input {
+        grid-area: center;
+      }
+    }
 
-  .blr-number-input-button-wrapper {
-    position: absolute;
-    right: 0;
-  }
+    &.mode2 {
+      .increment {
+        grid-area: right;
+      }
 
-  .wrapper-vertical {
-    position: relative;
-    display: inline-flex;
-    flex-direction: row;
-    height: 100%;
-  }
+      .decrement {
+        grid-area: right;
+      }
 
-  .wrapper-horizontal {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  .left {
-    position: absolute;
-    left: 0;
-  }
-
-  .right {
-    position: absolute;
-    right: 0;
-  }
-
-  .blr-input-inner-container .spaceBetween {
-    text-align: center;
+      .input {
+        grid-area: left;
+      }
+    }
   }
 `;
