@@ -111,7 +111,7 @@ export class BlrTextInput extends LitElement {
                 size: this.size,
                 classMap: iconClasses,
                 hideAria: true,
-                disablePointerEvents: false,
+                disablePointerEvents: this.disabled || this.readonly,
               })}`
             : nothing}
           ${wasInitialPasswordField
@@ -121,7 +121,7 @@ export class BlrTextInput extends LitElement {
                 size: this.size,
                 classMap: iconClasses,
                 hideAria: true,
-                disablePointerEvents: false,
+                disablePointerEvents: this.disabled || this.readonly,
                 onClick: () => this.togglePassword(),
               })}`
             : nothing}

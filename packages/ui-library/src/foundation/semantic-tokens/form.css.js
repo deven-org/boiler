@@ -3,8 +3,20 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix } =
-      semanticTokens.Forms;
+    const {
+      UserInput,
+      SurfaceFill,
+      SM,
+      MD,
+      LG,
+      Input,
+      InputBorderRadius,
+      Placeholder,
+      Caption,
+      Label,
+      LabelAppendix,
+      InputIcon,
+    } = semanticTokens.Forms;
     const { Select, TextArea } = componentTokens.Forms;
 
     return css`
@@ -18,10 +30,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-family: ${MD.UserInput.fontFamily}, sans-serif;
         border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
         border-radius: ${InputBorderRadius};
-
         box-sizing: border-box;
-        color: ${UserInput.Default.Rest};
-        background-color: ${SurfaceFill.Default.Rest};
+
         &::placeholder {
           color: ${Placeholder.Default.Rest};
         }
@@ -29,7 +39,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         &:hover {
           border-width: ${Input.Default.Hover.width};
           border-style: ${Input.Default.Hover.style};
-          border-color: ${Input.Default.Rest.color};
+          border-color: ${Input.Default.Hover.color};
           color: ${UserInput.Default.Hover};
           background-color: ${SurfaceFill.Default.Hover};
 
@@ -57,7 +67,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           color: ${Placeholder.Default.ReadOnly};
           border-color: transparent;
           outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
-          color: ${UserInput.Default.ReadOnly};
           background-color: ${SurfaceFill.Default.ReadOnly};
 
           &::placeholder {
@@ -208,6 +217,18 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
             right: ${Select.LG.IconPaddingRight};
           }
         }
+
+        &:hover {
+          .blr-input-icon {
+            color: ${InputIcon.Hover};
+          }
+
+          &:disabled {
+            .blr-input-icon {
+              color: ${InputIcon.Hover};
+            }
+          }
+        }
       }
 
       .hint-wrapper {
@@ -231,7 +252,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-family: ${SM.Caption.fontFamily}, sans-serif;
           font-weight: ${SM.Caption.fontWeight};
           font-size: ${SM.Caption.fontSize};
-          font-family: ${SM.Caption.fontFamily}, sans-serif;
           line-height: ${SM.Caption.lineHeight};
         }
 
@@ -239,7 +259,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-family: ${MD.Caption.fontFamily}, sans-serif;
           font-weight: ${MD.Caption.fontWeight};
           font-size: ${MD.Caption.fontSize};
-          font-family: ${MD.Caption.fontFamily}, sans-serif;
           line-height: ${MD.Caption.lineHeight};
         }
 
@@ -247,26 +266,30 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-family: ${LG.Caption.fontFamily}, sans-serif;
           font-weight: ${LG.Caption.fontWeight};
           font-size: ${LG.Caption.fontSize};
-          font-family: ${LG.Caption.fontFamily}, sans-serif;
           line-height: ${LG.Caption.lineHeight};
         }
       }
+
       .blr-form-hint,
       .blr-counter {
         .hint-container {
           display: flex;
           align-items: flex-start;
           word-break: break-all;
+
           .label-wrapper {
-            padding: 0rem 0px;
+            padding: 0;
             display: flex;
+
             .blr-caption-text {
               color: ${Caption.Hint};
             }
           }
         }
+
         &.error {
           color: ${Caption.Error};
+
           .hint-container {
             .label-wrapper {
               .blr-caption-text {
@@ -275,34 +298,41 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
             }
           }
         }
+
         &.sm {
           .hint-container {
             padding: ${SM.CaptionComponent.Padding};
             gap: ${SM.CaptionComponent.ItemSpacing};
+
             .icon-wrapper {
               padding: ${SM.CaptionComponent.IconWrapper.Padding};
             }
+
             .label-wrapper {
               padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
+
               .blr-caption-text {
                 font-family: ${SM.Caption.fontFamily}, sans-serif;
                 font-weight: ${SM.Caption.fontWeight};
                 font-size: ${SM.Caption.fontSize};
-                font-family: ${SM.Caption.fontFamily}, sans-serif;
                 line-height: ${SM.Caption.lineHeight};
               }
             }
           }
         }
+
         &.md {
           .hint-container {
             padding: ${MD.CaptionComponent.Padding};
             gap: ${MD.CaptionComponent.ItemSpacing};
+
             .icon-wrapper {
               padding: ${MD.CaptionComponent.IconWrapper.Padding};
             }
+
             .label-wrapper {
               padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
+
               .blr-caption-text {
                 font-family: ${MD.Caption.fontFamily}, sans-serif;
                 font-weight: ${MD.Caption.fontWeight};
@@ -312,15 +342,19 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
             }
           }
         }
+
         &.lg {
           .hint-container {
             padding: ${LG.CaptionComponent.Padding};
             gap: ${LG.CaptionComponent.ItemSpacing};
+
             .icon-wrapper {
               padding: ${LG.CaptionComponent.IconWrapper.Padding};
             }
+
             .label-wrapper {
               padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
+
               .blr-caption-text {
                 font-weight: ${LG.Caption.fontWeight};
                 font-size: ${LG.Caption.fontSize};
@@ -331,22 +365,28 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           }
         }
       }
+
       .blr-form-label {
         display: flex;
         align-items: baseline;
         color: ${Label.Rest};
+
         &:focus {
           color: ${Label.Focus};
         }
+
         &:hover {
           color: ${Label.Hover};
         }
+
         &:disabled {
           color: ${Label.Disabled};
         }
+
         &[readonly] {
           color: ${Label.ReadOnly};
         }
+
         &.sm {
           padding: ${SM.LabelSlot.Padding};
           font-weight: ${SM.Label.fontWeight};
@@ -356,6 +396,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           gap: ${SM.FormsLabelComponent.ItemSpacing};
           color: ${Label.Rest};
         }
+
         &.md {
           padding: ${MD.LabelSlot.Padding};
           font-weight: ${MD.Label.fontWeight};
@@ -364,6 +405,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           line-height: ${MD.Label.lineHeight};
           gap: ${MD.FormsLabelComponent.ItemSpacing};
         }
+
         &.lg {
           padding: ${LG.LabelSlot.Padding};
           font-weight: ${LG.Label.fontWeight};
@@ -377,18 +419,21 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       .blr-form-label-inline {
         flex: 1;
+
         &.sm {
           font-weight: ${SM.LabelNextToControl.fontWeight};
           font-size: ${SM.LabelNextToControl.fontSize};
           font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
           line-height: ${SM.LabelNextToControl.lineHeight};
         }
+
         &.md {
           font-weight: ${MD.LabelNextToControl.fontWeight};
           font-size: ${MD.LabelNextToControl.fontSize};
           font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
           line-height: ${MD.LabelNextToControl.lineHeight};
         }
+
         &.lg {
           font-weight: ${LG.LabelNextToControl.fontWeight};
           font-size: ${LG.LabelNextToControl.fontSize};
@@ -404,6 +449,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
         line-height: ${MD.LabelAppendix.lineHeight};
         color: ${LabelAppendix.Rest};
+
         &.sm {
           padding-left: ${SM.LabelSlot.Padding};
           font-weight: ${SM.LabelAppendix.fontWeight};
@@ -411,6 +457,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
           line-height: ${MD.LabelAppendix.lineHeight};
         }
+
         &.lg {
           padding-left: ${LG.LabelSlot.Padding};
           font-weight: ${LG.LabelAppendix.fontWeight};

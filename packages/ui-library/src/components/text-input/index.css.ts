@@ -13,4 +13,8 @@ export const styleCustom = css`
   .blr-input-icon:hover {
     cursor: pointer;
   }
+
+  .blr-input-icon:disabled {
+    cursor: none;
+  }
 `;
