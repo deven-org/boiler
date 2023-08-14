@@ -222,11 +222,19 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           .blr-input-icon {
             color: ${InputIcon.Hover};
           }
+        }
 
-          &:disabled {
-            .blr-input-icon {
-              color: ${InputIcon.Hover};
-            }
+        &:disabled,
+        &:hover {
+          .blr-input-icon {
+            color: ${InputIcon.Disabled};
+          }
+        }
+
+        &:hover,
+        &[readonly] {
+          .blr-input-icon {
+            color: ${InputIcon.Disabled};
           }
         }
       }
