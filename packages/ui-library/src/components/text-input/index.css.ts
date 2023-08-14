@@ -1,4 +1,4 @@
-import { css } from 'lit';
+import { css } from "lit";
 
 export const styleCustom = css`
   .blr-input {
@@ -8,5 +8,9 @@ export const styleCustom = css`
 
   .blr-text-input:disabled {
     pointer-events: none;
+  }
+
+  .blr-input-icon:hover {
+    cursor: pointer;
   }
 `;

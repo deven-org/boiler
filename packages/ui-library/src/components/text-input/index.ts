@@ -111,7 +111,7 @@ export class BlrTextInput extends LitElement {
                 size: this.size,
                 classMap: iconClasses,
                 hideAria: true,
-                disablePointerEvents: true,
+                disablePointerEvents: false,
               })}`
             : nothing}
           ${wasInitialPasswordField
