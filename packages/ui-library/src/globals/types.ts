@@ -8,6 +8,7 @@ import {
   FeedbackVariants,
   HintVariants,
   CounterVariants,
+  DividerVariations,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -31,3 +32,4 @@ export type RadioOption = {
 };
 export type WrapperVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
+export type DividerVariationTypes = (typeof DividerVariations)[number];
