@@ -81,6 +81,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
           color: ${UserInput.Default.Disabled};
           background-color: ${SurfaceFill.Default.Disabled};
+          cursor: not-allowed;
 
           &::placeholder {
             color: ${Placeholder.Default.Disabled};
@@ -192,7 +193,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
 
         &.sm {
-          padding-bottom: ${SM.LabelSlot.Padding};
+          padding: ${SM.LabelSlot.Padding};
           margin: ${SM.InputSlot.Margin};
 
           .blr-input-icon {
@@ -201,7 +202,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
 
         &.md {
-          padding-bottom: ${MD.LabelSlot.Padding};
+          padding: ${MD.LabelSlot.Padding};
           margin: ${MD.InputSlot.Margin};
 
           .blr-input-icon {
@@ -210,7 +211,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
 
         &.lg {
-          padding-bottom: ${LG.LabelSlot.Padding};
+          padding: ${LG.LabelSlot.Padding};
           margin: ${LG.InputSlot.Margin};
 
           .blr-input-icon {
@@ -221,6 +222,11 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         &:hover {
           & input:not(:disabled) + .blr-input-icon {
             color: ${InputIcon.Hover};
+          }
+
+          & .error-input:not(:disabled) + .blr-input-icon {
+            color: ${Input.Error.Rest.color};
+            cursor: default;
           }
         }
       }
