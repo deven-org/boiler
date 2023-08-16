@@ -35,6 +35,7 @@ export default {
 
 export const BlrCheckbox = ({
   label,
+  hasLabel,
   checkInputId,
   onBlur,
   onFocus,
@@ -56,6 +57,7 @@ export const BlrCheckbox = ({
   html`
     ${BlrCheckboxRenderFunction({
       label,
+      hasLabel,
       checkInputId,
       onBlur,
       onFocus,
@@ -85,6 +87,7 @@ const logEventType = (event: Event) => {
 BlrCheckbox.args = {
   theme: 'Light',
   label: 'Checkbox Option',
+  hasLabel: true,
   checkInputId: 'Checky',
   disabled: false,
   checked: false,
