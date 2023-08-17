@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Aug 2023 13:18:53 GMT
+ * Generated on Thu, 17 Aug 2023 09:49:47 GMT
  */
 
 export const semanticTokens = {
@@ -109,96 +109,6 @@ export const semanticTokens = {
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
       Error: 'hsla(350, 65%, 50%,1) ',
     },
-    SM: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
-      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
-      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
-      LabelNextToControl: {
-        fontFamily: '"Source Sans Pro" ',
-        fontWeight: 400,
-        lineHeight: '1rem',
-        fontSize: '0.875rem',
-      },
-      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
-      CaptionComponent: {
-        Padding: '0rem 0px',
-        ItemSpacing: '0.125rem',
-        IconSize: 'SM',
-        IconWrapper: { Padding: '0rem 0px' },
-        CaptionLabelWrapper: { Padding: '0rem 0px' },
-      },
-      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ' },
-      FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
-      InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
-      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
-    },
-    MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
-      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
-      CaptionComponent: {
-        Padding: '0rem 0px',
-        IconSize: 'SM',
-        ItemSpacing: '0.125rem',
-        CaptionLabelWrapper: { Padding: '0rem 0px' },
-        IconWrapper: { Padding: '0.031rem 0px' },
-      },
-      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ' },
-      FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
-      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      LabelNextToControl: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
-      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
-    },
-    LG: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
-      LabelAppendix: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
-      UserInput: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
-      LabelNextToControl: {
-        fontFamily: '"Source Sans Pro" ',
-        fontWeight: 400,
-        lineHeight: '1.5rem',
-        fontSize: '1.25rem',
-      },
-      Placeholder: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1.25rem' },
-      CaptionComponent: {
-        Padding: '0rem 0px',
-        ItemSpacing: '0.125rem',
-        IconSize: 'SM',
-        CaptionLabelWrapper: { Padding: '0rem 0px' },
-        IconWrapper: { Padding: '0.313rem 0px' },
-      },
-      CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
-      LabelSlot: { Padding: '0rem 0px 8px ' },
-      FormsLabelComponent: { ItemSpacing: '4px', Padding: '0 0px' },
-      InputSlot: { Margin: '0rem 0px 0rem 0px' },
-      InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
-      Legend: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
-    },
-    InputBorderRadius: '4px',
-    Input: {
-      Default: {
-        Rest: { color: 'hsla(220, 10%, 70%,1) ', width: '1px', style: 'solid' },
-        Hover: { color: 'hsla(220, 10%, 70%,1) ', width: '1px', style: 'solid' },
-        Pressed: { color: 'hsla(220, 10%, 70%,1) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-        Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-        ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
-      },
-      Error: {
-        Rest: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
-        Hover: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
-        Pressed: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
-        Focus: { color: 'hsla(350, 65%, 50%,1) ', width: '2px', style: 'solid' },
-      },
-    },
   },
   Action: {
     CTA: {
@@ -234,12 +144,6 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Primary: {
       SurfaceFill: {
@@ -274,12 +178,6 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Secondary: {
       SurfaceFill: {
@@ -314,12 +212,6 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 65%, 50%, 1)',
       },
-      Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
-      Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '1px', style: 'solid' },
-      Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-      Loading: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
     },
     Silent: {
       SurfaceFill: {
@@ -354,12 +246,6 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(220, 65%, 50%, 1)',
       },
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Destructive: {
       SurfaceFill: {
@@ -394,12 +280,6 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
     Encourage: {
       SurfaceFill: {
@@ -434,37 +314,7 @@ export const semanticTokens = {
         Disabled: 'hsla(220, 10%, 80%,1) ',
         Loading: 'hsla(0, 0%, 100%, 1)',
       },
-      Rest: { color: '#00000000', width: '1px', style: 'solid' },
-      Hover: { color: '#00000000', width: '1px', style: 'solid' },
-      Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-      Disabled: { color: 'hsla(220, 10%, 80%,0) ', width: '1px', style: 'solid' },
-      Loading: { color: '#00000000', width: '1px', style: 'solid' },
-    },
-    BorderRadius: '4px',
-    XS: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '0.75rem', fontSize: '0.5rem' },
-      LoaderSize: 'SM',
-    },
-    SM: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.75rem' },
-      LoaderSize: 'SM',
-    },
-    MD: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1rem', fontSize: '0.875rem' },
-      LoaderSize: 'MD',
-    },
-    LG: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1rem' },
-      LoaderSize: 'MD',
-    },
-    XL: {
-      Label: { fontFamily: '"Source Sans Pro" ', fontWeight: 600, lineHeight: '1.5rem', fontSize: '1.25rem' },
-      LoaderSize: 'LG',
     },
   },
-  Global: {
-    Focus: 'hsla(220, 10%, 10%,1) ',
-    FocusBorder: { color: 'hsla(220, 10%, 10%,1) ', width: '2px', style: 'solid' },
-  },
+  Global: { Focus: 'hsla(220, 10%, 10%,1) ' },
 };
