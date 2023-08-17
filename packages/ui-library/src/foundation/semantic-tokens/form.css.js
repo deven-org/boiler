@@ -52,7 +52,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         &[readonly] {
           border-width: ${Input.Default.ReadOnly.width};
           border-style: ${Input.Default.ReadOnly.style};
-          color: ${Placeholder.Default.ReadOnly};
           border-color: transparent;
           outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
           background-color: ${SurfaceFill.Default.ReadOnly};

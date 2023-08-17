@@ -449,8 +449,8 @@
       "intermediary/Light": "source",
       "color/SEM": "enabled",
       "color/CMP": "enabled",
-      "dimensions/SEM": "enabled",
-      "dimensions/CMP": "enabled"
+      "dimensions/CMP": "enabled",
+      "dimensions/SEM": "enabled"
     },
     "group": "Theme"
   },
@@ -903,9 +903,9 @@
       "core/COR": "source",
       "color/SEM": "enabled",
       "color/CMP": "enabled",
-      "dimensions/SEM": "enabled",
+      "intermediary/Dark": "source",
       "dimensions/CMP": "enabled",
-      "intermediary/Dark": "source"
+      "dimensions/SEM": "enabled"
     },
     "group": "Theme"
   }
