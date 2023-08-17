@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Aug 2023 13:18:53 GMT
+ * Generated on Thu, 17 Aug 2023 12:51:53 GMT
  */
 
 export const componentTokens = {
@@ -83,6 +83,7 @@ export const componentTokens = {
           Error: { color: 'hsla(350, 65%, 50%,1) ', width: '1px', style: 'solid' },
         },
       },
+      BorderRadius: '4px',
     },
   },
   Forms: {

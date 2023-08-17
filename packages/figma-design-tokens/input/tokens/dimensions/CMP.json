@@ -704,6 +704,10 @@
             "type": "border"
           }
         }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.MD}",
+        "type": "borderRadius"
       }
     },
     "Tooltip": {
