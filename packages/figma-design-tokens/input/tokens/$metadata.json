@@ -5,7 +5,7 @@
     "intermediary/Dark",
     "color/SEM",
     "color/CMP",
-    "Dimensions/CMP",
-    "Dimensions/SEM"
+    "dimensions/CMP",
+    "dimensions/SEM"
   ]
 }
