@@ -24,21 +24,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           width: 100%;
 
           &.sm {
-            margin-left: calc(
-              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px
-            );
+            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px);
           }
 
           &.md {
-            margin-left: calc(
-              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px
-            );
+            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px);
           }
 
           &.lg {
-            margin-left: calc(
-              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px
-            );
+            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px);
           }
         }
 
