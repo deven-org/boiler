@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 04 Aug 2023 13:44:39 GMT
+ * Generated on Thu, 17 Aug 2023 12:51:51 GMT
  */
 
 export const componentTokens = {
@@ -83,6 +83,7 @@ export const componentTokens = {
           Error: { color: 'hsla(350, 65%, 80%,1) ', width: '1px', style: 'solid' },
         },
       },
+      BorderRadius: '4px',
     },
   },
   Forms: {
@@ -628,7 +629,10 @@ export const componentTokens = {
     },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
   },
-  UI: { Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' } },
+  UI: {
+    Divider: { Stroke: 'hsla(220, 10%, 80%,0.3) ', Border: { color: 'hsla(220, 10%, 80%,0.3) ', width: '1px' } },
+    Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' },
+  },
   Action: {
     TextButton: {
       XS: { Padding: '0.25rem 12px', ItemSpacing: '4px' },
@@ -650,6 +654,20 @@ export const componentTokens = {
       MD: { Padding: '0.5rem 0.063rem 0.5rem 0.188rem', ItemSpacing: '0px' },
       LG: { Padding: '0.5rem 0rem 0.5rem 0.125rem', ItemSpacing: '-0.125rem' },
       XL: { Padding: '0.75rem 0rem 0.75rem 0.25rem', ItemSpacing: '-0.25rem' },
+    },
+    StepperCombo: {
+      SM: {
+        Vertical: { Width: '2rem', DividerWrapper: { Padding: '0 0.5rem' } },
+        Horizontal: { Width: '4rem', DividerWrapper: { Padding: '0.5rem 0' } },
+      },
+      MD: {
+        Vertical: { Width: '2.5rem', DividerWrapper: { Padding: '0 0.5rem' } },
+        Horizontal: { Width: '5rem', DividerWrapper: { Padding: '0.5rem 0' } },
+      },
+      LG: {
+        Vertical: { Width: '3rem', DividerWrapper: { Padding: '0 0.5rem' } },
+        Horizontal: { Width: '6rem', DividerWrapper: { Padding: '0.5rem 0' } },
+      },
     },
   },
 };

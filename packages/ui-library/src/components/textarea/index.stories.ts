@@ -3,7 +3,6 @@ import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 
 import { FormSizes } from '../../globals/constants';
-import { PureIconKeys } from '@boiler/icons';
 import './index';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
