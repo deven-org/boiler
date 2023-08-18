@@ -15,7 +15,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.trailing {
           flex-direction: row;
-          justify-content: flex-start;
+          justify-content: space-between;
           align-items: center;
         }
 
@@ -170,6 +170,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.sm {
           gap: ${ToggleSwitch.SM.Gap};
+          width: 200px;
 
           > .toggle-content-col {
             gap: ${ToggleSwitch.SM.ContentColGap};
@@ -224,6 +225,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.md {
           gap: ${ToggleSwitch.MD.Gap};
+          width: 220px;
 
           > .toggle-content-col {
             gap: ${ToggleSwitch.MD.ContentColGap};
@@ -278,6 +280,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.lg {
           gap: ${ToggleSwitch.LG.Gap};
+          width: 240px;
 
           > .toggle-content-col {
             gap: ${ToggleSwitch.LG.ContentColGap};
