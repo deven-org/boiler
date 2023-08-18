@@ -73,6 +73,8 @@ const componentTypes = [
   'Error',
   'Warning',
   'Select',
+  'Divider',
+  'StepperCombo',
 ];
 
 StyleDictionaryPackage.registerFormat({
