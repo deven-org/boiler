@@ -3,8 +3,20 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix } =
-      semanticTokens.Forms;
+    const {
+      UserInput,
+      SurfaceFill,
+      SM,
+      MD,
+      LG,
+      Input,
+      InputBorderRadius,
+      Placeholder,
+      Caption,
+      Label,
+      LabelAppendix,
+      InputIcon,
+    } = semanticTokens.Forms;
     const { Select, TextArea } = componentTokens.Forms;
 
     return css`
@@ -27,7 +39,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         &:hover {
           border-width: ${Input.Default.Hover.width};
           border-style: ${Input.Default.Hover.style};
-          border-color: ${Input.Default.Rest.color};
+          border-color: ${Input.Default.Hover.color};
           color: ${UserInput.Default.Hover};
           background-color: ${SurfaceFill.Default.Hover};
 
@@ -68,6 +80,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
           color: ${UserInput.Default.Disabled};
           background-color: ${SurfaceFill.Default.Disabled};
+          cursor: not-allowed;
 
           &::placeholder {
             color: ${Placeholder.Default.Disabled};
@@ -179,7 +192,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
 
         &.sm {
-          padding-bottom: ${SM.LabelSlot.Padding};
+          padding: ${SM.LabelSlot.Padding};
           margin: ${SM.InputSlot.Margin};
 
           .blr-input-icon {
@@ -188,7 +201,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
 
         &.md {
-          padding-bottom: ${MD.LabelSlot.Padding};
+          padding: ${MD.LabelSlot.Padding};
           margin: ${MD.InputSlot.Margin};
 
           .blr-input-icon {
@@ -197,11 +210,22 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
 
         &.lg {
-          padding-bottom: ${LG.LabelSlot.Padding};
+          padding: ${LG.LabelSlot.Padding};
           margin: ${LG.InputSlot.Margin};
 
           .blr-input-icon {
             right: ${Select.LG.IconPaddingRight};
+          }
+        }
+
+        &:hover {
+          & input:not(:disabled) + .blr-input-icon {
+            color: ${InputIcon.Hover};
+          }
+
+          & .error-input:not(:disabled) + .blr-input-icon {
+            color: ${Input.Error.Rest.color};
+            cursor: default;
           }
         }
       }
