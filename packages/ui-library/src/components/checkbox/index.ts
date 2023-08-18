@@ -19,7 +19,7 @@ export class BlrCheckbox extends LitElement {
   @query('input')
   protected _checkboxNode!: HTMLInputElement;
 
-  @property() label?: string;
+  @property() label!: string;
   @property() checkInputId!: string;
 
   @property() disabled?: boolean;
@@ -32,6 +32,7 @@ export class BlrCheckbox extends LitElement {
   @property() showHint?: boolean;
   @property() hintIcon?: IconType;
   @property() hintMessage?: string;
+  @property() hasLabel!: boolean;
 
   @property() size: FormSizesType = 'md';
 
@@ -85,7 +86,7 @@ export class BlrCheckbox extends LitElement {
           @blur=${this.onBlur}
         />
         <div class="label-wrapper">
-          ${this.label
+          ${this.hasLabel
             ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
             : nothing}
           ${this.showHint
@@ -124,6 +125,7 @@ export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;
 
 export const BlrCheckboxRenderFunction = ({
   label,
+  hasLabel,
   checkInputId,
   onBlur,
   onFocus,
@@ -144,6 +146,7 @@ export const BlrCheckboxRenderFunction = ({
   return html`
     <blr-checkbox
       .label=${label}
+      .hasLabel=${hasLabel}
       .checkInputId=${checkInputId}
       .onFocus=${onFocus}
       .onBlur=${onBlur}

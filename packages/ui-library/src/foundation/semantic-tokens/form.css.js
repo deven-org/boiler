@@ -271,6 +271,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       .blr-form-hint,
       .blr-counter {
+        color: ${Caption.Hint};
+
         .hint-container {
           display: flex;
           align-items: flex-start;
