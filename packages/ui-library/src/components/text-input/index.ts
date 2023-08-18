@@ -104,24 +104,24 @@ export class BlrTextInput extends LitElement {
             hasError="${this.hasError}"
           />
 
-          ${this.showInputIcon && !wasInitialPasswordField
+          ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
                 name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
                 size: this.size,
                 classMap: iconClasses,
                 hideAria: true,
-                disablePointerEvents: true,
+                disablePointerEvents: this.disabled || this.readonly,
               })}`
             : nothing}
-          ${wasInitialPasswordField
+          ${wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
                 name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
                 size: this.size,
                 classMap: iconClasses,
                 hideAria: true,
-                disablePointerEvents: false,
+                disablePointerEvents: this.disabled || this.readonly,
                 onClick: () => this.togglePassword(),
               })}`
             : nothing}
