@@ -15,14 +15,26 @@ export default {
       options: InputSizes,
       control: { type: 'select' },
     },
-    errorIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-    },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
     },
+    hintMessage: {
+      if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
+    },
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
+    },
+    label: {
+      if: { arg: 'hasLabel', eq: true },
+    },
+
     theme: {
       options: Themes,
       control: { type: 'select' },
@@ -86,21 +98,26 @@ const logEventType = (event: Event) => {
 
 BlrCheckbox.args = {
   theme: 'Light',
-  label: 'Checkbox Option',
+  size: 'md',
+
   hasLabel: true,
+  label: 'Checkbox Option',
+
+  hasError: false,
+  errorMessage: 'This is a sample error message',
+  errorIcon: '',
+
+  showHint: false,
+  hintMessage: 'This is a sample hint',
+  hintIcon: '',
+
   checkInputId: 'Checky',
   disabled: false,
   checked: false,
   indeterminate: false,
   readonly: false,
-  hasError: false,
-  size: 'md',
+
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
-  errorMessage: 'This is a sample error message',
-  errorIcon: '',
-  showHint: false,
-  hintMessage: 'This is a sample hint',
-  hintIcon: '',
 };
