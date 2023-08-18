@@ -45,6 +45,7 @@ export const styleCustom = css`
 
       & > input {
         grid-area: center;
+        text-align: center;
       }
     }
 

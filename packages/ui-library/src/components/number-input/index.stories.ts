@@ -13,12 +13,15 @@ export default {
       control: { type: 'select' },
     },
     variant: {
-      options: [undefined, 'mode1', 'mode2', 'mode3'],
+      options: ['mode1', 'mode2', 'mode3'],
       control: { type: 'select' },
     },
     theme: {
       options: Themes,
       control: { type: 'select' },
+    },
+    label: {
+      if: { arg: 'hasLabel', eq: true },
     },
   },
   parameters: {
@@ -43,33 +46,33 @@ export const BlrNumberInput = ({
   html`
     ${BlrNumberInputRenderFunction({
       variant,
+      theme,
       disabled,
+      label,
+      hasLabel,
       placeholder,
       readonly,
       required,
-      hasLabel,
       hasError,
-      label,
       size,
       labelAppendix,
       numberInputId,
-      theme,
     })}
   `;
 
 BlrNumberInput.storyName = 'BlrNumberInput';
 
 BlrNumberInput.args = {
-  variant: undefined,
+  variant: 'mode1',
+  theme: 'Light',
+  hasLabel: true,
+  label: 'Label',
   disabled: false,
   placeholder: 'Uschi',
   readonly: false,
   required: false,
-  label: 'Label',
-  hasLabel: false,
   hasError: false,
   size: 'md',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
-  theme: 'Light',
 };

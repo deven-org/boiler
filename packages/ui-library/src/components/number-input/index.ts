@@ -73,39 +73,78 @@ export class BlrNumberInput extends LitElement {
     });
     const stepperButtonSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as SizesType;
 
-    return html` <style>
+    return html`
+      <style>
         ${dynamicStyles.map((style) => style)}
       </style>
+      ${this.hasLabel
+        ? html` ${BlrFormLabelRenderFunction({
+            labelText: this.label,
+            labelSize: this.size,
+            labelAppendix: this.labelAppendix,
+            forValue: this.numberInputId,
+            theme: this.theme,
+          })}`
+        : html``}
       <div class="${wrapperClasses}">
-        ${this.hasLabel
-          ? html` ${BlrFormLabelRenderFunction({
-              labelText: this.label,
-              labelSize: this.size,
-              labelAppendix: this.labelAppendix,
-              forValue: this.numberInputId,
-              theme: this.theme,
-            })}`
-          : html``}
-        <button class="increment" @click=${this.stepperUp}>
-          ${BlrIconRenderFunction({
-            icon: calculateIconName('blrChevronUp', stepperButtonSize),
-            name: 'up',
-            size: stepperButtonSize,
-            hideAria: true,
-            disablePointerEvents: true,
-          })}
-        </button>
-        <button class="decrement" @click=${this.stepperDown}>
-          ${BlrIconRenderFunction({
-            icon: calculateIconName('blrChevronDown', stepperButtonSize),
-            name: 'down',
-            size: stepperButtonSize,
-            hideAria: true,
-            disablePointerEvents: true,
-          })}
-        </button>
+        ${this.variant === 'mode1'
+          ? html`<button class="increment" @click=${this.stepperUp}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrPlus', stepperButtonSize),
+                  name: 'up',
+                  size: stepperButtonSize,
+                  hideAria: true,
+                  disablePointerEvents: true,
+                })}
+              </button>
+              <button class="decrement" @click=${this.stepperDown}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrMinus', stepperButtonSize),
+                  name: 'down',
+                  size: stepperButtonSize,
+                  hideAria: true,
+                  disablePointerEvents: true,
+                })}
+              </button> `
+          : this.variant === 'mode2'
+          ? html`<button class="increment" @click=${this.stepperUp}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrPlus', stepperButtonSize),
+                  name: 'up',
+                  size: stepperButtonSize,
+                  hideAria: true,
+                  disablePointerEvents: true,
+                })}
+              </button>
+              <button class="decrement" @click=${this.stepperDown}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrMinus', stepperButtonSize),
+                  name: 'down',
+                  size: stepperButtonSize,
+                  hideAria: true,
+                  disablePointerEvents: true,
+                })}
+              </button> `
+          : html`<button class="increment" @click=${this.stepperUp}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrChevronUp', stepperButtonSize),
+                  name: 'up',
+                  size: stepperButtonSize,
+                  hideAria: true,
+                  disablePointerEvents: true,
+                })}
+              </button>
+              <button class="decrement" @click=${this.stepperDown}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrChevronDown', stepperButtonSize),
+                  name: 'down',
+                  size: stepperButtonSize,
+                  hideAria: true,
+                  disablePointerEvents: true,
+                })}
+              </button> `}
         <input
-          class="blr-form-element ${inputClasses}"
+          class="blr-form-element ${inputClasses} mode1"
           type="number"
           value=${this.currentValue.toFixed(2)}
           ?disabled=${this.disabled || nothing}
@@ -115,7 +154,8 @@ export class BlrNumberInput extends LitElement {
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
-      </div>`;
+      </div>
+    `;
   }
 }
 
