@@ -9,6 +9,7 @@ const sampleParams: BlrNumberInputType = {
   disabled: false,
   variant: 'mode1',
   theme: 'Light',
+  size: 'sm',
 };
 
 describe('blr-number-input', () => {

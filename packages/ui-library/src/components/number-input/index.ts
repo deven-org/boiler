@@ -71,7 +71,7 @@ export class BlrNumberInput extends LitElement {
 
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
     });
-    const stepperButtonSize = getComponentConfigToken('StepperButton', this.size).toLocaleLowerCase() as SizesType;
+    const stepperButtonSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as SizesType;
 
     return html` <style>
         ${dynamicStyles.map((style) => style)}
