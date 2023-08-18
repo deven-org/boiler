@@ -54,7 +54,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           border-style: ${Input.Default.ReadOnly.style};
           border-color: transparent;
           outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
-          color: ${UserInput.Default.ReadOnly};
           background-color: ${SurfaceFill.Default.ReadOnly};
 
           &::placeholder {
@@ -248,6 +247,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       .blr-form-hint,
       .blr-counter {
+        color: ${Caption.Hint};
+
         .hint-container {
           display: flex;
           align-items: flex-start;
