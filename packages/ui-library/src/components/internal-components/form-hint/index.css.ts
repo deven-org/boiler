@@ -10,6 +10,7 @@ export const styleCustom = css`
 
   .blr-form-hint {
     width: 100%;
+    justify-content: space-between;
     display: flex;
   }
 `;
