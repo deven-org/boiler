@@ -13,7 +13,7 @@ const sampleParams: BlrTextareaType = {
   maxLength: 140,
   cols: 20,
   rows: 5,
-  errorMessage: 'OMG it`s an error',
+  errorMessage: "OMG it's an error",
   placeholder: 'Type your message here ..',
   hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfoLg',

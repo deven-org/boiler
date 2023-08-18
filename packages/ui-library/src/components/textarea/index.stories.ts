@@ -6,6 +6,7 @@ import { FormSizes } from '../../globals/constants';
 import './index';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { PureIconKeys } from '@boiler/icons';
 
 export default {
   title: 'Design System/Web Components',
@@ -16,6 +17,8 @@ export default {
     },
     hintIcon: {
       if: { arg: 'showHint', eq: true },
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
     },
     hintText: {
       if: { arg: 'showHint', eq: true },
@@ -145,7 +148,7 @@ BlrTextarea.args = {
   hintText: 'Rindfleischetikettierungs',
 
   hasError: false,
-  errorMessage: 'OMG it`s an error',
+  errorMessage: "OMG it's an error",
 
   isResizeable: true,
 

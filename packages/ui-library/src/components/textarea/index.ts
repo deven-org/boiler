@@ -137,7 +137,7 @@ export class BlrTextarea extends LitElement {
                   ${BlrFormHintRenderFunction({
                     message: this.hasError ? this.errorMessage : this.hintText,
                     variant: this.hasError ? 'error' : 'hint',
-                    icon: this.hintIcon,
+                    icon: this.hasError ? 'blrErrorFilled' : this.hintIcon,
                     size: this.size,
                     theme: this.theme,
                     childElement: html`${BlrCounterRenderFunction({
