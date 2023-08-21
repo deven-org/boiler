@@ -277,6 +277,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           display: flex;
           align-items: flex-start;
           word-break: break-all;
+          margin-top: 1px;
 
           .label-wrapper {
             padding: 0;
