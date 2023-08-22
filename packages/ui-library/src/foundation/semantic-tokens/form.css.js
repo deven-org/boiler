@@ -230,6 +230,10 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
       }
 
+      .blr-caption-text {
+        word-break: break-all;
+      }
+
       .hint-wrapper {
         display: flex;
 
@@ -276,7 +280,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         .hint-container {
           display: flex;
           align-items: flex-start;
-          word-break: break-all;
           margin-top: 1px;
 
           .label-wrapper {
@@ -369,7 +372,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       .blr-form-label {
-        display: flex;
+        display: inline;
         align-items: baseline;
         color: ${Label.Rest};
 
