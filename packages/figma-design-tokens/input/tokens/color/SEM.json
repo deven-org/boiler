@@ -1083,5 +1083,19 @@
       },
       "type": "boxShadow"
     }
+  },
+  "UI": {
+    "Headline": {
+      "Default": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      }
+    },
+    "Paragraph": {
+      "Default": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      }
+    }
   }
 }

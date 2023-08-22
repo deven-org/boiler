@@ -22,6 +22,14 @@
           "type": "boxShadow"
         }
       }
+    },
+    "Dialog": {
+      "Surface": {
+        "Color": {
+          "value": "{q.surface.default}",
+          "type": "color"
+        }
+      }
     }
   },
   "Forms": {
