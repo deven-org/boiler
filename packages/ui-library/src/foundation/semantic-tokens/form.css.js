@@ -375,6 +375,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         display: inline;
         align-items: baseline;
         color: ${Label.Rest};
+        word-break: break-all;
 
         &:focus {
           color: ${Label.Focus};
