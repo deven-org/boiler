@@ -99,6 +99,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         border: 1px solid ${Neutral.SurfaceStroke};
         background-color: ${Neutral.Surface};
         border-radius: ${Counter.BorderRadius};
+        white-space: nowrap;
 
         &.sm {
           padding: ${Counter.SM.Padding};
