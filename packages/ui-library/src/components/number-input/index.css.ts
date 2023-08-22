@@ -41,10 +41,52 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           padding: ${Select.LG.InputFieldPadding};
         }
       }
+    `;
+  }
+);
+
+export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
+  (componentTokens) => {
+    const { StepperCombo } = componentTokens.Action;
+
+    return css`
+      .stepper-combo {
+        background-color: red;
+
+        &.horizontal {
+          &.sm {
+            width: calc(${StepperCombo.SM.Horizontal.Width});
+          }
+
+          &.md {
+            width: calc(${StepperCombo.MD.Horizontal.Width});
+          }
+
+          &.lg {
+            width: calc(${StepperCombo.LG.Horizontal.Width});
+          }
+        }
+
+        &.vertical {
+          &.sm {
+            width: ${StepperCombo.SM.Vertical.Width};
+          }
+
+          &.md {
+            width: ${StepperCombo.MD.Vertical.Width};
+          }
+
+          &.lg {
+            width: ${StepperCombo.LG.Vertical.Width};
+          }
+        }
+      }
 
       .custom-stepper-button {
         all: initial;
         line-height: 0;
+        text-align: center;
+        background-color: darkred;
       }
     `;
   }
@@ -54,6 +96,7 @@ export const baseStyle = css`
   .input-wrapper {
     display: grid;
     grid-template-areas: "left center right";
+    overflow: hidden;
 
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -118,12 +161,10 @@ export const baseStyle = css`
 
       .decrement {
         grid-area: right;
-        grid-row: 2;
       }
 
       & > input {
         grid-area: left;
-        grid-row: span 2;
       }
     }
   }
