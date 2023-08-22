@@ -747,6 +747,26 @@
           }
         }
       }
+    },
+    "Dialog": {
+      "Header": {
+        "Padding": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing"
+        }
+      },
+      "Content": {
+        "Padding": {
+          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+          "type": "spacing"
+        }
+      },
+      "Footer": {
+        "Padding": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      }
     }
   },
   "Forms": {
