@@ -57,6 +57,7 @@ export class BlrIconLink extends LitElement {
               size: this.size,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
+              theme: this.theme,
             })}`
           : html`${BlrIconRenderFunction({
               icon: calculateIconName(this.icon, this.size),
