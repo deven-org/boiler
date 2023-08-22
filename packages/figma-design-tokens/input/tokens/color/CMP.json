@@ -26,7 +26,7 @@
     "Dialog": {
       "Surface": {
         "Color": {
-          "value": "{q.surface.default}",
+          "value": "{q.background.level_2}",
           "type": "color"
         }
       }

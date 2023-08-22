@@ -2,7 +2,7 @@
   "q": {
     "surface": {
       "blanket": {
-        "value": "{core.color.coolgray.100.opa30}",
+        "value": "{core.color.coolgray.100.opa40}",
         "type": "color"
       },
       "default": {
