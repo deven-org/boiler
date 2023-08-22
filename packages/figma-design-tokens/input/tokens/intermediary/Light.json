@@ -126,6 +126,16 @@
         }
       }
     },
+    "background": {
+      "level_1": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "level_2": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      }
+    },
     "stroke": {
       "default": {
         "value": "{core.color.coolgray.700.solid}",
