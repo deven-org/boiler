@@ -1048,6 +1048,13 @@
         "value": "{core.color.coolgray.800.opa30}",
         "type": "color"
       }
+    },
+    "Blanket": {
+      "Surface": {
+        "value": "{q.surface.blanket}",
+        "type": "color",
+        "description": "Apply on blanket component"
+      }
     }
   },
   "Navigation": {

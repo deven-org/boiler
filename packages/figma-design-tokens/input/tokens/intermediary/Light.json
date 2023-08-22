@@ -1,8 +1,16 @@
 {
   "q": {
     "surface": {
+      "blanket": {
+        "value": "{core.color.coolgray.100.opa20}",
+        "type": "color"
+      },
       "default": {
         "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{core.color.crimson.800.opa10}",
         "type": "color"
       },
       "inverted": {
@@ -15,10 +23,6 @@
       },
       "warning": {
         "value": "{core.color.gold.500.opa10}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.crimson.800.opa10}",
         "type": "color"
       },
       "none": {
