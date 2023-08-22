@@ -22,8 +22,4 @@ export const styleCustom = css`
   .textarea-input-control.resizeable {
     resize: both;
   }
-
-  .new-class {
-    color: red;
-  }
 `;
