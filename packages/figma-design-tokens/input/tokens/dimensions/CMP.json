@@ -749,6 +749,36 @@
       }
     },
     "Dialog": {
+      "XS": {
+        "MaxWidth": {
+          "value": "400px",
+          "type": "sizing"
+        }
+      },
+      "SM": {
+        "MaxWidth": {
+          "value": "600px",
+          "type": "sizing"
+        }
+      },
+      "MD": {
+        "MaxWidth": {
+          "value": "900px",
+          "type": "sizing"
+        }
+      },
+      "LG": {
+        "MaxWidth": {
+          "value": "1200px",
+          "type": "sizing"
+        }
+      },
+      "XL": {
+        "MaxWidth": {
+          "value": "1556px",
+          "type": "sizing"
+        }
+      },
       "Header": {
         "Padding": {
           "value": "{core.dimensionPX.16}",
@@ -766,6 +796,10 @@
           "value": "{core.dimensionPX.8}",
           "type": "spacing"
         }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius"
       }
     }
   },
