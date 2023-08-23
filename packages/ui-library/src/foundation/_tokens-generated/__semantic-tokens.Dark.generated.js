@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 17 Aug 2023 12:51:51 GMT
+ * Generated on Wed, 23 Aug 2023 09:21:26 GMT
  */
 
 export const semanticTokens = {
@@ -105,6 +105,12 @@ export const semanticTokens = {
       Hover: 'hsla(0, 0%, 100%, 1)',
       Pressed: 'hsla(0, 0%, 100%, 1)',
       Focus: 'hsla(0, 0%, 100%, 1)',
+      Disabled: 'hsla(220, 10%, 40%,1) ',
+      ReadOnly: 'hsla(0, 0%, 100%, 1)',
+      Error: 'hsla(350, 65%, 60%,1) ',
+    },
+    Legend: {
+      Default: 'hsla(0, 0%, 100%, 1)',
       Disabled: 'hsla(220, 10%, 40%,1) ',
       ReadOnly: 'hsla(0, 0%, 100%, 1)',
       Error: 'hsla(350, 65%, 60%,1) ',
