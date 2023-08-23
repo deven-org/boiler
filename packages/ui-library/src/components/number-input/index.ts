@@ -3,9 +3,8 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { baseStyle, formLight, formDark, StepperComboLight, StepperComboDark } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { FormSizesType, SizesType } from '../../globals/types';
+import { FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-// import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
@@ -70,8 +69,10 @@ export class BlrNumberInput extends LitElement {
       iconKey = adjustType === 'increment' ? 'blrChevronUp' : 'blrChevronDown';
     }
 
-    return html`<button
-      class="custom-stepper-button ${buttonAlignment} ${stepperButtonSize} ${adjustType}"
+    const button = html`<button
+      class="custom-stepper-button ${buttonAlignment} ${buttonAlignment === 'vertical'
+        ? 'fullWidthHeight'
+        : stepperButtonSize} ${adjustType}"
       @click=${adjustType === 'increment' ? this.stepperUp : this.stepperDown}
     >
       ${BlrIconRenderFunction({
@@ -82,6 +83,12 @@ export class BlrNumberInput extends LitElement {
         disablePointerEvents: true,
       })}
     </button>`;
+
+    if (buttonAlignment === 'vertical') {
+      return html`<div class="stepper-combo vertical ${this.size} ${adjustType}">${button}</div>`;
+    } else {
+      return button;
+    }
   };
 
   protected render() {
@@ -103,7 +110,7 @@ export class BlrNumberInput extends LitElement {
 
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
     });
-    const stepperButtonSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
+    const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
 
     return html`
       <style>
@@ -120,16 +127,14 @@ export class BlrNumberInput extends LitElement {
         : nothing}
       <div class="${wrapperClasses}">
         ${this.variant === 'mode1' || this.variant === 'mode2'
-          ? html`<div class="stepper-combo horizontal ${stepperButtonSize}">
-                ${this.getButtonTemplate('operators', 'decrement', stepperButtonSize, 'horizontal')}
-              </div>
-              <div class="stepper-combo horizontal ${stepperButtonSize}">
-                ${this.getButtonTemplate('operators', 'increment', stepperButtonSize, 'horizontal')}
-              </div>`
-          : html`<div class="stepper-combo vertical ${stepperButtonSize}">
-              ${this.getButtonTemplate('chevrons', 'increment', stepperButtonSize, 'vertical')}
-              ${this.getButtonTemplate('chevrons', 'decrement', stepperButtonSize, 'vertical')}
-            </div>`}
+          ? html`
+              ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
+              ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+            `
+          : html`
+              ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
+              ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
+            `}
 
         <input
           class="${inputClasses}"

@@ -9,7 +9,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
     return css`
       .custom-form-input {
         all: initial;
-        margin: 0 2px;
         color: ${UserInput.Default.Rest};
         background-color: ${SurfaceFill.Default.Rest};
 
@@ -46,24 +45,25 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 );
 
 export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
-  (componentTokens) => {
-    const { StepperCombo } = componentTokens.Action;
+  (componentTokens, semanticTokens) => {
+    const { StepperCombo, StepperButton } = componentTokens.Action;
+    const { Silent } = semanticTokens.Action;
 
     return css`
       .stepper-combo {
-        background-color: red;
+        position: relative;
 
         &.horizontal {
           &.sm {
-            width: calc(${StepperCombo.SM.Horizontal.Width});
+            width: ${StepperCombo.SM.Horizontal.Width};
           }
 
           &.md {
-            width: calc(${StepperCombo.MD.Horizontal.Width});
+            width: ${StepperCombo.MD.Horizontal.Width};
           }
 
           &.lg {
-            width: calc(${StepperCombo.LG.Horizontal.Width});
+            width: ${StepperCombo.LG.Horizontal.Width};
           }
         }
 
@@ -86,7 +86,40 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         all: initial;
         line-height: 0;
         text-align: center;
-        background-color: darkred;
+        background-color: ${Silent.SurfaceFill.Rest};
+        color: ${Silent.Icon.Rest};
+
+        &.fullWidthHeight {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover {
+          background-color: ${Silent.SurfaceFill.Hover};
+          color: ${Silent.Icon.Hover};
+        }
+
+        &:active {
+          background-color: ${Silent.SurfaceFill.Pressed};
+          color: ${Silent.Icon.Pressed};
+        }
+
+        &:disabled {
+          background-color: ${Silent.SurfaceFill.Pressed};
+          color: ${Silent.Icon.Disabled};
+        }
+
+        &.sm {
+          width: ${StepperButton.SM.Width};
+        }
+
+        &.md {
+          width: ${StepperButton.MD.Width};
+        }
+
+        &.lg {
+          width: ${StepperButton.LG.Width};
+        }
       }
     `;
   }
@@ -161,10 +194,12 @@ export const baseStyle = css`
 
       .decrement {
         grid-area: right;
+        grid-row: 2;
       }
 
       & > input {
         grid-area: left;
+        grid-row: span 2;
       }
     }
   }
