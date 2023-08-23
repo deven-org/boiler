@@ -753,30 +753,55 @@
         "MaxWidth": {
           "value": "400px",
           "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
         }
       },
       "SM": {
         "MaxWidth": {
           "value": "600px",
           "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
         }
       },
       "MD": {
         "MaxWidth": {
           "value": "900px",
           "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
         }
       },
       "LG": {
         "MaxWidth": {
           "value": "1200px",
           "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
         }
       },
       "XL": {
         "MaxWidth": {
           "value": "1556px",
           "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
         }
       },
       "Header": {
