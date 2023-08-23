@@ -700,7 +700,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{q.content.ondefault.alpha}",
+            "value": "{q.content.ondisabled.alpha}",
             "type": "color"
           }
         },
@@ -766,10 +766,6 @@
           "Focus": {
             "value": "{Action.Primary.SurfaceFill.Focus}",
             "type": "color"
-          },
-          "Disabled": {
-            "value": "{Action.Primary.SurfaceFill.Disabled}",
-            "type": "color"
           }
         },
         "SurfaceStroke": {
@@ -788,10 +784,6 @@
           "Focus": {
             "value": "{Action.Primary.SurfaceStroke.Focus}",
             "type": "color"
-          },
-          "Disabled": {
-            "value": "{Action.Primary.SurfaceStroke.Disabled}",
-            "type": "color"
           }
         },
         "Label": {
@@ -808,10 +800,6 @@
             "type": "color"
           },
           "Focus": {
-            "value": "{q.content.onbrand.alpha}",
-            "type": "color"
-          },
-          "Disabled": {
             "value": "{q.content.onbrand.alpha}",
             "type": "color"
           }
@@ -832,10 +820,6 @@
           "Focus": {
             "value": "{q.content.onbrand.gamma}",
             "type": "color"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
-            "type": "color"
           }
         },
         "Icon": {
@@ -853,10 +837,6 @@
           },
           "Focus": {
             "value": "{q.content.onbrand.gamma}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
             "type": "color"
           }
         }

@@ -269,7 +269,7 @@
           }
         },
         "gamma": {
-          "value": "{core.color.white.opa90}",
+          "value": "{core.color.white.opa80}",
           "type": "color"
         }
       },
