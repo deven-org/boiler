@@ -1,8 +1,16 @@
 {
   "q": {
     "surface": {
+      "blanket": {
+        "value": "{core.color.coolgray.100.opa40}",
+        "type": "color"
+      },
       "default": {
         "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{core.color.crimson.400.opa40}",
         "type": "color"
       },
       "inverted": {
@@ -15,10 +23,6 @@
       },
       "warning": {
         "value": "{core.color.gold.400.opa40}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.crimson.400.opa40}",
         "type": "color"
       },
       "none": {
@@ -120,6 +124,16 @@
             "type": "color"
           }
         }
+      }
+    },
+    "background": {
+      "level_1": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "level_2": {
+        "value": "{core.color.coolgray.200.solid}",
+        "type": "color"
       }
     },
     "stroke": {

@@ -1070,5 +1070,32 @@
         }
       }
     }
+  },
+  "Elevation": {
+    "2": {
+      "value": {
+        "x": "0",
+        "y": "4",
+        "blur": "8",
+        "spread": "0",
+        "color": "{core.color.coolgray.100.opa30}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    }
+  },
+  "UI": {
+    "Headline": {
+      "Default": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      }
+    },
+    "Paragraph": {
+      "Default": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color"
+      }
+    }
   }
 }
