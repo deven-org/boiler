@@ -1110,5 +1110,15 @@
         }
       }
     }
+  },
+  "Actions": {
+    "Menu": {
+      "Surface": {
+        "Color": {
+          "value": "{q.background.level_2}",
+          "type": "color"
+        }
+      }
+    }
   }
 }
