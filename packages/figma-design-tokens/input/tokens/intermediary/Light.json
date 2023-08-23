@@ -210,7 +210,7 @@
           "description": "Forms"
         },
         "beta": {
-          "value": "{core.color.coolgray.300.solid}",
+          "value": "{core.color.coolgray.400.solid}",
           "type": "color"
         },
         "gamma": {
@@ -252,6 +252,10 @@
       "onbrand": {
         "alpha": {
           "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "value": "{core.color.white.opa80}",
           "type": "color"
         },
         "beta": {

@@ -267,6 +267,10 @@
             "value": "{core.color.azure.700.solid}",
             "type": "color"
           }
+        },
+        "gamma": {
+          "value": "{core.color.white.opa90}",
+          "type": "color"
         }
       },
       "ondisabled": {
