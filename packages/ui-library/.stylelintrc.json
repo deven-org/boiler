@@ -5,6 +5,7 @@
     "comment-empty-line-before": null,
     "at-rule-empty-line-before": null,
     "declaration-empty-line-before": null,
+    "declaration-colon-newline-after": null,
     "property-no-vendor-prefix": null,
     "alpha-value-notation": null,
     "value-keyword-case": ["lower", { "ignoreProperties": ["--font-family-sans"], "ignoreKeywords": ["/POSTCSS/"] }],
