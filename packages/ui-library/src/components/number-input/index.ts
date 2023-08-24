@@ -10,6 +10,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
+import { KeyboardEvent } from 'react';
 
 type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
@@ -56,6 +57,11 @@ export class BlrNumberInput extends LitElement {
   protected handleBlur = () => {
     this.isFocused = false;
   };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  protected handleChange(event: any) {
+    this.currentValue = Number(event.target?.value) || 0;
+  }
 
   protected getButtonTemplate = (
     buttonsType: ButtonTemplateType,
@@ -116,6 +122,7 @@ export class BlrNumberInput extends LitElement {
       <style>
         ${dynamicStyles.map((style) => style)}
       </style>
+
       ${this.hasLabel
         ? html` ${BlrFormLabelRenderFunction({
             labelText: this.label,
@@ -139,10 +146,11 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="number"
-          value=${this.currentValue}
+          .value=${this.currentValue}
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
+          @change=${this.handleChange}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
