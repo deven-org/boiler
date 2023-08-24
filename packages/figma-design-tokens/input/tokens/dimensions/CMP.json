@@ -507,6 +507,11 @@
           "value": "SM",
           "type": "componentConfig",
           "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+        },
+        "BorderRadius": {
+          "value": "{Action.BorderRadius}",
+          "type": "borderRadius",
+          "description": "Defines the border radius of a single menu item."
         }
       },
       "Section": {
@@ -521,6 +526,23 @@
           "value": "{core.typography.sourceSansPro.semibold.75}",
           "type": "typography"
         }
+      },
+      "SectionStack": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the space between each menu section"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the padding around all stacked menu sections."
+        }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius",
+        "description": "Defines the border radius of the whole menu component"
       }
     }
   },
