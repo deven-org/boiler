@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 24 Aug 2023 13:39:10 GMT
+ * Generated on Thu, 24 Aug 2023 16:22:09 GMT
  */
 
 export const componentConfig = {
@@ -24,6 +24,7 @@ export const componentConfig = {
     },
   },
   Action: {
+    Menu: { MenuItem: { IconSize: 'SM' } },
     TextButton: {
       XS: { IconSize: 'XXS' },
       SM: { IconSize: 'XS' },
@@ -53,7 +54,6 @@ export const componentConfig = {
       XL: { ChevronSize: 'MD' },
     },
     StepperButton: { SM: { IconSize: 'SM' }, MD: { IconSize: 'SM' }, LG: { IconSize: 'MD' } },
-    Menu: { MenuItem: { IconSize: 'SM' } },
     XS: { LoaderSize: 'SM' },
     SM: { LoaderSize: 'SM' },
     MD: { LoaderSize: 'MD' },
