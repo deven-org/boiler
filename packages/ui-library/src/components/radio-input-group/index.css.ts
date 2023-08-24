@@ -5,8 +5,4 @@ export const styleCustom = css`
   .group-error {
     margin: 0 1rem;
   }
-
-  .group-error {
-    background-color: pink;
-  }
 `;
