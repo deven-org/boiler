@@ -1,6 +1,14 @@
 import { LitElement, TemplateResult, html, nothing } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
-import { baseStyle, formLight, formDark, StepperComboLight, StepperComboDark } from './index.css';
+import { customElement, property, query, state } from 'lit/decorators.js';
+import {
+  baseStyle,
+  formLight,
+  formDark,
+  StepperComboLight,
+  StepperComboDark,
+  wrapperLight,
+  wrapperDark,
+} from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { FormSizesType } from '../../globals/types';
@@ -8,9 +16,8 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { SizelessIconType } from '@boiler/icons';
+import { IconType, SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { KeyboardEvent } from 'react';
 
 type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
@@ -19,6 +26,9 @@ type LayoutType = 'horizontal' | 'vertical';
 @customElement('blr-number-input')
 export class BlrNumberInput extends LitElement {
   static styles = [baseStyle];
+
+  @query('input')
+  protected _numberFieldNode!: HTMLInputElement;
 
   @property() numberInputId!: string;
   @property() variant = 'mode1';
@@ -30,24 +40,33 @@ export class BlrNumberInput extends LitElement {
   @property() hasLabel?: boolean;
   @property() size: FormSizesType = 'md';
   @property() labelAppendix?: string;
-  @property() hasError!: boolean;
+  @property() hasError?: boolean;
+  @property() errorMessage?: string;
+  @property() showHint = true;
+  @property() hintText?: string;
+  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() value?: number;
 
   @property() theme: ThemeType = 'Light';
 
   @state() protected isFocused = false;
-  @state() protected currentValue = 0;
+  @state() protected currentValue: number | undefined = undefined;
 
   protected stepperUp() {
-    this.currentValue++;
+    if (this.currentValue !== undefined) {
+      this.currentValue++;
+    }
   }
 
   protected stepperDown() {
-    this.currentValue--;
+    if (this.currentValue !== undefined) {
+      this.currentValue--;
+    }
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.currentValue = Number(this.currentValue) || 0;
+    this.currentValue = Number(this.currentValue) || Number(this.value);
   }
 
   protected handleFocus = () => {
@@ -58,9 +77,8 @@ export class BlrNumberInput extends LitElement {
     this.isFocused = false;
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  protected handleChange(event: any) {
-    this.currentValue = Number(event.target?.value) || 0;
+  protected handleChange() {
+    this.currentValue = Number(this._numberFieldNode.value) || 0;
   }
 
   protected getButtonTemplate = (
@@ -76,6 +94,7 @@ export class BlrNumberInput extends LitElement {
     }
 
     const button = html`<button
+      disabled=${this.disabled || nothing}
       class="custom-stepper-button ${buttonAlignment} ${buttonAlignment === 'vertical'
         ? 'fullWidthHeight'
         : stepperButtonSize} ${adjustType}"
@@ -99,7 +118,9 @@ export class BlrNumberInput extends LitElement {
 
   protected render() {
     const dynamicStyles =
-      this.theme === 'Light' ? [formLight, actionLight, StepperComboLight] : [formDark, actionDark, StepperComboDark];
+      this.theme === 'Light'
+        ? [formLight, wrapperLight, actionLight, StepperComboLight]
+        : [formDark, wrapperDark, actionDark, StepperComboDark];
 
     const inputClasses = classMap({
       'custom-form-input': true,
@@ -174,6 +195,7 @@ export const BlrNumberInputRenderFunction = ({
   size,
   labelAppendix,
   numberInputId,
+  value,
   theme,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
@@ -186,6 +208,7 @@ export const BlrNumberInputRenderFunction = ({
     .hasLabel="${hasLabel}"
     .hasError="${hasError}"
     .size="${size}"
+    .value="${value}"
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"

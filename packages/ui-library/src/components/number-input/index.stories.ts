@@ -4,6 +4,7 @@ import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 import './index';
 import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
 export default {
   title: 'Design System/Web Components',
@@ -22,6 +23,13 @@ export default {
     },
     label: {
       if: { arg: 'hasLabel', eq: true },
+    },
+    value: {
+      control: { type: 'text' },
+    },
+    hintIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
     },
   },
   parameters: {
@@ -42,6 +50,7 @@ export const BlrNumberInput = ({
   labelAppendix,
   numberInputId,
   theme,
+  value,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -57,12 +66,14 @@ export const BlrNumberInput = ({
       size,
       labelAppendix,
       numberInputId,
+      value,
     })}
   `;
 
 BlrNumberInput.storyName = 'BlrNumberInput';
 
 BlrNumberInput.args = {
+  value: undefined,
   variant: 'mode1',
   theme: 'Light',
   hasLabel: true,
@@ -75,4 +86,7 @@ BlrNumberInput.args = {
   size: 'md',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
+  showHint: true,
+  hintText: 'Field is used for hint',
+  hintIcon: 'blrInfo',
 };

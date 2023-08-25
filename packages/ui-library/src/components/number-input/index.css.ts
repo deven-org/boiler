@@ -1,16 +1,62 @@
 import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
+export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings(
+  (componentTokens, semanticTokens) => {
+    const { UserInput, SurfaceFill, Placeholder, SM, MD, LG, Input, InputBorderRadius } = semanticTokens.Forms;
+
+    return css`
+      .input-wrapper {
+        border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
+        border-radius: ${InputBorderRadius};
+
+        &.disabled {
+          border-width: ${Input.Default.ReadOnly.width};
+          border-style: ${Input.Default.Disabled.style};
+          border-color: transparent;
+          outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
+
+          cursor: not-allowed;
+          background-color: ${SurfaceFill.Default.Disabled};
+
+          & > input {
+            background-color: ${SurfaceFill.Default.Disabled};
+            color: ${UserInput.Default.Disabled};
+            &::placeholder {
+              color: ${Placeholder.Default.Disabled};
+            }
+          }
+        }
+
+        &.focus {
+          border-width: ${Input.Default.Rest.width};
+          border-style: ${Input.Default.Rest.style};
+          border-color: transparent;
+          outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+          background-color: ${SurfaceFill.Default.Focus};
+
+          & > input {
+            background-color: ${SurfaceFill.Default.Focus};
+            color: ${UserInput.Default.Focus};
+            &::placeholder {
+              color: ${Placeholder.Default.Focus};
+            }
+          }
+        }
+      }
+    `;
+  }
+);
+
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { UserInput, SurfaceFill, Placeholder, SM, MD, LG } = semanticTokens.Forms;
+    const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
     const { Select } = componentTokens.Forms;
 
     return css`
       .custom-form-input {
         all: initial;
         color: ${UserInput.Default.Rest};
-        background-color: ${SurfaceFill.Default.Rest};
 
         &::placeholder {
           color: ${Placeholder.Default.Rest};
@@ -94,18 +140,17 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           height: 100%;
         }
 
-        &:hover {
+        &:hover:not(:disabled) {
           background-color: ${Silent.SurfaceFill.Hover};
           color: ${Silent.Icon.Hover};
         }
 
-        &:active {
+        &:active:not(:disabled) {
           background-color: ${Silent.SurfaceFill.Pressed};
           color: ${Silent.Icon.Pressed};
         }
 
         &:disabled {
-          background-color: ${Silent.SurfaceFill.Pressed};
           color: ${Silent.Icon.Disabled};
         }
 
@@ -130,17 +175,7 @@ export const baseStyle = css`
     display: grid;
     grid-template-areas: "left center right";
     overflow: hidden;
-
-    border: 1px solid lightgray;
-    border-radius: 5px;
-
-    &.focus {
-      border-color: black;
-    }
-
-    &.disabled {
-      background-color: gray;
-    }
+    box-sizing: border-box;
 
     & > input::-webkit-outer-spin-button,
     & > input::-webkit-inner-spin-button {
