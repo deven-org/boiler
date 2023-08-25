@@ -6,23 +6,28 @@ export const { tokenizedLight: textButtonLight, tokenizedDark: textButtonDark } 
     const { TextButton } = componentTokens.Action;
 
     return css`
-      .blr-text-button.xs {
+      .blr-text-button.xs,
+      .blr-text-button-group.xs {
         padding: ${TextButton.XS.Padding};
       }
 
-      .blr-text-button.sm {
+      .blr-text-button.sm,
+      .blr-text-button-group.sm {
         padding: ${TextButton.SM.Padding};
       }
 
-      .blr-text-button.md {
+      .blr-text-button.md,
+      .blr-text-button-group.md {
         padding: ${TextButton.MD.Padding};
       }
 
-      .blr-text-button.lg {
+      .blr-text-button.lg,
+      .blr-text-button-group.lg {
         padding: ${TextButton.LG.Padding};
       }
 
-      .blr-text-button.xl {
+      .blr-text-button.xl,
+      .blr-text-button-group.xl {
         padding: ${TextButton.XL.Padding};
       }
     `;

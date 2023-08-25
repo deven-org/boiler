@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
+import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, FormSizes } from '../../globals/constants';
 import './index';
@@ -35,7 +35,7 @@ export default {
   },
 };
 
-export const BlrTextButton = ({
+export const BlrTextButtonGroup = ({
   label,
   onClick,
   onBlur,
@@ -48,9 +48,9 @@ export const BlrTextButton = ({
   trailingIcon,
   loadingStatus,
   theme,
-}: BlrTextButtonType) =>
+}: BlrTextButtonGroupType) =>
   html`
-    ${BlrTextButtonRenderFunction({
+    ${BlrTextButtonGroupRenderFunction({
       label,
       onClick,
       onBlur,
@@ -66,9 +66,9 @@ export const BlrTextButton = ({
     })}
   `;
 
-BlrTextButton.storyName = 'BlrTextButton';
+BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
-BlrTextButton.args = {
+BlrTextButtonGroup.args = {
   theme: 'Light',
   label: 'Button',
   onClick: () => console.log('onClick'),
