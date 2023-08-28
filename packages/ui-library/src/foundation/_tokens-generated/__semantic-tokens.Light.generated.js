@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 28 Aug 2023 08:00:56 GMT
+ * Generated on Mon, 28 Aug 2023 08:04:13 GMT
  */
 
 export const semanticTokens = {
@@ -200,6 +200,7 @@ export const semanticTokens = {
       },
     },
   },
+  UI: { Background: { Level_1: 'hsla(0, 0%, 100%, 1)', Level_2: 'hsla(0, 0%, 100%, 1)' } },
   Action: {
     CTA: {
       SurfaceFill: {

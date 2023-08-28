@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 28 Aug 2023 08:00:55 GMT
+ * Generated on Mon, 28 Aug 2023 08:04:12 GMT
  */
 
 export const componentTokens = {
