@@ -5,7 +5,7 @@ import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
-import { ActionVariantType, FormSizesType } from '../../globals/types';
+import {ActionVariantType, AlignmentType, FormSizesType} from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -27,6 +27,7 @@ export class BlrTextButtonGroup extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size: FormSizesType = 'md';
   @property() loadingStatus!: string;
+  @property() alignment: AlignmentType= 'center';
 
   @property() theme: ThemeType = 'Light';
 
@@ -36,14 +37,20 @@ export class BlrTextButtonGroup extends LitElement {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size || 'md',
+      [`${this.alignment}`]: this.alignment || 'center',
     });
+
+      const alignmentClasses = classMap({
+          [`${this.alignment}`]: this.alignment || 'center',
+      });
 
     const loaderVariant = determineLoaderVariant(this.variant);
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <button
+    <div class="wrapper ${alignmentClasses}">
+    <button
         class="blr-semantic-action blr-text-button-group ${classes}"
         @click="${this.onClick}"
         @blur="${this.onBlur}"
@@ -72,7 +79,69 @@ export class BlrTextButtonGroup extends LitElement {
                 hideAria: true,
               })}`}
             `}
-      </button>`;
+      </button>
+    <button
+        class="blr-semantic-action blr-text-button-group ${classes}"
+        @click="${this.onClick}"
+        @blur="${this.onBlur}"
+        ?disabled="${this.disabled}"
+        id=${this.buttonId || nothing}
+      >
+        ${this.loading
+        ? html`${BlrLoaderRenderFunction({
+          size: this.size,
+          variant: loaderVariant,
+          loadingStatus: this.loadingStatus,
+          theme: this.theme,
+        })}`
+        : html`
+              ${this.leadingIcon &&
+        html`${BlrIconRenderFunction({
+          icon: calculateIconName(this.leadingIcon, this.size),
+          size: this.size,
+          hideAria: true,
+        })}`}
+              <span>${this.label}</span>
+              ${this.trailingIcon &&
+        html`${BlrIconRenderFunction({
+          icon: calculateIconName(this.trailingIcon, this.size),
+          size: this.size,
+          hideAria: true,
+        })}`}
+            `}
+      </button>
+    <button
+        class="blr-semantic-action blr-text-button-group ${classes}"
+        @click="${this.onClick}"
+        @blur="${this.onBlur}"
+        ?disabled="${this.disabled}"
+        id=${this.buttonId || nothing}
+      >
+        ${this.loading
+        ? html`${BlrLoaderRenderFunction({
+          size: this.size,
+          variant: loaderVariant,
+          loadingStatus: this.loadingStatus,
+          theme: this.theme,
+        })}`
+        : html`
+              ${this.leadingIcon &&
+        html`${BlrIconRenderFunction({
+          icon: calculateIconName(this.leadingIcon, this.size),
+          size: this.size,
+          hideAria: true,
+        })}`}
+              <span>${this.label}</span>
+              ${this.trailingIcon &&
+        html`${BlrIconRenderFunction({
+          icon: calculateIconName(this.trailingIcon, this.size),
+          size: this.size,
+          hideAria: true,
+        })}`}
+            `}
+      </button>
+      
+    </div>`;
   }
 }
 
@@ -91,6 +160,8 @@ export const BlrTextButtonGroupRenderFunction = ({
   size,
   loadingStatus,
   theme,
+  alignment,
+
 }: BlrTextButtonGroupType) => {
   return html`<blr-text-button-group
     .label=${label}
@@ -105,5 +176,6 @@ export const BlrTextButtonGroupRenderFunction = ({
     .size=${size}
     .loadingStatus=${loadingStatus}
     .theme=${theme}
+    .alignment=${alignment}
   ></blr-text-button-group>`;
 };

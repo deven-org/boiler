@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, FormSizes } from '../../globals/constants';
+import { ActionVariants, FormSizes, AlignmentVariants } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -33,6 +33,10 @@ export default {
   parameters: {
     viewMode: 'docs',
   },
+  alignment: {
+    options: AlignmentVariants,
+    control: { type: 'select' },
+  },
 };
 
 export const BlrTextButtonGroup = ({
@@ -48,6 +52,7 @@ export const BlrTextButtonGroup = ({
   trailingIcon,
   loadingStatus,
   theme,
+  alignment,
 }: BlrTextButtonGroupType) =>
   html`
     ${BlrTextButtonGroupRenderFunction({
@@ -63,6 +68,7 @@ export const BlrTextButtonGroup = ({
       trailingIcon,
       loadingStatus,
       theme,
+      alignment,
     })}
   `;
 
@@ -81,4 +87,5 @@ BlrTextButtonGroup.args = {
   variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
+  alignment: 'center',
 };

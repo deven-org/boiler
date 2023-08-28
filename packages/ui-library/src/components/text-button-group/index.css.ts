@@ -17,4 +17,24 @@ export const styleCustom = css`
     /* Need to make sure we meet AA requirements with this custom outline */
     outline: 2px solid black;
   }
-`;
+
+  .wrapper {
+    display: flex;
+
+   &.space-between {
+   justify-content: space-between;
+   }
+   &.space-around {
+   justify-content: space-around;
+   } 
+   &.flex-end {
+   justify-content: flex-end;
+   }
+   &.flex-start {
+   justify-content: flex-start;
+   }
+   &.center {
+   justify-content: center;
+   }
+   }
+   `;
