@@ -1302,6 +1302,16 @@
         "value": "{q.content.ondefault.alpha}",
         "type": "color"
       }
+    },
+    "Background": {
+      "Level_1": {
+        "value": "{q.background.level_1}",
+        "type": "color"
+      },
+      "Level_2": {
+        "value": "{q.background.level_1}",
+        "type": "color"
+      }
     }
   }
 }
