@@ -17,47 +17,64 @@ type LayoutType = 'horizontal' | 'vertical';
 
 @customElement('blr-number-input')
 export class BlrNumberInput extends LitElement {
-  static styles = [baseStyle];
+  static 'styles' = [baseStyle];
 
-  @property() numberInputId!: string;
-  @property() variant = 'mode1';
-  @property() label!: string;
-  @property() disabled?: boolean;
-  @property() placeholder?: string;
-  @property() readonly?: boolean;
-  @property() required?: boolean;
-  @property() hasLabel?: boolean;
-  @property() size: FormSizesType = 'md';
-  @property() labelAppendix?: string;
-  @property() hasError!: boolean;
+  @property() 'numberInputId'!: string;
+  @property() 'variant' = 'mode1';
+  @property() 'label'!: string;
+  @property() 'disabled'?: boolean;
+  @property() 'placeholder'?: string;
+  @property() 'readonly'?: boolean;
+  @property() 'required'?: boolean;
+  @property() 'hasLabel'?: boolean;
+  @property() 'size': FormSizesType = 'md';
+  @property() 'labelAppendix'?: string;
+  @property() 'hasError'!: boolean;
+  @property() 'currency': string;
+  @property() 'hasCurrency'?: boolean;
 
-  @property() theme: ThemeType = 'Light';
+  @property() 'theme': ThemeType = 'Light';
 
-  @state() protected isFocused = false;
-  @state() protected currentValue = 0;
+  @state() protected 'isFocused' = false;
+  @state() protected 'currentValue' = 0;
 
-  protected stepperUp() {
+  protected 'stepperUp'() {
     this.currentValue++;
   }
 
-  protected stepperDown() {
+  protected 'stepperDown'() {
     this.currentValue--;
   }
 
-  connectedCallback() {
+  'connectedCallback'() {
     super.connectedCallback();
     this.currentValue = Number(this.currentValue) || 0;
   }
 
-  protected handleFocus = () => {
+  protected 'handleFocus' = () => {
     this.isFocused = true;
   };
 
-  protected handleBlur = () => {
+  protected 'handleBlur' = () => {
     this.isFocused = false;
   };
 
-  protected getButtonTemplate = (
+  protected 'toggleCurrency'() {
+    this.hasCurrency = !this.hasCurrency;
+  }
+
+  protected 'formatValue'(value: number) {
+    if (this.hasCurrency) {
+      return new Intl.NumberFormat('de-DE', {
+        style: 'currency',
+        currency: this.currency,
+      }).format(value);
+    } else {
+      return value.toString();
+    }
+  }
+
+  protected 'getButtonTemplate' = (
     buttonsType: ButtonTemplateType,
     adjustType: AdjustType,
     stepperButtonSize: FormSizesType,
@@ -91,7 +108,7 @@ export class BlrNumberInput extends LitElement {
     }
   };
 
-  protected render() {
+  protected 'render'() {
     const dynamicStyles =
       this.theme === 'Light' ? [formLight, actionLight, StepperComboLight] : [formDark, actionDark, StepperComboDark];
 
@@ -138,8 +155,11 @@ export class BlrNumberInput extends LitElement {
 
         <input
           class="${inputClasses}"
-          type="number"
-          value=${this.currentValue}
+          type="text"
+          value="${this.formatValue(this.currentValue)}"
+          currency="${this.currency}"
+          hasCurrency="${this.hasCurrency}"
+          toggleCurrency="${this.toggleCurrency}"
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
@@ -167,6 +187,8 @@ export const BlrNumberInputRenderFunction = ({
   labelAppendix,
   numberInputId,
   theme,
+  currency,
+  hasCurrency,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -181,5 +203,7 @@ export const BlrNumberInputRenderFunction = ({
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
+    .currency="${currency}"
+    .hasCurrency="${hasCurrency}"
   ></blr-number-input>`;
 };

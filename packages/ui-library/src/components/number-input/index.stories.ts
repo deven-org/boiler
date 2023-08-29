@@ -23,6 +23,11 @@ export default {
     label: {
       if: { arg: 'hasLabel', eq: true },
     },
+    currency: {
+      options: ['EUR', 'USD', 'JPY'],
+      control: { type: 'select' },
+      if: { arg: 'hasCurrency', eq: true },
+    },
   },
   parameters: {
     viewMode: 'docs',
@@ -42,6 +47,8 @@ export const BlrNumberInput = ({
   labelAppendix,
   numberInputId,
   theme,
+  currency,
+  hasCurrency,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -57,6 +64,8 @@ export const BlrNumberInput = ({
       size,
       labelAppendix,
       numberInputId,
+      currency,
+      hasCurrency,
     })}
   `;
 
@@ -75,4 +84,6 @@ BlrNumberInput.args = {
   size: 'md',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
+  currency: 'EUR',
+  hasCurrency: true,
 };
