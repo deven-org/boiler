@@ -20,7 +20,6 @@ export const styleCustom = css`
 
   .wrapper {
     display: flex;
-
    &.space-between {
    justify-content: space-between;
    }
@@ -36,5 +35,14 @@ export const styleCustom = css`
    &.center {
    justify-content: center;
    }
+    &.one {
+      background-color: red;
+    }
+    &.two {
+      background-color: blue;
+    }
+    &.three {
+      background-color: yellow;
+    }
    }
    `;

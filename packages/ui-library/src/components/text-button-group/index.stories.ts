@@ -2,9 +2,11 @@
 import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, FormSizes, AlignmentVariants } from '../../globals/constants';
+import {ActionVariants, FormSizes, AlignmentVariants, ButtonNumbers} from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import {Simulate} from "react-dom/test-utils";
+import select = Simulate.select;
 
 export default {
   title: 'Design System/Web Components/Button',
@@ -33,6 +35,10 @@ export default {
       options: AlignmentVariants,
       control: { type: 'select' },
     },
+    numberOfButtons: {
+      options: ButtonNumbers,
+      control: { type: 'select' },
+    }
   },
   parameters: {
     viewMode: 'docs',
@@ -54,6 +60,7 @@ export const BlrTextButtonGroup = ({
   loadingStatus,
   theme,
   alignment,
+  numberOfButtons,
 }: BlrTextButtonGroupType) =>
   html`
     ${BlrTextButtonGroupRenderFunction({
@@ -70,6 +77,7 @@ export const BlrTextButtonGroup = ({
       loadingStatus,
       theme,
       alignment,
+      numberOfButtons
     })}
   `;
 
@@ -78,6 +86,7 @@ BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 BlrTextButtonGroup.args = {
   theme: 'Light',
   alignment: 'center',
+  numberOfButtons: 'one',
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),

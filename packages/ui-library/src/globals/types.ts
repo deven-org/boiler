@@ -15,6 +15,7 @@ import {
   TabAlignmentVariants,
   OverflowVariants,
   AlignmentVariants,
+  ButtonNumbers,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -55,3 +56,4 @@ export type RenderBtnProps = {
   btnEventHandler: () => void;
   iconName: IconType;
 };
+export type ButtonNumberType = (typeof ButtonNumbers)[number];
