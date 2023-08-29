@@ -29,14 +29,15 @@ export default {
       options: Themes,
       control: { type: 'select' },
     },
+    alignment: {
+      options: AlignmentVariants,
+      control: { type: 'select' },
+    },
   },
   parameters: {
     viewMode: 'docs',
   },
-  alignment: {
-    options: AlignmentVariants,
-    control: { type: 'select' },
-  },
+  
 };
 
 export const BlrTextButtonGroup = ({
@@ -76,6 +77,7 @@ BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
 BlrTextButtonGroup.args = {
   theme: 'Light',
+  alignment: 'center',
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
@@ -87,5 +89,4 @@ BlrTextButtonGroup.args = {
   variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
-  alignment: 'center',
 };
