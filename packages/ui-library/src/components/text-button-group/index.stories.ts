@@ -5,8 +5,6 @@ import { PureIconKeys } from '@boiler/icons';
 import {ActionVariants, FormSizes, AlignmentVariants, ButtonNumbers} from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import {Simulate} from "react-dom/test-utils";
-import select = Simulate.select;
 
 export default {
   title: 'Design System/Web Components/Button',
@@ -86,7 +84,7 @@ BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 BlrTextButtonGroup.args = {
   theme: 'Light',
   alignment: 'center',
-  numberOfButtons: 'one',
+  numberOfButtons: '1',
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
