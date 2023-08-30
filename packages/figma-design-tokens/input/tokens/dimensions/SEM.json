@@ -432,29 +432,29 @@
         "type": "typography"
       },
       "CaptionComponent": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
+        "CaptionLabelWrapper": {
+          "Padding": {
+            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
         },
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
         },
         "IconWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0}",
             "type": "spacing"
           }
         },
-        "CaptionLabelWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
         }
       },
       "CaptionSlot": {
@@ -527,29 +527,29 @@
         "type": "typography"
       },
       "CaptionComponent": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        },
         "CaptionLabelWrapper": {
           "Padding": {
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
           }
         },
+        "IconSize": {
+          "value": "SM",
+          "type": "componentConfig"
+        },
         "IconWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.0,5} {core.dimensionPX.0}",
+          "PaddingTop": {
+            "value": "{core.dimensionREM.0,5}",
             "type": "spacing"
           }
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
         }
       },
       "CaptionSlot": {
@@ -622,29 +622,29 @@
         "type": "typography"
       },
       "CaptionComponent": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig"
-        },
         "CaptionLabelWrapper": {
           "Padding": {
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
           }
         },
+        "IconSize": {
+          "value": "SM",
+          "type": "componentConfig"
+        },
         "IconWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
+          "PaddingTop": {
+            "value": "{core.dimensionREM.5}",
             "type": "spacing"
           }
+        },
+        "ItemSpacing": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
         }
       },
       "CaptionSlot": {
