@@ -8,19 +8,6 @@
       "Content": {
         "value": "{q.content.oninverted.alpha}",
         "type": "color"
-      },
-      "Elevation": {
-        "1": {
-          "value": {
-            "x": "0",
-            "y": "2",
-            "blur": "4",
-            "spread": "0",
-            "color": "{core.color.coolgray.100.opa30}",
-            "type": "dropShadow"
-          },
-          "type": "boxShadow"
-        }
       }
     },
     "Dialog": {

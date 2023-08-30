@@ -536,7 +536,8 @@
       "Action.Selectable.Selected.Icon.Rest": "S:295d5eddd1b9f1b7cec067a6841318bfdabf3d41,",
       "Action.Selectable.Selected.Icon.Hover": "S:b896540bb8e0f70451de29664dc1d672022b6f27,",
       "Action.Selectable.Selected.Icon.Pressed": "S:76dc029a7fcab952990d849d301cb54116e5ee13,",
-      "Action.Selectable.Selected.Icon.Focus": "S:b5c9dbb810dd16a33eca2ae072ff89ee30b1825b,"
+      "Action.Selectable.Selected.Icon.Focus": "S:b5c9dbb810dd16a33eca2ae072ff89ee30b1825b,",
+      "Elevation.1": "S:89f1d4dde85bdd5ac56916f9512553d7aaf19db2,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
