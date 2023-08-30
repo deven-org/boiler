@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 04 Sep 2023 09:37:21 GMT
+ * Generated on Mon, 04 Sep 2023 09:37:41 GMT
  */
 
 export const semanticTokens = {
@@ -119,8 +119,9 @@ export const semanticTokens = {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
       CaptionComponent: {
         CaptionLabelWrapper: { Padding: '0rem 0px' },
+        IconDimension: '0.875rem',
         IconSize: 'SM',
-        IconWrapper: { PaddingTop: '0rem' },
+        IconWrapper: { PaddingTop: '0.063rem' },
         ItemSpacing: '0.125rem',
         Padding: '0rem 0px',
       },
@@ -145,6 +146,7 @@ export const semanticTokens = {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       CaptionComponent: {
         CaptionLabelWrapper: { Padding: '0rem 0px' },
+        IconDimension: '1rem',
         IconSize: 'SM',
         IconWrapper: { PaddingTop: '0.031rem' },
         ItemSpacing: '0.125rem',
@@ -166,6 +168,7 @@ export const semanticTokens = {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       CaptionComponent: {
         CaptionLabelWrapper: { Padding: '0rem 0px' },
+        IconDimension: '1rem',
         IconSize: 'SM',
         IconWrapper: { PaddingTop: '0.313rem' },
         ItemSpacing: '0.125rem',
