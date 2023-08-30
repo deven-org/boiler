@@ -31,6 +31,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
             appearance: none;
             outline: none;
             border-radius: 5px;
+            background-color: transparent;
 
             &::-webkit-slider-thumb {
               -webkit-appearance: none;
@@ -152,6 +153,19 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
         & > .inline-legend-disabled {
           color: ${Forms.Slider.Legend.Color.Disabled};
+        }
+      }
+
+      .range__bar {
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 2px;
+        border-radius: 5px;
+      }
+      @-moz-document url-prefix("") {
+        input[type="range"] {
+          z-index: 10; /* Apply z-index property only in Firefox */
         }
       }
     }

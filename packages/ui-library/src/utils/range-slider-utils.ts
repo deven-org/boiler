@@ -2,6 +2,20 @@ import { css } from 'nested-css-to-flat/lit-css';
 import { renderThemedCssStrings } from '../foundation/_tokens-generated/index.pseudo.generated';
 import { ThemeType } from '../foundation/_tokens-generated/index.themes';
 
+export const findToolTipPosition = (minVal: string, maxVal: string, offsetWidthVal: number, value: number) => {
+  const min = parseFloat(minVal);
+  const max = parseFloat(maxVal);
+  const width = offsetWidthVal;
+
+  // Calculate the percentage value
+  const percentage = ((value - min) / (max - min)) * 100;
+
+  // Calculate the tooltip position based on the percentage and width
+  const tooltipPosition = (percentage / 100) * width - 10;
+
+  return `${tooltipPosition.toString()}px`;
+};
+
 export const findNearestValue = (min: number, max: number, givenValue: number) => {
   const percentage = givenValue / 100;
   const range = max - min;
@@ -38,7 +52,7 @@ export const generateRangeBar = (
     const generateGradient = twoKonbs
       ? `linear-gradient(
             to right,
-            ${muteColor} ${startValueToSlider}%,
+            ${muteColor} ${startValueToSlider + 1}%,
             ${defaultColor} ${startValueToSlider}%,
             ${defaultColor} ${endValueToSlider}%,
             ${muteColor} ${endValueToSlider}%
@@ -59,4 +73,14 @@ export const generateRangeBar = (
   });
 
   return theme === 'Light' ? [tokenizedLight] : [tokenizedDark];
+};
+
+export const setOnclickValue = (value: number, stepperNumber: number, btnType: string, arrLength?: number) => {
+  const incConditionValue = arrLength !== undefined ? arrLength - 1 : 100;
+
+  if (btnType === 'INC' && value < incConditionValue) {
+    return value + stepperNumber;
+  } else if (btnType === 'DEC' && value > 0) {
+    return value - stepperNumber;
+  }
 };

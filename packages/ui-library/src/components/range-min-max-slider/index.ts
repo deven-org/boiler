@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../foundation/component-tokens/slider.css';
 import { FormSizesType, ActionVariantType } from '../../globals/types';
-import { findNearestValue, findPercentage, generateRangeBar } from '../../utils/range-slider-utils';
+import { findNearestValue, findPercentage, generateRangeBar, setOnclickValue } from '../../utils/range-slider-utils';
 
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
@@ -40,13 +40,16 @@ export class BlrRangeMinMaxSlider extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @property({ type: Boolean }) isUpdated? = false;
+
   @state() protected startValueToSlider = 0;
   @state() protected endValueToSlider = 0;
 
   protected updated(changedProperties: Map<string, number>) {
-    if (changedProperties.has('startValueToSlider') || changedProperties.has('endValueToSlider')) {
+    if ((changedProperties.has('startValueToSlider') || changedProperties.has('endValueToSlider')) && !this.isUpdated) {
       this.startValueToSlider = findPercentage(this.minValue, this.maxValue, this.startValue);
       this.endValueToSlider = findPercentage(this.minValue, this.maxValue, this.endValue);
+      this.isUpdated = true;
     }
   }
 
@@ -64,6 +67,40 @@ export class BlrRangeMinMaxSlider extends LitElement {
       theme: this.theme,
     })}`;
 
+  protected setMinValue = (btnType: string) => {
+    const modifiedValue = setOnclickValue(this.startValueToSlider, this.stepFactor, btnType);
+    if (modifiedValue !== undefined) {
+      this.startValueToSlider = modifiedValue;
+      this.startValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
+    }
+    return this.onClickMax?.(this.startValue, this.endValue);
+  };
+
+  protected showMinVal = (event: Event) => {
+    const value = Number((event.target as HTMLInputElement).value);
+
+    this.startValueToSlider = value;
+    this.startValue = findNearestValue(this.minValue, this.maxValue, value);
+    this.onChange?.(this.startValue, this.endValue, event);
+  };
+
+  protected setMaxValue = (btnType: string) => {
+    const modifiedValue = setOnclickValue(this.endValueToSlider, this.stepFactor, btnType);
+    if (modifiedValue !== undefined) {
+      this.endValueToSlider = modifiedValue;
+      this.endValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
+    }
+    return this.onClickMax?.(this.startValue, this.endValue);
+  };
+
+  protected showMaxVal = (event: Event) => {
+    const value = Number((event.target as HTMLInputElement).value);
+
+    this.endValueToSlider = value;
+    this.endValue = findNearestValue(this.minValue, this.maxValue, value);
+    this.onChange?.(this.startValue, this.endValue, event);
+  };
+
   protected render() {
     const rangeStyle = generateRangeBar(
       this.theme,
@@ -72,52 +109,17 @@ export class BlrRangeMinMaxSlider extends LitElement {
       this.disabled,
       true
     );
+
     const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
     const dynamicStyles = [...generatedStyles, ...rangeStyle];
-
-    const setMinValue = (btnType: string) => {
-      if (btnType === 'INC' && this.startValueToSlider < 100) {
-        this.startValueToSlider = this.startValueToSlider + this.stepFactor;
-        this.startValue = findNearestValue(this.minValue, this.maxValue, this.startValueToSlider + this.stepFactor);
-      } else if (btnType === 'DEC' && this.startValueToSlider > 0) {
-        this.startValueToSlider = this.startValueToSlider - this.stepFactor;
-        this.startValue = findNearestValue(this.minValue, this.maxValue, this.startValueToSlider - this.stepFactor);
-      }
-      return this.onClickMin?.(this.startValue, this.endValue);
-    };
-
-    const showMinVal = (event: Event) => {
-      const value = Number((event.target as HTMLInputElement).value);
-
-      this.startValueToSlider = value;
-      this.startValue = findNearestValue(this.minValue, this.maxValue, value);
-      this.onChange?.(this.startValue, this.endValue, event);
-    };
-
-    const setMaxValue = (btnType: string) => {
-      if (btnType === 'INC' && this.endValueToSlider < 100) {
-        this.endValueToSlider = this.endValueToSlider + this.stepFactor;
-        this.endValue = findNearestValue(this.minValue, this.maxValue, this.endValueToSlider + this.stepFactor);
-      } else if (btnType === 'DEC' && this.endValueToSlider > 0) {
-        this.endValueToSlider = this.endValueToSlider - this.stepFactor;
-        this.endValue = findNearestValue(this.minValue, this.maxValue, this.endValueToSlider - this.stepFactor);
-      }
-      return this.onClickMax?.(this.startValue, this.endValue);
-    };
-
-    const showMaxVal = (event: Event) => {
-      const value = Number((event.target as HTMLInputElement).value);
-
-      this.endValueToSlider = value;
-      this.endValue = findNearestValue(this.minValue, this.maxValue, value);
-      this.onChange?.(this.startValue, this.endValue, event);
-    };
 
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
       [`${this.size || 'md'}`]: this.size || 'md',
     });
+
+    const barClasses = `range__bar blr-slider-bar ${this.disabled ? `bar-disabled` : ``}`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -128,12 +130,12 @@ export class BlrRangeMinMaxSlider extends LitElement {
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_min',
-                btnEventHandler: () => setMinValue('INC'),
+                btnEventHandler: () => this.setMinValue('INC'),
                 iconName: this.incrementIcon,
               })}
               ${this.renderBtn({
                 btnId: 'dec_btn_min',
-                btnEventHandler: () => setMinValue('DEC'),
+                btnEventHandler: () => this.setMinValue('DEC'),
                 iconName: this.decrementIcon,
               })}
             </div>
@@ -147,24 +149,24 @@ export class BlrRangeMinMaxSlider extends LitElement {
                 id=${this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`}
                 type="range"
                 min="0"
-                value=${this.startValueToSlider}
+                .value=${this.startValueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range blr-slider-bar"
-                @change=${showMinVal}
-                @input=${showMinVal}
+                class="range"
+                @change=${this.showMinVal}
+                @input=${this.showMinVal}
                 ?disabled=${this.disabled}
               />
               <input
                 id=${this.rangeInputId ? `${this.rangeInputId}-2` : `rangeInputId-2`}
                 type="range"
                 min="0"
-                value=${this.endValueToSlider}
+                .value=${this.endValueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range blr-slider-bar"
-                @change=${showMaxVal}
-                @input=${showMaxVal}
+                class="range"
+                @change=${this.showMaxVal}
+                @input=${this.showMaxVal}
                 ?disabled=${this.disabled}
               />
 
@@ -174,17 +176,18 @@ export class BlrRangeMinMaxSlider extends LitElement {
               <div id="tooltip2" class="tooltip" style="left:${this.endValueToSlider}%">
                 ${this.endValue} ${this.units}
               </div>
+              <div class=${barClasses}></div>
             </div>
             ${this.showLegend ? html`<div class="inline-legend"><p>${this.maxValue} ${this.units}</p></div>` : nothing}
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_max',
-                btnEventHandler: () => setMaxValue('INC'),
+                btnEventHandler: () => this.setMaxValue('INC'),
                 iconName: this.incrementIcon,
               })}
               ${this.renderBtn({
                 btnId: 'dec_btn_max',
-                btnEventHandler: () => setMaxValue('DEC'),
+                btnEventHandler: () => this.setMaxValue('DEC'),
                 iconName: this.decrementIcon,
               })}
             </div>

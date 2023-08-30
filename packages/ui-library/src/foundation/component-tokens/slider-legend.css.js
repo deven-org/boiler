@@ -29,6 +29,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         & > .range-wrapper {
           position: relative;
           width: 100%;
+          z-index: 20;
         }
       }
     }
@@ -56,7 +57,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       outline: none;
       border-radius: 5px;
       margin: 10px 0;
-      background-color: ${Forms.Slider.Track.Stroke.Inactive.Default};
+      background-color: transparent;
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;

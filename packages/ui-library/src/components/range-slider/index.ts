@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../foundation/component-tokens/slider.css';
 import { FormSizesType, ActionVariantType } from '../../globals/types';
-import { findNearestValue, findPercentage, generateRangeBar } from '../../utils/range-slider-utils';
+import { findNearestValue, findPercentage, generateRangeBar, setOnclickValue } from '../../utils/range-slider-utils';
 
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
@@ -38,11 +38,14 @@ export class BlrRangeSlider extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @property({ type: Boolean }) isUpdated? = false;
+
   @state() protected valueToSlider = 0;
 
   protected updated(changedProperties: Map<string, number>) {
-    if (changedProperties.has('valueToSlider')) {
+    if (changedProperties.has('valueToSlider') && !this.isUpdated) {
       this.valueToSlider = findPercentage(this.minValue, this.maxValue, this.initialValue);
+      this.isUpdated = true;
     }
   }
 
@@ -65,32 +68,33 @@ export class BlrRangeSlider extends LitElement {
     const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
     const dynamicStyles = [...generatedStyles, ...rangeStyle];
 
-    const setValue = (btnType: string) => {
-      if (btnType === 'INC' && this.valueToSlider < 100) {
-        this.valueToSlider = this.valueToSlider + this.stepFactor;
-        this.initialValue = findNearestValue(this.minValue, this.maxValue, this.valueToSlider + this.stepFactor);
-      } else if (btnType === 'DEC' && this.valueToSlider > 0) {
-        this.valueToSlider = this.valueToSlider - this.stepFactor;
-        this.initialValue = findNearestValue(this.minValue, this.maxValue, this.valueToSlider - this.stepFactor);
-      }
-      return this.onClickMinMax?.(this.initialValue);
-    };
-
-    const showVal = (event: Event) => {
-      const value = Number((event.target as HTMLInputElement).value);
-      this.valueToSlider = value;
-      this.initialValue = findNearestValue(this.minValue, this.maxValue, value);
-
-      this.onChange?.(this.initialValue, event);
-    };
-
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
       [`${this.size || 'md'}`]: this.size || 'md',
     });
 
+    const setValue = (btnType: string) => {
+      const modifiedValue = setOnclickValue(this.valueToSlider, this.stepFactor, btnType);
+      if (modifiedValue !== undefined) {
+        this.valueToSlider = modifiedValue;
+        this.initialValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
+      }
+
+      return this.onClickMinMax?.(this.initialValue);
+    };
+
+    const showVal = (event: Event) => {
+      const value = Number((event.target as HTMLInputElement).value);
+      this.valueToSlider = value;
+      this.initialValue = findNearestValue(this.minValue, this.maxValue, this.valueToSlider);
+
+      this.onChange?.(this.initialValue, event);
+    };
+
     const inlineLegendStyles = !this.disabled ? 'inline-legend' : 'inline-legend inline-legend-disabled';
+
+    const barClasses = `range__bar blr-slider-bar ${this.disabled ? `bar-disabled` : ``}`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -111,10 +115,10 @@ export class BlrRangeSlider extends LitElement {
                 id=${this.rangeInputId || 'rangeInputId'}
                 type="range"
                 min="0"
-                value=${this.valueToSlider}
+                .value=${this.valueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range blr-slider-bar"
+                class="range"
                 ?disabled=${this.disabled}
                 @change=${showVal}
                 @input=${showVal}
@@ -122,6 +126,7 @@ export class BlrRangeSlider extends LitElement {
               <div id="tooltip" class="tooltip" style="left:${this.valueToSlider}%">
                 ${this.initialValue} ${this.units}
               </div>
+              <div class=${barClasses}></div>
             </div>
             ${this.showLegend
               ? html`<div class=${inlineLegendStyles}><p>${this.maxValue} ${this.units}</p></div>`

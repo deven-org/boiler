@@ -6,6 +6,7 @@ import { map } from 'lit/directives/map.js';
 import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../foundation/component-tokens/slider-legend.css';
 import { FormSizesType, ActionVariantType } from '../../globals/types';
+import { findToolTipPosition, setOnclickValue } from '../../utils/range-slider-utils';
 
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
@@ -38,13 +39,16 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @property({ type: Boolean }) isUpdated? = false;
+
   @state() protected selectedStartIndex = 0;
   @state() protected selectedEndIndex = 0;
 
   protected updated(changedProperties: Map<string, string>) {
-    if (changedProperties.has('startValue') || changedProperties.has('endValue')) {
+    if ((changedProperties.has('selectedStartIndex') || changedProperties.has('selectedEndIndex')) && !this.isUpdated) {
       this.selectedStartIndex = this.list.indexOf(this.startValue) || 0;
       this.selectedEndIndex = this.list.indexOf(this.endValue) || 0;
+      this.isUpdated = true;
     }
   }
 
@@ -75,10 +79,9 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
     };
 
     const setMinValue = (btnType: string) => {
-      if (btnType === 'INC' && this.selectedStartIndex < stepsArray.length - 1) {
-        this.selectedStartIndex = this.selectedStartIndex + this.stepFactor;
-      } else if (btnType === 'DEC' && this.selectedStartIndex > 0) {
-        this.selectedStartIndex = this.selectedStartIndex - this.stepFactor;
+      const modifiedValue = setOnclickValue(this.selectedStartIndex, this.stepFactor, btnType, stepsArray.length);
+      if (modifiedValue !== undefined) {
+        this.selectedStartIndex = modifiedValue;
       }
       return this.onClickMin?.(this.selectedStartIndex, this.selectedEndIndex);
     };
@@ -89,10 +92,9 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
     };
 
     const setMaxValue = (btnType: string) => {
-      if (btnType === 'INC' && this.selectedEndIndex < stepsArray.length - 1) {
-        this.selectedEndIndex = this.selectedEndIndex + this.stepFactor;
-      } else if (btnType === 'DEC' && this.selectedEndIndex > 0) {
-        this.selectedEndIndex = this.selectedEndIndex - this.stepFactor;
+      const modifiedValue = setOnclickValue(this.selectedEndIndex, this.stepFactor, btnType, stepsArray.length);
+      if (modifiedValue !== undefined) {
+        this.selectedEndIndex = modifiedValue;
       }
       return this.onClickMax?.(this.selectedStartIndex, this.selectedEndIndex);
     };
@@ -103,10 +105,16 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
       [`${this.size || 'md'}`]: this.size || 'md',
     });
 
-    const toolTipMinQuerySelector = this.shadowRoot?.querySelector(`#pip-${this.selectedStartIndex}`);
-    const toolTipMinPos = toolTipMinQuerySelector?.getBoundingClientRect().left;
-    const toolTipMaxQuerySelector = this.shadowRoot?.querySelector(`#pip-${this.selectedEndIndex}`);
-    const toolTipMaxPos = toolTipMaxQuerySelector?.getBoundingClientRect().left;
+    const minSliderId = this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`;
+    const maxSliderId = this.rangeInputId ? `${this.rangeInputId}-2` : `rangeInputId-2`;
+
+    const minSlider = this.shadowRoot?.querySelector(`#${minSliderId}`) as HTMLInputElement;
+    const maxSlider = this.shadowRoot?.querySelector(`#${maxSliderId}`) as HTMLInputElement;
+
+    const toolTipMinPos =
+      minSlider && findToolTipPosition(minSlider.min, minSlider.max, minSlider.offsetWidth, this.selectedStartIndex);
+    const toolTipMaxPos =
+      minSlider && findToolTipPosition(maxSlider.min, maxSlider.max, maxSlider.offsetWidth, this.selectedEndIndex);
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -114,12 +122,6 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
       <div class=${classes}>
         <fieldset class="range__field">
           <div class="input-wrapper">
-            <div id="tooltip1" class="tooltip" style="bottom:110px; left:${toolTipMinPos! - 15}px; position:absolute;">
-              ${stepsArray[this.selectedStartIndex]}
-            </div>
-            <div id="tooltip1" class="tooltip" style="bottom:110px; left:${toolTipMaxPos! - 15}px; position:absolute;">
-              ${stepsArray[this.selectedEndIndex]}
-            </div>
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_min',
@@ -135,10 +137,10 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
             <div class="input-row">
               <div class="range-wrapper">
                 <input
-                  id=${this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`}
+                  id=${minSliderId}
                   type="range"
                   min="0"
-                  value="${this.selectedStartIndex}"
+                  .value="${this.selectedStartIndex}"
                   max="${stepsArray.length - 1}"
                   step="${this.stepFactor}"
                   class="range"
@@ -148,10 +150,10 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
                   ?disabled=${this.disabled}
                 />
                 <input
-                  id=${this.rangeInputId ? `${this.rangeInputId}-2` : `rangeInputId-2`}
+                  id=${maxSliderId}
                   type="range"
                   min="0"
-                  value="${this.selectedEndIndex}"
+                  .value="${this.selectedEndIndex}"
                   max="${stepsArray.length - 1}"
                   step="${this.stepFactor}"
                   class="range"
@@ -160,6 +162,12 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
                   @input=${showMaxVal}
                   ?disabled=${this.disabled}
                 />
+                <div id="tooltip1" class="tooltip" style="left:${toolTipMinPos}; bottom:0px">
+                  ${stepsArray[this.selectedStartIndex]}
+                </div>
+                <div id="tooltip1" class="tooltip" style="left:${toolTipMaxPos}; bottom:0px">
+                  ${stepsArray[this.selectedEndIndex]}
+                </div>
               </div>
               <div class="tick-wrapper">
                 <div class="range__bar-row">

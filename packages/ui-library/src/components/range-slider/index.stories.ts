@@ -93,7 +93,7 @@ BlrRangeSlider.args = {
   onChange: logEventType,
   rangeInputId: 'range-id',
   initialValue: 80,
-  minValue: 75,
+  minValue: 30,
   maxValue: 130,
   units: '$',
   stepFactor: 1,
