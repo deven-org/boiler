@@ -438,13 +438,17 @@
             "type": "spacing"
           }
         },
+        "IconDimension": {
+          "value": "{core.dimensionREM.14}",
+          "type": "sizing"
+        },
         "IconSize": {
           "value": "SM",
           "type": "componentConfig"
         },
         "IconWrapper": {
           "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionREM.1}",
             "type": "spacing"
           }
         },
@@ -532,6 +536,10 @@
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
           }
+        },
+        "IconDimension": {
+          "value": "{core.dimensionREM.16}",
+          "type": "sizing"
         },
         "IconSize": {
           "value": "SM",
@@ -627,6 +635,10 @@
             "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
             "type": "spacing"
           }
+        },
+        "IconDimension": {
+          "value": "{core.dimensionREM.16}",
+          "type": "sizing"
         },
         "IconSize": {
           "value": "SM",
