@@ -31,12 +31,13 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDividerType) =>
-  html` ${BlrDividerRenderFunction({
+export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDividerType) => html`
+  ${BlrDividerRenderFunction({
     dividerDirectionVariant,
     addMargin,
     theme,
-  })}`;
+  })}
+`;
 
 BlrDivider.storyName = 'BlrDivider';
 
