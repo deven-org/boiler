@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 04 Sep 2023 09:37:04 GMT
+ * Generated on Mon, 04 Sep 2023 09:37:21 GMT
  */
 
 export const semanticTokens = {
@@ -118,11 +118,11 @@ export const semanticTokens = {
     SM: {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.75rem' },
       CaptionComponent: {
-        Padding: '0rem 0px',
-        ItemSpacing: '0.125rem',
-        IconSize: 'SM',
-        IconWrapper: { Padding: '0rem 0px' },
         CaptionLabelWrapper: { Padding: '0rem 0px' },
+        IconSize: 'SM',
+        IconWrapper: { PaddingTop: '0rem' },
+        ItemSpacing: '0.125rem',
+        Padding: '0rem 0px',
       },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
@@ -144,11 +144,11 @@ export const semanticTokens = {
     MD: {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1rem', fontSize: '0.875rem' },
       CaptionComponent: {
-        Padding: '0rem 0px',
-        IconSize: 'SM',
-        ItemSpacing: '0.125rem',
         CaptionLabelWrapper: { Padding: '0rem 0px' },
-        IconWrapper: { Padding: '0.031rem 0px' },
+        IconSize: 'SM',
+        IconWrapper: { PaddingTop: '0.031rem' },
+        ItemSpacing: '0.125rem',
+        Padding: '0rem 0px',
       },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       InputField: { Padding: '0.5rem 12px', IconSize: 'MD' },
@@ -165,11 +165,11 @@ export const semanticTokens = {
     LG: {
       Caption: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '1.5rem', fontSize: '1rem' },
       CaptionComponent: {
-        Padding: '0rem 0px',
-        ItemSpacing: '0.125rem',
-        IconSize: 'SM',
         CaptionLabelWrapper: { Padding: '0rem 0px' },
-        IconWrapper: { Padding: '0.313rem 0px' },
+        IconSize: 'SM',
+        IconWrapper: { PaddingTop: '0.313rem' },
+        ItemSpacing: '0.125rem',
+        Padding: '0rem 0px',
       },
       CaptionSlot: { Margin: '0.5rem 0px 0rem 0px' },
       InputField: { Padding: '0.75rem 16px', IconSize: 'MD' },
