@@ -64,15 +64,16 @@ export class BlrTabBar extends LitElement {
       [`${this.size}`]: this.size,
     });
 
-    const navItemClasses = classMap({
-      [`${this.size}`]: this.size,
+    const navListClasses = classMap({
+      [`${this.overflowVariant}`]: this.overflowVariant,
+      [`${this.alignment}`]: this.alignment,
     });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="blr-tab-bar-group ${classes}">
-        <div class="blr-tab-bar">
+        <div class="blr-tab-bar ${this.alignment}">
           ${this.overflowVariant === 'buttons'
             ? html`
                 <div class="tab-bar-navigation">
@@ -93,10 +94,10 @@ export class BlrTabBar extends LitElement {
                 </div>
               `
             : nothing}
-          <ul class="nav-list ${this.overflowVariant} ${this.alignment}">
+          <ul class="nav-list ${navListClasses}">
             ${this.tabs.map((tab) => {
               return html`
-                <li class="nav-item-container ${navItemClasses}">
+                <li class="nav-item-container ${this.size}">
                   <div class="nav-item-content-wrapper">
                     <a
                       href=${tab.href}
@@ -119,13 +120,15 @@ export class BlrTabBar extends LitElement {
             })}
           </ul>
         </div>
-        ${this.showDivider
-          ? BlrDividerRenderFunction({
-              dividerDirectionVariant: 'horizontal',
-              addMargin: true,
-              theme: this.theme,
-            })
-          : nothing}
+        <div class="wrapper-horizontal">
+          ${this.showDivider
+            ? BlrDividerRenderFunction({
+                dividerDirectionVariant: 'horizontal',
+                addMargin: true,
+                theme: this.theme,
+              })
+            : nothing}
+        </div>
       </div> `;
   }
 }

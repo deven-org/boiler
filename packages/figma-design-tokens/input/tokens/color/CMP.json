@@ -22,6 +22,14 @@
           "type": "boxShadow"
         }
       }
+    },
+    "Dialog": {
+      "Surface": {
+        "Color": {
+          "value": "{q.background.level_2}",
+          "type": "color"
+        }
+      }
     }
   },
   "Forms": {
@@ -1048,6 +1056,13 @@
         "value": "{core.color.coolgray.800.opa30}",
         "type": "color"
       }
+    },
+    "Blanket": {
+      "Surface": {
+        "value": "{q.surface.blanket}",
+        "type": "color",
+        "description": "Apply on blanket component"
+      }
     }
   },
   "Navigation": {
@@ -1092,6 +1107,23 @@
             "type": "color",
             "description": "Defines the color of the label of a tab. Apply on <label>"
           }
+        }
+      }
+    }
+  },
+  "Action": {
+    "Menu": {
+      "Surface": {
+        "Color": {
+          "value": "{q.background.level_2}",
+          "type": "color"
+        }
+      },
+      "MenuSection": {
+        "SectionTitle": {
+          "value": "{q.content.ondefault.alpha}",
+          "type": "color",
+          "description": "Apply on section title"
         }
       }
     }

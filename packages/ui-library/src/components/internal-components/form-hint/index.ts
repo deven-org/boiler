@@ -41,7 +41,7 @@ export class BlrFormHint extends LitElement {
         <div class="hint-container">
           <div class="icon-wrapper">
             ${BlrIconRenderFunction({
-              icon: calculateIconName(this.variant === 'hint' ? this.icon : 'blrErrorFilled', 'sm'),
+              icon: calculateIconName(this.variant === 'hint' || this.variant === 'error' ? this.icon : '', 'sm'),
               size: 'sm',
               classMap: iconClasses,
               hideAria: true,

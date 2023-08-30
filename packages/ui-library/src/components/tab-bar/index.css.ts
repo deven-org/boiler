@@ -6,4 +6,9 @@ export const styleCustom = css`
     flex-shrink: 0;
     width: 100%;
   }
+
+  .wrapper-horizontal {
+    position: relative;
+    display: block;
+  }
 `;

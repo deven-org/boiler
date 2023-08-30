@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTabBarRenderFunction, BlrTabBarType } from './index';
 import {
@@ -16,15 +15,15 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 export default {
   title: 'Design System/Web Components',
   argTypes: {
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+    },
     size: {
       options: FormSizes,
       control: { type: 'select' },
     },
     tabs: { control: 'array' },
-    icon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-    },
     tabContent: {
       options: TabContentVariants,
       control: { type: 'select' },
@@ -44,10 +43,6 @@ export default {
     },
     alignment: {
       options: TabAlignmentVariants,
-      control: { type: 'select' },
-    },
-    theme: {
-      options: Themes,
       control: { type: 'select' },
     },
   },
@@ -102,7 +97,6 @@ BlrTabBar.args = {
       label: 'Tab 1',
       icon: 'blr360',
       href: './',
-      active: true,
     },
     {
       label: 'Tab 2',
@@ -111,57 +105,55 @@ BlrTabBar.args = {
     },
     {
       label: 'Tab 3',
-      icon: 'blrCalendar',
+      icon: 'blrCrop',
       href: './',
     },
     {
       label: 'Tab 4',
-      icon: 'blrInfo',
+      icon: 'blrDocumentNew',
       href: './',
     },
     {
       label: 'Tab 5',
-      icon: 'blrCalendar',
+      icon: 'blrDocumentTwo',
       href: './',
     },
     {
       label: 'Tab 6',
-      icon: 'blrInfo',
+      icon: 'blrDownload',
       href: './',
     },
     {
       label: 'Tab 7',
-      icon: 'blrCalendar',
+      icon: 'blrHeart',
       href: './',
     },
     {
       label: 'Tab 8',
-      icon: 'blrInfo',
+      icon: 'blrHome',
       href: './',
     },
     {
       label: 'Tab 9',
-      icon: 'blrCalendar',
+      icon: 'blrLockClosed',
       href: './',
     },
     {
       label: 'Tab 10',
-      icon: 'blrCalendar',
+      icon: 'blrMusic',
       href: './',
     },
     {
       label: 'Tab 11',
-      icon: 'blrCalendar',
+      icon: 'blrPen',
       href: './',
     },
   ],
   overflowVariant: 'wrap',
   size: 'md',
   showDivider: true,
-  icon: 'blr360',
   variant: 'standard',
   tabContent: 'labelAndIcon',
   iconPosition: 'leading',
   alignment: 'left',
-  onClick: () => console.log('click'),
 };
