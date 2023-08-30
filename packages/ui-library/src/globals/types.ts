@@ -47,3 +47,9 @@ export type TabVariantType = (typeof TabVariants)[number];
 export type TabContentVariantType = (typeof TabContentVariants)[number];
 export type TabAlignmentVariantType = (typeof TabAlignmentVariants)[number];
 export type OverflowVariantType = (typeof OverflowVariants)[number];
+
+export type RenderBtnProps = {
+  btnId: string;
+  btnEventHandler: () => void;
+  iconName: IconType;
+};

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrRangeSliderType, BlrRangeSliderRenderFunction } from './index';
+import { BlrRangeLegendMinMaxSliderType, BlrRangeLegendMinMaxSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
 import './index';
 import { PureIconKeys } from '@boiler/icons';
@@ -34,18 +34,21 @@ export default {
     },
   },
   parameters: {
+    previewTabs: {
+      canvas: { hidden: true },
+    },
     viewMode: 'docs',
   },
 };
 
-export const BlrRangeSlider = ({
-  onClickMinMax,
+export const BlrRangeLegendMinMaxSlider = ({
+  onClickMin,
+  onClickMax,
   onChange,
   rangeInputId,
-  initialValue,
-  minValue,
-  maxValue,
-  units,
+  startValue,
+  endValue,
+  list,
   stepFactor,
   size,
   btnVariant,
@@ -54,48 +57,47 @@ export const BlrRangeSlider = ({
   incrementIcon,
   decrementIcon,
   theme,
-}: BlrRangeSliderType) =>
-  html`
-    ${BlrRangeSliderRenderFunction({
-      onClickMinMax,
-      onChange,
-      rangeInputId,
-      initialValue,
-      minValue,
-      maxValue,
-      units,
-      stepFactor,
-      size,
-      btnVariant,
-      showLegend,
-      disabled,
-      incrementIcon,
-      decrementIcon,
-      theme,
-    })}
-  `;
+}: BlrRangeLegendMinMaxSliderType) =>
+  html`${BlrRangeLegendMinMaxSliderRenderFunction({
+    onClickMin,
+    onClickMax,
+    onChange,
+    rangeInputId,
+    startValue,
+    endValue,
+    list,
+    stepFactor,
+    size,
+    btnVariant,
+    showLegend,
+    disabled,
+    incrementIcon,
+    decrementIcon,
+    theme,
+  })}`;
 
-BlrRangeSlider.storyName = 'BlrRangeSlider';
+BlrRangeLegendMinMaxSlider.storyName = 'BlrRangeLegendMinMaxSlider';
 
-const logEventType = (val: number, event: Event) => {
-  console.log('storybook:story:val', val);
+const logEventType = (minVal, maxVal, event) => {
+  console.log('storybook:story:min', minVal);
+  console.log('storybook:story:max', maxVal);
   console.log('storybook:story:logEventType', event.type);
-  console.log('storybook:story:logEventValue', (event.target as HTMLInputElement).value);
 };
 
-const btnEventType = (value: number) => {
-  console.log('storybook:story:logEventType', value);
+const btnEventType = (minValue: number, maxValue: number) => {
+  console.log('storybook:story:logEventType:minValue', minValue);
+  console.log('storybook:story:logEventType:maxValue', maxValue);
 };
 
-BlrRangeSlider.args = {
+BlrRangeLegendMinMaxSlider.args = {
   theme: 'Light',
-  onClickMinMax: btnEventType,
+  onClickMin: btnEventType,
+  onClickMax: btnEventType,
   onChange: logEventType,
-  rangeInputId: 'range-id',
-  initialValue: 80,
-  minValue: 75,
-  maxValue: 130,
-  units: '$',
+  rangeInputId: 'range-cmpt',
+  startValue: '200 $',
+  endValue: '400 $',
+  list: ['100 $', '200 $', '300 $', '400 $', '500 $', '600 $', '700 $'],
   stepFactor: 1,
   size: 'md',
   btnVariant: 'silent',

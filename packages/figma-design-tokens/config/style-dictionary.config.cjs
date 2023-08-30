@@ -75,7 +75,8 @@ const componentTypes = [
   'Select',
   'Divider',
   'StepperCombo',
-  'TabBar'
+  'TabBar',
+  'Slider',
 ];
 
 StyleDictionaryPackage.registerFormat({

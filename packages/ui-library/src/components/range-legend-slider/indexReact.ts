@@ -1,11 +1,11 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrRangeSlider } from '.';
+import { BlrRangeLegendSlider } from '.';
 
-export const BlrLabelRangeSliderReact = createComponent({
-  tagName: 'blr-label-range-slider',
-  elementClass: BlrRangeSlider,
+export const BlrLabelRangeLegendSliderReact = createComponent({
+  tagName: 'blr-label-range-legend-slider',
+  elementClass: BlrRangeLegendSlider,
   react: React,
   events: {
     onClick: 'pointerdown' as EventName<PointerEvent>,
