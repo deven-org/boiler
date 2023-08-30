@@ -1,3 +1,5 @@
+import { IconType } from '@boiler/icons';
+
 import {
   FeedbackSizes,
   Sizes,
@@ -33,3 +35,9 @@ export type RadioOption = {
 export type WrapperVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
+
+export type RenderBtnProps = {
+  btnId: string;
+  btnEventHandler: () => void;
+  iconName: IconType;
+};
