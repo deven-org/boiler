@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 17 Aug 2023 12:51:53 GMT
+ * Generated on Tue, 22 Aug 2023 13:03:20 GMT
  */
 
 export const componentTokens = {
@@ -632,6 +632,50 @@ export const componentTokens = {
   UI: {
     Divider: { Stroke: 'hsla(220, 10%, 80%,0.3) ', Border: { color: 'hsla(220, 10%, 80%,0.3) ', width: '1px' } },
     Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' },
+  },
+  Navigation: {
+    TabBar: {
+      Tab: {
+        HighlightLine: {
+          SurfaceFill: 'hsla(220, 65%, 50%, 1)',
+          Selected: { Opacity: '1' },
+          Unselected: { Opacity: '0' },
+        },
+        Label: {
+          Active: 'hsla(220, 65%, 50%, 1)',
+          Unselected: 'hsla(220, 10%, 10%,1) ',
+          Disabled: 'hsla(220, 10%, 80%,1) ',
+        },
+        Icon: {
+          Active: 'hsla(220, 65%, 50%, 1)',
+          Unselected: 'hsla(220, 10%, 10%,1) ',
+          Disabled: 'hsla(220, 10%, 80%,1) ',
+        },
+        SM: {
+          HighlightLine: { Height: '2px' },
+          ContentCol: { TopPadding: '0.25rem', ItemSpacing: '0.5rem' },
+          ContentRow: { PaddingLeftRight: '12px', ItemSpacing: '2px' },
+          Icon: { Sizing: '0.75rem' },
+        },
+        MD: {
+          HighlightLine: { Height: '2px' },
+          ContentCol: { TopPadding: '0.5rem', ItemSpacing: '0.5rem' },
+          ContentRow: { PaddingLeftRight: '16px', ItemSpacing: '2px' },
+          Icon: { Sizing: '1rem' },
+        },
+        LG: {
+          HighlightLine: { Height: '2px' },
+          ContentCol: { TopPadding: '0.5rem', ItemSpacing: '0.5rem' },
+          ContentRow: { PaddingLeftRight: '16px', ItemSpacing: '4px' },
+          Icon: { Sizing: '1rem' },
+        },
+      },
+      ButtonWrapper: {
+        SM: { Leading: { Padding: '0 0.5rem 0 0' }, Trailing: { Padding: '0 0 0 0.5rem' } },
+        MD: { Leading: { Padding: '0 0.5rem 0 0' }, Trailing: { Padding: '0 0 0 0.5rem' } },
+        LG: { Leading: { Padding: '0 0.75rem' }, Trailing: { Padding: '0 0 0 0.75rem' } },
+      },
+    },
   },
   Action: {
     TextButton: {

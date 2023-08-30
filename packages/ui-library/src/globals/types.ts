@@ -1,3 +1,4 @@
+import { IconType } from '@boiler/icons';
 import {
   FeedbackSizes,
   Sizes,
@@ -9,6 +10,10 @@ import {
   HintVariants,
   CounterVariants,
   DividerVariations,
+  TabVariants,
+  TabContentVariants,
+  TabAlignmentVariants,
+  OverflowVariants,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -30,6 +35,15 @@ export type RadioOption = {
   errorMessage?: string;
   checked?: boolean;
 };
-export type WrapperVariant = 'leading' | 'trailing';
+export type IconPositionVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
+export type TabType = {
+  label: string;
+  icon: IconType;
+  href: string;
+};
+export type TabVariantType = (typeof TabVariants)[number];
+export type TabContentVariantType = (typeof TabContentVariants)[number];
+export type TabAlignmentVariantType = (typeof TabAlignmentVariants)[number];
+export type OverflowVariantType = (typeof OverflowVariants)[number];

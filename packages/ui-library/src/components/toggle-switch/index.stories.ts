@@ -3,7 +3,7 @@ import { html } from 'lit';
 
 import { BlrToggleSwitchRenderFunction, BlrToggleSwitchType } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes, WrapperVariant } from '../../globals/constants';
+import { FormSizes, IconPositionVariant } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -19,7 +19,7 @@ export default {
       control: { type: 'select' },
     },
     variant: {
-      options: WrapperVariant,
+      options: IconPositionVariant,
       control: { type: 'select' },
     },
     theme: {
