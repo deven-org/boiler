@@ -1284,7 +1284,7 @@
         "y": "2",
         "blur": "4",
         "spread": "0",
-        "color": "{core.color.coolgray.100.opa30}",
+        "color": "{q.shadow.alpha}",
         "type": "dropShadow"
       },
       "type": "boxShadow"
@@ -1295,7 +1295,7 @@
         "y": "4",
         "blur": "8",
         "spread": "0",
-        "color": "{core.color.coolgray.100.opa30}",
+        "color": "{q.shadow.alpha}",
         "type": "dropShadow"
       },
       "type": "boxShadow"
