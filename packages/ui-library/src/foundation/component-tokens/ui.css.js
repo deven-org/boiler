@@ -46,6 +46,7 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
       .blr-divider.vertical {
         stroke: ${UI.Divider.Stroke};
         border-right: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
+        height: 100%;
 
         &.margin {
           margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};

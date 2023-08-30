@@ -18,10 +18,14 @@ export class BlrDivider extends LitElement {
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [dividerLight] : [dividerDark];
 
+    /* const classes = classMap({
+      'blr-divider': true,
+      [`${this.dividerDirectionVariant}`]: this.dividerDirectionVariant,
+    }); */
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-
       ${this.dividerDirectionVariant === 'vertical'
         ? html`<div class="blr-divider vertical"></div>`
         : html`<div class="blr-divider horizontal"></div>`} `;
