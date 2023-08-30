@@ -86,6 +86,96 @@ export class BlrTextButtonGroup extends LitElement {
             `}
       </button>
     `)}
+    <button
+        class="blr-semantic-action blr-text-button-group ${classes}"
+        @click="${this.onClick}"
+        @blur="${this.onBlur}"
+        ?disabled="${this.disabled}"
+        id=${'test' || nothing}
+      >
+        ${this.loading
+        ? html`${BlrLoaderRenderFunction({
+            size: this.size,
+            variant: loaderVariant,
+            loadingStatus: this.loadingStatus,
+            theme: this.theme,
+        })}`
+        : html`
+              ${this.leadingIcon &&
+        html`${BlrIconRenderFunction({
+            icon: calculateIconName(this.leadingIcon, this.size),
+            size: this.size,
+            hideAria: true,
+        })}`}
+              <span>${this.label}</span>
+              ${this.trailingIcon &&
+        html`${BlrIconRenderFunction({
+            icon: calculateIconName(this.trailingIcon, this.size),
+            size: this.size,
+            hideAria: true,
+        })}`}
+            `}
+      </button>
+    <button
+        class="blr-semantic-action blr-text-button-group ${classes}"
+        @click="${this.onClick}"
+        @blur="${this.onBlur}"
+        ?disabled="${this.disabled}"
+        id=${this.buttonId || nothing}
+      >
+        ${this.loading
+        ? html`${BlrLoaderRenderFunction({
+            size: this.size,
+            variant: loaderVariant,
+            loadingStatus: this.loadingStatus,
+            theme: this.theme,
+        })}`
+        : html`
+              ${this.leadingIcon &&
+        html`${BlrIconRenderFunction({
+            icon: calculateIconName(this.leadingIcon, this.size),
+            size: this.size,
+            hideAria: true,
+        })}`}
+              <span>${this.label}</span>
+              ${this.trailingIcon &&
+        html`${BlrIconRenderFunction({
+            icon: calculateIconName(this.trailingIcon, this.size),
+            size: this.size,
+            hideAria: true,
+        })}`}
+            `}
+      </button>
+    <button
+        class="blr-semantic-action blr-text-button-group ${classes}"
+        @click="${this.onClick}"
+        @blur="${this.onBlur}"
+        ?disabled="${this.disabled}"
+        id=${this.buttonId || nothing}
+      >
+        ${this.loading
+        ? html`${BlrLoaderRenderFunction({
+            size: this.size,
+            variant: loaderVariant,
+            loadingStatus: this.loadingStatus,
+            theme: this.theme,
+        })}`
+        : html`
+              ${this.leadingIcon &&
+        html`${BlrIconRenderFunction({
+            icon: calculateIconName(this.leadingIcon, this.size),
+            size: this.size,
+            hideAria: true,
+        })}`}
+              <span>${this.label}</span>
+              ${this.trailingIcon &&
+        html`${BlrIconRenderFunction({
+            icon: calculateIconName(this.trailingIcon, this.size),
+            size: this.size,
+            hideAria: true,
+        })}`}
+            `}
+      </button>
     </div>`;
   }
 }

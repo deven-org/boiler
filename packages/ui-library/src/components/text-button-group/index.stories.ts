@@ -9,6 +9,9 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 export default {
   title: 'Design System/Web Components/Button',
   argTypes: {
+    'buttons[0].label': { control: 'text'},
+    'buttons[0].variant': { control: 'text'},
+
     leadingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -47,6 +50,7 @@ export default {
 export const BlrTextButtonGroup = ({
   label,
   onClick,
+  buttons,
   onBlur,
   loading,
   disabled,
@@ -64,6 +68,7 @@ export const BlrTextButtonGroup = ({
     ${BlrTextButtonGroupRenderFunction({
       label,
       onClick,
+      buttons,
       onBlur,
       loading,
       disabled,
@@ -75,7 +80,7 @@ export const BlrTextButtonGroup = ({
       loadingStatus,
       theme,
       alignment,
-      numberOfButtons
+      numberOfButtons,
     })}
   `;
 
@@ -83,7 +88,7 @@ BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
 BlrTextButtonGroup.args = {
   theme: 'Light',
-  alignment: 'center',
+  alignment: 'flex-start',
   numberOfButtons: '1',
   label: 'Button',
   onClick: () => console.log('onClick'),
@@ -96,4 +101,9 @@ BlrTextButtonGroup.args = {
   variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
+  buttons: [
+    { label: 'Button 1', variant: 'cta', size: 'md', loadingStatus: 'Loading', disabled: false, buttonId: 'button-id-1', trailingIcon: 'ChevronUp', loading: false },
+    { label: 'Button 2', variant: 'cta', size: 'md', loadingStatus: 'Loading', disabled: false, buttonId: 'button-id-2', trailingIcon: 'ChevronDown', loading: false },
+    { label: 'Button 3', variant: 'cta', size: 'md', loadingStatus: 'Loading', disabled: false, buttonId: 'button-id-3', trailingIcon: 'ChevronLeft', loading: false },
+  ],
 };
