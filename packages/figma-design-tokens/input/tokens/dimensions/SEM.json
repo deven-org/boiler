@@ -427,28 +427,8 @@
   },
   "Forms": {
     "SM": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-        "type": "typography"
-      },
-      "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-        "type": "typography"
-      },
       "Caption": {
         "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-        "type": "typography"
-      },
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -483,28 +463,6 @@
           "type": "spacing"
         }
       },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "FormsLabelComponent": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "0 0",
-          "type": "spacing"
-        }
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "InputField": {
         "Padding": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
@@ -515,21 +473,55 @@
           "type": "componentConfig"
         }
       },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+        "type": "typography"
+      },
+      "LabelComponent": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
+          "type": "spacing"
+        }
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "LabelNextToControl": {
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+        "type": "typography"
+      },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography",
         "description": "Apply on forms group-legends eg.: <RadioGroup>"
-      }
-    },
-    "MD": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-        "type": "typography"
       },
-      "LabelAppendix": {
+      "Placeholder": {
         "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
+      "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+        "type": "typography"
+      }
+    },
+    "MD": {
       "Caption": {
         "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
@@ -566,40 +558,6 @@
           "type": "spacing"
         }
       },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "FormsLabelComponent": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "0 0",
-          "type": "spacing"
-        }
-      },
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "InputField": {
         "Padding": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
@@ -610,35 +568,57 @@
           "type": "componentConfig"
         }
       },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+        "type": "typography"
+      },
+      "LabelComponent": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
+          "type": "spacing"
+        }
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "LabelNextToControl": {
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+        "type": "typography"
+      },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography",
         "description": "Apply on forms group-legends eg.: <RadioGroup>"
-      }
-    },
-    "LG": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
-        "type": "typography"
       },
-      "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "Caption": {
+      "Placeholder": {
         "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+      }
+    },
+    "LG": {
+      "Caption": {
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
       "CaptionComponent": {
@@ -673,28 +653,6 @@
           "type": "spacing"
         }
       },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "FormsLabelComponent": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "0 0",
-          "type": "spacing"
-        }
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "InputField": {
         "Padding": {
           "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
@@ -705,10 +663,52 @@
           "type": "componentConfig"
         }
       },
+      "InputSlot": {
+        "Margin": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+        "type": "typography"
+      },
+      "LabelNextToControl": {
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+        "type": "typography"
+      },
+      "LabelSlot": {
+        "Padding": {
+          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "LabelComponent": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
+          "type": "spacing"
+        }
+      },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography",
         "description": "Apply on forms group-legends eg.: <RadioGroup>"
+      },
+      "Placeholder": {
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+        "type": "typography"
+      },
+      "UserInput": {
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+        "type": "typography"
       }
     },
     "InputBorderRadius": {
