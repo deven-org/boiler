@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, ButtonGroupSizes, AlignmentVariants, ButtonNumbers } from '../../globals/constants';
+import { ActionVariants, ButtonGroupSizes, AlignmentVariants } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -36,10 +36,6 @@ export default {
       options: AlignmentVariants,
       control: { type: 'select' },
     },
-    numberOfButtons: {
-      options: ButtonNumbers,
-      control: { type: 'select' },
-    },
   },
   parameters: {
     viewMode: 'docs',
@@ -61,7 +57,6 @@ export const BlrTextButtonGroup = ({
   loadingStatus,
   theme,
   alignment,
-  numberOfButtons,
 }: BlrTextButtonGroupType) =>
   html`
     ${BlrTextButtonGroupRenderFunction({
@@ -79,7 +74,6 @@ export const BlrTextButtonGroup = ({
       loadingStatus,
       theme,
       alignment,
-      numberOfButtons,
     })}
   `;
 
@@ -88,7 +82,6 @@ BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 BlrTextButtonGroup.args = {
   theme: 'Light',
   alignment: 'flex-start',
-  numberOfButtons: 1,
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
@@ -101,9 +94,9 @@ BlrTextButtonGroup.args = {
   loadingStatus: 'Loading',
   buttons: [
     {
-      label: 'Button 1',
-      variant: 'cta',
-      size: 'md',
+      label: 'One',
+      variant: 'silent',
+      size: 'sm',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-1',
@@ -111,8 +104,8 @@ BlrTextButtonGroup.args = {
       loading: false,
     },
     {
-      label: 'Button 2',
-      variant: 'cta',
+      label: 'Two',
+      variant: 'secondary',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
@@ -121,9 +114,9 @@ BlrTextButtonGroup.args = {
       loading: false,
     },
     {
-      label: 'Button 3',
-      variant: 'cta',
-      size: 'md',
+      label: 'Three',
+      variant: 'primary',
+      size: 'lg',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',

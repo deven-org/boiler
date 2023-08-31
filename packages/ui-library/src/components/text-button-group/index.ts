@@ -6,13 +6,7 @@ import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
 import { buttonGroupLight, buttonGroupDark } from '../../foundation/component-tokens/ui.css';
-import {
-  ActionVariantType,
-  AlignmentType,
-  ButtonNumberType,
-  ButtonOption,
-  ButtonGroupSizesType,
-} from '../../globals/types';
+import { ActionVariantType, AlignmentType, ButtonOption, ButtonGroupSizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -35,7 +29,6 @@ export class BlrTextButtonGroup extends LitElement {
   @property() size: ButtonGroupSizesType = 'md';
   @property() loadingStatus!: string;
   @property() alignment: AlignmentType = 'center';
-  @property() numberOfButtons: ButtonNumberType = 1;
   @property() buttons!: ButtonOption[];
 
   @property() theme: ThemeType = 'Light';
@@ -119,7 +112,6 @@ export const BlrTextButtonGroupRenderFunction = ({
   loadingStatus,
   theme,
   alignment,
-  numberOfButtons,
 }: BlrTextButtonGroupType) => {
   return html`<blr-text-button-group
     .label=${label}
@@ -136,6 +128,5 @@ export const BlrTextButtonGroupRenderFunction = ({
     .theme=${theme}
     .alignment=${alignment}
     .buttons=${buttons}
-    .numberOfButtons=${numberOfButtons}
   ></blr-text-button-group>`;
 };
