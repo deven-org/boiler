@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult, html, nothing } from 'lit';
+import { LitElement, PropertyPart, TemplateResult, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { baseStyle, formLight, formDark, StepperComboLight, StepperComboDark } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
@@ -32,10 +32,9 @@ export class BlrNumberInput extends LitElement {
   @property() currency!: string;
   @property() hasCurrency?: boolean;
   @property() locale?: string;
-  @property() weight?: number;
+  @property() weight!: number;
   @property() hasWeight!: boolean;
-  @property() numberStyle?: string;
-  @property() unit?: string;
+  @property() unit!: string;
   @property() unitDisplay?: string;
   @property() minimumFractionDigits?: number;
   @property() maximumFractionDigits?: number;
@@ -44,7 +43,6 @@ export class BlrNumberInput extends LitElement {
   @property() theme: ThemeType = 'Light';
   @state() protected isFocused = false;
   @state() protected currentValue = 0;
-  weightUnit: string | undefined;
 
   protected stepperUp() {
     this.currentValue++;
@@ -62,13 +60,22 @@ export class BlrNumberInput extends LitElement {
   protected handleBlur = () => {
     this.isFocused = false;
   };
+
   protected toggleCurrency() {
     this.hasCurrency = !this.hasCurrency;
   }
-  protected formatValue(value: number) {
+
+  protected toggleWeight() {
+    this.hasWeight = !this.hasWeight;
+  }
+
+  protected formatCurrencyValue(value: number) {
     if (this.hasCurrency) {
       const locale = this.locale;
-      return new Intl.NumberFormat(locale, { style: 'currency', currency: this.currency }).format(value);
+      return new Intl.NumberFormat(locale, {
+        style: 'currency',
+        currency: this.currency,
+      }).format(value);
     } else {
       return value.toString();
     }
@@ -79,7 +86,7 @@ export class BlrNumberInput extends LitElement {
       const locale = this.locale;
       return new Intl.NumberFormat(locale, {
         style: 'unit',
-        unit: this.weightUnit,
+        unit: this.weight,
         unitDisplay: 'narrow',
         minimumFractionDigits: 3,
         maximumFractionDigits: 3,
@@ -136,6 +143,7 @@ export class BlrNumberInput extends LitElement {
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
     });
     const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
+
     return html`
       <style>
         ${dynamicStyles.map((style) => style)}
@@ -163,7 +171,7 @@ export class BlrNumberInput extends LitElement {
           class="${inputClasses}"
           type="text"
           value="${this.useValueFormat
-            ? this.formatValue(this.currentValue)
+            ? this.formatCurrencyValue(this.currentValue)
             : this.formatWeightValue(this.currentValue)}"
           currency="${this.currency}"
           hasCurrency="${this.hasCurrency}"
@@ -175,6 +183,7 @@ export class BlrNumberInput extends LitElement {
           minimumFractionDigits="${this.minimumFractionDigits}"
           maximumFractionDigits="${this.maximumFractionDigits}"
           toggleCurrency="${this.toggleCurrency}"
+          toggleWeight="${this.toggleWeight}"
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
