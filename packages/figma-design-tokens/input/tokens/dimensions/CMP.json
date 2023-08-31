@@ -9,11 +9,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "SM": {
@@ -24,11 +19,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "MD": {
@@ -39,11 +29,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "LG": {
@@ -54,11 +39,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "XL": {
@@ -69,11 +49,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       }
     },
@@ -86,11 +61,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "SM": {
@@ -101,11 +71,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "MD": {
@@ -116,11 +81,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "LG": {
@@ -131,11 +91,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "XL": {
@@ -146,11 +101,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "LG",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       }
     },
@@ -163,16 +113,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "SM": {
@@ -183,16 +123,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "MD": {
@@ -203,16 +133,6 @@
         "ItemSpacing": {
           "value": "0",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "LG": {
@@ -223,16 +143,6 @@
         "ItemSpacing": {
           "value": "-{core.dimensionREM.2}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "XL": {
@@ -243,16 +153,6 @@
         "ItemSpacing": {
           "value": "-{core.dimensionREM.4}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "LG",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       }
     },
@@ -265,11 +165,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "SM": {
@@ -280,11 +175,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "MD": {
@@ -295,11 +185,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "LG": {
@@ -310,11 +195,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "XL": {
@@ -325,11 +205,6 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       }
     },
@@ -372,33 +247,18 @@
         "Width": {
           "value": "{core.dimensionREM.32}",
           "type": "sizing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "MD": {
         "Width": {
           "value": "{core.dimensionREM.40}",
           "type": "sizing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "LG": {
         "Width": {
           "value": "{core.dimensionREM.48}",
           "type": "sizing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       }
     },
@@ -502,11 +362,6 @@
             "type": "spacing",
             "description": "Adds space between Label & Description"
           }
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         },
         "BorderRadius": {
           "value": "{Action.BorderRadius}",
@@ -1031,7 +886,7 @@
               }
             }
           },
-          "Foreground": {
+          "Icon": {
             "Sizing": {
               "Unselected": {
                 "Rest": {
@@ -1124,11 +979,6 @@
                 }
               }
             }
-          },
-          "IconSize": {
-            "value": "SM",
-            "type": "componentConfig",
-            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         }
       },
@@ -1220,7 +1070,7 @@
               }
             }
           },
-          "Foreground": {
+          "Icon": {
             "Sizing": {
               "Unselected": {
                 "Rest": {
@@ -1313,11 +1163,6 @@
                 }
               }
             }
-          },
-          "IconSize": {
-            "value": "SM",
-            "type": "componentConfig",
-            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         },
         "ContentCol": {
@@ -1435,7 +1280,7 @@
               }
             }
           },
-          "Foreground": {
+          "Icon": {
             "Sizing": {
               "Unselected": {
                 "Rest": {
@@ -1528,11 +1373,6 @@
                 }
               }
             }
-          },
-          "IconSize": {
-            "value": "Custom (20px)",
-            "type": "componentConfig",
-            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         },
         "ContentCol": {
@@ -2501,11 +2341,6 @@
               "value": "{core.dimensionREM.12}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            },
-            "SizeVariant": {
-              "value": "XS",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         },
@@ -2546,11 +2381,6 @@
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            },
-            "SizeVariant": {
-              "value": "SM",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         },
@@ -2591,11 +2421,6 @@
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            },
-            "SizeVariant": {
-              "value": "SM",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         }

@@ -3,7 +3,7 @@ import { customElement, property, query } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { BlrFormLabelInline } from '../form-label-inline';
-import { FormSizesType } from '../../globals/types';
+import { FormSizesType, SizesType } from '../../globals/types';
 
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
@@ -11,6 +11,9 @@ import { checkboxDark, checkboxLight } from '../../foundation/component-tokens/c
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrIconRenderFunction } from '../internal-components/icon';
+import { calculateIconName } from '../../utils/calculate-icon-name';
 
 @customElement('blr-checkbox')
 export class BlrCheckbox extends LitElement {
@@ -54,6 +57,9 @@ export class BlrCheckbox extends LitElement {
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [formLight, checkboxLight] : [formDark, checkboxDark];
+    const iconSize = getComponentConfigToken('Checkbox', this.size).toLowerCase() as SizesType;
+
+    //console.log('iconSize', iconSize);
 
     const classes = classMap({
       'blr-semantic-action': true,
@@ -71,6 +77,12 @@ export class BlrCheckbox extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="${classes}">
+        ${BlrIconRenderFunction({
+          icon: calculateIconName('blrCheckmark', iconSize),
+          size: iconSize,
+          hideAria: true,
+        })}
+
         <input
           type="checkbox"
           class="input-control"

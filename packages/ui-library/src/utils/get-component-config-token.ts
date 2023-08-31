@@ -10,16 +10,26 @@ export const getComponentConfigToken = (
 ): SizesType => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const foundAction = componentConfig.Action[componentTokenName];
+  const foundInAction = componentConfig.Action[componentTokenName];
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const foundForm = componentConfig.Forms[componentTokenName];
+  const foundInForm = componentConfig.Forms[componentTokenName];
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const foundInNavigation = componentConfig.Navigation[componentTokenName];
+
   let returnValue: string | undefined = undefined;
 
-  if (foundAction && foundAction[size?.toUpperCase()] && foundAction[size?.toUpperCase()][configTokenName]) {
-    returnValue = foundAction[size?.toUpperCase()][configTokenName];
-  } else if (foundForm && foundForm[size?.toUpperCase()] && foundForm[size?.toUpperCase()][configTokenName]) {
-    returnValue = foundForm[size?.toUpperCase()][configTokenName];
+  if (foundInAction && foundInAction[size.toUpperCase()] && foundInAction[size.toUpperCase()][configTokenName]) {
+    returnValue = foundInAction[size.toUpperCase()][configTokenName];
+  } else if (foundInForm && foundInForm[size.toUpperCase()] && foundInForm[size.toUpperCase()][configTokenName]) {
+    returnValue = foundInForm[size.toUpperCase()][configTokenName];
+  } else if (
+    foundInNavigation &&
+    foundInNavigation[size.toUpperCase()] &&
+    foundInNavigation[size.toUpperCase()][configTokenName]
+  ) {
+    returnValue = foundInNavigation[size.toUpperCase()][configTokenName];
   }
 
   if (returnValue !== undefined) {
@@ -29,7 +39,7 @@ export const getComponentConfigToken = (
   console.warn(
     'getComponentConfigToken',
     `no match found for name:${componentTokenName} and size:${size} and token:${configTokenName}!`,
-    { foundAction, foundForm }
+    { foundInAction, foundInForm, foundInNavigation }
   );
 
   return 'sm';
