@@ -31,9 +31,21 @@ export class BlrNumberInput extends LitElement {
   @property() hasError!: boolean;
   @property() currency!: string;
   @property() hasCurrency?: boolean;
+  @property() locale?: string;
+  @property() weight?: number;
+  @property() hasWeight!: boolean;
+  @property() numberStyle?: string;
+  @property() unit?: string;
+  @property() unitDisplay?: string;
+  @property() minimumFractionDigits?: number;
+  @property() maximumFractionDigits?: number;
+  @property() useValueFormat?: boolean;
+
   @property() theme: ThemeType = 'Light';
   @state() protected isFocused = false;
   @state() protected currentValue = 0;
+  weightUnit: string | undefined;
+
   protected stepperUp() {
     this.currentValue++;
   }
@@ -55,11 +67,28 @@ export class BlrNumberInput extends LitElement {
   }
   protected formatValue(value: number) {
     if (this.hasCurrency) {
-      return new Intl.NumberFormat('de-DE', { style: 'currency', currency: this.currency }).format(value);
+      const locale = this.locale;
+      return new Intl.NumberFormat(locale, { style: 'currency', currency: this.currency }).format(value);
     } else {
       return value.toString();
     }
   }
+
+  protected formatWeightValue(value: number) {
+    if (this.hasWeight) {
+      const locale = this.locale;
+      return new Intl.NumberFormat(locale, {
+        style: 'unit',
+        unit: this.weightUnit,
+        unitDisplay: 'narrow',
+        minimumFractionDigits: 3,
+        maximumFractionDigits: 3,
+      }).format(value);
+    } else {
+      return value.toString();
+    }
+  }
+
   protected getButtonTemplate = (
     buttonsType: ButtonTemplateType,
     adjustType: AdjustType,
@@ -133,9 +162,18 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="text"
-          value="${this.formatValue(this.currentValue)}"
+          value="${this.useValueFormat
+            ? this.formatValue(this.currentValue)
+            : this.formatWeightValue(this.currentValue)}"
           currency="${this.currency}"
           hasCurrency="${this.hasCurrency}"
+          locale="${this.locale}"
+          weight="${this.weight}"
+          hasWeight="${this.hasWeight}"
+          unit="${this.unit}"
+          unitDisplay="${this.unitDisplay}"
+          minimumFractionDigits="${this.minimumFractionDigits}"
+          maximumFractionDigits="${this.maximumFractionDigits}"
           toggleCurrency="${this.toggleCurrency}"
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
@@ -166,6 +204,14 @@ export const BlrNumberInputRenderFunction = ({
   theme,
   currency,
   hasCurrency,
+  locale,
+  weight,
+  hasWeight,
+  unit,
+  unitDisplay,
+  minimumFractionDigits,
+  maximumFractionDigits,
+  useValueFormat,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -182,5 +228,13 @@ export const BlrNumberInputRenderFunction = ({
     .theme="${theme}"
     .currency="${currency}"
     .hasCurrency="${hasCurrency}"
+    .locale="${locale}"
+    .weight="${weight}"
+    .hasWeight="${hasWeight}"
+    .unit="${unit}"
+    .unitDisplay="${unitDisplay}"
+    .minimumFractionDigits="${minimumFractionDigits}"
+    .maximumFractionDigits="${maximumFractionDigits}"
+    .useValueFormat="${useValueFormat}"
   ></blr-number-input>`;
 };

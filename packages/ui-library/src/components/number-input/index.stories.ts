@@ -28,6 +28,15 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasCurrency', eq: true },
     },
+    weight: {
+      options: ['Kilogramm', 'Gramm', 'Milligramm'],
+      control: { type: 'select' },
+      if: { arg: 'hasWeight', eq: true },
+    },
+    locale: {
+      options: ['de-DE', 'en-US'],
+      control: { type: 'select' },
+    },
   },
   parameters: {
     viewMode: 'docs',
@@ -49,6 +58,11 @@ export const BlrNumberInput = ({
   theme,
   currency,
   hasCurrency,
+  locale,
+  weight,
+  hasWeight,
+  weightUnit,
+  useValueFormat,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -66,6 +80,11 @@ export const BlrNumberInput = ({
       numberInputId,
       currency,
       hasCurrency,
+      locale,
+      weight,
+      hasWeight,
+      weightUnit,
+      useValueFormat,
     })}
   `;
 
@@ -85,5 +104,9 @@ BlrNumberInput.args = {
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
   currency: 'EUR',
-  hasCurrency: true,
+  hasCurrency: false,
+  locale: 'DE',
+  weight: 'Kilogramm',
+  hasWeight: true,
+  useValueFormat: true,
 };
