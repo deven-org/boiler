@@ -96,7 +96,7 @@ BlrTextButtonGroup.args = {
     {
       label: 'One',
       variant: 'silent',
-      size: 'sm',
+      size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-1',
@@ -116,7 +116,7 @@ BlrTextButtonGroup.args = {
     {
       label: 'Three',
       variant: 'primary',
-      size: 'lg',
+      size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',

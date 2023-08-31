@@ -68,7 +68,7 @@ export class BlrTextButtonGroup extends LitElement {
               >
                 ${this.loading
                   ? html`${BlrLoaderRenderFunction({
-                      size: button.size,
+                      size: this.size,
                       variant: loaderVariant,
                       loadingStatus: button.loadingStatus,
                       theme: this.theme,
@@ -77,14 +77,14 @@ export class BlrTextButtonGroup extends LitElement {
                       ${this.leadingIcon &&
                       html`${BlrIconRenderFunction({
                         icon: calculateIconName(this.leadingIcon, button.size),
-                        size: button.size,
+                        size: this.size,
                         hideAria: true,
                       })}`}
                       <span>${button.label}</span>
                       ${this.trailingIcon &&
                       html`${BlrIconRenderFunction({
                         icon: calculateIconName(this.trailingIcon, button.size),
-                        size: button.size,
+                        size: this.size,
                         hideAria: true,
                       })}`}
                     `}
