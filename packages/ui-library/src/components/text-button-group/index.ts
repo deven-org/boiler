@@ -6,7 +6,13 @@ import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
 import { buttonGroupLight, buttonGroupDark } from '../../foundation/component-tokens/ui.css';
-import { ActionVariantType, AlignmentType, FormSizesType, ButtonNumberType, ButtonOption } from '../../globals/types';
+import {
+  ActionVariantType,
+  AlignmentType,
+  ButtonNumberType,
+  ButtonOption,
+  ButtonGroupSizesType,
+} from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -26,7 +32,7 @@ export class BlrTextButtonGroup extends LitElement {
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size: FormSizesType = 'md';
+  @property() size: ButtonGroupSizesType = 'md';
   @property() loadingStatus!: string;
   @property() alignment: AlignmentType = 'center';
   @property() numberOfButtons: ButtonNumberType = 1;

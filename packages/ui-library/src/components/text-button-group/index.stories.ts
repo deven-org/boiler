@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, FormSizes, AlignmentVariants, ButtonNumbers } from '../../globals/constants';
+import { ActionVariants, ButtonGroupSizes, AlignmentVariants, ButtonNumbers } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -21,7 +21,7 @@ export default {
       control: { type: 'select' },
     },
     size: {
-      options: FormSizes,
+      options: ButtonGroupSizes,
       control: { type: 'select' },
     },
     variant: {
