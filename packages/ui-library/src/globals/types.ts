@@ -57,3 +57,14 @@ export type RenderBtnProps = {
   iconName: IconType;
 };
 export type ButtonNumberType = (typeof ButtonNumbers)[number];
+
+export type ButtonOption = {
+  label: string;
+  variant: string;
+  size: FormSizesType;
+  loadingStatus: string;
+  disabled: boolean;
+  buttonId: string;
+  trailingIcon: string;
+  loading: boolean;
+};
