@@ -30,6 +30,26 @@ export const { tokenizedLight: textButtonLight, tokenizedDark: textButtonDark } 
       .blr-text-button-group.xl {
         padding: ${TextButton.XL.Padding};
       }
+
+      .blr-text-button-group.xs {
+        gap: ${TextButton.XS.ItemSpacing};
+      }
+
+      .blr-text-button-group.sm {
+        gap: ${TextButton.SM.ItemSpacing};
+      }
+
+      .blr-text-button-group.md {
+        gap: ${TextButton.MD.ItemSpacing};
+      }
+
+      .blr-text-button-group.lg {
+        gap: ${TextButton.LG.ItemSpacing};
+      }
+
+      .blr-text-button-group.xl {
+        gap: ${TextButton.XL.ItemSpacing};
+      }
     `;
   }
 );

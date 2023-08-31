@@ -5,6 +5,7 @@ import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
+import { buttonGroupLight, buttonGroupDark } from '../../foundation/component-tokens/ui.css';
 import { ActionVariantType, AlignmentType, FormSizesType, ButtonNumberType, ButtonOption } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -34,7 +35,10 @@ export class BlrTextButtonGroup extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [actionLight, textButtonLight] : [actionDark, textButtonDark];
+    const dynamicStyles =
+      this.theme === 'Light'
+        ? [actionLight, textButtonLight, buttonGroupLight]
+        : [actionDark, textButtonDark, buttonGroupDark];
 
     const classes = classMap({
       [`${this.variant}`]: this.variant,
@@ -44,7 +48,7 @@ export class BlrTextButtonGroup extends LitElement {
 
     const alignmentClasses = classMap({
       [`${this.alignment}`]: this.alignment || 'center',
-      [`${this.numberOfButtons}`]: this.numberOfButtons || '1',
+      [`${this.size}`]: this.size || 'md',
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
@@ -52,7 +56,7 @@ export class BlrTextButtonGroup extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <div class="wrapper ${alignmentClasses}">
+      <div class="wrapper ${alignmentClasses} blr-button-group">
         ${this.buttons.map(
           (button) =>
             html`
@@ -88,41 +92,7 @@ export class BlrTextButtonGroup extends LitElement {
               </button>
             `
         )}
-        ${Array.from({ length: this.numberOfButtons }).map(
-          (_, index) => html`
-            <button
-              class="blr-semantic-action blr-text-button-group ${classes}"
-              @click="${this.onClick}"
-              @blur="${this.onBlur}"
-              ?disabled="${this.disabled}"
-              id=${this.buttonId || nothing}
-            >
-              ${this.loading
-                ? html`${BlrLoaderRenderFunction({
-                    size: this.size,
-                    variant: loaderVariant,
-                    loadingStatus: this.loadingStatus,
-                    theme: this.theme,
-                  })}`
-                : html`
-                    ${this.leadingIcon &&
-                    html`${BlrIconRenderFunction({
-                      icon: calculateIconName(this.leadingIcon, this.size),
-                      size: this.size,
-                      hideAria: true,
-                    })}`}
-                    <span>${this.label}</span>
-                    ${this.trailingIcon &&
-                    html`${BlrIconRenderFunction({
-                      icon: calculateIconName(this.trailingIcon, this.size),
-                      size: this.size,
-                      hideAria: true,
-                    })}`}
-                  `}
-            </button>
-          `
-        )}
-      </div>`;
+      </div> `;
   }
 }
 
