@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+    const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
     const { Radio } = componentTokens.Forms;
 
     return css`
@@ -24,15 +24,21 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           width: 100%;
 
           &.sm {
-            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px);
+            margin-left: calc(
+              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px
+            );
           }
 
           &.md {
-            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px);
+            margin-left: calc(
+              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px
+            );
           }
 
           &.lg {
-            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px);
+            margin-left: calc(
+              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px
+            );
           }
         }
 
@@ -417,6 +423,32 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             font-family: ${LG.Caption.fontFamily}, sans-serif;
             font-size: ${LG.Caption.fontSize};
           }
+        }
+      }
+
+      .blr-legend {
+        &.sm {
+          font-weight: ${SM.Legend.fontWeight};
+          font-size: ${SM.Legend.fontSize};
+          font-family: ${SM.Legend.fontFamily}, sans-serif;
+          line-height: ${SM.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+
+        &.md {
+          font-weight: ${MD.Legend.fontWeight};
+          font-size: ${MD.Legend.fontSize};
+          font-family: ${MD.Legend.fontFamily}, sans-serif;
+          line-height: ${MD.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+
+        &.lg {
+          font-weight: ${LG.Legend.fontWeight};
+          font-size: ${LG.Legend.fontSize};
+          font-family: ${LG.Legend.fontFamily}, sans-serif;
+          line-height: ${LG.Legend.lineHeight};
+          color: ${Legend.Default};
         }
       }
     `;

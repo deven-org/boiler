@@ -34,6 +34,7 @@ export class BlrRadioGroup extends LitElement {
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupErrorIcon?: IconType;
+  @property() showLegend?: boolean = true;
 
   @property() theme: ThemeType = 'Light';
 
@@ -56,6 +57,8 @@ export class BlrRadioGroup extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
+      ${this.showLegend ? html` <legend class="blr-legend ${classes}">Choose any option</legend> ` : ''}
+
       <div class="blr-radio-group ${classes}">
         ${this.options &&
         this.options.map((option: RadioOption) => {
@@ -80,7 +83,7 @@ export class BlrRadioGroup extends LitElement {
               />
               <div class="label-wrapper">
                 ${option.label
-                  ? html`${BlrFormLabelInline({ labelText: option.label, forValue: this.id, labelSize: this.size })}`
+                  ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size })}`
                   : nothing}
                 ${this.showHint
                   ? html`
@@ -90,19 +93,6 @@ export class BlrRadioGroup extends LitElement {
                           variant: 'hint',
                           size: this.size,
                           icon: this.hintIcon ? this.hintIcon : undefined,
-                          theme: this.theme,
-                        })}
-                      </div>
-                    `
-                  : html``}
-                ${this.hasError
-                  ? html`
-                      <div class="error-wrapper">
-                        ${BlrFormHintRenderFunction({
-                          message: option.errorMessage,
-                          variant: 'error',
-                          size: this.size,
-                          icon: this.errorIcon ? this.errorIcon : undefined,
                           theme: this.theme,
                         })}
                       </div>
@@ -145,6 +135,7 @@ export const BlrRadioGroupRenderFunction = ({
   errorIcon,
   options,
   layout,
+  showLegend,
   showHint,
   hintIcon,
   hideLabel,
@@ -171,6 +162,7 @@ export const BlrRadioGroupRenderFunction = ({
     .showHint=${showHint}
     .hintIcon=${hintIcon}
     .hideLabel=${hideLabel}
+    .showLegend=${showLegend}
     .showGroupErrorMessage=${showGroupErrorMessage}
     .groupErrorMessage=${groupErrorMessage}
     .groupErrorIcon=${groupErrorIcon}
