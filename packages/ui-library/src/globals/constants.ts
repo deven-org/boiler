@@ -12,5 +12,12 @@ export const CounterVariants = ['default', 'warn', 'error'] as const;
 export const DividerVariations = ['vertical', 'horizontal'] as const;
 export const TabVariants = ['standard', 'fullWidth'] as const;
 export const TabContentVariants = ['labelOnly', 'iconOnly', 'labelAndIcon'] as const;
-export const TabAlignmentVariants = ['left', 'center', 'right'] as const;
+export const TabAlignmentVariants = [
+  'left',
+  'center',
+  'right',
+  'space-between',
+  'space-around',
+  'space-evenly',
+] as const;
 export const OverflowVariants = ['wrap', 'browserOverflow', 'buttons'] as const;

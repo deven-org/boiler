@@ -9,9 +9,9 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
     return css`
       .blr-tab-bar-group {
-        overflow-x: auto;
-        padding: 0 0 0.7rem;
         width: 100%;
+        display: flex;
+        align-items: center;
 
         &.fullWidth {
           .blr-tab-bar {
@@ -21,62 +21,52 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           }
         }
 
-        .blr-tab-bar {
-          display: flex;
-          align-items: center;
-          position: relative;
-          width: 100%;
+        .arrow {
+          background: none;
+          color: ${Silent.Icon.Rest};
+          border: none;
+          font: inherit;
+          cursor: pointer;
+          outline: inherit;
+          background-color: white;
 
           &.left {
-            justify-content: flex-start;
-          }
-
-          &.center {
-            justify-content: center;
+            position: absolute;
+            left: 1.8rem;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
           }
 
           &.right {
-            justify-content: flex-end;
-          }
-
-          .tab-bar-navigation {
             position: absolute;
-            width: 100%;
-
-            .arrow {
-              background: none;
-              color: ${Silent.Icon.Rest};
-              border: none;
-              padding: 0;
-              font: inherit;
-              cursor: pointer;
-              outline: inherit;
-              font-size: 24px;
-
-              &.left {
-                float: left;
-              }
-
-              &.right {
-                float: right;
-              }
-
-              &.sm {
-                padding: ${IconButton.SM.Padding};
-                gap: ${IconButton.SM.ItemSpacing};
-              }
-
-              &.md {
-                padding: ${IconButton.MD.Padding};
-                gap: ${IconButton.MD.ItemSpacing};
-              }
-
-              &.lg {
-                padding: ${IconButton.LG.Padding};
-                gap: ${IconButton.LG.ItemSpacing};
-              }
-            }
+            right: 1.8rem;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
           }
+
+          &.sm {
+            gap: ${IconButton.SM.ItemSpacing};
+          }
+
+          &.md {
+            gap: ${IconButton.MD.ItemSpacing};
+          }
+
+          &.lg {
+            gap: ${IconButton.LG.ItemSpacing};
+          }
+        }
+
+        .blr-tab-bar {
+          align-items: center;
+          position: relative;
+          width: 100%;
+          overflow: auto;
+          padding-bottom: 15px;
+          margin-bottom: -15px;
+          max-width: calc(100% - 2rem);
 
           .nav-list {
             display: flex;
@@ -98,6 +88,18 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               justify-content: flex-end;
             }
 
+            &.space-between {
+              justify-content: space-between;
+            }
+
+            &.space-around {
+              justify-content: space-around;
+            }
+
+            &.space-evenly {
+              justify-content: space-evenly;
+            }
+
             &.wrap {
               flex-wrap: wrap;
             }
@@ -106,6 +108,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               display: flex;
               flex-direction: column;
               flex: 0 1 0px;
+
+              &.fullWidth {
+                flex: 1 1 0px;
+              }
 
               .nav-item-content-wrapper {
                 display: flex;

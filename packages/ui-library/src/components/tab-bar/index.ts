@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, queryAll } from 'lit/decorators.js';
+import { customElement, property, query, queryAll } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { tabBarDark, tabBarLight } from '../../foundation/component-tokens/tab-bar.css';
@@ -24,6 +24,9 @@ import { BlrDividerRenderFunction } from '../internal-components/divider';
 export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
+  @query('.blr-tab-bar')
+  _navList!: Element;
+
   @queryAll('.nav-list li')
   _navItems!: Element[];
 
@@ -42,6 +45,21 @@ export class BlrTabBar extends LitElement {
   @property() onClick?: HTMLButtonElement['onclick'];
 
   @property() theme: ThemeType = 'Light';
+
+  scrollTab = (direction: string, speed: number, distance: number) => {
+    let scrollAmount = 0;
+    const slideTimer = setInterval(() => {
+      if (direction === 'left') {
+        this._navList.scrollLeft -= 15;
+      } else {
+        this._navList.scrollLeft += 15;
+      }
+      scrollAmount += 20;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
+      }
+    }, speed);
+  };
 
   protected render() {
     const dynamicStyles =
@@ -73,31 +91,22 @@ export class BlrTabBar extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="blr-tab-bar-group ${classes}">
+        ${this.overflowVariant === 'buttons'
+          ? html`
+              <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrChevronLeft', this.size),
+                  size: this.size,
+                  hideAria: true,
+                })}
+              </button>
+            `
+          : nothing}
         <div class="blr-tab-bar ${this.alignment}">
-          ${this.overflowVariant === 'buttons'
-            ? html`
-                <div class="tab-bar-navigation">
-                  <div class="arrow left ${this.size}">
-                    ${BlrIconRenderFunction({
-                      icon: calculateIconName('blrChevronLeft', this.size),
-                      size: this.size,
-                      hideAria: true,
-                    })}
-                  </div>
-                  <div class="arrow right ${this.size}">
-                    ${BlrIconRenderFunction({
-                      icon: calculateIconName('blrChevronRight', this.size),
-                      size: this.size,
-                      hideAria: true,
-                    })}
-                  </div>
-                </div>
-              `
-            : nothing}
           <ul class="nav-list ${navListClasses}">
             ${this.tabs.map((tab) => {
               return html`
-                <li class="nav-item-container ${this.size}">
+                <li class="nav-item-container ${classes}">
                   <div class="nav-item-content-wrapper">
                     <a
                       href=${tab.href}
@@ -120,15 +129,26 @@ export class BlrTabBar extends LitElement {
             })}
           </ul>
         </div>
-        <div class="wrapper-horizontal">
-          ${this.showDivider
-            ? BlrDividerRenderFunction({
-                dividerDirectionVariant: 'horizontal',
-                addMargin: true,
-                theme: this.theme,
-              })
-            : nothing}
-        </div>
+        ${this.overflowVariant === 'buttons'
+          ? html`
+              <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrChevronRight', this.size),
+                  size: this.size,
+                  hideAria: true,
+                })}
+              </button>
+            `
+          : nothing}
+      </div>
+      <div class="wrapper-horizontal">
+        ${this.showDivider
+          ? BlrDividerRenderFunction({
+              dividerDirectionVariant: 'horizontal',
+              addMargin: true,
+              theme: this.theme,
+            })
+          : nothing}
       </div> `;
   }
 }
@@ -136,6 +156,7 @@ export class BlrTabBar extends LitElement {
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
 
 export const BlrTabBarRenderFunction = ({
+  _navList,
   _navItems,
   tabs,
   overflowVariant,
@@ -153,6 +174,7 @@ export const BlrTabBarRenderFunction = ({
   onClick,
 }: BlrTabBarType) => {
   return html`<blr-tab-bar
+    .navlist=${_navList}
     .navItems=${_navItems}
     .tabs=${tabs}
     .overflowVariant=${overflowVariant}

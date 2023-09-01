@@ -8,7 +8,6 @@ import {
   TabContentVariants,
   TabVariants,
 } from '../../globals/constants';
-import { PureIconKeys } from '@boiler/icons';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -52,6 +51,7 @@ export default {
 };
 
 export const BlrTabBar = ({
+  _navList,
   _navItems,
   tabs,
   overflowVariant,
@@ -67,9 +67,11 @@ export const BlrTabBar = ({
   icon,
   theme,
   onClick,
+  scrollTab,
 }: BlrTabBarType) =>
   html`
     ${BlrTabBarRenderFunction({
+      _navList,
       _navItems,
       tabs,
       overflowVariant,
@@ -85,6 +87,7 @@ export const BlrTabBar = ({
       icon,
       theme,
       onClick,
+      scrollTab,
     })}
   `;
 
@@ -149,7 +152,7 @@ BlrTabBar.args = {
       href: './',
     },
   ],
-  overflowVariant: 'wrap',
+  overflowVariant: 'buttons',
   size: 'md',
   showDivider: true,
   variant: 'standard',
