@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 01 Sep 2023 10:35:48 GMT
+ * Generated on Fri, 01 Sep 2023 10:39:12 GMT
  */
 
 export const componentConfig = {
@@ -24,6 +24,7 @@ export const componentConfig = {
     },
   },
   Action: {
+    Menu: { MenuItem: { IconSize: 'SM' } },
     TextButton: {
       XS: { IconSize: 'XXS' },
       SM: { IconSize: 'XS' },

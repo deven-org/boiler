@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 01 Sep 2023 10:35:48 GMT
+ * Generated on Fri, 01 Sep 2023 10:39:12 GMT
  */
 
 export const semanticTokens = {
@@ -8,8 +8,8 @@ export const semanticTokens = {
     Neutral: {
       Surface: 'hsla(0, 0%, 100%, 1)',
       SurfaceStroke: '#00000000',
-      Text: 'hsla(220, 10%, 30%,1) ',
-      Icon: 'hsla(220, 10%, 30%,1) ',
+      Text: 'hsla(220, 10%, 40%,1) ',
+      Icon: 'hsla(220, 10%, 40%,1) ',
     },
     Warning: {
       Surface: 'hsla(50, 80%, 50%,0.1) ',
@@ -43,7 +43,7 @@ export const semanticTokens = {
       ReadOnly: 'hsla(220, 10%, 10%,1) ',
       Error: 'hsla(350, 65%, 50%,1) ',
     },
-    Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 30%,1) ' },
+    Caption: { Error: 'hsla(350, 65%, 50%,1) ', Hint: 'hsla(220, 10%, 40%,1) ' },
     UserInput: {
       Default: {
         Rest: 'hsla(220, 10%, 10%,1) ',
@@ -206,6 +206,7 @@ export const semanticTokens = {
       },
     },
   },
+  UI: { Background: { Level_1: 'hsla(0, 0%, 100%, 1)', Level_2: 'hsla(0, 0%, 100%, 1)' } },
   Action: {
     CTA: {
       SurfaceFill: {

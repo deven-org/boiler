@@ -1110,5 +1110,22 @@
         }
       }
     }
+  },
+  "Action": {
+    "Menu": {
+      "Surface": {
+        "Color": {
+          "value": "{q.background.level_2}",
+          "type": "color"
+        }
+      },
+      "MenuSection": {
+        "SectionTitle": {
+          "value": "{q.content.ondefault.alpha}",
+          "type": "color",
+          "description": "Apply on section title"
+        }
+      }
+    }
   }
 }
