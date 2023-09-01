@@ -23,12 +23,12 @@ export default {
     label: {
       if: { arg: 'hasLabel', eq: true },
     },
-    currency: {
+    currencyUnit: {
       options: ['EUR', 'USD', 'JPY'],
       control: { type: 'select' },
       if: { arg: 'hasCurrency', eq: true },
     },
-    weight: {
+    weightUnit: {
       options: ['kilogram', 'gram'],
       control: { type: 'select' },
       if: { arg: 'hasWeight', eq: true },
@@ -56,12 +56,11 @@ export const BlrNumberInput = ({
   size,
   labelAppendix,
   numberInputId,
-  currency,
+  currencyUnit,
   hasCurrency,
   locale,
-  weight,
-  hasWeight,
   weightUnit,
+  hasWeight,
   useValueFormat,
   unit,
 }: BlrNumberInputType) =>
@@ -79,12 +78,11 @@ export const BlrNumberInput = ({
       size,
       labelAppendix,
       numberInputId,
-      currency,
+      currencyUnit,
       hasCurrency,
       locale,
-      weight,
-      hasWeight,
       weightUnit,
+      hasWeight,
       useValueFormat,
       unit,
     })}
@@ -105,10 +103,10 @@ BlrNumberInput.args = {
   size: 'md',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
-  currency: 'EUR',
+  currencyUnit: 'EUR',
   hasCurrency: false,
   locale: 'DE',
-  weight: 'kilogram',
+  weightUnit: 'kilogram',
   hasWeight: false,
   useValueFormat: false,
 };

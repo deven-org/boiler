@@ -1,4 +1,4 @@
-import { LitElement, PropertyPart, TemplateResult, html, nothing } from 'lit';
+import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { baseStyle, formLight, formDark, StepperComboLight, StepperComboDark } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
@@ -29,11 +29,11 @@ export class BlrNumberInput extends LitElement {
   @property() size: FormSizesType = 'md';
   @property() labelAppendix?: string;
   @property() hasError!: boolean;
-  @property() currency!: string;
+  @property() currencyUnit!: string;
   @property() hasCurrency?: boolean;
   @property() locale?: string;
-  @property() weight!: number;
-  @property() hasWeight!: boolean;
+  @property() weightUnit!: string;
+  @property() hasWeight?: boolean;
   @property() unit!: string;
   @property() unitDisplay?: string;
   @property() minimumFractionDigits?: number;
@@ -74,8 +74,10 @@ export class BlrNumberInput extends LitElement {
       const locale = this.locale;
       return new Intl.NumberFormat(locale, {
         style: 'currency',
-        currency: this.currency,
-      }).format(value);
+        currency: this.currencyUnit,
+      })
+        .format(value)
+        .replace(/([\d,.]+)$/, ' $1');
     } else {
       return value.toString();
     }
@@ -86,10 +88,10 @@ export class BlrNumberInput extends LitElement {
       const locale = this.locale;
       return new Intl.NumberFormat(locale, {
         style: 'unit',
-        unit: this.weight,
+        unit: this.weightUnit,
         unitDisplay: 'narrow',
-        minimumFractionDigits: 3,
-        maximumFractionDigits: 3,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
       }).format(value);
     } else {
       return value.toString();
@@ -170,13 +172,15 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="text"
-          value="${this.useValueFormat
+          value="${this.useValueFormat && this.hasCurrency
             ? this.formatCurrencyValue(this.currentValue)
-            : this.formatWeightValue(this.currentValue)}"
-          currency="${this.currency}"
+            : this.useValueFormat && this.hasWeight
+            ? this.formatWeightValue(this.currentValue)
+            : this.currentValue}"
+          currency="${this.currencyUnit}"
           hasCurrency="${this.hasCurrency}"
           locale="${this.locale}"
-          weight="${this.weight}"
+          weight="${this.weightUnit}"
           hasWeight="${this.hasWeight}"
           unit="${this.unit}"
           unitDisplay="${this.unitDisplay}"
@@ -211,10 +215,10 @@ export const BlrNumberInputRenderFunction = ({
   labelAppendix,
   numberInputId,
   theme,
-  currency,
+  currencyUnit,
   hasCurrency,
   locale,
-  weight,
+  weightUnit,
   hasWeight,
   unit,
   unitDisplay,
@@ -235,10 +239,10 @@ export const BlrNumberInputRenderFunction = ({
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
-    .currency="${currency}"
+    .currencyUnit="${currencyUnit}"
     .hasCurrency="${hasCurrency}"
     .locale="${locale}"
-    .weight="${weight}"
+    .weightUnit="${weightUnit}"
     .hasWeight="${hasWeight}"
     .unit="${unit}"
     .unitDisplay="${unitDisplay}"
