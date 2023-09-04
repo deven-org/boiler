@@ -36,7 +36,6 @@ export default {
     locale: {
       options: ['de-DE', 'en-US'],
       control: { type: 'select' },
-      if: { arg: 'hasCurrency', eq: true },
     },
   },
   parameters: {
