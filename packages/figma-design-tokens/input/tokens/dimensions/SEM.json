@@ -27,8 +27,8 @@
       },
       "Focus": {
         "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
+          "color": "{Action.CTA.SurfaceStroke.Focus}",
+          "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
         "type": "border"
@@ -77,8 +77,8 @@
       },
       "Focus": {
         "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
+          "color": "{Action.Primary.SurfaceStroke.Focus}",
+          "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
         "type": "border"
@@ -127,8 +127,8 @@
       },
       "Focus": {
         "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
+          "color": "{Action.Secondary.SurfaceStroke.Focus}",
+          "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
         "type": "border"
@@ -177,8 +177,8 @@
       },
       "Focus": {
         "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
+          "color": "{Action.Silent.SurfaceStroke.Focus}",
+          "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
         "type": "border"
@@ -227,8 +227,8 @@
       },
       "Focus": {
         "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
+          "color": "{Action.Destructive.SurfaceStroke.Focus}",
+          "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
         "type": "border"
@@ -277,8 +277,8 @@
       },
       "Focus": {
         "value": {
-          "color": "{Global.Focus}",
-          "width": "{core.dimensionPX.2}",
+          "color": "{Action.Encourage.SurfaceStroke.Focus}",
+          "width": "{core.dimensionPX.1}",
           "style": "solid"
         },
         "type": "border"

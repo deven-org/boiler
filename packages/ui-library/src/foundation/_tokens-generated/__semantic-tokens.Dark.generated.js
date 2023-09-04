@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 06 Sep 2023 20:37:36 GMT
+ * Generated on Thu, 07 Sep 2023 08:23:13 GMT
  */
 
 export const semanticTokens = {
@@ -247,7 +247,7 @@ export const semanticTokens = {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+      Focus: { color: '#00000000', width: '1px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 30%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
@@ -287,7 +287,7 @@ export const semanticTokens = {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+      Focus: { color: '#00000000', width: '1px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 30%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
@@ -327,7 +327,7 @@ export const semanticTokens = {
       Rest: { color: 'hsla(220, 65%, 60%, 1)', width: '1px', style: 'solid' },
       Hover: { color: 'hsla(220, 65%, 70%, 1)', width: '1px', style: 'solid' },
       Pressed: { color: 'hsla(220, 65%, 80%, 1)', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+      Focus: { color: 'hsla(220, 65%, 60%, 1)', width: '1px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 30%,1) ', width: '1px', style: 'solid' },
       Loading: { color: 'hsla(220, 65%, 60%, 1)', width: '1px', style: 'solid' },
     },
@@ -367,7 +367,7 @@ export const semanticTokens = {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+      Focus: { color: '#00000000', width: '1px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 30%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
@@ -407,7 +407,7 @@ export const semanticTokens = {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+      Focus: { color: '#00000000', width: '1px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 30%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
@@ -447,7 +447,7 @@ export const semanticTokens = {
       Rest: { color: '#00000000', width: '1px', style: 'solid' },
       Hover: { color: '#00000000', width: '1px', style: 'solid' },
       Pressed: { color: '#00000000', width: '1px', style: 'solid' },
-      Focus: { color: 'hsla(0, 0%, 100%, 1)', width: '2px', style: 'solid' },
+      Focus: { color: '#00000000', width: '1px', style: 'solid' },
       Disabled: { color: 'hsla(220, 10%, 30%,0) ', width: '1px', style: 'solid' },
       Loading: { color: '#00000000', width: '1px', style: 'solid' },
     },
