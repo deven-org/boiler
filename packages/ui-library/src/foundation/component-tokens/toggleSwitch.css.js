@@ -107,21 +107,21 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               &::after {
                 content: "";
                 position: absolute;
-                background-color: ${ToggleSwitch.Control.Foreground.Unselected.Fill.Rest};
+                background-color: ${ToggleSwitch.Control.Ay11Icon.Unselected.Fill.Rest};
                 border-radius: 50%;
                 transition: transform 0.2s ease;
               }
             }
 
             > input:checked + .toggle-switch-slider::after {
-              background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+              background-color: ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
             }
 
             > .toggle-switch-unselect {
               &::after {
                 content: "";
                 position: absolute;
-                border-right: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+                border-right: 1px solid ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
               }
             }
 
@@ -130,7 +130,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 content: "";
                 position: absolute;
                 border-radius: 100%;
-                border: 1px solid ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+                border: 1px solid ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
               }
             }
           }
