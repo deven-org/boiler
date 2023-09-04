@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 01 Sep 2023 10:39:12 GMT
+ * Generated on Mon, 04 Sep 2023 09:40:45 GMT
  */
 
 export const componentTokens = {
@@ -526,8 +526,8 @@ export const componentTokens = {
               Hover: 'hsla(220, 10%, 60%,1) ',
               Pressed: 'hsla(220, 10%, 50%,1) ',
               Focus: 'hsla(220, 10%, 70%,1) ',
-              Disabled: 'hsla(220, 10%, 80%,1) ',
-              ReadOnly: 'hsla(220, 10%, 70%,1) ',
+              Disabled: 'hsla(220, 10%, 90%,1) ',
+              ReadOnly: 'hsla(220, 10%, 90%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -544,8 +544,8 @@ export const componentTokens = {
               Hover: 'hsla(100, 65%, 30%,1) ',
               Pressed: 'hsla(100, 65%, 20%,1) ',
               Focus: 'hsla(100, 65%, 40%,1) ',
-              Disabled: 'hsla(220, 10%, 80%,1) ',
-              ReadOnly: 'hsla(220, 10%, 70%,1) ',
+              Disabled: 'hsla(220, 10%, 90%,1) ',
+              ReadOnly: 'hsla(220, 10%, 90%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -557,15 +557,15 @@ export const componentTokens = {
             },
           },
         },
-        Foreground: {
+        Ay11Icon: {
           Unselected: {
             Fill: {
-              Rest: 'hsla(0, 0%, 100%, 1)',
-              Hover: 'hsla(0, 0%, 100%, 1)',
-              Pressed: 'hsla(0, 0%, 100%, 1)',
-              Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(0, 0%, 100%, 1)',
-              ReadOnly: 'hsla(0, 0%, 100%, 1)',
+              Rest: 'hsla(220, 10%, 80%,1) ',
+              Hover: 'hsla(220, 10%, 80%,1) ',
+              Pressed: 'hsla(220, 10%, 80%,1) ',
+              Focus: 'hsla(220, 10%, 80%,1) ',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 80%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -582,8 +582,8 @@ export const componentTokens = {
               Hover: 'hsla(0, 0%, 100%, 1)',
               Pressed: 'hsla(0, 0%, 100%, 1)',
               Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(0, 0%, 100%, 1)',
-              ReadOnly: 'hsla(0, 0%, 100%, 1)',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 80%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -592,6 +592,46 @@ export const componentTokens = {
               Focus: '#00000000',
               Disabled: '#00000000',
               ReadOnly: '#00000000',
+            },
+          },
+        },
+        Knob: {
+          Surface: {
+            Unselected: {
+              Fill: {
+                Rest: 'hsla(0, 0%, 100%, 1)',
+                Hover: 'hsla(0, 0%, 100%, 1)',
+                Pressed: 'hsla(0, 0%, 100%, 1)',
+                Focus: 'hsla(0, 0%, 100%, 1)',
+                Disabled: 'hsla(220, 10%, 80%,1) ',
+                ReadOnly: 'hsla(220, 10%, 80%,1) ',
+              },
+              Stroke: {
+                Rest: '#00000000',
+                Hover: '#00000000',
+                Pressed: '#00000000',
+                Focus: '#00000000',
+                Disabled: '#00000000',
+                ReadOnly: '#00000000',
+              },
+            },
+            Selected: {
+              Fill: {
+                Rest: 'hsla(0, 0%, 100%, 1)',
+                Hover: 'hsla(0, 0%, 100%, 1)',
+                Pressed: 'hsla(0, 0%, 100%, 1)',
+                Focus: 'hsla(0, 0%, 100%, 1)',
+                Disabled: 'hsla(220, 10%, 80%,1) ',
+                ReadOnly: 'hsla(220, 10%, 80%,1) ',
+              },
+              Stroke: {
+                Rest: '#00000000',
+                Hover: '#00000000',
+                Pressed: '#00000000',
+                Focus: '#00000000',
+                Disabled: '#00000000',
+                ReadOnly: '#00000000',
+              },
             },
           },
         },
