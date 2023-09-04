@@ -41,6 +41,11 @@ export class BlrRadioGroup extends LitElement {
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
+    const legendClasses = classMap({
+      'blr-legend': true,
+      [`${this.size}`]: this.size || 'md',
+    });
+
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
       [`disabled`]: this.disabled || false,
@@ -57,7 +62,7 @@ export class BlrRadioGroup extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      ${this.showLegend ? html` <legend class="blr-legend ${classes}">Choose any option</legend> ` : ''}
+      ${this.showLegend ? html`<legend class="${legendClasses}">Choose any option</legend>` : ''}
 
       <div class="blr-radio-group ${classes}">
         ${this.options &&
@@ -97,7 +102,7 @@ export class BlrRadioGroup extends LitElement {
                         })}
                       </div>
                     `
-                  : html``}
+                  : nothing}
               </div>
             </div>
           `;
@@ -114,7 +119,7 @@ export class BlrRadioGroup extends LitElement {
                 })}
               </div>
             `
-          : html``}
+          : nothing}
       </div> `;
   }
 }
