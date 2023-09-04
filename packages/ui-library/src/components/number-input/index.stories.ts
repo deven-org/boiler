@@ -36,10 +36,23 @@ export default {
     locale: {
       options: ['de-DE', 'en-US'],
       control: { type: 'select' },
+      if: { arg: 'hasCurrency', eq: true },
     },
   },
   parameters: {
     viewMode: 'docs',
+  },
+  hasCurrency: {
+    if: {
+      arg: 'useValueFormat',
+      eq: true,
+    },
+  },
+  hasWeight: {
+    if: {
+      arg: 'hasCurrency',
+      eq: true,
+    },
   },
 };
 
