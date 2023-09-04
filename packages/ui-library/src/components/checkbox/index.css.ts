@@ -1,4 +1,3 @@
-// import { css } from 'lit';
 import { css } from "nested-css-to-flat/lit-css";
 
 export const styleCustom = css`
