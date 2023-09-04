@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 04 Sep 2023 12:01:20 GMT
+ * Generated on Mon, 04 Sep 2023 12:15:52 GMT
  */
 
 export const componentTokens = {
@@ -695,11 +695,7 @@ export const componentTokens = {
         Typography: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
       },
     },
-    Select: {
-      SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
-      MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
-      LG: { InputFieldPadding: '0.75rem 48px 0.75rem 16px', IconPaddingRight: '16px' },
-    },
+    Select: { SM: { IconPaddingRight: '12px' }, MD: { IconPaddingRight: '12px' }, LG: { IconPaddingRight: '16px' } },
     TextArea: { SM: { MinHeight: '4rem' }, MD: { MinHeight: '5rem' }, LG: { MinHeight: '7rem' } },
   },
   UI: {
