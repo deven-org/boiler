@@ -69,32 +69,32 @@ export class BlrNumberInput extends LitElement {
     this.hasWeight = !this.hasWeight;
   }
 
-  protected formatCurrencyValue(value: number) {
+  protected formatCurrencyValue(currentValue: number) {
     if (this.hasCurrency) {
       const locale = this.locale;
       return new Intl.NumberFormat(locale, {
         style: 'currency',
         currency: this.currencyUnit,
       })
-        .format(value)
+        .format(currentValue)
         .replace(/([\d,.]+)$/, ' $1');
     } else {
-      return value.toString();
+      return currentValue;
     }
   }
 
-  protected formatWeightValue(value: number) {
+  protected formatWeightValue(currentValue: number) {
     if (this.hasWeight) {
       const locale = this.locale;
       return new Intl.NumberFormat(locale, {
         style: 'unit',
         unit: this.weightUnit,
-        unitDisplay: 'narrow',
+        unitDisplay: 'short',
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
-      }).format(value);
+      }).format(currentValue);
     } else {
-      return value.toString();
+      return currentValue;
     }
   }
 
@@ -172,7 +172,7 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="text"
-          value="${this.useValueFormat && this.hasCurrency
+          .value="${this.useValueFormat && this.hasCurrency
             ? this.formatCurrencyValue(this.currentValue)
             : this.useValueFormat && this.hasWeight
             ? this.formatWeightValue(this.currentValue)
