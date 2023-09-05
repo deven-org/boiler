@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: iconLight, tokenizedDark: iconDark } = renderThemedCssStrings((componentTokens) => {
@@ -43,11 +43,19 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
     const { StepperCombo } = componentTokens.Action;
 
     return css`
-      .blr-divider {
+      .blr-divider.vertical {
         stroke: ${UI.Divider.Stroke};
-        border-top: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
         border-right: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
         height: 100%;
+
+        &.margin {
+          margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+        }
+      }
+
+      .blr-divider.horizontal {
+        stroke: ${UI.Divider.Stroke};
+        border-top: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
 
         &.margin {
           margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};

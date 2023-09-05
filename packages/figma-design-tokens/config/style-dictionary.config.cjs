@@ -40,6 +40,7 @@ const semanticTypes = [
   'CaptionSlot',
   'Label',
   'LabelSlot',
+  'Legend',
   'UserInput',
   'Placeholder',
   'SurfaceFill',

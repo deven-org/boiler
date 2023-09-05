@@ -399,7 +399,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-size: ${SM.Label.fontSize};
           font-family: ${SM.Label.fontFamily}, sans-serif;
           line-height: ${SM.Label.lineHeight};
-          gap: ${SM.FormsLabelComponent.ItemSpacing};
+          gap: ${SM.LabelComponent.ItemSpacing};
           color: ${Label.Rest};
         }
 
@@ -409,7 +409,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-size: ${MD.Label.fontSize};
           font-family: ${MD.Label.fontFamily}, sans-serif;
           line-height: ${MD.Label.lineHeight};
-          gap: ${MD.FormsLabelComponent.ItemSpacing};
+          gap: ${MD.LabelComponent.ItemSpacing};
         }
 
         &.lg {
@@ -419,7 +419,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-family: ${LG.Label.fontFamily}, sans-serif;
           line-height: ${LG.Label.lineHeight};
           color: ${Label.Rest};
-          gap: ${LG.FormsLabelComponent.ItemSpacing};
+          gap: ${LG.LabelComponent.ItemSpacing};
         }
       }
 
