@@ -218,7 +218,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             }
 
             &:hover {
-              &:not(.disabled, .readonly) {
+              &:not(.disabled):not(.readonly) {
                 background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
                 width: ${Radio.Control.Background.Unselected.Hover};
                 height: ${Radio.Control.Background.Unselected.Hover};
@@ -230,7 +230,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                   height: ${Radio.Control.Foreground.Unselected.Hover};
                 }
 
-                + .label-wrapper {
+                & + .label-wrapper {
                   .blr-form-label-inline {
                     color: ${LabelNextToControl.Hover};
                   }
@@ -239,7 +239,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             }
 
             &:active {
-              &:not(.disabled, .readonly) {
+              &:not(.disabled):not(.readonly) {
                 background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
                 width: ${Radio.Control.Background.Unselected.Pressed};
                 height: ${Radio.Control.Background.Unselected.Pressed};
@@ -251,7 +251,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                   height: ${Radio.Control.Foreground.Unselected.Pressed};
                 }
 
-                + .label-wrapper {
+                & + .label-wrapper {
                   .blr-form-label-inline {
                     color: ${LabelNextToControl.Pressed};
                   }
@@ -273,7 +273,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 height: ${Radio.Control.Foreground.Unselected.Focus};
               }
 
-              + .label-wrapper {
+              & + .label-wrapper {
                 .blr-form-label-inline {
                   color: ${LabelNextToControl.Focus};
                 }
@@ -357,7 +357,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 height: ${Radio.Control.Foreground.Unselected.Disabled};
               }
 
-              + .label-wrapper {
+              & + .label-wrapper {
                 .blr-form-label-inline {
                   cursor: not-allowed;
                   color: ${LabelNextToControl.Disabled};
@@ -379,7 +379,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Foreground.Unselected.Error};
             }
 
-            + .label-wrapper {
+            & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${LabelNextToControl.Error};
               }
@@ -400,7 +400,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Foreground.Unselected.Disabled};
             }
 
-            + .label-wrapper {
+            & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${LabelNextToControl.Disabled};
               }
@@ -421,7 +421,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Foreground.Unselected.ReadOnly};
             }
 
-            + .label-wrapper {
+            & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${LabelNextToControl.ReadOnly};
               }

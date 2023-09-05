@@ -19,12 +19,12 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         justify-content: space-between;
         gap: 20px;
 
-        > .range-wrapper {
+        & > .range-wrapper {
           width: 100%;
           position: relative;
           min-height: 10px;
 
-          > input[type="range"] {
+          & > input[type="range"] {
             position: absolute;
             width: 100%;
             height: 5px;
@@ -121,7 +121,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
             }
           }
 
-          > .tooltip {
+          & > .tooltip {
             position: absolute;
             bottom: 15px;
             display: inline-block;
@@ -136,7 +136,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
           }
         }
 
-        > .inline-legend {
+        & > .inline-legend {
           font-family: ${Forms.Slider.Legend.Typography.fontFamily}, Arial, sans-serif;
           font-size: ${Forms.Slider.Legend.Typography.fontSize};
           font-weight: ${Forms.Slider.Legend.Typography.fontWeight};
@@ -145,12 +145,12 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
           word-wrap: normal;
           white-space: nowrap;
 
-          > p {
+          & > p {
             margin: 0;
           }
         }
 
-        > .inline-legend-disabled {
+        & > .inline-legend-disabled {
           color: ${Forms.Slider.Legend.Color.Disabled};
         }
       }

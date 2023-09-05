@@ -15,7 +15,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       justify-content: space-between;
       gap: 20px;
 
-      > .min-max-value {
+      & > .min-max-value {
         font-family: ${Forms.Slider.Legend.Typography.fontFamily}, Arial, sans-serif;
         font-size: ${Forms.Slider.Legend.Typography.fontSize};
         font-weight: ${Forms.Slider.Legend.Typography.fontWeight};
@@ -23,10 +23,10 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         color: ${Forms.Slider.Legend.Color.Default};
       }
 
-      > .input-row {
+      & > .input-row {
         width: 100%;
 
-        > .range-wrapper {
+        & > .range-wrapper {
           position: relative;
           width: 100%;
         }
@@ -152,7 +152,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       top: 5px;
       width: 100%;
 
-      > .range__bar-row {
+      & > .range__bar-row {
         display: flex;
         justify-content: space-between;
       }
@@ -169,7 +169,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
     }
 
     .range__container {
-      > .range__pip {
+      & > .range__pip {
         width: ${Forms.Slider.TickMark.Sizing};
         height: ${Forms.Slider.TickMark.Sizing};
         margin: 0 0 10px;
@@ -200,7 +200,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         }
       }
 
-      > .range__point {
+      & > .range__point {
         font-family: ${Forms.Slider.Legend.Typography.fontFamily}, Arial, sans-serif;
         font-size: ${Forms.Slider.Legend.Typography.fontSize};
         font-weight: ${Forms.Slider.Legend.Typography.fontWeight};
