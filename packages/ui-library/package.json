@@ -10,8 +10,8 @@
     "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
     "lint:stylelint": "stylelint 'src/**/*.css.js'",
     "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
-    "lint:prettier": "prettier \"**/*.{ts,tsx}\" --check",
-    "format:prettier": "prettier \"**/*.{ts,tsx}\" --write",
+    "lint:prettier": "prettier \"**/*.{ts,tsx,cjs,mjs,js}\" --check",
+    "format:prettier": "prettier \"**/*.{ts,tsx,cjs,mjs,js}\" --write",
     "test": "wtr --config web-test-runner.config.mjs",
     "test:update-snapshots": "npm run test -- --update-snapshots"
   },

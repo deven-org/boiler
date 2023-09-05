@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 28 Aug 2023 08:36:55 GMT
+ * Generated on Mon, 04 Sep 2023 09:40:43 GMT
  */
 
 export const componentTokens = {
@@ -526,7 +526,7 @@ export const componentTokens = {
               Hover: 'hsla(220, 10%, 20%,1) ',
               Pressed: 'hsla(220, 10%, 40%,1) ',
               Focus: 'hsla(220, 10%, 30%,1) ',
-              Disabled: 'hsla(220, 10%, 40%,1) ',
+              Disabled: 'hsla(220, 10%, 30%,1) ',
               ReadOnly: 'hsla(220, 10%, 30%,1) ',
             },
             Stroke: {
@@ -544,7 +544,7 @@ export const componentTokens = {
               Hover: 'hsla(100, 65%, 40%,1) ',
               Pressed: 'hsla(100, 65%, 50%,1) ',
               Focus: 'hsla(100, 65%, 30%,1) ',
-              Disabled: 'hsla(220, 10%, 40%,1) ',
+              Disabled: 'hsla(220, 10%, 30%,1) ',
               ReadOnly: 'hsla(220, 10%, 30%,1) ',
             },
             Stroke: {
@@ -557,15 +557,15 @@ export const componentTokens = {
             },
           },
         },
-        Foreground: {
+        Ay11Icon: {
           Unselected: {
             Fill: {
-              Rest: 'hsla(0, 0%, 100%, 1)',
-              Hover: 'hsla(0, 0%, 100%, 1)',
-              Pressed: 'hsla(0, 0%, 100%, 1)',
-              Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(220, 10%, 10%,1) ',
-              ReadOnly: 'hsla(220, 10%, 10%,1) ',
+              Rest: 'hsla(220, 10%, 40%,1) ',
+              Hover: 'hsla(220, 10%, 40%,1) ',
+              Pressed: 'hsla(220, 10%, 40%,1) ',
+              Focus: 'hsla(220, 10%, 40%,1) ',
+              Disabled: 'hsla(220, 10%, 40%,1) ',
+              ReadOnly: 'hsla(220, 10%, 40%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -582,8 +582,8 @@ export const componentTokens = {
               Hover: 'hsla(0, 0%, 100%, 1)',
               Pressed: 'hsla(0, 0%, 100%, 1)',
               Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(220, 10%, 10%,1) ',
-              ReadOnly: 'hsla(220, 10%, 10%,1) ',
+              Disabled: 'hsla(220, 10%, 40%,1) ',
+              ReadOnly: 'hsla(220, 10%, 40%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -592,6 +592,46 @@ export const componentTokens = {
               Focus: '#00000000',
               Disabled: '#00000000',
               ReadOnly: '#00000000',
+            },
+          },
+        },
+        Knob: {
+          Surface: {
+            Unselected: {
+              Fill: {
+                Rest: 'hsla(0, 0%, 100%, 1)',
+                Hover: 'hsla(0, 0%, 100%, 1)',
+                Pressed: 'hsla(0, 0%, 100%, 1)',
+                Focus: 'hsla(0, 0%, 100%, 1)',
+                Disabled: 'hsla(220, 10%, 40%,1) ',
+                ReadOnly: 'hsla(220, 10%, 40%,1) ',
+              },
+              Stroke: {
+                Rest: '#00000000',
+                Hover: '#00000000',
+                Pressed: '#00000000',
+                Focus: '#00000000',
+                Disabled: '#00000000',
+                ReadOnly: '#00000000',
+              },
+            },
+            Selected: {
+              Fill: {
+                Rest: 'hsla(0, 0%, 100%, 1)',
+                Hover: 'hsla(0, 0%, 100%, 1)',
+                Pressed: 'hsla(0, 0%, 100%, 1)',
+                Focus: 'hsla(0, 0%, 100%, 1)',
+                Disabled: 'hsla(220, 10%, 40%,1) ',
+                ReadOnly: 'hsla(220, 10%, 40%,1) ',
+              },
+              Stroke: {
+                Rest: '#00000000',
+                Hover: '#00000000',
+                Pressed: '#00000000',
+                Focus: '#00000000',
+                Disabled: '#00000000',
+                ReadOnly: '#00000000',
+              },
             },
           },
         },
@@ -621,6 +661,79 @@ export const componentTokens = {
       SM: { Gap: '0.5rem', ContentColGap: '0rem' },
       MD: { Gap: '0.5rem', ContentColGap: '0rem' },
       LG: { Gap: '0.5rem', ContentColGap: '0rem' },
+    },
+    Slider: {
+      Thumb: {
+        Fill: {
+          Rest: 'hsla(220, 10%, 10%,1) ',
+          Hover: 'hsla(220, 10%, 10%,1) ',
+          Pressed: 'hsla(220, 10%, 10%,1) ',
+          Focus: 'hsla(220, 10%, 10%,1) ',
+          Disabled: 'hsla(220, 10%, 10%,1) ',
+          ReadOnly: 'hsla(220, 10%, 10%,1) ',
+          Error: 'hsla(350, 65%, 40%,0.4) ',
+        },
+        Stroke: {
+          Rest: 'hsla(220, 65%, 60%, 1)',
+          Hover: 'hsla(220, 65%, 70%, 1)',
+          Pressed: 'hsla(220, 65%, 80%, 1)',
+          Focus: 'hsla(220, 65%, 60%, 1)',
+          Disabled: 'hsla(220, 10%, 30%,1) ',
+          ReadOnly: 'hsla(220, 10%, 20%,1) ',
+          Error: 'hsla(350, 65%, 80%,1) ',
+        },
+        Border: {
+          Rest: { color: 'hsla(220, 65%, 60%, 1)', width: '2px', style: 'solid' },
+          Hover: { color: 'hsla(220, 65%, 70%, 1)', width: '4px', style: 'solid' },
+          Pressed: { color: 'hsla(220, 65%, 80%, 1)', width: '4px', style: 'solid' },
+          Focus: { color: 'hsla(220, 65%, 60%, 1)', width: '2px', style: 'solid' },
+          Disabled: { color: 'hsla(220, 10%, 30%,1) ', width: '2px', style: 'solid' },
+          ReadOnly: { color: 'hsla(220, 10%, 20%,1) ', width: '2px', style: 'solid' },
+          Error: { color: 'hsla(350, 65%, 80%,1) ', width: '2px', style: 'solid' },
+        },
+        Sizing: { Rest: '14px', Hover: '20px', Pressed: '20px', Focus: '14px', Disabled: '14px', Readonly: '14px' },
+      },
+      Track: {
+        Stroke: {
+          Active: { Default: 'hsla(220, 65%, 95%, 1)', Mute: 'hsla(220, 10%, 40%,1) ' },
+          Inactive: { Default: 'hsla(220, 65%, 20%,0.3) ', Mute: 'hsla(220, 10%, 30%,1) ' },
+        },
+        Border: {
+          Active: {
+            Default: { color: 'hsla(220, 65%, 95%, 1)', width: '4px', style: 'solid' },
+            Mute: { color: 'hsla(220, 10%, 40%,1) ', width: '4px', style: 'solid' },
+          },
+          Inactive: {
+            Default: { color: 'hsla(220, 65%, 20%,0.3) ', width: '4px', style: 'solid' },
+            Mute: { color: 'hsla(220, 10%, 30%,1) ', width: '4px', style: 'solid' },
+          },
+        },
+      },
+      TickMark: {
+        Stroke: {
+          Active: { Default: 'hsla(220, 65%, 95%, 1)', Mute: 'hsla(220, 10%, 40%,1) ' },
+          Inactive: { Default: 'hsla(220, 65%, 20%,0.3) ', Mute: 'hsla(220, 10%, 30%,1) ' },
+        },
+        Fill: {
+          Active: { Default: 'hsla(220, 10%, 10%,1) ', Mute: 'hsla(220, 10%, 10%,1) ' },
+          Inactive: { Default: 'hsla(220, 10%, 10%,1) ', Mute: 'hsla(220, 10%, 10%,1) ' },
+        },
+        Border: {
+          Active: {
+            Default: { color: 'hsla(220, 65%, 95%, 1)', width: '1px', style: 'solid' },
+            Mute: { color: 'hsla(220, 10%, 40%,1) ', width: '1px', style: 'solid' },
+          },
+          Inactive: {
+            Default: { color: 'hsla(220, 65%, 20%,0.3) ', width: '1px1', style: 'solid' },
+            Mute: { color: 'hsla(220, 10%, 30%,1) ', width: '1px', style: 'solid' },
+          },
+        },
+        Sizing: '6px',
+      },
+      Legend: {
+        Color: { Default: 'hsla(220, 10%, 60%,1) ', Disabled: 'hsla(220, 10%, 40%,1) ' },
+        Typography: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
+      },
     },
     Select: {
       SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },

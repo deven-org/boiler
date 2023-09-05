@@ -40,6 +40,7 @@ const semanticTypes = [
   'CaptionSlot',
   'Label',
   'LabelSlot',
+  'Legend',
   'UserInput',
   'Placeholder',
   'SurfaceFill',
@@ -75,6 +76,7 @@ const componentTypes = [
   'Select',
   'Divider',
   'StepperCombo',
+  'Slider',
 ];
 
 StyleDictionaryPackage.registerFormat({

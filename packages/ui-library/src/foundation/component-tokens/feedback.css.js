@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: loadingSpinnerLight, tokenizedDark: loadingSpinnerDark } = renderThemedCssStrings(
