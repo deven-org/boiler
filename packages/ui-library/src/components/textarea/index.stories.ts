@@ -9,7 +9,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrTextarea',
   argTypes: {
     size: {
       options: FormSizes,

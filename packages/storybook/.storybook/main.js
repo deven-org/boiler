@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   stories: ['../../ui-library/src/**/*.stories.mdx', '../../ui-library/src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-docs'],
   framework: '@storybook/web-components',
   staticDirs: ['../static'],
   core: {

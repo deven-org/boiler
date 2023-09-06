@@ -19,5 +19,8 @@
     "@storybook/cli": "^6.5.0",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/web-components": "^6.5.16"
+  },
+  "dependencies": {
+    "@storybook/addon-docs": "^7.4.0"
   }
 }
