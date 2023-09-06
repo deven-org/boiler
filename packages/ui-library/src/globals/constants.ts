@@ -4,9 +4,20 @@ export const FeedbackSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const InputTypes = ['text', 'email', 'number', 'password'] as const;
 
-export const WrapperVariant = ['leading', 'trailing'] as const;
+export const IconPositionVariant = ['leading', 'trailing'] as const;
 export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destructive', 'encourage'] as const;
 export const FeedbackVariants = ['default', 'inverted'] as const;
 export const HintVariants = ['hint', 'error'] as const;
 export const CounterVariants = ['default', 'warn', 'error'] as const;
 export const DividerVariations = ['vertical', 'horizontal'] as const;
+export const TabVariants = ['standard', 'fullWidth'] as const;
+export const TabContentVariants = ['labelOnly', 'iconOnly', 'labelAndIcon'] as const;
+export const TabAlignmentVariants = [
+  'left',
+  'center',
+  'right',
+  'space-between',
+  'space-around',
+  'space-evenly',
+] as const;
+export const OverflowVariants = ['wrap', 'browserOverflow', 'buttons'] as const;

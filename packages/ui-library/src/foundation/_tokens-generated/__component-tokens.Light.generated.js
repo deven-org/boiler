@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 04 Sep 2023 09:40:45 GMT
+ * Generated on Tue, 22 Aug 2023 13:03:20 GMT
  */
 
 export const componentTokens = {
@@ -526,8 +526,8 @@ export const componentTokens = {
               Hover: 'hsla(220, 10%, 60%,1) ',
               Pressed: 'hsla(220, 10%, 50%,1) ',
               Focus: 'hsla(220, 10%, 70%,1) ',
-              Disabled: 'hsla(220, 10%, 90%,1) ',
-              ReadOnly: 'hsla(220, 10%, 90%,1) ',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 70%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -544,8 +544,8 @@ export const componentTokens = {
               Hover: 'hsla(100, 65%, 30%,1) ',
               Pressed: 'hsla(100, 65%, 20%,1) ',
               Focus: 'hsla(100, 65%, 40%,1) ',
-              Disabled: 'hsla(220, 10%, 90%,1) ',
-              ReadOnly: 'hsla(220, 10%, 90%,1) ',
+              Disabled: 'hsla(220, 10%, 80%,1) ',
+              ReadOnly: 'hsla(220, 10%, 70%,1) ',
             },
             Stroke: {
               Rest: '#00000000',
@@ -557,15 +557,15 @@ export const componentTokens = {
             },
           },
         },
-        Ay11Icon: {
+        Foreground: {
           Unselected: {
             Fill: {
-              Rest: 'hsla(220, 10%, 80%,1) ',
-              Hover: 'hsla(220, 10%, 80%,1) ',
-              Pressed: 'hsla(220, 10%, 80%,1) ',
-              Focus: 'hsla(220, 10%, 80%,1) ',
-              Disabled: 'hsla(220, 10%, 80%,1) ',
-              ReadOnly: 'hsla(220, 10%, 80%,1) ',
+              Rest: 'hsla(0, 0%, 100%, 1)',
+              Hover: 'hsla(0, 0%, 100%, 1)',
+              Pressed: 'hsla(0, 0%, 100%, 1)',
+              Focus: 'hsla(0, 0%, 100%, 1)',
+              Disabled: 'hsla(0, 0%, 100%, 1)',
+              ReadOnly: 'hsla(0, 0%, 100%, 1)',
             },
             Stroke: {
               Rest: '#00000000',
@@ -582,8 +582,8 @@ export const componentTokens = {
               Hover: 'hsla(0, 0%, 100%, 1)',
               Pressed: 'hsla(0, 0%, 100%, 1)',
               Focus: 'hsla(0, 0%, 100%, 1)',
-              Disabled: 'hsla(220, 10%, 80%,1) ',
-              ReadOnly: 'hsla(220, 10%, 80%,1) ',
+              Disabled: 'hsla(0, 0%, 100%, 1)',
+              ReadOnly: 'hsla(0, 0%, 100%, 1)',
             },
             Stroke: {
               Rest: '#00000000',
@@ -592,46 +592,6 @@ export const componentTokens = {
               Focus: '#00000000',
               Disabled: '#00000000',
               ReadOnly: '#00000000',
-            },
-          },
-        },
-        Knob: {
-          Surface: {
-            Unselected: {
-              Fill: {
-                Rest: 'hsla(0, 0%, 100%, 1)',
-                Hover: 'hsla(0, 0%, 100%, 1)',
-                Pressed: 'hsla(0, 0%, 100%, 1)',
-                Focus: 'hsla(0, 0%, 100%, 1)',
-                Disabled: 'hsla(220, 10%, 80%,1) ',
-                ReadOnly: 'hsla(220, 10%, 80%,1) ',
-              },
-              Stroke: {
-                Rest: '#00000000',
-                Hover: '#00000000',
-                Pressed: '#00000000',
-                Focus: '#00000000',
-                Disabled: '#00000000',
-                ReadOnly: '#00000000',
-              },
-            },
-            Selected: {
-              Fill: {
-                Rest: 'hsla(0, 0%, 100%, 1)',
-                Hover: 'hsla(0, 0%, 100%, 1)',
-                Pressed: 'hsla(0, 0%, 100%, 1)',
-                Focus: 'hsla(0, 0%, 100%, 1)',
-                Disabled: 'hsla(220, 10%, 80%,1) ',
-                ReadOnly: 'hsla(220, 10%, 80%,1) ',
-              },
-              Stroke: {
-                Rest: '#00000000',
-                Hover: '#00000000',
-                Pressed: '#00000000',
-                Focus: '#00000000',
-                Disabled: '#00000000',
-                ReadOnly: '#00000000',
-              },
             },
           },
         },
@@ -662,79 +622,6 @@ export const componentTokens = {
       MD: { Gap: '0.5rem', ContentColGap: '0rem' },
       LG: { Gap: '0.5rem', ContentColGap: '0rem' },
     },
-    Slider: {
-      Thumb: {
-        Fill: {
-          Rest: 'hsla(0, 0%, 100%, 1)',
-          Hover: 'hsla(0, 0%, 100%, 1)',
-          Pressed: 'hsla(0, 0%, 100%, 1)',
-          Focus: 'hsla(0, 0%, 100%, 1)',
-          Disabled: 'hsla(0, 0%, 100%, 1)',
-          ReadOnly: 'hsla(0, 0%, 100%, 1)',
-          Error: 'hsla(350, 65%, 80%,0.1) ',
-        },
-        Stroke: {
-          Rest: 'hsla(220, 65%, 50%, 1)',
-          Hover: 'hsla(220, 65%, 40%, 1)',
-          Pressed: 'hsla(220, 65%, 30%, 1)',
-          Focus: 'hsla(220, 65%, 50%, 1)',
-          Disabled: 'hsla(220, 10%, 80%,1) ',
-          ReadOnly: 'hsla(220, 10%, 90%,1) ',
-          Error: 'hsla(350, 65%, 50%,1) ',
-        },
-        Border: {
-          Rest: { color: 'hsla(220, 65%, 50%, 1)', width: '2px', style: 'solid' },
-          Hover: { color: 'hsla(220, 65%, 40%, 1)', width: '4px', style: 'solid' },
-          Pressed: { color: 'hsla(220, 65%, 30%, 1)', width: '4px', style: 'solid' },
-          Focus: { color: 'hsla(220, 65%, 50%, 1)', width: '2px', style: 'solid' },
-          Disabled: { color: 'hsla(220, 10%, 80%,1) ', width: '2px', style: 'solid' },
-          ReadOnly: { color: 'hsla(220, 10%, 90%,1) ', width: '2px', style: 'solid' },
-          Error: { color: 'hsla(350, 65%, 50%,1) ', width: '2px', style: 'solid' },
-        },
-        Sizing: { Rest: '14px', Hover: '20px', Pressed: '20px', Focus: '14px', Disabled: '14px', Readonly: '14px' },
-      },
-      Track: {
-        Stroke: {
-          Active: { Default: 'hsla(220, 65%, 50%, 1)', Mute: 'hsla(220, 10%, 80%,1) ' },
-          Inactive: { Default: 'hsla(220, 65%, 80%,0.3) ', Mute: 'hsla(220, 10%, 90%,1) ' },
-        },
-        Border: {
-          Active: {
-            Default: { color: 'hsla(220, 65%, 50%, 1)', width: '4px', style: 'solid' },
-            Mute: { color: 'hsla(220, 10%, 80%,1) ', width: '4px', style: 'solid' },
-          },
-          Inactive: {
-            Default: { color: 'hsla(220, 65%, 80%,0.3) ', width: '4px', style: 'solid' },
-            Mute: { color: 'hsla(220, 10%, 90%,1) ', width: '4px', style: 'solid' },
-          },
-        },
-      },
-      TickMark: {
-        Stroke: {
-          Active: { Default: 'hsla(220, 65%, 50%, 1)', Mute: 'hsla(220, 10%, 80%,1) ' },
-          Inactive: { Default: 'hsla(220, 65%, 80%,0.3) ', Mute: 'hsla(220, 10%, 90%,1) ' },
-        },
-        Fill: {
-          Active: { Default: 'hsla(0, 0%, 100%, 1)', Mute: 'hsla(0, 0%, 100%, 1)' },
-          Inactive: { Default: 'hsla(0, 0%, 100%, 1)', Mute: 'hsla(0, 0%, 100%, 1)' },
-        },
-        Border: {
-          Active: {
-            Default: { color: 'hsla(220, 65%, 50%, 1)', width: '1px', style: 'solid' },
-            Mute: { color: 'hsla(220, 10%, 80%,1) ', width: '1px', style: 'solid' },
-          },
-          Inactive: {
-            Default: { color: 'hsla(220, 65%, 80%,0.3) ', width: '1px1', style: 'solid' },
-            Mute: { color: 'hsla(220, 10%, 90%,1) ', width: '1px', style: 'solid' },
-          },
-        },
-        Sizing: '6px',
-      },
-      Legend: {
-        Color: { Default: 'hsla(220, 10%, 40%,1) ', Disabled: 'hsla(220, 10%, 80%,1) ' },
-        Typography: { fontFamily: '"Source Sans Pro" ', fontWeight: 400, lineHeight: '150%', fontSize: '0.75rem' },
-      },
-    },
     Select: {
       SM: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
       MD: { InputFieldPadding: '0.5rem 32px 0.5rem 12px', IconPaddingRight: '12px' },
@@ -745,6 +632,50 @@ export const componentTokens = {
   UI: {
     Divider: { Stroke: 'hsla(220, 10%, 80%,0.3) ', Border: { color: 'hsla(220, 10%, 80%,0.3) ', width: '1px' } },
     Icon: { XXS: '0.5rem', XS: '0.75rem', SM: '1rem', MD: '1.5rem', LG: '2rem', XL: '3rem' },
+  },
+  Navigation: {
+    TabBar: {
+      Tab: {
+        HighlightLine: {
+          SurfaceFill: 'hsla(220, 65%, 50%, 1)',
+          Selected: { Opacity: '1' },
+          Unselected: { Opacity: '0' },
+        },
+        Label: {
+          Active: 'hsla(220, 65%, 50%, 1)',
+          Unselected: 'hsla(220, 10%, 10%,1) ',
+          Disabled: 'hsla(220, 10%, 80%,1) ',
+        },
+        Icon: {
+          Active: 'hsla(220, 65%, 50%, 1)',
+          Unselected: 'hsla(220, 10%, 10%,1) ',
+          Disabled: 'hsla(220, 10%, 80%,1) ',
+        },
+        SM: {
+          HighlightLine: { Height: '2px' },
+          ContentCol: { TopPadding: '0.25rem', ItemSpacing: '0.5rem' },
+          ContentRow: { PaddingLeftRight: '12px', ItemSpacing: '2px' },
+          Icon: { Sizing: '0.75rem' },
+        },
+        MD: {
+          HighlightLine: { Height: '2px' },
+          ContentCol: { TopPadding: '0.5rem', ItemSpacing: '0.5rem' },
+          ContentRow: { PaddingLeftRight: '16px', ItemSpacing: '2px' },
+          Icon: { Sizing: '1rem' },
+        },
+        LG: {
+          HighlightLine: { Height: '2px' },
+          ContentCol: { TopPadding: '0.5rem', ItemSpacing: '0.5rem' },
+          ContentRow: { PaddingLeftRight: '16px', ItemSpacing: '4px' },
+          Icon: { Sizing: '1rem' },
+        },
+      },
+      ButtonWrapper: {
+        SM: { Leading: { Padding: '0 0.5rem 0 0' }, Trailing: { Padding: '0 0 0 0.5rem' } },
+        MD: { Leading: { Padding: '0 0.5rem 0 0' }, Trailing: { Padding: '0 0 0 0.5rem' } },
+        LG: { Leading: { Padding: '0 0.75rem' }, Trailing: { Padding: '0 0 0 0.75rem' } },
+      },
+    },
   },
   Action: {
     TextButton: {

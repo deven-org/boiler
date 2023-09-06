@@ -76,6 +76,7 @@ const componentTypes = [
   'Select',
   'Divider',
   'StepperCombo',
+  'TabBar',
   'Slider',
 ];
 
