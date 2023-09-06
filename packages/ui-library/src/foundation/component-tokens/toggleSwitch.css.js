@@ -19,21 +19,21 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           align-items: center;
         }
 
-        > .toggle-content-col {
+        & > .toggle-content-col {
           display: flex;
           flex-direction: column;
 
-          > .blr-form-label-inline {
+          & > .blr-form-label-inline {
             color: ${LabelNextToControl.Rest};
           }
         }
 
-        > .label-container {
+        & > .label-container {
           display: flex;
           align-items: center;
           justify-content: flex-start;
 
-          > .blr-label-switch-wrapper {
+          & > .blr-label-switch-wrapper {
             outline-offset: 2px;
             border-radius: 15px;
             position: relative;
@@ -44,7 +44,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
             }
 
-            > .blr-form-label-inline {
+            & > .blr-form-label-inline {
               color: ${LabelNextToControl.Rest};
             }
 
@@ -93,7 +93,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            > input {
+            & > input {
               appearance: none;
               outline-offset: 2px;
               border-radius: 15px;
@@ -103,7 +103,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            > .toggle-switch-slider {
+            & > .toggle-switch-slider {
               &::after {
                 content: "";
                 position: absolute;
@@ -113,11 +113,11 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            > input:checked + .toggle-switch-slider::after {
-              background-color: ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
+            & > input:checked + .toggle-switch-slider::after {
+              background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
             }
 
-            > .toggle-switch-unselect {
+            & > .toggle-switch-unselect {
               &::after {
                 content: "";
                 position: absolute;
@@ -125,7 +125,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            > .toggle-switch-select {
+            & > .toggle-switch-select {
               &::after {
                 content: "";
                 position: absolute;
@@ -135,20 +135,20 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
           }
 
-          > .blr-form-label-inline {
+          & > .blr-form-label-inline {
             color: ${LabelNextToControl.Rest};
           }
         }
 
         &.disabled {
-          > .toggle-content-col {
-            > .blr-form-label-inline {
+          & > .toggle-content-col {
+            & > .blr-form-label-inline {
               color: ${LabelNextToControl.Disabled};
             }
           }
 
-          > .label-container {
-            > .blr-form-label-inline {
+          & > .label-container {
+            & > .blr-form-label-inline {
               color: ${LabelNextToControl.Disabled};
             }
           }
@@ -161,8 +161,8 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
           }
 
-          > .label-container {
-            > .blr-form-label-inline {
+          & > .label-container {
+            & > .blr-form-label-inline {
               color: ${LabelNextToControl.ReadOnly};
             }
           }
@@ -172,24 +172,24 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           gap: ${ToggleSwitch.SM.Gap};
           width: 200px;
 
-          > .toggle-content-col {
+          & > .toggle-content-col {
             gap: ${ToggleSwitch.SM.ContentColGap};
           }
 
-          > .label-container {
+          & > .label-container {
             gap: ${ToggleSwitch.Control.SM.LabelGap};
 
-            > .blr-label-switch-wrapper {
+            & > .blr-label-switch-wrapper {
               width: ${ToggleSwitch.Control.SM.Background.Width};
               height: ${ToggleSwitch.Control.SM.Background.Height};
 
-              > input {
+              & > input {
                 width: ${ToggleSwitch.Control.SM.Background.Width};
                 height: ${ToggleSwitch.Control.SM.Background.Height};
                 margin: 0;
               }
 
-              > .toggle-switch-slider {
+              & > .toggle-switch-slider {
                 &::after {
                   width: ${ToggleSwitch.Control.SM.Knob.Sizing};
                   height: ${ToggleSwitch.Control.SM.Knob.Sizing};
@@ -198,11 +198,11 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              > input:checked + .toggle-switch-slider::after {
+              & > input:checked + .toggle-switch-slider::after {
                 transform: translateX(16px);
               }
 
-              > .toggle-switch-unselect {
+              & > .toggle-switch-unselect {
                 &::after {
                   top: 7px;
                   left: 9px;
@@ -211,7 +211,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              > .toggle-switch-select {
+              & > .toggle-switch-select {
                 &::after {
                   top: 7px;
                   right: 8px;
@@ -227,24 +227,24 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           gap: ${ToggleSwitch.MD.Gap};
           width: 220px;
 
-          > .toggle-content-col {
+          & > .toggle-content-col {
             gap: ${ToggleSwitch.MD.ContentColGap};
           }
 
-          > .label-container {
+          & > .label-container {
             gap: ${ToggleSwitch.Control.MD.LabelGap};
 
-            > .blr-label-switch-wrapper {
+            & > .blr-label-switch-wrapper {
               width: ${ToggleSwitch.Control.MD.Background.Width};
               height: ${ToggleSwitch.Control.MD.Background.Height};
 
-              > input {
+              & > input {
                 width: ${ToggleSwitch.Control.MD.Background.Width};
                 height: ${ToggleSwitch.Control.MD.Background.Height};
                 margin: 0;
               }
 
-              > .toggle-switch-slider {
+              & > .toggle-switch-slider {
                 &::after {
                   width: ${ToggleSwitch.Control.MD.Knob.Sizing};
                   height: ${ToggleSwitch.Control.MD.Knob.Sizing};
@@ -253,11 +253,11 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              > input:checked + .toggle-switch-slider::after {
+              & > input:checked + .toggle-switch-slider::after {
                 transform: translateX(20px);
               }
 
-              > .toggle-switch-unselect {
+              & > .toggle-switch-unselect {
                 &::after {
                   top: 8px;
                   left: 10px;
@@ -266,7 +266,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              > .toggle-switch-select {
+              & > .toggle-switch-select {
                 &::after {
                   top: 8px;
                   right: 8px;
@@ -282,24 +282,24 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           gap: ${ToggleSwitch.LG.Gap};
           width: 240px;
 
-          > .toggle-content-col {
+          & > .toggle-content-col {
             gap: ${ToggleSwitch.LG.ContentColGap};
           }
 
-          > .label-container {
+          & > .label-container {
             gap: ${ToggleSwitch.Control.LG.LabelGap};
 
-            > .blr-label-switch-wrapper {
+            & > .blr-label-switch-wrapper {
               width: ${ToggleSwitch.Control.LG.Background.Width};
               height: ${ToggleSwitch.Control.LG.Background.Height};
 
-              > input {
+              & > input {
                 width: ${ToggleSwitch.Control.LG.Background.Width};
                 height: ${ToggleSwitch.Control.LG.Background.Height};
                 margin: 0;
               }
 
-              > .toggle-switch-slider {
+              & > .toggle-switch-slider {
                 &::after {
                   width: ${ToggleSwitch.Control.LG.Knob.Sizing};
                   height: ${ToggleSwitch.Control.LG.Knob.Sizing};
@@ -308,11 +308,11 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              > input:checked + .toggle-switch-slider::after {
+              & > input:checked + .toggle-switch-slider::after {
                 transform: translateX(23px);
               }
 
-              > .toggle-switch-unselect {
+              & > .toggle-switch-unselect {
                 &::after {
                   top: 9px;
                   left: 13px;
@@ -321,7 +321,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              > .toggle-switch-select {
+              & > .toggle-switch-select {
                 &::after {
                   top: 9px;
                   right: 9px;
