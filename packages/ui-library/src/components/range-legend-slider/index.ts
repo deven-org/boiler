@@ -6,6 +6,7 @@ import { map } from 'lit/directives/map.js';
 import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../foundation/component-tokens/slider-legend.css';
 import { FormSizesType, ActionVariantType } from '../../globals/types';
+import { findToolTipPosition, setOnclickValue } from '../../utils/range-slider-utils';
 
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
@@ -37,11 +38,14 @@ export class BlrRangeLegendSlider extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @property({ type: Boolean }) isUpdated? = false;
+
   @state() protected selectedIndex = 0;
 
-  protected updated(changedProperties: Map<string, string>) {
-    if (changedProperties.has('initialValue')) {
+  protected updated(changedProperties: Map<string, number>) {
+    if (changedProperties.has('selectedIndex') && !this.isUpdated) {
       this.selectedIndex = this.list.indexOf(this.initialValue) || 0;
+      this.isUpdated = true;
     }
   }
 
@@ -68,10 +72,9 @@ export class BlrRangeLegendSlider extends LitElement {
     const filteredStepsArray = stepsArray.filter((_, i) => i % tickFrequency == 0);
 
     const setValue = (btnType: string) => {
-      if (btnType === 'INC' && this.selectedIndex < stepsArray.length - 1) {
-        this.selectedIndex = this.selectedIndex + this.stepFactor;
-      } else if (btnType === 'DEC' && this.selectedIndex > 0) {
-        this.selectedIndex = this.selectedIndex - this.stepFactor;
+      const modifiedValue = setOnclickValue(this.selectedIndex, this.stepFactor, btnType, stepsArray.length);
+      if (modifiedValue !== undefined) {
+        this.selectedIndex = modifiedValue;
       }
       return this.onClickMinMax?.(this.selectedIndex);
     };
@@ -87,8 +90,9 @@ export class BlrRangeLegendSlider extends LitElement {
       [`${this.size || 'md'}`]: this.size || 'md',
     });
 
-    const toolTipQuerySelector = this.shadowRoot?.querySelector(`#pip-${this.selectedIndex}`);
-    const toolTipPos = toolTipQuerySelector?.getBoundingClientRect().left;
+    const inputCmp1 = this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`;
+    const slider = this.shadowRoot?.querySelector(`#${inputCmp1}`) as HTMLInputElement;
+    const toolTipPos = slider && findToolTipPosition(slider.min, slider.max, slider.offsetWidth, this.selectedIndex);
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -96,9 +100,6 @@ export class BlrRangeLegendSlider extends LitElement {
       <div class=${classes}>
         <fieldset class="range__field">
           <div class="input-wrapper">
-            <div id="tooltip1" class="tooltip" style="bottom:90px; left:${toolTipPos! - 20}px; position:absolute;">
-              ${stepsArray[this.selectedIndex]}
-            </div>
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'dec_btn',
@@ -107,12 +108,12 @@ export class BlrRangeLegendSlider extends LitElement {
               })}
             </div>
             <div class="input-row">
-              <div class="range-wrapper">
+              <div class="range-wrapper" id="range-wrapper">
                 <input
-                  id=${this.rangeInputId ? `${this.rangeInputId}-1` : `rangeInputId-1`}
+                  id=${inputCmp1}
                   type="range"
                   min="0"
-                  value="${this.selectedIndex}"
+                  .value="${this.selectedIndex}"
                   max="${stepsArray.length - 1}"
                   step="${this.stepFactor}"
                   class="range"
@@ -121,6 +122,9 @@ export class BlrRangeLegendSlider extends LitElement {
                   @input=${showVal}
                   ?disabled=${this.disabled}
                 />
+                <div id="tooltip1" class="tooltip" style="bottom:0px; left: ${toolTipPos}">
+                  ${stepsArray[this.selectedIndex]}
+                </div>
               </div>
               <div class="tick-wrapper">
                 <div class="range__bar-row">

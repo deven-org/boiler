@@ -103,7 +103,7 @@ BlrRangeMinMaxSlider.args = {
   rangeInputId: 'range-cmpt',
   startValue: 80,
   endValue: 85,
-  minValue: 75,
+  minValue: 30,
   maxValue: 130,
   units: '$',
   stepFactor: 1,

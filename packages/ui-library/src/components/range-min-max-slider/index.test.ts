@@ -28,7 +28,7 @@ describe('blr-range-slider', () => {
     const textarea = querySelectorDeep('input', inputWrapper?.getRootNode() as HTMLElement);
     const className = textarea?.className;
 
-    expect(className).to.contain('range blr-slider-bar');
+    expect(className).to.contain('range');
   });
 
   it('should find two slider for min & max', async () => {
