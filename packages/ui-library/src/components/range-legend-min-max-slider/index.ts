@@ -116,6 +116,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
     const toolTipMaxPos =
       minSlider && findToolTipPosition(maxSlider.min, maxSlider.max, maxSlider.offsetWidth, this.selectedEndIndex);
 
+    const hasError = this.selectedEndIndex < this.selectedStartIndex;
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -172,13 +174,13 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
               <div class="tick-wrapper">
                 <div class="range__bar-row">
                   ${map(filteredStepsArray, (step, i) => {
-                    const barClasses = `range__bar ${
+                    const barClasses = `range__bar ${hasError ? `range__bar-error` : ``} ${
                       i >= this.selectedStartIndex && i < this.selectedEndIndex
                         ? 'range__bar-selected'
                         : 'range__bar-unselected'
                     }  ${this.disabled ? `bar-disabled` : ``}`;
 
-                    const pipClasses = `range__pip ${
+                    const pipClasses = `range__pip ${hasError ? `range__bar-error` : ``} ${
                       i >= this.selectedStartIndex && i < this.selectedEndIndex
                         ? 'range__pip-selected'
                         : 'range__pip-unselected'
@@ -198,9 +200,11 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
                     <div class="legend-wrapper">
                       <div class="range__numbers">
                         ${map(filteredStepsArray, (step) => {
-                          return html`<div class="range__container"><p class="range__point ${
-                            this.disabled ? `point-disabled` : ``
-                          }">${step}</p></div></div> `;
+                          const legendClasses = `range__point ${this.disabled ? `point-disabled` : ``} ${
+                            hasError ? `inline-legend-error` : ``
+                          }`;
+
+                          return html`<div class="range__container"><p class="${legendClasses}">${step}</p></div></div> `;
                         })}
                       </div>
                     </div>

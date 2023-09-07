@@ -154,6 +154,10 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         & > .inline-legend-disabled {
           color: ${Forms.Slider.Legend.Color.Disabled};
         }
+
+        & > .inline-legend-error {
+          color: #edabab;
+        }
       }
 
       .range__bar {

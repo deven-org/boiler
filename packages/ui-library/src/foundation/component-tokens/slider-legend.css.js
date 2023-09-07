@@ -212,6 +212,10 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         &.point-disabled {
           color: ${Forms.Slider.Legend.Color.Disabled};
         }
+
+        &.inline-legend-error {
+          color: #edabab;
+        }
       }
     }
 
@@ -239,6 +243,10 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         &.bar-disabled {
           background-color: ${Forms.Slider.Track.Stroke.Inactive.Mute};
         }
+      }
+
+      &.range__bar-error {
+        background-color: #edabab;
       }
     }
   `;

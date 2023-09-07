@@ -35,7 +35,8 @@ export const generateRangeBar = (
   startValueToSlider: number,
   endValueToSlider: number,
   disabled?: boolean,
-  twoKonbs?: boolean
+  twoKonbs?: string,
+  hasError?: boolean
 ) => {
   const { tokenizedLight, tokenizedDark } = renderThemedCssStrings((componentTokens) => {
     const { Forms } = componentTokens;
@@ -48,6 +49,9 @@ export const generateRangeBar = (
 
     const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
     const muteColor = disabled ? disbledMuteColor : activeMuteColor;
+
+    const errorMuteColor = '#edabab';
+    const errorActiveColor = '#d22d2d';
 
     const generateGradient = twoKonbs
       ? `linear-gradient(
@@ -65,9 +69,19 @@ export const generateRangeBar = (
           ${muteColor} 100%
         )`;
 
+    const errorGenerateGradient = hasError
+      ? `linear-gradient(
+            to right,
+            ${errorMuteColor} ${startValueToSlider + 1}%,
+            ${errorActiveColor} ${startValueToSlider}%,
+            ${errorActiveColor} ${endValueToSlider}%,
+            ${errorMuteColor} ${endValueToSlider}%
+          )`
+      : generateGradient;
+
     return css`
       .blr-slider-bar {
-        background: ${generateGradient};
+        background: ${errorGenerateGradient};
       }
     `;
   });

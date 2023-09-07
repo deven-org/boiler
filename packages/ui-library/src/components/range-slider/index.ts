@@ -92,7 +92,10 @@ export class BlrRangeSlider extends LitElement {
       this.onChange?.(this.initialValue, event);
     };
 
-    const inlineLegendStyles = !this.disabled ? 'inline-legend' : 'inline-legend inline-legend-disabled';
+    const inlineLegendStyles = classMap({
+      'inline-legend': true,
+      'inline-legend-disabled': this.disabled || false,
+    });
 
     const barClasses = `range__bar blr-slider-bar ${this.disabled ? `bar-disabled` : ``}`;
 
