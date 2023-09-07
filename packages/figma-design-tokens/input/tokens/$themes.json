@@ -201,10 +201,6 @@
       "Forms.Slider.Legend.Color.Default": "S:b1f0d15405a318950883a261662b1606e4709445,",
       "Forms.Slider.Legend.Color.Disabled": "S:78e041b0bf02ac6f1d82b68f008f634dcd7498e5,",
       "UI.Divider.Stroke": "S:67b175a1c37d17de8e9d4c612107a4d558519ef2,",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill": "S:6a0646595b624192862b36aaa6e502e8b3774d2a,",
-      "Navigation.TabBar.Tab.Label.Active": "S:8d36565db706edb6d13cbfeb237fd1e19bab0aa3,",
-      "Navigation.TabBar.Tab.Label.Unselected": "S:610bb50656e3a5973cda0f7a723448cfc84744a9,",
-      "Navigation.TabBar.Tab.Label.Disabled": "S:8523720966f0b1c00dd7e8ef00835af04e936d0d,",
       "Navigation.TabBar.Tab.Icon.Active": "S:93e991e60d77cf2f472e01c4ac3996d4e3759ba2,",
       "Navigation.TabBar.Tab.Icon.Unselected": "S:4256b581423d6fae5c3158c435acc8a47a4faeed,",
       "Navigation.TabBar.Tab.Icon.Disabled": "S:3fc9999702b7c0f34e967d536764491b72c428b7,",
@@ -537,7 +533,11 @@
       "Action.Selectable.Selected.Icon.Hover": "S:b896540bb8e0f70451de29664dc1d672022b6f27,",
       "Action.Selectable.Selected.Icon.Pressed": "S:76dc029a7fcab952990d849d301cb54116e5ee13,",
       "Action.Selectable.Selected.Icon.Focus": "S:b5c9dbb810dd16a33eca2ae072ff89ee30b1825b,",
-      "Elevation.1": "S:89f1d4dde85bdd5ac56916f9512553d7aaf19db2,"
+      "Elevation.1": "S:89f1d4dde85bdd5ac56916f9512553d7aaf19db2,",
+      "Navigation.TabBar.Tab.Label.Actives.Rest": "S:8d36565db706edb6d13cbfeb237fd1e19bab0aa3,",
+      "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "S:610bb50656e3a5973cda0f7a723448cfc84744a9,",
+      "Navigation.TabBar.Tab.Label.Unselected.Disabled": "S:8523720966f0b1c00dd7e8ef00835af04e936d0d,",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:6a0646595b624192862b36aaa6e502e8b3774d2a,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -759,10 +759,6 @@
       "Forms.Slider.Legend.Color.Disabled": "022ef2187311e450e3836516cdbdac3d006e6b1d",
       "UI.Divider.Stroke": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da",
       "UI.Blanket.Surface": "1758bac1223c81451082018286cba93e78c0cdda",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill": "06b97cdd7d8aff2a69291a0ad10b76aabfad3067",
-      "Navigation.TabBar.Tab.Label.Active": "4d42c6779757dd709b0159f2df97c60ff0fd5438",
-      "Navigation.TabBar.Tab.Label.Unselected": "f8ccd91033732a41cbff706bb3e5f676dcb49459",
-      "Navigation.TabBar.Tab.Label.Disabled": "b2f476133c19570593e15b3efb107035006f7c89",
       "Navigation.TabBar.Tab.Icon.Active": "32ca4ff70c59b3e17be6b1e884c146c628d163d8",
       "Navigation.TabBar.Tab.Icon.Unselected": "835b0fa89241eb1d1762917299e38554a7a056b0",
       "Navigation.TabBar.Tab.Icon.Disabled": "1216a8325abdd00038ff602636902f60912c99df",
@@ -1457,7 +1453,11 @@
       "Forms.LG.CaptionComponent.IconWrapper.PaddingTop": "775b16d13a004b18d9850eb2fc2bab205f69972d",
       "Forms.LG.CaptionComponent.ItemSpacing": "ef5c2ca2ccdbbe520a71c9afdfb2b39856393000",
       "Forms.LG.LabelComponent.ItemSpacing": "f61dee5fef7e7f2a1e8801625057884241025971",
-      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d"
+      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
+      "Navigation.TabBar.Tab.Label.Actives.Rest": "4d42c6779757dd709b0159f2df97c60ff0fd5438",
+      "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "f8ccd91033732a41cbff706bb3e5f676dcb49459",
+      "Navigation.TabBar.Tab.Label.Unselected.Disabled": "b2f476133c19570593e15b3efb107035006f7c89",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "06b97cdd7d8aff2a69291a0ad10b76aabfad3067"
     },
     "group": "Theme"
   },
@@ -1663,10 +1663,6 @@
       "Forms.Slider.Legend.Color.Default": "S:9352c0db6fe921a9f2463a8884238856a3dddbed,",
       "Forms.Slider.Legend.Color.Disabled": "S:f1725eec23db870c1979b9e73a7e3dc6a8c8ab6a,",
       "UI.Divider.Stroke": "S:38150a115a3b3713f5ec4c6cfcaeda4a43140f77,",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill": "S:ff7c873f8ce99590213cc4f8c41ed59b0aad5ea2,",
-      "Navigation.TabBar.Tab.Label.Active": "S:d6afadbd55e769da845c32c83275427b62f7441e,",
-      "Navigation.TabBar.Tab.Label.Unselected": "S:d2ba3fd27887492c3e86bf514835ab78ffd92ff0,",
-      "Navigation.TabBar.Tab.Label.Disabled": "S:f1727f9fe4071dc4a6df9c7528fcb6394fde7faf,",
       "Navigation.TabBar.Tab.Icon.Active": "S:6efae31e6545123a945d562f872d7fa24c99d3cd,",
       "Navigation.TabBar.Tab.Icon.Unselected": "S:40bc5a7818ad5201706b40fcf3a77249a79bf4f6,",
       "Navigation.TabBar.Tab.Icon.Disabled": "S:54f700dfe4f37c8b3c9214636ee0641f433a7f8d,",
@@ -1996,7 +1992,11 @@
       "Action.Selectable.Selected.Icon.Rest": "S:cc5259fb601a1579a2234739e1afc277c2bbe289,",
       "Action.Selectable.Selected.Icon.Hover": "S:677cf6d029a7908b5b7a770a73eab0ede52a59c4,",
       "Action.Selectable.Selected.Icon.Pressed": "S:27c2b8a37d7b382461daf58e5ded98a97ad88663,",
-      "Action.Selectable.Selected.Icon.Focus": "S:9ddd670079f691e224efbee45432d8b15476c0aa,"
+      "Action.Selectable.Selected.Icon.Focus": "S:9ddd670079f691e224efbee45432d8b15476c0aa,",
+      "Navigation.TabBar.Tab.Label.Actives.Rest": "S:d6afadbd55e769da845c32c83275427b62f7441e,",
+      "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "S:d2ba3fd27887492c3e86bf514835ab78ffd92ff0,",
+      "Navigation.TabBar.Tab.Label.Unselected.Disabled": "S:f1727f9fe4071dc4a6df9c7528fcb6394fde7faf,",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:ff7c873f8ce99590213cc4f8c41ed59b0aad5ea2,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -2218,10 +2218,6 @@
       "Forms.Slider.Legend.Color.Disabled": "022ef2187311e450e3836516cdbdac3d006e6b1d",
       "UI.Divider.Stroke": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da",
       "UI.Blanket.Surface": "1758bac1223c81451082018286cba93e78c0cdda",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill": "06b97cdd7d8aff2a69291a0ad10b76aabfad3067",
-      "Navigation.TabBar.Tab.Label.Active": "4d42c6779757dd709b0159f2df97c60ff0fd5438",
-      "Navigation.TabBar.Tab.Label.Unselected": "f8ccd91033732a41cbff706bb3e5f676dcb49459",
-      "Navigation.TabBar.Tab.Label.Disabled": "b2f476133c19570593e15b3efb107035006f7c89",
       "Navigation.TabBar.Tab.Icon.Active": "32ca4ff70c59b3e17be6b1e884c146c628d163d8",
       "Navigation.TabBar.Tab.Icon.Unselected": "835b0fa89241eb1d1762917299e38554a7a056b0",
       "Navigation.TabBar.Tab.Icon.Disabled": "1216a8325abdd00038ff602636902f60912c99df",
@@ -2916,7 +2912,11 @@
       "Forms.LG.CaptionComponent.IconWrapper.PaddingTop": "775b16d13a004b18d9850eb2fc2bab205f69972d",
       "Forms.LG.CaptionComponent.ItemSpacing": "ef5c2ca2ccdbbe520a71c9afdfb2b39856393000",
       "Forms.LG.LabelComponent.ItemSpacing": "f61dee5fef7e7f2a1e8801625057884241025971",
-      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d"
+      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
+      "Navigation.TabBar.Tab.Label.Actives.Rest": "4d42c6779757dd709b0159f2df97c60ff0fd5438",
+      "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "f8ccd91033732a41cbff706bb3e5f676dcb49459",
+      "Navigation.TabBar.Tab.Label.Unselected.Disabled": "b2f476133c19570593e15b3efb107035006f7c89",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "06b97cdd7d8aff2a69291a0ad10b76aabfad3067"
     },
     "group": "Theme"
   }
