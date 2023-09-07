@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 07 Sep 2023 08:50:02 GMT
+ * Generated on Thu, 07 Sep 2023 12:13:26 GMT
  */
 
 export const componentTokens = {
@@ -750,19 +750,44 @@ export const componentTokens = {
     TabBar: {
       Tab: {
         HighlightLine: {
-          SurfaceFill: 'hsla(220, 65%, 50%, 1)',
+          SurfaceFill: {
+            Rest: 'hsla(220, 65%, 50%, 1)',
+            Hover: 'hsla(220, 65%, 50%, 1)',
+            Pressed: 'hsla(220, 65%, 50%, 1)',
+            Focus: 'hsla(220, 65%, 50%, 1)',
+          },
           Selected: { Opacity: '1' },
           Unselected: { Opacity: '0' },
         },
         Label: {
-          Active: 'hsla(220, 65%, 50%, 1)',
-          Unselected: 'hsla(220, 10%, 10%,1) ',
-          Disabled: 'hsla(220, 10%, 80%,1) ',
+          Selected: {
+            Rest: 'hsla(220, 65%, 50%, 1)',
+            Hover: 'hsla(220, 65%, 50%, 1)',
+            Pressed: 'hsla(220, 65%, 50%, 1)',
+            Focus: 'hsla(220, 65%, 50%, 1)',
+          },
+          Unselected: {
+            Rest: 'hsla(220, 10%, 10%,1) ',
+            Hover: 'hsla(220, 10%, 10%,1) ',
+            Pressed: 'hsla(220, 10%, 10%,1) ',
+            Focus: 'hsla(220, 10%, 10%,1) ',
+            Disabled: 'hsla(220, 10%, 80%,1) ',
+          },
         },
         Icon: {
-          Active: 'hsla(220, 65%, 50%, 1)',
-          Unselected: 'hsla(220, 10%, 10%,1) ',
-          Disabled: 'hsla(220, 10%, 80%,1) ',
+          Selected: {
+            Rest: 'hsla(220, 65%, 50%, 1)',
+            Hover: 'hsla(220, 65%, 50%, 1)',
+            Pressed: 'hsla(220, 65%, 50%, 1)',
+            Focus: 'hsla(220, 65%, 50%, 1)',
+          },
+          Unselected: {
+            Rest: 'hsla(220, 10%, 10%,1) ',
+            Hover: 'hsla(220, 10%, 10%,1) ',
+            Pressed: 'hsla(220, 10%, 10%,1) ',
+            Focus: 'hsla(220, 10%, 10%,1) ',
+            Disabled: 'hsla(220, 10%, 80%,1) ',
+          },
         },
         SM: {
           HighlightLine: { Height: '2px' },
