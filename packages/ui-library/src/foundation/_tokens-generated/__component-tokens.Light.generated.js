@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 07 Sep 2023 13:32:15 GMT
+ * Generated on Thu, 07 Sep 2023 14:30:06 GMT
  */
 
 export const componentTokens = {
@@ -751,13 +751,24 @@ export const componentTokens = {
       Tab: {
         HighlightLine: {
           SurfaceFill: {
-            Rest: 'hsla(220, 65%, 50%, 1)',
-            Hover: 'hsla(220, 65%, 50%, 1)',
-            Pressed: 'hsla(220, 65%, 50%, 1)',
-            Focus: 'hsla(220, 65%, 50%, 1)',
+            Selected: {
+              Rest: 'hsla(220, 65%, 50%, 1)',
+              Hover: 'hsla(220, 65%, 50%, 1)',
+              Pressed: 'hsla(220, 65%, 50%, 1)',
+              Focus: 'hsla(220, 65%, 50%, 1)',
+            },
+            Unselected: {
+              Rest: 'hsla(220, 65%, 50%, 1)',
+              Hover: 'hsla(220, 65%, 50%, 1)',
+              Pressed: 'hsla(220, 65%, 50%, 1)',
+              Focus: 'hsla(220, 65%, 50%, 1)',
+              Disabled: 'hsla(220, 65%, 50%, 1)',
+            },
           },
-          Selected: { Opacity: '1' },
-          Unselected: { Opacity: '0' },
+          Opacity: {
+            Selected: { Rest: '1', Hover: '1', Pressed: '1', Focus: '0' },
+            Unselected: { Rest: '0', Hover: '0', Pressed: '0', Focus: '0', Disabled: '0' },
+          },
         },
         Label: {
           Selected: {
