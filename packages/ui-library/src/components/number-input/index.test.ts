@@ -10,6 +10,11 @@ const sampleParams: BlrNumberInputType = {
   variant: 'mode1',
   theme: 'Light',
   size: 'sm',
+  numberInputId: 'egal',
+  label: 'Hello',
+  showHint: false,
+  hintIcon: 'blr360Lg',
+  numberFormat: '%2.2f',
 };
 
 describe('blr-number-input', () => {

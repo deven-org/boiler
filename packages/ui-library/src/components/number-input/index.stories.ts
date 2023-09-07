@@ -7,7 +7,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrNumberInput',
   argTypes: {
     size: {
       options: FormSizes,
@@ -85,7 +85,7 @@ export const BlrNumberInput = ({
     })}
   `;
 
-BlrNumberInput.storyName = 'BlrNumberInput';
+BlrNumberInput.storyName = 'Component docs';
 
 BlrNumberInput.args = {
   value: undefined,

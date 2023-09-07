@@ -24,7 +24,7 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant, addMargin, size, theme }: BlrDividerType) => html`
+export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme, size }: BlrDividerType) => html`
   ${dividerDirectionVariant === 'vertical'
     ? html`<div style="height: 100px; display: inline-block;">
         ${BlrDividerRenderFunction({
@@ -32,6 +32,7 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, size, theme }: 
           addMargin,
           size,
           theme,
+          size,
         })}
       </div> `
     : html` <div style="width: 100%; display: inline-block;">
@@ -40,6 +41,7 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, size, theme }: 
           addMargin,
           size,
           theme,
+          size,
         })}
       </div>`}
 `;

@@ -14,7 +14,6 @@ import {
   TabContentVariants,
   TabAlignmentVariants,
   OverflowVariants,
-  NumberFormats,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
