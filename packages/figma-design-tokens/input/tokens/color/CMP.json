@@ -1193,25 +1193,96 @@
       "Tab": {
         "HighlightLine": {
           "SurfaceFill": {
-            "Rest": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Apply as fill on HightlightLine"
+            "Selected": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              }
             },
-            "Hover": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Apply as fill on HightlightLine"
+            "Unselected": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Disabled": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              }
+            }
+          },
+          "Opacity": {
+            "Selected": {
+              "Rest": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Hover": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Pressed": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity"
+              }
             },
-            "Pressed": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Apply as fill on HightlightLine"
-            },
-            "Focus": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Apply as fill on HightlightLine"
+            "Unselected": {
+              "Rest": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Hover": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Pressed": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Disabled": {
+                "value": "0",
+                "type": "opacity"
+              }
             }
           }
         },
