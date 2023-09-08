@@ -84,20 +84,24 @@ export class BlrNumberInput extends LitElement {
     this.currentValue = Number(this._numberFieldNode.value) || 0;
   }
 
-  protected customFormat(currentValue: number, fractionDigits: number, totalDigits: number): string {
-    const formattedNumber = currentValue.toFixed(fractionDigits);
+  protected customFormat(): string {
+    if (this.fractionDigits === 0) {
+      return this.currentValue?.toString();
+    }
 
+    const formattedNumber = this.currentValue.toFixed(this.fractionDigits);
     const [integerPart, fractionPart] = formattedNumber.split('.');
 
-    const padding = Math.max(totalDigits - integerPart.length, 0);
+    let paddedInteger = integerPart;
+    if (this.totalDigits > 0) {
+      const padding = Math.max(this.totalDigits - integerPart.length, 0);
+      paddedInteger = '0'.repeat(padding) + integerPart;
+    }
 
-    const paddedInteger = '0'.repeat(padding) + integerPart;
-
-    const result = `${paddedInteger}.${fractionPart || '0'.repeat(fractionDigits)}`;
+    const result = `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
 
     return result;
   }
-
   protected getButtonTemplate = (
     buttonsType: ButtonTemplateType,
     adjustType: AdjustType,
@@ -183,8 +187,8 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="number"
-          .value=${this.fractionDigits && this.totalDigits
-            ? this.customFormat(this.currentValue, this.fractionDigits, this.totalDigits)
+          .value=${this.fractionDigits
+            ? this.customFormat(this.currentValue, this.fractionDigits || 0, this.totalDigits)
             : this.currentValue}
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
