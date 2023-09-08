@@ -51,13 +51,22 @@ export const Example1 = () =>
       theme: 'Light',
     })}
   `;
-Example1.storyName = 'Example1';
+Example1.storyName = 'Default';
 
 export const Example2 = () =>
   html`
     ${BlrTextareaRenderFunction({
       ...defaultParams,
-      theme: 'Dark',
+      disabled: true,
     })}
   `;
-Example2.storyName = 'Example2';
+Example2.storyName = 'Disabled';
+
+export const Example3 = () =>
+  html`
+    ${BlrTextareaRenderFunction({
+      ...defaultParams,
+      hasError: true,
+    })}
+  `;
+Example3.storyName = 'hasError';
