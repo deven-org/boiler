@@ -102,12 +102,14 @@ export class BlrRangeMinMaxSlider extends LitElement {
   };
 
   protected render() {
+    const hasError = this.endValueToSlider < this.startValueToSlider;
     const rangeStyle = generateRangeBar(
       this.theme,
       this.startValueToSlider,
       this.endValueToSlider,
       this.disabled,
-      true
+      'twoKnob',
+      hasError
     );
 
     const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
@@ -119,7 +121,17 @@ export class BlrRangeMinMaxSlider extends LitElement {
       [`${this.size || 'md'}`]: this.size || 'md',
     });
 
-    const barClasses = `range__bar blr-slider-bar ${this.disabled ? `bar-disabled` : ``}`;
+    const inlineLegendStyles = classMap({
+      'inline-legend': true,
+      'inline-legend-disabled': this.disabled || false,
+      'inline-legend-error': hasError,
+    });
+
+    const barClasses = classMap({
+      'range__bar': true,
+      'blr-slider-bar': true,
+      'bar-disabled': this.disabled || false,
+    });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -140,7 +152,7 @@ export class BlrRangeMinMaxSlider extends LitElement {
               })}
             </div>
             ${this.showLegend
-              ? html`<div class="inline-legend">
+              ? html`<div class=${inlineLegendStyles}>
                   <p>${this.minValue} ${this.units}</p>
                 </div>`
               : nothing}
@@ -178,7 +190,11 @@ export class BlrRangeMinMaxSlider extends LitElement {
               </div>
               <div class=${barClasses}></div>
             </div>
-            ${this.showLegend ? html`<div class="inline-legend"><p>${this.maxValue} ${this.units}</p></div>` : nothing}
+            ${this.showLegend
+              ? html`<div class=${inlineLegendStyles}>
+                  <p>${this.maxValue} ${this.units}</p>
+                </div>`
+              : nothing}
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_max',

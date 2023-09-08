@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
@@ -114,7 +115,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
 
             & > input:checked + .toggle-switch-slider::after {
-              background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+              background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Rest};
             }
 
             & > .toggle-switch-unselect {
