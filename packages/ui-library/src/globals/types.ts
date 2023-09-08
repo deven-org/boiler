@@ -42,6 +42,7 @@ export type TabType = {
   label: string;
   icon: IconType;
   href: string;
+  disabled?: boolean;
 };
 export type TabVariantType = (typeof TabVariants)[number];
 export type TabContentVariantType = (typeof TabContentVariants)[number];

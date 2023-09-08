@@ -100,6 +100,7 @@ BlrTabBar.args = {
       label: 'Tab 1',
       icon: 'blr360',
       href: './',
+      disabled: true,
     },
     {
       label: 'Tab 2',

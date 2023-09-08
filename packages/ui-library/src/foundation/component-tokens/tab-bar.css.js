@@ -63,7 +63,6 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           align-items: center;
           position: relative;
           width: 100%;
-          overflow: auto;
           padding-bottom: 15px;
           margin-bottom: -15px;
           max-width: calc(100% - 2rem);
@@ -108,21 +107,123 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               display: flex;
               flex-direction: column;
               flex: 0 1 0px;
+              justify-content: center;
+
+
+              &:focus-within {
+                outline: 2px solid black;
+                border-radius: 4px;
+              }
 
               &.fullWidth {
                 flex: 1 1 0px;
               }
 
+              &.active {
+                .nav-item-content-wrapper {
+                  > a {
+                  color: ${TabBar.Tab.Label.Selected.Rest};
+
+                  &:hover {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Selected.Hover};
+                      }
+
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Selected.Hover};
+                      }
+                    }
+                  }
+
+                  &:focus {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Selected.Focus};
+                      }
+
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Selected.Focus};
+                      }
+                    }
+                  }
+
+                  &:active {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Selected.Pressed};
+                      }
+
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Selected.Pressed};
+                      }
+                    }
+                  }
+                }
+                }
+              }
+
               .nav-item-content-wrapper {
                 display: flex;
                 justify-content: center;
+                &:focus-visible {
+                  outline: none;
+                }
 
                 > a {
-                  color: ${TabBar.Tab.Label.Unselected};
+                  color: ${TabBar.Tab.Label.Unselected.Rest};
                   display: flex;
                   text-decoration: none;
                   align-items: center;
                   flex-shrink: 0;
+
+                  &:focus-visible {
+                    outline: none;
+                  }
+
+                  &:hover {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Unselected.Hover};
+                      }
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Unselected.Hover};
+                      }
+                    }
+                  }
+
+
+                  &:active {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Unselected.Pressed};
+                      }
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Unselected.Pressed};
+                      }
+                    }
+                  }
+
+                  &:focus {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Unselected.Focus};
+                      }
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Unselected.Focus};
+                      }
+                    }
+                  }
+
+                  &.disabled {
+                    > p {
+                      color: ${TabBar.Tab.Label.Unselected.Disabled}
+                    }
+
+                    > blr-icon {
+                      color: ${TabBar.Tab.Icon.Unselected.Disabled};
+                    }
+                  }
 
                   &.leading {
                     flex-direction: row;
@@ -143,6 +244,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-inline-end: 0;
                   }
                 }
+              }
+
+              .nav-item-underline {
+                opacity: ${TabBar.Tab.HighlightLine.Opacity.Unselected.Rest};
               }
 
               &.sm {
@@ -201,10 +306,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               }
 
               &.active {
-                .nav-item-underline {
-                  background-color: ${TabBar.Tab.HighlightLine.SurfaceFill};
-                  opacity: ${TabBar.Tab.HighlightLine.Selected.Opacity};
-                }
+                &:not(.disabled) {
+                  .nav-item-underline {
+                    background-color: ${TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest};
+                    opacity: ${TabBar.Tab.HighlightLine.Opacity.Selected.Rest};
+                  }
               }
             }
           }

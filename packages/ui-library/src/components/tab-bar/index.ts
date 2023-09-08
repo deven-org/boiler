@@ -27,7 +27,7 @@ export class BlrTabBar extends LitElement {
   @query('.blr-tab-bar')
   _navList!: Element;
 
-  @queryAll('.nav-list li')
+  @queryAll('.nav-list li:not(.disabled)')
   _navItems!: Element[];
 
   @property() tabs!: TabType[];
@@ -106,11 +106,11 @@ export class BlrTabBar extends LitElement {
           <ul class="nav-list ${navListClasses}">
             ${this.tabs.map((tab) => {
               return html`
-                <li class="nav-item-container ${classes}">
+                <li class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}">
                   <div class="nav-item-content-wrapper">
                     <a
                       href=${tab.href}
-                      class="blr-semantic-action ${this.size} ${this.iconPosition}"
+                      class="blr-semantic-action ${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
                       @click=${handleClick}
                     >
                       ${this.tabContent !== 'labelOnly'
