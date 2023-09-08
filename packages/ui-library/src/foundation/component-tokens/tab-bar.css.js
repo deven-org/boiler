@@ -12,6 +12,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         width: 100%;
         display: flex;
         align-items: center;
+        position: relative;
 
         &.fullWidth {
           .blr-tab-bar {
@@ -31,19 +32,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           background-color: white;
 
           &.left {
-            position: absolute;
-            left: 1.8rem;
-            top: 50%;
-            z-index: 2;
-            transform: translateY(-50%);
+            padding-top: 15px;
           }
 
           &.right {
-            position: absolute;
-            right: 1.8rem;
-            top: 50%;
-            z-index: 2;
-            transform: translateY(-50%);
+            padding-top: 15px;
           }
 
           &.sm {
@@ -60,9 +53,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         }
 
         .blr-tab-bar {
-          align-items: center;
           position: relative;
           width: 100%;
+          overflow-x: auto;
+          padding-top: 15px;
           padding-bottom: 15px;
           margin-bottom: -15px;
           max-width: calc(100% - 2rem);
@@ -70,10 +64,9 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           .nav-list {
             display: flex;
             list-style: none;
-            padding: 0 1.5rem;
+            padding: 0 0.5rem;
             margin: 0;
             align-items: center;
-            z-index: 1;
 
             &.left {
               justify-content: flex-start;
