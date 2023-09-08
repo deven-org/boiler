@@ -27,15 +27,17 @@ export default {
     value: {
       control: { type: 'text' },
     },
+    fractionDigits: {
+      control: { type: 'text' },
+    },
+    totalDigits: {
+      control: { type: 'text' },
+    },
     unit: {
       control: { type: 'text' },
     },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-    },
-    numberFormat: {
-      options: NumberFormats,
       control: { type: 'select' },
     },
   },
@@ -60,8 +62,9 @@ export const BlrNumberInput = ({
   value,
   showHint,
   hintIcon,
-  numberFormat,
   unit,
+  fractionDigits,
+  totalDigits,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -80,8 +83,9 @@ export const BlrNumberInput = ({
       value,
       showHint,
       hintIcon,
-      numberFormat,
       unit,
+      fractionDigits,
+      totalDigits,
     })}
   `;
 
@@ -89,8 +93,9 @@ BlrNumberInput.storyName = 'Component docs';
 
 BlrNumberInput.args = {
   value: undefined,
-  numberFormat: '%g',
   unit: '',
+  fractionDigits: '',
+  totalDigits: '',
   variant: 'mode1',
   theme: 'Light',
   hasLabel: true,

@@ -18,7 +18,6 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { IconType, SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { sprintf } from 'sprintf-js';
 
 type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
@@ -47,8 +46,9 @@ export class BlrNumberInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() value?: number;
-  @property() numberFormat!: string;
   @property() unit?: string = 'kg';
+  @property() totalDigits: number | undefined;
+  @property() fractionDigits: number | undefined;
 
   @property() theme: ThemeType = 'Light';
 
@@ -82,6 +82,20 @@ export class BlrNumberInput extends LitElement {
 
   protected handleChange() {
     this.currentValue = Number(this._numberFieldNode.value) || 0;
+  }
+
+  protected customFormat(currentValue: number, fractionDigits: number, totalDigits: number): string {
+    const formattedNumber = currentValue.toFixed(fractionDigits);
+
+    const [integerPart, fractionPart] = formattedNumber.split('.');
+
+    const padding = Math.max(totalDigits - integerPart.length, 0);
+
+    const paddedInteger = '0'.repeat(padding) + integerPart;
+
+    const result = `${paddedInteger}.${fractionPart || '0'.repeat(fractionDigits)}`;
+
+    return result;
   }
 
   protected getButtonTemplate = (
@@ -169,7 +183,9 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="number"
-          .value=${sprintf(this.numberFormat, this.currentValue)}
+          .value=${this.fractionDigits && this.totalDigits
+            ? this.customFormat(this.currentValue, this.fractionDigits, this.totalDigits)
+            : this.currentValue}
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
@@ -200,8 +216,9 @@ export const BlrNumberInputRenderFunction = ({
   numberInputId,
   value,
   theme,
-  numberFormat,
   unit,
+  fractionDigits,
+  totalDigits,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -217,7 +234,8 @@ export const BlrNumberInputRenderFunction = ({
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
-    .numberFormat="${numberFormat}"
     .unit="${unit}"
+    .fractionDigits="${fractionDigits}"
+    .totalDigits="${totalDigits}"
   ></blr-number-input>`;
 };
