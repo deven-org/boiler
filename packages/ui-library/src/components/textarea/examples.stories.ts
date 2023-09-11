@@ -24,7 +24,7 @@ const defaultParams: BlrTextareaType = {
 
   showHint: true,
   hintIcon: 'blrInfo',
-  hintText: 'Rindfleischetikettierungs',
+  hintText: 'hint message',
 
   hasError: false,
   errorMessage: "OMG it's an error",
