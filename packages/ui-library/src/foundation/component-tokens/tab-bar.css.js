@@ -209,7 +209,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   }
 
                   &.disabled {
-                    > p {
+                    > slot {
                       color: ${TabBar.Tab.Label.Unselected.Disabled}
                     }
 

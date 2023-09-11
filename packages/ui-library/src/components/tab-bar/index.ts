@@ -30,6 +30,12 @@ export class BlrTabBar extends LitElement {
   @queryAll('.nav-list li:not(.disabled)')
   _navItems!: Element[];
 
+  @queryAll('slot[name=tab]')
+  _navItemsSlots!: HTMLElement[];
+
+  @queryAll('slot[name=panel]')
+  _panels!: HTMLElement[];
+
   @property() tabs!: TabType[];
   @property() overflowVariant!: OverflowVariantType;
   @property() iconPosition: IconPositionVariant = 'leading';
@@ -65,16 +71,22 @@ export class BlrTabBar extends LitElement {
     const dynamicStyles =
       this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
 
-    const setActive = (el: Element) => {
-      if (el.parentElement) {
-        [...el.parentElement.children].forEach((sib) => sib.classList.remove('active'));
-        el.classList.add('active');
+    const setActive = (tabIndex: number) => {
+      const selectedTab = this._navItems[tabIndex - 1];
+      if (selectedTab.parentElement) {
+        [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
+        selectedTab.classList.add('active');
       }
+      this._panels.forEach((panel) => panel.classList.remove('active'));
+      this._panels[tabIndex].classList.add('active');
     };
 
-    const handleClick = (event: Event) => {
+    const handleSelect = (event: Event, label: string) => {
       event.preventDefault();
-      this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(listItem)));
+
+      const navLabels = Object.values(this._navItemsSlots).map((nav) => nav.innerText);
+      const index = navLabels.indexOf(label);
+      this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
     };
 
     const classes = classMap({
@@ -111,7 +123,7 @@ export class BlrTabBar extends LitElement {
                     <a
                       href=${tab.href}
                       class="blr-semantic-action ${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
-                      @click=${handleClick}
+                      @click=${(e: Event) => handleSelect(e, tab.label)}
                     >
                       ${this.tabContent !== 'labelOnly'
                         ? BlrIconRenderFunction({
@@ -120,7 +132,7 @@ export class BlrTabBar extends LitElement {
                             hideAria: true,
                           })
                         : nothing}
-                      ${this.tabContent !== 'iconOnly' ? html` <p>${tab.label}</p>` : nothing}
+                      ${this.tabContent !== 'iconOnly' ? html` <slot name="tab">${tab.label}</slot>` : nothing}
                     </a>
                   </div>
                   <div class="nav-item-underline"></div>
@@ -149,6 +161,11 @@ export class BlrTabBar extends LitElement {
               theme: this.theme,
             })
           : nothing}
+      </div>
+      <div class="panel-wrapper">
+        ${this.tabs.map((tab) => {
+          return html`<slot name="panel">${tab.label}</slot>`;
+        })}
       </div> `;
   }
 }

@@ -5,4 +5,16 @@ export const styleCustom = css`
     position: relative;
     display: block;
   }
+
+  .panel-wrapper {
+    margin-top: 2rem;
+
+    > slot {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
 `;
