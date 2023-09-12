@@ -54,7 +54,7 @@ export class BlrNumberInput extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   @state() protected isFocused = false;
-  @state() protected currentValue: number | undefined = undefined;
+  @state() protected currentValue = 0;
 
   protected stepperUp() {
     if (this.currentValue !== undefined && this.step !== undefined) {
@@ -72,7 +72,7 @@ export class BlrNumberInput extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    this.currentValue = Number(this.currentValue) || Number(this.value);
+    this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
     this.step = Number(this.step);
   }
 
@@ -88,17 +88,17 @@ export class BlrNumberInput extends LitElement {
     this.currentValue = Number(this._numberFieldNode.value) || 0;
   }
 
-  protected customFormat(): string {
-    if (this.fractionDigits === 0) {
-      return this.currentValue?.toFixed(0);
+  protected customFormat(cur: number, fractions: number, digits: number): string {
+    if (fractions === 0) {
+      return cur?.toFixed(0);
     }
 
-    const formattedNumber = this.currentValue.toFixed(this.fractionDigits);
+    const formattedNumber = cur.toFixed(fractions);
     const [integerPart, fractionPart] = formattedNumber.split('.');
 
     let paddedInteger = integerPart;
-    if (this.totalDigits > 0) {
-      const padding = Math.max(this.totalDigits - integerPart.length, 0);
+    if (digits > 0) {
+      const padding = Math.max(digits - integerPart.length, 0);
       paddedInteger = '0'.repeat(padding) + integerPart;
     }
 
@@ -191,10 +191,8 @@ export class BlrNumberInput extends LitElement {
         <input
           class="${inputClasses}"
           type="number"
-          .value=${this.fractionDigits
-            ? this.customFormat(this.currentValue, this.fractionDigits || 0, this.totalDigits)
-            : this.currentValue}
-          step="any"
+          .value=${this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)}
+          step="${this.step || nothing}"
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"

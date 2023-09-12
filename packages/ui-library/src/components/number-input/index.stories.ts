@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 import './index';
-import { FormSizes, NumberFormats } from '../../globals/constants';
+import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
@@ -25,7 +25,7 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     value: {
-      control: { type: 'text' },
+      control: { type: 'number' },
     },
     step: {
       control: { type: 'text' },
