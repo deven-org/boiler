@@ -25,15 +25,15 @@ export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
   @query('.blr-tab-bar')
-  _navList!: Element;
+  _navList!: HTMLElement;
 
   @queryAll('.nav-list li:not(.disabled)')
-  _navItems!: Element[];
+  _navItems!: HTMLElement[];
 
   @queryAll('slot[name=tab]')
   _navItemsSlots!: HTMLElement[];
 
-  @queryAll('slot[name=panel]')
+  @queryAll('[role=tabpanel]')
   _panels!: HTMLElement[];
 
   @property() tabs!: TabType[];
@@ -73,17 +73,21 @@ export class BlrTabBar extends LitElement {
 
     const setActive = (tabIndex: number) => {
       const selectedTab = this._navItems[tabIndex - 1];
+      selectedTab.setAttribute('aria-selected', 'true');
       if (selectedTab.parentElement) {
         [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
         selectedTab.classList.add('active');
       }
-      this._panels.forEach((panel) => panel.classList.remove('active'));
+      this._panels.forEach((panel) => {
+        panel.classList.remove('active');
+        panel.setAttribute('hidden', '');
+      });
       this._panels[tabIndex].classList.add('active');
+      this._panels[tabIndex].removeAttribute('hidden');
     };
 
     const handleSelect = (event: Event, label: string) => {
       event.preventDefault();
-
       const navLabels = Object.values(this._navItemsSlots).map((nav) => nav.innerText);
       const index = navLabels.indexOf(label);
       this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
@@ -115,13 +119,19 @@ export class BlrTabBar extends LitElement {
             `
           : nothing}
         <div class="blr-tab-bar ${this.alignment}">
-          <ul class="nav-list ${navListClasses}">
+          <ul class="nav-list ${navListClasses}" role="tablist">
             ${this.tabs.map((tab) => {
               return html`
-                <li class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}">
+                <li
+                  class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}"
+                  role="presentation"
+                >
                   <div class="nav-item-content-wrapper">
                     <a
-                      href=${tab.href}
+                      id=${`${tab.label.toLowerCase()} tab`}
+                      role="tab"
+                      href=${`#${tab.href}`}
+                      aria-controls=${tab.label.toLowerCase()}
                       class="blr-semantic-action ${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
                       @click=${(e: Event) => handleSelect(e, tab.label)}
                     >
@@ -162,11 +172,17 @@ export class BlrTabBar extends LitElement {
             })
           : nothing}
       </div>
-      <div class="panel-wrapper">
-        ${this.tabs.map((tab) => {
-          return html`<slot name="panel">${tab.label}</slot>`;
-        })}
-      </div> `;
+      ${this.tabs.map((tab) => {
+        return html` <section
+          id=${tab.href}
+          class="panel-wrapper"
+          role="tabpanel"
+          aria-labelledby="${`${tab.label.toLowerCase()} tab`}"
+          hidden
+        >
+          <p>${tab.label}</p>
+        </section>`;
+      })}`;
   }
 }
 
@@ -175,6 +191,8 @@ export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
 export const BlrTabBarRenderFunction = ({
   _navList,
   _navItems,
+  _navItemsSlots,
+  _panels,
   tabs,
   overflowVariant,
   iconPosition,
@@ -193,6 +211,8 @@ export const BlrTabBarRenderFunction = ({
   return html`<blr-tab-bar
     .navlist=${_navList}
     .navItems=${_navItems}
+    .navItemsSlots=${_navItemsSlots}
+    .panels=${_panels}
     .tabs=${tabs}
     .overflowVariant=${overflowVariant}
     .iconPosition=${iconPosition}

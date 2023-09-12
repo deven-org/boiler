@@ -53,6 +53,8 @@ export default {
 export const BlrTabBar = ({
   _navList,
   _navItems,
+  _navItemsSlots,
+  _panels,
   tabs,
   overflowVariant,
   iconPosition,
@@ -73,6 +75,8 @@ export const BlrTabBar = ({
     ${BlrTabBarRenderFunction({
       _navList,
       _navItems,
+      _navItemsSlots,
+      _panels,
       tabs,
       overflowVariant,
       iconPosition,
