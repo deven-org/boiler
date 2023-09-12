@@ -69,7 +69,6 @@ const componentTypes = [
   'Radio',
   'Checkbox',
   'ToggleSwitch',
-  'Feedback',
   'Counter',
   'Error',
   'Warning',
@@ -80,6 +79,7 @@ const componentTypes = [
   'TabBar',
   'Slider',
   'ButtonGroup',
+  'Tooltip',
 ];
 
 StyleDictionaryPackage.registerFormat({

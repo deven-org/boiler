@@ -24,3 +24,7 @@ export const TabAlignmentVariants = [
 export const OverflowVariantsStandard = ['wrap', 'browserOverflow', 'buttons'] as const;
 export const OverflowVariantsFullWidth = ['wrap', 'browserOverflow'] as const;
 export const ButtonsAlignmentVariants = ['flex-start', 'center', 'flex-end'] as const;
+
+export const ToolTipVisibility = ['onLoad', 'onHover'] as const;
+export const ToolTipPosition = ['left', 'right', 'top', 'bottom'] as const;
+export const ToolTipArrowPosition = ['start', 'end', 'middle', 'hide'] as const;
