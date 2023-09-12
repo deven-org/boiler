@@ -27,6 +27,9 @@ export default {
     value: {
       control: { type: 'text' },
     },
+    step: {
+      control: { type: 'text' },
+    },
     fractionDigits: {
       control: { type: 'text' },
     },
@@ -60,6 +63,7 @@ export const BlrNumberInput = ({
   numberInputId,
   theme,
   value,
+  step,
   showHint,
   hintIcon,
   unit,
@@ -81,6 +85,7 @@ export const BlrNumberInput = ({
       labelAppendix,
       numberInputId,
       value,
+      step,
       showHint,
       hintIcon,
       unit,
@@ -93,9 +98,10 @@ BlrNumberInput.storyName = 'Component docs';
 
 BlrNumberInput.args = {
   value: undefined,
-  unit: '',
+  step: '1',
   fractionDigits: '',
   totalDigits: '',
+  unit: '',
   variant: 'mode1',
   theme: 'Light',
   hasLabel: true,

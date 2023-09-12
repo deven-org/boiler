@@ -46,9 +46,10 @@ export class BlrNumberInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() value?: number;
+  @property() step?: number;
   @property() unit?: string = 'kg';
-  @property() totalDigits: number | undefined;
-  @property() fractionDigits: number | undefined;
+  @property() totalDigits?: number;
+  @property() fractionDigits?: number;
 
   @property() theme: ThemeType = 'Light';
 
@@ -56,20 +57,23 @@ export class BlrNumberInput extends LitElement {
   @state() protected currentValue: number | undefined = undefined;
 
   protected stepperUp() {
-    if (this.currentValue !== undefined) {
-      this.currentValue++;
+    if (this.currentValue !== undefined && this.step !== undefined) {
+      this.currentValue += Number(this.step);
+      this.requestUpdate('currentValue');
     }
   }
 
   protected stepperDown() {
-    if (this.currentValue !== undefined) {
-      this.currentValue--;
+    if (this.currentValue !== undefined && this.step !== undefined) {
+      this.currentValue -= Number(this.step);
+      this.requestUpdate('currentValue');
     }
   }
 
   connectedCallback() {
     super.connectedCallback();
     this.currentValue = Number(this.currentValue) || Number(this.value);
+    this.step = Number(this.step);
   }
 
   protected handleFocus = () => {
@@ -86,7 +90,7 @@ export class BlrNumberInput extends LitElement {
 
   protected customFormat(): string {
     if (this.fractionDigits === 0) {
-      return this.currentValue?.toString();
+      return this.currentValue?.toFixed(0);
     }
 
     const formattedNumber = this.currentValue.toFixed(this.fractionDigits);
@@ -190,6 +194,7 @@ export class BlrNumberInput extends LitElement {
           .value=${this.fractionDigits
             ? this.customFormat(this.currentValue, this.fractionDigits || 0, this.totalDigits)
             : this.currentValue}
+          step="any"
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
@@ -219,6 +224,7 @@ export const BlrNumberInputRenderFunction = ({
   labelAppendix,
   numberInputId,
   value,
+  step,
   theme,
   unit,
   fractionDigits,
@@ -235,6 +241,7 @@ export const BlrNumberInputRenderFunction = ({
     .hasError="${hasError}"
     .size="${size}"
     .value="${value}"
+    .step="${step}"
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
