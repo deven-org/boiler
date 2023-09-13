@@ -9,7 +9,6 @@ const defaultParams: BlrTextareaType = {
   labelAppendix: '(Optional)',
   size: 'md',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  minLength: 0,
   maxLength: 140,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
@@ -32,6 +31,13 @@ const defaultParams: BlrTextareaType = {
   isResizeable: true,
 };
 
+const fontStyle = html`
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+  </style>
+`;
+
 export default {
   title: 'Design System/Web Components/BlrTextarea/Examples',
   parameters: {
@@ -46,10 +52,24 @@ export default {
 
 export const Example1 = () =>
   html`
-    ${BlrTextareaRenderFunction({
-      ...defaultParams,
-      theme: 'Light',
-    })}
+    <div>
+      <h3>Default</h3>
+      ${fontStyle}
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        theme: 'Light',
+      })}
+      <h3>Disabled</h3>
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        disabled: true,
+      })}
+      <h3>HasError</h3>
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        hasError: true,
+      })}
+    </div>
   `;
 Example1.storyName = 'Default';
 
