@@ -5,6 +5,7 @@
   "main": "",
   "types": "",
   "scripts": {
+    "prestart": "npm run tokens:generate",
     "start": "npm run start --workspace=@boiler/storybook",
     "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
     "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
