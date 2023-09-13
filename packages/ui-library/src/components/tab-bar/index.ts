@@ -145,6 +145,7 @@ export class BlrTabBar extends LitElement {
         ${this.showDivider
           ? BlrDividerRenderFunction({
               dividerDirectionVariant: 'horizontal',
+              size: this.size,
               addMargin: true,
               theme: this.theme,
             })
