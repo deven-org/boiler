@@ -50,11 +50,16 @@ export default {
   },
 };
 
-export const Example1 = () =>
-  html`
-    <div>
+export const Example1 = () => {
+  return html`
+    ${fontStyle}
+    <style>
+      .stories-textarea {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+      }
+    </style>
+    <div class="stories-textarea">
       <h3>Default</h3>
-      ${fontStyle}
       ${BlrTextareaRenderFunction({
         ...defaultParams,
         theme: 'Light',
@@ -71,6 +76,7 @@ export const Example1 = () =>
       })}
     </div>
   `;
+};
 Example1.storyName = 'Default';
 
 export const Example2 = () =>
