@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 import './index';
+import { nothing } from 'lit';
 
 const defaultParams: BlrTextareaType = {
   theme: 'Light',
@@ -48,6 +49,17 @@ export default {
       },
     },
   },
+  argTypes: {
+    placeholder: {
+      name: 'Placeholder',
+      description: 'Defines a short hint intended to aid the user with data entry when the component has no value.',
+      defaultValue: '',
+      control: {
+        type: 'text',
+        label: 'Enter Text',
+      },
+    },
+  },
 };
 
 export const Example1 = () => {
@@ -57,13 +69,19 @@ export const Example1 = () => {
       .stories-textarea {
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
       }
+      .container {
+        width: 377px;
+        height: 64px;
+      }
     </style>
     <div class="stories-textarea">
       <h3>Default</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        theme: 'Light',
-      })}
+      <div class="container">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+        })}
+      </div>
       <h3>Disabled</h3>
       ${BlrTextareaRenderFunction({
         ...defaultParams,
@@ -77,16 +95,39 @@ export const Example1 = () => {
     </div>
   `;
 };
-Example1.storyName = 'Default';
+Example1.storyName = 'Textarea Examples Light Theme';
 
 export const Example2 = () =>
   html`
-    ${BlrTextareaRenderFunction({
-      ...defaultParams,
-      disabled: true,
-    })}
+    ${fontStyle}
+    <style>
+      .stories-textarea {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+        background-color: black;
+        color: white;
+        width: 377px;
+        height: 64px;
+      }
+    </style>
+    <div class="stories-textarea">
+      <h3>Default</h3>
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        theme: 'Dark',
+      })}
+      <h3>Disabled</h3>
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        disabled: true,
+      })}
+      <h3>HasError</h3>
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        hasError: true,
+      })}
+    </div>
   `;
-Example2.storyName = 'Disabled';
+Example2.storyName = 'Textarea Examples Dark Theme';
 
 export const Example3 = () =>
   html`
@@ -96,3 +137,18 @@ export const Example3 = () =>
     })}
   `;
 Example3.storyName = 'hasError';
+
+export const InteractivePlaceholder = ({ placeholder }) =>
+  html`
+    ${fontStyle}
+    ${BlrTextareaRenderFunction({
+      ...defaultParams,
+      placeholder: placeholder,
+      value: '',
+    })}
+  `;
+
+InteractivePlaceholder.storyName = 'Interaktiver Placeholder';
+InteractivePlaceholder.args = {
+  placeholder: defaultParams.placeholder,
+};
