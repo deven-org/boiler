@@ -230,6 +230,10 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         }
       }
 
+      .blr-caption-text {
+        word-break: break-all;
+      }
+
       .hint-wrapper {
         display: flex;
 
@@ -276,7 +280,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         .hint-container {
           display: flex;
           align-items: flex-start;
-          word-break: break-all;
+          margin-top: 1px;
 
           .label-wrapper {
             padding: 0;
@@ -368,9 +372,10 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       .blr-form-label {
-        display: flex;
+        display: inline;
         align-items: baseline;
         color: ${Label.Rest};
+        word-break: break-all;
 
         &:focus {
           color: ${Label.Focus};
@@ -394,7 +399,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-size: ${SM.Label.fontSize};
           font-family: ${SM.Label.fontFamily}, sans-serif;
           line-height: ${SM.Label.lineHeight};
-          gap: ${SM.FormsLabelComponent.ItemSpacing};
+          gap: ${SM.LabelComponent.ItemSpacing};
           color: ${Label.Rest};
         }
 
@@ -404,7 +409,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-size: ${MD.Label.fontSize};
           font-family: ${MD.Label.fontFamily}, sans-serif;
           line-height: ${MD.Label.lineHeight};
-          gap: ${MD.FormsLabelComponent.ItemSpacing};
+          gap: ${MD.LabelComponent.ItemSpacing};
         }
 
         &.lg {
@@ -414,7 +419,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           font-family: ${LG.Label.fontFamily}, sans-serif;
           line-height: ${LG.Label.lineHeight};
           color: ${Label.Rest};
-          gap: ${LG.FormsLabelComponent.ItemSpacing};
+          gap: ${LG.LabelComponent.ItemSpacing};
         }
       }
 

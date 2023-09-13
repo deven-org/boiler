@@ -1,8 +1,16 @@
 {
   "q": {
     "surface": {
+      "blanket": {
+        "value": "{core.color.coolgray.100.opa20}",
+        "type": "color"
+      },
       "default": {
         "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{core.color.crimson.800.opa10}",
         "type": "color"
       },
       "inverted": {
@@ -15,10 +23,6 @@
       },
       "warning": {
         "value": "{core.color.gold.500.opa10}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.crimson.800.opa10}",
         "type": "color"
       },
       "none": {
@@ -122,6 +126,16 @@
         }
       }
     },
+    "background": {
+      "level_1": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "level_2": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      }
+    },
     "stroke": {
       "default": {
         "value": "{core.color.coolgray.700.solid}",
@@ -196,7 +210,7 @@
           "description": "Forms"
         },
         "beta": {
-          "value": "{core.color.coolgray.300.solid}",
+          "value": "{core.color.coolgray.400.solid}",
           "type": "color"
         },
         "gamma": {
@@ -238,6 +252,10 @@
       "onbrand": {
         "alpha": {
           "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "gamma": {
+          "value": "{core.color.white.opa80}",
           "type": "color"
         },
         "beta": {
@@ -319,6 +337,28 @@
         },
         "error": {
           "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        }
+      }
+    },
+    "shadow": {
+      "alpha": {
+        "value": "{core.color.coolgray.100.opa30}",
+        "type": "color",
+        "description": "Apply on elevation Box shadow"
+      }
+    }
+  },
+  "_internal": {
+    "accent": {
+      "pink": {
+        "subtle": {
+          "value": "#FFDFFDDD",
+          "type": "color",
+          "description": "Only for internal purposes e.g. slot component"
+        },
+        "strong": {
+          "value": "#FF5AFFFF",
           "type": "color"
         }
       }

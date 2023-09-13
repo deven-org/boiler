@@ -187,7 +187,7 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
                 border-color: ${Checkbox.Control.Background.Selected.Stroke.ReadOnly};
               }
               &:hover {
-                &:not(:disabled, [readonly]) {
+                &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Background.Selected.Fill.Hover};
                   border-color: ${Checkbox.Control.Background.Selected.Stroke.Hover};
                 }
@@ -202,13 +202,13 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
                 background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"%3E%3Cpath d="M3.35834 8.9759L5.39724 10.9618C5.65804 11.2159 6.07374 11.2159 6.33454 10.9618L12.7617 4.70166" stroke="white" stroke-width="0.671667" stroke-linecap="round" stroke-linejoin="round" /%3E%3C/svg%3E');
               }
               &:hover {
-                &:not(:disabled, [readonly]) {
+                &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Background.Selected.Fill.Hover};
                   border-color: ${Checkbox.Control.Background.Selected.Stroke.Hover};
                 }
               }
               &:active {
-                &:not(:disabled, [readonly]) {
+                &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Background.Selected.Fill.Pressed};
                   border-color: ${Checkbox.Control.Background.Selected.Stroke.Pressed};
                 }
@@ -243,13 +243,13 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
               border-color: ${Checkbox.Control.Background.Unselected.Stroke.Disabled};
             }
             &:hover {
-              &:(:disabled, [readonly]) {
+              &:(:disabled):not([readonly]) {
                 background-color: ${Checkbox.Control.Background.Unselected.Fill.Hover};
                 border-color: ${Checkbox.Control.Background.Unselected.Stroke.Hover};
               }
             }
             &:active {
-              &:not(:disabled, [readonly]) {
+              &:not(:disabled):not([readonly]) {
                 background-color: ${Checkbox.Control.Background.Unselected.Fill.Pressed};
                 border-color: ${Checkbox.Control.Background.Unselected.Stroke.Pressed};
               }
@@ -267,13 +267,13 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
               background-color: ${Checkbox.Control.Background.Selected.Fill.Rest};
               border-color: ${Checkbox.Control.Background.Selected.Stroke.Rest};
               &:hover {
-                &:not(:disabled, [readonly]) {
+                &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Background.Selected.Fill.Hover};
                   border-color: ${Checkbox.Control.Background.Selected.Stroke.Hover};
                 }
               }
               &:active {
-                &:not(:disabled, [readonly]) {
+                &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Background.Selected.Fill.Pressed};
                   border-color: ${Checkbox.Control.Background.Selected.Stroke.Pressed};
                 }

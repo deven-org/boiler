@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { UserInput, SurfaceFill, Placeholder, SM, MD, LG, Input, InputBorderRadius } = semanticTokens.Forms;
+    const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius } = semanticTokens.Forms;
 
     return css`
       .input-wrapper {
@@ -22,6 +22,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           & > input {
             background-color: ${SurfaceFill.Default.Disabled};
             color: ${UserInput.Default.Disabled};
+
             &::placeholder {
               color: ${Placeholder.Default.Disabled};
             }
@@ -38,6 +39,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           & > input {
             background-color: ${SurfaceFill.Default.Focus};
             color: ${UserInput.Default.Focus};
+
             &::placeholder {
               color: ${Placeholder.Default.Focus};
             }

@@ -1,8 +1,16 @@
 {
   "q": {
     "surface": {
+      "blanket": {
+        "value": "{core.color.coolgray.100.opa40}",
+        "type": "color"
+      },
       "default": {
         "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{core.color.crimson.400.opa40}",
         "type": "color"
       },
       "inverted": {
@@ -15,10 +23,6 @@
       },
       "warning": {
         "value": "{core.color.gold.400.opa40}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{core.color.crimson.400.opa40}",
         "type": "color"
       },
       "none": {
@@ -120,6 +124,16 @@
             "type": "color"
           }
         }
+      }
+    },
+    "background": {
+      "level_1": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
+      },
+      "level_2": {
+        "value": "{core.color.coolgray.200.solid}",
+        "type": "color"
       }
     },
     "stroke": {
@@ -253,6 +267,10 @@
             "value": "{core.color.azure.700.solid}",
             "type": "color"
           }
+        },
+        "gamma": {
+          "value": "{core.color.white.opa80}",
+          "type": "color"
         }
       },
       "ondisabled": {
@@ -319,6 +337,28 @@
         },
         "error": {
           "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        }
+      }
+    },
+    "shadow": {
+      "alpha": {
+        "value": "{core.color.coolgray.100.opa30}",
+        "type": "color",
+        "description": "Apply on elevation Box shadow"
+      }
+    }
+  },
+  "_internal": {
+    "accent": {
+      "pink": {
+        "subtle": {
+          "value": "#453344DD",
+          "type": "color",
+          "description": "Only for internal purposes e.g. slot component"
+        },
+        "strong": {
+          "value": "#FF5AFFFF",
           "type": "color"
         }
       }

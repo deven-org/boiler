@@ -1,13 +1,39 @@
-import { css } from "lit";
+import { css } from "nested-css-to-flat/lit-css";
 
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+    const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
     const { Radio } = componentTokens.Forms;
 
     return css`
+      .blr-legend {
+        &.sm {
+          font-weight: ${SM.Legend.fontWeight};
+          font-size: ${SM.Legend.fontSize};
+          font-family: ${SM.Legend.fontFamily}, sans-serif;
+          line-height: ${SM.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+
+        &.md {
+          font-weight: ${MD.Legend.fontWeight};
+          font-size: ${MD.Legend.fontSize};
+          font-family: ${MD.Legend.fontFamily}, sans-serif;
+          line-height: ${MD.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+
+        &.lg {
+          font-weight: ${LG.Legend.fontWeight};
+          font-size: ${LG.Legend.fontSize};
+          font-family: ${LG.Legend.fontFamily}, sans-serif;
+          line-height: ${LG.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+      }
+
       .blr-radio-group {
         display: flex;
         align-items: flex-start;
@@ -24,15 +50,21 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           width: 100%;
 
           &.sm {
-            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px);
+            margin-left: calc(
+              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px
+            );
           }
 
           &.md {
-            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px);
+            margin-left: calc(
+              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px
+            );
           }
 
           &.lg {
-            margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px);
+            margin-left: calc(
+              1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px
+            );
           }
         }
 
@@ -186,7 +218,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             }
 
             &:hover {
-              &:not(.disabled, .readonly) {
+              &:not(.disabled):not(.readonly) {
                 background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
                 width: ${Radio.Control.Background.Unselected.Hover};
                 height: ${Radio.Control.Background.Unselected.Hover};
@@ -198,7 +230,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                   height: ${Radio.Control.Foreground.Unselected.Hover};
                 }
 
-                + .label-wrapper {
+                & + .label-wrapper {
                   .blr-form-label-inline {
                     color: ${LabelNextToControl.Hover};
                   }
@@ -207,7 +239,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             }
 
             &:active {
-              &:not(.disabled, .readonly) {
+              &:not(.disabled):not(.readonly) {
                 background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
                 width: ${Radio.Control.Background.Unselected.Pressed};
                 height: ${Radio.Control.Background.Unselected.Pressed};
@@ -219,7 +251,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                   height: ${Radio.Control.Foreground.Unselected.Pressed};
                 }
 
-                + .label-wrapper {
+                & + .label-wrapper {
                   .blr-form-label-inline {
                     color: ${LabelNextToControl.Pressed};
                   }
@@ -241,7 +273,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 height: ${Radio.Control.Foreground.Unselected.Focus};
               }
 
-              + .label-wrapper {
+              & + .label-wrapper {
                 .blr-form-label-inline {
                   color: ${LabelNextToControl.Focus};
                 }
@@ -325,7 +357,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 height: ${Radio.Control.Foreground.Unselected.Disabled};
               }
 
-              + .label-wrapper {
+              & + .label-wrapper {
                 .blr-form-label-inline {
                   cursor: not-allowed;
                   color: ${LabelNextToControl.Disabled};
@@ -347,7 +379,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Foreground.Unselected.Error};
             }
 
-            + .label-wrapper {
+            & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${LabelNextToControl.Error};
               }
@@ -368,7 +400,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Foreground.Unselected.Disabled};
             }
 
-            + .label-wrapper {
+            & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${LabelNextToControl.Disabled};
               }
@@ -389,7 +421,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Foreground.Unselected.ReadOnly};
             }
 
-            + .label-wrapper {
+            & + .label-wrapper {
               .blr-form-label-inline {
                 color: ${LabelNextToControl.ReadOnly};
               }
