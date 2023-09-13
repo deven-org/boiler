@@ -74,8 +74,9 @@ const componentTypes = [
   'Error',
   'Warning',
   'Select',
-  'Divider',
+  'StepperButton',
   'StepperCombo',
+  'Divider',
   'TabBar',
   'Slider',
 ];
