@@ -175,7 +175,9 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 export const baseStyle = css`
   .input-wrapper {
     display: grid;
-    grid-template-areas: "left center right";
+
+    grid-template-areas: "left center span right";
+
     overflow: hidden;
     box-sizing: border-box;
 
@@ -190,7 +192,7 @@ export const baseStyle = css`
     }
 
     &.mode1 {
-      grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+      grid-template-columns: fit-content(100%) 1.6fr 1.6fr fit-content(100%);
 
       .increment {
         grid-area: right;
@@ -202,28 +204,40 @@ export const baseStyle = css`
 
       & > input {
         grid-area: center;
-        text-align: center;
+        text-align: right;
+        padding: 0.5rem 5px;
+      }
+
+      & > span {
+        text-align: left;
+        padding: 0.7rem 0;
       }
     }
 
     &.mode2 {
-      grid-template-columns: 1fr fit-content(100%) fit-content(100%);
+      grid-template-columns: 1.6fr fit-content(100%) fit-content(100%);
 
       .increment {
         grid-area: right;
       }
 
       .decrement {
-        grid-area: center;
+        grid-area: span;
       }
 
       & > input {
         grid-area: left;
       }
+
+      & > span {
+        grid-area: left;
+        text-align: left;
+        padding: 0.7rem 27px;
+      }
     }
 
     &.mode3 {
-      grid-template-columns: 1fr fit-content(100%);
+      grid-template-columns: 1fr 1fr fit-content(100%);
 
       .increment {
         grid-area: right;
@@ -237,6 +251,13 @@ export const baseStyle = css`
       & > input {
         grid-area: left;
         grid-row: span 2;
+      }
+
+      & > span {
+        grid-area: center;
+        grid-row: span 2;
+        text-align: left;
+        padding: 0.7rem 0;
       }
     }
   }

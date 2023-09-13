@@ -47,7 +47,7 @@ export class BlrNumberInput extends LitElement {
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() value?: number;
   @property() step?: number;
-  @property() unit?: string = 'kg';
+  @property() unit?: string | undefined;
   @property() totalDigits?: number;
   @property() fractionDigits?: number;
 
@@ -73,7 +73,6 @@ export class BlrNumberInput extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
-    this.step = Number(this.step);
   }
 
   protected handleFocus = () => {
@@ -106,6 +105,7 @@ export class BlrNumberInput extends LitElement {
 
     return result;
   }
+
   protected getButtonTemplate = (
     buttonsType: ButtonTemplateType,
     adjustType: AdjustType,
