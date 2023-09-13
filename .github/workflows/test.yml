@@ -31,5 +31,8 @@ jobs:
       - name: Install modules
         run: npm ci
 
+      - name: Generate tokens
+        run: npm run tokens:generate
+
       - name: Run Tests
         run: npm run test
