@@ -16,10 +16,10 @@ export const getComponentConfigToken = (
   const foundForm = componentConfig.Forms[componentTokenName];
   let returnValue: string | undefined = undefined;
 
-  if (foundAction && foundAction[size.toUpperCase()] && foundAction[size.toUpperCase()][configTokenName]) {
-    returnValue = foundAction[size.toUpperCase()][configTokenName];
-  } else if (foundForm && foundForm[size.toUpperCase()] && foundForm[size.toUpperCase()][configTokenName]) {
-    returnValue = foundForm[size.toUpperCase()][configTokenName];
+  if (foundAction && foundAction[size?.toUpperCase()] && foundAction[size?.toUpperCase()][configTokenName]) {
+    returnValue = foundAction[size?.toUpperCase()][configTokenName];
+  } else if (foundForm && foundForm[size?.toUpperCase()] && foundForm[size?.toUpperCase()][configTokenName]) {
+    returnValue = foundForm[size?.toUpperCase()][configTokenName];
   }
 
   if (returnValue !== undefined) {
