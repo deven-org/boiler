@@ -348,5 +348,20 @@
         "description": "Apply on elevation Box shadow"
       }
     }
+  },
+  "_internal": {
+    "accent": {
+      "pink": {
+        "subtle": {
+          "value": "#FFDFFDDD",
+          "type": "color",
+          "description": "Only for internal purposes e.g. slot component"
+        },
+        "strong": {
+          "value": "#FF5AFFFF",
+          "type": "color"
+        }
+      }
+    }
   }
 }

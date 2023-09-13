@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { BlrDividerRenderFunction, BlrDividerType } from './index';
-import { DividerVariations, FormSizes } from '../../../globals/constants';
+import { DividerVariations } from '../../../globals/constants';
 import './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
@@ -9,10 +9,6 @@ export default {
   argTypes: {
     dividerDirectionVariant: {
       options: DividerVariations,
-      control: { type: 'select' },
-    },
-    size: {
-      options: FormSizes,
       control: { type: 'select' },
     },
     theme: {
@@ -28,12 +24,13 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDividerType) => html`
+export const BlrDivider = ({ dividerDirectionVariant, addMargin, size, theme }: BlrDividerType) => html`
   ${dividerDirectionVariant === 'vertical'
     ? html`<div style="height: 100px; display: inline-block;">
         ${BlrDividerRenderFunction({
           dividerDirectionVariant,
           addMargin,
+          size,
           theme,
         })}
       </div> `
@@ -41,6 +38,7 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme }: BlrDiv
         ${BlrDividerRenderFunction({
           dividerDirectionVariant,
           addMargin,
+          size,
           theme,
         })}
       </div>`}
@@ -52,5 +50,5 @@ BlrDivider.args = {
   size: 'md',
   addMargin: false,
   theme: 'Light',
-  dividerDirectionVariant: 'vertical',
+  directionVariant: 'vertical',
 };
