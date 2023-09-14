@@ -13,7 +13,8 @@ import {
   TabVariants,
   TabContentVariants,
   TabAlignmentVariants,
-  OverflowVariants,
+  OverflowVariantsStandard,
+  OverflowVariantsFullWidth,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -42,11 +43,13 @@ export type TabType = {
   label: string;
   icon: IconType;
   href: string;
+  disabled?: boolean;
 };
 export type TabVariantType = (typeof TabVariants)[number];
 export type TabContentVariantType = (typeof TabContentVariants)[number];
 export type TabAlignmentVariantType = (typeof TabAlignmentVariants)[number];
-export type OverflowVariantType = (typeof OverflowVariants)[number];
+export type OverflowVariantTypeStandard = (typeof OverflowVariantsStandard)[number];
+export type OverflowVariantTypeFullWidth = (typeof OverflowVariantsFullWidth)[number];
 
 export type RenderBtnProps = {
   btnId: string;

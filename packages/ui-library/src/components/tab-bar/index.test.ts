@@ -31,6 +31,10 @@ const sampleParams: BlrTabBarType = {
   iconPosition: 'leading',
   alignment: 'left',
   _navItems: [],
+  _navItemsSlots: [],
+  _panels: [],
+  _navList: document.createElement('ul'),
+  scrollTab: () => null,
 };
 
 describe('blr-tab-bar', () => {
