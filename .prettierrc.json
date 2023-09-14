@@ -11,13 +11,15 @@
     {
       "files": ["*.css.js"],
       "options": {
-        "singleQuote": false
+        "singleQuote": false,
+        "printWidth": 140
       }
     },
     {
       "files": ["*.css.ts"],
       "options": {
-        "singleQuote": false
+        "singleQuote": false,
+        "printWidth": 140
       }
     }
   ]

@@ -1,13 +1,12 @@
 import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { Silent } = semanticTokens.Action;
-    const { IconButton } = componentTokens.Action;
-    const { TabBar } = componentTokens.Navigation;
+export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const { Silent } = semanticTokens.Action;
+  const { IconButton } = componentTokens.Action;
+  const { TabBar } = componentTokens.Navigation;
 
-    return css`
+  return css`
       .wrapper-horizontal {
         position: relative;
         display: block;
@@ -351,5 +350,4 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         }
       }
     `;
-  }
-);
+});

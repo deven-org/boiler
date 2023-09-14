@@ -46,27 +46,34 @@ export class BlrNumberInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() value?: number;
+  @property() step?: number;
+  @property() unit?: string | undefined;
+  @property() totalDigits?: number;
+  @property() fractionDigits?: number;
+  @property() prependUnit?: boolean;
 
   @property() theme: ThemeType = 'Light';
 
   @state() protected isFocused = false;
-  @state() protected currentValue: number | undefined = undefined;
+  @state() protected currentValue = 0;
 
   protected stepperUp() {
-    if (this.currentValue !== undefined) {
-      this.currentValue++;
+    if (this.currentValue !== undefined && this.step !== undefined) {
+      this.currentValue += Number(this.step);
+      this.requestUpdate('currentValue');
     }
   }
 
   protected stepperDown() {
-    if (this.currentValue !== undefined) {
-      this.currentValue--;
+    if (this.currentValue !== undefined && this.step !== undefined) {
+      this.currentValue -= Number(this.step);
+      this.requestUpdate('currentValue');
     }
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.currentValue = Number(this.currentValue) || Number(this.value);
+    this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
   }
 
   protected handleFocus = () => {
@@ -79,6 +86,21 @@ export class BlrNumberInput extends LitElement {
 
   protected handleChange() {
     this.currentValue = Number(this._numberFieldNode.value) || 0;
+  }
+
+  protected customFormat(cur: number, fractions: number, digits: number): string {
+    const formattedNumber = cur.toFixed(fractions);
+    const [integerPart, fractionPart] = formattedNumber.split('.');
+
+    let paddedInteger = integerPart;
+    if (digits > 0) {
+      const padding = Math.max(digits - integerPart.length, 0);
+      paddedInteger = '0'.repeat(padding) + integerPart;
+    }
+
+    const result = `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
+
+    return result;
   }
 
   protected getButtonTemplate = (
@@ -129,6 +151,12 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    const unitClasses = classMap({
+      unit: true,
+      prepend: this.prependUnit === true,
+      [`${this.size}`]: this.size,
+    });
+
     const wrapperClasses = classMap({
       'input-wrapper': true,
       'focus': this.isFocused || false,
@@ -136,6 +164,7 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
 
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
+      'hasUnit': this.unit ? this.unit.length > 0 : false,
     });
     const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
 
@@ -163,11 +192,15 @@ export class BlrNumberInput extends LitElement {
               ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
               ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
             `}
+        ${this.prependUnit && this.unit && this.unit.length
+          ? html`<span class="${unitClasses}">${this.unit}</span>`
+          : nothing}
 
         <input
           class="${inputClasses}"
           type="number"
-          .value=${this.currentValue}
+          .value=${this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)}
+          step="${this.step || nothing}"
           ?disabled=${this.disabled || nothing}
           ?readonly=${this.readonly || nothing}
           ?required="${this.required}"
@@ -176,6 +209,9 @@ export class BlrNumberInput extends LitElement {
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
+        ${!this.prependUnit && this.unit && this.unit.length
+          ? html`<span class="${unitClasses}">${this.unit}</span>`
+          : nothing}
       </div>
     `;
   }
@@ -196,7 +232,12 @@ export const BlrNumberInputRenderFunction = ({
   labelAppendix,
   numberInputId,
   value,
+  step,
   theme,
+  unit,
+  fractionDigits,
+  totalDigits,
+  prependUnit,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -209,8 +250,13 @@ export const BlrNumberInputRenderFunction = ({
     .hasError="${hasError}"
     .size="${size}"
     .value="${value}"
+    .step="${step}"
     .labelAppendix="${labelAppendix}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
+    .unit="${unit}"
+    .fractionDigits="${fractionDigits}"
+    .totalDigits="${totalDigits}"
+    .prependUnit="${prependUnit}"
   ></blr-number-input>`;
 };

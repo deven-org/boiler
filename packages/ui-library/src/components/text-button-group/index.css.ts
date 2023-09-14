@@ -20,14 +20,17 @@ export const styleCustom = css`
 
   .wrapper {
     display: flex;
-   &.flex-end {
-   justify-content: flex-end;
-   }
-   &.flex-start {
-   justify-content: flex-start;
-   }
-   &.center {
-   justify-content: center;
-   }
-   }
-   `;
+
+    &.flex-end {
+      justify-content: flex-end;
+    }
+
+    &.flex-start {
+      justify-content: flex-start;
+    }
+
+    &.center {
+      justify-content: center;
+    }
+  }
+`;
