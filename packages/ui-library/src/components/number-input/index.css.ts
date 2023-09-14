@@ -50,11 +50,13 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
-  const { Select } = componentTokens.Forms;
 
   return css`
     .custom-form-input {
       all: initial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: ${UserInput.Default.Rest};
 
       &::placeholder {
@@ -66,7 +68,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${SM.UserInput.fontSize};
         font-family: ${SM.UserInput.fontFamily}, sans-serif;
         line-height: ${SM.UserInput.lineHeight};
-        padding: ${Select.SM.InputFieldPadding};
+        padding: ${SM.InputField.Padding};
       }
 
       &.md {
@@ -74,7 +76,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${MD.UserInput.fontSize};
         font-family: ${MD.UserInput.fontFamily}, sans-serif;
         line-height: ${MD.UserInput.lineHeight};
-        padding: ${Select.MD.InputFieldPadding};
+        padding: ${MD.InputField.Padding};
       }
 
       &.lg {
@@ -82,17 +84,22 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${LG.UserInput.fontSize};
         font-family: ${LG.UserInput.fontFamily}, sans-serif;
         line-height: ${LG.UserInput.lineHeight};
-        padding: ${Select.LG.InputFieldPadding};
+        padding: ${LG.InputField.Padding};
       }
     }
 
     .unit {
+      all: initial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       &.sm {
         font-weight: ${SM.UserInput.fontWeight};
         font-size: ${SM.UserInput.fontSize};
         font-family: ${SM.UserInput.fontFamily}, sans-serif;
         line-height: ${SM.UserInput.lineHeight};
-        padding: ${Select.SM.InputFieldPadding};
+        padding: ${SM.InputField.Padding};
       }
 
       &.md {
@@ -100,7 +107,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${MD.UserInput.fontSize};
         font-family: ${MD.UserInput.fontFamily}, sans-serif;
         line-height: ${MD.UserInput.lineHeight};
-        padding: ${Select.MD.InputFieldPadding};
+        padding: ${MD.InputField.Padding};
       }
 
       &.lg {
@@ -108,7 +115,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${LG.UserInput.fontSize};
         font-family: ${LG.UserInput.fontFamily}, sans-serif;
         line-height: ${LG.UserInput.lineHeight};
-        padding: ${Select.LG.InputFieldPadding};
+        padding: ${LG.InputField.Padding};
       }
     }
   `;
@@ -274,10 +281,12 @@ export const baseStyle = css`
 
       & > .unit:not(.prepend) {
         grid-area: unitright;
+        grid-row: span 2;
       }
 
       & > .unit.prepend {
         grid-area: unitleft;
+        grid-row: span 2;
       }
     }
   }

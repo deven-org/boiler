@@ -89,10 +89,6 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected customFormat(cur: number, fractions: number, digits: number): string {
-    if (fractions === 0) {
-      return cur?.toFixed(0);
-    }
-
     const formattedNumber = cur.toFixed(fractions);
     const [integerPart, fractionPart] = formattedNumber.split('.');
 
@@ -196,7 +192,10 @@ export class BlrNumberInput extends LitElement {
               ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
               ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
             `}
-        ${this.unit && this.unit.length ? html`<span class="${unitClasses}">${this.unit}</span>` : nothing}
+        ${this.prependUnit && this.unit && this.unit.length
+          ? html`<span class="${unitClasses}">${this.unit}</span>`
+          : nothing}
+
         <input
           class="${inputClasses}"
           type="number"
@@ -210,6 +209,9 @@ export class BlrNumberInput extends LitElement {
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
+        ${!this.prependUnit && this.unit && this.unit.length
+          ? html`<span class="${unitClasses}">${this.unit}</span>`
+          : nothing}
       </div>
     `;
   }

@@ -25,7 +25,7 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     value: {
-      control: { type: 'number' },
+      control: { type: 'text' },
     },
     step: {
       control: { type: 'text' },
@@ -99,13 +99,13 @@ export const BlrNumberInput = ({
 BlrNumberInput.storyName = 'Component docs';
 
 BlrNumberInput.args = {
-  value: undefined,
+  unit: 'kg',
+  prependUnit: false,
+  variant: 'mode3',
+  value: '',
   step: '1',
   fractionDigits: '',
   totalDigits: '',
-  unit: 'kg',
-  prependUnit: false,
-  variant: 'mode1',
   size: 'md',
   theme: 'Light',
   hasLabel: true,

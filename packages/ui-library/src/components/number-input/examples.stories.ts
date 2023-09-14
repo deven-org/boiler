@@ -6,15 +6,15 @@ import './index';
 const defaultParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',
   disabled: false,
-  variant: 'mode2',
+  variant: 'mode3',
   theme: 'Light',
   size: 'sm',
   numberInputId: 'egal',
   label: 'Hello',
   showHint: false,
   hintIcon: 'blr360Lg',
-  numberFormat: '%f',
-  value: 10.99999999,
+  step: 1,
+  value: 99,
 };
 
 export default {
@@ -32,42 +32,41 @@ export default {
 export const Example1 = () =>
   html`
     Default format
-    ${BlrNumberInputRenderFunction({
-      ...defaultParams,
-    })}
+    <div style="max-width: 290px;">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+      })}
+    </div>
   `;
 
-Example1.storyName = 'Default (%f)';
+Example1.storyName = 'Default';
 
 export const Example2 = () =>
   html`
-    1 place after decimal point
-    ${BlrNumberInputRenderFunction({
-      ...defaultParams,
-      numberFormat: '%.1f',
-    })}
+    Percent format
+    <div style="max-width: 290px;">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        unit: '%',
+        totalDigits: 3,
+      })}
+    </div>
   `;
 
-Example2.storyName = '1 decimal (%.1f)';
+Example2.storyName = 'Percent';
 
 export const Example3 = () =>
   html`
-    1 place after decimal point
-    ${BlrNumberInputRenderFunction({
-      ...defaultParams,
-      numberFormat: '%.2f',
-    })}
+    Percent format
+    <div style="max-width: 290px;">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        unit: '$',
+        prependUnit: true,
+        totalDigits: 3,
+        fractionDigits: 2,
+      })}
+    </div>
   `;
 
-Example3.storyName = '2 decimal (%.2f)';
-
-export const Example4 = () =>
-  html`
-    5 zeroes padded from the left
-    ${BlrNumberInputRenderFunction({
-      ...defaultParams,
-      numberFormat: '%05d',
-    })}
-  `;
-
-Example4.storyName = '5 zeroes padded from the left (%05d)';
+Example3.storyName = 'USD';
