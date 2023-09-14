@@ -52,5 +52,7 @@ themes.array.map((theme) => {
   fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.${theme}.generated.ts`, fileOutPut, 'utf-8');
 });
 
-const themeFile = `export const Themes = [ "${ themes.array.join('", "') }" ] as const; export type ThemeType = (typeof Themes)[number];`;
+const themeFile = `export const Themes = [ "${themes.array.join(
+  '", "'
+)}" ] as const; export type ThemeType = (typeof Themes)[number];`;
 fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.themes.ts`, themeFile, 'utf-8');

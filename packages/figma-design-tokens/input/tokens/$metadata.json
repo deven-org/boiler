@@ -5,7 +5,11 @@
     "intermediary/Dark",
     "color/SEM",
     "color/CMP",
+    "dimensions/SEM",
     "dimensions/CMP",
-    "dimensions/SEM"
+    "captions/allCaptions",
+    "captions/HintOnly",
+    "captions/ErrorOnly",
+    "captions/noCaptions"
   ]
 }

@@ -40,6 +40,7 @@ const semanticTypes = [
   'CaptionSlot',
   'Label',
   'LabelSlot',
+  'Legend',
   'UserInput',
   'Placeholder',
   'SurfaceFill',
@@ -73,8 +74,11 @@ const componentTypes = [
   'Error',
   'Warning',
   'Select',
-  'Divider',
+  'StepperButton',
   'StepperCombo',
+  'Divider',
+  'TabBar',
+  'Slider',
 ];
 
 StyleDictionaryPackage.registerFormat({
@@ -108,6 +112,7 @@ const getStyleDictionaryConfig = (theme) => {
       'input/tokens/core/*.json',
       'input/tokens/color/*.json',
       'input/tokens/dimensions/*.json',
+      'input/tokens/captions/*.json',
     ],
     platforms: {
       scss: {
