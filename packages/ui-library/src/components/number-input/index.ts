@@ -155,6 +155,12 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
     });
 
+    const unitClasses = classMap({
+      unit: true,
+      prepend: this.prependUnit === true,
+      [`${this.size}`]: this.size,
+    });
+
     const wrapperClasses = classMap({
       'input-wrapper': true,
       'focus': this.isFocused || false,
@@ -162,6 +168,7 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
 
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
+      'hasUnit': this.unit ? this.unit.length > 0 : false,
     });
     const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
 
@@ -189,7 +196,7 @@ export class BlrNumberInput extends LitElement {
               ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
               ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
             `}
-        ${!this.prependUnit && this.unit ? html`<span class="${inputClasses}">${this.unit}</span>` : nothing}
+        ${this.unit && this.unit.length ? html`<span class="${unitClasses}">${this.unit}</span>` : nothing}
         <input
           class="${inputClasses}"
           type="number"
@@ -203,7 +210,6 @@ export class BlrNumberInput extends LitElement {
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
-        ${this.prependUnit && this.unit ? html`<span class="${inputClasses}">${this.unit}</span>` : nothing}
       </div>
     `;
   }
