@@ -188,6 +188,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   align-items: center;
                   flex-shrink: 0;
 
+                  > blr-icon {
+                    align-items: center;
+                  }
+
                   &:focus-visible {
                     outline: none;
                   }
@@ -270,6 +274,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-left: ${TabBar.Tab.SM.ContentRow.PaddingLeftRight};
                     padding-right: ${TabBar.Tab.SM.ContentRow.PaddingLeftRight};
                     gap: ${TabBar.Tab.SM.ContentRow.ItemSpacing};
+
+                    > blr-icon {
+                      width: ${TabBar.Tab.SM.Icon.Sizing};
+                      height: ${TabBar.Tab.SM.Icon.Sizing};
+                    }
                   }
                 }
 
@@ -287,6 +296,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-left: ${TabBar.Tab.MD.ContentRow.PaddingLeftRight};
                     padding-right: ${TabBar.Tab.MD.ContentRow.PaddingLeftRight};
                     gap: ${TabBar.Tab.MD.ContentRow.ItemSpacing};
+
+                    > blr-icon {
+                      width: ${TabBar.Tab.MD.Icon.Sizing};
+                      height: ${TabBar.Tab.MD.Icon.Sizing};
+                    }
                   }
                 }
 
@@ -304,6 +318,12 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-left: ${TabBar.Tab.LG.ContentRow.PaddingLeftRight};
                     padding-right: ${TabBar.Tab.LG.ContentRow.PaddingLeftRight};
                     gap: ${TabBar.Tab.MD.ContentRow.ItemSpacing};
+
+
+                    > blr-icon {
+                      width: ${TabBar.Tab.LG.Icon.Sizing};
+                      height: ${TabBar.Tab.LG.Icon.Sizing};
+                    }
                   }
                 }
 
