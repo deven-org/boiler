@@ -8,7 +8,8 @@ import {
   FormSizesType,
   TabType,
   TabVariantType,
-  OverflowVariantType,
+  OverflowVariantTypeStandard,
+  OverflowVariantTypeFullWidth,
   TabAlignmentVariantType,
   IconPositionVariant,
   TabContentVariantType,
@@ -25,13 +26,20 @@ export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
   @query('.blr-tab-bar')
-  _navList!: Element;
+  _navList!: HTMLElement;
 
   @queryAll('.nav-list li')
-  _navItems!: Element[];
+  _navItems!: HTMLElement[];
+
+  @queryAll('slot[name=tab]')
+  _navItemsSlots!: HTMLElement[];
+
+  @queryAll('[role=tabpanel]')
+  _panels!: HTMLElement[];
 
   @property() tabs!: TabType[];
-  @property() overflowVariant!: OverflowVariantType;
+  @property() overflowVariantStandard!: OverflowVariantTypeStandard;
+  @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
   @property() iconPosition: IconPositionVariant = 'leading';
   @property() icon: IconType = 'blr360Sm';
   @property() variant: TabVariantType = 'standard';
@@ -65,16 +73,28 @@ export class BlrTabBar extends LitElement {
     const dynamicStyles =
       this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
 
-    const setActive = (el: Element) => {
-      if (el.parentElement) {
-        [...el.parentElement.children].forEach((sib) => sib.classList.remove('active'));
-        el.classList.add('active');
+    const setActive = (tabIndex: number) => {
+      const selectedTab = this._navItems[tabIndex];
+      selectedTab.setAttribute('aria-selected', 'true');
+      if (selectedTab.parentElement) {
+        [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
+        selectedTab.classList.add('active');
+      }
+      if (!selectedTab.classList.contains('disabled')) {
+        this._panels.forEach((panel) => {
+          panel.classList.remove('active');
+          panel.setAttribute('hidden', '');
+        });
+        this._panels[tabIndex].classList.add('active');
+        this._panels[tabIndex].removeAttribute('hidden');
       }
     };
 
-    const handleClick = (event: Event) => {
+    const handleSelect = (event: Event, label: string) => {
       event.preventDefault();
-      this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(listItem)));
+      const navLabels = Object.values(this._navItemsSlots).map((nav) => nav.innerText);
+      const index = navLabels.indexOf(label);
+      this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
     };
 
     const classes = classMap({
@@ -83,7 +103,8 @@ export class BlrTabBar extends LitElement {
     });
 
     const navListClasses = classMap({
-      [`${this.overflowVariant}`]: this.overflowVariant,
+      [`${this.overflowVariantStandard}`]: this.overflowVariantStandard,
+      [`${this.overflowVariantFullWidth}`]: this.overflowVariantFullWidth,
       [`${this.alignment}`]: this.alignment,
     });
 
@@ -91,7 +112,7 @@ export class BlrTabBar extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="blr-tab-bar-group ${classes}">
-        ${this.overflowVariant === 'buttons'
+        ${this.overflowVariantStandard === 'buttons'
           ? html`
               <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                 ${BlrIconRenderFunction({
@@ -103,15 +124,21 @@ export class BlrTabBar extends LitElement {
             `
           : nothing}
         <div class="blr-tab-bar ${this.alignment}">
-          <ul class="nav-list ${navListClasses}">
+          <ul class="nav-list ${navListClasses}" role="tablist">
             ${this.tabs.map((tab) => {
               return html`
-                <li class="nav-item-container ${classes}">
+                <li
+                  class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}"
+                  role="presentation"
+                >
                   <div class="nav-item-content-wrapper">
                     <a
-                      href=${tab.href}
-                      class="blr-semantic-action ${this.size} ${this.iconPosition}"
-                      @click=${handleClick}
+                      id=${`${tab.label.toLowerCase()} tab`}
+                      role="tab"
+                      href=${`#${tab.href}`}
+                      aria-controls=${tab.label.toLowerCase()}
+                      class="${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
+                      @click=${(e: Event) => handleSelect(e, tab.label)}
                     >
                       ${this.tabContent !== 'labelOnly'
                         ? BlrIconRenderFunction({
@@ -120,7 +147,9 @@ export class BlrTabBar extends LitElement {
                             hideAria: true,
                           })
                         : nothing}
-                      ${this.tabContent !== 'iconOnly' ? html` <p>${tab.label}</p>` : nothing}
+                      ${this.tabContent !== 'iconOnly'
+                        ? html` <slot class="blr-semantic-action ${this.size}" name="tab">${tab.label}</slot>`
+                        : nothing}
                     </a>
                   </div>
                   <div class="nav-item-underline"></div>
@@ -129,7 +158,7 @@ export class BlrTabBar extends LitElement {
             })}
           </ul>
         </div>
-        ${this.overflowVariant === 'buttons'
+        ${this.overflowVariantStandard === 'buttons'
           ? html`
               <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                 ${BlrIconRenderFunction({
@@ -141,7 +170,7 @@ export class BlrTabBar extends LitElement {
             `
           : nothing}
       </div>
-      <div class="wrapper-horizontal">
+      <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
         ${this.showDivider
           ? BlrDividerRenderFunction({
               dividerDirectionVariant: 'horizontal',
@@ -150,7 +179,18 @@ export class BlrTabBar extends LitElement {
               theme: this.theme,
             })
           : nothing}
-      </div> `;
+      </div>
+      ${this.tabs.map((tab) => {
+        return html` <section
+          id=${tab.href}
+          class="panel-wrapper"
+          role="tabpanel"
+          aria-labelledby="${`${tab.label.toLowerCase()} tab`}"
+          hidden
+        >
+          <p>${tab.label}</p>
+        </section>`;
+      })}`;
   }
 }
 
@@ -159,8 +199,11 @@ export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
 export const BlrTabBarRenderFunction = ({
   _navList,
   _navItems,
+  _navItemsSlots,
+  _panels,
   tabs,
-  overflowVariant,
+  overflowVariantStandard,
+  overflowVariantFullWidth,
   iconPosition,
   variant,
   tabContent,
@@ -177,8 +220,11 @@ export const BlrTabBarRenderFunction = ({
   return html`<blr-tab-bar
     .navlist=${_navList}
     .navItems=${_navItems}
+    .navItemsSlots=${_navItemsSlots}
+    .panels=${_panels}
     .tabs=${tabs}
-    .overflowVariant=${overflowVariant}
+    .overflowVariantStandard=${overflowVariantStandard}
+    .overflowVariantFullWidth=${overflowVariantFullWidth}
     .iconPosition=${iconPosition}
     .showDivider=${showDivider}
     .icon=${icon}

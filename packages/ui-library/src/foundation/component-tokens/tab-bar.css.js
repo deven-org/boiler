@@ -8,13 +8,30 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
     const { TabBar } = componentTokens.Navigation;
 
     return css`
+      .wrapper-horizontal {
+        position: relative;
+        display: block;
+
+        &.wrap {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 0;
+        }
+
+        &.browserOverflow {
+          padding: 0px 1rem;
+        }
+      }
       .blr-tab-bar-group {
         width: 100%;
         display: flex;
         align-items: center;
+        position: relative;
 
         &.fullWidth {
+          justify-content: space-evenly;
           .blr-tab-bar {
+            max-width: none;
             .nav-list {
               justify-content: space-between;
             }
@@ -28,22 +45,17 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           font: inherit;
           cursor: pointer;
           outline: inherit;
-          background-color: white;
+          background-color: ${Silent.SurfaceFill.Rest};
+          border-color: ${Silent.SurfaceStroke.Rest};
+          color: ${Silent.Icon.Rest};
+
 
           &.left {
-            position: absolute;
-            left: 1.8rem;
-            top: 50%;
-            z-index: 2;
-            transform: translateY(-50%);
+            padding-top: 15px;
           }
 
           &.right {
-            position: absolute;
-            right: 1.8rem;
-            top: 50%;
-            z-index: 2;
-            transform: translateY(-50%);
+            padding-top: 15px;
           }
 
           &.sm {
@@ -60,10 +72,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         }
 
         .blr-tab-bar {
-          align-items: center;
           position: relative;
           width: 100%;
-          overflow: auto;
+          overflow-x: auto;
+          padding-top: 15px;
           padding-bottom: 15px;
           margin-bottom: -15px;
           max-width: calc(100% - 2rem);
@@ -71,10 +83,9 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           .nav-list {
             display: flex;
             list-style: none;
-            padding: 0 1.5rem;
+            padding: 0 0.5rem;
             margin: 0;
             align-items: center;
-            z-index: 1;
 
             &.left {
               justify-content: flex-start;
@@ -102,27 +113,135 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
             &.wrap {
               flex-wrap: wrap;
+              overflow-x: visible;
+              padding: 0;
             }
 
             .nav-item-container {
               display: flex;
               flex-direction: column;
               flex: 0 1 0px;
+              justify-content: center;
+
+
+              &:focus-within {
+                outline: 2px solid black;
+                border-radius: 4px;
+              }
 
               &.fullWidth {
                 flex: 1 1 0px;
               }
 
+              &.active {
+                .nav-item-content-wrapper {
+                  > a {
+                  color: ${TabBar.Tab.Label.Selected.Rest};
+
+                  &:hover {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Selected.Hover};
+                      }
+
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Selected.Hover};
+                      }
+                    }
+                  }
+
+                  &:focus {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Selected.Focus};
+                      }
+
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Selected.Focus};
+                      }
+                    }
+                  }
+
+                  &:active {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Selected.Pressed};
+                      }
+
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Selected.Pressed};
+                      }
+                    }
+                  }
+                }
+                }
+              }
+
               .nav-item-content-wrapper {
                 display: flex;
                 justify-content: center;
+                &:focus-visible {
+                  outline: none;
+                }
 
                 > a {
-                  color: ${TabBar.Tab.Label.Unselected};
+                  color: ${TabBar.Tab.Label.Unselected.Rest};
                   display: flex;
                   text-decoration: none;
                   align-items: center;
                   flex-shrink: 0;
+
+                  > blr-icon {
+                    align-items: center;
+                  }
+
+                  &:focus-visible {
+                    outline: none;
+                  }
+
+                  &:hover {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Unselected.Hover};
+                      }
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Unselected.Hover};
+                      }
+                    }
+                  }
+
+
+                  &:active {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Unselected.Pressed};
+                      }
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Unselected.Pressed};
+                      }
+                    }
+                  }
+
+                  &:focus {
+                    &:not(.disabled) {
+                      > p {
+                        color: ${TabBar.Tab.Label.Unselected.Focus};
+                      }
+                      > blr-icon {
+                        color: ${TabBar.Tab.Icon.Unselected.Focus};
+                      }
+                    }
+                  }
+
+                  &.disabled {
+                    > slot {
+                      color: ${TabBar.Tab.Label.Unselected.Disabled}
+                    }
+
+                    > blr-icon {
+                      color: ${TabBar.Tab.Icon.Unselected.Disabled};
+                    }
+                  }
 
                   &.leading {
                     flex-direction: row;
@@ -145,6 +264,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                 }
               }
 
+              .nav-item-underline {
+                opacity: ${TabBar.Tab.HighlightLine.Opacity.Unselected.Rest};
+              }
+
               &.sm {
                 padding-top: ${TabBar.Tab.SM.ContentCol.TopPadding};
                 gap: ${TabBar.Tab.SM.ContentCol.ItemSpacing};
@@ -154,6 +277,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-left: ${TabBar.Tab.SM.ContentRow.PaddingLeftRight};
                     padding-right: ${TabBar.Tab.SM.ContentRow.PaddingLeftRight};
                     gap: ${TabBar.Tab.SM.ContentRow.ItemSpacing};
+
+                    > blr-icon {
+                      width: ${TabBar.Tab.SM.Icon.Sizing};
+                      height: ${TabBar.Tab.SM.Icon.Sizing};
+                    }
                   }
                 }
 
@@ -171,6 +299,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-left: ${TabBar.Tab.MD.ContentRow.PaddingLeftRight};
                     padding-right: ${TabBar.Tab.MD.ContentRow.PaddingLeftRight};
                     gap: ${TabBar.Tab.MD.ContentRow.ItemSpacing};
+
+                    > blr-icon {
+                      width: ${TabBar.Tab.MD.Icon.Sizing};
+                      height: ${TabBar.Tab.MD.Icon.Sizing};
+                    }
                   }
                 }
 
@@ -188,6 +321,12 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     padding-left: ${TabBar.Tab.LG.ContentRow.PaddingLeftRight};
                     padding-right: ${TabBar.Tab.LG.ContentRow.PaddingLeftRight};
                     gap: ${TabBar.Tab.MD.ContentRow.ItemSpacing};
+
+
+                    > blr-icon {
+                      width: ${TabBar.Tab.LG.Icon.Sizing};
+                      height: ${TabBar.Tab.LG.Icon.Sizing};
+                    }
                   }
                 }
 
@@ -201,10 +340,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               }
 
               &.active {
-                .nav-item-underline {
-                  background-color: ${TabBar.Tab.HighlightLine.SurfaceFill};
-                  opacity: ${TabBar.Tab.HighlightLine.Selected.Opacity};
-                }
+                &:not(.disabled) {
+                  .nav-item-underline {
+                    background-color: ${TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest};
+                    opacity: ${TabBar.Tab.HighlightLine.Opacity.Selected.Rest};
+                  }
               }
             }
           }

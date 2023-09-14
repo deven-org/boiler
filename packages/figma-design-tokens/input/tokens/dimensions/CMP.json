@@ -2513,22 +2513,6 @@
             }
           }
         },
-        "HighlightLine": {
-          "Selected": {
-            "Opacity": {
-              "value": "1",
-              "type": "opacity",
-              "description": "Controlls the visibility of the HighlightLine; Apply on selected / active tabs only. <HighlightLine>"
-            }
-          },
-          "Unselected": {
-            "Opacity": {
-              "value": "0",
-              "type": "opacity",
-              "description": "Controlls the visibility of the HighlightLine; Apply on unselected / inactive and disabled tabs. <HighlightLine>"
-            }
-          }
-        },
         "MD": {
           "HighlightLine": {
             "Height": {

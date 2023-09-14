@@ -110,6 +110,7 @@ const getStyleDictionaryConfig = (theme) => {
       'input/tokens/core/*.json',
       'input/tokens/color/*.json',
       'input/tokens/dimensions/*.json',
+      'input/tokens/captions/*.json',
     ],
     platforms: {
       scss: {
