@@ -2031,7 +2031,13 @@
       "color/CMP": "enabled",
       "intermediary/Dark": "enabled",
       "dimensions/CMP": "enabled",
-      "dimensions/SEM": "enabled"
+      "dimensions/SEM": "enabled",
+      "captions/allCaptions": "disabled",
+      "captions/HintOnly": "disabled",
+      "captions/ErrorOnly": "disabled",
+      "captions/noCaptions": "disabled",
+      "sizeVariants/CMP": "disabled",
+      "sizeVariants/SEM": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:5039:8491",
     "$figmaModeId": "5039:1",
