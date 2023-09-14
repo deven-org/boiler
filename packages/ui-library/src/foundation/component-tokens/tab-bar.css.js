@@ -45,7 +45,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           font: inherit;
           cursor: pointer;
           outline: inherit;
-          background-color: white;
+          background-color: ${Silent.SurfaceFill.Rest};
+          border-color: ${Silent.SurfaceStroke.Rest};
+          color: ${Silent.Icon.Rest};
+
 
           &.left {
             padding-top: 15px;
