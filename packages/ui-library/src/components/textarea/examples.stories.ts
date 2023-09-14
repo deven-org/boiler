@@ -41,6 +41,9 @@ const fontStyle = html`
 export default {
   title: 'Design System/Web Components/BlrTextarea/Examples',
   parameters: {
+    // backgrounds: {
+    //     default: 'light',
+    // },
     viewMode: 'story',
     previewTabs: {
       'storybook/docs/panel': {
@@ -68,10 +71,6 @@ export const Example1 = () => {
       .stories-textarea {
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
       }
-      .container {
-        width: 23rem;
-        height: 64px;
-      }
     </style>
     <div class="stories-textarea">
       <h3>Default</h3>
@@ -94,6 +93,11 @@ export const Example1 = () => {
     </div>
   `;
 };
+Example1.parameters = {
+  backgrounds: {
+    default: 'light',
+  },
+};
 Example1.storyName = 'Textarea Examples Light Theme';
 
 export const Example2 = () =>
@@ -103,8 +107,6 @@ export const Example2 = () =>
       .stories-textarea {
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
         color: white;
-        width: 23rem;
-        height: 64px;
       }
     </style>
     <div class="stories-textarea">
@@ -127,12 +129,12 @@ export const Example2 = () =>
       })}
     </div>
   `;
-Example2.params = {
-  darkMode: {
-    current: 'dark',
+(Example2.parameters = {
+  backgrounds: {
+    default: 'dark',
   },
-};
-Example2.storyName = 'Textarea Examples Dark Theme';
+}),
+  (Example2.storyName = 'Textarea Examples Dark Theme');
 
 export const Example3 = () =>
   html`
