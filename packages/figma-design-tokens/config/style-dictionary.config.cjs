@@ -79,6 +79,7 @@ const componentTypes = [
   'Divider',
   'TabBar',
   'Slider',
+  'ButtonGroup',
 ];
 
 StyleDictionaryPackage.registerFormat({

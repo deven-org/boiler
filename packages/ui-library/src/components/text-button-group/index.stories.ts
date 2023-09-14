@@ -1,14 +1,17 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
+import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, FormSizes } from '../../globals/constants';
+import { ActionVariants, ButtonGroupSizes, AlignmentVariants } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components/Button',
   argTypes: {
+    buttons: {
+      control: { type: 'array' },
+    },
     leadingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -18,7 +21,7 @@ export default {
       control: { type: 'select' },
     },
     size: {
-      options: FormSizes,
+      options: ButtonGroupSizes,
       control: { type: 'select' },
     },
     variant: {
@@ -29,15 +32,20 @@ export default {
       options: Themes,
       control: { type: 'select' },
     },
+    alignment: {
+      options: AlignmentVariants,
+      control: { type: 'select' },
+    },
   },
   parameters: {
     viewMode: 'docs',
   },
 };
 
-export const BlrTextButton = ({
+export const BlrTextButtonGroup = ({
   label,
   onClick,
+  buttons,
   onBlur,
   loading,
   disabled,
@@ -48,11 +56,13 @@ export const BlrTextButton = ({
   trailingIcon,
   loadingStatus,
   theme,
-}: BlrTextButtonType) =>
+  alignment,
+}: BlrTextButtonGroupType) =>
   html`
-    ${BlrTextButtonRenderFunction({
+    ${BlrTextButtonGroupRenderFunction({
       label,
       onClick,
+      buttons,
       onBlur,
       loading,
       disabled,
@@ -63,14 +73,15 @@ export const BlrTextButton = ({
       trailingIcon,
       loadingStatus,
       theme,
+      alignment,
     })}
   `;
 
-BlrTextButton.storyName = 'BlrTextButton';
+BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
-BlrTextButton.args = {
+BlrTextButtonGroup.args = {
   theme: 'Light',
-  label: 'Button',
+  alignment: 'flex-start',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
@@ -81,4 +92,36 @@ BlrTextButton.args = {
   variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
+  buttons: [
+    {
+      label: 'One',
+      variant: 'silent',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-id-1',
+      trailingIcon: 'ChevronUp',
+      loading: false,
+    },
+    {
+      label: 'Two',
+      variant: 'secondary',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-id-2',
+      trailingIcon: 'ChevronDown',
+      loading: false,
+    },
+    {
+      label: 'Three',
+      variant: 'primary',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-id-3',
+      trailingIcon: 'ChevronLeft',
+      loading: false,
+    },
+  ],
 };
