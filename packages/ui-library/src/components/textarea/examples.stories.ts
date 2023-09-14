@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 import './index';
-import { nothing } from 'lit';
 
 const defaultParams: BlrTextareaType = {
   theme: 'Light',
@@ -70,23 +69,23 @@ export const Example1 = () => {
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
       }
       .container {
-        width: 377px;
+        width: 23rem;
         height: 64px;
       }
     </style>
     <div class="stories-textarea">
       <h3>Default</h3>
-      <div class="container">
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-        })}
-      </div>
+      ${BlrTextareaRenderFunction({
+        ...defaultParams,
+        theme: 'Light',
+      })}
+
       <h3>Disabled</h3>
       ${BlrTextareaRenderFunction({
         ...defaultParams,
         disabled: true,
       })}
+
       <h3>HasError</h3>
       ${BlrTextareaRenderFunction({
         ...defaultParams,
@@ -103,9 +102,8 @@ export const Example2 = () =>
     <style>
       .stories-textarea {
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
-        background-color: black;
         color: white;
-        width: 377px;
+        width: 23rem;
         height: 64px;
       }
     </style>
@@ -119,14 +117,21 @@ export const Example2 = () =>
       ${BlrTextareaRenderFunction({
         ...defaultParams,
         disabled: true,
+        theme: 'Dark',
       })}
       <h3>HasError</h3>
       ${BlrTextareaRenderFunction({
         ...defaultParams,
         hasError: true,
+        theme: 'Dark',
       })}
     </div>
   `;
+Example2.params = {
+  darkMode: {
+    current: 'dark',
+  },
+};
 Example2.storyName = 'Textarea Examples Dark Theme';
 
 export const Example3 = () =>
