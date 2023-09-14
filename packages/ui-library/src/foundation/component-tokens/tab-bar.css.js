@@ -8,6 +8,14 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
     const { TabBar } = componentTokens.Navigation;
 
     return css`
+      .wrapper-horizontal {
+        position: relative;
+        display: block;
+
+        &.wrap, &.browserOverflow {
+          padding: 0px 1rem;
+        }
+      }
       .blr-tab-bar-group {
         width: 100%;
         display: flex;

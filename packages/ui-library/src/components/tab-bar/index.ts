@@ -8,7 +8,8 @@ import {
   FormSizesType,
   TabType,
   TabVariantType,
-  OverflowVariantType,
+  OverflowVariantTypeStandard,
+  OverflowVariantTypeFullWidth,
   TabAlignmentVariantType,
   IconPositionVariant,
   TabContentVariantType,
@@ -27,7 +28,7 @@ export class BlrTabBar extends LitElement {
   @query('.blr-tab-bar')
   _navList!: HTMLElement;
 
-  @queryAll('.nav-list li:not(.disabled)')
+  @queryAll('.nav-list li')
   _navItems!: HTMLElement[];
 
   @queryAll('slot[name=tab]')
@@ -37,7 +38,8 @@ export class BlrTabBar extends LitElement {
   _panels!: HTMLElement[];
 
   @property() tabs!: TabType[];
-  @property() overflowVariant!: OverflowVariantType;
+  @property() overflowVariantStandard!: OverflowVariantTypeStandard;
+  @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
   @property() iconPosition: IconPositionVariant = 'leading';
   @property() icon: IconType = 'blr360Sm';
   @property() variant: TabVariantType = 'standard';
@@ -72,18 +74,20 @@ export class BlrTabBar extends LitElement {
       this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
 
     const setActive = (tabIndex: number) => {
-      const selectedTab = this._navItems[tabIndex - 1];
+      const selectedTab = this._navItems[tabIndex];
       selectedTab.setAttribute('aria-selected', 'true');
       if (selectedTab.parentElement) {
         [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
         selectedTab.classList.add('active');
       }
-      this._panels.forEach((panel) => {
-        panel.classList.remove('active');
-        panel.setAttribute('hidden', '');
-      });
-      this._panels[tabIndex].classList.add('active');
-      this._panels[tabIndex].removeAttribute('hidden');
+      if (!selectedTab.classList.contains('disabled')) {
+        this._panels.forEach((panel) => {
+          panel.classList.remove('active');
+          panel.setAttribute('hidden', '');
+        });
+        this._panels[tabIndex].classList.add('active');
+        this._panels[tabIndex].removeAttribute('hidden');
+      }
     };
 
     const handleSelect = (event: Event, label: string) => {
@@ -99,7 +103,8 @@ export class BlrTabBar extends LitElement {
     });
 
     const navListClasses = classMap({
-      [`${this.overflowVariant}`]: this.overflowVariant,
+      [`${this.overflowVariantStandard}`]: this.overflowVariantStandard,
+      [`${this.overflowVariantFullWidth}`]: this.overflowVariantFullWidth,
       [`${this.alignment}`]: this.alignment,
     });
 
@@ -107,7 +112,7 @@ export class BlrTabBar extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="blr-tab-bar-group ${classes}">
-        ${this.overflowVariant === 'buttons'
+        ${this.overflowVariantStandard === 'buttons'
           ? html`
               <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                 ${BlrIconRenderFunction({
@@ -132,7 +137,7 @@ export class BlrTabBar extends LitElement {
                       role="tab"
                       href=${`#${tab.href}`}
                       aria-controls=${tab.label.toLowerCase()}
-                      class="blr-semantic-action ${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
+                      class="${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
                       @click=${(e: Event) => handleSelect(e, tab.label)}
                     >
                       ${this.tabContent !== 'labelOnly'
@@ -142,7 +147,9 @@ export class BlrTabBar extends LitElement {
                             hideAria: true,
                           })
                         : nothing}
-                      ${this.tabContent !== 'iconOnly' ? html` <slot name="tab">${tab.label}</slot>` : nothing}
+                      ${this.tabContent !== 'iconOnly'
+                        ? html` <slot class="blr-semantic-action ${this.size}" name="tab">${tab.label}</slot>`
+                        : nothing}
                     </a>
                   </div>
                   <div class="nav-item-underline"></div>
@@ -151,7 +158,7 @@ export class BlrTabBar extends LitElement {
             })}
           </ul>
         </div>
-        ${this.overflowVariant === 'buttons'
+        ${this.overflowVariantStandard === 'buttons'
           ? html`
               <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                 ${BlrIconRenderFunction({
@@ -163,7 +170,7 @@ export class BlrTabBar extends LitElement {
             `
           : nothing}
       </div>
-      <div class="wrapper-horizontal">
+      <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
         ${this.showDivider
           ? BlrDividerRenderFunction({
               dividerDirectionVariant: 'horizontal',
@@ -195,7 +202,8 @@ export const BlrTabBarRenderFunction = ({
   _navItemsSlots,
   _panels,
   tabs,
-  overflowVariant,
+  overflowVariantStandard,
+  overflowVariantFullWidth,
   iconPosition,
   variant,
   tabContent,
@@ -215,7 +223,8 @@ export const BlrTabBarRenderFunction = ({
     .navItemsSlots=${_navItemsSlots}
     .panels=${_panels}
     .tabs=${tabs}
-    .overflowVariant=${overflowVariant}
+    .overflowVariantStandard=${overflowVariantStandard}
+    .overflowVariantFullWidth=${overflowVariantFullWidth}
     .iconPosition=${iconPosition}
     .showDivider=${showDivider}
     .icon=${icon}
