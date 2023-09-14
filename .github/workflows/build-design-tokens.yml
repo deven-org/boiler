@@ -1,53 +1,53 @@
-name: Build design tokens
+#name: Build design tokens
 
-on:
-  push:
-    branches:
-      - 'design/*'
-  pull_request:
-    branches:
-      - 'design/*'
+#on:
+#  push:
+#    branches:
+#      - 'design/*'
+#  pull_request:
+#    branches:
+#      - 'design/*'
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
-      contents: write
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    permissions:
+# Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+#      contents: write
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
+#      - name: Setup Node.js
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: '18.x'
 
-      - name: Get node version
-        id: node
-        run: |
-          echo "::set-output name=version::$(node -v)"
+#      - name: Get node version
+#        id: node
+#        run: |
+#          echo "::set-output name=version::$(node -v)"
 
-      - name: Get node_modules cache
-        uses: actions/cache@v3.0.2
-        id: node_modules
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
+#      - name: Get node_modules cache
+#        uses: actions/cache@v3.0.2
+#        id: node_modules
+#        with:
+#          path: |
+#            **/node_modules
+#          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
 
-      - name: Install modules
-        run: npm ci
+#      - name: Install modules
+#        run: npm ci
 
-      - name: Generate tokens
-        run: npm run tokens:generate
-      - name: Commit changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git add .
-          git commit -m "feat(tokens): updates tokens"
-          git push origin HEAD:${{ github.ref }}
+#      - name: Generate tokens
+#        run: npm run tokens:generate
+#      - name: Commit changes
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: |
+#          git config --global user.email "github-actions@github.com"
+#          git config --global user.name "GitHub Actions"
+#          git add .
+#          git commit -m "feat(tokens): updates tokens"
+#          git push origin HEAD:${{ github.ref }}
