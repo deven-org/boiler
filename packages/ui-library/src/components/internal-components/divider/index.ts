@@ -6,7 +6,7 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-divider')
 export class BlrDivider extends LitElement {
-  @property() dividerDirectionVariant?: DividerVariationTypes = 'vertical';
+  @property() dividerDirectionVariant?: DividerVariationTypes;
   @property({ type: Boolean }) addMargin = false;
 
   @property() directionVariant?: DividerVariationTypes = 'vertical';
