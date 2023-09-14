@@ -8,6 +8,10 @@
     "dimensions/SEM",
     "dimensions/CMP",
     "sizeVariants/CMP",
-    "sizeVariants/SEM"
+    "sizeVariants/SEM",
+    "componentConfig/CMP",
+    "componentConfig/SEM",
+    "componentConfig_v2/CMP",
+    "componentConfig_v2/SEM"
   ]
 }
