@@ -69,27 +69,43 @@ export const Example1 = () => {
     ${fontStyle}
     <style>
       .stories-textarea {
+        display: flex;
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+      }
+      .story-textarea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 20rem;
+        max-height: 7rem;
       }
     </style>
     <div class="stories-textarea">
-      <h3>Default</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        theme: 'Light',
-      })}
+      <div class="story-textarea">
+        <h3>Rest</h3>
 
-      <h3>Disabled</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        disabled: true,
-      })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+        })}
+      </div>
+      <div class="story-textarea">
+        <h3>Disabled</h3>
 
-      <h3>HasError</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        hasError: true,
-      })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          disabled: true,
+        })}
+      </div>
+      <div class="story-textarea">
+        <h3>Error</h3>
+
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          hasError: true,
+        })}
+      </div>
     </div>
   `;
 };
@@ -105,28 +121,43 @@ export const Example2 = () =>
     ${fontStyle}
     <style>
       .stories-textarea {
+        display: flex;
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
         color: white;
       }
+      .story-textarea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 20rem;
+        max-height: 7rem;
+      }
     </style>
     <div class="stories-textarea">
-      <h3>Default</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        theme: 'Dark',
-      })}
-      <h3>Disabled</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        disabled: true,
-        theme: 'Dark',
-      })}
-      <h3>HasError</h3>
-      ${BlrTextareaRenderFunction({
-        ...defaultParams,
-        hasError: true,
-        theme: 'Dark',
-      })}
+      <div class="story-textarea">
+        <h3>Default</h3>
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Dark',
+        })}
+      </div>
+      <div class="story-textarea">
+        <h3>Disabled</h3>
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          disabled: true,
+          theme: 'Dark',
+        })}
+      </div>
+      <div class="story-textarea">
+        <h3>HasError</h3>
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          hasError: true,
+          theme: 'Dark',
+        })}
+      </div>
     </div>
   `;
 (Example2.parameters = {
