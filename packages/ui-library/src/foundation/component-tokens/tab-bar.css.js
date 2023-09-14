@@ -12,7 +12,13 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         position: relative;
         display: block;
 
-        &.wrap, &.browserOverflow {
+        &.wrap {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 0;
+        }
+
+        &.browserOverflow {
           padding: 0px 1rem;
         }
       }
@@ -23,7 +29,9 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         position: relative;
 
         &.fullWidth {
+          justify-content: space-evenly;
           .blr-tab-bar {
+            max-width: none;
             .nav-list {
               justify-content: space-between;
             }
@@ -102,6 +110,8 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
             &.wrap {
               flex-wrap: wrap;
+              overflow-x: visible;
+              padding: 0;
             }
 
             .nav-item-container {
