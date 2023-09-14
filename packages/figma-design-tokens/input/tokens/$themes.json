@@ -546,7 +546,9 @@
       "color/SEM": "enabled",
       "color/CMP": "enabled",
       "dimensions/CMP": "enabled",
-      "dimensions/SEM": "enabled"
+      "dimensions/SEM": "enabled",
+      "sizeVariants/CMP": "disabled",
+      "sizeVariants/SEM": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:5039:8491",
     "$figmaModeId": "5039:0",
