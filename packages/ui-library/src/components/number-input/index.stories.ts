@@ -69,6 +69,7 @@ export const BlrNumberInput = ({
   unit,
   fractionDigits,
   totalDigits,
+  prependUnit,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -91,6 +92,7 @@ export const BlrNumberInput = ({
       unit,
       fractionDigits,
       totalDigits,
+      prependUnit,
     })}
   `;
 
@@ -102,16 +104,17 @@ BlrNumberInput.args = {
   fractionDigits: '',
   totalDigits: '',
   unit: 'kg',
-  variant: 'mode3',
+  prependUnit: false,
+  variant: 'mode1',
+  size: 'md',
   theme: 'Light',
   hasLabel: true,
   label: 'Label',
   disabled: false,
-  placeholder: 'Uschi',
+  placeholder: 'Enter a number',
   readonly: false,
   required: false,
   hasError: false,
-  size: 'md',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
   showHint: true,

@@ -50,6 +50,7 @@ export class BlrNumberInput extends LitElement {
   @property() unit?: string | undefined;
   @property() totalDigits?: number;
   @property() fractionDigits?: number;
+  @property() prependUnit?: boolean;
 
   @property() theme: ThemeType = 'Light';
 
@@ -188,6 +189,7 @@ export class BlrNumberInput extends LitElement {
               ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
               ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
             `}
+        ${!this.prependUnit && this.unit ? html`<span class="${inputClasses}">${this.unit}</span>` : nothing}
         <input
           class="${inputClasses}"
           type="number"
@@ -201,7 +203,7 @@ export class BlrNumberInput extends LitElement {
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
-        ${this.unit && html`<span>${this.unit}</span>`}
+        ${this.prependUnit && this.unit ? html`<span class="${inputClasses}">${this.unit}</span>` : nothing}
       </div>
     `;
   }
@@ -227,6 +229,7 @@ export const BlrNumberInputRenderFunction = ({
   unit,
   fractionDigits,
   totalDigits,
+  prependUnit,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -246,5 +249,6 @@ export const BlrNumberInputRenderFunction = ({
     .unit="${unit}"
     .fractionDigits="${fractionDigits}"
     .totalDigits="${totalDigits}"
+    .prependUnit="${prependUnit}"
   ></blr-number-input>`;
 };

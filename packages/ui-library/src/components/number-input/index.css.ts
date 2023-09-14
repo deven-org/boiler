@@ -175,9 +175,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 export const baseStyle = css`
   .input-wrapper {
     display: grid;
-
     grid-template-areas: "left center span right";
-
     overflow: hidden;
     box-sizing: border-box;
 
@@ -210,7 +208,6 @@ export const baseStyle = css`
 
       & > span {
         text-align: left;
-        padding: 0.7rem 0;
       }
     }
 
@@ -227,6 +224,8 @@ export const baseStyle = css`
 
       & > input {
         grid-area: left;
+        width: 100%;
+        padding: 0.5rem;
       }
 
       & > span {
