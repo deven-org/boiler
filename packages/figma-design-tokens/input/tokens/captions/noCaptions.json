@@ -1,0 +1,14 @@
+{
+  "CaptionContainer": {
+    "value": "false",
+    "type": "boolean"
+  },
+  "🔷 HintMsg": {
+    "value": "false",
+    "type": "boolean"
+  },
+  "🔷 ErrorMsg": {
+    "value": "false",
+    "type": "boolean"
+  }
+}
