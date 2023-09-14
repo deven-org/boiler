@@ -7,9 +7,9 @@
     "color/CMP",
     "dimensions/SEM",
     "dimensions/CMP",
-    "captions/allCaptions",
-    "captions/HintOnly",
-    "captions/ErrorOnly",
-    "captions/noCaptions"
+    "componentConfig/CMP",
+    "componentConfig/SEM",
+    "componentConfig_v2/CMP",
+    "componentConfig_v2/SEM"
   ]
 }

@@ -166,7 +166,7 @@
             }
           }
         },
-        "Foreground": {
+        "Icon": {
           "Unselected": {
             "Fill": {
               "Rest": {
@@ -204,43 +204,6 @@
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Error"
               }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "also applies to indeterminate"
-              }
             }
           },
           "Selected": {
@@ -274,38 +237,6 @@
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
               }
             }
           }
