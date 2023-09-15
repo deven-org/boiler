@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
@@ -29,6 +30,14 @@ export class BlrIconButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  protected handleFocus = () => {
+    console.log('focused');
+  };
+
+  protected handleBlur = () => {
+    console.log('blurred');
+  };
+
   protected render() {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
@@ -41,13 +50,17 @@ export class BlrIconButton extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <button
+      <span
         aria-label=${this.arialabel || nothing}
         class="blr-semantic-action blr-icon-button ${classes}"
         @click=${this.onClick}
-        @blur=${this.onBlur}
         ?disabled=${this.disabled}
         id=${this.buttonId || nothing}
+        tabindex="0"
+        @focus=${this.handleFocus}
+        @blur=${this.handleBlur}
+        role="button"
+        @keydown=${this.onClick}
       >
         ${this.loading
           ? html`${BlrLoaderRenderFunction({
@@ -61,7 +74,7 @@ export class BlrIconButton extends LitElement {
               size: this.size,
               hideAria: true,
             })}`}
-      </button>`;
+      </span> `;
   }
 }
 
