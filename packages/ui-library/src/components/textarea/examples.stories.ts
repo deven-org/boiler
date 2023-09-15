@@ -70,6 +70,7 @@ export const Example1 = () => {
     <style>
       .stories-textarea {
         display: flex;
+        flex-wrap: wrap;
         font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
       }
       .story-textarea {
@@ -78,13 +79,22 @@ export const Example1 = () => {
         align-items: center;
         gap: 1rem;
         width: 20rem;
-        max-height: 7rem;
+      }
+      .focus {
+        outline: 2px solid hsla(220, 10%, 10%, 1);
+        border-radius: 4px;
       }
     </style>
     <div class="stories-textarea">
       <div class="story-textarea">
         <h3>Rest</h3>
-
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+        })}
+      </div>
+      <div class="story-textarea">
+        <h3>Focus</h3>
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
@@ -92,7 +102,6 @@ export const Example1 = () => {
       </div>
       <div class="story-textarea">
         <h3>Disabled</h3>
-
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           disabled: true,
@@ -100,11 +109,21 @@ export const Example1 = () => {
       </div>
       <div class="story-textarea">
         <h3>Error</h3>
-
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           hasError: true,
         })}
+      </div>
+      <div class="story-textarea">
+        <h3>readOnly</h3>
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          readonly: true,
+        })}
+      </div>
+      <div class="story-textarea">
+        <h3>Description</h3>
+        <p>Here is a description</p>
       </div>
     </div>
   `;
@@ -114,6 +133,7 @@ Example1.parameters = {
     default: 'light',
   },
 };
+
 Example1.storyName = 'Textarea Examples Light Theme';
 
 export const Example2 = () =>
@@ -167,15 +187,6 @@ export const Example2 = () =>
 }),
   (Example2.storyName = 'Textarea Examples Dark Theme');
 
-export const Example3 = () =>
-  html`
-    ${BlrTextareaRenderFunction({
-      ...defaultParams,
-      hasError: true,
-    })}
-  `;
-Example3.storyName = 'hasError';
-
 export const InteractivePlaceholder = ({ placeholder }) =>
   html`
     ${fontStyle}
@@ -185,7 +196,6 @@ export const InteractivePlaceholder = ({ placeholder }) =>
       value: '',
     })}
   `;
-
 InteractivePlaceholder.storyName = 'Interaktiver Placeholder';
 InteractivePlaceholder.args = {
   placeholder: defaultParams.placeholder,
