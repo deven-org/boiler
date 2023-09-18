@@ -31,18 +31,17 @@ export const styleCustom = css`
         background-color: #fff;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        border: 1px solid #999;
-        border: 1px solid rgba(0,0,0,.2);
+        border: 1px solid rgb(0 0 0 / 0.2);
         border-radius: 6px;
-        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
-        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
+        box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
         outline: 0;
 
         .modal-header {
           padding: 15px;
           border-bottom: 1px solid #e5e5e5;
         }
-      
+
         .modal-body {
           position: relative;
           padding: 15px;
@@ -53,9 +52,9 @@ export const styleCustom = css`
 
   .fade {
     opacity: 0;
-    -webkit-transition: opacity .4s linear;
-    -o-transition: opacity .4s linear;
-    transition: opacity .4s linear;
+    -webkit-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
   }
 
   .fade.in {
@@ -69,17 +68,15 @@ export const styleCustom = css`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: transparent;
-    opacity: 0;
     width: 100%;
     height: 100%;
     z-index: -1000;
   }
+
   .active {
-    background-color: #000000;
-    opacity: 0.6;
     z-index: 1040;
   }
+
   .modal-transition {
     transition: all 0.4s ease;
   }

@@ -1,22 +1,22 @@
-import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
+import { BlrOverlayType, BlrOverlayRenderFunction } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
-const sampleParams: BlrLoaderType = {
-  size: 'md',
-  variant: 'default',
-  loadingStatus: 'Loading',
+const sampleParams: BlrOverlayType = {
   theme: 'Light',
+  isOpen: true,
+  modalTitle: 'Title',
+  closeIconSize: 'sm',
 };
 
-describe('blr-loader', () => {
-  it('is having a statusRole containing the right className', async () => {
-    const element = await fixture(BlrLoaderRenderFunction(sampleParams));
+describe('blr-overlay', () => {
+  it('is having an element containing the right className', async () => {
+    const element = await fixture(BlrOverlayRenderFunction(sampleParams));
 
-    const statusRole = querySelectorDeep('[role="status"]', element.getRootNode() as HTMLElement);
-    const className = statusRole?.className;
+    const button = querySelectorDeep('.blr-overlay', element.getRootNode() as HTMLElement);
+    const className = button?.className;
 
-    expect(className).to.contain('blr-loader');
+    expect(className).to.contain('modal');
   });
 });

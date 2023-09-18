@@ -64,3 +64,16 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
     `;
   }
 );
+
+export const { tokenizedLight: blanketLight, tokenizedDark: blanketDark } = renderThemedCssStrings(
+  (componentTokens) => {
+    const { UI } = componentTokens;
+
+    return css`
+      .blr-blanket {
+        background-color: ${UI.Blanket.Surface};
+        height: 100%;
+      }
+    `;
+  }
+);

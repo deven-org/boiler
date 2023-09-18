@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { BlrBackdrop as BlrBackdropClass } from './index';
+import { BlrBlanket as BlrBlanketClass } from './index';
 import { FeedbackVariants, FormSizes } from '../../../globals/constants';
 
 import './index';
@@ -26,14 +26,13 @@ export default {
   },
 };
 
-export const BlrBackdrop = ({ theme }: BlrBackdropClass) =>
-html` <blr-overlay .theme=${theme}></blr-overlay>`;
+export const BlrBlanket = ({ theme }: BlrBlanketClass) => html` <blr-overlay .theme=${theme}></blr-overlay>`;
 
-BlrBackdrop.storyName = 'BlrBackdrop';
+BlrBlanket.storyName = 'BlrBlanket';
 
-BlrBackdrop.args = {
+BlrBlanket.args = {
   theme: 'Light',
   size: 'md',
   variant: 'default',
-  isOpen: false
+  isOpen: false,
 };

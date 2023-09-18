@@ -5,9 +5,10 @@ import { styleCustom } from './index.css';
 import { loadingSpinnerDark, loadingSpinnerLight } from '../../../foundation/component-tokens/feedback.css';
 import { FeedbackVariantType, FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { blanketDark, blanketLight } from '../../../foundation/component-tokens/ui.css';
 
-@customElement('blr-backdrop')
-export class BlrBackdrop extends LitElement {
+@customElement('blr-blanket')
+export class BlrBlanket extends LitElement {
   static styles = [styleCustom];
 
   @property() size?: FormSizesType = 'md';
@@ -16,31 +17,27 @@ export class BlrBackdrop extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected handleModalChange() {
-      this.isOpen = !this.isOpen;
+    this.isOpen = !this.isOpen;
   }
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [loadingSpinnerLight] : [loadingSpinnerDark];
+    const dynamicStyles = this.theme === 'Light' ? [blanketLight] : [blanketDark];
 
-    const backdropClasses = classMap({
-      [`active`]: this.isOpen
-    })
+    const blanketClasses = classMap({
+      [`modal-backdrop`]: true,
+      [`blr-blanket`]: true,
+      [`active`]: this.isOpen,
+    });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <div class="modal-backdrop ${backdropClasses} modal-transition"></div>
-      `;
+      <div class="${blanketClasses} modal-transition"></div> `;
   }
 }
 
-export type BlrBackdropType = Omit<BlrBackdrop, keyof LitElement>;
+export type BlrBlanketType = Omit<BlrBlanket, keyof LitElement>;
 
-export const BlrBackdropRenderFunction = ({ variant, size, theme, isOpen }: BlrBackdropType) => {
-  return html`<blr-backdrop
-    .variant=${variant}
-    .size=${size}
-    .theme=${theme}
-    .isOpen=${isOpen}
-  ></blr-backdrop>`;
+export const BlrBlanketRenderFunction = ({ variant, size, theme, isOpen }: BlrBlanketType) => {
+  return html`<blr-blanket .variant=${variant} .size=${size} .theme=${theme} .isOpen=${isOpen}></blr-blanket>`;
 };
