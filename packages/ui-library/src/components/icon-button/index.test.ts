@@ -19,7 +19,7 @@ describe('blr-icon-button', () => {
   it('is having a button containing the right className', async () => {
     const element = await fixture(BlrIconButtonRenderFunction(sampleParams));
 
-    const button = querySelectorDeep('button', element.getRootNode() as HTMLElement);
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     const className = button?.className;
 
     expect(className).to.contain('blr-icon-button');

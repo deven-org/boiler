@@ -5,7 +5,7 @@ export const styleCustom = css`
     all: inital;
     align-items: center;
     justify-content: center;
-    display: inline-block;
+    display: inline-flex;
     cursor: pointer;
   }
 
