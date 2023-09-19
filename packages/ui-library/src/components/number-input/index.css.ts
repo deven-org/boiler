@@ -1,96 +1,125 @@
 import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius } = semanticTokens.Forms;
+export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius } = semanticTokens.Forms;
 
-    return css`
-      .input-wrapper {
-        border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
-        border-radius: ${InputBorderRadius};
+  return css`
+    .input-wrapper {
+      border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
+      border-radius: ${InputBorderRadius};
 
-        &.disabled {
-          border-width: ${Input.Default.ReadOnly.width};
-          border-style: ${Input.Default.Disabled.style};
-          border-color: transparent;
-          outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
+      &.disabled {
+        border-width: ${Input.Default.ReadOnly.width};
+        border-style: ${Input.Default.Disabled.style};
+        border-color: transparent;
+        outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
 
-          cursor: not-allowed;
+        cursor: not-allowed;
+        background-color: ${SurfaceFill.Default.Disabled};
+
+        & > input {
           background-color: ${SurfaceFill.Default.Disabled};
+          color: ${UserInput.Default.Disabled};
 
-          & > input {
-            background-color: ${SurfaceFill.Default.Disabled};
-            color: ${UserInput.Default.Disabled};
-
-            &::placeholder {
-              color: ${Placeholder.Default.Disabled};
-            }
+          &::placeholder {
+            color: ${Placeholder.Default.Disabled};
           }
         }
+      }
 
-        &.focus {
-          border-width: ${Input.Default.Rest.width};
-          border-style: ${Input.Default.Rest.style};
-          border-color: transparent;
-          outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+      &.focus {
+        border-width: ${Input.Default.Rest.width};
+        border-style: ${Input.Default.Rest.style};
+        border-color: transparent;
+        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+        background-color: ${SurfaceFill.Default.Focus};
+
+        & > input {
           background-color: ${SurfaceFill.Default.Focus};
+          color: ${UserInput.Default.Focus};
 
-          & > input {
-            background-color: ${SurfaceFill.Default.Focus};
-            color: ${UserInput.Default.Focus};
-
-            &::placeholder {
-              color: ${Placeholder.Default.Focus};
-            }
+          &::placeholder {
+            color: ${Placeholder.Default.Focus};
           }
         }
       }
-    `;
-  }
-);
+    }
+  `;
+});
 
-export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
-    const { Select } = componentTokens.Forms;
+export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
 
-    return css`
-      .custom-form-input {
-        all: initial;
-        color: ${UserInput.Default.Rest};
+  return css`
+    .custom-form-input {
+      all: initial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: ${UserInput.Default.Rest};
 
-        &::placeholder {
-          color: ${Placeholder.Default.Rest};
-        }
-
-        &.sm {
-          font-weight: ${SM.UserInput.fontWeight};
-          font-size: ${SM.UserInput.fontSize};
-          font-family: ${SM.UserInput.fontFamily}, sans-serif;
-          line-height: ${SM.UserInput.lineHeight};
-          padding: ${Select.SM.InputFieldPadding};
-        }
-
-        &.md {
-          font-weight: ${MD.UserInput.fontWeight};
-          font-size: ${MD.UserInput.fontSize};
-          font-family: ${MD.UserInput.fontFamily}, sans-serif;
-          line-height: ${MD.UserInput.lineHeight};
-          padding: ${Select.MD.InputFieldPadding};
-        }
-
-        &.lg {
-          font-weight: ${LG.UserInput.fontWeight};
-          font-size: ${LG.UserInput.fontSize};
-          font-family: ${LG.UserInput.fontFamily}, sans-serif;
-          line-height: ${LG.UserInput.lineHeight};
-          padding: ${Select.LG.InputFieldPadding};
-        }
+      &::placeholder {
+        color: ${Placeholder.Default.Rest};
       }
-    `;
-  }
-);
+
+      &.sm {
+        font-weight: ${SM.UserInput.fontWeight};
+        font-size: ${SM.UserInput.fontSize};
+        font-family: ${SM.UserInput.fontFamily}, sans-serif;
+        line-height: ${SM.UserInput.lineHeight};
+        padding: ${SM.InputField.Padding};
+      }
+
+      &.md {
+        font-weight: ${MD.UserInput.fontWeight};
+        font-size: ${MD.UserInput.fontSize};
+        font-family: ${MD.UserInput.fontFamily}, sans-serif;
+        line-height: ${MD.UserInput.lineHeight};
+        padding: ${MD.InputField.Padding};
+      }
+
+      &.lg {
+        font-weight: ${LG.UserInput.fontWeight};
+        font-size: ${LG.UserInput.fontSize};
+        font-family: ${LG.UserInput.fontFamily}, sans-serif;
+        line-height: ${LG.UserInput.lineHeight};
+        padding: ${LG.InputField.Padding};
+      }
+    }
+
+    .unit {
+      all: initial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.sm {
+        font-weight: ${SM.UserInput.fontWeight};
+        font-size: ${SM.UserInput.fontSize};
+        font-family: ${SM.UserInput.fontFamily}, sans-serif;
+        line-height: ${SM.UserInput.lineHeight};
+        padding: ${SM.InputField.Padding};
+      }
+
+      &.md {
+        font-weight: ${MD.UserInput.fontWeight};
+        font-size: ${MD.UserInput.fontSize};
+        font-family: ${MD.UserInput.fontFamily}, sans-serif;
+        line-height: ${MD.UserInput.lineHeight};
+        padding: ${MD.InputField.Padding};
+      }
+
+      &.lg {
+        font-weight: ${LG.UserInput.fontWeight};
+        font-size: ${LG.UserInput.fontSize};
+        font-family: ${LG.UserInput.fontFamily}, sans-serif;
+        line-height: ${LG.UserInput.lineHeight};
+        padding: ${LG.InputField.Padding};
+      }
+    }
+  `;
+});
 
 export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
@@ -175,7 +204,8 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 export const baseStyle = css`
   .input-wrapper {
     display: grid;
-    grid-template-areas: "left center right";
+    grid-template-areas: "left unitleft center unitright right1 right2";
+    grid-template-columns: fit-content(100%) fit-content(100%) 1fr fit-content(100%) fit-content(100%) fit-content(100%);
     overflow: hidden;
     box-sizing: border-box;
 
@@ -190,10 +220,8 @@ export const baseStyle = css`
     }
 
     &.mode1 {
-      grid-template-columns: fit-content(100%) 1fr fit-content(100%);
-
       .increment {
-        grid-area: right;
+        grid-area: right2;
       }
 
       .decrement {
@@ -204,38 +232,60 @@ export const baseStyle = css`
         grid-area: center;
         text-align: center;
       }
+
+      & > .unit:not(.prepend) {
+        grid-area: unitright;
+      }
+
+      & > .unit.prepend {
+        grid-area: unitleft;
+      }
     }
 
     &.mode2 {
-      grid-template-columns: 1fr fit-content(100%) fit-content(100%);
-
       .increment {
-        grid-area: right;
+        grid-area: right2;
       }
 
       .decrement {
-        grid-area: center;
+        grid-area: right1;
       }
 
       & > input {
-        grid-area: left;
+        grid-area: center;
+      }
+
+      & > .unit:not(.prepend) {
+        grid-area: unitright;
+      }
+
+      & > .unit.prepend {
+        grid-area: unitleft;
       }
     }
 
     &.mode3 {
-      grid-template-columns: 1fr fit-content(100%);
-
       .increment {
-        grid-area: right;
+        grid-area: right2;
       }
 
       .decrement {
-        grid-area: right;
+        grid-area: right2;
         grid-row: 2;
       }
 
       & > input {
-        grid-area: left;
+        grid-area: center;
+        grid-row: span 2;
+      }
+
+      & > .unit:not(.prepend) {
+        grid-area: unitright;
+        grid-row: span 2;
+      }
+
+      & > .unit.prepend {
+        grid-area: unitleft;
         grid-row: span 2;
       }
     }

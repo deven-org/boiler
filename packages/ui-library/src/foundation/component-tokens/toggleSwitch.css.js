@@ -56,7 +56,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
 
               &:active {
-                background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Hover};
+                background-color: ${ToggleSwitch.Control.Background.Unselected.Fill.Pressed};
               }
 
               &[disabled] {
@@ -76,7 +76,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
 
               &:active {
-                background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Focus};
+                background-color: ${ToggleSwitch.Control.Background.Selected.Fill.Pressed};
               }
 
               &:focus {
@@ -107,14 +107,14 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               &::after {
                 content: "";
                 position: absolute;
-                background-color: ${ToggleSwitch.Control.Ay11Icon.Unselected.Fill.Rest};
+                background-color: ${ToggleSwitch.Control.Knob.Surface.Unselected.Fill.Rest};
                 border-radius: 50%;
                 transition: transform 0.2s ease;
               }
             }
 
             & > input:checked + .toggle-switch-slider::after {
-              background-color: ${ToggleSwitch.Control.Foreground.Selected.Fill.Rest};
+              background-color: ${ToggleSwitch.Control.Knob.Surface.Selected.Fill.Rest};
             }
 
             & > .toggle-switch-unselect {

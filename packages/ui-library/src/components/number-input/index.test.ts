@@ -10,17 +10,30 @@ const sampleParams: BlrNumberInputType = {
   variant: 'mode1',
   theme: 'Light',
   size: 'sm',
+  readonly: true,
+  required: true,
+  hasLabel: true,
+  hasError: true,
+  labelAppendix: 'label appendix',
+  numberInputId: 'egal',
+  label: 'Hello',
+  showHint: false,
+  hintIcon: 'blr360Lg',
+  value: 4,
+  unit: 'gr',
+  fractionDigits: 0,
+  totalDigits: 0,
 };
 
 describe('blr-number-input', () => {
-  // it('is having a input containing the right className', async () => {
-  //   const element = await fixture(BlrNumberInputRenderFunction(sampleParams));
-  //
-  //   const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
-  //   const className = input?.className;
-  //
-  //   expect(className).to.contain('blr-form-element');
-  // });
+  it('is having an input containing the right className', async () => {
+    const element = await fixture(BlrNumberInputRenderFunction(sampleParams));
+
+    const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
+    const className = input?.className;
+
+    expect(className).to.contain('custom-form-input');
+  });
 
   it('is is showing random placeholder', async () => {
     const randomString = getRandomString();

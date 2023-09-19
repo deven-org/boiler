@@ -79,7 +79,8 @@ const componentTypes = [
   'Divider',
   'TabBar',
   'Slider',
-  'Blanket'
+  'Blanket',
+  'ButtonGroup',
 ];
 
 StyleDictionaryPackage.registerFormat({
