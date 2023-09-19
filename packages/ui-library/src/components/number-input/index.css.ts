@@ -131,6 +131,9 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         position: relative;
 
         &.horizontal {
+          display: flex;
+          justify-content: flex-end;
+
           &.sm {
             width: ${StepperCombo.SM.Horizontal.Width};
           }
@@ -245,6 +248,13 @@ export const baseStyle = css`
     &.mode2 {
       .stepper-combo.horizontal.sm {
         grid-area: right2;
+
+        & > .divider-vertical {
+          position: absolute;
+          left: 50%;
+          height: 60%;
+          padding-top: 10%;
+        }
       }
 
       .stepper-combo.horizontal.md {
@@ -305,7 +315,7 @@ export const baseStyle = css`
 
   .divider-vertical {
     position: absolute;
-    left: 45%;
+    left: 60%;
     height: 60%;
     padding-top: 10%;
   }
