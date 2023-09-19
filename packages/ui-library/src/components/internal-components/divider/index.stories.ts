@@ -32,7 +32,6 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme, size }: 
           addMargin,
           size,
           theme,
-          size,
         })}
       </div> `
     : html` <div style="width: 100%; display: inline-block;">
@@ -41,7 +40,6 @@ export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme, size }: 
           addMargin,
           size,
           theme,
-          size,
         })}
       </div>`}
 `;

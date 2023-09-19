@@ -28,6 +28,10 @@ export class BlrDivider extends LitElement {
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
 
-export const BlrDividerRenderFunction = ({ directionVariant, size, theme }: BlrDividerType) => {
-  return html`<blr-divider .directionVariant=${directionVariant} .size=${size} .theme=${theme}></blr-divider>`;
+export const BlrDividerRenderFunction = ({ dividerDirectionVariant, size, theme }: BlrDividerType) => {
+  return html`<blr-divider
+    .dividerDirectionVariant=${dividerDirectionVariant}
+    .size=${size}
+    .theme=${theme}
+  ></blr-divider>`;
 };

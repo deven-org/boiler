@@ -243,12 +243,16 @@ export const baseStyle = css`
     }
 
     &.mode2 {
-      .increment {
+      .stepper-combo.horizontal.sm {
         grid-area: right2;
       }
 
-      .decrement {
-        grid-area: right1;
+      .stepper-combo.horizontal.md {
+        grid-area: right2;
+      }
+
+      .stepper-combo.horizontal.lg {
+        grid-area: right2;
       }
 
       & > input {
@@ -265,17 +269,18 @@ export const baseStyle = css`
     }
 
     &.mode3 {
-      .increment {
+      .stepper-combo.vertical.sm {
         grid-area: right2;
+        grid-row: span 2;
       }
 
-      .decrement {
+      .stepper-combo.vertical.md {
         grid-area: right2;
-        grid-row: 2;
+        grid-row: span 2;
       }
 
-      & > input {
-        grid-area: center;
+      .stepper-combo.vertical.lg {
+        grid-area: right2;
         grid-row: span 2;
       }
 
@@ -289,5 +294,19 @@ export const baseStyle = css`
         grid-row: span 2;
       }
     }
+  }
+
+  .divider-horizontal {
+    position: absolute;
+    top: 45%;
+    width: 60%;
+    padding-left: 20%;
+  }
+
+  .divider-vertical {
+    position: absolute;
+    left: 45%;
+    height: 60%;
+    padding-top: 10%;
   }
 `;

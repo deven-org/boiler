@@ -11,6 +11,7 @@ import {
 } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
+import { BlrDividerRenderFunction } from '../internal-components/divider';
 import { FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -183,14 +184,39 @@ export class BlrNumberInput extends LitElement {
           })}`
         : nothing}
       <div class="${wrapperClasses}">
-        ${this.variant === 'mode1' || this.variant === 'mode2'
+        ${this.variant === 'mode1'
           ? html`
               ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
               ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
             `
+          : this.variant === 'mode2'
+          ? html`
+              <div class="stepper-combo horizontal ${this.size}">
+                <div class="divider-vertical">
+                  ${BlrDividerRenderFunction({
+                    dividerDirectionVariant: 'vertical',
+                    size: this.size,
+                    theme: this.theme,
+                    addMargin: false,
+                  })}
+                </div>
+                ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
+                ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+              </div>
+            `
           : html`
-              ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
-              ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
+              <div class="stepper-combo vertical ${this.size} ${this.adjustType}">
+                <div class="divider-horizontal">
+                  ${BlrDividerRenderFunction({
+                    dividerDirectionVariant: 'horizontal',
+                    size: this.size,
+                    theme: this.theme,
+                    addMargin: false,
+                  })}
+                </div>
+                ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
+                ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
+              </div>
             `}
         ${this.prependUnit && this.unit && this.unit.length
           ? html`<span class="${unitClasses}">${this.unit}</span>`
