@@ -53,6 +53,7 @@ export class BlrOverlay extends LitElement {
                 icon: calculateIconName('blrClose', this.closeIconSize),
                 size: this.closeIconSize,
                 hideAria: true,
+                onClick: this.handleModalChange,
               })}
               <h4 class="modal-title">${this.modalTitle}</h4>
             </div>
