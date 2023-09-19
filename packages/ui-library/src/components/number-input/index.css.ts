@@ -281,22 +281,18 @@ export const baseStyle = css`
     &.mode3 {
       .stepper-combo.vertical.sm {
         grid-area: right2;
-        grid-row: span 2;
       }
 
       .stepper-combo.vertical.md {
         grid-area: right2;
-        grid-row: span 2;
       }
 
       .stepper-combo.vertical.lg {
         grid-area: right2;
-        grid-row: span 2;
       }
 
       & > .unit:not(.prepend) {
         grid-area: unitright;
-        grid-row: span 2;
       }
 
       & > .unit.prepend {
