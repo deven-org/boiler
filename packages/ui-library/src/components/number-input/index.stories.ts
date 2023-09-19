@@ -101,7 +101,7 @@ BlrNumberInput.storyName = 'Component docs';
 BlrNumberInput.args = {
   unit: 'kg',
   prependUnit: false,
-  variant: 'mode2',
+  variant: 'mode3',
   value: '',
   step: '1',
   fractionDigits: '',

@@ -171,7 +171,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
         &.fullWidthHeight {
           width: 100%;
-          height: 100%;
+          height: 50%;
         }
 
         &:hover:not(:disabled) {
@@ -308,7 +308,7 @@ export const baseStyle = css`
 
   .divider-horizontal {
     position: absolute;
-    top: 45%;
+    top: 50%;
     width: 60%;
     padding-left: 20%;
   }

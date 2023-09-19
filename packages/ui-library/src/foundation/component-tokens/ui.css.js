@@ -43,7 +43,7 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
 
   return css`
     .blr-divider.vertical {
-      border-right: ${UI.Divider.Border.width} solid red;
+      border-right: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
       height: 100%;
 
       &.margin {
@@ -52,7 +52,7 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
     }
 
     .blr-divider.horizontal {
-      border-top: ${UI.Divider.Border.width} solid red;
+      border-top: ${UI.Divider.Border.width} solid ${UI.Divider.Border.color};
 
       &.margin {
         margin: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};

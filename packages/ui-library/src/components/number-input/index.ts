@@ -57,6 +57,7 @@ export class BlrNumberInput extends LitElement {
 
   @state() protected isFocused = false;
   @state() protected currentValue = 0;
+  @state() protected adjustType = 'vertical' || 'horizontal';
 
   protected stepperUp() {
     if (this.currentValue !== undefined && this.step !== undefined) {
@@ -132,11 +133,7 @@ export class BlrNumberInput extends LitElement {
       })}
     </button>`;
 
-    if (buttonAlignment === 'vertical') {
-      return html`<div class="stepper-combo vertical ${this.size} ${adjustType}">${button}</div>`;
-    } else {
-      return button;
-    }
+    return button;
   };
 
   protected render() {
@@ -205,7 +202,7 @@ export class BlrNumberInput extends LitElement {
               </div>
             `
           : html`
-              <div class="stepper-combo vertical ${this.size} ${this.adjustType}">
+              <div class="stepper-combo vertical ${this.size}">
                 <div class="divider-horizontal">
                   ${BlrDividerRenderFunction({
                     dividerDirectionVariant: 'horizontal',
