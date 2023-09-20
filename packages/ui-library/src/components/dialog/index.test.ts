@@ -3,12 +3,16 @@ import { BlrDialogType, BlrDialogRenderFunction } from './index';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
+const dialogElement = document.createElement('div');
+dialogElement.classList.add('blr-dialog');
+
 const sampleParams: BlrDialogType = {
   theme: 'Light',
   isOpen: true,
   dialogTitle: 'Title',
   dialogDescription: 'Description',
   closeIconSize: 'sm',
+  _dialogElement: dialogElement,
 };
 
 describe('blr-dialog', () => {
