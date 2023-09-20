@@ -68,10 +68,16 @@ export const Example1 = () => {
   return html`
     ${fontStyle}
     <style>
+      .wrapper {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+      }
       .stories-textarea {
         display: flex;
         flex-wrap: wrap;
-        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+        flex-direction: column;
       }
       .story-textarea {
         display: flex;
@@ -84,46 +90,93 @@ export const Example1 = () => {
         outline: 2px solid hsla(220, 10%, 10%, 1);
         border-radius: 4px;
       }
+      .row {
+        display: flex;
+        flex-direction: column;
+      }
     </style>
-    <div class="stories-textarea">
-      <div class="story-textarea">
-        <h3>Rest</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-        })}
+    <div class="wrapper">
+      <div class="row">
+        <p style="text-align: center">Default</p>
+        <div class="stories-textarea">
+          <div class="story-textarea">
+            <p>Rest</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Light',
+            })}
+          </div>
+          <div class="story-textarea">
+            <p>Hover</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Light',
+            })}
+          </div>
+          <div class="story-textarea">
+            <p>Pressed</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Light',
+            })}
+          </div>
+          <div class="story-textarea">
+            <p>Focus</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Light',
+            })}
+          </div>
+          <div class="story-textarea">
+            <p>Disabled</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              disabled: true,
+            })}
+          </div>
+          <div class="story-textarea">
+            <p>readOnly</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              readonly: true,
+            })}
+          </div>
+          <div class="story-textarea">
+            <h3>Description</h3>
+            <p>Here is a description</p>
+          </div>
+        </div>
       </div>
-      <div class="story-textarea">
-        <h3>Focus</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-        })}
-      </div>
-      <div class="story-textarea">
-        <h3>Disabled</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          disabled: true,
-        })}
-      </div>
-      <div class="story-textarea">
-        <h3>Error</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          hasError: true,
-        })}
-      </div>
-      <div class="story-textarea">
-        <h3>readOnly</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          readonly: true,
-        })}
-      </div>
-      <div class="story-textarea">
-        <h3>Description</h3>
-        <p>Here is a description</p>
+      <div class="row">
+        <p style="text-align: center">Error</p>
+        <div class="story-textarea">
+          <p>Rest</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+          })}
+        </div>
+        <div class="story-textarea">
+          <p>Hover</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+          })}
+        </div>
+        <div class="story-textarea">
+          <p>Pressed</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+          })}
+        </div>
+        <div class="story-textarea">
+          <p>Focus</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+          })}
+        </div>
       </div>
     </div>
   `;
@@ -140,43 +193,120 @@ export const Example2 = () =>
   html`
     ${fontStyle}
     <style>
+      .wrapper {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+      }
+
       .stories-textarea {
         display: flex;
-        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
         color: white;
+        flex-wrap: wrap;
+        flex-direction: column;
       }
+
       .story-textarea {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
         width: 20rem;
-        max-height: 7rem;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
       }
     </style>
-    <div class="stories-textarea">
-      <div class="story-textarea">
-        <h3>Default</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Dark',
-        })}
+    <div class="wrapper">
+      <div class="row">
+        <p style="text-align: center; color: white">Default</p>
+        <div class="stories-textarea">
+          <div class="story-textarea">
+            <p>Rest</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Dark',
+            })}
+          </div>
+          <div class="story-textarea">
+            <p>Hover</p>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Dark',
+            })}
+          </div>
+          <div class="story-textarea">
+            <h3>Pressed</h3>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Dark',
+            })}
+          </div>
+          <div class="story-textarea">
+            <h3>Focus</h3>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              theme: 'Dark',
+            })}
+          </div>
+          <div class="story-textarea">
+            <h3>Disabled</h3>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              disabled: true,
+              theme: 'Dark',
+            })}
+          </div>
+          <div class="story-textarea">
+            <h3>readOnly</h3>
+            ${BlrTextareaRenderFunction({
+              ...defaultParams,
+              readonly: true,
+              theme: 'Dark',
+            })}
+          </div>
+          <div class="story-textarea">
+            <h3>Description</h3>
+            <p>Here is a description</p>
+          </div>
+        </div>
       </div>
-      <div class="story-textarea">
-        <h3>Disabled</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          disabled: true,
-          theme: 'Dark',
-        })}
-      </div>
-      <div class="story-textarea">
-        <h3>HasError</h3>
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          hasError: true,
-          theme: 'Dark',
-        })}
+      <div class="row">
+        <p style="text-align: center; color: white">Error</p>
+        <div class="story-textarea">
+          <p style="color: white">Rest</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+            theme: 'Dark',
+          })}
+        </div>
+        <div class="story-textarea">
+          <p style="color: white">Rest</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+            theme: 'Dark',
+          })}
+        </div>
+        <div class="story-textarea">
+          <p style="color: white">Rest</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+            theme: 'Dark',
+          })}
+        </div>
+        <div class="story-textarea">
+          <p style="color: white">Rest</p>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            hasError: true,
+            theme: 'Dark',
+          })}
+        </div>
       </div>
     </div>
   `;
