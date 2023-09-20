@@ -67,38 +67,35 @@ export class BlrRangeMinMaxSlider extends LitElement {
       theme: this.theme,
     })}`;
 
-  protected setMinValue = (btnType: string) => {
-    const modifiedValue = setOnclickValue(this.startValueToSlider, this.stepFactor, btnType);
-    if (modifiedValue !== undefined) {
-      this.startValueToSlider = modifiedValue;
-      this.startValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
-    }
-    return this.onClickMax?.(this.startValue, this.endValue);
-  };
-
-  protected showMinVal = (event: Event) => {
+  protected showValue = (isMaxValue: boolean) => (event: Event) => {
     const value = Number((event.target as HTMLInputElement).value);
 
-    this.startValueToSlider = value;
-    this.startValue = findNearestValue(this.minValue, this.maxValue, value);
+    if (isMaxValue) {
+      this.endValueToSlider = value;
+      this.endValue = findNearestValue(this.minValue, this.maxValue, value);
+    } else {
+      this.startValueToSlider = value;
+      this.startValue = findNearestValue(this.minValue, this.maxValue, value);
+    }
+
     this.onChange?.(this.startValue, this.endValue, event);
   };
 
-  protected setMaxValue = (btnType: string) => {
-    const modifiedValue = setOnclickValue(this.endValueToSlider, this.stepFactor, btnType);
+  protected setValue = (btnType: string, isMaxValue: boolean) => {
+    const valueToSlider = isMaxValue ? this.endValueToSlider : this.startValueToSlider;
+    const modifiedValue = setOnclickValue(valueToSlider, this.stepFactor, btnType);
+
     if (modifiedValue !== undefined) {
-      this.endValueToSlider = modifiedValue;
-      this.endValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
+      if (isMaxValue) {
+        this.endValueToSlider = modifiedValue;
+        this.endValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
+      } else {
+        this.startValueToSlider = modifiedValue;
+        this.startValue = findNearestValue(this.minValue, this.maxValue, modifiedValue);
+      }
     }
+
     return this.onClickMax?.(this.startValue, this.endValue);
-  };
-
-  protected showMaxVal = (event: Event) => {
-    const value = Number((event.target as HTMLInputElement).value);
-
-    this.endValueToSlider = value;
-    this.endValue = findNearestValue(this.minValue, this.maxValue, value);
-    this.onChange?.(this.startValue, this.endValue, event);
   };
 
   protected render() {
@@ -107,7 +104,7 @@ export class BlrRangeMinMaxSlider extends LitElement {
       this.startValueToSlider,
       this.endValueToSlider,
       this.disabled,
-      true
+      'twoKnob'
     );
 
     const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
@@ -119,7 +116,16 @@ export class BlrRangeMinMaxSlider extends LitElement {
       [`${this.size || 'md'}`]: this.size || 'md',
     });
 
-    const barClasses = `range__bar blr-slider-bar ${this.disabled ? `bar-disabled` : ``}`;
+    const inlineLegendStyles = classMap({
+      'inline-legend': true,
+      'inline-legend-disabled': this.disabled || false,
+    });
+
+    const barClasses = classMap({
+      'range__bar': true,
+      'blr-slider-bar': true,
+      'bar-disabled': this.disabled || false,
+    });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -130,17 +136,17 @@ export class BlrRangeMinMaxSlider extends LitElement {
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_min',
-                btnEventHandler: () => this.setMinValue('INC'),
+                btnEventHandler: () => this.setValue('INC', false),
                 iconName: this.incrementIcon,
               })}
               ${this.renderBtn({
                 btnId: 'dec_btn_min',
-                btnEventHandler: () => this.setMinValue('DEC'),
+                btnEventHandler: () => this.setValue('DEC', false),
                 iconName: this.decrementIcon,
               })}
             </div>
             ${this.showLegend
-              ? html`<div class="inline-legend">
+              ? html`<div class=${inlineLegendStyles}>
                   <p>${this.minValue} ${this.units}</p>
                 </div>`
               : nothing}
@@ -153,8 +159,7 @@ export class BlrRangeMinMaxSlider extends LitElement {
                 max="100"
                 step="${this.stepFactor}"
                 class="range"
-                @change=${this.showMinVal}
-                @input=${this.showMinVal}
+                @input=${this.showValue(false)}
                 ?disabled=${this.disabled}
               />
               <input
@@ -165,8 +170,7 @@ export class BlrRangeMinMaxSlider extends LitElement {
                 max="100"
                 step="${this.stepFactor}"
                 class="range"
-                @change=${this.showMaxVal}
-                @input=${this.showMaxVal}
+                @input=${this.showValue(true)}
                 ?disabled=${this.disabled}
               />
 
@@ -178,16 +182,20 @@ export class BlrRangeMinMaxSlider extends LitElement {
               </div>
               <div class=${barClasses}></div>
             </div>
-            ${this.showLegend ? html`<div class="inline-legend"><p>${this.maxValue} ${this.units}</p></div>` : nothing}
+            ${this.showLegend
+              ? html`<div class=${inlineLegendStyles}>
+                  <p>${this.maxValue} ${this.units}</p>
+                </div>`
+              : nothing}
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_max',
-                btnEventHandler: () => this.setMaxValue('INC'),
+                btnEventHandler: () => this.setValue('INC', true),
                 iconName: this.incrementIcon,
               })}
               ${this.renderBtn({
                 btnId: 'dec_btn_max',
-                btnEventHandler: () => this.setMaxValue('DEC'),
+                btnEventHandler: () => this.setValue('DEC', true),
                 iconName: this.decrementIcon,
               })}
             </div>

@@ -35,7 +35,7 @@ export const generateRangeBar = (
   startValueToSlider: number,
   endValueToSlider: number,
   disabled?: boolean,
-  twoKonbs?: boolean
+  twoKnobs?: string
 ) => {
   const { tokenizedLight, tokenizedDark } = renderThemedCssStrings((componentTokens) => {
     const { Forms } = componentTokens;
@@ -49,7 +49,7 @@ export const generateRangeBar = (
     const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
     const muteColor = disabled ? disbledMuteColor : activeMuteColor;
 
-    const generateGradient = twoKonbs
+    const generateGradient = twoKnobs
       ? `linear-gradient(
             to right,
             ${muteColor} ${startValueToSlider + 1}%,

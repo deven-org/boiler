@@ -73,30 +73,33 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
     const tickFrequency = 1;
     const filteredStepsArray = stepsArray.filter((_, i) => i % tickFrequency == 0);
 
-    const showMinVal = (event: Event) => {
-      this.selectedStartIndex = Number((event.target as HTMLInputElement).value);
+    const onInputVal = (isMinValue: boolean) => (event: Event) => {
+      const value = Number((event.target as HTMLInputElement).value);
+      if (isMinValue) {
+        this.selectedStartIndex = value;
+      } else {
+        this.selectedEndIndex = value;
+      }
       this.onChange?.(this.selectedStartIndex, this.selectedEndIndex, event);
     };
 
-    const setMinValue = (btnType: string) => {
-      const modifiedValue = setOnclickValue(this.selectedStartIndex, this.stepFactor, btnType, stepsArray.length);
-      if (modifiedValue !== undefined) {
-        this.selectedStartIndex = modifiedValue;
-      }
-      return this.onClickMin?.(this.selectedStartIndex, this.selectedEndIndex);
-    };
+    const setMinMaxValue = (btnType: string, isMinValue: boolean) => {
+      const selectedValue = isMinValue ? this.selectedStartIndex : this.selectedEndIndex;
+      const modifiedValue = setOnclickValue(selectedValue, this.stepFactor, btnType, stepsArray.length);
 
-    const showMaxVal = (event: Event) => {
-      this.selectedEndIndex = Number((event.target as HTMLInputElement).value);
-      this.onChange?.(this.selectedStartIndex, this.selectedEndIndex, event);
-    };
-
-    const setMaxValue = (btnType: string) => {
-      const modifiedValue = setOnclickValue(this.selectedEndIndex, this.stepFactor, btnType, stepsArray.length);
       if (modifiedValue !== undefined) {
-        this.selectedEndIndex = modifiedValue;
+        if (isMinValue) {
+          this.selectedStartIndex = modifiedValue;
+        } else {
+          this.selectedEndIndex = modifiedValue;
+        }
       }
-      return this.onClickMax?.(this.selectedStartIndex, this.selectedEndIndex);
+
+      if (isMinValue) {
+        return this.onClickMin?.(this.selectedStartIndex, this.selectedEndIndex);
+      } else {
+        return this.onClickMax?.(this.selectedStartIndex, this.selectedEndIndex);
+      }
     };
 
     const classes = classMap({
@@ -125,12 +128,12 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_min',
-                btnEventHandler: () => setMinValue('INC'),
+                btnEventHandler: () => setMinMaxValue('INC', true),
                 iconName: this.incrementIcon,
               })}
               ${this.renderBtn({
                 btnId: 'dec_btn_min',
-                btnEventHandler: () => setMinValue('DEC'),
+                btnEventHandler: () => setMinMaxValue('DEC', true),
                 iconName: this.decrementIcon,
               })}
             </div>
@@ -145,8 +148,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
                   step="${this.stepFactor}"
                   class="range"
                   style=""
-                  @change=${showMinVal}
-                  @input=${showMinVal}
+                  @change=${onInputVal(true)}
+                  @input=${onInputVal(true)}
                   ?disabled=${this.disabled}
                 />
                 <input
@@ -158,8 +161,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
                   step="${this.stepFactor}"
                   class="range"
                   style=""
-                  @change=${showMaxVal}
-                  @input=${showMaxVal}
+                  @change=${onInputVal(false)}
+                  @input=${onInputVal(false)}
                   ?disabled=${this.disabled}
                 />
                 <div id="tooltip1" class="tooltip" style="left:${toolTipMinPos}; bottom:0px">
@@ -198,9 +201,9 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
                     <div class="legend-wrapper">
                       <div class="range__numbers">
                         ${map(filteredStepsArray, (step) => {
-                          return html`<div class="range__container"><p class="range__point ${
-                            this.disabled ? `point-disabled` : ``
-                          }">${step}</p></div></div> `;
+                          const legendClasses = `range__point ${this.disabled ? `point-disabled` : ``}`;
+
+                          return html`<div class="range__container"><p class="${legendClasses}">${step}</p></div></div> `;
                         })}
                       </div>
                     </div>
@@ -210,12 +213,12 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_max',
-                btnEventHandler: () => setMaxValue('INC'),
+                btnEventHandler: () => setMinMaxValue('INC', false),
                 iconName: this.incrementIcon,
               })}
               ${this.renderBtn({
                 btnId: 'dec_btn_max',
-                btnEventHandler: () => setMaxValue('DEC'),
+                btnEventHandler: () => setMinMaxValue('DEC', false),
                 iconName: this.decrementIcon,
               })}
             </div>
