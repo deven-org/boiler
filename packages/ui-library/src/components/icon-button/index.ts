@@ -2,7 +2,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
@@ -18,7 +17,7 @@ export class BlrIconButton extends LitElement {
   static styles = [styleCustom];
 
   @property() arialabel?: string;
-  @property() icon?: IconType;
+  @property() icon?: string;
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;

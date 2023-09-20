@@ -7,7 +7,7 @@ export const styleCustom = css`
     width: 100%;
   }
 
-  .modal {
+  .dialog {
     position: fixed;
     top: 0;
     right: 0;
@@ -22,13 +22,13 @@ export const styleCustom = css`
     overflow-y: auto;
   }
 
-  .modal-dialog {
+  .dialog-dialog {
     width: 600px;
     margin: 30px auto;
     position: relative;
   }
 
-  .modal-content {
+  .dialog-content {
     position: relative;
     background-color: #fff;
     -webkit-background-clip: padding-box;
@@ -39,28 +39,33 @@ export const styleCustom = css`
     -webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
     box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
     outline: 0;
+    display: flex;
+    flex-direction: column;
   }
 
-  .modal-body,
-  .modal-footer {
+  .dialog-body,
+  .dialog-footer,
+  .dialog-header {
     position: relative;
-    padding: 15px;
+    padding: 5px 15px;
     margin: 0 0.5rem;
   }
 
-  .modal-header {
-    padding: 15px;
-  }
-
-  .modal-header h4 {
+  .dialog-header h4 {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1.4rem;
-    margin: 1.3rem 0.5rem;
+    margin: 0.5rem 0;
   }
 
-  .modal-body p {
+  .dialog-header blr-icon-button {
+    position: absolute;
+    right: 0;
+  }
+
+  .dialog-body p {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1rem;
+    margin: 0.5rem 0;
   }
 
   blr-icon {
@@ -77,10 +82,11 @@ export const styleCustom = css`
 
   .fade.in {
     opacity: 1;
-    display: block;
+    display: flex;
+    align-items: center;
   }
 
-  .modal-backdrop {
+  .dialog-backdrop {
     background-color: transparent;
     position: fixed;
     top: 0;
@@ -93,7 +99,7 @@ export const styleCustom = css`
     z-index: 1040;
   }
 
-  .modal-backdrop-transparent {
+  .dialog-backdrop-transparent {
     position: fixed;
     top: 0;
     right: 0;
@@ -106,7 +112,7 @@ export const styleCustom = css`
     z-index: -1000;
   }
 
-  .modal-transition {
+  .dialog-transition {
     transition: all 0.4s ease;
   }
 `;
