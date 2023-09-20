@@ -46,9 +46,16 @@ export class BlrTextarea extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   @state() protected count = 0;
-
+  @state() protected isFocused = true;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
 
+  protected handleFocus = () => {
+    this.isFocused = true;
+  };
+
+  protected handleBlur = () => {
+    this.isFocused = false;
+  };
   connectedCallback() {
     super.connectedCallback();
 
@@ -97,6 +104,7 @@ export class BlrTextarea extends LitElement {
       [`error-input`]: this.hasError || false,
       [`${this.size}`]: this.size,
       [`resizeable`]: this.isResizeable || false,
+      ['focus']: this.isFocused || false,
     });
 
     const counterVariant = this.determinateCounterVariant();
@@ -125,7 +133,8 @@ export class BlrTextarea extends LitElement {
             ?required="${this.required}"
             ?disabled="${this.disabled}"
             @input="${this.onChange}"
-            @focus="${this.onFocus}"
+            @focus=${this.handleFocus}
+            @blur=${this.handleBlur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
           >${this.value}</textarea>
