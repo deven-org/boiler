@@ -50,5 +50,4 @@ BlrDivider.args = {
   size: 'md',
   addMargin: false,
   theme: 'Light',
-  directionVariant: 'vertical',
 };

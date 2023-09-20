@@ -2,7 +2,7 @@ import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius } = semanticTokens.Forms;
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SurfaceStroke } = semanticTokens.Forms;
 
   return css`
     .input-wrapper {
@@ -28,7 +28,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
       }
 
-      &.focus {
+      &.focus:not(.error-input) {
         border-width: ${Input.Default.Rest.width};
         border-style: ${Input.Default.Rest.style};
         border-color: transparent;
@@ -44,12 +44,74 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           }
         }
       }
+
+      &.error-input {
+        border-width: ${Input.Error.Rest.width};
+        border-style: ${Input.Error.Rest.style};
+        border-color: ${Input.Error.Rest.color};
+        color: ${UserInput.Error.Rest};
+        background-color: ${SurfaceFill.Error.Rest};
+
+        &::placeholder {
+          color: ${Placeholder.Error.Rest};
+        }
+
+        &:hover {
+          border-width: ${Input.Error.Hover.width};
+          border-style: ${Input.Error.Hover.style};
+          border-color: ${Input.Error.Hover.color};
+          color: ${UserInput.Error.Hover};
+          background-color: ${SurfaceFill.Error.Hover};
+
+          &::placeholder {
+            color: ${Placeholder.Error.Hover};
+          }
+        }
+
+        &:active {
+          border-width: ${Input.Error.Pressed.width};
+          border-style: ${Input.Error.Pressed.style};
+          border-style: ${Input.Error.Pressed.color};
+          outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
+          color: ${UserInput.Error.Pressed};
+          background-color: ${SurfaceFill.Error.Pressed};
+
+          &::placeholder {
+            color: ${Placeholder.Error.Pressed};
+          }
+        }
+
+        &:focus {
+          border-width: ${Input.Error.Rest.width};
+          border-style: ${Input.Error.Rest.style};
+          border-color: transparent
+          outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+          color: ${Input.Error.Focus};
+          background-color: ${SurfaceFill.Error.Focus};
+
+          &::placeholder {
+            color: ${Placeholder.Error.Focus};
+          }
+        }
+      }
+
+      &[readonly] {
+        border-width: ${Input.Default.ReadOnly.width};
+        border-style: ${Input.Default.ReadOnly.style};
+        border-color: transparent;
+        outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
+        background-color: ${SurfaceFill.Default.ReadOnly};
+
+        &::placeholder {
+          color: ${Placeholder.Default.ReadOnly};
+        }
+      }
     }
   `;
 });
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
+  const { UserInput, Placeholder, SM, MD, LG, Input, SurfaceFill } = semanticTokens.Forms;
 
   return css`
     .custom-form-input {
@@ -86,6 +148,32 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${LG.UserInput.lineHeight};
         padding: ${LG.InputField.Padding};
       }
+
+      &.error-input {
+        color: ${Placeholder.Error.Focus};
+
+        &:focus {
+          background-color: ${SurfaceFill.Error.Focus};
+
+          color: ${Input.Error.Focus};
+        }
+      }
+    }
+
+    .hint-wrapper {
+      display: flex;
+
+      &.sm {
+        margin: ${SM.CaptionSlot.Margin};
+      }
+
+      &.md {
+        margin: ${MD.CaptionSlot.Margin};
+      }
+
+      &.lg {
+        margin: ${MD.CaptionSlot.Margin};
+      }
     }
 
     .unit {
@@ -116,6 +204,14 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-family: ${LG.UserInput.fontFamily}, sans-serif;
         line-height: ${LG.UserInput.lineHeight};
         padding: ${LG.InputField.Padding};
+      }
+
+      &.disabled {
+        color: ${UserInput.Default.Disabled};
+      }
+
+      &.error-input {
+        color: ${Placeholder.Error.Focus};
       }
     }
   `;
