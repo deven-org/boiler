@@ -5,9 +5,8 @@ import { styleCustom } from './index.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { BlrBlanketRenderFunction } from '../blanket';
 import { FormSizesType } from '../../../globals/types';
-import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { BlrIconRenderFunction } from '../icon';
 import { BlrTextButtonRenderFunction } from '../../text-button';
+import { BlrIconLinkRenderFunction } from '../../icon-link';
 
 @customElement('blr-overlay')
 export class BlrOverlay extends LitElement {
@@ -16,6 +15,7 @@ export class BlrOverlay extends LitElement {
   @property() isOpen = false;
   @property() theme: ThemeType = 'Light';
   @property() modalTitle?: string;
+  @property() modalDescription?: string;
   @property() closeIconSize: FormSizesType = 'md';
 
   protected handleModalChange() {
@@ -49,19 +49,38 @@ export class BlrOverlay extends LitElement {
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              ${BlrIconRenderFunction({
-                icon: calculateIconName('blrClose', this.closeIconSize),
-                size: this.closeIconSize,
-                hideAria: true,
+              ${BlrIconLinkRenderFunction({
+                arialabel: 'Button',
                 onClick: this.handleModalChange,
+                loading: false,
+                linkId: 'close',
+                variant: 'silent',
+                size: 'md',
+                icon: 'blrClose',
+                href: '',
+                target: '',
+                loadingStatus: '',
+                theme: 'Light',
               })}
               <h4 class="modal-title">${this.modalTitle}</h4>
             </div>
             <div class="modal-body">
-              <p>This is a descriptive text</p>
+              <p>${this.modalDescription}</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default btn-close" @click=${this.handleModalChange}>Close</button>
+              ${BlrTextButtonRenderFunction({
+                theme: 'Light',
+                label: 'Close Modal',
+                onClick: () => this.handleModalChange(),
+                leadingIcon: undefined,
+                trailingIcon: 'blrChevronDownMd',
+                loading: false,
+                disabled: false,
+                buttonId: 'secondary-close',
+                variant: 'secondary',
+                size: 'md',
+                loadingStatus: 'Loading',
+              })}
             </div>
           </div>
         </div>
@@ -76,6 +95,11 @@ export class BlrOverlay extends LitElement {
 
 export type BlrOverlayType = Omit<BlrOverlay, keyof LitElement>;
 
-export const BlrOverlayRenderFunction = ({ theme, modalTitle, closeIconSize }: BlrOverlayType) => {
-  return html`<blr-overlay .theme=${theme} .modalTitle=${modalTitle} .closeIconSize=${closeIconSize}></blr-overlay>`;
+export const BlrOverlayRenderFunction = ({ theme, modalTitle, modalDescription, closeIconSize }: BlrOverlayType) => {
+  return html`<blr-overlay
+    .theme=${theme}
+    .modalTitle=${modalTitle}
+    .modalDescription=${modalDescription}
+    .closeIconSize=${closeIconSize}
+  ></blr-overlay>`;
 };

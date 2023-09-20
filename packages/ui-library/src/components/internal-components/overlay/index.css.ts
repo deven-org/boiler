@@ -41,6 +41,13 @@ export const styleCustom = css`
     outline: 0;
   }
 
+  .modal-body,
+  .modal-footer {
+    position: relative;
+    padding: 15px;
+    margin: 0 0.5rem;
+  }
+
   .modal-header {
     padding: 15px;
   }
@@ -54,17 +61,11 @@ export const styleCustom = css`
   .modal-body p {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1rem;
-    margin: 0 0.5rem;
   }
 
   blr-icon {
     color: #135bec;
     cursor: pointer;
-  }
-
-  .modal-body {
-    position: relative;
-    padding: 15px;
   }
 
   .fade {

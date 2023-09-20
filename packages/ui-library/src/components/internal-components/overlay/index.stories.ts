@@ -20,13 +20,19 @@ export default {
   },
 };
 
-export const BlrOverlay = ({ theme, isOpen, modalTitle }: BlrOverlayClass) =>
-  html` <blr-overlay .theme=${theme} .isOpen=${isOpen} .modalTitle=${modalTitle}></blr-overlay>`;
+export const BlrOverlay = ({ theme, isOpen, modalTitle, modalDescription }: BlrOverlayClass) =>
+  html` <blr-overlay
+    .theme=${theme}
+    .isOpen=${isOpen}
+    .modalTitle=${modalTitle}
+    .modalDescription=${modalDescription}
+  ></blr-overlay>`;
 
 BlrOverlay.storyName = 'BlrOverlay';
 
 BlrOverlay.args = {
   theme: 'Light',
   isOpen: false,
-  modalTitle: 'Modal Title'
+  modalTitle: 'Modal Title',
+  modalDescription: 'Sample Text',
 };
