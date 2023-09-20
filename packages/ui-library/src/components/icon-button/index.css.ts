@@ -2,9 +2,10 @@ import { css } from "nested-css-to-flat/lit-css";
 
 export const styleCustom = css`
   .blr-icon-button {
+    all: inital;
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: inline-flex;
     cursor: pointer;
   }
 
