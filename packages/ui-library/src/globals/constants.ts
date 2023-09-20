@@ -21,5 +21,6 @@ export const TabAlignmentVariants = [
   'space-around',
   'space-evenly',
 ] as const;
+export const AlignmentVariants = ['center', 'flex-start', 'flex-end'] as const;
 export const OverflowVariantsStandard = ['wrap', 'browserOverflow', 'buttons'] as const;
 export const OverflowVariantsFullWidth = ['wrap', 'browserOverflow'] as const;
