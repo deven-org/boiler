@@ -238,21 +238,21 @@ export const Example2 = () =>
             })}
           </div>
           <div class="story-textarea">
-            <h3>Pressed</h3>
+            <p>Pressed</p>
             ${BlrTextareaRenderFunction({
               ...defaultParams,
               theme: 'Dark',
             })}
           </div>
           <div class="story-textarea">
-            <h3>Focus</h3>
+            <p>Focus</p>
             ${BlrTextareaRenderFunction({
               ...defaultParams,
               theme: 'Dark',
             })}
           </div>
           <div class="story-textarea">
-            <h3>Disabled</h3>
+            <p>Disabled</p>
             ${BlrTextareaRenderFunction({
               ...defaultParams,
               disabled: true,
@@ -260,7 +260,7 @@ export const Example2 = () =>
             })}
           </div>
           <div class="story-textarea">
-            <h3>readOnly</h3>
+            <p>readOnly</p>
             ${BlrTextareaRenderFunction({
               ...defaultParams,
               readonly: true,
@@ -268,7 +268,7 @@ export const Example2 = () =>
             })}
           </div>
           <div class="story-textarea">
-            <h3>Description</h3>
+            <p>Description</p>
             <p>Here is a description</p>
           </div>
         </div>
@@ -284,7 +284,7 @@ export const Example2 = () =>
           })}
         </div>
         <div class="story-textarea">
-          <p style="color: white">Rest</p>
+          <p style="color: white">Hover</p>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             hasError: true,
@@ -292,7 +292,7 @@ export const Example2 = () =>
           })}
         </div>
         <div class="story-textarea">
-          <p style="color: white">Rest</p>
+          <p style="color: white">Pressed</p>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             hasError: true,
@@ -300,7 +300,7 @@ export const Example2 = () =>
           })}
         </div>
         <div class="story-textarea">
-          <p style="color: white">Rest</p>
+          <p style="color: white">Focus</p>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             hasError: true,
