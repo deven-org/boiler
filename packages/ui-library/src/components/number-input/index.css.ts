@@ -408,6 +408,13 @@ export const baseStyle = css`
     &.mode3 {
       .stepper-combo.vertical.sm {
         grid-area: right2;
+
+        & > .divider-horizontal {
+          position: absolute;
+          top: 50%;
+          width: 60%;
+          left: 20%;
+        }
       }
 
       .stepper-combo.vertical.md {
