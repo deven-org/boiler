@@ -243,7 +243,7 @@ export const Example2 = () =>
         </div>
       </div>
       <div class="row">
-        <p style="text-align: center">Default</p>
+        <p style="text-align: center; color: white">Default</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Dark' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Dark' })}
