@@ -261,7 +261,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
             width: ${StepperCombo.LG.Horizontal.Width};
 
             > .divider-vertical {
-              padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
+              padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
             }
           }
         }
@@ -433,13 +433,11 @@ export const baseStyle = css`
     position: absolute;
     top: 50%;
     width: 60%;
-    padding-left: 20%;
   }
 
   .divider-vertical {
     position: absolute;
     left: 60%;
     height: 60%;
-    padding-top: 10%;
   }
 `;
