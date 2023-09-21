@@ -141,6 +141,65 @@ Example1.parameters = {
 
 Example1.storyName = 'Textarea Examples Light Theme';
 
+export const Example4 = () => {
+  return html`
+    ${fontStyle}
+    <style>
+      .wrapper {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .stories-textarea {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .story-textarea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 20rem;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+    <div class="wrapper">
+      <div class="row">
+        <p style="text-align: center">Default</p>
+        <div class="stories-textarea">
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Light', shouldFocus: true })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Light', disabled: true })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Light', readonly: true })}
+        </div>
+      </div>
+      <div class="row">
+        <p style="text-align: center">Default</p>
+        <div class="stories-textarea">
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', hasError: true, theme: 'Light' })}
+        </div>
+      </div>
+    </div>
+  `;
+};
+Example4.parameters = {
+  backgrounds: {
+    default: 'light',
+  },
+};
+
+Example4.storyName = 'Textarea Examples Light Theme Focus';
+
 export const Example2 = () =>
   html`
     ${fontStyle}
