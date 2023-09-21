@@ -31,6 +31,10 @@ const defaultParams: BlrTextareaType = {
   isResizeable: true,
 };
 
+interface StorybookTextareaType extends BlrTextareaType {
+  storybookLabel: string;
+}
+
 const fontStyle = html`
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
@@ -64,6 +68,13 @@ export default {
   },
 };
 
+const renderTextareaExample = (params: StorybookTextareaType) => html`
+  <div class="story-textarea">
+    <p>${params.storybookLabel}</p>
+    ${BlrTextareaRenderFunction(params)}
+  </div>
+`;
+
 export const Example1 = () => {
   return html`
     ${fontStyle}
@@ -86,10 +97,10 @@ export const Example1 = () => {
         gap: 1rem;
         width: 20rem;
       }
-      .focus {
-        outline: 2px solid hsla(220, 10%, 10%, 1);
-        border-radius: 4px;
-      }
+      /*.focus {*/
+      /*  outline: 2px solid hsla(220, 10%, 10%, 1);*/
+      /*  border-radius: 4px;*/
+      /*}*/
       .row {
         display: flex;
         flex-direction: column;
@@ -99,83 +110,21 @@ export const Example1 = () => {
       <div class="row">
         <p style="text-align: center">Default</p>
         <div class="stories-textarea">
-          <div class="story-textarea">
-            <p>Rest</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Light',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Hover</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Light',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Pressed</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Light',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Focus</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Light',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Disabled</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              disabled: true,
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>readOnly</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              readonly: true,
-            })}
-          </div>
-          <div class="story-textarea">
-            <h3>Description</h3>
-            <p>Here is a description</p>
-          </div>
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Light', disabled: true })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Light', readonly: true })}
         </div>
       </div>
       <div class="row">
-        <p style="text-align: center">Error</p>
-        <div class="story-textarea">
-          <p>Rest</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-          })}
-        </div>
-        <div class="story-textarea">
-          <p>Hover</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-          })}
-        </div>
-        <div class="story-textarea">
-          <p>Pressed</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-          })}
-        </div>
-        <div class="story-textarea">
-          <p>Focus</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-          })}
+        <p style="text-align: center">Default</p>
+        <div class="stories-textarea">
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', hasError: true, theme: 'Light' })}
         </div>
       </div>
     </div>
@@ -194,10 +143,10 @@ export const Example2 = () =>
     ${fontStyle}
     <style>
       .wrapper {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
       }
 
       .stories-textarea {
@@ -223,89 +172,21 @@ export const Example2 = () =>
       <div class="row">
         <p style="text-align: center; color: white">Default</p>
         <div class="stories-textarea">
-          <div class="story-textarea">
-            <p>Rest</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Dark',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Hover</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Dark',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Pressed</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Dark',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Focus</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              theme: 'Dark',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Disabled</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              disabled: true,
-              theme: 'Dark',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>readOnly</p>
-            ${BlrTextareaRenderFunction({
-              ...defaultParams,
-              readonly: true,
-              theme: 'Dark',
-            })}
-          </div>
-          <div class="story-textarea">
-            <p>Description</p>
-            <p>Here is a description</p>
-          </div>
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Dark', disabled: true })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Dark', readonly: true })}
         </div>
       </div>
       <div class="row">
-        <p style="text-align: center; color: white">Error</p>
-        <div class="story-textarea">
-          <p style="color: white">Rest</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-            theme: 'Dark',
-          })}
-        </div>
-        <div class="story-textarea">
-          <p style="color: white">Hover</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-            theme: 'Dark',
-          })}
-        </div>
-        <div class="story-textarea">
-          <p style="color: white">Pressed</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-            theme: 'Dark',
-          })}
-        </div>
-        <div class="story-textarea">
-          <p style="color: white">Focus</p>
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            hasError: true,
-            theme: 'Dark',
-          })}
+        <p style="text-align: center">Default</p>
+        <div class="stories-textarea">
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', hasError: true, theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', hasError: true, theme: 'Dark' })}
         </div>
       </div>
     </div>
