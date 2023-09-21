@@ -46,9 +46,6 @@ const fontStyle = html`
 export default {
   title: 'Design System/Web Components/BlrTextarea/Examples',
   parameters: {
-    // backgrounds: {
-    //     default: 'light',
-    // },
     viewMode: 'story',
     previewTabs: {
       'storybook/docs/panel': {
@@ -98,13 +95,13 @@ export const Example1 = () => {
         gap: 1rem;
         width: 20rem;
       }
-      .row {
+      .column {
         display: flex;
         flex-direction: column;
       }
     </style>
     <div class="wrapper">
-      <div class="row">
+      <div class="column">
         <p style="text-align: center">Default</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Light' })}
@@ -115,7 +112,7 @@ export const Example1 = () => {
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Light', readonly: true })}
         </div>
       </div>
-      <div class="row">
+      <div class="column">
         <p style="text-align: center">Error</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
@@ -163,13 +160,13 @@ export const Example4 = () => {
         gap: 1rem;
         width: 20rem;
       }
-      .row {
+      .column {
         display: flex;
         flex-direction: column;
       }
     </style>
     <div class="wrapper">
-      <div class="row">
+      <div class="column">
         <p style="text-align: center">Default</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Light' })}
@@ -180,7 +177,7 @@ export const Example4 = () => {
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Light', readonly: true })}
         </div>
       </div>
-      <div class="row">
+      <div class="column">
         <p style="text-align: center">Error</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
@@ -225,13 +222,13 @@ export const Example2 = () =>
         gap: 1rem;
         width: 20rem;
       }
-      .row {
+      .column {
         display: flex;
         flex-direction: column;
       }
     </style>
     <div class="wrapper">
-      <div class="row">
+      <div class="column">
         <p style="text-align: center; color: white">Default</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Dark' })}
@@ -242,7 +239,7 @@ export const Example2 = () =>
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Dark', readonly: true })}
         </div>
       </div>
-      <div class="row">
+      <div class="column">
         <p style="text-align: center; color: white">Error</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Dark' })}

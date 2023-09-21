@@ -47,7 +47,6 @@ export class BlrTextarea extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   @state() protected count = 0;
-  @state() protected isFocused = true;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
 
   firstUpdated() {
@@ -59,13 +58,6 @@ export class BlrTextarea extends LitElement {
     }
   }
 
-  protected handleFocus = () => {
-    this.isFocused = true;
-  };
-
-  protected handleBlur = () => {
-    this.isFocused = false;
-  };
   connectedCallback() {
     super.connectedCallback();
 
@@ -114,7 +106,6 @@ export class BlrTextarea extends LitElement {
       [`error-input`]: this.hasError || false,
       [`${this.size}`]: this.size,
       [`resizeable`]: this.isResizeable || false,
-      ['focus']: this.isFocused || false,
       ['shouldFocus']: this.shouldFocus || false,
     });
 
@@ -145,8 +136,8 @@ export class BlrTextarea extends LitElement {
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
             @input="${this.onChange}"
-            @focus=${this.handleFocus}
-            @blur=${this.handleBlur}
+            @focus=${this.focus}
+            @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
             shouldFocus="${this.shouldFocus}"
@@ -207,7 +198,6 @@ export const BlrTextareaRenderFunction = ({
   hintIcon,
   hasError,
   onChange,
-  onFocus,
   onSelect,
   readonly,
   isResizeable,
@@ -238,7 +228,6 @@ export const BlrTextareaRenderFunction = ({
     .hasError=${hasError}
     .labelAppendix=${labelAppendix}
     .onChange=${onChange}
-    .onFocus=${onFocus}
     .onSelect=${onSelect}
     .isResizeable=${isResizeable}
     .showHint=${showHint}
