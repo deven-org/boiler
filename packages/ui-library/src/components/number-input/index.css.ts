@@ -243,28 +243,48 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
           &.sm {
             width: ${StepperCombo.SM.Horizontal.Width};
+
+            > .divider-vertical {
+              padding: ${StepperCombo.SM.Horizontal.DividerWrapper.Padding};
+            }
           }
 
           &.md {
             width: ${StepperCombo.MD.Horizontal.Width};
+
+            > .divider-vertical {
+              padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
+            }
           }
 
           &.lg {
             width: ${StepperCombo.LG.Horizontal.Width};
+
+            > .divider-vertical {
+              padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
+            }
+          }
+        }
+      }
+
+      &.vertical {
+        &.sm {
+          width: ${StepperCombo.SM.Vertical.Width};
+        }
+
+        &.md {
+          width: ${StepperCombo.MD.Vertical.Width};
+
+          > .divider-horizontal {
+            padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
           }
         }
 
-        &.vertical {
-          &.sm {
-            width: ${StepperCombo.SM.Vertical.Width};
-          }
+        &.lg {
+          width: ${StepperCombo.LG.Vertical.Width};
 
-          &.md {
-            width: ${StepperCombo.MD.Vertical.Width};
-          }
-
-          &.lg {
-            width: ${StepperCombo.LG.Vertical.Width};
+          > .divider-horizontal {
+            padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
           }
         }
       }
