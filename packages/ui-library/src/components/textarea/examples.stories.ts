@@ -139,7 +139,7 @@ Example1.parameters = {
   },
 };
 
-Example1.storyName = 'Textarea Examples Light Theme';
+Example1.storyName = 'Textarea Examples Light Theme Focus Error';
 
 export const Example4 = () => {
   return html`
@@ -198,7 +198,7 @@ Example4.parameters = {
   },
 };
 
-Example4.storyName = 'Textarea Examples Light Theme Focus';
+Example4.storyName = 'Textarea Examples Light Theme Focus Default';
 
 export const Example2 = () =>
   html`
