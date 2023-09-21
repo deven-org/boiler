@@ -113,7 +113,6 @@ export class BlrTextarea extends LitElement {
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
       [`${this.size}`]: this.size,
-      [`readonly`]: this.readonly || false,
       [`resizeable`]: this.isResizeable || false,
       ['focus']: this.isFocused || false,
       ['shouldFocus']: this.shouldFocus || false,
@@ -144,6 +143,7 @@ export class BlrTextarea extends LitElement {
             placeholder="${this.placeholder || nothing}"
             ?required="${this.required}"
             ?disabled="${this.disabled}"
+            ?readonly="${this.readonly}"
             @input="${this.onChange}"
             @focus=${this.handleFocus}
             @blur=${this.handleBlur}
@@ -232,7 +232,7 @@ export const BlrTextareaRenderFunction = ({
     .placeholder="${placeholder}"
     .required=${required}
     .disabled=${disabled}
-    .readOnly=${readonly}
+    .readonly=${readonly}
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
