@@ -116,7 +116,7 @@ export const Example1 = () => {
         </div>
       </div>
       <div class="row">
-        <p style="text-align: center">Default</p>
+        <p style="text-align: center">Error</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Light' })}
@@ -181,7 +181,7 @@ export const Example4 = () => {
         </div>
       </div>
       <div class="row">
-        <p style="text-align: center">Default</p>
+        <p style="text-align: center">Error</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Light' })}
@@ -243,7 +243,7 @@ export const Example2 = () =>
         </div>
       </div>
       <div class="row">
-        <p style="text-align: center; color: white">Default</p>
+        <p style="text-align: center; color: white">Error</p>
         <div class="stories-textarea">
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Dark' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Dark' })}
