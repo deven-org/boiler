@@ -99,7 +99,7 @@ BlrTextInput.args = {
   hasLabel: true,
   labelAppendix: '(Optional)',
   showInputIcon: true,
-  inputIcon: 'blr360Lg',
+  inputIcon: 'blr360',
   type: 'text',
   value: '',
   placeholder: 'Test placeholder',

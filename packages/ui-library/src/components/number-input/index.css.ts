@@ -2,7 +2,7 @@ import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SurfaceStroke } = semanticTokens.Forms;
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius } = semanticTokens.Forms;
 
   return css`
     .input-wrapper {
@@ -28,7 +28,24 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
       }
 
-      &.focus:not(.error-input) {
+      &.focus:not(.error-input){
+        border-width: ${Input.Default.Rest.width};
+        border-style: ${Input.Default.Rest.style};
+        border-color: transparent;
+        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+        background-color: ${SurfaceFill.Default.Focus};
+
+        & > input {
+          background-color: ${SurfaceFill.Default.Focus};
+          color: ${UserInput.Default.Focus};
+
+          &::placeholder {
+            color: ${Placeholder.Default.Focus};
+          }
+        }
+      }
+
+      &:focus{
         border-width: ${Input.Default.Rest.width};
         border-style: ${Input.Default.Rest.style};
         border-color: transparent;
@@ -81,7 +98,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           }
         }
 
-        &:focus {
+        &.focus {
           border-width: ${Input.Error.Rest.width};
           border-style: ${Input.Error.Rest.style};
           border-color: transparent
@@ -106,7 +123,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           color: ${Placeholder.Default.ReadOnly};
         }
       }
-    }
+    }    
   `;
 });
 
@@ -150,13 +167,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.error-input {
-        color: ${Placeholder.Error.Focus};
-
-        &:focus {
-          background-color: ${SurfaceFill.Error.Focus};
-
-          color: ${Input.Error.Focus};
-        }
+        color: ${UserInput.Error.Rest};
       }
     }
 
@@ -211,7 +222,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.error-input {
-        color: ${Placeholder.Error.Focus};
+        color: ${UserInput.Error.Rest};
       }
     }
   `;

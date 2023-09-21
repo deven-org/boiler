@@ -155,6 +155,7 @@ export class BlrNumberInput extends LitElement {
       [`${this.size}`]: this.size,
       disabled: this.disabled || false,
       [`error-input`]: this.hasError || false,
+      focus: this.isFocused || false,
     });
 
     const wrapperClasses = classMap({
@@ -163,7 +164,6 @@ export class BlrNumberInput extends LitElement {
       'disabled': this.disabled || false,
       [`${this.size}`]: this.size,
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
-      [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
     });
     const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
