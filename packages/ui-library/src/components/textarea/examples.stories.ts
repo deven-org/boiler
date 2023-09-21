@@ -15,6 +15,7 @@ const defaultParams: BlrTextareaType = {
   warningLimitPer: 75,
   cols: 20,
   rows: 5,
+  shouldFocus: false,
 
   placeholder: 'Type your message here ..',
   required: false,
@@ -97,10 +98,6 @@ export const Example1 = () => {
         gap: 1rem;
         width: 20rem;
       }
-      /*.focus {*/
-      /*  outline: 2px solid hsla(220, 10%, 10%, 1);*/
-      /*  border-radius: 4px;*/
-      /*}*/
       .row {
         display: flex;
         flex-direction: column;
@@ -113,7 +110,7 @@ export const Example1 = () => {
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Light' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Light' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Light' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Light', shouldFocus: true })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Light', disabled: true })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Light', readonly: true })}
         </div>
@@ -124,7 +121,13 @@ export const Example1 = () => {
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Light' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', hasError: true, theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', hasError: true, theme: 'Light' })}
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Focus',
+            hasError: true,
+            theme: 'Light',
+            shouldFocus: true,
+          })}
         </div>
       </div>
     </div>
@@ -175,7 +178,7 @@ export const Example2 = () =>
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Dark' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Dark' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Dark' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Dark' })}
+          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Dark', shouldFocus: true })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Dark', disabled: true })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Dark', readonly: true })}
         </div>
@@ -186,7 +189,13 @@ export const Example2 = () =>
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Dark' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Dark' })}
           ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', hasError: true, theme: 'Dark' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', hasError: true, theme: 'Dark' })}
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Focus',
+            hasError: true,
+            theme: 'Dark',
+            shouldFocus: true,
+          })}
         </div>
       </div>
     </div>

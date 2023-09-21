@@ -42,12 +42,22 @@ export class BlrTextarea extends LitElement {
   @property() rows?: number;
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
+  @property() shouldFocus? = false;
 
   @property() theme: ThemeType = 'Light';
 
   @state() protected count = 0;
   @state() protected isFocused = true;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
+
+  firstUpdated() {
+    if (this.shouldFocus) {
+      const textarea = this.shadowRoot?.querySelector('textarea');
+      if (textarea) {
+        textarea.focus();
+      }
+    }
+  }
 
   protected handleFocus = () => {
     this.isFocused = true;
@@ -106,6 +116,7 @@ export class BlrTextarea extends LitElement {
       [`readonly`]: this.readonly || false,
       [`resizeable`]: this.isResizeable || false,
       ['focus']: this.isFocused || false,
+      ['shouldFocus']: this.shouldFocus || false,
     });
 
     const counterVariant = this.determinateCounterVariant();
@@ -138,6 +149,7 @@ export class BlrTextarea extends LitElement {
             @blur=${this.handleBlur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
+            shouldFocus="${this.shouldFocus}"
           >${this.value}</textarea>
         </div>
         <div class="hint-wrapper">
@@ -173,8 +185,8 @@ export class BlrTextarea extends LitElement {
     `;
   }
 }
-
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
+type OmittedKeys = 'firstUpdated';
+export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement | OmittedKeys>;
 
 export const BlrTextareaRenderFunction = ({
   textareaId,
@@ -202,6 +214,7 @@ export const BlrTextareaRenderFunction = ({
   showHint,
   value,
   theme,
+  shouldFocus,
 }: BlrTextareaType) => {
   return html`<blr-textarea
     class=${isResizeable ? nothing : `parent-width`}
@@ -230,5 +243,6 @@ export const BlrTextareaRenderFunction = ({
     .isResizeable=${isResizeable}
     .showHint=${showHint}
     .theme=${theme}
+    .shouldFocus=${shouldFocus}
   ></blr-textarea>`;
 };
