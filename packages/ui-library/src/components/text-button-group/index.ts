@@ -6,12 +6,17 @@ import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
 import { buttonGroupLight, buttonGroupDark } from '../../foundation/component-tokens/ui.css';
-import { ActionVariantType, AlignmentType, ButtonOption, ButtonGroupSizesType } from '../../globals/types';
+import { ActionVariantType, AlignmentType, ButtonGroupSizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
+
+export interface ButtonOption {
+  label: string;
+  buttonVariant?: ActionVariantType;
+}
 
 @customElement('blr-text-button-group')
 export class BlrTextButtonGroup extends LitElement {
@@ -30,6 +35,7 @@ export class BlrTextButtonGroup extends LitElement {
   @property() loadingStatus!: string;
   @property() alignment: AlignmentType = 'center';
   @property() buttons!: ButtonOption[];
+  @property() buttonVariant?: ActionVariantType = 'primary';
 
   @property() theme: ThemeType = 'Light';
 
@@ -58,7 +64,7 @@ export class BlrTextButtonGroup extends LitElement {
       </style>
       <div class="wrapper ${alignmentClasses} blr-button-group">
         ${this.buttons.map((button) => {
-          const buttonVariant = button.variant || this.variant;
+          const buttonVariant = button.buttonVariant || this.variant;
           const buttonClasses = classMap({
             [`${buttonVariant}`]: buttonVariant,
             [`${this.size}`]: this.size || 'md',
