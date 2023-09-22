@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, ButtonGroupSizes, AlignmentVariants } from '../../globals/constants';
+import { ActionVariants, ButtonGroupSizes, ButtonsAlignmentVariants } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -33,7 +33,7 @@ export default {
       control: { type: 'select' },
     },
     alignment: {
-      options: AlignmentVariants,
+      options: ButtonsAlignmentVariants,
       control: { type: 'select' },
     },
   },
@@ -95,7 +95,6 @@ BlrTextButtonGroup.args = {
   buttons: [
     {
       label: 'One',
-      variant: 'silent',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
@@ -105,7 +104,6 @@ BlrTextButtonGroup.args = {
     },
     {
       label: 'Two',
-      variant: 'secondary',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
@@ -115,12 +113,94 @@ BlrTextButtonGroup.args = {
     },
     {
       label: 'Three',
-      variant: 'primary',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',
       trailingIcon: 'ChevronLeft',
+      loading: false,
+    },
+  ],
+};
+
+export const VariantButtonGroup = ({
+  label,
+  onClick,
+  buttons,
+  onBlur,
+  loading,
+  disabled,
+  buttonId,
+  variant,
+  size,
+  leadingIcon,
+  trailingIcon,
+  loadingStatus,
+  theme,
+  alignment,
+}: BlrTextButtonGroupType) =>
+  html`
+    ${BlrTextButtonGroupRenderFunction({
+      label,
+      onClick,
+      buttons,
+      onBlur,
+      loading,
+      disabled,
+      buttonId,
+      variant,
+      size,
+      leadingIcon,
+      trailingIcon,
+      loadingStatus,
+      theme,
+      alignment,
+    })}
+  `;
+
+VariantButtonGroup.storyName = 'VariantButtonGroup';
+
+VariantButtonGroup.args = {
+  theme: 'Light',
+  alignment: 'center',
+  onClick: () => console.log('onClick'),
+  onBlur: () => console.log('onBlur'),
+  leadingIcon: undefined,
+  trailingIcon: 'blrChevronDown',
+  loading: false,
+  disabled: false,
+  buttonId: 'button-variant-id',
+  size: 'md',
+  loadingStatus: 'Loading',
+  buttons: [
+    {
+      label: 'Primary',
+      variant: 'primary',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-primary-id',
+      trailingIcon: 'blrChevronUp',
+      loading: false,
+    },
+    {
+      label: 'CTA',
+      variant: 'cta',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-cta-id',
+      trailingIcon: 'blrChevronRight',
+      loading: false,
+    },
+    {
+      label: 'Silent',
+      variant: 'silent',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-silent-id',
+      trailingIcon: 'blrChevronRight',
       loading: false,
     },
   ],
