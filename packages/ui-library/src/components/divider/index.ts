@@ -1,8 +1,8 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { DividerVariationTypes, FormSizesType } from '../../../globals/types';
-import { dividerLight, dividerDark } from '../../../foundation/component-tokens/ui.css';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { DividerVariationTypes, FormSizesType } from '../../globals/types';
+import { dividerLight, dividerDark } from '../../foundation/component-tokens/ui.css';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-divider')
 export class BlrDivider extends LitElement {

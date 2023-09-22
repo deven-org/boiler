@@ -19,7 +19,7 @@ import { IconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../utils/calculate-icon-name';
-import { BlrDividerRenderFunction } from '../internal-components/divider';
+import { BlrDividerRenderFunction } from '../divider';
 
 @customElement('blr-tab-bar')
 export class BlrTabBar extends LitElement {

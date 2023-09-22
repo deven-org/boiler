@@ -11,7 +11,7 @@ import {
 } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { BlrDividerRenderFunction } from '../internal-components/divider';
+import { BlrDividerRenderFunction } from '../divider';
 import { FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
