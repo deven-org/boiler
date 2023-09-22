@@ -128,7 +128,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 });
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, Placeholder, SM, MD, LG, Input, SurfaceFill } = semanticTokens.Forms;
+  const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
 
   return css`
     .custom-form-input {
@@ -408,13 +408,6 @@ export const baseStyle = css`
     &.mode3 {
       .stepper-combo.vertical.sm {
         grid-area: right2;
-
-        & > .divider-horizontal {
-          position: absolute;
-          top: 50%;
-          width: 60%;
-          left: 20%;
-        }
       }
 
       .stepper-combo.vertical.md {
@@ -423,13 +416,6 @@ export const baseStyle = css`
 
       .stepper-combo.vertical.lg {
         grid-area: right2;
-
-        & > .divider-horizontal {
-          position: absolute;
-          top: 50%;
-          width: 60%;
-          left: 4%;
-        }
       }
 
       & > .unit:not(.prepend) {
@@ -447,6 +433,8 @@ export const baseStyle = css`
     position: absolute;
     top: 50%;
     width: 60%;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .divider-vertical {
