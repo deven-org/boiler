@@ -9,30 +9,39 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 export default {
   title: 'Design System/Web Components/Button',
   argTypes: {
-    buttons: {
-      control: { type: 'array' },
-    },
-    leadingIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-    },
-    trailingIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-    },
-    size: {
-      options: ButtonGroupSizes,
-      control: { type: 'select' },
-    },
-    variant: {
+    'buttons[0].variant': {
       options: ActionVariants,
       control: { type: 'select' },
     },
-    theme: {
+    'buttons[1].variant': {
+      options: ActionVariants,
+      control: { type: 'select' },
+    },
+    'buttons[2].variant': {
+      options: ActionVariants,
+      control: { type: 'select' },
+    },
+    'leadingIcon': {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    'trailingIcon': {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    'size': {
+      options: ButtonGroupSizes,
+      control: { type: 'select' },
+    },
+    // variant: {
+    //   options: ActionVariants,
+    //   control: { type: 'select' },
+    // },
+    'theme': {
       options: Themes,
       control: { type: 'select' },
     },
-    alignment: {
+    'alignment': {
       options: ButtonsAlignmentVariants,
       control: { type: 'select' },
     },
@@ -89,7 +98,6 @@ BlrTextButtonGroup.args = {
   loading: false,
   disabled: false,
   buttonId: 'button-id',
-  variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
   buttons: [
@@ -100,6 +108,7 @@ BlrTextButtonGroup.args = {
       disabled: false,
       buttonId: 'button-id-1',
       trailingIcon: 'ChevronUp',
+      variant: 'silent',
       loading: false,
     },
     {
@@ -108,6 +117,7 @@ BlrTextButtonGroup.args = {
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-2',
+      variant: 'cta',
       trailingIcon: 'ChevronDown',
       loading: false,
     },
@@ -117,6 +127,7 @@ BlrTextButtonGroup.args = {
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',
+      variant: 'primary',
       trailingIcon: 'ChevronLeft',
       loading: false,
     },
