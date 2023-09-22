@@ -28,7 +28,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
       }
 
-      &.focus:not(.error-input){
+      &.focus:not(.error-input) {
         border-width: ${Input.Default.Rest.width};
         border-style: ${Input.Default.Rest.style};
         border-color: transparent;
@@ -45,7 +45,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
       }
 
-      &:focus{
+      &:focus {
         border-width: ${Input.Default.Rest.width};
         border-style: ${Input.Default.Rest.style};
         border-color: transparent;
@@ -88,7 +88,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         &:active {
           border-width: ${Input.Error.Pressed.width};
           border-style: ${Input.Error.Pressed.style};
-          border-style: ${Input.Error.Pressed.color};
+          border-color: ${Input.Error.Pressed.color};
           outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
           color: ${UserInput.Error.Pressed};
           background-color: ${SurfaceFill.Error.Pressed};
@@ -101,7 +101,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         &.focus {
           border-width: ${Input.Error.Rest.width};
           border-style: ${Input.Error.Rest.style};
-          border-color: transparent
+          border-color: transparent;
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
           color: ${Input.Error.Focus};
           background-color: ${SurfaceFill.Error.Focus};
@@ -123,7 +123,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           color: ${Placeholder.Default.ReadOnly};
         }
       }
-    }    
+    }
   `;
 });
 
