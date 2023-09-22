@@ -423,6 +423,13 @@ export const baseStyle = css`
 
       .stepper-combo.vertical.lg {
         grid-area: right2;
+
+        & > .divider-horizontal {
+          position: absolute;
+          top: 50%;
+          width: 60%;
+          left: 4%;
+        }
       }
 
       & > .unit:not(.prepend) {

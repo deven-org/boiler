@@ -110,7 +110,7 @@ BlrNumberInput.args = {
   step: '1',
   fractionDigits: '',
   totalDigits: '',
-  size: 'md',
+  size: 'lg',
   theme: 'Light',
   hasLabel: true,
   label: 'Label',
