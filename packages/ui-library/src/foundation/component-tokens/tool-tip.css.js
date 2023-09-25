@@ -1,9 +1,14 @@
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 import { css } from "nested-css-to-flat/lit-css";
 
-export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = renderThemedCssStrings((componentTokens) => {
-  // eslint-disable-next-line no-console
-  console.log("*** componentTokens ***", componentTokens);
+export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const {
+    Feedback: { Tooltip },
+  } = componentTokens;
+  const {
+    UI: { Caption },
+  } = semanticTokens;
+
   return css`
     .blr-tooltip {
       position: relative;
@@ -19,27 +24,62 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         & > .tooltip {
           visibility: visible;
           opacity: 1;
+
+          & + .nose-solo {
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
 
       & > .tooltip {
         visibility: hidden;
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-        padding: 5px;
+        border-radius: ${Tooltip.ContentCol.BorderRadius};
         position: absolute;
         z-index: 1;
         opacity: 0;
         transition: opacity 0.2s;
-        font-family: Arial, sans-serif;
+        width: max-content;
+        max-width: ${Tooltip.MaxWidth};
+        min-width: ${Tooltip.MinWidth};
 
-        &::after {
-          content: "";
+        & > .inner-container {
+          padding: ${Tooltip.ContentCol.Padding};
+          color: ${Tooltip.Content};
+          background-color: ${Tooltip.SurfaceFill};
+          border-radius: ${Tooltip.ContentCol.BorderRadius};
+        }
+
+        & > .elevation {
+          box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
+        }
+
+        &.sm {
+          font-family: ${Caption.SM.fontFamily}, sans-serif;
+          font-weight: ${Caption.SM.fontWeight};
+          font-size: ${Caption.SM.fontSize};
+          line-height: ${Caption.SM.lineHeight};
+        }
+
+        &.md {
+          font-family: ${Caption.MD.fontFamily}, sans-serif;
+          font-weight: ${Caption.MD.fontWeight};
+          font-size: ${Caption.MD.fontSize};
+          line-height: ${Caption.MD.lineHeight};
+        }
+
+        &.lg {
+          font-family: ${Caption.LG.fontFamily}, sans-serif;
+          font-weight: ${Caption.LG.fontWeight};
+          font-size: ${Caption.LG.fontSize};
+          line-height: ${Caption.LG.lineHeight};
+        }
+
+        & + .nose-solo {
           position: absolute;
-          border-width: 5px;
-          border-style: solid;
-          border-color: #000 transparent transparent;
+          visibility: hidden;
+          z-index: 1;
+          opacity: 0;
           transition: opacity 0.2s;
         }
       }
@@ -47,24 +87,29 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & > .blr-tooltip-visible-always {
         visibility: visible;
         opacity: 1;
+
+        & + .nose-solo {
+          visibility: visible;
+          opacity: 1;
+        }
       }
 
       & .tooltip-top {
         bottom: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
 
-        &::after {
-          top: 100%;
+        & + .nose-solo {
+          top: -10px;
           transform: rotate(0deg);
         }
       }
 
       & .tooltip-bottom {
         top: 100%;
-        margin-top: 5px;
+        margin-top: 10px;
 
-        &::after {
-          bottom: 100%;
+        & + .nose-solo {
+          bottom: -10px;
           transform: rotate(180deg);
         }
       }
@@ -73,8 +118,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         right: 100%;
         margin-right: 10px;
 
-        &::after {
-          left: 100%;
+        & + .nose-solo {
+          left: -15px;
           transform: rotate(270deg);
         }
       }
@@ -83,8 +128,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         left: 100%;
         margin-left: 10px;
 
-        &::after {
-          right: 100%;
+        & + .nose-solo {
+          right: -15px;
           transform: rotate(90deg);
         }
       }
@@ -92,8 +137,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-horizontal-start {
         left: 0;
 
-        &::after {
-          left: 5px;
+        & + .nose-solo {
+          left: ${Tooltip.NoseWrapper.PaddingLeftRight};
         }
       }
 
@@ -101,25 +146,31 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         left: 50%;
         transform: translateX(-50%);
 
-        &::after {
+        & + .nose-solo {
           left: 50%;
           transform: translateX(-50%);
+        }
+
+        &.tooltip-bottom {
+          & + .nose-solo {
+            transform: translateX(-50%) rotate(180deg);
+          }
         }
       }
 
       & .tooltip-horizontal-end {
         right: 0;
 
-        &::after {
-          right: 5px;
+        & + .nose-solo {
+          right: ${Tooltip.NoseWrapper.PaddingLeftRight};
         }
       }
 
       & .tooltip-vertical-start {
         top: 0;
 
-        &::after {
-          top: 5px;
+        & + .nose-solo {
+          top: ${Tooltip.NoseWrapper.PaddingTopBottom};
         }
       }
 
@@ -128,7 +179,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         transform: translateY(-50%);
         margin-top: -5px;
 
-        &::after {
+        & + .nose-solo {
           top: 50%;
         }
       }
@@ -136,8 +187,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-vertical-end {
         bottom: 0;
 
-        &::after {
-          bottom: 5px;
+        & + .nose-solo {
+          bottom: ${Tooltip.NoseWrapper.PaddingTopBottom};
         }
       }
 
@@ -150,14 +201,10 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       }
 
       & .hide-arrow {
-        &::after {
-          border: none;
+        & + .nose-solo {
+          display: none;
         }
       }
     }
   `;
 });
-
-// box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-//  border-color: #000 transparent transparent transparent; line 40

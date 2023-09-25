@@ -8,7 +8,7 @@
     "prestart": "npm run tokens:generate",
     "start": "npm run start --workspace=@boiler/storybook",
     "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
-    "copy:static": "mkdir -p dist/assets/fonts && cp -rip static/fonts/* dist/assets/fonts/",
+    "copy:static": "mkdir -p dist/assets && cp -rip static/{fonts,imgs}/* dist/assets/",
     "build": "npm run build --workspace=@boiler/ui-library",
     "build:types": "npm run build:types --workspace=@boiler/ui-library",
     "lint": "npm run lint --workspace=@boiler/ui-library",

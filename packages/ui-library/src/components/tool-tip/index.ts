@@ -9,13 +9,14 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 @customElement('blr-tool-tip')
 export class BlrToolTip extends LitElement {
   @property() theme: ThemeType = 'Light';
-  @property() size: FormSizesType = 'md';
+  @property() size: FormSizesType = 'lg';
   @property() text!: string;
   @property() toolTipId?: string = 'tooltip-1';
   @property() placement!: ToolTipPosition;
   @property() visibility?: ToolTipVisibility = 'onHover';
   @property() toolTipArrow?: ToolTipArrowPosition = 'start';
   @property() customCss?: string = '';
+  @property() elevation?: boolean = false;
 
   constructor() {
     super();
@@ -29,7 +30,7 @@ export class BlrToolTip extends LitElement {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-tooltip': true,
-      [`${this.size || 'md'}`]: this.size || 'md',
+      [`${this.size || 'lg'}`]: this.size || 'lg',
     });
     const generatedArrowPosition =
       this.placement === 'top' || this.placement === 'bottom'
@@ -38,11 +39,17 @@ export class BlrToolTip extends LitElement {
 
     const toolTipClasses = classMap({
       'tooltip': true,
+      [`${this.size || 'lg'}`]: this.size || 'lg',
       'blr-tooltip-visible-always': this.visibility === 'onLoad',
       [`tooltip-${this.placement}`]: true,
       [`${generatedArrowPosition}`]: true,
       [`hide-arrow`]: this.toolTipArrow === 'hide',
       [this.customCss || '']: this.customCss || false,
+    });
+
+    const innerContainerClasses = classMap({
+      'inner-container': true,
+      'elevation': this.elevation || false,
     });
 
     return html`
@@ -53,7 +60,10 @@ export class BlrToolTip extends LitElement {
         <!-- Children will be rendered here -->
 
         <slot></slot>
-        <span class="${toolTipClasses}" id=${this.toolTipId}>${this.text}</span>
+        <div class="${toolTipClasses}" id=${this.toolTipId}>
+          <div class="${innerContainerClasses}">${this.text}</div>
+        </div>
+        <img src="../../../assets/feedback/tooltip/NoseSolo.svg" alt="Nose" class="nose-solo" />
       </div>
     `;
   }
@@ -65,19 +75,18 @@ export type BlrToolTipType = Partial<BlrToolTipTypeWithOmitProperty> & {
 };
 
 export const BlrToolTipRenderFunction = ({
-  size,
   theme,
   text,
   toolTipId,
   placement,
   visibility,
   toolTipArrow,
+  elevation,
   customCss,
   itemRenderer,
 }: BlrToolTipType) => {
   return html`
     <blr-tool-tip
-      .size=${size}
       .theme=${theme}
       .text=${text}
       .tooldTipId=${toolTipId}
@@ -85,6 +94,7 @@ export const BlrToolTipRenderFunction = ({
       .visibility=${visibility}
       .customCss=${customCss}
       .toolTipArrow=${toolTipArrow}
+      .elevation=${elevation}
     >
       ${itemRenderer}
     </blr-tool-tip>
