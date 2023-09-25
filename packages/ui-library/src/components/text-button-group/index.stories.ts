@@ -9,40 +9,28 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 export default {
   title: 'Design System/Web Components/Button',
   argTypes: {
-    'leadingIcon': {
+    leadingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
-    'trailingIcon': {
+    trailingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
-    'size': {
+    size: {
       options: ButtonGroupSizes,
       control: { type: 'select' },
     },
-    'variant': {
+    variant: {
       options: ActionVariants,
       control: { type: 'select' },
     },
-    'theme': {
+    theme: {
       options: Themes,
       control: { type: 'select' },
     },
-    'alignment': {
+    alignment: {
       options: ButtonsAlignmentVariants,
-      control: { type: 'select' },
-    },
-    'buttons[0].buttonVariant': {
-      options: ActionVariants,
-      control: { type: 'select' },
-    },
-    'buttons[1].buttonVariant': {
-      options: ActionVariants,
-      control: { type: 'select' },
-    },
-    'buttons[2].buttonVariant': {
-      options: ActionVariants,
       control: { type: 'select' },
     },
   },
