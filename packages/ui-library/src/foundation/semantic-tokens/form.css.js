@@ -339,6 +339,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         .hint-container {
           padding: ${LG.CaptionComponent.Padding};
           gap: ${LG.CaptionComponent.ItemSpacing};
+          align-items: flex-end;
 
           .icon-wrapper {
             padding: ${LG.CaptionComponent.IconWrapper.Padding};
