@@ -823,6 +823,16 @@
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }
+      },
+      "MinWidth": {
+        "value": "{core.dimensionREM.40}",
+        "type": "sizing",
+        "description": "Defines the minimum width of the tooltip."
+      },
+      "MaxWidth": {
+        "value": "{core.dimensionREM.80}",
+        "type": "sizing",
+        "description": "Defines the maximum Width of the tooltip."
       }
     },
     "Dialog": {
