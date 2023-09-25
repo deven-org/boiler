@@ -545,11 +545,7 @@
       "color/SEM": "enabled",
       "color/CMP": "enabled",
       "dimensions/CMP": "enabled",
-      "dimensions/SEM": "enabled",
-      "captions/allCaptions": "disabled",
-      "captions/HintOnly": "disabled",
-      "captions/ErrorOnly": "disabled",
-      "captions/noCaptions": "disabled"
+      "dimensions/SEM": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:5039:8491",
     "$figmaModeId": "5039:0",
@@ -763,20 +759,35 @@
       "Forms.Slider.Legend.Color.Disabled": "022ef2187311e450e3836516cdbdac3d006e6b1d",
       "UI.Divider.Stroke": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da",
       "UI.Blanket.Surface": "1758bac1223c81451082018286cba93e78c0cdda",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill": "b1d09457f8286010d12324179c3ae0a20be0d470",
-      "Navigation.TabBar.Tab.Label.Active": "ff1ea3ed0061667e934c3dbe42a65ada0793f244",
-      "Navigation.TabBar.Tab.Label.Unselected": "b47da4387cc24128b5d2468160bfa8781a057ba8",
-      "Navigation.TabBar.Tab.Label.Disabled": "a0310b27218be324cf518b5c4eab6c61bf04fd37",
-      "Navigation.TabBar.Tab.Icon.Active": "5611bda3a33bb4e886b7355f006b43dc86c0a7eb",
-      "Navigation.TabBar.Tab.Icon.Unselected": "e0ade4e717959ea3dafbc87d890c962eb20a6b19",
-      "Navigation.TabBar.Tab.Icon.Disabled": "b631baa09b2e96fa2beea2344469ac9c42167523",
-      "Action.Menu.Surface.Color": "915b1ddec5d8b8e8a32bf5afbd9186e16af5ec54",
-      "Action.Menu.MenuSection.SectionTitle": "9f8a812cd4e37124e365682d18bd0dd37b5ea311",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest": "a9f02fe908bb058bce5087f032dabbee7189ec0b",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover": "66a0d31e617e9857429ae1d3093034423ed68c7d",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed": "cd36fc768255249ae38c7d9aee8f74d9f78c2112",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus": "8e251e194eb428f039f452bc766c5f83e77001bb",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest": "d8973b80c2c5dbd33734db74fcf88d9dc9781eba",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover": "f6d6615bec35396af700074611e652b9f261a6b0",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed": "9aa87bd5cd7efce5bd47389e0b296285d4f04bc3",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus": "0d8e3fa086b7a3d382711b1e6b8357b1d2385a11",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled": "4d343fe3fb69af3fd6fe8e56f324d3dac1d4d829",
+      "Navigation.TabBar.Tab.Label.Selected.Rest": "e9892e6e3f94be6889cd47da3a25199a077768c0",
+      "Navigation.TabBar.Tab.Label.Selected.Hover": "6458c0c2ec874d7e1b41b68a8403a016a1874aad",
+      "Navigation.TabBar.Tab.Label.Selected.Pressed": "036c851103290e1f7e55deba15facd214a969661",
+      "Navigation.TabBar.Tab.Label.Selected.Focus": "aa139c0b107ac7416763eb2df3985337ad330ea5",
+      "Navigation.TabBar.Tab.Label.Unselected.Rest": "b4d40a899198051eb71cd248baa2dfed5076c881",
+      "Navigation.TabBar.Tab.Label.Unselected.Hover": "41815cf3cf89194eaa0ec940187e9e982218f161",
+      "Navigation.TabBar.Tab.Label.Unselected.Pressed": "60488c3fa92b868bedc28bd82d4d97e27bf9442d",
+      "Navigation.TabBar.Tab.Label.Unselected.Focus": "5396365ceedb627293384013ea805412b55a9299",
+      "Navigation.TabBar.Tab.Label.Unselected.Disabled": "cf15b53a4ee2c83838f4341e758ca54a2d6ee958",
+      "Navigation.TabBar.Tab.Icon.Selected.Rest": "bf1b4d1669589d3764a435e5f4d19b2a70ad2696",
+      "Navigation.TabBar.Tab.Icon.Selected.Hover": "6736ba4de9a8103c3e81b1dde6532ad0628147f1",
+      "Navigation.TabBar.Tab.Icon.Selected.Pressed": "11dd1d450eaeec9ceae30166eacf64ffe556079e",
+      "Navigation.TabBar.Tab.Icon.Selected.Focus": "ef86593a1f3dbf5e7e6c4a3e20fe71fb6ef1a638",
+      "Navigation.TabBar.Tab.Icon.Unselected.Rest": "642f49daeb8a5281b424908d0fea56e70a41d265",
+      "Navigation.TabBar.Tab.Icon.Unselected.Hover": "08605d6465e4b7ffa3eb3422689ee17f603d17d4",
+      "Navigation.TabBar.Tab.Icon.Unselected.Pressed": "4cbf4b735f172abc3e2f00578831e33a9d1da076",
+      "Navigation.TabBar.Tab.Icon.Unselected.Focus": "5aa4790a9273876dbe9976cf76139a26d8debd8f",
+      "Navigation.TabBar.Tab.Icon.Unselected.Disabled": "4db57aaef7dacc16289639889ac20dba5b391df8",
+      "Action.Menu.Surface.Color": "915b1ddec5d8b8e8a32bf5afbd9186e16af5ec54",
+      "Action.Menu.MenuSection.SectionTitle": "9f8a812cd4e37124e365682d18bd0dd37b5ea311",
       "Action.CTA.SurfaceFill.Rest": "e113217d84d5ed192f2c9401e6881a78bd729419",
       "Action.CTA.SurfaceFill.Hover": "558ccf9c09e95bb902075239a9bd050b442c5bad",
       "Action.CTA.SurfaceFill.Pressed": "84fd3776c431823e1eb1fe5ee216df727493dc77",
@@ -1468,7 +1479,9 @@
       "Forms.LG.CaptionComponent.IconWrapper.PaddingTop": "775b16d13a004b18d9850eb2fc2bab205f69972d",
       "Forms.LG.CaptionComponent.ItemSpacing": "ef5c2ca2ccdbbe520a71c9afdfb2b39856393000",
       "Forms.LG.LabelComponent.ItemSpacing": "f61dee5fef7e7f2a1e8801625057884241025971",
-      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d"
+      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
+      "Feedback.Tooltip.NoseWrapper.PaddingTopBottom": "5ae1aa66dd9cbf9843d6f93ba70bb690a529c112",
+      "Feedback.Tooltip.NoseWrapper.PaddingLeftRight": "e1b333c7dbbf6ac752ba85d44cf99a82d81dc607"
     },
     "group": "Theme"
   },
@@ -2015,11 +2028,7 @@
       "color/CMP": "enabled",
       "intermediary/Dark": "enabled",
       "dimensions/CMP": "enabled",
-      "dimensions/SEM": "enabled",
-      "captions/allCaptions": "disabled",
-      "captions/HintOnly": "disabled",
-      "captions/ErrorOnly": "disabled",
-      "captions/noCaptions": "disabled"
+      "dimensions/SEM": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:5039:8491",
     "$figmaModeId": "5039:1",
@@ -2233,20 +2242,35 @@
       "Forms.Slider.Legend.Color.Disabled": "022ef2187311e450e3836516cdbdac3d006e6b1d",
       "UI.Divider.Stroke": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da",
       "UI.Blanket.Surface": "1758bac1223c81451082018286cba93e78c0cdda",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill": "b1d09457f8286010d12324179c3ae0a20be0d470",
-      "Navigation.TabBar.Tab.Label.Active": "ff1ea3ed0061667e934c3dbe42a65ada0793f244",
-      "Navigation.TabBar.Tab.Label.Unselected": "b47da4387cc24128b5d2468160bfa8781a057ba8",
-      "Navigation.TabBar.Tab.Label.Disabled": "a0310b27218be324cf518b5c4eab6c61bf04fd37",
-      "Navigation.TabBar.Tab.Icon.Active": "5611bda3a33bb4e886b7355f006b43dc86c0a7eb",
-      "Navigation.TabBar.Tab.Icon.Unselected": "e0ade4e717959ea3dafbc87d890c962eb20a6b19",
-      "Navigation.TabBar.Tab.Icon.Disabled": "b631baa09b2e96fa2beea2344469ac9c42167523",
-      "Action.Menu.Surface.Color": "915b1ddec5d8b8e8a32bf5afbd9186e16af5ec54",
-      "Action.Menu.MenuSection.SectionTitle": "9f8a812cd4e37124e365682d18bd0dd37b5ea311",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest": "a9f02fe908bb058bce5087f032dabbee7189ec0b",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover": "66a0d31e617e9857429ae1d3093034423ed68c7d",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed": "cd36fc768255249ae38c7d9aee8f74d9f78c2112",
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus": "8e251e194eb428f039f452bc766c5f83e77001bb",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest": "d8973b80c2c5dbd33734db74fcf88d9dc9781eba",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover": "f6d6615bec35396af700074611e652b9f261a6b0",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed": "9aa87bd5cd7efce5bd47389e0b296285d4f04bc3",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus": "0d8e3fa086b7a3d382711b1e6b8357b1d2385a11",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled": "4d343fe3fb69af3fd6fe8e56f324d3dac1d4d829",
+      "Navigation.TabBar.Tab.Label.Selected.Rest": "e9892e6e3f94be6889cd47da3a25199a077768c0",
+      "Navigation.TabBar.Tab.Label.Selected.Hover": "6458c0c2ec874d7e1b41b68a8403a016a1874aad",
+      "Navigation.TabBar.Tab.Label.Selected.Pressed": "036c851103290e1f7e55deba15facd214a969661",
+      "Navigation.TabBar.Tab.Label.Selected.Focus": "aa139c0b107ac7416763eb2df3985337ad330ea5",
+      "Navigation.TabBar.Tab.Label.Unselected.Rest": "b4d40a899198051eb71cd248baa2dfed5076c881",
+      "Navigation.TabBar.Tab.Label.Unselected.Hover": "41815cf3cf89194eaa0ec940187e9e982218f161",
+      "Navigation.TabBar.Tab.Label.Unselected.Pressed": "60488c3fa92b868bedc28bd82d4d97e27bf9442d",
+      "Navigation.TabBar.Tab.Label.Unselected.Focus": "5396365ceedb627293384013ea805412b55a9299",
+      "Navigation.TabBar.Tab.Label.Unselected.Disabled": "cf15b53a4ee2c83838f4341e758ca54a2d6ee958",
+      "Navigation.TabBar.Tab.Icon.Selected.Rest": "bf1b4d1669589d3764a435e5f4d19b2a70ad2696",
+      "Navigation.TabBar.Tab.Icon.Selected.Hover": "6736ba4de9a8103c3e81b1dde6532ad0628147f1",
+      "Navigation.TabBar.Tab.Icon.Selected.Pressed": "11dd1d450eaeec9ceae30166eacf64ffe556079e",
+      "Navigation.TabBar.Tab.Icon.Selected.Focus": "ef86593a1f3dbf5e7e6c4a3e20fe71fb6ef1a638",
+      "Navigation.TabBar.Tab.Icon.Unselected.Rest": "642f49daeb8a5281b424908d0fea56e70a41d265",
+      "Navigation.TabBar.Tab.Icon.Unselected.Hover": "08605d6465e4b7ffa3eb3422689ee17f603d17d4",
+      "Navigation.TabBar.Tab.Icon.Unselected.Pressed": "4cbf4b735f172abc3e2f00578831e33a9d1da076",
+      "Navigation.TabBar.Tab.Icon.Unselected.Focus": "5aa4790a9273876dbe9976cf76139a26d8debd8f",
+      "Navigation.TabBar.Tab.Icon.Unselected.Disabled": "4db57aaef7dacc16289639889ac20dba5b391df8",
+      "Action.Menu.Surface.Color": "915b1ddec5d8b8e8a32bf5afbd9186e16af5ec54",
+      "Action.Menu.MenuSection.SectionTitle": "9f8a812cd4e37124e365682d18bd0dd37b5ea311",
       "Action.CTA.SurfaceFill.Rest": "e113217d84d5ed192f2c9401e6881a78bd729419",
       "Action.CTA.SurfaceFill.Hover": "558ccf9c09e95bb902075239a9bd050b442c5bad",
       "Action.CTA.SurfaceFill.Pressed": "84fd3776c431823e1eb1fe5ee216df727493dc77",
@@ -2938,7 +2962,9 @@
       "Forms.LG.CaptionComponent.IconWrapper.PaddingTop": "775b16d13a004b18d9850eb2fc2bab205f69972d",
       "Forms.LG.CaptionComponent.ItemSpacing": "ef5c2ca2ccdbbe520a71c9afdfb2b39856393000",
       "Forms.LG.LabelComponent.ItemSpacing": "f61dee5fef7e7f2a1e8801625057884241025971",
-      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d"
+      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
+      "Feedback.Tooltip.NoseWrapper.PaddingTopBottom": "5ae1aa66dd9cbf9843d6f93ba70bb690a529c112",
+      "Feedback.Tooltip.NoseWrapper.PaddingLeftRight": "e1b333c7dbbf6ac752ba85d44cf99a82d81dc607"
     },
     "group": "Theme"
   },
@@ -2949,7 +2975,14 @@
     "selectedTokenSets": {
       "captions/allCaptions": "enabled"
     },
-    "group": "Caption"
+    "group": "Caption",
+    "$figmaCollectionId": "VariableCollectionId:6105:242686",
+    "$figmaModeId": "6105:0",
+    "$figmaVariableReferences": {
+      "CaptionContainer": "aa90916d78e02c0415f9518d569a6a341f2891eb",
+      "🔷 HintMsg": "b76216137548a722c3bbf2c7f9dc09df76a5feca",
+      "🔷 ErrorMsg": "c53a483d2440f5df0047daa2e6da82e2c610b3a8"
+    }
   },
   {
     "id": "75296d1875947aa3681aa72763fa1078814c938c",
@@ -2958,7 +2991,14 @@
     "selectedTokenSets": {
       "captions/HintOnly": "enabled"
     },
-    "group": "Caption"
+    "group": "Caption",
+    "$figmaCollectionId": "VariableCollectionId:6105:242686",
+    "$figmaModeId": "6105:1",
+    "$figmaVariableReferences": {
+      "CaptionContainer": "aa90916d78e02c0415f9518d569a6a341f2891eb",
+      "🔷 HintMsg": "b76216137548a722c3bbf2c7f9dc09df76a5feca",
+      "🔷 ErrorMsg": "c53a483d2440f5df0047daa2e6da82e2c610b3a8"
+    }
   },
   {
     "id": "952d14ff8cc881b46dc29b075f1927fc9d6326b9",
@@ -2967,7 +3007,14 @@
     "selectedTokenSets": {
       "captions/ErrorOnly": "enabled"
     },
-    "group": "Caption"
+    "group": "Caption",
+    "$figmaCollectionId": "VariableCollectionId:6105:242686",
+    "$figmaModeId": "6105:2",
+    "$figmaVariableReferences": {
+      "CaptionContainer": "aa90916d78e02c0415f9518d569a6a341f2891eb",
+      "🔷 HintMsg": "b76216137548a722c3bbf2c7f9dc09df76a5feca",
+      "🔷 ErrorMsg": "c53a483d2440f5df0047daa2e6da82e2c610b3a8"
+    }
   },
   {
     "id": "bb09f6c5d139043d0d6590c978e9096343ca4ba5",
@@ -2976,6 +3023,13 @@
     "selectedTokenSets": {
       "captions/noCaptions": "enabled"
     },
-    "group": "Caption"
+    "group": "Caption",
+    "$figmaCollectionId": "VariableCollectionId:6105:242686",
+    "$figmaModeId": "6105:3",
+    "$figmaVariableReferences": {
+      "CaptionContainer": "aa90916d78e02c0415f9518d569a6a341f2891eb",
+      "🔷 HintMsg": "b76216137548a722c3bbf2c7f9dc09df76a5feca",
+      "🔷 ErrorMsg": "c53a483d2440f5df0047daa2e6da82e2c610b3a8"
+    }
   }
 ]
