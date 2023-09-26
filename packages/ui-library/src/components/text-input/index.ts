@@ -92,7 +92,7 @@ export class BlrTextInput extends LitElement {
             class="blr-form-element ${inputClasses}"
             id=${this.textInputId}
             type="${this.currentType}"
-            value="${this.value}"
+            .value="${this.value}"
             placeholder="${this.placeholder}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"

@@ -28,7 +28,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
       }
 
-      &.focus {
+      &.focus:not(.error-input) {
         border-width: ${Input.Default.Rest.width};
         border-style: ${Input.Default.Rest.style};
         border-color: transparent;
@@ -42,6 +42,85 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           &::placeholder {
             color: ${Placeholder.Default.Focus};
           }
+        }
+      }
+
+      &:focus {
+        border-width: ${Input.Default.Rest.width};
+        border-style: ${Input.Default.Rest.style};
+        border-color: transparent;
+        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+        background-color: ${SurfaceFill.Default.Focus};
+
+        & > input {
+          background-color: ${SurfaceFill.Default.Focus};
+          color: ${UserInput.Default.Focus};
+
+          &::placeholder {
+            color: ${Placeholder.Default.Focus};
+          }
+        }
+      }
+
+      &.error-input {
+        border-width: ${Input.Error.Rest.width};
+        border-style: ${Input.Error.Rest.style};
+        border-color: ${Input.Error.Rest.color};
+        color: ${UserInput.Error.Rest};
+        background-color: ${SurfaceFill.Error.Rest};
+
+        &::placeholder {
+          color: ${Placeholder.Error.Rest};
+        }
+
+        &:hover {
+          border-width: ${Input.Error.Hover.width};
+          border-style: ${Input.Error.Hover.style};
+          border-color: ${Input.Error.Hover.color};
+          color: ${UserInput.Error.Hover};
+          background-color: ${SurfaceFill.Error.Hover};
+
+          &::placeholder {
+            color: ${Placeholder.Error.Hover};
+          }
+        }
+
+        &:active {
+          border-width: ${Input.Error.Pressed.width};
+          border-style: ${Input.Error.Pressed.style};
+          border-color: ${Input.Error.Pressed.color};
+          outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
+          color: ${UserInput.Error.Pressed};
+          background-color: ${SurfaceFill.Error.Pressed};
+
+          &::placeholder {
+            color: ${Placeholder.Error.Pressed};
+          }
+        }
+
+        &.focus {
+          border-width: ${Input.Error.Rest.width};
+          border-style: ${Input.Error.Rest.style};
+          border-color: transparent;
+          outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+          color: ${Input.Error.Focus};
+          background-color: ${SurfaceFill.Error.Focus};
+
+          &::placeholder {
+            color: ${Placeholder.Error.Focus};
+          }
+        }
+      }
+
+      &[readonly] {
+        border-width: ${Input.Default.ReadOnly.width};
+        border-style: ${Input.Default.ReadOnly.style};
+        border-color: transparent;
+        outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
+        background-color: ${SurfaceFill.Default.ReadOnly};
+
+        &::placeholder {
+          color: ${Placeholder.Default.ReadOnly};
         }
       }
     }
@@ -86,6 +165,26 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${LG.UserInput.lineHeight};
         padding: ${LG.InputField.Padding};
       }
+
+      &.error-input {
+        color: ${UserInput.Error.Rest};
+      }
+    }
+
+    .hint-wrapper {
+      display: flex;
+
+      &.sm {
+        margin: ${SM.CaptionSlot.Margin};
+      }
+
+      &.md {
+        margin: ${MD.CaptionSlot.Margin};
+      }
+
+      &.lg {
+        margin: ${MD.CaptionSlot.Margin};
+      }
     }
 
     .unit {
@@ -117,6 +216,14 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${LG.UserInput.lineHeight};
         padding: ${LG.InputField.Padding};
       }
+
+      &.disabled {
+        color: ${UserInput.Default.Disabled};
+      }
+
+      &.error-input {
+        color: ${UserInput.Error.Rest};
+      }
     }
   `;
 });
@@ -131,30 +238,53 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         position: relative;
 
         &.horizontal {
+          display: flex;
+          justify-content: flex-end;
+
           &.sm {
             width: ${StepperCombo.SM.Horizontal.Width};
+
+            > .divider-vertical {
+              padding: ${StepperCombo.SM.Horizontal.DividerWrapper.Padding};
+            }
           }
 
           &.md {
             width: ${StepperCombo.MD.Horizontal.Width};
+
+            > .divider-vertical {
+              padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
+            }
           }
 
           &.lg {
             width: ${StepperCombo.LG.Horizontal.Width};
+
+            > .divider-vertical {
+              padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
+            }
+          }
+        }
+      }
+
+      &.vertical {
+        &.sm {
+          width: ${StepperCombo.SM.Vertical.Width};
+        }
+
+        &.md {
+          width: ${StepperCombo.MD.Vertical.Width};
+
+          > .divider-horizontal {
+            padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
           }
         }
 
-        &.vertical {
-          &.sm {
-            width: ${StepperCombo.SM.Vertical.Width};
-          }
+        &.lg {
+          width: ${StepperCombo.LG.Vertical.Width};
 
-          &.md {
-            width: ${StepperCombo.MD.Vertical.Width};
-          }
-
-          &.lg {
-            width: ${StepperCombo.LG.Vertical.Width};
+          > .divider-horizontal {
+            padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
           }
         }
       }
@@ -168,7 +298,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
         &.fullWidthHeight {
           width: 100%;
-          height: 100%;
+          height: 50%;
         }
 
         &:hover:not(:disabled) {
@@ -243,12 +373,23 @@ export const baseStyle = css`
     }
 
     &.mode2 {
-      .increment {
+      .stepper-combo.horizontal.sm {
+        grid-area: right2;
+
+        & > .divider-vertical {
+          position: absolute;
+          left: 50%;
+          height: 60%;
+          padding-top: 10%;
+        }
+      }
+
+      .stepper-combo.horizontal.md {
         grid-area: right2;
       }
 
-      .decrement {
-        grid-area: right1;
+      .stepper-combo.horizontal.lg {
+        grid-area: right2;
       }
 
       & > input {
@@ -265,23 +406,20 @@ export const baseStyle = css`
     }
 
     &.mode3 {
-      .increment {
+      .stepper-combo.vertical.sm {
         grid-area: right2;
       }
 
-      .decrement {
+      .stepper-combo.vertical.md {
         grid-area: right2;
-        grid-row: 2;
       }
 
-      & > input {
-        grid-area: center;
-        grid-row: span 2;
+      .stepper-combo.vertical.lg {
+        grid-area: right2;
       }
 
       & > .unit:not(.prepend) {
         grid-area: unitright;
-        grid-row: span 2;
       }
 
       & > .unit.prepend {
@@ -289,5 +427,19 @@ export const baseStyle = css`
         grid-row: span 2;
       }
     }
+  }
+
+  .divider-horizontal {
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .divider-vertical {
+    position: absolute;
+    left: 60%;
+    height: 60%;
   }
 `;
