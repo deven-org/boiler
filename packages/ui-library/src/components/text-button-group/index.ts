@@ -45,12 +45,6 @@ export class BlrTextButtonGroup extends LitElement {
         ? [actionLight, textButtonLight, buttonGroupLight]
         : [actionDark, textButtonDark, buttonGroupDark];
 
-    const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
-      [`${this.alignment}`]: this.alignment || 'center',
-    });
-
     const alignmentClasses = classMap({
       [`${this.alignment}`]: this.alignment || 'center',
       [`${this.size}`]: this.size || 'md',
