@@ -42,8 +42,7 @@ export default {
 };
 
 export const BlrRangeMinMaxSlider = ({
-  onClickMin,
-  onClickMax,
+  onBtnClick,
   onChange,
   rangeInputId,
   startValue,
@@ -62,8 +61,7 @@ export const BlrRangeMinMaxSlider = ({
 }: BlrRangeMinMaxSliderType) =>
   html`
     ${BlrRangeMinMaxSliderRenderFunction({
-      onClickMin,
-      onClickMax,
+      onBtnClick,
       onChange,
       rangeInputId,
       startValue,
@@ -97,8 +95,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
 
 BlrRangeMinMaxSlider.args = {
   theme: 'Light',
-  onClickMin: btnEventType,
-  onClickMax: btnEventType,
+  onBtnClick: btnEventType,
   onChange: logEventType,
   rangeInputId: 'range-cmpt',
   startValue: 80,

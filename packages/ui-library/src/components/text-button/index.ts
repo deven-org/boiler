@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
@@ -30,6 +31,14 @@ export class BlrTextButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  protected handleFocus = () => {
+    console.log('focused');
+  };
+
+  protected handleBlur = () => {
+    console.log('blurred');
+  };
+
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [actionLight, textButtonLight] : [actionDark, textButtonDark];
 
@@ -43,10 +52,14 @@ export class BlrTextButton extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <button
+      <span
         class="blr-semantic-action blr-text-button ${classes}"
         @click="${this.onClick}"
-        @blur="${this.onBlur}"
+        tabindex="0"
+        @focus=${this.handleFocus}
+        @blur=${this.handleBlur}
+        role="button"
+        @keydown=${this.onClick}
         ?disabled="${this.disabled}"
         id=${this.buttonId || nothing}
       >
@@ -72,7 +85,7 @@ export class BlrTextButton extends LitElement {
                 hideAria: true,
               })}`}
             `}
-      </button>`;
+      </span>`;
   }
 }
 
