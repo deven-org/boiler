@@ -20,6 +20,7 @@ export const styleCustom = css`
 
   .wrapper {
     display: flex;
+    gap: 10px;
 
     &.flex-end {
       justify-content: flex-end;

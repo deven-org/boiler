@@ -2,16 +2,13 @@
 import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, ButtonGroupSizes, AlignmentVariants } from '../../globals/constants';
+import { ActionVariants, ButtonGroupSizes, ButtonsAlignmentVariants } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components/Button',
   argTypes: {
-    buttons: {
-      control: { type: 'array' },
-    },
     leadingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -33,7 +30,7 @@ export default {
       control: { type: 'select' },
     },
     alignment: {
-      options: AlignmentVariants,
+      options: ButtonsAlignmentVariants,
       control: { type: 'select' },
     },
   },
@@ -85,42 +82,210 @@ BlrTextButtonGroup.args = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
-  trailingIcon: 'blrChevronDown',
+  trailingIcon: 'blr360',
   loading: false,
   disabled: false,
+  variant: 'primary',
   buttonId: 'button-id',
-  variant: 'cta',
   size: 'md',
   loadingStatus: 'Loading',
   buttons: [
     {
       label: 'One',
-      variant: 'silent',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-1',
-      trailingIcon: 'ChevronUp',
+      trailingIcon: 'blr360',
+      buttonVariant: '',
       loading: false,
     },
     {
       label: 'Two',
-      variant: 'secondary',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-2',
-      trailingIcon: 'ChevronDown',
+      buttonVariant: '',
+      trailingIcon: 'blr360',
       loading: false,
     },
     {
       label: 'Three',
-      variant: 'primary',
       size: 'md',
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',
-      trailingIcon: 'ChevronLeft',
+      buttonVariant: '',
+      trailingIcon: 'blr360',
+      loading: false,
+    },
+  ],
+};
+
+export const VariantButtonGroupRight = ({
+  label,
+  onClick,
+  buttons,
+  onBlur,
+  loading,
+  disabled,
+  buttonId,
+  variant,
+  size,
+  leadingIcon,
+  trailingIcon,
+  loadingStatus,
+  theme,
+  alignment,
+}: BlrTextButtonGroupType) =>
+  html`
+    ${BlrTextButtonGroupRenderFunction({
+      label,
+      onClick,
+      buttons,
+      onBlur,
+      loading,
+      disabled,
+      buttonId,
+      variant,
+      size,
+      leadingIcon,
+      trailingIcon,
+      loadingStatus,
+      theme,
+      alignment,
+    })}
+  `;
+
+VariantButtonGroupRight.storyName = 'VariantButtonGroupRight';
+
+VariantButtonGroupRight.args = {
+  theme: 'Light',
+  alignment: 'flex-end',
+  onClick: () => console.log('onClick'),
+  onBlur: () => console.log('onBlur'),
+  leadingIcon: undefined,
+  trailingIcon: 'blr360',
+  loading: false,
+  disabled: false,
+  variant: 'primary',
+  buttonId: 'button-variant-id',
+  size: 'md',
+  loadingStatus: 'Loading',
+  buttons: [
+    {
+      label: 'Destructive',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-primary-id',
+      buttonVariant: 'destructive',
+      trailingIcon: 'blr360',
+      loading: false,
+    },
+    {
+      label: 'Encourage',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-cta-id',
+      trailingIcon: 'blr360',
+      buttonVariant: 'encourage',
+      loading: false,
+    },
+    {
+      label: 'Secondary',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-silent-id',
+      trailingIcon: 'blr360',
+      buttonVariant: 'secondary',
+      loading: false,
+    },
+  ],
+};
+
+export const VariantButtonGroupCenter = ({
+  label,
+  onClick,
+  buttons,
+  onBlur,
+  loading,
+  disabled,
+  buttonId,
+  variant,
+  size,
+  leadingIcon,
+  trailingIcon,
+  loadingStatus,
+  theme,
+  alignment,
+}: BlrTextButtonGroupType) =>
+  html`
+    ${BlrTextButtonGroupRenderFunction({
+      label,
+      onClick,
+      buttons,
+      onBlur,
+      loading,
+      disabled,
+      buttonId,
+      variant,
+      size,
+      leadingIcon,
+      trailingIcon,
+      loadingStatus,
+      theme,
+      alignment,
+    })}
+  `;
+
+VariantButtonGroupCenter.storyName = 'VariantButtonGroupCenter';
+
+VariantButtonGroupCenter.args = {
+  theme: 'Light',
+  alignment: 'center',
+  onClick: () => console.log('onClick'),
+  onBlur: () => console.log('onBlur'),
+  leadingIcon: undefined,
+  trailingIcon: 'blr360',
+  loading: false,
+  disabled: false,
+  buttonId: 'button-variant-id',
+  size: 'md',
+  variant: 'destructive',
+  loadingStatus: 'Loading',
+  buttons: [
+    {
+      label: 'Primary',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-primary-id',
+      buttonVariant: 'primary',
+      trailingIcon: 'blr360',
+      loading: false,
+    },
+    {
+      label: 'CTA',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-cta-id',
+      buttonVariant: 'cta',
+      trailingIcon: 'blr360',
+      loading: false,
+    },
+    {
+      label: 'Silent',
+      buttonVariant: 'silent',
+      size: 'md',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonId: 'button-silent-id',
+      trailingIcon: 'blr360',
       loading: false,
     },
   ],
