@@ -42,12 +42,21 @@ export class BlrTextarea extends LitElement {
   @property() rows?: number;
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
+  @property() shouldFocus? = false;
 
   @property() theme: ThemeType = 'Light';
 
   @state() protected count = 0;
-
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
+
+  firstUpdated() {
+    if (this.shouldFocus) {
+      const textarea = this.shadowRoot?.querySelector('textarea');
+      if (textarea) {
+        textarea.focus();
+      }
+    }
+  }
 
   connectedCallback() {
     super.connectedCallback();
@@ -97,6 +106,7 @@ export class BlrTextarea extends LitElement {
       [`error-input`]: this.hasError || false,
       [`${this.size}`]: this.size,
       [`resizeable`]: this.isResizeable || false,
+      ['shouldFocus']: this.shouldFocus || false,
     });
 
     const counterVariant = this.determinateCounterVariant();
@@ -124,10 +134,13 @@ export class BlrTextarea extends LitElement {
             placeholder="${this.placeholder || nothing}"
             ?required="${this.required}"
             ?disabled="${this.disabled}"
+            ?readonly="${this.readonly}"
             @input="${this.onChange}"
-            @focus="${this.onFocus}"
+            @focus=${this.focus}
+            @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
+            shouldFocus="${this.shouldFocus}"
           >${this.value}</textarea>
         </div>
         <div class="hint-wrapper">
@@ -163,8 +176,8 @@ export class BlrTextarea extends LitElement {
     `;
   }
 }
-
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
+type OmittedKeys = 'firstUpdated';
+export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement | OmittedKeys>;
 
 export const BlrTextareaRenderFunction = ({
   textareaId,
@@ -185,13 +198,13 @@ export const BlrTextareaRenderFunction = ({
   hintIcon,
   hasError,
   onChange,
-  onFocus,
   onSelect,
   readonly,
   isResizeable,
   showHint,
   value,
   theme,
+  shouldFocus,
 }: BlrTextareaType) => {
   return html`<blr-textarea
     class=${isResizeable ? nothing : `parent-width`}
@@ -209,16 +222,16 @@ export const BlrTextareaRenderFunction = ({
     .placeholder="${placeholder}"
     .required=${required}
     .disabled=${disabled}
-    .readOnly=${readonly}
+    .readonly=${readonly}
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
     .labelAppendix=${labelAppendix}
     .onChange=${onChange}
-    .onFocus=${onFocus}
     .onSelect=${onSelect}
     .isResizeable=${isResizeable}
     .showHint=${showHint}
     .theme=${theme}
+    .shouldFocus=${shouldFocus}
   ></blr-textarea>`;
 };
