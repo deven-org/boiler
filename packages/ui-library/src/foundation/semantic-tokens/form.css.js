@@ -223,6 +223,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
     .hint-wrapper {
       display: flex;
+      flex-direction: column;
 
       &.sm {
         margin: ${SM.CaptionSlot.Margin};
@@ -360,7 +361,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
     }
 
     .blr-form-label {
-      display: inline-flex;
+      display: inline;
       align-items: baseline;
       color: ${Label.Rest};
       word-break: break-all;
