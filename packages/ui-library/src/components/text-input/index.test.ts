@@ -30,7 +30,7 @@ describe('blr-text-input', () => {
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
     const className = input?.className;
 
-    expect(className).to.contain('blr-form-element');
+    expect(className).to.contain('blr-form-input');
   });
 
   it('is is showing random placeholder', async () => {
