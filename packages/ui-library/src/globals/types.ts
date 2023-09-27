@@ -70,3 +70,7 @@ export type ButtonOption = {
   trailingIcon: string;
   loading: boolean;
 };
+
+export type ToolTipPosition = 'left' | 'right' | 'top' | 'bottom';
+export type ToolTipVisibility = 'onLoad' | 'onHover';
+export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
