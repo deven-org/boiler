@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { InputSizesType } from '../../../globals/types';
+import { InputSizesType, LabelVariantType } from '../../../globals/types';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
@@ -14,6 +14,7 @@ export class BlrFormLabel extends LitElement {
   @property() labelSize: InputSizesType = 'md';
   @property() forValue: string | undefined;
   @property() theme: ThemeType = 'Light';
+  @property() variant: LabelVariantType = 'label';
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
@@ -21,6 +22,7 @@ export class BlrFormLabel extends LitElement {
     const labelClasses = classMap({
       'blr-form-label': true,
       [`${this.labelSize}`]: this.labelSize,
+      [`${this.variant}`]: this.variant,
     });
 
     const spanClasses = classMap({
@@ -46,6 +48,7 @@ export const BlrFormLabelRenderFunction = ({
   labelSize,
   forValue,
   theme,
+  variant,
 }: BlrFormLabelType) => {
   return html`<blr-form-label
     .labelText=${labelText}
@@ -53,5 +56,6 @@ export const BlrFormLabelRenderFunction = ({
     .labelSize=${labelSize}
     .forValue=${forValue}
     .theme=${theme}
+    .variant=${variant}
   ></blr-form-hint>`;
 };

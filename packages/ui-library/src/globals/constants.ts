@@ -28,3 +28,5 @@ export const ButtonsAlignmentVariants = ['flex-start', 'center', 'flex-end'] as 
 export const ToolTipVisibility = ['onLoad', 'onHover'] as const;
 export const ToolTipPosition = ['left', 'right', 'top', 'bottom'] as const;
 export const ToolTipArrowPosition = ['start', 'end', 'middle', 'hide'] as const;
+
+export const LabelVariants = ['label', 'error'] as const;

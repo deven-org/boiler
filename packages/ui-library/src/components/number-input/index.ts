@@ -180,6 +180,7 @@ export class BlrNumberInput extends LitElement {
             labelAppendix: this.labelAppendix,
             forValue: this.numberInputId,
             theme: this.theme,
+            variant: this.hasError ? 'error' : 'label',
           })}`
         : nothing}
       <div class="${wrapperClasses}">

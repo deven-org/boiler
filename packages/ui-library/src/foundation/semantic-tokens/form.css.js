@@ -381,6 +381,14 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         color: ${Label.ReadOnly};
       }
 
+      &.error {
+        color: ${Label.Error};
+
+        .blr-form-label-appendix {
+          color: ${LabelAppendix.Error};
+        }
+      }
+
       &.sm {
         padding: ${SM.LabelSlot.Padding};
         font-weight: ${SM.Label.fontWeight};
@@ -389,6 +397,10 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${SM.Label.lineHeight};
         gap: ${SM.LabelComponent.ItemSpacing};
         color: ${Label.Rest};
+
+        &.error {
+          color: ${Label.Error};
+        }
       }
 
       &.md {
@@ -408,6 +420,10 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${LG.Label.lineHeight};
         color: ${Label.Rest};
         gap: ${LG.LabelComponent.ItemSpacing};
+
+        &.error {
+          color: ${Label.Error};
+        }
       }
     }
 
@@ -461,7 +477,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       .error {
-        color: ${Caption.Error};
+        color: ${Label.Error};
       }
 
       .hint {
