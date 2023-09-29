@@ -38,6 +38,7 @@ export class BlrTextInput extends LitElement {
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
+  @property() errorIcon: IconType = 'blrInfoSm';
   @property() hasLabel!: boolean;
 
   @property() theme: ThemeType = 'Light';
@@ -127,16 +128,31 @@ export class BlrTextInput extends LitElement {
               })}`
             : nothing}
         </div>
-        <div class="hint-wrapper ${this.size}">
+        <div class="textinput-wrapper ${this.size}">
           ${this.showHint
             ? html`
-                ${BlrFormHintRenderFunction({
-                  message: this.hasError ? this.errorMessage : this.hintText,
-                  variant: this.hasError ? 'error' : 'hint',
-                  icon: this.hintIcon,
-                  size: 'sm',
-                  theme: this.theme,
-                })}
+                <div class="hint-wrapper">
+                  ${BlrFormHintRenderFunction({
+                    message: this.hintText || '',
+                    variant: 'hint',
+                    icon: this.hintIcon,
+                    size: this.size,
+                    theme: this.theme,
+                  })}
+                </div>
+              `
+            : nothing}
+          ${this.hasError
+            ? html`
+                <div class="error-wrapper">
+                  ${BlrFormHintRenderFunction({
+                    message: this.errorMessage || 'Ups, an error occured..',
+                    variant: 'error',
+                    icon: this.errorIcon,
+                    size: this.size,
+                    theme: this.theme,
+                  })}
+                </div>
               `
             : nothing}
         </div>
@@ -166,6 +182,7 @@ export const BlrTextInputRenderFunction = ({
   pattern,
   hasError,
   errorMessage,
+  errorIcon,
   showInputIcon,
   inputIcon,
   showHint,
@@ -193,6 +210,7 @@ export const BlrTextInputRenderFunction = ({
     .maxLength=${maxLength}
     .pattern=${pattern}
     .errorMessage=${errorMessage}
+    .errorIcon=${errorIcon}
     .showHint=${showHint}
     .hintText=${hintText}
     .hintIcon=${hintIcon}

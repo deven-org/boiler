@@ -25,6 +25,16 @@ export default {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
+    hintText: {
+      if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
+    },
     theme: {
       options: Themes,
       control: { type: 'select' },
@@ -54,6 +64,7 @@ export const BlrTextInput = ({
   pattern,
   hasError,
   errorMessage,
+  errorIcon,
   showInputIcon,
   inputIcon,
   showHint,
@@ -81,6 +92,7 @@ export const BlrTextInput = ({
       pattern,
       hasError,
       errorMessage,
+      errorIcon,
       showInputIcon,
       inputIcon,
       showHint,
@@ -102,15 +114,18 @@ BlrTextInput.args = {
   inputIcon: 'blr360',
   type: 'text',
   value: '',
+  size: 'md',
   placeholder: 'Test placeholder',
   disabled: false,
   required: false,
   readonly: false,
-  maxLength: '200',
-  size: 'md',
-  errorMessage: 'This is error message',
-  showHint: true,
-  hintText: 'Field is used for hint',
+
+  showHint: false,
   hintIcon: 'blrInfo',
+  hintText: ' This is a hint message',
+  maxLength: '200',
+
   hasError: false,
+  errorIcon: undefined,
+  errorMessage: ' ',
 };
