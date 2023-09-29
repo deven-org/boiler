@@ -32,6 +32,5 @@
     "node_modules": false,
     "package-lock.json": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.tabCompletion": "on"
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
