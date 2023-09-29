@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, FormSizes } from '../../globals/constants';
+import { ActionVariants, ButtonSizes } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -18,7 +18,7 @@ export default {
       control: { type: 'select' },
     },
     size: {
-      options: FormSizes,
+      options: ButtonSizes,
       control: { type: 'select' },
     },
     variant: {
@@ -73,8 +73,8 @@ BlrTextButton.args = {
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  leadingIcon: undefined,
-  trailingIcon: 'blrChevronDown',
+  leadingIcon: 'blr360',
+  trailingIcon: undefined,
   loading: false,
   disabled: false,
   buttonId: 'button-id',

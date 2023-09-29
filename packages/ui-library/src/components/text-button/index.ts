@@ -6,7 +6,7 @@ import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
-import { ActionVariantType, FormSizesType } from '../../globals/types';
+import { ActionVariantType, ButtonSizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -27,7 +27,7 @@ export class BlrTextButton extends LitElement {
   @property() disabled?: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size: FormSizesType = 'md';
+  @property() size: ButtonSizesType = 'md';
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
@@ -50,7 +50,7 @@ export class BlrTextButton extends LitElement {
 
     const loaderVariant = determineLoaderVariant(this.variant);
 
-    const iconSize = adjustIconSize(this.size).toLowerCase() as FormSizesType;
+    const iconSize = adjustIconSize(this.size).toLowerCase() as ButtonSizesType;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -68,7 +68,7 @@ export class BlrTextButton extends LitElement {
       >
         ${this.loading
           ? html`${BlrLoaderRenderFunction({
-              size: this.size,
+              size: iconSize,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,

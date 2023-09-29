@@ -16,6 +16,7 @@ import {
   OverflowVariantsStandard,
   OverflowVariantsFullWidth,
   ButtonGroupSizes,
+  ButtonSizes,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -29,8 +30,9 @@ export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];
 export type InputTypes = (typeof InputTypes)[number];
 export type ButtonGroupSizesType = (typeof ButtonGroupSizes)[number];
-
+export type ButtonSizesType = (typeof ButtonSizes)[number];
 export type InputSizesType = (typeof InputSizes)[number];
+
 export type RadioOption = {
   label: string;
   value: string;

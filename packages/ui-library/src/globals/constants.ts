@@ -4,6 +4,7 @@ export const FeedbackSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const InputTypes = ['text', 'email', 'password'] as const;
 export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
+export const ButtonSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 
 export const IconPositionVariant = ['leading', 'trailing'] as const;
 export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destructive', 'encourage'] as const;
