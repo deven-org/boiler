@@ -25,7 +25,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
           visibility: visible;
           opacity: 1;
 
-          & + .nose-solo {
+          & > .nose-solo {
             visibility: visible;
             opacity: 1;
           }
@@ -50,8 +50,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
           border-radius: ${Tooltip.ContentCol.BorderRadius};
         }
 
-        & > .elevation {
-          box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
+        &.elevation {
+          filter: drop-shadow(0 0 1px ${Tooltip.SurfaceFill});
         }
 
         &.sm {
@@ -75,7 +75,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
           line-height: ${Caption.LG.lineHeight};
         }
 
-        & + .nose-solo {
+        & > .nose-solo {
           position: absolute;
           visibility: hidden;
           z-index: 1;
@@ -88,7 +88,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         visibility: visible;
         opacity: 1;
 
-        & + .nose-solo {
+        & > .nose-solo {
           visibility: visible;
           opacity: 1;
         }
@@ -98,8 +98,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         bottom: 100%;
         margin-bottom: 10px;
 
-        & + .nose-solo {
-          top: -10px;
+        & > .nose-solo {
           transform: rotate(0deg);
         }
       }
@@ -108,8 +107,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         top: 100%;
         margin-top: 10px;
 
-        & + .nose-solo {
-          bottom: -10px;
+        & > .nose-solo {
           transform: rotate(180deg);
         }
       }
@@ -118,8 +116,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         right: 100%;
         margin-right: 10px;
 
-        & + .nose-solo {
-          left: -15px;
+        & > .nose-solo {
+          margin-left: -4px;
           transform: rotate(270deg);
         }
       }
@@ -128,8 +126,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         left: 100%;
         margin-left: 10px;
 
-        & + .nose-solo {
-          right: -15px;
+        & > .nose-solo {
+          margin-right: -4px;
           transform: rotate(90deg);
         }
       }
@@ -137,7 +135,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-horizontal-start {
         left: 0;
 
-        & + .nose-solo {
+        & > .nose-solo {
           left: ${Tooltip.NoseWrapper.PaddingLeftRight};
         }
       }
@@ -146,13 +144,13 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         left: 50%;
         transform: translateX(-50%);
 
-        & + .nose-solo {
+        & > .nose-solo {
           left: 50%;
           transform: translateX(-50%);
         }
 
         &.tooltip-bottom {
-          & + .nose-solo {
+          & > .nose-solo {
             transform: translateX(-50%) rotate(180deg);
           }
         }
@@ -161,7 +159,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-horizontal-end {
         right: 0;
 
-        & + .nose-solo {
+        & > .nose-solo {
           right: ${Tooltip.NoseWrapper.PaddingLeftRight};
         }
       }
@@ -169,7 +167,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-vertical-start {
         top: 0;
 
-        & + .nose-solo {
+        & > .nose-solo {
           top: ${Tooltip.NoseWrapper.PaddingTopBottom};
         }
       }
@@ -179,7 +177,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         transform: translateY(-50%);
         margin-top: -5px;
 
-        & + .nose-solo {
+        & > .nose-solo {
           top: 50%;
         }
       }
@@ -187,7 +185,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-vertical-end {
         bottom: 0;
 
-        & + .nose-solo {
+        & > .nose-solo {
           bottom: ${Tooltip.NoseWrapper.PaddingTopBottom};
         }
       }
@@ -201,7 +199,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       }
 
       & .hide-arrow {
-        & + .nose-solo {
+        & > .nose-solo {
           display: none;
         }
       }
