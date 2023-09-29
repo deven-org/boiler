@@ -9,6 +9,6 @@ export const adjustIconSize = (size: FormSizesType): SizesType => {
     case 'lg':
       return 'md';
     default:
-      return 'No valid size';
+      return 'md';
   }
 };
