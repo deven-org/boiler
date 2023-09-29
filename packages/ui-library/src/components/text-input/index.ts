@@ -128,7 +128,7 @@ export class BlrTextInput extends LitElement {
               })}`
             : nothing}
         </div>
-        <div class="textintup-wrapper ${this.size}">
+        <div class="textinput-wrapper ${this.size}">
           ${this.showHint
             ? html`
                 <div class="hint-wrapper">
