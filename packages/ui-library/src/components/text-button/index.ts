@@ -12,6 +12,7 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
+import { adjustIconSize } from '../../utils/adjust-icon-size';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -44,10 +45,12 @@ export class BlrTextButton extends LitElement {
 
     const classes = classMap({
       [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
+      [`${this.size}`]: this.size,
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
+
+    const iconSize = adjustIconSize(this.size).toLowerCase() as FormSizesType;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -73,15 +76,15 @@ export class BlrTextButton extends LitElement {
           : html`
               ${this.leadingIcon &&
               html`${BlrIconRenderFunction({
-                icon: calculateIconName(this.leadingIcon, this.size),
-                size: this.size,
+                icon: calculateIconName(this.leadingIcon, iconSize),
+                size: iconSize,
                 hideAria: true,
               })}`}
               <span>${this.label}</span>
               ${this.trailingIcon &&
               html`${BlrIconRenderFunction({
-                icon: calculateIconName(this.trailingIcon, this.size),
-                size: this.size,
+                icon: calculateIconName(this.trailingIcon, iconSize),
+                size: iconSize,
                 hideAria: true,
               })}`}
             `}
