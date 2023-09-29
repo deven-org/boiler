@@ -46,6 +46,7 @@ export class BlrTextButton extends LitElement {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size,
+      disabled: this.disabled || false,
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
