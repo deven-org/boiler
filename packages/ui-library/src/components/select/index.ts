@@ -5,6 +5,7 @@ import { styleCustom } from './index.css';
 import { FormSizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
+import { selectInputLight, selectInputDark } from '../../foundation/component-tokens/select.css';
 import { IconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -69,12 +70,13 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+    const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
 
     const inputClasses = classMap({
       'error': this.hasError || false,
       'error-input': this.hasError || false,
       [`${this.size || 'md'}`]: this.size || 'md',
+      [`disabled`]: this.disabled || false,
     });
 
     const iconClasses = classMap({
@@ -95,28 +97,31 @@ export class BlrSelect extends LitElement {
               theme: this.theme,
             })
           : nothing}
-        <div class="blr-input-inner-container ${inputClasses}">
-          <select
-            class="blr-form-element ${inputClasses}"
-            id=${this.selectId || nothing}
-            name=${this.name || nothing}
-            ?disabled=${this.disabled}
-            ?required=${this.required}
-            @change=${this.onChange}
-          >
-            ${this.options?.map((opt: Option) => {
-              return html`<option
-                class="blr-select-option"
-                id=${opt.value}
-                value=${opt.value}
-                ?selected=${opt.selected}
-                ?disabled=${opt.disabled}
-              >
-                ${opt.label}
-              </option>`;
-            })}
-          </select>
-
+        <div class="blr-select-inner-container ${inputClasses}">
+          <div class="blr-select-wrapper">
+            <select
+              class="blr-form-select ${inputClasses}"
+              id=${this.selectId || nothing}
+              name=${this.name || nothing}
+              ?disabled=${this.disabled}
+              ?required=${this.required}
+              @change=${this.onChange}
+            >
+              ${this.options?.map((opt: Option) => {
+                return html`
+                  <option
+                    class="blr-select-option"
+                    id=${opt.value}
+                    value=${opt.value}
+                    ?selected=${opt.selected}
+                    ?disabled=${opt.disabled}
+                  >
+                    ${opt.label}
+                  </option>
+                `;
+              })}
+            </select>
+          </div>
           ${this.renderTrailingIcon(iconClasses)}
         </div>
         <div>

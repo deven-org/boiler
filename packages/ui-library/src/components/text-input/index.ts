@@ -3,6 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import { textInputLight, textInputDark } from '../../foundation/component-tokens/text-input.css';
 import { InputTypes, FormSizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
@@ -44,24 +45,38 @@ export class BlrTextInput extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   @state() protected currentType: InputTypes = this.type;
+  @state() protected isFocused = false;
 
   protected togglePassword = () => {
     this.currentType = this.currentType === 'password' ? 'text' : 'password';
   };
 
+  protected handleFocus = () => {
+    this.isFocused = true;
+  };
+
+  protected handleBlur = () => {
+    this.isFocused = false;
+  };
+
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, iconButtonLight] : [formDark, iconButtonDark];
+    const dynamicStyles =
+      this.theme === 'Light' ? [formLight, textInputLight, iconButtonLight] : [formDark, textInputDark, iconButtonDark];
 
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
     const classes = classMap({
       [`${this.size}`]: this.size,
-      [`disabled`]: this.disabled || false,
     });
 
     const inputClasses = classMap({
-      [`error`]: this.hasError || false,
+      [`${this.size}`]: this.size,
+    });
+
+    const inputContainerClasses = classMap({
+      [`focus`]: this.isFocused || false,
       [`error-input`]: this.hasError || false,
+      [`disabled`]: this.disabled || false,
       [`${this.size}`]: this.size,
     });
 
@@ -88,23 +103,25 @@ export class BlrTextInput extends LitElement {
               theme: this.theme,
             })}`
           : html``}
-        <div class="blr-input-inner-container ${inputClasses}">
-          <input
-            class="blr-form-element ${inputClasses}"
-            id=${this.textInputId}
-            type="${this.currentType}"
-            .value="${this.value}"
-            placeholder="${this.placeholder}"
-            ?disabled="${this.disabled}"
-            ?readonly="${this.readonly}"
-            ?required="${this.required}"
-            @input=${this.onChange}
-            @blur=${this.onBlur}
-            @focus=${this.onFocus}
-            maxlength="${this.maxLength}"
-            pattern="${this.pattern}"
-            hasError="${this.hasError}"
-          />
+        <div class="blr-input-inner-container ${inputContainerClasses}">
+          <div class="blr-input-wrapper">
+            <input
+              class="blr-form-input ${inputClasses}"
+              id=${this.textInputId}
+              type="${this.currentType}"
+              .value="${this.value}"
+              placeholder="${this.placeholder}"
+              ?disabled="${this.disabled}"
+              ?readonly="${this.readonly}"
+              ?required="${this.required}"
+              @input=${this.onChange}
+              @blur=${this.handleBlur}
+              @focus=${this.handleFocus}
+              maxlength="${this.maxLength}"
+              pattern="${this.pattern}"
+              hasError="${this.hasError}"
+            />
+          </div>
 
           ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
@@ -176,8 +193,6 @@ export const BlrTextInputRenderFunction = ({
   size,
   required,
   onChange,
-  onBlur,
-  onFocus,
   maxLength,
   pattern,
   hasError,
@@ -205,8 +220,6 @@ export const BlrTextInputRenderFunction = ({
     .required=${required}
     .readonly=${readonly}
     .onChange=${onChange}
-    .onBlur=${onBlur}
-    .onFocus=${onFocus}
     .maxLength=${maxLength}
     .pattern=${pattern}
     .errorMessage=${errorMessage}
