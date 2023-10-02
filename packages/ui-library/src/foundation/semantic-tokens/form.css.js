@@ -142,7 +142,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${SM.UserInput.fontSize};
         font-family: ${SM.UserInput.fontFamily}, sans-serif;
         line-height: ${SM.UserInput.lineHeight};
-        padding: ${Select.SM.InputFieldPadding};
+        padding: ${SM.InputField.Padding};
       }
 
       &.md {
@@ -150,7 +150,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${MD.UserInput.fontSize};
         font-family: ${MD.UserInput.fontFamily}, sans-serif;
         line-height: ${MD.UserInput.lineHeight};
-        padding: ${Select.MD.InputFieldPadding};
+        padding: ${MD.InputField.Padding};
       }
 
       &.lg {
@@ -158,7 +158,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-size: ${LG.UserInput.fontSize};
         font-family: ${LG.UserInput.fontFamily}, sans-serif;
         line-height: ${LG.UserInput.lineHeight};
-        padding: ${Select.LG.InputFieldPadding};
+        padding: ${LG.InputField.Padding};
       }
     }
 
