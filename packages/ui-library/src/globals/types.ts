@@ -16,6 +16,7 @@ import {
   OverflowVariantsStandard,
   OverflowVariantsFullWidth,
   ButtonGroupSizes,
+  LabelVariants,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -74,3 +75,5 @@ export type ButtonOption = {
 export type ToolTipPosition = 'left' | 'right' | 'top' | 'bottom';
 export type ToolTipVisibility = 'onLoad' | 'onHover';
 export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
+
+export type LabelVariantType = (typeof LabelVariants)[number];

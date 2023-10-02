@@ -95,6 +95,7 @@ export class BlrSelect extends LitElement {
               labelSize: this.size,
               forValue: this.selectId,
               theme: this.theme,
+              variant: this.hasError ? 'error' : 'label',
             })
           : nothing}
         <div class="blr-select-inner-container ${inputClasses}">

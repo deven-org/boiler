@@ -122,6 +122,7 @@ export class BlrTextarea extends LitElement {
             labelAppendix: this.labelAppendix,
             forValue: this.textareaId,
             theme: this.theme,
+            variant: this.hasError ? 'error' : 'label',
           })}
         </div>
         <div class="input-wrapper">
