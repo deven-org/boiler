@@ -166,7 +166,13 @@ export class BlrNumberInput extends LitElement {
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
       [`error-input`]: this.hasError || false,
     });
-    const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
+
+    const iconSize = getComponentConfigToken([
+      'Action',
+      'StepperButton',
+      this.size.toUpperCase(),
+      'IconSize',
+    ]).toLowerCase() as FormSizesType;
 
     return html`
       <style>
