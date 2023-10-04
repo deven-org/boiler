@@ -11,7 +11,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       all: initial;
       width: 100%;
       color: ${UserInput.Default.Rest};
-      background-color: ${SurfaceFill.Default.Rest};
       font-weight: ${MD.UserInput.fontWeight};
       font-size: ${MD.UserInput.fontSize};
       font-family: ${MD.UserInput.fontFamily}, sans-serif;

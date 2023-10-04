@@ -47,6 +47,8 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           }
 
           &.disabled {
+            color: ${UserInput.Default.Disabled};
+
             &::placeholder {
               color: ${Placeholder.Default.Disabled};
             }

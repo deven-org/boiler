@@ -14,13 +14,13 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         border-style: ${Input.Default.Disabled.style};
         border-color: transparent;
         outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
-
-        cursor: not-allowed;
         background-color: ${SurfaceFill.Default.Disabled};
+        cursor: not-allowed;
 
         & > input {
           background-color: ${SurfaceFill.Default.Disabled};
           color: ${UserInput.Default.Disabled};
+          cursor: not-allowed;
 
           &::placeholder {
             color: ${Placeholder.Default.Disabled};
@@ -219,6 +219,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       &.disabled {
         color: ${UserInput.Default.Disabled};
+        cursor: not-allowed;
       }
 
       &.error-input {
@@ -313,6 +314,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
         &:disabled {
           color: ${Silent.Icon.Disabled};
+          cursor: not-allowed;
         }
 
         &.sm {
@@ -349,6 +351,10 @@ export const baseStyle = css`
       -moz-appearance: textfield;
     }
 
+    & > input {
+      grid-area: center;
+    }
+
     &.mode1 {
       .increment {
         grid-area: right2;
@@ -359,7 +365,6 @@ export const baseStyle = css`
       }
 
       & > input {
-        grid-area: center;
         text-align: center;
       }
 
@@ -390,10 +395,6 @@ export const baseStyle = css`
 
       .stepper-combo.horizontal.lg {
         grid-area: right2;
-      }
-
-      & > input {
-        grid-area: center;
       }
 
       & > .unit:not(.prepend) {
