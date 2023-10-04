@@ -4,7 +4,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { textInputLight, textInputDark } from '../../foundation/component-tokens/text-input.css';
-import { InputTypes, FormSizesType } from '../../globals/types';
+import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
@@ -12,6 +12,7 @@ import { iconButtonDark, iconButtonLight } from '../../foundation/component-toke
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
@@ -89,6 +90,8 @@ export class BlrTextInput extends LitElement {
       return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
+    const iconSize = getComponentConfigToken(['Forms', this.size.toUpperCase(), 'InputField', 'IconSize']) as SizesType;
+
     return html`
       <style>
         ${dynamicStyles.map((style) => style)}
@@ -130,7 +133,7 @@ export class BlrTextInput extends LitElement {
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
                 name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
-                size: this.size,
+                size: iconSize,
                 classMap: iconClasses,
                 hideAria: true,
                 disablePointerEvents: this.disabled || this.readonly,
@@ -140,7 +143,7 @@ export class BlrTextInput extends LitElement {
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
                 name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
-                size: this.size,
+                size: iconSize,
                 classMap: iconClasses,
                 hideAria: true,
                 disablePointerEvents: this.disabled || this.readonly,
