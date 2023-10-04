@@ -102,7 +102,6 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
             font-size: ${SM.UserInput.fontSize};
             font-family: ${SM.UserInput.fontFamily}, sans-serif;
             line-height: ${SM.UserInput.lineHeight};
-            padding: ${SM.InputField.Padding};
           }
 
           &.md {
@@ -110,7 +109,6 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
             font-size: ${MD.UserInput.fontSize};
             font-family: ${MD.UserInput.fontFamily}, sans-serif;
             line-height: ${MD.UserInput.lineHeight};
-            padding: ${MD.InputField.Padding};
           }
 
           &.lg {
@@ -118,7 +116,6 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
             font-size: ${LG.UserInput.fontSize};
             font-family: ${LG.UserInput.fontFamily}, sans-serif;
             line-height: ${LG.UserInput.lineHeight};
-            padding: ${MD.InputField.Padding};
           }
         }
       }
@@ -128,7 +125,6 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        padding: 0 !important;
         border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
         border-radius: ${InputBorderRadius};
         box-sizing: border-box;
@@ -139,7 +135,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
         }
 
         &.sm {
-          padding: ${SM.LabelSlot.Padding};
+          padding: ${SM.InputField.Padding};
           margin: ${SM.InputSlot.Margin};
 
           .blr-input-icon {
@@ -148,16 +144,12 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
         }
 
         &.md {
-          padding: ${MD.LabelSlot.Padding};
+          padding: ${MD.InputField.Padding};
           margin: ${MD.InputSlot.Margin};
-
-          .blr-input-icon {
-            right: ${Select.MD.IconPaddingRight};
-          }
         }
 
         &.lg {
-          padding: ${LG.LabelSlot.Padding};
+          padding: ${LG.InputField.Padding};
           margin: ${LG.InputSlot.Margin};
 
           .blr-input-icon {
