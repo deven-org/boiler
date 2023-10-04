@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
+import { textareaDark, textareaLight } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { counterDark, counterLight } from '../../foundation/component-tokens/feedback.css';
 import { CounterVariantType, FormSizesType, WarningLimits } from '../../globals/types';
@@ -14,8 +14,6 @@ import { BlrCounterRenderFunction } from '../internal-components/counter';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
-  static styles = [styleCustom];
-
   @property() textareaId!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
@@ -35,8 +33,11 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
+  @property() errorIcon: SizelessIconType = 'blrInfo';
+  @property() hint?: string;
   @property() showHint = true;
   @property() hintText?: string;
+  @property() showCounter?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() isResizeable?: boolean;
   @property() rows?: number;
@@ -94,7 +95,9 @@ export class BlrTextarea extends LitElement {
 
   protected render() {
     const dynamicStyles =
-      this.theme === 'Light' ? [formLight, counterLight, iconButtonLight] : [formDark, counterDark, iconButtonDark];
+      this.theme === 'Light'
+        ? [formLight, textareaLight, counterLight, iconButtonLight]
+        : [formDark, textareaDark, counterDark, iconButtonDark];
 
     const classes = classMap({
       [`${this.size}`]: this.size,
@@ -107,6 +110,10 @@ export class BlrTextarea extends LitElement {
       [`${this.size}`]: this.size,
       [`resizeable`]: this.isResizeable || false,
       ['shouldFocus']: this.shouldFocus || false,
+    });
+    const flexContainer = classMap({
+      [`flex-container`]: true,
+      [`${this.size}`]: this.size,
     });
 
     const counterVariant = this.determinateCounterVariant();
@@ -142,39 +149,63 @@ export class BlrTextarea extends LitElement {
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
             shouldFocus="${this.shouldFocus}"
-          >${this.value}</textarea>
-        </div>
-        <div class="hint-wrapper">
-          ${
-            this.showHint
-              ? html`
-                  ${BlrFormHintRenderFunction({
-                    message: this.hasError ? this.errorMessage : this.hintText,
-                    variant: this.hasError ? 'error' : 'hint',
-                    icon: this.hasError ? 'blrErrorFilled' : this.hintIcon,
-                    size: this.size,
-                    theme: this.theme,
-                    childElement: html`${BlrCounterRenderFunction({
-                      variant: counterVariant,
-                      current: this.count,
-                      max: this.maxLength || 0,
-                      size: this.size,
-                      theme: this.theme,
-                    })}`,
-                  })}
-                `
-              : html`${BlrCounterRenderFunction({
-                  variant: counterVariant,
-                  current: this.count,
-                  max: this.maxLength || 0,
-                  size: this.size,
-                  theme: this.theme,
-                })}`
-          }
+          >
+${this.value}</textarea
+          >
+          
+            <div class="${flexContainer}">
+            <div>
+              ${
+                this.showHint
+                  ? html`
+                      <div class="text-area-hint-wrapper">
+                        ${BlrFormHintRenderFunction({
+                          message: this.hintText || '',
+                          variant: 'hint',
+                          icon: this.hintIcon,
+                          size: this.size,
+                          theme: this.theme,
+                        })}
+                      </div>
+                    `
+                  : nothing
+              }
+              ${
+                this.hasError
+                  ? html`
+                      <div class="text-area-error-wrapper">
+                        ${BlrFormHintRenderFunction({
+                          message: this.errorMessage || ' ',
+                          variant: this.hasError ? 'error' : 'hint',
+                          size: this.size,
+                          icon: this.errorIcon ? this.errorIcon : undefined,
+                          theme: this.theme,
+                        })}
+                      </div>
+                    `
+                  : nothing
+              }
+            </div>
+              ${
+                this.showCounter
+                  ? html`
+                      <div class="counter-wrapper ${classes}">
+                        ${BlrCounterRenderFunction({
+                          variant: counterVariant,
+                          current: this.count,
+                          max: this.maxLength || 0,
+                          size: this.size,
+                          theme: this.theme,
+                        })}
+                      </div>
+                    `
+                  : nothing
+              }
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-    `;
+      </div> `;
   }
 }
 type OmittedKeys = 'firstUpdated';
@@ -198,11 +229,13 @@ export const BlrTextareaRenderFunction = ({
   hintText,
   hintIcon,
   hasError,
+  errorIcon,
   onChange,
   onSelect,
   readonly,
   isResizeable,
   showHint,
+  showCounter,
   value,
   theme,
   shouldFocus,
@@ -225,8 +258,10 @@ export const BlrTextareaRenderFunction = ({
     .disabled=${disabled}
     .readonly=${readonly}
     .hintText=${hintText}
+    .showCounter=${showCounter}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
+    .errorIcon=${errorIcon}
     .labelAppendix=${labelAppendix}
     .onChange=${onChange}
     .onSelect=${onSelect}
