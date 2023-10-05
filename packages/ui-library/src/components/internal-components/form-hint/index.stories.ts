@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { PureIconKeys } from '@boiler/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons';
 import { FormSizes, HintVariants } from '../../../globals/constants';
 import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
-import { PureIconKeys } from '@boiler/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons';
 import { ActionSizes, ActionVariants } from '../../globals/constants';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';

@@ -3,7 +3,7 @@ import { html } from 'lit-html';
 import { BlrRangeSliderType, BlrRangeSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
 import './index';
-import { PureIconKeys } from '@boiler/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {

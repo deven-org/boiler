@@ -4,7 +4,7 @@ import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 import './index';
 import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
 export default {
   title: 'Design System/Web Components/BlrNumberInput',

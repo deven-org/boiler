@@ -5,7 +5,7 @@ import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
 
 import { InputSizes } from '../../globals/constants';
 import './index';
-import { PureIconKeys } from '@boiler/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {

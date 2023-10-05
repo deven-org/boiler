@@ -2,7 +2,7 @@
 import { html } from 'lit-html';
 import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
 import { FormSizes, InputTypes } from '../../globals/constants';
-import { PureIconKeys } from '@boiler/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons';
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 

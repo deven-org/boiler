@@ -6,7 +6,7 @@ import { FormSizes } from '../../globals/constants';
 import './index';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { PureIconKeys } from '@boiler/icons';
+import { IconKeys as PureIconKeys } from '@boiler/icons';
 
 export default {
   title: 'Design System/Web Components/BlrTextarea',
