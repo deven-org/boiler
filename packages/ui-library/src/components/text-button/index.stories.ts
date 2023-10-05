@@ -75,10 +75,10 @@ BlrTextButton.args = {
   onBlur: () => console.log('onBlur'),
   leadingIcon: 'blr360',
   trailingIcon: undefined,
-  loading: false,
+  loading: true,
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
-  size: 'md',
+  size: 'xl',
   loadingStatus: 'Loading',
 };
