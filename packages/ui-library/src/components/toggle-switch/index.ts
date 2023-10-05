@@ -9,7 +9,7 @@ import { FormSizesType, IconPositionVariant } from '../../globals/types';
 import { styleCustom } from './index.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-tokens/toggleSwitch.css';
+import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-tokens/toggle-switch.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-label-toggleswitch')
