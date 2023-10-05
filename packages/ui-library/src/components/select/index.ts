@@ -98,8 +98,8 @@ export class BlrSelect extends LitElement {
               variant: this.hasError ? 'error' : 'label',
             })
           : nothing}
-        <div class="blr-select-inner-container ${inputClasses}">
-          <div class="blr-select-wrapper">
+        <div class="blr-select-wrapper ${inputClasses}">
+          <div class="blr-select-inner-container">
             <select
               class="blr-form-select ${inputClasses}"
               id=${this.selectId || nothing}

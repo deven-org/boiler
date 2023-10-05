@@ -7,7 +7,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
     const { Select } = componentTokens.Forms;
 
     return css`
-      .blr-select-wrapper {
+      .blr-select-inner-container {
         flex-grow: 1;
         flex-shrink: 1;
 
@@ -120,11 +120,10 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         }
       }
 
-      .blr-select-inner-container {
+      .blr-select-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
         border-radius: ${InputBorderRadius};
         box-sizing: border-box;

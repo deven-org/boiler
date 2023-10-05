@@ -106,8 +106,8 @@ export class BlrTextInput extends LitElement {
               })}
             `
           : html``}
-        <div class="blr-input-inner-container ${inputContainerClasses}">
-          <div class="blr-input-wrapper">
+        <div class="blr-input-wrapper ${inputContainerClasses}">
+          <div class="blr-input-inner-container">
             <input
               class="blr-form-input ${inputClasses}"
               id=${this.textInputId}

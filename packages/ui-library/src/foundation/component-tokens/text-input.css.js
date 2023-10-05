@@ -4,10 +4,9 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
-    const { Select } = componentTokens.Forms;
 
     return css`
-      .blr-input-wrapper {
+      .blr-input-inner-container {
         flex-grow: 1;
         flex-shrink: 1;
 
@@ -120,11 +119,10 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
         }
       }
 
-      .blr-input-inner-container {
+      .blr-input-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
         border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
         border-radius: ${InputBorderRadius};
         box-sizing: border-box;
@@ -137,10 +135,6 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
         &.sm {
           padding: ${SM.InputField.Padding};
           margin: ${SM.InputSlot.Margin};
-
-          .blr-input-icon {
-            right: ${Select.SM.IconPaddingRight};
-          }
         }
 
         &.md {
@@ -151,10 +145,6 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
         &.lg {
           padding: ${LG.InputField.Padding};
           margin: ${LG.InputSlot.Margin};
-
-          .blr-input-icon {
-            right: ${Select.LG.IconPaddingRight};
-          }
         }
 
         &:hover {
