@@ -4,7 +4,6 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
-    const { Select } = componentTokens.Forms;
 
     return css`
       .blr-select-inner-container {
