@@ -16,12 +16,20 @@ export default {
     options: { control: 'array' },
     layout: { control: 'select', options: ['horizontal', 'vertical'] },
     hintIcon: {
+      if: { arg: 'showHint', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
     groupErrorIcon: {
+      if: { arg: 'hasError', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
+    },
+    groupErrorMessage: {
+      if: { arg: 'hasError', eq: true },
+    },
+    groupHintMessage: {
+      if: { arg: 'showHint', eq: true },
     },
     theme: {
       options: Themes,
@@ -86,7 +94,6 @@ BlrRadioGroup.args = {
   theme: 'Light',
   disabled: false,
   name: 'Default Name',
-  hasError: true,
   required: false,
   readonly: false,
   size: 'md',
@@ -100,7 +107,7 @@ BlrRadioGroup.args = {
   showHint: true,
   groupHintMessage: 'This is a sample hint message',
   hintIcon: 'blrInfo',
-  showGroupErrorMessage: true,
+  hasError: false,
   groupErrorMessage: 'This is a sample error message',
-  groupErrorIcon: '',
+  groupErrorIcon: undefined,
 };

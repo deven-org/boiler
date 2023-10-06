@@ -31,6 +31,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         line-height: ${LG.Legend.lineHeight};
         color: ${Legend.Default};
       }
+
+      &.error {
+        color: ${Legend.Error};
+      }
     }
 
     .blr-radio-group {
