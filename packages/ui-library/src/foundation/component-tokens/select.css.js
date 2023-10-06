@@ -19,10 +19,6 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           outline: none;
           color: ${UserInput.Default.Rest};
 
-          font-weight: ${MD.UserInput.fontWeight};
-          font-size: ${MD.UserInput.fontSize};
-          font-family: ${MD.UserInput.fontFamily}, sans-serif;
-
           &::placeholder {
             color: ${Placeholder.Default.Rest};
           }

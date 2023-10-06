@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix, InputIcon } =
     semanticTokens.Forms;
-  const { Select, TextArea } = componentTokens.Forms;
+  const { Select } = componentTokens.Forms;
 
   return css`
     .blr-form-element {
@@ -237,131 +237,69 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
     }
 
-    .blr-counter {
-      &.sm {
-        font-family: ${SM.Caption.fontFamily}, sans-serif;
-        font-weight: ${SM.Caption.fontWeight};
-        font-size: ${SM.Caption.fontSize};
-        line-height: ${SM.Caption.lineHeight};
-      }
-
-      &.md {
-        font-family: ${MD.Caption.fontFamily}, sans-serif;
-        font-weight: ${MD.Caption.fontWeight};
-        font-size: ${MD.Caption.fontSize};
-        line-height: ${MD.Caption.lineHeight};
-      }
-
-      &.lg {
-        font-family: ${LG.Caption.fontFamily}, sans-serif;
-        font-weight: ${LG.Caption.fontWeight};
-        font-size: ${LG.Caption.fontSize};
-        line-height: ${LG.Caption.lineHeight};
-      }
-    }
-
-    .blr-form-hint,
-    .blr-counter {
+    .blr-form-hint {
       color: ${Caption.Hint};
-
-      .hint-container {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 1px;
-
-        .label-wrapper {
-          padding: 0;
-          display: flex;
-
-          .blr-caption-text {
-            color: ${Caption.Hint};
-          }
-        }
-      }
 
       &.error {
         color: ${Caption.Error};
-
-        .hint-container {
-          .label-wrapper {
-            .blr-caption-text {
-              color: ${Caption.Error};
-            }
-          }
-        }
       }
 
       &.sm {
-        .hint-container {
-          padding: ${SM.CaptionComponent.Padding};
-          gap: ${SM.CaptionComponent.ItemSpacing};
+        padding: ${SM.CaptionComponent.Padding};
+        gap: ${SM.CaptionComponent.ItemSpacing};
 
-          .icon-wrapper {
-            padding: ${SM.CaptionComponent.IconWrapper.Padding};
-          }
+        .blr-icon {
+          padding: ${SM.CaptionComponent.IconWrapper.Padding};
+        }
 
-          .label-wrapper {
-            padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
-
-            .blr-caption-text {
-              font-family: ${SM.Caption.fontFamily}, sans-serif;
-              font-weight: ${SM.Caption.fontWeight};
-              font-size: ${SM.Caption.fontSize};
-              line-height: ${SM.Caption.lineHeight};
-            }
-          }
+        .blr-caption-text {
+          padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
+          font-family: ${SM.Caption.fontFamily}, sans-serif;
+          font-weight: ${SM.Caption.fontWeight};
+          font-size: ${SM.Caption.fontSize};
+          line-height: ${SM.Caption.lineHeight};
         }
       }
 
       &.md {
-        .hint-container {
-          padding: ${MD.CaptionComponent.Padding};
-          gap: ${MD.CaptionComponent.ItemSpacing};
+        padding: ${MD.CaptionComponent.Padding};
+        gap: ${MD.CaptionComponent.ItemSpacing};
 
-          .icon-wrapper {
-            padding: ${MD.CaptionComponent.IconWrapper.Padding};
-          }
+        .blr-icon {
+          padding: ${MD.CaptionComponent.IconWrapper.Padding};
+        }
 
-          .label-wrapper {
-            padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
-
-            .blr-caption-text {
-              font-family: ${MD.Caption.fontFamily}, sans-serif;
-              font-weight: ${MD.Caption.fontWeight};
-              font-size: ${MD.Caption.fontSize};
-              line-height: ${MD.Caption.lineHeight};
-            }
-          }
+        .blr-caption-text {
+          padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
+          font-family: ${MD.Caption.fontFamily}, sans-serif;
+          font-weight: ${MD.Caption.fontWeight};
+          font-size: ${MD.Caption.fontSize};
+          line-height: ${MD.Caption.lineHeight};
         }
       }
 
       &.lg {
-        .hint-container {
-          padding: ${LG.CaptionComponent.Padding};
-          gap: ${LG.CaptionComponent.ItemSpacing};
-          align-items: flex-end;
+        padding: ${LG.CaptionComponent.Padding};
+        gap: ${LG.CaptionComponent.ItemSpacing};
+        align-items: flex-end;
 
-          .icon-wrapper {
-            padding: ${LG.CaptionComponent.IconWrapper.Padding};
-          }
+        .blr-icon {
+          padding: ${LG.CaptionComponent.IconWrapper.Padding};
+        }
 
-          .label-wrapper {
-            padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
-
-            .blr-caption-text {
-              font-weight: ${LG.Caption.fontWeight};
-              font-size: ${LG.Caption.fontSize};
-              font-family: ${LG.Caption.fontFamily}, sans-serif;
-              line-height: ${LG.Caption.lineHeight};
-            }
-          }
+        .blr-caption-text {
+          padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
+          font-weight: ${LG.Caption.fontWeight};
+          font-size: ${LG.Caption.fontSize};
+          font-family: ${LG.Caption.fontFamily}, sans-serif;
+          line-height: ${LG.Caption.lineHeight};
         }
       }
     }
 
     .blr-form-label {
-      display: inline;
-      align-items: baseline;
+      display: flex;
+      align-items: center;
       color: ${Label.Rest};
       word-break: break-all;
 
@@ -482,62 +420,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       .hint {
         color: ${Caption.Hint};
-      }
-    }
-
-    .blr-textarea {
-      &.sm {
-        .label-wrapper {
-          padding: ${SM.LabelSlot.Padding};
-        }
-
-        .input-wrapper {
-          margin: ${SM.InputSlot.Margin};
-
-          .textarea-input-control {
-            min-height: ${TextArea.SM.MinHeight};
-          }
-        }
-
-        .hint-wrapper {
-          margin: ${SM.CaptionSlot.Margin};
-        }
-      }
-
-      &.md {
-        .label-wrapper {
-          padding: ${MD.LabelSlot.Padding};
-        }
-
-        .input-wrapper {
-          margin: ${MD.InputSlot.Margin};
-
-          .textarea-input-control {
-            min-height: ${TextArea.MD.MinHeight};
-          }
-        }
-
-        .hint-wrapper {
-          margin: ${MD.CaptionSlot.Margin};
-        }
-      }
-
-      &.lg {
-        .label-wrapper {
-          padding: ${LG.LabelSlot.Padding};
-        }
-
-        .input-wrapper {
-          margin: ${LG.InputSlot.Margin};
-
-          .textarea-input-control {
-            min-height: ${TextArea.LG.MinHeight};
-          }
-        }
-
-        .hint-wrapper {
-          margin: ${LG.CaptionSlot.Margin};
-        }
       }
     }
   `;

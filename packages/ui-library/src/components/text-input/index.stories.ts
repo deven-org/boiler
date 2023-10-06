@@ -24,6 +24,7 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
     },
     hintText: {
       if: { arg: 'showHint', eq: true },
@@ -31,6 +32,7 @@ export default {
     errorIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
     },
     errorMessage: {
       if: { arg: 'hasError', eq: true },
@@ -115,13 +117,11 @@ BlrTextInput.args = {
   disabled: false,
   required: false,
   readonly: false,
-
   showHint: false,
+  hintText: 'This is a hint message',
   hintIcon: 'blrInfo',
-  hintText: ' This is a hint message',
   maxLength: '200',
-
   hasError: false,
-  errorIcon: undefined,
-  errorMessage: ' ',
+  errorMessage: 'This is an error message',
+  errorIcon: 'blrInfo',
 };
