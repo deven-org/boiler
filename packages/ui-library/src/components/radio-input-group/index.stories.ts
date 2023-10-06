@@ -104,10 +104,10 @@ BlrRadioGroup.args = {
   ],
   layout: 'horizontal',
   showLegend: true,
-  showHint: true,
+  showHint: false,
   groupHintMessage: 'This is a sample hint message',
   hintIcon: 'blrInfo',
   hasError: false,
-  groupErrorMessage: 'This is a sample error message',
+  groupErrorMessage: ' ',
   groupErrorIcon: undefined,
 };
