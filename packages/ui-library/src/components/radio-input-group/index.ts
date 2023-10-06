@@ -95,33 +95,33 @@ export class BlrRadioGroup extends LitElement {
             </div>
           `;
         })}
-        ${this.showHint
-          ? html`
-              <div class="hint-wrapper">
-                ${BlrFormHintRenderFunction({
-                  message: this.groupHintMessage || '',
-                  variant: 'hint',
-                  size: this.size,
-                  icon: this.hintIcon ? this.hintIcon : undefined,
-                  theme: this.theme,
-                })}
-              </div>
-            `
-          : nothing}
-        ${this.hasError
-          ? html`
-              <div class="group-error ${classes}">
-                ${BlrFormHintRenderFunction({
-                  message: this.groupErrorMessage || '',
-                  variant: 'error',
-                  size: this.size,
-                  icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
-                  theme: this.theme,
-                })}
-              </div>
-            `
-          : nothing}
-      </div> `;
+      </div>
+      ${this.showHint
+        ? html`
+            <div class="caption-group ${classes}">
+              ${BlrFormHintRenderFunction({
+                message: this.groupHintMessage || '',
+                variant: 'hint',
+                size: this.size,
+                icon: this.hintIcon ? this.hintIcon : undefined,
+                theme: this.theme,
+              })}
+            </div>
+          `
+        : nothing}
+      ${this.hasError
+        ? html`
+            <div class="caption-group ${classes}">
+              ${BlrFormHintRenderFunction({
+                message: this.groupErrorMessage || '',
+                variant: 'error',
+                size: this.size,
+                icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
+                theme: this.theme,
+              })}
+            </div>
+          `
+        : nothing} `;
   }
 }
 

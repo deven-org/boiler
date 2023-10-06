@@ -19,10 +19,6 @@ export default {
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
-    errorIcon: {
-      options: [undefined, ...getIconName(IconKeys)],
-      control: { type: 'select' },
-    },
     groupErrorIcon: {
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
@@ -90,7 +86,7 @@ BlrRadioGroup.args = {
   theme: 'Light',
   disabled: false,
   name: 'Default Name',
-  hasError: false,
+  hasError: true,
   required: false,
   readonly: false,
   size: 'md',
@@ -103,7 +99,7 @@ BlrRadioGroup.args = {
   showLegend: true,
   showHint: true,
   groupHintMessage: 'This is a sample hint message',
-  hintIcon: '',
+  hintIcon: 'blrInfo',
   showGroupErrorMessage: true,
   groupErrorMessage: 'This is a sample error message',
   groupErrorIcon: '',
