@@ -97,9 +97,9 @@ export class BlrRadioGroup extends LitElement {
           `;
         })}
       </div>
-      ${this.showHint
-        ? html`
-            <div class="caption-group ${classes}">
+      <div class="caption-group ${classes}">
+        ${this.showHint
+          ? html`
               ${BlrFormHintRenderFunction({
                 message: this.groupHintMessage || '',
                 variant: 'hint',
@@ -107,12 +107,10 @@ export class BlrRadioGroup extends LitElement {
                 icon: this.hintIcon ? this.hintIcon : undefined,
                 theme: this.theme,
               })}
-            </div>
-          `
-        : nothing}
-      ${this.hasError
-        ? html`
-            <div class="caption-group ${classes}">
+            `
+          : nothing}
+        ${this.hasError
+          ? html`
               ${BlrFormHintRenderFunction({
                 message: this.groupErrorMessage || '',
                 variant: 'error',
@@ -120,9 +118,9 @@ export class BlrRadioGroup extends LitElement {
                 icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
                 theme: this.theme,
               })}
-            </div>
-          `
-        : nothing} `;
+            `
+          : nothing}
+      </div> `;
   }
 }
 

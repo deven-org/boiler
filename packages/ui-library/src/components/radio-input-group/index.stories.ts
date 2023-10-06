@@ -108,6 +108,6 @@ BlrRadioGroup.args = {
   groupHintMessage: 'This is a sample hint message',
   hintIcon: 'blrInfo',
   hasError: false,
-  groupErrorMessage: ' ',
+  groupErrorMessage: '',
   groupErrorIcon: undefined,
 };
