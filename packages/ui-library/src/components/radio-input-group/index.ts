@@ -33,6 +33,7 @@ export class BlrRadioGroup extends LitElement {
   @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
+  @property() groupHintMessage?: string;
   @property() groupErrorIcon?: IconType;
   @property() showLegend?: boolean = true;
 
@@ -90,24 +91,24 @@ export class BlrRadioGroup extends LitElement {
                 ${option.label
                   ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size })}`
                   : nothing}
-                ${this.showHint
-                  ? html`
-                      <div class="hint-wrapper">
-                        ${BlrFormHintRenderFunction({
-                          message: option.hintMessage,
-                          variant: 'hint',
-                          size: this.size,
-                          icon: this.hintIcon ? this.hintIcon : undefined,
-                          theme: this.theme,
-                        })}
-                      </div>
-                    `
-                  : nothing}
               </div>
             </div>
           `;
         })}
-        ${this.hasError && this.showGroupErrorMessage
+        ${this.showHint
+          ? html`
+              <div class="hint-wrapper">
+                ${BlrFormHintRenderFunction({
+                  message: this.groupHintMessage || '',
+                  variant: 'hint',
+                  size: this.size,
+                  icon: this.hintIcon ? this.hintIcon : undefined,
+                  theme: this.theme,
+                })}
+              </div>
+            `
+          : nothing}
+        ${this.hasError
           ? html`
               <div class="group-error ${classes}">
                 ${BlrFormHintRenderFunction({
@@ -142,6 +143,7 @@ export const BlrRadioGroupRenderFunction = ({
   layout,
   showLegend,
   showHint,
+  groupHintMessage,
   hintIcon,
   hideLabel,
   showGroupErrorMessage,
@@ -165,6 +167,7 @@ export const BlrRadioGroupRenderFunction = ({
     .options=${options}
     .layout=${layout}
     .showHint=${showHint}
+    .groupHintMessage=${groupHintMessage}
     .hintIcon=${hintIcon}
     .hideLabel=${hideLabel}
     .showLegend=${showLegend}
