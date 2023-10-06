@@ -64,7 +64,7 @@ export class BlrRadioGroup extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      ${this.showLegend ? html`<legend class="${legendClasses}">Choose any option</legend>` : ''}
+      <div class="${legendClasses}">${this.showLegend ? html`<legend>Choose any option</legend>` : ''}</div>
 
       <div class="blr-radio-group ${classes}">
         ${this.options &&
