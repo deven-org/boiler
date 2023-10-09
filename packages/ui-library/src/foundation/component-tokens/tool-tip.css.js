@@ -9,6 +9,14 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
     UI: { Caption },
   } = semanticTokens;
 
+  const splitPaddingFunc = () => {
+    const { cssText } = Tooltip.ContentCol.Padding;
+    const value = parseFloat(cssText.trim().split(" ")[1]);
+    return { doubleValue: `${value}px`, singleValue: `${value / 2}px` };
+  };
+
+  const splitPadding = splitPaddingFunc();
+
   return css`
     .blr-tooltip {
       position: relative;
@@ -96,7 +104,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
       & .tooltip-top {
         bottom: 100%;
-        margin-bottom: 10px;
+        margin-bottom: ${splitPadding.doubleValue};
 
         & > .nose-solo {
           transform: rotate(0deg);
@@ -105,7 +113,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
       & .tooltip-bottom {
         top: 100%;
-        margin-top: 10px;
+        margin-top: ${splitPadding.doubleValue};
 
         & > .nose-solo {
           transform: rotate(180deg);
@@ -114,20 +122,20 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
       & .tooltip-left {
         right: 100%;
-        margin-right: 10px;
+        margin-right: ${splitPadding.doubleValue};
 
         & > .nose-solo {
-          margin-left: -4px;
+          margin-left: -${splitPadding.singleValue};
           transform: rotate(270deg);
         }
       }
 
       & .tooltip-right {
         left: 100%;
-        margin-left: 10px;
+        margin-left: ${splitPadding.doubleValue};
 
         & > .nose-solo {
-          margin-right: -4px;
+          margin-right: -${splitPadding.singleValue};
           transform: rotate(90deg);
         }
       }
@@ -175,7 +183,6 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
       & .tooltip-vertical-middle {
         top: 50%;
         transform: translateY(-50%);
-        margin-top: -5px;
 
         & > .nose-solo {
           top: 50%;

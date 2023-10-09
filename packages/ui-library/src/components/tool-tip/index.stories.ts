@@ -62,7 +62,7 @@ BlrToolTip.args = {
   theme: 'Light',
   text: 'Tooltip text comes here Tooltip text comes here',
   tooldTipId: 'my_text',
-  placement: 'top',
+  placement: 'right',
   toolTipArrow: 'middle',
   elevation: true,
   customCss: 'customToolTipCss',
