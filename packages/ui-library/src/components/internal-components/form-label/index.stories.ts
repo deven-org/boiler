@@ -6,7 +6,7 @@ import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
 import './index';
 
 export default {
-  title: 'Design System/Internal Components',
+  title: 'Design System/Internal Components/BlrFormLabel',
   argTypes: {
     labelSize: {
       options: FormSizes,
