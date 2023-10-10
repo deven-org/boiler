@@ -45,7 +45,7 @@ export class BlrRadioGroup extends LitElement {
     const legendClasses = classMap({
       'blr-legend': true,
       [`${this.size}`]: this.size || 'md',
-      [`error`]: this.hasError || false,
+      'error': this.hasError || false,
     });
 
     const classes = classMap({
