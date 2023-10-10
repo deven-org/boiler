@@ -50,10 +50,10 @@ export class BlrRadioGroup extends LitElement {
 
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
-      [`disabled`]: this.disabled || false,
-      [`readonly`]: this.readonly || false,
-      [`checked`]: this.checked || false,
-      [`error`]: this.hasError || false,
+      disabled: this.disabled || false,
+      readonly: this.readonly || false,
+      checked: this.checked || false,
+      error: this.hasError || false,
       [`${this.layout}`]: this.layout,
     });
 
