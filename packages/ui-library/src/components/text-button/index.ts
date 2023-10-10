@@ -12,7 +12,7 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
-import { adjustIconSize } from '../../utils/adjust-icon-size';
+import { adjustIconSize, adjustLoaderSize } from '../../utils/adjust-icon-size';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -52,6 +52,7 @@ export class BlrTextButton extends LitElement {
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const iconSize = adjustIconSize(this.size).toLowerCase() as ButtonSizesType;
+    const loaderSize = adjustLoaderSize(this.size).toLowerCase() as ButtonSizesType;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -69,7 +70,7 @@ export class BlrTextButton extends LitElement {
       >
         ${this.loading
           ? html`${BlrLoaderRenderFunction({
-              size: this.size,
+              size: loaderSize,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
