@@ -7,7 +7,7 @@ import './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Internal Components',
+  title: 'Design System/Internal Components/BlrFormHint',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],

@@ -7,7 +7,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/Button',
+  title: 'Design System/Web Components/ButtonTextGroup',
   argTypes: {
     leadingIcon: {
       options: [undefined, ...PureIconKeys],
