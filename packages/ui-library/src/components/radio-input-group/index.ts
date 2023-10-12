@@ -33,6 +33,7 @@ export class BlrRadioGroup extends LitElement {
   @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
+  @property() groupHintMessage?: string;
   @property() groupErrorIcon?: IconType;
   @property() showLegend?: boolean = true;
 
@@ -44,14 +45,15 @@ export class BlrRadioGroup extends LitElement {
     const legendClasses = classMap({
       'blr-legend': true,
       [`${this.size}`]: this.size || 'md',
+      'error': this.hasError || false,
     });
 
     const classes = classMap({
       [`${this.size}`]: this.size || 'md',
-      [`disabled`]: this.disabled || false,
-      [`readonly`]: this.readonly || false,
-      [`checked`]: this.checked || false,
-      [`error`]: this.hasError || false,
+      disabled: this.disabled || false,
+      readonly: this.readonly || false,
+      checked: this.checked || false,
+      error: this.hasError || false,
       [`${this.layout}`]: this.layout,
     });
 
@@ -62,7 +64,7 @@ export class BlrRadioGroup extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      ${this.showLegend ? html`<legend class="${legendClasses}">Choose any option</legend>` : ''}
+      ${this.showLegend ? html`<legend class="${legendClasses}">Choose any option</legend>` : nothing}
 
       <div class="blr-radio-group ${classes}">
         ${this.options &&
@@ -90,37 +92,38 @@ export class BlrRadioGroup extends LitElement {
                 ${option.label
                   ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size })}`
                   : nothing}
-                ${this.showHint
-                  ? html`
-                      <div class="hint-wrapper">
-                        ${BlrFormHintRenderFunction({
-                          message: option.hintMessage,
-                          variant: 'hint',
-                          size: this.size,
-                          icon: this.hintIcon ? this.hintIcon : undefined,
-                          theme: this.theme,
-                        })}
-                      </div>
-                    `
-                  : nothing}
               </div>
             </div>
           `;
         })}
-        ${this.hasError && this.showGroupErrorMessage
-          ? html`
-              <div class="group-error ${classes}">
-                ${BlrFormHintRenderFunction({
-                  message: this.groupErrorMessage || '',
-                  variant: 'error',
-                  size: this.size,
-                  icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
-                  theme: this.theme,
-                })}
-              </div>
-            `
-          : nothing}
-      </div> `;
+      </div>
+
+      ${this.showHint || this.hasError
+        ? html` <div class="caption-group ${classes}">
+            ${this.showHint
+              ? html`
+                  ${BlrFormHintRenderFunction({
+                    message: this.groupHintMessage || '',
+                    variant: 'hint',
+                    size: this.size,
+                    icon: this.hintIcon ? this.hintIcon : undefined,
+                    theme: this.theme,
+                  })}
+                `
+              : nothing}
+            ${this.hasError
+              ? html`
+                  ${BlrFormHintRenderFunction({
+                    message: this.groupErrorMessage || '',
+                    variant: 'error',
+                    size: this.size,
+                    icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
+                    theme: this.theme,
+                  })}
+                `
+              : nothing}
+          </div>`
+        : nothing} `;
   }
 }
 
@@ -142,6 +145,7 @@ export const BlrRadioGroupRenderFunction = ({
   layout,
   showLegend,
   showHint,
+  groupHintMessage,
   hintIcon,
   hideLabel,
   showGroupErrorMessage,
@@ -165,6 +169,7 @@ export const BlrRadioGroupRenderFunction = ({
     .options=${options}
     .layout=${layout}
     .showHint=${showHint}
+    .groupHintMessage=${groupHintMessage}
     .hintIcon=${hintIcon}
     .hideLabel=${hideLabel}
     .showLegend=${showLegend}
