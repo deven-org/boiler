@@ -13,6 +13,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
 import { adjustIconSize, adjustLoaderSize } from '../../utils/adjust-icon-size';
+import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -49,6 +50,10 @@ export class BlrTextButton extends LitElement {
       disabled: this.disabled || false,
     });
 
+    const loaderIconClasses = classMap({
+      [`loading-class-label-icons`]: this.loading,
+    });
+
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const iconSize = adjustIconSize(this.size).toLowerCase() as ButtonSizesType;
@@ -69,27 +74,51 @@ export class BlrTextButton extends LitElement {
         id=${this.buttonId || nothing}
       >
         ${this.loading
-          ? html`${BlrLoaderRenderFunction({
-              size: loaderSize,
-              variant: loaderVariant,
-              loadingStatus: this.loadingStatus,
-              theme: this.theme,
-            })}`
-          : html`
+          ? html`
+              <div class="loader-class">
+                ${BlrLoaderRenderFunction({
+                  size: loaderSize,
+                  variant: loaderVariant,
+                  loadingStatus: this.loadingStatus,
+                  theme: this.theme,
+                })}
+              </div>
+
               ${this.leadingIcon &&
               html`${BlrIconRenderFunction({
                 icon: calculateIconName(this.leadingIcon, iconSize),
                 size: iconSize,
                 hideAria: true,
+                classMap: loaderIconClasses,
               })}`}
-              <span>${this.label}</span>
+
+              <span class=${loaderIconClasses}>${this.label}</span>
+
               ${this.trailingIcon &&
               html`${BlrIconRenderFunction({
                 icon: calculateIconName(this.trailingIcon, iconSize),
                 size: iconSize,
                 hideAria: true,
+                classMap: loaderIconClasses,
+              })} `}
+            `
+          : html`${this.leadingIcon &&
+              html`${BlrIconRenderFunction({
+                icon: calculateIconName(this.leadingIcon, iconSize),
+                size: iconSize,
+                hideAria: true,
+                classMap: loaderIconClasses,
               })}`}
-            `}
+
+              <span class=${loaderIconClasses}>${this.label}</span>
+
+              ${this.trailingIcon &&
+              html`${BlrIconRenderFunction({
+                icon: calculateIconName(this.trailingIcon, iconSize),
+                size: iconSize,
+                hideAria: true,
+                classMap: loaderIconClasses,
+              })} `}`}
       </span>`;
   }
 }

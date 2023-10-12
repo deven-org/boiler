@@ -20,13 +20,13 @@ export const adjustIconSize = (size: ButtonSizesType): SizesType => {
 export const adjustLoaderSize = (size: ButtonSizesType): SizesType => {
   switch (size) {
     case 'xs':
-      return 'xxs';
+      return 'sm';
     case 'sm':
-      return 'xs';
+      return 'sm';
     case 'md':
       return 'sm';
     case 'lg':
-      return 'sm';
+      return 'md';
     case 'xl':
       return 'lg';
     default:

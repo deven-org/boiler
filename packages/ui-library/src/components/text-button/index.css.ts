@@ -8,6 +8,7 @@ export const styleCustom = css`
     display: inline-flex;
     cursor: pointer;
     outline-offset: -2px;
+    position: relative;
   }
 
   .blr-text-button:disabled {
@@ -18,5 +19,13 @@ export const styleCustom = css`
     /*  Component Tokens for Outline are missing */
     /* Need to make sure we meet AA requirements with this custom outline */
     outline: 2px solid black;
+  }
+
+  .loading-class-label-icons {
+    color: transparent;
+  }
+
+  .loader-class {
+    position: absolute;
   }
 `;
