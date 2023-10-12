@@ -517,7 +517,7 @@
       },
       "LabelSlot": {
         "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "value": "{core.dimensionREM.0} {core.dimensionPX.8} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
         }
       },
@@ -616,7 +616,7 @@
       },
       "LabelSlot": {
         "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "value": "{core.dimensionREM.0} {core.dimensionPX.8} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
         }
       },
@@ -709,7 +709,7 @@
       },
       "LabelSlot": {
         "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8}",
+          "value": "{core.dimensionREM.0} {core.dimensionPX.8} {core.dimensionPX.0} {core.dimensionPX.8}",
           "type": "spacing"
         }
       },
