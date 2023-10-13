@@ -13,18 +13,30 @@ export default {
   argTypes: {
     size: {
       options: FormSizes,
-      control: { type: 'select' },
+      control: { type: 'radio' },
+      table: {
+        category: 'Appearance',
+      },
     },
     hintIcon: {
       if: { arg: 'showHint', eq: true },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      table: {
+        category: 'Content/ Settings',
+      },
     },
     hintCounter: {
       if: { arg: 'showCounter', eq: true },
+      table: {
+        category: 'Content/ Settings',
+      },
     },
     hintText: {
       if: { arg: 'showHint', eq: true },
+      table: {
+        category: 'Content/ Settings',
+      },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
@@ -137,18 +149,19 @@ BlrTextarea.storyName = 'BlrTextarea-Docs';
 
 BlrTextarea.args = {
   theme: 'Light',
-  textareaId: '#1',
-  label: 'Label',
-  labelAppendix: '(Optional)',
   size: 'md',
-  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  textareaId: '#1',
+  cols: 20,
+  rows: 5,
   minLength: 0,
   maxLength: 140,
+
+  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  label: 'Label',
+  labelAppendix: '(Optional)',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-  cols: 20,
-  rows: 5,
 
   placeholder: 'Type your message here ..',
   required: false,

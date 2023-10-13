@@ -1,6 +1,7 @@
 import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 import './index';
+import { FormSizes } from '../../globals/constants';
 
 const defaultParams: BlrTextareaType = {
   theme: 'Light',
@@ -62,6 +63,13 @@ export default {
         type: 'text',
         label: 'Enter Text',
       },
+    },
+    size: {
+      options: FormSizes,
+      control: { type: 'radio' },
+      name: 'Size',
+      description: 'test Size',
+      defaultValue: '',
     },
   },
 };
