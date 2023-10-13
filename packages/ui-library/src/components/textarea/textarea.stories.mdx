@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { BlrTextareaRenderFunction } from './index';
+
+<Meta
+title="BlrTeaxtareaMDX"
+argTypes={{
+    //hier die ArgTypes
+}}
+parameters={{
+    viewMode: 'docs'
+}}
+/>
+
+# BlrTextareaMDX
+
+Hier kommt eine Beschreibung
+
+<Canvas>
+    <Story name="BlrTextarea-Docs-mdx" args={{
+        theme: 'Light',
+        textareaId: '#1',
+        label: 'Label',
+        labelAppendix: '(Optional)',
+        size: 'md',
+        value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+        minLength: 0,
+        maxLength: 140,
+        warningLimitType: 'warningLimitInt',
+        warningLimitInt: 105,
+        warningLimitPer: 75,
+        cols: 20,
+        rows: 5,
+        placeholder: 'Type your message here ..',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: true,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hintText: 'Rindfleischetikettierungs',
+        errorIcon: undefined,
+        hasError: false,
+        errorMessage: ' ',
+        isResizeable: true,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+## Properties
+
