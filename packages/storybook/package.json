@@ -20,6 +20,6 @@
     "@storybook/web-components-webpack5": "^7.4.6"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^7.4.6"
+    "@storybook/blocks": "^7.4.6"
   }
 }

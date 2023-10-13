@@ -1,10 +1,57 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/blocks';
 import { BlrTextareaRenderFunction } from './index';
+import { FormSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { PureIconKeys } from '@boiler/icons';
 
 <Meta
-title="BlrTeaxtareaMDX"
+title="Design System/Web Components/BlrTextarea"
 argTypes={{
-    //hier die ArgTypes
+    theme: {
+        options: Themes,
+        control: { type: 'select' },
+    },
+    size: {
+        options: FormSizes,
+        control: { type: 'radio' },
+    },
+    hintIcon: {
+        if: { arg: 'showHint', eq: true },
+        options: [undefined, ...PureIconKeys],
+        control: { type: 'select' },
+    },
+    hintCounter: {
+        if: { arg: 'showCounter', eq: true },
+    },
+    hintText: {
+        if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+        options: [undefined, ...PureIconKeys],
+        control: { type: 'select' },
+        if: { arg: 'hasError', eq: true },
+    },
+    errorMessage: {
+    if: { arg: 'hasError', eq: true },
+},
+    warningLimitType: {
+        name: 'Warning Limit Type',
+        options: ['warningLimitInt', 'warningLimitPer'],
+        control: {
+            type: 'radio',
+            labels: {
+                warningLimitInt: 'Whole Number',
+                warningLimitPer: 'Percentage',
+            },
+        },
+    },
+    // Only enabled if warningLimitType is Whole Number
+    warningLimitInt: {
+        control: 'number',
+        name: 'Warning Limit (Whole Number)',
+        if: { arg: 'warningLimitType', eq: 'warningLimitInt' },
+        description: 'Please provide a whole number',
+    },
 }}
 parameters={{
     viewMode: 'docs'

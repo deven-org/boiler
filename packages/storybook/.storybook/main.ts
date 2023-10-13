@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 const config: StorybookConfig = {
   stories: ['../../ui-library/src/**/*.stories.mdx', '../../ui-library/src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials'],
+  addons: ['@storybook/addon-essentials', '@storybook/blocks'],
   framework: '@storybook/web-components-webpack5',
   docs: {
     autodocs: true,
