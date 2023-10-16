@@ -1232,7 +1232,7 @@
       "OnEmptyField": {
         "Default": {
           "Rest": {
-            "value": "{q.content.onerror.beta}",
+            "value": "{q.content.ondefault.gamma.rest}",
             "type": "color",
             "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
           },
