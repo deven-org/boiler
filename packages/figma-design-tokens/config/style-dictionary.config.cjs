@@ -114,7 +114,7 @@ const getStyleDictionaryConfig = (theme) => {
       'input/tokens/color/*.json',
       'input/tokens/dimensions/*.json',
       'input/tokens/captions/*.json',
-      'input/tokens/componentConfig_v2/*.json',
+      'input/tokens/sizeVariants/*.json',
     ],
     platforms: {
       scss: {
