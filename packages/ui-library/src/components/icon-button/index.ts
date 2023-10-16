@@ -48,17 +48,19 @@ export class BlrIconButton extends LitElement {
     const dynamicStyles = this.theme === 'Light' ? [actionLight, iconButtonLight] : [actionDark, iconButtonDark];
     const loaderVariant = determineLoaderVariant(this.variant);
 
-    const loaderSize = getComponentConfigToken([
+    const loaderSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       this.size.toUpperCase(),
-      'LoaderSize',
+      'Loader',
     ]).toLowerCase() as FormSizesType;
 
-    const iconSize = getComponentConfigToken([
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       'IconButton',
       this.size.toUpperCase(),
-      'IconSize',
+      'Icon',
     ]).toLowerCase() as SizesType;
 
     return html`<style>
@@ -78,14 +80,14 @@ export class BlrIconButton extends LitElement {
       >
         ${this.loading
           ? html`${BlrLoaderRenderFunction({
-              size: loaderSize,
+              size: loaderSizeVariant,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
             })}`
           : html`${BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSize),
-              size: iconSize,
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: this.size,
               hideAria: true,
             })}`}
       </span> `;

@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { IconType } from '@boiler/icons';
 
 import { BlrFormLabelInline } from '../form-label-inline';
-import { FormSizesType, IconPositionVariant, SizesType } from '../../globals/types';
+import { FormSizesType, IconPositionVariant } from '../../globals/types';
 
 import { styleCustom } from './index.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
