@@ -339,6 +339,32 @@
           "value": "{core.color.crimson.500.solid}",
           "type": "color"
         }
+      },
+      "onunspecified": {
+        "default": {
+          "alpha": {
+            "value": "{core.color.white.opa20}",
+            "type": "color",
+            "description": "Use for components which can be used anywhere e.g: Loader"
+          },
+          "beta": {
+            "value": "{core.color.white.solid}",
+            "type": "color",
+            "description": "Use for components which can be used anywhere e.g: Loader"
+          }
+        },
+        "inverted": {
+          "alpha": {
+            "value": "{core.color.white.opa20}",
+            "type": "color",
+            "description": "Use for components which can be used anywhere e.g: Loader"
+          },
+          "beta": {
+            "value": "{core.color.white.solid}",
+            "type": "color",
+            "description": "Use for components which can be used anywhere e.g: Loader"
+          }
+        }
       }
     },
     "shadow": {
