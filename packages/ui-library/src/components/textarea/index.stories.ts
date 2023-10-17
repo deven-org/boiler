@@ -12,6 +12,8 @@ export default {
   title: 'Design System/Web Components/BlrTextarea',
   argTypes: {
     size: {
+      name: 'Size',
+      description: ' Description ',
       options: FormSizes,
       control: { type: 'radio' },
       table: {
@@ -80,7 +82,12 @@ export default {
     },
   },
   parameters: {
-    viewMode: 'docs',
+    viewMode: 'story',
+    previewTabs: {
+      'storybook/docs/panel': {
+        hidden: true,
+      },
+    },
   },
 };
 
@@ -167,6 +174,7 @@ BlrTextarea.args = {
   required: false,
   disabled: false,
   readonly: false,
+
   showCounter: true,
   showHint: true,
   hintIcon: 'blrInfo',

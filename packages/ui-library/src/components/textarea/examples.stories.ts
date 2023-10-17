@@ -4,6 +4,10 @@ import './index';
 import { FormSizes } from '../../globals/constants';
 
 const defaultParams: BlrTextareaType = {
+  errorIcon: '',
+  hint: '',
+  pattern: '',
+  showCounter: '',
   theme: 'Light',
   textareaId: '#1',
   label: 'Label',
@@ -45,7 +49,7 @@ const fontStyle = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/BlrTextarea/Examples',
+  title: 'Design System/Web Components/BlrTextarea/Text area',
   parameters: {
     viewMode: 'story',
     previewTabs: {
@@ -110,28 +114,27 @@ export const Example1 = () => {
     </style>
     <div class="wrapper">
       <div class="column">
-        <p style="text-align: center">Default</p>
         <div class="stories-textarea">
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Light', shouldFocus: true })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Light', disabled: true })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Light', readonly: true })}
-        </div>
-      </div>
-      <div class="column">
-        <p style="text-align: center">Error</p>
-        <div class="stories-textarea">
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', hasError: true, theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', hasError: true, theme: 'Light' })}
-          ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', hasError: true, theme: 'Light' })}
           ${renderTextareaExample({
             ...defaultParams,
-            storybookLabel: 'Focus',
-            hasError: true,
+            storybookLabel: 'Rest',
             theme: 'Light',
-            shouldFocus: true,
+            size: 'sm',
+            label: 'Text area SM',
+          })}
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Hover',
+            theme: 'Light',
+            size: 'md',
+            label: 'Text area MD',
+          })}
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Pressed',
+            theme: 'Light',
+            size: 'lg',
+            label: 'Text area LG',
           })}
         </div>
       </div>
@@ -144,7 +147,7 @@ Example1.parameters = {
   },
 };
 
-Example1.storyName = 'Textarea Examples Light Theme Focus Error';
+Example1.storyName = 'Textarea  Light Theme Focus Error';
 
 export const Example4 = () => {
   return html`
@@ -202,8 +205,23 @@ Example4.parameters = {
     default: 'light',
   },
 };
+export const description = ({}) =>
+  html`
+    ${fontStyle}
+    <p>This is a Description</p>
+  `;
+description.story = {
+  name: 'Description',
+  parameters: {
+    docs: {
+      description: {
+        story: 'another Description',
+      },
+    },
+  },
+};
 
-Example4.storyName = 'Textarea Examples Light Theme Focus Default';
+Example4.storyName = 'Textarea  Light Theme Focus Default';
 
 export const Example2 = () =>
   html`
@@ -269,7 +287,7 @@ export const Example2 = () =>
     default: 'dark',
   },
 }),
-  (Example2.storyName = 'Textarea Examples Dark Theme');
+  (Example2.storyName = 'Textarea  Dark Theme');
 
 export const InteractivePlaceholder = ({ placeholder }) =>
   html`
@@ -283,4 +301,20 @@ export const InteractivePlaceholder = ({ placeholder }) =>
 InteractivePlaceholder.storyName = 'Interaktiver Placeholder';
 InteractivePlaceholder.args = {
   placeholder: defaultParams.placeholder,
+};
+
+export const isResizeable = ({ placeholder }) =>
+  html`
+    ${fontStyle}
+    ${BlrTextareaRenderFunction({
+      ...defaultParams,
+      placeholder: placeholder,
+      value: '',
+      isResizeable: true,
+    })}
+  `;
+isResizeable.storyName = 'isResizeable';
+isResizeable.args = {
+  placeholder: defaultParams.placeholder,
+  isResizeable: true,
 };
