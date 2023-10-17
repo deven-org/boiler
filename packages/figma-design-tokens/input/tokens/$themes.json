@@ -538,7 +538,13 @@
       "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "S:610bb50656e3a5973cda0f7a723448cfc84744a9,",
       "Navigation.TabBar.Tab.Label.Unselected.Disabled": "S:8523720966f0b1c00dd7e8ef00835af04e936d0d,",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:6a0646595b624192862b36aaa6e502e8b3774d2a,",
-      "Action.Menu.Section.SectionTitle": "S:2051a61186bbc055cb0cf8b386a963717c94fa4c,"
+      "Action.Menu.Section.SectionTitle": "S:2051a61186bbc055cb0cf8b386a963717c94fa4c,",
+      "UI.Caption.SM": "S:e59af292883f315f89ca309442a6c18461925701,",
+      "UI.Caption.MD": "S:f4795ef3173aa4baf69e2ce5039ff6b9c195ebca,",
+      "UI.Caption.LG": "S:265379b2dde56a2e155c91e032f59089ad0aa15b,",
+      "Forms.SM.PrefixSuffix": "S:ead9c5fb313e8bf3f41f8ff4c4d9468bc99f9648,",
+      "Forms.MD.PrefixSuffix": "S:3e94547ee52a1e521c3054d2400c1b883ddbc454,",
+      "Forms.LG.PrefixSuffix": "S:348fdb06ff80287c3fe2b27605fb46f5bfdf163d,"
     },
     "selectedTokenSets": {
       "core/COR": "source",

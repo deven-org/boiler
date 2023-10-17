@@ -1172,7 +1172,7 @@
         "type": "color"
       }
     },
-    "Pre-Suffix": {
+    "PrefixSuffix": {
       "OnPopulatedField": {
         "Default": {
           "Rest": {
