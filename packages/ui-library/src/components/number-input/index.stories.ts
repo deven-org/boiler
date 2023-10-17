@@ -22,12 +22,6 @@ export default {
     label: {
       if: { arg: 'hasLabel', eq: true },
     },
-    value: {
-      control: { type: 'text' },
-    },
-    step: {
-      control: { type: 'text' },
-    },
     fractionDigits: {
       control: { type: 'text' },
     },
