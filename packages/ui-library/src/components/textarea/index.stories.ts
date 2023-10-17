@@ -9,7 +9,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrTextarea',
   argTypes: {
     size: {
       options: FormSizes,
@@ -20,8 +20,16 @@ export default {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
+    hintCounter: {
+      if: { arg: 'showCounter', eq: true },
+    },
     hintText: {
       if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
     },
 
     errorMessage: {
@@ -81,6 +89,7 @@ export const BlrTextarea = ({
   errorMessage,
   hintText,
   hintIcon,
+  errorIcon,
   hasError,
   onChange,
   onFocus,
@@ -88,6 +97,7 @@ export const BlrTextarea = ({
   readonly,
   isResizeable,
   showHint,
+  showCounter,
   value,
   theme,
 }: BlrTextareaType) =>
@@ -109,6 +119,7 @@ export const BlrTextarea = ({
       errorMessage,
       hintText,
       hintIcon,
+      errorIcon,
       hasError,
       onChange,
       onFocus,
@@ -116,12 +127,13 @@ export const BlrTextarea = ({
       readonly,
       isResizeable,
       showHint,
+      showCounter,
       value,
       theme,
     })}
   `;
 
-BlrTextarea.storyName = 'BlrTextarea';
+BlrTextarea.storyName = 'BlrTextarea-Docs';
 
 BlrTextarea.args = {
   theme: 'Light',
@@ -142,13 +154,14 @@ BlrTextarea.args = {
   required: false,
   disabled: false,
   readonly: false,
-
+  showCounter: true,
   showHint: true,
   hintIcon: 'blrInfo',
   hintText: 'Rindfleischetikettierungs',
 
+  errorIcon: undefined,
   hasError: false,
-  errorMessage: "OMG it's an error",
+  errorMessage: ' ',
 
   isResizeable: true,
 

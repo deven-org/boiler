@@ -5,7 +5,7 @@ import { styleCustom } from './index.css';
 import { FormSizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-
+import { selectInputLight, selectInputDark } from '../../foundation/component-tokens/select.css';
 import { IconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -36,8 +36,10 @@ export class BlrSelect extends LitElement {
   @property({ type: Array }) options: Option[] = [];
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() hint?: string;
+  @property() hintMessage?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
+  @property() errorIcon?: IconType = 'blr360Sm';
+  @property() showHint?: boolean;
   @property() showTrailingIcon?: boolean;
   @property() trailingIcon: IconType = 'blr360Sm';
 
@@ -68,12 +70,13 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+    const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
 
     const inputClasses = classMap({
       'error': this.hasError || false,
       'error-input': this.hasError || false,
       [`${this.size || 'md'}`]: this.size || 'md',
+      [`disabled`]: this.disabled || false,
     });
 
     const iconClasses = classMap({
@@ -92,40 +95,63 @@ export class BlrSelect extends LitElement {
               labelSize: this.size,
               forValue: this.selectId,
               theme: this.theme,
+              variant: this.hasError ? 'error' : 'label',
             })
           : nothing}
-        <div class="blr-input-inner-container ${inputClasses}">
-          <select
-            class="blr-form-element ${inputClasses}"
-            id=${this.selectId || nothing}
-            name=${this.name || nothing}
-            ?disabled=${this.disabled}
-            ?required=${this.required}
-            @change=${this.onChange}
-          >
-            ${this.options?.map((opt: Option) => {
-              return html`<option
-                class="blr-select-option"
-                id=${opt.value}
-                value=${opt.value}
-                ?selected=${opt.selected}
-                ?disabled=${opt.disabled}
-              >
-                ${opt.label}
-              </option>`;
-            })}
-          </select>
-
+        <div class="blr-select-wrapper ${inputClasses}">
+          <div class="blr-select-inner-container">
+            <select
+              class="blr-form-select ${inputClasses}"
+              id=${this.selectId || nothing}
+              name=${this.name || nothing}
+              ?disabled=${this.disabled}
+              ?required=${this.required}
+              @change=${this.onChange}
+            >
+              ${this.options?.map((opt: Option) => {
+                return html`
+                  <option
+                    class="blr-select-option"
+                    id=${opt.value}
+                    value=${opt.value}
+                    ?selected=${opt.selected}
+                    ?disabled=${opt.disabled}
+                  >
+                    ${opt.label}
+                  </option>
+                `;
+              })}
+            </select>
+          </div>
           ${this.renderTrailingIcon(iconClasses)}
         </div>
-        <div class="hint-wrapper ${this.size}">
-          ${BlrFormHintRenderFunction({
-            message: (this.hasError ? this.errorMessage : this.hint) || 'This is dummy message',
-            variant: this.hasError ? 'error' : 'hint',
-            size: 'sm',
-            icon: this.hintIcon,
-            theme: this.theme,
-          })}
+        <div>
+          ${this.showHint
+            ? html`
+                <div class="hint-wrapper">
+                  ${BlrFormHintRenderFunction({
+                    message: this.hintMessage || 'This is a hint Message',
+                    variant: 'hint',
+                    size: this.size,
+                    icon: this.hintIcon,
+                    theme: this.theme,
+                  })}
+                </div>
+              `
+            : nothing}
+          ${this.hasError
+            ? html`
+                <div>
+                  ${BlrFormHintRenderFunction({
+                    message: (this.hasError ? this.errorMessage : this.hintMessage) || '',
+                    variant: this.hasError ? 'error' : 'hint',
+                    size: this.size,
+                    icon: this.errorIcon ? this.errorIcon : undefined,
+                    theme: this.theme,
+                  })}
+                </div>
+              `
+            : nothing}
         </div>
       </div> `;
   }
@@ -146,8 +172,10 @@ export const BlrSelectRenderFunction = ({
   options,
   hasError,
   errorMessage,
-  hint,
+  hintMessage,
+  showHint,
   hintIcon,
+  errorIcon,
   showTrailingIcon,
   trailingIcon,
   theme,
@@ -160,8 +188,10 @@ export const BlrSelectRenderFunction = ({
     .required=${required}
     .onChange=${onChange}
     .errorMessage=${errorMessage}
-    .hint=${hint}
+    .hintMessage=${hintMessage}
+    .showHint=${showHint}
     .hintIcon=${hintIcon}
+    .errorIcon=${errorIcon}
     .hasError=${hasError}
     .options=${options}
     .labelAppendix=${labelAppendix}

@@ -813,30 +813,26 @@
         }
       },
       "NoseWrapper": {
-        "Left": {
-          "Padding": {
-            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
+        "PaddingTopBottom": {
+          "value": "{core.dimensionREM.5}",
+          "type": "spacing",
+          "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
         },
-        "Right": {
-          "Padding": {
-            "value": "{core.dimensionREM.5} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
-        "Top": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
-            "type": "spacing"
-          }
-        },
-        "Bottom": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionREM.8}",
-            "type": "spacing"
-          }
+        "PaddingLeftRight": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }
+      },
+      "MinWidth": {
+        "value": "{core.dimensionREM.40}",
+        "type": "sizing",
+        "description": "Defines the minimum width of the tooltip."
+      },
+      "MaxWidth": {
+        "value": "{core.dimensionREM.80}",
+        "type": "sizing",
+        "description": "Defines the maximum Width of the tooltip."
       }
     },
     "Dialog": {
@@ -2498,22 +2494,6 @@
               "value": "XS",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-            }
-          }
-        },
-        "HighlightLine": {
-          "Selected": {
-            "Opacity": {
-              "value": "1",
-              "type": "opacity",
-              "description": "Controlls the visibility of the HighlightLine; Apply on selected / active tabs only. <HighlightLine>"
-            }
-          },
-          "Unselected": {
-            "Opacity": {
-              "value": "0",
-              "type": "opacity",
-              "description": "Controlls the visibility of the HighlightLine; Apply on unselected / inactive and disabled tabs. <HighlightLine>"
             }
           }
         },

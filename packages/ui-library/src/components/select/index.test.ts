@@ -31,6 +31,6 @@ describe('blr-select', () => {
     const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
     const className = select?.className;
 
-    expect(className).to.contain('blr-form-element');
+    expect(className).to.contain('blr-form-select');
   });
 });

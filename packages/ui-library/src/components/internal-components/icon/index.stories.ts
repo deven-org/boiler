@@ -9,7 +9,7 @@ import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { classMap } from 'lit/directives/class-map.js';
 
 export default {
-  title: 'Design System/Internal Components',
+  title: 'Design System/Internal Components/BlrIcon',
   argTypes: {
     size: {
       options: Sizes,

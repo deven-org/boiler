@@ -3,6 +3,7 @@ export const InputSizes = ['sm', 'md', 'lg'] as const;
 export const FeedbackSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const InputTypes = ['text', 'email', 'password'] as const;
+export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 
 export const IconPositionVariant = ['leading', 'trailing'] as const;
 export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destructive', 'encourage'] as const;
@@ -20,4 +21,12 @@ export const TabAlignmentVariants = [
   'space-around',
   'space-evenly',
 ] as const;
-export const OverflowVariants = ['wrap', 'browserOverflow', 'buttons'] as const;
+export const OverflowVariantsStandard = ['wrap', 'browserOverflow', 'buttons'] as const;
+export const OverflowVariantsFullWidth = ['wrap', 'browserOverflow'] as const;
+export const ButtonsAlignmentVariants = ['flex-start', 'center', 'flex-end'] as const;
+
+export const ToolTipVisibility = ['onLoad', 'onHover'] as const;
+export const ToolTipPosition = ['left', 'right', 'top', 'bottom'] as const;
+export const ToolTipArrowPosition = ['start', 'end', 'middle', 'hide'] as const;
+
+export const LabelVariants = ['label', 'error'] as const;

@@ -1,11 +1,11 @@
 import { html } from 'lit-html';
 import { BlrDividerRenderFunction, BlrDividerType } from './index';
-import { DividerVariations } from '../../../globals/constants';
+import { DividerVariations } from '../../globals/constants';
 import './index';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Internal Components',
+  title: 'Design System/Web Components/BlrDivider',
   argTypes: {
     dividerDirectionVariant: {
       options: DividerVariations,
@@ -24,7 +24,7 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant, addMargin, size, theme }: BlrDividerType) => html`
+export const BlrDivider = ({ dividerDirectionVariant, addMargin, theme, size }: BlrDividerType) => html`
   ${dividerDirectionVariant === 'vertical'
     ? html`<div style="height: 100px; display: inline-block;">
         ${BlrDividerRenderFunction({
@@ -50,5 +50,4 @@ BlrDivider.args = {
   size: 'md',
   addMargin: false,
   theme: 'Light',
-  directionVariant: 'vertical',
 };

@@ -11,6 +11,7 @@ import {
 } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
+import { BlrDividerRenderFunction } from '../divider';
 import { FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -18,6 +19,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { IconType, SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
+import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 
 type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
@@ -46,27 +48,35 @@ export class BlrNumberInput extends LitElement {
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
   @property() value?: number;
+  @property() step?: number;
+  @property() unit?: string | undefined;
+  @property() totalDigits?: number;
+  @property() fractionDigits?: number;
+  @property() prependUnit?: boolean;
 
   @property() theme: ThemeType = 'Light';
 
   @state() protected isFocused = false;
-  @state() protected currentValue: number | undefined = undefined;
+  @state() protected currentValue = 0;
+  @state() protected adjustType = 'vertical' || 'horizontal';
 
   protected stepperUp() {
-    if (this.currentValue !== undefined) {
-      this.currentValue++;
+    if (this.currentValue !== undefined && this.step !== undefined) {
+      this.currentValue += Number(this.step);
+      this.requestUpdate('currentValue');
     }
   }
 
   protected stepperDown() {
-    if (this.currentValue !== undefined) {
-      this.currentValue--;
+    if (this.currentValue !== undefined && this.step !== undefined) {
+      this.currentValue -= Number(this.step);
+      this.requestUpdate('currentValue');
     }
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.currentValue = Number(this.currentValue) || Number(this.value);
+    this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
   }
 
   protected handleFocus = () => {
@@ -79,6 +89,21 @@ export class BlrNumberInput extends LitElement {
 
   protected handleChange() {
     this.currentValue = Number(this._numberFieldNode.value) || 0;
+  }
+
+  protected customFormat(cur: number, fractions: number, digits: number): string {
+    const formattedNumber = cur.toFixed(fractions);
+    const [integerPart, fractionPart] = formattedNumber.split('.');
+
+    let paddedInteger = integerPart;
+    if (digits > 0) {
+      const padding = Math.max(digits - integerPart.length, 0);
+      paddedInteger = '0'.repeat(padding) + integerPart;
+    }
+
+    const result = `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
+
+    return result;
   }
 
   protected getButtonTemplate = (
@@ -94,7 +119,7 @@ export class BlrNumberInput extends LitElement {
     }
 
     const button = html`<button
-      disabled=${this.disabled || nothing}
+      ?disabled="${this.disabled}"
       class="custom-stepper-button ${buttonAlignment} ${buttonAlignment === 'vertical'
         ? 'fullWidthHeight'
         : stepperButtonSize} ${adjustType}"
@@ -109,11 +134,7 @@ export class BlrNumberInput extends LitElement {
       })}
     </button>`;
 
-    if (buttonAlignment === 'vertical') {
-      return html`<div class="stepper-combo vertical ${this.size} ${adjustType}">${button}</div>`;
-    } else {
-      return button;
-    }
+    return button;
   };
 
   protected render() {
@@ -124,9 +145,17 @@ export class BlrNumberInput extends LitElement {
 
     const inputClasses = classMap({
       'custom-form-input': true,
-      [`error`]: this.hasError || false,
-      [`error-input`]: this.hasError || false,
       [`${this.size}`]: this.size,
+      [`error-input`]: this.hasError || false,
+    });
+
+    const unitClasses = classMap({
+      unit: true,
+      prepend: this.prependUnit === true,
+      [`${this.size}`]: this.size,
+      disabled: this.disabled || false,
+      [`error-input`]: this.hasError || false,
+      focus: this.isFocused || false,
     });
 
     const wrapperClasses = classMap({
@@ -134,8 +163,8 @@ export class BlrNumberInput extends LitElement {
       'focus': this.isFocused || false,
       'disabled': this.disabled || false,
       [`${this.size}`]: this.size,
-
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
+      [`error-input`]: this.hasError || false,
     });
     const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
 
@@ -151,31 +180,82 @@ export class BlrNumberInput extends LitElement {
             labelAppendix: this.labelAppendix,
             forValue: this.numberInputId,
             theme: this.theme,
+            variant: this.hasError ? 'error' : 'label',
           })}`
         : nothing}
       <div class="${wrapperClasses}">
-        ${this.variant === 'mode1' || this.variant === 'mode2'
-          ? html`
-              ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
-              ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
-            `
-          : html`
-              ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
-              ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
-            `}
+        ${!this.readonly
+          ? html` ${this.variant === 'mode1'
+              ? html`
+                  ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
+                  ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+                `
+              : this.variant === 'mode2'
+              ? html`
+                  <div class="stepper-combo horizontal ${this.size}">
+                    <div class="divider-vertical">
+                      ${BlrDividerRenderFunction({
+                        dividerDirectionVariant: 'vertical',
+                        size: this.size,
+                        theme: this.theme,
+                        addMargin: false,
+                      })}
+                    </div>
+                    ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
+                    ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+                  </div>
+                `
+              : html`
+                  <div class="stepper-combo vertical ${this.size}">
+                    <div class="divider-horizontal">
+                      ${BlrDividerRenderFunction({
+                        dividerDirectionVariant: 'horizontal',
+                        size: this.size,
+                        theme: this.theme,
+                        addMargin: false,
+                      })}
+                    </div>
+                    ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
+                    ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
+                  </div>
+                `}`
+          : nothing}
+        ${this.prependUnit && this.unit && this.unit.length && !this.readonly
+          ? html`<span class="${unitClasses}">${this.unit}</span>`
+          : nothing}
 
         <input
           class="${inputClasses}"
           type="number"
-          .value=${this.currentValue}
-          ?disabled=${this.disabled || nothing}
-          ?readonly=${this.readonly || nothing}
+          .value=${!this.readonly
+            ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
+            : ''}
+          step="${this.step || nothing}"
+          ?disabled="${this.disabled}"
+          ?readonly="${this.readonly}"
           ?required="${this.required}"
+          hasError="${this.hasError}"
           @change=${this.handleChange}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
           placeholder=${this.placeholder || nothing}
         />
+        ${!this.prependUnit && this.unit && this.unit.length && !this.readonly
+          ? html`<span class="${unitClasses}">${this.unit}</span>`
+          : nothing}
+      </div>
+      <div class="hint-wrapper ${this.size}">
+        ${this.showHint
+          ? html`
+              ${BlrFormHintRenderFunction({
+                message: this.hasError ? this.errorMessage : this.hintText,
+                variant: this.hasError ? 'error' : 'hint',
+                icon: this.hintIcon,
+                size: 'sm',
+                theme: this.theme,
+              })}
+            `
+          : nothing}
       </div>
     `;
   }
@@ -192,11 +272,20 @@ export const BlrNumberInputRenderFunction = ({
   label,
   hasLabel,
   hasError,
+  errorMessage,
   size,
   labelAppendix,
+  showHint,
+  hintText,
+  hintIcon,
   numberInputId,
   value,
+  step,
   theme,
+  unit,
+  fractionDigits,
+  totalDigits,
+  prependUnit,
 }: BlrNumberInputType) => {
   return html`<blr-number-input
     .variant="${variant}"
@@ -207,10 +296,19 @@ export const BlrNumberInputRenderFunction = ({
     .label="${label}"
     .hasLabel="${hasLabel}"
     .hasError="${hasError}"
+    .errorMessage="${errorMessage}"
     .size="${size}"
     .value="${value}"
+    .step="${step}"
     .labelAppendix="${labelAppendix}"
+    .showHint="${showHint}"
+    .hintText="${hintText}"
+    .hintIcon="${hintIcon}"
     .numberInputId="${numberInputId}"
     .theme="${theme}"
+    .unit="${unit}"
+    .fractionDigits="${fractionDigits}"
+    .totalDigits="${totalDigits}"
+    .prependUnit="${prependUnit}"
   ></blr-number-input>`;
 };

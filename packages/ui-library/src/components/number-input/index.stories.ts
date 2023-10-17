@@ -7,7 +7,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrNumberInput',
   argTypes: {
     size: {
       options: FormSizes,
@@ -25,6 +25,18 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     value: {
+      control: { type: 'text' },
+    },
+    step: {
+      control: { type: 'text' },
+    },
+    fractionDigits: {
+      control: { type: 'text' },
+    },
+    totalDigits: {
+      control: { type: 'text' },
+    },
+    unit: {
       control: { type: 'text' },
     },
     hintIcon: {
@@ -45,12 +57,21 @@ export const BlrNumberInput = ({
   required,
   hasLabel,
   hasError,
+  errorMessage,
   label,
   size,
   labelAppendix,
   numberInputId,
   theme,
   value,
+  step,
+  showHint,
+  hintIcon,
+  hintText,
+  unit,
+  fractionDigits,
+  totalDigits,
+  prependUnit,
 }: BlrNumberInputType) =>
   html`
     ${BlrNumberInputRenderFunction({
@@ -63,27 +84,42 @@ export const BlrNumberInput = ({
       readonly,
       required,
       hasError,
+      errorMessage,
       size,
       labelAppendix,
       numberInputId,
       value,
+      step,
+      showHint,
+      hintText,
+      hintIcon,
+      unit,
+      fractionDigits,
+      totalDigits,
+      prependUnit,
     })}
   `;
 
-BlrNumberInput.storyName = 'BlrNumberInput';
+BlrNumberInput.storyName = 'Component docs';
 
 BlrNumberInput.args = {
-  value: undefined,
-  variant: 'mode1',
+  unit: 'kg',
+  prependUnit: false,
+  variant: 'mode3',
+  value: '',
+  step: '1',
+  fractionDigits: '',
+  totalDigits: '',
+  size: 'md',
   theme: 'Light',
   hasLabel: true,
   label: 'Label',
   disabled: false,
-  placeholder: 'Uschi',
+  placeholder: 'Enter a number',
   readonly: false,
   required: false,
   hasError: false,
-  size: 'md',
+  errorMessage: 'This is error message',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
   showHint: true,

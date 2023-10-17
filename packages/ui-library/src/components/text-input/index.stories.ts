@@ -7,7 +7,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrTextInput',
   argTypes: {
     size: {
       options: FormSizes,
@@ -24,6 +24,16 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+    },
+    hintText: {
+      if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
     },
     theme: {
       options: Themes,
@@ -48,12 +58,11 @@ export const BlrTextInput = ({
   size,
   required,
   onChange,
-  onBlur,
-  onFocus,
   maxLength,
   pattern,
   hasError,
   errorMessage,
+  errorIcon,
   showInputIcon,
   inputIcon,
   showHint,
@@ -75,12 +84,11 @@ export const BlrTextInput = ({
       size,
       required,
       onChange,
-      onBlur,
-      onFocus,
       maxLength,
       pattern,
       hasError,
       errorMessage,
+      errorIcon,
       showInputIcon,
       inputIcon,
       showHint,
@@ -99,18 +107,21 @@ BlrTextInput.args = {
   hasLabel: true,
   labelAppendix: '(Optional)',
   showInputIcon: true,
-  inputIcon: 'blr360Lg',
+  inputIcon: 'blr360',
   type: 'text',
   value: '',
+  size: 'md',
   placeholder: 'Test placeholder',
   disabled: false,
   required: false,
   readonly: false,
-  maxLength: '200',
-  size: 'md',
-  errorMessage: 'This is error message',
-  showHint: true,
-  hintText: 'Field is used for hint',
+
+  showHint: false,
   hintIcon: 'blrInfo',
+  hintText: ' This is a hint message',
+  maxLength: '200',
+
   hasError: false,
+  errorIcon: undefined,
+  errorMessage: ' ',
 };

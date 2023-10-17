@@ -7,7 +7,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrSelect',
   argTypes: {
     size: {
       options: FormSizes,
@@ -20,6 +20,18 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
+    },
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
+    },
+    hintMessage: {
+      if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
     },
     options: {
       control: 'array',
@@ -53,9 +65,11 @@ export const BlrSelect = ({
   size,
   required,
   errorMessage,
-  hint,
+  hintMessage,
+  showHint,
   hintIcon,
   hasError,
+  errorIcon,
   labelAppendix,
   showTrailingIcon,
   trailingIcon,
@@ -73,8 +87,10 @@ export const BlrSelect = ({
       size,
       required,
       errorMessage,
-      hint,
+      hintMessage,
       hintIcon,
+      errorIcon,
+      showHint,
       hasError,
       labelAppendix,
       showTrailingIcon,
@@ -91,16 +107,18 @@ BlrSelect.args = {
   theme: 'Light',
   name: 'Text Input',
   hasLabel: true,
+  showHint: false,
+  hintMessage: 'This is a hint Message',
+  hintIcon: undefined,
   label: 'Label',
   labelAppendix: '(Optional)',
   showTrailingIcon: true,
   size: 'md',
   hasError: false,
-  errorMessage: 'This is error message',
+  errorMessage: '',
+  errorIcon: undefined,
   disabled: false,
   required: false,
-  hint: 'Field is used for hint',
-  hintIcon: 'blrInfo',
   selectId: 'Peter',
   trailingIcon: 'blrChevronDown',
   options: [

@@ -8,7 +8,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrToggleSwitch',
   argTypes: {
     size: {
       options: FormSizes,

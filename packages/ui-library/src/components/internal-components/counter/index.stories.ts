@@ -6,7 +6,7 @@ import { BlrCounterRenderFunction, BlrCounterType } from './index';
 import './index';
 
 export default {
-  title: 'Design System/Internal Components',
+  title: 'Design System/Internal Components/BlrCounterType',
   argTypes: {
     variant: {
       options: CounterVariants,

@@ -7,7 +7,7 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/InputSlider',
+  title: 'Design System/Web Components/RangeLegendSlider',
   argTypes: {
     incrementIcon: {
       options: [undefined, ...PureIconKeys],

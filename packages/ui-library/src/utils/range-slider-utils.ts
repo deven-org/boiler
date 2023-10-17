@@ -35,7 +35,8 @@ export const generateRangeBar = (
   startValueToSlider: number,
   endValueToSlider: number,
   disabled?: boolean,
-  twoKonbs?: boolean
+  twoKnobs?: string,
+  isMinLesserThanMax?: boolean
 ) => {
   const { tokenizedLight, tokenizedDark } = renderThemedCssStrings((componentTokens) => {
     const { Forms } = componentTokens;
@@ -49,13 +50,16 @@ export const generateRangeBar = (
     const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
     const muteColor = disabled ? disbledMuteColor : activeMuteColor;
 
-    const generateGradient = twoKonbs
+    const twoKnobStartValue = isMinLesserThanMax ? startValueToSlider : endValueToSlider;
+    const twoKnobEndValue = isMinLesserThanMax ? endValueToSlider : startValueToSlider;
+
+    const generateGradient = twoKnobs
       ? `linear-gradient(
             to right,
-            ${muteColor} ${startValueToSlider + 1}%,
-            ${defaultColor} ${startValueToSlider}%,
-            ${defaultColor} ${endValueToSlider}%,
-            ${muteColor} ${endValueToSlider}%
+            ${muteColor} ${twoKnobStartValue + 1}%,
+            ${defaultColor} ${twoKnobStartValue}%,
+            ${defaultColor} ${twoKnobEndValue}%,
+            ${muteColor} ${twoKnobEndValue}%
           )`
       : `linear-gradient(
           to right,

@@ -5931,6 +5931,107 @@ const blrNotificationBellOnXxs = (className: string) =>
     />
   </svg>`;
 
+const blrOffLg = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
+    <path
+      d="M21 16C21 18.7614 18.7614 21 16 21C13.2386 21 11 18.7614 11 16C11 13.2386 13.2386 11 16 11C18.7614 11 21 13.2386 21 16Z"
+      stroke="currentColor"
+      stroke-width="2"
+    />
+  </svg>`;
+
+const blrOffMd = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
+    <path
+      d="M15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+    />
+  </svg>`;
+
+const blrOffSm = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 16 16" fill="none">
+    <path
+      d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z"
+      stroke="currentColor"
+    />
+  </svg>`;
+
+const blrOffXl = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 48 48" fill="none">
+    <path
+      d="M31.5 24C31.5 28.1421 28.1421 31.5 24 31.5C19.8579 31.5 16.5 28.1421 16.5 24C16.5 19.8579 19.8579 16.5 24 16.5C28.1421 16.5 31.5 19.8579 31.5 24Z"
+      stroke="currentColor"
+      stroke-width="3"
+    />
+  </svg>`;
+
+const blrOffXs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 12 12" fill="none">
+    <path
+      d="M8.25 6C8.25 7.24264 7.24264 8.25 6 8.25C4.75736 8.25 3.75 7.24264 3.75 6C3.75 4.75736 4.75736 3.75 6 3.75C7.24264 3.75 8.25 4.75736 8.25 6Z"
+      stroke="currentColor"
+      stroke-width="0.5"
+    />
+  </svg>`;
+
+const blrOffXxs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 8 8" fill="none">
+    <path
+      d="M5.75 4C5.75 4.9665 4.9665 5.75 4 5.75C3.0335 5.75 2.25 4.9665 2.25 4C2.25 3.0335 3.0335 2.25 4 2.25C4.9665 2.25 5.75 3.0335 5.75 4Z"
+      stroke="currentColor"
+      stroke-width="0.5"
+    />
+  </svg>`;
+
+const blrOnLg = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
+    <path
+      d="M15 11C15 10.4477 15.4477 10 16 10C16.5523 10 17 10.4477 17 11V21C17 21.5523 16.5523 22 16 22C15.4477 22 15 21.5523 15 21V11Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrOnMd = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 24 24" fill="none">
+    <path
+      d="M11.25 8.25C11.25 7.83579 11.5858 7.5 12 7.5C12.4142 7.5 12.75 7.83579 12.75 8.25V15.75C12.75 16.1642 12.4142 16.5 12 16.5C11.5858 16.5 11.25 16.1642 11.25 15.75V8.25Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrOnSm = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 16 16" fill="none">
+    <path
+      d="M7.5 5.5C7.5 5.22386 7.72386 5 8 5C8.27614 5 8.5 5.22386 8.5 5.5V10.5C8.5 10.7761 8.27614 11 8 11C7.72386 11 7.5 10.7761 7.5 10.5V5.5Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrOnXl = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 48 48" fill="none">
+    <path
+      d="M22.5 16.5C22.5 15.6716 23.1716 15 24 15C24.8284 15 25.5 15.6716 25.5 16.5V31.5C25.5 32.3284 24.8284 33 24 33C23.1716 33 22.5 32.3284 22.5 31.5V16.5Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrOnXs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 12 12" fill="none">
+    <path
+      d="M5.625 4.125C5.625 3.91789 5.79289 3.75 6 3.75C6.20711 3.75 6.375 3.91789 6.375 4.125V7.875C6.375 8.08211 6.20711 8.25 6 8.25C5.79289 8.25 5.625 8.08211 5.625 7.875V4.125Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
+const blrOnXxs = (className: string) =>
+  html`<svg class="${className}" viewBox="0 0 8 8" fill="none">
+    <path
+      d="M3.75 2.75C3.75 2.61193 3.86193 2.5 4 2.5C4.13807 2.5 4.25 2.61193 4.25 2.75V5.25C4.25 5.38807 4.13807 5.5 4 5.5C3.86193 5.5 3.75 5.38807 3.75 5.25V2.75Z"
+      fill="currentColor"
+    />
+  </svg>`;
+
 const blrPauseLg = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 32 32" fill="none">
     <path
@@ -8451,6 +8552,8 @@ export const PureIconKeys = [
   'blrMusic',
   'blrNotificationBellOff',
   'blrNotificationBellOn',
+  'blrOff',
+  'blrOn',
   'blrPause',
   'blrPen',
   'blrPhoneIncomingCall',
@@ -8951,6 +9054,18 @@ export const IconMapping = {
   blrNotificationBellOnXl,
   blrNotificationBellOnXs,
   blrNotificationBellOnXxs,
+  blrOffLg,
+  blrOffMd,
+  blrOffSm,
+  blrOffXl,
+  blrOffXs,
+  blrOffXxs,
+  blrOnLg,
+  blrOnMd,
+  blrOnSm,
+  blrOnXl,
+  blrOnXs,
+  blrOnXxs,
   blrPauseLg,
   blrPauseMd,
   blrPauseSm,

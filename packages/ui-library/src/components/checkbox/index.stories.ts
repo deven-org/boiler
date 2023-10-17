@@ -9,7 +9,7 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components',
+  title: 'Design System/Web Components/BlrCheckbox',
   argTypes: {
     size: {
       options: InputSizes,
