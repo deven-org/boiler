@@ -1,11 +1,22 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas, DocsPage, ArgsTable } from '@storybook/blocks';
 import { BlrTextareaRenderFunction } from './index';
 import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
+import { BlrTextareaReact } from './indexReact'
+
 
 <Meta
-title="Design System/Web Components/BlrTextarea"
+    title="Design System/Web Components/BlrTextarea"
+    addParameters={{
+    docs: {
+        page: props => (
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', border: 'solid 1px red'}}>
+                <DocsPage {...props} />
+            </div>
+        ),
+    },
+}}
 argTypes={{
     theme: {
         options: Themes,
@@ -57,34 +68,140 @@ parameters={{
     viewMode: 'docs'
 }}
 />
+# Text area
+Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text.
+Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
 
-# BlrTextareaMDX
+- [Docs](#docs)
+- [Appearance](#appearance)
+    - [Sizing](#sizes)
+    - [Resize](#resize)
+- [Content/ Settings](#content)
+    - [Placeholder](#placeholder)
+- [States](#states)
+    - [Disabled](#disabled)
+    - [Readonly](#readonly)
+- [Validation](#validation)
+    - [Required](#required)
+    - [hasError](#hasError)
+- [Dependencies](#dependencies)
+    - [Captions](#captions)
+    - [Label](#label)
+    - [Counter](#counter)
 
-Hier kommt eine Beschreibung
-
+## Docs
 <Canvas>
-    <Story name="BlrTextarea-Docs-mdx" args={{
+    <Story name="Docs"
+           args={{
+               theme: 'Light',
+               textareaId: 'docs',
+               label: 'Share your feedback',
+               labelAppendix: 'optional',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here ',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: false,
+               showHint: false,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+<ArgsTable of="BlrTextareaReact"/>
+
+# Appearance
+### Sizes
+A text area that lets the user resize the area horizontally and vertically.
+<Canvas>
+    <Story name="Text area SM" args={{
         theme: 'Light',
-        textareaId: '#1',
-        label: 'Label',
-        labelAppendix: '(Optional)',
-        size: 'md',
-        value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-        minLength: 0,
-        maxLength: 140,
-        warningLimitType: 'warningLimitInt',
-        warningLimitInt: 105,
-        warningLimitPer: 75,
-        cols: 20,
+        textareaId: 'textareasmall',
+        label: 'Text area SM',
+        labelAppendix: 'appendix',
+        size: 'sm',
+        value: '',
+        cols: 40,
         rows: 5,
-        placeholder: 'Type your message here ..',
+        placeholder: 'Add a message here',
         required: false,
         disabled: false,
         readonly: false,
-        showCounter: true,
+        showCounter: false,
         showHint: true,
         hintIcon: 'blrInfo',
-        hintText: 'Rindfleischetikettierungs',
+        hintText: 'This is a small hint',
+        errorIcon: undefined,
+        hasError: false,
+        errorMessage: ' ',
+        isResizeable: true,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="Text area MD" args={{
+        theme: 'Light',
+        textareaId: 'textareamedium',
+        label: 'Text area MD',
+        labelAppendix: 'appendix',
+        size: 'md',
+        value: '',
+        cols: 40,
+        rows: 3,
+        placeholder: 'Add a message here',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: false,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hintText: 'This is a small hint',
+        errorIcon: undefined,
+        hasError: false,
+        errorMessage: ' ',
+        isResizeable: true,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="Text area LG" args={{
+        theme: 'Light',
+        textareaId: 'textarealarge',
+        label: 'Text area LG',
+        labelAppendix: 'appendix',
+        size: 'lg',
+        value: '',
+        cols: 40,
+        rows: 4,
+        placeholder: 'Add a message here',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: false,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hintText: 'This is a small hint',
         errorIcon: undefined,
         hasError: false,
         errorMessage: ' ',
@@ -97,5 +214,517 @@ Hier kommt eine Beschreibung
     </Story>
 </Canvas>
 
-## Properties
 
+### Resize in progress
+#### Auto
+A text area that lets the user resize the area horizontally and vertically.
+#### Horizontal/ Vertical
+A text area that lets the user resize the area horizontally or vertically.
+#### None
+A text area that does not resize and uses a scroll bar to show overflow text.
+<Canvas>
+    <Story name="Auto resize"
+           args={{
+               theme: 'Light',
+               textareaId: 'auto-resize',
+               label: 'Auto resize',
+               labelAppendix: '',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="Horizontal resize" args={{
+        theme: 'Light',
+        textareaId: 'horizontal-resize',
+        label: 'Horizontal resize',
+        labelAppendix: '',
+        size: 'md',
+        value: '',
+        minLength: 0,
+        maxLength: 140,
+        warningLimitType: 'warningLimitInt',
+        warningLimitInt: 105,
+        warningLimitPer: 75,
+        cols: 40,
+        rows: 4,
+        placeholder: 'Add a message here ..',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: false,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hintText: 'This is a small hint',
+        errorIcon: undefined,
+        hasError: false,
+        errorMessage: ' ',
+        isResizeable: true,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="Vertical resize" args={{
+        theme: 'Light',
+        textareaId: 'vertical-resize',
+        label: 'Vertical resize',
+        labelAppendix: '',
+        size: 'md',
+        value: '',
+        minLength: 0,
+        maxLength: 140,
+        warningLimitType: 'warningLimitInt',
+        warningLimitInt: 105,
+        warningLimitPer: 75,
+        cols: 40,
+        rows: 4,
+        placeholder: 'Add a message here ..',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: false,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hintText: 'This is a small hint',
+        errorIcon: undefined,
+        hasError: false,
+        errorMessage: ' ',
+        isResizeable: true,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="None" args={{
+        theme: 'Light',
+        textareaId: 'none',
+        label: 'None',
+        labelAppendix: '',
+        size: 'md',
+        value: '',
+        minLength: 0,
+        maxLength: 140,
+        warningLimitType: 'warningLimitInt',
+        warningLimitInt: 105,
+        warningLimitPer: 75,
+        cols: 40,
+        rows: 4,
+        placeholder: 'Add a message here',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: false,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hintText: 'This is a small hint',
+        errorIcon: undefined,
+        hasError: false,
+        errorMessage: ' ',
+        isResizeable: false,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+## Content/ Settings
+### Placeholder
+The text area can display a placeholder text to improve the usability of this component
+<Canvas>
+    <Story name="Has placeholder"
+           args={{
+               theme: 'Light',
+               textareaId: '9',
+               label: 'Has placeholder',
+               labelAppendix: '',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="Without placeholder"
+           args={{
+               theme: 'Light',
+               textareaId: '10',
+               label: 'Without placeholder',
+               labelAppendix: '',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: '',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+## States
+### Disabled
+A text area that lets the user resize the area horizontally and vertically.
+<Canvas>
+    <Story name="Disabled"
+           args={{
+               theme: 'Light',
+               textareaId: 'disabled',
+               label: 'Disabled text area',
+               labelAppendix: '(Optional)',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here',
+               required: false,
+               disabled: true,
+               readonly: false,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+### Readonly
+A text area that lets the user resize the area horizontally or vertically.
+<Canvas>
+    <Story name="Readonly"
+           args={{
+               theme: 'Light',
+               textareaId: 'readonly',
+               label: 'Readonly',
+               labelAppendix: '(Optional)',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here ..',
+               required: false,
+               disabled: false,
+               readonly: true,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+## Validation
+A technical description how use validation-patterns
+### Required
+The text area can be set as a required field. An error will be thrown, if the field was not filled.
+<Canvas>
+    <Story name="Required"
+           args={{
+               theme: 'Light',
+               textareaId: 'required',
+               label: 'Reason for submission',
+               labelAppendix: '(required)',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Please leave a short description',
+               required: false,
+               disabled: false,
+               readonly: true,
+               showCounter: false,
+               showHint: false,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+### hasError
+<Canvas>
+    <Story name="hasError"
+           args={{
+               theme: 'Light',
+               textareaId: 'hasError',
+               label: 'Reason for submission',
+               labelAppendix: '(required)',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Please leave a short description',
+               required: false,
+               disabled: false,
+               readonly: true,
+               showCounter: false,
+               showHint: false,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: true,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+## Dependencies
+### Captions
+The text area can display an additional hint text and error message. Both captions can be combined. For more information review the caption component.
+<Canvas>
+    <Story name="withHint"
+           args={{
+               theme: 'Light',
+               textareaId: 'withHint',
+               label: 'A text area with a hint',
+               labelAppendix: '',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+    <Story name="hasErrorMessage" args={{
+        theme: 'Light',
+        textareaId: 'hasErrorMessage',
+        label: 'A text area with an error message',
+        labelAppendix: '',
+        size: 'md',
+        value: '',
+        minLength: 0,
+        maxLength: 140,
+        warningLimitType: 'warningLimitInt',
+        warningLimitInt: 105,
+        warningLimitPer: 75,
+        cols: 40,
+        rows: 4,
+        placeholder: 'Add a message here',
+        required: false,
+        disabled: false,
+        readonly: false,
+        showCounter: false,
+        showHint: false,
+        hintIcon: 'blrInfo',
+        hintText: 'This is a small hint',
+        errorIcon: 'blrErrorFilled',
+        hasError: true,
+        errorMessage: ' OMG it is an error ',
+        isResizeable: true,
+        onChange: () => action('onChange'),
+        onFocus: () => action('onFocus'),
+        onSelect: () => action('onSelect'),
+    }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+
+</Canvas>
+
+### Label
+The text area can display an optional label component, consisting of a label and a label appendix. For more information review the caption component.
+<Canvas>
+    <Story name="label"
+           args={{
+               theme: 'Light',
+               textareaId: 'label',
+               label: 'This is a label',
+               labelAppendix: '(optional)',
+               size: 'md',
+               value: '',
+               minLength: 0,
+               maxLength: 140,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 105,
+               warningLimitPer: 75,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: false,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
+
+### Counter
+The text area can show an optional counter. The threshold for the warning and error message can be set individually.
+For more information review the counter component.
+<Canvas>
+    <Story name="counter"
+           args={{
+               theme: 'Light',
+               textareaId: 'counter',
+               label: 'Text area with counter',
+               labelAppendix: '<appendix>',
+               size: 'md',
+               value: 'This text almost reached the maximum amount of characters.',
+               minLength: 0,
+               maxLength: 70,
+               warningLimitType: 'warningLimitInt',
+               warningLimitInt: 44,
+               warningLimitPer: 50,
+               cols: 40,
+               rows: 4,
+               placeholder: 'Add a message here',
+               required: false,
+               disabled: false,
+               readonly: false,
+               showCounter: true,
+               showHint: true,
+               hintIcon: 'blrInfo',
+               hintText: 'This is a small hint',
+               errorIcon: undefined,
+               hasError: false,
+               errorMessage: ' ',
+               isResizeable: true,
+               onChange: () => action('onChange'),
+               onFocus: () => action('onFocus'),
+               onSelect: () => action('onSelect'),
+           }}>
+        {args => BlrTextareaRenderFunction(args)}
+    </Story>
+</Canvas>
