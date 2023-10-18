@@ -65,16 +65,16 @@ export default {
                 Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
         </p>
         <ul>
-        <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Docs</strong></a></li>
-        <li>Appearance <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Appearance</strong></a>
+        <li> <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Docs</strong></a></li>
+        <li> <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Appearance</strong></a>
             <ul>
-                <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel">Sizing</a></li>
-                <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel">Resize</a></li>
+                <li> <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Sizing</strong></a></li>
+                <li> <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Resize</strong></a></li>
             </ul>
         </li>
-        <li>Content/ Settings
+         <li> <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Content/ Settings</strong></a>
             <ul>
-                <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel">Example 1</a>
+                <li> <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Placeholder</strong></a>
                 </li>
             </ul>
         </li>
@@ -88,6 +88,16 @@ export default {
     },
   },
   argTypes: {
+    size: {
+      options: FormSizes,
+      control: { type: 'radio' },
+      name: 'size-variant',
+      description: 'Select size variant of this component',
+      defaultValue: '',
+      table: {
+        category: 'Appearance',
+      },
+    },
     placeholder: {
       name: 'Placeholder',
       description: 'Defines a short hint intended to aid the user with data entry when the component has no value.',
@@ -96,13 +106,9 @@ export default {
         type: 'text',
         label: 'Enter Text',
       },
-    },
-    size: {
-      options: FormSizes,
-      control: { type: 'radio' },
-      name: 'Size',
-      description: 'test Size',
-      defaultValue: '',
+      table: {
+        category: 'Content/ Settings',
+      },
     },
   },
 };
