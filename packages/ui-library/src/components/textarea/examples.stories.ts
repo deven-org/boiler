@@ -51,10 +51,39 @@ const fontStyle = html`
 export default {
   title: 'Design System/Web Components/BlrTextarea/Text area',
   parameters: {
-    viewMode: 'story',
+    viewMode: 'docs',
     previewTabs: {
       'storybook/docs/panel': {
         hidden: true,
+      },
+    },
+    docs: {
+      description: {
+        component: ` 
+ <div>
+        <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
+                Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
+        </p>
+        <ul>
+        <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Docs</strong></a></li>
+        <li>Appearance <a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel"><strong>Appearance</strong></a>
+            <ul>
+                <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel">Sizing</a></li>
+                <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel">Resize</a></li>
+            </ul>
+        </li>
+        <li>Content/ Settings
+            <ul>
+                <li><a href="/story/design-system-web-components-blrtextarea-text-area--mein-beispiel">Example 1</a>
+                </li>
+            </ul>
+        </li>
+        
+        </ul>
+        wow
+        </div>
+        
+        `,
       },
     },
   },
@@ -102,8 +131,9 @@ export const Example1 = () => {
       }
       .story-textarea {
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
         width: 20rem;
       }
@@ -117,24 +147,30 @@ export const Example1 = () => {
         <div class="stories-textarea">
           ${renderTextareaExample({
             ...defaultParams,
-            storybookLabel: 'Rest',
+            storybookLabel: 'Storybook Label 1',
             theme: 'Light',
             size: 'sm',
             label: 'Text area SM',
+            cols: 40,
+            rows: 5,
           })}
           ${renderTextareaExample({
             ...defaultParams,
-            storybookLabel: 'Hover',
+            storybookLabel: 'Storybook Label 2',
             theme: 'Light',
             size: 'md',
             label: 'Text area MD',
+            cols: 40,
+            rows: 5,
           })}
           ${renderTextareaExample({
             ...defaultParams,
-            storybookLabel: 'Pressed',
+            storybookLabel: 'Storybook Label 3',
             theme: 'Light',
             size: 'lg',
             label: 'Text area LG',
+            cols: 40,
+            rows: 5,
           })}
         </div>
       </div>
@@ -143,11 +179,16 @@ export const Example1 = () => {
 };
 Example1.parameters = {
   backgrounds: {
-    default: 'light',
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story: 'beschreibung2',
+    },
   },
 };
 
-Example1.storyName = 'Textarea  Light Theme Focus Error';
+Example1.storyName = 'Example 1';
 
 export const Example4 = () => {
   return html`
@@ -317,4 +358,26 @@ isResizeable.storyName = 'isResizeable';
 isResizeable.args = {
   placeholder: defaultParams.placeholder,
   isResizeable: true,
+};
+
+export const MeinBeispiel = () =>
+  html`
+    <div class="stories-textarea">
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Dark' })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Dark' })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Dark' })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Dark', shouldFocus: true })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Dark', disabled: true })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Dark', readonly: true })}
+    </div>
+  `;
+MeinBeispiel.story = {
+  name: 'test2',
+  parameters: {
+    docs: {
+      description: {
+        story: 'another description',
+      },
+    },
+  },
 };
