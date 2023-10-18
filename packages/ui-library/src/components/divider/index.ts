@@ -6,7 +6,7 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 @customElement('blr-divider')
 export class BlrDivider extends LitElement {
-  @property() dividerDirectionVariant?: DividerVariationTypes;
+  @property() dividerDirectionVariant!: DividerVariationTypes;
   @property({ type: Boolean }) addMargin = false;
 
   @property() directionVariant?: DividerVariationTypes = 'vertical';
@@ -30,8 +30,8 @@ export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
 
 export const BlrDividerRenderFunction = ({ dividerDirectionVariant, size, theme }: BlrDividerType) => {
   return html`<blr-divider
-    .dividerDirectionVariant=${dividerDirectionVariant}
-    .size=${size}
-    .theme=${theme}
+    dividerDirectionVariant=${dividerDirectionVariant}
+    size=${size}
+    theme=${theme}
   ></blr-divider>`;
 };
