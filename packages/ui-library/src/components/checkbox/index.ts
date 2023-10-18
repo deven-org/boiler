@@ -11,6 +11,7 @@ import { checkboxDark, checkboxLight } from '../../foundation/component-tokens/c
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-checkbox')
 export class BlrCheckbox extends LitElement {
@@ -123,46 +124,5 @@ export class BlrCheckbox extends LitElement {
 
 export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;
 
-export const BlrCheckboxRenderFunction = ({
-  label,
-  hasLabel,
-  checkInputId,
-  onBlur,
-  onFocus,
-  onChange,
-  disabled,
-  size,
-  checked,
-  indeterminate,
-  readonly,
-  hasError,
-  errorMessage,
-  errorIcon,
-  showHint,
-  hintIcon,
-  hintMessage,
-  theme,
-}: BlrCheckboxType) => {
-  return html`
-    <blr-checkbox
-      .label=${label}
-      .hasLabel=${hasLabel}
-      .checkInputId=${checkInputId}
-      .onFocus=${onFocus}
-      .onBlur=${onBlur}
-      .onChange=${onChange}
-      .disabled=${disabled}
-      .checked=${checked}
-      .indeterminate=${indeterminate}
-      .readonly=${readonly}
-      .size=${size}
-      .hasError=${hasError}
-      .errorMessage=${errorMessage}
-      .errorIcon=${errorIcon}
-      .showHint=${showHint}
-      .hintIcon=${hintIcon}
-      .hintMessage=${hintMessage}
-      .theme=${theme}
-    ></blr-checkbox>
-  `;
-};
+export const BlrCheckboxRenderFunction = (params: BlrCheckboxType) =>
+  genericBlrComponentRenderer<BlrCheckboxType>({ ...params });

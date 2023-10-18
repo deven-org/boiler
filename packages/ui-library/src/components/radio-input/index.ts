@@ -9,6 +9,7 @@ import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-radio')
 export class BlrRadio extends LitElement {
@@ -106,40 +107,5 @@ export class BlrRadio extends LitElement {
 
 export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
 
-export const BlrRadioRenderFunction = ({
-  disabled,
-  checked,
-  size,
-  name,
-  required,
-  readonly,
-  onChange,
-  onBlur,
-  onFocus,
-  hasError,
-  option,
-  showHint,
-  hintIcon,
-  errorIcon,
-  theme,
-}: BlrRadioType) => {
-  return html`<blr-radio
-    .value=${option.value}
-    .name=${name}
-    .disabled=${disabled}
-    .checked=${checked}
-    .required=${required}
-    .readonly=${readonly}
-    .size=${size}
-    .hasError=${hasError}
-    .errorMessage=${option.errorMessage}
-    .errorIcon=${errorIcon}
-    .onChange=${onChange}
-    .onBlur=${onBlur}
-    .onFocus=${onFocus}
-    .option=${option}
-    .showHint=${showHint}
-    .hintIcon=${hintIcon}
-    .theme=${theme}
-  ></blr-radio>`;
-};
+export const BlrRadioRenderFunction = (params: BlrRadioType) =>
+  genericBlrComponentRenderer<BlrRadioType>({ ...params });

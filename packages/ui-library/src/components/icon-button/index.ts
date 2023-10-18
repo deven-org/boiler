@@ -12,6 +12,7 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrLoaderRenderFunction } from '../loader';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-icon-button')
 export class BlrIconButton extends LitElement {
@@ -80,30 +81,5 @@ export class BlrIconButton extends LitElement {
 
 export type BlrIconButtonType = Omit<BlrIconButton, keyof LitElement>;
 
-export const BlrIconButtonRenderFunction = ({
-  arialabel,
-  onClick,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  icon,
-  loadingStatus,
-  theme,
-}: BlrIconButtonType) => {
-  return html`<blr-icon-button
-    .arialabel=${arialabel}
-    .onClick=${onClick}
-    .onBlur=${onBlur}
-    .loading=${loading}
-    .disabled=${disabled}
-    .buttonId=${buttonId}
-    .variant=${variant}
-    .size=${size}
-    .icon=${icon}
-    .loadingStatus=${loadingStatus}
-    .theme=${theme}
-  ></blr-icon-button>`;
-};
+export const BlrIconButtonRenderFunction = (params: BlrIconButtonType) =>
+  genericBlrComponentRenderer<BlrIconButtonType>({ ...params });

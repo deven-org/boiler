@@ -20,6 +20,7 @@ import { actionDark, actionLight } from '../../foundation/semantic-tokens/action
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrDividerRenderFunction } from '../divider';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-tab-bar')
 export class BlrTabBar extends LitElement {
@@ -174,8 +175,6 @@ export class BlrTabBar extends LitElement {
         ${this.showDivider
           ? BlrDividerRenderFunction({
               dividerDirectionVariant: 'horizontal',
-              size: this.size,
-              addMargin: true,
               theme: this.theme,
             })
           : nothing}
@@ -196,46 +195,5 @@ export class BlrTabBar extends LitElement {
 
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
 
-export const BlrTabBarRenderFunction = ({
-  _navList,
-  _navItems,
-  _navItemsSlots,
-  _panels,
-  tabs,
-  overflowVariantStandard,
-  overflowVariantFullWidth,
-  iconPosition,
-  variant,
-  tabContent,
-  alignment,
-  size,
-  onChange,
-  onBlur,
-  onFocus,
-  icon,
-  theme,
-  showDivider,
-  onClick,
-}: BlrTabBarType) => {
-  return html`<blr-tab-bar
-    .navlist=${_navList}
-    .navItems=${_navItems}
-    .navItemsSlots=${_navItemsSlots}
-    .panels=${_panels}
-    .tabs=${tabs}
-    .overflowVariantStandard=${overflowVariantStandard}
-    .overflowVariantFullWidth=${overflowVariantFullWidth}
-    .iconPosition=${iconPosition}
-    .showDivider=${showDivider}
-    .icon=${icon}
-    .variant=${variant}
-    .tabContent=${tabContent}
-    .alignment=${alignment}
-    .size=${size}
-    .onChange=${onChange}
-    .onBlur=${onBlur}
-    .onFocus=${onFocus}
-    .theme=${theme}
-    .onClick=${onClick}
-  ></blr-tab-bar>`;
-};
+export const BlrTabBarRenderFunction = (params: BlrTabBarType) =>
+  genericBlrComponentRenderer<BlrTabBarType>({ ...params });

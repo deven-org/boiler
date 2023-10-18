@@ -11,6 +11,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrCounterRenderFunction } from '../internal-components/counter';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
@@ -50,7 +51,7 @@ export class BlrTextarea extends LitElement {
   @state() protected count = 0;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
 
-  firstUpdated() {
+  protected firstUpdated() {
     if (this.shouldFocus) {
       const textarea = this.shadowRoot?.querySelector('textarea');
       if (textarea) {
@@ -208,66 +209,8 @@ ${this.value}</textarea
       </div> `;
   }
 }
-type OmittedKeys = 'firstUpdated';
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement | OmittedKeys>;
 
-export const BlrTextareaRenderFunction = ({
-  textareaId,
-  label,
-  labelAppendix,
-  placeholder,
-  required,
-  disabled,
-  size,
-  maxLength,
-  warningLimitType,
-  warningLimitInt,
-  warningLimitPer,
-  cols,
-  rows,
-  errorMessage,
-  hintText,
-  hintIcon,
-  hasError,
-  errorIcon,
-  onChange,
-  onSelect,
-  readonly,
-  isResizeable,
-  showHint,
-  showCounter,
-  value,
-  theme,
-  shouldFocus,
-}: BlrTextareaType) => {
-  return html`<blr-textarea
-    class=${isResizeable ? nothing : `parent-width`}
-    .textareaId=${textareaId}
-    .label=${label}
-    .size=${size}
-    .maxLength=${maxLength}
-    .warningLimitType=${warningLimitType}
-    .warningLimitInt=${warningLimitInt}
-    .warningLimitPer=${warningLimitPer}
-    .cols=${cols}
-    .rows=${rows}
-    .value=${value}
-    .errorMessage=${errorMessage}
-    .placeholder="${placeholder}"
-    .required=${required}
-    .disabled=${disabled}
-    .readonly=${readonly}
-    .hintText=${hintText}
-    .showCounter=${showCounter}
-    .hintIcon=${hintIcon}
-    .hasError=${hasError}
-    .errorIcon=${errorIcon}
-    .labelAppendix=${labelAppendix}
-    .onChange=${onChange}
-    .onSelect=${onSelect}
-    .isResizeable=${isResizeable}
-    .showHint=${showHint}
-    .theme=${theme}
-    .shouldFocus=${shouldFocus}
-  ></blr-textarea>`;
-};
+export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
+
+export const BlrTextInputRenderFunction = (params: BlrTextareaType) =>
+  genericBlrComponentRenderer<BlrTextareaType>({ ...params });

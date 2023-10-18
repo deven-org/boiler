@@ -5,6 +5,7 @@ import { CounterVariantType, FormSizesType } from '../../../globals/types';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { counterDark, counterLight } from '../../../foundation/component-tokens/feedback.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-counter')
 export class BlrCounter extends LitElement {
@@ -34,12 +35,5 @@ export class BlrCounter extends LitElement {
 
 export type BlrCounterType = Omit<BlrCounter, keyof LitElement>;
 
-export const BlrCounterRenderFunction = ({ variant, current, max, size, theme }: BlrCounterType) => {
-  return html`<blr-counter
-    .variant=${variant}
-    .current=${current}
-    .max=${max}
-    .size=${size}
-    .theme=${theme}
-  ></blr-counter>`;
-};
+export const BlrCounterRenderFunction = (params: BlrCounterType) =>
+  genericBlrComponentRenderer<BlrCounterType>({ ...params });

@@ -25,7 +25,7 @@ export class BlrIcon extends LitElement {
 }
 
 // BlrIconType is a new Type containing all properties of BlrIcon without the properties of LitElement
-// and some additional properties which are not part of the component
+// and some additional properties which are not part of the component, so we dont use the generic render function
 export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   classMap?: DirectiveResult<typeof ClassMapDirective>;
   onClick?: HTMLElement['onclick'];

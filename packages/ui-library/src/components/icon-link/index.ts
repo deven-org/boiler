@@ -11,6 +11,7 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrLoaderRenderFunction } from '../loader';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-icon-link')
 export class BlrIconLink extends LitElement {
@@ -70,32 +71,5 @@ export class BlrIconLink extends LitElement {
 
 export type BlrIconLinkType = Omit<BlrIconLink, keyof LitElement>;
 
-export const BlrIconLinkRenderFunction = ({
-  arialabel,
-  onClick,
-  onBlur,
-  loading,
-  linkId,
-  variant,
-  size,
-  icon,
-  href,
-  target,
-  loadingStatus,
-  theme,
-}: BlrIconLinkType) => {
-  return html`<blr-icon-link
-    .arialabel=${arialabel}
-    .onClick=${onClick}
-    .onBlur=${onBlur}
-    .loading=${loading}
-    .linkId=${linkId}
-    .variant=${variant}
-    .size=${size}
-    .icon=${icon}
-    .href=${href}
-    .target=${target}
-    .loadingStatus=${loadingStatus}
-    .theme=${theme}
-  ></blr-icon-link>`;
-};
+export const BlrIconLinkRenderFunction = (params: BlrIconLinkType) =>
+  genericBlrComponentRenderer<BlrIconLinkType>({ ...params });

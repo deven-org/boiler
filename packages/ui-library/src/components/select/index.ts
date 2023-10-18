@@ -12,6 +12,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 type Option = {
   value: string;
@@ -159,46 +160,5 @@ export class BlrSelect extends LitElement {
 
 export type BlrSelectType = Omit<BlrSelect, keyof LitElement>;
 
-export const BlrSelectRenderFunction = ({
-  selectId,
-  labelAppendix,
-  name,
-  hasLabel,
-  label,
-  disabled,
-  size,
-  required,
-  onChange,
-  options,
-  hasError,
-  errorMessage,
-  hintMessage,
-  showHint,
-  hintIcon,
-  errorIcon,
-  showTrailingIcon,
-  trailingIcon,
-  theme,
-}: BlrSelectType) => {
-  return html`<blr-select
-    .selectId=${selectId}
-    .name=${name}
-    .disabled=${disabled}
-    .size=${size}
-    .required=${required}
-    .onChange=${onChange}
-    .errorMessage=${errorMessage}
-    .hintMessage=${hintMessage}
-    .showHint=${showHint}
-    .hintIcon=${hintIcon}
-    .errorIcon=${errorIcon}
-    .hasError=${hasError}
-    .options=${options}
-    .labelAppendix=${labelAppendix}
-    .showTrailingIcon=${showTrailingIcon}
-    .trailingIcon=${trailingIcon}
-    .hasLabel=${hasLabel}
-    .label=${label}
-    .theme=${theme}
-  ></blr-select>`;
-};
+export const BlrSelectRenderFunction = (params: BlrSelectType) =>
+  genericBlrComponentRenderer<BlrSelectType>({ ...params });

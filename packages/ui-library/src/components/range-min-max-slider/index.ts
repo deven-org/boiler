@@ -11,6 +11,7 @@ import { RenderBtnProps } from '../../globals/types';
 
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-range-min-max-slider')
 export class BlrRangeMinMaxSlider extends LitElement {
@@ -213,43 +214,5 @@ export class BlrRangeMinMaxSlider extends LitElement {
 
 export type BlrRangeMinMaxSliderType = Omit<BlrRangeMinMaxSlider, keyof LitElement>;
 
-export const BlrRangeMinMaxSliderRenderFunction = ({
-  onBtnClick,
-  onChange,
-  rangeInputId,
-  startValue,
-  endValue,
-  minValue,
-  maxValue,
-  units,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeMinMaxSliderType) => {
-  return html`
-    <blr-range-min-max-slider
-      .onBtnClick=${onBtnClick}
-      .onChange=${onChange}
-      .rangeInputId=${rangeInputId}
-      .startValue=${startValue}
-      .endValue=${endValue}
-      .minValue=${minValue}
-      .maxValue=${maxValue}
-      .units=${units}
-      .stepFactor=${stepFactor}
-      .size=${size}
-      .btnVariant=${btnVariant}
-      .showLegend=${showLegend}
-      .disabled=${disabled}
-      .incrementIcon=${incrementIcon}
-      .decrementIcon=${decrementIcon}
-      .theme=${theme}
-    >
-    </blr-range-min-max-slider>
-  `;
-};
+export const BlrRangeMinMaxSliderRenderFunction = (params: BlrRangeMinMaxSliderType) =>
+  genericBlrComponentRenderer<BlrRangeMinMaxSliderType>({ ...params });

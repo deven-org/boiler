@@ -12,6 +12,7 @@ import { iconButtonDark, iconButtonLight } from '../../foundation/component-toke
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-text-input')
 export class BlrTextInput extends LitElement {
@@ -183,54 +184,5 @@ export class BlrTextInput extends LitElement {
 
 export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
 
-export const BlrTextInputRenderFunction = ({
-  textInputId,
-  type,
-  label,
-  hasLabel,
-  labelAppendix,
-  value,
-  placeholder,
-  disabled,
-  readonly,
-  size,
-  required,
-  onChange,
-  maxLength,
-  pattern,
-  hasError,
-  errorMessage,
-  errorIcon,
-  showInputIcon,
-  inputIcon,
-  showHint,
-  hintText,
-  hintIcon,
-  theme,
-}: BlrTextInputType) => {
-  return html`<blr-text-input
-    .textInputId=${textInputId}
-    .label=${label}
-    .hasLabel=${hasLabel}
-    .labelAppendix=${labelAppendix}
-    .showInputIcon=${showInputIcon}
-    .inputIcon=${inputIcon}
-    .type=${type}
-    .value=${value}
-    .placeholder=${placeholder}
-    .disabled=${disabled}
-    .size=${size}
-    .required=${required}
-    .readonly=${readonly}
-    .onChange=${onChange}
-    .maxLength=${maxLength}
-    .pattern=${pattern}
-    .errorMessage=${errorMessage}
-    .errorIcon=${errorIcon}
-    .showHint=${showHint}
-    .hintText=${hintText}
-    .hintIcon=${hintIcon}
-    .hasError=${hasError}
-    .theme=${theme}
-  ></blr-text-input>`;
-};
+export const BlrTextInputRenderFunction = (params: BlrTextInputType) =>
+  genericBlrComponentRenderer<BlrTextInputType>({ ...params });

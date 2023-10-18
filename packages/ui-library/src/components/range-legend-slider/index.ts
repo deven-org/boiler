@@ -13,6 +13,7 @@ import { RenderBtnProps } from '../../globals/types';
 
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-range-legend-slider')
 export class BlrRangeLegendSlider extends LitElement {
@@ -177,36 +178,5 @@ export class BlrRangeLegendSlider extends LitElement {
 
 export type BlrRangeLegendSliderType = Omit<BlrRangeLegendSlider, keyof LitElement>;
 
-export const BlrRangeLegendSliderRenderFunction = ({
-  onClickMinMax,
-  onChange,
-  rangeInputId,
-  initialValue,
-  list,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeLegendSliderType) => {
-  return html`
-    <blr-range-legend-slider
-      .onClickMinMax=${onClickMinMax}
-      .onChange=${onChange}
-      .rangeInputId=${rangeInputId}
-      .initialValue=${initialValue}
-      .list=${list}
-      .stepFactor=${stepFactor}
-      .size=${size}
-      .btnVariant=${btnVariant}
-      .showLegend=${showLegend}
-      .disabled=${disabled}
-      .incrementIcon=${incrementIcon}
-      .decrementIcon=${decrementIcon}
-      .theme=${theme}
-    ></blr-range-legend-slider>
-  `;
-};
+export const BlrRangeLegendSliderRenderFunction = (params: BlrRangeLegendSliderType) =>
+  genericBlrComponentRenderer<BlrRangeLegendSliderType>({ ...params });

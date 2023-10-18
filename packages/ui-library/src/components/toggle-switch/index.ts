@@ -11,6 +11,7 @@ import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-tokens/toggleSwitch.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 @customElement('blr-label-toggleswitch')
 export class BlrToggleSwitch extends LitElement {
@@ -138,44 +139,5 @@ export class BlrToggleSwitch extends LitElement {
 
 export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
 
-export const BlrToggleSwitchRenderFunction = ({
-  label,
-  showLabel,
-  onLabel,
-  offLabel,
-  showStateLabel,
-  checkInputId,
-  onBlur,
-  onFocus,
-  onChange,
-  disabled,
-  readonly,
-  size,
-  variant,
-  checked,
-  showHint,
-  hintText,
-  hintIcon,
-  theme,
-}: BlrToggleSwitchType) => {
-  return html`<blr-label-toggleswitch
-    .label=${label}
-    .showLabel=${showLabel}
-    .onLabel=${onLabel}
-    .offLabel=${offLabel}
-    .showStateLabel=${showStateLabel}
-    .checkInputId=${checkInputId}
-    .onFocus=${onFocus}
-    .onBlur=${onBlur}
-    .onChange=${onChange}
-    .disabled=${disabled}
-    .readonly=${readonly}
-    .checked=${checked}
-    .size=${size}
-    .variant=${variant}
-    .showHint=${showHint}
-    .hintText=${hintText}
-    .hintIcon=${hintIcon}
-    .theme=${theme}
-  ></blr-label-toggleswitch>`;
-};
+export const BlrTextInputRenderFunction = (params: BlrToggleSwitchType) =>
+  genericBlrComponentRenderer<BlrToggleSwitchType>({ ...params });
