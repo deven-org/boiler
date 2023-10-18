@@ -8,7 +8,9 @@ import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { styleMap } from 'lit/directives/style-map.js';
 
-@customElement('blr-icon')
+const TAG_NAME = 'blr-icon';
+
+@customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
   static styles = [styleCustom, iconLight];
 

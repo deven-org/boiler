@@ -14,7 +14,9 @@ import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-range-legend-min-max-slider')
+const TAG_NAME = 'blr-range-legend-min-max-slider';
+
+@customElement(TAG_NAME)
 export class BlrRangeLegendMinMaxSlider extends LitElement {
   static styles = [styleCustom];
 
@@ -234,4 +236,4 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
 export type BlrRangeLegendMinMaxSliderType = Omit<BlrRangeLegendMinMaxSlider, keyof LitElement>;
 
 export const BlrRangeLegendMinMaxSliderRenderFunction = (params: BlrRangeLegendMinMaxSliderType) =>
-  genericBlrComponentRenderer<BlrRangeLegendMinMaxSliderType>({ ...params });
+  genericBlrComponentRenderer<BlrRangeLegendMinMaxSliderType>(TAG_NAME, { ...params });

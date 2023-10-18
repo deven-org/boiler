@@ -19,7 +19,9 @@ export interface ButtonOption {
   buttonVariant?: ActionVariantType;
 }
 
-@customElement('blr-text-button-group')
+const TAG_NAME = 'blr-text-button-group';
+
+@customElement(TAG_NAME)
 export class BlrTextButtonGroup extends LitElement {
   static styles = [styleCustom];
 
@@ -110,4 +112,4 @@ export class BlrTextButtonGroup extends LitElement {
 export type BlrTextButtonGroupType = Omit<BlrTextButtonGroup, keyof LitElement>;
 
 export const BlrTextButtonGroupRenderFunction = (params: BlrTextButtonGroupType) =>
-  genericBlrComponentRenderer<BlrTextButtonGroupType>({ ...params });
+  genericBlrComponentRenderer<BlrTextButtonGroupType>(TAG_NAME, { ...params });

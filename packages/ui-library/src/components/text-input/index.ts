@@ -14,7 +14,9 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-text-input')
+const TAG_NAME = 'blr-text-input';
+
+@customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
   static styles = [styleCustom];
 
@@ -185,4 +187,4 @@ export class BlrTextInput extends LitElement {
 export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
 
 export const BlrTextInputRenderFunction = (params: BlrTextInputType) =>
-  genericBlrComponentRenderer<BlrTextInputType>({ ...params });
+  genericBlrComponentRenderer<BlrTextInputType>(TAG_NAME, { ...params });

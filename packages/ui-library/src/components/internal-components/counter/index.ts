@@ -7,7 +7,9 @@ import { counterDark, counterLight } from '../../../foundation/component-tokens/
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-counter')
+const TAG_NAME = 'blr-counter';
+
+@customElement(TAG_NAME)
 export class BlrCounter extends LitElement {
   static styles = [];
 
@@ -36,4 +38,4 @@ export class BlrCounter extends LitElement {
 export type BlrCounterType = Omit<BlrCounter, keyof LitElement>;
 
 export const BlrCounterRenderFunction = (params: BlrCounterType) =>
-  genericBlrComponentRenderer<BlrCounterType>({ ...params });
+  genericBlrComponentRenderer<BlrCounterType>(TAG_NAME, { ...params });

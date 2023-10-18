@@ -13,7 +13,9 @@ import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-range-slider')
+const TAG_NAME = 'blr-range-slider';
+
+@customElement(TAG_NAME)
 export class BlrRangeSlider extends LitElement {
   static styles = [styleCustom];
 
@@ -149,4 +151,4 @@ export class BlrRangeSlider extends LitElement {
 export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElement>;
 
 export const BlrRangeSliderRenderFunction = (params: BlrRangeSliderType) =>
-  genericBlrComponentRenderer<BlrRangeSliderType>({ ...params });
+  genericBlrComponentRenderer<BlrRangeSliderType>(TAG_NAME, { ...params });

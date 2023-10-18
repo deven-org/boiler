@@ -1,6 +1,7 @@
 import { TemplateResult, html } from 'lit';
 
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
+  tagName: string,
   props: ComponentType,
   useLitBindings = true
 ): TemplateResult<1> => {
@@ -10,14 +11,14 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
 
   entries.forEach(([key, value], index) => {
     if (index === 0) {
-      templateFragments.push(`<blr-divider${useLitBindings ? ' .' : ' '}${key}=`);
+      templateFragments.push(`<${tagName}${useLitBindings ? ' .' : ' '}${key}=`);
     } else {
       templateFragments.push(`${useLitBindings ? ' .' : ' '}${key}=`);
     }
 
     values.push(value);
   });
-  templateFragments.push(`></blr-divider>`);
+  templateFragments.push(`></${tagName}>`);
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore

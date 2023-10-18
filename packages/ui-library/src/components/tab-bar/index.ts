@@ -22,7 +22,9 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrDividerRenderFunction } from '../divider';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-tab-bar')
+const TAG_NAME = 'blr-tab-bar';
+
+@customElement(TAG_NAME)
 export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
@@ -196,4 +198,4 @@ export class BlrTabBar extends LitElement {
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
 
 export const BlrTabBarRenderFunction = (params: BlrTabBarType) =>
-  genericBlrComponentRenderer<BlrTabBarType>({ ...params });
+  genericBlrComponentRenderer<BlrTabBarType>(TAG_NAME, { ...params });

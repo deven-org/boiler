@@ -13,7 +13,9 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { styleMap } from 'lit/directives/style-map.js';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-tool-tip')
+const TAG_NAME = 'blr-tool-tip';
+
+@customElement(TAG_NAME)
 export class BlrToolTip extends LitElement {
   @property() theme: ThemeType = 'Light';
   @property() size: FormSizesType = 'sm';
@@ -128,4 +130,4 @@ export type BlrToolTipType = Partial<BlrToolTipTypeWithOmitProperty> & {
 };
 
 export const BlrToolTipRenderFunction = (params: BlrToolTipType) =>
-  genericBlrComponentRenderer<BlrToolTipType>({ ...params });
+  genericBlrComponentRenderer<BlrToolTipType>(TAG_NAME, { ...params });

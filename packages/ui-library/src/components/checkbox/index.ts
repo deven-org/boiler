@@ -13,7 +13,9 @@ import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-checkbox')
+const TAG_NAME = 'blr-checkbox';
+
+@customElement(TAG_NAME)
 export class BlrCheckbox extends LitElement {
   static styles = [styleCustom];
 
@@ -125,4 +127,4 @@ export class BlrCheckbox extends LitElement {
 export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;
 
 export const BlrCheckboxRenderFunction = (params: BlrCheckboxType) =>
-  genericBlrComponentRenderer<BlrCheckboxType>({ ...params });
+  genericBlrComponentRenderer<BlrCheckboxType>(TAG_NAME, { ...params });

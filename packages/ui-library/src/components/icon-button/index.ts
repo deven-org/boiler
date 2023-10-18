@@ -14,7 +14,9 @@ import { BlrLoaderRenderFunction } from '../loader';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-icon-button')
+const TAG_NAME = 'blr-icon-button';
+
+@customElement(TAG_NAME)
 export class BlrIconButton extends LitElement {
   static styles = [styleCustom];
 
@@ -82,4 +84,4 @@ export class BlrIconButton extends LitElement {
 export type BlrIconButtonType = Omit<BlrIconButton, keyof LitElement>;
 
 export const BlrIconButtonRenderFunction = (params: BlrIconButtonType) =>
-  genericBlrComponentRenderer<BlrIconButtonType>({ ...params });
+  genericBlrComponentRenderer<BlrIconButtonType>(TAG_NAME, { ...params });

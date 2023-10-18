@@ -5,7 +5,9 @@ import { dividerLight, dividerDark } from '../../foundation/component-tokens/ui.
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-divider')
+const TAG_NAME = 'blr-divider';
+
+@customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
   @property() dividerDirectionVariant?: DividerVariationTypes;
   @property() directionVariant?: DividerVariationTypes = 'vertical';
@@ -26,4 +28,4 @@ export class BlrDivider extends LitElement {
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
 
 export const BlrDividerRenderFunction = (params: BlrDividerType) =>
-  genericBlrComponentRenderer<BlrDividerType>({ ...params });
+  genericBlrComponentRenderer<BlrDividerType>(TAG_NAME, { ...params });

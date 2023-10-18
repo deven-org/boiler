@@ -13,7 +13,9 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrCounterRenderFunction } from '../internal-components/counter';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-textarea')
+const TAG_NAME = 'blr-textarea';
+
+@customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {
   @property() textareaId!: string;
   @property() label!: string;
@@ -212,5 +214,5 @@ ${this.value}</textarea
 
 export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
 
-export const BlrTextInputRenderFunction = (params: BlrTextareaType) =>
-  genericBlrComponentRenderer<BlrTextareaType>({ ...params });
+export const BlrTextareaRenderFunction = (params: BlrTextareaType) =>
+  genericBlrComponentRenderer<BlrTextareaType>(TAG_NAME, { ...params });

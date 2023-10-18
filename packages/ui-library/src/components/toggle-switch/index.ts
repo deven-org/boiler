@@ -13,7 +13,9 @@ import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-label-toggleswitch')
+const TAG_NAME = 'blr-label-toggleswitch';
+
+@customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {
   static styles = [styleCustom];
 
@@ -139,5 +141,5 @@ export class BlrToggleSwitch extends LitElement {
 
 export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
 
-export const BlrTextInputRenderFunction = (params: BlrToggleSwitchType) =>
-  genericBlrComponentRenderer<BlrToggleSwitchType>({ ...params });
+export const BlrToggleSwitchRenderFunction = (params: BlrToggleSwitchType) =>
+  genericBlrComponentRenderer<BlrToggleSwitchType>(TAG_NAME, { ...params });

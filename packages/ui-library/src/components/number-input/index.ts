@@ -26,7 +26,9 @@ type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
 type LayoutType = 'horizontal' | 'vertical';
 
-@customElement('blr-number-input')
+const TAG_NAME = 'blr-number-input';
+
+@customElement(TAG_NAME)
 export class BlrNumberInput extends LitElement {
   static styles = [baseStyle];
 
@@ -261,4 +263,4 @@ export class BlrNumberInput extends LitElement {
 export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement>;
 
 export const BlrNumberInputRenderFunction = (params: BlrNumberInputType) =>
-  genericBlrComponentRenderer<BlrNumberInputType>({ ...params });
+  genericBlrComponentRenderer<BlrNumberInputType>(TAG_NAME, { ...params });

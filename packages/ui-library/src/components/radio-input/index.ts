@@ -11,7 +11,9 @@ import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-radio')
+const TAG_NAME = 'blr-radio';
+
+@customElement(TAG_NAME)
 export class BlrRadio extends LitElement {
   static styles = [styleCustom];
 
@@ -108,4 +110,4 @@ export class BlrRadio extends LitElement {
 export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
 
 export const BlrRadioRenderFunction = (params: BlrRadioType) =>
-  genericBlrComponentRenderer<BlrRadioType>({ ...params });
+  genericBlrComponentRenderer<BlrRadioType>(TAG_NAME, { ...params });

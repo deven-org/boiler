@@ -21,7 +21,9 @@ type Option = {
   disabled?: boolean;
 };
 
-@customElement('blr-select')
+const TAG_NAME = 'blr-select';
+
+@customElement(TAG_NAME)
 export class BlrSelect extends LitElement {
   static styles = [styleCustom];
 
@@ -161,4 +163,4 @@ export class BlrSelect extends LitElement {
 export type BlrSelectType = Omit<BlrSelect, keyof LitElement>;
 
 export const BlrSelectRenderFunction = (params: BlrSelectType) =>
-  genericBlrComponentRenderer<BlrSelectType>({ ...params });
+  genericBlrComponentRenderer<BlrSelectType>(TAG_NAME, { ...params });

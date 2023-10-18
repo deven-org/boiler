@@ -11,7 +11,9 @@ import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-radio-group')
+const TAG_NAME = 'blr-radio-group';
+
+@customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {
   static styles = [styleCustom];
 
@@ -138,4 +140,4 @@ export class BlrRadioGroup extends LitElement {
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
 
 export const BlrRadioGroupRenderFunction = (params: BlrRadioGroupType) =>
-  genericBlrComponentRenderer<BlrRadioGroupType>({ ...params });
+  genericBlrComponentRenderer<BlrRadioGroupType>(TAG_NAME, { ...params });
