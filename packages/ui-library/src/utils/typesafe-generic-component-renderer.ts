@@ -18,13 +18,12 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
 
     values.push(value);
   });
+
   templateFragments.push(`></${tagName}>`);
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   templateFragments.raw = templateFragments;
 
-  const result = html(templateFragments as unknown as TemplateStringsArray, ...values);
-
-  return result;
+  return html(templateFragments as unknown as TemplateStringsArray, ...values);
 };
