@@ -51,11 +51,11 @@ export const BlrFormLabelRenderFunction = ({
   variant,
 }: BlrFormLabelType) => {
   return html`<blr-form-label
-    .labelText=${labelText}
-    .labelAppendix=${labelAppendix}
-    .labelSize=${labelSize}
-    .forValue=${forValue}
-    .theme=${theme}
-    .variant=${variant}
-  ></blr-form-hint>`;
+    labelText=${labelText}
+    labelAppendix=${labelAppendix}
+    labelSize=${labelSize}
+    forValue=${forValue}
+    theme=${theme}
+    variant=${variant}
+    ></blr-form-hint>`;
 };
