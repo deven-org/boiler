@@ -63,29 +63,31 @@ export const BlrCheckbox = ({
   showHint,
   hintIcon,
   hintMessage,
+  handleChange,
   theme,
 }: BlrCheckboxType) =>
   html`
-    <blr-checkbox
-      label=${label}
-      hasLabel=${hasLabel}
-      .checkInputId=${checkInputId}
-      .onFocus=${onFocus}
-      .onBlur=${onBlur}
-      .onChange=${onChange}
-      .disabled=${disabled}
-      .checked=${checked}
-      .indeterminate=${indeterminate}
-      .readonly=${readonly}
-      size=${size}
-      .hasError=${hasError}
-      .errorMessage=${errorMessage}
-      .errorIcon=${errorIcon}
-      .showHint=${showHint}
-      .hintIcon=${hintIcon}
-      .hintMessage=${hintMessage}
-      theme=${theme}
-    ></blr-checkbox>
+    ${BlrCheckboxRenderFunction({
+      label,
+      hasLabel,
+      checkInputId,
+      onBlur,
+      onFocus,
+      onChange,
+      disabled,
+      size,
+      checked,
+      indeterminate,
+      readonly,
+      hasError,
+      errorMessage,
+      errorIcon,
+      showHint,
+      hintIcon,
+      hintMessage,
+      handleChange,
+      theme,
+    })}
   `;
 
 BlrCheckbox.storyName = 'BlrCheckbox';
