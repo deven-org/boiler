@@ -2,8 +2,7 @@ import { TemplateResult, html } from 'lit';
 
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,
-  props: ComponentType,
-  useLitBindings = true
+  props: ComponentType
 ): TemplateResult<1> => {
   const templateFragments: string[] = [];
   const values: unknown[] = [];
@@ -11,9 +10,9 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
 
   entries.forEach(([key, value], index) => {
     if (index === 0) {
-      templateFragments.push(`<${tagName}${useLitBindings ? ' .' : ' '}${key}=`);
+      templateFragments.push(`<${tagName} .${key}=`);
     } else {
-      templateFragments.push(`${useLitBindings ? ' .' : ' '}${key}=`);
+      templateFragments.push(` .${key}=`);
     }
 
     values.push(value);
