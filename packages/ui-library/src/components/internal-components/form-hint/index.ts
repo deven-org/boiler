@@ -35,12 +35,13 @@ export class BlrFormHint extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
-    const iconSize = getComponentConfigToken([
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Forms',
       this.size.toUpperCase(),
       'CaptionComponent',
-      'IconSize',
-    ]) as SizesType;
+      'Icon',
+    ]).toLowerCase() as SizesType;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -49,8 +50,11 @@ export class BlrFormHint extends LitElement {
         <div class="hint-container">
           <div class="icon-wrapper">
             ${BlrIconRenderFunction({
-              icon: calculateIconName(this.variant === 'hint' || this.variant === 'error' ? this.icon : '', 'sm'),
-              size: iconSize,
+              icon: calculateIconName(
+                this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
+                iconSizeVariant
+              ),
+              size: iconSizeVariant,
               classMap: iconClasses,
               hideAria: true,
             })}

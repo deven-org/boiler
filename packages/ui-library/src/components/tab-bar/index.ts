@@ -110,14 +110,22 @@ export class BlrTabBar extends LitElement {
       [`${this.alignment}`]: this.alignment,
     });
 
-    const iconSize = getComponentConfigToken([
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Navigation',
       'TabBar',
       'Tab',
       this.size.toUpperCase(),
       'Icon',
-      'SizeVariant',
     ]) as SizesType;
+
+    const iconButtonSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Action',
+      'IconButton',
+      this.size.toUpperCase(),
+      'Icon',
+    ]).toLowerCase() as SizesType;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -127,8 +135,8 @@ export class BlrTabBar extends LitElement {
           ? html`
               <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrChevronLeft', iconSize),
-                  size: iconSize,
+                  icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
+                  size: iconButtonSizeVariant,
                   hideAria: true,
                 })}
               </button>
@@ -153,8 +161,8 @@ export class BlrTabBar extends LitElement {
                     >
                       ${this.tabContent !== 'labelOnly'
                         ? BlrIconRenderFunction({
-                            icon: calculateIconName(tab.icon, iconSize),
-                            size: iconSize,
+                            icon: calculateIconName(tab.icon, iconSizeVariant),
+                            size: iconSizeVariant,
                             hideAria: true,
                           })
                         : nothing}
@@ -173,8 +181,8 @@ export class BlrTabBar extends LitElement {
           ? html`
               <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrChevronRight', iconSize),
-                  size: iconSize,
+                  icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
+                  size: iconButtonSizeVariant,
                   hideAria: true,
                 })}
               </button>

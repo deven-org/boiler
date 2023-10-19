@@ -47,21 +47,27 @@ export class BlrSelect extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected renderTrailingIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
-    const iconSize = getComponentConfigToken(['Forms', this.size.toUpperCase(), 'InputField', 'IconSize']) as SizesType;
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Forms',
+      this.size.toUpperCase(),
+      'InputField',
+      'Icon',
+    ]).toLowerCase() as SizesType;
 
     if (this.showTrailingIcon) {
       if (this.hasError) {
         return html`${BlrIconRenderFunction({
-          icon: 'blrErrorFilledSm',
-          size: iconSize,
+          icon: calculateIconName('blrErrorFilled', iconSizeVariant),
+          size: iconSizeVariant,
           classMap: classes,
           hideAria: true,
           disablePointerEvents: true,
         })}`;
       } else {
         return html`${BlrIconRenderFunction({
-          icon: calculateIconName(this.trailingIcon, iconSize),
-          size: iconSize,
+          icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+          size: iconSizeVariant,
           classMap: classes,
           hideAria: true,
           disablePointerEvents: true,

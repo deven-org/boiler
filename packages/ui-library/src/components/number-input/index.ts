@@ -12,7 +12,7 @@ import {
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrDividerRenderFunction } from '../divider';
-import { FormSizesType, SizesType } from '../../globals/types';
+import { FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -167,11 +167,12 @@ export class BlrNumberInput extends LitElement {
       [`error-input`]: this.hasError || false,
     });
 
-    const iconSize = getComponentConfigToken([
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       'StepperButton',
       this.size.toUpperCase(),
-      'IconSize',
+      'Icon',
     ]).toLowerCase() as FormSizesType;
 
     return html`
@@ -193,8 +194,8 @@ export class BlrNumberInput extends LitElement {
         ${!this.readonly
           ? html` ${this.variant === 'mode1'
               ? html`
-                  ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
-                  ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+                  ${this.getButtonTemplate('operators', 'decrement', iconSizeVariant, 'horizontal')}
+                  ${this.getButtonTemplate('operators', 'increment', iconSizeVariant, 'horizontal')}
                 `
               : this.variant === 'mode2'
               ? html`
@@ -207,8 +208,8 @@ export class BlrNumberInput extends LitElement {
                         addMargin: false,
                       })}
                     </div>
-                    ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
-                    ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+                    ${this.getButtonTemplate('operators', 'decrement', iconSizeVariant, 'horizontal')}
+                    ${this.getButtonTemplate('operators', 'increment', iconSizeVariant, 'horizontal')}
                   </div>
                 `
               : html`
@@ -221,8 +222,8 @@ export class BlrNumberInput extends LitElement {
                         addMargin: false,
                       })}
                     </div>
-                    ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
-                    ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
+                    ${this.getButtonTemplate('chevrons', 'increment', iconSizeVariant, 'vertical')}
+                    ${this.getButtonTemplate('chevrons', 'decrement', iconSizeVariant, 'vertical')}
                   </div>
                 `}`
           : nothing}

@@ -8,7 +8,6 @@ import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
-import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -61,8 +60,7 @@ export class BlrTextInput extends LitElement {
   };
 
   protected render() {
-    const dynamicStyles =
-      this.theme === 'Light' ? [formLight, textInputLight, iconButtonLight] : [formDark, textInputDark, iconButtonDark];
+    const dynamicStyles = this.theme === 'Light' ? [formLight, textInputLight] : [formDark, textInputDark];
 
     const wasInitialPasswordField = Boolean(this.type === 'password');
 
@@ -90,7 +88,13 @@ export class BlrTextInput extends LitElement {
       return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
     };
 
-    const iconSize = getComponentConfigToken(['Forms', this.size.toUpperCase(), 'InputField', 'IconSize']) as SizesType;
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Forms',
+      this.size.toUpperCase(),
+      'InputField',
+      'Icon',
+    ]).toLowerCase() as SizesType;
 
     return html`
       <style>
@@ -131,9 +135,9 @@ export class BlrTextInput extends LitElement {
 
           ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
-                icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
-                name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, this.size),
-                size: iconSize,
+                icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, iconSizeVariant),
+                name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, iconSizeVariant),
+                size: iconSizeVariant,
                 classMap: iconClasses,
                 hideAria: true,
                 disablePointerEvents: this.disabled || this.readonly,
@@ -143,7 +147,7 @@ export class BlrTextInput extends LitElement {
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
                 name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
-                size: iconSize,
+                size: iconSizeVariant,
                 classMap: iconClasses,
                 hideAria: true,
                 disablePointerEvents: this.disabled || this.readonly,

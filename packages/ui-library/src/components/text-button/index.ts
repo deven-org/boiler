@@ -48,10 +48,12 @@ export class BlrTextButton extends LitElement {
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
-    const loaderSize = getComponentConfigToken([
+
+    const loaderSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       this.size.toUpperCase(),
-      'LoaderSize',
+      'Loader',
     ]).toLowerCase() as FormSizesType;
 
     const iconSizeVariant = getComponentConfigToken([
@@ -61,8 +63,6 @@ export class BlrTextButton extends LitElement {
       this.size.toUpperCase(),
       'Icon',
     ]).toLowerCase() as SizesType;
-
-    console.log({ size: this.size, iconSizeVariant });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -80,7 +80,7 @@ export class BlrTextButton extends LitElement {
       >
         ${this.loading
           ? html`${BlrLoaderRenderFunction({
-              size: loaderSize,
+              size: loaderSizeVariant,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
