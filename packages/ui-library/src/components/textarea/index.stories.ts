@@ -88,8 +88,45 @@ export default {
         hidden: true,
       },
     },
+    docs: {
+      description: {
+        component: ` <div>
+        <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
+                Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
+        </p>
+        <ul>
+        <li> <a href="/docs/design-system-web-components-blrtextarea--docs"><strong>Docs</strong></a></li>
+        <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Appearance</strong></a>
+            <ul>
+                <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Sizing</strong></a></li>
+                <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Resize</strong></a></li>
+            </ul>
+        </li>
+         <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Content/ Settings</strong></a>
+            <ul>
+                <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Placeholder</strong></a>
+                </li>
+            </ul>
+        </li>
+        
+        </ul>
+        wow\`
+        </div>`,
+      },
+    },
   },
 };
+
+interface StorybookTextareaType extends BlrTextareaType {
+  storybookLabel: string;
+}
+
+const renderTextareaExample = (params: StorybookTextareaType) => html`
+  <div class="story-textarea">
+    <p>${params.storybookLabel}</p>
+    ${BlrTextareaRenderFunction(params)}
+  </div>
+`;
 
 export const BlrTextarea = ({
   textareaId,
@@ -158,7 +195,7 @@ BlrTextarea.args = {
   theme: 'Light',
   size: 'md',
   textareaId: '#1',
-  cols: 20,
+  cols: 45,
   rows: 5,
   minLength: 0,
   maxLength: 140,
@@ -189,4 +226,138 @@ BlrTextarea.args = {
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
+};
+
+export const Sizing = () => {
+  return html`
+    <style>
+      .wrapper {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .stories-textarea {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .story-textarea {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 20rem;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+    <div class="wrapper">
+      <div class="column">
+        <div class="stories-textarea">
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Storybook Label 1',
+            theme: 'Light',
+            size: 'sm',
+            label: 'Text area SM',
+            cols: 40,
+            rows: 5,
+          })}
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Storybook Label 2',
+            theme: 'Light',
+            size: 'md',
+            label: 'Text area MD',
+            cols: 40,
+            rows: 5,
+          })}
+          ${renderTextareaExample({
+            ...defaultParams,
+            storybookLabel: 'Storybook Label 3',
+            theme: 'Light',
+            size: 'lg',
+            label: 'Text area LG',
+            cols: 40,
+            rows: 5,
+          })}
+        </div>
+      </div>
+    </div>
+  `;
+};
+Sizing.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story: 'beschreibung2',
+    },
+  },
+};
+
+Sizing.storyName = 'Sizing';
+
+export const MeinBeispiel12 = () =>
+  html`
+    <div class="stories-textarea">
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Dark' })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Dark' })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Dark' })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Dark', shouldFocus: true })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Dark', disabled: true })}
+      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Dark', readonly: true })}
+    </div>
+  `;
+MeinBeispiel12.story = {
+  name: 'test2',
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+    docs: {
+      description: {
+        story: 'another description 1',
+      },
+    },
+  },
+};
+
+const defaultParams: BlrTextareaType = {
+  errorIcon: '',
+  hint: '',
+  pattern: '',
+  showCounter: '',
+  theme: 'Light',
+  textareaId: '#1',
+  label: 'Label',
+  labelAppendix: '(Optional)',
+  size: 'md',
+  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  maxLength: 140,
+  warningLimitType: 'warningLimitInt',
+  warningLimitInt: 105,
+  warningLimitPer: 75,
+  cols: 20,
+  rows: 5,
+  shouldFocus: false,
+
+  placeholder: 'Type your message here ..',
+  required: false,
+  disabled: false,
+  readonly: false,
+
+  showHint: true,
+  hintIcon: 'blrInfo',
+  hintText: 'hint message',
+
+  hasError: false,
+  errorMessage: "OMG it's an error",
+
+  isResizeable: true,
 };
