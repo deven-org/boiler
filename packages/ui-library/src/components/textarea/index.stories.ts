@@ -352,7 +352,8 @@ Resize.parameters = {
   },
   docs: {
     description: {
-      story: '<h4>reSizes</h4><p>test.</p>',
+      story:
+        '<h4>Auto</h4><p>A text area that lets the user resize the area horizontally and vertically.</p><h4>Horizontal/ Vertical</h4><p>A text area that lets the user resize the area horizontally or vertically.</p><h4>None</h4><p>A text area that does not resize and uses a scroll bar to show overflow text.</p>',
     },
   },
 };
