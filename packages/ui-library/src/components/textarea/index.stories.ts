@@ -404,6 +404,7 @@ export const Placeholder = () => {
           size: 'md',
           label: "Hasn't placeholder",
           labelAppendix: '',
+          placeholder: '',
           value: '',
         })}
       </div>
@@ -637,7 +638,6 @@ export const Counter = () => {
           label: 'Text area with counter',
           labelAppendix: '<appendix>',
           showCounter: true,
-          readonly: true,
           value: 'This text almost reached the maximum amount of characters.',
           warningLimitType: 'warningLimitInt',
           warningLimitInt: 44,
