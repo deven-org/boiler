@@ -74,7 +74,7 @@ BlrTextButton.args = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
-  trailingIcon: 'blrChevronDown',
+  trailingIcon: 'blr360',
   loading: false,
   disabled: false,
   buttonId: 'button-id',

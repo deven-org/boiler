@@ -55,12 +55,15 @@ export class BlrTextButton extends LitElement {
       'LoaderSize',
     ]).toLowerCase() as FormSizesType;
 
-    const iconSize = getComponentConfigToken([
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       'TextButton',
       this.size.toUpperCase(),
-      'IconSize',
-    ]) as SizesType;
+      'Icon',
+    ]).toLowerCase() as SizesType;
+
+    console.log({ size: this.size, iconSizeVariant });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -86,15 +89,15 @@ export class BlrTextButton extends LitElement {
           : html`
               ${this.leadingIcon &&
               html`${BlrIconRenderFunction({
-                icon: calculateIconName(this.leadingIcon, iconSize),
-                size: iconSize,
+                icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+                size: this.size,
                 hideAria: true,
               })}`}
               <span>${this.label}</span>
               ${this.trailingIcon &&
               html`${BlrIconRenderFunction({
-                icon: calculateIconName(this.trailingIcon, iconSize),
-                size: iconSize,
+                icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+                size: this.size,
                 hideAria: true,
               })}`}
             `}
