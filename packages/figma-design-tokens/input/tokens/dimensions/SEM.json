@@ -308,50 +308,30 @@
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
         "type": "typography"
-      },
-      "LoaderSize": {
-        "value": "SM",
-        "type": "componentConfig"
       }
     },
     "SM": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography"
-      },
-      "LoaderSize": {
-        "value": "SM",
-        "type": "componentConfig"
       }
     },
     "MD": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography"
-      },
-      "LoaderSize": {
-        "value": "MD",
-        "type": "componentConfig"
       }
     },
     "LG": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
         "type": "typography"
-      },
-      "LoaderSize": {
-        "value": "MD",
-        "type": "componentConfig"
       }
     },
     "XL": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
         "type": "typography"
-      },
-      "LoaderSize": {
-        "value": "LG",
-        "type": "componentConfig"
       }
     }
   },
@@ -456,10 +436,6 @@
           "value": "{core.dimensionREM.14}",
           "type": "sizing"
         },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig"
-        },
         "IconWrapper": {
           "PaddingTop": {
             "value": "{core.dimensionREM.1}",
@@ -485,10 +461,6 @@
         "Padding": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig"
         }
       },
       "InputSlot": {
@@ -555,10 +527,6 @@
           "value": "{core.dimensionREM.16}",
           "type": "sizing"
         },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig"
-        },
         "IconWrapper": {
           "PaddingTop": {
             "value": "{core.dimensionREM.0,5}",
@@ -584,10 +552,6 @@
         "Padding": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig"
         }
       },
       "InputSlot": {
@@ -654,10 +618,6 @@
           "value": "{core.dimensionREM.16}",
           "type": "sizing"
         },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig"
-        },
         "IconWrapper": {
           "PaddingTop": {
             "value": "{core.dimensionREM.5}",
@@ -683,10 +643,6 @@
         "Padding": {
           "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
           "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig"
         }
       },
       "InputSlot": {

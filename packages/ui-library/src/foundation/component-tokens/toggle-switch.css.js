@@ -107,6 +107,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               &::after {
                 content: "";
                 position: absolute;
+                z-index: 1;
                 background-color: ${ToggleSwitch.Control.Knob.Surface.Unselected.Fill.Rest};
                 border-radius: 50%;
                 transition: transform 0.2s ease;
@@ -117,21 +118,21 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               background-color: ${ToggleSwitch.Control.Knob.Surface.Selected.Fill.Rest};
             }
 
-            & > .toggle-switch-unselect {
-              &::after {
-                content: "";
-                position: absolute;
-                border-right: 1px solid ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
+            & > .toggle-icon {
+              position: absolute;
+              top: 0;
+
+              & > .toggle-icon-class {
+                color: ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
               }
             }
 
+            & > .toggle-switch-unselect {
+              left: 0;
+            }
+
             & > .toggle-switch-select {
-              &::after {
-                content: "";
-                position: absolute;
-                border-radius: 100%;
-                border: 1px solid ${ToggleSwitch.Control.Ay11Icon.Selected.Fill.Rest};
-              }
+              right: 0;
             }
           }
 
@@ -202,21 +203,12 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 transform: translateX(16px);
               }
 
-              & > .toggle-switch-unselect {
-                &::after {
-                  top: 7px;
-                  left: 9px;
-                  width: 1px;
-                  height: 5px;
-                }
-              }
+              & > .toggle-icon {
+                height: ${ToggleSwitch.Control.SM.Background.Height};
 
-              & > .toggle-switch-select {
-                &::after {
-                  top: 7px;
-                  right: 8px;
-                  width: 4px;
-                  height: 4px;
+                & > .toggle-icon-class {
+                  height: ${ToggleSwitch.Control.SM.Background.Height};
+                  align-items: center;
                 }
               }
             }
@@ -257,21 +249,12 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 transform: translateX(20px);
               }
 
-              & > .toggle-switch-unselect {
-                &::after {
-                  top: 8px;
-                  left: 10px;
-                  width: 1px;
-                  height: 7px;
-                }
-              }
+              & > .toggle-icon {
+                height: ${ToggleSwitch.Control.MD.Background.Height};
 
-              & > .toggle-switch-select {
-                &::after {
-                  top: 8px;
-                  right: 8px;
-                  width: 6px;
-                  height: 6px;
+                & > .toggle-icon-class {
+                  height: ${ToggleSwitch.Control.MD.Background.Height};
+                  align-items: center;
                 }
               }
             }
@@ -312,21 +295,12 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 transform: translateX(23px);
               }
 
-              & > .toggle-switch-unselect {
-                &::after {
-                  top: 9px;
-                  left: 13px;
-                  width: 1px;
-                  height: 10px;
-                }
-              }
+              & > .toggle-icon {
+                height: ${ToggleSwitch.Control.LG.Background.Height};
 
-              & > .toggle-switch-select {
-                &::after {
-                  top: 9px;
-                  right: 9px;
-                  width: 8px;
-                  height: 8px;
+                & > .toggle-icon-class {
+                  height: ${ToggleSwitch.Control.LG.Background.Height};
+                  align-items: center;
                 }
               }
             }

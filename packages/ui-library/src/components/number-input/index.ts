@@ -166,7 +166,14 @@ export class BlrNumberInput extends LitElement {
       [`${this.variant || 'mode1'}`]: this.variant || 'mode1',
       [`error-input`]: this.hasError || false,
     });
-    const iconSize = getComponentConfigToken('StepperButton', this.size).toLowerCase() as FormSizesType;
+
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Action',
+      'StepperButton',
+      this.size.toUpperCase(),
+      'Icon',
+    ]).toLowerCase() as FormSizesType;
 
     return html`
       <style>
@@ -187,8 +194,8 @@ export class BlrNumberInput extends LitElement {
         ${!this.readonly
           ? html` ${this.variant === 'mode1'
               ? html`
-                  ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
-                  ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+                  ${this.getButtonTemplate('operators', 'decrement', iconSizeVariant, 'horizontal')}
+                  ${this.getButtonTemplate('operators', 'increment', iconSizeVariant, 'horizontal')}
                 `
               : this.variant === 'mode2'
               ? html`
@@ -201,8 +208,8 @@ export class BlrNumberInput extends LitElement {
                         addMargin: false,
                       })}
                     </div>
-                    ${this.getButtonTemplate('operators', 'decrement', iconSize, 'horizontal')}
-                    ${this.getButtonTemplate('operators', 'increment', iconSize, 'horizontal')}
+                    ${this.getButtonTemplate('operators', 'decrement', iconSizeVariant, 'horizontal')}
+                    ${this.getButtonTemplate('operators', 'increment', iconSizeVariant, 'horizontal')}
                   </div>
                 `
               : html`
@@ -215,8 +222,8 @@ export class BlrNumberInput extends LitElement {
                         addMargin: false,
                       })}
                     </div>
-                    ${this.getButtonTemplate('chevrons', 'increment', iconSize, 'vertical')}
-                    ${this.getButtonTemplate('chevrons', 'decrement', iconSize, 'vertical')}
+                    ${this.getButtonTemplate('chevrons', 'increment', iconSizeVariant, 'vertical')}
+                    ${this.getButtonTemplate('chevrons', 'decrement', iconSizeVariant, 'vertical')}
                   </div>
                 `}`
           : nothing}

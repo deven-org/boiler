@@ -2,7 +2,7 @@ import { LitElement, html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { FormSizesType } from '../../globals/types';
+import { FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { selectInputLight, selectInputDark } from '../../foundation/component-tokens/select.css';
@@ -12,6 +12,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 type Option = {
   value: string;
@@ -46,19 +47,27 @@ export class BlrSelect extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected renderTrailingIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Forms',
+      this.size.toUpperCase(),
+      'InputField',
+      'Icon',
+    ]).toLowerCase() as SizesType;
+
     if (this.showTrailingIcon) {
       if (this.hasError) {
         return html`${BlrIconRenderFunction({
-          icon: 'blrErrorFilledSm',
-          size: this.size,
+          icon: calculateIconName('blrErrorFilled', iconSizeVariant),
+          size: iconSizeVariant,
           classMap: classes,
           hideAria: true,
           disablePointerEvents: true,
         })}`;
       } else {
         return html`${BlrIconRenderFunction({
-          icon: calculateIconName(this.trailingIcon, this.size),
-          size: this.size,
+          icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+          size: iconSizeVariant,
           classMap: classes,
           hideAria: true,
           disablePointerEvents: true,

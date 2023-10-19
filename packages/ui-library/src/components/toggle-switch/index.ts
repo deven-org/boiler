@@ -9,8 +9,10 @@ import { FormSizesType, IconPositionVariant } from '../../globals/types';
 import { styleCustom } from './index.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-tokens/toggleSwitch.css';
+import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-tokens/toggle-switch.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { BlrIconRenderFunction } from '../internal-components/icon';
+import { calculateIconName } from '../../utils/calculate-icon-name';
 
 @customElement('blr-label-toggleswitch')
 export class BlrToggleSwitch extends LitElement {
@@ -20,7 +22,6 @@ export class BlrToggleSwitch extends LitElement {
   protected _checkboxNode!: HTMLInputElement;
 
   @property() label?: string;
-  @property() showLabel?: boolean;
   @property() onLabel!: string;
   @property() offLabel!: string;
   @property() showStateLabel?: boolean;
@@ -30,7 +31,6 @@ export class BlrToggleSwitch extends LitElement {
   @property() readonly?: boolean;
   @property() checked?: boolean;
 
-  @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: IconType = 'blrInfoSm';
 
@@ -74,21 +74,26 @@ export class BlrToggleSwitch extends LitElement {
       [`${this.size || 'md'}`]: this.size || 'md',
       [`${this.variant || 'leading'}`]: this.variant || 'leading',
     });
+
     const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
+
+    const toggleIconsClass = classMap({
+      'toggle-icon-class': true,
+    });
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class=${classes}>
         <span class="toggle-content-col">
-          ${this.showLabel && this.label
+          ${this.label
             ? html` ${BlrFormLabelInline({
                 labelText: this.label,
                 forValue: this.checkInputId,
                 labelSize: this.size || 'md',
               })}`
-            : html``}
-          ${this.showHint
+            : nothing}
+          ${this.hintText
             ? html`
                 ${BlrFormHintRenderFunction({
                   message: this.hintText,
@@ -98,7 +103,7 @@ export class BlrToggleSwitch extends LitElement {
                   theme: this.theme,
                 })}
               `
-            : html``}
+            : nothing}
         </span>
         <div class="label-container">
           <label
@@ -121,8 +126,22 @@ export class BlrToggleSwitch extends LitElement {
             />
             <span class="toggle-switch-slider"> </span>
 
-            <span class="toggle-switch-unselect"></span>
-            <span class="toggle-switch-select"></span>
+            <span class="toggle-switch-unselect toggle-icon">
+              ${BlrIconRenderFunction({
+                icon: calculateIconName('blrOn', this.size),
+                size: this.size,
+                hideAria: true,
+                classMap: toggleIconsClass,
+              })}
+            </span>
+            <span class="toggle-switch-select toggle-icon">
+              ${BlrIconRenderFunction({
+                icon: calculateIconName('blrOff', this.size),
+                size: this.size,
+                hideAria: true,
+                classMap: toggleIconsClass,
+              })}
+            </span>
           </label>
           ${this.variant === 'leading' && this.showStateLabel
             ? html` ${BlrFormLabelInline({
@@ -140,7 +159,6 @@ export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
 
 export const BlrToggleSwitchRenderFunction = ({
   label,
-  showLabel,
   onLabel,
   offLabel,
   showStateLabel,
@@ -153,14 +171,12 @@ export const BlrToggleSwitchRenderFunction = ({
   size,
   variant,
   checked,
-  showHint,
   hintText,
   hintIcon,
   theme,
 }: BlrToggleSwitchType) => {
   return html`<blr-label-toggleswitch
     .label=${label}
-    .showLabel=${showLabel}
     .onLabel=${onLabel}
     .offLabel=${offLabel}
     .showStateLabel=${showStateLabel}
@@ -173,7 +189,6 @@ export const BlrToggleSwitchRenderFunction = ({
     .checked=${checked}
     .size=${size}
     .variant=${variant}
-    .showHint=${showHint}
     .hintText=${hintText}
     .hintIcon=${hintIcon}
     .theme=${theme}
