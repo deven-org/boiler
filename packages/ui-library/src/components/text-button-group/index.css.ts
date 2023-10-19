@@ -1,4 +1,7 @@
-import { css } from "lit";
+import { css } from "nested-css-to-flat/lit-css";
+import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated";
+
+const { ButtonGroup } = componentTokens.UI;
 
 export const styleCustom = css`
   .blr-text-button-group {
@@ -20,7 +23,6 @@ export const styleCustom = css`
 
   .wrapper {
     display: flex;
-    gap: 10px;
 
     &.flex-end {
       justify-content: flex-end;
@@ -33,5 +35,25 @@ export const styleCustom = css`
     &.center {
       justify-content: center;
     }
+  }
+
+  .blr-text-button-group.xs {
+    gap: ${ButtonGroup.XS.ItemSpacing};
+  }
+
+  .blr-text-button-group.sm {
+    gap: ${ButtonGroup.SM.ItemSpacing};
+  }
+
+  .blr-text-button-group.md {
+    gap: ${ButtonGroup.MD.ItemSpacing};
+  }
+
+  .blr-text-button-group.lg {
+    gap: ${ButtonGroup.LG.ItemSpacing};
+  }
+
+  .blr-text-button-group.xl {
+    gap: ${ButtonGroup.XL.ItemSpacing};
   }
 `;

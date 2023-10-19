@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 import { BlrLoader as BlrLoaderClass } from './index';
-import { FeedbackVariants, FormSizes } from '../../globals/constants';
+import { ActionSizes, FeedbackVariants } from '../../globals/constants';
 
 import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -9,7 +9,7 @@ export default {
   title: 'Design System/Web Components/BlrLoader',
   argTypes: {
     size: {
-      options: FormSizes,
+      options: ActionSizes,
       control: { type: 'select' },
     },
     variant: {

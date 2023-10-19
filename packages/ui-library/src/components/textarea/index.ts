@@ -8,7 +8,6 @@ import { CounterVariantType, FormSizesType, WarningLimits } from '../../globals/
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
-import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrCounterRenderFunction } from '../internal-components/counter';
 
@@ -95,9 +94,7 @@ export class BlrTextarea extends LitElement {
 
   protected render() {
     const dynamicStyles =
-      this.theme === 'Light'
-        ? [formLight, textareaLight, counterLight, iconButtonLight]
-        : [formDark, textareaDark, counterDark, iconButtonDark];
+      this.theme === 'Light' ? [formLight, textareaLight, counterLight] : [formDark, textareaDark, counterDark];
 
     const classes = classMap({
       [`${this.size}`]: this.size,

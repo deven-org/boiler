@@ -1,83 +1,6 @@
 import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: textButtonLight, tokenizedDark: textButtonDark } = renderThemedCssStrings((componentTokens) => {
-  const { TextButton } = componentTokens.Action;
-
-  return css`
-    .blr-text-button.xs,
-    .blr-text-button-group.xs {
-      padding: ${TextButton.XS.Padding};
-    }
-
-    .blr-text-button.sm,
-    .blr-text-button-group.sm {
-      padding: ${TextButton.SM.Padding};
-    }
-
-    .blr-text-button.md,
-    .blr-text-button-group.md {
-      padding: ${TextButton.MD.Padding};
-    }
-
-    .blr-text-button.lg,
-    .blr-text-button-group.lg {
-      padding: ${TextButton.LG.Padding};
-    }
-
-    .blr-text-button.xl,
-    .blr-text-button-group.xl {
-      padding: ${TextButton.XL.Padding};
-    }
-
-    .blr-text-button-group.xs {
-      gap: ${TextButton.XS.ItemSpacing};
-    }
-
-    .blr-text-button-group.sm {
-      gap: ${TextButton.SM.ItemSpacing};
-    }
-
-    .blr-text-button-group.md {
-      gap: ${TextButton.MD.ItemSpacing};
-    }
-
-    .blr-text-button-group.lg {
-      gap: ${TextButton.LG.ItemSpacing};
-    }
-
-    .blr-text-button-group.xl {
-      gap: ${TextButton.XL.ItemSpacing};
-    }
-  `;
-});
-
-export const { tokenizedLight: iconButtonLight, tokenizedDark: iconButtonDark } = renderThemedCssStrings((componentTokens) => {
-  const { IconButton } = componentTokens.Action;
-
-  return css`
-    .blr-icon-button.xs {
-      padding: ${IconButton.XS.Padding};
-    }
-
-    .blr-icon-button.sm {
-      padding: ${IconButton.SM.Padding};
-    }
-
-    .blr-icon-button.md {
-      padding: ${IconButton.MD.Padding};
-    }
-
-    .blr-icon-button.lg {
-      padding: ${IconButton.LG.Padding};
-    }
-
-    .blr-icon-button.xl {
-      padding: ${IconButton.XL.Padding};
-    }
-  `;
-});
-
 export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonDark } = renderThemedCssStrings((componentTokens) => {
   const { StepperButton } = componentTokens.Action;
 
@@ -92,19 +15,6 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
       text-align: center;
     }
   `;
-  /*
-      .blr-stepper-button.sm {
-        width: ${StepperButton.SM.Width};
-      }
-
-      .blr-stepper-button.md {
-        width: ${StepperButton.MD.Width};
-      }
-
-      .blr-stepper-button.lg {
-        width: ${StepperButton.LG.Width};
-      }
-      */
 });
 
 export const { tokenizedLight: stepperComboLight, tokenizedDark: stepperComboDark } = renderThemedCssStrings((componentTokens) => {

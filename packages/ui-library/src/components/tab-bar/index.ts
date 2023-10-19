@@ -13,6 +13,7 @@ import {
   TabAlignmentVariantType,
   IconPositionVariant,
   TabContentVariantType,
+  SizesType,
 } from '../../globals/types';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { IconType } from '@boiler/icons';
@@ -20,6 +21,7 @@ import { actionDark, actionLight } from '../../foundation/semantic-tokens/action
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrDividerRenderFunction } from '../divider';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-tab-bar')
 export class BlrTabBar extends LitElement {
@@ -108,6 +110,23 @@ export class BlrTabBar extends LitElement {
       [`${this.alignment}`]: this.alignment,
     });
 
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Navigation',
+      'TabBar',
+      'Tab',
+      this.size.toUpperCase(),
+      'Icon',
+    ]) as SizesType;
+
+    const iconButtonSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Action',
+      'IconButton',
+      this.size.toUpperCase(),
+      'Icon',
+    ]).toLowerCase() as SizesType;
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -116,8 +135,8 @@ export class BlrTabBar extends LitElement {
           ? html`
               <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrChevronLeft', this.size),
-                  size: this.size,
+                  icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
+                  size: iconButtonSizeVariant,
                   hideAria: true,
                 })}
               </button>
@@ -142,8 +161,8 @@ export class BlrTabBar extends LitElement {
                     >
                       ${this.tabContent !== 'labelOnly'
                         ? BlrIconRenderFunction({
-                            icon: calculateIconName(tab.icon, this.size),
-                            size: this.size,
+                            icon: calculateIconName(tab.icon, iconSizeVariant),
+                            size: iconSizeVariant,
                             hideAria: true,
                           })
                         : nothing}
@@ -162,8 +181,8 @@ export class BlrTabBar extends LitElement {
           ? html`
               <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrChevronRight', this.size),
-                  size: this.size,
+                  icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
+                  size: iconButtonSizeVariant,
                   hideAria: true,
                 })}
               </button>

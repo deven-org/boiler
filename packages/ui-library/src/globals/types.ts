@@ -17,6 +17,7 @@ import {
   OverflowVariantsFullWidth,
   ButtonGroupSizes,
   LabelVariants,
+  ActionSizes,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -26,6 +27,7 @@ export type FeedbackVariantType = (typeof FeedbackVariants)[number];
 export type HintVariantType = (typeof HintVariants)[number];
 export type CounterVariantType = (typeof CounterVariants)[number];
 
+export type ActionSizesType = (typeof ActionSizes)[number];
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];
 export type InputTypes = (typeof InputTypes)[number];

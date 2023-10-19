@@ -2,19 +2,20 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { IconType } from '@boiler/icons';
-import { styleCustom } from './index.css';
+import { styleCustom as iconLinkStyleCustom } from './index.css';
+import { styleCustom as iconButtonStyleCustom } from '../icon-button/index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
-import { ActionVariantType, FormSizesType } from '../../globals/types';
+import { ActionVariantType, FormSizesType, SizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrLoaderRenderFunction } from '../loader';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-icon-link')
 export class BlrIconLink extends LitElement {
-  static styles = [styleCustom];
+  static styles = [iconLinkStyleCustom, iconButtonStyleCustom];
 
   @property() arialabel?: string;
   @property() icon?: IconType;
@@ -36,8 +37,23 @@ export class BlrIconLink extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
-    const dynamicStyles = this.theme === 'Light' ? [actionLight, iconButtonLight] : [actionDark, iconButtonDark];
+    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
     const loaderVariant = determineLoaderVariant(this.variant);
+
+    const loaderSize = getComponentConfigToken([
+      'SizeVariant',
+      'Action',
+      this.size.toUpperCase(),
+      'Loader',
+    ]).toLowerCase() as FormSizesType;
+
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Action',
+      'IconButton',
+      this.size.toUpperCase(),
+      'Icon',
+    ]).toLowerCase() as SizesType;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -54,14 +70,14 @@ export class BlrIconLink extends LitElement {
       >
         ${this.loading
           ? html`${BlrLoaderRenderFunction({
-              size: this.size,
+              size: loaderSize,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
             })}`
           : html`${BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, this.size),
-              size: this.size,
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
               hideAria: true,
             })}`}
       </a>`;

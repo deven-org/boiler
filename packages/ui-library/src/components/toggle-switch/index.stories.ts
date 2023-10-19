@@ -31,7 +31,6 @@ export default {
 
 export const BlrToggleSwitch = ({
   label,
-  showLabel,
   onLabel,
   offLabel,
   showStateLabel,
@@ -44,7 +43,6 @@ export const BlrToggleSwitch = ({
   size,
   variant,
   checked,
-  showHint,
   hintText,
   hintIcon,
   isSelected,
@@ -53,7 +51,6 @@ export const BlrToggleSwitch = ({
   html`
     ${BlrToggleSwitchRenderFunction({
       label,
-      showLabel,
       onLabel,
       offLabel,
       showStateLabel,
@@ -66,7 +63,6 @@ export const BlrToggleSwitch = ({
       size,
       variant,
       checked,
-      showHint,
       hintText,
       hintIcon,
       isSelected,
@@ -83,7 +79,6 @@ const logEventType = (event: Event) => {
 BlrToggleSwitch.args = {
   theme: 'Light',
   label: 'Toggle Switch Option',
-  showLabel: true,
   onLabel: 'On',
   offLabel: 'Off',
   showStateLabel: true,
@@ -92,7 +87,6 @@ BlrToggleSwitch.args = {
   readonly: false,
   checked: false,
   size: 'md',
-  showHint: true,
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',
   variant: 'leading',

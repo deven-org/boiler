@@ -64,14 +64,14 @@ BlrIconButton.storyName = 'BlrIconButton';
 
 BlrIconButton.args = {
   theme: 'Light',
+  variant: 'cta',
+  size: 'md',
   arialabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  icon: 'blrChevronDown',
+  icon: 'blr360',
   loading: false,
   disabled: false,
   buttonId: 'button-id',
-  variant: 'cta',
-  size: 'md',
   loadingStatus: 'Loading',
 };
