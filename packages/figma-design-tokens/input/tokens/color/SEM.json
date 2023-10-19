@@ -1250,12 +1250,12 @@
       "Default": {
         "Shape": {
           "Background": {
-            "value": "{core.color.azure.600.opa20}",
+            "value": "{q.content.onunspecified.default.alpha}",
             "type": "color",
             "description": "Use on: Loader"
           },
           "Foreground": {
-            "value": "{core.color.azure.400.solid}",
+            "value": "{q.content.onunspecified.default.beta}",
             "type": "color",
             "description": "Use on: Loader"
           }
@@ -1264,12 +1264,12 @@
       "Inverted": {
         "Shape": {
           "Background": {
-            "value": "{core.color.white.opa20}",
+            "value": "{q.content.onunspecified.inverted.alpha}",
             "type": "color",
             "description": "Use on: Loader"
           },
           "Foreground": {
-            "value": "{core.color.white.solid}",
+            "value": "{q.content.onunspecified.inverted.beta}",
             "type": "color",
             "description": "Use on: Loader"
           }

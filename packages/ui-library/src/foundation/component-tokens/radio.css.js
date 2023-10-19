@@ -37,6 +37,20 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
     }
 
+    .blr-legend-wrapper {
+      &.sm {
+        padding: ${Radio.SM.ContentRow.Padding};
+      }
+
+      &.md {
+        padding: ${Radio.MD.ContentRow.Padding};
+      }
+
+      &.lg {
+        padding: ${Radio.LG.ContentRow.Padding};
+      }
+    }
+
     .blr-radio-group {
       display: flex;
       align-items: flex-start;
@@ -67,17 +81,28 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
       &.sm {
         gap: ${Radio.SM.ContentRow.ItemSpacing};
-        padding: ${Radio.SM.ContentRow.Padding};
       }
 
       &.md {
         gap: ${Radio.MD.ContentRow.ItemSpacing};
-        padding: ${Radio.MD.ContentRow.Padding};
       }
 
       &.lg {
         gap: ${Radio.LG.ContentRow.ItemSpacing};
-        padding: ${Radio.LG.ContentRow.Padding};
+      }
+    }
+
+    .caption-group {
+      &.sm {
+        padding: ${Radio.SM.ContentRow.Padding};
+      }
+
+      &.md {
+        padding: ${Radio.MD.ContentRow.Padding};
+      }
+
+      &.lg {
+        padding: ${Radio.MD.ContentCol.PaddingTop};
       }
     }
 
