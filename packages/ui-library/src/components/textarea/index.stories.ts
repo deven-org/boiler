@@ -141,7 +141,7 @@ export default {
     },
     docs: {
       description: {
-        component: `<div style="background-color: lightblue">
+        component: `<div>
         <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
                 Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
         </p>
@@ -186,7 +186,6 @@ export default {
             </ul>
         </li>
         </ul>
-        wow\`
         </div>`,
       },
     },
