@@ -7,6 +7,21 @@ import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
+// Shared Style for Story
+const sharedStyles = html`
+  <style>
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .stories-textarea {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  </style>
+`;
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   errorIcon: '',
@@ -245,71 +260,41 @@ BlrTextarea.args = {
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
 };
+
 // All Stories
 //Appearance Size Story
 export const Sizes = () => {
   return html`
-    <style>
-      .wrapper {
-        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .stories-textarea {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
-      .story-textarea {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 20rem;
-      }
-      .column {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
+    ${sharedStyles}
     <div class="wrapper">
-      <div class="column">
-        <div class="stories-textarea">
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'sm',
-            label: 'Text area SM',
-            value: '',
-            cols: 40,
-            rows: 5,
-          })}
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'md',
-            label: 'Text area MD',
-            value: '',
-            cols: 40,
-            rows: 5,
-          })}
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'lg',
-            label: 'Text area LG',
-            value: '',
-            cols: 40,
-            rows: 5,
-          })}
-        </div>
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'sm',
+          label: 'Text area SM',
+          value: '',
+          cols: 40,
+          rows: 5,
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Text area MD',
+          value: '',
+          cols: 40,
+          rows: 5,
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'lg',
+          label: 'Text area LG',
+          value: '',
+          cols: 40,
+          rows: 5,
+        })}
       </div>
     </div>
   `;
@@ -329,64 +314,38 @@ Sizes.storyName = 'Appearance';
 //Appearance Resize Story
 export const Resize = () => {
   return html`
-    <style>
-      .wrapper {
-        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-      }
-      .stories-textarea {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-      }
-      .story-textarea {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        width: 20rem;
-      }
-      .column {
-        display: flex;
-        flex-direction: column;
-      }
-    </style>
+    ${sharedStyles}
     <div class="wrapper">
-      <div class="column">
-        <div class="stories-textarea">
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'md',
-            label: 'Auto resize',
-            value: '',
-          })}
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'md',
-            label: 'Horizontal resize',
-            value: '',
-          })}
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'md',
-            label: 'Vertical resize',
-            value: '',
-          })}
-          ${BlrTextareaRenderFunction({
-            ...defaultParams,
-            theme: 'Light',
-            size: 'lg',
-            label: 'None',
-            value: '',
-            isResizeable: false,
-          })}
-        </div>
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Auto resize',
+          value: '',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Horizontal resize',
+          value: '',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Vertical resize',
+          value: '',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'lg',
+          label: 'None',
+          value: '',
+          isResizeable: false,
+        })}
       </div>
     </div>
   `;
@@ -408,10 +367,13 @@ Resize.story = {
 //MeinBeispiel12 Story with Storybook background per default dark
 export const MeinBeispiel12 = () => {
   return html`
-    <div class="stories-textarea">
-      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', shouldFocus: true })}
-      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', disabled: true })}
-      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', readonly: true })}
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', shouldFocus: true })}
+        ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', disabled: true })}
+        ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', readonly: true })}
+      </div>
     </div>
   `;
 };
