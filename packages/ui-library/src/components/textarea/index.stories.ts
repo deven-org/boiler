@@ -28,7 +28,7 @@ const defaultParams: BlrTextareaType = {
   errorIcon: '',
   hint: '',
   pattern: '',
-  showCounter: '',
+  showCounter: false,
   theme: 'Light',
   textareaId: '#1',
   label: 'Label',
@@ -150,16 +150,41 @@ export default {
         <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Appearance</strong></a>
             <ul>
                 <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Sizing</strong></a></li>
-                <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Resize</strong></a></li>
+                <li> <a href="/story/design-system-web-components-blrtextarea--resize"><strong>Resize</strong></a></li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Content/ Settings</strong></a>
+         <li> <a href="/story/design-system-web-components-blrtextarea--placeholder"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Placeholder</strong></a>
+                <li> <a href="/story/design-system-web-components-blrtextarea--placeholder"><strong>Placeholder</strong></a>
                 </li>
             </ul>
         </li>
-        
+         <li> <a href="/story/design-system-web-components-blrtextarea--disabled"><strong>States</strong></a>
+            <ul>
+                <li> <a href="/story/design-system-web-components-blrtextarea--disabled"><strong>Disabled</strong></a>
+                </li>
+                 <li> <a href="/story/design-system-web-components-blrtextarea--readonly"><strong>Readonly</strong></a>
+                </li>
+            </ul>
+        </li>
+         <li> <a href="/story/design-system-web-components-blrtextarea--required"><strong>Validation</strong></a>
+            <ul>
+                <li> <a href="/story/design-system-web-components-blrtextarea--required"><strong>Required</strong></a>
+                </li>
+                 <li> <a href="/story/design-system-web-components-blrtextarea--has-error"><strong>hasError</strong></a>
+                </li>
+            </ul>
+        </li>
+         <li> <a href="/story/design-system-web-components-blrtextarea--captions"><strong>Dependencies</strong></a>
+            <ul>
+                <li> <a href="/story/design-system-web-components-blrtextarea--captions"><strong>Caption</strong></a>
+                </li>
+                 <li> <a href="/story/design-system-web-components-blrtextarea--label"><strong>Label</strong></a>
+                </li>
+                <li> <a href="/story/design-system-web-components-blrtextarea--counter"><strong>Counter</strong></a>
+                </li>
+            </ul>
+        </li>
         </ul>
         wow\`
         </div>`,
@@ -358,6 +383,282 @@ Resize.parameters = {
   },
 };
 Resize.storyName = 'Resize';
+
+//Content/ Settings Placeholder
+export const Placeholder = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Has placeholder',
+          labelAppendix: '',
+          value: '',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: "Hasn't placeholder",
+          labelAppendix: '',
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Placeholder.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story:
+        '<h4>Placeholder</h4><p>The text area can display a placeholder text to improve the usability of this component.</p>',
+    },
+  },
+};
+Placeholder.storyName = 'Content/ Settings';
+
+// States Disabled
+export const Disabled = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Disabled text area',
+          labelAppendix: '',
+          disabled: true,
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Disabled.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story: '<h4>Disabled</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
+    },
+  },
+};
+Disabled.storyName = 'States';
+
+// States Readonly
+export const Readonly = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Readonly',
+          readonly: true,
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Readonly.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story: '<p>A text area that lets the user resize the area horizontally or vertically.</p>',
+    },
+  },
+};
+Readonly.storyName = 'Readonly';
+
+// Validation Required Todo add interactive Story with Button to show the State
+export const Required = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: 'Please leave a short description',
+          label: 'Reason for submission',
+          labelAppendix: '(required)',
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Required.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story:
+        '<p>A technical description how use validation-patterns</p><h4>Required</h4><p>The text area can be set as a required field. An error will be thrown, if the field was not filled.</p>',
+    },
+  },
+};
+Required.storyName = 'Required';
+
+// Validation hasError Todo add interactive Story with Button to show the State
+export const hasError = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: 'Please leave a short description',
+          label: 'Reason for submission',
+          labelAppendix: '(required)',
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+hasError.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story: '<p>blabla</p>',
+    },
+  },
+};
+hasError.storyName = 'hasError';
+
+//Dependencies Captions
+export const Captions = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: '',
+          label: 'A text area with a hint',
+          labelAppendix: '',
+          value: '',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: '',
+          label: ' A text area with an error message',
+          labelAppendix: '',
+          hasError: true,
+          showHint: false,
+          errorIcon: 'blrError',
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Captions.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story:
+        '<h4>Captions</h4><p>The text area can display an additional hint text and error message. Both captions can be combined. For more information review the caption component.</p>',
+    },
+  },
+};
+Captions.storyName = 'Dependencies';
+
+// States Label
+export const Label = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'This is a label',
+          labelAppendix: '(optional)',
+          placeholder: '',
+          readonly: true,
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Label.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story:
+        '<p>The text area can display an optional label component, consisting of a label and a label appendix. For more information review the caption component.</p>',
+    },
+  },
+};
+Label.storyName = 'Label';
+
+// States Counter
+export const Counter = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          label: 'Text area with counter',
+          labelAppendix: '<appendix>',
+          showCounter: true,
+          readonly: true,
+          value: 'This text almost reached the maximum amount of characters.',
+          warningLimitType: 'warningLimitInt',
+          warningLimitInt: 44,
+          warningLimitPer: 50,
+        })}
+      </div>
+    </div>
+  `;
+};
+Counter.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story:
+        '<p>The text area can show an optional counter. The threshold for the warning and error message can be set individually. For more information review the counter component.</p>',
+    },
+  },
+};
+Counter.storyName = 'Counter';
 
 //MeinBeispiel12 Story with Storybook background per default dark
 export const MeinBeispiel12 = () => {
