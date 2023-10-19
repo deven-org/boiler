@@ -18,11 +18,12 @@
   "license": "ISC",
   "devDependencies": {
     "@boiler/figma-design-tokens": "0.0.1",
-    "@boiler/eslint-config-boiler": "1.0.0"
+    "@boiler/eslint-config-boiler": "1.0.0",
+    "postcss-lit": "^1.1.0"
   },
   "dependencies": {
     "@boiler/icons": "0.0.1",
-    "@lit-labs/react": "^1.1.1",
+    "@lit/react": "^1.0.0",
     "lit": "^2.6.1",
     "nested-css-to-flat": "^1.0.5"
   }
