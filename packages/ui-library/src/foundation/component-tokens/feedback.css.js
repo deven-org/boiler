@@ -7,7 +7,6 @@ export const { tokenizedLight: loadingSpinnerLight, tokenizedDark: loadingSpinne
   return css`
     .blr-loading-spinner {
       border-radius: 50%;
-      display: inline-block;
       box-sizing: border-box;
       animation: rotation 1s linear infinite;
 
