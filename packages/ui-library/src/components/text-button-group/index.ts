@@ -16,6 +16,13 @@ import { BlrLoaderRenderFunction } from '../loader';
 export interface ButtonOption {
   label: string;
   buttonVariant?: ActionVariantType;
+  loadingStatus: string;
+  disabled: boolean;
+  buttonId: string;
+  size: ButtonGroupSizesType;
+  trailingIcon?: IconType;
+  leadingIcon?: IconType;
+  loading: boolean;
 }
 
 @customElement('blr-text-button-group')

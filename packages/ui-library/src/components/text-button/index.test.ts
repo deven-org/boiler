@@ -18,8 +18,7 @@ const sampleParams: BlrTextButtonType = {
 describe('blr-text-button', () => {
   it('is having a button containing the right className', async () => {
     const element = await fixture(BlrTextButtonRenderFunction(sampleParams));
-
-    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLSpanElement);
     const className = button?.className;
 
     expect(className).to.contain('blr-text-button');
