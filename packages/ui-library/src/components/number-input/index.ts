@@ -12,7 +12,7 @@ import {
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrDividerRenderFunction } from '../divider';
-import { FormSizesType } from '../../globals/types';
+import { FormSizesType, SizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';

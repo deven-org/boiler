@@ -5,7 +5,6 @@ import { customElement, property } from 'lit/decorators.js';
 import { IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { iconButtonDark, iconButtonLight } from '../../foundation/component-tokens/action.css';
 import { ActionVariantType, FormSizesType, SizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -45,7 +44,7 @@ export class BlrIconButton extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
-    const dynamicStyles = this.theme === 'Light' ? [actionLight, iconButtonLight] : [actionDark, iconButtonDark];
+    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const loaderSizeVariant = getComponentConfigToken([
@@ -87,7 +86,7 @@ export class BlrIconButton extends LitElement {
             })}`
           : html`${BlrIconRenderFunction({
               icon: calculateIconName(this.icon, iconSizeVariant),
-              size: this.size,
+              size: iconSizeVariant,
               hideAria: true,
             })}`}
       </span> `;

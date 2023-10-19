@@ -70,6 +70,8 @@ BlrTextButton.storyName = 'BlrTextButton';
 
 BlrTextButton.args = {
   theme: 'Light',
+  variant: 'cta',
+  size: 'md',
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
@@ -78,7 +80,5 @@ BlrTextButton.args = {
   loading: false,
   disabled: false,
   buttonId: 'button-id',
-  variant: 'cta',
-  size: 'md',
   loadingStatus: 'Loading',
 };

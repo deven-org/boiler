@@ -246,6 +246,8 @@ VariantButtonGroupCenter.storyName = 'VariantButtonGroupCenter';
 
 VariantButtonGroupCenter.args = {
   theme: 'Light',
+  size: 'md',
+  variant: 'destructive',
   alignment: 'center',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
@@ -254,8 +256,6 @@ VariantButtonGroupCenter.args = {
   loading: false,
   disabled: false,
   buttonId: 'button-variant-id',
-  size: 'md',
-  variant: 'destructive',
   loadingStatus: 'Loading',
   buttons: [
     {

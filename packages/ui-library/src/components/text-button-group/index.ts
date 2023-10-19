@@ -2,9 +2,9 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { IconType } from '@boiler/icons';
-import { styleCustom } from './index.css';
+import { styleCustom as StyleTextButtonGroupCustom } from './index.css';
+import { styleCustom as StyleTextButtonCustom } from '../text-button/index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { textButtonDark, textButtonLight } from '../../foundation/component-tokens/action.css';
 import { buttonGroupLight, buttonGroupDark } from '../../foundation/component-tokens/ui.css';
 import { ActionVariantType, AlignmentType, ButtonGroupSizesType, FormSizesType, SizesType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
@@ -21,7 +21,7 @@ export interface ButtonOption {
 
 @customElement('blr-text-button-group')
 export class BlrTextButtonGroup extends LitElement {
-  static styles = [styleCustom];
+  static styles = [StyleTextButtonGroupCustom, StyleTextButtonCustom];
 
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
@@ -41,10 +41,7 @@ export class BlrTextButtonGroup extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const dynamicStyles =
-      this.theme === 'Light'
-        ? [actionLight, textButtonLight, buttonGroupLight]
-        : [actionDark, textButtonDark, buttonGroupDark];
+    const dynamicStyles = this.theme === 'Light' ? [actionLight, buttonGroupLight] : [actionDark, buttonGroupDark];
 
     const alignmentClasses = classMap({
       [`${this.alignment}`]: this.alignment || 'center',
@@ -58,12 +55,13 @@ export class BlrTextButtonGroup extends LitElement {
       'LoaderSize',
     ]).toLowerCase() as FormSizesType;
 
-    const iconSize = getComponentConfigToken([
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       'TextButton',
       this.size.toUpperCase(),
-      'IconSize',
-    ]) as SizesType;
+      'Icon',
+    ]).toLowerCase() as SizesType;
 
     return html`
       <style>
@@ -79,7 +77,7 @@ export class BlrTextButtonGroup extends LitElement {
           });
           return html`
             <button
-              class="blr-semantic-action blr-text-button-group ${buttonClasses}"
+              class="blr-semantic-action blr-text-button blr-text-button-group ${buttonClasses}"
               @click="${this.onClick}"
               @blur="${this.onBlur}"
               ?disabled="${this.disabled}"
@@ -96,8 +94,8 @@ export class BlrTextButtonGroup extends LitElement {
                     ${this.leadingIcon &&
                     html`
                       ${BlrIconRenderFunction({
-                        icon: calculateIconName(this.leadingIcon, button.size),
-                        size: iconSize,
+                        icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+                        size: iconSizeVariant,
                         hideAria: true,
                       })}
                     `}
@@ -105,8 +103,8 @@ export class BlrTextButtonGroup extends LitElement {
                     ${this.trailingIcon &&
                     html`
                       ${BlrIconRenderFunction({
-                        icon: calculateIconName(this.trailingIcon, button.size),
-                        size: iconSize,
+                        icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+                        size: iconSizeVariant,
                         hideAria: true,
                       })}
                     `}
