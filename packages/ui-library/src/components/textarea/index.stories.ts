@@ -1,13 +1,48 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
-
 import { FormSizes } from '../../globals/constants';
 import './index';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
+// Default parameters for Textarea component
+const defaultParams: BlrTextareaType = {
+  errorIcon: '',
+  hint: '',
+  pattern: '',
+  showCounter: '',
+  theme: 'Light',
+  textareaId: '#1',
+  label: 'Label',
+  labelAppendix: '(Optional)',
+  size: 'md',
+  value: '',
+  maxLength: 140,
+  warningLimitType: 'warningLimitInt',
+  warningLimitInt: 105,
+  warningLimitPer: 75,
+  cols: 20,
+  rows: 5,
+  shouldFocus: false,
+
+  placeholder: 'Add a message here',
+  required: false,
+  disabled: false,
+  readonly: false,
+
+  showHint: true,
+  hintIcon: 'blrInfo',
+  hintText: '<This is a small hint>',
+
+  hasError: false,
+  errorMessage: "OMG it's an error",
+
+  isResizeable: true,
+};
+
+//Main Showcase Storybook Textarea
 export default {
   title: 'Design System/Web Components/BlrTextarea',
   argTypes: {
@@ -90,7 +125,7 @@ export default {
     },
     docs: {
       description: {
-        component: ` <div>
+        component: ` <div style="background-color: aqua">
         <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
                 Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
         </p>
@@ -117,6 +152,7 @@ export default {
   },
 };
 
+//Main Component for Textarea
 export const BlrTextarea = ({
   textareaId,
   label,
@@ -177,7 +213,6 @@ export const BlrTextarea = ({
       theme,
     })}
   `;
-
 BlrTextarea.storyName = 'BlrTextarea-Docs';
 
 BlrTextarea.args = {
@@ -188,36 +223,111 @@ BlrTextarea.args = {
   rows: 5,
   minLength: 0,
   maxLength: 140,
-
-  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  value: '',
   label: 'Label',
   labelAppendix: '(Optional)',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-
-  placeholder: 'Type your message here ..',
+  placeholder: 'Add a message here',
   required: false,
   disabled: false,
   readonly: false,
-
   showCounter: true,
   showHint: true,
   hintIcon: 'blrInfo',
   hintText: 'Rindfleischetikettierungs',
-
   errorIcon: undefined,
   hasError: false,
   errorMessage: ' ',
-
   isResizeable: true,
-
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
 };
-
+// All Stories
+//Appearance Size Story
 export const Sizes = () => {
+  return html`
+    <style>
+      .wrapper {
+        font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .stories-textarea {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .story-textarea {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 20rem;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <div class="wrapper">
+      <div class="column">
+        <div class="stories-textarea">
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            size: 'sm',
+            label: 'Text area SM',
+            value: '',
+            cols: 40,
+            rows: 5,
+          })}
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            size: 'md',
+            label: 'Text area MD',
+            value: '',
+            cols: 40,
+            rows: 5,
+          })}
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            size: 'lg',
+            label: 'Text area LG',
+            value: '',
+            cols: 40,
+            rows: 5,
+          })}
+        </div>
+      </div>
+    </div>
+  `;
+};
+Sizes.parameters = {
+  backgrounds: {
+    default: 'Light',
+  },
+  docs: {
+    description: {
+      story: '<h4>Sizes</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
+    },
+  },
+};
+Sizes.storyName = 'Appearance';
+
+//Appearance Resize Story
+export const Resize = () => {
   return html`
     <style>
       .wrapper {
@@ -250,56 +360,61 @@ export const Sizes = () => {
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'sm',
-            label: 'Text area SM',
-            cols: 40,
-            rows: 5,
+            size: 'md',
+            label: 'Auto resize',
+            value: '',
           })}
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
             size: 'md',
-            label: 'Text area MD',
-            cols: 40,
-            rows: 5,
+            label: 'Horizontal resize',
+            value: '',
+          })}
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            size: 'md',
+            label: 'Vertical resize',
+            value: '',
           })}
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
             size: 'lg',
-            label: 'Text area LG',
-            cols: 40,
-            rows: 5,
+            label: 'None',
+            value: '',
+            isResizeable: false,
           })}
         </div>
       </div>
     </div>
   `;
 };
-Sizes.parameters = {
-  backgrounds: {
-    default: 'Light',
-  },
-  docs: {
-    description: {
-      story: 'beschreibung2',
+Resize.story = {
+  name: 'Resize',
+  parameters: {
+    backgrounds: {
+      default: 'Light',
+    },
+    docs: {
+      description: {
+        story: '<h4>Sizes</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
+      },
     },
   },
 };
 
-Sizes.storyName = 'Sizes';
-
-export const MeinBeispiel12 = () =>
-  html`
+//MeinBeispiel12 Story with Storybook background per default dark
+export const MeinBeispiel12 = () => {
+  return html`
     <div class="stories-textarea">
-      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark' })}
-      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark' })}
-      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark' })}
       ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', shouldFocus: true })}
       ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', disabled: true })}
       ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', readonly: true })}
     </div>
   `;
+};
 MeinBeispiel12.story = {
   name: 'test2',
   parameters: {
@@ -312,38 +427,4 @@ MeinBeispiel12.story = {
       },
     },
   },
-};
-
-const defaultParams: BlrTextareaType = {
-  errorIcon: '',
-  hint: '',
-  pattern: '',
-  showCounter: '',
-  theme: 'Light',
-  textareaId: '#1',
-  label: 'Label',
-  labelAppendix: '(Optional)',
-  size: 'md',
-  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  maxLength: 140,
-  warningLimitType: 'warningLimitInt',
-  warningLimitInt: 105,
-  warningLimitPer: 75,
-  cols: 20,
-  rows: 5,
-  shouldFocus: false,
-
-  placeholder: 'Type your message here ..',
-  required: false,
-  disabled: false,
-  readonly: false,
-
-  showHint: true,
-  hintIcon: 'blrInfo',
-  hintText: 'hint message',
-
-  hasError: false,
-  errorMessage: "OMG it's an error",
-
-  isResizeable: true,
 };
