@@ -96,15 +96,15 @@ export default {
         </p>
         <ul>
         <li> <a href="/docs/design-system-web-components-blrtextarea--docs"><strong>Docs</strong></a></li>
-        <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Appearance</strong></a>
+        <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Appearance</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Sizing</strong></a></li>
-                <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Resize</strong></a></li>
+                <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Sizing</strong></a></li>
+                <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Resize</strong></a></li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Content/ Settings</strong></a>
+         <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--sizing"><strong>Placeholder</strong></a>
+                <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Placeholder</strong></a>
                 </li>
             </ul>
         </li>
@@ -116,17 +116,6 @@ export default {
     },
   },
 };
-
-interface StorybookTextareaType extends BlrTextareaType {
-  storybookLabel: string;
-}
-
-const renderTextareaExample = (params: StorybookTextareaType) => html`
-  <div class="story-textarea">
-    <p>${params.storybookLabel}</p>
-    ${BlrTextareaRenderFunction(params)}
-  </div>
-`;
 
 export const BlrTextarea = ({
   textareaId,
@@ -228,7 +217,7 @@ BlrTextarea.args = {
   onSelect: () => action('onSelect'),
 };
 
-export const Sizing = () => {
+export const Sizes = () => {
   return html`
     <style>
       .wrapper {
@@ -258,27 +247,24 @@ export const Sizing = () => {
     <div class="wrapper">
       <div class="column">
         <div class="stories-textarea">
-          ${renderTextareaExample({
+          ${BlrTextareaRenderFunction({
             ...defaultParams,
-            storybookLabel: 'Storybook Label 1',
             theme: 'Light',
             size: 'sm',
             label: 'Text area SM',
             cols: 40,
             rows: 5,
           })}
-          ${renderTextareaExample({
+          ${BlrTextareaRenderFunction({
             ...defaultParams,
-            storybookLabel: 'Storybook Label 2',
             theme: 'Light',
             size: 'md',
             label: 'Text area MD',
             cols: 40,
             rows: 5,
           })}
-          ${renderTextareaExample({
+          ${BlrTextareaRenderFunction({
             ...defaultParams,
-            storybookLabel: 'Storybook Label 3',
             theme: 'Light',
             size: 'lg',
             label: 'Text area LG',
@@ -290,7 +276,7 @@ export const Sizing = () => {
     </div>
   `;
 };
-Sizing.parameters = {
+Sizes.parameters = {
   backgrounds: {
     default: 'Light',
   },
@@ -301,17 +287,17 @@ Sizing.parameters = {
   },
 };
 
-Sizing.storyName = 'Sizing';
+Sizes.storyName = 'Sizes';
 
 export const MeinBeispiel12 = () =>
   html`
     <div class="stories-textarea">
-      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Rest', theme: 'Dark' })}
-      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Hover', theme: 'Dark' })}
-      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Pressed', theme: 'Dark' })}
-      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Focus', theme: 'Dark', shouldFocus: true })}
-      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'Disabled', theme: 'Dark', disabled: true })}
-      ${renderTextareaExample({ ...defaultParams, storybookLabel: 'readOnly', theme: 'Dark', readonly: true })}
+      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark' })}
+      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark' })}
+      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark' })}
+      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', shouldFocus: true })}
+      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', disabled: true })}
+      ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', readonly: true })}
     </div>
   `;
 MeinBeispiel12.story = {
