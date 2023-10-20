@@ -62,13 +62,162 @@ const defaultParams: BlrTextareaType = {
 export default {
   title: 'Design System/Web Components/BlrTextarea',
   argTypes: {
+    //Appearance
     size: {
-      name: 'Size',
-      description: ' Description ',
+      name: 'size',
+      description: ' Select size variant of this component ',
       options: FormSizes,
       control: { type: 'radio' },
       table: {
         category: 'Appearance',
+      },
+    },
+    isResizeable: {
+      name: 'resize',
+      description: 'Choose if the text area is resizeable',
+      control: 'boolean',
+      table: {
+        category: 'Appearance',
+      },
+    },
+    cols: {
+      options: FormSizes,
+      control: { type: 'number' },
+      name: 'cols',
+      description: 'Defines the width of the text area',
+      defaultValue: '45',
+      table: {
+        category: 'Appearance',
+      },
+    },
+    rows: {
+      options: FormSizes,
+      control: { type: 'number' },
+      name: 'rows',
+      description: 'Defines the height of the text area',
+      defaultValue: '5',
+      table: {
+        category: 'Appearance',
+      },
+    },
+    minLength: {
+      name: 'minLength',
+      defaultValue: 0,
+      table: {
+        category: 'Appearance',
+      },
+    },
+    maxLength: {
+      name: 'maxLength',
+      defaultValue: 140,
+      table: {
+        category: 'Appearance',
+      },
+    },
+
+    //Content/ Settings
+    placeholder: {
+      name: 'placeholder',
+      defaultValue: 'Add a message here',
+      table: {
+        category: 'Content/ Settings',
+      },
+    },
+    value: {
+      name: 'value',
+      description: 'The text which was entered in the text area',
+      defaultValue: '',
+      control: {
+        type: 'text',
+        label: 'Enter Text',
+      },
+      table: {
+        category: 'Content/ Settings',
+      },
+    },
+
+    //States
+    disabled: {
+      name: 'disabled',
+      defaultValue: false,
+      table: {
+        category: 'States',
+      },
+    },
+    readonly: {
+      name: 'readonly',
+      defaultValue: false,
+      table: {
+        category: 'States',
+      },
+    },
+
+    //Dependencies
+    hasError: {
+      name: 'hasError',
+      defaultValue: false,
+      table: {
+        category: 'Validations',
+      },
+    },
+    errorMessage: {
+      table: {
+        category: 'Validations',
+      },
+      if: { arg: 'hasError', eq: true },
+    },
+    errorIcon: {
+      table: {
+        category: 'Validations',
+      },
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
+    },
+    hasLabel: {
+      name: 'hasLabel',
+      description: 'Show or hide the label',
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        category: 'Content/ Settings',
+      },
+    },
+    label: {
+      name: 'labelText',
+      description: 'The text which is displayed as the text areas label',
+      defaultValue: true,
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Content/ Settings',
+      },
+      if: { arg: 'hasLabel', eq: true },
+    },
+    labelAppendix: {
+      name: 'labelAppendixText',
+      description: 'The text which is displayed after the text label',
+      defaultValue: true,
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Content/ Settings',
+      },
+      if: { arg: 'hasLabel', eq: true },
+    },
+    showHint: {
+      name: 'hasHint',
+      description: 'Show or hide the hint message',
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        category: 'Content/ Settings',
       },
     },
     hintIcon: {
@@ -79,29 +228,28 @@ export default {
         category: 'Content/ Settings',
       },
     },
-    hintCounter: {
-      if: { arg: 'showCounter', eq: true },
-      table: {
-        category: 'Content/ Settings',
-      },
-    },
     hintText: {
       if: { arg: 'showHint', eq: true },
       table: {
         category: 'Content/ Settings',
       },
     },
-    errorIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-      if: { arg: 'hasError', eq: true },
+    showCounter: {
+      name: 'hasCounter',
+      description: 'Show or hide a counter which counts the entered characters.',
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        category: 'Content/ Settings',
+      },
     },
-
-    errorMessage: {
-      if: { arg: 'hasError', eq: true },
-    },
-
     warningLimitType: {
+      if: { arg: 'showCounter', eq: true },
+      table: {
+        category: 'Content/ Settings',
+      },
       name: 'Warning Limit Type',
       options: ['warningLimitInt', 'warningLimitPer'],
       control: {
@@ -114,6 +262,9 @@ export default {
     },
     // Only enabled if warningLimitType is Whole Number
     warningLimitInt: {
+      table: {
+        category: 'Content/ Settings',
+      },
       control: 'number',
       name: 'Warning Limit (Whole Number)',
       if: { arg: 'warningLimitType', eq: 'warningLimitInt' },
@@ -121,12 +272,16 @@ export default {
     },
     // Only enabled if warningLimitType is Percentage
     warningLimitPer: {
+      table: {
+        category: 'Content/ Settings',
+      },
       control: { type: 'range', min: 1, max: 100, step: 1 },
       name: 'Warning Limit (Percentage)',
       if: { arg: 'warningLimitType', eq: 'warningLimitPer' },
       description:
         'Please provide a percentage. Warning limit is calculated based on the percentage of the maximum length reached ((maximum length / 100) * percentage value)',
     },
+
     theme: {
       options: Themes,
       control: { type: 'select' },
