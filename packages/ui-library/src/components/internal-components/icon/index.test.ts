@@ -6,7 +6,7 @@ import { classMap } from 'lit/directives/class-map.js';
 const TEST_CLASS = 'test-class';
 
 describe('blr-icon', () => {
-  it('renders correctly', async () => {
+  it('containing the right className', async () => {
     const classes = classMap({
       [`${TEST_CLASS}`]: true,
     });
