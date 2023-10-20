@@ -32,7 +32,5 @@ export const BlrDivider = (params: BlrDividerType) => html`
 BlrDivider.storyName = 'BlrDivider';
 
 BlrDivider.args = {
-  size: 'md',
-  addMargin: false,
   theme: 'Light',
 };
