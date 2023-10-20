@@ -1,7 +1,5 @@
-import { html } from 'lit-html';
 import { BlrRadioGroupRenderFunction, BlrRadioGroupType } from './index';
 import { InputSizes } from '../../globals/constants';
-import './index';
 import { getIconName } from '../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -38,56 +36,8 @@ export default {
   },
 };
 
-export const BlrRadioGroup = ({
-  disabled,
-  checked,
-  size,
-  name,
-  required,
-  readonly,
-  onChange,
-  onBlur,
-  onFocus,
-  hasError,
-  errorIcon,
-  options,
-  layout,
-  showHint,
-  groupHintMessage,
-  hintIcon,
-  hideLabel,
-  showLegend,
-  showGroupErrorMessage,
-  groupErrorMessage,
-  groupErrorIcon,
-  theme,
-}: BlrRadioGroupType) =>
-  html`
-    ${BlrRadioGroupRenderFunction({
-      disabled,
-      checked,
-      size,
-      name,
-      required,
-      readonly,
-      onChange,
-      onBlur,
-      onFocus,
-      hasError,
-      errorIcon,
-      options,
-      layout,
-      showHint,
-      groupHintMessage,
-      hintIcon,
-      hideLabel,
-      showLegend,
-      showGroupErrorMessage,
-      groupErrorMessage,
-      groupErrorIcon,
-      theme,
-    })}
-  `;
+export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
+
 BlrRadioGroup.storyName = 'BlrRadioGroup';
 
 BlrRadioGroup.args = {

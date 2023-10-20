@@ -1,5 +1,4 @@
-import { html } from 'lit';
-
+import { html } from 'lit-html';
 import { BlrToolTipRenderFunction, BlrToolTipType } from './index';
 import { ToolTipVisibility, ToolTipPosition, ToolTipArrowPosition } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -26,33 +25,13 @@ export default {
   },
 };
 
-export const BlrToolTip = ({
-  theme,
-  text,
-  toolTipId,
-  placement,
-  visibility,
-  toolTipArrow,
-  elevation,
-  customCss,
-  itemRenderer,
-}: BlrToolTipType) =>
+export const BlrToolTip = (params: BlrToolTipType) =>
   html`
     <div
       style="height:500px; display: flex; justify-content: center; flex-direction: row; align-content: center; align-items: center;"
     >
       <p style="padding: 0px 3px; margin: 0px;"></p>
-      ${BlrToolTipRenderFunction({
-        theme,
-        text,
-        toolTipId,
-        placement,
-        visibility,
-        toolTipArrow,
-        elevation,
-        customCss,
-        itemRenderer,
-      })}
+      ${BlrToolTipRenderFunction(params)}
     </div>
   `;
 

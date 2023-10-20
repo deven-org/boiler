@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ButtonGroupSizes, ButtonsAlignmentVariants } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -39,40 +37,7 @@ export default {
   },
 };
 
-export const BlrTextButtonGroup = ({
-  label,
-  onClick,
-  buttons,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) =>
-  html`
-    ${BlrTextButtonGroupRenderFunction({
-      label,
-      onClick,
-      buttons,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-      alignment,
-    })}
-  `;
+export const BlrTextButtonGroup = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
@@ -123,40 +88,7 @@ BlrTextButtonGroup.args = {
   ],
 };
 
-export const VariantButtonGroupRight = ({
-  label,
-  onClick,
-  buttons,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) =>
-  html`
-    ${BlrTextButtonGroupRenderFunction({
-      label,
-      onClick,
-      buttons,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-      alignment,
-    })}
-  `;
+export const VariantButtonGroupRight = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 VariantButtonGroupRight.storyName = 'VariantButtonGroupRight';
 
@@ -207,40 +139,7 @@ VariantButtonGroupRight.args = {
   ],
 };
 
-export const VariantButtonGroupCenter = ({
-  label,
-  onClick,
-  buttons,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) =>
-  html`
-    ${BlrTextButtonGroupRenderFunction({
-      label,
-      onClick,
-      buttons,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-      alignment,
-    })}
-  `;
+export const VariantButtonGroupCenter = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 VariantButtonGroupCenter.storyName = 'VariantButtonGroupCenter';
 

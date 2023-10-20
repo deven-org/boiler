@@ -1,10 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-
 import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
 
 import { InputSizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -45,50 +42,7 @@ export default {
   },
 };
 
-export const BlrCheckbox = ({
-  label,
-  hasLabel,
-  checkInputId,
-  onBlur,
-  onFocus,
-  onChange,
-  disabled,
-  size,
-  checked,
-  indeterminate,
-  readonly,
-  hasError,
-  errorMessage,
-  errorIcon,
-  showHint,
-  hintIcon,
-  hintMessage,
-  handleChange,
-  theme,
-}: BlrCheckboxType) =>
-  html`
-    ${BlrCheckboxRenderFunction({
-      label,
-      hasLabel,
-      checkInputId,
-      onBlur,
-      onFocus,
-      onChange,
-      disabled,
-      size,
-      checked,
-      indeterminate,
-      readonly,
-      hasError,
-      errorMessage,
-      errorIcon,
-      showHint,
-      hintIcon,
-      hintMessage,
-      handleChange,
-      theme,
-    })}
-  `;
+export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
 
 BlrCheckbox.storyName = 'BlrCheckbox';
 

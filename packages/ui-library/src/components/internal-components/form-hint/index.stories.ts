@@ -3,7 +3,6 @@ import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, HintVariants } from '../../../globals/constants';
 import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
 
-import './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -31,8 +30,7 @@ export default {
   },
 };
 
-export const BlrFormHint = ({ message, icon, variant, size, childElement, theme }: BlrFormHintType) =>
-  BlrFormHintRenderFunction({ message, icon, variant, size, childElement, theme });
+export const BlrFormHint = (params: BlrFormHintType) => BlrFormHintRenderFunction(params);
 
 BlrFormHint.storyName = 'BlrFormHint';
 

@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
 import { BlrDividerRenderFunction, BlrDividerType } from './index';
 import { DividerVariations } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -24,20 +23,10 @@ export default {
   },
 };
 
-export const BlrDivider = ({ dividerDirectionVariant, theme }: BlrDividerType) => html`
-  ${dividerDirectionVariant === 'vertical'
-    ? html`<div style="height: 100px; display: inline-block;">
-        ${BlrDividerRenderFunction({
-          dividerDirectionVariant,
-          theme,
-        })}
-      </div> `
-    : html` <div style="width: 100%; display: inline-block;">
-        ${BlrDividerRenderFunction({
-          dividerDirectionVariant,
-          theme,
-        })}
-      </div>`}
+export const BlrDivider = (params: BlrDividerType) => html`
+  ${params.dividerDirectionVariant === 'vertical'
+    ? html`<div style="height: 100px; display: inline-block;">${BlrDividerRenderFunction(params)}</div> `
+    : html` <div style="width: 100%; display: inline-block;">${BlrDividerRenderFunction(params)}</div>`}
 `;
 
 BlrDivider.storyName = 'BlrDivider';

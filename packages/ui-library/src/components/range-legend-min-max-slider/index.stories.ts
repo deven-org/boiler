@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrRangeLegendMinMaxSliderType, BlrRangeLegendMinMaxSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -41,38 +39,8 @@ export default {
   },
 };
 
-export const BlrRangeLegendMinMaxSlider = ({
-  onBtnClick,
-  onChange,
-  rangeInputId,
-  startValue,
-  endValue,
-  list,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeLegendMinMaxSliderType) =>
-  html`${BlrRangeLegendMinMaxSliderRenderFunction({
-    onBtnClick,
-    onChange,
-    rangeInputId,
-    startValue,
-    endValue,
-    list,
-    stepFactor,
-    size,
-    btnVariant,
-    showLegend,
-    disabled,
-    incrementIcon,
-    decrementIcon,
-    theme,
-  })}`;
+export const BlrRangeLegendMinMaxSlider = (params: BlrRangeLegendMinMaxSliderType) =>
+  BlrRangeLegendMinMaxSliderRenderFunction(params);
 
 BlrRangeLegendMinMaxSlider.storyName = 'BlrRangeLegendMinMaxSlider';
 

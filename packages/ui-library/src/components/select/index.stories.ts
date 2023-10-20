@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrSelectRenderFunction, BlrSelectType } from './index';
 import { FormSizes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -56,50 +54,7 @@ export default {
   },
 };
 
-export const BlrSelect = ({
-  selectId,
-  onChange,
-  name,
-  options,
-  disabled,
-  size,
-  required,
-  errorMessage,
-  hintMessage,
-  showHint,
-  hintIcon,
-  hasError,
-  errorIcon,
-  labelAppendix,
-  showTrailingIcon,
-  trailingIcon,
-  hasLabel,
-  label,
-  theme,
-}: BlrSelectType) =>
-  html`
-    ${BlrSelectRenderFunction({
-      selectId,
-      onChange,
-      name,
-      options,
-      disabled,
-      size,
-      required,
-      errorMessage,
-      hintMessage,
-      hintIcon,
-      errorIcon,
-      showHint,
-      hasError,
-      labelAppendix,
-      showTrailingIcon,
-      trailingIcon,
-      hasLabel,
-      label,
-      theme,
-    })}
-  `;
+export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params);
 
 BlrSelect.storyName = 'BlrSelect';
 

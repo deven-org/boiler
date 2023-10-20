@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrRangeLegendSliderType, BlrRangeLegendSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -41,36 +39,7 @@ export default {
   },
 };
 
-export const BlrRangeLegendSlider = ({
-  onClickMinMax,
-  onChange,
-  rangeInputId,
-  initialValue,
-  list,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeLegendSliderType) =>
-  html`${BlrRangeLegendSliderRenderFunction({
-    onClickMinMax,
-    onChange,
-    rangeInputId,
-    initialValue,
-    list,
-    stepFactor,
-    size,
-    btnVariant,
-    showLegend,
-    disabled,
-    incrementIcon,
-    decrementIcon,
-    theme,
-  })}`;
+export const BlrRangeLegendSlider = (params: BlrRangeLegendSliderType) => BlrRangeLegendSliderRenderFunction(params);
 
 BlrRangeLegendSlider.storyName = 'BlrRangeLegendSlider';
 

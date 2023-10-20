@@ -1,7 +1,5 @@
-import { html } from 'lit-html';
 import { BlrRadioRenderFunction, BlrRadioType } from './index';
 import { InputSizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -28,42 +26,7 @@ export default {
   },
 };
 
-export const BlrRadio = ({
-  disabled,
-  checked,
-  size,
-  name,
-  required,
-  readonly,
-  onChange,
-  onBlur,
-  onFocus,
-  hasError,
-  errorIcon,
-  option,
-  showHint,
-  hintIcon,
-  theme,
-}: BlrRadioType) =>
-  html`
-    ${BlrRadioRenderFunction({
-      disabled,
-      checked,
-      size,
-      name,
-      required,
-      readonly,
-      onChange,
-      onBlur,
-      onFocus,
-      hasError,
-      errorIcon,
-      option,
-      showHint,
-      hintIcon,
-      theme,
-    })}
-  `;
+export const BlrRadio = (params: BlrRadioType) => BlrRadioRenderFunction(params);
 
 BlrRadio.storyName = 'BlrRadio';
 

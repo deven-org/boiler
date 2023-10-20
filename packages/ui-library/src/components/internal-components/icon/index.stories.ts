@@ -1,7 +1,6 @@
 import { html } from 'lit-html';
 import { IconKeys } from '@boiler/icons';
 
-import './index';
 import { BlrIcon as BlrIconClass, BlrIconRenderFunction } from './index';
 import { Sizes } from '../../../globals/constants';
 import { getIconName } from '../../../utils/get-icon-name';
@@ -23,7 +22,7 @@ export default {
 
 const allIcons = getIconName(IconKeys);
 
-export const BlrIcon = ({ size }: BlrIconClass) => {
+export const BlrIcon = (params: BlrIconClass) => {
   const classes = classMap({
     'icon-gallery-layout': true,
   });
@@ -32,7 +31,11 @@ export const BlrIcon = ({ size }: BlrIconClass) => {
     <ul class="icon-gallery icon-thumbnails">
       ${allIcons.map((icon) => {
         return html`<li>
-          ${BlrIconRenderFunction({ icon: calculateIconName(icon as string, size), size: size, classMap: classes })}
+          ${BlrIconRenderFunction({
+            icon: calculateIconName(icon as string, params.size),
+            size: params.size,
+            classMap: classes,
+          })}
           <span class="icon-label">${icon}</span>
         </li>`;
       })}
