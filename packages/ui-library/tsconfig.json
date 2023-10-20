@@ -15,5 +15,5 @@
     "strict": true
   },
   "include": ["src"],
-  "exclude": ["**/*.stories.ts", "**/__snapshots__/*", "src/**/*.config.js"]
+  "exclude": []
 }
