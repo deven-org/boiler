@@ -21,6 +21,7 @@ const sampleParams: BlrTextInputType = {
   showInputIcon: true,
   inputIcon: 'blr360Lg',
   theme: 'Light',
+  errorIcon: 'Peter',
 };
 
 describe('blr-text-input', () => {
