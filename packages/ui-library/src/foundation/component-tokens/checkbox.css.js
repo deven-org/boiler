@@ -1,12 +1,11 @@
 import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { Checkbox } = componentTokens.Forms;
-    const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const { Checkbox } = componentTokens.Forms;
+  const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 
-    return css`
+  return css`
       .blr-checkbox {
         display: flex;
         transition: all 0.25s ease 0s;
@@ -65,8 +64,8 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
               min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
               margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
               &:after {
-                width: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
-                height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
+                width: ${Checkbox.SM.Control.Icon.Sizing.Selected.Rest};
+                height: ${Checkbox.SM.Control.Icon.Sizing.Selected.Rest};
               }
               &:hover {
                 width: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
@@ -110,8 +109,8 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
               min-height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
               margin-top: ${Checkbox.MD.ControlWrapper.TopMargin};
               &:after {
-                width: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
-                height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
+                width: ${Checkbox.MD.Control.Icon.Sizing.Selected.Rest};
+                height: ${Checkbox.MD.Control.Icon.Sizing.Selected.Rest};
               }
               &:hover {
                 width: ${Checkbox.MD.Control.Background.Sizing.Selected.Hover};
@@ -155,8 +154,8 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
               min-height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
               margin-top: ${Checkbox.LG.ControlWrapper.TopMargin};
               &:after {
-                width: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
-                height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
+                width: ${Checkbox.LG.Control.Icon.Sizing.Selected.Rest};
+                height: ${Checkbox.LG.Control.Icon.Sizing.Selected.Rest};
               }
               &:hover {
                 width: ${Checkbox.LG.Control.Background.Sizing.Selected.Hover};
@@ -335,5 +334,4 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
         }
       }
     `;
-  }
-);
+});

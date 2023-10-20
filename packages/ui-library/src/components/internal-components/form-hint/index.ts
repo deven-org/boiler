@@ -1,13 +1,14 @@
 import { LitElement, TemplateResult, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { FormSizesType, HintVariantType } from '../../../globals/types';
+import { FormSizesType, HintVariantType, SizesType } from '../../../globals/types';
 import { BlrIconRenderFunction } from '../icon';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { styleCustom } from './index.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 const TAG_NAME = 'blr-form-hint';
@@ -37,6 +38,14 @@ export class BlrFormHint extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const iconSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Forms',
+      this.size.toUpperCase(),
+      'CaptionComponent',
+      'Icon',
+    ]).toLowerCase() as SizesType;
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -44,8 +53,11 @@ export class BlrFormHint extends LitElement {
         <div class="hint-container">
           <div class="icon-wrapper">
             ${BlrIconRenderFunction({
-              icon: calculateIconName(this.variant === 'hint' || this.variant === 'error' ? this.icon : '', 'sm'),
-              size: 'sm',
+              icon: calculateIconName(
+                this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
+                iconSizeVariant
+              ),
+              size: iconSizeVariant,
               classMap: iconClasses,
               hideAria: true,
             })}

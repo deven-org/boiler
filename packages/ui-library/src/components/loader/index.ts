@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { loadingSpinnerDark, loadingSpinnerLight } from '../../foundation/component-tokens/feedback.css';
-import { FeedbackVariantType, FormSizesType } from '../../globals/types';
+import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
@@ -13,7 +13,7 @@ const TAG_NAME = 'blr-loader';
 export class BlrLoader extends LitElement {
   static styles = [styleCustom];
 
-  @property() size?: FormSizesType = 'md';
+  @property() size?: ActionSizesType = 'md';
   @property() variant?: FeedbackVariantType;
   @property() loadingStatus!: string;
 
