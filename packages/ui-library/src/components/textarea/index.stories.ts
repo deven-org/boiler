@@ -151,8 +151,14 @@ export default {
         category: 'States',
       },
     },
-
-    //Dependencies
+    // Validation
+    required: {
+      name: 'required',
+      defaultValue: false,
+      table: {
+        category: 'Validations',
+      },
+    },
     hasError: {
       name: 'hasError',
       defaultValue: false,
@@ -174,6 +180,8 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasError', eq: true },
     },
+
+    //Dependencies
     hasLabel: {
       name: 'hasLabel',
       description: 'Show or hide the label',
@@ -280,6 +288,36 @@ export default {
       if: { arg: 'warningLimitType', eq: 'warningLimitPer' },
       description:
         'Please provide a percentage. Warning limit is calculated based on the percentage of the maximum length reached ((maximum length / 100) * percentage value)',
+    },
+
+    // Events
+    onChange: {
+      name: 'onChange',
+      action: 'onChange',
+      table: {
+        category: 'Events',
+      },
+    },
+    onFocus: {
+      name: 'onFocus',
+      action: 'onFocus',
+      table: {
+        category: 'Events',
+      },
+    },
+    onBlur: {
+      name: 'onBlur',
+      action: 'onBlur',
+      table: {
+        category: 'Events',
+      },
+    },
+    onSelect: {
+      name: 'onSelect',
+      action: 'onSelect',
+      table: {
+        category: 'Events',
+      },
     },
 
     theme: {
@@ -414,7 +452,7 @@ BlrTextarea.storyName = 'BlrTextarea-Docs';
 BlrTextarea.args = {
   theme: 'Light',
   size: 'md',
-  textareaId: '#2',
+
   cols: 40,
   rows: 4,
   minLength: 0,
@@ -440,6 +478,7 @@ BlrTextarea.args = {
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
+  onBlur: () => action('onBlur'),
 };
 
 // All Stories
