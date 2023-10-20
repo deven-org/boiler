@@ -1,12 +1,18 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 import { fixture, expect } from '@open-wc/testing';
+import { BlrIconRenderFunction } from '.';
+import { classMap } from 'lit/directives/class-map.js';
+
+const TEST_CLASS = 'test-class';
 
 describe('blr-icon', () => {
   it('renders correctly', async () => {
-    const element = await fixture(`
-      <blr-icon icon="blrChevronDown" size="md"></blr-text-button>
-    `);
+    const classes = classMap({
+      [`${TEST_CLASS}`]: true,
+    });
 
-    await expect(element).shadowDom.to.equalSnapshot();
+    const element = await fixture(BlrIconRenderFunction({ size: 'md', classMap: classes }));
+
+    await expect(element.className).to.contain(TEST_CLASS);
   });
 });

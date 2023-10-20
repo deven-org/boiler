@@ -14,8 +14,8 @@ const TAG_NAME = 'blr-icon';
 export class BlrIcon extends LitElement {
   static styles = [styleCustom, iconLight];
 
-  @property() icon!: IconType;
-  @property() size!: SizesType;
+  @property() icon: IconType = 'blr360Xs';
+  @property() size: SizesType = 'md';
 
   protected render() {
     if (IconMapping.hasOwnProperty(this.icon) && typeof IconMapping[this.icon] === 'function') {
