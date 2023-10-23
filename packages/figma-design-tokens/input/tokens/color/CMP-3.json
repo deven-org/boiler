@@ -1,0 +1,621 @@
+{
+  "SECTION 0": "// Aufbau der design tokens",
+
+  "colors": {
+    "SemanticGroup": {
+      "ComponentName": {
+        "Element--[SubElement]--TokenType": {
+          "Sentiment--ToggleState--UserInteraction": {
+            "value": "",
+            "type": "",
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "dimensions": {
+    "SemanticGroup": {
+      "ComponentName": {
+        "Element-[SubElement]-TokenType": {
+          "SizeVariant--UserInteraction": {
+            "value": "",
+            "type": "",
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+
+  "SECTION 1": "NamingConventions",
+
+  "TokeTypes": {
+    "TokenTypes-color": "BackgroundColor; BorderColor; IconColor; TextColor ",
+    "TokenTypes-dimensions": "Size, IconSize, BorderWidth, BorderRadius, PaddingTop, Width, Height..."
+  },
+
+  "Sentiments": "Default; Mute",
+
+  "ToggleStates": {
+    "Active": "Replaces Selected everywhere",
+    "Inactive": "Replaces Unselected everywhere"
+  },
+
+  "SizeVariants": "XS, SM, MD, LG, XL",
+
+  "UserInteractions": "Rest, Hover, Pressed...",
+
+  "SECTION 2": "// CMP tokens - dimensions und colors zusammengefasst, müssen aber in einzelne files später",
+
+  "Found Bug 1": "Radio und Checkbox sind eigentlich gleich. Aber das naming stimmt nicht überein (ContentRow vs MainContainer)",
+  "Found Bug 2": "Radio hat ContentCol.PaddingTop, aber checkbox nicht. Der token kann eigentlich weg",
+  "Found Bug 3": "Checkbox.Control hat keinen borderradius token",
+  "Found Bug 4": "Checkbox/Radio.MainContainer.ItemSpacing ist nicht klar ob horizontal oder vertical. Evntl besser Row nennen?",
+  "Outdated 1": "Dimensions/CMP:Select.IconPaddingRight tokens sind outdated? Ich glaube Input.ItemSpacing und Input.Padding sollte reichen",
+
+  "Forms": {
+    "Checkbox": {
+      "ContentCol--ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "ContentCol--PaddingTop": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "MainContainer-ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "ControlWrapper--PaddingTop": {
+        "SM": { "was named": "TopMarging" },
+        "MD": {},
+        "LG": {}
+      },
+      "Control--BackgroundColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--BorderColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--IconColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--BorderRadius": {
+        "SM": "currently missing",
+        "MD": "currently missing",
+        "LG": {}
+      },
+      "Control--IconSize": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--Size": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      }
+    },
+    "Radio": {
+      "ContentCol--ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "ContentCol--PaddingTop": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "MainContainer-ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "ControlWrapper--PaddingTop": {
+        "SM": { "was named": "TopMarging" },
+        "MD": {},
+        "LG": {}
+      },
+      "Control--BackgroundColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--BorderColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--IconColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--BorderRadius": {
+        "SM": "currently missing",
+        "MD": "currently missing",
+        "LG": {}
+      },
+      "Control--IconSize": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--Size": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      }
+    },
+    "RadioGroup": {
+      "Outdated 1": "RadioStack.PaddingTop - Statt dessen: LegendContainer.PaddingBottom",
+      "RadioStackVertical--ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "RadioStackHorizontal--ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "LegendContainer--PaddingBottom": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "CaptionContainer--ItemSpacing": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "CaptionContainer--PaddingTop": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      }
+    },
+    "Slider": {
+      "Thumb--BackgroundColor": {
+        "Rest": {
+          "value": "{q.surface.default}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.Rest"
+        },
+        "Hover": {
+          "value": "{q.surface.default}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.Hover"
+        },
+        "Pressed": {
+          "value": "{q.surface.default}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.Pressed"
+        },
+        "Focus": {
+          "value": "{q.surface.default}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.Focus"
+        },
+        "Disabled": {
+          "value": "{q.surface.default}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.Disabled"
+        },
+        "ReadOnly": {
+          "value": "{q.surface.default}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.ReadOnly"
+        },
+        "Error": {
+          "value": "{q.surface.error}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Fill.Error"
+        }
+      },
+      "Thumb--BorderColor": {
+        "Rest": {
+          "value": "{q.stroke.brand.beta.rest}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.Rest"
+        },
+        "Hover": {
+          "value": "{q.stroke.brand.beta.hover}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.Hover"
+        },
+        "Pressed": {
+          "value": "{q.stroke.brand.beta.pressed}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.Pressed"
+        },
+        "Focus": {
+          "value": "{q.stroke.brand.beta.rest}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.Focus"
+        },
+        "Disabled": {
+          "value": "{q.stroke.disabled.beta}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.Disabled"
+        },
+        "ReadOnly": {
+          "value": "{q.stroke.readonly}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.ReadOnly"
+        },
+        "Error": {
+          "value": "{q.stroke.error}",
+          "type": "color",
+          "description": "Forms.Slider.Thumb.Stroke.Error"
+        }
+      },
+      "Thumb--BorderWidth": {
+        "Rest": {
+          "value": "core.dimensionPX.2",
+          "type": "borderWidth"
+        },
+        "Hover": {
+          "value": "core.dimensionPX.4",
+          "type": "borderWidth"
+        },
+        "Pressed": {
+          "value": "Forms.Slider.Thumb.BorderWidth.Hover",
+          "type": "borderWidth"
+        },
+        "Focus": {
+          "value": "Forms.Slider.Thumb.BorderWidth.Rest",
+          "type": "borderWidth"
+        },
+        "Disabled": {
+          "value": "Forms.Slider.Thumb.BorderWidth.Rest",
+          "type": "borderWidth"
+        },
+        "ReadOnly": {
+          "value": "Forms.Slider.Thumb.BorderWidth.Rest",
+          "type": "borderWidth"
+        },
+        "Error": {
+          "value": "Forms.Slider.Thumb.BorderWidth.Rest",
+          "type": "borderWidth"
+        }
+      },
+      // Hier habe ich mich entschieden, dass die border tokens auch nochmal aufgebrochen dargestell werden (widht / color)
+      // Damit stellen wir sicher, dass wir die tokens in Figma nutzen können. Aber das sollte nochmal validiert werden.
+      "Thumb--Border": {
+        "Rest": {
+          "value": {
+            "color": "{Forms.Slider.Thumb.BorderColor.Rest}",
+            "width": "{Forms.Slider.Thumb.BorderWidth.Rest}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Hover": {},
+        "...": {}
+      },
+      "Thumb--Size": {
+        "Rest": {
+          "value": "{core.dimensionPX.14}",
+          "type": "sizing"
+        },
+        "Hover": {
+          "value": "{core.dimensionPX.20}",
+          "type": "sizing"
+        },
+        "Pressed": {
+          "value": "{Forms.Slider.Thumb.Size.Hover}",
+          "type": "sizing"
+        },
+        "Focus": {
+          "value": "{Forms.Slider.Thumb.Size.Rest}",
+          "type": "sizing"
+        },
+        "Disabled": {
+          "value": "Forms.Slider.Thumb.Size.Rest}",
+          "type": "sizing"
+        },
+        "ReadOnly": {
+          "value": "{Forms.Slider.Thumb.Size.Rest}",
+          "type": "sizing"
+        }
+      },
+      "Track--BorderColor": {
+        "Default--Active": {
+          "value": "{q.content.onbrand.beta.rest}",
+          "type": "color"
+        },
+        "Default--Inactive": {
+          "value": "{q.surface.brand.secondary.rest}",
+          "type": "color"
+        },
+        "Mute--Active": {
+          "value": "{q.content.ondisabled.alpha}",
+          "type": "color"
+        },
+        "Mute--Inactive": {
+          "value": "{q.surface.disabled.alpha}",
+          "type": "color"
+        }
+      },
+      "Track--BorderWidth": {
+        "Default--Active": {
+          "value": "{core.dimensionPX.4}",
+          "type": "borderWidth"
+        },
+        "Default--Inactive": {
+          "value": "{core.dimensionPX.4}",
+          "type": "color"
+        },
+        "Mute--Active": {
+          "value": "{core.dimensionPX.4}",
+          "type": "color"
+        },
+        "Mute--Inactive": {
+          "value": "{core.dimensionPX.4}",
+          "type": "color"
+        }
+      },
+      // Hier ist ebenfalls der border token aufgebrochen
+      "Track--Border": {
+        "Default--Active": {
+          "value": {
+            "color": "{Forms.Slider.Track.BorderColor.Default.Active.}",
+            "width": "{Forms.Slider.Track.BorderWidth.Default.Active.}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Default--Inactive": {
+          "value": {
+            "color": "{Forms.Slider.Track.BorderColor.Default.Inactive.}",
+            "width": "{Forms.Slider.Track.BorderWidth.Default.Inactive.}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Mute--Active": {
+          "value": {
+            "color": "{Forms.Slider.Track.BorderColor.Mute.Active.}",
+            "width": "{Forms.Slider.Track.BorderWidth.Mute.Active.}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Mute--Inactive": {
+          "value": {
+            "color": "{Forms.Slider.Track.BorderColor.Mute.Inactive.}",
+            "width": "{Forms.Slider.Track.BorderWidth.Mute.Inactive.}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      },
+      "TickMark-BackgroundColor": {
+        "Default--Active": {
+          "value": "{q.surface.default}",
+          "type": "color"
+        },
+        "Default--Inactive": {
+          "value": "{Forms.Slider.TickMark.BackgroundColor.Default.Active}",
+          "type": "color"
+        },
+        "Mute--Active": {
+          "value": "{Forms.Slider.TickMark.BackgroundColor.Default.Active}",
+          "type": "color"
+        },
+        "Mute--Inactive": {
+          "value": "{Forms.Slider.TickMark.BackgroundColor.Default.Active}",
+          "type": "color"
+        }
+      },
+      "TickMark--BorderColor": {
+        "Default--Active": {
+          "value": "{q.content.onbrand.beta.rest}",
+          "type": "color"
+        },
+        "Default--Inactive": {
+          "value": "{q.surface.brand.secondary.rest}",
+          "type": "color"
+        },
+        "Mute--Active": {
+          "value": "{q.content.ondisabled.alpha}",
+          "type": "color"
+        },
+        "Mute--Inactive": {
+          "value": "{q.surface.disabled.alpha}",
+          "type": "color"
+        }
+      },
+      "TickMark--BorderWidth": {
+        "Default--Active": {
+          "value": "{core.dimensionPX.1}",
+          "type": "borderWidth"
+        },
+        "Default--Inactive": {
+          "value": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+          "type": "borderWidth"
+        },
+        "Mute--Active": {
+          "value": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+          "type": "borderWidth"
+        },
+        "Mute--Inactive": {
+          "value": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+          "type": "borderWidth"
+        }
+      },
+      "TickMark--Border": {
+        "Default--Active": {
+          "value": {
+            "color": "{Forms.Slider.TickMark.BorderColor.Default.Active}",
+            "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Default--Inactive": {
+          "value": {
+            "color": "{Forms.Slider.TickMark.BorderColor.Default.Inactive}",
+            "width": "{Forms.Slider.TickMark.BorderWidth.Default.Inactive}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Mute--Active": {
+          "value": {
+            "color": "{Forms.Slider.TickMark.BorderColor.Mute.Active}",
+            "width": "{Forms.Slider.TickMark.BorderWidth.Mute.Active}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "Mute--Inactive": {
+          "value": {
+            "color": "{Forms.Slider.TickMark.BorderColor.Mute.Inactive}",
+            "width": "{Forms.Slider.TickMark.BorderWidth.Mute.Inactive}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      },
+      // extending tickmark-size to match it's siblings better
+      "TickMark--Size": {
+        "Default--Active": {
+          "value": "{core.dimensionPX.6}",
+          "type": "borderWidth"
+        },
+        "Default--Inactive": {
+          "value": "{Forms.Slider.TickMark.Size.Default.Active}",
+          "type": "borderWidth"
+        },
+        "Mute--Active": {
+          "value": "{Forms.Slider.TickMark.Size.Default.Active}",
+          "type": "borderWidth"
+        },
+        "Mute--Inactive": {
+          "value": "{Forms.Slider.TickMark.Size.Default.Active}",
+          "type": "borderWidth"
+        }
+      },
+      "Legend--TextColor": {
+        "Default": {
+          "value": "{q.content.ondefault.beta}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{q.content.ondisabled.alpha}",
+          "type": "color"
+        }
+      }
+    },
+    "ToggleSwitch": {
+      "Bug 1": "Der Token ToggleSwitch.A11yOffBorderRadius klingt komisch und kann evtl weg",
+      "Bug 2": "Die ToggleSwitch.[scale].Gap tokens sind unklar. Horizontal oder Vertical? ",
+      "Bug 3": "Control--LabelGap sollte eher ?ParentContainer.ItemSpacing heißen ",
+      "Control--BackgroundColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--BorderColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--Width": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--Height": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--Padding": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--AY11Icon--IconColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--AY11Icon--Size": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--AY11IconContainer--PaddingLeftRight": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--Knob--BackgroundColor": {
+        "Active--Rest": {},
+        "Active--Hover": {},
+        "Inactive--Rest": {},
+        "Inactive--Hover": {}
+      },
+      "Control--Knob--Size": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "Control--LabelGap": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "???--Gap": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      },
+      "ContentCol--Gap": {
+        "SM": {},
+        "MD": {}
+      }
+    },
+    "TextArea": {
+      "Input--MinHeight": {
+        "SM": {},
+        "MD": {},
+        "LG": {}
+      }
+    }
+  }
+}
+
+// mit CMP.Forms bin ich durch, zT müssen noch ein par values rübergeholt werden. Jetzt müssen mehr komponenten betrachtet werden
+
+// Kann man im naming zwischen horizontalem und verticalem itemSpacing unterscheiden?
+
+// Wie liest Figma border tokens? Können die direkt auf nodes angewandt werden?
+
+// Good practice: Immer wenn die values gleich sind, wird der erste Token (idR "Rest") referenziert
+
+// Siblings should use the same "sentiment--toggleState--UserInteraction" pattern.
