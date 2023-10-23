@@ -517,7 +517,11 @@ Sizes.parameters = {
   backgrounds: {
     default: 'Light',
   },
+  //manual Code integration
   docs: {
+    source: {
+      code: '<blr-textarea label="Text area LG", size="lg"></blr-textarea>',
+    },
     description: {
       story: '<h4>Sizes</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
     },
