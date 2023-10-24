@@ -5,12 +5,12 @@ const { TextButton } = componentTokens.Action;
 
 export const styleCustom = css`
   .blr-text-button {
-    all: inital;
     align-items: center;
     justify-content: center;
     display: inline-flex;
     cursor: pointer;
     outline-offset: -2px;
+    position: relative;
   }
 
   .blr-text-button:disabled {
@@ -46,5 +46,15 @@ export const styleCustom = css`
   .blr-text-button.xl {
     gap: ${TextButton.XL.ItemSpacing};
     padding: ${TextButton.XL.Padding};
+  }
+
+  .loading-class-icons,
+  .loading-class-label {
+    color: transparent;
+  }
+
+  .loader-class {
+    position: absolute;
+    display: inline-flex;
   }
 `;

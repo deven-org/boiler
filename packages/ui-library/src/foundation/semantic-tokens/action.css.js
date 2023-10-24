@@ -7,7 +7,7 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
   return css`
     .blr-semantic-action {
       border-radius: ${BorderRadius};
-      outline-style: solid;
+      border: none;
 
       &.xs {
         font-family: ${XS.Label.fontFamily}, sans-serif;
@@ -46,8 +46,7 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
 
       &.cta {
         background-color: ${CTA.SurfaceFill.Rest};
-        outline-color: ${CTA.SurfaceStroke.Rest};
-        outline-width: ${CTA.SurfaceStroke.width};
+        outline: ${CTA.Rest.style} ${CTA.Rest.width} ${CTA.Rest.color};
         color: ${CTA.Icon.Rest};
 
         &:hover {
@@ -66,7 +65,7 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
 
         &:disabled {
           background-color: ${CTA.SurfaceFill.Disabled};
-          color: ${CTA.SurfaceFill.Disabled};
+          color: ${CTA.Label.Disabled};
           outline-color: ${CTA.SurfaceStroke.Hover};
           outline-width: ${CTA.SurfaceStroke.width};
         }
@@ -74,36 +73,32 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
 
       &.primary {
         background-color: ${Primary.SurfaceFill.Rest};
-        outline-color: ${Primary.SurfaceStroke.Rest};
-        outline-width: ${Primary.Rest.width};
+        outline: ${Primary.Rest.style} ${Primary.Rest.width} ${Primary.Rest.color};
         color: ${Primary.Icon.Rest};
 
         &:hover {
           background-color: ${Primary.SurfaceFill.Hover};
           color: ${Primary.SurfaceFill.Disabled};
-          outline-color: ${Primary.SurfaceStroke.Hover};
-          outline-width: ${Primary.SurfaceStroke.width};
+          outline: ${Primary.Hover.style} ${Primary.Hover.width} ${Primary.Hover.color};
         }
 
         &:active {
           background-color: ${Primary.SurfaceFill.Pressed};
-          color: ${Primary.SurfaceFill.Disabled};
+          color: ${Primary.SurfaceFill.Rest};
           outline-color: ${Primary.SurfaceStroke.Hover};
           outline-width: ${Primary.SurfaceStroke.width};
         }
 
         &:disabled {
           background-color: ${Primary.SurfaceFill.Disabled};
-          color: ${Primary.SurfaceFill.Disabled};
-          outline-color: ${Primary.SurfaceStroke.Hover};
-          outline-width: ${Primary.SurfaceStroke.width};
+          color: ${Primary.Label.Disabled};
+          outline: ${Primary.Disabled.style} ${Primary.Disabled.width} ${Primary.Disabled.color};
         }
       }
 
       &.secondary {
         background-color: ${Secondary.SurfaceFill.Rest};
-        outline-color: ${Secondary.SurfaceStroke.Rest};
-        outline-width: ${Secondary.Rest.width};
+        outline: ${Secondary.Rest.style} ${Secondary.Rest.width} ${Secondary.Rest.color};
         color: ${Secondary.Icon.Rest};
 
         &:hover {
@@ -120,15 +115,14 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
 
         &:disabled {
           background-color: ${Secondary.SurfaceFill.Disabled};
-          outline-color: ${Secondary.SurfaceStroke.Disabled};
+          outline: ${Secondary.Disabled.style} ${Secondary.Disabled.width} ${Secondary.Disabled.color};
           color: ${Secondary.Icon.Disabled};
         }
       }
 
       &.silent {
         background-color: ${Silent.SurfaceFill.Rest};
-        outline-color: ${Silent.SurfaceStroke.Rest};
-        outline-width: ${Silent.Rest.width};
+        outline: ${Silent.Rest.style} ${Silent.Rest.width} ${Silent.Rest.color};
         color: ${Silent.Icon.Rest};
 
         &:hover {
@@ -144,16 +138,15 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
         }
 
         &:disabled {
-          background-color: ${Silent.SurfaceFill.Pressed};
+          background-color: ${Silent.SurfaceFill.Rest};
           color: ${Silent.Icon.Disabled};
-          outline-color: ${Silent.SurfaceStroke.Hover};
+          outline: ${Silent.Disabled.style} ${Silent.Disabled.width} ${Silent.Disabled.color};
         }
       }
 
       &.destructive {
         background-color: ${Destructive.SurfaceFill.Rest};
-        outline-color: ${Destructive.SurfaceStroke.Rest};
-        outline-width: ${Destructive.Rest.width};
+        outline: ${Destructive.Rest.style} ${Destructive.Rest.width} ${Destructive.Rest.color};
         color: ${Destructive.Icon.Rest};
 
         &:hover {
@@ -177,8 +170,7 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
 
       &.encourage {
         background-color: ${Encourage.SurfaceFill.Rest};
-        outline-color: ${Encourage.SurfaceStroke.Rest};
-        outline-width: ${Encourage.Rest.width};
+        outline: ${Encourage.Rest.style} ${Encourage.Rest.width} ${Encourage.Rest.color};
         color: ${Encourage.Icon.Rest};
 
         &:hover {
