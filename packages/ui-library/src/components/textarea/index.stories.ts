@@ -60,7 +60,7 @@ const defaultParams: BlrTextareaType = {
 
 //Main Showcase Storybook Textarea
 export default {
-  title: 'Design System/Web Components/BlrTextarea',
+  title: 'Design System/Web Components/Text area',
   argTypes: {
     //Appearance
     size: {
@@ -447,7 +447,7 @@ export const BlrTextarea = ({
         theme,
       })}
     </div> `;
-BlrTextarea.storyName = 'BlrTextarea-Docs';
+BlrTextarea.storyName = 'TextArea';
 
 BlrTextarea.args = {
   theme: 'Light',
@@ -458,8 +458,9 @@ BlrTextarea.args = {
   minLength: 0,
   maxLength: 140,
   value: '',
+  hasLabel: true,
   label: 'Share your feedback',
-  labelAppendix: 'optional',
+  labelAppendix: '(optional)',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
