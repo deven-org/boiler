@@ -64,7 +64,7 @@ export class BlrTextButtonGroup extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="wrapper ${alignmentClasses} blr-button-group">
-        ${this.buttons.map((button) => {
+        ${this.buttons?.map((button) => {
           const buttonVariant = button.buttonVariant || this.variant;
           const buttonClasses = classMap({
             [`${buttonVariant}`]: buttonVariant,

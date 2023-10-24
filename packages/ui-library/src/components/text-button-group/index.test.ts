@@ -1,4 +1,5 @@
-import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
+import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction, BlrTextButtonGroup } from './index';
+import { html } from 'lit-html';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -53,6 +54,12 @@ const sampleParams: BlrTextButtonGroupType = {
 };
 
 describe('blr-text-button-group', () => {
+  let component: BlrTextButtonGroup;
+
+  beforeEach(async () => {
+    component = await fixture(html`<blr-text-button-group>I am a button from button group</blr-text-button-group>`);
+  });
+
   it('is having a button containing the right className', async () => {
     const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
 
@@ -61,5 +68,19 @@ describe('blr-text-button-group', () => {
     const className = button?.className;
 
     expect(className).to.contain('blr-text-button-group');
+  });
+
+  it('has an action variant', async () => {
+    const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
+    const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
+
+    expect(button?.textContent?.trim().toLocaleLowerCase()).to.be.oneOf([
+      'primary',
+      'secondary',
+      'cta',
+      'silent',
+      'destructive',
+      'encourage',
+    ]);
   });
 });
