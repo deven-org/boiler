@@ -2,9 +2,8 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../../globals/types';
-import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { counterDark, counterLight } from '../../../foundation/component-tokens/feedback.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { counterLight, counterDark } from './index.css';
 
 @customElement('blr-counter')
 export class BlrCounter extends LitElement {
@@ -17,18 +16,20 @@ export class BlrCounter extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, counterLight] : [formDark, counterDark];
+    const dynamicStyles = this.theme === 'Light' ? [counterLight] : [counterDark];
 
     const classes = classMap({
       'blr-counter': true,
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size,
+      [this.variant]: this.variant,
+      [this.size]: this.size,
     });
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
+    return html`
+      <style>
+        ${dynamicStyles}
       </style>
-      <div class=${classes}>${this.current} / ${this.max}</div>`;
+      <div class=${classes}>${this.current} / ${this.max}</div>
+    `;
   }
 }
 

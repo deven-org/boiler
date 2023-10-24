@@ -17,6 +17,9 @@ export default {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
+    hintMessage: {
+      if: { arg: 'showHint', eq: true },
+    },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -24,9 +27,6 @@ export default {
     },
     errorMessage: {
       if: { arg: 'hasError', eq: true },
-    },
-    hintMessage: {
-      if: { arg: 'showHint', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
@@ -108,15 +108,15 @@ BlrSelect.args = {
   name: 'Text Input',
   hasLabel: true,
   showHint: false,
-  hintMessage: 'This is a hint Message',
-  hintIcon: undefined,
+  hintMessage: 'This is a hint message',
+  hintIcon: 'blrInfo',
   label: 'Label',
   labelAppendix: '(Optional)',
   showTrailingIcon: true,
   size: 'md',
   hasError: false,
-  errorMessage: '',
-  errorIcon: undefined,
+  errorMessage: 'This is an error message',
+  errorIcon: 'blrInfo',
   disabled: false,
   required: false,
   selectId: 'Peter',

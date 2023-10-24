@@ -2,8 +2,6 @@
 import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, HintVariants } from '../../../globals/constants';
 import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
-
-import './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {

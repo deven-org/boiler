@@ -2,7 +2,8 @@ import { css } from "nested-css-to-flat/lit-css";
 
 export const styleCustom = css`
   .blr-text-input {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
   }
 
