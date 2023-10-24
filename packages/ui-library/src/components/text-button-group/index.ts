@@ -48,11 +48,21 @@ export class BlrTextButtonGroup extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const loaderIconClasses = classMap({
+      'loading-class-icons': this.loading,
+    });
+
+    const labelClasses = classMap({
+      'loading-class-label': this.loading,
+    });
+
     const loaderVariant = determineLoaderVariant(this.variant);
-    const loaderSize = getComponentConfigToken([
+
+    const loaderSizeVariant = getComponentConfigToken([
+      'SizeVariant',
       'Action',
       this.size.toUpperCase(),
-      'LoaderSize',
+      'Loader',
     ]).toLowerCase() as FormSizesType;
 
     const iconSizeVariant = getComponentConfigToken([
@@ -70,45 +80,54 @@ export class BlrTextButtonGroup extends LitElement {
       <div class="wrapper ${alignmentClasses} blr-button-group">
         ${this.buttons.map((button) => {
           const buttonVariant = button.buttonVariant || this.variant;
+
           const buttonClasses = classMap({
             [`${buttonVariant}`]: buttonVariant,
             [`${this.size}`]: this.size || 'md',
             [`${this.alignment}`]: this.alignment || 'center',
+            'blr-semantic-action': true,
+            'blr-text-button-group': true,
           });
+
+          const labelAndIconGroup = html`
+            ${this.leadingIcon &&
+            html`${BlrIconRenderFunction({
+              icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: loaderIconClasses,
+            })}`}
+            <span class=${labelClasses}>${button.label}</span>
+            ${this.trailingIcon &&
+            html`${BlrIconRenderFunction({
+              icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: loaderIconClasses,
+            })}`}
+          `;
+
           return html`
             <button
-              class="blr-semantic-action blr-text-button blr-text-button-group ${buttonClasses}"
+              class="${buttonClasses}"
               @click="${this.onClick}"
               @blur="${this.onBlur}"
               ?disabled="${this.disabled}"
               id=${this.buttonId || nothing}
             >
               ${this.loading
-                ? html` ${BlrLoaderRenderFunction({
-                    size: loaderSize,
-                    variant: loaderVariant,
-                    loadingStatus: button.loadingStatus,
-                    theme: this.theme,
-                  })}`
-                : html`
-                    ${this.leadingIcon &&
-                    html`
-                      ${BlrIconRenderFunction({
-                        icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-                        size: iconSizeVariant,
-                        hideAria: true,
+                ? html`
+                    <div class="loader-class ${loaderIconClasses}">
+                      ${BlrLoaderRenderFunction({
+                        size: loaderSizeVariant,
+                        variant: loaderVariant,
+                        loadingStatus: this.loadingStatus,
+                        theme: this.theme,
                       })}
-                    `}
-                    <span>${button.label}</span>
-                    ${this.trailingIcon &&
-                    html`
-                      ${BlrIconRenderFunction({
-                        icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-                        size: iconSizeVariant,
-                        hideAria: true,
-                      })}
-                    `}
-                  `}
+                    </div>
+                    ${labelAndIconGroup}
+                  `
+                : html` ${labelAndIconGroup} `}
             </button>
           `;
         })}
