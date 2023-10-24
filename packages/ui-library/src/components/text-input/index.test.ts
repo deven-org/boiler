@@ -12,6 +12,7 @@ const sampleParams: BlrTextInputType = {
   type: 'text',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   maxLength: 140,
+  errorIcon: 'blrInfoLg',
   errorMessage: "OMG it's an error",
   placeholder: 'Type your message here ..',
   hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',

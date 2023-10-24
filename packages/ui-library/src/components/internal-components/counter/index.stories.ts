@@ -3,8 +3,6 @@ import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { CounterVariants, FormSizes } from '../../../globals/constants';
 import { BlrCounterRenderFunction, BlrCounterType } from './index';
 
-import './index';
-
 export default {
   title: 'Design System/Internal Components/BlrCounterType',
   argTypes: {

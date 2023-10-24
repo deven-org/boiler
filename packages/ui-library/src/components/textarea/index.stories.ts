@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 
@@ -161,7 +160,7 @@ BlrTextarea.args = {
 
   errorIcon: undefined,
   hasError: false,
-  errorMessage: ' ',
+  errorMessage: 'This is an error message',
 
   isResizeable: true,
 

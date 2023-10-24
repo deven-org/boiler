@@ -57,5 +57,5 @@ export const BlrFormLabelRenderFunction = ({
     .forValue=${forValue}
     .theme=${theme}
     .variant=${variant}
-  ></blr-form-hint>`;
+  ></blr-form-label>`;
 };
