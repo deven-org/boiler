@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as StyleTextButtonGroupCustom } from './index.css';
 import { styleCustom as StyleTextButtonCustom } from '../text-button/index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
@@ -12,6 +12,7 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 export interface ButtonOption {
@@ -19,15 +20,17 @@ export interface ButtonOption {
   buttonVariant?: ActionVariantType;
 }
 
-@customElement('blr-text-button-group')
+const TAG_NAME = 'blr-text-button-group';
+
+@customElement(TAG_NAME)
 export class BlrTextButtonGroup extends LitElement {
   static styles = [StyleTextButtonGroupCustom, StyleTextButtonCustom];
 
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: IconType;
-  @property() trailingIcon?: IconType;
+  @property() leadingIcon?: SizelessIconType;
+  @property() trailingIcon?: SizelessIconType;
   @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
@@ -91,20 +94,20 @@ export class BlrTextButtonGroup extends LitElement {
 
           const labelAndIconGroup = html`
             ${this.leadingIcon &&
-            html`${BlrIconRenderFunction({
+            BlrIconRenderFunction({
               icon: calculateIconName(this.leadingIcon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
               classMap: loaderIconClasses,
-            })}`}
+            })}
             <span class=${labelClasses}>${button.label}</span>
             ${this.trailingIcon &&
-            html`${BlrIconRenderFunction({
+            BlrIconRenderFunction({
               icon: calculateIconName(this.trailingIcon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
               classMap: loaderIconClasses,
-            })}`}
+            })}
           `;
 
           return html`
@@ -138,36 +141,5 @@ export class BlrTextButtonGroup extends LitElement {
 
 export type BlrTextButtonGroupType = Omit<BlrTextButtonGroup, keyof LitElement>;
 
-export const BlrTextButtonGroupRenderFunction = ({
-  label,
-  onClick,
-  onBlur,
-  buttons,
-  leadingIcon,
-  trailingIcon,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) => {
-  return html`<blr-text-button-group
-    .label=${label}
-    .onClick=${onClick}
-    .onBlur=${onBlur}
-    .leadingIcon=${leadingIcon}
-    .trailingIcon=${trailingIcon}
-    .loading=${loading}
-    .disabled=${disabled}
-    .buttonId=${buttonId}
-    .variant=${variant}
-    .size=${size}
-    .loadingStatus=${loadingStatus}
-    .theme=${theme}
-    .alignment=${alignment}
-    .buttons=${buttons}
-  ></blr-text-button-group>`;
-};
+export const BlrTextButtonGroupRenderFunction = (params: BlrTextButtonGroupType) =>
+  genericBlrComponentRenderer<BlrTextButtonGroupType>(TAG_NAME, { ...params });

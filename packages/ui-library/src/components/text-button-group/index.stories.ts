@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ButtonGroupSizes, ButtonsAlignmentVariants } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -39,46 +37,13 @@ export default {
   },
 };
 
-export const BlrTextButtonGroup = ({
-  label,
-  onClick,
-  buttons,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) =>
-  html`
-    ${BlrTextButtonGroupRenderFunction({
-      label,
-      onClick,
-      buttons,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-      alignment,
-    })}
-  `;
+export const BlrTextButtonGroup = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
-BlrTextButtonGroup.args = {
+const args: BlrTextButtonGroupType = {
   theme: 'Light',
-  alignment: 'flex-start',
+  alignment: 'left',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
@@ -97,7 +62,7 @@ BlrTextButtonGroup.args = {
       disabled: false,
       buttonId: 'button-id-1',
       trailingIcon: 'blr360',
-      buttonVariant: '',
+      buttonVariant: undefined,
       loading: false,
     },
     {
@@ -106,7 +71,7 @@ BlrTextButtonGroup.args = {
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-2',
-      buttonVariant: '',
+      buttonVariant: undefined,
       trailingIcon: 'blr360',
       loading: false,
     },
@@ -116,53 +81,22 @@ BlrTextButtonGroup.args = {
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',
-      buttonVariant: '',
+      buttonVariant: undefined,
       trailingIcon: 'blr360',
       loading: false,
     },
   ],
 };
 
-export const VariantButtonGroupRight = ({
-  label,
-  onClick,
-  buttons,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) =>
-  html`
-    ${BlrTextButtonGroupRenderFunction({
-      label,
-      onClick,
-      buttons,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-      alignment,
-    })}
-  `;
+BlrTextButtonGroup.args = args;
+
+export const VariantButtonGroupRight = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 VariantButtonGroupRight.storyName = 'VariantButtonGroupRight';
 
-VariantButtonGroupRight.args = {
+const args2: BlrTextButtonGroupType = {
   theme: 'Light',
-  alignment: 'flex-end',
+  alignment: 'right',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
@@ -207,44 +141,13 @@ VariantButtonGroupRight.args = {
   ],
 };
 
-export const VariantButtonGroupCenter = ({
-  label,
-  onClick,
-  buttons,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-  alignment,
-}: BlrTextButtonGroupType) =>
-  html`
-    ${BlrTextButtonGroupRenderFunction({
-      label,
-      onClick,
-      buttons,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-      alignment,
-    })}
-  `;
+VariantButtonGroupRight.args = args2;
+
+export const VariantButtonGroupCenter = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 VariantButtonGroupCenter.storyName = 'VariantButtonGroupCenter';
 
-VariantButtonGroupCenter.args = {
+const args3: BlrTextButtonGroupType = {
   theme: 'Light',
   size: 'md',
   variant: 'destructive',
@@ -290,3 +193,5 @@ VariantButtonGroupCenter.args = {
     },
   ],
 };
+
+VariantButtonGroupCenter.args = args3;

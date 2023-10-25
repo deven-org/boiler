@@ -1,4 +1,3 @@
-import { html } from 'lit-html';
 import { BlrTabBarRenderFunction, BlrTabBarType } from './index';
 import {
   FormSizes,
@@ -9,7 +8,6 @@ import {
   TabContentVariants,
   TabVariants,
 } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -57,56 +55,11 @@ export default {
   },
 };
 
-export const BlrTabBar = ({
-  _navList,
-  _navItems,
-  _navItemsSlots,
-  _panels,
-  tabs,
-  overflowVariantStandard,
-  overflowVariantFullWidth,
-  iconPosition,
-  variant,
-  tabContent,
-  alignment,
-  size,
-  onChange,
-  onBlur,
-  onFocus,
-  showDivider,
-  icon,
-  theme,
-  onClick,
-  scrollTab,
-}: BlrTabBarType) =>
-  html`
-    ${BlrTabBarRenderFunction({
-      _navList,
-      _navItems,
-      _navItemsSlots,
-      _panels,
-      tabs,
-      overflowVariantStandard,
-      overflowVariantFullWidth,
-      iconPosition,
-      variant,
-      tabContent,
-      alignment,
-      size,
-      onChange,
-      onBlur,
-      onFocus,
-      showDivider,
-      icon,
-      theme,
-      onClick,
-      scrollTab,
-    })}
-  `;
+export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(params);
 
 BlrTabBar.storyName = 'BlrTabBar';
 
-BlrTabBar.args = {
+const args: BlrTabBarType = {
   theme: 'Light',
   tabs: [
     {
@@ -175,3 +128,5 @@ BlrTabBar.args = {
   iconPosition: 'leading',
   alignment: 'left',
 };
+
+BlrTabBar.args = args;

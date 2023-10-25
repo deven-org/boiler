@@ -16,34 +16,37 @@ import {
   SizesType,
 } from '../../globals/types';
 import { BlrIconRenderFunction } from '../internal-components/icon';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrDividerRenderFunction } from '../divider';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-tab-bar')
+const TAG_NAME = 'blr-tab-bar';
+
+@customElement(TAG_NAME)
 export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
   @query('.blr-tab-bar')
-  _navList!: HTMLElement;
+  protected _navList!: HTMLElement;
 
   @queryAll('.nav-list li')
-  _navItems!: HTMLElement[];
+  protected _navItems!: HTMLElement[];
 
   @queryAll('slot[name=tab]')
-  _navItemsSlots!: HTMLElement[];
+  protected _navItemsSlots!: HTMLElement[];
 
   @queryAll('[role=tabpanel]')
-  _panels!: HTMLElement[];
+  protected _panels!: HTMLElement[];
 
   @property() tabs!: TabType[];
   @property() overflowVariantStandard!: OverflowVariantTypeStandard;
   @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
   @property() iconPosition: IconPositionVariant = 'leading';
-  @property() icon: IconType = 'blr360Sm';
+  @property() icon: SizelessIconType = 'blr360Sm';
   @property() variant: TabVariantType = 'standard';
   @property() tabContent: TabContentVariantType = 'labelOnly';
   @property() alignment: TabAlignmentVariantType = 'left';
@@ -56,7 +59,7 @@ export class BlrTabBar extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  scrollTab = (direction: string, speed: number, distance: number) => {
+  protected scrollTab = (direction: string, speed: number, distance: number) => {
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
       if (direction === 'left') {
@@ -193,8 +196,6 @@ export class BlrTabBar extends LitElement {
         ${this.showDivider
           ? BlrDividerRenderFunction({
               dividerDirectionVariant: 'horizontal',
-              size: this.size,
-              addMargin: true,
               theme: this.theme,
             })
           : nothing}
@@ -215,46 +216,5 @@ export class BlrTabBar extends LitElement {
 
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
 
-export const BlrTabBarRenderFunction = ({
-  _navList,
-  _navItems,
-  _navItemsSlots,
-  _panels,
-  tabs,
-  overflowVariantStandard,
-  overflowVariantFullWidth,
-  iconPosition,
-  variant,
-  tabContent,
-  alignment,
-  size,
-  onChange,
-  onBlur,
-  onFocus,
-  icon,
-  theme,
-  showDivider,
-  onClick,
-}: BlrTabBarType) => {
-  return html`<blr-tab-bar
-    .navlist=${_navList}
-    .navItems=${_navItems}
-    .navItemsSlots=${_navItemsSlots}
-    .panels=${_panels}
-    .tabs=${tabs}
-    .overflowVariantStandard=${overflowVariantStandard}
-    .overflowVariantFullWidth=${overflowVariantFullWidth}
-    .iconPosition=${iconPosition}
-    .showDivider=${showDivider}
-    .icon=${icon}
-    .variant=${variant}
-    .tabContent=${tabContent}
-    .alignment=${alignment}
-    .size=${size}
-    .onChange=${onChange}
-    .onBlur=${onBlur}
-    .onFocus=${onFocus}
-    .theme=${theme}
-    .onClick=${onClick}
-  ></blr-tab-bar>`;
-};
+export const BlrTabBarRenderFunction = (params: BlrTabBarType) =>
+  genericBlrComponentRenderer<BlrTabBarType>(TAG_NAME, { ...params });

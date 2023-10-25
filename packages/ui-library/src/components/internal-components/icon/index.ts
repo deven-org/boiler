@@ -8,12 +8,14 @@ import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { styleMap } from 'lit/directives/style-map.js';
 
-@customElement('blr-icon')
+const TAG_NAME = 'blr-icon';
+
+@customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
   static styles = [styleCustom, iconLight];
 
-  @property() icon!: IconType;
-  @property() size!: SizesType;
+  @property() icon: IconType = 'blr360Xs';
+  @property() size: SizesType = 'md';
 
   protected render() {
     if (IconMapping.hasOwnProperty(this.icon) && typeof IconMapping[this.icon] === 'function') {
@@ -25,7 +27,7 @@ export class BlrIcon extends LitElement {
 }
 
 // BlrIconType is a new Type containing all properties of BlrIcon without the properties of LitElement
-// and some additional properties which are not part of the component
+// and some additional properties which are not part of the component, so we dont use the generic render function
 export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   classMap?: DirectiveResult<typeof ClassMapDirective>;
   onClick?: HTMLElement['onclick'];

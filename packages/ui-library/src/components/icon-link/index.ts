@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as iconLinkStyleCustom } from './index.css';
 import { styleCustom as iconButtonStyleCustom } from '../icon-button/index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
@@ -11,14 +11,17 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrLoaderRenderFunction } from '../loader';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+
+const TAG_NAME = 'blr-icon-link';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
-@customElement('blr-icon-link')
+@customElement(TAG_NAME)
 export class BlrIconLink extends LitElement {
   static styles = [iconLinkStyleCustom, iconButtonStyleCustom];
 
   @property() arialabel?: string;
-  @property() icon?: IconType;
+  @property() icon?: SizelessIconType;
   @property() href?: string;
   @property() target?: string;
   @property() onClick?: HTMLLinkElement['onclick'];
@@ -86,32 +89,5 @@ export class BlrIconLink extends LitElement {
 
 export type BlrIconLinkType = Omit<BlrIconLink, keyof LitElement>;
 
-export const BlrIconLinkRenderFunction = ({
-  arialabel,
-  onClick,
-  onBlur,
-  loading,
-  linkId,
-  variant,
-  size,
-  icon,
-  href,
-  target,
-  loadingStatus,
-  theme,
-}: BlrIconLinkType) => {
-  return html`<blr-icon-link
-    .arialabel=${arialabel}
-    .onClick=${onClick}
-    .onBlur=${onBlur}
-    .loading=${loading}
-    .linkId=${linkId}
-    .variant=${variant}
-    .size=${size}
-    .icon=${icon}
-    .href=${href}
-    .target=${target}
-    .loadingStatus=${loadingStatus}
-    .theme=${theme}
-  ></blr-icon-link>`;
-};
+export const BlrIconLinkRenderFunction = (params: BlrIconLinkType) =>
+  genericBlrComponentRenderer<BlrIconLinkType>(TAG_NAME, { ...params });

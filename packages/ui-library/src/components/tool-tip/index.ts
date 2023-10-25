@@ -11,8 +11,11 @@ import {
 } from '../../globals/constants';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { styleMap } from 'lit/directives/style-map.js';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-tool-tip')
+const TAG_NAME = 'blr-tool-tip';
+
+@customElement(TAG_NAME)
 export class BlrToolTip extends LitElement {
   @property() theme: ThemeType = 'Light';
   @property() size: FormSizesType = 'sm';
@@ -126,29 +129,5 @@ export type BlrToolTipType = Partial<BlrToolTipTypeWithOmitProperty> & {
   itemRenderer: TemplateResult;
 };
 
-export const BlrToolTipRenderFunction = ({
-  theme,
-  text,
-  toolTipId,
-  placement,
-  visibility,
-  toolTipArrow,
-  elevation,
-  customCss,
-  itemRenderer,
-}: BlrToolTipType) => {
-  return html`
-    <blr-tool-tip
-      .theme=${theme}
-      .text=${text}
-      .tooldTipId=${toolTipId}
-      .placement=${placement}
-      .visibility=${visibility}
-      .customCss=${customCss}
-      .toolTipArrow=${toolTipArrow}
-      .elevation=${elevation}
-    >
-      ${itemRenderer}
-    </blr-tool-tip>
-  `;
-};
+export const BlrToolTipRenderFunction = (params: BlrToolTipType) =>
+  genericBlrComponentRenderer<BlrToolTipType>(TAG_NAME, { ...params });

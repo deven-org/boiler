@@ -37,7 +37,7 @@ export const BlrFormInfo = ({
 
 BlrFormInfo.storyName = 'BlrFormInfo';
 
-BlrFormInfo.args = {
+const args: BlrFormInfoType = {
   theme: 'Light',
   size: 'md',
   showHint: true,
@@ -47,3 +47,5 @@ BlrFormInfo.args = {
   errorMessage: 'This is an error message',
   errorIcon: 'blrInfo',
 };
+
+BlrFormInfo.args = args;

@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 
 import { BlrFormLabelInline } from '../form-label-inline';
 import { FormSizesType, IconPositionVariant } from '../../globals/types';
@@ -11,10 +11,13 @@ import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { toggleSwitchDark, toggleSwitchLight } from '../../foundation/component-tokens/toggle-switch.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+
+const TAG_NAME = 'blr-label-toggleswitch';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 
-@customElement('blr-label-toggleswitch')
+@customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {
   static styles = [styleCustom];
 
@@ -32,7 +35,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() checked?: boolean;
 
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
 
   @property() size: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';
@@ -157,40 +160,5 @@ export class BlrToggleSwitch extends LitElement {
 
 export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
 
-export const BlrToggleSwitchRenderFunction = ({
-  label,
-  onLabel,
-  offLabel,
-  showStateLabel,
-  checkInputId,
-  onBlur,
-  onFocus,
-  onChange,
-  disabled,
-  readonly,
-  size,
-  variant,
-  checked,
-  hintText,
-  hintIcon,
-  theme,
-}: BlrToggleSwitchType) => {
-  return html`<blr-label-toggleswitch
-    .label=${label}
-    .onLabel=${onLabel}
-    .offLabel=${offLabel}
-    .showStateLabel=${showStateLabel}
-    .checkInputId=${checkInputId}
-    .onFocus=${onFocus}
-    .onBlur=${onBlur}
-    .onChange=${onChange}
-    .disabled=${disabled}
-    .readonly=${readonly}
-    .checked=${checked}
-    .size=${size}
-    .variant=${variant}
-    .hintText=${hintText}
-    .hintIcon=${hintIcon}
-    .theme=${theme}
-  ></blr-label-toggleswitch>`;
-};
+export const BlrToggleSwitchRenderFunction = (params: BlrToggleSwitchType) =>
+  genericBlrComponentRenderer<BlrToggleSwitchType>(TAG_NAME, { ...params });

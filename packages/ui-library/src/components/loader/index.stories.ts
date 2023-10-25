@@ -1,8 +1,6 @@
-import { html } from 'lit-html';
-import { BlrLoader as BlrLoaderClass } from './index';
+import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
 import { ActionSizes, FeedbackVariants } from '../../globals/constants';
 
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -26,14 +24,15 @@ export default {
   },
 };
 
-export const BlrLoader = ({ size, variant, loadingStatus }: BlrLoaderClass) =>
-  html` <blr-loader .size=${size} .variant=${variant} .loadingStatus=${loadingStatus}></blr-loader> `;
+export const BlrLoader = (params: BlrLoaderType) => BlrLoaderRenderFunction(params);
 
 BlrLoader.storyName = 'BlrLoader';
 
-BlrLoader.args = {
+const args: BlrLoaderType = {
   theme: 'Light',
   size: 'md',
   variant: 'default',
   loadingStatus: 'Loading',
 };
+
+BlrLoader.args = args;

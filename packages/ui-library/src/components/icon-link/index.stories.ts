@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrIconLinkType, BlrIconLinkRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, FormSizes } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -31,40 +29,11 @@ export default {
   },
 };
 
-export const BlrIconLink = ({
-  arialabel,
-  onClick,
-  onBlur,
-  loading,
-  linkId,
-  variant,
-  size,
-  icon,
-  href,
-  target,
-  loadingStatus,
-  theme,
-}: BlrIconLinkType) =>
-  html`
-    ${BlrIconLinkRenderFunction({
-      arialabel,
-      onClick,
-      onBlur,
-      loading,
-      linkId,
-      variant,
-      size,
-      icon,
-      href,
-      target,
-      loadingStatus,
-      theme,
-    })}
-  `;
+export const BlrIconLink = (params: BlrIconLinkType) => BlrIconLinkRenderFunction(params);
 
 BlrIconLink.storyName = 'BlrIconLink';
 
-BlrIconLink.args = {
+const args: BlrIconLinkType = {
   theme: 'Light',
   arialabel: 'Button',
   onClick: () => console.log('onClick'),
@@ -78,3 +47,5 @@ BlrIconLink.args = {
   target: '_self',
   loadingStatus: 'Loading',
 };
+
+BlrIconLink.args = args;

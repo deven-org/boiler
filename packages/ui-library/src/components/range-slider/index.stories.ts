@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrRangeSliderType, BlrRangeSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -38,42 +36,7 @@ export default {
   },
 };
 
-export const BlrRangeSlider = ({
-  onClickMinMax,
-  onChange,
-  rangeInputId,
-  initialValue,
-  minValue,
-  maxValue,
-  units,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeSliderType) =>
-  html`
-    ${BlrRangeSliderRenderFunction({
-      onClickMinMax,
-      onChange,
-      rangeInputId,
-      initialValue,
-      minValue,
-      maxValue,
-      units,
-      stepFactor,
-      size,
-      btnVariant,
-      showLegend,
-      disabled,
-      incrementIcon,
-      decrementIcon,
-      theme,
-    })}
-  `;
+export const BlrRangeSlider = (params: BlrRangeSliderType) => BlrRangeSliderRenderFunction(params);
 
 BlrRangeSlider.storyName = 'BlrRangeSlider';
 
@@ -81,13 +44,14 @@ const logEventType = (val: number, event: Event) => {
   console.log('storybook:story:val', val);
   console.log('storybook:story:logEventType', event.type);
   console.log('storybook:story:logEventValue', (event.target as HTMLInputElement).value);
+  return null;
 };
 
 const btnEventType = (value: number) => {
   console.log('storybook:story:logEventType', value);
 };
 
-BlrRangeSlider.args = {
+const args: BlrRangeSliderType = {
   theme: 'Light',
   onClickMinMax: btnEventType,
   onChange: logEventType,
@@ -104,3 +68,5 @@ BlrRangeSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeSlider.args = args;

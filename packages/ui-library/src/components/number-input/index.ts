@@ -17,15 +17,18 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { IconType, SizelessIconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 type ButtonTemplateType = 'operators' | 'chevrons';
 type AdjustType = 'increment' | 'decrement';
 type LayoutType = 'horizontal' | 'vertical';
 
-@customElement('blr-number-input')
+const TAG_NAME = 'blr-number-input';
+
+@customElement(TAG_NAME)
 export class BlrNumberInput extends LitElement {
   static styles = [baseStyle];
 
@@ -46,7 +49,7 @@ export class BlrNumberInput extends LitElement {
   @property() errorMessage?: string;
   @property() showHint = true;
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() value?: number;
   @property() step?: number;
   @property() unit?: string | undefined;
@@ -203,9 +206,7 @@ export class BlrNumberInput extends LitElement {
                     <div class="divider-vertical">
                       ${BlrDividerRenderFunction({
                         dividerDirectionVariant: 'vertical',
-                        size: this.size,
                         theme: this.theme,
-                        addMargin: false,
                       })}
                     </div>
                     ${this.getButtonTemplate('operators', 'decrement', iconSizeVariant, 'horizontal')}
@@ -217,9 +218,7 @@ export class BlrNumberInput extends LitElement {
                     <div class="divider-horizontal">
                       ${BlrDividerRenderFunction({
                         dividerDirectionVariant: 'horizontal',
-                        size: this.size,
                         theme: this.theme,
-                        addMargin: false,
                       })}
                     </div>
                     ${this.getButtonTemplate('chevrons', 'increment', iconSizeVariant, 'vertical')}
@@ -270,52 +269,5 @@ export class BlrNumberInput extends LitElement {
 
 export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement>;
 
-export const BlrNumberInputRenderFunction = ({
-  variant,
-  disabled,
-  placeholder,
-  readonly,
-  required,
-  label,
-  hasLabel,
-  hasError,
-  errorMessage,
-  size,
-  labelAppendix,
-  showHint,
-  hintText,
-  hintIcon,
-  numberInputId,
-  value,
-  step,
-  theme,
-  unit,
-  fractionDigits,
-  totalDigits,
-  prependUnit,
-}: BlrNumberInputType) => {
-  return html`<blr-number-input
-    .variant="${variant}"
-    .disabled="${disabled}"
-    .placeholder="${placeholder}"
-    .readonly="${readonly}"
-    .required="${required}"
-    .label="${label}"
-    .hasLabel="${hasLabel}"
-    .hasError="${hasError}"
-    .errorMessage="${errorMessage}"
-    .size="${size}"
-    .value="${value}"
-    .step="${step}"
-    .labelAppendix="${labelAppendix}"
-    .showHint="${showHint}"
-    .hintText="${hintText}"
-    .hintIcon="${hintIcon}"
-    .numberInputId="${numberInputId}"
-    .theme="${theme}"
-    .unit="${unit}"
-    .fractionDigits="${fractionDigits}"
-    .totalDigits="${totalDigits}"
-    .prependUnit="${prependUnit}"
-  ></blr-number-input>`;
-};
+export const BlrNumberInputRenderFunction = (params: BlrNumberInputType) =>
+  genericBlrComponentRenderer<BlrNumberInputType>(TAG_NAME, { ...params });

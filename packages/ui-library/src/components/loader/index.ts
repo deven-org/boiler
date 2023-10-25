@@ -5,8 +5,11 @@ import { styleCustom } from './index.css';
 import { loadingSpinnerDark, loadingSpinnerLight } from '../../foundation/component-tokens/feedback.css';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-loader')
+const TAG_NAME = 'blr-loader';
+
+@customElement(TAG_NAME)
 export class BlrLoader extends LitElement {
   static styles = [styleCustom];
 
@@ -36,11 +39,5 @@ export class BlrLoader extends LitElement {
 
 export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;
 
-export const BlrLoaderRenderFunction = ({ variant, size, loadingStatus, theme }: BlrLoaderType) => {
-  return html`<blr-loader
-    .variant=${variant}
-    .size=${size}
-    .loadingStatus=${loadingStatus}
-    .theme=${theme}
-  ></blr-loader>`;
-};
+export const BlrLoaderRenderFunction = (params: BlrLoaderType) =>
+  genericBlrComponentRenderer<BlrLoaderType>(TAG_NAME, { ...params });

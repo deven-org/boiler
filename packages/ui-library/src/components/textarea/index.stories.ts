@@ -1,8 +1,5 @@
-import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
-
 import { FormSizes } from '../../globals/constants';
-import './index';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
@@ -71,77 +68,17 @@ export default {
   },
 };
 
-export const BlrTextarea = ({
-  textareaId,
-  label,
-  labelAppendix,
-  placeholder,
-  required,
-  disabled,
-  size,
-  maxLength,
-  warningLimitType,
-  warningLimitInt,
-  warningLimitPer,
-  cols,
-  rows,
-  errorMessage,
-  hintText,
-  hintIcon,
-  errorIcon,
-  hasError,
-  onChange,
-  onFocus,
-  onSelect,
-  readonly,
-  isResizeable,
-  showHint,
-  showCounter,
-  value,
-  theme,
-}: BlrTextareaType) =>
-  html`
-    ${BlrTextareaRenderFunction({
-      textareaId,
-      label,
-      labelAppendix,
-      placeholder,
-      required,
-      disabled,
-      size,
-      maxLength,
-      warningLimitType,
-      warningLimitInt,
-      warningLimitPer,
-      cols,
-      rows,
-      errorMessage,
-      hintText,
-      hintIcon,
-      errorIcon,
-      hasError,
-      onChange,
-      onFocus,
-      onSelect,
-      readonly,
-      isResizeable,
-      showHint,
-      showCounter,
-      value,
-      theme,
-    })}
-  `;
+export const BlrTextarea = (params: BlrTextareaType) => BlrTextareaRenderFunction(params);
 
 BlrTextarea.storyName = 'BlrTextarea-Docs';
 
-BlrTextarea.args = {
+const args: BlrTextareaType = {
   theme: 'Light',
   textareaId: '#1',
   label: 'Label',
   labelAppendix: '(Optional)',
   size: 'md',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  minLength: 0,
   maxLength: 140,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
@@ -168,3 +105,5 @@ BlrTextarea.args = {
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
 };
+
+BlrTextarea.args = args;
