@@ -20,7 +20,7 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
 
   templateFragments.push(`></${tagName}>`);
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // eslint-disable-next-line
   // @ts-ignore
   templateFragments.raw = templateFragments;
 
