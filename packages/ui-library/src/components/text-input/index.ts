@@ -6,14 +6,17 @@ import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { textInputLight, textInputDark } from '../../foundation/component-tokens/text-input.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+
+const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrFormInfoRenderFunction } from '../internal-components/form-info';
 
-@customElement('blr-text-input')
+@customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
   static styles = [styleCustom];
 
@@ -35,11 +38,11 @@ export class BlrTextInput extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() showInputIcon = true;
-  @property() inputIcon: IconType = 'blr360Sm';
+  @property() inputIcon: SizelessIconType = 'blr360Sm';
   @property() showHint = true;
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
-  @property() errorIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
+  @property() errorIcon: SizelessIconType = 'blrInfoSm';
   @property() hasLabel!: boolean;
 
   @property() theme: ThemeType = 'Light';
@@ -173,54 +176,5 @@ export class BlrTextInput extends LitElement {
 
 export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
 
-export const BlrTextInputRenderFunction = ({
-  textInputId,
-  type,
-  label,
-  hasLabel,
-  labelAppendix,
-  value,
-  placeholder,
-  disabled,
-  readonly,
-  size,
-  required,
-  onChange,
-  maxLength,
-  pattern,
-  hasError,
-  errorMessage,
-  errorIcon,
-  showInputIcon,
-  inputIcon,
-  showHint,
-  hintText,
-  hintIcon,
-  theme,
-}: BlrTextInputType) => {
-  return html`<blr-text-input
-    .textInputId=${textInputId}
-    .label=${label}
-    .hasLabel=${hasLabel}
-    .labelAppendix=${labelAppendix}
-    .showInputIcon=${showInputIcon}
-    .inputIcon=${inputIcon}
-    .type=${type}
-    .value=${value}
-    .placeholder=${placeholder}
-    .disabled=${disabled}
-    .size=${size}
-    .required=${required}
-    .readonly=${readonly}
-    .onChange=${onChange}
-    .maxLength=${maxLength}
-    .pattern=${pattern}
-    .errorMessage=${errorMessage}
-    .errorIcon=${errorIcon}
-    .showHint=${showHint}
-    .hintText=${hintText}
-    .hintIcon=${hintIcon}
-    .hasError=${hasError}
-    .theme=${theme}
-  ></blr-text-input>`;
-};
+export const BlrTextInputRenderFunction = (params: BlrTextInputType) =>
+  genericBlrComponentRenderer<BlrTextInputType>(TAG_NAME, { ...params });

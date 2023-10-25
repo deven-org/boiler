@@ -1,7 +1,5 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
-import './index';
 import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
@@ -49,67 +47,18 @@ export default {
   },
 };
 
-export const BlrNumberInput = ({
-  variant,
-  disabled,
-  placeholder,
-  readonly,
-  required,
-  hasLabel,
-  hasError,
-  errorMessage,
-  label,
-  size,
-  labelAppendix,
-  numberInputId,
-  theme,
-  value,
-  step,
-  showHint,
-  hintIcon,
-  hintText,
-  unit,
-  fractionDigits,
-  totalDigits,
-  prependUnit,
-}: BlrNumberInputType) =>
-  html`
-    ${BlrNumberInputRenderFunction({
-      variant,
-      theme,
-      disabled,
-      label,
-      hasLabel,
-      placeholder,
-      readonly,
-      required,
-      hasError,
-      errorMessage,
-      size,
-      labelAppendix,
-      numberInputId,
-      value,
-      step,
-      showHint,
-      hintText,
-      hintIcon,
-      unit,
-      fractionDigits,
-      totalDigits,
-      prependUnit,
-    })}
-  `;
+export const BlrNumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderFunction(params);
 
 BlrNumberInput.storyName = 'Component docs';
 
-BlrNumberInput.args = {
+const args: BlrNumberInputType = {
   unit: 'kg',
   prependUnit: false,
   variant: 'mode3',
-  value: '',
-  step: '1',
-  fractionDigits: '',
-  totalDigits: '',
+  value: 0,
+  step: 1,
+  fractionDigits: undefined,
+  totalDigits: undefined,
   size: 'md',
   theme: 'Light',
   hasLabel: true,
@@ -126,3 +75,5 @@ BlrNumberInput.args = {
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',
 };
+
+BlrNumberInput.args = args;

@@ -24,15 +24,16 @@ export default {
   },
 };
 
-export const BlrCounter = ({ variant, current, max, size, theme }: BlrCounterType) =>
-  BlrCounterRenderFunction({ variant, current, max, size, theme });
+export const BlrCounter = (params: BlrCounterType) => BlrCounterRenderFunction(params);
 
 BlrCounter.storyName = 'BlrCounter';
 
-BlrCounter.args = {
+const args: BlrCounterType = {
   theme: 'Light',
   variant: 'default',
   current: 3,
   max: 100,
   size: 'md',
 };
+
+BlrCounter.args = args;

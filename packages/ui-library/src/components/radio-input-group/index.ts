@@ -7,10 +7,13 @@ import { radioDark, radioLight } from '../../foundation/component-tokens/radio.c
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-radio-group')
+const TAG_NAME = 'blr-radio-group';
+
+@customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {
   static styles = [styleCustom];
 
@@ -24,17 +27,17 @@ export class BlrRadioGroup extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
-  @property() errorIcon?: IconType;
+  @property() errorIcon?: SizelessIconType;
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
   @property() layout!: boolean;
   @property() showHint = true;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
   @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
-  @property() groupErrorIcon?: IconType;
+  @property() groupErrorIcon?: SizelessIconType;
   @property() showLegend?: boolean = true;
 
   @property() theme: ThemeType = 'Light';
@@ -136,53 +139,5 @@ export class BlrRadioGroup extends LitElement {
 
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
 
-export const BlrRadioGroupRenderFunction = ({
-  disabled,
-  checked,
-  size,
-  name,
-  required,
-  readonly,
-  onChange,
-  onBlur,
-  onFocus,
-  hasError,
-  errorIcon,
-  options,
-  layout,
-  showLegend,
-  showHint,
-  groupHintMessage,
-  hintIcon,
-  hideLabel,
-  showGroupErrorMessage,
-  groupErrorMessage,
-  groupErrorIcon,
-  theme,
-}: BlrRadioGroupType) => {
-  return html`<blr-radio-group
-    class="example-layout-class"
-    .disabled=${disabled}
-    .checked=${checked}
-    .size=${size}
-    .name=${name}
-    .required=${required}
-    .readonly=${readonly}
-    @input=${onChange}
-    @blur=${onBlur}
-    @focus=${onFocus}
-    .hasError=${hasError}
-    .errorIcon=${errorIcon}
-    .options=${options}
-    .layout=${layout}
-    .showHint=${showHint}
-    .groupHintMessage=${groupHintMessage}
-    .hintIcon=${hintIcon}
-    .hideLabel=${hideLabel}
-    .showLegend=${showLegend}
-    .showGroupErrorMessage=${showGroupErrorMessage}
-    .groupErrorMessage=${groupErrorMessage}
-    .groupErrorIcon=${groupErrorIcon}
-    .theme=${theme}
-  ></blr-radio-group>`;
-};
+export const BlrRadioGroupRenderFunction = (params: BlrRadioGroupType) =>
+  genericBlrComponentRenderer<BlrRadioGroupType>(TAG_NAME, { ...params });

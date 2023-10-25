@@ -2,7 +2,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { ActionSizesType, ActionVariantType, SizesType, FormSizesType } from '../../globals/types';
@@ -11,6 +11,9 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+
+const TAG_NAME = 'blr-text-button';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-text-button')
@@ -20,8 +23,8 @@ export class BlrTextButton extends LitElement {
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: IconType;
-  @property() trailingIcon?: IconType;
+  @property() leadingIcon?: SizelessIconType;
+  @property() trailingIcon?: SizelessIconType;
   @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
@@ -121,32 +124,5 @@ export class BlrTextButton extends LitElement {
 
 export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement>;
 
-export const BlrTextButtonRenderFunction = ({
-  label,
-  onClick,
-  onBlur,
-  leadingIcon,
-  trailingIcon,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  loadingStatus,
-  theme,
-}: BlrTextButtonType) => {
-  return html`<blr-text-button
-    .label=${label}
-    .onClick=${onClick}
-    .onBlur=${onBlur}
-    .leadingIcon=${leadingIcon}
-    .trailingIcon=${trailingIcon}
-    .loading=${loading}
-    .disabled=${disabled}
-    .buttonId=${buttonId}
-    .variant=${variant}
-    .size=${size}
-    .loadingStatus=${loadingStatus}
-    .theme=${theme}
-  ></blr-text-button>`;
-};
+export const BlrTextButtonRenderFunction = (params: BlrTextButtonType) =>
+  genericBlrComponentRenderer<BlrTextButtonType>(TAG_NAME, { ...params });

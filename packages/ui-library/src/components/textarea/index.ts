@@ -10,7 +10,11 @@ import { BlrCounterRenderFunction } from '../internal-components/counter';
 import { BlrFormInfoRenderFunction } from '../internal-components/form-info';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 
-@customElement('blr-textarea')
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+
+const TAG_NAME = 'blr-textarea';
+
+@customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {
   static styles = [styleCustom];
 
@@ -33,11 +37,11 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType = 'blrInfo';
   @property() hint?: string;
   @property() showHint = true;
   @property() hintText?: string;
-  @property() showCounter?: string;
+  @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() isResizeable?: boolean;
   @property() rows?: number;
@@ -50,7 +54,7 @@ export class BlrTextarea extends LitElement {
   @state() protected count = 0;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
 
-  firstUpdated() {
+  protected firstUpdated() {
     if (this.shouldFocus) {
       const textarea = this.shadowRoot?.querySelector('textarea');
       if (textarea) {
@@ -151,7 +155,7 @@ ${this.value}
         >
         <div class="${textareaInfoContainer}">
           ${this.showHint || this.hasError
-            ? html`${BlrFormInfoRenderFunction({
+            ? BlrFormInfoRenderFunction({
                 theme: this.theme,
                 size: this.size,
                 showHint: this.showHint,
@@ -160,18 +164,16 @@ ${this.value}
                 hasError: !!this.hasError,
                 errorMessage: this.errorMessage,
                 errorIcon: this.errorIcon,
-              })}`
+              })
             : nothing}
           ${this.showCounter
-            ? html`
-                ${BlrCounterRenderFunction({
-                  variant: counterVariant,
-                  current: this.count,
-                  max: this.maxLength || 0,
-                  size: this.size,
-                  theme: this.theme,
-                })}
-              `
+            ? BlrCounterRenderFunction({
+                variant: counterVariant,
+                current: this.count,
+                max: this.maxLength || 0,
+                size: this.size,
+                theme: this.theme,
+              })
             : nothing}
         </div>
       </div>
@@ -179,66 +181,7 @@ ${this.value}
   }
 }
 
-type OmittedKeys = 'firstUpdated';
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement | OmittedKeys>;
+export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
 
-export const BlrTextareaRenderFunction = ({
-  textareaId,
-  label,
-  labelAppendix,
-  placeholder,
-  required,
-  disabled,
-  size,
-  maxLength,
-  warningLimitType,
-  warningLimitInt,
-  warningLimitPer,
-  cols,
-  rows,
-  errorMessage,
-  hintText,
-  hintIcon,
-  hasError,
-  errorIcon,
-  onChange,
-  onSelect,
-  readonly,
-  isResizeable,
-  showHint,
-  showCounter,
-  value,
-  theme,
-  shouldFocus,
-}: BlrTextareaType) => {
-  return html`<blr-textarea
-    class=${isResizeable ? nothing : `parent-width`}
-    .textareaId=${textareaId}
-    .label=${label}
-    .size=${size}
-    .maxLength=${maxLength}
-    .warningLimitType=${warningLimitType}
-    .warningLimitInt=${warningLimitInt}
-    .warningLimitPer=${warningLimitPer}
-    .cols=${cols}
-    .rows=${rows}
-    .value=${value}
-    .errorMessage=${errorMessage}
-    .placeholder="${placeholder}"
-    .required=${required}
-    .disabled=${disabled}
-    .readonly=${readonly}
-    .hintText=${hintText}
-    .showCounter=${showCounter}
-    .hintIcon=${hintIcon}
-    .hasError=${hasError}
-    .errorIcon=${errorIcon}
-    .labelAppendix=${labelAppendix}
-    .onChange=${onChange}
-    .onSelect=${onSelect}
-    .isResizeable=${isResizeable}
-    .showHint=${showHint}
-    .theme=${theme}
-    .shouldFocus=${shouldFocus}
-  ></blr-textarea>`;
-};
+export const BlrTextareaRenderFunction = (params: BlrTextareaType) =>
+  genericBlrComponentRenderer<BlrTextareaType>(TAG_NAME, { ...params });

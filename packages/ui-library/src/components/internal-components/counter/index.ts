@@ -4,8 +4,11 @@ import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { counterLight, counterDark } from './index.css';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-counter')
+const TAG_NAME = 'blr-counter';
+
+@customElement(TAG_NAME)
 export class BlrCounter extends LitElement {
   static styles = [];
 
@@ -35,12 +38,5 @@ export class BlrCounter extends LitElement {
 
 export type BlrCounterType = Omit<BlrCounter, keyof LitElement>;
 
-export const BlrCounterRenderFunction = ({ variant, current, max, size, theme }: BlrCounterType) => {
-  return html`<blr-counter
-    .variant=${variant}
-    .current=${current}
-    .max=${max}
-    .size=${size}
-    .theme=${theme}
-  ></blr-counter>`;
-};
+export const BlrCounterRenderFunction = (params: BlrCounterType) =>
+  genericBlrComponentRenderer<BlrCounterType>(TAG_NAME, { ...params });

@@ -1,7 +1,5 @@
-import { html } from 'lit-html';
 import { BlrRadioGroupRenderFunction, BlrRadioGroupType } from './index';
 import { InputSizes } from '../../globals/constants';
-import './index';
 import { getIconName } from '../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -38,59 +36,11 @@ export default {
   },
 };
 
-export const BlrRadioGroup = ({
-  disabled,
-  checked,
-  size,
-  name,
-  required,
-  readonly,
-  onChange,
-  onBlur,
-  onFocus,
-  hasError,
-  errorIcon,
-  options,
-  layout,
-  showHint,
-  groupHintMessage,
-  hintIcon,
-  hideLabel,
-  showLegend,
-  showGroupErrorMessage,
-  groupErrorMessage,
-  groupErrorIcon,
-  theme,
-}: BlrRadioGroupType) =>
-  html`
-    ${BlrRadioGroupRenderFunction({
-      disabled,
-      checked,
-      size,
-      name,
-      required,
-      readonly,
-      onChange,
-      onBlur,
-      onFocus,
-      hasError,
-      errorIcon,
-      options,
-      layout,
-      showHint,
-      groupHintMessage,
-      hintIcon,
-      hideLabel,
-      showLegend,
-      showGroupErrorMessage,
-      groupErrorMessage,
-      groupErrorIcon,
-      theme,
-    })}
-  `;
+export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
+
 BlrRadioGroup.storyName = 'BlrRadioGroup';
 
-BlrRadioGroup.args = {
+const args: BlrRadioGroupType = {
   theme: 'Light',
   disabled: false,
   name: 'Default Name',
@@ -102,7 +52,7 @@ BlrRadioGroup.args = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  layout: 'horizontal',
+  layout: true,
   showLegend: true,
   showHint: true,
   groupHintMessage: 'This is a sample hint message',
@@ -110,4 +60,8 @@ BlrRadioGroup.args = {
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
+  hideLabel: false,
+  showGroupErrorMessage: false,
 };
+
+BlrRadioGroup.args = args;

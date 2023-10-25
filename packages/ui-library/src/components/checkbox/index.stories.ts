@@ -1,10 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-
 import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
 
 import { InputSizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -45,50 +42,7 @@ export default {
   },
 };
 
-export const BlrCheckbox = ({
-  label,
-  hasLabel,
-  checkInputId,
-  onBlur,
-  onFocus,
-  onChange,
-  disabled,
-  size,
-  checked,
-  indeterminate,
-  readonly,
-  hasError,
-  errorMessage,
-  errorIcon,
-  showHint,
-  hintIcon,
-  hintMessage,
-  handleChange,
-  theme,
-}: BlrCheckboxType) =>
-  html`
-    ${BlrCheckboxRenderFunction({
-      label,
-      hasLabel,
-      checkInputId,
-      onBlur,
-      onFocus,
-      onChange,
-      disabled,
-      size,
-      checked,
-      indeterminate,
-      readonly,
-      hasError,
-      errorMessage,
-      errorIcon,
-      showHint,
-      hintIcon,
-      hintMessage,
-      handleChange,
-      theme,
-    })}
-  `;
+export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
 
 BlrCheckbox.storyName = 'BlrCheckbox';
 
@@ -96,7 +50,7 @@ const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);
 };
 
-BlrCheckbox.args = {
+const args: BlrCheckboxType = {
   theme: 'Light',
   size: 'md',
 
@@ -105,11 +59,11 @@ BlrCheckbox.args = {
 
   hasError: false,
   errorMessage: 'This is a sample error message',
-  errorIcon: '',
+  errorIcon: undefined,
 
   showHint: false,
   hintMessage: 'This is a sample hint',
-  hintIcon: '',
+  hintIcon: undefined,
 
   checkInputId: 'Checky',
   disabled: false,
@@ -120,4 +74,7 @@ BlrCheckbox.args = {
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
+  handleChange: logEventType,
 };
+
+BlrCheckbox.args = args;
