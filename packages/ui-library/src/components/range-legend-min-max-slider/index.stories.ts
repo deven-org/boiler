@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrRangeLegendMinMaxSliderType, BlrRangeLegendMinMaxSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -41,45 +39,16 @@ export default {
   },
 };
 
-export const BlrRangeLegendMinMaxSlider = ({
-  onBtnClick,
-  onChange,
-  rangeInputId,
-  startValue,
-  endValue,
-  list,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeLegendMinMaxSliderType) =>
-  html`${BlrRangeLegendMinMaxSliderRenderFunction({
-    onBtnClick,
-    onChange,
-    rangeInputId,
-    startValue,
-    endValue,
-    list,
-    stepFactor,
-    size,
-    btnVariant,
-    showLegend,
-    disabled,
-    incrementIcon,
-    decrementIcon,
-    theme,
-  })}`;
+export const BlrRangeLegendMinMaxSlider = (params: BlrRangeLegendMinMaxSliderType) =>
+  BlrRangeLegendMinMaxSliderRenderFunction(params);
 
 BlrRangeLegendMinMaxSlider.storyName = 'Range Slider (Legend)';
 
-const logEventType = (minVal, maxVal, event) => {
+const logEventType = (minVal: number, maxVal: number, event: Event) => {
   console.log('storybook:story:min', minVal);
   console.log('storybook:story:max', maxVal);
   console.log('storybook:story:logEventType', event.type);
+  return null;
 };
 
 const btnEventType = (minValue: number, maxValue: number) => {
@@ -87,7 +56,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
   console.log('storybook:story:logEventType:maxValue', maxValue);
 };
 
-BlrRangeLegendMinMaxSlider.args = {
+const args: BlrRangeLegendMinMaxSliderType = {
   theme: 'Light',
   onBtnClick: btnEventType,
   onChange: logEventType,
@@ -103,3 +72,5 @@ BlrRangeLegendMinMaxSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeLegendMinMaxSlider.args = args;

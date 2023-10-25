@@ -1,5 +1,4 @@
-import { html } from 'lit';
-
+import { html } from 'lit-html';
 import { BlrToolTipRenderFunction, BlrToolTipType } from './index';
 import { ToolTipVisibility, ToolTipPosition, ToolTipArrowPosition } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -26,42 +25,21 @@ export default {
   },
 };
 
-export const BlrToolTip = ({
-  theme,
-  text,
-  toolTipId,
-  placement,
-  visibility,
-  toolTipArrow,
-  elevation,
-  customCss,
-  itemRenderer,
-}: BlrToolTipType) =>
+export const BlrToolTip = (params: BlrToolTipType) =>
   html`
     <div
       style="height:500px; display: flex; justify-content: center; flex-direction: row; align-content: center; align-items: center;"
     >
       <p style="padding: 0px 3px; margin: 0px;"></p>
-      ${BlrToolTipRenderFunction({
-        theme,
-        text,
-        toolTipId,
-        placement,
-        visibility,
-        toolTipArrow,
-        elevation,
-        customCss,
-        itemRenderer,
-      })}
+      ${BlrToolTipRenderFunction(params)}
     </div>
   `;
 
 BlrToolTip.storyName = 'BlrToolTip';
 
-BlrToolTip.args = {
+const args: BlrToolTipType = {
   theme: 'Light',
   text: 'Tooltip text comes here Tooltip text comes here',
-  tooldTipId: 'my_text',
   placement: 'right',
   toolTipArrow: 'middle',
   elevation: true,
@@ -69,3 +47,5 @@ BlrToolTip.args = {
   visibility: 'onLoad',
   itemRenderer: html` <p style="padding: 0px; margin: 0px; border-bottom: 1px dashed #ccc;">tool tip</p> `,
 };
+
+BlrToolTip.args = args;

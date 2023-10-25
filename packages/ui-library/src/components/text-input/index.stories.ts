@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
 import { FormSizes, InputTypes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -47,62 +45,11 @@ export default {
   },
 };
 
-export const BlrTextInput = ({
-  textInputId,
-  type,
-  label,
-  hasLabel,
-  labelAppendix,
-  value,
-  placeholder,
-  disabled,
-  readonly,
-  size,
-  required,
-  onChange,
-  maxLength,
-  pattern,
-  hasError,
-  errorMessage,
-  errorIcon,
-  showInputIcon,
-  inputIcon,
-  showHint,
-  hintText,
-  hintIcon,
-  theme,
-}: BlrTextInputType) =>
-  html`
-    ${BlrTextInputRenderFunction({
-      textInputId,
-      type,
-      label,
-      hasLabel,
-      labelAppendix,
-      value,
-      placeholder,
-      disabled,
-      readonly,
-      size,
-      required,
-      onChange,
-      maxLength,
-      pattern,
-      hasError,
-      errorMessage,
-      errorIcon,
-      showInputIcon,
-      inputIcon,
-      showHint,
-      hintText,
-      hintIcon,
-      theme,
-    })}
-  `;
+export const BlrTextInput = (params: BlrTextInputType) => BlrTextInputRenderFunction(params);
 
 BlrTextInput.storyName = 'BlrTextInput';
 
-BlrTextInput.args = {
+const args: BlrTextInputType = {
   theme: 'Light',
   textInputId: 'Input ID',
   label: 'Label',
@@ -120,8 +67,10 @@ BlrTextInput.args = {
   showHint: false,
   hintText: 'This is a hint message',
   hintIcon: 'blrInfo',
-  maxLength: '200',
+  maxLength: 200,
   hasError: false,
   errorMessage: 'This is an error message',
   errorIcon: 'blrInfo',
 };
+
+BlrTextInput.args = args;

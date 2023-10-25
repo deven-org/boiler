@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
-import './index';
 
 const defaultParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',

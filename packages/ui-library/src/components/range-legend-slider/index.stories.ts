@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrRangeLegendSliderType, BlrRangeLegendSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -41,49 +39,20 @@ export default {
   },
 };
 
-export const BlrRangeLegendSlider = ({
-  onClickMinMax,
-  onChange,
-  rangeInputId,
-  initialValue,
-  list,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeLegendSliderType) =>
-  html`${BlrRangeLegendSliderRenderFunction({
-    onClickMinMax,
-    onChange,
-    rangeInputId,
-    initialValue,
-    list,
-    stepFactor,
-    size,
-    btnVariant,
-    showLegend,
-    disabled,
-    incrementIcon,
-    decrementIcon,
-    theme,
-  })}`;
+export const BlrRangeLegendSlider = (params: BlrRangeLegendSliderType) => BlrRangeLegendSliderRenderFunction(params);
 
 BlrRangeLegendSlider.storyName = 'Range Slider (Legend)';
 
 const logEventType = (value: number, event: Event) => {
   console.log('storybook:story:logEventType', event.type);
   console.log('storybook:story:logEventValue', (event.target as HTMLInputElement).value);
+  return null;
 };
 
 const btnEventType = (value: number) => {
   console.log('storybook:story:logEventType', value);
 };
-
-BlrRangeLegendSlider.args = {
+const args: BlrRangeLegendSliderType = {
   theme: 'Light',
   onClickMinMax: btnEventType,
   onChange: logEventType,
@@ -98,3 +67,5 @@ BlrRangeLegendSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeLegendSlider.args = args;

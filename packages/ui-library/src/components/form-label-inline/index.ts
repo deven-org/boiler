@@ -8,6 +8,8 @@ type FormLabelInlineType = {
   forValue: string;
 };
 
-export const BlrFormLabelInline = ({ labelText, labelSize: size, forValue }: FormLabelInlineType) => {
-  return html` <label class="blr-form-label-inline ${size}" for=${forValue}> ${labelText} </label> `;
+export const BlrFormLabelInline = (params: FormLabelInlineType) => {
+  return html`
+    <label class="blr-form-label-inline ${params.labelSize}" for=${params.forValue}> ${params.labelText} </label>
+  `;
 };

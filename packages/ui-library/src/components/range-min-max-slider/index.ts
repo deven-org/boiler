@@ -9,10 +9,13 @@ import { findNearestValue, findPercentage, generateRangeBar, setOnclickValue } f
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
 
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-range-min-max-slider')
+const TAG_NAME = 'blr-range-min-max-slider';
+
+@customElement(TAG_NAME)
 export class BlrRangeMinMaxSlider extends LitElement {
   static styles = [styleCustom];
 
@@ -31,8 +34,8 @@ export class BlrRangeMinMaxSlider extends LitElement {
   @property() size: FormSizesType = 'md';
   @property() btnVariant: ActionVariantType = 'silent';
 
-  @property() incrementIcon!: IconType;
-  @property() decrementIcon!: IconType;
+  @property() incrementIcon!: SizelessIconType;
+  @property() decrementIcon!: SizelessIconType;
 
   @property() showLegend?: boolean = true;
   @property() disabled?: boolean = false;
@@ -213,43 +216,5 @@ export class BlrRangeMinMaxSlider extends LitElement {
 
 export type BlrRangeMinMaxSliderType = Omit<BlrRangeMinMaxSlider, keyof LitElement>;
 
-export const BlrRangeMinMaxSliderRenderFunction = ({
-  onBtnClick,
-  onChange,
-  rangeInputId,
-  startValue,
-  endValue,
-  minValue,
-  maxValue,
-  units,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeMinMaxSliderType) => {
-  return html`
-    <blr-range-min-max-slider
-      .onBtnClick=${onBtnClick}
-      .onChange=${onChange}
-      .rangeInputId=${rangeInputId}
-      .startValue=${startValue}
-      .endValue=${endValue}
-      .minValue=${minValue}
-      .maxValue=${maxValue}
-      .units=${units}
-      .stepFactor=${stepFactor}
-      .size=${size}
-      .btnVariant=${btnVariant}
-      .showLegend=${showLegend}
-      .disabled=${disabled}
-      .incrementIcon=${incrementIcon}
-      .decrementIcon=${decrementIcon}
-      .theme=${theme}
-    >
-    </blr-range-min-max-slider>
-  `;
-};
+export const BlrRangeMinMaxSliderRenderFunction = (params: BlrRangeMinMaxSliderType) =>
+  genericBlrComponentRenderer<BlrRangeMinMaxSliderType>(TAG_NAME, { ...params });

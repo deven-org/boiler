@@ -1,10 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-
 import { BlrToggleSwitchRenderFunction, BlrToggleSwitchType } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, IconPositionVariant } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -29,46 +26,7 @@ export default {
   },
 };
 
-export const BlrToggleSwitch = ({
-  label,
-  onLabel,
-  offLabel,
-  showStateLabel,
-  checkInputId,
-  onBlur,
-  onFocus,
-  onChange,
-  disabled,
-  readonly,
-  size,
-  variant,
-  checked,
-  hintText,
-  hintIcon,
-  isSelected,
-  theme,
-}: BlrToggleSwitchType) =>
-  html`
-    ${BlrToggleSwitchRenderFunction({
-      label,
-      onLabel,
-      offLabel,
-      showStateLabel,
-      checkInputId,
-      onBlur,
-      onFocus,
-      onChange,
-      disabled,
-      readonly,
-      size,
-      variant,
-      checked,
-      hintText,
-      hintIcon,
-      isSelected,
-      theme,
-    })}
-  `;
+export const BlrToggleSwitch = (params: BlrToggleSwitchType) => BlrToggleSwitchRenderFunction(params);
 
 BlrToggleSwitch.storyName = 'BlrToggleSwitch';
 
@@ -76,7 +34,7 @@ const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);
 };
 
-BlrToggleSwitch.args = {
+const args: BlrToggleSwitchType = {
   theme: 'Light',
   label: 'Toggle Switch Option',
   onLabel: 'On',
@@ -93,4 +51,7 @@ BlrToggleSwitch.args = {
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
+  isSelected: false,
 };
+
+BlrToggleSwitch.args = args;

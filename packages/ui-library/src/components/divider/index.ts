@@ -1,17 +1,16 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { DividerVariationTypes, FormSizesType } from '../../globals/types';
+import { DividerVariationTypes } from '../../globals/types';
 import { dividerLight, dividerDark } from '../../foundation/component-tokens/ui.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-divider')
+const TAG_NAME = 'blr-divider';
+
+@customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
   @property() dividerDirectionVariant?: DividerVariationTypes;
-  @property({ type: Boolean }) addMargin = false;
-
   @property() directionVariant?: DividerVariationTypes = 'vertical';
-
-  @property() size: FormSizesType = 'md';
   @property() theme: ThemeType = 'Light';
 
   protected render() {
@@ -28,10 +27,5 @@ export class BlrDivider extends LitElement {
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
 
-export const BlrDividerRenderFunction = ({ dividerDirectionVariant, size, theme }: BlrDividerType) => {
-  return html`<blr-divider
-    .dividerDirectionVariant=${dividerDirectionVariant}
-    .size=${size}
-    .theme=${theme}
-  ></blr-divider>`;
-};
+export const BlrDividerRenderFunction = (params: BlrDividerType) =>
+  genericBlrComponentRenderer<BlrDividerType>(TAG_NAME, { ...params });

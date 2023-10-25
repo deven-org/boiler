@@ -29,15 +29,16 @@ export default {
   },
 };
 
-export const BlrFormHint = ({ message, icon, variant, size, childElement, theme }: BlrFormHintType) =>
-  BlrFormHintRenderFunction({ message, icon, variant, size, childElement, theme });
+export const BlrFormHint = (params: BlrFormHintType) => BlrFormHintRenderFunction(params);
 
 BlrFormHint.storyName = 'BlrFormHint';
 
-BlrFormHint.args = {
+const args: BlrFormHintType = {
   theme: 'Light',
   message: 'hallo',
   icon: 'blr360',
   variant: 'hint',
   size: 'sm',
 };
+
+BlrFormHint.args = args;

@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrRangeMinMaxSliderType, BlrRangeMinMaxSliderRenderFunction } from './index';
 import { Sizes } from '../../globals/constants';
-import './index';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
@@ -41,44 +39,7 @@ export default {
   },
 };
 
-export const BlrRangeMinMaxSlider = ({
-  onBtnClick,
-  onChange,
-  rangeInputId,
-  startValue,
-  endValue,
-  minValue,
-  maxValue,
-  units,
-  stepFactor,
-  size,
-  btnVariant,
-  showLegend,
-  disabled,
-  incrementIcon,
-  decrementIcon,
-  theme,
-}: BlrRangeMinMaxSliderType) =>
-  html`
-    ${BlrRangeMinMaxSliderRenderFunction({
-      onBtnClick,
-      onChange,
-      rangeInputId,
-      startValue,
-      endValue,
-      minValue,
-      maxValue,
-      units,
-      stepFactor,
-      size,
-      btnVariant,
-      showLegend,
-      disabled,
-      incrementIcon,
-      decrementIcon,
-      theme,
-    })}
-  `;
+export const BlrRangeMinMaxSlider = (params: BlrRangeMinMaxSliderType) => BlrRangeMinMaxSliderRenderFunction(params);
 
 BlrRangeMinMaxSlider.storyName = 'Range Slider (No Legend)';
 
@@ -86,6 +47,7 @@ const logEventType = (minVal: number, maxVal: number, event: Event) => {
   console.log('storybook:story:min', minVal);
   console.log('storybook:story:max', maxVal);
   console.log('storybook:story:logEventValue', (event.target as HTMLInputElement).value);
+  return null;
 };
 
 const btnEventType = (minValue: number, maxValue: number) => {
@@ -93,7 +55,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
   console.log('storybook:story:logEventType:maxValue', maxValue);
 };
 
-BlrRangeMinMaxSlider.args = {
+const args: BlrRangeMinMaxSliderType = {
   theme: 'Light',
   onBtnClick: btnEventType,
   onChange: logEventType,
@@ -111,3 +73,5 @@ BlrRangeMinMaxSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeMinMaxSlider.args = args;

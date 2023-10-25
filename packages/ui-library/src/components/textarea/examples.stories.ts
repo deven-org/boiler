@@ -1,6 +1,5 @@
 import { html } from 'lit-html';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
-import './index';
 
 const defaultParams: BlrTextareaType = {
   theme: 'Light',
@@ -29,6 +28,7 @@ const defaultParams: BlrTextareaType = {
   errorIcon: 'blrInfo',
   hasError: false,
   errorMessage: "OMG it's an error",
+  errorIcon: 'Blr360',
 
   isResizeable: true,
 };

@@ -1,4 +1,4 @@
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import {
   FeedbackSizes,
   Sizes,
@@ -47,7 +47,7 @@ export type DividerVariationTypes = (typeof DividerVariations)[number];
 export type AlignmentType = (typeof TabAlignmentVariants)[number];
 export type TabType = {
   label: string;
-  icon: IconType;
+  icon: SizelessIconType;
   href: string;
   disabled?: boolean;
 };
@@ -60,7 +60,7 @@ export type OverflowVariantTypeFullWidth = (typeof OverflowVariantsFullWidth)[nu
 export type RenderBtnProps = {
   btnId: string;
   btnEventHandler: () => void;
-  iconName: IconType;
+  iconName: SizelessIconType;
 };
 
 export type ButtonOption = {

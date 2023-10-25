@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionSizes, ActionVariants } from '../../globals/constants';
-import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -35,40 +33,11 @@ export default {
   },
 };
 
-export const BlrTextButton = ({
-  label,
-  onClick,
-  onBlur,
-  loading,
-  disabled,
-  buttonId,
-  variant,
-  size,
-  leadingIcon,
-  trailingIcon,
-  loadingStatus,
-  theme,
-}: BlrTextButtonType) =>
-  html`
-    ${BlrTextButtonRenderFunction({
-      label,
-      onClick,
-      onBlur,
-      loading,
-      disabled,
-      buttonId,
-      variant,
-      size,
-      leadingIcon,
-      trailingIcon,
-      loadingStatus,
-      theme,
-    })}
-  `;
+export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderFunction(params);
 
 BlrTextButton.storyName = 'BlrTextButton';
 
-BlrTextButton.args = {
+const args: BlrTextButtonType = {
   theme: 'Light',
   variant: 'cta',
   size: 'md',
@@ -82,3 +51,5 @@ BlrTextButton.args = {
   buttonId: 'button-id',
   loadingStatus: 'Loading',
 };
+
+BlrTextButton.args = args;
