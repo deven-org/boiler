@@ -4,7 +4,6 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { selectInputLight, selectInputDark } from '../../foundation/component-tokens/select.css';
 import { IconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
@@ -14,6 +13,8 @@ import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+
+import { BlrFormInfoRenderFunction } from '../internal-components/form-info';
 
 type Option = {
   value: string;
@@ -87,17 +88,18 @@ export class BlrSelect extends LitElement {
     const inputClasses = classMap({
       'error': this.hasError || false,
       'error-input': this.hasError || false,
-      [`${this.size || 'md'}`]: this.size || 'md',
-      [`disabled`]: this.disabled || false,
+      [this.size]: this.size,
+      'disabled': this.disabled || false,
     });
 
     const iconClasses = classMap({
       'blr-input-icon': true,
-      [`${this.size || 'md'}`]: this.size || 'md',
+      [this.size]: this.size,
     });
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
+    return html`
+      <style>
+        ${dynamicStyles}
       </style>
       <div class="blr-select">
         ${this.hasLabel
@@ -137,35 +139,20 @@ export class BlrSelect extends LitElement {
           </div>
           ${this.renderTrailingIcon(iconClasses)}
         </div>
-        <div>
-          ${this.showHint
-            ? html`
-                <div class="hint-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.hintMessage || 'This is a hint Message',
-                    variant: 'hint',
-                    size: this.size,
-                    icon: this.hintIcon,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
-          ${this.hasError
-            ? html`
-                <div>
-                  ${BlrFormHintRenderFunction({
-                    message: (this.hasError ? this.errorMessage : this.hintMessage) || '',
-                    variant: this.hasError ? 'error' : 'hint',
-                    size: this.size,
-                    icon: this.errorIcon ? this.errorIcon : undefined,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
-        </div>
-      </div> `;
+        ${this.showHint || this.hasError
+          ? html`${BlrFormInfoRenderFunction({
+              theme: this.theme,
+              size: this.size,
+              showHint: !!this.showHint,
+              hintText: this.hintMessage,
+              hintIcon: this.hintIcon,
+              hasError: !!this.hasError,
+              errorMessage: this.errorMessage,
+              errorIcon: this.errorIcon,
+            })}`
+          : nothing}
+      </div>
+    `;
   }
 }
 

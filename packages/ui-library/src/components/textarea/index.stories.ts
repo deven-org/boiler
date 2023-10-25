@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 import { FormSizes } from '../../globals/constants';
 import { action } from '@storybook/addon-actions';
@@ -99,7 +98,7 @@ BlrTextarea.args = {
 
   errorIcon: undefined,
   hasError: false,
-  errorMessage: ' ',
+  errorMessage: 'This is an error message',
 
   isResizeable: true,
 

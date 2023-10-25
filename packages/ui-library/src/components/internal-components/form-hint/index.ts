@@ -50,22 +50,16 @@ export class BlrFormHint extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class=${classes}>
-        <div class="hint-container">
-          <div class="icon-wrapper">
-            ${BlrIconRenderFunction({
-              icon: calculateIconName(
-                this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
-                iconSizeVariant
-              ),
-              size: iconSizeVariant,
-              classMap: iconClasses,
-              hideAria: true,
-            })}
-          </div>
-          <div class="label-wrapper">
-            <span class="blr-caption-text">${this.message}</span>
-          </div>
-        </div>
+        ${BlrIconRenderFunction({
+          icon: calculateIconName(
+            this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
+            iconSizeVariant
+          ),
+          size: iconSizeVariant,
+          classMap: iconClasses,
+          hideAria: true,
+        })}
+        <span class="blr-caption-text">${this.message}</span>
         ${this.childElement}
       </div>`;
   }

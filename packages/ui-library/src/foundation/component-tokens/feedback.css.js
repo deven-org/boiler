@@ -7,7 +7,6 @@ export const { tokenizedLight: loadingSpinnerLight, tokenizedDark: loadingSpinne
   return css`
     .blr-loading-spinner {
       border-radius: 50%;
-      display: inline-block;
       box-sizing: border-box;
       animation: rotation 1s linear infinite;
 
@@ -79,52 +78,6 @@ export const { tokenizedLight: loadingSpinnerLight, tokenizedDark: loadingSpinne
 
       100% {
         transform: rotate(360deg);
-      }
-    }
-  `;
-});
-
-export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Counter } = componentTokens.Feedback;
-  const { Error, Neutral, Warning } = semanticTokens.Feedback;
-
-  return css`
-    .blr-counter {
-      word-break: initial;
-      margin-left: auto;
-      color: ${Neutral.Text};
-      border: 1px solid ${Neutral.SurfaceStroke};
-      border-radius: ${Counter.BorderRadius};
-      white-space: nowrap;
-
-      &.sm {
-        padding: ${Counter.SM.Padding};
-        gap: ${Counter.SM.ItemSpacing};
-      }
-
-      &.md {
-        padding: ${Counter.MD.Padding};
-        gap: ${Counter.MD.ItemSpacing};
-      }
-
-      &.lg {
-        padding: ${Counter.LG.Padding};
-        gap: ${Counter.LG.ItemSpacing};
-      }
-
-      &.limit-reached,
-      &.error {
-        color: ${Error.Text};
-        border-color: ${Error.SurfaceStroke};
-        background-color: ${Error.Surface};
-      }
-
-      &.limit-close-int,
-      &.limit-close-per,
-      &.warn {
-        color: ${Warning.Text};
-        border-color: ${Warning.SurfaceStroke};
-        background-color: ${Warning.Surface};
       }
     }
   `;

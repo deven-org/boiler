@@ -50,6 +50,14 @@ export class BlrTextButton extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const loaderIconClasses = classMap({
+      'loading-class-icons': this.loading,
+    });
+
+    const labelClasses = classMap({
+      'loading-class-label': this.loading,
+    });
+
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const loaderSizeVariant = getComponentConfigToken([
@@ -67,6 +75,22 @@ export class BlrTextButton extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
+    const labelAndIconGroup = html` ${this.leadingIcon &&
+      html`${BlrIconRenderFunction({
+        icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+        size: iconSizeVariant,
+        hideAria: true,
+        classMap: loaderIconClasses,
+      })}`}
+      <span class=${labelClasses}>${this.label}</span>
+      ${this.trailingIcon &&
+      html`${BlrIconRenderFunction({
+        icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+        size: iconSizeVariant,
+        hideAria: true,
+        classMap: loaderIconClasses,
+      })}`}`;
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -82,27 +106,18 @@ export class BlrTextButton extends LitElement {
         id=${this.buttonId || nothing}
       >
         ${this.loading
-          ? html`${BlrLoaderRenderFunction({
-              size: loaderSizeVariant,
-              variant: loaderVariant,
-              loadingStatus: this.loadingStatus,
-              theme: this.theme,
-            })}`
-          : html`
-              ${this.leadingIcon &&
-              html`${BlrIconRenderFunction({
-                icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-                size: iconSizeVariant,
-                hideAria: true,
-              })}`}
-              <span>${this.label}</span>
-              ${this.trailingIcon &&
-              html`${BlrIconRenderFunction({
-                icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-                size: iconSizeVariant,
-                hideAria: true,
-              })}`}
-            `}
+          ? html`
+              <div class="loader-class ${loaderIconClasses}">
+                ${BlrLoaderRenderFunction({
+                  size: loaderSizeVariant,
+                  variant: loaderVariant,
+                  loadingStatus: this.loadingStatus,
+                  theme: this.theme,
+                })}
+              </div>
+              ${labelAndIconGroup}
+            `
+          : html` ${labelAndIconGroup} `}
       </span>`;
   }
 }

@@ -6,7 +6,6 @@ import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { textInputLight, textInputDark } from '../../foundation/component-tokens/text-input.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
@@ -15,6 +14,7 @@ import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-compon
 
 const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrFormInfoRenderFunction } from '../internal-components/form-info';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
@@ -101,7 +101,7 @@ export class BlrTextInput extends LitElement {
 
     return html`
       <style>
-        ${dynamicStyles.map((style) => style)}
+        ${dynamicStyles}
       </style>
       <div class="blr-text-input ${classes}">
         ${this.hasLabel
@@ -115,7 +115,7 @@ export class BlrTextInput extends LitElement {
                 variant: this.hasError ? 'error' : 'label',
               })}
             `
-          : html``}
+          : nothing}
         <div class="blr-input-wrapper ${inputContainerClasses}">
           <div class="blr-input-inner-container">
             <input
@@ -135,7 +135,6 @@ export class BlrTextInput extends LitElement {
               hasError="${this.hasError}"
             />
           </div>
-
           ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, iconSizeVariant),
@@ -158,34 +157,18 @@ export class BlrTextInput extends LitElement {
               })}`
             : nothing}
         </div>
-        <div class="textinput-wrapper ${this.size}">
-          ${this.showHint
-            ? html`
-                <div class="hint-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.hintText || '',
-                    variant: 'hint',
-                    icon: this.hintIcon,
-                    size: this.size,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
-          ${this.hasError
-            ? html`
-                <div class="error-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.errorMessage || 'Ups, an error occured..',
-                    variant: 'error',
-                    icon: this.errorIcon,
-                    size: this.size,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
-        </div>
+        ${this.showHint || this.hasError
+          ? html`${BlrFormInfoRenderFunction({
+              theme: this.theme,
+              size: this.size,
+              showHint: this.showHint,
+              hintText: this.hintText,
+              hintIcon: this.hintIcon,
+              hasError: !!this.hasError,
+              errorMessage: this.errorMessage,
+              errorIcon: this.errorIcon,
+            })}`
+          : nothing}
       </div>
     `;
   }

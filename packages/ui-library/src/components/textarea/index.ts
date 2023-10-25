@@ -1,21 +1,23 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
-import { textareaDark, textareaLight } from './index.css';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { counterDark, counterLight } from '../../foundation/component-tokens/feedback.css';
+import { styleCustom, textAreaDark, textAreaLight } from './index.css';
 import { CounterVariantType, FormSizesType, WarningLimits } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrCounterRenderFunction } from '../internal-components/counter';
+import { BlrFormInfoRenderFunction } from '../internal-components/form-info';
+import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 const TAG_NAME = 'blr-textarea';
 
 @customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {
+  static styles = [styleCustom];
+
   @property() textareaId!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
@@ -96,116 +98,88 @@ export class BlrTextarea extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles =
-      this.theme === 'Light' ? [formLight, textareaLight, counterLight] : [formDark, textareaDark, counterDark];
+    const dynamicStyles = this.theme === 'Light' ? [formLight, textAreaLight] : [formDark, textAreaDark];
 
     const classes = classMap({
-      [`${this.size}`]: this.size,
-      [`error`]: this.hasError || false,
+      [this.size]: this.size,
+      error: this.hasError || false,
     });
 
     const textareaClasses = classMap({
-      [`error`]: this.hasError || false,
-      [`error-input`]: this.hasError || false,
-      [`${this.size}`]: this.size,
-      [`resizeable`]: this.isResizeable || false,
-      ['shouldFocus']: this.shouldFocus || false,
+      'error': this.hasError || false,
+      'error-input': this.hasError || false,
+      [this.size]: this.size,
+      'resizeable': this.isResizeable || false,
+      'shouldFocus': this.shouldFocus || false,
     });
-    const flexContainer = classMap({
-      [`flex-container`]: true,
-      [`${this.size}`]: this.size,
+
+    const textareaInfoContainer = classMap({
+      'blr-textarea-info-container': true,
+      [this.size]: this.size,
     });
 
     const counterVariant = this.determinateCounterVariant();
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
+    return html`
+      <style>
+        ${dynamicStyles}
       </style>
       <div class="${classes} blr-textarea">
-        <div class="label-wrapper">
-          ${BlrFormLabelRenderFunction({
-            labelText: this.label,
-            labelSize: this.size,
-            labelAppendix: this.labelAppendix,
-            forValue: this.textareaId,
-            theme: this.theme,
-            variant: this.hasError ? 'error' : 'label',
-          })}
+        ${BlrFormLabelRenderFunction({
+          labelText: this.label,
+          labelSize: this.size,
+          labelAppendix: this.labelAppendix,
+          forValue: this.textareaId,
+          theme: this.theme,
+          variant: this.hasError ? 'error' : 'label',
+        })}
+        <textarea
+          class="blr-form-element textarea-input-control ${textareaClasses}"
+          id="${this.textareaId || nothing}"
+          maxlength="${this.maxLength || nothing}"
+          cols="${this.cols || nothing}"
+          rows="${this.rows || nothing}"
+          placeholder="${this.placeholder || nothing}"
+          ?required="${this.required}"
+          ?disabled="${this.disabled}"
+          ?readonly="${this.readonly}"
+          @input="${this.onChange}"
+          @focus=${this.focus}
+          @blur=${this.blur}
+          @select="${this.onSelect}"
+          @keyup="${this.updateCounter}"
+          shouldFocus="${this.shouldFocus}"
+        >
+${this.value}
+        </textarea
+        >
+        <div class="${textareaInfoContainer}">
+          ${this.showHint || this.hasError
+            ? html`${BlrFormInfoRenderFunction({
+                theme: this.theme,
+                size: this.size,
+                showHint: this.showHint,
+                hintText: this.hintText,
+                hintIcon: this.hintIcon,
+                hasError: !!this.hasError,
+                errorMessage: this.errorMessage,
+                errorIcon: this.errorIcon,
+              })}`
+            : nothing}
+          ${this.showCounter
+            ? html`
+                ${BlrCounterRenderFunction({
+                  variant: counterVariant,
+                  current: this.count,
+                  max: this.maxLength || 0,
+                  size: this.size,
+                  theme: this.theme,
+                })}
+              `
+            : nothing}
         </div>
-        <div class="input-wrapper">
-          <textarea
-            class="blr-form-element textarea-input-control ${textareaClasses}"
-            id="${this.textareaId || nothing}"
-            maxlength="${this.maxLength || nothing}"
-            cols="${this.cols || nothing}"
-            rows="${this.rows || nothing}"
-            placeholder="${this.placeholder || nothing}"
-            ?required="${this.required}"
-            ?disabled="${this.disabled}"
-            ?readonly="${this.readonly}"
-            @input="${this.onChange}"
-            @focus=${this.focus}
-            @blur=${this.blur}
-            @select="${this.onSelect}"
-            @keyup="${this.updateCounter}"
-            shouldFocus="${this.shouldFocus}"
-          >
-${this.value}</textarea
-          >
-          
-            <div class="${flexContainer}">
-            <div>
-              ${
-                this.showHint
-                  ? html`
-                      <div class="text-area-hint-wrapper">
-                        ${BlrFormHintRenderFunction({
-                          message: this.hintText || '',
-                          variant: 'hint',
-                          icon: this.hintIcon,
-                          size: this.size,
-                          theme: this.theme,
-                        })}
-                      </div>
-                    `
-                  : nothing
-              }
-              ${
-                this.hasError
-                  ? html`
-                      <div class="text-area-error-wrapper">
-                        ${BlrFormHintRenderFunction({
-                          message: this.errorMessage || ' ',
-                          variant: this.hasError ? 'error' : 'hint',
-                          size: this.size,
-                          icon: this.errorIcon ? this.errorIcon : undefined,
-                          theme: this.theme,
-                        })}
-                      </div>
-                    `
-                  : nothing
-              }
-            </div>
-              ${
-                this.showCounter
-                  ? html`
-                      <div class="counter-wrapper ${classes}">
-                        ${BlrCounterRenderFunction({
-                          variant: counterVariant,
-                          current: this.count,
-                          max: this.maxLength || 0,
-                          size: this.size,
-                          theme: this.theme,
-                        })}
-                      </div>
-                    `
-                  : nothing
-              }
-            </div>
-            </div>
-          </div>
-        </div>
-      </div> `;
+      </div>
+    `;
   }
 }
 

@@ -2,7 +2,7 @@ import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
+  (_componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
 
     return css`
