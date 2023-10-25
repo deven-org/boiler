@@ -23,7 +23,7 @@ export interface ButtonOption {
 export class BlrTextButtonGroup extends LitElement {
   static styles = [StyleTextButtonGroupCustom, StyleTextButtonCustom];
 
-  @property() label = 'Button Label';
+  @property() label? = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() leadingIcon?: IconType;
@@ -37,7 +37,7 @@ export class BlrTextButtonGroup extends LitElement {
   @property() alignment: AlignmentType = 'center';
   @property() buttons!: ButtonOption[];
   @property() buttonVariant?: ActionVariantType = 'primary';
-
+  @property() iconButton?: IconType;
   @property() theme: ThemeType = 'Light';
 
   protected render() {
@@ -73,6 +73,14 @@ export class BlrTextButtonGroup extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
+    const iconButtonSizeVariant = getComponentConfigToken([
+      'SizeVariant',
+      'Action',
+      'IconButton',
+      this.size.toUpperCase(),
+      'Icon',
+    ]).toLowerCase() as SizesType;
+
     return html`
       <style>
         ${dynamicStyles.map((style) => style)}
@@ -89,23 +97,30 @@ export class BlrTextButtonGroup extends LitElement {
             'blr-text-button-group': true,
           });
 
-          const labelAndIconGroup = html`
-            ${this.leadingIcon &&
-            html`${BlrIconRenderFunction({
-              icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: loaderIconClasses,
-            })}`}
-            <span class=${labelClasses}>${button.label}</span>
-            ${this.trailingIcon &&
-            html`${BlrIconRenderFunction({
-              icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: loaderIconClasses,
-            })}`}
-          `;
+          const labelAndIconGroup = html` ${this.iconButton
+            ? html`${BlrIconRenderFunction({
+                icon: calculateIconName(this.iconButton, iconButtonSizeVariant),
+                size: iconButtonSizeVariant,
+                hideAria: true,
+                classMap: loaderIconClasses,
+              })}`
+            : html`
+                ${this.leadingIcon &&
+                html`${BlrIconRenderFunction({
+                  icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+                  size: iconSizeVariant,
+                  hideAria: true,
+                  classMap: loaderIconClasses,
+                })}`}
+                <span class=${labelClasses}>${button.label}</span>
+                ${this.trailingIcon &&
+                html`${BlrIconRenderFunction({
+                  icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+                  size: iconSizeVariant,
+                  hideAria: true,
+                  classMap: loaderIconClasses,
+                })}`}
+              `}`;
 
           return html`
             <button
@@ -143,6 +158,7 @@ export const BlrTextButtonGroupRenderFunction = ({
   onClick,
   onBlur,
   buttons,
+  iconButton,
   leadingIcon,
   trailingIcon,
   loading,
@@ -160,6 +176,7 @@ export const BlrTextButtonGroupRenderFunction = ({
     .onBlur=${onBlur}
     .leadingIcon=${leadingIcon}
     .trailingIcon=${trailingIcon}
+    .iconButton=${iconButton}
     .loading=${loading}
     .disabled=${disabled}
     .buttonId=${buttonId}
