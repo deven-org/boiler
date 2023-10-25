@@ -54,12 +54,6 @@ const sampleParams: BlrTextButtonGroupType = {
 };
 
 describe('blr-text-button-group', () => {
-  let component: BlrTextButtonGroup;
-
-  beforeEach(async () => {
-    component = await fixture(html`<blr-text-button-group>I am a button from button group</blr-text-button-group>`);
-  });
-
   it('is having a button containing the right className', async () => {
     const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
 
@@ -70,7 +64,7 @@ describe('blr-text-button-group', () => {
     expect(className).to.contain('blr-text-button-group');
   });
 
-  it('has an action variant', async () => {
+  it('has a span value', async () => {
     const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
     const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
 
