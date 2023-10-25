@@ -7,7 +7,7 @@ import { radioDark, radioLight } from '../../foundation/component-tokens/radio.c
 import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
@@ -27,17 +27,17 @@ export class BlrRadioGroup extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
-  @property() errorIcon?: IconType;
+  @property() errorIcon?: SizelessIconType;
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
   @property() layout!: boolean;
   @property() showHint = true;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
   @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
-  @property() groupErrorIcon?: IconType;
+  @property() groupErrorIcon?: SizelessIconType;
   @property() showLegend?: boolean = true;
 
   @property() theme: ThemeType = 'Light';

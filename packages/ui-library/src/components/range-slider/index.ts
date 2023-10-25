@@ -9,7 +9,7 @@ import { findNearestValue, findPercentage, generateRangeBar, setOnclickValue } f
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
 
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
@@ -33,8 +33,8 @@ export class BlrRangeSlider extends LitElement {
   @property() size: FormSizesType = 'md';
   @property() btnVariant: ActionVariantType = 'silent';
 
-  @property() incrementIcon!: IconType;
-  @property() decrementIcon!: IconType;
+  @property() incrementIcon!: SizelessIconType;
+  @property() decrementIcon!: SizelessIconType;
 
   @property() showLegend?: boolean = true;
   @property() disabled?: boolean = false;

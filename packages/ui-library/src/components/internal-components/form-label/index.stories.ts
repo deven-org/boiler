@@ -28,7 +28,7 @@ export const BlrFormLabel = (params: BlrFormLabelType) => BlrFormLabelRenderFunc
 
 BlrFormLabel.storyName = 'BlrFormLabel';
 
-BlrFormLabel.args = {
+const args: BlrFormLabelType = {
   theme: 'Light',
   labelText: 'Test',
   labelAppendix: 'added',
@@ -36,3 +36,5 @@ BlrFormLabel.args = {
   forValue: 'Richard',
   variant: 'label',
 };
+
+BlrFormLabel.args = args;

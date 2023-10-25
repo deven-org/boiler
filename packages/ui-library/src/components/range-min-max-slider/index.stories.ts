@@ -47,6 +47,7 @@ const logEventType = (minVal: number, maxVal: number, event: Event) => {
   console.log('storybook:story:min', minVal);
   console.log('storybook:story:max', maxVal);
   console.log('storybook:story:logEventValue', (event.target as HTMLInputElement).value);
+  return null;
 };
 
 const btnEventType = (minValue: number, maxValue: number) => {
@@ -54,7 +55,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
   console.log('storybook:story:logEventType:maxValue', maxValue);
 };
 
-BlrRangeMinMaxSlider.args = {
+const args: BlrRangeMinMaxSliderType = {
   theme: 'Light',
   onBtnClick: btnEventType,
   onChange: logEventType,
@@ -72,3 +73,5 @@ BlrRangeMinMaxSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeMinMaxSlider.args = args;

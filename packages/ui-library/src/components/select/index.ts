@@ -5,7 +5,7 @@ import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { selectInputLight, selectInputDark } from '../../foundation/component-tokens/select.css';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
@@ -42,11 +42,11 @@ export class BlrSelect extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
-  @property() errorIcon?: IconType = 'blr360Sm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
+  @property() errorIcon?: SizelessIconType = 'blr360Sm';
   @property() showHint?: boolean;
   @property() showTrailingIcon?: boolean;
-  @property() trailingIcon: IconType = 'blr360Sm';
+  @property() trailingIcon: SizelessIconType = 'blr360Sm';
 
   @property() theme: ThemeType = 'Light';
 
@@ -61,21 +61,21 @@ export class BlrSelect extends LitElement {
 
     if (this.showTrailingIcon) {
       if (this.hasError) {
-        return html`${BlrIconRenderFunction({
+        return BlrIconRenderFunction({
           icon: calculateIconName('blrErrorFilled', iconSizeVariant),
           size: iconSizeVariant,
           classMap: classes,
           hideAria: true,
           disablePointerEvents: true,
-        })}`;
+        });
       } else {
-        return html`${BlrIconRenderFunction({
+        return BlrIconRenderFunction({
           icon: calculateIconName(this.trailingIcon, iconSizeVariant),
           size: iconSizeVariant,
           classMap: classes,
           hideAria: true,
           disablePointerEvents: true,
-        })}`;
+        });
       }
     }
 
@@ -140,7 +140,7 @@ export class BlrSelect extends LitElement {
           ${this.renderTrailingIcon(iconClasses)}
         </div>
         ${this.showHint || this.hasError
-          ? html`${BlrFormInfoRenderFunction({
+          ? BlrFormInfoRenderFunction({
               theme: this.theme,
               size: this.size,
               showHint: !!this.showHint,
@@ -149,7 +149,7 @@ export class BlrSelect extends LitElement {
               hasError: !!this.hasError,
               errorMessage: this.errorMessage,
               errorIcon: this.errorIcon,
-            })}`
+            })
           : nothing}
       </div>
     `;

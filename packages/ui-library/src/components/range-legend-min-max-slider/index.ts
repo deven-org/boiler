@@ -10,7 +10,7 @@ import { findToolTipPosition, setOnclickValue } from '../../utils/range-slider-u
 
 import { BlrIconButtonRenderFunction } from '../icon-button';
 import { RenderBtnProps } from '../../globals/types';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
@@ -33,8 +33,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
   @property() size: FormSizesType = 'md';
   @property() btnVariant: ActionVariantType = 'silent';
 
-  @property() incrementIcon!: IconType;
-  @property() decrementIcon!: IconType;
+  @property() incrementIcon!: SizelessIconType;
+  @property() decrementIcon!: SizelessIconType;
 
   @property() showLegend?: boolean = true;
   @property() disabled?: boolean = false;
@@ -55,7 +55,7 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
   }
 
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
-    html`${BlrIconButtonRenderFunction({
+    BlrIconButtonRenderFunction({
       arialabel: btnId,
       onClick: btnEventHandler,
       icon: iconName,
@@ -66,7 +66,7 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
       size: this.size,
       loadingStatus: 'Loading',
       theme: this.theme,
-    })}`;
+    });
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];

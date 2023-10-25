@@ -37,11 +37,11 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType = 'blrInfo';
   @property() hint?: string;
   @property() showHint = true;
   @property() hintText?: string;
-  @property() showCounter?: string;
+  @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() isResizeable?: boolean;
   @property() rows?: number;
@@ -155,7 +155,7 @@ ${this.value}
         >
         <div class="${textareaInfoContainer}">
           ${this.showHint || this.hasError
-            ? html`${BlrFormInfoRenderFunction({
+            ? BlrFormInfoRenderFunction({
                 theme: this.theme,
                 size: this.size,
                 showHint: this.showHint,
@@ -164,18 +164,16 @@ ${this.value}
                 hasError: !!this.hasError,
                 errorMessage: this.errorMessage,
                 errorIcon: this.errorIcon,
-              })}`
+              })
             : nothing}
           ${this.showCounter
-            ? html`
-                ${BlrCounterRenderFunction({
-                  variant: counterVariant,
-                  current: this.count,
-                  max: this.maxLength || 0,
-                  size: this.size,
-                  theme: this.theme,
-                })}
-              `
+            ? BlrCounterRenderFunction({
+                variant: counterVariant,
+                current: this.count,
+                max: this.maxLength || 0,
+                size: this.size,
+                theme: this.theme,
+              })
             : nothing}
         </div>
       </div>

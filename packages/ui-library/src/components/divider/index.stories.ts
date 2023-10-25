@@ -31,6 +31,8 @@ export const BlrDivider = (params: BlrDividerType) => html`
 
 BlrDivider.storyName = 'BlrDivider';
 
-BlrDivider.args = {
+const args: BlrDividerType = {
   theme: 'Light',
 };
+
+BlrDivider.args = args;

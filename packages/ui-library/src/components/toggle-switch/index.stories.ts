@@ -34,7 +34,7 @@ const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);
 };
 
-BlrToggleSwitch.args = {
+const args: BlrToggleSwitchType = {
   theme: 'Light',
   label: 'Toggle Switch Option',
   onLabel: 'On',
@@ -51,4 +51,7 @@ BlrToggleSwitch.args = {
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
+  isSelected: false,
 };
+
+BlrToggleSwitch.args = args;

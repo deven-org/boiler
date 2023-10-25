@@ -44,10 +44,11 @@ export const BlrRangeLegendMinMaxSlider = (params: BlrRangeLegendMinMaxSliderTyp
 
 BlrRangeLegendMinMaxSlider.storyName = 'BlrRangeLegendMinMaxSlider';
 
-const logEventType = (minVal, maxVal, event) => {
+const logEventType = (minVal: number, maxVal: number, event: Event) => {
   console.log('storybook:story:min', minVal);
   console.log('storybook:story:max', maxVal);
   console.log('storybook:story:logEventType', event.type);
+  return null;
 };
 
 const btnEventType = (minValue: number, maxValue: number) => {
@@ -55,7 +56,7 @@ const btnEventType = (minValue: number, maxValue: number) => {
   console.log('storybook:story:logEventType:maxValue', maxValue);
 };
 
-BlrRangeLegendMinMaxSlider.args = {
+const args: BlrRangeLegendMinMaxSliderType = {
   theme: 'Light',
   onBtnClick: btnEventType,
   onChange: logEventType,
@@ -71,3 +72,5 @@ BlrRangeLegendMinMaxSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeLegendMinMaxSlider.args = args;

@@ -46,13 +46,13 @@ BlrRangeLegendSlider.storyName = 'BlrRangeLegendSlider';
 const logEventType = (value: number, event: Event) => {
   console.log('storybook:story:logEventType', event.type);
   console.log('storybook:story:logEventValue', (event.target as HTMLInputElement).value);
+  return null;
 };
 
 const btnEventType = (value: number) => {
   console.log('storybook:story:logEventType', value);
 };
-
-BlrRangeLegendSlider.args = {
+const args: BlrRangeLegendSliderType = {
   theme: 'Light',
   onClickMinMax: btnEventType,
   onChange: logEventType,
@@ -67,3 +67,5 @@ BlrRangeLegendSlider.args = {
   incrementIcon: 'blrPlus',
   decrementIcon: 'blrMinus',
 };
+
+BlrRangeLegendSlider.args = args;

@@ -40,7 +40,7 @@ export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderF
 
 BlrRadioGroup.storyName = 'BlrRadioGroup';
 
-BlrRadioGroup.args = {
+const args: BlrRadioGroupType = {
   theme: 'Light',
   disabled: false,
   name: 'Default Name',
@@ -52,7 +52,7 @@ BlrRadioGroup.args = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  layout: 'horizontal',
+  layout: true,
   showLegend: true,
   showHint: true,
   groupHintMessage: 'This is a sample hint message',
@@ -60,4 +60,8 @@ BlrRadioGroup.args = {
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
+  hideLabel: false,
+  showGroupErrorMessage: false,
 };
+
+BlrRadioGroup.args = args;

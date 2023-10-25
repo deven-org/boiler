@@ -59,7 +59,7 @@ export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(para
 
 BlrTabBar.storyName = 'BlrTabBar';
 
-BlrTabBar.args = {
+const args: BlrTabBarType = {
   theme: 'Light',
   tabs: [
     {
@@ -128,3 +128,5 @@ BlrTabBar.args = {
   iconPosition: 'leading',
   alignment: 'left',
 };
+
+BlrTabBar.args = args;

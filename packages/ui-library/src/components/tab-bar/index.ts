@@ -16,7 +16,7 @@ import {
   SizesType,
 } from '../../globals/types';
 import { BlrIconRenderFunction } from '../internal-components/icon';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -31,22 +31,22 @@ export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
   @query('.blr-tab-bar')
-  _navList!: HTMLElement;
+  protected _navList!: HTMLElement;
 
   @queryAll('.nav-list li')
-  _navItems!: HTMLElement[];
+  protected _navItems!: HTMLElement[];
 
   @queryAll('slot[name=tab]')
-  _navItemsSlots!: HTMLElement[];
+  protected _navItemsSlots!: HTMLElement[];
 
   @queryAll('[role=tabpanel]')
-  _panels!: HTMLElement[];
+  protected _panels!: HTMLElement[];
 
   @property() tabs!: TabType[];
   @property() overflowVariantStandard!: OverflowVariantTypeStandard;
   @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
   @property() iconPosition: IconPositionVariant = 'leading';
-  @property() icon: IconType = 'blr360Sm';
+  @property() icon: SizelessIconType = 'blr360Sm';
   @property() variant: TabVariantType = 'standard';
   @property() tabContent: TabContentVariantType = 'labelOnly';
   @property() alignment: TabAlignmentVariantType = 'left';
@@ -59,7 +59,7 @@ export class BlrTabBar extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  scrollTab = (direction: string, speed: number, distance: number) => {
+  protected scrollTab = (direction: string, speed: number, distance: number) => {
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
       if (direction === 'left') {

@@ -30,7 +30,7 @@ export const BlrRadio = (params: BlrRadioType) => BlrRadioRenderFunction(params)
 
 BlrRadio.storyName = 'BlrRadio';
 
-BlrRadio.args = {
+const args: BlrRadioType = {
   theme: 'Light',
   checked: false,
   disabled: false,
@@ -47,6 +47,8 @@ BlrRadio.args = {
   },
   showHint: true,
   hasError: false,
-  hintIcon: '',
-  errorIcon: '',
+  hintIcon: undefined,
+  errorIcon: undefined,
 };
+
+BlrRadio.args = args;

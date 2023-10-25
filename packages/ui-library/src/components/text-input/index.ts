@@ -6,7 +6,7 @@ import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { textInputLight, textInputDark } from '../../foundation/component-tokens/text-input.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -38,11 +38,11 @@ export class BlrTextInput extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() showInputIcon = true;
-  @property() inputIcon: IconType = 'blr360Sm';
+  @property() inputIcon: SizelessIconType = 'blr360Sm';
   @property() showHint = true;
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
-  @property() errorIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
+  @property() errorIcon: SizelessIconType = 'blrInfoSm';
   @property() hasLabel!: boolean;
 
   @property() theme: ThemeType = 'Light';

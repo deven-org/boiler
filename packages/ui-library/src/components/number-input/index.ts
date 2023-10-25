@@ -17,7 +17,7 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { IconType, SizelessIconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
@@ -49,7 +49,7 @@ export class BlrNumberInput extends LitElement {
   @property() errorMessage?: string;
   @property() showHint = true;
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() value?: number;
   @property() step?: number;
   @property() unit?: string | undefined;

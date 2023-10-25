@@ -49,7 +49,7 @@ export const BlrTextInput = (params: BlrTextInputType) => BlrTextInputRenderFunc
 
 BlrTextInput.storyName = 'BlrTextInput';
 
-BlrTextInput.args = {
+const args: BlrTextInputType = {
   theme: 'Light',
   textInputId: 'Input ID',
   label: 'Label',
@@ -67,8 +67,10 @@ BlrTextInput.args = {
   showHint: false,
   hintText: 'This is a hint message',
   hintIcon: 'blrInfo',
-  maxLength: '200',
+  maxLength: 200,
   hasError: false,
   errorMessage: 'This is an error message',
   errorIcon: 'blrInfo',
 };
+
+BlrTextInput.args = args;

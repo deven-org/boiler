@@ -37,10 +37,9 @@ export const BlrToolTip = (params: BlrToolTipType) =>
 
 BlrToolTip.storyName = 'BlrToolTip';
 
-BlrToolTip.args = {
+const args: BlrToolTipType = {
   theme: 'Light',
   text: 'Tooltip text comes here Tooltip text comes here',
-  tooldTipId: 'my_text',
   placement: 'right',
   toolTipArrow: 'middle',
   elevation: true,
@@ -48,3 +47,5 @@ BlrToolTip.args = {
   visibility: 'onLoad',
   itemRenderer: html` <p style="padding: 0px; margin: 0px; border-bottom: 1px dashed #ccc;">tool tip</p> `,
 };
+
+BlrToolTip.args = args;

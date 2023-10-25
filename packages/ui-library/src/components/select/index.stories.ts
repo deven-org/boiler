@@ -58,7 +58,7 @@ export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(para
 
 BlrSelect.storyName = 'BlrSelect';
 
-BlrSelect.args = {
+const args: BlrSelectType = {
   theme: 'Light',
   name: 'Text Input',
   hasLabel: true,
@@ -83,3 +83,5 @@ BlrSelect.args = {
     { value: 'dieter', label: 'Dieter' },
   ],
 };
+
+BlrSelect.args = args;

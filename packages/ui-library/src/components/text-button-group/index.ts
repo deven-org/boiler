@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as StyleTextButtonGroupCustom } from './index.css';
 import { styleCustom as StyleTextButtonCustom } from '../text-button/index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
@@ -29,8 +29,8 @@ export class BlrTextButtonGroup extends LitElement {
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: IconType;
-  @property() trailingIcon?: IconType;
+  @property() leadingIcon?: SizelessIconType;
+  @property() trailingIcon?: SizelessIconType;
   @property() loading!: boolean;
   @property() disabled?: boolean;
   @property() buttonId?: string;
@@ -94,20 +94,20 @@ export class BlrTextButtonGroup extends LitElement {
 
           const labelAndIconGroup = html`
             ${this.leadingIcon &&
-            html`${BlrIconRenderFunction({
+            BlrIconRenderFunction({
               icon: calculateIconName(this.leadingIcon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
               classMap: loaderIconClasses,
-            })}`}
+            })}
             <span class=${labelClasses}>${button.label}</span>
             ${this.trailingIcon &&
-            html`${BlrIconRenderFunction({
+            BlrIconRenderFunction({
               icon: calculateIconName(this.trailingIcon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
               classMap: loaderIconClasses,
-            })}`}
+            })}
           `;
 
           return html`

@@ -33,7 +33,7 @@ export const BlrIconButton = (params: BlrIconButtonType) => BlrIconButtonRenderF
 
 BlrIconButton.storyName = 'BlrIconButton';
 
-BlrIconButton.args = {
+const args: BlrIconButtonType = {
   theme: 'Light',
   variant: 'cta',
   size: 'md',
@@ -46,3 +46,5 @@ BlrIconButton.args = {
   buttonId: 'button-id',
   loadingStatus: 'Loading',
 };
+
+BlrIconButton.args = args;

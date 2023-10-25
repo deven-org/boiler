@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 
 import { BlrFormLabelInline } from '../form-label-inline';
 import { FormSizesType, IconPositionVariant } from '../../globals/types';
@@ -35,7 +35,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() checked?: boolean;
 
   @property() hintText?: string;
-  @property() hintIcon: IconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfoSm';
 
   @property() size: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';

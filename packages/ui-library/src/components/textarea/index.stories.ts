@@ -72,14 +72,13 @@ export const BlrTextarea = (params: BlrTextareaType) => BlrTextareaRenderFunctio
 
 BlrTextarea.storyName = 'BlrTextarea-Docs';
 
-BlrTextarea.args = {
+const args: BlrTextareaType = {
   theme: 'Light',
   textareaId: '#1',
   label: 'Label',
   labelAppendix: '(Optional)',
   size: 'md',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  minLength: 0,
   maxLength: 140,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
@@ -106,3 +105,5 @@ BlrTextarea.args = {
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
 };
+
+BlrTextarea.args = args;

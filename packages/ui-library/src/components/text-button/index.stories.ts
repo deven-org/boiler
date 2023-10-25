@@ -37,7 +37,7 @@ export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderF
 
 BlrTextButton.storyName = 'BlrTextButton';
 
-BlrTextButton.args = {
+const args: BlrTextButtonType = {
   theme: 'Light',
   variant: 'cta',
   size: 'md',
@@ -51,3 +51,5 @@ BlrTextButton.args = {
   buttonId: 'button-id',
   loadingStatus: 'Loading',
 };
+
+BlrTextButton.args = args;

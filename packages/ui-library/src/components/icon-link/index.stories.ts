@@ -33,7 +33,7 @@ export const BlrIconLink = (params: BlrIconLinkType) => BlrIconLinkRenderFunctio
 
 BlrIconLink.storyName = 'BlrIconLink';
 
-BlrIconLink.args = {
+const args: BlrIconLinkType = {
   theme: 'Light',
   arialabel: 'Button',
   onClick: () => console.log('onClick'),
@@ -47,3 +47,5 @@ BlrIconLink.args = {
   target: '_self',
   loadingStatus: 'Loading',
 };
+
+BlrIconLink.args = args;

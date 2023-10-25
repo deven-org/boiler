@@ -1,4 +1,4 @@
-import { BlrLoader as BlrLoaderClass, BlrLoaderRenderFunction } from './index';
+import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
 import { ActionSizes, FeedbackVariants } from '../../globals/constants';
 
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -24,13 +24,15 @@ export default {
   },
 };
 
-export const BlrLoader = (params: BlrLoaderClass) => BlrLoaderRenderFunction(params);
+export const BlrLoader = (params: BlrLoaderType) => BlrLoaderRenderFunction(params);
 
 BlrLoader.storyName = 'BlrLoader';
 
-BlrLoader.args = {
+const args: BlrLoaderType = {
   theme: 'Light',
   size: 'md',
   variant: 'default',
   loadingStatus: 'Loading',
 };
+
+BlrLoader.args = args;

@@ -41,9 +41,9 @@ export const BlrTextButtonGroup = (params: BlrTextButtonGroupType) => BlrTextBut
 
 BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
 
-BlrTextButtonGroup.args = {
+const args: BlrTextButtonGroupType = {
   theme: 'Light',
-  alignment: 'flex-start',
+  alignment: 'left',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
@@ -62,7 +62,7 @@ BlrTextButtonGroup.args = {
       disabled: false,
       buttonId: 'button-id-1',
       trailingIcon: 'blr360',
-      buttonVariant: '',
+      buttonVariant: undefined,
       loading: false,
     },
     {
@@ -71,7 +71,7 @@ BlrTextButtonGroup.args = {
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-2',
-      buttonVariant: '',
+      buttonVariant: undefined,
       trailingIcon: 'blr360',
       loading: false,
     },
@@ -81,20 +81,22 @@ BlrTextButtonGroup.args = {
       loadingStatus: 'Loading',
       disabled: false,
       buttonId: 'button-id-3',
-      buttonVariant: '',
+      buttonVariant: undefined,
       trailingIcon: 'blr360',
       loading: false,
     },
   ],
 };
 
+BlrTextButtonGroup.args = args;
+
 export const VariantButtonGroupRight = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 VariantButtonGroupRight.storyName = 'VariantButtonGroupRight';
 
-VariantButtonGroupRight.args = {
+const args2: BlrTextButtonGroupType = {
   theme: 'Light',
-  alignment: 'flex-end',
+  alignment: 'right',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   leadingIcon: undefined,
@@ -139,11 +141,13 @@ VariantButtonGroupRight.args = {
   ],
 };
 
+VariantButtonGroupRight.args = args2;
+
 export const VariantButtonGroupCenter = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
 VariantButtonGroupCenter.storyName = 'VariantButtonGroupCenter';
 
-VariantButtonGroupCenter.args = {
+const args3: BlrTextButtonGroupType = {
   theme: 'Light',
   size: 'md',
   variant: 'destructive',
@@ -189,3 +193,5 @@ VariantButtonGroupCenter.args = {
     },
   ],
 };
+
+VariantButtonGroupCenter.args = args3;

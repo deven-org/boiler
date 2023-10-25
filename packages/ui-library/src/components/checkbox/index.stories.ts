@@ -50,7 +50,7 @@ const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);
 };
 
-BlrCheckbox.args = {
+const args: BlrCheckboxType = {
   theme: 'Light',
   size: 'md',
 
@@ -59,11 +59,11 @@ BlrCheckbox.args = {
 
   hasError: false,
   errorMessage: 'This is a sample error message',
-  errorIcon: '',
+  errorIcon: undefined,
 
   showHint: false,
   hintMessage: 'This is a sample hint',
-  hintIcon: '',
+  hintIcon: undefined,
 
   checkInputId: 'Checky',
   disabled: false,
@@ -74,4 +74,7 @@ BlrCheckbox.args = {
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
+  handleChange: logEventType,
 };
+
+BlrCheckbox.args = args;

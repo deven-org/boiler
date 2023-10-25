@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -48,18 +47,18 @@ export default {
   },
 };
 
-export const BlrNumberInput = (params: BlrNumberInputType) => html` ${BlrNumberInputRenderFunction(params)} `;
+export const BlrNumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderFunction(params);
 
 BlrNumberInput.storyName = 'Component docs';
 
-BlrNumberInput.args = {
+const args: BlrNumberInputType = {
   unit: 'kg',
   prependUnit: false,
   variant: 'mode3',
-  value: '',
-  step: '1',
-  fractionDigits: '',
-  totalDigits: '',
+  value: 0,
+  step: 1,
+  fractionDigits: undefined,
+  totalDigits: undefined,
   size: 'md',
   theme: 'Light',
   hasLabel: true,
@@ -76,3 +75,5 @@ BlrNumberInput.args = {
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',
 };
+
+BlrNumberInput.args = args;
