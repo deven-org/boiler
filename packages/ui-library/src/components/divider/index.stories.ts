@@ -5,7 +5,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrDivider',
+  title: 'Design System/Web Components/UI/Divider',
   argTypes: {
     dividerDirectionVariant: {
       options: DividerVariations,

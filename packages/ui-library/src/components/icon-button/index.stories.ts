@@ -7,7 +7,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrIconButton',
+  title: 'Design System/Web Components/Actions/Buttons/IconButton',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],

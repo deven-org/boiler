@@ -5,7 +5,7 @@ import { ToolTipVisibility, ToolTipPosition, ToolTipArrowPosition } from '../../
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrToolTip',
+  title: 'Design System/Web Components/Feedback/Tooltip',
   argTypes: {
     theme: {
       options: Themes,

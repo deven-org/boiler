@@ -26,6 +26,7 @@ const defaultParams: BlrTextareaType = {
   hintIcon: 'blrInfo',
   hintText: 'hint message',
 
+  errorIcon: 'blrInfo',
   hasError: false,
   errorMessage: "OMG it's an error",
 
@@ -44,7 +45,7 @@ const fontStyle = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/BlrTextarea/Examples',
+  title: 'Design System/Web Components/Forms/TextArea/Examples',
   parameters: {
     viewMode: 'story',
     previewTabs: {
@@ -272,7 +273,7 @@ export const InteractivePlaceholder = ({ placeholder }) =>
       value: '',
     })}
   `;
-InteractivePlaceholder.storyName = 'Interaktiver Placeholder';
+InteractivePlaceholder.storyName = 'Interactive Placeholder';
 InteractivePlaceholder.args = {
   placeholder: defaultParams.placeholder,
 };

@@ -7,7 +7,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 
 export default {
-  title: 'Design System/Web Components/BlrNumberInput',
+  title: 'Design System/Web Components/Forms/NumberInput',
   argTypes: {
     size: {
       options: FormSizes,

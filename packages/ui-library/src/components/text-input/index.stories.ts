@@ -7,7 +7,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrTextInput',
+  title: 'Design System/Web Components/Forms/TextInput',
   argTypes: {
     size: {
       options: FormSizes,

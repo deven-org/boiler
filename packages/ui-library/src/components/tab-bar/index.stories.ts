@@ -13,7 +13,7 @@ import './index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrTabBar',
+  title: 'Design System/Web Components/Navigation/TabBar',
   argTypes: {
     theme: {
       options: Themes,
