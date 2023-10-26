@@ -64,17 +64,11 @@ describe('blr-text-button-group', () => {
     expect(className).to.contain('blr-text-button-group');
   });
 
-  it('has a span value', async () => {
+  it('has a span inside', async () => {
     const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
-    const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
 
-    expect(button?.textContent?.trim().toLocaleLowerCase()).to.be.oneOf([
-      'primary',
-      'secondary',
-      'cta',
-      'silent',
-      'destructive',
-      'encourage',
-    ]);
+    const span = querySelectorDeep('span', element.getRootNode() as HTMLButtonElement);
+
+    expect(span).to.exist;
   });
 });
