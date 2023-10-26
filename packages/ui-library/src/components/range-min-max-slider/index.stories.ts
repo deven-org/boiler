@@ -5,7 +5,7 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrRangeMinMaxSlider',
+  title: 'Design System/Web Components/Forms/Slider/SliderTwoValues',
   argTypes: {
     incrementIcon: {
       options: [undefined, ...PureIconKeys],
@@ -41,7 +41,7 @@ export default {
 
 export const BlrRangeMinMaxSlider = (params: BlrRangeMinMaxSliderType) => BlrRangeMinMaxSliderRenderFunction(params);
 
-BlrRangeMinMaxSlider.storyName = 'BlrRangeMinMaxSlider';
+BlrRangeMinMaxSlider.storyName = 'Range Slider (No Legend)';
 
 const logEventType = (minVal: number, maxVal: number, event: Event) => {
   console.log('storybook:story:min', minVal);

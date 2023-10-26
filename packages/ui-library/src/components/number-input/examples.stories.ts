@@ -17,7 +17,7 @@ const defaultParams: BlrNumberInputType = {
 };
 
 export default {
-  title: 'Design System/Web Components/BlrNumberInput/NumberFormat Examples',
+  title: 'Design System/Web Components/Forms/NumberInput',
   parameters: {
     viewMode: 'story',
     previewTabs: {

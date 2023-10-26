@@ -5,7 +5,7 @@ import { ActionSizes, ActionVariants } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/Button',
+  title: 'Design System/Web Components/Actions/Buttons/TextButton',
   argTypes: {
     leadingIcon: {
       options: [undefined, ...PureIconKeys],

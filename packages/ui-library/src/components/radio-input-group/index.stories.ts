@@ -5,7 +5,7 @@ import { IconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/Radio',
+  title: 'Design System/Web Components/Forms/Radio',
   argTypes: {
     size: {
       options: InputSizes,

@@ -5,7 +5,7 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/BlrSelect',
+  title: 'Design System/Web Components/Forms/Select',
   argTypes: {
     size: {
       options: FormSizes,
