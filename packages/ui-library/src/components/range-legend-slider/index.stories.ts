@@ -5,7 +5,7 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/RangeLegendSlider',
+  title: 'Design System/Web Components/Forms/Slider/SliderSingleValue',
   argTypes: {
     incrementIcon: {
       options: [undefined, ...PureIconKeys],
@@ -41,7 +41,7 @@ export default {
 
 export const BlrRangeLegendSlider = (params: BlrRangeLegendSliderType) => BlrRangeLegendSliderRenderFunction(params);
 
-BlrRangeLegendSlider.storyName = 'BlrRangeLegendSlider';
+BlrRangeLegendSlider.storyName = 'Range Slider (Legend)';
 
 const logEventType = (value: number, event: Event) => {
   console.log('storybook:story:logEventType', event.type);

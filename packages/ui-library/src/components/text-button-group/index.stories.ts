@@ -5,7 +5,7 @@ import { ActionVariants, ButtonGroupSizes, ButtonsAlignmentVariants } from '../.
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/ButtonTextGroup',
+  title: 'Design System/Web Components/UI/Button Group',
   argTypes: {
     leadingIcon: {
       options: [undefined, ...PureIconKeys],

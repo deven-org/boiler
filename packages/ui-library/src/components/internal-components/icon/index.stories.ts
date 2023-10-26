@@ -9,7 +9,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { SizesType } from '../../../globals/types';
 
 export default {
-  title: 'Design System/Internal Components/BlrIcon',
+  title: 'Design System/Web Components/UI/Icon',
   argTypes: {
     size: {
       options: Sizes,

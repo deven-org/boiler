@@ -5,7 +5,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
 export default {
-  title: 'Design System/Web Components/BlrTextarea',
+  title: 'Design System/Web Components/Forms/TextArea',
   argTypes: {
     size: {
       options: FormSizes,
@@ -70,7 +70,7 @@ export default {
 
 export const BlrTextarea = (params: BlrTextareaType) => BlrTextareaRenderFunction(params);
 
-BlrTextarea.storyName = 'BlrTextarea-Docs';
+BlrTextarea.storyName = 'BlrTextArea';
 
 const args: BlrTextareaType = {
   theme: 'Light',
