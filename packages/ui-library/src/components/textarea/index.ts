@@ -15,6 +15,9 @@ import { BlrCounterRenderFunction } from '../internal-components/counter';
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
   @property() textareaId!: string;
+  @property() name!: string;
+  @property() arialabel!: string;
+  @property() hasLabel?: boolean;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -26,6 +29,7 @@ export class BlrTextarea extends LitElement {
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
+  @property() minLength?: number;
   @property() maxLength?: number;
   @property() warningLimitType: WarningLimits = 'warningLimitInt';
   @property() warningLimitInt = 105;
@@ -213,6 +217,9 @@ export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement | OmittedKeys>;
 
 export const BlrTextareaRenderFunction = ({
   textareaId,
+  name,
+  arialabel,
+  hasLabel,
   label,
   labelAppendix,
   placeholder,
@@ -220,6 +227,7 @@ export const BlrTextareaRenderFunction = ({
   disabled,
   size,
   maxLength,
+  minLength,
   warningLimitType,
   warningLimitInt,
   warningLimitPer,
@@ -243,9 +251,13 @@ export const BlrTextareaRenderFunction = ({
   return html`<blr-textarea
     class=${isResizeable ? nothing : `parent-width`}
     .textareaId=${textareaId}
+    .name=${name}
+    .ariaLabel=${arialabel}
+    .hasLabel=${hasLabel}
     .label=${label}
     .size=${size}
     .maxLength=${maxLength}
+    .minLength=${minLength}
     .warningLimitType=${warningLimitType}
     .warningLimitInt=${warningLimitInt}
     .warningLimitPer=${warningLimitPer}

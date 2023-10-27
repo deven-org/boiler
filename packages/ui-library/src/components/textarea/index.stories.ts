@@ -11,7 +11,6 @@ import { PureIconKeys } from '@boiler/icons';
 const sharedStyles = html`
   <style>
     .wrapper {
-      font-family: 'Source Sans Pro', 'Source Code Pro', sans-serif;
       display: flex;
       justify-content: center;
     }
@@ -25,14 +24,16 @@ const sharedStyles = html`
 `;
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
+  arialabel: '',
+  name: '',
   errorIcon: '',
   hint: '',
   pattern: '',
   showCounter: false,
   theme: 'Light',
-  textareaId: '#1',
+  textareaId: '',
   label: 'Label',
-  labelAppendix: '(Optional)',
+  labelAppendix: '',
   size: 'md',
   value: '',
   maxLength: 140,
@@ -64,19 +65,21 @@ export default {
   argTypes: {
     //Appearance
     size: {
-      name: 'size',
-      description: ' Select size variant of this component ',
+      name: 'sizeVariant',
+      description: ' Choose size of the component. ',
       options: FormSizes,
       control: { type: 'radio' },
       table: {
+        disable: false,
         category: 'Appearance',
       },
     },
     isResizeable: {
       name: 'resize',
-      description: 'Choose if the text area is resizeable',
+      description: 'Choose if component is resizeable.',
       control: 'boolean',
       table: {
+        disable: false,
         category: 'Appearance',
       },
     },
@@ -84,9 +87,10 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'cols',
-      description: 'Defines the width of the text area',
-      defaultValue: '45',
+      description: 'Enter amount of coloumns the component should hold.',
+      defaultValue: '20',
       table: {
+        disable: false,
         category: 'Appearance',
       },
     },
@@ -94,171 +98,141 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'rows',
-      description: 'Defines the height of the text area',
+      description: 'Enter amount of rows the component should have.',
       defaultValue: '5',
       table: {
-        category: 'Appearance',
-      },
-    },
-    minLength: {
-      name: 'minLength',
-      defaultValue: 0,
-      table: {
-        category: 'Appearance',
-      },
-    },
-    maxLength: {
-      name: 'maxLength',
-      defaultValue: 140,
-      table: {
+        disable: false,
         category: 'Appearance',
       },
     },
 
     //Content/ Settings
     placeholder: {
+      description: 'Enter string used as placeholder text.',
       name: 'placeholder',
-      defaultValue: 'Add a message here',
+      defaultValue: 'Placeholder-text',
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
     },
     value: {
       name: 'value',
-      description: 'The text which was entered in the text area',
+      description: 'Enter the value the component should have.',
       defaultValue: '',
       control: {
         type: 'text',
         label: 'Enter Text',
       },
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
     },
-
-    //States
-    disabled: {
-      name: 'disabled',
-      defaultValue: false,
+    minLength: {
+      name: 'minLength',
+      description: 'Enter the min allowed length.',
+      defaultValue: 0,
       table: {
-        category: 'States',
+        disable: false,
+        category: 'Content/ Settings',
       },
     },
-    readonly: {
-      name: 'readonly',
-      defaultValue: false,
+    maxLength: {
+      name: 'maxLength',
+      description: 'Enter the max allowed length. Additional input is cut off after the max has been reached.',
+      defaultValue: 140,
       table: {
-        category: 'States',
+        disable: false,
+        category: 'Content/ Settings',
       },
     },
-    // Validation
-    required: {
-      name: 'required',
-      defaultValue: false,
-      table: {
-        category: 'Validations',
-      },
-    },
-    hasError: {
-      name: 'hasError',
-      defaultValue: false,
-      table: {
-        category: 'Validations',
-      },
-    },
-    errorMessage: {
-      table: {
-        category: 'Validations',
-      },
-      if: { arg: 'hasError', eq: true },
-    },
-    errorIcon: {
-      table: {
-        category: 'Validations',
-      },
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-      if: { arg: 'hasError', eq: true },
-    },
-
-    //Dependencies
     hasLabel: {
       name: 'hasLabel',
-      description: 'Show or hide the label',
+      description: 'Choose if component has a label.',
       defaultValue: true,
-      control: {
-        type: 'boolean',
-      },
+      control: { type: 'boolean' },
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
     },
     label: {
-      name: 'labelText',
-      description: 'The text which is displayed as the text areas label',
-      defaultValue: true,
+      name: 'label',
+      description: 'Enter string used as label text.',
       control: {
         type: 'text',
       },
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
     labelAppendix: {
-      name: 'labelAppendixText',
-      description: 'The text which is displayed after the text label',
-      defaultValue: true,
+      name: 'labelAppendix',
+      description:
+        'Enter string used as an appendix to the label. Use this to inform the user in case this field is required.',
       control: {
         type: 'text',
       },
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
     showHint: {
       name: 'hasHint',
-      description: 'Show or hide the hint message',
+      description: ' Choose if component has a hint message. ',
       defaultValue: true,
       control: {
         type: 'boolean',
       },
       table: {
-        category: 'Content/ Settings',
-      },
-    },
-    hintIcon: {
-      if: { arg: 'showHint', eq: true },
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-      table: {
+        disable: false,
         category: 'Content/ Settings',
       },
     },
     hintText: {
+      name: 'hintMessage',
+      description: 'Enter string used used as hint message.',
       if: { arg: 'showHint', eq: true },
       table: {
+        disable: false,
+        category: 'Content/ Settings',
+      },
+    },
+    hintIcon: {
+      description: 'Select an icon which is displayed in front of the hint message.',
+      if: { arg: 'showHint', eq: true },
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      table: {
+        disable: false,
         category: 'Content/ Settings',
       },
     },
     showCounter: {
       name: 'hasCounter',
-      description: 'Show or hide a counter which counts the entered characters.',
+      description: 'Choose if component has a counter.',
       defaultValue: true,
       control: {
         type: 'boolean',
       },
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
     },
     warningLimitType: {
       if: { arg: 'showCounter', eq: true },
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
       name: 'Warning Limit Type',
+      description: 'Choose if warning limit is defined by percentage or amount of characters.',
       options: ['warningLimitInt', 'warningLimitPer'],
       control: {
         type: 'radio',
@@ -271,51 +245,149 @@ export default {
     // Only enabled if warningLimitType is Whole Number
     warningLimitInt: {
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
       control: 'number',
       name: 'Warning Limit (Whole Number)',
+      description: 'Enter at which amount of characters the warning state is displayed.',
       if: { arg: 'warningLimitType', eq: 'warningLimitInt' },
-      description: 'Please provide a whole number',
     },
     // Only enabled if warningLimitType is Percentage
     warningLimitPer: {
       table: {
+        disable: false,
         category: 'Content/ Settings',
       },
       control: { type: 'range', min: 1, max: 100, step: 1 },
       name: 'Warning Limit (Percentage)',
       if: { arg: 'warningLimitType', eq: 'warningLimitPer' },
+      description: 'Enter at what percentage the warning state is displayed.',
+    },
+
+    //States
+    disabled: {
+      name: 'disabled',
       description:
-        'Please provide a percentage. Warning limit is calculated based on the percentage of the maximum length reached ((maximum length / 100) * percentage value)',
+        'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'States',
+      },
+    },
+    readonly: {
+      name: 'readonly',
+      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'States',
+      },
+    },
+
+    // Validation
+    required: {
+      name: 'required',
+      description: 'Choose if the component must hold a value after an interaction or a submit.',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'Validations',
+      },
+    },
+    hasError: {
+      name: 'hasError',
+      description: 'Choose if component has an error.',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'Validations',
+      },
+    },
+    errorMessage: {
+      name: 'errorMessage',
+      description: 'Enter string used used as error message.',
+      table: {
+        category: 'Validations',
+      },
+      if: { arg: 'hasError', eq: true },
+    },
+    errorIcon: {
+      name: 'errorIcon',
+      description: 'Select an icon which is displayed in front of the error message.',
+      table: {
+        disable: false,
+        category: 'Validations',
+      },
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
+    },
+
+    //Accessibility
+    arialabel: {
+      name: 'ariaLabel',
+      description:
+        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
+      table: {
+        disable: false,
+        category: 'Accessibility',
+      },
+    },
+
+    //Technical attributes
+    textareaId: {
+      name: 'textareaID',
+      description: 'Unique identifier for this component.',
+      table: {
+        disable: false,
+        category: 'Technical Attributes',
+      },
+    },
+    name: {
+      name: 'name',
+      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
+      table: {
+        disable: false,
+        category: 'Technical Attributes',
+      },
     },
 
     // Events
     onChange: {
       name: 'onChange',
+      description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
+        disable: false,
         category: 'Events',
       },
     },
     onFocus: {
       name: 'onFocus',
+      description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
+        disable: false,
         category: 'Events',
       },
     },
     onBlur: {
       name: 'onBlur',
+      description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
+        disable: false,
         category: 'Events',
       },
     },
     onSelect: {
       name: 'onSelect',
+      description: 'Fires when some text is selected.',
       action: 'onSelect',
       table: {
+        disable: false,
         category: 'Events',
       },
     },
@@ -388,6 +460,7 @@ export default {
 //Main Component for Textarea
 export const BlrTextarea = ({
   textareaId,
+  arialabel,
   label,
   labelAppendix,
   placeholder,
@@ -395,23 +468,24 @@ export const BlrTextarea = ({
   disabled,
   size,
   maxLength,
-  warningLimitType,
-  warningLimitInt,
-  warningLimitPer,
   cols,
   rows,
-  errorMessage,
   hintText,
   hintIcon,
-  errorIcon,
   hasError,
+  errorMessage,
+  errorIcon,
   onChange,
   onFocus,
   onSelect,
   readonly,
   isResizeable,
+  name,
   showHint,
   showCounter,
+  warningLimitType,
+  warningLimitPer,
+  warningLimitInt,
   value,
   theme,
 }: BlrTextareaType) =>
@@ -419,6 +493,7 @@ export const BlrTextarea = ({
     <div class="wrapper">
       ${BlrTextareaRenderFunction({
         textareaId,
+        arialabel,
         label,
         labelAppendix,
         placeholder,
@@ -426,33 +501,36 @@ export const BlrTextarea = ({
         disabled,
         size,
         maxLength,
-        warningLimitType,
-        warningLimitInt,
-        warningLimitPer,
         cols,
         rows,
-        errorMessage,
         hintText,
         hintIcon,
-        errorIcon,
         hasError,
+        errorMessage,
+        errorIcon,
         onChange,
         onFocus,
+        name,
         onSelect,
         readonly,
         isResizeable,
         showHint,
         showCounter,
+        warningLimitType,
+        warningLimitPer,
+        warningLimitInt,
         value,
         theme,
       })}
     </div> `;
 BlrTextarea.storyName = 'TextArea';
 
-BlrTextarea.args = {
+const args: BlrTextareaType = {
   theme: 'Light',
+  textareaId: '#674',
+  name: 'TextArea',
+  arialabel: 'TextArea',
   size: 'md',
-
   cols: 40,
   rows: 4,
   minLength: 0,
@@ -481,6 +559,7 @@ BlrTextarea.args = {
   onSelect: () => action('onSelect'),
   onBlur: () => action('onBlur'),
 };
+BlrTextarea.args = args;
 
 // All Stories
 //Appearance Size Story
@@ -521,7 +600,7 @@ Sizes.parameters = {
   //manual Code integration
   docs: {
     source: {
-      code: '<blr-textarea label="Text area LG", size="lg"></blr-textarea>',
+      code: '<blr-textarea label="Text area LG" size="lg"></blr-textarea>',
     },
     description: {
       story: '<h4>Sizes</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
@@ -569,7 +648,18 @@ export const Resize = () => {
     </div>
   `;
 };
+Resize.argTypes = {
+  size: {
+    table: {
+      disable: true,
+      category: 'Appearance',
+    },
+  },
+};
 Resize.parameters = {
+  actions: { disable: true },
+  addons: { disable: true },
+  controls: { disable: true },
   backgrounds: {
     default: 'Light',
   },
