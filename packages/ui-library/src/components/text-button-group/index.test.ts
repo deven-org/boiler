@@ -58,7 +58,6 @@ describe('blr-text-button-group', () => {
     const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
 
     const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
-
     const className = button?.className;
 
     expect(className).to.contain('blr-text-button-group');
@@ -70,5 +69,19 @@ describe('blr-text-button-group', () => {
     const span = querySelectorDeep('span', element.getRootNode() as HTMLButtonElement);
 
     expect(span).to.exist;
+  });
+
+  describe('blr-text-button-group', () => {
+    it('works', async () => {
+      const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
+      await expect(element).to.be.accessible();
+    });
+  });
+
+  it('can check for an exiting css class', async () => {
+    const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
+    const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
+
+    expect(button).to.have.class('blr-text-button-group');
   });
 });
