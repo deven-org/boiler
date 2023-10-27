@@ -1,5 +1,4 @@
-import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction, BlrTextButtonGroup } from './index';
-import { html } from 'lit-html';
+import { BlrTextButtonGroupType, BlrTextButtonGroupRenderFunction } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -83,5 +82,14 @@ describe('blr-text-button-group', () => {
     const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
 
     expect(button).to.have.class('blr-text-button-group');
+  });
+
+  it('has color primary', async () => {
+    const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
+
+    const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
+    const className = button?.className;
+
+    expect(className).to.contain('primary');
   });
 });
