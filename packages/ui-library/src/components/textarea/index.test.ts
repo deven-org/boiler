@@ -50,6 +50,48 @@ describe('blr-textarea', () => {
     expect(placeholder).to.be.equal(randomString);
   });
 
+  it('is doesnt have a placeholder attribute if placeholder is empty', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        placeholder: undefined,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const placeholder = textarea?.getAttribute('placeholder');
+
+    expect(placeholder).to.be.equal(null);
+  });
+
+  it('is is applying maxLength of 5', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        maxLength: 5,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const maxLength = textarea?.getAttribute('maxlength');
+
+    expect(maxLength).to.be.equal('5');
+  });
+
+  it('is doesnt have a maxLength attribute if maxLength is empty', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        maxLength: undefined,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const maxLength = textarea?.getAttribute('maxlength');
+
+    expect(maxLength).to.be.equal(null);
+  });
+
   it('is is disabled when attribute disabled is set', async () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
