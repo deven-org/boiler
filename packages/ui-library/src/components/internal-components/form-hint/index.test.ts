@@ -14,8 +14,8 @@ const sampleParams: BlrFormHintType = {
 describe('blr-form-hint', () => {
   it('renders a <div> element inside Shadow DOM for blr-hint', async () => {
     const element = await fixture(BlrFormHintRenderFunction(sampleParams));
-    const blrLabel = querySelectorDeep('div.blr-form-hint', element.getRootNode() as HTMLElement);
-    expect(blrLabel).to.exist;
+    const blrHint = querySelectorDeep('div.blr-form-hint', element.getRootNode() as HTMLElement);
+    expect(blrHint).to.exist;
   });
 
   it('renders a blr-form-hint with new value', async () => {
@@ -26,10 +26,7 @@ describe('blr-form-hint', () => {
       })
     );
 
-    const blrHintLabel = querySelectorDeep(
-      'div.blr-form-hint .hint-container .label-wrapper .blr-caption-text',
-      element.getRootNode() as HTMLElement
-    );
+    const blrHintLabel = querySelectorDeep('div.blr-form-hint .blr-caption-text', element.getRootNode() as HTMLElement);
 
     const blrText = blrHintLabel?.textContent;
     expect(blrText).to.include('New hint message added');
@@ -43,10 +40,7 @@ describe('blr-form-hint', () => {
       })
     );
 
-    const blrHintLabel = querySelectorDeep(
-      'div.blr-form-hint .hint-container .label-wrapper .blr-caption-text',
-      element.getRootNode() as HTMLElement
-    );
+    const blrHintLabel = querySelectorDeep('div.blr-form-hint .blr-caption-text', element.getRootNode() as HTMLElement);
 
     const blrText = blrHintLabel?.textContent;
     expect(blrText).to.include('');
@@ -60,10 +54,7 @@ describe('blr-form-hint', () => {
       })
     );
 
-    const blrHintWithIcon = querySelectorDeep(
-      'div.blr-form-hint .hint-container .icon-wrapper .blr-icon svg',
-      element.getRootNode() as HTMLElement
-    );
+    const blrHintWithIcon = querySelectorDeep('div.blr-form-hint .blr-icon svg', element.getRootNode() as HTMLElement);
 
     expect(blrHintWithIcon).to.exist;
   });
@@ -76,10 +67,7 @@ describe('blr-form-hint', () => {
       })
     );
 
-    const blrHintWithIcon = querySelectorDeep(
-      'div.blr-form-hint .hint-container .icon-wrapper .blr-icon svg',
-      element.getRootNode() as HTMLElement
-    );
+    const blrHintWithIcon = querySelectorDeep('div.blr-form-hint .blr-icon svg', element.getRootNode() as HTMLElement);
 
     expect(blrHintWithIcon).not.to.exist;
   });

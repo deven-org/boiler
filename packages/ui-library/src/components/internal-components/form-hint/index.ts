@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult, html } from 'lit';
+import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, HintVariantType, SizesType } from '../../../globals/types';
@@ -50,15 +50,17 @@ export class BlrFormHint extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class=${classes}>
-        ${BlrIconRenderFunction({
-          icon: calculateIconName(
-            this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
-            iconSizeVariant
-          ),
-          size: iconSizeVariant,
-          classMap: iconClasses,
-          hideAria: true,
-        })}
+        ${this.icon
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(
+                this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
+                iconSizeVariant
+              ),
+              size: iconSizeVariant,
+              classMap: iconClasses,
+              hideAria: true,
+            })
+          : nothing}
         <span class="blr-caption-text">${this.message}</span>
         ${this.childElement}
       </div>`;
