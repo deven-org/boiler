@@ -85,7 +85,7 @@ describe('blr-text-button-group', () => {
   });
 
   it('has color primary', async () => {
-    const element = await fixture(BlrTextButtonGroupRenderFunction(sampleParams));
+    const element = await fixture(BlrTextButtonGroupRenderFunction({ ...sampleParams, buttonVariant: 'primary' }));
 
     const button = querySelectorDeep('button', element.getRootNode() as HTMLButtonElement);
     const className = button?.className;
