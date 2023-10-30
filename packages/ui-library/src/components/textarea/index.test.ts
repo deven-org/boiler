@@ -20,7 +20,7 @@ const sampleParams: BlrTextareaType = {
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
-  showCounter: false,
+  hasCounter: false,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,

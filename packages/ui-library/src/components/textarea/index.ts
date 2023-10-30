@@ -40,7 +40,7 @@ export class BlrTextarea extends LitElement {
   @property() errorMessageIcon: SizelessIconType = 'blrInfo';
   @property() hasHint = true;
   @property() hintMessage?: string;
-  @property() showCounter?: boolean;
+  @property() hasCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() resize?: boolean;
   @property() rows?: number;
@@ -190,7 +190,7 @@ ${this.value}</textarea
               }
             </div>
               ${
-                this.showCounter
+                this.hasCounter
                   ? html`
                       <div class="counter-wrapper ${classes}">
                         ${BlrCounterRenderFunction({
@@ -242,7 +242,7 @@ export const BlrTextareaRenderFunction = ({
   readonly,
   resize,
   hasHint,
-  showCounter,
+  hasCounter,
   value,
   theme,
   shouldFocus,
@@ -269,7 +269,7 @@ export const BlrTextareaRenderFunction = ({
     .disabled=${disabled}
     .readonly=${readonly}
     .hintMessage=${hintMessage}
-    .showCounter=${showCounter}
+    .hasCounter=${hasCounter}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
     .errorMessageIcon=${errorMessageIcon}
