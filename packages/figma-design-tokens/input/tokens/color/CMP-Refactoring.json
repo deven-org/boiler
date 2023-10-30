@@ -1288,7 +1288,7 @@
       "MenuItem--Container--Padding": {
         "value": "{Action.Menu.MenuItem.Container.PaddingTopBottom} {Action.Menu.MenuItem.Container.PaddingLeftRight}",
         "type": "spacing",
-        "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+        "description": "Do not apply in Figma, use aliases <PaddingLeftRight> and <PaddingTopBottom> instead."
       },
       "MenuItem--Container--BorderRadius": {
         "value": "{Action.BorderRadius}",
@@ -1304,6 +1304,33 @@
         "value": "0",
         "type": "spacing",
         "description": "Adds space between Label & Description"
+      },
+      // renames Section -> MenuSection
+      // adds PaddingTop/Btm...
+      "MenuSection--SectionTitleWrapper--PaddingTop": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing",
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+      },
+      "MenuSection--SectionTitleWrapper--PaddingRight": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing",
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+      },
+      "MenuSection--SectionTitleWrapper--PaddingBottom": {
+        "value": "{core.dimensionPX.8}",
+        "type": "spacing",
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+      },
+      "MenuSection--SectionTitleWrapper--PaddingLeft": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing",
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+      },
+      "MenuSection--SectionTitleWrapper--SectionTitleWrapper--Padding": {
+        "value": "{Action.Menu.MenuSection.}",
+        "type": "spacing",
+        "description": "Do not apply in Figma, use aliases <PaddingTop/Right/Bottom/Left> instead. \nDefines the padding around the section title text."
       }
     }
   }
@@ -1355,4 +1382,6 @@ Hintergrund dafür ist: Figma versteht keine Compound tokens, sondern nur single
 Wir erstellen also single value tokens (zB "PaddingLeft": "3px" oder "PaddingTopBottom": "5px") die wir in Figma anwenden können und als variablen sichtbar sind.
 Diese tokens müssen dann als Alias in dem "Padding" token verwendet werden.
 Auf den "Padding" token sollte nie verziechtet werden, weil ein node der nur mit "PaddingLeft" ausgestattet ist in einem anderem design auch paddenTop brauchen könnte. In dem Falle müssten der code der compoennte geändert werden, was es zu vermeiden gilt.
+
+Vielleicht nennen wir alle PaddingLeftRight und PaddingTopBottom in PaddingHorizontal und PaddingVertical um?
 */
