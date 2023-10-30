@@ -34,7 +34,7 @@ const defaultParams: BlrTextareaType = {
   maxLength: 140,
   label: 'Label',
   labelAppendix: '',
-  showHint: false,
+  hasHint: false,
   arialabel: '',
   hint: '',
   name: '',
@@ -182,7 +182,7 @@ export default {
       },
       if: { arg: 'hasLabel', eq: true },
     },
-    showHint: {
+    hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
@@ -197,7 +197,7 @@ export default {
     hintText: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       table: {
         disable: false,
         category: 'Content/ Settings',
@@ -205,7 +205,7 @@ export default {
     },
     hintIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       table: {
@@ -471,7 +471,7 @@ export const BlrTextarea = ({
   hasLabel,
   label,
   labelAppendix,
-  showHint,
+  hasHint,
   hintText,
   hintIcon,
   showCounter,
@@ -506,7 +506,7 @@ export const BlrTextarea = ({
         hasLabel,
         label,
         labelAppendix,
-        showHint,
+        hasHint,
         hintText,
         hintIcon,
         showCounter,
@@ -542,7 +542,7 @@ const args: BlrTextareaType = {
   hasLabel: true,
   label: 'Share your feedback',
   labelAppendix: '(optional)',
-  showHint: false,
+  hasHint: false,
   hintText: 'This is a small hint message',
   hintIcon: 'blrInfo',
   showCounter: false,
@@ -863,7 +863,7 @@ export const Captions = () => {
           label: ' A text area with an error message',
           labelAppendix: '',
           hasError: true,
-          showHint: false,
+          hasHint: false,
           errorIcon: 'blrError',
           value: '',
         })}

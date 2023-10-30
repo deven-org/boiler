@@ -17,7 +17,7 @@ const sampleParams: BlrTextareaType = {
   hasLabel: true,
   label: 'Label',
   labelAppendix: 'appendix',
-  showHint: false,
+  hasHint: false,
   hintText: 'This is a small hint message',
   hintIcon: 'blrInfo',
   showCounter: false,
@@ -95,7 +95,7 @@ describe('blr-textarea', () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
       })
     );

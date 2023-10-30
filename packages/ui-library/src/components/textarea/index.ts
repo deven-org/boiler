@@ -39,7 +39,7 @@ export class BlrTextarea extends LitElement {
   @property() errorMessage?: string;
   @property() errorIcon: SizelessIconType = 'blrInfo';
   @property() hint?: string;
-  @property() showHint = true;
+  @property() hasHint = true;
   @property() hintText?: string;
   @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
@@ -160,7 +160,7 @@ ${this.value}</textarea
             <div class="${flexContainer}">
             <div>
               ${
-                this.showHint
+                this.hasHint
                   ? html`
                       <div class="text-area-hint-wrapper">
                         ${BlrFormHintRenderFunction({
@@ -242,7 +242,7 @@ export const BlrTextareaRenderFunction = ({
   onSelect,
   readonly,
   resize,
-  showHint,
+  hasHint,
   showCounter,
   value,
   theme,
@@ -278,7 +278,7 @@ export const BlrTextareaRenderFunction = ({
     .onChange=${onChange}
     .onSelect=${onSelect}
     .resize=${resize}
-    .showHint=${showHint}
+    .hasHint=${hasHint}
     .theme=${theme}
     .shouldFocus=${shouldFocus}
   ></blr-textarea>`;
