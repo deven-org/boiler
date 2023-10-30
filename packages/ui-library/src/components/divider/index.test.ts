@@ -4,8 +4,6 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrDividerType = {
-  size: 'md',
-  addMargin: false,
   theme: 'Light',
 };
 
