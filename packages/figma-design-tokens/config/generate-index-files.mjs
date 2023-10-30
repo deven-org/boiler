@@ -26,7 +26,7 @@ themes.array.map((theme) => {
   console.log('\n==============================================');
   console.log(`\nProcessing: [${theme}]`);
 
-  const filteredJsFiles = files.filter((item) => item.endsWith(theme + '.generated.js') && item.startsWith('__'));
+  const filteredJsFiles = files.filter((item) => item.endsWith(theme + '.generated.mjs') && item.startsWith('__'));
 
   const importsPart = filteredJsFiles.map(
     (item) => `import {${convertToCamelCase(item.split('.')[0])}} from './${item}'`
