@@ -1,5 +1,9 @@
 {
-  "SECTION 0": "// Aufbau der design tokens",
+  /* 
+  
+  Aufbau der design tokens
+  
+  */
 
   "colors": {
     "SemanticGroup": {
@@ -18,7 +22,7 @@
     "SemanticGroup": {
       "ComponentName": {
         "Element-[SubElement]-TokenType": {
-          "SizeVariant--UserInteraction": {
+          "LayoutVariant--SizeVariant--UserInteraction": {
             "value": "",
             "type": "",
             "description": ""
@@ -41,32 +45,43 @@
     }
   },
 
-  "SECTION 1": "NamingConventions",
+  /*
+  
+  ### NamingConventions ###
 
-  "TokeTypes": {
+  TokeTypes: 
     "TokenTypes-color": "BackgroundColor; BorderColor; IconColor; TextColor ",
     "TokenTypes-dimensions": "Size, IconSize, BorderWidth, BorderRadius, PaddingTop, Width, Height...",
     "TokenTypes-borders": "Border"
-  },
 
-  "Sentiments": "Default; Mute",
+  Sentiments:
+     "Default; Mute"
 
-  "ToggleStates": {
+  ToggleStates:
     "Active": "Replaces Selected everywhere",
     "Inactive": "Replaces Unselected everywhere"
-  },
 
-  "SizeVariants": "XS, SM, MD, LG, XL",
+  LayoutVariant:
+    "Vertical, Horizontal"
+    (Use if the component comes in different layouts as seen in StepperCombo)
 
-  "UserInteractions": "Rest, Hover, Pressed...",
+  "SizeVariants": 
+    "XS, SM, MD, LG, XL"
 
-  "SECTION 2": "// CMP tokens - dimensions und colors zusammengefasst, müssen aber in einzelne files später",
+  "UserInteractions": 
+    "Rest, Hover, Pressed..."
+
+*/
+
+  /* ###  CMP tokens - dimensions und colors zusammengefasst, müssen aber in einzelne files später"
 
   "Found Bug 1": "Radio und Checkbox sind eigentlich gleich. Aber das naming stimmt nicht überein (ContentRow vs MainContainer)",
   "Found Bug 2": "Radio hat ContentCol.PaddingTop, aber checkbox nicht. Der token kann eigentlich weg",
   "Found Bug 3": "Checkbox.Control hat keinen borderradius token",
   "Found Bug 4": "Checkbox/Radio.MainContainer.ItemSpacing ist nicht klar ob horizontal oder vertical. Evntl besser Row nennen?",
   "Outdated 1": "Dimensions/CMP:Select.IconPaddingRight tokens sind outdated? Ich glaube Input.ItemSpacing und Input.Padding sollte reichen",
+
+  */
 
   "Forms": {
     "Checkbox": {
@@ -544,9 +559,9 @@
       }
     },
     "ToggleSwitch": {
-      "Bug 1": "Der Token ToggleSwitch.A11yOffBorderRadius klingt komisch und kann evtl weg",
-      "Bug 2": "Die ToggleSwitch.[scale].Gap tokens sind unklar. Horizontal oder Vertical? ",
-      "Bug 3": "Control--LabelGap sollte eher ?ParentContainer.ItemSpacing heißen ",
+      // "Bug 1": "Der Token ToggleSwitch.A11yOffBorderRadius klingt komisch und kann evtl weg",
+      // "Bug 2": "Die ToggleSwitch.[scale].Gap tokens sind unklar. Horizontal oder Vertical? ",
+      // "Bug 3": "Control--LabelGap sollte eher ?ParentContainer.ItemSpacing heißen ",
       "Control--BackgroundColor": {
         "Active--Rest": {},
         "Active--Hover": {},
@@ -627,6 +642,8 @@
   },
 
   "Actions": {
+    // BUG: StepperButton.Border lasse ich hier weg, weil es sich hier schlicht um einen Silent Button handelt.
+
     "TextButton": {
       // fügt "Container" hier hinzu um präziseres naming zu haben
       // splittet "Padding" auf in "PaddingLeftRight" und "PaddingTopBottom" weil Figma mit compounds nicht arbeiten kann
@@ -1113,13 +1130,192 @@
           "type": "spacing"
         }
       }
+    },
+    "StepperCombo": {
+      // fügt "Container" hier hinzu um präziseres naming zu haben
+      // Investigate: Muss die Breite fix sein? Oder ist die Breite schon von den Buttons im ComboContainer vorgegeben?
+      // Padding is split up
+      "Container--Width": {
+        "Vertical--SM": {
+          "value": "{core.dimensionREM.32}",
+          "type": "sizing"
+        },
+        "Vertical--MD": {
+          "value": "{core.dimensionREM.40}",
+          "type": "sizing"
+        },
+        "Vertical--LG": {
+          "value": "{core.dimensionREM.48}",
+          "type": "sizing"
+        },
+        "Horizontal--SM": {
+          "value": "{core.dimensionREM.64}",
+          "type": "sizing"
+        },
+        "Horizontal--MD": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing"
+        },
+        "Horizontal--LG": {
+          "value": "{core.dimensionREM.96}",
+          "type": "sizing"
+        }
+      },
+      "DividerWrapper--PaddingLeftRight": {
+        "Vertical--SM": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Vertical--MD": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Vertical--LG": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Horizontal--SM": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Horizontal--MD": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Horizontal--LG": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        }
+      },
+      "DividerWrapper--PaddingTopBottom": {
+        "Vertical--SM": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Vertical--MD": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Vertical--LG": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Horizontal--SM": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Horizontal--MD": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        },
+        "Horizontal--LG": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        }
+      },
+      "DividerWrapper--Padding": {
+        "Vertical--SM": {
+          "Padding": {
+            "value": "{Action.StepperCombo.DividerWrapper.PaddingTopBottom.Vertical.SM} {Action.StepperCombo.DividerWrapper.PaddingLeftRight.Vertical.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+          }
+        },
+        "Vertical--MD": {
+          "Padding": {
+            "value": "{Action.StepperCombo.DividerWrapper.PaddingTopBottom.Vertical.MD} {Action.StepperCombo.DividerWrapper.PaddingLeftRight.Vertical.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+          }
+        },
+        "Vertical--LG": {
+          "Padding": {
+            "value": "{Action.StepperCombo.DividerWrapper.PaddingTopBottom.Vertical.LG} {Action.StepperCombo.DividerWrapper.PaddingLeftRight.Vertical.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+          }
+        },
+        "Horizontal--SM": {
+          "Padding": {
+            "value": "{Action.StepperCombo.DividerWrapper.PaddingTopBottom.Horizontal.SM} {Action.StepperCombo.DividerWrapper.PaddingLeftRight.Horizontal.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+          }
+        },
+        "Horizontal--MD": {
+          "Padding": {
+            "value": "{Action.StepperCombo.DividerWrapper.PaddingTopBottom.Horizontal.MD} {Action.StepperCombo.DividerWrapper.PaddingLeftRight.Horizontal.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+          }
+        },
+        "Horizontal--LG": {
+          "Padding": {
+            "value": "{Action.StepperCombo.DividerWrapper.PaddingTopBottom.Horizontal.LG} {Action.StepperCombo.DividerWrapper.PaddingLeftRight.Vertical.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+          }
+        }
+      }
+    },
+    "Menu": {
+      // don't be confused! Token renaming:
+      // MenuItem--Padding/BorderRadius -> MenuItem--Container--Padding/BorderRadius
+      // MenuItem--Container--ItemSpacing -> MenuItem--ContentRow--ItemSpacing
+      // fügt ausserdem PaddingLeftRight und PaddingTopBottom hinzu
+      "MenuItem--Container--PaddingTopBottom": {
+        "value": "{core.dimensionPX.8}",
+        "type": "spacing",
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+      },
+      "MenuItem--Container--PaddingLeftRight": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing",
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+      },
+      "MenuItem--Container--Padding": {
+        "value": "{Action.Menu.MenuItem.Container.PaddingTopBottom} {Action.Menu.MenuItem.Container.PaddingLeftRight}",
+        "type": "spacing",
+        "description": "Do not apply in Figma, use aliases <PaddingLeft> and <PaddingRight> instead."
+      },
+      "MenuItem--Container--BorderRadius": {
+        "value": "{Action.BorderRadius}",
+        "type": "borderRadius",
+        "description": "Defines the border radius of a single menu item."
+      },
+      "MenuItem--ContentRow--ItemSpacing": {
+        "value": "{core.dimensionPX.4}",
+        "type": "spacing",
+        "description": "Adds space between Icons and ContentStack (Label & Description)"
+      },
+      "MenuItem--ContentStack--ItemSpacing": {
+        "value": "0",
+        "type": "spacing",
+        "description": "Adds space between Label & Description"
+      }
     }
-    // Hier gehts weiter
   }
+  // Hier gehts weiter
 }
 
 // mit CMP.Forms bin ich durch,
 // mit dimensions.CMP.Action habe ich angefangen
+
+// Stepper Button
+// Not so happy here. Könnne wir hier nicht icon-button tokens verwenden? Sind silent-button tokens genug fürs styling?
+// Wie auch immer, ich skippe alle Stepper Button tokens erstmal
 
 // ### ToDos
 
@@ -1154,9 +1350,9 @@ Die border tokens sind alleiningst als convinience feature für die coded compon
 /*
 Eine Komponente die Paddings hat muss immer einen spacing token namens "Padding" haben.
 Dieser token wird immer auf die coded components angewandt. 
-Wenn das padding nicht auf allen Seite gleich ist (zB {0 10px} oder {0 10px 20px 0}), müssen zusätzliche tokens erstellt werden.
+Wenn das Padding nicht auf allen Seite gleich ist (zB {0 10px} oder {0 10px 20px 0}), müssen zusätzliche tokens erstellt werden.
 Hintergrund dafür ist: Figma versteht keine Compound tokens, sondern nur single value tokens.
-Wir erstellen also single value tokens (zB "paddingLeft": "3px" oder "paddingTopBottom": "5px") die wir in Figma anwenden können und als variablen sichtbar sind.
-Diese tokens müssen dann als Alias in dem "padding" token verwendet werden.
-Auf den "padding" token sollte nie verziechtet werden, weil ein node der nur mit "paddingLeft" ausgestattet ist in einem anderem design auch paddenTop brauchen könnte. In dem Falle müssten der code der compoennte geändert werden, was es zu vermeiden gilt.
+Wir erstellen also single value tokens (zB "PaddingLeft": "3px" oder "PaddingTopBottom": "5px") die wir in Figma anwenden können und als variablen sichtbar sind.
+Diese tokens müssen dann als Alias in dem "Padding" token verwendet werden.
+Auf den "Padding" token sollte nie verziechtet werden, weil ein node der nur mit "PaddingLeft" ausgestattet ist in einem anderem design auch paddenTop brauchen könnte. In dem Falle müssten der code der compoennte geändert werden, was es zu vermeiden gilt.
 */
