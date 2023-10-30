@@ -9,8 +9,7 @@ const TAG_NAME = 'blr-divider';
 
 @customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
-  @property() dividerDirectionVariant?: DividerVariationTypes;
-  @property() directionVariant?: DividerVariationTypes = 'vertical';
+  @property() dividerDirectionVariant?: DividerVariationTypes = 'vertical';
   @property() theme: ThemeType = 'Light';
 
   protected render() {
