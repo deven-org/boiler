@@ -38,7 +38,7 @@ const defaultParams: BlrTextareaType = {
   arialabel: '',
   hint: '',
   name: '',
-  errorIcon: '',
+  errorMessageIcon: '',
   pattern: '',
   showCounter: false,
   theme: 'Light',
@@ -313,8 +313,8 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
-      name: 'errorIcon',
+    errorMessageIcon: {
+      name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         disable: false,
@@ -483,7 +483,7 @@ export const BlrTextarea = ({
   required,
   hasError,
   errorMessage,
-  errorIcon,
+  errorMessageIcon,
   arialabel,
   textareaId,
   name,
@@ -518,7 +518,7 @@ export const BlrTextarea = ({
         required,
         hasError,
         errorMessage,
-        errorIcon,
+        errorMessageIcon,
         arialabel,
         textareaId,
         name,
@@ -554,7 +554,7 @@ const args: BlrTextareaType = {
   required: false,
   hasError: false,
   errorMessage: ' ',
-  errorIcon: undefined,
+  errorMessageIcon: undefined,
   arialabel: 'TextArea',
   textareaId: '#674',
   name: 'TextArea',
@@ -864,7 +864,7 @@ export const Captions = () => {
           labelAppendix: '',
           hasError: true,
           hasHint: false,
-          errorIcon: 'blrError',
+          errorMessageIcon: 'blrError',
           value: '',
         })}
       </div>

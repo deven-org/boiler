@@ -37,7 +37,7 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon: SizelessIconType = 'blrInfo';
+  @property() errorMessageIcon: SizelessIconType = 'blrInfo';
   @property() hint?: string;
   @property() hasHint = true;
   @property() hintText?: string;
@@ -182,7 +182,7 @@ ${this.value}</textarea
                           message: this.errorMessage || ' ',
                           variant: this.hasError ? 'error' : 'hint',
                           size: this.sizeVariant,
-                          icon: this.errorIcon ? this.errorIcon : undefined,
+                          icon: this.errorMessageIcon ? this.errorMessageIcon : undefined,
                           theme: this.theme,
                         })}
                       </div>
@@ -237,7 +237,7 @@ export const BlrTextareaRenderFunction = ({
   hintText,
   hintIcon,
   hasError,
-  errorIcon,
+  errorMessageIcon,
   onChange,
   onSelect,
   readonly,
@@ -273,7 +273,7 @@ export const BlrTextareaRenderFunction = ({
     .showCounter=${showCounter}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
-    .errorIcon=${errorIcon}
+    .errorMessageIcon=${errorMessageIcon}
     .labelAppendix=${labelAppendix}
     .onChange=${onChange}
     .onSelect=${onSelect}

@@ -29,7 +29,7 @@ const sampleParams: BlrTextareaType = {
   required: false,
   hasError: false,
   errorMessage: ' ',
-  errorIcon: '',
+  errorMessageIcon: '',
   arialabel: 'TextArea',
   textareaId: '#674',
   name: 'TextArea',
