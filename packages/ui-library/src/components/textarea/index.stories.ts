@@ -35,10 +35,10 @@ const defaultParams: BlrTextareaType = {
   label: 'Label',
   labelAppendix: '',
   hasHint: false,
+  hintMessage: 'This is a small hint',
+  hintIcon: 'blrInfo',
   arialabel: '',
-  hint: '',
   name: '',
-  errorMessageIcon: '',
   pattern: '',
   showCounter: false,
   theme: 'Light',
@@ -52,11 +52,9 @@ const defaultParams: BlrTextareaType = {
   disabled: false,
   readonly: false,
 
-  hintIcon: 'blrInfo',
-  hintText: '<This is a small hint>',
-
   hasError: false,
   errorMessage: "OMG it's an error",
+  errorMessageIcon: '',
 };
 
 //Main Showcase Storybook Textarea
@@ -194,7 +192,7 @@ export default {
         category: 'Content/ Settings',
       },
     },
-    hintText: {
+    hintMessage: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
       if: { arg: 'hasHint', eq: true },
@@ -472,7 +470,7 @@ export const BlrTextarea = ({
   label,
   labelAppendix,
   hasHint,
-  hintText,
+  hintMessage,
   hintIcon,
   showCounter,
   warningLimitType,
@@ -507,7 +505,7 @@ export const BlrTextarea = ({
         label,
         labelAppendix,
         hasHint,
-        hintText,
+        hintMessage,
         hintIcon,
         showCounter,
         warningLimitType,
@@ -543,7 +541,7 @@ const args: BlrTextareaType = {
   label: 'Share your feedback',
   labelAppendix: '(optional)',
   hasHint: false,
-  hintText: 'This is a small hint message',
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   showCounter: false,
   warningLimitType: 'warningLimitInt',

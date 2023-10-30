@@ -18,7 +18,7 @@ const sampleParams: BlrTextareaType = {
   label: 'Label',
   labelAppendix: 'appendix',
   hasHint: false,
-  hintText: 'This is a small hint message',
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   showCounter: false,
   warningLimitType: 'warningLimitInt',

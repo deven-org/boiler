@@ -38,9 +38,8 @@ export class BlrTextarea extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorMessageIcon: SizelessIconType = 'blrInfo';
-  @property() hint?: string;
   @property() hasHint = true;
-  @property() hintText?: string;
+  @property() hintMessage?: string;
   @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() resize?: boolean;
@@ -164,7 +163,7 @@ ${this.value}</textarea
                   ? html`
                       <div class="text-area-hint-wrapper">
                         ${BlrFormHintRenderFunction({
-                          message: this.hintText || '',
+                          message: this.hintMessage || '',
                           variant: 'hint',
                           icon: this.hintIcon,
                           size: this.sizeVariant,
@@ -234,7 +233,7 @@ export const BlrTextareaRenderFunction = ({
   cols,
   rows,
   errorMessage,
-  hintText,
+  hintMessage,
   hintIcon,
   hasError,
   errorMessageIcon,
@@ -269,7 +268,7 @@ export const BlrTextareaRenderFunction = ({
     .required=${required}
     .disabled=${disabled}
     .readonly=${readonly}
-    .hintText=${hintText}
+    .hintMessage=${hintMessage}
     .showCounter=${showCounter}
     .hintIcon=${hintIcon}
     .hasError=${hasError}
