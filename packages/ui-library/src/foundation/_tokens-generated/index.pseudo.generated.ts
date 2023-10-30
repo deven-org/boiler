@@ -18,12 +18,9 @@ import { semanticTokens as semanticTokensType } from './semanticTokensType.gener
 import {
   semanticTokens as semanticTokensLight,
   componentTokens as componentTokensLight,
-} from './index.Light.generated.js';
+} from './index.Light.generated';
 
-import {
-  semanticTokens as semanticTokensDark,
-  componentTokens as componentTokensDark,
-} from './index.Dark.generated.js';
+import { semanticTokens as semanticTokensDark, componentTokens as componentTokensDark } from './index.Dark.generated';
 
 import { CSSResult } from 'lit';
 
