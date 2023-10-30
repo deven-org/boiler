@@ -25,7 +25,7 @@ const sharedStyles = html`
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   sizeVariant: 'md',
-  isResizeable: true,
+  resize: true,
   cols: 40,
   rows: 4,
   placeholder: 'Add a message here',
@@ -74,7 +74,7 @@ export default {
         category: 'Appearance',
       },
     },
-    isResizeable: {
+    resize: {
       name: 'resize',
       description: 'Choose if component is resizeable.',
       control: 'boolean',
@@ -461,7 +461,7 @@ export default {
 export const BlrTextarea = ({
   theme,
   sizeVariant,
-  isResizeable,
+  resize,
   minLength,
   maxLength,
   cols,
@@ -496,7 +496,7 @@ export const BlrTextarea = ({
       ${BlrTextareaRenderFunction({
         theme,
         sizeVariant,
-        isResizeable,
+        resize,
         minLength,
         maxLength,
         cols,
@@ -532,7 +532,7 @@ BlrTextarea.storyName = 'TextArea';
 const args: BlrTextareaType = {
   theme: 'Light',
   sizeVariant: 'md',
-  isResizeable: true,
+  resize: true,
   cols: 40,
   rows: 4,
   placeholder: 'Add a message here',
@@ -646,7 +646,7 @@ export const Resize = () => {
           sizeVariant: 'md',
           label: 'None',
           value: '',
-          isResizeable: false,
+          resize: false,
         })}
       </div>
     </div>

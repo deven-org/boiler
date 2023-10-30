@@ -43,7 +43,7 @@ export class BlrTextarea extends LitElement {
   @property() hintText?: string;
   @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() isResizeable?: boolean;
+  @property() resize?: boolean;
   @property() rows?: number;
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
@@ -112,7 +112,7 @@ export class BlrTextarea extends LitElement {
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
       [`${this.sizeVariant}`]: this.sizeVariant,
-      [`resizeable`]: this.isResizeable || false,
+      [`resizeable`]: this.resize || false,
       ['shouldFocus']: this.shouldFocus || false,
     });
     const flexContainer = classMap({
@@ -241,7 +241,7 @@ export const BlrTextareaRenderFunction = ({
   onChange,
   onSelect,
   readonly,
-  isResizeable,
+  resize,
   showHint,
   showCounter,
   value,
@@ -249,7 +249,7 @@ export const BlrTextareaRenderFunction = ({
   shouldFocus,
 }: BlrTextareaType) => {
   return html`<blr-textarea
-    class=${isResizeable ? nothing : `parent-width`}
+    class=${resize ? nothing : `parent-width`}
     .textareaId=${textareaId}
     .name=${name}
     .ariaLabel=${arialabel}
@@ -277,7 +277,7 @@ export const BlrTextareaRenderFunction = ({
     .labelAppendix=${labelAppendix}
     .onChange=${onChange}
     .onSelect=${onSelect}
-    .isResizeable=${isResizeable}
+    .resize=${resize}
     .showHint=${showHint}
     .theme=${theme}
     .shouldFocus=${shouldFocus}
