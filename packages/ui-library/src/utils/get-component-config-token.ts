@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-console */
-import { componentConfig } from '../foundation/_tokens-generated/config-tokens/__component-config.generated';
+import { componentConfig } from '../foundation/_tokens-generated/config-tokens/__component-config.generated.mjs';
 
 /* Its not typesafe now because the input file is js in the first place. we need to adjust the transformer */
 
