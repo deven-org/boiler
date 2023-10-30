@@ -11,15 +11,23 @@
 
   This will make it possible to switch prebuild themes on the fly on a component level
 */
+
+import { componentTokens as componentTokensType } from './componentTokensType.generated';
+import { semanticTokens as semanticTokensType } from './semanticTokensType.generated';
+
 import {
   semanticTokens as semanticTokensLight,
   componentTokens as componentTokensLight,
-} from './index.Light.generated';
+} from './index.Light.generated.js';
 
-import { semanticTokens as semanticTokensDark, componentTokens as componentTokensDark } from './index.Dark.generated';
+import {
+  semanticTokens as semanticTokensDark,
+  componentTokens as componentTokensDark,
+} from './index.Dark.generated.js';
+
 import { CSSResult } from 'lit';
 
-export function renderThemedCssStrings(renderFunc: (cT: any, sT: any) => CSSResult): {
+export function renderThemedCssStrings(renderFunc: (cT: componentTokensType, sT: semanticTokensType) => CSSResult): {
   tokenizedLight: CSSResult;
   tokenizedDark: CSSResult;
 } {

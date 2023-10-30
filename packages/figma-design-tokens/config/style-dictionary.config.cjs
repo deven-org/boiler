@@ -163,7 +163,7 @@ const getStyleDictionaryConfig = (theme) => {
         files: [
           {
             format: 'custom/format/semanticTokens',
-            destination: `__semantic-tokens.${theme}.generated.js`,
+            destination: `__semantic-tokens.${theme}.generated.mjs`,
             filter: (token) => {
               const typeToFilter = semanticTypes;
               return typeToFilter.includes(token.attributes.type);
@@ -171,7 +171,7 @@ const getStyleDictionaryConfig = (theme) => {
           },
           {
             format: 'custom/format/componentTokens',
-            destination: `__component-tokens.${theme}.generated.js`,
+            destination: `__component-tokens.${theme}.generated.mjs`,
             filter: (token) => {
               const typeToFilter = componentTypes;
               return typeToFilter.includes(token.attributes.type) && token.type !== 'componentConfig';
@@ -179,7 +179,7 @@ const getStyleDictionaryConfig = (theme) => {
           },
           {
             format: 'custom/format/componentConfig',
-            destination: 'config-tokens/__component-config.generated.js',
+            destination: 'config-tokens/__component-config.generated.mjs',
             filter: (token) => {
               return token.type === 'componentConfig';
             },
