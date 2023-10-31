@@ -1,7 +1,7 @@
 {
   /* 
   
-  Aufbau der design tokens
+  Aufbau der Componnent tokens
   
   */
 
@@ -44,6 +44,19 @@
       }
     }
   },
+  "typos": {
+    "SemanticGroup": {
+      "ComponentName": {
+        "Element-[SubElement]-TokenType": {
+          "SizeVariant": {
+            "value": "",
+            "type": "",
+            "description": ""
+          }
+        }
+      }
+    }
+  },
 
   /*
   
@@ -53,9 +66,13 @@
     "TokenTypes-color": "BackgroundColor; BorderColor; IconColor; TextColor ",
     "TokenTypes-dimensions": "Size, IconSize, BorderWidth, BorderRadius, PaddingTop, Width, Height...",
     "TokenTypes-borders": "Border"
+    "TokenTypes-typos": "Typography"
+
+  Element:
+    an Element must be named. If the the Element is the outer container of the component I use "Container" 
 
   Sentiments:
-     "Default; Mute"
+     "Default; Mute; Inverted; Neutral; Warning; Error"
 
   ToggleStates:
     "Active": "Replaces Selected everywhere",
@@ -81,7 +98,7 @@
   "Found Bug 4": "Checkbox/Radio.MainContainer.ItemSpacing ist nicht klar ob horizontal oder vertical. Evntl besser Row nennen?",
   "Outdated 1": "Dimensions/CMP:Select.IconPaddingRight tokens sind outdated? Ich glaube Input.ItemSpacing und Input.Padding sollte reichen",
 
-  */
+*/
 
   "Forms": {
     "Checkbox": {
@@ -1327,18 +1344,732 @@
         "type": "spacing",
         "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
       },
-      "MenuSection--SectionTitleWrapper--SectionTitleWrapper--Padding": {
+      "MenuSection--SectionTitleWrapper--Padding": {
         "value": "{Action.Menu.MenuSection.}",
         "type": "spacing",
         "description": "Do not apply in Figma, use aliases <PaddingTop/Right/Bottom/Left> instead. \nDefines the padding around the section title text."
+      },
+      "MenuSection--SectionTitle--Typography": {
+        "value": "{core.typography.sourceSansPro.semibold.75}",
+        "type": "typography"
+      },
+      "MenuSection--SectionTitle--TextColor": {
+        "value": "{q.content.ondefault.alpha}",
+        "type": "color",
+        "description": "Action.Menu.MenuSection.SectionTitle | Apply on section title"
+      },
+      "MenuSection--SectionStack--ItemSpacing": {
+        "value": "{core.dimensionPX.12}",
+        "type": "spacing",
+        "description": "Defines the space between each menu section"
+      },
+      "MenuSection--SectionStack--Padding": {
+        "value": "{core.dimensionPX.12}",
+        "type": "spacing",
+        "description": "Use on coded comp and Figma. Defines the padding around all stacked menu sections."
+      },
+      // adds "Container--" to BorderRadius
+      "Container--BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius",
+        "description": "Defines the border radius of the whole menu component"
+      },
+      // renames Menu.Surface -> Menu.Container.BackgroundColor
+      "Container--BackgroundColor": {
+        "value": "{q.background.level_2}",
+        "type": "color",
+        "description": "Action.Menu.Surface.Color"
       }
     }
+  },
+
+  "Feedback": {
+    "Loader": {
+      "Container--Size": {
+        "SM": {
+          "value": "{core.dimensionREM.16}",
+          "type": "sizing"
+        },
+        "MD": {
+          "value": "{core.dimensionREM.24}",
+          "type": "sizing"
+        },
+        "LG": {
+          "value": "{core.dimensionREM.32}",
+          "type": "sizing"
+        }
+      },
+      "Container--Padding": {
+        "SM": {
+          "value": "{core.dimensionREM.1}",
+          "type": "spacing"
+        },
+        "MD": {
+          "value": "{core.dimensionREM.2}",
+          "type": "spacing"
+        },
+        "LG": {
+          "value": "{core.dimensionREM.3}",
+          "type": "spacing"
+        }
+      },
+      "Background--BorderColor": {
+        "Default": {
+          "value": "{Feedback.Brand.Default.Shape.Background}",
+          "type": "color"
+        },
+        "Inverted": {
+          "value": "{Feedback.Brand.Inverted.Shape.Background}",
+          "type": "color"
+        }
+      },
+      "Background--BorderWidth": {
+        "SM": {
+          "value": "{core.dimensionPX.2}",
+          "type": "borderWidth"
+        },
+        "MD": {
+          "value": "{core.dimensionPX.2}",
+          "type": "borderWidth"
+        },
+        "LG": {
+          "value": "{core.dimensionPX.3}",
+          "type": "borderWidth"
+        }
+      },
+      "Background--Border": {
+        "SM--Default": {
+          "value": {
+            "color": "{Feedback.Loader.Background.BorderColor.Default}",
+            "width": "{Feedback.Loader.Background.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "SM--Inverted": {
+          "value": {
+            "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
+            "width": "{Feedback.Loader.Background.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Default": {
+          "value": {
+            "color": "{Feedback.Loader.Background.BorderColor.Default}",
+            "width": "{Feedback.Loader.Background.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Inverted": {
+          "value": {
+            "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
+            "width": "{Feedback.Loader.Background.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Default": {
+          "value": {
+            "color": "{Feedback.Loader.Background.BorderColor.Default}",
+            "width": "{Feedback.Loader.Background.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Inverted": {
+          "value": {
+            "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
+            "width": "{Feedback.Loader.Background.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      },
+
+      "Foreground--BorderColor": {
+        "Default": {
+          "value": "{Feedback.Brand.Default.Shape.Foreground}",
+          "type": "color"
+        },
+        "Inverted": {
+          "value": "{Feedback.Brand.Inverted.Shape.Foreground}",
+          "type": "color"
+        }
+      },
+      "Foreground--BorderWidth": {
+        "SM": {
+          "value": "{core.dimensionPX.2}",
+          "type": "borderWidth"
+        },
+        "MD": {
+          "value": "{core.dimensionPX.2}",
+          "type": "borderWidth"
+        },
+        "LG": {
+          "value": "{core.dimensionPX.3}",
+          "type": "borderWidth"
+        }
+      },
+      "Foreground--Border": {
+        "SM--Default": {
+          "value": {
+            "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
+            "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "SM--Inverted": {
+          "value": {
+            "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
+            "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Default": {
+          "value": {
+            "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
+            "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Inverted": {
+          "value": {
+            "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
+            "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Default": {
+          "value": {
+            "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
+            "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Inverted": {
+          "value": {
+            "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
+            "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      }
+    },
+
+    "Counter": {
+      // Adds "Container"
+      // Adds "BorderRadius" for every Size Variant
+
+      "Container--BorderRadius": {
+        "SM": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Feedback.Counter.Container.BorderRadius.SM}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Feedback.Counter.Container.BorderRadius.SM}",
+          "type": "borderRadius"
+        }
+      },
+      "Container--PaddingTopBottom": {
+        "SM": {
+          "value": "{core.dimensionPX.0}",
+          "type": "spacing"
+        },
+        "MD": {
+          "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+          "type": "spacing"
+        },
+        "LG": {
+          "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+          "type": "spacing"
+        }
+      },
+      "Container--PaddingLeftRight": {
+        "SM": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "MD": {
+          "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+          "type": "spacing"
+        },
+        "LG": {
+          "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+          "type": "spacing"
+        }
+      },
+      "Container--Padding": {
+        "SM": {
+          "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
+          "type": "spacing"
+        },
+        "MD": {
+          "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
+          "type": "spacing"
+        },
+        "LG": {
+          "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
+          "type": "spacing"
+        }
+      },
+      "Container--ItemSpacing": {
+        "SM": {
+          "value": "{core.dimensionPX.2}",
+          "type": "spacing"
+        },
+        "MD": {
+          "value": "{core.dimensionPX.2}",
+          "type": "spacing"
+        },
+        "LG": {
+          "value": "{core.dimensionPX.2}",
+          "type": "spacing"
+        }
+      },
+      // adds BorderColor and BorderWidth
+      "Container--BorderColor": {
+        "Neutral": {
+          "value": "{Feedback.Neutral.SurfaceStroke}",
+          "type": "color"
+        },
+        "Warning": {
+          "value": "{Feedback.Warning.SurfaceStroke}",
+          "type": "color"
+        },
+        "Error": {
+          "value": "{Feedback.Error.SurfaceStroke}",
+          "type": "color"
+        }
+      },
+      "Container--BorderWidth": {
+        "SM": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "MD": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        },
+        "LG": {
+          "value": "{core.borderWidth.Medium}",
+          "type": "borderWidth"
+        }
+      },
+      "Container--Border": {
+        "SM--Neutral": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+            "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "SM--Warning": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+            "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "SM--Error": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Error}",
+            "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Neutral": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+            "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Warning": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+            "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "MD--Error": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Error}",
+            "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Neutral": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+            "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Warning": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+            "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "LG--Error": {
+          "value": {
+            "color": "{Feedback.Counter.Container.BorderColor.Error}",
+            "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      },
+      // adds "Text" tokens. Any better naming?
+      "Text--Typography": {
+        // BUG: The Counter uses "Forms.[scale].Caption". This should change so it consumes a core token
+        "SM": {
+          "value": "{Forms.SM.Caption}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Forms.MD.Caption}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Forms.LG.Caption}",
+          "type": "borderRadius"
+        }
+      },
+      "Text--TextColor": {
+        "Neutral": {
+          "value": "{Feedback.Neutral.Text",
+          "type": "color"
+        },
+        "Warning": {
+          "value": "{Feedback.Warning.Text",
+          "type": "color"
+        },
+        "Error": {
+          "value": "{Feedback.Error.Text",
+          "type": "color"
+        }
+      }
+    },
+
+    "Tooltip": {
+      "ContentCol--BorderRadius": {
+        "value": "{core.borderRadius.MD}",
+        "type": "borderRadius"
+      },
+      "ContentCol--PaddingTopBottom": {
+        "value": "{core.dimensionPX.6}",
+        "type": "spacing"
+      },
+      "ContentCol--PaddingLeftRight": {
+        "value": "{core.dimensionPX.8}",
+        "type": "spacing"
+      },
+      "ContentCol--Padding": {
+        "value": "{Feedback.Tooltip.ContentCol.PaddingTopBottom} {Feedback.Tooltip.ContentCol.PaddingLeftRight}",
+        "type": "spacing"
+      },
+      // BackgroundColor -> ContentCol.BackgroundColor
+      "ContentCol--BackgroundColor": {
+        "value": "{q.surface.inverted}",
+        "type": "color"
+      },
+      // Adds Nose.BackgroundColor
+      "Nose--BackgroundColor": {
+        "value": "{Feedback.Tooltip.ContentCol.BackgroundColor}",
+        "type": "color"
+      },
+      "NoseWrapper--PaddingTopBottom": {
+        "value": "{core.dimensionREM.5}",
+        "type": "spacing",
+        "description": "Figma AND coded comps! Apply on tooltips where the nose is on the side of the ContentCol. The pading defines the inset of the nose."
+      },
+      "NoseWrapper--PaddingLeftRight": {
+        "value": "{core.dimensionREM.8}",
+        "type": "spacing",
+        "description": "Figma AND coded comps! Apply on tooltips where the nose is either above or below the ContentCol. The pading defines the inset of the nose."
+      },
+      "Container--MinWidth": {
+        "value": "{core.dimensionREM.40}",
+        "type": "sizing",
+        "description": "Defines the minimum width of the tooltip."
+      },
+      "Container--MaxWidth": {
+        "value": "{core.dimensionREM.80}",
+        "type": "sizing",
+        "description": "Defines the maximum Width of the tooltip."
+      },
+      // renames Tooltip.Content -> Tooltip.Text.TextColor
+      "Text--TextColor": {
+        "value": "{q.content.oninverted.alpha}",
+        "type": "color"
+      },
+      // adds Tooltip.Text.Typography
+      "Text--Typography": {
+        "value": "UI.Caption.SM",
+        "type": "typography"
+      }
+    },
+    "Dialog": {
+      // Adding TopBottom LeftRight Paddings for all relevant Elements (new values also)
+
+      "Container--PaddingTopBottom": {
+        "XS": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "SM": {
+          "value": "{core.dimensionPX.24}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "MD": {
+          "value": "{core.dimensionPX.32}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "LG": {
+          "value": "{core.dimensionPX.48}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "XL": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        }
+      },
+      "Container--PaddingLeftRight": {
+        "XS": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "SM": {
+          "value": "{core.dimensionPX.24}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "MD": {
+          "value": "{core.dimensionPX.32}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "LG": {
+          "value": "{core.dimensionPX.48}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        },
+        "XL": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Figma Only! Defines the Dialog Combined"
+        }
+      },
+      "Container--Padding": {
+        "XS": {
+          "value": "{Feedback.Dialog.Container.PaddingTopBottom.XS} {Feedback.Dialog.Container.PaddingLeftRight.XS}",
+          "type": "spacing",
+          "description": "Coded comps Only! Defines the Dialog Combined"
+        },
+        "SM": {
+          "value": "{Feedback.Dialog.Container.PaddingTopBottom.SM} {Feedback.Dialog.Container.PaddingLeftRight.SM}",
+          "type": "spacing",
+          "description": "Coded comps Only! Defines the Dialog Combined"
+        },
+        "MD": {
+          "value": "{Feedback.Dialog.Container.PaddingTopBottom.MD} {Feedback.Dialog.Container.PaddingLeftRight.MD}",
+          "type": "spacing",
+          "description": "Coded comps Only! Defines the Dialog Combined"
+        },
+        "LG": {
+          "value": "{Feedback.Dialog.Container.PaddingTopBottom.LG} {Feedback.Dialog.Container.PaddingLeftRight.LG}",
+          "type": "spacing",
+          "description": "Coded comps Only! Defines the Dialog Combined"
+        },
+        "XL": {
+          "value": "{Feedback.Dialog.Container.PaddingTopBottom.XL} {Feedback.Dialog.Container.PaddingLeftRight.XL}",
+          "type": "spacing",
+          "description": "Coded comps Only! Defines the Dialog Combined"
+        }
+      },
+
+      "DialogCombined--Container--MaxWidth": {
+        "XS": {
+          "value": "400px",
+          "type": "sizing"
+        },
+        "SM": {
+          "value": "600px",
+          "type": "sizing"
+        },
+        "MD": {
+          "value": "900px",
+          "type": "sizing"
+        },
+        "LG": {
+          "value": "1200px",
+          "type": "sizing"
+        },
+        "XL": {
+          "value": "1556px",
+          "type": "sizing"
+        }
+      },
+      // Adds sizeVariants for BorderRadius
+      "DialogCombined--Container--BorderRadius": {
+        "XS": {
+          "value": "{core.borderRadius.LG}",
+          "type": "borderRadius"
+        },
+        "SM": {
+          "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+          "type": "borderRadius"
+        },
+        "XL": {
+          "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+          "type": "borderRadius"
+        }
+      },
+      "DialogCombined--Container--BackgroundColor": {
+        "value": "{q.background.level_2}",
+        "type": "color"
+      },
+      "DialogHeader--PaddingTopBottom": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing"
+      },
+      "DialogHeader--PaddingLeftRight": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing"
+      },
+      "DialogHeader--Padding": {
+        "value": "{Feedback.Dialog.DialogHeader.PaddingTopBottom} {Feedback.Dialog.DialogHeader.PaddingLeftRight}",
+        "type": "spacing"
+      },
+      // Adds typotoken and textcolor
+      "DialogHeader--Title--Typography": {
+        "value": "{UI.Headline.H5}",
+        "type": "typography"
+      },
+      "DialogHeader--Title--TextColor": {
+        "value": "{UI.Headline.Default}",
+        "type": "typography"
+      },
+      "DialogContent--PaddingTopBottom": {
+        "value": "{core.dimensionPX.8}",
+        "type": "spacing"
+      },
+      "DialogContent--PaddingLeftRight": {
+        "value": "{core.dimensionPX.16}",
+        "type": "spacing"
+      },
+      "DialogContent--Padding": {
+        "value": "{Feedback.Dialog.DialogContent.PaddingTopBottom} {Feedback.Dialog.DialogContent.PaddingLeftRight}",
+        "type": "spacing"
+      },
+      // Adds typotoken and textcolor
+      "DialogContent--Text--Typography": {
+        "value": "{UI.Paragraph.MD.Regular}",
+        "type": "typography"
+      },
+      "DialogContent--Text--TextColor": {
+        "value": "{UI.Paragraph.Default}",
+        "type": "typography"
+      },
+      "DialogFooter--PaddingTopBottom": {
+        "value": "{core.dimensionPX.8}",
+        "type": "spacing"
+      },
+      "DialogFooter--PaddingLeftRight": {
+        "value": "{core.dimensionPX.8}",
+        "type": "spacing"
+      },
+      "DialogFooter--Padding": {
+        "value": "{Feedback.Dialog.DialogFooter.PaddingTopBottom} {Feedback.Dialog.DialogFooter.PaddingLeftRight}",
+        "type": "spacing"
+      }
+    }
+  },
+  "UI": {
+    "Icon": {
+      "Container--Size": {
+        "XXS": {
+          "value": "{core.dimensionREM.8}",
+          "type": "sizing",
+          "description": "size of XXS icon"
+        },
+        "XS": {
+          "value": "{core.dimensionREM.12}",
+          "type": "sizing",
+          "description": "size of XS icon"
+        },
+        "SM": {
+          "value": "{core.dimensionREM.16}",
+          "type": "sizing",
+          "description": "size of SM icon"
+        },
+        "MD": {
+          "value": "{core.dimensionREM.24}",
+          "type": "sizing",
+          "description": "size of MD icon"
+        },
+        "LG": {
+          "value": "{core.dimensionREM.32}",
+          "type": "sizing",
+          "description": "size of LG icon"
+        },
+        "XL": {
+          "value": "{core.dimensionREM.48}",
+          "type": "sizing",
+          "description": "size of XL icon"
+        }
+      }
+    },
+    "Divider": {
+      // Here is an exception, where I do not name an element
+      "BorderWidth": {},
+      "BorderColor": {},
+      "Border": {}
+    }
   }
-  // Hier gehts weiter
 }
 
-// mit CMP.Forms bin ich durch,
-// mit dimensions.CMP.Action habe ich angefangen
+/* DONE
+CMP.Forms
+CMP.Action
+CMP.Feedback
+*/
 
 // Stepper Button
 // Not so happy here. Könnne wir hier nicht icon-button tokens verwenden? Sind silent-button tokens genug fürs styling?
@@ -1346,15 +2077,15 @@
 
 // ### ToDos
 
-// Kann man im naming zwischen horizontalem und verticalem itemSpacing unterscheiden, wenn der container name das nicht her gibt?
-
-// Siblings should allways use the same "sentiment--toggleState--UserInteraction" pattern.
+// Kann man im naming zwischen horizontalem und verticalem itemSpacing unterscheiden, wenn der container name das nicht hergibt?
 
 // ### Good practice:
 
+//  Siblings should allways use the same "sentiment--toggleState--UserInteraction" pattern.
+
 //  Immer wenn die values gleich sind, wird der erste Token (idR "Rest") referenziert
 
-// Good practice: Wenn eine bordercolor angegebn ist, müssen auch borderWith und und border erstellt werden
+//  Wenn eine bordercolor angegebn ist, müssen auch borderWith und und border erstellt werden
 
 // ### Borders
 
@@ -1384,4 +2115,24 @@ Diese tokens müssen dann als Alias in dem "Padding" token verwendet werden.
 Auf den "Padding" token sollte nie verziechtet werden, weil ein node der nur mit "PaddingLeft" ausgestattet ist in einem anderem design auch paddenTop brauchen könnte. In dem Falle müssten der code der compoennte geändert werden, was es zu vermeiden gilt.
 
 Vielleicht nennen wir alle PaddingLeftRight und PaddingTopBottom in PaddingHorizontal und PaddingVertical um?
+*/
+
+/*
+"Element" : {
+  "XS": {
+
+  },
+  "SM": {
+
+  },
+  "MD": {
+
+  },
+  "LG": {
+
+  },
+  "XL": {
+
+  }
+},
 */
