@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
+import { html as htmlLiteral, literal } from 'lit/static-html.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { ActionVariantType, FormSizesType, SizesType } from '../../globals/types';
+import { ActionVariantType, FormSizesType, SizesType, TargetType } from '../../globals/types';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../internal-components/icon';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -30,6 +31,13 @@ export class BlrIconButton extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size: FormSizesType = 'md';
   @property() loadingStatus!: string;
+
+  @property() isLink = true;
+  @property() href?: string;
+  @property() target?: TargetType;
+  @property() linkTitle?: string;
+  @property() hreflang?: string;
+  @property() download = false;
 
   @property() theme: ThemeType = 'Light';
 
@@ -65,10 +73,13 @@ export class BlrIconButton extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
-    return html`<style>
+    const buttonWrapper = this.isLink ? literal`a` : literal`span`;
+
+    return htmlLiteral`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <span
+
+      <${buttonWrapper}
         aria-label=${this.arialabel || nothing}
         class="blr-semantic-action blr-icon-button ${classes}"
         @click=${this.onClick}
@@ -77,22 +88,28 @@ export class BlrIconButton extends LitElement {
         tabindex="0"
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
-        role="button"
         @keydown=${this.onClick}
+        href=${this.href || nothing}
+        target=${this.target || nothing}
+        title=${this.linkTitle || nothing}
+        hreflang=${this.hreflang || nothing}
+        download=${this.download || nothing}
       >
-        ${this.loading
-          ? html`${BlrLoaderRenderFunction({
-              size: loaderSizeVariant,
-              variant: loaderVariant,
-              loadingStatus: this.loadingStatus,
-              theme: this.theme,
-            })}`
-          : html`${BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-            })}`}
-      </span> `;
+        ${
+          this.loading
+            ? html`${BlrLoaderRenderFunction({
+                size: loaderSizeVariant,
+                variant: loaderVariant,
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+              })}`
+            : html`${BlrIconRenderFunction({
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                hideAria: true,
+              })}`
+        }
+      </${buttonWrapper}> `;
   }
 }
 

@@ -79,3 +79,5 @@ export type ToolTipVisibility = 'onLoad' | 'onHover';
 export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
 
 export type LabelVariantType = (typeof LabelVariants)[number];
+
+export type TargetType = '_self' | '_blank' | '_parent' | 'framename';

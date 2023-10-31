@@ -32,3 +32,5 @@ export const ToolTipPosition = ['left', 'right', 'top', 'bottom'] as const;
 export const ToolTipArrowPosition = ['start', 'end', 'middle', 'hide'] as const;
 
 export const LabelVariants = ['label', 'error'] as const;
+
+export const TargetTypes = ['_self', '_blank', '_parent', '_top', 'framename'] as const;

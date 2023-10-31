@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { BlrIconButtonType, BlrIconButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, Sizes } from '../../globals/constants';
+import { ActionVariants, Sizes, TargetTypes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -18,6 +18,23 @@ export default {
     variant: {
       options: ActionVariants,
       control: { type: 'select' },
+    },
+    href: {
+      if: { arg: 'isLink', eq: true },
+    },
+    target: {
+      options: TargetTypes,
+      control: { type: 'select' },
+      if: { arg: 'isLink', eq: true },
+    },
+    linkTitle: {
+      if: { arg: 'isLink', eq: true },
+    },
+    hreflang: {
+      if: { arg: 'isLink', eq: true },
+    },
+    download: {
+      if: { arg: 'isLink', eq: true },
     },
     theme: {
       options: Themes,
@@ -45,6 +62,11 @@ const args: BlrIconButtonType = {
   disabled: false,
   buttonId: 'button-id',
   loadingStatus: 'Loading',
+  isLink: false,
+  href: '',
+  linkTitle: '',
+  hreflang: 'en',
+  download: false,
 };
 
 BlrIconButton.args = args;

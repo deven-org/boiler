@@ -23,6 +23,10 @@ export const styleCustom = css`
     outline: 2px solid black;
   }
 
+  .blr-icon-button:focus:hover {
+    outline: 2px solid black;
+  }
+
   .blr-icon-button.xs {
     padding: ${IconButton.XS.Padding};
   }
