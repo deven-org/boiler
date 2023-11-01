@@ -14,37 +14,36 @@ import { BlrCounterRenderFunction } from '../internal-components/counter';
 
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
-  @property() textareaId!: string;
-  @property() name!: string;
-  @property() arialabel!: string;
-  @property() hasLabel?: boolean;
+  @property() sizeVariant: FormSizesType = 'md';
+  @property() resize?: boolean;
+  @property() cols?: number;
+  @property() rows?: number;
+  @property() placeholder?: string;
+  @property() value!: string;
+  @property() minLength?: number;
+  @property() maxLength?: number;
   @property() label!: string;
   @property() labelAppendix?: string;
-  @property() value!: string;
-  @property() placeholder?: string;
+  @property() hasHint = true;
+  @property() hintMessage?: string;
+  @property() hintMessageIcon: SizelessIconType = 'blrInfo';
+  @property() arialabel!: string;
+  @property() name!: string;
+  @property() hasCounter?: boolean;
+  @property() warningLimitType: WarningLimits = 'warningLimitInt';
+  @property() warningLimitInt = 105;
+  @property() warningLimitPer = 75;
+  @property() textareaId!: string;
+  @property() hasLabel?: boolean;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
-  @property() sizeVariant: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property() minLength?: number;
-  @property() maxLength?: number;
-  @property() warningLimitType: WarningLimits = 'warningLimitInt';
-  @property() warningLimitInt = 105;
-  @property() warningLimitPer = 75;
-  @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorMessageIcon: SizelessIconType = 'blrInfo';
-  @property() hasHint = true;
-  @property() hintMessage?: string;
-  @property() hasCounter?: boolean;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() resize?: boolean;
-  @property() rows?: number;
-  @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
   @property() shouldFocus? = false;
 
@@ -165,7 +164,7 @@ ${this.value}</textarea
                         ${BlrFormHintRenderFunction({
                           message: this.hintMessage || '',
                           variant: 'hint',
-                          icon: this.hintIcon,
+                          icon: this.hintMessageIcon,
                           size: this.sizeVariant,
                           theme: this.theme,
                         })}
@@ -234,7 +233,7 @@ export const BlrTextareaRenderFunction = ({
   rows,
   errorMessage,
   hintMessage,
-  hintIcon,
+  hintMessageIcon,
   hasError,
   errorMessageIcon,
   onChange,
@@ -270,7 +269,7 @@ export const BlrTextareaRenderFunction = ({
     .readonly=${readonly}
     .hintMessage=${hintMessage}
     .hasCounter=${hasCounter}
-    .hintIcon=${hintIcon}
+    .hintMessageIcon=${hintMessageIcon}
     .hasError=${hasError}
     .errorMessageIcon=${errorMessageIcon}
     .labelAppendix=${labelAppendix}

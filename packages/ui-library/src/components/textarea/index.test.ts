@@ -19,7 +19,7 @@ const sampleParams: BlrTextareaType = {
   labelAppendix: 'appendix',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   hasCounter: false,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
@@ -96,14 +96,14 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
       })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const formHint = querySelectorDeep('blr-form-hint', textarea?.getRootNode() as HTMLElement);
-    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
+    const hintMessageIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintMessageIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
 
