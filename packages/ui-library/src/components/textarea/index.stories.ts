@@ -58,7 +58,7 @@ const defaultParams: BlrTextareaType = {
 
 //Main Showcase Storybook Textarea
 export default {
-  title: 'Design System/Web Components/Text area',
+  title: 'Design System/Web Components/TextArea',
   argTypes: {
     //Appearance
     sizeVariant: {
@@ -395,10 +395,10 @@ export default {
     },
   },
   parameters: {
-    viewMode: 'story',
+    viewMode: 'docs',
     previewTabs: {
       'storybook/docs/panel': {
-        hidden: true,
+        hidden: false,
       },
     },
     docs: {
@@ -408,42 +408,42 @@ export default {
                 Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
         </p>
         <ul>
-        <li> <a href="/docs/design-system-web-components-blrtextarea--docs"><strong>Docs</strong></a></li>
-        <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Appearance</strong></a>
+        <li> <a href="/docs/design-system-web-components-textarea--docs"><strong>Docs</strong></a></li>
+        <li> <a href="/?path=/docs/design-system-web-components-textarea--docs#appearance"><strong>Appearance</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--sizes"><strong>Sizing</strong></a></li>
-                <li> <a href="/story/design-system-web-components-blrtextarea--resize"><strong>Resize</strong></a></li>
+                <li> <a href="/?path=/docs/design-system-web-components-textarea--docs#sizes"><strong>Sizing</strong></a></li>
+                <li> <a href="/story/design-system-web-components-textarea--resize"><strong>Resize</strong></a></li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-blrtextarea--placeholder"><strong>Content/ Settings</strong></a>
+         <li> <a href="/?path=/docs/design-system-web-components-textarea--docs#dependencies"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--placeholder"><strong>Placeholder</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <a href="/story/design-system-web-components-blrtextarea--disabled"><strong>States</strong></a>
-            <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--disabled"><strong>Disabled</strong></a>
-                </li>
-                 <li> <a href="/story/design-system-web-components-blrtextarea--readonly"><strong>Readonly</strong></a>
+                <li> <a href="/story/design-system-web-components-textarea--placeholder"><strong>Placeholder</strong></a>
                 </li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-blrtextarea--required"><strong>Validation</strong></a>
+         <li> <a href="/story/design-system-web-components-textarea--disabled"><strong>States</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--required"><strong>Required</strong></a>
+                <li> <a href="/story/design-system-web-components-textarea--disabled"><strong>Disabled</strong></a>
                 </li>
-                 <li> <a href="/story/design-system-web-components-blrtextarea--has-error"><strong>hasError</strong></a>
+                 <li> <a href="/story/design-system-web-components-textarea--readonly"><strong>Readonly</strong></a>
                 </li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-blrtextarea--captions"><strong>Dependencies</strong></a>
+         <li> <a href="/story/design-system-web-components-textarea--required"><strong>Validation</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-blrtextarea--captions"><strong>Caption</strong></a>
+                <li> <a href="/story/design-system-web-components-textarea--required"><strong>Required</strong></a>
                 </li>
-                 <li> <a href="/story/design-system-web-components-blrtextarea--label"><strong>Label</strong></a>
+                 <li> <a href="/story/design-system-web-components-textarea--has-error"><strong>hasError</strong></a>
                 </li>
-                <li> <a href="/story/design-system-web-components-blrtextarea--counter"><strong>Counter</strong></a>
+            </ul>
+        </li>
+         <li> <a href="/story/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a>
+            <ul>
+                <li> <a href="/story/design-system-web-components-textarea--captions"><strong>Caption</strong></a>
+                </li>
+                 <li> <a href="/story/design-system-web-components-textarea--label"><strong>Label</strong></a>
+                </li>
+                <li> <a href="/story/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
                 </li>
             </ul>
         </li>
