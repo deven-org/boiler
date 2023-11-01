@@ -2,7 +2,7 @@ import type { StorybookConfig } from '@storybook/web-components-webpack5';
 import { resolve } from 'path';
 
 const config: StorybookConfig = {
-  stories: ['../../ui-library/src/**/*.stories.mdx', '../../ui-library/src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../../ui-library/src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-essentials'],
   framework: '@storybook/web-components-webpack5',
   docs: {
@@ -12,9 +12,10 @@ const config: StorybookConfig = {
 
   webpackFinal: async (config) => {
     config.module!.rules!.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: resolve(__dirname, 'packages'),
+      loader: 'ts-loader',
+      options: {
+        configFile: '../tsconfig.json',
+      },
     });
 
     // Return the altered config
