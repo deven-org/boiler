@@ -9,6 +9,7 @@
     "start": "npm run start --workspace=@boiler/storybook",
     "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
     "copy:static": "mkdir -p dist/assets && cp -rip static/{fonts,imgs}/* dist/assets/",
+    "---prebuild": "npm run tokens:generate",
     "build": "npm run build --workspace=@boiler/ui-library",
     "build:types": "npm run build:types --workspace=@boiler/ui-library",
     "lint": "npm run lint --workspace=@boiler/ui-library",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.0",
+    "@babel/plugin-transform-class-properties": "^7.22.5",
     "@babel/preset-env": "^7.22.20",
     "@babel/preset-typescript": "^7.23.0",
     "@boiler/figma-design-tokens": "0.0.1",
@@ -81,7 +83,6 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
-  "dependencies": {},
   "engines": {
     "node": "^18"
   }

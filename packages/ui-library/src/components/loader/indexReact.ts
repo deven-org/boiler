@@ -1,5 +1,5 @@
 import React from 'react';
-import { createComponent, EventName } from '@lit-labs/react';
+import { createComponent, EventName } from '@lit/react';
 
 import { BlrLoader } from '.';
 

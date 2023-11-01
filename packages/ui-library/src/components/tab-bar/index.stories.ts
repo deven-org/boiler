@@ -127,6 +127,7 @@ const args: BlrTabBarType = {
   tabContent: 'labelAndIcon',
   iconPosition: 'leading',
   alignment: 'left',
+  icon: 'Blr360',
 };
 
 BlrTabBar.args = args;

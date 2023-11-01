@@ -12,9 +12,9 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../loader';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 const TAG_NAME = 'blr-text-button';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {

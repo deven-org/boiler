@@ -11,7 +11,7 @@ const sampleParams: BlrSelectType = {
   showTrailingIcon: true,
   size: 'md',
   errorMessage: 'This is error message',
-  hint: 'Field is used for hint',
+  hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfoLg',
   selectId: 'Peter',
   trailingIcon: 'blrChevronDownLg',

@@ -43,7 +43,7 @@ export function renderThemedCssStrings(renderFunc: (cT: componentTokensType, sT:
   }
 
   return {
-    tokenizedLight,
-    tokenizedDark,
+    tokenizedLight: tokenizedLight as CSSResult,
+    tokenizedDark: tokenizedDark as CSSResult,
   };
 }

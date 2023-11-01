@@ -1,5 +1,5 @@
 import { css } from "nested-css-to-flat/lit-css";
-import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated";
+import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
 const { TextButton } = componentTokens.Action;
 

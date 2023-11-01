@@ -22,7 +22,8 @@ const sampleParams: BlrTabBarType = {
       href: './',
     },
   ],
-  overflowVariant: 'wrap',
+  overflowVariantStandard: 'wrap',
+  overflowVariantFullWidth: 'wrap',
   size: 'md',
   showDivider: true,
   icon: 'blr360Sm',
@@ -30,11 +31,6 @@ const sampleParams: BlrTabBarType = {
   tabContent: 'labelAndIcon',
   iconPosition: 'leading',
   alignment: 'left',
-  _navItems: [],
-  _navItemsSlots: [],
-  _panels: [],
-  _navList: document.createElement('ul'),
-  scrollTab: () => null,
 };
 
 describe('blr-tab-bar', () => {

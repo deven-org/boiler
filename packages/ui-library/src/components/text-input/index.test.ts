@@ -20,9 +20,8 @@ const sampleParams: BlrTextInputType = {
   showHint: true,
   hasLabel: true,
   showInputIcon: true,
-  inputIcon: 'blr360Lg',
+  inputIcon: 'blr360',
   theme: 'Light',
-  errorIcon: 'blr360Lg',
 };
 
 describe('blr-text-input', () => {

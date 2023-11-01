@@ -28,7 +28,6 @@ const defaultParams: BlrTextareaType = {
   errorIcon: 'blrInfo',
   hasError: false,
   errorMessage: "OMG it's an error",
-  errorIcon: 'Blr360',
 
   isResizeable: true,
 };
@@ -257,13 +256,16 @@ export const Example2 = () =>
       </div>
     </div>
   `;
-(Example2.parameters = {
+
+Example2.parameters = {
   backgrounds: {
     default: 'dark',
   },
-}),
-  (Example2.storyName = 'Textarea Examples Dark Theme');
+};
 
+Example2.storyName = 'Textarea Examples Dark Theme';
+
+/*
 export const InteractivePlaceholder = ({ placeholder }) =>
   html`
     ${fontStyle}
@@ -277,3 +279,4 @@ InteractivePlaceholder.storyName = 'Interactive Placeholder';
 InteractivePlaceholder.args = {
   placeholder: defaultParams.placeholder,
 };
+*/

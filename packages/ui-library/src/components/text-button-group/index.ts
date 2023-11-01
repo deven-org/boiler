@@ -26,7 +26,6 @@ const TAG_NAME = 'blr-text-button-group';
 export class BlrTextButtonGroup extends LitElement {
   static styles = [StyleTextButtonGroupCustom, StyleTextButtonCustom];
 
-  @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() leadingIcon?: SizelessIconType;

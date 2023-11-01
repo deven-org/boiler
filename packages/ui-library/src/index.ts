@@ -1,4 +1,4 @@
-import './components/text-button/index.ts';
+import './components/text-button/index';
 
 export { BlrTextButton } from './components/text-button';
 export type { IconType } from '@boiler/icons/index';

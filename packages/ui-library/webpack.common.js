@@ -2,12 +2,13 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 // const CopyPlugin = require('copy-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/index.ts', './src/foundation/_tokens-generated/index.generated.scss'],
+  entry: ['./src/index.ts'],
   mode: 'development',
   devtool: 'source-map',
   optimization: {
@@ -20,22 +21,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(?:ts|mjs|cjs)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.(scss|css)$/,
-        use: [
-          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
+        options: {
+          presets: [['@babel/preset-env', { targets: 'defaults' }], ['@babel/preset-typescript']],
+          plugins: [
+            ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+            '@babel/plugin-transform-class-properties',
+          ],
+        },
       },
     ],
   },
@@ -43,21 +38,16 @@ module.exports = {
     extensions: ['.ts', '.js'],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: '[name].[contenthash].css',
-      chunkFilename: '[id].css',
-    }),
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin(),
     // new CopyPlugin({
     //   patterns: [{ from: 'src/assets', to: 'assets' }]
     // }),
-    new ESLintPlugin({
-      extensions: ['.ts', '.js'],
-      exclude: 'node_modules',
-      context: 'src',
-    }),
+
+    //new ESLintPlugin({
+    //  extensions: ['.ts', '.js'],
+    //  exclude: 'node_modules',
+    //  context: 'src',
+    //}),
   ],
 };
