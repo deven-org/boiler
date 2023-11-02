@@ -11,7 +11,7 @@ const defaultParams: BlrNumberInputType = {
   numberInputId: 'egal',
   label: 'Hello',
   showHint: false,
-  hintIcon: 'blr360Lg',
+  hintIcon: 'blr360',
   step: 1,
   value: 99,
 };

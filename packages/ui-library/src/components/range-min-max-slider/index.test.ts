@@ -16,8 +16,8 @@ const sampleParams: BlrRangeMinMaxSliderType = {
   btnVariant: 'silent',
   showLegend: true,
   disabled: false,
-  incrementIcon: 'blrPlusMd',
-  decrementIcon: 'blrMinusMd',
+  incrementIcon: 'blrPlus',
+  decrementIcon: 'blrMinus',
   onChange: () => null,
 };
 

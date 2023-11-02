@@ -9,7 +9,7 @@ import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { checkboxDark, checkboxLight } from '../../foundation/component-tokens/checkbox.css';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
@@ -31,9 +31,9 @@ export class BlrCheckbox extends LitElement {
   @property() readonly?: boolean;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: IconType;
+  @property() errorIcon?: SizelessIconType;
   @property() showHint?: boolean;
-  @property() hintIcon?: IconType;
+  @property() hintIcon?: SizelessIconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
 

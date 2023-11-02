@@ -16,7 +16,6 @@ import {
   SizesType,
 } from '../../globals/types';
 import { BlrIconRenderFunction } from '../internal-components/icon';
-import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../utils/calculate-icon-name';
@@ -46,7 +45,6 @@ export class BlrTabBar extends LitElement {
   @property() overflowVariantStandard!: OverflowVariantTypeStandard;
   @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
   @property() iconPosition: IconPositionVariant = 'leading';
-  @property() icon: SizelessIconType = 'blr360Sm';
   @property() variant: TabVariantType = 'standard';
   @property() tabContent: TabContentVariantType = 'labelOnly';
   @property() alignment: TabAlignmentVariantType = 'left';

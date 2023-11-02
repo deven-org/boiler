@@ -38,11 +38,11 @@ export class BlrTextInput extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() showInputIcon = true;
-  @property() inputIcon: SizelessIconType = 'blr360Sm';
+  @property() inputIcon: SizelessIconType = 'blr360';
   @property() showHint = true;
   @property() hintText?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfoSm';
-  @property() errorIcon: SizelessIconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() errorIcon: SizelessIconType = 'blrInfo';
   @property() hasLabel!: boolean;
 
   @property() theme: ThemeType = 'Light';
@@ -137,8 +137,12 @@ export class BlrTextInput extends LitElement {
           </div>
           ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
-                icon: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, iconSizeVariant),
-                name: this.hasError ? 'blrErrorFilledSm' : calculateIconName(this.inputIcon, iconSizeVariant),
+                icon: this.hasError
+                  ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                  : calculateIconName(this.inputIcon, iconSizeVariant),
+                name: this.hasError
+                  ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                  : calculateIconName(this.inputIcon, iconSizeVariant),
                 size: iconSizeVariant,
                 classMap: iconClasses,
                 hideAria: true,
@@ -147,8 +151,8 @@ export class BlrTextInput extends LitElement {
             : nothing}
           ${wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
-                icon: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
-                name: this.hasError ? 'blrErrorFilledSm' : getPasswordIcon(),
+                icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
+                name: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
                 size: iconSizeVariant,
                 classMap: iconClasses,
                 hideAria: true,

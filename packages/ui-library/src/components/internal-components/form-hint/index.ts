@@ -18,7 +18,7 @@ export class BlrFormHint extends LitElement {
   static styles = [styleCustom];
 
   @property() message?: string;
-  @property() icon?: SizelessIconType;
+  @property() icon?: SizelessIconType | undefined;
   @property() variant: HintVariantType = 'hint';
   @property() size: FormSizesType = 'md';
   @property() childElement?: TemplateResult<1>;

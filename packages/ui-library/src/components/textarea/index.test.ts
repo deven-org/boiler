@@ -16,7 +16,7 @@ const sampleParams: BlrTextareaType = {
   errorMessage: "OMG it's an error",
   placeholder: 'Type your message here ..',
   hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  hintIcon: 'blrInfoLg',
+  hintIcon: 'blrInfo',
   showHint: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,

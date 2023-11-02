@@ -7,7 +7,7 @@ import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../foundation/component-tokens/radio.css';
 import { BlrFormLabelInline } from '../form-label-inline';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
@@ -27,10 +27,10 @@ export class BlrRadio extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
-  @property() errorIcon?: IconType;
+  @property() errorIcon?: SizelessIconType;
   @property() option!: RadioOption;
   @property() showHint?: boolean;
-  @property() hintIcon?: IconType;
+  @property() hintIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
 

@@ -18,7 +18,7 @@ const sampleParams: BlrNumberInputType = {
   numberInputId: 'egal',
   label: 'Hello',
   showHint: false,
-  hintIcon: 'blr360Lg',
+  hintIcon: 'blr360',
   value: 4,
   unit: 'gr',
   fractionDigits: 0,

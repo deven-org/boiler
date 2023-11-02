@@ -6,7 +6,7 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 const sampleParams: BlrIconLinkType = {
   arialabel: 'Button',
   loading: false,
-  icon: 'blr360Lg',
+  icon: 'blr360',
   linkId: 'link-id',
   variant: 'cta',
   size: 'md',
