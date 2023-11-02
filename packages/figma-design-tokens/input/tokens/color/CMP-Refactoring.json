@@ -3943,9 +3943,14 @@
 
   // ### Actions ###
 
-  // ## Texg Button ##
+  // ## Text Button ##
   // fügt "Container" hier hinzu um präziseres naming zu haben
   // splittet "Padding" auf in "PaddingLeftRight" und "PaddingTopBottom" weil Figma mit compounds nicht arbeiten kann
+
+  // ##TextDropDown
+  // fügt "Container" hier hinzu um präziseres naming zu haben
+  // splittet "Padding" auf in "PaddingLeft/Right/Top/Bottom" weil Figma mit compounds nicht arbeiten kann
+  // skipping sizeVariant for now
 
   // ## Icon Button ##
   // fügt "Container" hier hinzu um präziseres naming zu haben
@@ -3971,7 +3976,10 @@
   // MenuItem--Padding/BorderRadius -> MenuItem--Container--Padding/BorderRadius
   // MenuItem--Container--ItemSpacing -> MenuItem--ContentRow--ItemSpacing
   // fügt ausserdem PaddingLeftRight und PaddingTopBottom hinzu
-
+  // renames Section -> MenuSection
+  // adds MenuSection.SectionTitleWrapper.PaddingTop/Btm...
+  // adds "Container--" to BorderRadius
+  // renames Menu.Surface.Color -> Menu.Container.BackgroundColor
   "Actions": {
     "TextButton": {
       "Container--PaddingTopBottom": {
@@ -4099,9 +4107,6 @@
       }
     },
     "TextDropdown": {
-      // fügt "Container" hier hinzu um präziseres naming zu haben
-      // splittet "Padding" auf in "PaddingLeft/Right/Top/Bottom" weil Figma mit compounds nicht arbeiten kann
-      // skipping sizeVariant for now
       "Container--PaddingTop": {
         "XS": {
           "value": "{core.dimensionREM.4}",
@@ -4704,90 +4709,103 @@
       "MenuItem--Container--PaddingTopBottom": {
         "value": "{core.dimensionPX.8}",
         "type": "spacing",
-        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+        "oldPath": "None"
       },
       "MenuItem--Container--PaddingLeftRight": {
         "value": "{core.dimensionPX.16}",
         "type": "spacing",
-        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+        "oldPath": "None"
       },
       "MenuItem--Container--Padding": {
         "value": "{Action.Menu.MenuItem.Container.PaddingTopBottom} {Action.Menu.MenuItem.Container.PaddingLeftRight}",
         "type": "spacing",
-        "description": "Do not apply in Figma, use aliases <PaddingLeftRight> and <PaddingTopBottom> instead."
+        "description": "Do not apply in Figma, use aliases <PaddingLeftRight> and <PaddingTopBottom> instead.",
+        "oldPath": "Action.Menu.MenuItem.Padding"
       },
       "MenuItem--Container--BorderRadius": {
         "value": "{Action.BorderRadius}",
         "type": "borderRadius",
-        "description": "Defines the border radius of a single menu item."
+        "description": "Defines the border radius of a single menu item.",
+        "oldPath": "Action.Menu.MenuItem.BorderRadius"
       },
       "MenuItem--ContentRow--ItemSpacing": {
         "value": "{core.dimensionPX.4}",
         "type": "spacing",
-        "description": "Adds space between Icons and ContentStack (Label & Description)"
+        "description": "Adds space between Icons and ContentStack (Label & Description)",
+        "oldPath": "Action.Menu.MenuItem.Container.ItemSpacing"
       },
       "MenuItem--ContentStack--ItemSpacing": {
         "value": "0",
         "type": "spacing",
-        "description": "Adds space between Label & Description"
+        "description": "Adds space between Label & Description",
+        "oldPath": "Action.Menu.MenuItem.ContentStack.ItemSpacing"
       },
-      // renames Section -> MenuSection
-      // adds PaddingTop/Btm...
+
       "MenuSection--SectionTitleWrapper--PaddingTop": {
         "value": "{core.dimensionPX.16}",
         "type": "spacing",
-        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text.",
+        "oldPath": "None"
       },
       "MenuSection--SectionTitleWrapper--PaddingRight": {
         "value": "{core.dimensionPX.16}",
         "type": "spacing",
-        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text.",
+        "oldPath": "None"
       },
       "MenuSection--SectionTitleWrapper--PaddingBottom": {
         "value": "{core.dimensionPX.8}",
         "type": "spacing",
-        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text.",
+        "oldPath": "None"
       },
       "MenuSection--SectionTitleWrapper--PaddingLeft": {
         "value": "{core.dimensionPX.16}",
         "type": "spacing",
-        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text."
+        "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps. \nDefines the padding around the section title text.",
+        "oldPath": "None"
       },
       "MenuSection--SectionTitleWrapper--Padding": {
-        "value": "{Action.Menu.MenuSection.}",
+        "value": "{Action.Menu.MenuSection.SectionTitleWrapper.PaddingTop} {Action.Menu.MenuSection.SectionTitleWrapper.PaddingRight} {Action.Menu.MenuSection.SectionTitleWrapper.PaddingBottom} {Action.Menu.MenuSection.SectionTitleWrapper.PaddingLeft}",
         "type": "spacing",
-        "description": "Do not apply in Figma, use aliases <PaddingTop/Right/Bottom/Left> instead. \nDefines the padding around the section title text."
+        "description": "Do not apply in Figma, use aliases <PaddingTop/Right/Bottom/Left> instead. \nDefines the padding around the section title text.",
+        "oldPath": "Action.Menu.Section.SectionTitleWrapper.Padding"
       },
       "MenuSection--SectionTitle--Typography": {
         "value": "{core.typography.sourceSansPro.semibold.75}",
-        "type": "typography"
+        "type": "typography",
+        "oldPath": "Action.Menu.Section.SectionTitle"
       },
       "MenuSection--SectionTitle--TextColor": {
         "value": "{q.content.ondefault.alpha}",
         "type": "color",
-        "description": "Action.Menu.MenuSection.SectionTitle | Apply on section title"
+        "description": "Apply on section title",
+        "oldPath": "Action.Menu.MenuSection.SectionTitle"
       },
       "MenuSection--SectionStack--ItemSpacing": {
         "value": "{core.dimensionPX.12}",
         "type": "spacing",
-        "description": "Defines the space between each menu section"
+        "description": "Defines the space between each menu section",
+        "oldPath": "Action.Menu.SectionStack.ItemSpacing"
       },
       "MenuSection--SectionStack--Padding": {
         "value": "{core.dimensionPX.12}",
         "type": "spacing",
-        "description": "Use on coded comp and Figma. Defines the padding around all stacked menu sections."
+        "description": "Use on coded comp and Figma. Defines the padding around all stacked menu sections.",
+        "oldPath": "Action.Menu.SectionStack.Padding"
       },
-      // adds "Container--" to BorderRadius
       "Container--BorderRadius": {
         "value": "{core.borderRadius.LG}",
         "type": "borderRadius",
-        "description": "Defines the border radius of the whole menu component"
+        "description": "Defines the border radius of the whole menu component",
+        "oldPath": "Action.Menu.BorderRadius"
       },
-      // renames Menu.Surface -> Menu.Container.BackgroundColor
       "Container--BackgroundColor": {
         "value": "{q.background.level_2}",
         "type": "color",
-        "description": "Action.Menu.Surface.Color"
+        "oldPath": "Action.Menu.Surface.Color"
       }
     }
   },
