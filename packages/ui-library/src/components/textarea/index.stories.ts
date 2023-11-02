@@ -397,8 +397,8 @@ export default {
   parameters: {
     viewMode: 'docs',
     previewTabs: {
-      'storybook/docs/panel': {
-        hidden: false,
+      'storybook/story/panel': {
+        hidden: true,
       },
     },
     docs: {
@@ -409,41 +409,41 @@ export default {
         </p>
         <ul>
         <li> <a href="/docs/design-system-web-components-textarea--docs"><strong>Docs</strong></a></li>
-        <li> <a href="/?path=/docs/design-system-web-components-textarea--docs#appearance"><strong>Appearance</strong></a>
+        <li> <a href="/docs/design-system-web-components-textarea--sizes"><strong>Appearance</strong></a>
             <ul>
-                <li> <a href="/?path=/docs/design-system-web-components-textarea--docs#sizes"><strong>Sizing</strong></a></li>
-                <li> <a href="/story/design-system-web-components-textarea--resize"><strong>Resize</strong></a></li>
+                <li> <a href="/docs/design-system-web-components-textarea--sizes"><strong>Sizing</strong></a></li>
+                <li> <a href="/docs/design-system-web-components-textarea--resize"><strong>Resize</strong></a></li>
             </ul>
         </li>
-         <li> <a href="/?path=/docs/design-system-web-components-textarea--docs#dependencies"><strong>Content/ Settings</strong></a>
+         <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-textarea--placeholder"><strong>Placeholder</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <a href="/story/design-system-web-components-textarea--disabled"><strong>States</strong></a>
-            <ul>
-                <li> <a href="/story/design-system-web-components-textarea--disabled"><strong>Disabled</strong></a>
-                </li>
-                 <li> <a href="/story/design-system-web-components-textarea--readonly"><strong>Readonly</strong></a>
+                <li> <a href="/docs/design-system-web-components-textarea--placeholder"><strong>Placeholder</strong></a>
                 </li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-textarea--required"><strong>Validation</strong></a>
+         <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>States</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-textarea--required"><strong>Required</strong></a>
+                <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>Disabled</strong></a>
                 </li>
-                 <li> <a href="/story/design-system-web-components-textarea--has-error"><strong>hasError</strong></a>
+                 <li> <a href="/docs/design-system-web-components-textarea--readonly"><strong>Readonly</strong></a>
                 </li>
             </ul>
         </li>
-         <li> <a href="/story/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a>
+         <li> <a href="/docs/design-system-web-components-textarea--required"><strong>Validation</strong></a>
             <ul>
-                <li> <a href="/story/design-system-web-components-textarea--captions"><strong>Caption</strong></a>
+                <li> <a href="/docs/design-system-web-components-textarea--required"><strong>Required</strong></a>
                 </li>
-                 <li> <a href="/story/design-system-web-components-textarea--label"><strong>Label</strong></a>
+                 <li> <a href="/docs/design-system-web-components-textarea--has-error"><strong>hasError</strong></a>
                 </li>
-                <li> <a href="/story/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
+            </ul>
+        </li>
+         <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a>
+            <ul>
+                <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Caption</strong></a>
+                </li>
+                 <li> <a href="/docs/design-system-web-components-textarea--label"><strong>Label</strong></a>
+                </li>
+                <li> <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
                 </li>
             </ul>
         </li>
