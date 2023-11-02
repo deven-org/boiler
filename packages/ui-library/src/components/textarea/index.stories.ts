@@ -562,6 +562,23 @@ const args: BlrTextareaType = {
 };
 BlrTextarea.args = args;
 
+//disabledArgTypesTable
+const argTypesToDisable = ['sizeVariant', 'resize'];
+
+function generateDisabledArgTypes(argTypes) {
+  const disabledArgTypes = {};
+  argTypes.forEach((argType) => {
+    disabledArgTypes[argType] = {
+      table: {
+        disable: true,
+      },
+    };
+  });
+  return disabledArgTypes;
+}
+
+const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
+
 // All Stories
 //Appearance Size Story
 export const Sizes = () => {
@@ -593,6 +610,9 @@ export const Sizes = () => {
       </div>
     </div>
   `;
+};
+Sizes.argTypes = {
+  ...disabledArgTypes,
 };
 Sizes.parameters = {
   backgrounds: {
@@ -650,17 +670,43 @@ export const Resize = () => {
   `;
 };
 Resize.argTypes = {
-  size: {
+  sizeVariant: {
     table: {
       disable: true,
-      category: 'Appearance',
+    },
+  },
+  resize: {
+    table: {
+      disable: true,
+    },
+  },
+  cols: {
+    table: {
+      disable: true,
+    },
+  },
+  rows: {
+    table: {
+      disable: true,
+    },
+  },
+  placeholder: {
+    table: {
+      disable: true,
+    },
+  },
+  value: {
+    table: {
+      disable: true,
+    },
+  },
+  minLength: {
+    table: {
+      disable: true,
     },
   },
 };
 Resize.parameters = {
-  actions: { disable: true },
-  addons: { disable: true },
-  controls: { disable: true },
   backgrounds: {
     default: 'Light',
   },
