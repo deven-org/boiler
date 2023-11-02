@@ -260,37 +260,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -304,37 +304,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -350,37 +350,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -394,37 +394,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -440,37 +440,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -484,37 +484,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -527,8 +527,8 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Rest}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Rest}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -536,8 +536,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Hover}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Hover}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -545,8 +545,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Pressed}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -554,8 +554,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Focus}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Focus}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -563,8 +563,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Disabled}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -572,8 +572,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.ReadOnly}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -581,8 +581,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Error}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Active.Error}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -592,8 +592,8 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Rest}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -601,8 +601,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Hover}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -610,8 +610,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Pressed}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -619,8 +619,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Focus}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -628,8 +628,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Disabled}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -637,8 +637,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.ReadOnly}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -646,8 +646,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.SM.Inactive.Error}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -659,8 +659,8 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Rest}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Rest}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -668,8 +668,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Hover}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Hover}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -677,8 +677,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Pressed}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -686,8 +686,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Focus}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Focus}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -695,8 +695,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Disabled}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -704,8 +704,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.ReadOnly}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -713,8 +713,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Error}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Active.Error}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -724,8 +724,8 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Rest}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -733,8 +733,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Hover}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -742,8 +742,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Pressed}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -751,8 +751,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Focus}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -760,8 +760,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Disabled}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -769,8 +769,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.ReadOnly}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -778,8 +778,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.MD.Inactive.Error}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -791,8 +791,8 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Rest}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Rest}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -800,8 +800,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Hover}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Hover}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -809,8 +809,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Pressed}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -818,8 +818,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Focus}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Focus}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -827,8 +827,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Disabled}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -836,8 +836,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.ReadOnly}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -845,8 +845,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Active.Error}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Active.Error}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -856,8 +856,8 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Rest}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -865,8 +865,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Hover}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -874,8 +874,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Pressed}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -883,8 +883,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Focus}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -892,8 +892,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Disabled}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -901,8 +901,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.ReadOnly}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -910,8 +910,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Checkbox.Control.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Checkbox.Control.BorderWidth.LG.Inactive.Error}",
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -927,12 +927,12 @@
               "oldPath": "Forms.Checkbox.Control.BorderRadius"
             },
             "MD": {
-              "value": "{Forms.Checkbox.Control.BorderRadius.SM}",
+              "value": "{Forms.Checkbox.Control.Container.BorderRadius}",
               "type": "borderRadius",
               "oldPath": "None"
             },
             "LG": {
-              "value": "{Forms.Checkbox.Control.BorderRadius.SM}",
+              "value": "{Forms.Checkbox.Control.Container.BorderRadius}",
               "type": "borderRadius",
               "oldPath": "None"
             }
@@ -1444,37 +1444,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -1488,37 +1488,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -1534,37 +1534,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -1578,37 +1578,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -1624,37 +1624,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -1668,37 +1668,37 @@
                   "oldPath": "None"
                 },
                 "Hover": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Pressed": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Focus": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Disabled": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
                 },
                 "Error": {
-                  "value": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps",
                   "oldPath": "None"
@@ -1711,8 +1711,8 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Rest}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1720,8 +1720,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Hover}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1729,8 +1729,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1738,8 +1738,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Focus}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1747,8 +1747,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1756,8 +1756,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1765,8 +1765,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Error}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Active.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1776,8 +1776,8 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1785,8 +1785,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1794,8 +1794,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1803,8 +1803,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1812,8 +1812,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1821,8 +1821,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1830,8 +1830,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Radio.Control.BorderWidth.SM.Inactive.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1843,8 +1843,8 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Rest}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1852,8 +1852,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Hover}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1861,8 +1861,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1870,8 +1870,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Focus}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1879,8 +1879,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1888,8 +1888,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1897,8 +1897,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Error}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Active.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1908,8 +1908,8 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1917,8 +1917,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1926,8 +1926,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1935,8 +1935,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1944,8 +1944,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1953,8 +1953,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1962,8 +1962,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Radio.Control.BorderWidth.MD.Inactive.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1975,8 +1975,8 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Rest}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1984,8 +1984,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Hover}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -1993,8 +1993,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2002,8 +2002,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Focus}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2011,8 +2011,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2020,8 +2020,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2029,8 +2029,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Active.Error}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Active.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2040,8 +2040,8 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2049,8 +2049,8 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2058,8 +2058,8 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2067,8 +2067,8 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2076,8 +2076,8 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2085,8 +2085,8 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -2094,8 +2094,8 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Radio.Control.BorderWidth.LG.Inactive.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border",
@@ -3990,31 +3990,31 @@
         },
         "Padding": {
           "XS": {
-            "value": "{Action.TextButton.Container.PaddingLeftRight.XS} {Action.TextButton.Container.PaddingTopBottom.XS}",
+            "value": "{Action.TextButton.Container.PaddingTopBottom.XS} {Action.TextButton.Container.PaddingLeftRight.XS}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead.",
             "oldPath": "Action.TextButton.[scale].Padding"
           },
           "SM": {
-            "value": "{Action.TextButton.Container.PaddingLeftRight.SM} {Action.TextButton.Container.PaddingTopBottom.SM}",
+            "value": "{Action.TextButton.Container.PaddingTopBottom.SM} {Action.TextButton.Container.PaddingLeftRight.SM}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead.",
             "oldPath": "Action.TextButton.[scale].Padding"
           },
           "MD": {
-            "value": "{Action.TextButton.Container.PaddingLeftRight.MD} {Action.TextButton.Container.PaddingTopBottom.MD}",
+            "value": "{Action.TextButton.Container.PaddingTopBottom.MD} {Action.TextButton.Container.PaddingLeftRight.MD}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead.",
             "oldPath": "Action.TextButton.[scale].Padding"
           },
           "LG": {
-            "value": "{Action.TextButton.Container.PaddingLeftRight.LG} {Action.TextButton.Container.PaddingTopBottom.LG}",
+            "value": "{Action.TextButton.Container.PaddingTopBottom.LG} {Action.TextButton.Container.PaddingLeftRight.LG}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead.",
             "oldPath": "Action.TextButton.[scale].Padding"
           },
           "XL": {
-            "value": "{Action.TextButton.Container.PaddingLeftRight.XL} {Action.TextButton.Container.PaddingTopBottom.XL}",
+            "value": "{Action.TextButton.Container.PaddingTopBottom.XL} {Action.TextButton.Container.PaddingLeftRight.XL}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead.",
             "oldPath": "Action.TextButton.[scale].Padding"
@@ -5228,17 +5228,17 @@
         "Typography": {
           "SM": {
             "value": "{Forms.SM.Caption}",
-            "type": "borderRadius",
+            "type": "ty",
             "oldPath": "None (used Forms semantic)"
           },
           "MD": {
             "value": "{Forms.MD.Caption}",
-            "type": "borderRadius",
+            "type": "ty",
             "oldPath": "None (used Forms semantic)"
           },
           "LG": {
             "value": "{Forms.LG.Caption}",
-            "type": "borderRadius",
+            "type": "ty",
             "oldPath": "None (used Forms semantic)"
           }
         },
@@ -5476,22 +5476,22 @@
               "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
             },
             "SM": {
-              "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+              "value": "{Feedback.Dialog.DialogCombined.Container.BorderRadius.XS}",
               "type": "borderRadius",
               "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
             },
             "MD": {
-              "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+              "value": "{Feedback.Dialog.DialogCombined.Container.BorderRadius.XS}",
               "type": "borderRadius",
               "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
             },
             "LG": {
-              "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+              "value": "{Feedback.Dialog.DialogCombined.Container.BorderRadius.XS}",
               "type": "borderRadius",
               "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
             },
             "XL": {
-              "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
+              "value": "{Feedback.Dialog.DialogCombined.Container.BorderRadius.XS}",
               "type": "borderRadius",
               "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
             }
@@ -5533,7 +5533,7 @@
           },
           "TextColor": {
             "value": "{UI.Headline.Default}",
-            "type": "typography",
+            "type": "color",
             "oldPath": "None (used UI semantic before)"
           }
         }
@@ -5568,7 +5568,7 @@
           },
           "TextColor": {
             "value": "{UI.Paragraph.Default}",
-            "type": "typography",
+            "type": "color",
             "oldPath": "None (used UI semantic before)"
           }
         }
@@ -5600,46 +5600,46 @@
     }
   },
 
-  /// Hier weiter
-
   "UI": {
     "Icon": {
-      "Container--Size": {
-        "XXS": {
-          "value": "{core.dimensionREM.8}",
-          "type": "sizing",
-          "description": "size of XXS icon",
-          "oldPath": "UI.Icon.[scale]"
-        },
-        "XS": {
-          "value": "{core.dimensionREM.12}",
-          "type": "sizing",
-          "description": "size of XS icon",
-          "oldPath": "UI.Icon.[scale]"
-        },
-        "SM": {
-          "value": "{core.dimensionREM.16}",
-          "type": "sizing",
-          "description": "size of SM icon",
-          "oldPath": "UI.Icon.[scale]"
-        },
-        "MD": {
-          "value": "{core.dimensionREM.24}",
-          "type": "sizing",
-          "description": "size of MD icon",
-          "oldPath": "UI.Icon.[scale]"
-        },
-        "LG": {
-          "value": "{core.dimensionREM.32}",
-          "type": "sizing",
-          "description": "size of LG icon",
-          "oldPath": "UI.Icon.[scale]"
-        },
-        "XL": {
-          "value": "{core.dimensionREM.48}",
-          "type": "sizing",
-          "description": "size of XL icon",
-          "oldPath": "UI.Icon.[scale]"
+      "Container": {
+        "Size": {
+          "XXS": {
+            "value": "{core.dimensionREM.8}",
+            "type": "sizing",
+            "description": "size of XXS icon",
+            "oldPath": "UI.Icon.[scale]"
+          },
+          "XS": {
+            "value": "{core.dimensionREM.12}",
+            "type": "sizing",
+            "description": "size of XS icon",
+            "oldPath": "UI.Icon.[scale]"
+          },
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing",
+            "description": "size of SM icon",
+            "oldPath": "UI.Icon.[scale]"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing",
+            "description": "size of MD icon",
+            "oldPath": "UI.Icon.[scale]"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing",
+            "description": "size of LG icon",
+            "oldPath": "UI.Icon.[scale]"
+          },
+          "XL": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing",
+            "description": "size of XL icon",
+            "oldPath": "UI.Icon.[scale]"
+          }
         }
       }
     },
@@ -5664,14 +5664,18 @@
       }
     },
     "Blanket": {
-      "Container--BackgroundColor": {
-        "value": "{q.surface.blanket}",
-        "type": "color",
-        "description": "Apply on blanket component",
-        "oldPath": "UI.Blanket.Surface"
-      },
-      "ButtonGroup": {
-        "Container--ItemSpacing": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{q.surface.blanket}",
+          "type": "color",
+          "description": "Apply on blanket component",
+          "oldPath": "UI.Blanket.Surface"
+        }
+      }
+    },
+    "ButtonGroup": {
+      "Container": {
+        "ItemSpacing": {
           "XS": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing",
@@ -5703,444 +5707,456 @@
   },
   "Navigation": {
     "TabBar": {
-      "ButtonWrapper--InnerPadding": {
-        "SM": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
-          "oldPath": "None"
-        },
-        "MD": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
-          "oldPath": "None"
-        },
-        "LG": {
-          "value": "{core.dimensionREM.12}",
-          "type": "spacing",
-          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
-          "oldPath": "None"
-        }
-      },
-      "ButtonWrapper--Padding": {
-        "Leading": {
+      "ButtonWrapper": {
+        "InnerPadding": {
           "SM": {
-            "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS} 0 0",
+            "value": "{core.dimensionREM.8}",
             "type": "spacing",
-            "description": "Coded comps only!",
-            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+            "oldPath": "None"
           },
           "MD": {
-            "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+            "value": "{core.dimensionREM.8}",
             "type": "spacing",
-            "description": "Coded comps only!.",
-            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+            "oldPath": "None"
           },
           "LG": {
-            "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+            "value": "{core.dimensionREM.12}",
             "type": "spacing",
-            "description": "Coded comps only!.",
-            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+            "oldPath": "None"
           }
         },
-        "Trailing": {
-          "SM": {
-            "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS}",
-            "type": "spacing",
-            "description": "Coded comps only!",
-            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+        "Padding": {
+          "Leading": {
+            "SM": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!",
+              "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+            },
+            "MD": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!.",
+              "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+            },
+            "LG": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!.",
+              "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+            }
           },
-          "MD": {
-            "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
-            "type": "spacing",
-            "description": "Coded comps only!.",
-            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
-          },
-          "LG": {
-            "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
-            "type": "spacing",
-            "description": "Coded comps only!.",
-            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
-          }
-        }
-      },
-      "Tab--HighlightLine--Height": {
-        "SM": {
-          "value": "{core.dimensionPX.2}",
-          "type": "sizing",
-          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
-        },
-        "MD": {
-          "value": "{core.dimensionPX.2}",
-          "type": "sizing",
-          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
-        },
-        "LG": {
-          "value": "{core.dimensionPX.2}",
-          "type": "sizing",
-          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
-        }
-      },
-      "Tab--HighlightLine--BackgroundColor": {
-        "Active": {
-          "Rest": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest"
-          },
-          "Hover": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover"
-          },
-          "Pressed": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed"
-          },
-          "Focus": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus"
-          }
-        },
-        "Inactive": {
-          "Rest": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest"
-          },
-          "Hover": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover"
-          },
-          "Pressed": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed"
-          },
-          "Focus": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus"
-          },
-          "Disabled": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": " Apply as fill on HightlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled"
+          "Trailing": {
+            "SM": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS}",
+              "type": "spacing",
+              "description": "Coded comps only!",
+              "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+            },
+            "MD": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
+              "type": "spacing",
+              "description": "Coded comps only!.",
+              "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+            },
+            "LG": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
+              "type": "spacing",
+              "description": "Coded comps only!.",
+              "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+            }
           }
         }
       },
-      "Tab--HighlightLine--Opacity": {
-        "Active": {
-          "Rest": {
-            "value": "1",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Rest"
+      "Tab": {
+        "HighlightLine": {
+          "Height": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
+            }
           },
-          "Hover": {
-            "value": "1",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Hover"
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled"
+              }
+            }
           },
-          "Pressed": {
-            "value": "1",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Pressed"
-          },
-          "Focus": {
-            "value": "0",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Focus"
+          "Opacity": {
+            "Active": {
+              "Rest": {
+                "value": "1",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Rest"
+              },
+              "Hover": {
+                "value": "1",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "1",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Rest"
+              },
+              "Hover": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Hover"
+              },
+              "Pressed": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Pressed"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Focus"
+              },
+              "Disabled": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Disabled"
+              }
+            }
           }
         },
-        "Inactive": {
-          "Rest": {
-            "value": "0",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Rest"
+        "Label": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Disabled"
+              }
+            }
           },
-          "Hover": {
-            "value": "0",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Hover"
-          },
-          "Pressed": {
-            "value": "0",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Pressed"
-          },
-          "Focus": {
-            "value": "0",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Focus"
-          },
-          "Disabled": {
-            "value": "0",
-            "type": "opacity",
-            "description": " Controls the opacity of the HighlightLine",
-            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Disabled"
-          }
-        }
-      },
-      "Tab--Label--TextColor": {
-        "Active": {
-          "Rest": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Rest"
-          },
-          "Hover": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Hover"
-          },
-          "Pressed": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Pressed"
-          },
-          "Focus": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Focus"
-          }
-        },
-        "Inactive": {
-          "Rest": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Rest"
-          },
-          "Hover": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Hover"
-          },
-          "Pressed": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Pressed"
-          },
-          "Focus": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Focus"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Disabled"
-          }
-        }
-      },
-
-      "Tab--Label--Typography": {
-        "SM": {
-          "value": "Action.SM.Label",
-          "type": "typography",
-          "oldPath": "None (used Action semantic before)"
-        },
-        "MD": {
-          "value": "Action.MD.Label",
-          "type": "typography",
-          "oldPath": "None (used Action semantic before)"
-        },
-        "LG": {
-          "value": "Action.LG.Label",
-          "type": "typography",
-          "oldPath": "None (used Action semantic before)"
-        }
-      },
-
-      "Tab--ContentCol--PaddingTop": {
-        "SM": {
-          "value": "{core.dimensionREM.4}",
-          "type": "spacing",
-          "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
-        },
-        "MD": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
-        },
-        "LG": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
-        }
-      },
-      "Tab--ContentCol--ItemSpacing": {
-        "SM": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
-        },
-        "MD": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
-        },
-        "LG": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
-        }
-      },
-      "Tab--ContentRow--PaddingLeftRight": {
-        "SM": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the padding left and right of <ContentRow>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
-        },
-        "MD": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the padding left and right of <ContentRow>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
-        },
-        "LG": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the padding left and right of <ContentRow>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
-        }
-      },
-      "Tab--ContentRow--ItemSpacing": {
-        "SM": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing",
-          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
-        },
-        "MD": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing",
-          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
-        },
-        "LG": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing",
-          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
-          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
-        }
-      },
-      "Tab--Icon--IconSize": {
-        "SM": {
-          "value": "{core.dimensionREM.12}",
-          "type": "sizing",
-          "description": "Defines height and width of the icon of a tab",
-          "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
-        },
-        "MD": {
-          "value": "{core.dimensionREM.16}",
-          "type": "sizing",
-          "description": "Defines height and width of the icon of a tab",
-          "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
-        },
-        "LG": {
-          "value": "{core.dimensionREM.16}",
-          "type": "sizing",
-          "description": "Defines height and width of the icon of a tab",
-          "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
-        }
-      },
-      "Tab--Icon--IconColor": {
-        "Active": {
-          "Rest": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Rest"
-          },
-          "Hover": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Hover"
-          },
-          "Pressed": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Pressed"
-          },
-          "Focus": {
-            "value": "{q.content.ondefault.brand.rest}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Focus"
+          "Typography": {
+            "SM": {
+              "value": "Action.SM.Label",
+              "type": "typography",
+              "oldPath": "None (used Action semantic before)"
+            },
+            "MD": {
+              "value": "Action.MD.Label",
+              "type": "typography",
+              "oldPath": "None (used Action semantic before)"
+            },
+            "LG": {
+              "value": "Action.LG.Label",
+              "type": "typography",
+              "oldPath": "None (used Action semantic before)"
+            }
           }
         },
-        "Inactive": {
-          "Rest": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Rest"
+        "ContentCol": {
+          "PaddingTop": {
+            "SM": {
+              "value": "{core.dimensionREM.4}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
+            }
           },
-          "Hover": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Hover"
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
+            }
+          }
+        },
+        "ContentRow": {
+          "PaddingLeftRight": {
+            "SM": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
+            }
           },
-          "Pressed": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Presssed"
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
+              "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
+            }
+          }
+        },
+        "Icon": {
+          "IconSize": {
+            "SM": {
+              "value": "{core.dimensionREM.12}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab",
+              "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab",
+              "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab",
+              "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
+            }
           },
-          "Focus": {
-            "value": "{q.content.ondefault.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Focus"
-          },
-          "Disabled": {
-            "value": "{q.content.ondisabled.alpha}",
-            "type": "color",
-            "description": "Defines the color of the label of a tab. Apply on <label>",
-            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Disabled"
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Presssed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Disabled"
+              }
+            }
           }
         }
       }

@@ -5673,34 +5673,34 @@
         "type": "color",
         "description": "Apply on blanket component",
         "oldPath": "UI.Blanket.Surface"
-      },
-      "ButtonGroup": {
-        "Container--ItemSpacing": {
-          "XS": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing",
-            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
-          },
-          "SM": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing",
-            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
-          },
-          "MD": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing",
-            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
-          },
-          "LG": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing",
-            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
-          },
-          "XL": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing",
-            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
-          }
+      }
+    },
+    "ButtonGroup": {
+      "Container--ItemSpacing": {
+        "XS": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing",
+          "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
+        },
+        "SM": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing",
+          "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
+        },
+        "MD": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing",
+          "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
+        },
+        "LG": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing",
+          "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
+        },
+        "XL": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing",
+          "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
         }
       }
     }
