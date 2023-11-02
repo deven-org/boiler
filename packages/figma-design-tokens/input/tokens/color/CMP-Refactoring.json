@@ -1331,19 +1331,19 @@
         "SM": {
           "value": "{Forms.Radio.ContentRow.PaddingTopBottom.SM} 0 ",
           "type": "spacing",
-          "description": "Code comps only! Do not apply on Figma comps.",
+          "description": "Coded comps only!",
           "oldPath": "Forms.Radio.SM.ContentRow.Padding"
         },
         "MD": {
           "value": "{Forms.Radio.ContentRow.PaddingTopBottom.MD} 0 ",
           "type": "spacing",
-          "description": "Code comps only! Do not apply on Figma comps.",
+          "description": "Coded comps only!",
           "oldPath": "Forms.Radio.MD.ContentRow.Padding"
         },
         "LG": {
           "value": "{Forms.Radio.ContentRow.PaddingTopBottom.LG} 0 ",
           "type": "spacing",
-          "description": "Code comps only! Do not apply on Figma comps.",
+          "description": "Coded comps only!",
           "oldPath": "Forms.Radio.LG.ContentRow.Padding"
         }
       },
@@ -2602,19 +2602,19 @@
         "SM": {
           "value": "{Forms.RadioGroup.CaptionContainer.PaddingTop.SM} 0 0 0",
           "type": "spacing",
-          "description": "Code comps only! Do not apply on Figma comps.",
+          "description": "Coded comps only!",
           "oldPath": "Forms.RadioGroup.SM.CaptionContainer.PaddingTop"
         },
         "MD": {
           "value": "{Forms.RadioGroup.CaptionContainer.PaddingTop.MD} 0 0 0",
           "type": "spacing",
-          "description": "Code comps only! Do not apply on Figma comps.",
+          "description": "Coded comps only!",
           "oldPath": "Forms.RadioGroup.MD.CaptionContainer.PaddingTop"
         },
         "LG": {
           "value": "{Forms.RadioGroup.CaptionContainer.PaddingTop.LG} 0 0 0",
           "type": "spacing",
-          "description": "Code comps only! Do not apply on Figma comps.",
+          "description": "Coded comps only!",
           "oldPath": "Forms.RadioGroup.LG.CaptionContainer.PaddingTop"
         }
       }
@@ -2753,7 +2753,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         },
         "Hover": {
@@ -2763,7 +2763,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         },
         "Pressed": {
@@ -2773,7 +2773,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         },
         "Focus": {
@@ -2783,7 +2783,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         },
         "Disabled": {
@@ -2793,7 +2793,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         },
         "ReadOnly": {
@@ -2803,7 +2803,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         },
         "Error": {
@@ -2813,7 +2813,7 @@
             "style": "solid"
           },
           "type": "border",
-          "description": "Code comps only! Do not apply on Figma comps. Use BorderWidth and BorderColor instead",
+          "description": "Coded comps only! Use BorderWidth and BorderColor instead",
           "oldPath": "Forms.Slider.Thumb.Border.[state]"
         }
       },
@@ -4810,58 +4810,87 @@
     }
   },
 
+  // ### Feedback ###
+
+  // ## Counter ##
+  // Adds "Container"
+  // Adds "BorderRadius" for every Size Variant
+  // adds Counter.Container.BorderColor and Counter.Container.BorderWidth
+  // adds "Counter.Text" tokens. Any better naming?
+  // BUG: The Counter uses "Forms.[scale].Caption". This should change so it consumes a core token
+
+  // ## Tooltip ##
+  // Adds Nose.BackgroundColor
+
+  // ## Dialog ##
+  // Adding TopBottom LeftRight Paddings for all relevant Elements (new values also)
+  // Adds sizeVariants for BorderRadius
+  // Adds typotoken and textcolor
+  // Adds typotoken and textcolor
+
   "Feedback": {
     "Loader": {
       "Container--Size": {
         "SM": {
           "value": "{core.dimensionREM.16}",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Loader.[scale].Sizing"
         },
         "MD": {
           "value": "{core.dimensionREM.24}",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Loader.[scale].Sizing"
         },
         "LG": {
           "value": "{core.dimensionREM.32}",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Loader.[scale].Sizing"
         }
       },
       "Container--Padding": {
         "SM": {
           "value": "{core.dimensionREM.1}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Loader.[scale].Padding"
         },
         "MD": {
           "value": "{core.dimensionREM.2}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Loader.[scale].Padding"
         },
         "LG": {
           "value": "{core.dimensionREM.3}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Loader.[scale].Padding"
         }
       },
       "Background--BorderColor": {
         "Default": {
           "value": "{Feedback.Brand.Default.Shape.Background}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         },
         "Inverted": {
           "value": "{Feedback.Brand.Inverted.Shape.Background}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         }
       },
       "Background--BorderWidth": {
         "SM": {
           "value": "{core.dimensionPX.2}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{core.dimensionPX.2}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{core.dimensionPX.3}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         }
       },
       "Background--Border": {
@@ -4871,7 +4900,8 @@
             "width": "{Feedback.Loader.Background.BorderWidth.SM}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.SM.Background.Default"
         },
         "SM--Inverted": {
           "value": {
@@ -4879,7 +4909,8 @@
             "width": "{Feedback.Loader.Background.BorderWidth.SM}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.SM.Background.Inverted"
         },
         "MD--Default": {
           "value": {
@@ -4887,7 +4918,8 @@
             "width": "{Feedback.Loader.Background.BorderWidth.MD}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.MD.Background.Default"
         },
         "MD--Inverted": {
           "value": {
@@ -4895,7 +4927,8 @@
             "width": "{Feedback.Loader.Background.BorderWidth.MD}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.MD.Background.Inverted"
         },
         "LG--Default": {
           "value": {
@@ -4903,7 +4936,8 @@
             "width": "{Feedback.Loader.Background.BorderWidth.LG}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.LG.Background.Default"
         },
         "LG--Inverted": {
           "value": {
@@ -4911,32 +4945,38 @@
             "width": "{Feedback.Loader.Background.BorderWidth.LG}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.LG.Background.Inverted"
         }
       },
 
       "Foreground--BorderColor": {
         "Default": {
           "value": "{Feedback.Brand.Default.Shape.Foreground}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         },
         "Inverted": {
           "value": "{Feedback.Brand.Inverted.Shape.Foreground}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         }
       },
       "Foreground--BorderWidth": {
         "SM": {
           "value": "{core.dimensionPX.2}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{core.dimensionPX.2}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{core.dimensionPX.3}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         }
       },
       "Foreground--Border": {
@@ -4946,7 +4986,8 @@
             "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.SM.Foreground.Default"
         },
         "SM--Inverted": {
           "value": {
@@ -4954,7 +4995,8 @@
             "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.SM.Foreground.Inverted"
         },
         "MD--Default": {
           "value": {
@@ -4962,7 +5004,8 @@
             "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.MD.Foreground.Default"
         },
         "MD--Inverted": {
           "value": {
@@ -4970,7 +5013,8 @@
             "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.MD.Foreground.Inverted"
         },
         "LG--Default": {
           "value": {
@@ -4978,7 +5022,8 @@
             "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.LG.Foreground.Default"
         },
         "LG--Inverted": {
           "value": {
@@ -4986,216 +5031,256 @@
             "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
             "style": "solid"
           },
-          "type": "border"
+          "type": "border",
+          "oldPath": "Feedback.Loader.LG.Foreground.Inverted"
         }
       }
     },
 
     "Counter": {
-      // Adds "Container"
-      // Adds "BorderRadius" for every Size Variant
-
       "Container--BorderRadius": {
         "SM": {
           "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{Feedback.Counter.Container.BorderRadius.SM}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{Feedback.Counter.Container.BorderRadius.SM}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "None"
         }
       },
       "Container--PaddingTopBottom": {
         "SM": {
           "value": "{core.dimensionPX.0}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "None"
         }
       },
       "Container--PaddingLeftRight": {
         "SM": {
           "value": "{core.dimensionPX.4}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "None"
         }
       },
       "Container--Padding": {
         "SM": {
           "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Counter.SM.Padding"
         },
         "MD": {
           "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Counter.MD.Padding"
         },
         "LG": {
           "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Counter.LG.Padding"
         }
       },
       "Container--ItemSpacing": {
         "SM": {
           "value": "{core.dimensionPX.2}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Counter.SM.ItemSpacing"
         },
         "MD": {
           "value": "{core.dimensionPX.2}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Counter.MD.ItemSpacing"
         },
         "LG": {
           "value": "{core.dimensionPX.2}",
-          "type": "spacing"
+          "type": "spacing",
+          "oldPath": "Feedback.Counter.LG.ItemSpacing"
         }
       },
-      // adds BorderColor and BorderWidth
+
       "Container--BorderColor": {
         "Neutral": {
           "value": "{Feedback.Neutral.SurfaceStroke}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         },
         "Warning": {
           "value": "{Feedback.Warning.SurfaceStroke}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         },
         "Error": {
           "value": "{Feedback.Error.SurfaceStroke}",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None"
         }
       },
       "Container--BorderWidth": {
         "SM": {
           "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{core.borderWidth.Medium}",
-          "type": "borderWidth"
+          "type": "borderWidth",
+          "oldPath": "None"
         }
       },
       "Container--Border": {
-        "SM--Neutral": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
-            "width": "{Feedback.Counter.Container.BorderWidth.SM}",
-            "style": "solid"
+        "SM": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+              "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.SM.Border.Neutral"
           },
-          "type": "border"
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+              "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.SM.Border.Warning"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Error}",
+              "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.SM.Border.Error"
+          }
         },
-        "SM--Warning": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Warning}",
-            "width": "{Feedback.Counter.Container.BorderWidth.SM}",
-            "style": "solid"
+
+        "MD": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+              "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.MD.Border.Neutral"
           },
-          "type": "border"
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+              "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.MD.Border.Warning"
+          },
+          "Error": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Error}",
+              "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.MD.Border.Error"
+          }
         },
-        "SM--Error": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Error}",
-            "width": "{Feedback.Counter.Container.BorderWidth.SM}",
-            "style": "solid"
+
+        "LG": {
+          "Neutral": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+              "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.LG.Border.Neutral"
           },
-          "type": "border"
-        },
-        "MD--Neutral": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
-            "width": "{Feedback.Counter.Container.BorderWidth.MD}",
-            "style": "solid"
+          "Warning": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+              "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.LG.Border.Warning"
           },
-          "type": "border"
-        },
-        "MD--Warning": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Warning}",
-            "width": "{Feedback.Counter.Container.BorderWidth.MD}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "MD--Error": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Error}",
-            "width": "{Feedback.Counter.Container.BorderWidth.MD}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "LG--Neutral": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
-            "width": "{Feedback.Counter.Container.BorderWidth.LG}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "LG--Warning": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Warning}",
-            "width": "{Feedback.Counter.Container.BorderWidth.LG}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "LG--Error": {
-          "value": {
-            "color": "{Feedback.Counter.Container.BorderColor.Error}",
-            "width": "{Feedback.Counter.Container.BorderWidth.LG}",
-            "style": "solid"
-          },
-          "type": "border"
+          "Error": {
+            "value": {
+              "color": "{Feedback.Counter.Container.BorderColor.Error}",
+              "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+              "style": "solid"
+            },
+            "type": "border",
+            "oldPath": "Feedback.Counter.LG.Border.Error"
+          }
         }
       },
-      // adds "Text" tokens. Any better naming?
       "Text--Typography": {
-        // BUG: The Counter uses "Forms.[scale].Caption". This should change so it consumes a core token
         "SM": {
           "value": "{Forms.SM.Caption}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "None (used Forms semantic)"
         },
         "MD": {
           "value": "{Forms.MD.Caption}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "None (used Forms semantic)"
         },
         "LG": {
           "value": "{Forms.LG.Caption}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "None (used Forms semantic)"
         }
       },
       "Text--TextColor": {
         "Neutral": {
           "value": "{Feedback.Neutral.Text",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None (used semantic before)"
         },
         "Warning": {
           "value": "{Feedback.Warning.Text",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None (used semantic before)"
         },
         "Error": {
           "value": "{Feedback.Error.Text",
-          "type": "color"
+          "type": "color",
+          "oldPath": "None (used semantic before)"
         }
       }
     },
@@ -5203,333 +5288,417 @@
     "Tooltip": {
       "ContentCol--BorderRadius": {
         "value": "{core.borderRadius.MD}",
-        "type": "borderRadius"
+        "type": "borderRadius",
+        "oldPath": "Feedback.Tooltip.ContentCol.BorderRadius"
       },
       "ContentCol--PaddingTopBottom": {
         "value": "{core.dimensionPX.6}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead",
+        "oldPath": "None"
       },
       "ContentCol--PaddingLeftRight": {
         "value": "{core.dimensionPX.8}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead",
+        "oldPath": "None"
       },
       "ContentCol--Padding": {
         "value": "{Feedback.Tooltip.ContentCol.PaddingTopBottom} {Feedback.Tooltip.ContentCol.PaddingLeftRight}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Do not apply in Figma, use aliases <PaddingTop/Right/Bottom/Left> instead.",
+        "oldPath": "Feedback.Tooltip.ContentCol.Padding"
       },
-      // BackgroundColor -> ContentCol.BackgroundColor
       "ContentCol--BackgroundColor": {
         "value": "{q.surface.inverted}",
-        "type": "color"
+        "type": "color",
+        "oldPath": "Feedback.Tooltip.SurfaceFill"
       },
-      // Adds Nose.BackgroundColor
       "Nose--BackgroundColor": {
         "value": "{Feedback.Tooltip.ContentCol.BackgroundColor}",
-        "type": "color"
+        "type": "color",
+        "oldPath": "None"
       },
       "NoseWrapper--PaddingTopBottom": {
         "value": "{core.dimensionREM.5}",
         "type": "spacing",
-        "description": "Figma AND coded comps! Apply on tooltips where the nose is on the side of the ContentCol. The pading defines the inset of the nose."
+        "description": "Figma AND coded comps! Apply on tooltips where the nose is on the side of the ContentCol. The pading defines the inset of the nose.",
+        "oldPath": "Feedback.Tooltip.NoseWrapper.PaddingTopBottom"
       },
       "NoseWrapper--PaddingLeftRight": {
         "value": "{core.dimensionREM.8}",
         "type": "spacing",
-        "description": "Figma AND coded comps! Apply on tooltips where the nose is either above or below the ContentCol. The pading defines the inset of the nose."
+        "description": "Figma AND coded comps! Apply on tooltips where the nose is either above or below the ContentCol. The pading defines the inset of the nose.",
+        "oldPath": "Feedback.Tooltip.NoseWrapper.PaddingLeftRight"
       },
       "Container--MinWidth": {
         "value": "{core.dimensionREM.40}",
         "type": "sizing",
-        "description": "Defines the minimum width of the tooltip."
+        "description": "Defines the minimum width of the tooltip.",
+        "oldPath": "Feedback.Tooltip.MinWidth"
       },
       "Container--MaxWidth": {
         "value": "{core.dimensionREM.80}",
         "type": "sizing",
-        "description": "Defines the maximum Width of the tooltip."
+        "description": "Defines the maximum Width of the tooltip.",
+        "oldPath": "Feedback.Tooltip.MaxWidth"
       },
-      // renames Tooltip.Content -> Tooltip.Text.TextColor
+
       "Text--TextColor": {
         "value": "{q.content.oninverted.alpha}",
-        "type": "color"
+        "type": "color",
+        "oldPath": "Feedback.Tooltip.Content"
       },
-      // adds Tooltip.Text.Typography
+
       "Text--Typography": {
         "value": "UI.Caption.SM",
-        "type": "typography"
+        "type": "typography",
+        "oldPath": "None (used UI semantic before)"
       }
     },
     "Dialog": {
-      // Adding TopBottom LeftRight Paddings for all relevant Elements (new values also)
-
       "Container--PaddingTopBottom": {
         "XS": {
           "value": "{core.dimensionPX.16}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "SM": {
           "value": "{core.dimensionPX.24}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{core.dimensionPX.32}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{core.dimensionPX.48}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "XL": {
           "value": "{core.dimensionPX.64}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         }
       },
       "Container--PaddingLeftRight": {
         "XS": {
           "value": "{core.dimensionPX.16}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "SM": {
           "value": "{core.dimensionPX.24}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{core.dimensionPX.32}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{core.dimensionPX.48}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         },
         "XL": {
           "value": "{core.dimensionPX.64}",
           "type": "spacing",
-          "description": "Figma Only! Defines the Dialog Combined"
+          "description": "Figma Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "None"
         }
       },
       "Container--Padding": {
         "XS": {
           "value": "{Feedback.Dialog.Container.PaddingTopBottom.XS} {Feedback.Dialog.Container.PaddingLeftRight.XS}",
           "type": "spacing",
-          "description": "Coded comps Only! Defines the Dialog Combined"
+          "description": "Coded comps Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "Feedback.Dialog.XS.Padding"
         },
         "SM": {
           "value": "{Feedback.Dialog.Container.PaddingTopBottom.SM} {Feedback.Dialog.Container.PaddingLeftRight.SM}",
           "type": "spacing",
-          "description": "Coded comps Only! Defines the Dialog Combined"
+          "description": "Coded comps Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "Feedback.Dialog.SM.Padding"
         },
         "MD": {
           "value": "{Feedback.Dialog.Container.PaddingTopBottom.MD} {Feedback.Dialog.Container.PaddingLeftRight.MD}",
           "type": "spacing",
-          "description": "Coded comps Only! Defines the Dialog Combined"
+          "description": "Coded comps Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "Feedback.Dialog.MD.Padding"
         },
         "LG": {
           "value": "{Feedback.Dialog.Container.PaddingTopBottom.LG} {Feedback.Dialog.Container.PaddingLeftRight.LG}",
           "type": "spacing",
-          "description": "Coded comps Only! Defines the Dialog Combined"
+          "description": "Coded comps Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "Feedback.Dialog.LG.Padding"
         },
         "XL": {
           "value": "{Feedback.Dialog.Container.PaddingTopBottom.XL} {Feedback.Dialog.Container.PaddingLeftRight.XL}",
           "type": "spacing",
-          "description": "Coded comps Only! Defines the Dialog Combined"
+          "description": "Coded comps Only! Defines the padding of the whole Dialog component - how much of the blanket is allways visible",
+          "oldPath": "Feedback.Dialog.XL.Padding"
         }
       },
 
       "DialogCombined--Container--MaxWidth": {
         "XS": {
           "value": "400px",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Dialog.[scale].MaxWidth"
         },
         "SM": {
           "value": "600px",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Dialog.[scale].MaxWidth"
         },
         "MD": {
           "value": "900px",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Dialog.[scale].MaxWidth"
         },
         "LG": {
           "value": "1200px",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Dialog.[scale].MaxWidth"
         },
         "XL": {
           "value": "1556px",
-          "type": "sizing"
+          "type": "sizing",
+          "oldPath": "Feedback.Dialog.[scale].MaxWidth"
         }
       },
-      // Adds sizeVariants for BorderRadius
+
       "DialogCombined--Container--BorderRadius": {
         "XS": {
           "value": "{core.borderRadius.LG}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
         },
         "SM": {
           "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
         },
         "MD": {
           "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
         },
         "LG": {
           "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
         },
         "XL": {
           "value": "{Feedback.Dialog.DialogCombined.BorderRadius.XS}",
-          "type": "borderRadius"
+          "type": "borderRadius",
+          "oldPath": "Feedback.Dialog.BorderRadius (was scale agnostic before)"
         }
       },
       "DialogCombined--Container--BackgroundColor": {
         "value": "{q.background.level_2}",
-        "type": "color"
+        "type": "color",
+        "oldPath": "Feedback.Dialog.Surface.Color"
       },
       "DialogHeader--PaddingTopBottom": {
         "value": "{core.dimensionPX.16}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Defines the padding of the DialogHeader section",
+        "oldPath": "None"
       },
       "DialogHeader--PaddingLeftRight": {
         "value": "{core.dimensionPX.16}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Defines the padding of the DialogHeader section",
+        "oldPath": "None"
       },
       "DialogHeader--Padding": {
         "value": "{Feedback.Dialog.DialogHeader.PaddingTopBottom} {Feedback.Dialog.DialogHeader.PaddingLeftRight}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Coded comps only! Defines the padding of the DialogHeader section",
+        "oldPath": "Feedback.Dialog.Header.Padding"
       },
-      // Adds typotoken and textcolor
+
       "DialogHeader--Title--Typography": {
         "value": "{UI.Headline.H5}",
-        "type": "typography"
+        "type": "typography",
+        "oldPath": "None (used UI semantic before)"
       },
       "DialogHeader--Title--TextColor": {
         "value": "{UI.Headline.Default}",
-        "type": "typography"
+        "type": "typography",
+        "oldPath": "None (used UI semantic before)"
       },
       "DialogContent--PaddingTopBottom": {
         "value": "{core.dimensionPX.8}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Defines the padding of the DialogContent section.",
+        "oldPath": "None"
       },
       "DialogContent--PaddingLeftRight": {
         "value": "{core.dimensionPX.16}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Defines the padding of the DialogContent section.",
+        "oldPath": "None"
       },
       "DialogContent--Padding": {
         "value": "{Feedback.Dialog.DialogContent.PaddingTopBottom} {Feedback.Dialog.DialogContent.PaddingLeftRight}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Coded comps only! Defines the padding of the DialogContent section",
+        "oldPath": "Feedback.Dialog.Content.Padding"
       },
-      // Adds typotoken and textcolor
+
       "DialogContent--Text--Typography": {
         "value": "{UI.Paragraph.MD.Regular}",
-        "type": "typography"
+        "type": "typography",
+        "oldPath": "None (used UI semantic before)"
       },
       "DialogContent--Text--TextColor": {
         "value": "{UI.Paragraph.Default}",
-        "type": "typography"
+        "type": "typography",
+        "oldPath": "None (used UI semantic before)"
       },
       "DialogFooter--PaddingTopBottom": {
         "value": "{core.dimensionPX.8}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Defines the padding of the DialogFooter section.",
+
+        "oldPath": "None"
       },
       "DialogFooter--PaddingLeftRight": {
         "value": "{core.dimensionPX.8}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Figma Only! Defines the padding of the DialogFooter section.",
+
+        "oldPath": "None"
       },
       "DialogFooter--Padding": {
         "value": "{Feedback.Dialog.DialogFooter.PaddingTopBottom} {Feedback.Dialog.DialogFooter.PaddingLeftRight}",
-        "type": "spacing"
+        "type": "spacing",
+        "description": "Coded comps only! Defines the padding of the DialogFooter section",
+        "oldPath": "Feedback.Dialog.Footer"
       }
     }
   },
+
+  // ### UI ###
+  // ## Divider ##
+  // Here is an exception, where I do not name an element
+  // Bug: need to use semantic/quasis colors on Divider.BorderColor
+  // Adds BorderWidth
+
+  // ## Tabbar ##
+  // Adds Tab.Label.Typography
+  // Renames TopPadding > PaddingTop
+
   "UI": {
     "Icon": {
       "Container--Size": {
         "XXS": {
           "value": "{core.dimensionREM.8}",
           "type": "sizing",
-          "description": "size of XXS icon"
+          "description": "size of XXS icon",
+          "oldPath": "UI.Icon.[scale]"
         },
         "XS": {
           "value": "{core.dimensionREM.12}",
           "type": "sizing",
-          "description": "size of XS icon"
+          "description": "size of XS icon",
+          "oldPath": "UI.Icon.[scale]"
         },
         "SM": {
           "value": "{core.dimensionREM.16}",
           "type": "sizing",
-          "description": "size of SM icon"
+          "description": "size of SM icon",
+          "oldPath": "UI.Icon.[scale]"
         },
         "MD": {
           "value": "{core.dimensionREM.24}",
           "type": "sizing",
-          "description": "size of MD icon"
+          "description": "size of MD icon",
+          "oldPath": "UI.Icon.[scale]"
         },
         "LG": {
           "value": "{core.dimensionREM.32}",
           "type": "sizing",
-          "description": "size of LG icon"
+          "description": "size of LG icon",
+          "oldPath": "UI.Icon.[scale]"
         },
         "XL": {
           "value": "{core.dimensionREM.48}",
           "type": "sizing",
-          "description": "size of XL icon"
+          "description": "size of XL icon",
+          "oldPath": "UI.Icon.[scale]"
         }
       }
     },
     "Divider": {
-      // Here is an exception, where I do not name an element
       "BorderColor": {
-        // Bug: need to use semantic/quasis colors here
         "value": "{core.color.coolgray.800.opa30}",
-        "type": "color"
+        "type": "color",
+        "oldPath": "UI.Divider.Stroke"
       },
-      // Adds BorderWidht
       "BorderWidth": {
         "value": "{core.dimensionPX.1}",
-        "type": "borderWidth"
+        "type": "borderWidth",
+        "oldPath": "None"
       },
       "Border": {
         "value": {
           "color": "{UI.Divider.BorderColor}",
           "width": "{UI.Divider.BorderWidth}"
         },
-        "type": "border"
+        "type": "border",
+        "oldPath": "UI.Divider.Border"
       }
     },
     "Blanket": {
       "Container--BackgroundColor": {
         "value": "{q.surface.blanket}",
         "type": "color",
-        "description": "Apply on blanket component"
+        "description": "Apply on blanket component",
+        "oldPath": "UI.Blanket.Surface"
       },
       "ButtonGroup": {
         "Container--ItemSpacing": {
           "XS": {
             "value": "{core.dimensionPX.4}",
-            "type": "spacing"
+            "type": "spacing",
+            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
           },
           "SM": {
             "value": "{core.dimensionPX.4}",
-            "type": "spacing"
+            "type": "spacing",
+            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
           },
           "MD": {
             "value": "{core.dimensionPX.8}",
-            "type": "spacing"
+            "type": "spacing",
+            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
           },
           "LG": {
             "value": "{core.dimensionPX.8}",
-            "type": "spacing"
+            "type": "spacing",
+            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
           },
           "XL": {
             "value": "{core.dimensionPX.8}",
-            "type": "spacing"
+            "type": "spacing",
+            "oldPath": "UI.ButtonGroup.[scale].ItemSpacing"
           }
         }
       }
@@ -5541,355 +5710,441 @@
         "SM": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+          "oldPath": "None"
         },
         "MD": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+          "oldPath": "None"
         },
         "LG": {
           "value": "{core.dimensionREM.12}",
           "type": "spacing",
-          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+          "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps.",
+          "oldPath": "None"
         }
       },
       "ButtonWrapper--Padding": {
-        "Leading--SM": {
-          "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS} 0 0",
-          "type": "spacing",
-          "description": "Coded comps only!"
+        "Leading": {
+          "SM": {
+            "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS} 0 0",
+            "type": "spacing",
+            "description": "Coded comps only!",
+            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+          },
+          "MD": {
+            "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+            "type": "spacing",
+            "description": "Coded comps only!.",
+            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+          },
+          "LG": {
+            "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+            "type": "spacing",
+            "description": "Coded comps only!.",
+            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Leading.Padding"
+          }
         },
-        "Leading--MD": {
-          "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
-          "type": "spacing",
-          "description": "Coded comps only!."
-        },
-        "Leading--LG": {
-          "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
-          "type": "spacing",
-          "description": "Coded comps only!."
-        },
-        "Trailing--SM": {
-          "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS}",
-          "type": "spacing",
-          "description": "Coded comps only!"
-        },
-        "Trailing--MD": {
-          "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
-          "type": "spacing",
-          "description": "Coded comps only!."
-        },
-        "Trailing--LG": {
-          "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
-          "type": "spacing",
-          "description": "Coded comps only!."
+        "Trailing": {
+          "SM": {
+            "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.XS}",
+            "type": "spacing",
+            "description": "Coded comps only!",
+            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+          },
+          "MD": {
+            "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
+            "type": "spacing",
+            "description": "Coded comps only!.",
+            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+          },
+          "LG": {
+            "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
+            "type": "spacing",
+            "description": "Coded comps only!.",
+            "oldPath": "Navigation.TabBar.ButtonWrapper.[scale].Trailing.Padding"
+          }
         }
       },
       "Tab--HighlightLine--Height": {
         "SM": {
           "value": "{core.dimensionPX.2}",
           "type": "sizing",
-          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
         },
         "MD": {
           "value": "{core.dimensionPX.2}",
           "type": "sizing",
-          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
         },
         "LG": {
           "value": "{core.dimensionPX.2}",
           "type": "sizing",
-          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+          "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].HighlightLine.Height"
         }
       },
       "Tab--HighlightLine--BackgroundColor": {
-        "Select--Rest": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest Apply as fill on HightlightLine"
+        "Active": {
+          "Rest": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus"
+          }
         },
-        "Selected--Hover": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover Apply as fill on HightlightLine"
-        },
-        "Selected--Pressed": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed Apply as fill on HightlightLine"
-        },
-        "Selected--Focus": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus Apply as fill on HightlightLine"
-        },
-        "Unsselected--Rest": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest Apply as fill on HightlightLine"
-        },
-        "Unsselected--Hover": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover Apply as fill on HightlightLine"
-        },
-        "Unsselected--Pressed": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed Apply as fill on HightlightLine"
-        },
-        "Unsselected--Focus": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus Apply as fill on HightlightLine"
-        },
-        "Unsselected--Disabled": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled Apply as fill on HightlightLine"
+        "Inactive": {
+          "Rest": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus"
+          },
+          "Disabled": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": " Apply as fill on HightlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled"
+          }
         }
       },
       "Tab--HighlightLine--Opacity": {
-        "Selected--Rest": {
-          "value": "1",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Rest Controls the opacity of the HighlightLine"
+        "Active": {
+          "Rest": {
+            "value": "1",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Rest"
+          },
+          "Hover": {
+            "value": "1",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Hover"
+          },
+          "Pressed": {
+            "value": "1",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Pressed"
+          },
+          "Focus": {
+            "value": "0",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Focus"
+          }
         },
-        "Selected--Hover": {
-          "value": "1",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Hover Controls the opacity of the HighlightLine"
-        },
-        "Selected--Pressed": {
-          "value": "1",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Pressed Controls the opacity of the HighlightLine"
-        },
-        "Selected--Focus": {
-          "value": "0",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Focus Controls the opacity of the HighlightLine"
-        },
-        "Unselected--Rest": {
-          "value": "0",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Rest Controls the opacity of the HighlightLine"
-        },
-        "Unselected--Hover": {
-          "value": "0",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Hover Controls the opacity of the HighlightLine"
-        },
-        "Unselected--Pressed": {
-          "value": "0",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Pressed Controls the opacity of the HighlightLine"
-        },
-        "Unselected--Focus": {
-          "value": "0",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Focus Controls the opacity of the HighlightLine"
-        },
-        "Unselected--Disabled": {
-          "value": "0",
-          "type": "opacity",
-          "description": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Disabled Controls the opacity of the HighlightLine"
+        "Inactive": {
+          "Rest": {
+            "value": "0",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Rest"
+          },
+          "Hover": {
+            "value": "0",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Hover"
+          },
+          "Pressed": {
+            "value": "0",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Pressed"
+          },
+          "Focus": {
+            "value": "0",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Focus"
+          },
+          "Disabled": {
+            "value": "0",
+            "type": "opacity",
+            "description": " Controls the opacity of the HighlightLine",
+            "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Disabled"
+          }
         }
       },
       "Tab--Label--TextColor": {
-        "Selected--Rest": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.Selected.Rest | Defines the color of the label of a tab. Apply on <label>"
+        "Active": {
+          "Rest": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Rest"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Hover"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Pressed"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.Selected.Focus"
+          }
         },
-        "Selected--Hover": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.Selected.Hover | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Selected--Pressed": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.Selected.Pressed | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Selected--Focus": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.Selected.Focus | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Rest": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.unselected.Rest | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Hover": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.unselected.Hover | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Pressed": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.unselected.Pressed | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Focus": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.unselected.Focus | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Disabled": {
-          "value": "{q.content.ondisabled.alpha}",
-          "type": "color",
-          "description": "Navigation.TabBar.Tab.Label.unselected.Disabled | Defines the color of the label of a tab. Apply on <label>"
+        "Inactive": {
+          "Rest": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Rest"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Hover"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Pressed"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Focus"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Label.unselected.Disabled"
+          }
         }
       },
-      // Adds Tab.Label.Typography
+
       "Tab--Label--Typography": {
         "SM": {
           "value": "Action.SM.Label",
-          "type": "typography"
+          "type": "typography",
+          "oldPath": "None (used Action semantic before)"
         },
         "MD": {
           "value": "Action.MD.Label",
-          "type": "typography"
+          "type": "typography",
+          "oldPath": "None (used Action semantic before)"
         },
         "LG": {
           "value": "Action.LG.Label",
-          "type": "typography"
+          "type": "typography",
+          "oldPath": "None (used Action semantic before)"
         }
       },
-      // Renames TopPadding > PaddingTop
+
       "Tab--ContentCol--PaddingTop": {
         "SM": {
           "value": "{core.dimensionREM.4}",
           "type": "spacing",
-          "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+          "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
         },
         "MD": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+          "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
         },
         "LG": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+          "description": "Defines the topPadding of a tab; Apply on <ContentCol>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.TopPadding"
         }
       },
       "Tab--ContentCol--ItemSpacing": {
         "SM": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
         },
         "MD": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
         },
         "LG": {
           "value": "{core.dimensionREM.8}",
           "type": "spacing",
-          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+          "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentCol.ItemSpacing"
         }
       },
       "Tab--ContentRow--PaddingLeftRight": {
         "SM": {
           "value": "{core.dimensionPX.12}",
           "type": "spacing",
-          "description": "Defines the padding left and right of <ContentRow>"
+          "description": "Defines the padding left and right of <ContentRow>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
         },
         "MD": {
           "value": "{core.dimensionPX.12}",
           "type": "spacing",
-          "description": "Defines the padding left and right of <ContentRow>"
+          "description": "Defines the padding left and right of <ContentRow>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
         },
         "LG": {
           "value": "{core.dimensionPX.12}",
           "type": "spacing",
-          "description": "Defines the padding left and right of <ContentRow>"
+          "description": "Defines the padding left and right of <ContentRow>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.PaddingLeftRight"
         }
       },
       "Tab--ContentRow--ItemSpacing": {
         "SM": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing",
-          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
         },
         "MD": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing",
-          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
         },
         "LG": {
           "value": "{core.dimensionPX.4}",
           "type": "spacing",
-          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+          "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>",
+          "oldPath": "Navigation.TabBar.Tab.[scale].ContentRow.ItemSpacing"
         }
       },
       "Tab--Icon--IconSize": {
         "SM": {
           "value": "{core.dimensionREM.12}",
           "type": "sizing",
-          "description": "Defines height and width of the icon of a tab"
+          "description": "Defines height and width of the icon of a tab",
+          "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
         },
         "MD": {
           "value": "{core.dimensionREM.16}",
           "type": "sizing",
-          "description": "Defines height and width of the icon of a tab"
+          "description": "Defines height and width of the icon of a tab",
+          "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
         },
         "LG": {
           "value": "{core.dimensionREM.16}",
           "type": "sizing",
-          "description": "Defines height and width of the icon of a tab"
+          "description": "Defines height and width of the icon of a tab",
+          "oldPath": "Navigation.TabBar.Tab.[scale].Icon.Sizing"
         }
       },
       "Tab--Icon--IconColor": {
-        "Selected--Rest": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Selected.Rest | Defines the color of the label of a tab. Apply on <label>"
+        "Active": {
+          "Rest": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Rest"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Hover"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Pressed"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.brand.rest}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Focus"
+          }
         },
-        "Selected--Hover": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Selected.Hover | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Selected--Pressed": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Selected.Pressed | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Selected--Focus": {
-          "value": "{q.content.ondefault.brand.rest}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Selected.Focus | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Rest": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Unelected.Rest | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Hover": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Unelected.Hover | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Pressed": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Unelected.Presssed | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Focus": {
-          "value": "{q.content.ondefault.alpha}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Unelected.Focus | Defines the color of the label of a tab. Apply on <label>"
-        },
-        "Unselected--Disabled": {
-          "value": "{q.content.ondisabled.alpha}",
-          "type": "color",
-          "description": "{Root}.Navigation.TabBar.Tab.Icon.Unelected.Disabled | Defines the color of the label of a tab. Apply on <label>"
+        "Inactive": {
+          "Rest": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Rest"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Hover"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Presssed"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Focus"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Defines the color of the label of a tab. Apply on <label>",
+            "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Disabled"
+          }
         }
       }
     }
