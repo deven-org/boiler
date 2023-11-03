@@ -563,7 +563,40 @@ const args: BlrTextareaType = {
 BlrTextarea.args = args;
 
 //disabledArgTypesTable
-const argTypesToDisable = ['sizeVariant', 'resize'];
+const argTypesToDisable = [
+  'theme',
+  'sizeVariant',
+  'resize',
+  'cols',
+  'rows',
+  'placeholder',
+  'value',
+  'minLength',
+  'maxLength',
+  'hasLabel',
+  'label',
+  'labelAppendix',
+  'hasHint',
+  'hintMessage',
+  'hintMessageIcon',
+  'hasCounter',
+  'warningLimitType',
+  'warningLimitInt',
+  'warningLimitPer',
+  'disabled',
+  'readonly',
+  'required',
+  'hasError',
+  'errorMessage',
+  'errorMessageIcon',
+  'arialabel',
+  'textareaId',
+  'name',
+  'onChange',
+  'onFocus',
+  'onBlur',
+  'onSelect',
+];
 
 function generateDisabledArgTypes(argTypes) {
   const disabledArgTypes = {};
@@ -670,41 +703,7 @@ export const Resize = () => {
   `;
 };
 Resize.argTypes = {
-  sizeVariant: {
-    table: {
-      disable: true,
-    },
-  },
-  resize: {
-    table: {
-      disable: true,
-    },
-  },
-  cols: {
-    table: {
-      disable: true,
-    },
-  },
-  rows: {
-    table: {
-      disable: true,
-    },
-  },
-  placeholder: {
-    table: {
-      disable: true,
-    },
-  },
-  value: {
-    table: {
-      disable: true,
-    },
-  },
-  minLength: {
-    table: {
-      disable: true,
-    },
-  },
+  ...disabledArgTypes,
 };
 Resize.parameters = {
   backgrounds: {
@@ -746,6 +745,9 @@ export const Placeholder = () => {
     </div>
   `;
 };
+Placeholder.argTypes = {
+  ...disabledArgTypes,
+};
 Placeholder.parameters = {
   backgrounds: {
     default: 'Light',
@@ -778,6 +780,9 @@ export const Disabled = () => {
     </div>
   `;
 };
+Disabled.argTypes = {
+  ...disabledArgTypes,
+};
 Disabled.parameters = {
   backgrounds: {
     default: 'Light',
@@ -807,6 +812,9 @@ export const Readonly = () => {
       </div>
     </div>
   `;
+};
+Readonly.argTypes = {
+  ...disabledArgTypes,
 };
 Readonly.parameters = {
   backgrounds: {
@@ -839,6 +847,9 @@ export const Required = () => {
     </div>
   `;
 };
+Required.argTypes = {
+  ...disabledArgTypes,
+};
 Required.parameters = {
   backgrounds: {
     default: 'Light',
@@ -870,6 +881,9 @@ export const hasError = () => {
       </div>
     </div>
   `;
+};
+hasError.argTypes = {
+  ...disabledArgTypes,
 };
 hasError.parameters = {
   backgrounds: {
@@ -914,6 +928,9 @@ export const Captions = () => {
     </div>
   `;
 };
+Captions.argTypes = {
+  ...disabledArgTypes,
+};
 Captions.parameters = {
   backgrounds: {
     default: 'Light',
@@ -946,6 +963,9 @@ export const Label = () => {
       </div>
     </div>
   `;
+};
+Label.argTypes = {
+  ...disabledArgTypes,
 };
 Label.parameters = {
   backgrounds: {
@@ -981,6 +1001,9 @@ export const Counter = () => {
       </div>
     </div>
   `;
+};
+Counter.argTypes = {
+  ...disabledArgTypes,
 };
 Counter.parameters = {
   backgrounds: {
