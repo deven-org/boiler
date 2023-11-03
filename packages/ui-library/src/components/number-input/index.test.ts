@@ -26,13 +26,13 @@ const sampleParams: BlrNumberInputType = {
 };
 
 describe('blr-number-input', () => {
-  it('is having an input containing the right className', async () => {
+  it('input is of type "number"', async () => {
     const element = await fixture(BlrNumberInputRenderFunction(sampleParams));
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
-    const className = input?.className;
+    const type = input?.type;
 
-    expect(className).to.contain('custom-form-input');
+    expect(type).to.be.equal('number');
   });
 
   it('is is showing random placeholder', async () => {
