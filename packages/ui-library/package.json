@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
+    "start": "sb dev -p 1337 -c storybook/.storybook",
+    "build-storybook:static": "sb build && sb extract ./storybook-static",
+    "create-config:pa11y": "node --experimental-json-modules utils/create-pa11y-config.mjs",
+    "pretest:a11y": "npm run build:static && npm run create-config:pa11y",
+    "test:a11y": "pa11y-ci --config ./.pa11yci",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "build:types": "rimraf types && tsc --emitDeclarationOnly",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
@@ -19,7 +24,12 @@
   "devDependencies": {
     "@boiler/figma-design-tokens": "0.0.1",
     "@boiler/eslint-config-boiler": "1.0.0",
-    "postcss-lit": "^1.1.0"
+    "postcss-lit": "^1.1.0",
+    "@storybook/addon-actions": "^7.4.6",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/cli": "^7.4.6",
+    "@storybook/web-components": "^7.4.6",
+    "@storybook/web-components-webpack5": "^7.4.6"
   },
   "dependencies": {
     "@boiler/icons": "0.0.1",
