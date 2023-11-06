@@ -1,26 +1,32 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { DividerVariationTypes } from '../../../globals/types';
-import { dividerLight, dividerDark } from '../../../foundation/component-tokens/ui.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { classMap } from 'lit/directives/class-map.js';
+import { dividerDark, dividerLight } from './index.css';
 
 const TAG_NAME = 'blr-divider';
 
 @customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
-  @property() dividerDirectionVariant?: DividerVariationTypes = 'vertical';
+  @property() directionVariant: DividerVariationTypes = 'vertical';
   @property() theme: ThemeType = 'Light';
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [dividerLight] : [dividerDark];
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
+    const dividerClasses = classMap({
+      'blr-divider': true,
+      [this.directionVariant]: true,
+    });
+
+    return html`
+      <style>
+        ${dynamicStyles}
       </style>
-      ${this.dividerDirectionVariant === 'vertical'
-        ? html`<div class="blr-divider vertical"></div>`
-        : html`<div class="blr-divider horizontal"></div>`} `;
+      <div class="${dividerClasses}"></div>
+    `;
   }
 }
 

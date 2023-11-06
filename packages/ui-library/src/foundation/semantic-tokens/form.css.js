@@ -281,7 +281,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       &.lg {
         padding: ${LG.CaptionComponent.Padding};
         gap: ${LG.CaptionComponent.ItemSpacing};
-        align-items: flex-end;
 
         .blr-icon {
           padding: ${LG.CaptionComponent.IconWrapper.Padding};

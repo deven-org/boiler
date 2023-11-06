@@ -2,23 +2,77 @@ import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius } = semanticTokens.Forms;
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG } = semanticTokens.Forms;
+  const { StepperCombo } = componentTokens.Action;
 
   return css`
     .input-wrapper {
-      border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
+      outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};
 
+      > input {
+        border: none;
+        outline: none;
+        color: inherit;
+      }
+
+      > * {
+        background-color: transparent;
+      }
+
+      &.mode1 {
+        &.sm {
+          > .custom-stepper-button {
+            width: ${StepperCombo.SM.Vertical.Width};
+          }
+        }
+
+        &.md {
+          > .custom-stepper-button {
+            width: ${StepperCombo.MD.Vertical.Width};
+          }
+        }
+
+        &.lg {
+          > .custom-stepper-button {
+            width: ${StepperCombo.LG.Vertical.Width};
+          }
+        }
+      }
+
+      > .unit,
+      input {
+        &.sm {
+          font-weight: ${SM.UserInput.fontWeight};
+          font-size: ${SM.UserInput.fontSize};
+          font-family: ${SM.UserInput.fontFamily}, sans-serif;
+          line-height: ${SM.UserInput.lineHeight};
+          padding: ${SM.InputField.Padding};
+        }
+
+        &.md {
+          font-weight: ${MD.UserInput.fontWeight};
+          font-size: ${MD.UserInput.fontSize};
+          font-family: ${MD.UserInput.fontFamily}, sans-serif;
+          line-height: ${MD.UserInput.lineHeight};
+          padding: ${MD.InputField.Padding};
+        }
+
+        &.lg {
+          font-weight: ${LG.UserInput.fontWeight};
+          font-size: ${LG.UserInput.fontSize};
+          font-family: ${LG.UserInput.fontFamily}, sans-serif;
+          line-height: ${LG.UserInput.lineHeight};
+          padding: ${LG.InputField.Padding};
+        }
+      }
+
       &.disabled {
-        border-width: ${Input.Default.ReadOnly.width};
-        border-style: ${Input.Default.Disabled.style};
-        border-color: transparent;
         outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
         background-color: ${SurfaceFill.Default.Disabled};
         cursor: not-allowed;
 
         & > input {
-          background-color: ${SurfaceFill.Default.Disabled};
           color: ${UserInput.Default.Disabled};
           cursor: not-allowed;
 
@@ -28,32 +82,11 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
       }
 
-      &.focus:not(.error-input) {
-        border-width: ${Input.Default.Rest.width};
-        border-style: ${Input.Default.Rest.style};
-        border-color: transparent;
+      &:focus-within {
         outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
         background-color: ${SurfaceFill.Default.Focus};
 
         & > input {
-          background-color: ${SurfaceFill.Default.Focus};
-          color: ${UserInput.Default.Focus};
-
-          &::placeholder {
-            color: ${Placeholder.Default.Focus};
-          }
-        }
-      }
-
-      &:focus {
-        border-width: ${Input.Default.Rest.width};
-        border-style: ${Input.Default.Rest.style};
-        border-color: transparent;
-        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
-        background-color: ${SurfaceFill.Default.Focus};
-
-        & > input {
-          background-color: ${SurfaceFill.Default.Focus};
           color: ${UserInput.Default.Focus};
 
           &::placeholder {
@@ -63,9 +96,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
 
       &.error-input {
-        border-width: ${Input.Error.Rest.width};
-        border-style: ${Input.Error.Rest.style};
-        border-color: ${Input.Error.Rest.color};
+        outline: ${Input.Error.Rest.width} ${Input.Error.Rest.style} ${Input.Error.Rest.color};
         color: ${UserInput.Error.Rest};
         background-color: ${SurfaceFill.Error.Rest};
 
@@ -74,9 +105,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
 
         &:hover {
-          border-width: ${Input.Error.Hover.width};
-          border-style: ${Input.Error.Hover.style};
-          border-color: ${Input.Error.Hover.color};
+          outline: ${Input.Error.Hover.width} ${Input.Error.Hover.style} ${Input.Error.Hover.color};
           color: ${UserInput.Error.Hover};
           background-color: ${SurfaceFill.Error.Hover};
 
@@ -86,9 +115,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
 
         &:active {
-          border-width: ${Input.Error.Pressed.width};
-          border-style: ${Input.Error.Pressed.style};
-          border-color: ${Input.Error.Pressed.color};
           outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
           color: ${UserInput.Error.Pressed};
           background-color: ${SurfaceFill.Error.Pressed};
@@ -98,10 +124,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           }
         }
 
-        &.focus {
-          border-width: ${Input.Error.Rest.width};
-          border-style: ${Input.Error.Rest.style};
-          border-color: transparent;
+        &:focus-within {
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
           color: ${Input.Error.Focus};
           background-color: ${SurfaceFill.Error.Focus};
@@ -113,9 +136,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
 
       &[readonly] {
-        border-width: ${Input.Default.ReadOnly.width};
-        border-style: ${Input.Default.ReadOnly.style};
-        border-color: transparent;
         outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
         background-color: ${SurfaceFill.Default.ReadOnly};
 
@@ -127,125 +147,22 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   `;
 });
 
-export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, Placeholder, SM, MD, LG } = semanticTokens.Forms;
-
-  return css`
-    .custom-form-input {
-      all: initial;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: ${UserInput.Default.Rest};
-
-      &::placeholder {
-        color: ${Placeholder.Default.Rest};
-      }
-
-      &.sm {
-        font-weight: ${SM.UserInput.fontWeight};
-        font-size: ${SM.UserInput.fontSize};
-        font-family: ${SM.UserInput.fontFamily}, sans-serif;
-        line-height: ${SM.UserInput.lineHeight};
-        padding: ${SM.InputField.Padding};
-      }
-
-      &.md {
-        font-weight: ${MD.UserInput.fontWeight};
-        font-size: ${MD.UserInput.fontSize};
-        font-family: ${MD.UserInput.fontFamily}, sans-serif;
-        line-height: ${MD.UserInput.lineHeight};
-        padding: ${MD.InputField.Padding};
-      }
-
-      &.lg {
-        font-weight: ${LG.UserInput.fontWeight};
-        font-size: ${LG.UserInput.fontSize};
-        font-family: ${LG.UserInput.fontFamily}, sans-serif;
-        line-height: ${LG.UserInput.lineHeight};
-        padding: ${LG.InputField.Padding};
-      }
-
-      &.error-input {
-        color: ${UserInput.Error.Rest};
-      }
-    }
-
-    .hint-wrapper {
-      display: flex;
-
-      &.sm {
-        margin: ${SM.CaptionSlot.Margin};
-      }
-
-      &.md {
-        margin: ${MD.CaptionSlot.Margin};
-      }
-
-      &.lg {
-        margin: ${MD.CaptionSlot.Margin};
-      }
-    }
-
-    .unit {
-      all: initial;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &.sm {
-        font-weight: ${SM.UserInput.fontWeight};
-        font-size: ${SM.UserInput.fontSize};
-        font-family: ${SM.UserInput.fontFamily}, sans-serif;
-        line-height: ${SM.UserInput.lineHeight};
-        padding: ${SM.InputField.Padding};
-      }
-
-      &.md {
-        font-weight: ${MD.UserInput.fontWeight};
-        font-size: ${MD.UserInput.fontSize};
-        font-family: ${MD.UserInput.fontFamily}, sans-serif;
-        line-height: ${MD.UserInput.lineHeight};
-        padding: ${MD.InputField.Padding};
-      }
-
-      &.lg {
-        font-weight: ${LG.UserInput.fontWeight};
-        font-size: ${LG.UserInput.fontSize};
-        font-family: ${LG.UserInput.fontFamily}, sans-serif;
-        line-height: ${LG.UserInput.lineHeight};
-        padding: ${LG.InputField.Padding};
-      }
-
-      &.disabled {
-        color: ${UserInput.Default.Disabled};
-        cursor: not-allowed;
-      }
-
-      &.error-input {
-        color: ${UserInput.Error.Rest};
-      }
-    }
-  `;
-});
-
 export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { StepperCombo, StepperButton } = componentTokens.Action;
+    const { StepperCombo } = componentTokens.Action;
     const { Silent } = semanticTokens.Action;
 
     return css`
       .stepper-combo {
-        position: relative;
-
-        &.horizontal {
-          display: flex;
-          justify-content: flex-end;
+        &.mode2 {
+          display: grid;
+          grid-template-columns: 1fr 0 1fr;
+          justify-content: center;
 
           &.sm {
             width: ${StepperCombo.SM.Horizontal.Width};
 
-            > .divider-vertical {
+            > blr-divider {
               padding: ${StepperCombo.SM.Horizontal.DividerWrapper.Padding};
             }
           }
@@ -253,7 +170,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.md {
             width: ${StepperCombo.MD.Horizontal.Width};
 
-            > .divider-vertical {
+            > blr-divider {
               padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
             }
           }
@@ -261,46 +178,51 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.lg {
             width: ${StepperCombo.LG.Horizontal.Width};
 
-            > .divider-vertical {
+            > blr-divider {
               padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
+            }
+          }
+        }
+
+        &.mode3 {
+          display: grid;
+          grid-template-rows: 1fr 0 1fr;
+          justify-content: center;
+
+          &.sm {
+            width: ${StepperCombo.SM.Vertical.Width};
+
+            > blr-divider {
+              padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+            }
+          }
+
+          &.md {
+            width: ${StepperCombo.MD.Vertical.Width};
+
+            > blr-divider {
+              padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
+            }
+          }
+
+          &.lg {
+            width: ${StepperCombo.LG.Vertical.Width};
+
+            > blr-divider {
+              padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
             }
           }
         }
       }
 
-      &.vertical {
-        &.sm {
-          width: ${StepperCombo.SM.Vertical.Width};
-        }
-
-        &.md {
-          width: ${StepperCombo.MD.Vertical.Width};
-
-          > .divider-horizontal {
-            padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
-          }
-        }
-
-        &.lg {
-          width: ${StepperCombo.LG.Vertical.Width};
-
-          > .divider-horizontal {
-            padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
-          }
-        }
-      }
-
       .custom-stepper-button {
-        all: initial;
-        line-height: 0;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
         background-color: ${Silent.SurfaceFill.Rest};
         color: ${Silent.Icon.Rest};
-
-        &.fullWidthHeight {
-          width: 100%;
-          height: 50%;
-        }
+        padding: 0;
 
         &:hover:not(:disabled) {
           background-color: ${Silent.SurfaceFill.Hover};
@@ -317,16 +239,12 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           cursor: not-allowed;
         }
 
-        &.sm {
-          width: ${StepperButton.SM.Width};
+        &.mode2 {
+          width: unset;
         }
 
-        &.md {
-          width: ${StepperButton.MD.Width};
-        }
-
-        &.lg {
-          width: ${StepperButton.LG.Width};
+        &.mode3 {
+          width: inherit;
         }
       }
     `;
@@ -335,9 +253,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
 export const baseStyle = css`
   .input-wrapper {
-    display: grid;
-    grid-template-areas: "left unitleft center unitright right1 right2";
-    grid-template-columns: fit-content(100%) fit-content(100%) 1fr fit-content(100%) fit-content(100%) fit-content(100%);
+    display: flex;
     overflow: hidden;
     box-sizing: border-box;
 
@@ -347,100 +263,37 @@ export const baseStyle = css`
       margin: 0;
     }
 
-    & > input[type="number"] {
+    > input {
+      flex-grow: 1;
+    }
+
+    > input[type="number"] {
       -moz-appearance: textfield;
     }
 
-    & > input {
-      grid-area: center;
-    }
-
     &.mode1 {
-      .increment {
-        grid-area: right2;
+      > button:first-of-type {
+        order: -2;
       }
 
-      .decrement {
-        grid-area: left;
+      .unit {
+        order: -1;
+      }
+
+      .unit.prepend {
+        order: 0;
       }
 
       & > input {
         text-align: center;
       }
-
-      & > .unit:not(.prepend) {
-        grid-area: unitright;
-      }
-
-      & > .unit.prepend {
-        grid-area: unitleft;
-      }
     }
 
-    &.mode2 {
-      .stepper-combo.horizontal.sm {
-        grid-area: right2;
-
-        & > .divider-vertical {
-          position: absolute;
-          left: 50%;
-          height: 60%;
-          padding-top: 10%;
-        }
-      }
-
-      .stepper-combo.horizontal.md {
-        grid-area: right2;
-      }
-
-      .stepper-combo.horizontal.lg {
-        grid-area: right2;
-      }
-
-      & > .unit:not(.prepend) {
-        grid-area: unitright;
-      }
-
-      & > .unit.prepend {
-        grid-area: unitleft;
-      }
-    }
-
+    &.mode2,
     &.mode3 {
-      .stepper-combo.vertical.sm {
-        grid-area: right2;
-      }
-
-      .stepper-combo.vertical.md {
-        grid-area: right2;
-      }
-
-      .stepper-combo.vertical.lg {
-        grid-area: right2;
-      }
-
-      & > .unit:not(.prepend) {
-        grid-area: unitright;
-      }
-
-      & > .unit.prepend {
-        grid-area: unitleft;
-        grid-row: span 2;
+      .unit.prepend {
+        order: -1;
       }
     }
-  }
-
-  .divider-horizontal {
-    position: absolute;
-    top: 50%;
-    width: 60%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  .divider-vertical {
-    position: absolute;
-    left: 60%;
-    height: 60%;
   }
 `;

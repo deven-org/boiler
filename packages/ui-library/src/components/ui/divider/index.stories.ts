@@ -6,7 +6,7 @@ import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 export default {
   title: 'Design System/Web Components/UI/Divider',
   argTypes: {
-    dividerDirectionVariant: {
+    directionVariant: {
       options: DividerVariations,
       control: { type: 'select' },
     },
@@ -24,14 +24,13 @@ export default {
 };
 
 export const BlrDivider = (params: BlrDividerType) => html`
-  ${params.dividerDirectionVariant === 'vertical'
-    ? html`<div style="height: 100px; display: inline-block;">${BlrDividerRenderFunction(params)}</div> `
-    : html` <div style="width: 100%; display: inline-block;">${BlrDividerRenderFunction(params)}</div>`}
+  <div style="width: 100%; height: 100px; display: inline-block;">${BlrDividerRenderFunction(params)}</div>
 `;
 
 BlrDivider.storyName = 'Divider';
 
 const args: BlrDividerType = {
+  directionVariant: 'horizontal',
   theme: 'Light',
 };
 
