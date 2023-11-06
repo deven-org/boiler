@@ -22,14 +22,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@boiler/figma-design-tokens": "0.0.1",
+    "@babel/core": "^7.23.0",
+    "@babel/plugin-proposal-decorators": "^7.23.0",
+    "@babel/plugin-transform-class-properties": "^7.22.5",
+    "@babel/plugin-transform-class-static-block": "^7.22.11",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.23.0",
     "@boiler/eslint-config-boiler": "1.0.0",
-    "postcss-lit": "^1.1.0",
+    "@boiler/figma-design-tokens": "0.0.1",
     "@storybook/addon-actions": "^7.4.6",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/cli": "^7.4.6",
     "@storybook/web-components": "^7.4.6",
-    "@storybook/web-components-webpack5": "^7.4.6"
+    "@storybook/web-components-webpack5": "^7.4.6",
+    "postcss-lit": "^1.1.0"
   },
   "dependencies": {
     "@boiler/icons": "0.0.1",

@@ -1,0 +1,24 @@
+{
+    "default": {
+        "standard": "WCAG2AA",
+        "timeout": 1000,
+        "page": {
+            "viewport": {
+                "width": 320,
+                "height": 480
+            }
+        }
+    },
+    "urls": [
+        "http://localhost:1337/iframe.html?id=blriconbutton--blr-icon-button&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blriconlink--blr-icon-link&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blricon--blr-icon&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrloader--blr-loader&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrradio--blr-radio-group&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrradio--blr-radio&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrselect--blr-select&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrtextbutton--blr-text-button&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrtextinput--blr-text-input&viewMode=story",
+        "http://localhost:1337/iframe.html?id=blrtextbutton--blr-text-button&args=icon:boilerChevronDownGreen&viewMode=story"
+    ]
+}
