@@ -4,7 +4,7 @@ import { CounterVariants, FormSizes } from '../../../globals/constants';
 import { BlrCounterRenderFunction, BlrCounterType } from './index';
 
 export default {
-  title: 'Design System/Internal Components/Counter',
+  title: 'Design System/Web Components/Internal Components/Counter',
   argTypes: {
     variant: {
       options: CounterVariants,

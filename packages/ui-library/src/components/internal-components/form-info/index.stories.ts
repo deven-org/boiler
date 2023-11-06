@@ -3,7 +3,7 @@ import { CounterVariants, FormSizes } from '../../../globals/constants';
 import { BlrFormInfoRenderFunction, BlrFormInfoType } from './index';
 
 export default {
-  title: 'Design System/Internal Components/FormInfo',
+  title: 'Design System/Web Components/Internal Components/FormInfo',
   argTypes: {
     variant: {
       options: CounterVariants,

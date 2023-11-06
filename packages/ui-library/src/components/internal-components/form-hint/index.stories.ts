@@ -5,7 +5,7 @@ import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Internal Components/FormHint',
+  title: 'Design System/Web Components/Internal Components/FormHint',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],

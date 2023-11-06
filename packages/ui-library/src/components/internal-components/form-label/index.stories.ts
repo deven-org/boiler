@@ -4,7 +4,7 @@ import { FormSizes, LabelVariants } from '../../../globals/constants';
 import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
 
 export default {
-  title: 'Design System/Internal Components/Label',
+  title: 'Design System/Web Components/Internal Components/Label',
   argTypes: {
     labelSize: {
       options: FormSizes,
