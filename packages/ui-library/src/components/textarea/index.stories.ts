@@ -70,7 +70,7 @@ export default {
 
 export const BlrTextarea = (params: BlrTextareaType) => BlrTextareaRenderFunction(params);
 
-BlrTextarea.storyName = 'BlrTextArea';
+BlrTextarea.storyName = 'TextArea';
 
 const args: BlrTextareaType = {
   theme: 'Light',

@@ -3,7 +3,7 @@ import { CounterVariants, FormSizes } from '../../../globals/constants';
 import { BlrFormInfoRenderFunction, BlrFormInfoType } from './index';
 
 export default {
-  title: 'Design System/Internal Components/BlrFormInfo',
+  title: 'Design System/Internal Components/FormInfo',
   argTypes: {
     variant: {
       options: CounterVariants,
@@ -35,7 +35,7 @@ export const BlrFormInfo = ({
 }: BlrFormInfoType) =>
   BlrFormInfoRenderFunction({ theme, size, showHint, hintText, hintIcon, hasError, errorMessage, errorIcon });
 
-BlrFormInfo.storyName = 'BlrFormInfo';
+BlrFormInfo.storyName = 'FormInfo';
 
 const args: BlrFormInfoType = {
   theme: 'Light',

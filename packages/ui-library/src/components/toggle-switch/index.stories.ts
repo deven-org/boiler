@@ -28,7 +28,7 @@ export default {
 
 export const BlrToggleSwitch = (params: BlrToggleSwitchType) => BlrToggleSwitchRenderFunction(params);
 
-BlrToggleSwitch.storyName = 'BlrToggleSwitch';
+BlrToggleSwitch.storyName = 'ToggleSwitch';
 
 const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);

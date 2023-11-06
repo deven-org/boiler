@@ -35,7 +35,7 @@ export const BlrToolTip = (params: BlrToolTipType) =>
     </div>
   `;
 
-BlrToolTip.storyName = 'BlrToolTip';
+BlrToolTip.storyName = 'ToolTip';
 
 const args: BlrToolTipType = {
   theme: 'Light',

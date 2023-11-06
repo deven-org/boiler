@@ -44,7 +44,7 @@ export default {
 
 export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
 
-BlrCheckbox.storyName = 'BlrCheckbox';
+BlrCheckbox.storyName = 'Checkbox';
 
 const logEventType = (event: Event) => {
   console.log('storybook:story:logEventType', event.type);

@@ -56,7 +56,7 @@ export default {
 
 export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params);
 
-BlrSelect.storyName = 'BlrSelect';
+BlrSelect.storyName = 'Select';
 
 const args: BlrSelectType = {
   theme: 'Light',

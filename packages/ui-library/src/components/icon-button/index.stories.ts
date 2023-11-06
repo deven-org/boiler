@@ -31,7 +31,7 @@ export default {
 
 export const BlrIconButton = (params: BlrIconButtonType) => BlrIconButtonRenderFunction(params);
 
-BlrIconButton.storyName = 'BlrIconButton';
+BlrIconButton.storyName = 'IconButton';
 
 const args: BlrIconButtonType = {
   theme: 'Light',

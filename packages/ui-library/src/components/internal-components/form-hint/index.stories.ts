@@ -5,7 +5,7 @@ import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Internal Components/BlrFormHint',
+  title: 'Design System/Internal Components/FormHint',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],
@@ -31,7 +31,7 @@ export default {
 
 export const BlrFormHint = (params: BlrFormHintType) => BlrFormHintRenderFunction(params);
 
-BlrFormHint.storyName = 'BlrFormHint';
+BlrFormHint.storyName = 'FormHint';
 
 const args: BlrFormHintType = {
   theme: 'Light',

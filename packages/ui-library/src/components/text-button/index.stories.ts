@@ -35,7 +35,7 @@ export default {
 
 export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderFunction(params);
 
-BlrTextButton.storyName = 'BlrTextButton';
+BlrTextButton.storyName = 'TextButton';
 
 const args: BlrTextButtonType = {
   theme: 'Light',

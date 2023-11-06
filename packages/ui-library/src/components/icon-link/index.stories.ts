@@ -31,7 +31,7 @@ export default {
 
 export const BlrIconLink = (params: BlrIconLinkType) => BlrIconLinkRenderFunction(params);
 
-BlrIconLink.storyName = 'BlrIconLink';
+BlrIconLink.storyName = 'IconLink';
 
 const args: BlrIconLinkType = {
   theme: 'Light',

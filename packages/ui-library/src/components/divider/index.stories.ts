@@ -29,7 +29,7 @@ export const BlrDivider = (params: BlrDividerType) => html`
     : html` <div style="width: 100%; display: inline-block;">${BlrDividerRenderFunction(params)}</div>`}
 `;
 
-BlrDivider.storyName = 'BlrDivider';
+BlrDivider.storyName = 'Divider';
 
 const args: BlrDividerType = {
   theme: 'Light',

@@ -57,7 +57,7 @@ export default {
 
 export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(params);
 
-BlrTabBar.storyName = 'BlrTabBar';
+BlrTabBar.storyName = 'TabBar';
 
 const args: BlrTabBarType = {
   theme: 'Light',

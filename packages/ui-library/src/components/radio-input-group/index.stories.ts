@@ -38,7 +38,7 @@ export default {
 
 export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
 
-BlrRadioGroup.storyName = 'BlrRadioGroup';
+BlrRadioGroup.storyName = 'RadioGroup';
 
 const args: BlrRadioGroupType = {
   theme: 'Light',

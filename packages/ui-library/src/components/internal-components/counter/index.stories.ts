@@ -26,7 +26,7 @@ export default {
 
 export const BlrCounter = (params: BlrCounterType) => BlrCounterRenderFunction(params);
 
-BlrCounter.storyName = 'BlrCounter';
+BlrCounter.storyName = 'Counter';
 
 const args: BlrCounterType = {
   theme: 'Light',

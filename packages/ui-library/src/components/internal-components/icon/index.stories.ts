@@ -44,7 +44,7 @@ export const BlrIcon = (params: BlrIconType) => {
   </div>`;
 };
 
-BlrIcon.storyName = 'BlrIcon';
+BlrIcon.storyName = 'Icon';
 
 const args: BlrIconType = {
   size: 'lg',

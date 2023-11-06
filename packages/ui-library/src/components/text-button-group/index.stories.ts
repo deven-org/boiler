@@ -39,7 +39,7 @@ export default {
 
 export const BlrTextButtonGroup = (params: BlrTextButtonGroupType) => BlrTextButtonGroupRenderFunction(params);
 
-BlrTextButtonGroup.storyName = 'BlrTextButtonGroup';
+BlrTextButtonGroup.storyName = 'TextButtonGroup';
 
 const args: BlrTextButtonGroupType = {
   theme: 'Light',

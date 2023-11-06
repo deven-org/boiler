@@ -28,7 +28,7 @@ export default {
 
 export const BlrRadio = (params: BlrRadioType) => BlrRadioRenderFunction(params);
 
-BlrRadio.storyName = 'BlrRadio';
+BlrRadio.storyName = 'Radio';
 
 const args: BlrRadioType = {
   theme: 'Light',

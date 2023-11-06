@@ -26,7 +26,7 @@ export default {
 
 export const BlrLoader = (params: BlrLoaderType) => BlrLoaderRenderFunction(params);
 
-BlrLoader.storyName = 'BlrLoader';
+BlrLoader.storyName = 'Loader';
 
 const args: BlrLoaderType = {
   theme: 'Light',

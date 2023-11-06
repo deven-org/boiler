@@ -47,7 +47,7 @@ export default {
 
 export const BlrTextInput = (params: BlrTextInputType) => BlrTextInputRenderFunction(params);
 
-BlrTextInput.storyName = 'BlrTextInput';
+BlrTextInput.storyName = 'TextInput';
 
 const args: BlrTextInputType = {
   theme: 'Light',

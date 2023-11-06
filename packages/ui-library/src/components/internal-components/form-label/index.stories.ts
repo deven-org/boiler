@@ -26,7 +26,7 @@ export default {
 
 export const BlrFormLabel = (params: BlrFormLabelType) => BlrFormLabelRenderFunction(params);
 
-BlrFormLabel.storyName = 'BlrFormLabel';
+BlrFormLabel.storyName = 'FormLabel';
 
 const args: BlrFormLabelType = {
   theme: 'Light',
