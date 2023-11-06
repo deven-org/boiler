@@ -649,7 +649,7 @@ Sizes.argTypes = {
 };
 Sizes.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   //manual Code integration
   docs: {
@@ -707,7 +707,7 @@ Resize.argTypes = {
 };
 Resize.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -750,7 +750,7 @@ Placeholder.argTypes = {
 };
 Placeholder.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -785,7 +785,7 @@ Disabled.argTypes = {
 };
 Disabled.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -818,7 +818,7 @@ Readonly.argTypes = {
 };
 Readonly.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -852,7 +852,7 @@ Required.argTypes = {
 };
 Required.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -887,7 +887,7 @@ hasError.argTypes = {
 };
 hasError.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -933,7 +933,7 @@ Captions.argTypes = {
 };
 Captions.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -969,7 +969,7 @@ Label.argTypes = {
 };
 Label.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
@@ -1007,7 +1007,7 @@ Counter.argTypes = {
 };
 Counter.parameters = {
   backgrounds: {
-    default: 'Light',
+    default: '',
   },
   docs: {
     description: {
