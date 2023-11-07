@@ -25,7 +25,7 @@ export class BlrIconButton extends LitElement {
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;
-  @property() disabled?: boolean;
+  @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size: FormSizesType = 'md';
@@ -45,6 +45,7 @@ export class BlrIconButton extends LitElement {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size || 'md',
+      disabled: this.disabled,
     });
 
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
@@ -65,6 +66,11 @@ export class BlrIconButton extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
+    const IconClasses = classMap({
+      'disabled-icon-secondary': this.disabled && this.variant === 'secondary',
+      'disabled-icon-silent': this.disabled && this.variant === 'silent',
+    });
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -72,7 +78,6 @@ export class BlrIconButton extends LitElement {
         aria-label=${this.arialabel || nothing}
         class="blr-semantic-action blr-icon-button ${classes}"
         @click=${this.onClick}
-        ?disabled=${this.disabled}
         id=${this.buttonId || nothing}
         tabindex="0"
         @focus=${this.handleFocus}
@@ -91,6 +96,7 @@ export class BlrIconButton extends LitElement {
               icon: calculateIconName(this.icon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
+              classMap: IconClasses,
             })}`}
       </span> `;
   }

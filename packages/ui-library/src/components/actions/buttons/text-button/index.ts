@@ -26,7 +26,7 @@ export class BlrTextButton extends LitElement {
   @property() leadingIcon?: SizelessIconType;
   @property() trailingIcon?: SizelessIconType;
   @property() loading!: boolean;
-  @property() disabled?: boolean;
+  @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size: ActionSizesType = 'md';
@@ -46,16 +46,21 @@ export class BlrTextButton extends LitElement {
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
     const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
+      [this.variant]: this.variant,
+      [this.size]: this.size || 'md',
+      disabled: this.disabled,
     });
 
     const loaderIconClasses = classMap({
       'loading-class-icons': this.loading,
+      'disabled-icon-secondary': this.disabled && this.variant === 'secondary',
+      'disabled-icon-silent': this.disabled && this.variant === 'silent',
     });
 
     const labelClasses = classMap({
       'loading-class-label': this.loading,
+      'disabled-label-secondary': this.disabled && this.variant === 'secondary',
+      'disabled-label-silent': this.disabled && this.variant === 'silent',
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
@@ -102,7 +107,6 @@ export class BlrTextButton extends LitElement {
         @blur=${this.handleBlur}
         role="button"
         @keydown=${this.onClick}
-        ?disabled="${this.disabled}"
         id=${this.buttonId || nothing}
       >
         ${this.loading
