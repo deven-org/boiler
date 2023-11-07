@@ -1,0 +1,1423 @@
+{
+  "Forms": {
+    "Checkbox": {
+      "Control": {
+        "Container": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Fill.[state]"
+              },
+              "Hover": {
+                "value": "{q.surface.brand.primary.hover}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Fill.[state]"
+              },
+              "Pressed": {
+                "value": "{q.surface.brand.primary.pressed}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Fill.[state]"
+              },
+              "Focus": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Fill.[state]"
+              },
+              "Disabled": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Fill.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Fill.[state]"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              },
+              "Error": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Fill.[state]"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Background.Selected.Stroke.ReadOnly"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.stroke.brand.beta.rest}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.brand.beta.hover}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.brand.beta.pressed}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.brand.beta.rest}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.disabled.beta}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.readonly}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Icon.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Icon.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Icon.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Icon.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Icon.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "also applies to indeterminate",
+                "oldPath": "Forms.Checkbox.Control.Icon.Selected.Fill.ReadOnly"
+              }
+            },
+
+            "Inactive": {
+              "Rest": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.surface.none}",
+                "type": "color",
+                "oldPath": "Forms.Checkbox.Control.Icon.Unselected.Fill.Error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Radio": {
+      "Control": {
+        "Container": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Fill.[state]"
+              },
+              "Hover": {
+                "value": "{q.surface.brand.primary.hover}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Fill.[state]"
+              },
+              "Pressed": {
+                "value": "{q.surface.brand.primary.pressed}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Fill.[state]"
+              },
+              "Focus": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Fill.[state]"
+              },
+              "Disabled": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Fill.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "description": "Also applies to indeterminate",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Fill.[state]"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              },
+              "Error": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "description": "",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Fill.[state]"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Selected.Stroke.ReadOnly"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.stroke.brand.beta.rest}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.brand.beta.hover}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.brand.beta.pressed}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.brand.beta.rest}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.disabled.beta}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.readonly}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Background.Unselected.Stroke.Error"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.inverted}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Slider": {
+      "Thumb": {
+        "BackgroundColor": {
+          "Rest": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.Rest"
+          },
+          "Hover": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.Hover"
+          },
+          "Pressed": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.Pressed"
+          },
+          "Focus": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.Focus"
+          },
+          "Disabled": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.Disabled"
+          },
+          "ReadOnly": {
+            "value": "{q.surface.default}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.ReadOnly"
+          },
+          "Error": {
+            "value": "{q.surface.error}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Thumb.Fill.Error"
+          }
+        },
+        "BorderColor": {
+          "Rest": {
+            "value": "{q.stroke.brand.beta.rest}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.Rest"
+          },
+          "Hover": {
+            "value": "{q.stroke.brand.beta.hover}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.Hover"
+          },
+          "Pressed": {
+            "value": "{q.stroke.brand.beta.pressed}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.Pressed"
+          },
+          "Focus": {
+            "value": "{q.stroke.brand.beta.rest}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.Focus"
+          },
+          "Disabled": {
+            "value": "{q.stroke.disabled.beta}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.Disabled"
+          },
+          "ReadOnly": {
+            "value": "{q.stroke.readonly}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.ReadOnly"
+          },
+          "Error": {
+            "value": "{q.stroke.error}",
+            "type": "color",
+            "description": "Figma Only! Do not apply on codes comps. Use <Border> instead.",
+            "oldPath": "Forms.Slider.Thumb.Stroke.Error"
+          }
+        }
+      },
+      "Track": {
+        "BorderColor": {
+          "Default": {
+            "Active": {
+              "value": "{q.content.onbrand.beta.rest}",
+              "type": "color",
+              "oldPath": "Forms.Slider.Track.Stroke.Active.Default"
+            },
+            "Inactive": {
+              "value": "{q.surface.brand.secondary.rest}",
+              "type": "color",
+              "oldPath": "Forms.Slider.Track.Stroke.Inactive.Default"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{q.content.ondisabled.alpha}",
+              "type": "color",
+              "oldPath": "Forms.Slider.Track.Stroke.Active.Mute"
+            },
+            "Inactive": {
+              "value": "{q.surface.disabled.alpha}",
+              "type": "color",
+              "oldPath": "Forms.Slider.Track.Stroke.Inactive.Mute"
+            }
+          }
+        }
+      },
+      "TickMark": {
+        "BackgroundColor": {
+          "Default": {
+            "Active": {
+              "value": "{q.surface.default}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Forms.Slider.TickMark.BackgroundColor.Default.Active}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{Forms.Slider.TickMark.BackgroundColor.Default.Active}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Forms.Slider.TickMark.BackgroundColor.Default.Active}",
+              "type": "color"
+            }
+          }
+        },
+        "BorderColor": {
+          "Default": {
+            "Active": {
+              "value": "{q.content.onbrand.beta.rest}",
+              "type": "color",
+              "oldPath": "Forms.Slider.TickMark.Stroke.Active.Default"
+            },
+            "Inactive": {
+              "value": "{q.surface.brand.secondary.rest}",
+              "type": "color",
+              "oldPath": "Forms.Slider.TickMark.Stroke.Inactive.Default"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{q.content.ondisabled.alpha}",
+              "type": "color",
+              "oldPath": "Forms.Slider.TickMark.Stroke.Active.Mute"
+            },
+            "Inactive": {
+              "value": "{q.surface.disabled.alpha}",
+              "type": "color",
+              "oldPath": "Forms.Slider.TickMark.Stroke.Inactive.Mute"
+            }
+          }
+        }
+      },
+      "Legend": {
+        "TextColor": {
+          "Default": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Legend.Color.Default"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "oldPath": "Forms.Slider.Legend.Color.Disabled"
+          }
+        }
+      }
+    },
+    "ToggleSwitch": {
+      "Control": {
+        "Container": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.surface.brand.encourage.rest}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.surface.brand.encourage.hover}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.surface.brand.encourage.pressed}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.surface.brand.encourage.rest}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.gamma.rest}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.gamma.hover}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.gamma.pressed}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.gamma.rest}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            }
+          }
+        },
+        "AY11Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            }
+          }
+        },
+
+        "Knob": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Fill.[state]"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Fill.[state]"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Fill.[state]"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Fill.[state]"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Fill.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Fill.[state]"
+              }
+            },
+
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Fill.[state]"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Fill.[state]"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Fill.[state]"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Fill.[state]"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Fill.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Fill.[state]"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Stroke.[state]"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Stroke.[state]"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Stroke.[state]"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Stroke.[state]"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Stroke.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Selected.Stroke.[state]"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Stroke.[state]"
+              },
+              "Hover": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Stroke.[state]"
+              },
+              "Pressed": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Stroke.[state]"
+              },
+              "Focus": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Stroke.[state]"
+              },
+              "Disabled": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Stroke.[state]"
+              },
+              "ReadOnly": {
+                "value": "{q.stroke.none}",
+                "type": "color",
+                "oldPath": "Forms.ToggleSwitch.Control.Knob.Surface.Unselected.Stroke.[state]"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Actions": {
+    "Menu": {
+      "MenuSection": {
+        "SectionTitle": {
+          "TextColor": {
+            "value": "{q.content.ondefault.alpha}",
+            "type": "color",
+            "description": "Apply on section title",
+            "oldPath": "Action.Menu.MenuSection.SectionTitle"
+          }
+        }
+      },
+      "Container": {
+        "BackgroundColor": {
+          "value": "{q.background.level_2}",
+          "type": "color",
+          "oldPath": "Action.Menu.Surface.Color"
+        }
+      }
+    }
+  },
+  "Feedback": {
+    "Loader": {
+      "Background": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Background}",
+            "type": "color",
+            "oldPath": "None"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Background}",
+            "type": "color",
+            "oldPath": "None"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Foreground}",
+            "type": "color",
+            "oldPath": "None"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Foreground}",
+            "type": "color",
+            "oldPath": "None"
+          }
+        }
+      }
+    },
+    "Counter": {
+      "Container": {
+        "BorderColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.SurfaceStroke}",
+            "type": "color",
+            "oldPath": "None"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.SurfaceStroke}",
+            "type": "color",
+            "oldPath": "None"
+          },
+          "Error": {
+            "value": "{Feedback.Error.SurfaceStroke}",
+            "type": "color",
+            "oldPath": "None"
+          }
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Text",
+            "type": "color",
+            "oldPath": "None (used semantic before)"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Text",
+            "type": "color",
+            "oldPath": "None (used semantic before)"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Text",
+            "type": "color",
+            "oldPath": "None (used semantic before)"
+          }
+        }
+      }
+    },
+    "Tooltip": {
+      "ContentCol": {
+        "BackgroundColor": {
+          "value": "{q.surface.inverted}",
+          "type": "color",
+          "oldPath": "Feedback.Tooltip.SurfaceFill"
+        }
+      },
+      "Nose": {
+        "BackgroundColor": {
+          "value": "{Feedback.Tooltip.ContentCol.BackgroundColor}",
+          "type": "color",
+          "oldPath": "None"
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "value": "{q.content.oninverted.alpha}",
+          "type": "color",
+          "oldPath": "Feedback.Tooltip.Content"
+        }
+      }
+    },
+    "Dialog": {
+      "DialogCombined": {
+        "Container": {
+          "BackgroundColor": {
+            "value": "{q.background.level_2}",
+            "type": "color",
+            "oldPath": "Feedback.Dialog.Surface.Color"
+          }
+        }
+      },
+
+      "DialogHeader": {
+        "Title": {
+          "TextColor": {
+            "value": "{UI.Headline.Default}",
+            "type": "color",
+            "oldPath": "None (used UI semantic before)"
+          }
+        }
+      },
+
+      "DialogContent": {
+        "Text": {
+          "TextColor": {
+            "value": "{UI.Paragraph.Default}",
+            "type": "color",
+            "oldPath": "None (used UI semantic before)"
+          }
+        }
+      }
+    }
+  },
+
+  "UI": {
+    "Divider": {
+      "BorderColor": {
+        "value": "{core.color.coolgray.800.opa30}",
+        "type": "color",
+        "oldPath": "UI.Divider.Stroke"
+      }
+    },
+    "Blanket": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{q.surface.blanket}",
+          "type": "color",
+          "description": "Apply on blanket component",
+          "oldPath": "UI.Blanket.Surface"
+        }
+      }
+    }
+  },
+  "Navigation": {
+    "TabBar": {
+      "Tab": {
+        "HighlightLine": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": " Apply as fill on HightlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Unselected.Disabled"
+              }
+            }
+          },
+          "Opacity": {
+            "Active": {
+              "Rest": {
+                "value": "1",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Rest"
+              },
+              "Hover": {
+                "value": "1",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "1",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Rest"
+              },
+              "Hover": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Hover"
+              },
+              "Pressed": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Pressed"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Focus"
+              },
+              "Disabled": {
+                "value": "0",
+                "type": "opacity",
+                "description": " Controls the opacity of the HighlightLine",
+                "oldPath": "Navigation.TabBar.Tab.HighlightLine.Opacity.Unselected.Disabled"
+              }
+            }
+          }
+        },
+        "Label": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Label.unselected.Disabled"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Pressed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Selected.Focus"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Rest"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Hover"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Presssed"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Focus"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>",
+                "oldPath": "Navigation.TabBar.Tab.Icon.Unelected.Disabled"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1457 @@
+{
+  "Forms": {
+    "Checkbox": {
+      "Control": {
+        "Container": {
+          "Border": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                }
+              }
+            },
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                }
+              }
+            },
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Checkbox.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "Forms.Checkbox.Control.Unselected.[state]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Radio": {
+      "Control": {
+        "Container": {
+          "Border": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              }
+            },
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              }
+            },
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border",
+                  "oldPath": "None"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "Slider": {
+      "Thumb": {
+        "Border": {
+          "Rest": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.Rest}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.Rest}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          },
+          "Hover": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.Hover}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.Hover}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.Pressed}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.Pressed}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          },
+          "Focus": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.Focus}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.Focus}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.Disabled}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.Disabled}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          },
+          "ReadOnly": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.ReadOnly}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.ReadOnly}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          },
+          "Error": {
+            "value": {
+              "color": "{Forms.Slider.Thumb.BorderColor.Error}",
+              "width": "{Forms.Slider.Thumb.BorderWidth.Error}",
+              "style": "solid"
+            },
+            "type": "border",
+            "description": "Coded comps only! Use BorderWidth and BorderColor instead",
+            "oldPath": "Forms.Slider.Thumb.Border.[state]"
+          }
+        }
+      },
+      "Track": {
+        "Border": {
+          "Default": {
+            "Active": {
+              "value": {
+                "color": "{Forms.Slider.Track.BorderColor.Default.Active.}",
+                "width": "{Forms.Slider.Track.BorderWidth.Default.Active.}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.Track.Border.Active.Default"
+            },
+            "Inactive": {
+              "value": {
+                "color": "{Forms.Slider.Track.BorderColor.Default.Inactive.}",
+                "width": "{Forms.Slider.Track.BorderWidth.Default.Inactive.}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.Track.Border.Inactive.Default"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": {
+                "color": "{Forms.Slider.Track.BorderColor.Mute.Active.}",
+                "width": "{Forms.Slider.Track.BorderWidth.Mute.Active.}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.Track.Border.Active.Mute"
+            },
+            "Inactive": {
+              "value": {
+                "color": "{Forms.Slider.Track.BorderColor.Mute.Inactive.}",
+                "width": "{Forms.Slider.Track.BorderWidth.Mute.Inactive.}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.Track.Border.Inactive.Mute"
+            }
+          }
+        }
+      },
+      "TickMark": {
+        "Border": {
+          "Default": {
+            "Active": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.BorderColor.Default.Active}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.TickMark.Border.Active.Default"
+            },
+            "Inactive": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.BorderColor.Default.Inactive}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Inactive}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.TickMark.Border.Inactive.Default"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.BorderColor.Mute.Active}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Mute.Active}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.TickMark.Border.Active.Mute"
+            },
+            "Inactive": {
+              "value": {
+                "color": "{Forms.Slider.TickMark.BorderColor.Mute.Inactive}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Mute.Inactive}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Forms.Slider.TickMark.Border.Inactive.Mute"
+            }
+          }
+        }
+      }
+    },
+    "ToggleSwitch": {
+      "Control": {
+        "Container": {
+          "Border": {
+            "Active": {
+              "Rest": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Active.Rest}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Active.Rest}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Hover": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Active.Hover}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Active.Hover}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Pressed": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Active.Pressed}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Active.Pressed}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Focus": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Active.Focus}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Active.Focus}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Disabled": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Active.Disabled}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Active.Disabled}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "ReadOnly": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Active.ReadOnly}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Active.ReadOnly}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Inactive.Rest}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Inactive.Rest}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Hover": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Inactive.Hover}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Inactive.Hover}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Pressed": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Inactive.Pressed}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Inactive.Pressed}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Focus": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Inactive.Focus}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Inactive.Focus}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Disabled": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Inactive.Disabled}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Inactive.Disabled}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "ReadOnly": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Container.BorderColor.Inactive.ReadOnly}",
+                  "width": "{Forms.ToggleSwitch.Control.Container.BorderWidth.Inactive.ReadOnly}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              }
+            }
+          }
+        },
+
+        "Knob": {
+          "Border": {
+            "Active": {
+              "Rest": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Active.Rest}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Hover": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Hover}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Active.Hover}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Pressed": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Pressed}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Active.Pressed}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Focus": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Focus}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Active.Focus}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Disabled": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Disabled}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Active.Disabled}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "ReadOnly": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.ReadOnly}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Active.ReadOnly}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Inactive.Rest}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Hover": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Hover}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Inactive.Hover}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Pressed": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Pressed}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Inactive.Pressed}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Focus": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Focus}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Inactive.Focus}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "Disabled": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Disabled}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Inactive.Disabled}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              },
+              "ReadOnly": {
+                "value": {
+                  "color": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.ReadOnly}",
+                  "width": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.Inactive.ReadOnly}",
+                  "style": "solid"
+                },
+                "type": "border",
+                "oldPath": "None"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "Feedback": {
+    "Loader": {
+      "Background": {
+        "Border": {
+          "SM": {
+            "Default": {
+              "value": {
+                "color": "{Feedback.Loader.Background.BorderColor.Default}",
+                "width": "{Feedback.Loader.Background.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.SM.Background.Default"
+            },
+            "Inverted": {
+              "value": {
+                "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
+                "width": "{Feedback.Loader.Background.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.SM.Background.Inverted"
+            }
+          },
+          "MD": {
+            "Default": {
+              "value": {
+                "color": "{Feedback.Loader.Background.BorderColor.Default}",
+                "width": "{Feedback.Loader.Background.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.MD.Background.Default"
+            },
+            "Inverted": {
+              "value": {
+                "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
+                "width": "{Feedback.Loader.Background.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.MD.Background.Inverted"
+            }
+          },
+          "LG": {
+            "Default": {
+              "value": {
+                "color": "{Feedback.Loader.Background.BorderColor.Default}",
+                "width": "{Feedback.Loader.Background.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.LG.Background.Default"
+            },
+            "Inverted": {
+              "value": {
+                "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
+                "width": "{Feedback.Loader.Background.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.LG.Background.Inverted"
+            }
+          }
+        }
+      },
+
+      "Foreground": {
+        "Border": {
+          "SM": {
+            "Default": {
+              "value": {
+                "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
+                "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.SM.Foreground.Default"
+            },
+            "Inverted": {
+              "value": {
+                "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
+                "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.SM.Foreground.Inverted"
+            }
+          },
+          "MD": {
+            "Default": {
+              "value": {
+                "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
+                "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.MD.Foreground.Default"
+            },
+            "Inverted": {
+              "value": {
+                "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
+                "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.MD.Foreground.Inverted"
+            }
+          },
+          "LG": {
+            "Default": {
+              "value": {
+                "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
+                "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.LG.Foreground.Default"
+            },
+            "Inverted": {
+              "value": {
+                "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
+                "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Loader.LG.Foreground.Inverted"
+            }
+          }
+        }
+      }
+    },
+
+    "Counter": {
+      "Container": {
+        "Border": {
+          "SM": {
+            "Neutral": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+                "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.SM.Border.Neutral"
+            },
+            "Warning": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+                "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.SM.Border.Warning"
+            },
+            "Error": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Error}",
+                "width": "{Feedback.Counter.Container.BorderWidth.SM}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.SM.Border.Error"
+            }
+          },
+
+          "MD": {
+            "Neutral": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+                "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.MD.Border.Neutral"
+            },
+            "Warning": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+                "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.MD.Border.Warning"
+            },
+            "Error": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Error}",
+                "width": "{Feedback.Counter.Container.BorderWidth.MD}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.MD.Border.Error"
+            }
+          },
+
+          "LG": {
+            "Neutral": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Neutral}",
+                "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.LG.Border.Neutral"
+            },
+            "Warning": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Warning}",
+                "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.LG.Border.Warning"
+            },
+            "Error": {
+              "value": {
+                "color": "{Feedback.Counter.Container.BorderColor.Error}",
+                "width": "{Feedback.Counter.Container.BorderWidth.LG}",
+                "style": "solid"
+              },
+              "type": "border",
+              "oldPath": "Feedback.Counter.LG.Border.Error"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "UI": {
+    "Divider": {
+      "Border": {
+        "value": {
+          "color": "{UI.Divider.BorderColor}",
+          "width": "{UI.Divider.BorderWidth}"
+        },
+        "type": "border",
+        "oldPath": "UI.Divider.Border"
+      }
+    }
+  }
+}
