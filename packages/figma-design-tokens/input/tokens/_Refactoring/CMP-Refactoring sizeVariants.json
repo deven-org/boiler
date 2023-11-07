@@ -1,0 +1,274 @@
+{
+  "Action": {
+    "TextButton": {
+      "Icon": {
+        "SizeVariant": {
+          "XS": {
+            "value": "XXS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextButton.XS.Icon"
+          },
+          "SM": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextButton.SM.Icon"
+          },
+          "MD": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextButton.MD.Icon"
+          },
+          "LG": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextButton.LG.Icon"
+          },
+          "XL": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextButton.XL.Icon"
+          }
+        }
+      }
+    },
+    "IconButton": {
+      "Icon": {
+        "SizeVariant": {
+          "XS": {
+            "value": "XXS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconButton.XS.Icon"
+          },
+          "SM": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconButton.SM.Icon"
+          },
+          "MD": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconButton.MD.Icon"
+          },
+          "LG": {
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconButton.LG.Icon"
+          },
+          "XL": {
+            "value": "LG",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconButton.XL.Icon"
+          }
+        }
+      }
+    },
+    "IconDropdown": {
+      "Icon": {
+        "SizeVariant": {
+          "XS": {
+            "value": "XXS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.XS.Icon"
+          },
+          "SM": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.SM.Icon"
+          },
+          "MD": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.MD.Icon"
+          },
+          "LG": {
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.LG.Icon"
+          },
+          "XL": {
+            "value": "LG",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.XL.Icon"
+          }
+        }
+      },
+      "Chevron": {
+        "SizeVariant": {
+          "XS": {
+            "value": "XXS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.XS.Chevron"
+          },
+          "SM": {
+            "value": "XXS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.SM.Chevron"
+          },
+          "MD": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.MD.Chevron"
+          },
+          "LG": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.LG.Chevron"
+          },
+          "XL": {
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.IconDropdown.XL.Chevron"
+          }
+        }
+      }
+    },
+    "TextDropdown": {
+      "Chevron": {
+        "SizeVariant": {
+          "XS": {
+            "value": "XXS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextDropdown.XS.Chevron"
+          },
+          "SM": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextDropdown.SM.Chevron"
+          },
+          "MD": {
+            "value": "XS",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextDropdown.MD.Chevron"
+          },
+          "LG": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextDropdown.LG.Chevron"
+          },
+          "XL": {
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.TextDropdown.XL.Chevron"
+          }
+        }
+      }
+    },
+    "StepperButton": {
+      "Icon": {
+        "SizeVariant": {
+          "SM": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.StepperButton.SM.Icon"
+          },
+          "MD": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.StepperButton.MD.Icon"
+          },
+          "LG": {
+            "value": "MD",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.StepperButton.LG.Icon"
+          }
+        }
+      }
+    },
+    "Menu": {
+      "MenuItem": {
+        "Icon": {
+          "SizeVariant": {
+            "value": "SM",
+            "type": "componentConfig",
+            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+            "oldPath": "SizeVariant.Action.Menu.MenuItem.Icon"
+          }
+        }
+      }
+    }
+  },
+  "Forms": {
+    "Checkbox": {
+      "Control": {
+        "Icon": {
+          "SizeVariant": {
+            "SM": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+              "oldPath": "SizeVariant.Forms.Checkbox.SM.Control.Icon"
+            },
+            "MD": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+              "oldPath": "SizeVariant.Forms.Checkbox.MD.Control.Icon"
+            },
+            "LG": {
+              "value": "MD",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+              "oldPath": "SizeVariant.Forms.Checkbox.LG.Control.Icon"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Navigation": {
+    "TabBar": {
+      "Tab": {
+        "Icon": {
+          "SizeVariant": {
+            "SM": {
+              "value": "XS",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+              "oldPath": "SizeVariant.Navigation.TabBar.Tab.SM.Icon"
+            },
+            "MD": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+              "oldPath": "SizeVariant.Navigation.TabBar.Tab.MD.Icon"
+            },
+            "LG": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)",
+              "oldPath": "SizeVariant.Navigation.TabBar.Tab.LG.Icon"
+            }
+          }
+        }
+      }
+    }
+  }
+}
