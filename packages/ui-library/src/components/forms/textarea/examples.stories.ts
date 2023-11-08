@@ -16,7 +16,7 @@ const defaultParams: BlrTextareaType = {
   rows: 5,
   shouldFocus: false,
 
-  placeholder: 'Type your message here ..',
+  placeholder: 'Type your message here...',
   required: false,
   disabled: false,
   readonly: false,
@@ -28,7 +28,6 @@ const defaultParams: BlrTextareaType = {
   errorIcon: 'blrInfo',
   hasError: false,
   errorMessage: "OMG it's an error",
-  errorIcon: 'Blr360',
 
   isResizeable: true,
 };
@@ -131,6 +130,7 @@ export const Example1 = () => {
     </div>
   `;
 };
+
 Example1.parameters = {
   backgrounds: {
     default: 'light',
@@ -190,6 +190,7 @@ export const Example4 = () => {
     </div>
   `;
 };
+
 Example4.parameters = {
   backgrounds: {
     default: 'light',
@@ -257,14 +258,16 @@ export const Example2 = () =>
       </div>
     </div>
   `;
-(Example2.parameters = {
+
+Example2.parameters = {
   backgrounds: {
     default: 'dark',
   },
-}),
-  (Example2.storyName = 'Textarea Examples Dark Theme');
+};
 
-export const InteractivePlaceholder = ({ placeholder }) =>
+Example2.storyName = 'Textarea Examples Dark Theme';
+
+export const InteractivePlaceholder = ({ placeholder }: { placeholder: string }) =>
   html`
     ${fontStyle}
     ${BlrTextareaRenderFunction({
@@ -273,7 +276,7 @@ export const InteractivePlaceholder = ({ placeholder }) =>
       value: '',
     })}
   `;
-InteractivePlaceholder.storyName = 'Interactive Placeholder';
+
 InteractivePlaceholder.args = {
   placeholder: defaultParams.placeholder,
 };
