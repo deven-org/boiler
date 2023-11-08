@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { html } from 'lit-html';
+import { html } from 'lit';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 import { FormSizes } from '../../globals/constants';
 import './index';
@@ -1042,3 +1042,37 @@ MeinBeispiel12.parameters = {
   },
 };
 MeinBeispiel12.storyName = 'MeinBeispiel12';
+
+//Interaktive
+export const Interactive = ({ onClick }: { onClick: () => void }) => {
+  let value = '';
+  const handleInput = (event) => {
+    value = (event.target as HTMLTextAreaElement).value;
+    console.log(value);
+  };
+
+  const handleClick = () => {
+    console.log('handleClick', value);
+    args.hasError = !value.trim();
+    console.log('trim', !value.trim(), args.hasError);
+  };
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          value: value,
+          hasError: args.hasError,
+          onChange: handleInput,
+        })}
+        <button @click=${handleClick}>Submit</button>
+      </div>
+    </div>
+  `;
+};
+Interactive.args = {
+  onClick: () => console.log('onClick'),
+};
+
+Interactive.storyName = 'Interactive';
