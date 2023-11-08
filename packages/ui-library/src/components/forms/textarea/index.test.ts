@@ -90,7 +90,7 @@ describe('blr-textarea', () => {
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
-    const formHint = querySelectorDeep('blr-form-hint', textarea?.getRootNode() as HTMLElement);
+    const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
     const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
 

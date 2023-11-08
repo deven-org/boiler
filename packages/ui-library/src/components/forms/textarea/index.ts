@@ -7,7 +7,7 @@ import { BlrFormLabelRenderFunction } from '../../internal-components/form-label
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { BlrCounterRenderFunction } from '../../internal-components/counter';
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
@@ -155,7 +155,7 @@ ${this.value}
         >
         <div class="${textareaInfoContainer}">
           ${this.showHint || this.hasError
-            ? BlrFormInfoRenderFunction({
+            ? BlrFormCaptionGroupRenderFunction({
                 theme: this.theme,
                 size: this.size,
                 showHint: this.showHint,

@@ -12,7 +12,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 
 const TAG_NAME = 'blr-number-input';
 
@@ -210,7 +210,7 @@ export class BlrNumberInput extends LitElement {
           : nothing}
       </div>
       ${this.showHint || this.hasError
-        ? BlrFormInfoRenderFunction({
+        ? BlrFormCaptionGroupRenderFunction({
             theme: this.theme,
             size: this.size,
             showHint: this.showHint,

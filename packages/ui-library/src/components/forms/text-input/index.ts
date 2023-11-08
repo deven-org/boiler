@@ -14,7 +14,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 
 const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
@@ -158,7 +158,7 @@ export class BlrTextInput extends LitElement {
             : nothing}
         </div>
         ${this.showHint || this.hasError
-          ? html`${BlrFormInfoRenderFunction({
+          ? html`${BlrFormCaptionGroupRenderFunction({
               theme: this.theme,
               size: this.size,
               showHint: this.showHint,

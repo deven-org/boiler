@@ -8,10 +8,10 @@ import { FormSizesType } from '../../../globals/types';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { checkboxDark, checkboxLight } from '../../../foundation/component-tokens/checkbox.css';
-import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 
 const TAG_NAME = 'blr-checkbox';
 
@@ -32,7 +32,7 @@ export class BlrCheckbox extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorIcon?: IconType;
-  @property() showHint?: boolean;
+  @property() showHint = true;
   @property() hintIcon?: IconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
@@ -92,32 +92,20 @@ export class BlrCheckbox extends LitElement {
           ${this.hasLabel
             ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
             : nothing}
-          ${this.showHint
-            ? html`
-                <div class="hint-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.hintMessage,
-                    variant: 'hint',
-                    size: this.size,
-                    icon: this.hintIcon ? this.hintIcon : undefined,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
-          ${this.hasError
-            ? html`
-                <div class="error-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.errorMessage,
-                    variant: 'error',
-                    size: this.size,
-                    icon: this.errorIcon ? this.errorIcon : undefined,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
+          <div class="caption-wrapper">
+            ${this.showHint || this.hasError
+              ? BlrFormCaptionGroupRenderFunction({
+                  theme: this.theme,
+                  size: this.size,
+                  showHint: this.showHint,
+                  hintText: this.hintMessage,
+                  hintIcon: this.hintIcon,
+                  hasError: !!this.hasError,
+                  errorMessage: this.errorMessage,
+                  errorIcon: this.errorIcon,
+                })
+              : nothing}
+          </div>
         </div>
       </div>
     `;

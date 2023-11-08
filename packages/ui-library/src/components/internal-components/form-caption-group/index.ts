@@ -3,11 +3,11 @@ import { html, LitElement, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizesType } from '../../../globals/types';
-import { BlrFormHintRenderFunction } from '../form-hint';
-import { formInfoDark, formInfoLight } from './index.css';
+import { BlrFormCaptionRenderFunction } from './form-caption';
+import { formCaptionGroupDark, formCaptionGroupLight } from './index.css';
 
-@customElement('blr-form-info')
-export class BlrFormInfo extends LitElement {
+@customElement('blr-form-caption-group')
+export class BlrFormCaption extends LitElement {
   static styles = [];
 
   @property() theme: ThemeType = 'Light';
@@ -21,16 +21,16 @@ export class BlrFormInfo extends LitElement {
   @property() errorIcon?: SizelessIconType = 'blrInfo';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formInfoLight] : [formInfoDark];
+    const dynamicStyles = this.theme === 'Light' ? [formCaptionGroupLight] : [formCaptionGroupDark];
 
     return html`
       <style>
         ${dynamicStyles}
       </style>
-      <div class="blr-form-info-container ${this.size}">
+      <div class="blr-form-caption-group-container ${this.size}">
         ${this.showHint
           ? html`
-              ${BlrFormHintRenderFunction({
+              ${BlrFormCaptionRenderFunction({
                 message: this.hintText,
                 variant: 'hint',
                 icon: this.hintIcon,
@@ -41,7 +41,7 @@ export class BlrFormInfo extends LitElement {
           : nothing}
         ${this.hasError
           ? html`
-              ${BlrFormHintRenderFunction({
+              ${BlrFormCaptionRenderFunction({
                 message: this.errorMessage,
                 variant: 'error',
                 icon: this.errorIcon,
@@ -55,9 +55,9 @@ export class BlrFormInfo extends LitElement {
   }
 }
 
-export type BlrFormInfoType = Omit<BlrFormInfo, keyof LitElement>;
+export type BlrFormCaptionGroupType = Omit<BlrFormCaption, keyof LitElement>;
 
-export const BlrFormInfoRenderFunction = ({
+export const BlrFormCaptionGroupRenderFunction = ({
   theme,
   size,
   showHint,
@@ -66,7 +66,7 @@ export const BlrFormInfoRenderFunction = ({
   hasError,
   errorMessage,
   errorIcon,
-}: BlrFormInfoType) => html`<blr-form-info
+}: BlrFormCaptionGroupType) => html`<blr-form-caption-group
   .theme=${theme}
   .size=${size}
   .showHint=${showHint}
@@ -75,4 +75,4 @@ export const BlrFormInfoRenderFunction = ({
   .hasError=${hasError}
   .errorMessage=${errorMessage}
   .errorIcon=${errorIcon}
-></blr-form-info>`;
+></blr-form-caption-group>`;

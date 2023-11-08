@@ -220,7 +220,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       word-break: break-all;
     }
 
-    .hint-wrapper {
+    .caption-wrapper {
       display: flex;
       flex-direction: column;
 
@@ -237,7 +237,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
     }
 
-    .blr-form-hint {
+    .blr-form-caption {
       color: ${Caption.Hint};
 
       &.error {
@@ -249,7 +249,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${SM.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${SM.CaptionComponent.IconWrapper.Padding};
+          padding-top: ${SM.CaptionComponent.IconWrapper.PaddingTop};
         }
 
         .blr-caption-text {
@@ -266,7 +266,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${MD.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${MD.CaptionComponent.IconWrapper.Padding};
+          padding-top: ${MD.CaptionComponent.IconWrapper.PaddingTop};
         }
 
         .blr-caption-text {
@@ -283,7 +283,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${LG.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${LG.CaptionComponent.IconWrapper.Padding};
+          padding-top: ${LG.CaptionComponent.IconWrapper.PaddingTop};
         }
 
         .blr-caption-text {

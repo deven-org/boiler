@@ -7,7 +7,7 @@ import { BlrFormLabelInline } from '../../internal-components/form-label/form-la
 import { FormSizesType, IconPositionVariant } from '../../../globals/types';
 
 import { styleCustom } from './index.css';
-import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { toggleSwitchDark, toggleSwitchLight } from '../../../foundation/component-tokens/toggle-switch.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
@@ -98,7 +98,7 @@ export class BlrToggleSwitch extends LitElement {
             : nothing}
           ${this.hintText
             ? html`
-                ${BlrFormHintRenderFunction({
+                ${BlrFormCaptionRenderFunction({
                   message: this.hintText,
                   variant: 'hint',
                   icon: this.hintIcon,

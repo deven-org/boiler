@@ -14,7 +14,7 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 
 type Option = {
   value: string;
@@ -140,7 +140,7 @@ export class BlrSelect extends LitElement {
           ${this.renderTrailingIcon(iconClasses)}
         </div>
         ${this.showHint || this.hasError
-          ? BlrFormInfoRenderFunction({
+          ? BlrFormCaptionGroupRenderFunction({
               theme: this.theme,
               size: this.size,
               showHint: !!this.showHint,

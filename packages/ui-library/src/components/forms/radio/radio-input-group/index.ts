@@ -6,7 +6,7 @@ import { formDark, formLight } from '../../../../foundation/semantic-tokens/form
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../../../globals/types';
 import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
-import { BlrFormHintRenderFunction } from '../../../internal-components/form-hint';
+import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
@@ -112,7 +112,7 @@ export class BlrRadioGroup extends LitElement {
         ? html` <div class="caption-group ${classes}">
             ${this.showHint
               ? html`
-                  ${BlrFormHintRenderFunction({
+                  ${BlrFormCaptionRenderFunction({
                     message: this.groupHintMessage || '',
                     variant: 'hint',
                     size: this.size,
@@ -123,7 +123,7 @@ export class BlrRadioGroup extends LitElement {
               : nothing}
             ${this.hasError
               ? html`
-                  ${BlrFormHintRenderFunction({
+                  ${BlrFormCaptionRenderFunction({
                     message: this.groupErrorMessage || '',
                     variant: 'error',
                     size: this.size,

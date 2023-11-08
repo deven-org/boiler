@@ -1,14 +1,10 @@
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { CounterVariants, FormSizes } from '../../../globals/constants';
-import { BlrFormInfoRenderFunction, BlrFormInfoType } from './index';
+import { FormSizes } from '../../../globals/constants';
+import { BlrFormCaptionGroupRenderFunction, BlrFormCaptionGroupType } from './index';
 
 export default {
-  title: 'Design System/Web Components/Internal Components/FormInfo',
+  title: 'Design System/Web Components/Internal Components/FormCaptionGroup',
   argTypes: {
-    variant: {
-      options: CounterVariants,
-      control: { type: 'select' },
-    },
     size: {
       options: FormSizes,
       control: { type: 'select' },
@@ -23,7 +19,7 @@ export default {
   },
 };
 
-export const BlrFormInfo = ({
+export const BlrFormCaptionGroup = ({
   theme,
   size,
   showHint,
@@ -32,12 +28,12 @@ export const BlrFormInfo = ({
   hasError,
   errorMessage,
   errorIcon,
-}: BlrFormInfoType) =>
-  BlrFormInfoRenderFunction({ theme, size, showHint, hintText, hintIcon, hasError, errorMessage, errorIcon });
+}: BlrFormCaptionGroupType) =>
+  BlrFormCaptionGroupRenderFunction({ theme, size, showHint, hintText, hintIcon, hasError, errorMessage, errorIcon });
 
-BlrFormInfo.storyName = 'FormInfo';
+BlrFormCaptionGroup.storyName = 'FormCaptionGroup';
 
-const args: BlrFormInfoType = {
+const args: BlrFormCaptionGroupType = {
   theme: 'Light',
   size: 'md',
   showHint: true,
@@ -48,4 +44,4 @@ const args: BlrFormInfoType = {
   errorIcon: 'blrInfo',
 };
 
-BlrFormInfo.args = args;
+BlrFormCaptionGroup.args = args;

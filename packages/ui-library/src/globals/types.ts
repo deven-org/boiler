@@ -8,7 +8,7 @@ import {
   DividerVariations,
   ActionVariants,
   FeedbackVariants,
-  HintVariants,
+  CaptionVariants,
   CounterVariants,
   TabVariants,
   TabContentVariants,
@@ -24,7 +24,7 @@ export type SizesType = (typeof Sizes)[number];
 
 export type ActionVariantType = (typeof ActionVariants)[number];
 export type FeedbackVariantType = (typeof FeedbackVariants)[number];
-export type HintVariantType = (typeof HintVariants)[number];
+export type CaptionVariantType = (typeof CaptionVariants)[number];
 export type CounterVariantType = (typeof CounterVariants)[number];
 
 export type ActionSizesType = (typeof ActionSizes)[number];

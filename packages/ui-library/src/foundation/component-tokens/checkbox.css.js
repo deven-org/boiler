@@ -23,9 +23,9 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
         .label-wrapper {
           display: flex;
           flex-wrap: wrap;
-          .hint-wrapper, .error-wrapper {
+          .caption-wrapper {
             flex-basis: 100%;
-            .blr-form-hint {
+            .blr-form-caption {
               gap: 0px;
             }
           }
