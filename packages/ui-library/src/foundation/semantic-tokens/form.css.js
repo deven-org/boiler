@@ -250,6 +250,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
         .blr-icon {
           padding-top: ${SM.CaptionComponent.IconWrapper.PaddingTop};
+          height: ${SM.CaptionComponent.IconDimension};
+          width: ${SM.CaptionComponent.IconDimension};
         }
 
         .blr-caption-text {
@@ -267,6 +269,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
         .blr-icon {
           padding-top: ${MD.CaptionComponent.IconWrapper.PaddingTop};
+          height: ${MD.CaptionComponent.IconDimension};
+          width: ${MD.CaptionComponent.IconDimension};
         }
 
         .blr-caption-text {
@@ -284,6 +288,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
         .blr-icon {
           padding-top: ${LG.CaptionComponent.IconWrapper.PaddingTop};
+          height: ${LG.CaptionComponent.IconDimension};
+          width: ${LG.CaptionComponent.IconDimension};
         }
 
         .blr-caption-text {
