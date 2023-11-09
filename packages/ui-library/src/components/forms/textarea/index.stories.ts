@@ -19,7 +19,7 @@ export default {
     hintCounter: {
       if: { arg: 'showCounter', eq: true },
     },
-    hintText: {
+    hintMessage: {
       if: { arg: 'showHint', eq: true },
     },
     errorIcon: {
@@ -93,7 +93,7 @@ const args: BlrTextareaType = {
   showCounter: true,
   showHint: true,
   hintIcon: 'blrInfo',
-  hintText: 'Rindfleischetikettierungs',
+  hintMessage: 'Rindfleischetikettierungs',
 
   errorIcon: undefined,
   hasError: false,

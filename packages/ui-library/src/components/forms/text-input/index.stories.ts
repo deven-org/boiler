@@ -24,7 +24,7 @@ export default {
       control: { type: 'select' },
       if: { arg: 'showHint', eq: true },
     },
-    hintText: {
+    hintMessage: {
       if: { arg: 'showHint', eq: true },
     },
     errorIcon: {
@@ -65,7 +65,7 @@ const args: BlrTextInputType = {
   required: false,
   readonly: false,
   showHint: false,
-  hintText: 'This is a hint message',
+  hintMessage: 'This is a hint message',
   hintIcon: 'blrInfo',
   maxLength: 200,
   hasError: false,

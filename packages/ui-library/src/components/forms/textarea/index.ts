@@ -40,7 +40,7 @@ export class BlrTextarea extends LitElement {
   @property() errorIcon?: SizelessIconType = 'blrInfo';
   @property() hint?: string;
   @property() showHint = true;
-  @property() hintText?: string;
+  @property() hintMessage?: string;
   @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() isResizeable?: boolean;
@@ -159,9 +159,9 @@ ${this.value}
                 theme: this.theme,
                 size: this.size,
                 showHint: this.showHint,
-                hintText: this.hintText,
+                hintMessage: this.hintMessage,
                 hintIcon: this.hintIcon,
-                hasError: !!this.hasError,
+                showError: !!this.hasError,
                 errorMessage: this.errorMessage,
                 errorIcon: this.errorIcon,
               })

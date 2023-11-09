@@ -82,9 +82,9 @@ export class BlrRadio extends LitElement {
                   theme: this.theme,
                   size: this.size,
                   showHint: this.showHint,
-                  hintText: this.option.hintMessage,
+                  hintMessage: this.option.hintMessage,
                   hintIcon: this.hintIcon,
-                  hasError: !!this.hasError,
+                  showError: !!this.hasError,
                   errorMessage: this.option.errorMessage,
                   errorIcon: this.errorIcon,
                 })

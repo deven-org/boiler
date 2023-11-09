@@ -37,7 +37,7 @@ export class BlrNumberInput extends LitElement {
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType = 'blrInfoSm';
   @property() showHint = true;
-  @property() hintText?: string;
+  @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() value?: number;
   @property() step?: number;
@@ -214,9 +214,9 @@ export class BlrNumberInput extends LitElement {
             theme: this.theme,
             size: this.size,
             showHint: this.showHint,
-            hintText: this.hintText,
+            hintMessage: this.hintMessage,
             hintIcon: this.hintIcon,
-            hasError: !!this.hasError,
+            showError: !!this.hasError,
             errorMessage: this.errorMessage,
             errorIcon: this.errorIcon,
           })

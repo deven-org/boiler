@@ -144,9 +144,9 @@ export class BlrSelect extends LitElement {
               theme: this.theme,
               size: this.size,
               showHint: !!this.showHint,
-              hintText: this.hintMessage,
+              hintMessage: this.hintMessage,
               hintIcon: this.hintIcon,
-              hasError: !!this.hasError,
+              showError: !!this.hasError,
               errorMessage: this.errorMessage,
               errorIcon: this.errorIcon,
             })

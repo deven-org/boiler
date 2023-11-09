@@ -40,7 +40,7 @@ export class BlrTextInput extends LitElement {
   @property() showInputIcon = true;
   @property() inputIcon: SizelessIconType = 'blr360Sm';
   @property() showHint = true;
-  @property() hintText?: string;
+  @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfoSm';
   @property() errorIcon: SizelessIconType = 'blrInfoSm';
   @property() hasLabel!: boolean;
@@ -162,9 +162,9 @@ export class BlrTextInput extends LitElement {
               theme: this.theme,
               size: this.size,
               showHint: this.showHint,
-              hintText: this.hintText,
+              hintMessage: this.hintMessage,
               hintIcon: this.hintIcon,
-              hasError: !!this.hasError,
+              showError: !!this.hasError,
               errorMessage: this.errorMessage,
               errorIcon: this.errorIcon,
             })}`

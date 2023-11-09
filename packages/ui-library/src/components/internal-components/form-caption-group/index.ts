@@ -14,11 +14,13 @@ export class BlrFormCaption extends LitElement {
 
   @property() size: FormSizesType = 'md';
   @property() showHint = true;
-  @property() hintText?: string;
+  @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType = 'blrInfo';
-  @property() hasError = false;
+  @property() hintArialabel?: string;
+  @property() showError = false;
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType = 'blrInfo';
+  @property() errorArialabel?: string;
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [formCaptionGroupLight] : [formCaptionGroupDark];
@@ -31,15 +33,16 @@ export class BlrFormCaption extends LitElement {
         ${this.showHint
           ? html`
               ${BlrFormCaptionRenderFunction({
-                message: this.hintText,
+                message: this.hintMessage,
                 variant: 'hint',
                 icon: this.hintIcon,
                 size: this.size,
                 theme: this.theme,
+                arialabel: this.hintArialabel,
               })}
             `
           : nothing}
-        ${this.hasError
+        ${this.showError
           ? html`
               ${BlrFormCaptionRenderFunction({
                 message: this.errorMessage,
@@ -47,6 +50,7 @@ export class BlrFormCaption extends LitElement {
                 icon: this.errorIcon,
                 size: this.size,
                 theme: this.theme,
+                arialabel: this.errorArialabel,
               })}
             `
           : nothing}
@@ -61,18 +65,18 @@ export const BlrFormCaptionGroupRenderFunction = ({
   theme,
   size,
   showHint,
-  hintText,
+  hintMessage,
   hintIcon,
-  hasError,
+  showError,
   errorMessage,
   errorIcon,
 }: BlrFormCaptionGroupType) => html`<blr-form-caption-group
   .theme=${theme}
   .size=${size}
   .showHint=${showHint}
-  .hintText=${hintText}
+  .hintMessage=${hintMessage}
   .hintIcon=${hintIcon}
-  .hasError=${hasError}
+  .showError=${showError}
   .errorMessage=${errorMessage}
   .errorIcon=${errorIcon}
 ></blr-form-caption-group>`;

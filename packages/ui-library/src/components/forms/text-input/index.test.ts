@@ -15,7 +15,7 @@ const sampleParams: BlrTextInputType = {
   errorIcon: 'blrInfoLg',
   errorMessage: "OMG it's an error",
   placeholder: 'Type your message here ..',
-  hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  hintMessage: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfoLg',
   showHint: true,
   hasLabel: true,

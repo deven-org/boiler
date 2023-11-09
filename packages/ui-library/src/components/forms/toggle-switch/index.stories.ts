@@ -45,7 +45,7 @@ const args: BlrToggleSwitchType = {
   readonly: false,
   checked: false,
   size: 'md',
-  hintText: 'Field is used for hint',
+  hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   variant: 'leading',
   onChange: logEventType,

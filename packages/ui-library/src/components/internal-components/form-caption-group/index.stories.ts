@@ -23,13 +23,26 @@ export const BlrFormCaptionGroup = ({
   theme,
   size,
   showHint,
-  hintText,
+  hintMessage,
   hintIcon,
-  hasError,
+  hintArialabel,
+  showError,
   errorMessage,
   errorIcon,
+  errorArialabel,
 }: BlrFormCaptionGroupType) =>
-  BlrFormCaptionGroupRenderFunction({ theme, size, showHint, hintText, hintIcon, hasError, errorMessage, errorIcon });
+  BlrFormCaptionGroupRenderFunction({
+    theme,
+    size,
+    showHint,
+    hintMessage,
+    hintIcon,
+    hintArialabel,
+    showError,
+    errorMessage,
+    errorIcon,
+    errorArialabel,
+  });
 
 BlrFormCaptionGroup.storyName = 'FormCaptionGroup';
 
@@ -37,11 +50,13 @@ const args: BlrFormCaptionGroupType = {
   theme: 'Light',
   size: 'md',
   showHint: true,
-  hintText: 'This is a hint',
+  hintMessage: 'This is a hint',
   hintIcon: 'blrInfo',
-  hasError: true,
+  hintArialabel: 'Form Hint',
+  showError: true,
   errorMessage: 'This is an error message',
   errorIcon: 'blrInfo',
+  errorArialabel: 'Form Hint',
 };
 
 BlrFormCaptionGroup.args = args;
