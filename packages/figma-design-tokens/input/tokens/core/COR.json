@@ -4108,7 +4108,7 @@
     },
     "fontFamilies": {
       "sourceSansPro": {
-        "value": "\"Source Sans Pro\"",
+        "value": "Source Sans Pro",
         "type": "fontFamilies",
         "description": "One of many fontfamilies you could add to B01LER "
       }
