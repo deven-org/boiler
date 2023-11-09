@@ -1,3 +1,4 @@
+import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizes } from '../../../globals/constants';
 import { BlrFormCaptionGroupRenderFunction, BlrFormCaptionGroupType } from './index';
@@ -12,6 +13,28 @@ export default {
     theme: {
       options: Themes,
       control: { type: 'select' },
+    },
+    hintIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
+    },
+    hintMessage: {
+      if: { arg: 'showHint', eq: true },
+    },
+    hintArialabel: {
+      if: { arg: 'showHint', eq: true },
+    },
+    errorIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'showError', eq: true },
+    },
+    errorMessage: {
+      if: { arg: 'showError', eq: true },
+    },
+    errorArialabel: {
+      if: { arg: 'showError', eq: true },
     },
   },
   parameters: {
@@ -56,7 +79,7 @@ const args: BlrFormCaptionGroupType = {
   showError: true,
   errorMessage: 'This is an error message',
   errorIcon: 'blrInfo',
-  errorArialabel: 'Form Hint',
+  errorArialabel: 'Form Error',
 };
 
 BlrFormCaptionGroup.args = args;

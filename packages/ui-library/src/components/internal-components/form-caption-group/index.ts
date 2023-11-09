@@ -15,11 +15,11 @@ export class BlrFormCaption extends LitElement {
   @property() size: FormSizesType = 'md';
   @property() showHint = true;
   @property() hintMessage?: string;
-  @property() hintIcon?: SizelessIconType = 'blrInfo';
+  @property() hintIcon?: SizelessIconType;
   @property() hintArialabel?: string;
   @property() showError = false;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType;
   @property() errorArialabel?: string;
 
   protected render() {
