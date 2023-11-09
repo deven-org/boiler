@@ -12,7 +12,7 @@ const config: StorybookConfig = {
 
   previewBody: (body) => `
     ${body}
-    <script>console.log('this build was created on ' + (new Date()).toLocaleString());</script>
+    <script>console.log('this build was created on ${new Date().toLocaleString()}');</script>
   `,
 
   webpackFinal: async (config) => {
