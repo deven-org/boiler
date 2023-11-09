@@ -2,7 +2,6 @@ import { css } from "nested-css-to-flat/lit-css";
 
 export const styleCustom = css`
   .blr-checkbox {
-    background-color: red;
     display: flex;
     align-items: flex-start;
 
