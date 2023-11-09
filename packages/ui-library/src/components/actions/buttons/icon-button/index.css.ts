@@ -12,6 +12,71 @@ export const styleCustom = css`
     justify-content: center;
     display: inline-flex;
     cursor: pointer;
+
+    &.xs {
+      padding: ${IconButton.XS.Padding};
+    }
+
+    &.sm {
+      padding: ${IconButton.SM.Padding};
+    }
+
+    &.md {
+      padding: ${IconButton.MD.Padding};
+    }
+
+    &.lg {
+      padding: ${IconButton.LG.Padding};
+    }
+
+    &.xl {
+      padding: ${IconButton.XL.Padding};
+    }
+
+    &.disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+
+      &.cta {
+        background-color: ${Action.CTA.SurfaceFill.Disabled};
+        border: ${Action.CTA.Disabled};
+        outline-color: ${Action.CTA.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.primary {
+        background-color: ${Action.Primary.SurfaceFill.Disabled};
+        border: ${Action.Primary.Disabled};
+        outline-color: ${Action.Primary.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.secondary {
+        background-color: ${Action.Secondary.SurfaceFill.Disabled};
+        outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
+      }
+
+      &.silent {
+        background-color: ${Action.Silent.SurfaceFill.Disabled};
+        border: ${Action.Silent.Disabled};
+        outline-color: ${Action.Silent.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.encourage {
+        background-color: ${Action.Encourage.SurfaceFill.Disabled};
+        border: ${Action.Encourage.Disabled};
+        outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.destructive {
+        background-color: ${Action.Destructive.SurfaceFill.Disabled};
+        border: ${Action.Destructive.Disabled};
+        outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+    }
   }
 
   .blr-icon-button:focus {
@@ -20,76 +85,27 @@ export const styleCustom = css`
     outline: 2px solid black;
   }
 
-  .blr-icon-button.disabled {
-    pointer-events: none;
-    cursor: not-allowed;
+  .disabled-icon-cta {
+    color: ${Action.CTA.Icon.Disabled};
   }
 
-  .blr-icon-button.disabled.cta {
-    background-color: ${Action.CTA.SurfaceFill.Disabled};
-    border: ${Action.CTA.Disabled};
-    outline-color: ${Action.CTA.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-icon-button.disabled.primary {
-    background-color: ${Action.Primary.SurfaceFill.Disabled};
-    border: ${Action.Primary.Disabled};
-    outline-color: ${Action.Primary.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-icon-button.disabled.secondary {
-    background-color: ${Action.Secondary.SurfaceFill.Disabled};
-    outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
-  }
-
-  .blr-icon-button.disabled.silent {
-    background-color: ${Action.Silent.SurfaceFill.Disabled};
-    border: ${Action.Silent.Disabled};
-    outline-color: ${Action.Silent.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-icon-button.disabled.encourage {
-    background-color: ${Action.Encourage.SurfaceFill.Disabled};
-    border: ${Action.Encourage.Disabled};
-    outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-icon-button.disabled.destructive {
-    background-color: ${Action.Destructive.SurfaceFill.Disabled};
-    border: ${Action.Destructive.Disabled};
-    outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-icon-button.xs {
-    padding: ${IconButton.XS.Padding};
-  }
-
-  .blr-icon-button.sm {
-    padding: ${IconButton.SM.Padding};
-  }
-
-  .blr-icon-button.md {
-    padding: ${IconButton.MD.Padding};
-  }
-
-  .blr-icon-button.lg {
-    padding: ${IconButton.LG.Padding};
-  }
-
-  .blr-icon-button.xl {
-    padding: ${IconButton.XL.Padding};
+  .disabled-icon-primary {
+    color: ${Action.Primary.Icon.Disabled};
   }
 
   .disabled-icon-secondary {
     color: ${Action.Secondary.Icon.Disabled};
   }
 
+  .disabled-icon-destructive {
+    color: ${Action.Destructive.Icon.Disabled};
+  }
+
   .disabled-icon-silent {
     color: ${Action.Silent.Icon.Disabled};
+  }
+
+  .disabled-icon-encourage {
+    color: ${Action.Encourage.Icon.Disabled};
   }
 `;

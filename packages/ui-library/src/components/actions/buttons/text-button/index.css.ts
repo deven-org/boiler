@@ -12,82 +12,82 @@ export const styleCustom = css`
     cursor: pointer;
     outline-offset: -2px;
     position: relative;
+
+    &.xs {
+      gap: ${TextButton.XS.ItemSpacing};
+      padding: ${TextButton.XS.Padding};
+    }
+
+    &.sm {
+      gap: ${TextButton.SM.ItemSpacing};
+      padding: ${TextButton.SM.Padding};
+    }
+
+    &.md {
+      gap: ${TextButton.MD.ItemSpacing};
+      padding: ${TextButton.MD.Padding};
+    }
+
+    &.lg {
+      gap: ${TextButton.LG.ItemSpacing};
+      padding: ${TextButton.LG.Padding};
+    }
+
+    &.xl {
+      gap: ${TextButton.XL.ItemSpacing};
+      padding: ${TextButton.XL.Padding};
+    }
+
+    &.disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+
+      &.cta {
+        background-color: ${Action.CTA.SurfaceFill.Disabled};
+        border: ${Action.CTA.Disabled};
+        outline-color: ${Action.CTA.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.primary {
+        background-color: ${Action.Primary.SurfaceFill.Disabled};
+        border: ${Action.Primary.Disabled};
+        outline-color: ${Action.Primary.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.secondary {
+        background-color: ${Action.Secondary.SurfaceFill.Disabled};
+        outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
+      }
+
+      &.silent {
+        background-color: ${Action.Silent.SurfaceFill.Disabled};
+        border: ${Action.Silent.Disabled};
+        outline-color: ${Action.Silent.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.encourage {
+        background-color: ${Action.Encourage.SurfaceFill.Disabled};
+        border: ${Action.Encourage.Disabled};
+        outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+
+      &.destructive {
+        background-color: ${Action.Destructive.SurfaceFill.Disabled};
+        border: ${Action.Destructive.Disabled};
+        outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
+      }
+    }
   }
 
   .blr-text-button:focus {
     /*  Component Tokens for Outline are missing */
     /* Need to make sure we meet AA requirements with this custom outline */
     outline: 2px solid black;
-  }
-
-  .blr-text-button.disabled {
-    pointer-events: none;
-    cursor: not-allowed;
-  }
-
-  .blr-text-button.disabled.cta {
-    background-color: ${Action.CTA.SurfaceFill.Disabled};
-    border: ${Action.CTA.Disabled};
-    outline-color: ${Action.CTA.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-text-button.disabled.primary {
-    background-color: ${Action.Primary.SurfaceFill.Disabled};
-    border: ${Action.Primary.Disabled};
-    outline-color: ${Action.Primary.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-text-button.disabled.secondary {
-    background-color: ${Action.Secondary.SurfaceFill.Disabled};
-    outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
-  }
-
-  .blr-text-button.disabled.silent {
-    background-color: ${Action.Silent.SurfaceFill.Disabled};
-    border: ${Action.Silent.Disabled};
-    outline-color: ${Action.Silent.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-text-button.disabled.encourage {
-    background-color: ${Action.Encourage.SurfaceFill.Disabled};
-    border: ${Action.Encourage.Disabled};
-    outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-text-button.disabled.destructive {
-    background-color: ${Action.Destructive.SurfaceFill.Disabled};
-    border: ${Action.Destructive.Disabled};
-    outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
-    border-radius: ${Action.BorderRadius};
-  }
-
-  .blr-text-button.xs {
-    gap: ${TextButton.XS.ItemSpacing};
-    padding: ${TextButton.XS.Padding};
-  }
-
-  .blr-text-button.sm {
-    gap: ${TextButton.SM.ItemSpacing};
-    padding: ${TextButton.SM.Padding};
-  }
-
-  .blr-text-button.md {
-    gap: ${TextButton.MD.ItemSpacing};
-    padding: ${TextButton.MD.Padding};
-  }
-
-  .blr-text-button.lg {
-    gap: ${TextButton.LG.ItemSpacing};
-    padding: ${TextButton.LG.Padding};
-  }
-
-  .blr-text-button.xl {
-    gap: ${TextButton.XL.ItemSpacing};
-    padding: ${TextButton.XL.Padding};
   }
 
   .loading-class-icons,
@@ -100,19 +100,51 @@ export const styleCustom = css`
     display: inline-flex;
   }
 
+  .disabled-icon-cta {
+    color: ${Action.CTA.Icon.Disabled};
+  }
+
+  .disabled-icon-primary {
+    color: ${Action.Primary.Icon.Disabled};
+  }
+
   .disabled-icon-secondary {
     color: ${Action.Secondary.Icon.Disabled};
+  }
+
+  .disabled-icon-destructive {
+    color: ${Action.Destructive.Icon.Disabled};
   }
 
   .disabled-icon-silent {
     color: ${Action.Silent.Icon.Disabled};
   }
 
+  .disabled-icon-encourage {
+    color: ${Action.Encourage.Icon.Disabled};
+  }
+
+  .disabled-label-cta {
+    color: ${Action.CTA.Label.Disabled};
+  }
+
+  .disabled-label-primary {
+    color: ${Action.Primary.Label.Disabled};
+  }
+
   .disabled-label-secondary {
     color: ${Action.Secondary.Label.Disabled};
   }
 
+  .disabled-label-destructive {
+    color: ${Action.Destructive.Label.Disabled};
+  }
+
   .disabled-label-silent {
     color: ${Action.Silent.Label.Disabled};
+  }
+
+  .disabled-label-encourage {
+    color: ${Action.Encourage.Label.Disabled};
   }
 `;
