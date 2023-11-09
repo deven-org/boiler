@@ -10,6 +10,11 @@ const config: StorybookConfig = {
   },
   staticDirs: ['../static'],
 
+  previewBody: (body) => `
+    ${body}
+    <script>console.log('this build was created on ' + (new Date()).toLocaleString());</script>
+  `,
+
   webpackFinal: async (config) => {
     config.module!.rules!.push({
       test: /\.scss$/,
