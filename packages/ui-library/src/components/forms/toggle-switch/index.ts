@@ -97,15 +97,13 @@ export class BlrToggleSwitch extends LitElement {
               })}`
             : nothing}
           ${this.hintMessage
-            ? html`
-                ${BlrFormCaptionRenderFunction({
-                  message: this.hintMessage,
-                  variant: 'hint',
-                  icon: this.hintIcon,
-                  size: this.size || 'sm',
-                  theme: this.theme,
-                })}
-              `
+            ? BlrFormCaptionRenderFunction({
+                message: this.hintMessage,
+                variant: 'hint',
+                icon: this.hintIcon,
+                size: this.size || 'sm',
+                theme: this.theme,
+              })
             : nothing}
         </span>
         <div class="label-container">

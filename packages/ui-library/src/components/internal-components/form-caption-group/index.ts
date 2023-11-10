@@ -5,8 +5,11 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizesType } from '../../../globals/types';
 import { BlrFormCaptionRenderFunction } from './form-caption';
 import { formCaptionGroupDark, formCaptionGroupLight } from './index.css';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-@customElement('blr-form-caption-group')
+const TAG_NAME = 'blr-form-caption-group';
+
+@customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {
   static styles = [];
 
@@ -61,22 +64,25 @@ export class BlrFormCaption extends LitElement {
 
 export type BlrFormCaptionGroupType = Omit<BlrFormCaption, keyof LitElement>;
 
-export const BlrFormCaptionGroupRenderFunction = ({
-  theme,
-  size,
-  showHint,
-  hintMessage,
-  hintIcon,
-  showError,
-  errorMessage,
-  errorIcon,
-}: BlrFormCaptionGroupType) => html`<blr-form-caption-group
-  .theme=${theme}
-  .size=${size}
-  .showHint=${showHint}
-  .hintMessage=${hintMessage}
-  .hintIcon=${hintIcon}
-  .showError=${showError}
-  .errorMessage=${errorMessage}
-  .errorIcon=${errorIcon}
-></blr-form-caption-group>`;
+export const BlrFormCaptionGroupRenderFunction = (params: BlrFormCaptionGroupType) =>
+  genericBlrComponentRenderer<BlrFormCaptionGroupType>(TAG_NAME, { ...params });
+
+// export const BlrFormCaptionGroupRenderFunction = ({
+//   theme,
+//   size,
+//   showHint,
+//   hintMessage,
+//   hintIcon,
+//   showError,
+//   errorMessage,
+//   errorIcon,
+// }: BlrFormCaptionGroupType) => html`<blr-form-caption-group
+//   .theme=${theme}
+//   .size=${size}
+//   .showHint=${showHint}
+//   .hintMessage=${hintMessage}
+//   .hintIcon=${hintIcon}
+//   .showError=${showError}
+//   .errorMessage=${errorMessage}
+//   .errorIcon=${errorIcon}
+// ></blr-form-caption-group>`;

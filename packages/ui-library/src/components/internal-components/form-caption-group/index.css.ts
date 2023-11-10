@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 
 export const { tokenizedLight: formCaptionGroupLight, tokenizedDark: formCaptionGroupDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
-    const { SM, MD } = semanticTokens.Forms;
+    const { SM, MD, LG } = semanticTokens.Forms;
 
     return css`
       .blr-form-caption-group-container {
@@ -16,7 +16,7 @@ export const { tokenizedLight: formCaptionGroupLight, tokenizedDark: formCaption
         }
 
         &.lg {
-          margin: ${MD.CaptionSlot.Margin};
+          margin: ${LG.CaptionSlot.Margin};
         }
       }
     `;
