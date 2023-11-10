@@ -1,11 +1,11 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrCheckbox } from '.';
+import { BlrButtonGroup } from '.';
 
-export const BlrCheckboxReact = createComponent({
-  tagName: 'blr-checkbox',
-  elementClass: BlrCheckbox,
+export const BlrButtonGroupReact = createComponent({
+  tagName: 'blr-button-group',
+  elementClass: BlrButtonGroup,
   react: React,
   events: {
     onClick: 'pointerdown' as EventName<PointerEvent>,
