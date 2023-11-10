@@ -22,9 +22,11 @@ export class BlrButtonGroup extends LitElement {
       [this.size]: this.size,
     });
 
-    return html`<div class="${classes}">
-      <slot></slot>
-    </div>`;
+    return html`
+      <div class="${classes}">
+        <slot></slot>
+      </div>
+    `;
   }
 }
 
