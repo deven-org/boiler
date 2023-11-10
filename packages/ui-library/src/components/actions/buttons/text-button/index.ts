@@ -26,7 +26,7 @@ export class BlrTextButton extends LitElement {
   @property() leadingIcon?: SizelessIconType;
   @property() trailingIcon?: SizelessIconType;
   @property() loading!: boolean;
-  @property() disabled?: boolean;
+  @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size: ActionSizesType = 'md';
@@ -46,16 +46,29 @@ export class BlrTextButton extends LitElement {
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
     const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
+      [this.variant]: this.variant,
+      [this.size]: this.size || 'md',
+      disabled: this.disabled,
     });
 
     const loaderIconClasses = classMap({
       'loading-class-icons': this.loading,
+      'disabled-icon-cta': this.disabled && this.variant === 'cta',
+      'disabled-icon-primary': this.disabled && this.variant === 'primary',
+      'disabled-icon-secondary': this.disabled && this.variant === 'secondary',
+      'disabled-icon-destructive': this.disabled && this.variant === 'destructive',
+      'disabled-icon-silent': this.disabled && this.variant === 'silent',
+      'disabled-icon-encourage': this.disabled && this.variant === 'encourage',
     });
 
     const labelClasses = classMap({
       'loading-class-label': this.loading,
+      'disabled-label-cta': this.disabled && this.variant === 'cta',
+      'disabled-label-primary': this.disabled && this.variant === 'primary',
+      'disabled-label-secondary': this.disabled && this.variant === 'secondary',
+      'disabled-label-destructive': this.disabled && this.variant === 'destructive',
+      'disabled-label-silent': this.disabled && this.variant === 'silent',
+      'disabled-label-encourage': this.disabled && this.variant === 'encourage',
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
@@ -76,20 +89,20 @@ export class BlrTextButton extends LitElement {
     ]).toLowerCase() as SizesType;
 
     const labelAndIconGroup = html` ${this.leadingIcon &&
-      html`${BlrIconRenderFunction({
+      BlrIconRenderFunction({
         icon: calculateIconName(this.leadingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
         classMap: loaderIconClasses,
-      })}`}
+      })}
       <span class=${labelClasses}>${this.label}</span>
       ${this.trailingIcon &&
-      html`${BlrIconRenderFunction({
+      BlrIconRenderFunction({
         icon: calculateIconName(this.trailingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
         classMap: loaderIconClasses,
-      })}`}`;
+      })}`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -97,12 +110,11 @@ export class BlrTextButton extends LitElement {
       <span
         class="blr-semantic-action blr-text-button ${classes}"
         @click="${this.onClick}"
-        tabindex="0"
+        tabindex=${this.disabled ? nothing : '0'}
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
-        role="button"
+        role=${this.disabled ? nothing : 'button'}
         @keydown=${this.onClick}
-        ?disabled="${this.disabled}"
         id=${this.buttonId || nothing}
       >
         ${this.loading
