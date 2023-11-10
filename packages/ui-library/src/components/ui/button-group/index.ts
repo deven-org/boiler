@@ -30,5 +30,5 @@ export class BlrButtonGroup extends LitElement {
 
 export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElement>;
 
-export const BlrLayoutGroupFunction = (params: BlrButtonGroupType, children?: TemplateResult<1>) =>
+export const BlrButtonGroupFunction = (params: BlrButtonGroupType, children?: TemplateResult<1>) =>
   genericBlrComponentRenderer<BlrButtonGroupType>(TAG_NAME, { ...params }, children);

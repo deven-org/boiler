@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { BlrButtonGroupType, BlrLayoutGroupFunction } from './index';
+import { BlrButtonGroupType, BlrButtonGroupFunction } from './index';
 import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button';
 import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button';
 import { html } from 'lit';
@@ -59,8 +59,8 @@ const contentTextButtons = html`
 `;
 
 export const BlrButtonGroup = (params: BlrButtonGroupType) => html`
-  Text-Buttons ${BlrLayoutGroupFunction(params, contentTextButtons)} Icon-Buttons
-  ${BlrLayoutGroupFunction(params, contentIconButtons)}
+  Text-Buttons ${BlrButtonGroupFunction(params, contentTextButtons)} Icon-Buttons
+  ${BlrButtonGroupFunction(params, contentIconButtons)}
 `;
 
 BlrButtonGroup.storyName = 'BlrButtonGroup';
