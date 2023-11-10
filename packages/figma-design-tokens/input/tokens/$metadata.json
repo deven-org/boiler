@@ -12,10 +12,6 @@
     "captions/ErrorOnly",
     "captions/noCaptions",
     "sizeVariants/CMP",
-    "sizeVariants/SEM",
-    "componentConfig/CMP",
-    "componentConfig/SEM",
-    "componentConfig_v2/CMP",
-    "componentConfig_v2/SEM"
+    "sizeVariants/SEM"
   ]
 }

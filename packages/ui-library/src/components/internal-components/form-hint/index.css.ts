@@ -4,5 +4,6 @@ export const styleCustom = css`
   .blr-form-hint {
     width: 100%;
     display: flex;
+    align-items: center;
   }
 `;
