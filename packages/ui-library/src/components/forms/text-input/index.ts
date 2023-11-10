@@ -158,7 +158,7 @@ export class BlrTextInput extends LitElement {
             : nothing}
         </div>
         ${this.showHint || this.hasError
-          ? html`${BlrFormCaptionGroupRenderFunction({
+          ? BlrFormCaptionGroupRenderFunction({
               theme: this.theme,
               size: this.size,
               showHint: this.showHint,
@@ -167,7 +167,7 @@ export class BlrTextInput extends LitElement {
               showError: !!this.hasError,
               errorMessage: this.errorMessage,
               errorIcon: this.errorIcon,
-            })}`
+            })
           : nothing}
       </div>
     `;

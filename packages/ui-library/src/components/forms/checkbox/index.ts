@@ -32,7 +32,7 @@ export class BlrCheckbox extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorIcon?: IconType;
-  @property() showHint = true;
+  @property() showHint?: boolean;
   @property() hintIcon?: IconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
@@ -92,20 +92,18 @@ export class BlrCheckbox extends LitElement {
           ${this.hasLabel
             ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
             : nothing}
-          <div class="caption-wrapper">
-            ${this.showHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({
-                  theme: this.theme,
-                  size: this.size,
-                  showHint: this.showHint,
-                  hintMessage: this.hintMessage,
-                  hintIcon: this.hintIcon,
-                  showError: !!this.hasError,
-                  errorMessage: this.errorMessage,
-                  errorIcon: this.errorIcon,
-                })
-              : nothing}
-          </div>
+          ${this.showHint || this.hasError
+            ? BlrFormCaptionGroupRenderFunction({
+                theme: this.theme,
+                size: this.size,
+                showHint: !!this.showHint,
+                hintMessage: this.hintMessage,
+                hintIcon: this.hintIcon,
+                showError: !!this.hasError,
+                errorMessage: this.errorMessage,
+                errorIcon: this.errorIcon,
+              })
+            : nothing}
         </div>
       </div>
     `;
