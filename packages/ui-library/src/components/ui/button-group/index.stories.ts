@@ -1,0 +1,73 @@
+/* eslint-disable no-console */
+import { BlrButtonGroupType, BlrLayoutGroupFunction } from './index';
+import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button';
+import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button';
+import { html } from 'lit';
+import { ButtonGroupAlignmentVariants, ButtonGroupSizes } from '../../../globals/constants';
+
+export default {
+  title: 'Design System/Web Components/UI/Button Group',
+  argTypes: {
+    size: {
+      options: ButtonGroupSizes,
+      control: { type: 'select' },
+    },
+    alignment: {
+      options: ButtonGroupAlignmentVariants,
+      control: { type: 'select' },
+    },
+  },
+  parameters: {
+    viewMode: 'docs',
+  },
+};
+
+const contentIconButtons = html`
+  ${BlrIconButtonRenderFunction({
+    size: 'md',
+    theme: 'Light',
+    loading: false,
+    variant: 'primary',
+    loadingStatus: 'Loading',
+  })}
+  ${BlrIconButtonRenderFunction({
+    size: 'md',
+    theme: 'Light',
+    loading: false,
+    variant: 'secondary',
+    loadingStatus: 'Loading',
+  })}
+`;
+
+const contentTextButtons = html`
+  ${BlrTextButtonRenderFunction({
+    label: 'Jaok',
+    size: 'md',
+    theme: 'Light',
+    loading: false,
+    variant: 'primary',
+    loadingStatus: 'Loading',
+  })}
+  ${BlrTextButtonRenderFunction({
+    label: 'Nein',
+    size: 'md',
+    theme: 'Light',
+    loading: false,
+    variant: 'secondary',
+    loadingStatus: 'Loading',
+  })}
+`;
+
+export const BlrButtonGroup = (params: BlrButtonGroupType) => html`
+  Text-Buttons ${BlrLayoutGroupFunction(params, contentTextButtons)} Icon-Buttons
+  ${BlrLayoutGroupFunction(params, contentIconButtons)}
+`;
+
+BlrButtonGroup.storyName = 'BlrButtonGroup';
+
+const args: BlrButtonGroupType = {
+  size: 'md',
+  alignment: 'left',
+};
+
+BlrButtonGroup.args = args;
