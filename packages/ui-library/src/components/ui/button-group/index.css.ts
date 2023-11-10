@@ -6,8 +6,6 @@ const { ButtonGroup } = componentTokens.UI;
 
 export const styleCustom = css`
   .blr-button-group {
-    align-items: center;
-    justify-content: center;
     display: flex;
 
     &.left {

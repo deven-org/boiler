@@ -18,8 +18,8 @@ export class BlrButtonGroup extends LitElement {
   protected render() {
     const classes = classMap({
       'blr-button-group': true,
-      [`${this.alignment}`]: this.alignment,
-      [`${this.size}`]: this.size,
+      [this.alignment]: this.alignment,
+      [this.size]: this.size,
     });
 
     return html`<div class="${classes}">
