@@ -4,7 +4,7 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Web Components/Forms/Radio',
+  title: 'Design System/Web Components/Forms/RadioGroup',
   argTypes: {
     size: {
       options: InputSizes,
