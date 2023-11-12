@@ -29,6 +29,7 @@ const contentIconButtons = html`
     loading: false,
     variant: 'primary',
     loadingStatus: 'Loading',
+    disabled: false,
   })}
   ${BlrIconButtonRenderFunction({
     size: 'md',
@@ -36,6 +37,7 @@ const contentIconButtons = html`
     loading: false,
     variant: 'secondary',
     loadingStatus: 'Loading',
+    disabled: false,
   })}
 `;
 
@@ -47,6 +49,7 @@ const contentTextButtons = html`
     loading: false,
     variant: 'primary',
     loadingStatus: 'Loading',
+    disabled: false,
   })}
   ${BlrTextButtonRenderFunction({
     label: 'Nein',
@@ -55,6 +58,7 @@ const contentTextButtons = html`
     loading: false,
     variant: 'secondary',
     loadingStatus: 'Loading',
+    disabled: false,
   })}
 `;
 
