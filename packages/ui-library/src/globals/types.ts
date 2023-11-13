@@ -18,6 +18,7 @@ import {
   ButtonGroupSizes,
   LabelVariants,
   ActionSizes,
+  ButtonGroupAlignmentVariants,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -44,7 +45,8 @@ export type RadioOption = {
 export type IconPositionVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
-export type AlignmentType = (typeof TabAlignmentVariants)[number];
+export type ButtonGroupAlignmentType = (typeof ButtonGroupAlignmentVariants)[number];
+
 export type TabType = {
   label: string;
   icon: SizelessIconType;
