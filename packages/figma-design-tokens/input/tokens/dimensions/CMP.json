@@ -2247,15 +2247,6 @@
         "description": "size of XL icon"
       }
     },
-    "Divider": {
-      "Border": {
-        "value": {
-          "color": "{UI.Divider.Stroke}",
-          "width": "{core.dimensionPX.1}"
-        },
-        "type": "border"
-      }
-    },
     "ButtonGroup": {
       "XS": {
         "ItemSpacing": {
@@ -2285,6 +2276,24 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
           "type": "spacing"
+        }
+      }
+    },
+    "Divider": {
+      "Container": {
+        "Horizontal": {
+          "Height": {
+            "value": "{core.dimensionPX.1}",
+            "type": "sizing",
+            "description": "The thickness of the divider\n>>> new"
+          }
+        },
+        "Vertical": {
+          "Width": {
+            "value": "UI.Divider.Container.Horizontal",
+            "type": "sizing",
+            "description": "The thickness of the divider\n>>> new"
+          }
         }
       }
     }

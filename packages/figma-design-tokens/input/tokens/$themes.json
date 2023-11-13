@@ -200,7 +200,6 @@
       "Forms.Slider.TickMark.Fill.Inactive.Mute": "S:2af4318cf4518991f956ff59e7eaffec7439b1e0,",
       "Forms.Slider.Legend.Color.Default": "S:b1f0d15405a318950883a261662b1606e4709445,",
       "Forms.Slider.Legend.Color.Disabled": "S:78e041b0bf02ac6f1d82b68f008f634dcd7498e5,",
-      "UI.Divider.Stroke": "S:67b175a1c37d17de8e9d4c612107a4d558519ef2,",
       "Navigation.TabBar.Tab.Icon.Active": "S:93e991e60d77cf2f472e01c4ac3996d4e3759ba2,",
       "Navigation.TabBar.Tab.Icon.Unselected": "S:4256b581423d6fae5c3158c435acc8a47a4faeed,",
       "Navigation.TabBar.Tab.Icon.Disabled": "S:3fc9999702b7c0f34e967d536764491b72c428b7,",
@@ -538,7 +537,8 @@
       "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "S:610bb50656e3a5973cda0f7a723448cfc84744a9,",
       "Navigation.TabBar.Tab.Label.Unselected.Disabled": "S:8523720966f0b1c00dd7e8ef00835af04e936d0d,",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:6a0646595b624192862b36aaa6e502e8b3774d2a,",
-      "Action.Menu.Section.SectionTitle": "S:2051a61186bbc055cb0cf8b386a963717c94fa4c,"
+      "Action.Menu.Section.SectionTitle": "S:2051a61186bbc055cb0cf8b386a963717c94fa4c,",
+      "UI.Divider.Container.BackgroundColor": "S:67b175a1c37d17de8e9d4c612107a4d558519ef2,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -1097,7 +1097,6 @@
       "Forms.Slider.TickMark.Fill.Inactive.Mute": "b038a2db0f9367b4a3711e09952325567f0c616c",
       "Forms.Slider.Legend.Color.Default": "a379967d3a56a97aee50f9a7e51c6a712798c546",
       "Forms.Slider.Legend.Color.Disabled": "022ef2187311e450e3836516cdbdac3d006e6b1d",
-      "UI.Divider.Stroke": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da",
       "UI.Blanket.Surface": "1758bac1223c81451082018286cba93e78c0cdda",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest": "a9f02fe908bb058bce5087f032dabbee7189ec0b",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover": "66a0d31e617e9857429ae1d3093034423ed68c7d",
@@ -1551,7 +1550,8 @@
       "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Focus": "d9781fdfc12ee8333a5a7238907e5904bd3af666",
       "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Disabled": "0eeb041b0da061d094b2239fdf30789973576ea9",
       "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.ReadOnly": "6f3458b40899f21f7ede632d429e002305043422",
-      "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Error": "b687bafe90bf8989481c0935c4b12aade0e0e9e8"
+      "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Error": "b687bafe90bf8989481c0935c4b12aade0e0e9e8",
+      "UI.Divider.Container.BackgroundColor": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da"
     },
     "group": "Theme"
   },
@@ -1756,7 +1756,6 @@
       "Forms.Slider.TickMark.Fill.Inactive.Mute": "S:0c23210359f028c8928920ec9436916bf7f689fb,",
       "Forms.Slider.Legend.Color.Default": "S:9352c0db6fe921a9f2463a8884238856a3dddbed,",
       "Forms.Slider.Legend.Color.Disabled": "S:f1725eec23db870c1979b9e73a7e3dc6a8c8ab6a,",
-      "UI.Divider.Stroke": "S:38150a115a3b3713f5ec4c6cfcaeda4a43140f77,",
       "Navigation.TabBar.Tab.Icon.Active": "S:6efae31e6545123a945d562f872d7fa24c99d3cd,",
       "Navigation.TabBar.Tab.Icon.Unselected": "S:40bc5a7818ad5201706b40fcf3a77249a79bf4f6,",
       "Navigation.TabBar.Tab.Icon.Disabled": "S:54f700dfe4f37c8b3c9214636ee0641f433a7f8d,",
@@ -2090,7 +2089,8 @@
       "Navigation.TabBar.Tab.Label.Actives.Rest": "S:d6afadbd55e769da845c32c83275427b62f7441e,",
       "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "S:d2ba3fd27887492c3e86bf514835ab78ffd92ff0,",
       "Navigation.TabBar.Tab.Label.Unselected.Disabled": "S:f1727f9fe4071dc4a6df9c7528fcb6394fde7faf,",
-      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:ff7c873f8ce99590213cc4f8c41ed59b0aad5ea2,"
+      "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:ff7c873f8ce99590213cc4f8c41ed59b0aad5ea2,",
+      "UI.Divider.Container.BackgroundColor": "S:38150a115a3b3713f5ec4c6cfcaeda4a43140f77,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -2649,7 +2649,6 @@
       "Forms.Slider.TickMark.Fill.Inactive.Mute": "b038a2db0f9367b4a3711e09952325567f0c616c",
       "Forms.Slider.Legend.Color.Default": "a379967d3a56a97aee50f9a7e51c6a712798c546",
       "Forms.Slider.Legend.Color.Disabled": "022ef2187311e450e3836516cdbdac3d006e6b1d",
-      "UI.Divider.Stroke": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da",
       "UI.Blanket.Surface": "1758bac1223c81451082018286cba93e78c0cdda",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest": "a9f02fe908bb058bce5087f032dabbee7189ec0b",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Selected.Hover": "66a0d31e617e9857429ae1d3093034423ed68c7d",
@@ -3103,7 +3102,8 @@
       "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Focus": "d9781fdfc12ee8333a5a7238907e5904bd3af666",
       "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Disabled": "0eeb041b0da061d094b2239fdf30789973576ea9",
       "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.ReadOnly": "6f3458b40899f21f7ede632d429e002305043422",
-      "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Error": "b687bafe90bf8989481c0935c4b12aade0e0e9e8"
+      "Forms.Checkbox.LG.Control.Icon.Sizing.Indeterminate.Error": "b687bafe90bf8989481c0935c4b12aade0e0e9e8",
+      "UI.Divider.Container.BackgroundColor": "39bec8c5a9ba906af5f4c5daf5a348ae3618d4da"
     },
     "group": "Theme"
   },

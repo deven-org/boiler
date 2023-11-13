@@ -1106,9 +1106,12 @@
   },
   "UI": {
     "Divider": {
-      "Stroke": {
-        "value": "{core.color.coolgray.800.opa30}",
-        "type": "color"
+      "Container": {
+        "BackgroundColor": {
+          "value": "{core.color.coolgray.800.opa30}",
+          "type": "color",
+          "description": "Color of the divider\n>>> UI.Divider.Stroke"
+        }
       }
     },
     "Blanket": {
