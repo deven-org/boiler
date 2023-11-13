@@ -543,15 +543,88 @@
       }
     },
     "Counter": {
-      "SM": {
+      "Container": {
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "oldPath": "None"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "oldPath": "None"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "oldPath": "None"
+          }
+        },
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "oldPath": "None"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "oldPath": "None"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "oldPath": "None"
+          }
+        },
         "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
+          "SM": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          },
+          "MD": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          }
         },
         "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          }
+        }
+      },
+      "SM": {
         "Border": {
           "Neutral": {
             "value": {
@@ -580,14 +653,6 @@
         }
       },
       "MD": {
-        "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
         "Border": {
           "Neutral": {
             "value": {
@@ -616,14 +681,6 @@
         }
       },
       "LG": {
-        "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
         "Border": {
           "Neutral": {
             "value": {
@@ -648,25 +705,6 @@
               "style": "solid"
             },
             "type": "border"
-          }
-        }
-      },
-      "Container": {
-        "BorderRadius": {
-          "SM": {
-            "value": "{core.borderRadius.MD}",
-            "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> new"
-          },
-          "MD": {
-            "value": "{core.borderRadius.MD}",
-            "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
-          },
-          "LG": {
-            "value": "{core.borderRadius.MD}",
-            "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> new"
           }
         }
       }
