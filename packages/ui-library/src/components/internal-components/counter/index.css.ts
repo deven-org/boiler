@@ -10,7 +10,9 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
     .blr-counter {
       word-break: initial;
       color: ${Neutral.Text};
-      outline: 1px solid ${Neutral.SurfaceStroke};
+
+      outline-color: ${Counter.BorderColor.Neutral};
+      outline-style: solid;
       white-space: nowrap;
 
       &.sm {
@@ -22,6 +24,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         font-size: ${SM.Caption.fontSize};
         line-height: ${SM.Caption.lineHeight};
         border-radius: ${Counter.Container.BorderRadius.SM};
+        outline-width: ${Counter.Container.BorderWidth.SM};
       }
 
       &.md {
@@ -33,6 +36,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         font-size: ${MD.Caption.fontSize};
         line-height: ${MD.Caption.lineHeight};
         border-radius: ${Counter.Container.BorderRadius.MD};
+        outline-width: ${Counter.Container.BorderWidth.MD};
       }
 
       &.lg {
@@ -44,17 +48,18 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         font-size: ${LG.Caption.fontSize};
         line-height: ${LG.Caption.lineHeight};
         border-radius: ${Counter.Container.BorderRadius.LG};
+        outline-width: ${Counter.Container.BorderWidth.LG};
       }
 
       &.error {
         color: ${Error.Text};
-        outline-color: ${Error.SurfaceStroke};
+        outline-color: ${Counter.BorderColor.Error};
         background-color: ${Error.Surface};
       }
 
       &.warn {
         color: ${Warning.Text};
-        outline-color: ${Warning.SurfaceStroke};
+        outline-color: ${Counter.BorderColor.Warning};
         background-color: ${Warning.Surface};
       }
     }
