@@ -548,48 +548,51 @@
           "SM": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "oldPath": "None"
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "MD": {
             "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
             "type": "spacing",
-            "oldPath": "None"
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "LG": {
             "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
             "type": "spacing",
-            "oldPath": "None"
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           }
         },
         "PaddingLeftRight": {
           "SM": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing",
-            "oldPath": "None"
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "MD": {
             "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
             "type": "spacing",
-            "oldPath": "None"
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "LG": {
             "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
             "type": "spacing",
-            "oldPath": "None"
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           }
         },
         "Padding": {
           "SM": {
             "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
-            "type": "spacing"
+            "type": "spacing",
+            "description": "Coded Comps Only!"
           },
           "MD": {
             "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
-            "type": "spacing"
+            "type": "spacing",
+            "description": "Coded Comps Only!"
           },
           "LG": {
             "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
-            "type": "spacing"
+            "type": "spacing",
+            "description": "Coded Comps Only!"
           }
         },
         "BorderRadius": {
