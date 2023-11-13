@@ -16,6 +16,7 @@ const testContent = BlrTextButtonRenderFunction({
   loading: false,
   variant: 'primary',
   loadingStatus: 'Loading',
+  disabled: false,
 });
 
 describe('blr-button-group', () => {
