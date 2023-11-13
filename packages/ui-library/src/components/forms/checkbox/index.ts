@@ -23,7 +23,7 @@ export class BlrCheckbox extends LitElement {
   protected _checkboxNode!: HTMLInputElement;
 
   @property() label!: string;
-  @property() checkInputId!: string;
+  @property() checkInputId?: string;
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
@@ -45,11 +45,7 @@ export class BlrCheckbox extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  connectedCallback() {
-    super.connectedCallback();
-  }
-
-  handleChange(event: Event) {
+  protected handleChange(event: Event) {
     if (!this.disabled) {
       this.onChange?.(event);
     }

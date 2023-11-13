@@ -2216,44 +2216,39 @@
   },
   "UI": {
     "Icon": {
-      "XXS": {
-        "value": "{core.dimensionREM.8}",
-        "type": "sizing",
-        "description": "size of XXS icon"
-      },
-      "XS": {
-        "value": "{core.dimensionREM.12}",
-        "type": "sizing",
-        "description": "size of XS icon"
-      },
-      "SM": {
-        "value": "{core.dimensionREM.16}",
-        "type": "sizing",
-        "description": "size of SM icon"
-      },
-      "MD": {
-        "value": "{core.dimensionREM.24}",
-        "type": "sizing",
-        "description": "size of MD icon"
-      },
-      "LG": {
-        "value": "{core.dimensionREM.32}",
-        "type": "sizing",
-        "description": "size of LG icon"
-      },
-      "XL": {
-        "value": "{core.dimensionREM.48}",
-        "type": "sizing",
-        "description": "size of XL icon"
-      }
-    },
-    "Divider": {
-      "Border": {
-        "value": {
-          "color": "{UI.Divider.Stroke}",
-          "width": "{core.dimensionPX.1}"
-        },
-        "type": "border"
+      "Container": {
+        "Size": {
+          "XXS": {
+            "value": "{core.dimensionREM.8}",
+            "type": "sizing",
+            "description": "size of XXS icon\n>>>: UI.Icon.XXS"
+          },
+          "XS": {
+            "value": "{core.dimensionREM.12}",
+            "type": "sizing",
+            "description": "size of XS icon\n>>> UI.Icon.XS"
+          },
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing",
+            "description": "size of SM icon\n>>> UI.Icon.SM\n"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing",
+            "description": "size of MD icon\n>>> UI.Icon.MD"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing",
+            "description": "size of LG icon\n>>> UI.Icon.LG"
+          },
+          "XL": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing",
+            "description": "size of XL icon\n>>> UI.Icon.XL"
+          }
+        }
       }
     },
     "ButtonGroup": {
@@ -2285,6 +2280,24 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.8}",
           "type": "spacing"
+        }
+      }
+    },
+    "Divider": {
+      "Container": {
+        "Horizontal": {
+          "Height": {
+            "value": "{core.dimensionPX.1}",
+            "type": "sizing",
+            "description": "The thickness of the divider\n>>> new"
+          }
+        },
+        "Vertical": {
+          "Width": {
+            "value": "{UI.Divider.Container.Horizontal.Height}",
+            "type": "sizing",
+            "description": "The thickness of the divider\n>>> new"
+          }
         }
       }
     }

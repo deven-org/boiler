@@ -11,7 +11,7 @@ export default {
       options: FormSizes,
       control: { type: 'select' },
     },
-    trailingIcon: {
+    icon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
     },
@@ -44,6 +44,14 @@ export default {
       action: 'onChange',
       description: '(@change)="onChange($event)"',
     },
+    onFocus: {
+      action: 'onFocus',
+      description: '(@change)="onFocus($event)"',
+    },
+    onBlur: {
+      action: 'onBlur',
+      description: '(@change)="onBlur($event)"',
+    },
     theme: {
       options: Themes,
       control: { type: 'select' },
@@ -59,15 +67,14 @@ export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(para
 BlrSelect.storyName = 'Select';
 
 const args: BlrSelectType = {
+  arialabel: 'Select',
   theme: 'Light',
   name: 'Text Input',
-  hasLabel: true,
   showHint: false,
   hintMessage: 'This is a hint message',
   hintIcon: 'blrInfo',
   label: 'Label',
   labelAppendix: '(Optional)',
-  showTrailingIcon: true,
   size: 'md',
   hasError: false,
   errorMessage: 'This is an error message',
@@ -75,13 +82,16 @@ const args: BlrSelectType = {
   disabled: false,
   required: false,
   selectId: 'Peter',
-  trailingIcon: 'blrChevronDown',
+  icon: 'blrChevronDown',
   options: [
     { value: 'uschi', label: 'Uschi', disabled: true },
     { value: '1', label: 'Option 1' },
     { value: '2', label: 'Option 2', selected: true },
     { value: 'dieter', label: 'Dieter' },
   ],
+  onChange: (event: Event) => console.log(event.type),
+  onFocus: (event: Event) => console.log(event.type),
+  onBlur: (event: Event) => console.log(event.type),
 };
 
 BlrSelect.args = args;

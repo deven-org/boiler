@@ -6,16 +6,16 @@ export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = rend
 
   return css`
     .blr-divider {
-      background-color: ${UI.Divider.Border.color};
+      background-color: ${UI.Divider.Container.BackgroundColor};
 
       &.vertical {
-        width: ${UI.Divider.Border.width};
+        width: ${UI.Divider.Container.Vertical.Width};
         height: 100%;
       }
 
       &.horizontal {
         width: 100%;
-        height: ${UI.Divider.Border.width};
+        height: ${UI.Divider.Container.Horizontal.Height};
       }
     }
   `;
