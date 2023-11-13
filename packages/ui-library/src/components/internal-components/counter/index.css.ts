@@ -15,8 +15,8 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
 
       &.sm {
         margin: ${SM.CaptionSlot.Margin};
-        padding: ${Counter.SM.Padding};
-        gap: ${Counter.SM.ItemSpacing};
+        padding: ${Counter.Container.Padding.SM};
+        gap: ${Counter.Container.ItemSpacing.SM};
         font-family: ${SM.Caption.fontFamily}, sans-serif;
         font-weight: ${SM.Caption.fontWeight};
         font-size: ${SM.Caption.fontSize};
@@ -26,8 +26,8 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
 
       &.md {
         margin: ${MD.CaptionSlot.Margin};
-        padding: ${Counter.MD.Padding};
-        gap: ${Counter.MD.ItemSpacing};
+        padding: ${Counter.Container.Padding.MD};
+        gap: ${Counter.Container.ItemSpacing.MD};
         font-family: ${MD.Caption.fontFamily}, sans-serif;
         font-weight: ${MD.Caption.fontWeight};
         font-size: ${MD.Caption.fontSize};
@@ -37,8 +37,8 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
 
       &.lg {
         margin: ${MD.CaptionSlot.Margin};
-        padding: ${Counter.LG.Padding};
-        gap: ${Counter.LG.ItemSpacing};
+        padding: ${Counter.Container.Padding.LG};
+        gap: ${Counter.Container.ItemSpacing.LG};
         font-family: ${LG.Caption.fontFamily}, sans-serif;
         font-weight: ${LG.Caption.fontWeight};
         font-size: ${LG.Caption.fontSize};
