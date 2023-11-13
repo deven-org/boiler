@@ -1,4 +1,5 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDark } = renderThemedCssStrings(
@@ -7,7 +8,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
     const { LabelNextToControl } = semanticTokens.Forms;
     const { FocusBorder } = semanticTokens.Global;
 
-    return css`
+    return typeSafeNestedCss`
       .blr-label-toggleswitch {
         &.leading {
           flex-direction: column;

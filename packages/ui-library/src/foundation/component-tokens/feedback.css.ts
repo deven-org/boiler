@@ -1,10 +1,11 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: loadingSpinnerLight, tokenizedDark: loadingSpinnerDark } = renderThemedCssStrings((componentTokens) => {
   const { Loader } = componentTokens.Feedback;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-loading-spinner {
       border-radius: 50%;
       box-sizing: border-box;

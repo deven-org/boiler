@@ -1,11 +1,11 @@
-import { typeSafeNestedcss } from "../../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { Counter } = componentTokens.Feedback;
   const { SM, MD, LG } = semanticTokens.Forms;
 
-  return typeSafeNestedcss`
+  return typeSafeNestedCss`
     .blr-counter {
       word-break: initial;
       color: ${Counter.Text.TextColor.Neutral};
