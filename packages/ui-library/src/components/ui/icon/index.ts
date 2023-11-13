@@ -1,7 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
-import { iconLight } from '../../../foundation/component-tokens/ui.css';
 import { styleCustom } from './index.css';
 import { SizesType } from '../../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
@@ -12,7 +11,7 @@ const TAG_NAME = 'blr-icon';
 
 @customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
-  static styles = [styleCustom, iconLight];
+  static styles = [styleCustom];
 
   @property() icon: IconType = 'blr360Xs';
   @property() size: SizesType = 'md';
