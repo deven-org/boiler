@@ -10,8 +10,8 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
     .blr-counter {
       word-break: initial;
       color: ${Neutral.Text};
-
-      outline-color: ${Counter.BorderColor.Neutral};
+      background-color: ${Counter.Container.BackgroundColor.Neutral};
+      outline-color: ${Counter.Container.BorderColor.Neutral};
       outline-style: solid;
       white-space: nowrap;
 
@@ -53,13 +53,13 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
 
       &.error {
         color: ${Error.Text};
-        outline-color: ${Counter.BorderColor.Error};
+        outline-color: ${Counter.Container.BackgroundColor.Error};
         background-color: ${Error.Surface};
       }
 
       &.warn {
         color: ${Warning.Text};
-        outline-color: ${Counter.BorderColor.Warning};
+        outline-color: ${Counter.Container.BackgroundColor.Warning};
         background-color: ${Warning.Surface};
       }
     }
