@@ -2290,7 +2290,7 @@
         },
         "Vertical": {
           "Width": {
-            "value": "UI.Divider.Container.Horizontal",
+            "value": "{UI.Divider.Container.Horizontal.Height}",
             "type": "sizing",
             "description": "The thickness of the divider\n>>> new"
           }
