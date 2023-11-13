@@ -33,6 +33,22 @@
             "type": "color"
           }
         }
+      },
+      "Text": {
+        "TextColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Text}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Text}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Text}",
+            "type": "color"
+          }
+        }
       }
     },
     "Tooltip": {
