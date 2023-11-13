@@ -1,21 +1,37 @@
 {
   "Feedback": {
     "Counter": {
-      "BorderColor": {
-        "Neutral": {
-          "value": "{Feedback.Neutral.SurfaceStroke}",
-          "type": "color",
-          "oldPath": "None"
+      "Container": {
+        "BorderColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.SurfaceStroke}",
+            "type": "color",
+            "oldPath": "None"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.SurfaceStroke}",
+            "type": "color",
+            "oldPath": "None"
+          },
+          "Error": {
+            "value": "{Feedback.Error.SurfaceStroke}",
+            "type": "color",
+            "oldPath": "None"
+          }
         },
-        "Warning": {
-          "value": "{Feedback.Warning.SurfaceStroke}",
-          "type": "color",
-          "oldPath": "None"
-        },
-        "Error": {
-          "value": "{Feedback.Error.SurfaceStroke}",
-          "type": "color",
-          "oldPath": "None"
+        "BackgroundColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Surface}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Surface}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Surface}",
+            "type": "color"
+          }
         }
       }
     },
