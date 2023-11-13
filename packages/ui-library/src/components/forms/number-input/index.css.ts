@@ -152,7 +152,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
     const { StepperCombo } = componentTokens.Action;
     const { Silent } = semanticTokens.Action;
 
-    return css`
+    return typeSafeNestedCss`
       .stepper-combo {
         &.mode2 {
           display: grid;
@@ -251,7 +251,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
   }
 );
 
-export const baseStyle = css`
+export const baseStyle = typeSafeNestedCss`
   .input-wrapper {
     display: flex;
     overflow: hidden;
