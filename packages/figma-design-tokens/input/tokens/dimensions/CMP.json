@@ -612,6 +612,23 @@
             "description": "Border radius of counter container\n>>> new"
           }
         },
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth",
+            "oldPath": "None"
+          },
+          "MD": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth",
+            "oldPath": "None"
+          },
+          "LG": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth",
+            "oldPath": "None"
+          }
+        },
         "ItemSpacing": {
           "SM": {
             "value": "{core.dimensionPX.2}",
@@ -624,90 +641,6 @@
           "LG": {
             "value": "{core.dimensionPX.2}",
             "type": "spacing"
-          }
-        }
-      },
-      "SM": {
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        }
-      },
-      "MD": {
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        }
-      },
-      "LG": {
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
           }
         }
       }

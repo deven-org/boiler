@@ -546,7 +546,8 @@
       "color/SEM": "enabled",
       "color/CMP": "enabled",
       "dimensions/CMP": "enabled",
-      "dimensions/SEM": "enabled"
+      "dimensions/SEM": "enabled",
+      "borders/CMP": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:5039:8491",
     "$figmaModeId": "5039:0",
@@ -606,6 +607,9 @@
       "Feedback.Counter.Container.BorderRadius.SM": "b92726906c5e430f98a1cad2d3d82dfe0aca0dcc",
       "Feedback.Counter.Container.BorderRadius.MD": "48e765817d76c8b7edebf4b7358f54917a5c6ed5",
       "Feedback.Counter.Container.BorderRadius.LG": "762a14cf88d137f74c22256eec1c608454c0e883",
+      "Feedback.Counter.Container.BorderWidth.SM": "bd162a688380d5634b3f1e1d74e9a2a37ffc656d",
+      "Feedback.Counter.Container.BorderWidth.MD": "c536f378d7447a8f1fa6c25706dfeeb055378b00",
+      "Feedback.Counter.Container.BorderWidth.LG": "58edf1745a264d7d4716f008c9596dc7f2c9dbd9",
       "Feedback.Counter.Container.ItemSpacing.SM": "b7e727d841e99d19aa1e25115cb852c8848d1a4e",
       "Feedback.Counter.Container.ItemSpacing.MD": "57188318614cb71bd63a30c76640b42cddfedcca",
       "Feedback.Counter.Container.ItemSpacing.LG": "8a7f45d6dac66cac86edc88c64381a8fd6aa6da4",
@@ -900,6 +904,9 @@
       "Forms.LG.CaptionComponent.ItemSpacing": "ef5c2ca2ccdbbe520a71c9afdfb2b39856393000",
       "Forms.LG.LabelComponent.ItemSpacing": "f61dee5fef7e7f2a1e8801625057884241025971",
       "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
+      "Feedback.Counter.BorderColor.Neutral": "295886cf8c1504da4c3eb3758f1b472757ab0e27",
+      "Feedback.Counter.BorderColor.Warning": "8f52b1726e2e580c03392194f4e612493e99b9bb",
+      "Feedback.Counter.BorderColor.Error": "9db5578273868bd19fafed91a98c0c6be969ed9a",
       "Feedback.Tooltip.SurfaceFill": "b6e780869894888e343c303051813f37724f905d",
       "Feedback.Tooltip.Content": "3ac82f6ccd777b78f4311000b90b52e023df9dc3",
       "Feedback.Dialog.Surface.Color": "0632bde949b58fdbe72a95081dcbb58dddd5edc4",
@@ -2032,7 +2039,8 @@
       "color/CMP": "enabled",
       "intermediary/Dark": "enabled",
       "dimensions/CMP": "enabled",
-      "dimensions/SEM": "enabled"
+      "dimensions/SEM": "enabled",
+      "borders/CMP": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:5039:8491",
     "$figmaModeId": "5039:1",
@@ -2092,6 +2100,9 @@
       "Feedback.Counter.Container.BorderRadius.SM": "b92726906c5e430f98a1cad2d3d82dfe0aca0dcc",
       "Feedback.Counter.Container.BorderRadius.MD": "48e765817d76c8b7edebf4b7358f54917a5c6ed5",
       "Feedback.Counter.Container.BorderRadius.LG": "762a14cf88d137f74c22256eec1c608454c0e883",
+      "Feedback.Counter.Container.BorderWidth.SM": "bd162a688380d5634b3f1e1d74e9a2a37ffc656d",
+      "Feedback.Counter.Container.BorderWidth.MD": "c536f378d7447a8f1fa6c25706dfeeb055378b00",
+      "Feedback.Counter.Container.BorderWidth.LG": "58edf1745a264d7d4716f008c9596dc7f2c9dbd9",
       "Feedback.Counter.Container.ItemSpacing.SM": "b7e727d841e99d19aa1e25115cb852c8848d1a4e",
       "Feedback.Counter.Container.ItemSpacing.MD": "57188318614cb71bd63a30c76640b42cddfedcca",
       "Feedback.Counter.Container.ItemSpacing.LG": "8a7f45d6dac66cac86edc88c64381a8fd6aa6da4",
@@ -2386,6 +2397,9 @@
       "Forms.LG.CaptionComponent.ItemSpacing": "ef5c2ca2ccdbbe520a71c9afdfb2b39856393000",
       "Forms.LG.LabelComponent.ItemSpacing": "f61dee5fef7e7f2a1e8801625057884241025971",
       "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
+      "Feedback.Counter.BorderColor.Neutral": "295886cf8c1504da4c3eb3758f1b472757ab0e27",
+      "Feedback.Counter.BorderColor.Warning": "8f52b1726e2e580c03392194f4e612493e99b9bb",
+      "Feedback.Counter.BorderColor.Error": "9db5578273868bd19fafed91a98c0c6be969ed9a",
       "Feedback.Tooltip.SurfaceFill": "b6e780869894888e343c303051813f37724f905d",
       "Feedback.Tooltip.Content": "3ac82f6ccd777b78f4311000b90b52e023df9dc3",
       "Feedback.Dialog.Surface.Color": "0632bde949b58fdbe72a95081dcbb58dddd5edc4",
@@ -2980,7 +2994,8 @@
     "name": "AllCaptions",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "captions/allCaptions": "enabled"
+      "captions/allCaptions": "enabled",
+      "borders/CMP": "disabled"
     },
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
@@ -2996,7 +3011,8 @@
     "name": "HintOnly",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "captions/HintOnly": "enabled"
+      "captions/HintOnly": "enabled",
+      "borders/CMP": "disabled"
     },
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
@@ -3012,7 +3028,8 @@
     "name": "ErrorOnly",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "captions/ErrorOnly": "enabled"
+      "captions/ErrorOnly": "enabled",
+      "borders/CMP": "disabled"
     },
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
@@ -3028,7 +3045,8 @@
     "name": "noCaptions",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "captions/noCaptions": "enabled"
+      "captions/noCaptions": "enabled",
+      "borders/CMP": "disabled"
     },
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
