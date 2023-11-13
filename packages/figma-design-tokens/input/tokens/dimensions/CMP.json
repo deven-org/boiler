@@ -543,117 +543,106 @@
       }
     },
     "Counter": {
-      "SM": {
+      "Container": {
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        },
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        },
         "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
+          "SM": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          }
+        },
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          },
+          "MD": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          }
+        },
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth",
+            "oldPath": "None"
+          },
+          "MD": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth",
+            "oldPath": "None"
+          },
+          "LG": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth",
+            "oldPath": "None"
+          }
         },
         "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
           },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
           },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
+          "LG": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
           }
         }
-      },
-      "MD": {
-        "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        }
-      },
-      "LG": {
-        "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        }
-      },
-      "BorderRadius": {
-        "value": "{core.borderRadius.MD}",
-        "type": "borderRadius"
       }
     },
     "Tooltip": {
