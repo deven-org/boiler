@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from "nested-css-to-flat/lit-css";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
@@ -11,7 +11,6 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
       word-break: initial;
       color: ${Neutral.Text};
       outline: 1px solid ${Neutral.SurfaceStroke};
-      border-radius: ${Counter.BorderRadius};
       white-space: nowrap;
 
       &.sm {
@@ -22,6 +21,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         font-weight: ${SM.Caption.fontWeight};
         font-size: ${SM.Caption.fontSize};
         line-height: ${SM.Caption.lineHeight};
+        border-radius: ${Counter.Container.BorderRadius.SM};
       }
 
       &.md {
@@ -32,6 +32,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         font-weight: ${MD.Caption.fontWeight};
         font-size: ${MD.Caption.fontSize};
         line-height: ${MD.Caption.lineHeight};
+        border-radius: ${Counter.Container.BorderRadius.MD};
       }
 
       &.lg {
@@ -42,6 +43,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         font-weight: ${LG.Caption.fontWeight};
         font-size: ${LG.Caption.fontSize};
         line-height: ${LG.Caption.lineHeight};
+        border-radius: ${Counter.Container.BorderRadius.LG};
       }
 
       &.error {
