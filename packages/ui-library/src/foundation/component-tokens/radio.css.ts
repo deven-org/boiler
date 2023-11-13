@@ -1,4 +1,4 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
@@ -6,7 +6,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
   const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
   const { Radio } = componentTokens.Forms;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-legend {
       &.sm {
         font-weight: ${SM.Legend.fontWeight};

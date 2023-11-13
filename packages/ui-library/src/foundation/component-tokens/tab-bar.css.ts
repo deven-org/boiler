@@ -1,4 +1,5 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
@@ -6,7 +7,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
   const { IconButton } = componentTokens.Action;
   const { TabBar } = componentTokens.Navigation;
 
-  return css`
+  return typeSafeNestedCss`
       .wrapper-horizontal {
         position: relative;
         display: block;

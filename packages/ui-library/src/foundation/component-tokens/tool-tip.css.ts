@@ -1,5 +1,6 @@
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
-import { css } from "nested-css-to-flat/lit-css";
 
 export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const {
@@ -17,7 +18,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
   const splitPadding = splitPaddingFunc();
 
-  return css`
+  return typeSafeNestedCss`
     .blr-tooltip {
       position: relative;
       display: inline-block;

@@ -1,10 +1,12 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literals";
+
 import { componentTokens } from "../../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
 const { TextButton } = componentTokens.Action;
 const { Action } = semanticTokens;
-export const styleCustom = css`
+
+export const styleCustom = typeSafeNestedCss`
   .blr-text-button {
     align-items: center;
     justify-content: center;

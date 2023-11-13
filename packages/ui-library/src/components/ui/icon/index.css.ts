@@ -1,9 +1,10 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
 const { UI } = componentTokens;
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   :host {
     display: inline-flex;
     flex-shrink: 0;

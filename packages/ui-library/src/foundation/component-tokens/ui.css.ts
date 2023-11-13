@@ -1,10 +1,11 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: buttonGroupLight, tokenizedDark: buttonGroupDark } = renderThemedCssStrings((componentTokens) => {
   const { UI } = componentTokens;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-button-group.xs {
       gap: ${UI.ButtonGroup.XS.ItemSpacing};
     }

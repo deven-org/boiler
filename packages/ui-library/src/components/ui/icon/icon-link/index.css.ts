@@ -1,6 +1,6 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literals";
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   .blr-icon-link {
     align-items: center;
     justify-content: center;

@@ -1,10 +1,11 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = renderThemedCssStrings((componentTokens) => {
   const { UI } = componentTokens;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-divider {
       background-color: ${UI.Divider.Container.BackgroundColor};
 
