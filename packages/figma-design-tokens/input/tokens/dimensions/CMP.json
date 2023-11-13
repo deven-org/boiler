@@ -651,9 +651,24 @@
           }
         }
       },
-      "BorderRadius": {
-        "value": "{core.borderRadius.MD}",
-        "type": "borderRadius"
+      "Container": {
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          },
+          "MD": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          }
+        }
       }
     },
     "Tooltip": {
