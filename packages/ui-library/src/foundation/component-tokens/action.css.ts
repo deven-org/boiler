@@ -1,4 +1,5 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonDark } = renderThemedCssStrings((componentTokens) => {
@@ -6,7 +7,7 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
 
   // this line broke the stepper button
   // color: ${StepperButton.Icon.Rest};
-  return css`
+  return typeSafeNestedCss`
     .blr-stepper-button {
       all: initial;
       border-color: ${StepperButton.Border.Rest.color};
@@ -20,7 +21,7 @@ export const { tokenizedLight: stepperButtonLight, tokenizedDark: stepperButtonD
 export const { tokenizedLight: stepperComboLight, tokenizedDark: stepperComboDark } = renderThemedCssStrings((componentTokens) => {
   const { StepperCombo } = componentTokens.Action;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-stepper-combo.vertical {
       height: 100%;
     }

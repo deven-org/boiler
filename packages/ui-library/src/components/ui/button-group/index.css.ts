@@ -1,10 +1,10 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
 const { ButtonGroup } = componentTokens.UI;
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   .blr-button-group {
     display: flex;
 

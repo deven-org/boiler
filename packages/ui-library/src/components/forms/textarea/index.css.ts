@@ -1,7 +1,8 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   .blr-textarea {
     max-width: fit-content;
   }
@@ -15,7 +16,7 @@ export const styleCustom = css`
 export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = renderThemedCssStrings((componentTokens) => {
   const { TextArea } = componentTokens.Forms;
 
-  return css`
+  return typeSafeNestedCss`
     .textarea-input-control {
       resize: none;
       display: block;

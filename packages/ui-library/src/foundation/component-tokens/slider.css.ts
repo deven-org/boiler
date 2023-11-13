@@ -1,10 +1,11 @@
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
-import { css } from "nested-css-to-flat/lit-css";
 
 export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = renderThemedCssStrings((componentTokens) => {
   const { Forms } = componentTokens;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-slider {
       margin: 0;
 

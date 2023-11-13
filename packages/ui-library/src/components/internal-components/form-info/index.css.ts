@@ -1,10 +1,11 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: formInfoLight, tokenizedDark: formInfoDark } = renderThemedCssStrings((_componentTokens, semanticTokens) => {
   const { SM, MD } = semanticTokens.Forms;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-form-info-container {
       &.sm {
         margin: ${SM.CaptionSlot.Margin};
