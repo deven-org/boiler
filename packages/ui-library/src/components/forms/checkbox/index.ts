@@ -5,9 +5,9 @@ import { classMap } from 'lit/directives/class-map.js';
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
 import { FormSizesType } from '../../../globals/types';
 
-import { styleCustom } from './index.css';
+import { styleCustomLight, styleCustomDark } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { checkboxDark, checkboxLight } from '../../../foundation/component-tokens/checkbox.css';
+
 import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
@@ -17,7 +17,7 @@ const TAG_NAME = 'blr-checkbox';
 
 @customElement(TAG_NAME)
 export class BlrCheckbox extends LitElement {
-  static styles = [styleCustom];
+  static styles = [];
 
   @query('input')
   protected _checkboxNode!: HTMLInputElement;
@@ -52,16 +52,16 @@ export class BlrCheckbox extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, checkboxLight] : [formDark, checkboxDark];
+    const dynamicStyles = this.theme === 'Light' ? [formLight, styleCustomLight] : [formDark, styleCustomDark];
 
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-checkbox': true,
-      [`error`]: this.hasError || false,
-      [`disabled`]: this.disabled || false,
-      [`checked`]: this.checked || false,
-      [`readonly`]: this.readonly || false,
-      [`indeterminate`]: this.indeterminate || false,
+      'error': this.hasError || false,
+      'disabled': this.disabled || false,
+      'checked': this.checked || false,
+      'readonly': this.readonly || false,
+      'indeterminate': this.indeterminate || false,
       [`${this.size}`]: this.size || 'md',
     });
 
@@ -86,7 +86,7 @@ export class BlrCheckbox extends LitElement {
         />
         <div class="label-wrapper">
           ${this.hasLabel
-            ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
+            ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
             : nothing}
           ${this.showHint
             ? html`
