@@ -3,7 +3,7 @@ import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literal
 import { componentTokens } from "../../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
-const { TextButton } = componentTokens.Action;
+const { TextButton } = componentTokens.Actions;
 const { Action, Global } = semanticTokens;
 
 export const styleCustom = typeSafeNestedCss`
@@ -24,8 +24,8 @@ export const styleCustom = typeSafeNestedCss`
     position: relative;
 
     &.xs {
-      gap: ${TextButton.XS.ItemSpacing};
-      padding: ${TextButton.XS.Padding};
+      gap: ${TextButton.Container.ItemSpacing.XS};
+      padding: ${TextButton.Container.Padding.XS};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.XS};
@@ -33,8 +33,8 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.sm {
-      gap: ${TextButton.SM.ItemSpacing};
-      padding: ${TextButton.SM.Padding};
+      gap: ${TextButton.Container.ItemSpacing.SM};
+      padding: ${TextButton.Container.Padding.SM};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.SM};
@@ -42,8 +42,8 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.md {
-      gap: ${TextButton.MD.ItemSpacing};
-      padding: ${TextButton.MD.Padding};
+      gap: ${TextButton.Container.ItemSpacing.MD};
+      padding: ${TextButton.Container.Padding.MD};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.MD};
@@ -51,8 +51,8 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.lg {
-      gap: ${TextButton.LG.ItemSpacing};
-      padding: ${TextButton.LG.Padding};
+      gap: ${TextButton.Container.ItemSpacing.LG};
+      padding: ${TextButton.Container.Padding.LG};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.LG};
@@ -60,8 +60,8 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.xl {
-      gap: ${TextButton.XL.ItemSpacing};
-      padding: ${TextButton.XL.Padding};
+      gap: ${TextButton.Container.ItemSpacing.XL};
+      padding: ${TextButton.Container.Padding.XL};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.XL};

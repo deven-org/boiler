@@ -55,26 +55,6 @@ export class BlrTextButton extends LitElement {
       disabled: this.disabled,
     });
 
-    const loaderIconClasses = classMap({
-      'loading-class-icons': this.loading,
-      'disabled-icon-cta': this.disabled && this.variant === 'cta',
-      'disabled-icon-primary': this.disabled && this.variant === 'primary',
-      'disabled-icon-secondary': this.disabled && this.variant === 'secondary',
-      'disabled-icon-destructive': this.disabled && this.variant === 'destructive',
-      'disabled-icon-silent': this.disabled && this.variant === 'silent',
-      'disabled-icon-encourage': this.disabled && this.variant === 'encourage',
-    });
-
-    const labelClasses = classMap({
-      'loading-class-label': this.loading,
-      'disabled-label-cta': this.disabled && this.variant === 'cta',
-      'disabled-label-primary': this.disabled && this.variant === 'primary',
-      'disabled-label-secondary': this.disabled && this.variant === 'secondary',
-      'disabled-label-destructive': this.disabled && this.variant === 'destructive',
-      'disabled-label-silent': this.disabled && this.variant === 'silent',
-      'disabled-label-encourage': this.disabled && this.variant === 'encourage',
-    });
-
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const loaderSizeVariant = getComponentConfigToken([
@@ -97,15 +77,13 @@ export class BlrTextButton extends LitElement {
         icon: calculateIconName(this.leadingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
-        classMap: loaderIconClasses,
       })}
-      <span class=${labelClasses}>${this.label}</span>
+      <span>${this.label}</span>
       ${this.trailingIcon &&
       BlrIconRenderFunction({
         icon: calculateIconName(this.trailingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
-        classMap: loaderIconClasses,
       })}`;
 
     return html`<style>
@@ -124,17 +102,15 @@ export class BlrTextButton extends LitElement {
         ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
         ${this.loading
           ? html`
-              <div class="loader-class ${loaderIconClasses}">
-                ${BlrLoaderRenderFunction({
-                  size: loaderSizeVariant,
-                  variant: loaderVariant,
-                  loadingStatus: this.loadingStatus,
-                  theme: this.theme,
-                })}
-              </div>
+              ${BlrLoaderRenderFunction({
+                size: loaderSizeVariant,
+                variant: loaderVariant,
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+              })}
               ${labelAndIconGroup}
             `
-          : html` ${labelAndIconGroup} `}
+          : labelAndIconGroup}
       </span>`;
   }
 }
