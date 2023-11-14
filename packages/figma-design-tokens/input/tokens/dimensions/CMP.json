@@ -55,10 +55,6 @@
       },
       "Container": {
         "BorderRadius": {
-          "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
-            "type": "borderRadius"
-          },
           "SM": {
             "value": "{Actions.Container.BorderRadius.SM}",
             "type": "borderRadius"
@@ -69,10 +65,6 @@
           },
           "LG": {
             "value": "{Actions.Container.BorderRadius.LG}",
-            "type": "borderRadius"
-          },
-          "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
             "type": "borderRadius"
           }
         }
