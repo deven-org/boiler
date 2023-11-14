@@ -15,6 +15,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
@@ -99,6 +100,28 @@ export class BlrTextInput extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
+    const captionContent = html`
+    ${this.showHint ? 
+      BlrFormCaptionRenderFunction({
+        variant: 'hint',
+        theme: this.theme,
+        size: this.size,
+        message: this.hintMessage,
+        icon: this.hintIcon
+      })
+    : nothing}
+
+    ${this.hasError ?
+      BlrFormCaptionRenderFunction({
+        variant: 'error',
+        theme: this.theme,
+        size: this.size,
+        message: this.errorMessage,
+        icon: this.errorIcon
+      })
+      : nothing}
+    `;
+
     return html`
       <style>
         ${dynamicStyles}
@@ -158,16 +181,8 @@ export class BlrTextInput extends LitElement {
             : nothing}
         </div>
         ${this.showHint || this.hasError
-          ? BlrFormCaptionGroupRenderFunction({
-              theme: this.theme,
-              size: this.size,
-              showHint: this.showHint,
-              hintMessage: this.hintMessage,
-              hintIcon: this.hintIcon,
-              showError: !!this.hasError,
-              errorMessage: this.errorMessage,
-              errorIcon: this.errorIcon,
-            })
+          ?
+          BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent)
           : nothing}
       </div>
     `;

@@ -1,7 +1,7 @@
 import { BlrTextareaRenderFunction, BlrTextareaType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextareaType = {
@@ -80,12 +80,58 @@ describe('blr-textarea', () => {
     expect(disabled).to.be.equal(null);
   });
 
-  it('is having a a visible hint icon', async () => {
+  it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
         showHint: true,
         hintIcon: 'blrInfo',
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
+    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
+    const hintClassName = formCaptionHint?.className;
+
+    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
+    const errorClassName = formCaptionError?.className;
+
+    expect(hintClassName).to.contain('hint');
+    expect(errorClassName).to.contain('error');
+  });
+
+  it('is having a visible hint icon', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        showHint: true,
+        hintIcon: 'blrInfo',
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
+    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
+
+    const rect = svg?.getBoundingClientRect();
+
+    expect(rect).have.property('width');
+    expect(rect).have.property('height');
+
+    expect(rect?.width).to.be.greaterThan(0);
+    expect(rect?.height).to.be.greaterThan(0);
+  });
+
+  it('is having a visible error icon', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
       })
     );
 

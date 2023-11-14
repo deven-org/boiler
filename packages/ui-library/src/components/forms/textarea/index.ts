@@ -11,6 +11,7 @@ import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/for
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-textarea';
 
@@ -37,12 +38,12 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType;
   @property() hint?: string;
   @property() showHint = true;
   @property() hintMessage?: string;
   @property() showCounter?: boolean;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() hintIcon?: SizelessIconType;
   @property() isResizeable?: boolean;
   @property() rows?: number;
   @property() cols?: number;
@@ -120,6 +121,28 @@ export class BlrTextarea extends LitElement {
 
     const counterVariant = this.determinateCounterVariant();
 
+    const captionContent = html`
+      ${this.showHint ? 
+        BlrFormCaptionRenderFunction({
+          variant: 'hint',
+          theme: this.theme,
+          size: this.size,
+          message: this.hintMessage,
+          icon: this.hintIcon
+        })
+      : nothing}
+
+      ${this.hasError ?
+        BlrFormCaptionRenderFunction({
+          variant: 'error',
+          theme: this.theme,
+          size: this.size,
+          message: this.errorMessage,
+          icon: this.errorIcon
+        })
+        : nothing}
+      `;
+
     return html`
       <style>
         ${dynamicStyles}
@@ -155,17 +178,8 @@ ${this.value}
         >
         <div class="${textareaInfoContainer}">
           ${this.showHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({
-                theme: this.theme,
-                size: this.size,
-                showHint: this.showHint,
-                hintMessage: this.hintMessage,
-                hintIcon: this.hintIcon,
-                showError: !!this.hasError,
-                errorMessage: this.errorMessage,
-                errorIcon: this.errorIcon,
-              })
-            : nothing}
+            ?
+            BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent) : nothing}
           ${this.showCounter
             ? BlrCounterRenderFunction({
                 variant: counterVariant,

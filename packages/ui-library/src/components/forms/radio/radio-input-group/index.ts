@@ -10,6 +10,7 @@ import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-radio-group';
 
@@ -33,7 +34,6 @@ export class BlrRadioGroup extends LitElement {
   @property() layout!: boolean;
   @property() showHint = true;
   @property() groupHintIcon: SizelessIconType = 'blrInfoSm';
-  @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
@@ -68,6 +68,28 @@ export class BlrRadioGroup extends LitElement {
     const calculateOptionId = (label: string) => {
       return label.replace(/ /g, '_').toLowerCase();
     };
+
+    const captionContent = html`
+    ${this.showHint ? 
+      BlrFormCaptionRenderFunction({
+        variant: 'hint',
+        theme: this.theme,
+        size: this.size,
+        message: this.groupHintMessage,
+        icon: this.groupHintIcon
+      })
+    : nothing}
+
+    ${this.hasError ?
+      BlrFormCaptionRenderFunction({
+        variant: 'error',
+        theme: this.theme,
+        size: this.size,
+        message: this.groupErrorMessage,
+        icon: this.groupErrorIcon
+      })
+      : nothing}
+    `;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -110,18 +132,9 @@ export class BlrRadioGroup extends LitElement {
 
       ${this.showHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${this.showHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({
-                  theme: this.theme,
-                  size: this.size,
-                  showHint: !!this.showHint,
-                  hintMessage: this.groupHintMessage,
-                  hintIcon: this.groupHintIcon,
-                  showError: !!this.hasError,
-                  errorMessage: this.groupErrorMessage,
-                  errorIcon: this.groupErrorIcon,
-                })
-              : nothing}
+        ${this.showHint || this.hasError
+          ?
+          BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent) : nothing}
           </div>`
         : nothing} `;
   }

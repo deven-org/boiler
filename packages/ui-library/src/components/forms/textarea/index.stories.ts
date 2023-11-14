@@ -95,7 +95,7 @@ const args: BlrTextareaType = {
   hintIcon: 'blrInfo',
   hintMessage: 'Rindfleischetikettierungs',
 
-  errorIcon: undefined,
+  errorIcon: 'blrErrorFilled',
   hasError: false,
   errorMessage: 'This is an error message',
 

@@ -10,6 +10,7 @@ import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-radio';
 
@@ -51,6 +52,30 @@ export class BlrRadio extends LitElement {
 
     const id = this.option.label ? calculateOptionId(this.option.label) : '';
 
+    const renderCaptionContent = (option: RadioOption) => {
+      return html`
+        ${this.showHint ? 
+          BlrFormCaptionRenderFunction({
+            variant: 'hint',
+            theme: this.theme,
+            size: this.size,
+            message: option.hintMessage,
+            icon: this.hintIcon
+          })
+        : nothing}
+
+        ${this.hasError ?
+          BlrFormCaptionRenderFunction({
+            variant: 'error',
+            theme: this.theme,
+            size: this.size,
+            message: option.errorMessage,
+            icon: this.errorIcon
+          })
+          : nothing}
+        `;
+      }
+
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
@@ -77,18 +102,9 @@ export class BlrRadio extends LitElement {
             ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
             : nothing}
           <div class="caption-wrapper">
-            ${this.showHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({
-                  theme: this.theme,
-                  size: this.size,
-                  showHint: this.showHint,
-                  hintMessage: this.option.hintMessage,
-                  hintIcon: this.hintIcon,
-                  showError: !!this.hasError,
-                  errorMessage: this.option.errorMessage,
-                  errorIcon: this.errorIcon,
-                })
-              : nothing}
+          ${this.showHint || this.hasError
+            ?
+            BlrFormCaptionGroupRenderFunction({size: this.size}, renderCaptionContent(this.option)) : nothing}
           </div>
         </div>
       </div> `;

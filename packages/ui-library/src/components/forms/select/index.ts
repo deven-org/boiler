@@ -15,6 +15,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 type Option = {
   value: string;
@@ -78,8 +79,6 @@ export class BlrSelect extends LitElement {
         disablePointerEvents: true,
       });
     }
-
-    return nothing;
   }
 
   protected render() {
@@ -96,6 +95,28 @@ export class BlrSelect extends LitElement {
       'blr-input-icon': true,
       [this.size]: this.size,
     });
+
+    const captionContent = html`
+    ${this.showHint ? 
+      BlrFormCaptionRenderFunction({
+        variant: 'hint',
+        theme: this.theme,
+        size: this.size,
+        message: this.hintMessage,
+        icon: this.hintIcon
+      })
+    : nothing}
+
+    ${this.hasError ?
+      BlrFormCaptionRenderFunction({
+        variant: 'error',
+        theme: this.theme,
+        size: this.size,
+        message: this.errorMessage,
+        icon: this.errorIcon
+      })
+      : nothing}
+    `;
 
     return html`
       <style>
@@ -143,16 +164,8 @@ export class BlrSelect extends LitElement {
           ${this.renderIcon(iconClasses)}
         </div>
         ${this.showHint || this.hasError
-          ? BlrFormCaptionGroupRenderFunction({
-              theme: this.theme,
-              size: this.size,
-              showHint: !!this.showHint,
-              hintMessage: this.hintMessage,
-              hintIcon: this.hintIcon,
-              showError: !!this.hasError,
-              errorMessage: this.errorMessage,
-              errorIcon: this.errorIcon,
-            })
+          ?
+          BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent)
           : nothing}
       </div>
     `;

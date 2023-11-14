@@ -8,10 +8,11 @@ import { FormSizesType } from '../../../globals/types';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { checkboxDark, checkboxLight } from '../../../foundation/component-tokens/checkbox.css';
-import { IconType } from '@boiler/icons';
+import { IconType, SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-checkbox';
 
@@ -31,9 +32,9 @@ export class BlrCheckbox extends LitElement {
   @property() readonly?: boolean;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: IconType;
+  @property() errorIcon?: SizelessIconType;
   @property() showHint?: boolean;
-  @property() hintIcon?: IconType;
+  @property() hintIcon?: SizelessIconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
 
@@ -65,6 +66,28 @@ export class BlrCheckbox extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const captionContent = html`
+    ${this.showHint ? 
+      BlrFormCaptionRenderFunction({
+        variant: 'hint',
+        theme: this.theme,
+        size: this.size,
+        message: this.hintMessage,
+        icon: this.hintIcon
+      })
+    : nothing}
+
+    ${this.hasError ?
+      BlrFormCaptionRenderFunction({
+        variant: 'error',
+        theme: this.theme,
+        size: this.size,
+        message: this.errorMessage,
+        icon: this.errorIcon
+      })
+      : nothing}
+    `;
+
     return html`
       <style>
         ${dynamicStyles.map((style) => style)}
@@ -88,18 +111,9 @@ export class BlrCheckbox extends LitElement {
           ${this.hasLabel
             ? html`${BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })}`
             : nothing}
-          ${this.showHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({
-                theme: this.theme,
-                size: this.size,
-                showHint: !!this.showHint,
-                hintMessage: this.hintMessage,
-                hintIcon: this.hintIcon,
-                showError: !!this.hasError,
-                errorMessage: this.errorMessage,
-                errorIcon: this.errorIcon,
-              })
-            : nothing}
+            ${this.showHint || this.hasError
+              ?
+              BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent) : nothing}
         </div>
       </div>
     `;
