@@ -22,7 +22,7 @@ export const styleCustom = typeSafeNestedCss`
     cursor: pointer;
     outline-offset: -2px;
     position: relative;
-
+    
     &.xs {
       gap: ${TextButton.Container.ItemSpacing.XS};
       padding: ${TextButton.Container.Padding.XS};
