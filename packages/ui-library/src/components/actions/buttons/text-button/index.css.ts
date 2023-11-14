@@ -4,9 +4,17 @@ import { componentTokens } from "../../../../foundation/_tokens-generated/__comp
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
 const { TextButton } = componentTokens.Action;
-const { Action } = semanticTokens;
+const { Action, Global } = semanticTokens;
 
 export const styleCustom = typeSafeNestedCss`
+  .focus-layer {
+    position: absolute;
+    inset: 0;
+    outline-color: ${Global.FocusBorder.color};
+    outline-style: ${Global.FocusBorder.style};
+    outline-width: ${Global.FocusBorder.width};
+  }
+
   .blr-text-button {
     align-items: center;
     justify-content: center;
@@ -18,26 +26,46 @@ export const styleCustom = typeSafeNestedCss`
     &.xs {
       gap: ${TextButton.XS.ItemSpacing};
       padding: ${TextButton.XS.Padding};
+
+      & > .focus-layer {
+        border-radius: ${TextButton.Container.BorderRadius.XS};
+      }
     }
 
     &.sm {
       gap: ${TextButton.SM.ItemSpacing};
       padding: ${TextButton.SM.Padding};
+
+      & > .focus-layer {
+        border-radius: ${TextButton.Container.BorderRadius.SM};
+      }
     }
 
     &.md {
       gap: ${TextButton.MD.ItemSpacing};
       padding: ${TextButton.MD.Padding};
+
+      & > .focus-layer {
+        border-radius: ${TextButton.Container.BorderRadius.MD};
+      }
     }
 
     &.lg {
       gap: ${TextButton.LG.ItemSpacing};
       padding: ${TextButton.LG.Padding};
+
+      & > .focus-layer {
+        border-radius: ${TextButton.Container.BorderRadius.LG};
+      }
     }
 
     &.xl {
       gap: ${TextButton.XL.ItemSpacing};
       padding: ${TextButton.XL.Padding};
+
+      & > .focus-layer {
+        border-radius: ${TextButton.Container.BorderRadius.XL};
+      }
     }
 
     &.disabled {
@@ -84,12 +112,6 @@ export const styleCustom = typeSafeNestedCss`
         border-radius: ${Action.BorderRadius};
       }
     }
-  }
-
-  .blr-text-button:focus {
-    /*  Component Tokens for Outline are missing */
-    /* Need to make sure we meet AA requirements with this custom outline */
-    outline: 2px solid black;
   }
 
   .loading-class-icons,
