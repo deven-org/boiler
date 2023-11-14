@@ -36,9 +36,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           position: relative;
           outline-offset: 2px;
           transition: all 0.25s ease 0s;
-          border-radius: ${Checkbox.ControlBorderRadius};
           background-color: ${Checkbox.Control.Background.Unselected.Fill.Rest};
-          border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
         }
         .label-wrapper {
           display: flex;
@@ -61,10 +59,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           gap: ${Checkbox.SM.MainContainer.ItemSpacing};
           .input-control {
             width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
-            min-width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
             height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
-            min-height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
             margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
+            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
+            border-radius: ${Checkbox.ControlBorderRadius};
           }
           .label-wrapper {
             padding-top: ${Checkbox.SM.ContentCol.PaddingTop};
@@ -78,26 +76,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
           .input-control {
             &:checked {
-              width: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
-              min-width: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
-              height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
-              min-height: ${Checkbox.SM.Control.Background.Sizing.Selected.Rest};
-              margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
+
               &:after {
                 width: ${Checkbox.SM.Control.Icon.Sizing.Selected.Rest};
                 height: ${Checkbox.SM.Control.Icon.Sizing.Selected.Rest};
-              }
-              &:hover {
-                width: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
-                height: ${Checkbox.SM.Control.Background.Sizing.Selected.Hover};
-              }
-              &:disabled {
-                width: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
-                height: ${Checkbox.SM.Control.Background.Sizing.Selected.Disabled};
-              }
-              &:[readonly] {
-                width: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
-                height: ${Checkbox.SM.Control.Background.Sizing.Selected.ReadOnly};
               }
             }
           }
@@ -106,10 +88,18 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           gap: ${Checkbox.MD.MainContainer.ItemSpacing};
           .input-control {
             width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
-            min-width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
             height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
-            min-height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
             margin-top: ${Checkbox.MD.ControlWrapper.TopMargin};
+            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
+            border-radius: ${Checkbox.ControlBorderRadius};
+
+            &:checked {
+
+              &:after {
+                width: ${Checkbox.MD.Control.Icon.Sizing.Selected.Rest};
+                height: ${Checkbox.MD.Control.Icon.Sizing.Selected.Rest};
+              }
+            }
           }
           .label-wrapper {
             padding-top: ${Checkbox.MD.ContentCol.PaddingTop};
@@ -121,40 +111,22 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               font-size: ${MD.LabelNextToControl.fontSize};
             }
           }
-          .input-control {
-            &:checked {
-              width: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
-              min-width: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
-              height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
-              min-height: ${Checkbox.MD.Control.Background.Sizing.Selected.Rest};
-              margin-top: ${Checkbox.MD.ControlWrapper.TopMargin};
-              &:after {
-                width: ${Checkbox.MD.Control.Icon.Sizing.Selected.Rest};
-                height: ${Checkbox.MD.Control.Icon.Sizing.Selected.Rest};
-              }
-              &:hover {
-                width: ${Checkbox.MD.Control.Background.Sizing.Selected.Hover};
-                height: ${Checkbox.MD.Control.Background.Sizing.Selected.Hover};
-              }
-              &:disabled {
-                width: ${Checkbox.MD.Control.Background.Sizing.Selected.Disabled};
-                height: ${Checkbox.MD.Control.Background.Sizing.Selected.Disabled};
-              }
-              &:[readonly] {
-                width: ${Checkbox.MD.Control.Background.Sizing.Selected.ReadOnly};
-                height: ${Checkbox.MD.Control.Background.Sizing.Selected.ReadOnly};
-              }
-            }
-          }
         }
         &.lg {
           gap: ${Checkbox.LG.MainContainer.ItemSpacing};
           .input-control {
             width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
-            min-width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
             height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
-            min-height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
             margin-top: ${Checkbox.LG.ControlWrapper.TopMargin};
+            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
+            border-radius: ${Checkbox.ControlBorderRadius};
+            &:checked {
+
+              &:after {
+                width: ${Checkbox.LG.Control.Icon.Sizing.Selected.Rest};
+                height: ${Checkbox.LG.Control.Icon.Sizing.Selected.Rest};
+              }
+            }
           }
           .label-wrapper {
             padding-top: ${Checkbox.LG.ContentCol.PaddingTop};
@@ -164,31 +136,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               font-weight: ${LG.LabelNextToControl.fontWeight};
               lineHeight: ${LG.LabelNextToControl.lineHeight};
               font-size: ${LG.LabelNextToControl.fontSize};
-            }
-          }
-          .input-control {
-            &:checked {
-              width: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
-              min-width: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
-              height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
-              min-height: ${Checkbox.LG.Control.Background.Sizing.Selected.Rest};
-              margin-top: ${Checkbox.LG.ControlWrapper.TopMargin};
-              &:after {
-                width: ${Checkbox.LG.Control.Icon.Sizing.Selected.Rest};
-                height: ${Checkbox.LG.Control.Icon.Sizing.Selected.Rest};
-              }
-              &:hover {
-                width: ${Checkbox.LG.Control.Background.Sizing.Selected.Hover};
-                height: ${Checkbox.LG.Control.Background.Sizing.Selected.Hover};
-              }
-              &:disabled {
-                width: ${Checkbox.LG.Control.Background.Sizing.Selected.Disabled};
-                height: ${Checkbox.LG.Control.Background.Sizing.Selected.Disabled};
-              }
-              &:[readonly] {
-                width: ${Checkbox.LG.Control.Background.Sizing.Selected.ReadOnly};
-                height: ${Checkbox.LG.Control.Background.Sizing.Selected.ReadOnly};
-              }
             }
           }
         }
@@ -326,24 +273,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         }
     
         &.error {
-          &.sm {
-            .input-control {
-              width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Error};
-              height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Error};
-            }
-          }
-          &.md {
-            .input-control {
-              width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Error};
-              height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Error};
-            }
-          }
-          &.lg {
-            .input-control {
-              width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Error};
-              height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Error};
-            }
-          }
           .input-control {
             background-color: ${Checkbox.Control.Background.Unselected.Fill.Error};
             border-color: ${Checkbox.Control.Background.Unselected.Stroke.Error};
