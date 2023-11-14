@@ -17,58 +17,35 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
       box-sizing: border-box;
       animation: rotation 1s linear infinite;
 
+      &.default { 
+        border-color: ${Loader.Background.BorderColor.Default};
+        border-bottom-color: ${Loader.Foreground.BorderColor.Default};
+      }
+
+      &.inverted {
+        border-color: ${Loader.Background.BorderColor.Inverted};
+        border-bottom-color: ${Loader.Foreground.BorderColor.Inverted};
+      }
+
       &.sm {
         width: ${Loader.Container.Size.SM};
         height: ${Loader.Container.Size.SM};
         padding: ${Loader.Container.Padding.SM};
-
-        &.default { 
-          border-color: ${Loader.Background.BorderColor.Default};
-          border-bottom-color: ${Loader.Foreground.BorderColor.Default};
-          border-width: ${Loader.SM.Background.Default.width};
-        }
-
-        &.inverted {
-          border-color: ${Loader.SM.Background.Inverted.color};
-          border-bottom-color: ${Loader.SM.Foreground.Inverted.color};
-          border-width: ${Loader.SM.Background.Inverted.width};
-        }
+        border-width: ${Loader.Background.BorderWidth.SM};
       }
 
       &.md {
         width: ${Loader.Container.Size.MD};
         height: ${Loader.Container.Size.MD};
         padding: ${Loader.Container.Padding.MD};
-
-        &.default {
-          border-color: ${Loader.MD.Background.Default.color};
-          border-bottom-color: ${Loader.MD.Foreground.Default.color};
-          border-width: ${Loader.MD.Background.Default.width};
-        }
-
-        &.inverted {
-          border-color: ${Loader.MD.Background.Inverted.color};
-          border-bottom-color: ${Loader.MD.Foreground.Inverted.color};
-          border-width: ${Loader.MD.Background.Inverted.width};
-        }
+        border-width: ${Loader.Background.BorderWidth.MD};
       }
 
       &.lg {
         width: ${Loader.Container.Size.LG};
         height: ${Loader.Container.Size.LG};
         padding: ${Loader.Container.Padding.LG};
-
-        &.default {
-          border-color: ${Loader.LG.Background.Default.color};
-          border-bottom-color: ${Loader.LG.Foreground.Default.color};
-          border-width: ${Loader.LG.Background.Default.width};
-        }
-
-        &.inverted {
-          border-color: ${Loader.LG.Background.Inverted.color};
-          border-bottom-color: ${Loader.LG.Foreground.Inverted.color};
-          border-width: ${Loader.LG.Background.Inverted.width};
-        }
+        border-width: ${Loader.Background.BorderWidth.LG};
       }
     }
 
