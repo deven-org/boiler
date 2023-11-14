@@ -26,6 +26,7 @@ export const styleCustom = typeSafeNestedCss`
     &.xs {
       gap: ${TextButton.Container.ItemSpacing.XS};
       padding: ${TextButton.Container.Padding.XS};
+      border-radius: ${TextButton.Container.BorderRadius.XS};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.XS};
@@ -35,6 +36,7 @@ export const styleCustom = typeSafeNestedCss`
     &.sm {
       gap: ${TextButton.Container.ItemSpacing.SM};
       padding: ${TextButton.Container.Padding.SM};
+      border-radius: ${TextButton.Container.BorderRadius.SM};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.SM};
@@ -44,6 +46,7 @@ export const styleCustom = typeSafeNestedCss`
     &.md {
       gap: ${TextButton.Container.ItemSpacing.MD};
       padding: ${TextButton.Container.Padding.MD};
+      border-radius: ${TextButton.Container.BorderRadius.MD};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.MD};
@@ -53,6 +56,7 @@ export const styleCustom = typeSafeNestedCss`
     &.lg {
       gap: ${TextButton.Container.ItemSpacing.LG};
       padding: ${TextButton.Container.Padding.LG};
+      border-radius: ${TextButton.Container.BorderRadius.LG};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.LG};
@@ -62,6 +66,7 @@ export const styleCustom = typeSafeNestedCss`
     &.xl {
       gap: ${TextButton.Container.ItemSpacing.XL};
       padding: ${TextButton.Container.Padding.XL};
+      border-radius: ${TextButton.Container.BorderRadius.XL};
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.XL};
