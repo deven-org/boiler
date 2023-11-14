@@ -20,7 +20,6 @@ export const styleCustom = typeSafeNestedCss`
     justify-content: center;
     display: inline-flex;
     cursor: pointer;
-    outline-offset: -2px;
     position: relative;
     
     &.xs {
