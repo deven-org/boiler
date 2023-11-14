@@ -56,15 +56,15 @@
       "Container": {
         "BorderRadius": {
           "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
+            "value": "{core.borderRadius.None}",
             "type": "borderRadius"
           },
           "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
+            "value": "{core.borderRadius.None}",
             "type": "borderRadius"
           },
           "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
+            "value": "{core.borderRadius.None}",
             "type": "borderRadius"
           }
         }
