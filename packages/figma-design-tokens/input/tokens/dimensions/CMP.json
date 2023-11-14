@@ -822,62 +822,6 @@
             "value": "{core.dimensionPX.3}",
             "type": "borderWidth"
           }
-        },
-        "Border": {
-          "SM": {
-            "Default": {
-              "value": {
-                "color": "{Feedback.Loader.Background.BorderColor.Default}",
-                "width": "{Feedback.Loader.Background.BorderWidth.SM}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "Inverted": {
-              "value": {
-                "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
-                "width": "{Feedback.Loader.Background.BorderWidth.SM}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          },
-          "MD": {
-            "Default": {
-              "value": {
-                "color": "{Feedback.Loader.Background.BorderColor.Default}",
-                "width": "{Feedback.Loader.Background.BorderWidth.MD}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "Inverted": {
-              "value": {
-                "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
-                "width": "{Feedback.Loader.Background.BorderWidth.MD}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          },
-          "LG": {
-            "Default": {
-              "value": {
-                "color": "{Feedback.Loader.Background.BorderColor.Default}",
-                "width": "{Feedback.Loader.Background.BorderWidth.LG}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "Inverted": {
-              "value": {
-                "color": "{Feedback.Loader.Background.BorderColor.Inverted}",
-                "width": "{Feedback.Loader.Background.BorderWidth.LG}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          }
         }
       },
       "Foreground": {
@@ -893,62 +837,6 @@
           "LG": {
             "value": "{core.dimensionPX.3}",
             "type": "borderWidth"
-          }
-        },
-        "Border": {
-          "SM": {
-            "Default": {
-              "value": {
-                "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
-                "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "Inverted": {
-              "value": {
-                "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
-                "width": "{Feedback.Loader.Foreground.BorderWidth.SM}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          },
-          "MD": {
-            "Default": {
-              "value": {
-                "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
-                "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "Inverted": {
-              "value": {
-                "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
-                "width": "{Feedback.Loader.Foreground.BorderWidth.MD}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          },
-          "LG": {
-            "Default": {
-              "value": {
-                "color": "{Feedback.Loader.Foreground.BorderColor.Default}",
-                "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "Inverted": {
-              "value": {
-                "color": "{Feedback.Loader.Foreground.BorderColor.Inverted}",
-                "width": "{Feedback.Loader.Foreground.BorderWidth.LG}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
           }
         }
       }
