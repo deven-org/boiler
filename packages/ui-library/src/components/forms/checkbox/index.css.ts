@@ -27,10 +27,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               pointer-events: none;
             }
           }
-    
-          &:focus {
-            outline-offset: 2px;
-          }
         }
 
         .blr-form-label-inline {
@@ -196,7 +192,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
         }
-      }
+
         &:not(.error) {
           .input-control {
             &:checked {
@@ -239,7 +235,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               &:focus {
                 background-color: ${Checkbox.Control.Background.Selected.Fill.Focus};
                 border-color: ${Checkbox.Control.Background.Selected.Stroke.Focus};
-                outline: 2px solid black;
               }
               &:indeterminate {
                 background-color: ${Checkbox.Control.Background.Selected.Fill.ReadOnly};
@@ -280,7 +275,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             &:focus {
               background-color: ${Checkbox.Control.Background.Unselected.Fill.Focus};
               border-color: ${Checkbox.Control.Background.Unselected.Stroke.Focus};
-              outline: 2px solid black;
             }
             &[readonly] {
               background-color: ${Checkbox.Control.Background.Unselected.Fill.ReadOnly};
@@ -354,7 +348,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             background-color: ${Checkbox.Control.Background.Unselected.Fill.Error};
             border-color: ${Checkbox.Control.Background.Unselected.Stroke.Error};
           }
-        }
         }
       }
     `;

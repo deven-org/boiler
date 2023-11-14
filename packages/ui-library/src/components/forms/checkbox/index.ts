@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
+import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
@@ -45,6 +45,18 @@ export class BlrCheckbox extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @state() protected focused = false;
+
+  protected handleFocus = (event: FocusEvent) => {
+    this.focused = true;
+    this.onFocus?.(event);
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    this.focused = false;
+    this.onBlur?.(event);
+  };
+
   protected handleChange(event: Event) {
     if (!this.disabled) {
       this.onChange?.(event);
@@ -59,6 +71,7 @@ export class BlrCheckbox extends LitElement {
       'blr-checkbox': true,
       'error': this.hasError || false,
       'disabled': this.disabled || false,
+      'focus': this.focused || false,
       'checked': this.checked || false,
       'readonly': this.readonly || false,
       'indeterminate': this.indeterminate || false,
@@ -81,8 +94,8 @@ export class BlrCheckbox extends LitElement {
           ?readonly=${this.readonly}
           ?hasError=${this.hasError}
           @change=${this.handleChange}
-          @focus=${this.onFocus}
-          @blur=${this.onBlur}
+          @focus=${this.handleFocus}
+          @blur=${this.handleBlur}
         />
         <div class="label-wrapper">
           ${this.hasLabel
