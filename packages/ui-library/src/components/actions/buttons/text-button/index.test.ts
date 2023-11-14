@@ -6,7 +6,7 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 const sampleParams: BlrTextButtonType = {
   label: 'Button',
   leadingIcon: undefined,
-  trailingIcon: 'blrChevronDownLg',
+  trailingIcon: 'blrChevronDown',
   loading: false,
   buttonId: 'button-id',
   variant: 'cta',

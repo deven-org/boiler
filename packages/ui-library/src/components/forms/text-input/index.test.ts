@@ -12,17 +12,16 @@ const sampleParams: BlrTextInputType = {
   type: 'text',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   maxLength: 140,
-  errorIcon: 'blrInfoLg',
+  errorIcon: 'blrInfo',
   errorMessage: "OMG it's an error",
   placeholder: 'Type your message here ..',
   hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  hintIcon: 'blrInfoLg',
+  hintIcon: 'blrInfo',
   showHint: true,
   hasLabel: true,
   showInputIcon: true,
-  inputIcon: 'blr360Lg',
+  inputIcon: 'blr360',
   theme: 'Light',
-  errorIcon: 'blr360Lg',
 };
 
 describe('blr-text-input', () => {

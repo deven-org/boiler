@@ -5,7 +5,7 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrIconButtonType = {
   arialabel: 'Button',
-  icon: 'blrChevronDownLg',
+  icon: 'blrChevronDown',
   loading: false,
   disabled: false,
   buttonId: 'button-id',

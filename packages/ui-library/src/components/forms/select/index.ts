@@ -44,8 +44,8 @@ export class BlrSelect extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfoSm';
-  @property() errorIcon?: SizelessIconType = 'blr360Sm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType = 'blr360';
   @property() showHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 

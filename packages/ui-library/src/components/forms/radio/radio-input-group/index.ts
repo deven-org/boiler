@@ -32,7 +32,7 @@ export class BlrRadioGroup extends LitElement {
   @property() options!: RadioOption[];
   @property() layout!: boolean;
   @property() showHint = true;
-  @property() hintIcon: SizelessIconType = 'blrInfoSm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;

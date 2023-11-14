@@ -14,7 +14,7 @@ const sampleParams: BlrToggleSwitchType = {
   offLabel: 'Off',
   showHint: true,
   hintText: 'Field is used for hint',
-  hintIcon: 'blrInfoLg',
+  hintIcon: 'blrInfo',
   variant: 'leading',
   isSelected: false,
   theme: 'Light',

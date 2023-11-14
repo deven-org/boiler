@@ -8589,7 +8589,7 @@ export const PureIconKeys = [
   'blrVideoCamera',
   'blrVideo',
   'blrWiFi',
-];
+] as const;
 
 export const IconMapping = {
   blr360Lg,
