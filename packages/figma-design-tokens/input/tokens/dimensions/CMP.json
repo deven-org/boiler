@@ -50,6 +50,28 @@
           "value": "{core.dimensionPX.4}",
           "type": "spacing"
         }
+      },
+      "BorderRadius": {
+        "XS": {
+          "value": "{Actions.Container.BorderRadius.XS}",
+          "type": "borderRadius"
+        },
+        "SM": {
+          "value": "{Actions.Container.BorderRadius.SM}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Actions.Container.BorderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Actions.Container.BorderRadius.LG}",
+          "type": "borderRadius"
+        },
+        "XL": {
+          "value": "{Actions.Container.BorderRadius.XL}",
+          "type": "borderRadius"
+        }
       }
     },
     "TextDropdown": {
@@ -101,6 +123,28 @@
         "ItemSpacing": {
           "value": "{core.dimensionPX.2}",
           "type": "spacing"
+        }
+      },
+      "BorderRadius": {
+        "XS": {
+          "value": "{Actions.Container.BorderRadius.XS}",
+          "type": "borderRadius"
+        },
+        "SM": {
+          "value": "{Actions.Container.BorderRadius.SM}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Actions.Container.BorderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Actions.Container.BorderRadius.LG}",
+          "type": "borderRadius"
+        },
+        "XL": {
+          "value": "{Actions.Container.BorderRadius.XL}",
+          "type": "borderRadius"
         }
       }
     },
@@ -155,6 +199,28 @@
         "Width": {
           "value": "{core.dimensionREM.48}",
           "type": "sizing"
+        }
+      },
+      "BorderRadius": {
+        "XS": {
+          "value": "{Actions.Container.BorderRadius.XS}",
+          "type": "borderRadius"
+        },
+        "SM": {
+          "value": "{Actions.Container.BorderRadius.SM}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{Actions.Container.BorderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{Actions.Container.BorderRadius.LG}",
+          "type": "borderRadius"
+        },
+        "XL": {
+          "value": "{Actions.Container.BorderRadius.XL}",
+          "type": "borderRadius"
         }
       }
     },
@@ -343,6 +409,28 @@
             "value": "0",
             "type": "spacing"
           }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
         }
       }
     },
@@ -503,6 +591,28 @@
           "XL": {
             "value": "-{core.dimensionREM.4}",
             "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
           }
         }
       }

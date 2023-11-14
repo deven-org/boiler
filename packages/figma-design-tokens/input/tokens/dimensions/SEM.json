@@ -793,5 +793,31 @@
       },
       "type": "border"
     }
+  },
+  "Actions": {
+    "Container": {
+      "BorderRadius": {
+        "XS": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "SM": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "MD": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "LG": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        },
+        "XL": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        }
+      }
+    }
   }
 }
