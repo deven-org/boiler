@@ -5,18 +5,15 @@
         "BorderColor": {
           "Neutral": {
             "value": "{Feedback.Neutral.SurfaceStroke}",
-            "type": "color",
-            "oldPath": "None"
+            "type": "color"
           },
           "Warning": {
             "value": "{Feedback.Warning.SurfaceStroke}",
-            "type": "color",
-            "oldPath": "None"
+            "type": "color"
           },
           "Error": {
             "value": "{Feedback.Error.SurfaceStroke}",
-            "type": "color",
-            "oldPath": "None"
+            "type": "color"
           }
         },
         "BackgroundColor": {
@@ -66,6 +63,32 @@
         "Color": {
           "value": "{q.background.level_2}",
           "type": "color"
+        }
+      }
+    },
+    "Loader": {
+      "Background": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Background}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Background}",
+            "type": "color"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Foreground}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Foreground}",
+            "type": "color"
+          }
         }
       }
     }
