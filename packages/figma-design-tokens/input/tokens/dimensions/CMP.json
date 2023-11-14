@@ -322,6 +322,28 @@
             "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
             "type": "spacing"
           }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
         }
       }
     },
@@ -482,6 +504,28 @@
           "XL": {
             "value": "{core.dimensionPX.2}",
             "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
           }
         }
       }
