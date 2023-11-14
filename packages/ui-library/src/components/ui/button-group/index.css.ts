@@ -21,23 +21,23 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.xs {
-      gap: ${ButtonGroup.XS.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.XS};
     }
 
     &.sm {
-      gap: ${ButtonGroup.SM.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.SM};
     }
 
     &.md {
-      gap: ${ButtonGroup.MD.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.MD};
     }
 
     &.lg {
-      gap: ${ButtonGroup.LG.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.LG};
     }
 
     &.xl {
-      gap: ${ButtonGroup.XL.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.XL};
     }
   }
 `;
