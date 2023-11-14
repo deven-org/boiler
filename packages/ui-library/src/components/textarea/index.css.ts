@@ -23,11 +23,11 @@ export const { tokenizedLight: textareaLight, tokenizedDark: textareaDark } = re
       width: 100%;
     }
 
-    &.resize {
+    .both {
       resize: both;
     }
 
-    &.vertical {
+    .vertical {
       resize: vertical;
     }
 
@@ -35,7 +35,7 @@ export const { tokenizedLight: textareaLight, tokenizedDark: textareaDark } = re
       resize: horizontal;
     }
 
-    &.none {
+    .none {
       resize: none;
     }
 

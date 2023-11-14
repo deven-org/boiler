@@ -110,10 +110,7 @@ export class BlrTextarea extends LitElement {
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
       [`${this.sizeVariant}`]: this.sizeVariant,
-      resize: this.resize === 'both',
-      vertical: this.resize === 'vertical',
-      horizontal: this.resize === 'horizontal',
-      none: this.resize === 'none',
+      [`${this.resize}`]: this.resize || true,
       ['shouldFocus']: this.shouldFocus || false,
     });
     const flexContainer = classMap({
