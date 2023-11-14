@@ -23,8 +23,20 @@ export const { tokenizedLight: textareaLight, tokenizedDark: textareaDark } = re
       width: 100%;
     }
 
-    .textarea-input-control.resizeable {
+    &.resize {
       resize: both;
+    }
+
+    &.vertical {
+      resize: vertical;
+    }
+
+    .horizontal {
+      resize: horizontal;
+    }
+
+    &.none {
+      resize: none;
     }
 
     .flex-container {

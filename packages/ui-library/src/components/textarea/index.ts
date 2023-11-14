@@ -4,7 +4,7 @@ import { customElement, property, query, state } from 'lit/decorators.js';
 import { textareaDark, textareaLight } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { counterDark, counterLight } from '../../foundation/component-tokens/feedback.css';
-import { CounterVariantType, FormSizesType, WarningLimits } from '../../globals/types';
+import { CounterVariantType, FormSizesType, ResizeType, WarningLimits } from '../../globals/types';
 import { BlrFormLabelRenderFunction } from '../internal-components/form-label';
 import { BlrFormHintRenderFunction } from '../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
@@ -15,7 +15,7 @@ import { BlrCounterRenderFunction } from '../internal-components/counter';
 @customElement('blr-textarea')
 export class BlrTextarea extends LitElement {
   @property() sizeVariant: FormSizesType = 'md';
-  @property() resize?: boolean;
+  @property() resize: ResizeType = 'none';
   @property() cols?: number;
   @property() rows?: number;
   @property() placeholder?: string;
@@ -110,7 +110,10 @@ export class BlrTextarea extends LitElement {
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
       [`${this.sizeVariant}`]: this.sizeVariant,
-      [`resizeable`]: this.resize || false,
+      resize: this.resize === 'both',
+      vertical: this.resize === 'vertical',
+      horizontal: this.resize === 'horizontal',
+      none: this.resize === 'none',
       ['shouldFocus']: this.shouldFocus || false,
     });
     const flexContainer = classMap({

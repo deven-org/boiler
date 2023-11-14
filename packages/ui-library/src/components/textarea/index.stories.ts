@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
-import { FormSizes } from '../../globals/constants';
+import { FormSizes, Resizes } from '../../globals/constants';
 import './index';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -25,7 +25,7 @@ const sharedStyles = html`
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   sizeVariant: 'md',
-  resize: true,
+  resize: 'none',
   cols: 40,
   rows: 4,
   placeholder: 'Add a message here',
@@ -56,7 +56,7 @@ const defaultParams: BlrTextareaType = {
   errorMessageIcon: '',
 };
 
-//Main Showcase Storybook Textarea
+//Main Showcase Storybook Textarea, main argType Table
 export default {
   title: 'Design System/Web Components/TextArea',
   argTypes: {
@@ -74,7 +74,8 @@ export default {
     resize: {
       name: 'resize',
       description: 'Choose if component is resizeable.',
-      control: 'boolean',
+      options: Resizes,
+      control: { type: 'select' },
       table: {
         disable: false,
         category: 'Appearance',
@@ -446,6 +447,11 @@ export default {
                 <li> <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
                 </li>
             </ul>
+            <ul>
+            <li>
+            <a href="/story/design-system-web-components-textarea--dark-mode"><strong>DarkMode</strong></a>
+</li>
+</ul>
         </li>
         </ul>
         </div>`,
@@ -529,7 +535,7 @@ BlrTextarea.storyName = 'TextArea';
 const args: BlrTextareaType = {
   theme: 'Light',
   sizeVariant: 'md',
-  resize: true,
+  resize: 'both',
   cols: 40,
   rows: 4,
   placeholder: 'Add a message here',
@@ -562,7 +568,7 @@ const args: BlrTextareaType = {
 };
 BlrTextarea.args = args;
 
-//disabledArgTypesTable
+//disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
   'sizeVariant',
@@ -597,7 +603,6 @@ const argTypesToDisable = [
   'onBlur',
   'onSelect',
 ];
-
 function generateDisabledArgTypes(argTypes) {
   const disabledArgTypes = {};
   argTypes.forEach((argType) => {
@@ -609,7 +614,6 @@ function generateDisabledArgTypes(argTypes) {
   });
   return disabledArgTypes;
 }
-
 const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 // All Stories
@@ -669,35 +673,46 @@ export const Resize = () => {
     ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-          sizeVariant: 'md',
-          label: 'Auto resize',
-          value: '',
-        })}
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-          sizeVariant: 'md',
-          label: 'Horizontal resize',
-          value: '',
-        })}
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-          sizeVariant: 'md',
-          label: 'Vertical resize',
-          value: '',
-        })}
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-          sizeVariant: 'md',
-          label: 'None',
-          value: '',
-          resize: false,
-        })}
+        <div>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            sizeVariant: 'md',
+            label: 'Auto resize',
+            value: '',
+            resize: 'both',
+          })}
+        </div>
+        <div>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            sizeVariant: 'md',
+            label: 'Horizontal resize',
+            value: '',
+            resize: 'horizontal',
+          })}
+        </div>
+        <div>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            sizeVariant: 'md',
+            label: 'Vertical resize',
+            value: '',
+            resize: 'vertical',
+          })}
+        </div>
+        <div>
+          ${BlrTextareaRenderFunction({
+            ...defaultParams,
+            theme: 'Light',
+            sizeVariant: 'md',
+            label: 'None',
+            value: '',
+            resize: 'none',
+          })}
+        </div>
       </div>
     </div>
   `;
@@ -1018,61 +1033,55 @@ Counter.parameters = {
 };
 Counter.storyName = 'Counter';
 
-//MeinBeispiel12 Story with Storybook background per default dark
-export const MeinBeispiel12 = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textarea">
-        ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', shouldFocus: true })}
-        ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', disabled: true })}
-        ${BlrTextareaRenderFunction({ ...defaultParams, theme: 'Dark', readonly: true })}
-      </div>
-    </div>
-  `;
-};
-MeinBeispiel12.parameters = {
-  backgrounds: {
-    default: 'dark',
-  },
-  docs: {
-    description: {
-      story: '<h2>another description 1</h2>',
-    },
-  },
-};
-MeinBeispiel12.storyName = 'MeinBeispiel12';
-
-//Interaktive
-export const Interactive = ({ onClick }: { onClick: () => void }) => {
-  let value = '';
-  const handleInput = (event) => {
-    value = (event.target as HTMLTextAreaElement).value;
-    console.log(value);
-  };
-
-  const handleClick = () => {
-    console.log('handleClick', value);
-    args.hasError = !value.trim();
-    console.log('trim', !value.trim(), args.hasError);
-  };
+//DarkMode Story with few Examples per default dark
+export const DarkMode = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
           ...defaultParams,
-          value: value,
-          hasError: args.hasError,
-          onChange: handleInput,
+          theme: 'Dark',
+          shouldFocus: true,
+          label: 'hasFocus',
+          labelAppendix: 'true',
         })}
-        <button @click=${handleClick}>Submit</button>
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Dark',
+          disabled: true,
+          label: 'disabled',
+          labelAppendix: 'true',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Dark',
+          readonly: true,
+          label: 'readonly',
+          labelAppendix: 'true',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Dark',
+          hasError: true,
+          label: 'hasError',
+          labelAppendix: 'true',
+        })}
       </div>
     </div>
   `;
 };
-Interactive.args = {
-  onClick: () => console.log('onClick'),
+DarkMode.parameters = {
+  backgrounds: {
+    default: 'dark',
+  },
+  docs: {
+    description: {
+      story: '<h2>Few examples in DarkMode</h2>',
+    },
+  },
 };
-
-Interactive.storyName = 'Interactive';
+DarkMode.argTypes = {
+  ...disabledArgTypes,
+};
+DarkMode.storyName = 'DarkMode';
