@@ -24,4 +24,20 @@ describe('blr-icon-button', () => {
 
     expect(className).to.contain('blr-icon-button');
   });
+
+  it('is having a a visible icon', async () => {
+    const element = await fixture(BlrIconButtonRenderFunction(sampleParams));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    const icon = querySelectorDeep('blr-icon', button?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', icon?.getRootNode() as HTMLElement);
+
+    const rect = svg?.getBoundingClientRect();
+
+    expect(rect).have.property('width');
+    expect(rect).have.property('height');
+
+    expect(rect?.width).to.be.greaterThan(0);
+    expect(rect?.height).to.be.greaterThan(0);
+  });
 });
