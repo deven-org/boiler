@@ -74,42 +74,39 @@ export const styleCustom = typeSafeNestedCss`
 
       &.cta {
         background-color: ${Action.CTA.SurfaceFill.Disabled};
-        border: ${Action.CTA.Disabled};
         outline-color: ${Action.CTA.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.CTA.Icon.Disabled};
       }
 
       &.primary {
         background-color: ${Action.Primary.SurfaceFill.Disabled};
-        border: ${Action.Primary.Disabled};
         outline-color: ${Action.Primary.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Primary.Icon.Disabled};
       }
 
       &.secondary {
         background-color: ${Action.Secondary.SurfaceFill.Disabled};
         outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
+        color: ${Action.Secondary.Icon.Disabled};
       }
 
       &.silent {
         background-color: ${Action.Silent.SurfaceFill.Disabled};
-        border: ${Action.Silent.Disabled};
         outline-color: ${Action.Silent.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Silent.Icon.Disabled};
+
       }
 
       &.encourage {
         background-color: ${Action.Encourage.SurfaceFill.Disabled};
-        border: ${Action.Encourage.Disabled};
         outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Encourage.Icon.Disabled};
       }
 
       &.destructive {
         background-color: ${Action.Destructive.SurfaceFill.Disabled};
-        border: ${Action.Destructive.Disabled};
         outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Destructive.Icon.Disabled};
       }
     }
   }
@@ -122,53 +119,5 @@ export const styleCustom = typeSafeNestedCss`
   .loader-class {
     position: absolute;
     display: inline-flex;
-  }
-
-  .disabled-icon-cta {
-    color: ${Action.CTA.Icon.Disabled};
-  }
-
-  .disabled-icon-primary {
-    color: ${Action.Primary.Icon.Disabled};
-  }
-
-  .disabled-icon-secondary {
-    color: ${Action.Secondary.Icon.Disabled};
-  }
-
-  .disabled-icon-destructive {
-    color: ${Action.Destructive.Icon.Disabled};
-  }
-
-  .disabled-icon-silent {
-    color: ${Action.Silent.Icon.Disabled};
-  }
-
-  .disabled-icon-encourage {
-    color: ${Action.Encourage.Icon.Disabled};
-  }
-
-  .disabled-label-cta {
-    color: ${Action.CTA.Label.Disabled};
-  }
-
-  .disabled-label-primary {
-    color: ${Action.Primary.Label.Disabled};
-  }
-
-  .disabled-label-secondary {
-    color: ${Action.Secondary.Label.Disabled};
-  }
-
-  .disabled-label-destructive {
-    color: ${Action.Destructive.Label.Disabled};
-  }
-
-  .disabled-label-silent {
-    color: ${Action.Silent.Label.Disabled};
-  }
-
-  .disabled-label-encourage {
-    color: ${Action.Encourage.Label.Disabled};
   }
 `;
