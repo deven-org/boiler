@@ -4,7 +4,7 @@ import { componentTokens } from "../../../../foundation/_tokens-generated/__comp
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
 const { IconButton } = componentTokens.Actions;
-const Actions = semanticTokens.Action;
+const { Action } = semanticTokens;
 
 export const styleCustom = typeSafeNestedCss`
   .blr-icon-button {
@@ -16,22 +16,27 @@ export const styleCustom = typeSafeNestedCss`
 
     &.xs {
       padding: ${IconButton.Container.Padding.XS};
+      border-radius: ${IconButton.BorderRadius};
     }
 
     &.sm {
       padding: ${IconButton.Container.Padding.SM};
+      border-radius: ${IconButton.BorderRadius};
     }
 
     &.md {
       padding: ${IconButton.Container.Padding.MD};
+      border-radius: ${IconButton.BorderRadius};
     }
 
     &.lg {
       padding: ${IconButton.Container.Padding.LG};
+      border-radius: ${IconButton.BorderRadius};
     }
 
     &.xl {
       padding: ${IconButton.Container.Padding.XL};
+      border-radius: ${IconButton.BorderRadius};
     }
 
     &.disabled {
@@ -39,45 +44,48 @@ export const styleCustom = typeSafeNestedCss`
       cursor: not-allowed;
 
       &.cta {
-        background-color: ${Actions.CTA.SurfaceFill.Disabled};
-        border-color: ${Actions.CTA.Disabled.color};
-        border-style: ${Actions.CTA.Disabled.style};
-        border-width: ${Actions.CTA.Disabled.width};
-        outline-color: ${Actions.CTA.SurfaceStroke.Disabled};
-        border-radius: ${Actions.BorderRadius};
+        background-color: ${Action.CTA.SurfaceFill.Disabled};
+        border-color: ${Action.CTA.Disabled.color};
+        border-style: ${Action.CTA.Disabled.style};
+        border-width: ${Action.CTA.Disabled.width};
+
+        outline-color: ${Action.CTA.SurfaceStroke.Disabled};
+
       }
 
       &.primary {
-        background-color: ${Actions.Primary.SurfaceFill.Disabled};
-        border: ${Actions.Primary.Disabled};
-        outline-color: ${Actions.Primary.SurfaceStroke.Disabled};
-        border-radius: ${Actions.BorderRadius};
+        background-color: ${Action.Primary.SurfaceFill.Disabled};
+        border-color: ${Action.Primary.Disabled.color};
+        border-style: ${Action.Primary.Disabled.style};
+        border-width: ${Action.Primary.Disabled.width};
+  
+        outline-color: ${Action.Primary.SurfaceStroke.Disabled};
       }
 
       &.secondary {
-        background-color: ${Actions.Secondary.SurfaceFill.Disabled};
-        outline-color: ${Actions.Secondary.SurfaceStroke.Disabled};
+        background-color: ${Action.Secondary.SurfaceFill.Disabled};
+        outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
       }
 
       &.silent {
-        background-color: ${Actions.Silent.SurfaceFill.Disabled};
-        border: ${Actions.Silent.Disabled};
-        outline-color: ${Actions.Silent.SurfaceStroke.Disabled};
-        border-radius: ${Actions.BorderRadius};
+        background-color: ${Action.Silent.SurfaceFill.Disabled};
+        border: ${Action.Silent.Disabled};
+        outline-color: ${Action.Silent.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
       }
 
       &.encourage {
-        background-color: ${Actions.Encourage.SurfaceFill.Disabled};
-        border: ${Actions.Encourage.Disabled};
-        outline-color: ${Actions.Encourage.SurfaceStroke.Disabled};
-        border-radius: ${Actions.BorderRadius};
+        background-color: ${Action.Encourage.SurfaceFill.Disabled};
+        border: ${Action.Encourage.Disabled};
+        outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
       }
 
       &.destructive {
-        background-color: ${Actions.Destructive.SurfaceFill.Disabled};
-        border: ${Actions.Destructive.Disabled};
-        outline-color: ${Actions.Destructive.SurfaceStroke.Disabled};
-        border-radius: ${Actions.BorderRadius};
+        background-color: ${Action.Destructive.SurfaceFill.Disabled};
+        border: ${Action.Destructive.Disabled};
+        outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
+        border-radius: ${Action.BorderRadius};
       }
     }
   }
@@ -89,26 +97,26 @@ export const styleCustom = typeSafeNestedCss`
   }
 
   .disabled-icon-cta {
-    color: ${Actions.CTA.Icon.Disabled};
+    color: ${Action.CTA.Icon.Disabled};
   }
 
   .disabled-icon-primary {
-    color: ${Actions.Primary.Icon.Disabled};
+    color: ${Action.Primary.Icon.Disabled};
   }
 
   .disabled-icon-secondary {
-    color: ${Actions.Secondary.Icon.Disabled};
+    color: ${Action.Secondary.Icon.Disabled};
   }
 
   .disabled-icon-destructive {
-    color: ${Actions.Destructive.Icon.Disabled};
+    color: ${Action.Destructive.Icon.Disabled};
   }
 
   .disabled-icon-silent {
-    color: ${Actions.Silent.Icon.Disabled};
+    color: ${Action.Silent.Icon.Disabled};
   }
 
   .disabled-icon-encourage {
-    color: ${Actions.Encourage.Icon.Disabled};
+    color: ${Action.Encourage.Icon.Disabled};
   }
 `;
