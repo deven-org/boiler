@@ -50,9 +50,16 @@ export class BlrTextButton extends LitElement {
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
     const classes = classMap({
+      'blr-semantic-action': true,
+      'blr-text-button': true,
       [this.variant]: this.variant,
       [this.size]: this.size || 'md',
-      disabled: this.disabled,
+      'disabled': this.disabled,
+      'loading': this.loading,
+    });
+
+    const iconClasses = classMap({
+      icon: true,
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
@@ -77,20 +84,22 @@ export class BlrTextButton extends LitElement {
         icon: calculateIconName(this.leadingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
+        classMap: iconClasses,
       })}
-      <span>${this.label}</span>
+      <span class="label">${this.label}</span>
       ${this.trailingIcon &&
       BlrIconRenderFunction({
         icon: calculateIconName(this.trailingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
+        classMap: iconClasses,
       })}`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
       <span
-        class="blr-semantic-action blr-text-button ${classes}"
+        class="${classes}"
         @click="${this.onClick}"
         tabindex=${this.disabled ? nothing : '0'}
         @focus=${this.handleFocus}
@@ -107,6 +116,7 @@ export class BlrTextButton extends LitElement {
                 variant: loaderVariant,
                 loadingStatus: this.loadingStatus,
                 theme: this.theme,
+                floating: true,
               })}
               ${labelAndIconGroup}
             `

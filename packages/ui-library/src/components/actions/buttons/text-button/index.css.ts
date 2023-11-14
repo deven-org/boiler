@@ -111,13 +111,11 @@ export const styleCustom = typeSafeNestedCss`
     }
   }
 
-  .loading-class-icons,
-  .loading-class-label {
-    color: transparent;
+  .loading {
+    & > .icon,
+    & > .label {
+      visibility: hidden;
+    }
   }
 
-  .loader-class {
-    position: absolute;
-    display: inline-flex;
-  }
 `;
