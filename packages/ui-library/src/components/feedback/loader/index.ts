@@ -24,6 +24,7 @@ export class BlrLoader extends LitElement {
 
     const classes = classMap({
       'blr-loader': true,
+      'floating': this.floating || false,
       [`${this.variant}`]: this.variant || '',
       [`${this.size}`]: this.size || 'md',
     });
@@ -31,14 +32,7 @@ export class BlrLoader extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      <div
-        class="${this.floating ? 'floating' : ''}"
-        role="status"
-        aria-live="polite"
-        ?aria-label=${this.loadingStatus}
-      >
-        <div class=${classes}></div>
-      </div>`;
+      <div class="${classes}" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}></div>`;
   }
 }
 
