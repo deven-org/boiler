@@ -3,34 +3,69 @@ import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literal
 import { componentTokens } from "../../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
-const { IconButton } = componentTokens.Action;
-const { Action } = semanticTokens;
+const { IconButton } = componentTokens.Actions;
+const { Action, Global } = semanticTokens;
+
 export const styleCustom = typeSafeNestedCss`
+  .focus-layer {
+    position: absolute;
+    inset: 0;
+    outline-color: ${Global.FocusBorder.color};
+    outline-style: ${Global.FocusBorder.style};
+    outline-width: ${Global.FocusBorder.width};
+  }
+
   .blr-icon-button {
     all: inital;
     align-items: center;
     justify-content: center;
     display: inline-flex;
     cursor: pointer;
+    position: relative;
 
     &.xs {
-      padding: ${IconButton.XS.Padding};
+      padding: ${IconButton.Container.Padding.XS};
+      border-radius: ${IconButton.Container.BorderRadius.XS};
+
+      & > .focus-layer {
+        border-radius: ${IconButton.Container.BorderRadius.XS};
+      }
     }
 
     &.sm {
-      padding: ${IconButton.SM.Padding};
+      padding: ${IconButton.Container.Padding.SM};
+      border-radius: ${IconButton.Container.BorderRadius.SM};
+
+      & > .focus-layer {
+        border-radius: ${IconButton.Container.BorderRadius.SM};
+      }
     }
 
     &.md {
-      padding: ${IconButton.MD.Padding};
+      padding: ${IconButton.Container.Padding.MD};
+      border-radius: ${IconButton.Container.BorderRadius.MD};
+
+      & > .focus-layer {
+        border-radius: ${IconButton.Container.BorderRadius.MD};
+      }
     }
 
     &.lg {
-      padding: ${IconButton.LG.Padding};
+      padding: ${IconButton.Container.Padding.LG};
+      border-radius: ${IconButton.Container.BorderRadius.LG};
+
+      & > .focus-layer {
+        border-radius: ${IconButton.Container.BorderRadius.LG};
+      }
     }
 
     &.xl {
-      padding: ${IconButton.XL.Padding};
+      padding: ${IconButton.Container.Padding.XL};
+      border-radius: ${IconButton.Container.BorderRadius.XL};
+
+      & > .focus-layer {
+        border-radius: ${IconButton.Container.BorderRadius.XL};
+      }
     }
 
     &.disabled {
@@ -39,73 +74,40 @@ export const styleCustom = typeSafeNestedCss`
 
       &.cta {
         background-color: ${Action.CTA.SurfaceFill.Disabled};
-        border: ${Action.CTA.Disabled};
         outline-color: ${Action.CTA.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.CTA.Icon.Disabled};
       }
 
       &.primary {
         background-color: ${Action.Primary.SurfaceFill.Disabled};
-        border: ${Action.Primary.Disabled};
         outline-color: ${Action.Primary.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Primary.Icon.Disabled};
       }
 
       &.secondary {
         background-color: ${Action.Secondary.SurfaceFill.Disabled};
         outline-color: ${Action.Secondary.SurfaceStroke.Disabled};
+        color: ${Action.Secondary.Icon.Disabled};
       }
 
       &.silent {
         background-color: ${Action.Silent.SurfaceFill.Disabled};
-        border: ${Action.Silent.Disabled};
         outline-color: ${Action.Silent.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Silent.Icon.Disabled};
+
       }
 
       &.encourage {
         background-color: ${Action.Encourage.SurfaceFill.Disabled};
-        border: ${Action.Encourage.Disabled};
         outline-color: ${Action.Encourage.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Encourage.Icon.Disabled};
       }
 
       &.destructive {
         background-color: ${Action.Destructive.SurfaceFill.Disabled};
-        border: ${Action.Destructive.Disabled};
         outline-color: ${Action.Destructive.SurfaceStroke.Disabled};
-        border-radius: ${Action.BorderRadius};
+        color: ${Action.Destructive.Icon.Disabled};
       }
     }
-  }
-
-  .blr-icon-button:focus {
-    /*  Component Tokens for Outline are missing */
-    /* Need to make sure we meet AA requirements with this custom outline */
-    outline: 2px solid black;
-  }
-
-  .disabled-icon-cta {
-    color: ${Action.CTA.Icon.Disabled};
-  }
-
-  .disabled-icon-primary {
-    color: ${Action.Primary.Icon.Disabled};
-  }
-
-  .disabled-icon-secondary {
-    color: ${Action.Secondary.Icon.Disabled};
-  }
-
-  .disabled-icon-destructive {
-    color: ${Action.Destructive.Icon.Disabled};
-  }
-
-  .disabled-icon-silent {
-    color: ${Action.Silent.Icon.Disabled};
-  }
-
-  .disabled-icon-encourage {
-    color: ${Action.Encourage.Icon.Disabled};
   }
 `;

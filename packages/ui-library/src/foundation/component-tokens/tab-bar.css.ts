@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { Silent } = semanticTokens.Action;
-  const { IconButton } = componentTokens.Action;
+  const { IconButton } = componentTokens.Actions;
   const { TabBar } = componentTokens.Navigation;
 
   return typeSafeNestedCss`
@@ -59,15 +59,15 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           }
 
           &.sm {
-            gap: ${IconButton.SM.ItemSpacing};
+            gap: ${IconButton.Container.ItemSpacing.SM};
           }
 
           &.md {
-            gap: ${IconButton.MD.ItemSpacing};
+            gap: ${IconButton.Container.ItemSpacing.MD};
           }
 
           &.lg {
-            gap: ${IconButton.LG.ItemSpacing};
+            gap: ${IconButton.Container.ItemSpacing.LG};
           }
         }
 
