@@ -1369,11 +1369,11 @@
               "type": "borderRadius"
             },
             "MD": {
-              "value": "{Forms.Checkbox.Control.Container.BorderRadius}",
+              "value": "{Forms.Checkbox.Control.Container.BorderRadius.SM}",
               "type": "borderRadius"
             },
             "LG": {
-              "value": "{Forms.Checkbox.Control.Container.BorderRadius}",
+              "value": "{Forms.Checkbox.Control.Container.BorderRadius.SM}",
               "type": "borderRadius"
             }
           },
@@ -1400,27 +1400,27 @@
                 "type": "sizing"
               },
               "Hover": {
-                "value": "{Forms.Checkbox.Control.IconSize.SM}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Pressed": {
-                "value": "{Forms.Checkbox.Control.IconSize.SM}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Focus": {
-                "value": "{Forms.Checkbox.Control.IconSize.SM}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Disabled": {
-                "value": "{Forms.Checkbox.Control.IconSize.SM}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "ReadOnly": {
-                "value": "{Forms.Checkbox.Control.IconSize.SM}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Error": {
-                "value": "{Forms.Checkbox.Control.IconSize.SM}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               }
             },
@@ -1430,27 +1430,27 @@
                 "type": "sizing"
               },
               "Hover": {
-                "value": "{Forms.Checkbox.Control.IconSize.MD}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Pressed": {
-                "value": "{Forms.Checkbox.Control.IconSize.MD}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Focus": {
-                "value": "{Forms.Checkbox.Control.IconSize.MD}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Disabled": {
-                "value": "{Forms.Checkbox.Control.IconSize.MD}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "ReadOnly": {
-                "value": "{Forms.Checkbox.Control.IconSize.MD}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Error": {
-                "value": "{Forms.Checkbox.Control.IconSize.MD}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               }
             },
@@ -1460,27 +1460,27 @@
                 "type": "sizing"
               },
               "Hover": {
-                "value": "{Forms.Checkbox.Control.IconSize.LG}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Pressed": {
-                "value": "{Forms.Checkbox.Control.IconSize.LG}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Focus": {
-                "value": "{Forms.Checkbox.Control.IconSize.LG}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Disabled": {
-                "value": "{Forms.Checkbox.Control.IconSize.LG}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "ReadOnly": {
-                "value": "{Forms.Checkbox.Control.IconSize.LG}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Error": {
-                "value": "{Forms.Checkbox.Control.IconSize.LG}",
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               }
             }
