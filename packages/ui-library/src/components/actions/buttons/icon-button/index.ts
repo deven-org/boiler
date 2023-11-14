@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
@@ -25,7 +25,7 @@ export class BlrIconButton extends LitElement {
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;
-  @property() disabled?: boolean;
+  @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size: FormSizesType = 'md';
@@ -33,18 +33,23 @@ export class BlrIconButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @state() protected focused = false;
+
   protected handleFocus = () => {
     console.log('focused');
+    this.focused = true;
   };
 
   protected handleBlur = () => {
     console.log('blurred');
+    this.focused = false;
   };
 
   protected render() {
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size || 'md',
+      disabled: this.disabled,
     });
 
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
@@ -68,31 +73,32 @@ export class BlrIconButton extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
+
       <span
         aria-label=${this.arialabel || nothing}
         class="blr-semantic-action blr-icon-button ${classes}"
         @click=${this.onClick}
-        ?disabled=${this.disabled}
         id=${this.buttonId || nothing}
-        tabindex="0"
+        tabindex=${this.disabled ? nothing : '0'}
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
-        role="button"
+        role=${this.disabled ? nothing : 'button'}
         @keydown=${this.onClick}
       >
+        ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
         ${this.loading
-          ? html`${BlrLoaderRenderFunction({
+          ? BlrLoaderRenderFunction({
               size: loaderSizeVariant,
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
-            })}`
-          : html`${BlrIconRenderFunction({
+            })
+          : BlrIconRenderFunction({
               icon: calculateIconName(this.icon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
-            })}`}
-      </span> `;
+            })}
+      </span>`;
   }
 }
 

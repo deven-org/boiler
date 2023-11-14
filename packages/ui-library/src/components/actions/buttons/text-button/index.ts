@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
@@ -26,7 +26,7 @@ export class BlrTextButton extends LitElement {
   @property() leadingIcon?: SizelessIconType;
   @property() trailingIcon?: SizelessIconType;
   @property() loading!: boolean;
-  @property() disabled?: boolean;
+  @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size: ActionSizesType = 'md';
@@ -34,28 +34,32 @@ export class BlrTextButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @state() protected focused = false;
+
   protected handleFocus = () => {
     console.log('focused');
+    this.focused = true;
   };
 
   protected handleBlur = () => {
     console.log('blurred');
+    this.focused = false;
   };
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
     const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
+      'blr-semantic-action': true,
+      'blr-text-button': true,
+      [this.variant]: this.variant,
+      [this.size]: this.size || 'md',
+      'disabled': this.disabled,
+      'loading': this.loading,
     });
 
-    const loaderIconClasses = classMap({
-      'loading-class-icons': this.loading,
-    });
-
-    const labelClasses = classMap({
-      'loading-class-label': this.loading,
+    const iconClasses = classMap({
+      icon: true,
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
@@ -76,48 +80,47 @@ export class BlrTextButton extends LitElement {
     ]).toLowerCase() as SizesType;
 
     const labelAndIconGroup = html` ${this.leadingIcon &&
-      html`${BlrIconRenderFunction({
+      BlrIconRenderFunction({
         icon: calculateIconName(this.leadingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
-        classMap: loaderIconClasses,
-      })}`}
-      <span class=${labelClasses}>${this.label}</span>
+        classMap: iconClasses,
+      })}
+      <span class="label">${this.label}</span>
       ${this.trailingIcon &&
-      html`${BlrIconRenderFunction({
+      BlrIconRenderFunction({
         icon: calculateIconName(this.trailingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
-        classMap: loaderIconClasses,
-      })}`}`;
+        classMap: iconClasses,
+      })}`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
       <span
-        class="blr-semantic-action blr-text-button ${classes}"
+        class="${classes}"
         @click="${this.onClick}"
-        tabindex="0"
+        tabindex=${this.disabled ? nothing : '0'}
         @focus=${this.handleFocus}
         @blur=${this.handleBlur}
-        role="button"
+        role=${this.disabled ? nothing : 'button'}
         @keydown=${this.onClick}
-        ?disabled="${this.disabled}"
         id=${this.buttonId || nothing}
       >
+        ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
         ${this.loading
           ? html`
-              <div class="loader-class ${loaderIconClasses}">
-                ${BlrLoaderRenderFunction({
-                  size: loaderSizeVariant,
-                  variant: loaderVariant,
-                  loadingStatus: this.loadingStatus,
-                  theme: this.theme,
-                })}
-              </div>
+              ${BlrLoaderRenderFunction({
+                size: loaderSizeVariant,
+                variant: loaderVariant,
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+                floating: true,
+              })}
               ${labelAndIconGroup}
             `
-          : html` ${labelAndIconGroup} `}
+          : labelAndIconGroup}
       </span>`;
   }
 }

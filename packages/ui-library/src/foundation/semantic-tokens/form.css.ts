@@ -1,4 +1,5 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
@@ -6,7 +7,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
     semanticTokens.Forms;
   const { Select } = componentTokens.Forms;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-form-element {
       all: initial;
       width: 100%;

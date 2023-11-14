@@ -2,7 +2,8 @@ import { TemplateResult, html } from 'lit';
 
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,
-  props: ComponentType
+  props: ComponentType,
+  children?: TemplateResult<1>
 ): TemplateResult<1> => {
   const templateFragments: string[] = [];
   const values: unknown[] = [];
@@ -18,7 +19,13 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
     values.push(value);
   });
 
-  templateFragments.push(`></${tagName}>`);
+  if (children) {
+    templateFragments.push(`>`);
+    values.push(children);
+    templateFragments.push(`</${tagName}>`);
+  } else {
+    templateFragments.push(`></${tagName}>`);
+  }
 
   // eslint-disable-next-line
   // @ts-ignore

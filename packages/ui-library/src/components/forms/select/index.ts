@@ -29,15 +29,17 @@ const TAG_NAME = 'blr-select';
 export class BlrSelect extends LitElement {
   static styles = [styleCustom];
 
+  @property() arialabel?: string;
   @property() selectId!: string;
   @property() labelAppendix?: string;
   @property() name!: string;
-  @property() hasLabel?: boolean;
-  @property() label!: string;
+  @property() label?: string;
   @property() disabled?: boolean;
   @property() size: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
+  @property() onChange?: (event: Event) => void;
+  @property() onBlur?: (event: Event) => void;
+  @property() onFocus?: (event: Event) => void;
   @property({ type: Array }) options: Option[] = [];
   @property() hasError?: boolean;
   @property() errorMessage?: string;
@@ -45,12 +47,11 @@ export class BlrSelect extends LitElement {
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() errorIcon?: SizelessIconType = 'blr360';
   @property() showHint?: boolean;
-  @property() showTrailingIcon?: boolean;
-  @property() trailingIcon: SizelessIconType = 'blr360';
+  @property() icon?: SizelessIconType = 'blrChevronDown';
 
   @property() theme: ThemeType = 'Light';
 
-  protected renderTrailingIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
+  protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     const iconSizeVariant = getComponentConfigToken([
       'SizeVariant',
       'Forms',
@@ -59,24 +60,23 @@ export class BlrSelect extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
-    if (this.showTrailingIcon) {
-      if (this.hasError) {
-        return BlrIconRenderFunction({
-          icon: calculateIconName('blrErrorFilled', iconSizeVariant),
-          size: iconSizeVariant,
-          classMap: classes,
-          hideAria: true,
-          disablePointerEvents: true,
-        });
-      } else {
-        return BlrIconRenderFunction({
-          icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-          size: iconSizeVariant,
-          classMap: classes,
-          hideAria: true,
-          disablePointerEvents: true,
-        });
-      }
+    if (this.hasError) {
+      return BlrIconRenderFunction({
+        icon: calculateIconName('blrErrorFilled', iconSizeVariant),
+        size: iconSizeVariant,
+        classMap: classes,
+        hideAria: true,
+        disablePointerEvents: true,
+      });
+    } else {
+      const modifiedIcon = this.icon ? this.icon : 'blrChevronDown';
+      return BlrIconRenderFunction({
+        icon: calculateIconName(modifiedIcon, iconSizeVariant),
+        size: iconSizeVariant,
+        classMap: classes,
+        hideAria: true,
+        disablePointerEvents: true,
+      });
     }
 
     return nothing;
@@ -102,7 +102,7 @@ export class BlrSelect extends LitElement {
         ${dynamicStyles}
       </style>
       <div class="blr-select">
-        ${this.hasLabel
+        ${this.label
           ? BlrFormLabelRenderFunction({
               labelText: this.label,
               labelAppendix: this.labelAppendix,
@@ -115,12 +115,15 @@ export class BlrSelect extends LitElement {
         <div class="blr-select-wrapper ${inputClasses}">
           <div class="blr-select-inner-container">
             <select
+              aria-label=${this.arialabel || nothing}
               class="blr-form-select ${inputClasses}"
               id=${this.selectId || nothing}
               name=${this.name || nothing}
               ?disabled=${this.disabled}
               ?required=${this.required}
               @change=${this.onChange}
+              @focus=${this.onFocus}
+              @blur=${this.onBlur}
             >
               ${this.options?.map((opt: Option) => {
                 return html`
@@ -137,7 +140,7 @@ export class BlrSelect extends LitElement {
               })}
             </select>
           </div>
-          ${this.renderTrailingIcon(iconClasses)}
+          ${this.renderIcon(iconClasses)}
         </div>
         ${this.showHint || this.hasError
           ? BlrFormInfoRenderFunction({

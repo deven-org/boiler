@@ -1,6 +1,6 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   .blr-select-option {
     display: flex;
     flex-direction: column;

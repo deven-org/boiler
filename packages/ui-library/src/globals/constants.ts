@@ -1,6 +1,6 @@
 export const Sizes = ['xxs', 'xs', 'sm', 'md', 'lg', 'xl'] as const;
 export const InputSizes = ['sm', 'md', 'lg'] as const;
-export const FeedbackSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
+export const FeedbackSizes = ['sm', 'md', 'lg'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const ActionSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 
@@ -23,6 +23,9 @@ export const TabAlignmentVariants = [
   'space-around',
   'space-evenly',
 ] as const;
+
+export const ButtonGroupAlignmentVariants = ['left', 'center', 'right'] as const;
+
 export const OverflowVariantsStandard = ['wrap', 'browserOverflow', 'buttons'] as const;
 export const OverflowVariantsFullWidth = ['wrap', 'browserOverflow'] as const;
 export const ButtonsAlignmentVariants = ['flex-start', 'center', 'flex-end'] as const;

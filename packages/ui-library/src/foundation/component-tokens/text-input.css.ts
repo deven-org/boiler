@@ -1,16 +1,17 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
+export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(
+  (_componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
 
-    return css`
-      .blr-select-inner-container {
+    return typeSafeNestedCss`
+      .blr-input-inner-container {
         flex-grow: 1;
         flex-shrink: 1;
 
-        .blr-form-select {
+        .blr-form-input {
           all: initial;
           border-radius: ${InputBorderRadius};
           box-sizing: border-box;
@@ -18,6 +19,10 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           border: none;
           outline: none;
           color: ${UserInput.Default.Rest};
+
+          font-weight: ${MD.UserInput.fontWeight};
+          font-size: ${MD.UserInput.fontSize};
+          font-family: ${MD.UserInput.fontFamily}, sans-serif;
 
           &::placeholder {
             color: ${Placeholder.Default.Rest};
@@ -42,8 +47,6 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           }
 
           &.disabled {
-            color: ${UserInput.Default.Disabled};
-
             &::placeholder {
               color: ${Placeholder.Default.Disabled};
             }
@@ -58,7 +61,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
             }
           }
 
-          &.error-select {
+          &.error-input {
             border: none;
             outline: none;
 
@@ -117,7 +120,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         }
       }
 
-      .blr-select-wrapper {
+      .blr-input-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -156,7 +159,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
             color: ${InputIcon.Hover};
           }
 
-          &.error-select:not(.disabled) + .blr-input-icon {
+          &.error-input:not(.disabled) + .blr-input-icon {
             color: ${Input.Error.Rest.color};
             cursor: default;
           }
@@ -180,7 +183,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           background-color: ${SurfaceFill.Default.Disabled};
           cursor: not-allowed;
 
-          .blr-form-select {
+          .blr-form-input {
             border: none;
             outline: none;
             background: transparent;
@@ -244,7 +247,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
             color: ${Input.Error.Rest.color};
           }
 
-          .blr-form-select {
+          .blr-form-input {
             background: transparent;
             color: ${UserInput.Error.Rest};
           }

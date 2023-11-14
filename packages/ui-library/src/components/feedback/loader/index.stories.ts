@@ -1,5 +1,5 @@
 import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
-import { ActionSizes, FeedbackVariants } from '../../../globals/constants';
+import { FeedbackSizes, FeedbackVariants } from '../../../globals/constants';
 
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
@@ -7,7 +7,7 @@ export default {
   title: 'Design System/Web Components/Feedback/Loader',
   argTypes: {
     size: {
-      options: ActionSizes,
+      options: FeedbackSizes,
       control: { type: 'select' },
     },
     variant: {
@@ -33,6 +33,7 @@ const args: BlrLoaderType = {
   size: 'md',
   variant: 'default',
   loadingStatus: 'Loading',
+  floating: false,
 };
 
 BlrLoader.args = args;
