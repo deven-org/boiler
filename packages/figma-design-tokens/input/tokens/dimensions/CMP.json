@@ -2030,6 +2030,113 @@
         }
       }
     },
+    "RadioGroup": {
+      "SM": {
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "LegendWrapper": {
+          "PaddingBottom": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          }
+        },
+        "RadioStack": {
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          }
+        }
+      },
+      "MD": {
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "LegendWrapper": {
+          "PaddingBottom": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          }
+        },
+        "RadioStack": {
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          }
+        }
+      },
+      "LG": {
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "LegendWrapper": {
+          "PaddingBottom": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          }
+        },
+        "RadioStack": {
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          }
+        }
+      }
+    },
     "Select": {
       "SM": {
         "IconPaddingRight": {
@@ -2397,104 +2504,6 @@
         "Typography": {
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
-        }
-      }
-    },
-    "RadioGroup": {
-      "SM": {
-        "RadioStack": {
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        }
-      },
-      "MD": {
-        "RadioStack": {
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        }
-      },
-      "LG": {
-        "RadioStack": {
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
         }
       }
     }
