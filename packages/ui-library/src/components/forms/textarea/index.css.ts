@@ -2,6 +2,10 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
+import { semanticTokens } from "../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
+
+const { SM, MD, LG } = semanticTokens.Forms;
+
 export const styleCustom = typeSafeNestedCss`
   .blr-textarea {
     max-width: fit-content;
@@ -10,6 +14,24 @@ export const styleCustom = typeSafeNestedCss`
   .blr-textarea-info-container {
     display: flex;
     justify-content: space-between;
+
+    &.sm {
+      > blr-counter {
+        margin: ${SM.CaptionSlot.Margin};
+      }
+    }
+
+    &.md {
+      > blr-counter {
+        margin: ${MD.CaptionSlot.Margin};
+      }
+    }
+
+    &.lg {
+      > blr-counter {
+        margin: ${LG.CaptionSlot.Margin};
+      }
+    }
   }
 `;
 

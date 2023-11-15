@@ -128,7 +128,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           border-style: ${Input.Error.Rest.style};
           border-color: transparent;
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focus};
+          color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
@@ -239,6 +239,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
     }
 
     .blr-form-caption {
+      display: flex;
       color: ${Caption.Hint};
 
       &.error {
