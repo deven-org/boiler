@@ -39,15 +39,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
     .blr-legend-wrapper {
       &.sm {
-        padding-bottom: ${RadioGroup.SM.RadioStack.PaddingTop};
+        padding-bottom: ${RadioGroup.SM.LegendWrapper.PaddingBottom};
       }
 
       &.md {
-        padding-bottom: ${RadioGroup.MD.RadioStack.PaddingTop};
+        padding-bottom: ${RadioGroup.MD.LegendWrapper.PaddingBottom};
       }
 
       &.lg {
-        padding-bottom: ${RadioGroup.LG.RadioStack.PaddingTop};
+        padding-bottom: ${RadioGroup.LG.LegendWrapper.PaddingBottom};
       }
     }
 
