@@ -46,13 +46,15 @@ export class BlrIconButton extends LitElement {
   };
 
   protected render() {
+    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
+
     const classes = classMap({
       [`${this.variant}`]: this.variant,
       [`${this.size}`]: this.size || 'md',
       disabled: this.disabled,
+      loading: this.loading || false,
     });
 
-    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const loaderSizeVariant = getComponentConfigToken([
@@ -92,6 +94,7 @@ export class BlrIconButton extends LitElement {
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
+              floating: true,
             })
           : BlrIconRenderFunction({
               icon: calculateIconName(this.icon, iconSizeVariant),
