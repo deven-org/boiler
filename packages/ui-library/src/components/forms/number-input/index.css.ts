@@ -21,6 +21,9 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
 
       &.mode1 {
+        display: grid;
+        grid-template-columns: 10% 40% 40% 10%;
+
         &.sm {
           > .custom-stepper-button {
             width: ${StepperCombo.SM.Vertical.Width};
@@ -38,7 +41,16 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
             width: ${StepperCombo.LG.Vertical.Width};
           }
         }
+        > .unit {
+          text-align: left;
+        }
+  
+        > input {
+          text-align: right;
+        }
       }
+
+   
 
       > .unit,
       input {
@@ -277,15 +289,20 @@ export const baseStyle = typeSafeNestedCss`
       }
 
       .unit {
-        order: -1;
-      }
-
-      .unit.prepend {
         order: 0;
       }
 
-      & > input {
-        text-align: center;
+      .unit.prepend {
+        order: -1;
+        text-align: right;
+      }
+
+      > input.prepend {
+        text-align: left;
+      }
+      
+      > button:last-of-type {
+        margin-left:auto;
       }
     }
 
