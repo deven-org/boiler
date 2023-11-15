@@ -11,7 +11,7 @@
     "posttokens:generate": "prettier ../ui-library/src/foundation/_tokens-generated/* --write"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^0.4.3",
     "lodash.kebabcase": "4.1.1",

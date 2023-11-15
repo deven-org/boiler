@@ -15,7 +15,7 @@
     "test": "wtr --config web-test-runner.config.mjs"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@boiler/figma-design-tokens": "0.0.1",
     "@boiler/eslint-config-boiler": "1.0.0"
