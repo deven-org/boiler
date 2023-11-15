@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "svgo:icons": "svgo -f icon-set -o icons-optimized --config svgo.config.js",
     "precompile:icons": "rimraf icons",

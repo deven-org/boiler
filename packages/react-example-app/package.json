@@ -1,6 +1,7 @@
 {
   "name": "@boiler/react-example-app",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
