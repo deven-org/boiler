@@ -28,7 +28,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
         }
-
         .blr-form-label-inline {
           color: ${LabelNextToControl.Rest};
         }
@@ -46,6 +45,9 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             .blr-form-hint {
               gap: 0px;
             }
+          }
+          .blr-form-label-inline {
+            font-family: ${SM.LabelNextToControl.fontFamily}, 'sans-serif';
           }
         }
         &.disabled {
@@ -68,7 +70,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             padding-top: ${Checkbox.SM.ContentCol.PaddingTop};
             gap: ${Checkbox.SM.ContentCol.ItemSpacing};
             .blr-form-label-inline {
-              font-family: ${SM.LabelNextToControl.fontFamily}, 'sans-serif';
               font-weight: ${SM.LabelNextToControl.fontWeight};
               lineHeight: ${SM.LabelNextToControl.lineHeight};
               font-size: ${SM.LabelNextToControl.fontSize};
@@ -105,7 +106,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             padding-top: ${Checkbox.MD.ContentCol.PaddingTop};
             gap: ${Checkbox.MD.ContentCol.ItemSpacing};
             .blr-form-label-inline {
-              font-family: ${MD.LabelNextToControl.fontFamily}, 'sans-serif';
               font-weight: ${MD.LabelNextToControl.fontWeight};
               lineHeight: ${MD.LabelNextToControl.lineHeight};
               font-size: ${MD.LabelNextToControl.fontSize};
@@ -132,7 +132,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             padding-top: ${Checkbox.LG.ContentCol.PaddingTop};
             gap: ${Checkbox.LG.ContentCol.ItemSpacing};
             .blr-form-label-inline {
-              font-family: ${LG.LabelNextToControl.fontFamily}, 'sans-serif';
               font-weight: ${LG.LabelNextToControl.fontWeight};
               lineHeight: ${LG.LabelNextToControl.lineHeight};
               font-size: ${LG.LabelNextToControl.fontSize};
