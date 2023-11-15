@@ -14,10 +14,12 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'showHint', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
     },
     theme: {
       options: Themes,

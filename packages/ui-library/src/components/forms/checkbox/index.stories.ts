@@ -74,7 +74,6 @@ const args: BlrCheckboxType = {
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
-  handleChange: logEventType,
 };
 
 BlrCheckbox.args = args;
