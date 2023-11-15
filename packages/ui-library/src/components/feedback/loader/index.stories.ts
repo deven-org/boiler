@@ -33,7 +33,6 @@ const args: BlrLoaderType = {
   size: 'md',
   variant: 'default',
   loadingStatus: 'Loading',
-  floating: false,
 };
 
 BlrLoader.args = args;

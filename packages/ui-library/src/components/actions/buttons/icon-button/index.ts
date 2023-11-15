@@ -55,6 +55,10 @@ export class BlrIconButton extends LitElement {
       loading: this.loading || false,
     });
 
+    const iconClasses = classMap({
+      icon: true,
+    });
+
     const loaderVariant = determineLoaderVariant(this.variant);
 
     const loaderSizeVariant = getComponentConfigToken([
@@ -94,13 +98,14 @@ export class BlrIconButton extends LitElement {
               variant: loaderVariant,
               loadingStatus: this.loadingStatus,
               theme: this.theme,
-              floating: true,
             })
-          : BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-            })}
+          : nothing}
+        ${BlrIconRenderFunction({
+          icon: calculateIconName(this.icon, iconSizeVariant),
+          size: iconSizeVariant,
+          hideAria: true,
+          classMap: iconClasses,
+        })}
       </span>`;
   }
 }

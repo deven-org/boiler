@@ -67,11 +67,11 @@ export const styleCustom = typeSafeNestedCss`
         border-radius: ${IconButton.Container.BorderRadius.XL};
       }
     }
-
-    .loading {
-      & > .icon
-      {
-        visibility: hidden;
-      }
+  }
+  
+  .loading {
+    & > .icon {
+      visibility: hidden;
+    }
   }
 `;

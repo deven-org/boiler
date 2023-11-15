@@ -116,7 +116,6 @@ export class BlrTextButton extends LitElement {
                 variant: loaderVariant,
                 loadingStatus: this.loadingStatus,
                 theme: this.theme,
-                floating: true,
               })}
               ${labelAndIconGroup}
             `
