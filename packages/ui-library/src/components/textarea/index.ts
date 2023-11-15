@@ -24,7 +24,7 @@ export class BlrTextarea extends LitElement {
   @property() maxLength?: number;
   @property() label!: string;
   @property() labelAppendix?: string;
-  @property() hasHint = true;
+  @property() hasHint? = true;
   @property() hintMessage?: string;
   @property() hintMessageIcon: SizelessIconType = 'blrInfo';
   @property() arialabel!: string;
@@ -110,7 +110,7 @@ export class BlrTextarea extends LitElement {
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
       [`${this.sizeVariant}`]: this.sizeVariant,
-      [`${this.resize}`]: this.resize || true,
+      [this.resize]: this.resize,
       ['shouldFocus']: this.shouldFocus || false,
     });
     const flexContainer = classMap({
@@ -248,7 +248,6 @@ export const BlrTextareaRenderFunction = ({
   shouldFocus,
 }: BlrTextareaType) => {
   return html`<blr-textarea
-    class=${resize ? nothing : `parent-width`}
     .textareaId=${textareaId}
     .name=${name}
     .arialabel=${arialabel}
