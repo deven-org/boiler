@@ -8,7 +8,6 @@ const sampleParams: BlrCounterType = {
   variant: 'default',
   current: 3,
   max: 100,
-  size: 'md',
 };
 
 describe('blr-counter', () => {
@@ -50,5 +49,23 @@ describe('blr-counter', () => {
     const element = await fixture(BlrCounterRenderFunction({ ...sampleParams, variant: 'error' }));
     const blrCounter = querySelectorDeep('div.blr-counter.error', element.getRootNode() as HTMLElement);
     expect(blrCounter).to.exist;
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrCounterRenderFunction(sampleParams));
+
+    const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);
+    const className = blrCounter?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrCounterRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);
+    const className = blrCounter?.className;
+
+    expect(className).to.contain('sm');
   });
 });

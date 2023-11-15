@@ -19,7 +19,8 @@ export class BlrLoader extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [styleCustomLight] : [styleCustomDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [styleCustomLight] : [styleCustomDark];
 
     const classes = classMap({
       'blr-loader': true,
@@ -27,10 +28,11 @@ export class BlrLoader extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class="${classes}" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}></div>`;
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <div class="${classes}" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}></div>`;
+    }
   }
 }
 

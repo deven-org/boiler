@@ -29,7 +29,7 @@ export class BlrTextButton extends LitElement {
   @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size: ActionSizesType = 'md';
+  @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
@@ -47,80 +47,82 @@ export class BlrTextButton extends LitElement {
   };
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
-    const classes = classMap({
-      'blr-semantic-action': true,
-      'blr-text-button': true,
-      [this.variant]: this.variant,
-      [this.size]: this.size || 'md',
-      'disabled': this.disabled,
-      'loading': this.loading,
-    });
+      const classes = classMap({
+        'blr-semantic-action': true,
+        'blr-text-button': true,
+        [this.variant]: this.variant,
+        [`${this.size}`]: this.size,
+        'disabled': this.disabled,
+        'loading': this.loading,
+      });
 
-    const iconClasses = classMap({
-      icon: true,
-    });
+      const iconClasses = classMap({
+        icon: true,
+      });
 
-    const loaderVariant = determineLoaderVariant(this.variant);
+      const loaderVariant = determineLoaderVariant(this.variant);
 
-    const loaderSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      this.size.toUpperCase(),
-      'Loader',
-    ]).toLowerCase() as FormSizesType;
+      const loaderSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        this.size.toUpperCase(),
+        'Loader',
+      ]).toLowerCase() as FormSizesType;
 
-    const iconSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      'TextButton',
-      this.size.toUpperCase(),
-      'Icon',
-    ]).toLowerCase() as SizesType;
+      const iconSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        'TextButton',
+        this.size.toUpperCase(),
+        'Icon',
+      ]).toLowerCase() as SizesType;
 
-    const labelAndIconGroup = html` ${this.leadingIcon &&
-      BlrIconRenderFunction({
-        icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-        size: iconSizeVariant,
-        hideAria: true,
-        classMap: iconClasses,
-      })}
-      <span class="label">${this.label}</span>
-      ${this.trailingIcon &&
-      BlrIconRenderFunction({
-        icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-        size: iconSizeVariant,
-        hideAria: true,
-        classMap: iconClasses,
-      })}`;
+      const labelAndIconGroup = html` ${this.leadingIcon &&
+        BlrIconRenderFunction({
+          icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+          size: iconSizeVariant,
+          hideAria: true,
+          classMap: iconClasses,
+        })}
+        <span class="label">${this.label}</span>
+        ${this.trailingIcon &&
+        BlrIconRenderFunction({
+          icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+          size: iconSizeVariant,
+          hideAria: true,
+          classMap: iconClasses,
+        })}`;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <span
-        class="${classes}"
-        @click="${this.onClick}"
-        tabindex=${this.disabled ? nothing : '0'}
-        @focus=${this.handleFocus}
-        @blur=${this.handleBlur}
-        role=${this.disabled ? nothing : 'button'}
-        @keydown=${this.onClick}
-        id=${this.buttonId || nothing}
-      >
-        ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
-        ${this.loading
-          ? html`
-              ${BlrLoaderRenderFunction({
-                size: loaderSizeVariant,
-                variant: loaderVariant,
-                loadingStatus: this.loadingStatus,
-                theme: this.theme,
-              })}
-              ${labelAndIconGroup}
-            `
-          : labelAndIconGroup}
-      </span>`;
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <span
+          class="${classes}"
+          @click="${this.onClick}"
+          tabindex=${this.disabled ? nothing : '0'}
+          @focus=${this.handleFocus}
+          @blur=${this.handleBlur}
+          role=${this.disabled ? nothing : 'button'}
+          @keydown=${this.onClick}
+          id=${this.buttonId || nothing}
+        >
+          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.loading
+            ? html`
+                ${BlrLoaderRenderFunction({
+                  size: loaderSizeVariant,
+                  variant: loaderVariant,
+                  loadingStatus: this.loadingStatus,
+                  theme: this.theme,
+                })}
+                ${labelAndIconGroup}
+              `
+            : labelAndIconGroup}
+        </span>`;
+    }
   }
 }
 
