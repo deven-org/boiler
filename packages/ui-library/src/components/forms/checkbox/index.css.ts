@@ -35,7 +35,11 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           position: relative;
           outline-offset: 2px;
           transition: all 0.25s ease 0s;
-          background-color: ${Checkbox.Control.Background.Unselected.Fill.Rest};
+          //background-color: ${Checkbox.Control.Background.Unselected.Fill.Rest};
+          background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
+          border-style: ${0}
+          border-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
+
         }
         .label-wrapper {
           display: flex;
@@ -58,13 +62,23 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
         }
         &.sm {
-          gap: ${Checkbox.SM.MainContainer.ItemSpacing};
+          //gap: ${Checkbox.SM.MainContainer.ItemSpacing};
+          gap: ${Checkbox.ContentCol.ItemSpacing.SM};
           .input-control {
-            width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
-            height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
-            margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
-            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
-            border-radius: ${Checkbox.ControlBorderRadius};
+            //width: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
+            //height: ${Checkbox.SM.Control.Background.Sizing.Unselected.Rest};
+            //margin-top: ${Checkbox.SM.ControlWrapper.TopMargin};
+            //border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${
+      Checkbox.Control.Background.Unselected.Stroke.Rest
+    };
+            //border-radius: ${Checkbox.ControlBorderRadius};
+
+            width: ${Checkbox.Control.Container.Size.SM};
+            height: ${Checkbox.Control.Container.Size.SM};
+            margin-top: ${Checkbox.ContentCol.PaddingTop.SM};
+            border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Rest};
+
+
           }
           .label-wrapper {
             padding-top: ${Checkbox.SM.ContentCol.PaddingTop};
@@ -91,7 +105,9 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             width: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
             height: ${Checkbox.MD.Control.Background.Sizing.Unselected.Rest};
             margin-top: ${Checkbox.MD.ControlWrapper.TopMargin};
-            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
+            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${
+      Checkbox.Control.Background.Unselected.Stroke.Rest
+    };
             border-radius: ${Checkbox.ControlBorderRadius};
 
             &:checked {
@@ -118,7 +134,9 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             width: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
             height: ${Checkbox.LG.Control.Background.Sizing.Unselected.Rest};
             margin-top: ${Checkbox.LG.ControlWrapper.TopMargin};
-            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${Checkbox.Control.Background.Unselected.Stroke.Rest};
+            border: ${Checkbox.Control.Unselected.Rest.width} ${Checkbox.Control.Unselected.Rest.style} ${
+      Checkbox.Control.Background.Unselected.Stroke.Rest
+    };
             border-radius: ${Checkbox.ControlBorderRadius};
             &:checked {
 
