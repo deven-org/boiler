@@ -12,7 +12,7 @@ export const wrapValuesWithCss = (obj: any) => {
     // If the value is a string, wrap it with css``
     else if (typeof value === 'string') {
       obj[key] = css`
-        ${unsafeCSS(value)}
+        ${unsafeCSS(value.trim())}
       `;
     }
   }
