@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
@@ -33,12 +33,16 @@ export class BlrIconButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @state() protected focused = false;
+
   protected handleFocus = () => {
     console.log('focused');
+    this.focused = true;
   };
 
   protected handleBlur = () => {
     console.log('blurred');
+    this.focused = false;
   };
 
   protected render() {
@@ -66,18 +70,10 @@ export class BlrIconButton extends LitElement {
       'Icon',
     ]).toLowerCase() as SizesType;
 
-    const IconClasses = classMap({
-      'disabled-icon-cta': this.disabled && this.variant === 'cta',
-      'disabled-icon-primary': this.disabled && this.variant === 'primary',
-      'disabled-icon-secondary': this.disabled && this.variant === 'secondary',
-      'disabled-icon-destructive': this.disabled && this.variant === 'destructive',
-      'disabled-icon-silent': this.disabled && this.variant === 'silent',
-      'disabled-icon-encourage': this.disabled && this.variant === 'encourage',
-    });
-
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
+
       <span
         aria-label=${this.arialabel || nothing}
         class="blr-semantic-action blr-icon-button ${classes}"
@@ -89,6 +85,7 @@ export class BlrIconButton extends LitElement {
         role=${this.disabled ? nothing : 'button'}
         @keydown=${this.onClick}
       >
+        ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
         ${this.loading
           ? BlrLoaderRenderFunction({
               size: loaderSizeVariant,
@@ -100,9 +97,8 @@ export class BlrIconButton extends LitElement {
               icon: calculateIconName(this.icon, iconSizeVariant),
               size: iconSizeVariant,
               hideAria: true,
-              classMap: IconClasses,
             })}
-      </span> `;
+      </span>`;
   }
 }
 

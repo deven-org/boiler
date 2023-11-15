@@ -8,33 +8,28 @@ const sampleParams: BlrTabBarType = {
   tabs: [
     {
       label: 'Tab 1',
-      icon: 'blr360Sm',
+      icon: 'blr360',
       href: './',
     },
     {
       label: 'Tab 2',
-      icon: 'blrInfoSm',
+      icon: 'blrInfo',
       href: './',
     },
     {
       label: 'Tab 3',
-      icon: 'blrCalendarSm',
+      icon: 'blrCalendar',
       href: './',
     },
   ],
-  overflowVariant: 'wrap',
+  overflowVariantStandard: 'wrap',
+  overflowVariantFullWidth: 'wrap',
   size: 'md',
   showDivider: true,
-  icon: 'blr360Sm',
   variant: 'standard',
   tabContent: 'labelAndIcon',
   iconPosition: 'leading',
   alignment: 'left',
-  _navItems: [],
-  _navItemsSlots: [],
-  _panels: [],
-  _navList: document.createElement('ul'),
-  scrollTab: () => null,
 };
 
 describe('blr-tab-bar', () => {

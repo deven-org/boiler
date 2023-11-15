@@ -36,7 +36,7 @@ export class BlrNumberInput extends LitElement {
   @property() labelAppendix?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = 'blrInfoSm';
+  @property() errorIcon: SizelessIconType = 'blrInfo';
   @property() showHint = true;
   @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
@@ -175,25 +175,24 @@ export class BlrNumberInput extends LitElement {
     });
 
     const captionContent = html`
-    ${this.showHint ? 
-      BlrFormCaptionRenderFunction({
-        variant: 'hint',
-        theme: this.theme,
-        size: this.size,
-        message: this.hintMessage,
-        icon: this.hintIcon
-      })
-    : nothing}
-
-    ${this.hasError ?
-      BlrFormCaptionRenderFunction({
-        variant: 'error',
-        theme: this.theme,
-        size: this.size,
-        message: this.errorMessage,
-        icon: this.errorIcon
-      })
-      : nothing}
+      ${this.showHint
+        ? BlrFormCaptionRenderFunction({
+            variant: 'hint',
+            theme: this.theme,
+            size: this.size,
+            message: this.hintMessage,
+            icon: this.hintIcon,
+          })
+        : nothing}
+      ${this.hasError
+        ? BlrFormCaptionRenderFunction({
+            variant: 'error',
+            theme: this.theme,
+            size: this.size,
+            message: this.errorMessage,
+            icon: this.errorIcon,
+          })
+        : nothing}
     `;
 
     return html`
@@ -232,9 +231,9 @@ export class BlrNumberInput extends LitElement {
             `
           : nothing}
       </div>
-        ${this.showHint || this.hasError
-          ?
-          BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent) : nothing}
+      ${this.showHint || this.hasError
+        ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+        : nothing}
     `;
   }
 }

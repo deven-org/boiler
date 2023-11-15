@@ -1,5 +1,53 @@
 {
   "Feedback": {
+    "Counter": {
+      "Container": {
+        "BorderColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.SurfaceStroke}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.SurfaceStroke}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.SurfaceStroke}",
+            "type": "color"
+          }
+        },
+        "BackgroundColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Surface}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Surface}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Surface}",
+            "type": "color"
+          }
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Text}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Text}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Text}",
+            "type": "color"
+          }
+        }
+      }
+    },
     "Tooltip": {
       "SurfaceFill": {
         "value": "{q.surface.inverted}",
@@ -15,6 +63,32 @@
         "Color": {
           "value": "{q.background.level_2}",
           "type": "color"
+        }
+      }
+    },
+    "Loader": {
+      "Background": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Background}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Background}",
+            "type": "color"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Foreground}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Foreground}",
+            "type": "color"
+          }
         }
       }
     }

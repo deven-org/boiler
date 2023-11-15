@@ -45,8 +45,8 @@ export class BlrSelect extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfoSm';
-  @property() errorIcon?: SizelessIconType = 'blr360Sm';
+  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType = 'blr360';
   @property() showHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
@@ -97,25 +97,24 @@ export class BlrSelect extends LitElement {
     });
 
     const captionContent = html`
-    ${this.showHint ? 
-      BlrFormCaptionRenderFunction({
-        variant: 'hint',
-        theme: this.theme,
-        size: this.size,
-        message: this.hintMessage,
-        icon: this.hintIcon
-      })
-    : nothing}
-
-    ${this.hasError ?
-      BlrFormCaptionRenderFunction({
-        variant: 'error',
-        theme: this.theme,
-        size: this.size,
-        message: this.errorMessage,
-        icon: this.errorIcon
-      })
-      : nothing}
+      ${this.showHint
+        ? BlrFormCaptionRenderFunction({
+            variant: 'hint',
+            theme: this.theme,
+            size: this.size,
+            message: this.hintMessage,
+            icon: this.hintIcon,
+          })
+        : nothing}
+      ${this.hasError
+        ? BlrFormCaptionRenderFunction({
+            variant: 'error',
+            theme: this.theme,
+            size: this.size,
+            message: this.errorMessage,
+            icon: this.errorIcon,
+          })
+        : nothing}
     `;
 
     return html`
@@ -164,8 +163,7 @@ export class BlrSelect extends LitElement {
           ${this.renderIcon(iconClasses)}
         </div>
         ${this.showHint || this.hasError
-          ?
-          BlrFormCaptionGroupRenderFunction({size: this.size}, captionContent)
+          ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
           : nothing}
       </div>
     `;

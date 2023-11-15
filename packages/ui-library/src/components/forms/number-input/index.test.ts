@@ -1,7 +1,7 @@
 import { BlrNumberInputRenderFunction, BlrNumberInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrNumberInputType = {
@@ -18,7 +18,8 @@ const sampleParams: BlrNumberInputType = {
   numberInputId: 'egal',
   label: 'Hello',
   showHint: false,
-  hintIcon: 'blr360Lg',
+  hintIcon: 'blr360',
+  errorIcon: 'blrInfo',
   value: 4,
   unit: 'gr',
   fractionDigits: 0,
@@ -49,5 +50,28 @@ describe('blr-number-input', () => {
     const placeholder = input?.getAttribute('placeholder');
 
     expect(placeholder).to.be.equal(randomString);
+  });
+
+  it('is shows adjacent caption components in caption group slot', async () => {
+    const element = await fixture(
+      BlrNumberInputRenderFunction({
+        ...sampleParams,
+        showHint: true,
+        hintIcon: 'blrInfo',
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
+      })
+    );
+
+    const captionWrapper = querySelectorDeep('blr-number-input', element.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
+    const hintClassName = formCaptionHint?.className;
+
+    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
+    const errorClassName = formCaptionError?.className;
+
+    expect(hintClassName).to.contain('hint');
+    expect(errorClassName).to.contain('error');
   });
 });

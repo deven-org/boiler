@@ -1,7 +1,7 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literals";
 
-export const styleCustom = css`
-  .blr-form-caption {
+export const styleCustom = typeSafeNestedCss`
+  .blr-form-hint {
     width: 100%;
     display: flex;
     align-items: flex-start;

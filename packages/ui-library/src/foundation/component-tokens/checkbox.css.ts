@@ -1,11 +1,12 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { Checkbox } = componentTokens.Forms;
   const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 
-  return css`
+  return typeSafeNestedCss`
       .blr-checkbox {
         display: flex;
         transition: all 0.25s ease 0s;

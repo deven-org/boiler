@@ -6,7 +6,7 @@ import { InputSizesType, RadioOption } from '../../../../globals/types';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
@@ -28,10 +28,10 @@ export class BlrRadio extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
-  @property() errorIcon?: IconType;
+  @property() errorIcon?: SizelessIconType;
   @property() option!: RadioOption;
   @property() showHint = true;
-  @property() hintIcon?: IconType;
+  @property() hintIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
 
@@ -54,27 +54,26 @@ export class BlrRadio extends LitElement {
 
     const renderCaptionContent = (option: RadioOption) => {
       return html`
-        ${this.showHint ? 
-          BlrFormCaptionRenderFunction({
-            variant: 'hint',
-            theme: this.theme,
-            size: this.size,
-            message: option.hintMessage,
-            icon: this.hintIcon
-          })
-        : nothing}
-
-        ${this.hasError ?
-          BlrFormCaptionRenderFunction({
-            variant: 'error',
-            theme: this.theme,
-            size: this.size,
-            message: option.errorMessage,
-            icon: this.errorIcon
-          })
+        ${this.showHint
+          ? BlrFormCaptionRenderFunction({
+              variant: 'hint',
+              theme: this.theme,
+              size: this.size,
+              message: option.hintMessage,
+              icon: this.hintIcon,
+            })
           : nothing}
-        `;
-      }
+        ${this.hasError
+          ? BlrFormCaptionRenderFunction({
+              variant: 'error',
+              theme: this.theme,
+              size: this.size,
+              message: option.errorMessage,
+              icon: this.errorIcon,
+            })
+          : nothing}
+      `;
+    };
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -102,9 +101,9 @@ export class BlrRadio extends LitElement {
             ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
             : nothing}
           <div class="caption-wrapper">
-          ${this.showHint || this.hasError
-            ?
-            BlrFormCaptionGroupRenderFunction({size: this.size}, renderCaptionContent(this.option)) : nothing}
+            ${this.showHint || this.hasError
+              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, renderCaptionContent(this.option))
+              : nothing}
           </div>
         </div>
       </div> `;

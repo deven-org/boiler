@@ -1,11 +1,12 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
 
-    return css`
+    return typeSafeNestedCss`
       .blr-input-inner-container {
         flex-grow: 1;
         flex-shrink: 1;

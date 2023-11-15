@@ -31,7 +31,6 @@ describe('blr-checkbox', () => {
     expect(className).to.contain('input-control');
   });
 
-
   it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
       BlrCheckboxRenderFunction({

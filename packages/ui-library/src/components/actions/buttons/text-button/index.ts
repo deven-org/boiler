@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
@@ -34,41 +34,32 @@ export class BlrTextButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @state() protected focused = false;
+
   protected handleFocus = () => {
     console.log('focused');
+    this.focused = true;
   };
 
   protected handleBlur = () => {
     console.log('blurred');
+    this.focused = false;
   };
 
   protected render() {
     const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
     const classes = classMap({
+      'blr-semantic-action': true,
+      'blr-text-button': true,
       [this.variant]: this.variant,
       [this.size]: this.size || 'md',
-      disabled: this.disabled,
+      'disabled': this.disabled,
+      'loading': this.loading,
     });
 
-    const loaderIconClasses = classMap({
-      'loading-class-icons': this.loading,
-      'disabled-icon-cta': this.disabled && this.variant === 'cta',
-      'disabled-icon-primary': this.disabled && this.variant === 'primary',
-      'disabled-icon-secondary': this.disabled && this.variant === 'secondary',
-      'disabled-icon-destructive': this.disabled && this.variant === 'destructive',
-      'disabled-icon-silent': this.disabled && this.variant === 'silent',
-      'disabled-icon-encourage': this.disabled && this.variant === 'encourage',
-    });
-
-    const labelClasses = classMap({
-      'loading-class-label': this.loading,
-      'disabled-label-cta': this.disabled && this.variant === 'cta',
-      'disabled-label-primary': this.disabled && this.variant === 'primary',
-      'disabled-label-secondary': this.disabled && this.variant === 'secondary',
-      'disabled-label-destructive': this.disabled && this.variant === 'destructive',
-      'disabled-label-silent': this.disabled && this.variant === 'silent',
-      'disabled-label-encourage': this.disabled && this.variant === 'encourage',
+    const iconClasses = classMap({
+      icon: true,
     });
 
     const loaderVariant = determineLoaderVariant(this.variant);
@@ -93,22 +84,22 @@ export class BlrTextButton extends LitElement {
         icon: calculateIconName(this.leadingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
-        classMap: loaderIconClasses,
+        classMap: iconClasses,
       })}
-      <span class=${labelClasses}>${this.label}</span>
+      <span class="label">${this.label}</span>
       ${this.trailingIcon &&
       BlrIconRenderFunction({
         icon: calculateIconName(this.trailingIcon, iconSizeVariant),
         size: iconSizeVariant,
         hideAria: true,
-        classMap: loaderIconClasses,
+        classMap: iconClasses,
       })}`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
       <span
-        class="blr-semantic-action blr-text-button ${classes}"
+        class="${classes}"
         @click="${this.onClick}"
         tabindex=${this.disabled ? nothing : '0'}
         @focus=${this.handleFocus}
@@ -117,19 +108,19 @@ export class BlrTextButton extends LitElement {
         @keydown=${this.onClick}
         id=${this.buttonId || nothing}
       >
+        ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
         ${this.loading
           ? html`
-              <div class="loader-class ${loaderIconClasses}">
-                ${BlrLoaderRenderFunction({
-                  size: loaderSizeVariant,
-                  variant: loaderVariant,
-                  loadingStatus: this.loadingStatus,
-                  theme: this.theme,
-                })}
-              </div>
+              ${BlrLoaderRenderFunction({
+                size: loaderSizeVariant,
+                variant: loaderVariant,
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+                floating: true,
+              })}
               ${labelAndIconGroup}
             `
-          : html` ${labelAndIconGroup} `}
+          : labelAndIconGroup}
       </span>`;
   }
 }

@@ -1,10 +1,10 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
 const { ButtonGroup } = componentTokens.UI;
 
-export const styleCustom = css`
+export const styleCustom = typeSafeNestedCss`
   .blr-button-group {
     display: flex;
 
@@ -21,23 +21,23 @@ export const styleCustom = css`
     }
 
     &.xs {
-      gap: ${ButtonGroup.XS.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.XS};
     }
 
     &.sm {
-      gap: ${ButtonGroup.SM.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.SM};
     }
 
     &.md {
-      gap: ${ButtonGroup.MD.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.MD};
     }
 
     &.lg {
-      gap: ${ButtonGroup.LG.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.LG};
     }
 
     &.xl {
-      gap: ${ButtonGroup.XL.ItemSpacing};
+      gap: ${ButtonGroup.Container.ItemSpacing.XL};
     }
   }
 `;

@@ -1,14 +1,12 @@
-import { css } from "nested-css-to-flat/lit-css";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = renderThemedCssStrings((_componentTokens, semanticTokens) => {
-  const { BorderRadius, CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } = semanticTokens.Action;
+  const { CTA, Primary, Secondary, Silent, XS, SM, MD, LG, XL, Destructive, Encourage } = semanticTokens.Action;
 
-  return css`
+  return typeSafeNestedCss`
     .blr-semantic-action {
-      border-radius: ${BorderRadius};
-      border: none;
-
       &.xs {
         font-family: ${XS.Label.fontFamily}, sans-serif;
         font-weight: ${XS.Label.fontWeight};
@@ -53,21 +51,21 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
           background-color: ${CTA.SurfaceFill.Hover};
           color: ${CTA.SurfaceFill.Disabled};
           outline-color: ${CTA.SurfaceStroke.Hover};
-          outline-width: ${CTA.SurfaceStroke.width};
+          outline-width: ${CTA.Hover.width};
         }
 
         &:active {
           background-color: ${CTA.SurfaceFill.Pressed};
           color: ${CTA.SurfaceFill.Disabled};
           outline-color: ${CTA.SurfaceStroke.Hover};
-          outline-width: ${CTA.SurfaceStroke.width};
+          outline-width: ${CTA.Hover.width};
         }
 
         &:disabled {
           background-color: ${CTA.SurfaceFill.Disabled};
           color: ${CTA.Label.Disabled};
           outline-color: ${CTA.SurfaceStroke.Hover};
-          outline-width: ${CTA.SurfaceStroke.width};
+          outline-width: ${CTA.Hover.width};
         }
       }
 
@@ -86,7 +84,7 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
           background-color: ${Primary.SurfaceFill.Pressed};
           color: ${Primary.SurfaceFill.Rest};
           outline-color: ${Primary.SurfaceStroke.Hover};
-          outline-width: ${Primary.SurfaceStroke.width};
+          outline-width: ${Primary.Hover.width};
         }
 
         &:disabled {
@@ -105,18 +103,21 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
           background-color: ${Secondary.SurfaceFill.Hover};
           outline-color: ${Secondary.SurfaceStroke.Hover};
           color: ${Secondary.Icon.Hover};
+          outline-width: ${Secondary.Hover.width};
         }
 
         &:active {
           background-color: ${Secondary.SurfaceFill.Pressed};
           outline-color: ${Secondary.SurfaceStroke.Pressed};
           color: ${Secondary.Icon.Pressed};
+          outline-width: ${Secondary.Hover.width};
         }
 
         &:disabled {
           background-color: ${Secondary.SurfaceFill.Disabled};
           outline: ${Secondary.Disabled.style} ${Secondary.Disabled.width} ${Secondary.Disabled.color};
           color: ${Secondary.Icon.Disabled};
+          outline-width: ${Secondary.Hover.width};
         }
       }
 
@@ -129,18 +130,21 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
           background-color: ${Silent.SurfaceFill.Hover};
           color: ${Silent.Icon.Hover};
           outline-color: ${Silent.SurfaceStroke.Hover};
+          outline-width: ${Silent.Hover.width};
         }
 
         &:active {
           background-color: ${Silent.SurfaceFill.Pressed};
           color: ${Silent.Icon.Pressed};
           outline-color: ${Silent.SurfaceStroke.Hover};
+          outline-width: ${Silent.Hover.width};
         }
 
         &:disabled {
           background-color: ${Silent.SurfaceFill.Rest};
           color: ${Silent.Icon.Disabled};
           outline: ${Silent.Disabled.style} ${Silent.Disabled.width} ${Silent.Disabled.color};
+          outline-width: ${Silent.Hover.width};
         }
       }
 
@@ -153,18 +157,21 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
           background-color: ${Destructive.SurfaceFill.Hover};
           outline-color: ${Destructive.SurfaceStroke.Hover};
           color: ${Destructive.Icon.Disabled};
+          outline-width: ${Destructive.Hover.width};
         }
 
         &:active {
           background-color: ${Destructive.SurfaceFill.Pressed};
           outline-color: ${Destructive.SurfaceStroke.Hover};
           color: ${Destructive.Icon.Disabled};
+          outline-width: ${Destructive.Hover.width};
         }
 
         &:disabled {
           background-color: ${Destructive.SurfaceFill.Disabled};
           color: ${Destructive.Icon.Disabled};
           outline-color: ${Destructive.SurfaceStroke.Hover};
+          outline-width: ${Destructive.Hover.width};
         }
       }
 
@@ -177,18 +184,21 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
           background-color: ${Encourage.SurfaceFill.Hover};
           color: ${Encourage.Icon.Disabled};
           outline-color: ${Encourage.SurfaceStroke.Hover};
+          outline-width: ${Encourage.Hover.width};
         }
 
         &:active {
           background-color: ${Encourage.SurfaceFill.Pressed};
           color: ${Encourage.Icon.Disabled};
           outline-color: ${Encourage.SurfaceStroke.Hover};
+          outline-width: ${Encourage.Hover.width};
         }
 
         &:disabled {
           background-color: ${Encourage.SurfaceFill.Disabled};
           color: ${Encourage.Icon.Disabled};
           outline-color: ${Encourage.SurfaceStroke.Hover};
+          outline-width: ${Encourage.Hover.width};
         }
       }
     }
