@@ -84,7 +84,7 @@ $ npm test
 
 # License
 
-Please add in this section what kind of licence your project uses.
+This project is licensed under the [MIT license](./LICENSE.md).
 
 # How to continue
 

@@ -10,7 +10,7 @@
     "test:a11y": "pa11y-ci --config ./.pa11yci"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@boiler/ui-library": "^0.0.1",
     "@storybook/addon-actions": "^7.4.6",
