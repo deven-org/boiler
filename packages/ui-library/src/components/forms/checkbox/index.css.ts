@@ -13,30 +13,21 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         align-items: flex-start;
         transition: all 0.25s ease 0s;
 
-        & > input {
+        .blr-form-label-inline {
+          color: ${LabelNextToControl.Rest};
+        }
+        .input-control[type=checkbox] {
           all: initial;
-    
+          margin: 0;
+          position: relative;
+          outline-offset: 2px;
+          transition: all 0.25s ease 0s;
+          border-style: solid;
+
           &:disabled + label {
             cursor: not-allowed;
             pointer-events: none;
           }
-    
-          &:checked {
-            &:disabled + label {
-              cursor: not-allowed;
-              pointer-events: none;
-            }
-          }
-        }
-        .blr-form-label-inline {
-          color: ${LabelNextToControl.Rest};
-        }
-        .input-control {
-          position: relative;
-          outline-offset: 2px;
-          transition: all 0.25s ease 0s;
-          background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
-          border-color: ${Checkbox.Control.Container.BorderColor.Inactive.Rest};
         }
         .label-wrapper {
           display: flex;
@@ -58,13 +49,14 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             cursor: not-allowed;
           }
         }
+
         &.sm {
           gap: ${Checkbox.ContentRow.ItemSpacing.SM};
           .input-control {
             width: ${Checkbox.Control.Container.Size.SM};
             height: ${Checkbox.Control.Container.Size.SM};
-            margin-top: ${Checkbox.ContentCol.PaddingTop.SM};
-            border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Rest};
+            margin-top: ${Checkbox.ControlWrapper.PaddingTop.SM};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.SM};
           }
           .label-wrapper {
             padding-top: ${Checkbox.ContentCol.PaddingTop.SM};
@@ -76,7 +68,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
           .input-control {
-            // TODO: Consider Size AND State and dont forget border-width
             &:checked {
               &::after {
                 width: ${Checkbox.Control.Icon.IconSize.SM.Rest};
@@ -85,13 +76,14 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
         }
+
         &.md {
           gap: ${Checkbox.ContentRow.ItemSpacing.MD};
           .input-control {
             width: ${Checkbox.Control.Container.Size.MD};
             height: ${Checkbox.Control.Container.Size.MD};
-            margin-top: ${Checkbox.ContentCol.PaddingTop.MD};
-            border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Rest};
+            margin-top: ${Checkbox.ControlWrapper.PaddingTop.MD};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.MD};
           }
           .label-wrapper {
             padding-top: ${Checkbox.ContentCol.PaddingTop.MD};
@@ -103,7 +95,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
           .input-control {
-            // TODO: Consider Size AND State and dont forget border-width
             &:checked {
               &::after {
                 width: ${Checkbox.Control.Icon.IconSize.MD.Rest};
@@ -112,13 +103,14 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
         }
+
         &.lg {
           gap: ${Checkbox.ContentRow.ItemSpacing.LG};
           .input-control {
             width: ${Checkbox.Control.Container.Size.LG};
             height: ${Checkbox.Control.Container.Size.LG};
-            margin-top: ${Checkbox.ContentCol.PaddingTop.LG};
-            border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Rest};
+            margin-top: ${Checkbox.ControlWrapper.PaddingTop.LG};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.LG};
           }
           .label-wrapper {
             padding-top: ${Checkbox.ContentCol.PaddingTop.LG};
@@ -130,7 +122,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
           .input-control {
-            // TODO: Consider Size AND State and dont forget border-width
             &:checked {
               &::after {
                 width: ${Checkbox.Control.Icon.IconSize.LG.Rest};
@@ -142,7 +133,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         &:not(.error) {
           .input-control {
-            &:checked, &:indeterminate {
+            &:checked {
+              background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
+              border-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
+
               &:hover {
                 &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Hover};
@@ -169,8 +163,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               }
             }
 
-            &:not(:checked),
-            &:not(:indeterminate) {
+            &:not(:checked) {
+              background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
+              border-color: ${Checkbox.Control.Container.BorderColor.Inactive.Rest};
+
               &:hover {
                 &:not(:disabled):not([readonly]) {
                   background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Hover};
@@ -206,29 +202,184 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
         }
 
-        &:checked:not(:indeterminate)::after {
-          content: "";
-          margin-right: 1rem;
-          float: left;
-          transition: 0.15s all ease-out; 
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"%3E%3Cpath d="M3.35834 8.9759L5.39724 10.9618C5.65804 11.2159 6.07374 11.2159 6.33454 10.9618L12.7617 4.70166" stroke="white" stroke-width="0.671667" stroke-linecap="round" stroke-linejoin="round" /%3E%3C/svg%3E');
+        &:not(.indeterminate) {
+          .input-control {
+            &::after {
+              content: " ";
+              margin-right: 1rem;
+              float: left;
+              transition: 0.15s all ease-out; 
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"%3E%3Cpath d="M3.35834 8.9759L5.39724 10.9618C5.65804 11.2159 6.07374 11.2159 6.33454 10.9618L12.7617 4.70166" stroke="white" stroke-width="0.671667" stroke-linecap="round" stroke-linejoin="round" /%3E%3C/svg%3E');
+            }
+          }  
         }
 
-        &:indeterminate::after {
-          content: "";
-          display: block;
-          width: 10px;
-          border-style: solid;
-          border-color: white;
-          border-width: 2px 0px 0px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 0px;
-          right: 0px;
-          margin: 0px auto;
+        &.indeterminate {
+          .input-control {
+            &::after {
+              content: " ";
+              display: block;
+              width: 10px;
+              border-style: solid;
+              border-color: white;
+              border-width: 2px 0px 0px;
+              position: absolute;
+              top: calc(50% - 1px);
+              margin: 0px auto;  
+            }
+          }  
+        }
+
+        .sm {
+          &:checked {
+            border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Rest};
+
+            &:hover {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Hover};
+              }
+            }
+            &:focus {
+              border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Focus};
+            }
+            &:active {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Pressed};
+              }
+            }
+            &:disabled {
+              border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Disabled};
+            }
+            &[readonly] {
+              border-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly};
+            }
+          }
+
+          &:not(:checked) {
+            border-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest};
+
+            &:hover {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover};
+              }
+            }
+            &:focus {
+              border-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus};
+            }
+            &:active {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed};
+              }
+            }
+            &:disabled {
+              border-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled};
+            }
+            &[readonly] {
+              border-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
+            }
+          }
+        }
+
+        .md {
+          &:checked {
+            border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Rest};
+
+            &:hover {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Hover};
+              }
+            }
+            &:focus {
+              border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Focus};
+            }
+            &:active {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Pressed};
+              }
+            }
+            &:disabled {
+              border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Disabled};
+            }
+            &[readonly] {
+              border-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly};
+            }
+          }
+
+          &:not(:checked) {
+            border-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest};
+
+            &:hover {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover};
+              }
+            }
+            &:focus {
+              border-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus};
+            }
+            &:active {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed};
+              }
+            }
+            &:disabled {
+              border-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled};
+            }
+            &[readonly] {
+              border-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly};
+            }
+          }
+        }
+
+        .lg {
+          &:checked {
+            border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Rest};
+
+            &:hover {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Hover};
+              }
+            }
+            &:focus {
+              border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Focus};
+            }
+            &:active {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Pressed};
+              }
+            }
+            &:disabled {
+              border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Disabled};
+            }
+            &[readonly] {
+              border-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly};
+            }
+          }
+
+          &:not(:checked) {
+            border-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest};
+
+            &:hover {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover};
+              }
+            }
+            &:focus {
+              border-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus};
+            }
+            &:active {
+              &:not(:disabled):not([readonly]) {
+                border-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed};
+              }
+            }
+            &:disabled {
+              border-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled};
+            }
+            &[readonly] {
+              border-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly};
+            }
+          }
         }
       }
     `;

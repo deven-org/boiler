@@ -37,7 +37,7 @@ export class BlrCheckbox extends LitElement {
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
 
-  @property() size?: FormSizesType = 'md';
+  @property() size: FormSizesType = 'md';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
