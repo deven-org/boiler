@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
-// Shared Style for Story
+// Shared Style inside the Stories
 const sharedStyles = html`
   <style>
     .wrapper {
@@ -22,6 +22,7 @@ const sharedStyles = html`
     }
   </style>
 `;
+
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   sizeVariant: 'md',
@@ -73,7 +74,7 @@ export default {
     },
     resize: {
       name: 'resize',
-      description: 'Choose if component is resizeable.',
+      description: 'Select if and how the component can be resized.',
       options: Resizes,
       control: { type: 'select' },
       table: {
@@ -447,11 +448,9 @@ export default {
                 <li> <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
                 </li>
             </ul>
-            <ul>
             <li>
             <a href="/story/design-system-web-components-textarea--dark-mode"><strong>DarkMode</strong></a>
 </li>
-</ul>
         </li>
         </ul>
         </div>`,

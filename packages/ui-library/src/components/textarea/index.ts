@@ -138,6 +138,7 @@ export class BlrTextarea extends LitElement {
           <textarea
             class="blr-form-element textarea-input-control ${textareaClasses}"
             maxlength="${this.maxLength || nothing}"
+            aria-label="${this.arialabel}"
             cols="${this.cols || nothing}"
             rows="${this.rows || nothing}"
             placeholder="${this.placeholder || nothing}"
@@ -250,7 +251,7 @@ export const BlrTextareaRenderFunction = ({
     class=${resize ? nothing : `parent-width`}
     .textareaId=${textareaId}
     .name=${name}
-    .ariaLabel=${arialabel}
+    .arialabel=${arialabel}
     .hasLabel=${hasLabel}
     .label=${label}
     .sizeVariant=${sizeVariant}
