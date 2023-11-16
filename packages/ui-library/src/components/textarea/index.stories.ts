@@ -46,7 +46,6 @@ const defaultParams: BlrTextareaType = {
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-  shouldFocus: false,
 
   required: false,
   disabled: false,
@@ -86,7 +85,7 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'cols',
-      description: 'Enter amount of coloumns the component should hold.',
+      description: 'Enter amount of columns the component should hold.',
       defaultValue: '20',
       table: {
         disable: false,
@@ -593,7 +592,7 @@ const argTypesToDisable = [
   'hasError',
   'errorMessage',
   'errorMessageIcon',
-  'arialabel',
+  'ariaLabel',
   'textareaId',
   'name',
   'onChange',
@@ -616,7 +615,7 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 // All Stories
 //Appearance Size Story
-//That should be work at render an h4 and a description instead of the manual integration, for example i put it here to show it
+
 /**
  *
  * #### sizeVariant
@@ -898,7 +897,7 @@ hasError.storyName = 'hasError';
  * The TextArea component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see <a href="/docs/design-system-web-components-textarea--label"><strong>FormLabel</strong></a> component.
  *
  * #### FormCaptionGroup
- * The TextArea component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaptionGroup component [link to FormCaption component].
+ * The TextArea component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see  <a href="/docs/design-system-web-components-textarea--captions"><strong>FormCaptionGroup</strong></a> component.
  *
  * #### Counter
  * The TextArea component can display an optional counter. The threshold for the warning and error message can be set individually. For more information see <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a> component.
