@@ -8,7 +8,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
     :host {
       display: inline-flex;
       flex-shrink: 0;
-      _width: 100%;
 
       position: absolute;
       left: 50%;
