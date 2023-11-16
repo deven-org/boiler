@@ -6,9 +6,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
   return typeSafeNestedCss`
     :host {
-      display: inline-flex;
-      flex-shrink: 0;
-
       position: absolute;
       left: 50%;
       top: 50%;
@@ -61,13 +58,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
       100% {
         transform: rotate(360deg);
       }
-    }
-
-    .floating {
-      _position: absolute;
-      -left: 50%;
-      -top: 50%;
-      _transform: translate(-50%, -50%);
     }
   `;
 });
