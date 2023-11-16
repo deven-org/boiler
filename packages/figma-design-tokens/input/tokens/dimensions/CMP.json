@@ -954,12 +954,12 @@
       },
       "NoseWrapper": {
         "PaddingTopBottom": {
-          "value": "{core.dimensionREM.5}",
+          "value": "{core.dimensionPX.5}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
         },
         "PaddingLeftRight": {
-          "value": "{core.dimensionREM.8}",
+          "value": "{core.dimensionPX.8}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }

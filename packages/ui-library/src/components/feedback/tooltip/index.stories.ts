@@ -1,0 +1,123 @@
+import { LitElement, html } from 'lit';
+
+import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
+import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes';
+import { FormSizes, TooltipPlacement } from '../../../globals/constants';
+import { setupTooltip } from './setupTooltip';
+import { customElement, property, query } from 'lit/decorators.js';
+import { FormSizesType } from '../../../globals/types';
+import { Placement as PlacementType } from '@floating-ui/dom';
+import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble';
+
+export default {
+  title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',
+  argTypes: {
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+    },
+    placement: {
+      options: TooltipPlacement,
+      control: { type: 'select' },
+    },
+    size: {
+      options: FormSizes,
+      control: { type: 'select' },
+    },
+  },
+};
+
+export const BlrTooltip = (params: BlrTooltipType) => html`<div
+  style="height: 400px; width: 400px; display: flex; justify-content: center; align-items: center; margin: auto;"
+>
+  ${BlrTooltipRenderFunction(
+    params,
+    html`<div style="height: 200px; width: 200px; background-color: lightblue"></div>`
+  )}
+</div>`;
+
+export const BlrTooltipVirtualReference = (params: BlrTooltipType) => {
+  return html` <div style="height: 400px; width: 400px">
+    <virtual-reference
+      theme=${params.theme}
+      text=${params.text}
+      size=${params.size}
+      placement=${params.placement}
+      hasArrow=${params.hasArrow}
+      elevation=${params.elevation}
+      offset=${params.offset}
+    ></virtual-reference>
+  </div>`;
+};
+
+BlrTooltip.storyName = 'Tooltip';
+BlrTooltipVirtualReference.storyName = 'Tooltip Virtual Reference';
+
+const args: BlrTooltipType = {
+  theme: 'Light',
+  text: 'Tooltip text comes here Tooltip text comes here',
+  size: 'sm',
+  placement: 'top',
+  hasArrow: true,
+  elevation: true,
+  offset: 4,
+};
+
+BlrTooltip.args = args;
+BlrTooltipVirtualReference.args = args;
+
+@customElement('virtual-reference')
+export class VirtualReference extends LitElement {
+  @property() theme: ThemeType = 'Light';
+  @property() size: FormSizesType = 'sm';
+  @property() text!: string;
+  @property() placement: PlacementType = 'top';
+  @property() hasArrow = true;
+  @property() elevation = true;
+  @property() offset = 4;
+
+  @query('blr-tooltip-bubble')
+  protected _tooltipBubble!: HTMLElement;
+
+  protected firstUpdated() {
+    this._tooltipBubble.style.visibility = 'hidden';
+    this._tooltipBubble.style.opacity = '0';
+
+    document.addEventListener('mousemove', ({ clientX, clientY }) => {
+      this._tooltipBubble.style.visibility = 'visible';
+      this._tooltipBubble.style.opacity = '1';
+
+      const virtualReference = {
+        getBoundingClientRect() {
+          return {
+            width: 0,
+            height: 0,
+            x: clientX,
+            y: clientY,
+            left: clientX,
+            right: clientX,
+            top: clientY,
+            bottom: clientY,
+          };
+        },
+      };
+
+      setupTooltip(virtualReference, this._tooltipBubble, this.placement, 4);
+    });
+
+    document.addEventListener('mouseleave', () => {
+      this._tooltipBubble.style.visibility = 'hidden';
+      this._tooltipBubble.style.opacity = '0';
+    });
+  }
+
+  render() {
+    return html`${BlrTooltipBubbleRenderFunction({
+      theme: this.theme,
+      text: this.text,
+      size: this.size,
+      hasArrow: this.hasArrow,
+      elevation: this.elevation,
+    })}`;
+  }
+}
