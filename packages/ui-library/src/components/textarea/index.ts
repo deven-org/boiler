@@ -45,21 +45,11 @@ export class BlrTextarea extends LitElement {
   @property() errorMessage?: string;
   @property() errorMessageIcon: SizelessIconType = 'blrInfo';
   @property() onSelect?: HTMLElement['onselect'];
-  @property() shouldFocus? = false;
 
   @property() theme: ThemeType = 'Light';
 
   @state() protected count = 0;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
-
-  firstUpdated() {
-    if (this.shouldFocus) {
-      const textarea = this.shadowRoot?.querySelector('textarea');
-      if (textarea) {
-        textarea.focus();
-      }
-    }
-  }
 
   connectedCallback() {
     super.connectedCallback();
@@ -102,20 +92,19 @@ export class BlrTextarea extends LitElement {
         : [formDark, textareaDark, counterDark, iconButtonDark];
 
     const classes = classMap({
-      [`${this.sizeVariant}`]: this.sizeVariant,
+      [this.sizeVariant]: this.sizeVariant,
       [`error`]: this.hasError || false,
     });
 
     const textareaClasses = classMap({
       [`error`]: this.hasError || false,
       [`error-input`]: this.hasError || false,
-      [`${this.sizeVariant}`]: this.sizeVariant,
+      [this.sizeVariant]: this.sizeVariant,
       [this.resize]: this.resize,
-      ['shouldFocus']: this.shouldFocus || false,
     });
     const flexContainer = classMap({
       [`flex-container`]: true,
-      [`${this.sizeVariant}`]: this.sizeVariant,
+      [this.sizeVariant]: this.sizeVariant,
     });
 
     const counterVariant = this.determinateCounterVariant();
@@ -150,7 +139,6 @@ export class BlrTextarea extends LitElement {
             @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
-            shouldFocus="${this.shouldFocus}"
             id="${this.textareaId || nothing}"
           >
 ${this.value}</textarea
@@ -245,7 +233,6 @@ export const BlrTextareaRenderFunction = ({
   hasCounter,
   value,
   theme,
-  shouldFocus,
 }: BlrTextareaType) => {
   return html`<blr-textarea
     .textareaId=${textareaId}
@@ -278,6 +265,5 @@ export const BlrTextareaRenderFunction = ({
     .resize=${resize}
     .hasHint=${hasHint}
     .theme=${theme}
-    .shouldFocus=${shouldFocus}
   ></blr-textarea>`;
 };

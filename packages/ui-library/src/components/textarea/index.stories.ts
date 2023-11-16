@@ -450,9 +450,6 @@ export default {
                 <li> <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
                 </li>
             </ul>
-            <li>
-            <a href="/story/design-system-web-components-textarea--dark-mode"><strong>DarkMode</strong></a>
-</li>
         </li>
         </ul>
         </div>`,
