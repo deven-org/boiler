@@ -37,6 +37,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
 
         }
+
         .label-wrapper {
           display: flex;
           flex-wrap: wrap;
@@ -50,11 +51,12 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             font-family: ${SM.LabelNextToControl.fontFamily}, 'sans-serif';
           }
         }
+
         &.disabled {
           cursor: not-allowed;
           .blr-form-label-inline {
             color: red;
-            _color: ${LabelNextToControl.Disabled};
+           
             cursor: not-allowed;
           }
         }
@@ -154,35 +156,43 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         }
 
-        &:not(.error) {
-          .label-wrapper {
-            .blr-form-label-inline {
-              color: ${LabelNextToControl.Rest};
+        &:not(.disabled) {
+          &:not(.error) {
+          
+            .label-wrapper {
+              .blr-form-label-inline {
+                color: ${LabelNextToControl.Rest};
 
-              &:hover {
-                &:not(:disabled):not([readonly]) {
-                  color: ${LabelNextToControl.Hover};
+                &:hover {
+                &:not([readonly]) {
+                    color: ${LabelNextToControl.Hover};
+                  }
+                }
+                &:focus {
+                  color: ${LabelNextToControl.Focus};
+                }
+                &:active {
+                  &:not(:disabled):not([readonly]) {
+                    color: ${LabelNextToControl.Pressed};
+                  }
+                }
+                &[readonly] {
+                  color: green;
                 }
               }
-              &:focus {
-                color: ${LabelNextToControl.Focus};
-              }
-              &:active {
-                &:not(:disabled):not([readonly]) {
-                  color: ${LabelNextToControl.Pressed};
-                }
-              }
-              &:disabled {
-                color: green;
-              }
-              &[readonly] {
-                color: ${LabelNextToControl.ReadOnly};
-              }
+            
             }
           }
+          &.error {
+            color: ${LabelNextToControl.Error};
+          }
         }
-        &.error {
-          color: ${LabelNextToControl.Error};
+        &.disabled {
+          .label-wrapper {
+            .blr-form-label-inline {
+              color: ${LabelNextToControl.Disabled};
+            }
+          }
         }
         
 
