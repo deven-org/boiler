@@ -10,8 +10,14 @@
         "type": "color"
       },
       "error": {
-        "value": "{core.color.crimson.400.opa40}",
-        "type": "color"
+        "alpha": {
+          "value": "{core.color.crimson.400.opa40}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.crimson.600.solid}",
+          "type": "color"
+        }
       },
       "inverted": {
         "value": "{core.color.white.solid}",
@@ -146,7 +152,7 @@
         "type": "color"
       },
       "error": {
-        "value": "{core.color.crimson.800.solid}",
+        "value": "{core.color.crimson.600.solid}",
         "type": "color"
       },
       "warning": {
@@ -294,6 +300,10 @@
         },
         "gamma": {
           "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
+        "delta": {
+          "value": "{core.color.white.solid}",
           "type": "color"
         }
       },

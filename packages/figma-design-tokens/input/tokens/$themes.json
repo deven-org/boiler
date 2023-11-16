@@ -1510,7 +1510,6 @@
       "UI.Background.Level_2": "eaff8e85cb734a3e5c166fe28517c1430a083b81",
       "q.surface.blanket": "4c18e52448b9202ee4deccedb4e11dcb836e8b85",
       "q.surface.default": "daa19b0648718e4b0cf640f86106907fbc2f7b9a",
-      "q.surface.error": "853a0dad067356fbcd541f322754e636962cbed0",
       "q.surface.inverted": "be62c24b18818b74bb5419601990061243356d37",
       "q.surface.readonly": "c16031a08499ee91f585067be14ebb92f9f2a1f4",
       "q.surface.warning": "4d7024ac2ed9747365004fbbaf19cf07e03d5d56",
@@ -1585,7 +1584,8 @@
       "q.content.onunspecified.inverted.beta": "e58e8029fc5f3480be093c8fac50a82614801687",
       "q.shadow.alpha": "83778a8c4ffd7b5d5c4df92bfde29340078a2dd0",
       "_internal.accent.pink.subtle": "a5817511c781de8760bf04d0dc84a07aca5c012d",
-      "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea"
+      "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea",
+      "q.surface.error.alpha": "853a0dad067356fbcd541f322754e636962cbed0"
     },
     "group": "Theme"
   },
@@ -3096,7 +3096,6 @@
       "UI.Background.Level_2": "eaff8e85cb734a3e5c166fe28517c1430a083b81",
       "q.surface.blanket": "4c18e52448b9202ee4deccedb4e11dcb836e8b85",
       "q.surface.default": "daa19b0648718e4b0cf640f86106907fbc2f7b9a",
-      "q.surface.error": "853a0dad067356fbcd541f322754e636962cbed0",
       "q.surface.inverted": "be62c24b18818b74bb5419601990061243356d37",
       "q.surface.readonly": "c16031a08499ee91f585067be14ebb92f9f2a1f4",
       "q.surface.warning": "4d7024ac2ed9747365004fbbaf19cf07e03d5d56",
@@ -3171,7 +3170,8 @@
       "q.content.onunspecified.inverted.beta": "e58e8029fc5f3480be093c8fac50a82614801687",
       "q.shadow.alpha": "83778a8c4ffd7b5d5c4df92bfde29340078a2dd0",
       "_internal.accent.pink.subtle": "a5817511c781de8760bf04d0dc84a07aca5c012d",
-      "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea"
+      "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea",
+      "q.surface.error.alpha": "853a0dad067356fbcd541f322754e636962cbed0"
     },
     "group": "Theme"
   },

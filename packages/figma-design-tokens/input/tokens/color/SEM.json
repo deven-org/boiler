@@ -1035,19 +1035,19 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         }
       }
@@ -1226,7 +1226,7 @@
     },
     "Error": {
       "Surface": {
-        "value": "{q.surface.error}",
+        "value": "{q.surface.error.alpha}",
         "type": "color",
         "description": "Use on: Counter"
       },
