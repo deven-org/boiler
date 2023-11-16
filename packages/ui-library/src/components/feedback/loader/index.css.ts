@@ -6,9 +6,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
   return typeSafeNestedCss`
     :host {
-      display: inline-flex;
-      flex-shrink: 0;
-      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .blr-loader {
@@ -57,13 +58,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
       100% {
         transform: rotate(360deg);
       }
-    }
-
-    .floating {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
     }
   `;
 });

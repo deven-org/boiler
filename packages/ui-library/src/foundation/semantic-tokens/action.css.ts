@@ -7,6 +7,11 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
 
   return typeSafeNestedCss`
     .blr-semantic-action {
+      &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+      
       &.xs {
         font-family: ${XS.Label.fontFamily}, sans-serif;
         font-weight: ${XS.Label.fontWeight};
@@ -42,163 +47,174 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
         font-size: ${XL.Label.fontSize};
       }
 
+
       &.cta {
         background-color: ${CTA.SurfaceFill.Rest};
         outline: ${CTA.Rest.style} ${CTA.Rest.width} ${CTA.Rest.color};
-        color: ${CTA.Icon.Rest};
+        color: ${CTA.Label.Rest};
+        > blr-icon {color: ${CTA.Icon.Rest};}
 
         &:hover {
           background-color: ${CTA.SurfaceFill.Hover};
-          color: ${CTA.SurfaceFill.Disabled};
-          outline-color: ${CTA.SurfaceStroke.Hover};
-          outline-width: ${CTA.Hover.width};
+          outline: ${CTA.Hover.style} ${CTA.Hover.width} ${CTA.Hover.color};
+          color: ${CTA.Label.Hover};
+          > blr-icon {color: ${CTA.Icon.Hover};}
         }
 
         &:active {
           background-color: ${CTA.SurfaceFill.Pressed};
-          color: ${CTA.SurfaceFill.Disabled};
-          outline-color: ${CTA.SurfaceStroke.Hover};
-          outline-width: ${CTA.Hover.width};
-        }
+          outline: ${CTA.Pressed.style} ${CTA.Pressed.width} ${CTA.Pressed.color};
+          color: ${CTA.Label.Pressed};
+          > blr-icon {color: ${CTA.Icon.Pressed};}
 
-        &:disabled {
+        }
+        &.disabled {
           background-color: ${CTA.SurfaceFill.Disabled};
+          outline-color: ${CTA.SurfaceStroke.Disabled};
           color: ${CTA.Label.Disabled};
-          outline-color: ${CTA.SurfaceStroke.Hover};
-          outline-width: ${CTA.Hover.width};
+          > blr-icon {color: ${CTA.Icon.Disabled};}
         }
       }
+
 
       &.primary {
         background-color: ${Primary.SurfaceFill.Rest};
         outline: ${Primary.Rest.style} ${Primary.Rest.width} ${Primary.Rest.color};
-        color: ${Primary.Icon.Rest};
+        color: ${Primary.Label.Rest};
+        > blr-icon {color: ${Primary.Icon.Rest};}
 
         &:hover {
           background-color: ${Primary.SurfaceFill.Hover};
-          color: ${Primary.SurfaceFill.Disabled};
           outline: ${Primary.Hover.style} ${Primary.Hover.width} ${Primary.Hover.color};
+          color: ${Primary.Label.Hover};
+          > blr-icon {color: ${Primary.Icon.Hover};}
         }
 
         &:active {
           background-color: ${Primary.SurfaceFill.Pressed};
-          color: ${Primary.SurfaceFill.Rest};
-          outline-color: ${Primary.SurfaceStroke.Hover};
-          outline-width: ${Primary.Hover.width};
-        }
+          outline: ${Primary.Pressed.style} ${Primary.Pressed.width} ${Primary.Pressed.color};
+          color: ${Primary.Label.Pressed};
+          > blr-icon {color: ${Primary.Icon.Pressed};}
 
-        &:disabled {
+        }
+        &.disabled {
           background-color: ${Primary.SurfaceFill.Disabled};
+          outline-color: ${Primary.SurfaceStroke.Disabled};
           color: ${Primary.Label.Disabled};
-          outline: ${Primary.Disabled.style} ${Primary.Disabled.width} ${Primary.Disabled.color};
+          > blr-icon {color: ${Primary.Icon.Disabled};}
         }
       }
 
       &.secondary {
+        outline-offset: calc(${Secondary.Rest.width} * -1);
         background-color: ${Secondary.SurfaceFill.Rest};
         outline: ${Secondary.Rest.style} ${Secondary.Rest.width} ${Secondary.Rest.color};
-        color: ${Secondary.Icon.Rest};
+        color: ${Secondary.Label.Rest};
+        > blr-icon {color: ${Secondary.Icon.Rest};}
 
         &:hover {
           background-color: ${Secondary.SurfaceFill.Hover};
-          outline-color: ${Secondary.SurfaceStroke.Hover};
-          color: ${Secondary.Icon.Hover};
-          outline-width: ${Secondary.Hover.width};
+          outline: ${Secondary.Hover.style} ${Secondary.Hover.width} ${Secondary.Hover.color};
+          color: ${Secondary.Label.Hover};
+          > blr-icon {color: ${Secondary.Icon.Hover};}
         }
 
         &:active {
           background-color: ${Secondary.SurfaceFill.Pressed};
-          outline-color: ${Secondary.SurfaceStroke.Pressed};
-          color: ${Secondary.Icon.Pressed};
-          outline-width: ${Secondary.Hover.width};
-        }
+          outline: ${Secondary.Pressed.style} ${Secondary.Pressed.width} ${Secondary.Pressed.color};
+          color: ${Secondary.Label.Pressed};
+          > blr-icon {color: ${Secondary.Icon.Pressed};}
 
-        &:disabled {
+        }
+        &.disabled {
           background-color: ${Secondary.SurfaceFill.Disabled};
-          outline: ${Secondary.Disabled.style} ${Secondary.Disabled.width} ${Secondary.Disabled.color};
-          color: ${Secondary.Icon.Disabled};
-          outline-width: ${Secondary.Hover.width};
+          outline-color: ${Secondary.SurfaceStroke.Disabled};
+          color: ${Secondary.Label.Disabled};
+          > blr-icon {color: ${Secondary.Icon.Disabled};}
         }
       }
 
       &.silent {
         background-color: ${Silent.SurfaceFill.Rest};
         outline: ${Silent.Rest.style} ${Silent.Rest.width} ${Silent.Rest.color};
-        color: ${Silent.Icon.Rest};
+        color: ${Silent.Label.Rest};
+        > blr-icon {color: ${Silent.Icon.Rest};}
 
         &:hover {
           background-color: ${Silent.SurfaceFill.Hover};
-          color: ${Silent.Icon.Hover};
-          outline-color: ${Silent.SurfaceStroke.Hover};
-          outline-width: ${Silent.Hover.width};
+          outline: ${Silent.Hover.style} ${Silent.Hover.width} ${Silent.Hover.color};
+          color: ${Silent.Label.Hover};
+          > blr-icon {color: ${Silent.Icon.Hover};}
         }
 
         &:active {
           background-color: ${Silent.SurfaceFill.Pressed};
-          color: ${Silent.Icon.Pressed};
-          outline-color: ${Silent.SurfaceStroke.Hover};
-          outline-width: ${Silent.Hover.width};
-        }
+          outline: ${Silent.Pressed.style} ${Silent.Pressed.width} ${Silent.Pressed.color};
+          color: ${Silent.Label.Pressed};
+          > blr-icon {color: ${Silent.Icon.Pressed};}
 
-        &:disabled {
-          background-color: ${Silent.SurfaceFill.Rest};
-          color: ${Silent.Icon.Disabled};
-          outline: ${Silent.Disabled.style} ${Silent.Disabled.width} ${Silent.Disabled.color};
-          outline-width: ${Silent.Hover.width};
+        }
+        &.disabled {
+          background-color: ${Silent.SurfaceFill.Disabled};
+          outline-color: ${Silent.SurfaceStroke.Disabled};
+          color: ${Silent.Label.Disabled};
+          > blr-icon {color: ${Silent.Icon.Disabled};}
         }
       }
 
       &.destructive {
         background-color: ${Destructive.SurfaceFill.Rest};
         outline: ${Destructive.Rest.style} ${Destructive.Rest.width} ${Destructive.Rest.color};
-        color: ${Destructive.Icon.Rest};
+        color: ${Destructive.Label.Rest};
+        > blr-icon {color: ${Destructive.Icon.Rest};}
 
         &:hover {
           background-color: ${Destructive.SurfaceFill.Hover};
-          outline-color: ${Destructive.SurfaceStroke.Hover};
-          color: ${Destructive.Icon.Disabled};
-          outline-width: ${Destructive.Hover.width};
+          outline: ${Destructive.Hover.style} ${Destructive.Hover.width} ${Destructive.Hover.color};
+          color: ${Destructive.Label.Hover};
+          > blr-icon {color: ${Destructive.Icon.Hover};}
         }
 
         &:active {
           background-color: ${Destructive.SurfaceFill.Pressed};
-          outline-color: ${Destructive.SurfaceStroke.Hover};
-          color: ${Destructive.Icon.Disabled};
-          outline-width: ${Destructive.Hover.width};
-        }
+          outline: ${Destructive.Pressed.style} ${Destructive.Pressed.width} ${Destructive.Pressed.color};
+          color: ${Destructive.Label.Pressed};
+          > blr-icon {color: ${Destructive.Icon.Pressed};}
 
-        &:disabled {
+        }
+        &.disabled {
           background-color: ${Destructive.SurfaceFill.Disabled};
-          color: ${Destructive.Icon.Disabled};
-          outline-color: ${Destructive.SurfaceStroke.Hover};
-          outline-width: ${Destructive.Hover.width};
+          outline-color: ${Destructive.SurfaceStroke.Disabled};
+          color: ${Destructive.Label.Disabled};
+          > blr-icon {color: ${Destructive.Icon.Disabled};}
         }
       }
 
       &.encourage {
         background-color: ${Encourage.SurfaceFill.Rest};
         outline: ${Encourage.Rest.style} ${Encourage.Rest.width} ${Encourage.Rest.color};
-        color: ${Encourage.Icon.Rest};
+        color: ${Encourage.Label.Rest};
+        > blr-icon {color: ${Encourage.Icon.Rest};}
 
         &:hover {
           background-color: ${Encourage.SurfaceFill.Hover};
-          color: ${Encourage.Icon.Disabled};
-          outline-color: ${Encourage.SurfaceStroke.Hover};
-          outline-width: ${Encourage.Hover.width};
+          outline: ${Encourage.Hover.style} ${Encourage.Hover.width} ${Encourage.Hover.color};
+          color: ${Encourage.Label.Hover};
+          > blr-icon {color: ${Encourage.Icon.Hover};}
         }
 
         &:active {
           background-color: ${Encourage.SurfaceFill.Pressed};
-          color: ${Encourage.Icon.Disabled};
-          outline-color: ${Encourage.SurfaceStroke.Hover};
-          outline-width: ${Encourage.Hover.width};
-        }
+          outline: ${Encourage.Pressed.style} ${Encourage.Pressed.width} ${Encourage.Pressed.color};
+          color: ${Encourage.Label.Pressed};
+          > blr-icon {color: ${Encourage.Icon.Pressed};}
 
-        &:disabled {
+        }
+        &.disabled {
           background-color: ${Encourage.SurfaceFill.Disabled};
-          color: ${Encourage.Icon.Disabled};
-          outline-color: ${Encourage.SurfaceStroke.Hover};
-          outline-width: ${Encourage.Hover.width};
+          outline-color: ${Encourage.SurfaceStroke.Disabled};
+          color: ${Encourage.Label.Disabled};
+          > blr-icon {color: ${Encourage.Icon.Disabled};}
         }
       }
     }
