@@ -13,9 +13,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         align-items: flex-start;
         transition: all 0.25s ease 0s;
 
-        .blr-form-label-inline {
-          color: ${LabelNextToControl.Rest};
-        }
+        
         .input-control[type=checkbox] {
           all: initial;
           margin: 0;
@@ -55,11 +53,13 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         &.disabled {
           cursor: not-allowed;
           .blr-form-label-inline {
-            color: ${LabelNextToControl.Disabled};
+            color: red;
+            _color: ${LabelNextToControl.Disabled};
             cursor: not-allowed;
           }
         }
        
+        
 
         &.sm {
           gap: ${Checkbox.ContentRow.ItemSpacing.SM};
@@ -152,6 +152,37 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
 
+        }
+
+        &:not(.error) {
+          .label-wrapper {
+            .blr-form-label-inline {
+              color: ${LabelNextToControl.Rest};
+
+              &:hover {
+                &:not(:disabled):not([readonly]) {
+                  color: ${LabelNextToControl.Hover};
+                }
+              }
+              &:focus {
+                color: ${LabelNextToControl.Focus};
+              }
+              &:active {
+                &:not(:disabled):not([readonly]) {
+                  color: ${LabelNextToControl.Pressed};
+                }
+              }
+              &:disabled {
+                color: green;
+              }
+              &[readonly] {
+                color: ${LabelNextToControl.ReadOnly};
+              }
+            }
+          }
+        }
+        &.error {
+          color: ${LabelNextToControl.Error};
         }
         
 
