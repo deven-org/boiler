@@ -404,6 +404,8 @@ export default {
       },
     },
     docs: {
+      //canvas: {sourceState: 'shown'},//show code
+      //source: {type: 'code'},//additional to previous
       description: {
         component: `<div>
         <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
@@ -411,29 +413,29 @@ export default {
         </p>
         <ul>
         <li> <a href="/docs/design-system-web-components-textarea--docs"><strong>Docs</strong></a></li>
-        <li> <a href="/docs/design-system-web-components-textarea--sizes"><strong>Appearance</strong></a>
+        <li> <a href="/docs/design-system-web-components-textarea--size-variant"><strong>Appearance</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--sizes"><strong>Sizing</strong></a></li>
-                <li> <a href="/docs/design-system-web-components-textarea--resize"><strong>Resize</strong></a></li>
+                <li> <a href="/docs/design-system-web-components-textarea--size-variant"><strong>sizeVariant</strong></a></li>
+                <li> <a href="/docs/design-system-web-components-textarea--resize"><strong>resize</strong></a></li>
             </ul>
         </li>
          <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--placeholder"><strong>Placeholder</strong></a>
+                <li> <a href="/docs/design-system-web-components-textarea--placeholder"><strong>placeholder</strong></a>
                 </li>
             </ul>
         </li>
          <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>States</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>Disabled</strong></a>
+                <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>disabled</strong></a>
                 </li>
-                 <li> <a href="/docs/design-system-web-components-textarea--readonly"><strong>Readonly</strong></a>
+                 <li> <a href="/docs/design-system-web-components-textarea--readonly"><strong>readonly</strong></a>
                 </li>
             </ul>
         </li>
          <li> <a href="/docs/design-system-web-components-textarea--required"><strong>Validation</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--required"><strong>Required</strong></a>
+                <li> <a href="/docs/design-system-web-components-textarea--required"><strong>required</strong></a>
                 </li>
                  <li> <a href="/docs/design-system-web-components-textarea--has-error"><strong>hasError</strong></a>
                 </li>
@@ -443,7 +445,7 @@ export default {
             <ul>
                 <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Caption</strong></a>
                 </li>
-                 <li> <a href="/docs/design-system-web-components-textarea--label"><strong>Label</strong></a>
+                 <li> <a href="/docs/design-system-web-components-textarea--label"><strong>label</strong></a>
                 </li>
                 <li> <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
                 </li>
@@ -617,7 +619,13 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 // All Stories
 //Appearance Size Story
-export const Sizes = () => {
+//That should be work at render an h4 and a description instead of the manual integration, for example i put it here to show it
+/**
+ *
+ * #### sizeVariant
+ * The TextArea component comes in 3 sizes: SM, MD and LG.
+ */
+export const SizeVariant = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -647,26 +655,31 @@ export const Sizes = () => {
     </div>
   `;
 };
-Sizes.argTypes = {
+SizeVariant.argTypes = {
   ...disabledArgTypes,
 };
-Sizes.parameters = {
+SizeVariant.parameters = {
   backgrounds: {
     default: '',
   },
-  //manual Code integration
+  //example for manual Code integration
   docs: {
     source: {
       code: '<blr-textarea label="Text area LG" size="lg"></blr-textarea>',
     },
-    description: {
-      story: '<h4>Sizes</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
-    },
   },
 };
-Sizes.storyName = 'Appearance';
+SizeVariant.storyName = 'Appearance';
 
 //Appearance Resize Story
+/**
+ * #### auto
+ * The resize component can be resizeable or not resizeable.
+ * #### horizontal/ vertical
+ * A text area that lets the user resize the area horizontally or vertically.
+ * #### none
+ * A text area that does not resize and uses a scroll bar to show overflow text.
+ */
 export const Resize = () => {
   return html`
     ${sharedStyles}
@@ -719,20 +732,12 @@ export const Resize = () => {
 Resize.argTypes = {
   ...disabledArgTypes,
 };
-Resize.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<h4>Auto</h4><p>A text area that lets the user resize the area horizontally and vertically.</p><h4>Horizontal/ Vertical</h4><p>A text area that lets the user resize the area horizontally or vertically.</p><h4>None</h4><p>A text area that does not resize and uses a scroll bar to show overflow text.</p>',
-    },
-  },
-};
-Resize.storyName = 'Resize';
+Resize.storyName = 'resize';
 
 //Content/ Settings Placeholder
+/**
+ * The placeholder component can display a placeholder text. This is recommended to improve usability.
+ */
 export const Placeholder = () => {
   return html`
     ${sharedStyles}
@@ -762,20 +767,14 @@ export const Placeholder = () => {
 Placeholder.argTypes = {
   ...disabledArgTypes,
 };
-Placeholder.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<h4>Placeholder</h4><p>The text area can display a placeholder text to improve the usability of this component.</p>',
-    },
-  },
-};
 Placeholder.storyName = 'Content/ Settings';
 
 // States Disabled
+/**
+ * Apart from states like Rest, Hover, Pressed and Focus, the TextArea component can also be Disabled or Readonly. The Error state is documented under Validation.
+ * #### disabled
+ * The TextArea Component in the Disabled state can not be interacted with. This means it can not receive focus or be selected.
+ */
 export const Disabled = () => {
   return html`
     ${sharedStyles}
@@ -797,19 +796,12 @@ export const Disabled = () => {
 Disabled.argTypes = {
   ...disabledArgTypes,
 };
-Disabled.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story: '<h4>Disabled</h4><p>A text area that lets the user resize the area horizontally and vertically.</p>',
-    },
-  },
-};
 Disabled.storyName = 'States';
 
 // States Readonly
+/**
+ * The readonly component in the Readonly state can not be interacted with, but it can still be selected and receive focus.
+ */
 export const Readonly = () => {
   return html`
     ${sharedStyles}
@@ -830,17 +822,7 @@ export const Readonly = () => {
 Readonly.argTypes = {
   ...disabledArgTypes,
 };
-Readonly.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story: '<p>A text area that lets the user resize the area horizontally or vertically.</p>',
-    },
-  },
-};
-Readonly.storyName = 'Readonly';
+Readonly.storyName = 'readonly';
 
 // Validation Required Todo add interactive Story with Button to show the State
 export const Required = () => {
@@ -871,11 +853,11 @@ Required.parameters = {
   docs: {
     description: {
       story:
-        '<p>A technical description how use validation-patterns</p><h4>Required</h4><p>The text area can be set as a required field. An error will be thrown, if the field was not filled.</p>',
+        '<h3>required</h3><p>The TextArea component can be set as required. If set as required, an error should be thrown, when the TextArea component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the <a href="/docs/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a> section below.</p>',
     },
   },
 };
-Required.storyName = 'Required';
+Required.storyName = 'Validation';
 
 // Validation hasError Todo add interactive Story with Button to show the State
 export const hasError = () => {
@@ -905,13 +887,25 @@ hasError.parameters = {
   },
   docs: {
     description: {
-      story: '<p>blabla</p>',
+      story:
+        '<p>The TextArea component can be set to have an error with the hasError property. An error can be displayed after submitting a wrong value, after leaving/deselecting the TextArea or in case the TextArea was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the <a href="/docs/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a> section below.</p>',
     },
   },
 };
 hasError.storyName = 'hasError';
 
 //Dependencies Captions
+/**
+ *
+ * #### FormLabel
+ * The TextArea component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see <a href="/docs/design-system-web-components-textarea--label"><strong>FormLabel</strong></a> component.
+ *
+ * #### FormCaptionGroup
+ * The TextArea component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaptionGroup component [link to FormCaption component].
+ *
+ * #### Counter
+ * The TextArea component can display an optional counter. The threshold for the warning and error message can be set individually. For more information see <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a> component.
+ */
 export const Captions = () => {
   return html`
     ${sharedStyles}
@@ -945,17 +939,7 @@ export const Captions = () => {
 Captions.argTypes = {
   ...disabledArgTypes,
 };
-Captions.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<h4>Captions</h4><p>The text area can display an additional hint text and error message. Both captions can be combined. For more information review the caption component.</p>',
-    },
-  },
-};
+
 Captions.storyName = 'Dependencies';
 
 // States Label
@@ -988,13 +972,16 @@ Label.parameters = {
   docs: {
     description: {
       story:
-        '<p>The text area can display an optional label component, consisting of a label and a label appendix. For more information review the caption component.</p>',
+        '<p>The Text Area can display an optional label component, consisting of a label and a label appendix. For more information review the caption component.</p>',
     },
   },
 };
-Label.storyName = 'Label';
+Label.storyName = 'label';
 
 // States Counter
+/**
+ * The TextArea component can display an optional counter. The threshold for the warning and error message can be set individually. For more information see <a href="/docs/design-system-web-components-textarea--counter"><strong>counter</strong></a> component.
+ */
 export const Counter = () => {
   return html`
     ${sharedStyles}
@@ -1023,64 +1010,5 @@ Counter.parameters = {
   backgrounds: {
     default: '',
   },
-  docs: {
-    description: {
-      story:
-        '<p>The text area can show an optional counter. The threshold for the warning and error message can be set individually. For more information review the counter component.</p>',
-    },
-  },
 };
-Counter.storyName = 'Counter';
-
-//DarkMode Story with few Examples per default dark
-export const DarkMode = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textarea">
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Dark',
-          shouldFocus: true,
-          label: 'hasFocus',
-          labelAppendix: 'true',
-        })}
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Dark',
-          disabled: true,
-          label: 'disabled',
-          labelAppendix: 'true',
-        })}
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Dark',
-          readonly: true,
-          label: 'readonly',
-          labelAppendix: 'true',
-        })}
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Dark',
-          hasError: true,
-          label: 'hasError',
-          labelAppendix: 'true',
-        })}
-      </div>
-    </div>
-  `;
-};
-DarkMode.parameters = {
-  backgrounds: {
-    default: 'dark',
-  },
-  docs: {
-    description: {
-      story: '<h2>Few examples in DarkMode</h2>',
-    },
-  },
-};
-DarkMode.argTypes = {
-  ...disabledArgTypes,
-};
-DarkMode.storyName = 'DarkMode';
+Counter.storyName = 'counter';
