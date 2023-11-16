@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
-  const { Radio } = componentTokens.Forms;
+  const { Radio, RadioGroup } = componentTokens.Forms;
 
   return typeSafeNestedCss`
     .blr-legend {
@@ -39,15 +39,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
     .blr-legend-wrapper {
       &.sm {
-        padding: ${Radio.SM.ContentRow.Padding};
+        padding-bottom: ${RadioGroup.SM.LegendWrapper.PaddingBottom};
       }
 
       &.md {
-        padding: ${Radio.MD.ContentRow.Padding};
+        padding-bottom: ${RadioGroup.MD.LegendWrapper.PaddingBottom};
       }
 
       &.lg {
-        padding: ${Radio.LG.ContentRow.Padding};
+        padding-bottom: ${RadioGroup.LG.LegendWrapper.PaddingBottom};
       }
     }
 
@@ -94,15 +94,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
     .caption-group {
       &.sm {
-        padding: ${Radio.SM.ContentRow.Padding};
+        padding-top: ${RadioGroup.SM.CaptionContainer.PaddingTop};
       }
 
       &.md {
-        padding: ${Radio.MD.ContentRow.Padding};
+        padding-top: ${RadioGroup.MD.CaptionContainer.PaddingTop};
       }
 
       &.lg {
-        padding: ${Radio.MD.ContentCol.PaddingTop};
+        padding-top: ${RadioGroup.SM.CaptionContainer.PaddingTop};
       }
     }
 

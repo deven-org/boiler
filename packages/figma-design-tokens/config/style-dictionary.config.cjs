@@ -80,6 +80,7 @@ const componentTypes = [
   'Slider',
   'ButtonGroup',
   'Tooltip',
+  'RadioGroup',
 ];
 
 StyleDictionaryPackage.registerFormat({
