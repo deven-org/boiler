@@ -402,9 +402,13 @@ export default {
         hidden: true,
       },
     },
+    //Two examples for Code integration
     docs: {
+      //First example for manual code integration
       //canvas: {sourceState: 'shown'},//show code
       //source: {type: 'code'},//additional to previous
+      //Second Example
+      // source: { code: '<blr-textarea label="Text area LG" size="lg"></blr-textarea>',},
       description: {
         component: `<div>
         <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
@@ -590,6 +594,7 @@ const argTypesToDisable = [
   'readonly',
   'required',
   'hasError',
+  'arialabel',
   'errorMessage',
   'errorMessageIcon',
   'ariaLabel',
@@ -653,17 +658,6 @@ export const SizeVariant = () => {
 };
 SizeVariant.argTypes = {
   ...disabledArgTypes,
-};
-SizeVariant.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  //example for manual Code integration
-  docs: {
-    source: {
-      code: '<blr-textarea label="Text area LG" size="lg"></blr-textarea>',
-    },
-  },
 };
 SizeVariant.storyName = 'Appearance';
 

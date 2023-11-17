@@ -7,7 +7,7 @@ import { getRandomString } from '../../utils/get-random.string';
 const sampleParams: BlrTextareaType = {
   theme: 'Light',
   sizeVariant: 'md',
-  resize: true,
+  resize: 'both',
   cols: 40,
   rows: 4,
   placeholder: 'Here is the placeholder',
@@ -72,7 +72,7 @@ describe('blr-textarea', () => {
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const disabled = textarea?.getAttribute('disabled');
 
-    // in html disabled will become an empty string when its true
+    // in html disabled will become an empty string when it's true
     expect(disabled).to.be.equal('');
   });
 
