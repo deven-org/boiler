@@ -15,7 +15,6 @@ export class BlrLoader extends LitElement {
   @property() size?: ActionSizesType = 'md';
   @property() variant?: FeedbackVariantType;
   @property() loadingStatus!: string;
-  @property() floating?: boolean;
 
   @property() theme: ThemeType = 'Light';
 
@@ -24,7 +23,6 @@ export class BlrLoader extends LitElement {
 
     const classes = classMap({
       'blr-loader': true,
-      'floating': this.floating || false,
       [`${this.variant}`]: this.variant || '',
       [`${this.size}`]: this.size || 'md',
     });
