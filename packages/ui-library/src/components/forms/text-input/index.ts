@@ -20,30 +20,33 @@ import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
 export class BlrTextInput extends LitElement {
   static styles = [styleCustom];
 
-  @property() textInputId!: string;
-  @property() type: InputTypes = 'text';
+  @property() size: FormSizesType = 'md';
+  @property() placeholder?: string;
+  @property() value!: string;
+  @property() maxLength?: number;
   @property() label!: string;
   @property() labelAppendix?: string;
-  @property() value!: string;
-  @property() placeholder?: string;
+  @property() showHint = true;
+  @property() hintText?: string;
+  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() arialabel!: string;
+  @property() name!: string;
+  @property() textInputId!: string;
+  @property() hasLabel!: boolean;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
-  @property() size: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property() maxLength?: number;
-  @property() pattern?: string;
+  @property() onSelect?: HTMLElement['onselect'];
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() showInputIcon = true;
-  @property() inputIcon: SizelessIconType = 'blr360';
-  @property() showHint = true;
-  @property() hintText?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() errorIcon: SizelessIconType = 'blrInfo';
-  @property() hasLabel!: boolean;
+  @property() type: InputTypes = 'text';
+  @property() pattern?: string;
+  @property() hasIcon = true;
+  @property() inputIcon: SizelessIconType = 'blr360';
 
   @property() theme: ThemeType = 'Light';
 
@@ -120,6 +123,7 @@ export class BlrTextInput extends LitElement {
           <div class="blr-input-inner-container">
             <input
               class="blr-form-input ${inputClasses}"
+              aria-label="${this.arialabel}"
               id=${this.textInputId}
               type="${this.currentType}"
               .value="${this.value}"
@@ -135,7 +139,7 @@ export class BlrTextInput extends LitElement {
               hasError="${this.hasError}"
             />
           </div>
-          ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
+          ${this.hasIcon && !wasInitialPasswordField && !this.readonly
             ? html`${BlrIconRenderFunction({
                 icon: this.hasError
                   ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
