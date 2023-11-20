@@ -335,7 +335,7 @@ export default {
             <ul>
                 <li> <a href="#required"><strong>required</strong></a>
                 </li>
-                <li> <a href="#hasError"><strong>hasError</strong></a>
+                <li> <a href="#haserror"><strong>hasError</strong></a>
                 </li>
             </ul></li>
         <li> <a href="#dependencies"><strong>Dependencies</strong></a>
@@ -547,6 +547,14 @@ export const Disabled = () => {
 Disabled.storyName = 'States';
 
 // Validation Required Todo add interactive Story with Button to show the State
+/**
+ * #### required
+ * The TextInput component can be set as required. If set as required, an error should be thrown, when the [component name] component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the [Dependencies](#dependencies) section below.
+ *
+ * #### hasError
+ * The TextInput component can be set to have an error with the hasError property. An error can be displayed after submitting a wrong value, after leaving/deselecting the TextInput or in case the TextInput was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the [Dependencies](#dependencies) section below.
+ *
+ * */
 export const Required = () => {
   return html`
     ${sharedStyles}
@@ -569,46 +577,8 @@ Required.parameters = {
   backgrounds: {
     default: '',
   },
-  docs: {
-    description: {
-      story:
-        '<h3>required</h3><p>The TextInput component can be set as required. If set as required, an error should be thrown, when the TextInput component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the <a href="#dependencies"><strong>Dependencies</strong></a> section below.</p>',
-    },
-  },
 };
 Required.storyName = 'Validation';
-
-// Validation hasError Todo add interactive Story with Button to show the State
-export const hasError = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-          size: 'md',
-          placeholder: 'Please leave a short description',
-          label: 'Reason for submission',
-          labelAppendix: '(required)',
-          value: '',
-        })}
-      </div>
-    </div>
-  `;
-};
-hasError.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<p>The TextInput component can be set to have an error with the hasError property. An error can be displayed after submitting a wrong value, after leaving/deselecting the TextInput or in case the TextInput was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the <a href="#dependencies"><strong>Dependencies</strong></a> section below.</p>',
-    },
-  },
-};
-hasError.storyName = 'hasError';
 
 //Dependencies Captions
 /**
