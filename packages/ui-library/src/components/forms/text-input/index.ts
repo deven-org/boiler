@@ -135,6 +135,7 @@ export class BlrTextInput extends LitElement {
               @blur=${this.handleBlur}
               @focus=${this.handleFocus}
               maxlength="${this.maxLength}"
+              hasIcon="${this.hasIcon}"
               pattern="${this.pattern}"
               hasError="${this.hasError}"
             />
