@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
@@ -18,9 +17,9 @@ import { calculateIconName } from '../../../../utils/calculate-icon-name';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../../../feedback/loader';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
 const TAG_NAME = 'blr-text-button';
-import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -28,6 +27,7 @@ export class BlrTextButton extends LitElement {
 
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
+  @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() leadingIcon?: SizelessIconType;
   @property() trailingIcon?: SizelessIconType;
@@ -40,20 +40,8 @@ export class BlrTextButton extends LitElement {
   @property() loadingStatus!: string;
   @property() hasIcon?: boolean;
   @property() iconPosition?: IconPositionVariant = 'leading';
-
+  @property() innerTabIndex?: number = 0;
   @property() theme: ThemeType = 'Light';
-
-  @state() protected focused = false;
-
-  protected handleFocus = () => {
-    console.log('focused');
-    this.focused = true;
-  };
-
-  protected handleBlur = () => {
-    console.log('blurred');
-    this.focused = false;
-  };
 
   protected render() {
     if (this.size) {
@@ -63,16 +51,10 @@ export class BlrTextButton extends LitElement {
         'blr-semantic-action': true,
         'blr-text-button': true,
         [this.variant]: this.variant,
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
         'disabled': this.disabled,
         'loading': this.loading,
       });
-
-      const iconClasses = classMap({
-        icon: true,
-      });
-
-      const loaderVariant = determineLoaderVariant(this.variant);
 
       const loaderSizeVariant = getComponentConfigToken([
         'SizeVariant',
@@ -89,50 +71,44 @@ export class BlrTextButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` ${this.hasIcon && this.iconPosition === 'leading'
-          ? BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: iconClasses,
-            })
-          : nothing}
-        <span class="label">${this.label}</span>
-        ${this.hasIcon && this.iconPosition === 'trailing'
-          ? BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: iconClasses,
-            })
-          : nothing}`;
-
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
         <span
-          class="${classes}"
-          @click="${this.onClick}"
-          tabindex=${this.disabled ? nothing : '0'}
-          @focus=${this.handleFocus}
-          @blur=${this.handleBlur}
-          role=${this.disabled ? nothing : 'button'}
-          @keydown=${this.onClick}
+          class=${classes}
           id=${this.buttonId || nothing}
+          tabindex=${this.disabled ? nothing : this.innerTabIndex}
+          role="button"
+          aria-disabled=${this.disabled || nothing}
+          @click=${this.onClick}
+          @focus=${this.onFocus}
+          @blur=${this.onBlur}
+          @keydown=${this.onClick}
         >
-          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
-            ? html`
-                ${BlrLoaderRenderFunction({
-                  size: loaderSizeVariant,
-                  variant: loaderVariant,
-                  loadingStatus: this.loadingStatus,
-                  theme: this.theme,
-                })}
-                ${labelAndIconGroup}
-              `
-            : labelAndIconGroup}
-        </span>`;
+            ? BlrLoaderRenderFunction({
+                size: loaderSizeVariant,
+                variant: determineLoaderVariant(this.variant),
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+              })
+            : nothing}
+          ${this.leadingIcon &&
+          BlrIconRenderFunction({
+            icon: calculateIconName(this.leadingIcon, iconSizeVariant),
+            size: iconSizeVariant,
+            hideAria: true,
+          })}
+          <span class="label">${this.label}</span>
+          ${this.trailingIcon &&
+          BlrIconRenderFunction({
+            icon: calculateIconName(this.trailingIcon, iconSizeVariant),
+            size: iconSizeVariant,
+            hideAria: true,
+          })}
+        </span>
+      `;
     }
   }
 }

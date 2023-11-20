@@ -40,11 +40,13 @@ const args: BlrIconButtonType = {
   arialabel: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
+  onFocus: () => console.log('onFocus'),
   icon: 'blr360',
   loading: false,
   disabled: false,
   buttonId: 'button-id',
   loadingStatus: 'Loading',
+  innerTabIndex: 1,
 };
 
 BlrIconButton.args = args;

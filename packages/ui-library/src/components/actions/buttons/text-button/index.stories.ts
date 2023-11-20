@@ -46,6 +46,7 @@ const args: BlrTextButtonType = {
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
+  onFocus: () => console.log('onFocus'),
   hasIcon: true,
   iconPosition: 'leading',
   icon: 'blr360',
@@ -53,6 +54,7 @@ const args: BlrTextButtonType = {
   disabled: false,
   buttonId: 'button-id',
   loadingStatus: 'Loading',
+  innerTabIndex: 1,
 };
 
 BlrTextButton.args = args;

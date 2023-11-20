@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
@@ -23,6 +22,7 @@ export class BlrIconButton extends LitElement {
   @property() arialabel?: string;
   @property() icon?: SizelessIconType;
   @property() onClick?: HTMLButtonElement['onclick'];
+  @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;
   @property() disabled!: boolean;
@@ -30,37 +30,19 @@ export class BlrIconButton extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size?: FormSizesType = 'md';
   @property() loadingStatus!: string;
-
+  @property() innerTabIndex?: number = 0;
   @property() theme: ThemeType = 'Light';
-
-  @state() protected focused = false;
-
-  protected handleFocus = () => {
-    console.log('focused');
-    this.focused = true;
-  };
-
-  protected handleBlur = () => {
-    console.log('blurred');
-    this.focused = false;
-  };
 
   protected render() {
     if (this.size) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
-        [`${this.variant}`]: this.variant,
-        [`${this.size}`]: this.size,
+        [this.variant]: this.variant,
+        [this.size]: this.size,
         disabled: this.disabled,
-        loading: this.loading || false,
+        loading: this.loading ?? false,
       });
-
-      const iconClasses = classMap({
-        icon: true,
-      });
-
-      const loaderVariant = determineLoaderVariant(this.variant);
 
       const loaderSizeVariant = getComponentConfigToken([
         'SizeVariant',
@@ -77,26 +59,25 @@ export class BlrIconButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
-
         <span
           aria-label=${this.arialabel || nothing}
           class="blr-semantic-action blr-icon-button ${classes}"
-          @click=${this.onClick}
           id=${this.buttonId || nothing}
-          tabindex=${this.disabled ? nothing : '0'}
-          @focus=${this.handleFocus}
-          @blur=${this.handleBlur}
-          role=${this.disabled ? nothing : 'button'}
+          tabindex=${this.disabled ? nothing : this.innerTabIndex}
+          @click=${this.onClick}
           @keydown=${this.onClick}
+          @focus=${this.onFocus}
+          @blur=${this.onBlur}
+          role=${this.disabled ? nothing : 'button'}
         >
-          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
             ? BlrLoaderRenderFunction({
                 size: loaderSizeVariant,
-                variant: loaderVariant,
+                variant: determineLoaderVariant(this.variant),
                 loadingStatus: this.loadingStatus,
                 theme: this.theme,
               })
@@ -105,9 +86,9 @@ export class BlrIconButton extends LitElement {
             icon: calculateIconName(this.icon, iconSizeVariant),
             size: iconSizeVariant,
             hideAria: true,
-            classMap: iconClasses,
           })}
-        </span>`;
+        </span>
+      `;
     }
   }
 }
