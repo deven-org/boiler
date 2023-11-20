@@ -78,6 +78,11 @@ export class BlrCheckbox extends LitElement {
       [`${this.size}`]: this.size || 'md',
     });
 
+    const labelWrapperClasses = classMap({
+      'label-wrapper': true,
+      'readonly': this.readonly || false,
+    });
+
     return html`
       <style>
         ${dynamicStyles.map((style) => style)}
@@ -97,7 +102,7 @@ export class BlrCheckbox extends LitElement {
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
         />
-        <div class="label-wrapper">
+        <div class="${labelWrapperClasses}">
           ${this.hasLabel
             ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
             : nothing}

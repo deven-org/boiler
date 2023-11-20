@@ -7,12 +7,11 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
     const { Checkbox } = componentTokens.Forms;
     const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
 
-    return typeSafeNestedCss`
+    return typeSafeNestedCss/* css */ `
       .blr-checkbox {
         display: flex;
         align-items: flex-start;
         transition: all 0.25s ease 0s;
-
         
         .input-control[type=checkbox] {
           all: initial;
@@ -25,17 +24,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           outline-width: 0;
           outline-style: solid;
           outline-offset: 0;
-
-          &:disabled + label {
-            cursor: not-allowed;
-            pointer-events: none;
-          }
-
-          &[readonly]{
-            cursor: not-allowed;
-            pointer-events: none;
-          }
-
         }
 
         .label-wrapper {
@@ -51,18 +39,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             font-family: ${SM.LabelNextToControl.fontFamily}, 'sans-serif';
           }
         }
-
-        &.disabled {
-          cursor: not-allowed;
-          .blr-form-label-inline {
-            color: red;
-           
-            cursor: not-allowed;
-          }
-        }
-       
-        
-
+      
         &.sm {
           gap: ${Checkbox.ContentRow.ItemSpacing.SM};
           
@@ -157,29 +134,29 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         &:not(.disabled) {
           &:not(.error) {
-          
             .label-wrapper {
-              .blr-form-label-inline {
-                color: ${LabelNextToControl.Rest};
+              color: ${LabelNextToControl.Rest};
 
-                &:hover {
-                &:not([readonly]) {
-                    color: ${LabelNextToControl.Hover};
-                  }
-                }
-                &:focus {
-                  color: ${LabelNextToControl.Focus};
-                }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
-                    color: ${LabelNextToControl.Pressed};
-                  }
-                }
-                &[readonly] {
-                  color: green;
+              &:hover {
+              &:not([readonly]) {
+                  color: ${LabelNextToControl.Hover};
                 }
               }
-            
+              &:focus {
+                color: ${LabelNextToControl.Focus};
+              }
+              &:active {
+                &:not(:disabled):not([readonly]) {
+                  color: ${LabelNextToControl.Pressed};
+                }
+              }
+              &.readonly {
+                color: ${LabelNextToControl.ReadOnly};
+                .blr-form-label-inline {
+                  cursor: not-allowed !important;
+                  pointer-events: none;
+                }
+              }
             }
           }
           &.error {
@@ -187,15 +164,24 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
         }
         &.disabled {
+          .input-control {
+            cursor: not-allowed;
+          }
           .label-wrapper {
             .blr-form-label-inline {
+              cursor: not-allowed;
               color: ${LabelNextToControl.Disabled};
             }
           }
         }
+        &.readonly {
+          .input-control {
+            pointer-events: none;
+          }
+        }
         
 
-        &:not(.error) {
+        &:not(.error) { 
           .input-control {
             &:checked {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
@@ -226,6 +212,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
                 outline-color: ${Checkbox.Control.Container.BorderColor.Active.ReadOnly};
               }
             }
+
 
             &:not(:checked) {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
