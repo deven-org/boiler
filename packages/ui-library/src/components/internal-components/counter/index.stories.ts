@@ -3,10 +3,8 @@ import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { CounterVariants, FormSizes } from '../../../globals/constants';
 import { BlrCounterRenderFunction, BlrCounterType } from './index';
 
-import './index';
-
 export default {
-  title: 'Design System/Internal Components/BlrCounterType',
+  title: 'Design System/Web Components/Internal Components/Counter',
   argTypes: {
     variant: {
       options: CounterVariants,
@@ -26,15 +24,16 @@ export default {
   },
 };
 
-export const BlrCounter = ({ variant, current, max, size, theme }: BlrCounterType) =>
-  BlrCounterRenderFunction({ variant, current, max, size, theme });
+export const BlrCounter = (params: BlrCounterType) => BlrCounterRenderFunction(params);
 
-BlrCounter.storyName = 'BlrCounter';
+BlrCounter.storyName = 'Counter';
 
-BlrCounter.args = {
+const args: BlrCounterType = {
   theme: 'Light',
   variant: 'default',
   current: 3,
   max: 100,
   size: 'md',
 };
+
+BlrCounter.args = args;

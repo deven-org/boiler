@@ -2,7 +2,7 @@ import { BlrTextareaRenderFunction, BlrTextareaType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../utils/get-random.string';
+import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',
@@ -16,11 +16,17 @@ const sampleParams: BlrTextareaType = {
   maxLength: 140,
   hasLabel: true,
   label: 'Label',
-  labelAppendix: 'appendix',
-  hasHint: false,
-  hintMessage: 'This is a small hint message',
-  hintMessageIcon: 'blrInfo',
-  hasCounter: false,
+  labelAppendix: '(Optional)',
+  size: 'md',
+  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  maxLength: 140,
+  cols: 20,
+  rows: 5,
+  errorMessage: "OMG it's an error",
+  placeholder: 'Type your message here ..',
+  hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  hintIcon: 'blrInfo',
+  showHint: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,

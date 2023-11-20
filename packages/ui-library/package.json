@@ -8,15 +8,14 @@
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "format": "npm run format:eslint && npm run format:prettier",
     "lint:eslint": "eslint 'src/**' --ext .ts,.tsx",
-    "lint:stylelint": "stylelint 'src/**/*.css.js'",
+    "lint:stylelint": "stylelint 'src/**/*.css.{ts,js}'",
     "format:eslint": "eslint 'src/**' --ext .ts,.tsx --fix",
     "lint:prettier": "prettier \"**/*.{ts,tsx,cjs,mjs,js}\" --check",
     "format:prettier": "prettier \"**/*.{ts,tsx,cjs,mjs,js}\" --write",
-    "test": "wtr --config web-test-runner.config.mjs",
-    "test:update-snapshots": "npm run test -- --update-snapshots"
+    "test": "wtr --config web-test-runner.config.mjs"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@boiler/figma-design-tokens": "0.0.1",
     "@boiler/eslint-config-boiler": "1.0.0"

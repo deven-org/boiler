@@ -2,12 +2,10 @@
 import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, HintVariants } from '../../../globals/constants';
 import { BlrFormHintRenderFunction, BlrFormHintType } from './index';
-
-import './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Design System/Internal Components/BlrFormHint',
+  title: 'Design System/Web Components/Internal Components/FormHint',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],
@@ -31,15 +29,16 @@ export default {
   },
 };
 
-export const BlrFormHint = ({ message, icon, variant, size, childElement, theme }: BlrFormHintType) =>
-  BlrFormHintRenderFunction({ message, icon, variant, size, childElement, theme });
+export const BlrFormHint = (params: BlrFormHintType) => BlrFormHintRenderFunction(params);
 
-BlrFormHint.storyName = 'BlrFormHint';
+BlrFormHint.storyName = 'FormHint';
 
-BlrFormHint.args = {
+const args: BlrFormHintType = {
   theme: 'Light',
   message: 'hallo',
   icon: 'blr360',
   variant: 'hint',
   size: 'sm',
 };
+
+BlrFormHint.args = args;

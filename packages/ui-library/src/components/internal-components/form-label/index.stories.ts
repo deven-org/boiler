@@ -3,10 +3,8 @@ import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizes, LabelVariants } from '../../../globals/constants';
 import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
 
-import './index';
-
 export default {
-  title: 'Design System/Internal Components/BlrFormLabel',
+  title: 'Design System/Web Components/Internal Components/FormLabel',
   argTypes: {
     labelSize: {
       options: FormSizes,
@@ -26,12 +24,11 @@ export default {
   },
 };
 
-export const BlrFormLabel = ({ labelText, labelAppendix, labelSize, forValue, theme, variant }: BlrFormLabelType) =>
-  BlrFormLabelRenderFunction({ labelText, labelAppendix, labelSize, forValue, theme, variant });
+export const BlrFormLabel = (params: BlrFormLabelType) => BlrFormLabelRenderFunction(params);
 
-BlrFormLabel.storyName = 'BlrFormLabel';
+BlrFormLabel.storyName = 'FormLabel';
 
-BlrFormLabel.args = {
+const args: BlrFormLabelType = {
   theme: 'Light',
   labelText: 'Test',
   labelAppendix: 'added',
@@ -39,3 +36,5 @@ BlrFormLabel.args = {
   forValue: 'Richard',
   variant: 'label',
 };
+
+BlrFormLabel.args = args;

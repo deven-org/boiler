@@ -1,36 +1,24 @@
-import { componentConfig } from '../foundation/_tokens-generated/config-tokens/__component-config.generated';
-import { SizesType } from '../globals/types';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
+import { componentConfig } from '../foundation/_tokens-generated/config-tokens/__component-config.generated.mjs';
 
 /* Its not typesafe now because the input file is js in the first place. we need to adjust the transformer */
 
-export const getComponentConfigToken = (
-  componentTokenName: string,
-  size: SizesType,
-  configTokenName = 'IconSize'
-): SizesType => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const foundAction = componentConfig.Action[componentTokenName];
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const foundForm = componentConfig.Forms[componentTokenName];
-  let returnValue: string | undefined = undefined;
+const createComponentConfigTokenGetter = (data: any) => {
+  return (keys: string[]) => {
+    let currentObj = data;
 
-  if (foundAction && foundAction[size?.toUpperCase()] && foundAction[size?.toUpperCase()][configTokenName]) {
-    returnValue = foundAction[size?.toUpperCase()][configTokenName];
-  } else if (foundForm && foundForm[size?.toUpperCase()] && foundForm[size?.toUpperCase()][configTokenName]) {
-    returnValue = foundForm[size?.toUpperCase()][configTokenName];
-  }
+    for (const key of keys) {
+      if (currentObj.hasOwnProperty(key)) {
+        currentObj = currentObj[key];
+      } else {
+        console.log('createComponentConfigTokenGetter: did not found ' + key);
+        return 'xxs'; // Key not found
+      }
+    }
 
-  if (returnValue !== undefined) {
-    return returnValue as SizesType;
-  }
-  // eslint-disable-next-line no-console
-  console.warn(
-    'getComponentConfigToken',
-    `no match found for name:${componentTokenName} and size:${size} and token:${configTokenName}!`,
-    { foundAction, foundForm }
-  );
-
-  return 'sm';
+    return currentObj;
+  };
 };
+
+export const getComponentConfigToken = createComponentConfigTokenGetter(componentConfig);

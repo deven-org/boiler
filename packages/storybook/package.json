@@ -4,13 +4,13 @@
   "description": "",
   "scripts": {
     "start": "sb dev -p 1337",
-    "build:static": "sb build && sb extract ./storybook-static",
+    "build:static": "sb build",
     "create-config:pa11y": "node --experimental-json-modules utils/create-pa11y-config.mjs",
     "pretest:a11y": "npm run build:static && npm run create-config:pa11y",
     "test:a11y": "pa11y-ci --config ./.pa11yci"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@boiler/ui-library": "^0.0.1",
     "@storybook/addon-actions": "^7.5.3",

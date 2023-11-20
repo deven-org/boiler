@@ -1,4 +1,4 @@
-import { IconType } from '@boiler/icons';
+import { SizelessIconType } from '@boiler/icons';
 import {
   FeedbackSizes,
   Sizes,
@@ -18,6 +18,8 @@ import {
   ButtonGroupSizes,
   LabelVariants,
   Resizes,
+  ActionSizes,
+  ButtonGroupAlignmentVariants,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -27,6 +29,7 @@ export type FeedbackVariantType = (typeof FeedbackVariants)[number];
 export type HintVariantType = (typeof HintVariants)[number];
 export type CounterVariantType = (typeof CounterVariants)[number];
 
+export type ActionSizesType = (typeof ActionSizes)[number];
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];
 export type InputTypes = (typeof InputTypes)[number];
@@ -44,10 +47,11 @@ export type RadioOption = {
 export type IconPositionVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
-export type AlignmentType = (typeof TabAlignmentVariants)[number];
+export type ButtonGroupAlignmentType = (typeof ButtonGroupAlignmentVariants)[number];
+
 export type TabType = {
   label: string;
-  icon: IconType;
+  icon: SizelessIconType;
   href: string;
   disabled?: boolean;
 };
@@ -60,7 +64,7 @@ export type OverflowVariantTypeFullWidth = (typeof OverflowVariantsFullWidth)[nu
 export type RenderBtnProps = {
   btnId: string;
   btnEventHandler: () => void;
-  iconName: IconType;
+  iconName: SizelessIconType;
 };
 
 export type ButtonOption = {

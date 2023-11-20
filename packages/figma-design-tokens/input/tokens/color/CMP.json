@@ -1,5 +1,53 @@
 {
   "Feedback": {
+    "Counter": {
+      "Container": {
+        "BorderColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.SurfaceStroke}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.SurfaceStroke}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.SurfaceStroke}",
+            "type": "color"
+          }
+        },
+        "BackgroundColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Surface}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Surface}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Surface}",
+            "type": "color"
+          }
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "Neutral": {
+            "value": "{Feedback.Neutral.Text}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Feedback.Warning.Text}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Feedback.Error.Text}",
+            "type": "color"
+          }
+        }
+      }
+    },
     "Tooltip": {
       "SurfaceFill": {
         "value": "{q.surface.inverted}",
@@ -15,6 +63,32 @@
         "Color": {
           "value": "{q.background.level_2}",
           "type": "color"
+        }
+      }
+    },
+    "Loader": {
+      "Background": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Background}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Background}",
+            "type": "color"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Feedback.Brand.Default.Shape.Foreground}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Feedback.Brand.Inverted.Shape.Foreground}",
+            "type": "color"
+          }
         }
       }
     }
@@ -166,7 +240,7 @@
             }
           }
         },
-        "Foreground": {
+        "Icon": {
           "Unselected": {
             "Fill": {
               "Rest": {
@@ -204,43 +278,6 @@
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Unselected.Fill.Error"
               }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "also applies to indeterminate"
-              }
             }
           },
           "Selected": {
@@ -274,38 +311,6 @@
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
                 "description": "Forms.Checkbox.Control.Foreground.Selected.Fill.ReadOnly\n//\nalso applies to indeterminate"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Rest\n//\nalso applies to indeterminate"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Hover\n//\nalso applies to indeterminate"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Pressed\n//\nalso applies to indeterminate"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Focus\n//\nalso applies to indeterminate"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.Disabled\n//\nalso applies to indeterminate"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Checkbox.Control.Foreground.Selected.Stroke.ReadOnly\n//\nalso applies to indeterminate"
               }
             }
           }
@@ -1175,9 +1180,12 @@
   },
   "UI": {
     "Divider": {
-      "Stroke": {
-        "value": "{core.color.coolgray.800.opa30}",
-        "type": "color"
+      "Container": {
+        "BackgroundColor": {
+          "value": "{core.color.coolgray.800.opa30}",
+          "type": "color",
+          "description": "Color of the divider\n>>> UI.Divider.Stroke"
+        }
       }
     },
     "Blanket": {

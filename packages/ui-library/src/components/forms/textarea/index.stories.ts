@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
-import { FormSizes, Resizes } from '../../globals/constants';
-import './index';
+import { FormSizes, Resizes } from '../../../globals/constants';
+
 import { action } from '@storybook/addon-actions';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
 // Shared Style inside the Stories
@@ -58,7 +58,7 @@ const defaultParams: BlrTextareaType = {
 
 //Main Showcase Storybook Textarea, main argType Table
 export default {
-  title: 'Design System/Web Components/TextArea',
+  title: 'Design System/Web Components/Forms/TextArea',
   argTypes: {
     //Appearance
     sizeVariant: {

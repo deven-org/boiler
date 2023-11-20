@@ -1,338 +1,5 @@
 {
   "Action": {
-    "TextButton": {
-      "XS": {
-        "Padding": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "SM": {
-        "Padding": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "MD": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.16}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "LG": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.24}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "XL": {
-        "Padding": {
-          "value": "{core.dimensionREM.16} {core.dimensionPX.40}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      }
-    },
-    "IconButton": {
-      "XS": {
-        "Padding": {
-          "value": "{core.dimensionREM.6}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "SM": {
-        "Padding": {
-          "value": "{core.dimensionREM.6}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "MD": {
-        "Padding": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "LG": {
-        "Padding": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "XL": {
-        "Padding": {
-          "value": "{core.dimensionREM.12}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "LG",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      }
-    },
-    "IconDropdown": {
-      "XS": {
-        "Padding": {
-          "value": "{core.dimensionREM.6} {core.dimensionREM.1} {core.dimensionREM.6} {core.dimensionREM.3}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "SM": {
-        "Padding": {
-          "value": "{core.dimensionREM.6} {core.dimensionREM.1} {core.dimensionREM.6} {core.dimensionREM.3}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "MD": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionREM.1} {core.dimensionREM.8} {core.dimensionREM.3}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "0",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "LG": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionREM.0} {core.dimensionREM.8} {core.dimensionREM.2}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "-{core.dimensionREM.2}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "XL": {
-        "Padding": {
-          "value": "{core.dimensionREM.12} {core.dimensionREM.0} {core.dimensionREM.12} {core.dimensionREM.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "-{core.dimensionREM.4}",
-          "type": "spacing"
-        },
-        "IconSize": {
-          "value": "LG",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
-        "ChevronSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      }
-    },
-    "TextDropdown": {
-      "XS": {
-        "Padding": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.8} {core.dimensionREM.4} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "XXS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "SM": {
-        "Padding": {
-          "value": "{core.dimensionREM.4} {core.dimensionPX.8} {core.dimensionREM.4} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "MD": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12} {core.dimensionREM.8} {core.dimensionPX.20}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "XS",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "LG": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.16} {core.dimensionREM.8} {core.dimensionPX.24}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      },
-      "XL": {
-        "Padding": {
-          "value": "{core.dimensionREM.16} {core.dimensionPX.32} {core.dimensionREM.16} {core.dimensionPX.40}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "ChevronSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        }
-      }
-    },
     "StepperButton": {
       "Border": {
         "Rest": {
@@ -372,33 +39,34 @@
         "Width": {
           "value": "{core.dimensionREM.32}",
           "type": "sizing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "MD": {
         "Width": {
           "value": "{core.dimensionREM.40}",
           "type": "sizing"
-        },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
         }
       },
       "LG": {
         "Width": {
           "value": "{core.dimensionREM.48}",
           "type": "sizing"
-        },
-        "IconSize": {
-          "value": "MD",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+        }
+      },
+      "Container": {
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          }
         }
       }
     },
@@ -503,11 +171,6 @@
             "description": "Adds space between Label & Description"
           }
         },
-        "IconSize": {
-          "value": "SM",
-          "type": "componentConfig",
-          "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-        },
         "BorderRadius": {
           "value": "{Action.BorderRadius}",
           "type": "borderRadius",
@@ -546,259 +209,736 @@
       }
     }
   },
+  "Actions": {
+    "TextButton": {
+      "Container": {
+        "PaddingTopBottom": {
+          "XS": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingLeftRight": {
+          "XS": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.24}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionPX.40}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "Padding": {
+          "XS": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.XS} {Actions.TextButton.Container.PaddingLeftRight.XS}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "SM": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.SM} {Actions.TextButton.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "MD": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.MD} {Actions.TextButton.Container.PaddingLeftRight.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "LG": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.LG} {Actions.TextButton.Container.PaddingLeftRight.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "XL": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.XL} {Actions.TextButton.Container.PaddingLeftRight.XL}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "TextDropdown": {
+      "Container": {
+        "PaddingTop": {
+          "XS": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingRight": {
+          "XS": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionPX.32}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingBottom": {
+          "XS": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingLeft": {
+          "XS": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionPX.20}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.24}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionPX.40}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "Padding": {
+          "XS": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.XS} {Actions.TextDropdown.Container.PaddingRight.XS} {Actions.TextDropdown.Container.PaddingBottom.XS} {Actions.TextDropdown.Container.PaddingLeft.XS}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "SM": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.SM} {Actions.TextDropdown.Container.PaddingRight.SM} {Actions.TextDropdown.Container.PaddingBottom.SM} {Actions.TextDropdown.Container.PaddingLeft.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "MD": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.MD} {Actions.TextDropdown.Container.PaddingRight.MD} {Actions.TextDropdown.Container.PaddingBottom.MD} {Actions.TextDropdown.Container.PaddingLeft.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "LG": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.LG} {Actions.TextDropdown.Container.PaddingRight.LG} {Actions.TextDropdown.Container.PaddingBottom.LG} {Actions.TextDropdown.Container.PaddingLeft.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "XL": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.XL} {Actions.TextDropdown.Container.PaddingRight.XL} {Actions.TextDropdown.Container.PaddingBottom.XL} {Actions.TextDropdown.Container.PaddingLeft.XL}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "IconButton": {
+      "Container": {
+        "Padding": {
+          "XS": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing"
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "0",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "IconDropdown": {
+      "Container": {
+        "PaddingTop": {
+          "XS": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingRight": {
+          "XS": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingBottom": {
+          "XS": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingLeft": {
+          "XS": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "Padding": {
+          "XS": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.XS} {Actions.IconDropdown.Container.PaddingRight.XS} {Actions.IconDropdown.Container.PaddingBottom.XS} {Actions.IconDropdown.Container.PaddingLeft.XS}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "SM": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.SM} {Actions.IconDropdown.Container.PaddingRight.SM} {Actions.IconDropdown.Container.PaddingBottom.SM} {Actions.IconDropdown.Container.PaddingLeft.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "MD": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.MD} {Actions.IconDropdown.Container.PaddingRight.MD} {Actions.IconDropdown.Container.PaddingBottom.MD} {Actions.IconDropdown.Container.PaddingLeft.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "LG": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.LG} {Actions.IconDropdown.Container.PaddingRight.LG} {Actions.IconDropdown.Container.PaddingBottom.LG} {Actions.IconDropdown.Container.PaddingLeft.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "XL": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.XL} {Actions.IconDropdown.Container.PaddingRight.XL} {Actions.IconDropdown.Container.PaddingBottom.XL} {Actions.IconDropdown.Container.PaddingLeft.XL}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "-{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "-{core.dimensionREM.4}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    }
+  },
   "Feedback": {
     "Loader": {
-      "SM": {
-        "Background": {
-          "Default": {
-            "value": {
-              "color": "{Feedback.Brand.Default.Shape.Background}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
+      "Container": {
+        "Size": {
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
           },
-          "Inverted": {
-            "value": {
-              "color": "{Feedback.Brand.Inverted.Shape.Background}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        },
-        "Foreground": {
-          "Default": {
-            "value": {
-              "color": "{Feedback.Brand.Default.Shape.Foreground}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
+          "MD": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing"
           },
-          "Inverted": {
-            "value": {
-              "color": "{Feedback.Brand.Inverted.Shape.Foreground}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
+          "LG": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing"
           }
-        },
-        "Sizing": {
-          "value": "{core.dimensionREM.16}",
-          "type": "sizing"
         },
         "Padding": {
-          "value": "{core.dimensionREM.1}",
-          "type": "spacing"
+          "SM": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing"
+          }
         }
       },
-      "MD": {
-        "Background": {
-          "Default": {
-            "value": {
-              "color": "{Feedback.Brand.Default.Shape.Background}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
+      "Background": {
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
           },
-          "Inverted": {
-            "value": {
-              "color": "{Feedback.Brand.Inverted.Shape.Background}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        },
-        "Foreground": {
-          "Default": {
-            "value": {
-              "color": "{Feedback.Brand.Default.Shape.Foreground}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
           },
-          "Inverted": {
-            "value": {
-              "color": "{Feedback.Brand.Inverted.Shape.Foreground}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
-            },
-            "type": "border"
+          "LG": {
+            "value": "{core.dimensionPX.3}",
+            "type": "borderWidth"
           }
-        },
-        "Sizing": {
-          "value": "{core.dimensionREM.24}",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
         }
       },
-      "LG": {
-        "Background": {
-          "Default": {
-            "value": {
-              "color": "{Feedback.Brand.Default.Shape.Background}",
-              "width": "{core.dimensionPX.3}",
-              "style": "solid"
-            },
-            "type": "border"
+      "Foreground": {
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
           },
-          "Inverted": {
-            "value": {
-              "color": "{Feedback.Brand.Inverted.Shape.Background}",
-              "width": "{core.dimensionPX.3}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        },
-        "Foreground": {
-          "Default": {
-            "value": {
-              "color": "{Feedback.Brand.Default.Shape.Foreground}",
-              "width": "{core.dimensionPX.3}",
-              "style": "solid"
-            },
-            "type": "border"
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
           },
-          "Inverted": {
-            "value": {
-              "color": "{Feedback.Brand.Inverted.Shape.Foreground}",
-              "width": "{core.dimensionPX.3}",
-              "style": "solid"
-            },
-            "type": "border"
+          "LG": {
+            "value": "{core.dimensionPX.3}",
+            "type": "borderWidth"
           }
-        },
-        "Sizing": {
-          "value": "{core.dimensionREM.32}",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionREM.3}",
-          "type": "spacing"
         }
       }
     },
     "Counter": {
-      "SM": {
+      "Container": {
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        },
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        },
         "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
+          "SM": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          }
+        },
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          },
+          "MD": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          }
+        },
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth"
+          },
+          "MD": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth"
+          },
+          "LG": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth"
+          }
         },
         "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
           },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
           },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
+          "LG": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
           }
         }
-      },
-      "MD": {
-        "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        }
-      },
-      "LG": {
-        "Padding": {
-          "value": "{core.dimensionPX.0} {core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.2}",
-          "type": "spacing"
-        },
-        "Border": {
-          "Neutral": {
-            "value": {
-              "color": "{Feedback.Neutral.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Warning": {
-            "value": {
-              "color": "{Feedback.Warning.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Feedback.Error.SurfaceStroke}",
-              "width": "{core.borderWidth.Medium}",
-              "style": "solid"
-            },
-            "type": "border"
-          }
-        }
-      },
-      "BorderRadius": {
-        "value": "{core.borderRadius.MD}",
-        "type": "borderRadius"
       }
     },
     "Tooltip": {
@@ -1031,7 +1171,7 @@
               }
             }
           },
-          "Foreground": {
+          "Icon": {
             "Sizing": {
               "Unselected": {
                 "Rest": {
@@ -1124,11 +1264,6 @@
                 }
               }
             }
-          },
-          "IconSize": {
-            "value": "SM",
-            "type": "componentConfig",
-            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         }
       },
@@ -1220,7 +1355,7 @@
               }
             }
           },
-          "Foreground": {
+          "Icon": {
             "Sizing": {
               "Unselected": {
                 "Rest": {
@@ -1313,11 +1448,6 @@
                 }
               }
             }
-          },
-          "IconSize": {
-            "value": "SM",
-            "type": "componentConfig",
-            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         },
         "ContentCol": {
@@ -1435,7 +1565,7 @@
               }
             }
           },
-          "Foreground": {
+          "Icon": {
             "Sizing": {
               "Unselected": {
                 "Rest": {
@@ -1528,11 +1658,6 @@
                 }
               }
             }
-          },
-          "IconSize": {
-            "value": "Custom (20px)",
-            "type": "componentConfig",
-            "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           }
         },
         "ContentCol": {
@@ -1905,32 +2030,127 @@
         }
       }
     },
+    "RadioGroup": {
+      "SM": {
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "LegendWrapper": {
+          "PaddingBottom": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          }
+        },
+        "RadioStack": {
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          }
+        }
+      },
+      "MD": {
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "LegendWrapper": {
+          "PaddingBottom": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          }
+        },
+        "RadioStack": {
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          }
+        }
+      },
+      "LG": {
+        "CaptionContainer": {
+          "ItemSpacing": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          }
+        },
+        "LegendWrapper": {
+          "PaddingBottom": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          }
+        },
+        "RadioStack": {
+          "Horizontal": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.16}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          },
+          "Vertical": {
+            "ItemSpacing": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            }
+          }
+        }
+      }
+    },
     "Select": {
       "SM": {
-        "InputFieldPadding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
         "IconPaddingRight": {
           "value": "{core.dimensionPX.12}",
           "type": "spacing"
         }
       },
       "MD": {
-        "InputFieldPadding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.32} {core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        },
         "IconPaddingRight": {
           "value": "{core.dimensionPX.12}",
           "type": "spacing"
         }
       },
       "LG": {
-        "InputFieldPadding": {
-          "value": "{core.dimensionREM.12} {core.dimensionPX.48} {core.dimensionREM.12} {core.dimensionPX.16}",
-          "type": "spacing"
-        },
         "IconPaddingRight": {
           "value": "{core.dimensionPX.16}",
           "type": "spacing"
@@ -2286,177 +2506,86 @@
           "type": "typography"
         }
       }
-    },
-    "RadioGroup": {
-      "SM": {
-        "RadioStack": {
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        }
-      },
-      "MD": {
-        "RadioStack": {
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        }
-      },
-      "LG": {
-        "RadioStack": {
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        }
-      }
     }
   },
   "UI": {
     "Icon": {
-      "XXS": {
-        "value": "{core.dimensionREM.8}",
-        "type": "sizing",
-        "description": "size of XXS icon"
-      },
-      "XS": {
-        "value": "{core.dimensionREM.12}",
-        "type": "sizing",
-        "description": "size of XS icon"
-      },
-      "SM": {
-        "value": "{core.dimensionREM.16}",
-        "type": "sizing",
-        "description": "size of SM icon"
-      },
-      "MD": {
-        "value": "{core.dimensionREM.24}",
-        "type": "sizing",
-        "description": "size of MD icon"
-      },
-      "LG": {
-        "value": "{core.dimensionREM.32}",
-        "type": "sizing",
-        "description": "size of LG icon"
-      },
-      "XL": {
-        "value": "{core.dimensionREM.48}",
-        "type": "sizing",
-        "description": "size of XL icon"
-      }
-    },
-    "Divider": {
-      "Border": {
-        "value": {
-          "color": "{UI.Divider.Stroke}",
-          "width": "{core.dimensionPX.1}"
-        },
-        "type": "border"
+      "Container": {
+        "Size": {
+          "XXS": {
+            "value": "{core.dimensionREM.8}",
+            "type": "sizing",
+            "description": "size of XXS icon\n>>>: UI.Icon.XXS"
+          },
+          "XS": {
+            "value": "{core.dimensionREM.12}",
+            "type": "sizing",
+            "description": "size of XS icon\n>>> UI.Icon.XS"
+          },
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing",
+            "description": "size of SM icon\n>>> UI.Icon.SM\n"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing",
+            "description": "size of MD icon\n>>> UI.Icon.MD"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing",
+            "description": "size of LG icon\n>>> UI.Icon.LG"
+          },
+          "XL": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing",
+            "description": "size of XL icon\n>>> UI.Icon.XL"
+          }
+        }
       }
     },
     "ButtonGroup": {
-      "XS": {
+      "Container": {
         "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
+          "XS": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          }
         }
-      },
-      "SM": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        }
-      },
-      "MD": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "LG": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "XL": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+      }
+    },
+    "Divider": {
+      "Container": {
+        "Horizontal": {
+          "Height": {
+            "value": "{core.dimensionPX.1}",
+            "type": "sizing",
+            "description": "The thickness of the divider\n>>> new"
+          }
+        },
+        "Vertical": {
+          "Width": {
+            "value": "{UI.Divider.Container.Horizontal.Height}",
+            "type": "sizing",
+            "description": "The thickness of the divider\n>>> new"
+          }
         }
       }
     }
@@ -2501,11 +2630,6 @@
               "value": "{core.dimensionREM.12}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            },
-            "SizeVariant": {
-              "value": "XS",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         },
@@ -2546,11 +2670,6 @@
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            },
-            "SizeVariant": {
-              "value": "SM",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         },
@@ -2591,11 +2710,6 @@
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            },
-            "SizeVariant": {
-              "value": "SM",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
           }
         }
