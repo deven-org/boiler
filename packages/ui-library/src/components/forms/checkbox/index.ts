@@ -12,6 +12,9 @@ import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
 import { IconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { BlrIconRenderFunction } from '../../ui/icon';
+import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
 const TAG_NAME = 'blr-checkbox';
 
@@ -83,14 +86,50 @@ export class BlrCheckbox extends LitElement {
       'readonly': this.readonly || false,
     });
 
+    const visualCheckboxClasses = classMap({
+      'visual-checkbox': true,
+      'input-control': true,
+      'disabled': this.disabled || false,
+      'focus': this.focused || false,
+      'checked': this.checked || false,
+      'readonly': this.readonly || false,
+    });
+
+    const checkerIconClasses = classMap({
+      'checker-icon': true,
+    });
+
+    const checkerIconSizeVariant = getComponentConfigToken([
+      'Checkbox',
+      this.size.toUpperCase(),
+      'Control',
+      'Icon',
+    ]).toLowerCase() as FormSizesType;
+
     return html`
       <style>
         ${dynamicStyles.map((style) => style)}
       </style>
       <div class="${classes}">
+        <label class="${visualCheckboxClasses}" for="${this.checkInputId}">
+          ${this.indeterminate
+            ? BlrIconRenderFunction({
+                icon: calculateIconName('blrMinus', checkerIconSizeVariant),
+                size: 'lg',
+                hideAria: true,
+                classMap: checkerIconClasses,
+              })
+            : BlrIconRenderFunction({
+                icon: calculateIconName('blrCheckmark', checkerIconSizeVariant),
+                size: 'lg',
+                hideAria: true,
+                classMap: checkerIconClasses,
+              })}
+        </label>
+
         <input
           type="checkbox"
-          class="input-control"
+          class="${visualCheckboxClasses}"
           id=${this.checkInputId || nothing}
           name=${this.checkInputId || nothing}
           ?disabled=${this.disabled}
