@@ -1057,630 +1057,74 @@
   },
   "Forms": {
     "Checkbox": {
-      "SM": {
-        "ContentCol": {
-          "ItemSpacing": {
+      "ContentCol": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption."
           },
-          "PaddingTop": {
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption."
+          }
+        },
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          },
+          "LG": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
-        },
-        "MainContainer": {
-          "ItemSpacing": {
+        }
+      },
+      "ContentRow": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+            "description": "Controls the horizontal spacing between the Control and the Label"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Controls the horizontal spacing between the Control and the Label"
           }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
+        }
+      },
+      "ControlWrapper": {
+        "PaddingTop": {
+          "SM": {
             "value": "0",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
-          }
-        },
-        "Control": {
-          "Background": {
-            "Sizing": {
-              "Unselected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Selected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Indeterminate": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              }
-            }
           },
-          "Icon": {
-            "Sizing": {
-              "Unselected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Selected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Indeterminate": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              }
-            }
-          }
-        }
-      },
-      "MD": {
-        "Control": {
-          "Background": {
-            "Sizing": {
-              "Unselected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Selected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Indeterminate": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              }
-            }
-          },
-          "Icon": {
-            "Sizing": {
-              "Unselected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Selected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              },
-              "Indeterminate": {
-                "Rest": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.16}",
-                  "type": "sizing"
-                }
-              }
-            }
-          }
-        },
-        "ContentCol": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
-          }
-        },
-        "MainContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
-          }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
+          "MD": {
             "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
-          }
-        }
-      },
-      "LG": {
-        "Control": {
-          "Background": {
-            "Sizing": {
-              "Unselected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                }
-              },
-              "Selected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                }
-              },
-              "Indeterminate": {
-                "Rest": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                }
-              }
-            }
           },
-          "Icon": {
-            "Sizing": {
-              "Unselected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                }
-              },
-              "Selected": {
-                "Rest": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                }
-              },
-              "Indeterminate": {
-                "Rest": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Hover": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Pressed": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Focus": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Disabled": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                },
-                "Error": {
-                  "value": "{core.dimensionPX.20}",
-                  "type": "sizing"
-                }
-              }
-            }
-          }
-        },
-        "ContentCol": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
-          }
-        },
-        "MainContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.12}",
-            "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
-          }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
+          "LG": {
             "value": "{core.dimensionREM.2}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
@@ -1688,68 +1132,360 @@
         }
       },
       "Control": {
-        "Unselected": {
-          "Rest": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Rest}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
+        "Container": {
+          "BorderWidth": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Hover": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Pressed": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Focus": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Disabled": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Error": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.1}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Hover": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Pressed": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Focus": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Disabled": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Error": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                }
+              }
             },
-            "type": "border"
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Hover": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Pressed": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Focus": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Disabled": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Error": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.1}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Hover": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Pressed": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Focus": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Disabled": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Error": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                }
+              }
+            },
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Hover": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Pressed": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Focus": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Disabled": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Error": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.1}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Hover": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Pressed": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Focus": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Disabled": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                },
+                "Error": {
+                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth",
+                  "description": "Figma Only! Do not apply on codes comps"
+                }
+              }
+            }
           },
-          "Hover": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Hover}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
+          "BorderRadius": {
+            "SM": {
+              "value": "{core.borderRadius.SM}",
+              "type": "borderRadius"
             },
-            "type": "border"
+            "MD": {
+              "value": "{Forms.Checkbox.Control.Container.BorderRadius.SM}",
+              "type": "borderRadius"
+            },
+            "LG": {
+              "value": "{Forms.Checkbox.Control.Container.BorderRadius.SM}",
+              "type": "borderRadius"
+            }
           },
-          "Pressed": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
+          "Size": {
+            "SM": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
             },
-            "type": "border"
-          },
-          "Focus": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
+            "MD": {
+              "value": "{core.dimensionPX.16}",
+              "type": "sizing"
             },
-            "type": "border"
-          },
-          "Disabled": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
+            "LG": {
+              "value": "{core.dimensionPX.20}",
+              "type": "sizing"
+            }
+          }
+        },
+        "Icon": {
+          "IconSize": {
+            "SM": {
+              "Rest": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "Hover": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "type": "sizing"
+              },
+              "Pressed": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "type": "sizing"
+              },
+              "Focus": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "type": "sizing"
+              },
+              "Disabled": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "type": "sizing"
+              },
+              "ReadOnly": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "type": "sizing"
+              },
+              "Error": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "type": "sizing"
+              }
             },
-            "type": "border"
-          },
-          "ReadOnly": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
+            "MD": {
+              "Rest": {
+                "value": "{core.dimensionPX.16}",
+                "type": "sizing"
+              },
+              "Hover": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "type": "sizing"
+              },
+              "Pressed": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "type": "sizing"
+              },
+              "Focus": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "type": "sizing"
+              },
+              "Disabled": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "type": "sizing"
+              },
+              "ReadOnly": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "type": "sizing"
+              },
+              "Error": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "type": "sizing"
+              }
             },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Forms.Checkbox.Control.Background.Unselected.Stroke.Error}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
+            "LG": {
+              "Rest": {
+                "value": "{core.dimensionPX.20}",
+                "type": "sizing"
+              },
+              "Hover": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "type": "sizing"
+              },
+              "Pressed": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "type": "sizing"
+              },
+              "Focus": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "type": "sizing"
+              },
+              "Disabled": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "type": "sizing"
+              },
+              "ReadOnly": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "type": "sizing"
+              },
+              "Error": {
+                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "type": "sizing"
+              }
+            }
           }
         }
-      },
-      "ControlBorderRadius": {
-        "value": "{core.borderRadius.SM}",
-        "type": "borderRadius"
       }
     },
     "Radio": {
