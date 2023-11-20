@@ -253,11 +253,11 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
     
         &.error {
           & .input-control, & .visual-checkbox {
-            &:checked {
+            &.checked {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Error};
               outline-color: ${Checkbox.Control.Container.BorderColor.Active.Error};
             }
-            &:not(:checked) {
+            &:not(.checked) {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Error};
               outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Error};
             }
