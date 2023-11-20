@@ -416,41 +416,41 @@ export default {
         </p>
         <ul>
         <li> <a href="/docs/design-system-web-components-textarea--docs"><strong>Docs</strong></a></li>
-        <li> <a href="/docs/design-system-web-components-textarea--size-variant"><strong>Appearance</strong></a>
+        <li> <a href="#appearance"><strong>Appearance</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--size-variant"><strong>sizeVariant</strong></a></li>
-                <li> <a href="/docs/design-system-web-components-textarea--resize"><strong>resize</strong></a></li>
+                <li> <a href="#sizevariant"><strong>sizeVariant</strong></a></li>
+                <li> <a href="#resize"><strong>resize</strong></a></li>
             </ul>
         </li>
-         <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Content/ Settings</strong></a>
+         <li> <a href="#content--settings"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--placeholder"><strong>placeholder</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>States</strong></a>
-            <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--disabled"><strong>disabled</strong></a>
-                </li>
-                 <li> <a href="/docs/design-system-web-components-textarea--readonly"><strong>readonly</strong></a>
+                <li> <a href="#placeholder"><strong>placeholder</strong></a>
                 </li>
             </ul>
         </li>
-         <li> <a href="/docs/design-system-web-components-textarea--required"><strong>Validation</strong></a>
+         <li> <a href="#states"><strong>States</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--required"><strong>required</strong></a>
+                <li> <a href="#disabled"><strong>disabled</strong></a>
                 </li>
-                 <li> <a href="/docs/design-system-web-components-textarea--has-error"><strong>hasError</strong></a>
+                 <li> <a href="#readonly"><strong>readonly</strong></a>
                 </li>
             </ul>
         </li>
-         <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a>
+         <li> <a href="#validation"><strong>Validation</strong></a>
             <ul>
-                <li> <a href="/docs/design-system-web-components-textarea--captions"><strong>Caption</strong></a>
+                <li> <a href="#required"><strong>required</strong></a>
                 </li>
-                 <li> <a href="/docs/design-system-web-components-textarea--label"><strong>label</strong></a>
+                 <li> <a href="#haserror"><strong>hasError</strong></a>
                 </li>
-                <li> <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a>
+            </ul>
+        </li>
+         <li> <a href="#dependencies"><strong>Dependencies</strong></a>
+            <ul>
+                <li> <a href="#dependencies"><strong>Caption</strong></a>
+                </li>
+                 <li> <a href="#label"><strong>label</strong></a>
+                </li>
+                <li> <a href="#counter"><strong>Counter</strong></a>
                 </li>
             </ul>
         </li>
