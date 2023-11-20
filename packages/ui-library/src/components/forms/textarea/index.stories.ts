@@ -462,73 +462,11 @@ export default {
 };
 
 //Main Component for Textarea
-export const BlrTextarea = ({
-  theme,
-  sizeVariant,
-  resize,
-  minLength,
-  maxLength,
-  cols,
-  rows,
-  placeholder,
-  value,
-  hasLabel,
-  label,
-  labelAppendix,
-  hasHint,
-  hintMessage,
-  hintMessageIcon,
-  hasCounter,
-  warningLimitType,
-  warningLimitInt,
-  warningLimitPer,
-  disabled,
-  readonly,
-  required,
-  hasError,
-  errorMessage,
-  errorMessageIcon,
-  arialabel,
-  textareaId,
-  name,
-  onChange,
-  onFocus,
-  onSelect,
-}: BlrTextareaType) =>
+export const BlrTextarea = (params: BlrTextareaType) =>
   html`${sharedStyles}
     <div class="wrapper">
       ${BlrTextareaRenderFunction({
-        theme,
-        sizeVariant,
-        resize,
-        minLength,
-        maxLength,
-        cols,
-        rows,
-        placeholder,
-        value,
-        hasLabel,
-        label,
-        labelAppendix,
-        hasHint,
-        hintMessage,
-        hintMessageIcon,
-        hasCounter,
-        warningLimitType,
-        warningLimitInt,
-        warningLimitPer,
-        disabled,
-        readonly,
-        required,
-        hasError,
-        errorMessage,
-        errorMessageIcon,
-        arialabel,
-        textareaId,
-        name,
-        onChange,
-        onFocus,
-        onSelect,
+        ...params,
       })}
     </div> `;
 BlrTextarea.storyName = 'TextArea';
@@ -605,9 +543,10 @@ const argTypesToDisable = [
   'onBlur',
   'onSelect',
 ];
-function generateDisabledArgTypes(argTypes) {
+
+const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
-  argTypes.forEach((argType) => {
+  argTypes.forEach((argType: string) => {
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -615,7 +554,7 @@ function generateDisabledArgTypes(argTypes) {
     };
   });
   return disabledArgTypes;
-}
+};
 const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 // All Stories
@@ -719,6 +658,7 @@ export const Resize = () => {
     </div>
   `;
 };
+
 Resize.argTypes = {
   ...disabledArgTypes,
 };

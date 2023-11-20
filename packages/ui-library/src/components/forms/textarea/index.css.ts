@@ -51,6 +51,18 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
         resize: none;
       }
 
+      &.sm {
+        min-height: ${TextArea.SM.MinHeight};
+      }
+
+      &.md {
+        min-height: ${TextArea.MD.MinHeight};
+      }
+
+      &.lg {
+        min-height: ${TextArea.LG.MinHeight};
+      }
+
       .flex-container {
         display: flex;
         align-items: flex-start;
@@ -59,17 +71,14 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
   
         &.sm {
           margin: ${SM.CaptionSlot.Margin};
-          min-height: ${TextArea.SM.MinHeight};
         }
   
         &.md {
           margin: ${MD.CaptionSlot.Margin};
-          min-height: ${TextArea.MD.MinHeight};
         }
   
         &.lg {
           margin: ${LG.CaptionSlot.Margin};
-          min-height: ${TextArea.LG.MinHeight};
         }
       }
     }
