@@ -1,0 +1,244 @@
+.blr-checkbox {
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.25s ease 0s;
+}
+.blr-checkbox > input {
+  all: initial;
+}
+.blr-checkbox > input:disabled + label {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.blr-checkbox > input:checked {
+}
+.blr-checkbox > input:checked:disabled + label {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.blr-checkbox .blr-form-label-inline {
+  color: hsla(0, 0%, 100%, 1);
+}
+.blr-checkbox .input-control {
+  position: relative;
+  outline-offset: 2px;
+  transition: all 0.25s ease 0s;
+  background-color: hsla(0, 0%, 100%, 1);
+  border-color: hsla(220, 65%, 60%, 1);
+  border-style: solid;
+}
+.blr-checkbox .label-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blr-checkbox .label-wrapper .hint-wrapper,
+.error-wrapper {
+  flex-basis: 100%;
+}
+:is(.blr-checkbox .label-wrapper .hint-wrapper, .error-wrapper) .blr-form-hint {
+  gap: 0px;
+}
+.blr-checkbox .label-wrapper .blr-form-label-inline {
+  font-family: Source Sans Pro, 'sans-serif';
+}
+.blr-checkbox.disabled {
+  cursor: not-allowed;
+}
+.blr-checkbox.disabled .blr-form-label-inline {
+  color: hsla(220, 10%, 40%, 1);
+  cursor: not-allowed;
+}
+.blr-checkbox.sm {
+  gap: 8px;
+}
+.blr-checkbox.sm .input-control {
+  width: 16px;
+  height: 16px;
+  margin-top: 0rem;
+  border-width: 0px;
+}
+.blr-checkbox.sm .label-wrapper {
+  padding-top: 0rem;
+  gap: 0px;
+}
+.blr-checkbox.sm .label-wrapper .blr-form-label-inline {
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.875rem;
+}
+.blr-checkbox.sm .input-control {
+}
+.blr-checkbox.sm .input-control:checked {
+}
+.blr-checkbox.sm .input-control:checked::after {
+  width: 16px;
+  height: 16px;
+}
+.blr-checkbox.md {
+  gap: 8px;
+}
+.blr-checkbox.md .input-control {
+  width: 16px;
+  height: 16px;
+  margin-top: 0rem;
+  border-width: 0px;
+}
+.blr-checkbox.md .label-wrapper {
+  padding-top: 0rem;
+  gap: 0px;
+}
+.blr-checkbox.md .label-wrapper .blr-form-label-inline {
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.blr-checkbox.md .input-control {
+}
+.blr-checkbox.md .input-control:checked {
+}
+.blr-checkbox.md .input-control:checked::after {
+  width: 16px;
+  height: 16px;
+}
+.blr-checkbox.lg {
+  gap: 12px;
+}
+.blr-checkbox.lg .input-control {
+  width: 20px;
+  height: 20px;
+  margin-top: 0rem;
+  border-width: 0px;
+}
+.blr-checkbox.lg .label-wrapper {
+  padding-top: 0rem;
+  gap: 0px;
+}
+.blr-checkbox.lg .label-wrapper .blr-form-label-inline {
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+}
+.blr-checkbox.lg .input-control {
+}
+.blr-checkbox.lg .input-control:checked {
+}
+.blr-checkbox.lg .input-control:checked::after {
+  width: 20px;
+  height: 20px;
+}
+.blr-checkbox:not(.error) {
+}
+.blr-checkbox:not(.error) .input-control {
+}
+.blr-checkbox:not(.error) .input-control:checked,
+.blr-checkbox:not(.error) .input-control:indeterminate {
+}
+:is(.blr-checkbox:not(.error) .input-control:checked, .blr-checkbox:not(.error) .input-control:indeterminate):hover {
+}
+:is(.blr-checkbox:not(.error) .input-control:checked, .blr-checkbox:not(.error) .input-control:indeterminate):hover:not(
+    :disabled
+  ):not([readonly]) {
+  background-color: hsla(220, 65%, 50%, 1);
+  border-color: #00000000;
+}
+:is(.blr-checkbox:not(.error) .input-control:checked, .blr-checkbox:not(.error) .input-control:indeterminate):focus {
+  background-color: hsla(220, 65%, 40%, 1);
+  border-color: #00000000;
+}
+:is(.blr-checkbox:not(.error) .input-control:checked, .blr-checkbox:not(.error) .input-control:indeterminate):active {
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:checked,
+    .blr-checkbox:not(.error) .input-control:indeterminate
+  ):active:not(:disabled):not([readonly]) {
+  background-color: hsla(220, 65%, 60%, 1);
+  border-color: #00000000;
+}
+:is(.blr-checkbox:not(.error) .input-control:checked, .blr-checkbox:not(.error) .input-control:indeterminate):disabled {
+  background-color: hsla(220, 10%, 30%, 1);
+  border-color: #00000000;
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:checked,
+    .blr-checkbox:not(.error) .input-control:indeterminate
+  )[readonly] {
+  background-color: hsla(220, 10%, 30%, 1);
+  border-color: #00000000;
+}
+.blr-checkbox:not(.error) .input-control:not(:checked),
+.blr-checkbox:not(.error) .input-control:not(:indeterminate) {
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  ):hover {
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  ):hover:not(:disabled):not([readonly]) {
+  background-color: hsla(0, 0%, 100%, 1);
+  border-color: hsla(220, 65%, 70%, 1);
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  ):focus {
+  background-color: hsla(0, 0%, 100%, 1);
+  border-color: hsla(220, 65%, 60%, 1);
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  ):active {
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  ):active:not(:disabled):not([readonly]) {
+  background-color: hsla(0, 0%, 100%, 1);
+  border-color: hsla(220, 65%, 80%, 1);
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  ):disabled {
+  background-color: hsla(220, 10%, 10%, 1);
+  border-color: hsla(220, 10%, 30%, 1);
+}
+:is(
+    .blr-checkbox:not(.error) .input-control:not(:checked),
+    .blr-checkbox:not(.error) .input-control:not(:indeterminate)
+  )[readonly] {
+  background-color: hsla(220, 10%, 10%, 1);
+  border-color: hsla(220, 10%, 20%, 1);
+}
+.blr-checkbox.error {
+}
+.blr-checkbox.error .input-control {
+  background-color: hsla(0, 0%, 100%, 1);
+  border-color: hsla(350, 65%, 80%, 1);
+}
+.blr-checkbox:checked:not(:indeterminate)::after {
+  content: '';
+  margin-right: 1rem;
+  float: left;
+  transition: 0.15s all ease-out;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"%3E%3Cpath d="M3.35834 8.9759L5.39724 10.9618C5.65804 11.2159 6.07374 11.2159 6.33454 10.9618L12.7617 4.70166" stroke="white" stroke-width="0.671667" stroke-linecap="round" stroke-linejoin="round" /%3E%3C/svg%3E');
+}
+.blr-checkbox:indeterminate::after {
+  content: '';
+  display: block;
+  width: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px 0px 0px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+}
