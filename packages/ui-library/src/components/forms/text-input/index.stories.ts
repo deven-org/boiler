@@ -23,7 +23,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Forms/TextInput',
+  title: 'Design System/Web Components/Forms/Text Input',
   argTypes: {
     //Appearance
     //todo rename size to sizeVariant
@@ -278,7 +278,7 @@ export default {
     },
     //Technical attributes
     textInputId: {
-      name: 'textInputID',
+      name: 'textInputId',
       description: 'Unique identifier for this component.',
       table: {
         disable: false,
@@ -296,6 +296,10 @@ export default {
     theme: {
       options: Themes,
       control: { type: 'select' },
+      table: {
+        disable: false,
+        category: 'Appearance',
+      },
     },
   },
 
@@ -314,37 +318,37 @@ export default {
         <li> <a href="/docs/design-system-web-components-forms-textinput--docs"><strong>Docs</strong></a></li>
         <li> <a href="#appearance"><strong>Appearance</strong></a>
             <ul>
-                <li> <a href="#sizevariant"><strong>sizeVariant</strong></a></li>
+                <li> <a href="#size-variant"><strong>Size Variant</strong></a></li>
             </ul>
         </li>
          <li> <a href="#content--settings"><strong>Content/ Settings</strong></a>
             <ul>
-                <li> <a href="#type"><strong>type</strong></a>
+                <li> <a href="#type"><strong>Type</strong></a>
                 </li>
-                <li> <a href="#placeholder"><strong>placeholder</strong></a>
+                <li> <a href="#placeholder"><strong>Placeholder</strong></a>
                 </li>
             </ul></li>
         <li> <a href="#states"><strong>States</strong></a>
             <ul>
-                <li> <a href="#disabled"><strong>disabled</strong></a>
+                <li> <a href="#disabled"><strong>Disabled</strong></a>
                 </li>
-                <li> <a href="#readonly"><strong>readonly</strong></a>
+                <li> <a href="#readonly"><strong>Readonly</strong></a>
                 </li>
             </ul></li>
         <li> <a href="#validation"><strong>Validation</strong></a>
             <ul>
-                <li> <a href="#required"><strong>required</strong></a>
+                <li> <a href="#required"><strong>Required</strong></a>
                 </li>
-                <li> <a href="#haserror"><strong>hasError</strong></a>
+                <li> <a href="#has-error"><strong>Has Error</strong></a>
                 </li>
             </ul></li>
         <li> <a href="#dependencies"><strong>Dependencies</strong></a>
             <ul>
-                <li> <a href="#formlabel"><strong>FormLabel</strong></a>
+                <li> <a href="#form-label"><strong>Form Label</strong></a>
                 </li>
                 <li> <a href="#icon"><strong>Icon</strong></a>
                 </li>
-                <li> <a href="#formcaption"><strong>FormCaption</strong></a>
+                <li> <a href="#form-caption"><strong>Form Caption</strong></a>
                 </li>
             </ul></li>
         </ul>
@@ -355,7 +359,7 @@ export default {
 };
 
 export const BlrTextInput = (params: BlrTextInputType) => BlrTextInputRenderFunction(params);
-BlrTextInput.storyName = 'TextInput';
+BlrTextInput.storyName = 'Text Input';
 
 const args: BlrTextInputType = {
   theme: 'Light',
@@ -416,11 +420,56 @@ const defaultParams: BlrTextInputType = {
   showInputIcon: true,
 };
 
+//disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
+const argTypesToDisable = [
+  'theme',
+  'size',
+  'isResizeable',
+  'placeholder',
+  'value',
+  'minLength',
+  'maxLength',
+  'hasLabel',
+  'label',
+  'labelAppendix',
+  'showHint',
+  'hintText',
+  'hintIcon',
+  'type',
+  'showInputIcon',
+  'textInputId',
+  'disabled',
+  'readonly',
+  'required',
+  'hasError',
+  'errorMessage',
+  'errorIcon',
+  'arialabel',
+  'name',
+  'onChange',
+  'onFocus',
+  'onBlur',
+  'onSelect',
+];
+
+const generateDisabledArgTypes = (argTypes: string[]) => {
+  const disabledArgTypes = {};
+  argTypes.forEach((argType: string) => {
+    disabledArgTypes[argType] = {
+      table: {
+        disable: true,
+      },
+    };
+  });
+  return disabledArgTypes;
+};
+const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
+
 // All Stories
 //Appearance Size Story
 /**
- * #### sizeVariant
- * The TextInput component comes in 3 sizes: SM, MD and LG.
+ * #### Size Variant
+ * The Text Input component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -431,33 +480,36 @@ export const SizeVariant = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'sm',
-          label: 'Text area SM',
+          label: 'Text Input SM',
           value: '',
         })}
         ${BlrTextInputRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Text area MD',
+          label: 'Text Input MD',
           value: '',
         })}
         ${BlrTextInputRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'lg',
-          label: 'Text area LG',
+          label: 'Text Input LG',
           value: '',
         })}
       </div>
     </div>
   `;
 };
+SizeVariant.argTypes = {
+  ...disabledArgTypes,
+};
 SizeVariant.storyName = 'Appearance';
 
 //Content/ Settings Type & Placeholder
 /**
  * #### Type
- * The TextInput component can have all the types an html input can have, except the number and the unit type, which is covered in the NumberInput component. For more information see NumberInput component [link to NumberInput component].
+ * The Text Input component can have all the types an html input can have, except the number and the unit type, which is covered in the NumberInput component. For more information see NumberInput component [link to NumberInput component].
  */
 export const Type = () => {
   return html`
@@ -467,9 +519,19 @@ export const Type = () => {
         ${BlrTextInputRenderFunction({
           ...defaultParams,
           theme: 'Light',
+          type: 'text',
+          size: 'md',
+          label: 'Enter text',
+          labelAppendix: '',
+          placeholder: '',
+          value: '',
+        })}
+        ${BlrTextInputRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
           type: 'password',
           size: 'md',
-          label: 'type is password',
+          label: 'Enter password',
           labelAppendix: '',
           placeholder: '',
           value: '',
@@ -478,10 +540,13 @@ export const Type = () => {
     </div>
   `;
 };
+Type.argTypes = {
+  ...disabledArgTypes,
+};
 Type.storyName = 'Content/ Settings';
 
 /**
- * The TextInput component can display a placeholder text. This is recommended to improve usability.
+ * The Text Input component can display a placeholder text. This is recommended to improve usability.
  */
 export const Placeholder = () => {
   return html`
@@ -509,14 +574,16 @@ export const Placeholder = () => {
     </div>
   `;
 };
-Placeholder.storyName = 'placeholder';
+Placeholder.argTypes = {
+  ...disabledArgTypes,
+};
+Placeholder.storyName = 'Placeholder';
+
 // States Disabled
 /**
- * Apart from states like Rest, Hover, Pressed and Focus, the TextInput component can also be Disabled or Readonly. The Error state is documented under Validation.
- * #### disabled
- * The TextInput Component in the Disabled state can not be interacted with. This means it can not receive focus or be selected.
- * #### readonly
- * The readonly component in the Readonly state can not be interacted with, but it can still be selected and receive focus.
+ * Apart from states like Rest, Hover, Pressed and Focus, the Text Input component can also be Disabled or Readonly. The Error state is documented under Validation.
+ * #### Disabled
+ * The Text Input component in the Disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
@@ -527,11 +594,28 @@ export const Disabled = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Disabled TextInput',
+          label: 'Disabled Text Input',
           labelAppendix: '',
           disabled: true,
           value: '',
         })}
+      </div>
+    </div>
+  `;
+};
+Disabled.argTypes = {
+  ...disabledArgTypes,
+};
+Disabled.storyName = 'States';
+
+/**
+ * The Text Input component in the Readonly state can not be interacted with, but it can still be selected and receive focus.
+ */
+export const Readonly = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textinput">
         ${BlrTextInputRenderFunction({
           ...defaultParams,
           theme: 'Light',
@@ -544,16 +628,15 @@ export const Disabled = () => {
     </div>
   `;
 };
-Disabled.storyName = 'States';
+Readonly.argTypes = {
+  ...disabledArgTypes,
+};
+Readonly.storyName = 'Readonly';
 
 // Validation Required Todo add interactive Story with Button to show the State
 /**
- * #### required
- * The TextInput component can be set as required. If set as required, an error should be thrown, when the [component name] component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the [Dependencies](#dependencies) section below.
- *
- * #### hasError
- * The TextInput component can be set to have an error with the hasError property. An error can be displayed after submitting a wrong value, after leaving/deselecting the TextInput or in case the TextInput was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the [Dependencies](#dependencies) section below.
- *
+ * #### Required
+ * The Text Input component can be set as required. If set as required, an error should be thrown, when the Text Input component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the [Dependencies](#dependencies) section below.
  * */
 export const Required = () => {
   return html`
@@ -573,6 +656,9 @@ export const Required = () => {
     </div>
   `;
 };
+Required.argTypes = {
+  ...disabledArgTypes,
+};
 Required.parameters = {
   backgrounds: {
     default: '',
@@ -580,20 +666,43 @@ Required.parameters = {
 };
 Required.storyName = 'Validation';
 
+/**
+ * The Text Input component can be set to have an error with the Has Error property. An error can be displayed after submitting a wrong value, after leaving/deselecting the Text Input or in case the Text Input was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the [Dependencies](#dependencies) section below.
+ * */
+export const hasError = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextInputRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: 'Please leave a short description',
+          label: 'Reason for submission',
+          labelAppendix: '(required)',
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+hasError.argTypes = {
+  ...disabledArgTypes,
+};
+hasError.parameters = {
+  backgrounds: {
+    default: '',
+  },
+};
+hasError.storyName = 'Has Error';
+
 //Dependencies Captions
 /**
- *
- * #### FormLabel
- * The TextInput component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see FormLabel component [link to FormLabel component].
- *
- * #### Icon
- * The TextInput component can have a trailing clickable icon / icon button. This could be used for example to show or hide the input, when it is used to enter a password. For more information about the Icon component see Icon component [link to Icon component].
- *
- * #### FormCaption
- * The TextInput component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaption component [link to FormCaption component].
+ * #### Form Label
+ * The Text Input component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see FormLabel component [link to FormLabel component].
  */
-
-export const Captions = () => {
+export const FormLabel = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -603,10 +712,26 @@ export const Captions = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: 'A textinput with a FormLabel',
-          labelAppendix: '(FormLabelAppendix)',
+          label: 'A Text Input with a Form Label',
+          labelAppendix: '(appendix)',
           value: '',
         })}
+      </div>
+    </div>
+  `;
+};
+FormLabel.argTypes = {
+  ...disabledArgTypes,
+};
+FormLabel.storyName = 'Dependencies';
+/**
+ * The Text Input component can have a trailing clickable icon / icon button. This could be used for example to show or hide the input, when it is used to enter a password. For more information about the Icon component see Icon component [link to Icon component].
+ */
+export const Icon = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textinput">
         ${BlrTextInputRenderFunction({
           ...defaultParams,
           theme: 'Light',
@@ -620,12 +745,29 @@ export const Captions = () => {
           errorIcon: 'blrError',
           value: '',
         })}
+      </div>
+    </div>
+  `;
+};
+Icon.argTypes = {
+  ...disabledArgTypes,
+};
+Icon.storyName = 'Icon';
+
+/**
+ * The Text Input component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaption component [link to FormCaption component].
+ */
+export const FormCaption = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textinput">
         ${BlrTextInputRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: ' A TextInput without an Input Icon',
+          label: ' A Text Input without an Input Icon',
           labelAppendix: '',
           showHint: false,
           showInputIcon: false,
@@ -635,4 +777,7 @@ export const Captions = () => {
     </div>
   `;
 };
-Captions.storyName = 'Dependencies';
+FormCaption.argTypes = {
+  ...disabledArgTypes,
+};
+FormCaption.storyName = 'Form Caption';
