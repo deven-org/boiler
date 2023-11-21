@@ -28,7 +28,7 @@ export class BlrTextInput extends LitElement {
   @property() placeholder?: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -63,118 +63,120 @@ export class BlrTextInput extends LitElement {
   };
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, textInputLight] : [formDark, textInputDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight, textInputLight] : [formDark, textInputDark];
 
-    const wasInitialPasswordField = Boolean(this.type === 'password');
+      const wasInitialPasswordField = Boolean(this.type === 'password');
 
-    const classes = classMap({
-      [`${this.size}`]: this.size,
-    });
+      const classes = classMap({
+        [`${this.size}`]: this.size,
+      });
 
-    const inputClasses = classMap({
-      [`${this.size}`]: this.size,
-    });
+      const inputClasses = classMap({
+        [`${this.size}`]: this.size,
+      });
 
-    const inputContainerClasses = classMap({
-      [`focus`]: this.isFocused || false,
-      [`error-input`]: this.hasError || false,
-      [`disabled`]: this.disabled || false,
-      [`${this.size}`]: this.size,
-    });
+      const inputContainerClasses = classMap({
+        [`focus`]: this.isFocused || false,
+        [`error-input`]: this.hasError || false,
+        [`disabled`]: this.disabled || false,
+        [`${this.size}`]: this.size,
+      });
 
-    const iconClasses = classMap({
-      'blr-input-icon': true,
-      [`${this.size}`]: this.size,
-    });
+      const iconClasses = classMap({
+        'blr-input-icon': true,
+        [`${this.size}`]: this.size,
+      });
 
-    const getPasswordIcon = () => {
-      return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
-    };
+      const getPasswordIcon = () => {
+        return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
+      };
 
-    const iconSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Forms',
-      this.size.toUpperCase(),
-      'InputField',
-      'Icon',
-    ]).toLowerCase() as SizesType;
+      const iconSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Forms',
+        this.size.toUpperCase(),
+        'InputField',
+        'Icon',
+      ]).toLowerCase() as SizesType;
 
-    return html`
-      <style>
-        ${dynamicStyles}
-      </style>
-      <div class="blr-text-input ${classes}">
-        ${this.hasLabel
-          ? html`
-              ${BlrFormLabelRenderFunction({
-                labelText: this.label,
-                labelSize: this.size,
-                labelAppendix: this.labelAppendix,
-                forValue: this.textInputId,
-                theme: this.theme,
-                variant: this.hasError ? 'error' : 'label',
-              })}
-            `
-          : nothing}
-        <div class="blr-input-wrapper ${inputContainerClasses}">
-          <div class="blr-input-inner-container">
-            <input
-              class="blr-form-input ${inputClasses}"
-              id=${this.textInputId}
-              type="${this.currentType}"
-              .value="${this.value}"
-              placeholder="${this.placeholder}"
-              ?disabled="${this.disabled}"
-              ?readonly="${this.readonly}"
-              ?required="${this.required}"
-              @input=${this.onChange}
-              @blur=${this.handleBlur}
-              @focus=${this.handleFocus}
-              maxlength="${this.maxLength}"
-              pattern="${this.pattern}"
-              hasError="${this.hasError}"
-            />
-          </div>
-          ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
-            ? html`${BlrIconRenderFunction({
-                icon: this.hasError
-                  ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                  : calculateIconName(this.inputIcon, iconSizeVariant),
-                name: this.hasError
-                  ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                  : calculateIconName(this.inputIcon, iconSizeVariant),
-                size: iconSizeVariant,
-                classMap: iconClasses,
-                hideAria: true,
-                disablePointerEvents: this.disabled || this.readonly,
-              })}`
+      return html`
+        <style>
+          ${dynamicStyles}
+        </style>
+        <div class="blr-text-input ${classes}">
+          ${this.hasLabel
+            ? html`
+                ${BlrFormLabelRenderFunction({
+                  labelText: this.label,
+                  labelSize: this.size,
+                  labelAppendix: this.labelAppendix,
+                  forValue: this.textInputId,
+                  theme: this.theme,
+                  variant: this.hasError ? 'error' : 'label',
+                })}
+              `
             : nothing}
-          ${wasInitialPasswordField && !this.readonly
-            ? html`${BlrIconRenderFunction({
-                icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-                name: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-                size: iconSizeVariant,
-                classMap: iconClasses,
-                hideAria: true,
-                disablePointerEvents: this.disabled || this.readonly,
-                onClick: () => this.togglePassword(),
+          <div class="blr-input-wrapper ${inputContainerClasses}">
+            <div class="blr-input-inner-container">
+              <input
+                class="blr-form-input ${inputClasses}"
+                id=${this.textInputId}
+                type="${this.currentType}"
+                .value="${this.value}"
+                placeholder="${this.placeholder}"
+                ?disabled="${this.disabled}"
+                ?readonly="${this.readonly}"
+                ?required="${this.required}"
+                @input=${this.onChange}
+                @blur=${this.handleBlur}
+                @focus=${this.handleFocus}
+                maxlength="${this.maxLength}"
+                pattern="${this.pattern}"
+                hasError="${this.hasError}"
+              />
+            </div>
+            ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
+              ? html`${BlrIconRenderFunction({
+                  icon: this.hasError
+                    ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                    : calculateIconName(this.inputIcon, iconSizeVariant),
+                  name: this.hasError
+                    ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                    : calculateIconName(this.inputIcon, iconSizeVariant),
+                  size: iconSizeVariant,
+                  classMap: iconClasses,
+                  hideAria: true,
+                  disablePointerEvents: this.disabled || this.readonly,
+                })}`
+              : nothing}
+            ${wasInitialPasswordField && !this.readonly
+              ? html`${BlrIconRenderFunction({
+                  icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
+                  name: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
+                  size: iconSizeVariant,
+                  classMap: iconClasses,
+                  hideAria: true,
+                  disablePointerEvents: this.disabled || this.readonly,
+                  onClick: () => this.togglePassword(),
+                })}`
+              : nothing}
+          </div>
+          ${this.showHint || this.hasError
+            ? html`${BlrFormInfoRenderFunction({
+                theme: this.theme,
+                size: this.size,
+                showHint: this.showHint,
+                hintText: this.hintText,
+                hintIcon: this.hintIcon,
+                hasError: !!this.hasError,
+                errorMessage: this.errorMessage,
+                errorIcon: this.errorIcon,
               })}`
             : nothing}
         </div>
-        ${this.showHint || this.hasError
-          ? html`${BlrFormInfoRenderFunction({
-              theme: this.theme,
-              size: this.size,
-              showHint: this.showHint,
-              hintText: this.hintText,
-              hintIcon: this.hintIcon,
-              hasError: !!this.hasError,
-              errorMessage: this.errorMessage,
-              errorIcon: this.errorIcon,
-            })}`
-          : nothing}
-      </div>
-    `;
+      `;
+    }
   }
 }
 

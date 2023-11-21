@@ -7,7 +7,6 @@ const sampleParams: BlrFormLabelType = {
   theme: 'Light',
   labelText: 'Label text',
   labelAppendix: 'Appendix txt',
-  labelSize: 'md',
   forValue: 'for_txt',
   variant: 'label',
 };
@@ -81,6 +80,24 @@ describe('blr-form-label', () => {
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const errorLabel = blrLabel?.getAttribute('class');
-    expect(errorLabel).to.be.equal(` blr-form-label ${sampleParams.labelSize} error `);
+    expect(errorLabel).to.contain('error');
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrFormLabelRenderFunction(sampleParams));
+
+    const label = querySelectorDeep('label', element.getRootNode() as HTMLElement);
+    const className = label?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrFormLabelRenderFunction({ ...sampleParams, labelSize: 'sm' }));
+
+    const label = querySelectorDeep('label', element.getRootNode() as HTMLElement);
+    const className = label?.className;
+
+    expect(className).to.contain('sm');
   });
 });

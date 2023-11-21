@@ -40,7 +40,7 @@ export class BlrCheckbox extends LitElement {
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
 
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -67,113 +67,115 @@ export class BlrCheckbox extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, styleCustomLight] : [formDark, styleCustomDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight, styleCustomLight] : [formDark, styleCustomDark];
 
-    const classes = classMap({
-      'blr-semantic-action': true,
-      'blr-checkbox': true,
-      'error': this.hasError || false,
-      'disabled': this.disabled || false,
-      'focus': this.focused || false,
-      'checked': this.checked || false,
-      'readonly': this.readonly || false,
-      'indeterminate': this.indeterminate || false,
-      [`${this.size}`]: this.size || 'md',
-    });
+      const classes = classMap({
+        'blr-semantic-action': true,
+        'blr-checkbox': true,
+        'error': this.hasError || false,
+        'disabled': this.disabled || false,
+        'focus': this.focused || false,
+        'checked': this.checked || false,
+        'readonly': this.readonly || false,
+        'indeterminate': this.indeterminate || false,
+        [`${this.size}`]: this.size,
+      });
 
-    const labelWrapperClasses = classMap({
-      'label-wrapper': true,
-      'readonly': this.readonly || false,
-    });
+      const labelWrapperClasses = classMap({
+        'label-wrapper': true,
+        'readonly': this.readonly || false,
+      });
 
-    const visualCheckboxClasses = classMap({
-      'visual-checkbox': true,
-      'input-control': true,
-      'disabled': this.disabled || false,
-      'focus': this.focused || false,
-      'checked': this.checked || false,
-      'readonly': this.readonly || false,
-    });
+      const visualCheckboxClasses = classMap({
+        'visual-checkbox': true,
+        'input-control': true,
+        'disabled': this.disabled || false,
+        'focus': this.focused || false,
+        'checked': this.checked || false,
+        'readonly': this.readonly || false,
+      });
 
-    const checkerIconClasses = classMap({
-      'checker-icon': true,
-    });
+      const checkerIconClasses = classMap({
+        'checker-icon': true,
+      });
 
-    const checkerIconSizeVariant = getComponentConfigToken([
-      'Checkbox',
-      this.size.toUpperCase(),
-      'Control',
-      'Icon',
-    ]).toLowerCase() as FormSizesType;
+      const checkerIconSizeVariant = getComponentConfigToken([
+        'Checkbox',
+        this.size.toUpperCase(),
+        'Control',
+        'Icon',
+      ]).toLowerCase() as FormSizesType;
 
-    return html`
-      <style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class="${classes}">
-        <label class="${visualCheckboxClasses}" for="${this.checkInputId}">
-          ${this.indeterminate
-            ? BlrIconRenderFunction({
-                icon: calculateIconName('blrMinus', checkerIconSizeVariant),
-                size: 'lg',
-                hideAria: true,
-                classMap: checkerIconClasses,
-              })
-            : BlrIconRenderFunction({
-                icon: calculateIconName('blrCheckmark', checkerIconSizeVariant),
-                size: 'lg',
-                hideAria: true,
-                classMap: checkerIconClasses,
-              })}
-        </label>
+      return html`
+        <style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <div class="${classes}">
+          <label class="${visualCheckboxClasses}" for="${this.checkInputId}">
+            ${this.indeterminate
+              ? BlrIconRenderFunction({
+                  icon: calculateIconName('blrMinus', checkerIconSizeVariant),
+                  size: 'lg',
+                  hideAria: true,
+                  classMap: checkerIconClasses,
+                })
+              : BlrIconRenderFunction({
+                  icon: calculateIconName('blrCheckmark', checkerIconSizeVariant),
+                  size: 'lg',
+                  hideAria: true,
+                  classMap: checkerIconClasses,
+                })}
+          </label>
 
-        <input
-          type="checkbox"
-          class="${visualCheckboxClasses}"
-          id=${this.checkInputId || nothing}
-          name=${this.checkInputId || nothing}
-          ?disabled=${this.disabled}
-          ?checked=${this.checked}
-          ?indeterminate=${this.indeterminate}
-          ?readonly=${this.readonly}
-          ?hasError=${this.hasError}
-          @change=${this.handleChange}
-          @focus=${this.handleFocus}
-          @blur=${this.handleBlur}
-        />
-        <div class="${labelWrapperClasses}">
-          ${this.hasLabel
-            ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
-            : nothing}
-          ${this.showHint
-            ? html`
-                <div class="hint-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.hintMessage,
-                    variant: 'hint',
-                    size: this.size,
-                    icon: this.hintIcon ? this.hintIcon : undefined,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
-          ${this.hasError
-            ? html`
-                <div class="error-wrapper">
-                  ${BlrFormHintRenderFunction({
-                    message: this.errorMessage,
-                    variant: 'error',
-                    size: this.size,
-                    icon: this.errorIcon ? this.errorIcon : undefined,
-                    theme: this.theme,
-                  })}
-                </div>
-              `
-            : nothing}
+          <input
+            type="checkbox"
+            class="${visualCheckboxClasses}"
+            id=${this.checkInputId || nothing}
+            name=${this.checkInputId || nothing}
+            ?disabled=${this.disabled}
+            ?checked=${this.checked}
+            ?indeterminate=${this.indeterminate}
+            ?readonly=${this.readonly}
+            ?hasError=${this.hasError}
+            @change=${this.handleChange}
+            @focus=${this.handleFocus}
+            @blur=${this.handleBlur}
+          />
+          <div class="${labelWrapperClasses}">
+            ${this.hasLabel
+              ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
+              : nothing}
+            ${this.showHint
+              ? html`
+                  <div class="hint-wrapper">
+                    ${BlrFormHintRenderFunction({
+                      message: this.hintMessage,
+                      variant: 'hint',
+                      size: this.size,
+                      icon: this.hintIcon ? this.hintIcon : undefined,
+                      theme: this.theme,
+                    })}
+                  </div>
+                `
+              : nothing}
+            ${this.hasError
+              ? html`
+                  <div class="error-wrapper">
+                    ${BlrFormHintRenderFunction({
+                      message: this.errorMessage,
+                      variant: 'error',
+                      size: this.size,
+                      icon: this.errorIcon ? this.errorIcon : undefined,
+                      theme: this.theme,
+                    })}
+                  </div>
+                `
+              : nothing}
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }
   }
 }
 

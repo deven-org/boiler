@@ -14,32 +14,34 @@ export class BlrFormLabel extends LitElement {
 
   @property() labelText = '';
   @property() labelAppendix?: string;
-  @property() labelSize: InputSizesType = 'md';
+  @property() labelSize?: InputSizesType = 'md';
   @property() forValue: string | undefined;
   @property() theme: ThemeType = 'Light';
   @property() variant: LabelVariantType = 'label';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+    if (this.labelSize) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
 
-    const labelClasses = classMap({
-      'blr-form-label': true,
-      [`${this.labelSize}`]: this.labelSize,
-      [`${this.variant}`]: this.variant,
-    });
+      const labelClasses = classMap({
+        'blr-form-label': true,
+        [`${this.labelSize}`]: this.labelSize,
+        [`${this.variant}`]: this.variant,
+      });
 
-    const spanClasses = classMap({
-      'blr-form-label-appendix': true,
-      [`${this.labelSize}`]: this.labelSize,
-    });
+      const spanClasses = classMap({
+        'blr-form-label-appendix': true,
+        [`${this.labelSize}`]: this.labelSize,
+      });
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <label class=${labelClasses} for=${this.forValue || nothing}>
-        ${this.labelText}
-        <span class=${spanClasses}>${this.labelAppendix}</span>
-      </label>`;
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <label class=${labelClasses} for=${this.forValue || nothing}>
+          ${this.labelText}
+          <span class=${spanClasses}>${this.labelAppendix}</span>
+        </label>`;
+    }
   }
 }
 
