@@ -50,7 +50,6 @@ export class BlrTextarea extends LitElement {
   @property() rows?: number;
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
-  @property() shouldFocus? = false;
   @property() name?: string;
   @property() theme: ThemeType = 'Light';
 
@@ -102,7 +101,6 @@ export class BlrTextarea extends LitElement {
         'error-input': this.hasError || false,
         [`${this.size}`]: this.size,
         [this.isResizeable]: this.isResizeable,
-        'shouldFocus': this.shouldFocus || false,
       });
 
       const textareaInfoContainer = classMap({
@@ -143,10 +141,8 @@ export class BlrTextarea extends LitElement {
             @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
-            shouldFocus="${this.shouldFocus}"
           >
-${this.value}
-        </textarea
+${this.value}</textarea
           >
           <div class="${textareaInfoContainer}">
             ${this.showHint || this.hasError
