@@ -2186,15 +2186,25 @@
               "type": "sizing"
             }
           },
-          "IconContainer": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionREM.2}",
-              "type": "spacing"
-            }
-          },
           "LabelGap": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing"
+          }
+        },
+        "AY11IconContainer": {
+          "PaddingLeftRight": {
+            "SM": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "0.21875rem",
+              "type": "spacing"
+            }
           }
         },
         "MD": {
@@ -2202,12 +2212,6 @@
             "Sizing": {
               "value": "{core.dimensionREM.20}",
               "type": "sizing"
-            }
-          },
-          "IconContainer": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionREM.2}",
-              "type": "spacing"
             }
           },
           "LabelGap": {
@@ -2222,15 +2226,77 @@
               "type": "sizing"
             }
           },
-          "IconContainer": {
-            "PaddingLeftRight": {
-              "value": "0.21875rem",
-              "type": "spacing"
-            }
-          },
           "LabelGap": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing"
+          }
+        },
+        "Knob": {
+          "BorderWidth": {
+            "Active": {
+              "Rest": {
+                "value": "{core.borderWidth.None}",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Hover": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Pressed": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Focus": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Disabled": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "ReadOnly": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{core.borderWidth.None}",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Hover": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Pressed": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Focus": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "Disabled": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              },
+              "ReadOnly": {
+                "value": "Forms.ToggleSwitch.Control.Container.BorderWidht.SM.Active.Rest",
+                "type": "borderWidth",
+                "oldPath": "None"
+              }
+            }
           }
         }
       },
