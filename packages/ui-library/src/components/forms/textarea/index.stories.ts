@@ -477,7 +477,7 @@ const args: BlrTextareaType = {
   cols: 40,
   rows: 4,
   placeholder: 'Add a message here',
-  value: 'test',
+  value: '',
   minLength: 0,
   maxLength: 140,
   hasLabel: true,
@@ -843,6 +843,7 @@ export const Captions = () => {
           size: 'md',
           placeholder: '',
           label: 'A text area with a hint',
+          showHint: true,
           labelAppendix: '',
           value: '',
         })}
