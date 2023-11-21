@@ -10,10 +10,12 @@ export default {
     icon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
     },
     iconPosition: {
       options: IconPositionVariant,
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
     },
     size: {
       options: ActionSizes,
