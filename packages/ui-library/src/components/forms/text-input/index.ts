@@ -22,6 +22,7 @@ export class BlrTextInput extends LitElement {
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
+  @property() arialabel!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -33,6 +34,7 @@ export class BlrTextInput extends LitElement {
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
+  @property() onSelect?: HTMLElement['onselect'];
   @property() maxLength?: number;
   @property() pattern?: string;
   @property() hasError?: boolean;
@@ -44,6 +46,7 @@ export class BlrTextInput extends LitElement {
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() errorIcon: SizelessIconType = 'blrInfo';
   @property() hasLabel!: boolean;
+  @property() name!: string;
 
   @property() theme: ThemeType = 'Light';
 
@@ -122,6 +125,7 @@ export class BlrTextInput extends LitElement {
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.textInputId}
+                aria-label=${this.arialabel}
                 type="${this.currentType}"
                 .value="${this.value}"
                 placeholder="${this.placeholder}"
