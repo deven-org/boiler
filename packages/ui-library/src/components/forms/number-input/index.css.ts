@@ -23,7 +23,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       &.mode1 {
         display: grid;
         grid-template-columns: 10% 40% 40% 10%;
-
+       
         &.sm {
           > .custom-stepper-button {
             width: ${StepperCombo.SM.Vertical.Width};
@@ -76,6 +76,12 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           font-family: ${LG.UserInput.fontFamily}, sans-serif;
           line-height: ${LG.UserInput.lineHeight};
           padding: ${LG.InputField.Padding};
+        }
+
+        &.mode1 {
+          & > input {
+            padding-right:4px;
+          }
         }
       }
 
@@ -288,13 +294,19 @@ export const baseStyle = typeSafeNestedCss`
         order: -2;
       }
 
-      .unit {
-        order: 0;
+      > input{
+        color:green;
       }
 
+      .unit {
+        order: 0;
+        padding-left:0;
+      }
+   
       .unit.prepend {
         order: -1;
         text-align: right;
+        padding-right:0;
       }
 
       > input.prepend {
@@ -303,6 +315,9 @@ export const baseStyle = typeSafeNestedCss`
       
       > button:last-of-type {
         margin-left:auto;
+      }
+      > input{
+        padding-right:0;
       }
     }
 
