@@ -73,18 +73,26 @@ export class BlrCheckbox extends LitElement {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-checkbox': true,
+
+        /*
         'error': this.hasError || false,
         'disabled': this.disabled || false,
         'focus': this.focused || false,
         'checked': this.checked || false,
         'readonly': this.readonly || false,
         'indeterminate': this.indeterminate || false,
+        */
+
         [`${this.size}`]: this.size,
       });
 
       const labelWrapperClasses = classMap({
         'label-wrapper': true,
+        'disabled': this.disabled || false,
+        'focus': this.focused || false,
+        'checked': this.checked || false,
         'readonly': this.readonly || false,
+        'indeterminate': this.indeterminate || false,
       });
 
       const visualCheckboxClasses = classMap({
@@ -94,6 +102,7 @@ export class BlrCheckbox extends LitElement {
         'focus': this.focused || false,
         'checked': this.checked || false,
         'readonly': this.readonly || false,
+        'indeterminate': this.indeterminate || false,
       });
 
       const checkerIconClasses = classMap({

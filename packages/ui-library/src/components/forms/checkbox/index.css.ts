@@ -137,13 +137,13 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         }
 
-        &:not(.disabled) {
-          &:not(.error) {
-            .label-wrapper {
+        .label-wrapper {
+          &:not(.disabled) {
+            &:not(.error) {
               color: ${LabelNextToControl.Rest};
 
               &:hover {
-              &:not([readonly]) {
+                &:not(.readonly) {
                   color: ${LabelNextToControl.Hover};
                 }
               }
@@ -151,7 +151,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
                 color: ${LabelNextToControl.Focus};
               }
               &.active {
-                &:not(:disabled):not([readonly]) {
+                &:not(.readonly) {
                   color: ${LabelNextToControl.Pressed};
                 }
               }
@@ -167,27 +167,23 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           &.error {
             color: ${LabelNextToControl.Error};
           }
-        }
-        &.disabled {
-          .input-control {
-            cursor: not-allowed;
-          }
-          .label-wrapper {
+          &.disabled {
             .blr-form-label-inline {
               cursor: not-allowed;
               color: ${LabelNextToControl.Disabled};
             }
-          }
+          }  
         }
-        &.readonly {
-          .input-control {
+
+        .input-control, .visual-checkbox {
+          &.disabled {
+            cursor: not-allowed;
+          }
+          &.readonly {
             pointer-events: none;
           }
-        }
-        
 
-        &:not(.error) { 
-          & .input-control, & .visual-checkbox {
+          &:not(.error) {
             &.checked {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
@@ -218,13 +214,12 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               }
             }
 
-
             &:not(.checked) {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Rest};
 
               &.hover {
-                &:not(:disabled):not([readonly]) {
+                &:not(.disabled):not(.readonly) {
                   background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Hover};
                   outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Hover};
                 }
@@ -234,7 +229,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
                 outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Focus};
               }
               &.active {
-                &:not(:disabled):not([readonly]) {
+                &:not(.disabled):not(.readonly) {
                   background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Pressed};
                   outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Pressed};
                 }
@@ -249,10 +244,8 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               }
             }
           }
-        }
-    
-        &.error {
-          & .input-control, & .visual-checkbox {
+
+          &.error {
             &.checked {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Error};
               outline-color: ${Checkbox.Control.Container.BorderColor.Active.Error};
@@ -263,6 +256,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
         }
+
 
         &.sm {
           &:not(.error) {
