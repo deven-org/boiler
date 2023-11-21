@@ -18,7 +18,7 @@ export const styleCustom = typeSafeNestedCss`
   .blr-text-button {
     align-items: center;
     justify-content: center;
-    display: inline-flex;
+    display: flex;
     cursor: pointer;
     position: relative;
     
@@ -85,7 +85,7 @@ export const styleCustom = typeSafeNestedCss`
   }
 
   .inline {
-    display: inline;
+    display: inline-flex;
   }
 
   .inline-block {
