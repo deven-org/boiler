@@ -10,7 +10,6 @@ const sampleParams: BlrIconButtonType = {
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
-  size: 'md',
   loadingStatus: 'Loading',
   theme: 'Light',
 };
@@ -25,7 +24,7 @@ describe('blr-icon-button', () => {
     expect(className).to.contain('blr-icon-button');
   });
 
-  it('is having a a visible icon', async () => {
+  it('is having a visible icon', async () => {
     const element = await fixture(BlrIconButtonRenderFunction(sampleParams));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
@@ -39,5 +38,67 @@ describe('blr-icon-button', () => {
 
     expect(rect?.width).to.be.greaterThan(0);
     expect(rect?.height).to.be.greaterThan(0);
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrIconButtonRenderFunction(sampleParams));
+
+    const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
+    const className = iconButton?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
+    const className = iconButton?.className;
+
+    expect(className).to.contain('sm');
+  });
+
+  it('shows loading icon when loading is true', async () => {
+    const element = await fixture(
+      BlrIconButtonRenderFunction({
+        ...sampleParams,
+        loading: true,
+      })
+    );
+
+    const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
+    const loader = querySelectorDeep('blr-loader', iconButton?.getRootNode() as HTMLElement);
+
+    expect(loader).to.exist;
+  });
+
+  it('does not show loading icon when loading is false', async () => {
+    const element = await fixture(
+      BlrIconButtonRenderFunction({
+        ...sampleParams,
+        loading: false,
+      })
+    );
+    const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
+    const loader = querySelectorDeep('blr-loader', iconButton?.getRootNode() as HTMLElement);
+    expect(loader).not.to.exist;
+  });
+
+  it('has a disabled class in the className when disabled is true', async () => {
+    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    const className = button?.className;
+
+    expect(className).to.contain('disabled');
+  });
+
+  it('does not have a disabled class in the className when disabled is true', async () => {
+    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    const className = button?.className;
+
+    expect(className).not.to.contain('disabled');
   });
 });

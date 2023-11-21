@@ -31,11 +31,11 @@ export class BlrNumberInput extends LitElement {
   @property() readonly?: boolean;
   @property() required?: boolean;
   @property() hasLabel?: boolean;
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() labelAppendix?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = 'blrInfoSm';
+  @property() errorIcon?: SizelessIconType = 'blrInfo';
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
@@ -111,7 +111,6 @@ export class BlrNumberInput extends LitElement {
         })}
       </button>
     `;
-
     return button;
   }
 
@@ -150,78 +149,80 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles =
-      this.theme === 'Light'
-        ? [wrapperLight, actionLight, StepperComboLight]
-        : [wrapperDark, actionDark, StepperComboDark];
+    if (this.size) {
+      const dynamicStyles =
+        this.theme === 'Light'
+          ? [wrapperLight, actionLight, StepperComboLight]
+          : [wrapperDark, actionDark, StepperComboDark];
 
-    const inputClasses = classMap({
-      [this.size]: this.size,
-    });
+      const inputClasses = classMap({
+        [`${this.size}`]: this.size,
+      });
 
-    const unitClasses = classMap({
-      unit: true,
-      prepend: !!this.prependUnit,
-      [this.size]: this.size,
-    });
+      const unitClasses = classMap({
+        unit: true,
+        prepend: !!this.prependUnit,
+        [`${this.size}`]: this.size,
+      });
 
-    const wrapperClasses = classMap({
-      'input-wrapper': true,
-      'disabled': this.disabled || false,
-      [this.size]: this.size,
-      [this.variant || 'mode1']: this.variant || 'mode1',
-      'error-input': this.hasError || false,
-    });
+      const wrapperClasses = classMap({
+        'input-wrapper': true,
+        'disabled': this.disabled || false,
+        [`${this.size}`]: this.size,
+        [this.variant || 'mode1']: this.variant || 'mode1',
+        'error-input': this.hasError || false,
+      });
 
-    return html`
-      <style>
-        ${dynamicStyles}
-      </style>
-      ${this.hasLabel
-        ? BlrFormLabelRenderFunction({
-            labelText: this.label,
-            labelSize: this.size,
-            labelAppendix: this.labelAppendix,
-            forValue: this.numberInputId,
-            theme: this.theme,
-            variant: this.hasError ? 'error' : 'label',
-          })
-        : nothing}
-      <div class="${wrapperClasses}">
-        <input
-          class="${inputClasses}"
-          type="number"
-          .value=${!this.readonly
-            ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
-            : nothing}
-          step="${this.step || nothing}"
-          ?disabled="${this.disabled}"
-          ?readonly="${this.readonly}"
-          ?required="${this.required}"
-          hasError="${this.hasError}"
-          @change=${this.handleChange}
-          placeholder=${this.placeholder || nothing}
-        />
-        ${!this.readonly && this.unit
-          ? html`
-              <span class="${unitClasses}">${this.unit}</span>
-              ${this.renderMode()}
-            `
+      return html`
+        <style>
+          ${dynamicStyles}
+        </style>
+        ${this.hasLabel
+          ? BlrFormLabelRenderFunction({
+              labelText: this.label,
+              labelSize: this.size,
+              labelAppendix: this.labelAppendix,
+              forValue: this.numberInputId,
+              theme: this.theme,
+              variant: this.hasError ? 'error' : 'label',
+            })
           : nothing}
-      </div>
-      ${this.showHint || this.hasError
-        ? BlrFormInfoRenderFunction({
-            theme: this.theme,
-            size: this.size,
-            showHint: this.showHint,
-            hintText: this.hintText,
-            hintIcon: this.hintIcon,
-            hasError: !!this.hasError,
-            errorMessage: this.errorMessage,
-            errorIcon: this.errorIcon,
-          })
-        : nothing}
-    `;
+        <div class="${wrapperClasses}">
+          <input
+            class="${inputClasses}"
+            type="number"
+            .value=${!this.readonly
+              ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
+              : nothing}
+            step="${this.step || nothing}"
+            ?disabled="${this.disabled}"
+            ?readonly="${this.readonly}"
+            ?required="${this.required}"
+            hasError="${this.hasError}"
+            @change=${this.handleChange}
+            placeholder=${this.placeholder || nothing}
+          />
+          ${!this.readonly && this.unit
+            ? html`
+                <span class="${unitClasses}">${this.unit}</span>
+                ${this.renderMode()}
+              `
+            : nothing}
+        </div>
+        ${this.showHint || this.hasError
+          ? BlrFormInfoRenderFunction({
+              theme: this.theme,
+              size: this.size,
+              showHint: this.showHint,
+              hintText: this.hintText,
+              hintIcon: this.hintIcon,
+              hasError: !!this.hasError,
+              errorMessage: this.errorMessage,
+              errorIcon: this.errorIcon,
+            })
+          : nothing}
+      `;
+    }
   }
 }
 

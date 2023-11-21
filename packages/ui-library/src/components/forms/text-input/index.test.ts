@@ -8,7 +8,6 @@ const sampleParams: BlrTextInputType = {
   textInputId: '#1',
   label: 'Label',
   labelAppendix: '(Optional)',
-  size: 'md',
   type: 'text',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   maxLength: 140,
@@ -59,7 +58,9 @@ describe('blr-text-input', () => {
     );
 
     const textInputContainer = querySelectorDeep('.blr-input-inner-container', element.getRootNode() as HTMLElement);
+
     const passwordIcon = querySelectorDeep('blr-icon', textInputContainer?.getRootNode() as HTMLElement);
+
     const svg = querySelectorDeep('svg', passwordIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
@@ -83,5 +84,49 @@ describe('blr-text-input', () => {
     const label = querySelectorDeep('blr-form-label', inputContainer?.getRootNode() as HTMLElement);
 
     expect(label).to.not.exist;
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrTextInputRenderFunction(sampleParams));
+
+    const inputWrapper = querySelectorDeep('.blr-input-wrapper', element.getRootNode() as HTMLElement);
+    const className = inputWrapper?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrTextInputRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const inputWrapper = querySelectorDeep('.blr-input-wrapper', element.getRootNode() as HTMLElement);
+    const className = inputWrapper?.className;
+
+    expect(className).to.contain('sm');
+  });
+
+  it('has a label if hasLabel is true', async () => {
+    const element = await fixture(
+      BlrTextInputRenderFunction({
+        ...sampleParams,
+        hasLabel: true,
+      })
+    );
+
+    const textInput = querySelectorDeep('.blr-text-input', element.getRootNode() as HTMLElement);
+    const label = querySelectorDeep('.blr-form-label', textInput?.getRootNode() as HTMLElement);
+    expect(label).to.exist;
+  });
+
+  it('does not have a label if hasLabel is false', async () => {
+    const element = await fixture(
+      BlrTextInputRenderFunction({
+        ...sampleParams,
+        hasLabel: false,
+      })
+    );
+
+    const textInput = querySelectorDeep('.blr-text-input', element.getRootNode() as HTMLElement);
+    const label = querySelectorDeep('.blr-form-label', textInput?.getRootNode() as HTMLElement);
+    expect(label).not.to.exist;
   });
 });

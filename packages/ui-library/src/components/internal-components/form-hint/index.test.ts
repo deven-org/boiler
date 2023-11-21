@@ -8,7 +8,6 @@ const sampleParams: BlrFormHintType = {
   message: 'hallo',
   icon: 'blr360',
   variant: 'hint',
-  size: 'sm',
 };
 
 describe('blr-form-hint', () => {
@@ -82,5 +81,23 @@ describe('blr-form-hint', () => {
     const element = await fixture(BlrFormHintRenderFunction({ ...sampleParams, variant: 'error' }));
     const blrLabel = querySelectorDeep('div.blr-form-hint.error', element.getRootNode() as HTMLElement);
     expect(blrLabel).to.exist;
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrFormHintRenderFunction(sampleParams));
+
+    const blrFormHint = querySelectorDeep('div.blr-form-hint', element.getRootNode() as HTMLElement);
+    const className = blrFormHint?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrFormHintRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const blrFormHint = querySelectorDeep('div.blr-form-hint', element.getRootNode() as HTMLElement);
+    const className = blrFormHint?.className;
+
+    expect(className).to.contain('sm');
   });
 });

@@ -17,7 +17,6 @@ const sampleParams: BlrTextareaType = {
   hasLabel: true,
   label: 'Label',
   labelAppendix: '(Optional)',
-  size: 'md',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   maxLength: 140,
   cols: 20,
@@ -118,5 +117,23 @@ describe('blr-textarea', () => {
 
     expect(rect?.width).to.be.greaterThan(0);
     expect(rect?.height).to.be.greaterThan(0);
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrTextareaRenderFunction(sampleParams));
+
+    const textareaWrapper = querySelectorDeep('.textarea-input-control', element.getRootNode() as HTMLElement);
+    const className = textareaWrapper?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrTextareaRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const textareaWrapper = querySelectorDeep('.textarea-input-control', element.getRootNode() as HTMLElement);
+    const className = textareaWrapper?.className;
+
+    expect(className).to.contain('sm');
   });
 });

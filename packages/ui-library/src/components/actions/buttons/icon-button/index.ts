@@ -28,7 +28,7 @@ export class BlrIconButton extends LitElement {
   @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
@@ -46,67 +46,69 @@ export class BlrIconButton extends LitElement {
   };
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
-    const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
-      disabled: this.disabled,
-      loading: this.loading || false,
-    });
+      const classes = classMap({
+        [`${this.variant}`]: this.variant,
+        [`${this.size}`]: this.size,
+        disabled: this.disabled,
+        loading: this.loading || false,
+      });
 
-    const iconClasses = classMap({
-      icon: true,
-    });
+      const iconClasses = classMap({
+        icon: true,
+      });
 
-    const loaderVariant = determineLoaderVariant(this.variant);
+      const loaderVariant = determineLoaderVariant(this.variant);
 
-    const loaderSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      this.size.toUpperCase(),
-      'Loader',
-    ]).toLowerCase() as FormSizesType;
+      const loaderSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        this.size.toUpperCase(),
+        'Loader',
+      ]).toLowerCase() as FormSizesType;
 
-    const iconSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      'IconButton',
-      this.size.toUpperCase(),
-      'Icon',
-    ]).toLowerCase() as SizesType;
+      const iconSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        'IconButton',
+        this.size.toUpperCase(),
+        'Icon',
+      ]).toLowerCase() as SizesType;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
 
-      <span
-        aria-label=${this.arialabel || nothing}
-        class="blr-semantic-action blr-icon-button ${classes}"
-        @click=${this.onClick}
-        id=${this.buttonId || nothing}
-        tabindex=${this.disabled ? nothing : '0'}
-        @focus=${this.handleFocus}
-        @blur=${this.handleBlur}
-        role=${this.disabled ? nothing : 'button'}
-        @keydown=${this.onClick}
-      >
-        ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
-        ${this.loading
-          ? BlrLoaderRenderFunction({
-              size: loaderSizeVariant,
-              variant: loaderVariant,
-              loadingStatus: this.loadingStatus,
-              theme: this.theme,
-            })
-          : nothing}
-        ${BlrIconRenderFunction({
-          icon: calculateIconName(this.icon, iconSizeVariant),
-          size: iconSizeVariant,
-          hideAria: true,
-          classMap: iconClasses,
-        })}
-      </span>`;
+        <span
+          aria-label=${this.arialabel || nothing}
+          class="blr-semantic-action blr-icon-button ${classes}"
+          @click=${this.onClick}
+          id=${this.buttonId || nothing}
+          tabindex=${this.disabled ? nothing : '0'}
+          @focus=${this.handleFocus}
+          @blur=${this.handleBlur}
+          role=${this.disabled ? nothing : 'button'}
+          @keydown=${this.onClick}
+        >
+          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.loading
+            ? BlrLoaderRenderFunction({
+                size: loaderSizeVariant,
+                variant: loaderVariant,
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+              })
+            : nothing}
+          ${BlrIconRenderFunction({
+            icon: calculateIconName(this.icon, iconSizeVariant),
+            size: iconSizeVariant,
+            hideAria: true,
+            classMap: iconClasses,
+          })}
+        </span>`;
+    }
   }
 }
 

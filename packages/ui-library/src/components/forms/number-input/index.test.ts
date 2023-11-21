@@ -9,7 +9,6 @@ const sampleParams: BlrNumberInputType = {
   disabled: false,
   variant: 'mode1',
   theme: 'Light',
-  size: 'sm',
   readonly: true,
   required: true,
   hasLabel: true,
@@ -49,5 +48,23 @@ describe('blr-number-input', () => {
     const placeholder = input?.getAttribute('placeholder');
 
     expect(placeholder).to.be.equal(randomString);
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrNumberInputRenderFunction(sampleParams));
+
+    const numberInputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
+    const className = numberInputWrapper?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrNumberInputRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const numberInputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
+    const className = numberInputWrapper?.className;
+
+    expect(className).to.contain('sm');
   });
 });

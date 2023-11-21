@@ -18,7 +18,7 @@ const TAG_NAME = 'blr-tool-tip';
 @customElement(TAG_NAME)
 export class BlrToolTip extends LitElement {
   @property() theme: ThemeType = 'Light';
-  @property() size: FormSizesType = 'sm';
+  @property() size?: FormSizesType = 'sm';
   @property() text!: string;
   @property() toolTipId?: string = 'tooltip-1';
   @property() placement!: ToolTipPosition;
@@ -68,59 +68,61 @@ export class BlrToolTip extends LitElement {
   };
 
   protected render() {
-    const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
-    const dynamicStyles = [...generatedStyles];
+    if (this.size) {
+      const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
+      const dynamicStyles = [...generatedStyles];
 
-    const classes = classMap({
-      'blr-semantic-action': true,
-      'blr-tooltip': true,
-      [`${this.size}`]: this.size,
-    });
-    const generatedArrowPosition =
-      this.placement === toolTipPosition[2] || this.placement === toolTipPosition[3]
-        ? `tooltip-horizontal-${this.toolTipArrow}`
-        : `tooltip-vertical-${this.toolTipArrow}`;
+      const classes = classMap({
+        'blr-semantic-action': true,
+        'blr-tooltip': true,
+        [`${this.size}`]: this.size,
+      });
+      const generatedArrowPosition =
+        this.placement === toolTipPosition[2] || this.placement === toolTipPosition[3]
+          ? `tooltip-horizontal-${this.toolTipArrow}`
+          : `tooltip-vertical-${this.toolTipArrow}`;
 
-    const toolTipClasses = classMap({
-      'tooltip': true,
-      [`${this.size}`]: this.size,
-      'blr-tooltip-visible-always': this.visibility === toolTipVisibility[0],
-      [`tooltip-${this.placement}`]: true,
-      [`${generatedArrowPosition}`]: true,
-      [`hide-arrow`]: this.toolTipArrow === toolTipArrowPosition[3],
-      [this.customCss || '']: this.customCss || false,
-      'elevation': this.elevation || false,
-    });
+      const toolTipClasses = classMap({
+        'tooltip': true,
+        [`${this.size}`]: this.size,
+        'blr-tooltip-visible-always': this.visibility === toolTipVisibility[0],
+        [`tooltip-${this.placement}`]: true,
+        [`${generatedArrowPosition}`]: true,
+        [`hide-arrow`]: this.toolTipArrow === toolTipArrowPosition[3],
+        [this.customCss || '']: this.customCss || false,
+        'elevation': this.elevation || false,
+      });
 
-    const innerContainerClasses = classMap({
-      'inner-container': true,
-    });
+      const innerContainerClasses = classMap({
+        'inner-container': true,
+      });
 
-    this.noseAlignment();
+      this.noseAlignment();
 
-    return html`
-      <style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class=${classes}>
-        <!-- Children will be rendered here -->
+      return html`
+        <style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <div class=${classes}>
+          <!-- Children will be rendered here -->
 
-        <slot></slot>
-        <div class="${toolTipClasses}" id=${this.toolTipId}>
-          <div class="${innerContainerClasses}" id="toolTip_txt">${this.text}</div>
+          <slot></slot>
+          <div class="${toolTipClasses}" id=${this.toolTipId}>
+            <div class="${innerContainerClasses}" id="toolTip_txt">${this.text}</div>
 
-          <object
-            data="../../../assets/feedback/tooltip/NoseSolo.svg"
-            class="nose-solo"
-            style=${styleMap(this.noseAlignment())}
-          >
-            <!-- Fallback content or text goes here -->
-            <!-- This will be displayed if the browser doesn't support <object> or if the SVG fails to load -->
-            Fallback content or message if SVG is not supported.
-          </object>
+            <object
+              data="../../../assets/feedback/tooltip/NoseSolo.svg"
+              class="nose-solo"
+              style=${styleMap(this.noseAlignment())}
+            >
+              <!-- Fallback content or text goes here -->
+              <!-- This will be displayed if the browser doesn't support <object> or if the SVG fails to load -->
+              Fallback content or message if SVG is not supported.
+            </object>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }
   }
 }
 
