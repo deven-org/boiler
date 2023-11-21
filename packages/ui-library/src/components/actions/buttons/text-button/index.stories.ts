@@ -10,10 +10,12 @@ export default {
     leadingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
     },
     trailingIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
     },
     size: {
       options: ActionSizes,
@@ -44,6 +46,7 @@ const args: BlrTextButtonType = {
   label: 'Button',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
+  hasIcon: true,
   leadingIcon: undefined,
   trailingIcon: 'blr360',
   loading: false,

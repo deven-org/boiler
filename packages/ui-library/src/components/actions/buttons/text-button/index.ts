@@ -31,6 +31,7 @@ export class BlrTextButton extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
+  @property() hasIcon?: boolean;
 
   @property() theme: ThemeType = 'Light';
 
