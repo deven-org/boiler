@@ -80,4 +80,19 @@ export const styleCustom = typeSafeNestedCss`
     }
   }
 
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  .none {
+    display: inline-flex;
+  }
 `;

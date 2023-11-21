@@ -20,6 +20,7 @@ import {
   Resizes,
   ActionSizes,
   ButtonGroupAlignmentVariants,
+  buttonDisplayOptions,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -83,3 +84,4 @@ export type ToolTipVisibility = 'onLoad' | 'onHover';
 export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
 
 export type LabelVariantType = (typeof LabelVariants)[number];
+export type buttonDisplayType = (typeof buttonDisplayOptions)[number];

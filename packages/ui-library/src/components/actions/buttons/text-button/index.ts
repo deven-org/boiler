@@ -11,6 +11,7 @@ import {
   SizesType,
   FormSizesType,
   IconPositionVariant,
+  buttonDisplayType,
 } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
@@ -29,17 +30,16 @@ export class BlrTextButton extends LitElement {
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: SizelessIconType;
-  @property() trailingIcon?: SizelessIconType;
   @property() icon?: SizelessIconType;
-  @property() loading!: boolean;
-  @property() disabled!: boolean;
+  @property({ type: Boolean }) hasIcon?: boolean;
+  @property() iconPosition?: IconPositionVariant = 'leading';
+  @property({ type: Boolean }) loading!: boolean;
+  @property({ type: Boolean }) disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
-  @property() hasIcon?: boolean;
-  @property() iconPosition?: IconPositionVariant = 'leading';
+  @property() buttonDisplay: buttonDisplayType = 'block';
 
   @property() theme: ThemeType = 'Light';
 
@@ -66,6 +66,7 @@ export class BlrTextButton extends LitElement {
         [`${this.size}`]: this.size,
         'disabled': this.disabled,
         'loading': this.loading,
+        [this.buttonDisplay]: this.buttonDisplay,
       });
 
       const iconClasses = classMap({
