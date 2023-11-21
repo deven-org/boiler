@@ -238,41 +238,62 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         &.sm {
           &:not(.error) {
             .visual-checkbox {
+              & .checker-icon {
+                width: ${Checkbox.Control.Icon.IconSize.SM.Rest};
+                height: ${Checkbox.Control.Icon.IconSize.SM.Rest};
+              }
+              outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest};
+              outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
+              
 
-              &:not(.checked){
-                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest};
-                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
-                
-
-                &.hover {
-                  &:not(:disabled):not([readonly]) {
-                    outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover};
-                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
+              &.hover {
+                &:not(:disabled):not([readonly]) {
+                  & .checker-icon {
+                    width: ${Checkbox.Control.Icon.IconSize.SM.Hover};
+                    height: ${Checkbox.Control.Icon.IconSize.SM.Hover};
                   }
-                }
-                &.focus {
-                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus};
-                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus} * -1);
-                  
-                }
-                &.active {
-                  &:not(.disabled):not(.readonly) {
-                    outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed};
-                    outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
-                  }
-                }
-                &.disabled {
-                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled};
-                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
-                  
-                }
-                &.readonly {
-                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
-                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
                 }
               }
+              &.focus {
+                & .checker-icon {
+                  width: ${Checkbox.Control.Icon.IconSize.SM.Focus};
+                  height: ${Checkbox.Control.Icon.IconSize.SM.Focus};
+                }
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus} * -1);
+              }
+              &.active {
+                &:not(.disabled):not(.readonly) {
+                  & .checker-icon {
+                    width: ${Checkbox.Control.Icon.IconSize.SM.Pressed};
+                    height: ${Checkbox.Control.Icon.IconSize.SM.Pressed};
+                  }
+                  outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed};
+                  outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
+                }
+              }
+              &.disabled {
+                & .checker-icon {
+                  width: ${Checkbox.Control.Icon.IconSize.SM.Disabled};
+                  height: ${Checkbox.Control.Icon.IconSize.SM.Disabled};
+                }
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
+                
+              }
+              &.readonly {
+                & .checker-icon {
+                  width: ${Checkbox.Control.Icon.IconSize.SM.ReadOnly};
+                  height: ${Checkbox.Control.Icon.IconSize.SM.ReadOnly};
+                }
+                outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
+                outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
+              }
 
-              &.checked{
+
+              &.checked {
                 outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Rest} * -1);
 
@@ -307,6 +328,11 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
           &.error{
             .visual-checkbox {
+              & .checker-icon {
+                width: ${Checkbox.Control.Icon.IconSize.SM.Error};
+                height: ${Checkbox.Control.Icon.IconSize.SM.Error};
+              }
+
               &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Error} * -1);

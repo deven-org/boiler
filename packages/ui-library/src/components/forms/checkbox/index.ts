@@ -52,7 +52,7 @@ export class BlrCheckbox extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  protected connectedCallback() {
+  connectedCallback() {
     super.connectedCallback();
     this.currentCheckedState = this.checked;
   }
@@ -101,15 +101,6 @@ export class BlrCheckbox extends LitElement {
         'blr-semantic-action': true,
         'blr-checkbox': true,
         'error': this.hasError || false,
-        /*
-        'error': this.hasError || false,
-        'disabled': this.disabled || false,
-        'focus': this.focused || false,
-        'checked': this.checked || false,
-        'readonly': this.readonly || false,
-        'indeterminate': this.indeterminate || false,
-        */
-
         [`${this.size}`]: this.size,
       });
 
@@ -172,15 +163,15 @@ export class BlrCheckbox extends LitElement {
             ${this.indeterminate
               ? BlrIconRenderFunction({
                   icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
-                  size: 'lg',
                   hideAria: true,
                   classMap: checkerIconClasses,
+                  ignoreSize: true,
                 })
               : BlrIconRenderFunction({
                   icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
-                  size: 'lg',
                   hideAria: true,
                   classMap: checkerIconClasses,
+                  ignoreSize: true,
                 })}
           </label>
 
