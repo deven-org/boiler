@@ -1,5 +1,5 @@
-// import '!style-loader!css-loader!sass-loader!@boiler/ui-library/src/foundation/_tokens-generated/index.generated.scss';
-import '../static/iconGallery/iconGallery.css';
+import './static/iconGallery/iconGallery.css';
+import './static/fonts/fonts.css';
 
 export default {
   parameters: {

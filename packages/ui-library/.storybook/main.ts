@@ -2,13 +2,13 @@ import type { StorybookConfig } from '@storybook/web-components-webpack5';
 import { resolve } from 'path';
 
 const config: StorybookConfig = {
-  stories: ['../../ui-library/src/**/*.stories.mdx', '../../ui-library/src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
   framework: '@storybook/web-components-webpack5',
   docs: {
     autodocs: true,
   },
-  staticDirs: ['../static'],
+  staticDirs: ['static'],
 
   previewBody: (body) => `
     ${body}
