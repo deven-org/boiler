@@ -883,31 +883,30 @@
             "Inactive": {
               "Rest": {
                 "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+                "type": "color"
               },
               "Hover": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
@@ -919,27 +918,27 @@
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
               },
               "Hover": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
-                "value": "{q.stroke.none}",
+                "value": "{Forms.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
