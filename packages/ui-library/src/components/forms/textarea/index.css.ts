@@ -1,5 +1,4 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
-
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const styleCustom = typeSafeNestedCss`
@@ -35,19 +34,19 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
       word-break: break-all;
       width: 100%;
 
-      .both {
+      &.both {
         resize: both;
       }
   
-      .vertical {
+      &.vertical {
         resize: vertical;
       }
   
-      .horizontal {
+      &.horizontal {
         resize: horizontal;
       }
   
-      .none {
+      &.none {
         resize: none;
       }
 
