@@ -14,6 +14,7 @@ const convertToCamelCase = (item) => {
   return convertedString;
 };
 
+/*
 const cssFiles = files
   .filter((item) => item.endsWith('generated.scss') && item.startsWith('_'))
   .map((item) => item.replace('.scss', '').replace('_', ''))
@@ -21,6 +22,7 @@ const cssFiles = files
 
 console.log(chalk.magentaBright('👷 creates foundation/_tokens-generated/index.generated.scss... \n'));
 fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/index.generated.scss`, cssFiles.join('\n'), 'utf-8');
+*/
 
 themes.array.map((theme) => {
   console.log('\n==============================================');

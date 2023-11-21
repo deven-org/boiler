@@ -6,8 +6,8 @@
   "types": "",
   "scripts": {
     "prestart": "npm run tokens:generate",
-    "start": "npm run start --workspace=@boiler/storybook",
-    "build:storybook": "npm run build:static --workspace=@boiler/storybook",
+    "start": "npm run start:storybook --workspace=@boiler/ui-library",
+    "build:storybook": "npm run build:storybook --workspace=@boiler/ui-library",
     "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
     "copy:static": "mkdir -p dist/assets && cp -rip static/{fonts,imgs}/* dist/assets/",
     "build": "npm run build --workspace=@boiler/ui-library",
@@ -39,7 +39,8 @@
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/plugin-transform-class-properties": "^7.23.0",
     "@babel/preset-typescript": "^7.23.0",
     "@boiler/figma-design-tokens": "0.0.1",
     "@boiler/react-example-app": "0.0.1",
@@ -82,7 +83,16 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "@storybook/addon-a11y": "7.4.6",
+    "@storybook/addon-actions": "7.4.6",
+    "@storybook/addon-essentials": "7.4.6",
+    "@storybook/cli": "7.4.6",
+    "@storybook/web-components": "7.4.6",
+    "@storybook/web-components-webpack5": "7.4.6",
+    "@storybook/manager-api": "7.4.6",
+    "@storybook/theming": "7.4.6",
+    "@storybook/addons": "7.4.6"
   },
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
