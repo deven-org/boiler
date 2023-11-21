@@ -66,7 +66,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
           
           .input-control {
-            &:checked {
+            &.checked {
               &::after {
                 width: ${Checkbox.Control.Icon.IconSize.SM.Rest};
                 height: ${Checkbox.Control.Icon.IconSize.SM.Rest};
@@ -96,7 +96,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
 
           .input-control {
-            &:checked {
+            &.checked {
               &::after {
                 width: ${Checkbox.Control.Icon.IconSize.MD.Rest};
                 height: ${Checkbox.Control.Icon.IconSize.MD.Rest};
@@ -127,7 +127,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
 
           .input-control {
-            &:checked {
+            &.checked {
               &::after {
                 width: ${Checkbox.Control.Icon.IconSize.LG.Rest};
                 height: ${Checkbox.Control.Icon.IconSize.LG.Rest};
@@ -188,8 +188,8 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
 
-              &:hover {
-                &:not(:disabled):not([readonly]) {
+              &.hover {
+                &:not(.disabled):not(.readonly) {
                   background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Hover};
                   outline-color: ${Checkbox.Control.Container.BorderColor.Active.Hover};
                 }
@@ -262,66 +262,66 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           &:not(.error) {
             .input-control, .visual-checkbox {
 
-              &:not(:checked){
+              &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
                 
 
-                &:hover {
+                &.hover {
                   &:not(:disabled):not([readonly]) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
                   }
                 }
-                &:focus {
+                &.focus {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Focus} * -1);
                   
                 }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
+                &.active {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
                   }
                 }
-                &:disabled {
+                &.disabled {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
                   
                 }
-                &[readonly] {
+                &.readonly {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
                 }
               }
 
-              &:checked{
+              &.checked{
                 outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Rest} * -1);
 
-                &:hover {
-                  &:not(:disabled):not([readonly]) {
+                &.hover {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Hover};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Hover} * -1);
                   }
                 }
-                &:focus {
+                &.focus {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Focus};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Focus} * -1);
                   
                 }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
+                &.active {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Pressed};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Pressed} * -1);
                   }
                 }
-                &:disabled {
+                &.disabled {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Disabled};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Disabled} * -1);
                   
                 }
-                &[readonly] {
+                &.readonly {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.ReadOnly} * -1);
                 }
@@ -330,11 +330,11 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
           &.error{
             .input-control, .visual-checkbox {
-              &:not(:checked){
+              &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Inactive.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Inactive.Error} * -1);
               }
-              &:checked{
+              &.checked{
                 outline-width: ${Checkbox.Control.Container.BorderWidth.SM.Active.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.SM.Active.Error} * -1);
               }
@@ -347,66 +347,66 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           &:not(.error) {
             .input-control {
 
-              &:not(:checked){
+              &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest} * -1);
                 
 
-                &:hover {
-                  &:not(:disabled):not([readonly]) {
+                &.hover {
+                  &.not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Hover} * -1);
                   }
                 }
-                &:focus {
+                &.focus {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Focus} * -1);
                   
                 }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
+                &.active {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Pressed} * -1);
                   }
                 }
-                &:disabled {
+                &.disabled {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Disabled} * -1);
                   
                 }
-                &[readonly] {
+                &.readonly {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.ReadOnly} * -1);
                 }
               }
 
-              &:checked{
+              &.checked{
                 outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Rest} * -1);
 
-                &:hover {
-                  &:not(:disabled):not([readonly]) {
+                &.hover {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Hover};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Hover} * -1);
                   }
                 }
-                &:focus {
+                &.focus {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Focus};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Focus} * -1);
                   
                 }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
+                &.active {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Pressed};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Pressed} * -1);
                   }
                 }
-                &:disabled {
+                &.disabled {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Disabled};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Disabled} * -1);
                   
                 }
-                &[readonly] {
+                &.readonly {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.ReadOnly} * -1);
                 }
@@ -415,11 +415,11 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
           &.error{
             .input-control {
-              &:not(:checked){
+              &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Inactive.Error} * -1);
               }
-              &:checked{
+              &.checked{
                 outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Active.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.MD.Active.Error} * -1);
               }
@@ -432,92 +432,85 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           &:not(.error) {
             .input-control {
 
-              &:not(:checked){
+              &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
                 
 
-                &:hover {
-                  &:not(:disabled):not([readonly]) {
+                &.hover {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Hover} * -1);
                   }
                 }
-                &:focus {
+                &.focus {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Focus} * -1);
                   
                 }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
+                &.active {
+                  &:not(:disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Pressed} * -1);
                   }
                 }
-                &:disabled {
+                &.disabled {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Disabled} * -1);
                   
                 }
-                &[readonly] {
+                &.readonly {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.ReadOnly} * -1);
                 }
               }
 
-              &:checked{
+              &.checked{
                 outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Rest};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Rest} * -1);
 
-                &:hover {
-                  &:not(:disabled):not([readonly]) {
+                &.hover {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Hover};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Hover} * -1);
                   }
                 }
-                &:focus {
+                &.focus {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Focus};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Focus} * -1);
                   
                 }
-                &:active {
-                  &:not(:disabled):not([readonly]) {
+                &.active {
+                  &:not(.disabled):not(.readonly) {
                     outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Pressed};
                     outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Pressed} * -1);
                   }
                 }
-                &:disabled {
+                &.disabled {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Disabled};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Disabled} * -1);
                   
                 }
-                &[readonly] {
+                &.readonly {
                   outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly};
                   outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.ReadOnly} * -1);
                 }
               }      
             }
           }
-          &.error{
+          &.error:not(.disbaled) {
             .input-control {
-              &:not(:checked){
+              &:not(.checked){
                 outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Inactive.Error} * -1);
               }
-              &:checked{
+              &.checked{
                 outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Active.Error};
                 outline-offset: calc(${Checkbox.Control.Container.BorderWidth.LG.Active.Error} * -1);
               }
             }
           }
         }
-
-
-
-
-
-
-
 
 
         &:not(.indeterminate) {
@@ -549,12 +542,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }  
         }
-
-
-       
-
-        
-
 
       }
     `;
