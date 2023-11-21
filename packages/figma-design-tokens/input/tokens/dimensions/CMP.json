@@ -2242,6 +2242,28 @@
           "type": "typography"
         }
       }
+    },
+    "NumberInput": {
+      "Input": {
+        "TextContainer": {
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing",
+              "description": "Defines spacing between Prefix, UserInputText and Suffix"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing",
+              "description": "Defines spacing between Prefix, UserInputText and Suffix"
+            }
+          }
+        }
+      }
     }
   },
   "UI": {
