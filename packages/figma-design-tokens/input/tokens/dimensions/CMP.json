@@ -858,9 +858,41 @@
       }
     },
     "ToggleSwitch": {
-      "A11yOffBorderRadius": {
-        "value": "{core.borderRadius.Round}",
-        "type": "borderRadius"
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "value": "{core.dimensionREM.40}",
+          "type": "borderRadius"
+        }
+      },
+      "ContentCol": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        }
       },
       "Control": {
         "Container": {
@@ -1123,6 +1155,22 @@
             }
           }
         },
+        "AY11IconContainer": {
+          "PaddingLeftRight": {
+            "SM": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "0.21875rem",
+              "type": "spacing"
+            }
+          }
+        },
         "Knob": {
           "Size": {
             "SM": {
@@ -1194,22 +1242,6 @@
               }
             }
           }
-        },
-        "AY11IconContainer": {
-          "PaddingLeftRight": {
-            "SM": {
-              "value": "{core.dimensionREM.2}",
-              "type": "spacing"
-            },
-            "MD": {
-              "value": "{core.dimensionREM.2}",
-              "type": "spacing"
-            },
-            "LG": {
-              "value": "0.21875rem",
-              "type": "spacing"
-            }
-          }
         }
       },
       "ControlWithStateLabel": {
@@ -1228,36 +1260,6 @@
               "type": "spacing"
             }
           }
-        }
-      },
-      "SM": {
-        "Gap": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ContentColGap": {
-          "value": "{core.dimensionREM.0}",
-          "type": "spacing"
-        }
-      },
-      "MD": {
-        "Gap": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ContentColGap": {
-          "value": "{core.dimensionREM.0}",
-          "type": "spacing"
-        }
-      },
-      "LG": {
-        "Gap": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ContentColGap": {
-          "value": "{core.dimensionREM.0}",
-          "type": "spacing"
         }
       }
     },
