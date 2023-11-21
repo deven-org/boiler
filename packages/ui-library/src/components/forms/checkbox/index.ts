@@ -41,6 +41,9 @@ export class BlrCheckbox extends LitElement {
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
 
+  @property() checkedIcon?: SizelessIconType = 'blrCheckmark';
+  @property() indeterminatedIcon?: SizelessIconType = 'blrMinus';
+
   @property() size?: FormSizesType = 'md';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
@@ -123,7 +126,6 @@ export class BlrCheckbox extends LitElement {
 
       const visualCheckboxClasses = classMap({
         'visual-checkbox': true,
-        'input-control': true,
         'error': this.hasError || false,
         'disabled': this.disabled || false,
         'focus': this.focused || false,
@@ -138,10 +140,12 @@ export class BlrCheckbox extends LitElement {
       });
 
       const checkerIconSizeVariant = getComponentConfigToken([
+        'Forms',
         'Checkbox',
-        this.size.toUpperCase(),
         'Control',
         'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
       ]).toLowerCase() as FormSizesType;
 
       return html`
@@ -149,25 +153,9 @@ export class BlrCheckbox extends LitElement {
           ${dynamicStyles.map((style) => style)}
         </style>
         <div class="${classes}" @mouseenter=${this.handleEnter} @mouseleave=${this.handleLeave}>
-          <label class="${visualCheckboxClasses}" for="${this.checkInputId}">
-            ${this.indeterminate
-              ? BlrIconRenderFunction({
-                  icon: calculateIconName('blrMinus', checkerIconSizeVariant),
-                  size: 'lg',
-                  hideAria: true,
-                  classMap: checkerIconClasses,
-                })
-              : BlrIconRenderFunction({
-                  icon: calculateIconName('blrCheckmark', checkerIconSizeVariant),
-                  size: 'lg',
-                  hideAria: true,
-                  classMap: checkerIconClasses,
-                })}
-          </label>
-
           <input
             type="checkbox"
-            class="${visualCheckboxClasses}"
+            class="input-control"
             id=${this.checkInputId || nothing}
             name=${this.checkInputId || nothing}
             ?disabled=${this.disabled}
@@ -179,6 +167,23 @@ export class BlrCheckbox extends LitElement {
             @focus=${this.handleFocus}
             @blur=${this.handleBlur}
           />
+
+          <label class="${visualCheckboxClasses}" for="${this.checkInputId}">
+            ${this.indeterminate
+              ? BlrIconRenderFunction({
+                  icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
+                  size: 'lg',
+                  hideAria: true,
+                  classMap: checkerIconClasses,
+                })
+              : BlrIconRenderFunction({
+                  icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
+                  size: 'lg',
+                  hideAria: true,
+                  classMap: checkerIconClasses,
+                })}
+          </label>
+
           <div class="${labelWrapperClasses}">
             ${this.hasLabel
               ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
