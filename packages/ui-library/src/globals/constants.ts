@@ -37,4 +37,4 @@ export const ToolTipArrowPosition = ['start', 'end', 'middle', 'hide'] as const;
 export const LabelVariants = ['label', 'error'] as const;
 export const Resizes = ['both', 'vertical', 'horizontal', 'none'] as const;
 
-export const buttonDisplayOptions = ['inline', 'block', 'inline-block', 'none'] as const;
+export const buttonDisplayOptions = ['inline', 'block', 'inline-block', 'default'] as const;

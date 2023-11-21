@@ -91,8 +91,4 @@ export const styleCustom = typeSafeNestedCss`
   .inline-block {
     display: inline-block;
   }
-
-  .none {
-    display: inline-flex;
-  }
 `;
