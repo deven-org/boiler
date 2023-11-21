@@ -22,11 +22,11 @@ export class BlrLoader extends LitElement {
     if (this.size) {
       const dynamicStyles = this.theme === 'Light' ? [styleCustomLight] : [styleCustomDark];
 
-    const classes = classMap({
-      'blr-loader': true,
-      [`${this.variant}`]: this.variant || '',
-      [`${this.size}`]: this.size || 'md',
-    });
+      const classes = classMap({
+        'blr-loader': true,
+        [`${this.variant}`]: this.variant || '',
+        [`${this.size}`]: this.size || 'md',
+      });
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}

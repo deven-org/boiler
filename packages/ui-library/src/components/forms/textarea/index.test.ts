@@ -5,7 +5,16 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextareaType = {
-  textareaId: '#1',
+  theme: 'Light',
+  sizeVariant: 'md',
+  resize: 'both',
+  cols: 40,
+  rows: 4,
+  placeholder: 'Here is the placeholder',
+  value: '',
+  minLength: 0,
+  maxLength: 140,
+  hasLabel: true,
   label: 'Label',
   labelAppendix: '(Optional)',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
@@ -20,7 +29,15 @@ const sampleParams: BlrTextareaType = {
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-  theme: 'Light',
+  disabled: false,
+  readonly: false,
+  required: false,
+  hasError: false,
+  errorMessage: ' ',
+  errorMessageIcon: '',
+  arialabel: 'TextArea',
+  textareaId: '#674',
+  name: 'TextArea',
 };
 
 describe('blr-textarea', () => {
@@ -60,7 +77,7 @@ describe('blr-textarea', () => {
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const disabled = textarea?.getAttribute('disabled');
 
-    // in html disabled will become an empty string when its true
+    // in html disabled will become an empty string when it's true
     expect(disabled).to.be.equal('');
   });
 
@@ -83,15 +100,15 @@ describe('blr-textarea', () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
-        showHint: true,
-        hintIcon: 'blrInfo',
+        hasHint: true,
+        hintMessageIcon: 'blrInfo',
       })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const formHint = querySelectorDeep('blr-form-hint', textarea?.getRootNode() as HTMLElement);
-    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
+    const hintMessageIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintMessageIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
 
