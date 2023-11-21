@@ -156,7 +156,8 @@ export class BlrNumberInput extends LitElement {
           : [wrapperDark, actionDark, StepperComboDark];
 
       const inputClasses = classMap({
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
+        prepend: !!this.prependUnit,
       });
 
       const unitClasses = classMap({
