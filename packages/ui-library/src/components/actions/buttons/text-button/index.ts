@@ -66,7 +66,7 @@ export class BlrTextButton extends LitElement {
         [`${this.size}`]: this.size,
         'disabled': this.disabled,
         'loading': this.loading,
-        [this.buttonDisplay]: this.buttonDisplay === 'block' ? '' : this.buttonDisplay,
+        [this.buttonDisplay]: this.buttonDisplay,
       });
 
       const iconClasses = classMap({

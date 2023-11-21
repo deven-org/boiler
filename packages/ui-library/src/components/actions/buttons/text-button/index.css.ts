@@ -82,6 +82,7 @@ export const styleCustom = typeSafeNestedCss`
 
   .block {
     display: block;
+    text-align: center;
   }
 
   .inline {
