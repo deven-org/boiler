@@ -26,7 +26,6 @@ export default {
   title: 'Design System/Web Components/Forms/Text Input',
   argTypes: {
     //Appearance
-    //todo rename size to sizeVariant
     size: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
