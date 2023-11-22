@@ -60,7 +60,6 @@ export class BlrCheckbox extends LitElement {
   protected handleChange(event: Event) {
     if (!this.disabled) {
       this.onChange?.(event);
-      this.currentCheckedState = !this.currentCheckedState;
       console.log('change', this.currentCheckedState);
     }
   }
@@ -93,6 +92,7 @@ export class BlrCheckbox extends LitElement {
 
   protected handlePress = () => {
     this.active = true;
+    this.currentCheckedState = !this.currentCheckedState;
     console.log('active', this.active);
   };
 
@@ -171,16 +171,19 @@ export class BlrCheckbox extends LitElement {
           @focusin=${this.handleFocus}
           @focusout=${this.handleBlur}
           @keydown=${(event: KeyboardEvent) => {
-            if (event.key === 'space') {
+            console.log(event);
+            if (event.code === 'Space') {
               this.handlePress();
-              event.stopPropagation();
             }
+            event.stopPropagation();
+            event.preventDefault();
           }}
           @keyup=${(event: KeyboardEvent) => {
-            if (event.key === 'space') {
+            if (event.code === 'Space') {
               this.handleRelease();
-              event.stopPropagation();
             }
+            event.stopPropagation();
+            event.preventDefault();
           }}
           tabindex="0"
         >
