@@ -130,16 +130,21 @@ export class BlrCheckbox extends LitElement {
         'visual-checkbox': true,
         'error': this.hasError || false,
         'disabled': this.disabled || false,
-        'focus': this.focused || false,
         'hover': this.hovered || false,
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'readonly': this.readonly || false,
         'indeterminate': this.indeterminate || false,
+        'focus': this.focused || false,
       });
 
       const checkerIconClasses = classMap({
         'checker-icon': true,
+      });
+
+      const focusRingClasses = classMap({
+        'focus-ring': true,
+        'focus': this.focused || false,
       });
 
       const checkerIconSizeVariant = getComponentConfigToken([
@@ -163,10 +168,26 @@ export class BlrCheckbox extends LitElement {
           @mouseup=${this.handleRelease}
           @touchstart=${this.handlePress}
           @touchend=${this.handleRelease}
+          @focusin=${this.handleFocus}
+          @focusout=${this.handleBlur}
+          @keydown=${(event: KeyboardEvent) => {
+            if (event.key === 'space') {
+              this.handlePress();
+              event.stopPropagation();
+            }
+          }}
+          @keyup=${(event: KeyboardEvent) => {
+            if (event.key === 'space') {
+              this.handleRelease();
+              event.stopPropagation();
+            }
+          }}
+          tabindex="0"
         >
           <input
             type="checkbox"
             class="input-control"
+            tabindex="-1"
             id=${this.checkInputId || nothing}
             name=${this.checkInputId || nothing}
             ?disabled=${this.disabled}
@@ -175,35 +196,27 @@ export class BlrCheckbox extends LitElement {
             ?readonly=${this.readonly}
             ?hasError=${this.hasError}
             @change=${this.handleChange}
-            @focus=${this.handleFocus}
-            @blur=${this.handleBlur}
-            @keydown=${(event: KeyboardEvent) => {
-              if (event.key === 'space') {
-                this.handlePress();
-              }
-            }}
-            @keyup=${(event: KeyboardEvent) => {
-              if (event.key === 'space') {
-                this.handleRelease();
-              }
-            }}
           />
 
-          <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true">
-            ${this.indeterminate
-              ? BlrIconRenderFunction({
-                  icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
-                  hideAria: true,
-                  classMap: checkerIconClasses,
-                  ignoreSize: true,
-                })
-              : BlrIconRenderFunction({
-                  icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
-                  hideAria: true,
-                  classMap: checkerIconClasses,
-                  ignoreSize: true,
-                })}
-          </label>
+          <div class="focus-wrapper">
+            <div class="${focusRingClasses}"></div>
+
+            <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true">
+              ${this.indeterminate
+                ? BlrIconRenderFunction({
+                    icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
+                    hideAria: true,
+                    classMap: checkerIconClasses,
+                    ignoreSize: true,
+                  })
+                : BlrIconRenderFunction({
+                    icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
+                    hideAria: true,
+                    classMap: checkerIconClasses,
+                    ignoreSize: true,
+                  })}
+            </label>
+          </div>
 
           <div class="${labelWrapperClasses}">
             ${this.hasLabel
