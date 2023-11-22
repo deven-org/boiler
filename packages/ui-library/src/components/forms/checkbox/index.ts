@@ -201,25 +201,23 @@ export class BlrCheckbox extends LitElement {
             @change=${this.handleChange}
           />
 
-          <div class="focus-wrapper">
-            <div class="${focusRingClasses}"></div>
+          <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true">
+            ${this.indeterminate
+              ? BlrIconRenderFunction({
+                  icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
+                  hideAria: true,
+                  classMap: checkerIconClasses,
+                  ignoreSize: true,
+                })
+              : BlrIconRenderFunction({
+                  icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
+                  hideAria: true,
+                  classMap: checkerIconClasses,
+                  ignoreSize: true,
+                })}
 
-            <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true">
-              ${this.indeterminate
-                ? BlrIconRenderFunction({
-                    icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
-                    hideAria: true,
-                    classMap: checkerIconClasses,
-                    ignoreSize: true,
-                  })
-                : BlrIconRenderFunction({
-                    icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
-                    hideAria: true,
-                    classMap: checkerIconClasses,
-                    ignoreSize: true,
-                  })}
-            </label>
-          </div>
+            <div class="${focusRingClasses}"></div>
+          </label>
 
           <div class="${labelWrapperClasses}">
             ${this.hasLabel

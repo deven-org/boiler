@@ -6,14 +6,12 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
   (componentTokens, semanticTokens) => {
     const { Checkbox } = componentTokens.Forms;
     const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+    const { FocusBorder } = semanticTokens.Global;
 
     return typeSafeNestedCss/* css */ `
       .blr-checkbox {
-        all: initial;
         display: flex;
-        position: relative;
-        align-items: flex-start;
-        transition: all 0.25s ease 0s;
+
 
         .input-control {
           all: initial;
@@ -25,10 +23,8 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           display: inline-block;
           margin: 0;
           position: relative;
-          transition: all 0.25s ease 0s;
-          overflow: hidden;
+          transition: background-color 0.25s ease 0s;
           outline-style: solid;
-
 
           & .checker-icon {
             position: absolute;
@@ -49,14 +45,16 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
         }
 
-        .focus-wrapper {
-          position: relative;
+        .focus-ring {
+          position: absolute;
+          inset: 0;
+          outline-color: transparent;
+          outline-style: solid;
 
-          .focus-ring {
-            position: absolute;
-            inset: 0;
-            outline-color: transparent;
-            outline-style: solid;
+          &.focus {
+            outline-width: ${FocusBorder.width};
+            outline-offset: 2px;
+            outline-color: ${FocusBorder.color};
           }
         }
       
@@ -67,6 +65,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             width: ${Checkbox.Control.Container.Size.SM};
             height: ${Checkbox.Control.Container.Size.SM};
             margin-top: ${Checkbox.ControlWrapper.PaddingTop.SM};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.SM};
+          }
+
+          .focus-ring {
             border-radius: ${Checkbox.Control.Container.BorderRadius.SM};
           }
           
@@ -91,6 +93,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             border-radius: ${Checkbox.Control.Container.BorderRadius.MD};
           }
 
+          .focus-ring {
+            border-radius: ${Checkbox.Control.Container.BorderRadius.MD};
+          }
+
           .label-wrapper {
             padding-top: ${Checkbox.ContentCol.PaddingTop.MD};
             gap: ${Checkbox.ContentCol.ItemSpacing.MD};
@@ -109,6 +115,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             width: ${Checkbox.Control.Container.Size.LG};
             height: ${Checkbox.Control.Container.Size.LG};
             margin-top: ${Checkbox.ControlWrapper.PaddingTop.LG};
+            border-radius: ${Checkbox.Control.Container.BorderRadius.LG};
+          }
+
+          .focus-ring {
             border-radius: ${Checkbox.Control.Container.BorderRadius.LG};
           }
 
@@ -296,12 +306,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         &.sm {
           &:not(.error) {
-            .focus-ring.focus {
-              outline-width: 2px;
-              outline-offset: 2px;
-              outline-color: black;
-            }
-
             .visual-checkbox {
               & .checker-icon {
                 width: ${Checkbox.Control.Icon.IconSize.SM.Rest};
@@ -391,12 +395,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
           &.error{
-            .focus-ring.focus {
-              outline-width: 2px;
-              outline-offset: 2px;
-              outline-color: black;
-            }
-
             .visual-checkbox {
               & .checker-icon {
                 width: ${Checkbox.Control.Icon.IconSize.SM.Error};
@@ -418,12 +416,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         &.md {
           &:not(.error) {
-            .focus-ring.focus {
-              outline-width: 2px;
-              outline-offset: 2px;
-              outline-color: black;
-            }
-
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest};
@@ -492,11 +484,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
           &.error {
-            .focus-ring.focus {
-              outline-width: 2px;
-              outline-offset: 2px;
-              outline-color: black;
-            }
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${Checkbox.Control.Container.BorderWidth.MD.Inactive.Error};
@@ -513,11 +500,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
         &.lg {
           &:not(.error) {
-            .focus-ring.focus {
-              outline-width: 2px;
-              outline-offset: 2px;
-              outline-color: black;
-            }
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest};
@@ -585,12 +567,6 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
             }
           }
           &.error:not(.disbaled) {
-            .focus-ring.focus {
-              outline-width: 2px;
-              outline-offset: 2px;
-              outline-color: black;
-            }
-
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${Checkbox.Control.Container.BorderWidth.LG.Inactive.Error};
