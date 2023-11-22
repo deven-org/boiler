@@ -31,7 +31,7 @@ export class BlrNumberInput extends LitElement {
   @property() readonly?: boolean;
   @property() required?: boolean;
   @property() hasLabel?: boolean;
-  @property() size?: FormSizesType = 'md';
+  @property() size: FormSizesType = 'md';
   @property() labelAppendix?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;

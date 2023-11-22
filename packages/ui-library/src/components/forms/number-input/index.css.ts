@@ -1,8 +1,11 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
+import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+const { NumberInput } = componentTokens.Forms;
+
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG } = semanticTokens.Forms;
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
 
   return typeSafeNestedCss`
@@ -14,6 +17,10 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         border: none;
         outline: none;
         color: inherit;
+      }
+
+      .unit{
+        color:${PrefixSuffix.OnPopulatedField.Default.Rest};
       }
 
       > * {
@@ -28,6 +35,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           > .custom-stepper-button {
             width: ${StepperCombo.SM.Vertical.Width};
           }
+          
         }
 
         &.md {
@@ -47,10 +55,19 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   
         > input {
           text-align: right;
+          &.sm{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+          }
+
+          &.md{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+          }
+
+          &.lg{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+          }
         }
       }
-
-   
 
       > .unit,
       input {
@@ -60,6 +77,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           font-family: ${SM.UserInput.fontFamily}, sans-serif;
           line-height: ${SM.UserInput.lineHeight};
           padding: ${SM.InputField.Padding};
+
         }
 
         &.md {
@@ -78,11 +96,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           padding: ${LG.InputField.Padding};
         }
 
-        &.mode1 {
-          & > input {
-            padding-right:4px;
-          }
-        }
       }
 
       &.disabled {
@@ -144,7 +157,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
         &:focus-within {
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${Input.Error.Focus};
+          color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
@@ -200,6 +213,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
               padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
             }
           }
+         
         }
 
         &.mode3 {
@@ -294,10 +308,6 @@ export const baseStyle = typeSafeNestedCss`
         order: -2;
       }
 
-      > input{
-        color:green;
-      }
-
       .unit {
         order: 0;
         padding-left:0;
@@ -325,6 +335,20 @@ export const baseStyle = typeSafeNestedCss`
     &.mode3 {
       .unit.prepend {
         order: -1;
+        padding-right:0;
+      }
+      > input.prepend{
+        &.sm{
+        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+        }
+
+        &.md{
+          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+        }
+        
+        &.lg{
+          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+        }
       }
     }
   }
