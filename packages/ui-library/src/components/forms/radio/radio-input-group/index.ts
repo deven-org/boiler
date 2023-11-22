@@ -6,10 +6,10 @@ import { formDark, formLight } from '../../../../foundation/semantic-tokens/form
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../../../globals/types';
 import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
-import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
 import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-radio-group';
@@ -32,8 +32,9 @@ export class BlrRadioGroup extends LitElement {
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
   @property() layout!: string;
-  @property() showGroupHintMessage = true;
+  @property() showHint = true;
   @property() groupHintIcon: SizelessIconType = 'blrInfo';
+  @property() errorMessage?: string;
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
@@ -71,7 +72,7 @@ export class BlrRadioGroup extends LitElement {
       };
 
       const captionContent = html`
-        ${this.showGroupHintMessage
+        ${this.showHint
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -130,17 +131,14 @@ export class BlrRadioGroup extends LitElement {
           })}
         </div>
 
-        ${this.showGroupErrorMessage || this.hasError
+        ${this.showHint || this.hasError
           ? html` <div class="caption-group ${classes}">
-              ${this.showGroupErrorMessage || this.hasError
-                ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
-                : nothing}
+              ${BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)}
             </div>`
           : nothing} `;
     }
   }
 }
-
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
 
 export const BlrRadioGroupRenderFunction = (params: BlrRadioGroupType) =>
