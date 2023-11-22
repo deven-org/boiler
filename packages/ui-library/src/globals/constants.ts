@@ -3,7 +3,26 @@ export const InputSizes = ['sm', 'md', 'lg'] as const;
 export const FeedbackSizes = ['sm', 'md', 'lg'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const ActionSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
-
+export const Units = [
+  'USD',
+  'EUR',
+  'JPY',
+  'GBP',
+  'kg',
+  'g',
+  'lb',
+  'oz',
+  '%',
+  'm',
+  'cm',
+  'km',
+  'in',
+  'ft',
+  'l',
+  'ml',
+  's',
+  'min',
+];
 export const InputTypes = ['text', 'email', 'password'] as const;
 export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 

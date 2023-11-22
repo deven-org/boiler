@@ -3,6 +3,8 @@ import '../static/iconGallery/iconGallery.css';
 
 export default {
   parameters: {
+    layout: 'padded',
+    layout: 'centered',
     actions: {
       argTypesRegex: '^on[A-Z].*',
     },
