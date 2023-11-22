@@ -5,9 +5,9 @@ const validFirstCharactersLength = charactersLength - 10;
 
 const getRandomCharacter = (validFirstChar: boolean) => {
   if (validFirstChar) {
-    return characters.charAt(Math.floor(Math.random() * validFirstCharactersLength));
+    return characters.charAt((Math.random() * validFirstCharactersLength) | 0);
   } else {
-    return characters.charAt(Math.floor(Math.random() * validFirstCharactersLength));
+    return characters.charAt((Math.random() * charactersLength) | 0);
   }
 };
 
