@@ -16,10 +16,10 @@ const getRandomCharacter = (validFirstChar: boolean) => {
 export const generateId = (length?: number) => {
   length = length || 12;
   let result = getRandomCharacter(true);
-  let counter = 0;
-  while (counter < length - 1) {
+
+  for (let i = 0, l = length - 1; i < l; i++) {
     result += getRandomCharacter(false);
-    counter += 1;
   }
+
   return result;
 };
