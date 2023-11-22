@@ -204,7 +204,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         &.sm {
           gap: ${ToggleSwitch.Container.ItemSpacing.SM};
           _FIX?_: "width kann weg, weil es nur nervt";
-          width: 200px;
+          _width: 200px;
 
           & > .toggle-content-col {
             gap: ${ToggleSwitch.ContentCol.ItemSpacing.SM};
@@ -323,7 +323,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         &.md {
           gap: ${ToggleSwitch.Container.ItemSpacing.MD};
           _FIX?_: "width kann weg, weil es nur nervt";
-          width: 220px;
+          _width: 220px;
 
           & > .toggle-content-col {
             gap: ${ToggleSwitch.ContentCol.ItemSpacing.MD};
@@ -443,7 +443,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         &.lg {
           gap: ${ToggleSwitch.Container.ItemSpacing.LG};
           _FIX?_: "width kann weg, weil es nur nervt";
-          width: 240px;
+          _width: 240px;
 
           & > .toggle-content-col {
             gap: ${ToggleSwitch.ContentCol.ItemSpacing.LG};
