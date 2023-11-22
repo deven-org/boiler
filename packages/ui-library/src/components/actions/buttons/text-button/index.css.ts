@@ -85,15 +85,22 @@ export const styleCustom = typeSafeNestedCss`
     display: block;
     text-align: center;
 
-   & > .trailing-icon-class {
+    & > .trailing-icon-class,
+    & > .leading-icon-class {
      display:inline;
      margin: auto;
-     color: red;
+     vertical-align: middle;
     }
   }
 
   .inline {
-    display: inline-flex;
+    display: inline;
+    & > .trailing-icon-class,
+    & > .leading-icon-class {
+      display:inline;
+      margin: auto;
+      vertical-align: middle;
+     }
   }
 
   .inline-block {
@@ -101,10 +108,11 @@ export const styleCustom = typeSafeNestedCss`
     text-align: center;
     margin: auto;
 
-    & > .trailing-icon-class {
+    & > .trailing-icon-class,
+    & > .leading-icon-class {
       display:inline;
       text-align:center;
-      color: red;
+      vertical-align: middle;
       }
   }
 `;

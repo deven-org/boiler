@@ -91,12 +91,14 @@ export class BlrTextButton extends LitElement {
       ]).toLowerCase() as SizesType;
 
       const labelAndIconGroup = html` ${this.hasIcon && this.iconPosition === 'leading'
-          ? BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: iconClasses,
-            })
+          ? html`<div class="leading-icon-class">
+              ${BlrIconRenderFunction({
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                hideAria: true,
+                classMap: iconClasses,
+              })}
+            </div>`
           : nothing}
         <span class="label">${this.label}</span>
         ${this.hasIcon && this.iconPosition === 'trailing'
