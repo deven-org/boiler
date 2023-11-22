@@ -21,6 +21,7 @@ import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-
 
 const TAG_NAME = 'blr-text-button';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
+import { generateId } from '../../../../utils/generateId';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {
@@ -34,7 +35,7 @@ export class BlrTextButton extends LitElement {
   @property() icon?: SizelessIconType;
   @property() loading!: boolean;
   @property() disabled!: boolean;
-  @property() buttonId?: string;
+  @property() buttonId?: string = generateId();
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;

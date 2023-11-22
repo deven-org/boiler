@@ -13,6 +13,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { generateId } from '../../../utils/generateId';
 
 const TAG_NAME = 'blr-number-input';
 
@@ -23,7 +24,7 @@ export class BlrNumberInput extends LitElement {
   @query('input')
   protected _numberFieldNode!: HTMLInputElement;
 
-  @property() numberInputId!: string;
+  @property() numberInputId?: string = generateId();
   @property() variant: 'mode1' | 'mode2' | 'mode3' = 'mode1';
   @property() label!: string;
   @property() disabled?: boolean;
@@ -190,6 +191,7 @@ export class BlrNumberInput extends LitElement {
           : nothing}
         <div class="${wrapperClasses}">
           <input
+            id=${this.numberInputId || nothing}
             class="${inputClasses}"
             type="number"
             .value=${!this.readonly

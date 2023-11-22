@@ -56,7 +56,6 @@ const args: BlrRangeLegendSliderType = {
   theme: 'Light',
   onClickMinMax: btnEventType,
   onChange: logEventType,
-  rangeInputId: 'range-cmpt',
   initialValue: '300 $',
   list: ['100 $', '200 $', '300 $', '400 $', '500 $', '600 $'],
   stepFactor: 1,

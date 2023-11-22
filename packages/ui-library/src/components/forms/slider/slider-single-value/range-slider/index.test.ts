@@ -5,7 +5,6 @@ import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-d
 
 const sampleParams: BlrRangeSliderType = {
   theme: 'Light',
-  rangeInputId: 'range-id',
   initialValue: 80,
   minValue: 75,
   maxValue: 130,

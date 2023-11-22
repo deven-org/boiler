@@ -11,6 +11,7 @@ import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { generateId } from '../../../utils/generateId';
 
 const TAG_NAME = 'blr-textarea';
 
@@ -18,7 +19,7 @@ const TAG_NAME = 'blr-textarea';
 export class BlrTextarea extends LitElement {
   static styles = [styleCustom];
 
-  @property() textareaId!: string;
+  @property() textareaId?: string = generateId();
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() arialabel?: string;

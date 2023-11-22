@@ -15,6 +15,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { generateId } from '../../../utils/generateId';
 
 type Option = {
   value: string;
@@ -30,7 +31,7 @@ export class BlrSelect extends LitElement {
   static styles = [styleCustom];
 
   @property() arialabel?: string;
-  @property() selectId!: string;
+  @property() selectId?: string = generateId();
   @property() labelAppendix?: string;
   @property() name!: string;
   @property() label?: string;

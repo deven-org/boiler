@@ -13,6 +13,7 @@ import { BlrLoaderRenderFunction } from '../../../feedback/loader';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
+import { generateId } from '../../../../utils/generateId';
 
 const TAG_NAME = 'blr-icon-button';
 
@@ -26,7 +27,7 @@ export class BlrIconButton extends LitElement {
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;
   @property() disabled!: boolean;
-  @property() buttonId?: string;
+  @property() buttonId?: string = generateId();
   @property() variant: ActionVariantType = 'primary';
   @property() size?: FormSizesType = 'md';
   @property() loadingStatus!: string;

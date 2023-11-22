@@ -81,7 +81,6 @@ const args: BlrSelectType = {
   errorIcon: 'blrInfo',
   disabled: false,
   required: false,
-  selectId: 'Peter',
   icon: 'blrChevronDown',
   options: [
     { value: 'uschi', label: 'Uschi', disabled: true },

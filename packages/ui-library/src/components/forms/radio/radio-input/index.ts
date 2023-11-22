@@ -10,6 +10,7 @@ import { BlrFormHintRenderFunction } from '../../../internal-components/form-hin
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { generateId } from '../../../../utils/generateId';
 
 const TAG_NAME = 'blr-radio';
 
@@ -31,6 +32,7 @@ export class BlrRadio extends LitElement {
   @property() option!: RadioOption;
   @property() showHint?: boolean;
   @property() hintIcon?: SizelessIconType;
+  @property() radioInputId?: string = generateId();
 
   @property() theme: ThemeType = 'Light';
 
@@ -46,18 +48,12 @@ export class BlrRadio extends LitElement {
         [`error`]: this.hasError || false,
       });
 
-      const calculateOptionId = (label: string) => {
-        return label ? label.replace(/ /g, '_').toLowerCase() : '';
-      };
-
-      const id = this.option.label ? calculateOptionId(this.option.label) : '';
-
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>
         <div class="blr-radio ${classes}">
           <input
-            id=${id || nothing}
+            id=${this.radioInputId || nothing}
             class="${classes} input-control"
             type="radio"
             name=${this.name}

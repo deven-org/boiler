@@ -73,7 +73,6 @@ const args: BlrCheckboxType = {
   hintMessage: 'This is a sample hint',
   hintIcon: undefined,
 
-  checkInputId: 'Checky',
   disabled: false,
   checked: false,
   indeterminate: false,

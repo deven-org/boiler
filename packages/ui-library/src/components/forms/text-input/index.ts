@@ -15,12 +15,13 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { generateId } from '../../../utils/generateId';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
   static styles = [styleCustom];
 
-  @property() textInputId!: string;
+  @property() textInputId?: string = generateId();
   @property() type: InputTypes = 'text';
   @property() label!: string;
   @property() labelAppendix?: string;

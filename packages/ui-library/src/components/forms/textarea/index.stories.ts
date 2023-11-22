@@ -41,7 +41,6 @@ const defaultParams: BlrTextareaType = {
   name: '',
   showCounter: false,
   theme: 'Light',
-  textareaId: '',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,

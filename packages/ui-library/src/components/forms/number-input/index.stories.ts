@@ -64,7 +64,6 @@ const args: BlrNumberInputType = {
   hasError: false,
   errorMessage: 'This is error message',
   labelAppendix: '(Optional)',
-  numberInputId: 'Input ID',
   showHint: true,
   hintText: 'Field is used for hint',
   hintIcon: 'blrInfo',

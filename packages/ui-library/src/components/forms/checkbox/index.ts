@@ -16,6 +16,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
+import { generateId } from '../../../utils/generateId';
 
 const TAG_NAME = 'blr-checkbox';
 
@@ -27,7 +28,7 @@ export class BlrCheckbox extends LitElement {
   protected _checkboxNode!: HTMLInputElement;
 
   @property() label!: string;
-  @property() checkInputId?: string;
+  @property() checkInputId?: string = generateId();
 
   @property() disabled?: boolean;
   @property() checked?: boolean;

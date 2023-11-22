@@ -16,6 +16,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 const TAG_NAME = 'blr-label-toggleswitch';
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { generateId } from '../../../utils/generateId';
 
 @customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {
@@ -28,7 +29,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() onLabel!: string;
   @property() offLabel!: string;
   @property() showStateLabel?: boolean;
-  @property() checkInputId!: string;
+  @property() checkInputId?: string = generateId();
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;

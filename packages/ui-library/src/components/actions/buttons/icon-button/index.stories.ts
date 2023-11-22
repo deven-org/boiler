@@ -43,7 +43,6 @@ const args: BlrIconButtonType = {
   icon: 'blr360',
   loading: false,
   disabled: false,
-  buttonId: 'button-id',
   loadingStatus: 'Loading',
 };
 

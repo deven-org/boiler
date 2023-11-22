@@ -51,7 +51,6 @@ BlrTextInput.storyName = 'TextInput';
 
 const args: BlrTextInputType = {
   theme: 'Light',
-  textInputId: 'Input ID',
   label: 'Label',
   hasLabel: true,
   labelAppendix: '(Optional)',

@@ -17,6 +17,7 @@ import { RenderBtnProps } from '../../../../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../../utils/typesafe-generic-component-renderer';
+import { generateId } from '../../../../../utils/generateId';
 
 const TAG_NAME = 'blr-range-min-max-slider';
 
@@ -27,7 +28,7 @@ export class BlrRangeMinMaxSlider extends LitElement {
   @property() onBtnClick?: (min: number, max: number) => void;
   @property() onChange!: (minVal: number, maxVal: number, event: Event) => HTMLButtonElement['onchange'];
 
-  @property() rangeInputId!: string;
+  @property() rangeInputId?: string = generateId();
 
   @property() startValue!: number;
   @property() endValue!: number;
