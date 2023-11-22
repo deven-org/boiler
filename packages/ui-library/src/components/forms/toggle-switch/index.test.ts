@@ -9,7 +9,6 @@ const sampleParams: BlrToggleSwitchType = {
   disabled: false,
   readonly: false,
   checked: false,
-  size: 'md',
   onLabel: 'On',
   offLabel: 'Off',
   showHint: true,
@@ -28,5 +27,49 @@ describe('blr-label-toggleswitch', () => {
     const className = input?.className;
 
     expect(className).to.contain('input-control');
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrToggleSwitchRenderFunction(sampleParams));
+
+    const input = querySelectorDeep('div.blr-label-toggleswitch', element.getRootNode() as HTMLElement);
+    const className = input?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrToggleSwitchRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const input = querySelectorDeep('div.blr-label-toggleswitch', element.getRootNode() as HTMLElement);
+    const className = input?.className;
+
+    expect(className).to.contain('sm');
+  });
+
+  it('shows hint when "showHint" is true', async () => {
+    const element = await fixture(
+      BlrToggleSwitchRenderFunction({
+        ...sampleParams,
+        showHint: true,
+      })
+    );
+
+    const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+
+    expect(hint).to.exist;
+  });
+
+  it('does not show hint when "showHint" is false', async () => {
+    const element = await fixture(
+      BlrToggleSwitchRenderFunction({
+        ...sampleParams,
+        showHint: false,
+      })
+    );
+
+    const hint = querySelectorDeep('blr-form-hint', element.getRootNode() as HTMLElement);
+
+    expect(hint).not.to.exist;
   });
 });

@@ -28,62 +28,64 @@ export class BlrIconLink extends LitElement {
   @property() onBlur?: HTMLLinkElement['onblur'];
   @property() linkId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() loading!: boolean;
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size || 'md',
-    });
+    if (this.size) {
+      const classes = classMap({
+        [`${this.variant}`]: this.variant,
+        [`${this.size}`]: this.size,
+      });
 
-    const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
-    const loaderVariant = determineLoaderVariant(this.variant);
+      const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
+      const loaderVariant = determineLoaderVariant(this.variant);
 
-    const loaderSize = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      this.size.toUpperCase(),
-      'Loader',
-    ]).toLowerCase() as FormSizesType;
+      const loaderSize = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        this.size.toUpperCase(),
+        'Loader',
+      ]).toLowerCase() as FormSizesType;
 
-    const iconSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      'IconButton',
-      this.size.toUpperCase(),
-      'Icon',
-    ]).toLowerCase() as SizesType;
+      const iconSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        'IconButton',
+        this.size.toUpperCase(),
+        'Icon',
+      ]).toLowerCase() as SizesType;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <a
-        aria-label=${this.arialabel}
-        class="blr-semantic-action blr-icon-link blr-icon-button ${classes}"
-        href=${this.href}
-        loading=${this.loading}
-        target=${this.target}
-        @click=${this.onClick}
-        @blur=${this.onBlur}
-        id=${this.linkId || nothing}
-      >
-        ${this.loading
-          ? html`${BlrLoaderRenderFunction({
-              size: loaderSize,
-              variant: loaderVariant,
-              loadingStatus: this.loadingStatus,
-              theme: this.theme,
-            })}`
-          : html`${BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-            })}`}
-      </a>`;
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <a
+          aria-label=${this.arialabel}
+          class="blr-semantic-action blr-icon-link blr-icon-button ${classes}"
+          href=${this.href}
+          loading=${this.loading}
+          target=${this.target}
+          @click=${this.onClick}
+          @blur=${this.onBlur}
+          id=${this.linkId || nothing}
+        >
+          ${this.loading
+            ? BlrLoaderRenderFunction({
+                size: loaderSize,
+                variant: loaderVariant,
+                loadingStatus: this.loadingStatus,
+                theme: this.theme,
+              })
+            : BlrIconRenderFunction({
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                hideAria: true,
+              })}
+        </a>`;
+    }
   }
 }
 

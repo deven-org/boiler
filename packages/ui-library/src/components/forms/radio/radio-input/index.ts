@@ -22,7 +22,7 @@ export class BlrRadio extends LitElement {
   @property() readonly?: boolean;
   @property() checked?: boolean;
   @property() name?: string;
-  @property() size: InputSizesType = 'md';
+  @property() size?: InputSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -36,77 +36,79 @@ export class BlrRadio extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
-    const classes = classMap({
-      [`${this.size}`]: this.size || 'md',
-      [`disabled`]: this.disabled || false,
-      [`readonly`]: this.readonly || false,
-      [`checked`]: this.checked || this.option.checked || false,
-      [`error`]: this.hasError || false,
-    });
+      const classes = classMap({
+        [`${this.size}`]: this.size,
+        [`disabled`]: this.disabled || false,
+        [`readonly`]: this.readonly || false,
+        [`checked`]: this.checked || this.option.checked || false,
+        [`error`]: this.hasError || false,
+      });
 
-    const calculateOptionId = (label: string) => {
-      return label ? label.replace(/ /g, '_').toLowerCase() : '';
-    };
+      const calculateOptionId = (label: string) => {
+        return label ? label.replace(/ /g, '_').toLowerCase() : '';
+      };
 
-    const id = this.option.label ? calculateOptionId(this.option.label) : '';
+      const id = this.option.label ? calculateOptionId(this.option.label) : '';
 
-    const renderCaptionContent = (option: RadioOption) => {
-      return html`
-        ${this.showHint
-          ? BlrFormCaptionRenderFunction({
-              variant: 'hint',
-              theme: this.theme,
-              size: this.size,
-              message: option.hintMessage,
-              icon: this.hintIcon,
-            })
-          : nothing}
-        ${this.hasError
-          ? BlrFormCaptionRenderFunction({
-              variant: 'error',
-              theme: this.theme,
-              size: this.size,
-              message: option.errorMessage,
-              icon: this.errorIcon,
-            })
-          : nothing}
-      `;
-    };
-
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class="blr-radio ${classes}">
-        <input
-          id=${id || nothing}
-          class="${classes} input-control"
-          type="radio"
-          name=${this.name}
-          value=${this.option.value || nothing}
-          ?disabled=${this.disabled}
-          ?readonly=${this.readonly}
-          ?aria-disabled=${this.disabled}
-          ?invalid=${this.hasError}
-          ?aria-invalid=${this.hasError}
-          ?checked=${this.checked}
-          ?required=${this.required}
-          @input=${this.onChange}
-          @blur=${this.onBlur}
-          @focus=${this.onFocus}
-        />
-        <div class="label-wrapper">
-          ${this.option.label
-            ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
+      const renderCaptionContent = (option: RadioOption) => {
+        return html`
+          ${this.showHint
+            ? BlrFormCaptionRenderFunction({
+                variant: 'hint',
+                theme: this.theme,
+                size: this.size,
+                message: option.hintMessage,
+                icon: this.hintIcon,
+              })
             : nothing}
-          <div class="caption-wrapper">
-            ${this.showHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, renderCaptionContent(this.option))
+          ${this.hasError
+            ? BlrFormCaptionRenderFunction({
+                variant: 'error',
+                theme: this.theme,
+                size: this.size,
+                message: option.errorMessage,
+                icon: this.errorIcon,
+              })
+            : nothing}
+        `;
+      };
+
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <div class="blr-radio ${classes}">
+          <input
+            id=${id || nothing}
+            class="${classes} input-control"
+            type="radio"
+            name=${this.name}
+            value=${this.option.value || nothing}
+            ?disabled=${this.disabled}
+            ?readonly=${this.readonly}
+            ?aria-disabled=${this.disabled}
+            ?invalid=${this.hasError}
+            ?aria-invalid=${this.hasError}
+            ?checked=${this.checked}
+            ?required=${this.required}
+            @input=${this.onChange}
+            @blur=${this.onBlur}
+            @focus=${this.onFocus}
+          />
+          <div class="label-wrapper">
+            ${this.option.label
+              ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
               : nothing}
+            <div class="caption-wrapper">
+              ${this.showHint || this.hasError
+                ? BlrFormCaptionGroupRenderFunction({ size: this.size }, renderCaptionContent(this.option))
+                : nothing}
+            </div>
           </div>
-        </div>
-      </div> `;
+        </div> `;
+    }
   }
 }
 

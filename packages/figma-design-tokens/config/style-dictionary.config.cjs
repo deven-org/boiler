@@ -118,6 +118,7 @@ const getStyleDictionaryConfig = (theme) => {
       'input/tokens/sizeVariants/*.json',
     ],
     platforms: {
+      /*
       scss: {
         transforms: [
           'attribute/cti',
@@ -151,6 +152,7 @@ const getStyleDictionaryConfig = (theme) => {
           },
         ],
       },
+      */
       js: {
         transforms: [
           'attribute/cti',
@@ -197,6 +199,6 @@ themes.array.map((theme) => {
 
   const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme));
 
-  StyleDictionary.buildPlatform('scss');
+  //StyleDictionary.buildPlatform('scss');
   StyleDictionary.buildPlatform('js');
 });

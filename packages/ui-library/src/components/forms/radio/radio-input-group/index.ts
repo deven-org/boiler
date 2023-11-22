@@ -31,8 +31,8 @@ export class BlrRadioGroup extends LitElement {
   @property() errorIcon?: SizelessIconType;
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
-  @property() layout!: boolean;
-  @property() showHint = true;
+  @property() layout!: string;
+  @property() showGroupHintMessage = true;
   @property() groupHintIcon: SizelessIconType = 'blrInfo';
   @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
@@ -43,99 +43,101 @@ export class BlrRadioGroup extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
-    const legendClasses = classMap({
-      'blr-legend': true,
-      [`${this.size}`]: this.size || 'md',
-      'error': this.hasError || false,
-    });
+      const legendClasses = classMap({
+        'blr-legend': true,
+        [`${this.size}`]: this.size,
+        'error': this.hasError || false,
+      });
 
-    const legendWrapperClasses = classMap({
-      'blr-legend-wrapper': true,
-      [`${this.size}`]: this.size || 'md',
-    });
+      const legendWrapperClasses = classMap({
+        'blr-legend-wrapper': true,
+        [`${this.size}`]: this.size,
+      });
 
-    const classes = classMap({
-      [`${this.size}`]: this.size || 'md',
-      disabled: this.disabled || false,
-      readonly: this.readonly || false,
-      checked: this.checked || false,
-      error: this.hasError || false,
-      [`${this.layout}`]: this.layout,
-    });
+      const classes = classMap({
+        [`${this.size}`]: this.size,
+        disabled: this.disabled || false,
+        readonly: this.readonly || false,
+        checked: this.checked || false,
+        error: this.hasError || false,
+        [`${this.layout}`]: this.layout,
+      });
 
-    const calculateOptionId = (label: string) => {
-      return label.replace(/ /g, '_').toLowerCase();
-    };
+      const calculateOptionId = (label: string) => {
+        return label.replace(/ /g, '_').toLowerCase();
+      };
 
-    const captionContent = html`
-      ${this.showHint
-        ? BlrFormCaptionRenderFunction({
-            variant: 'hint',
-            theme: this.theme,
-            size: this.size,
-            message: this.groupHintMessage,
-            icon: this.groupHintIcon,
-          })
-        : nothing}
-      ${this.hasError
-        ? BlrFormCaptionRenderFunction({
-            variant: 'error',
-            theme: this.theme,
-            size: this.size,
-            message: this.groupErrorMessage,
-            icon: this.groupErrorIcon,
-          })
-        : nothing}
-    `;
+      const captionContent = html`
+        ${this.showGroupHintMessage
+          ? BlrFormCaptionRenderFunction({
+              variant: 'hint',
+              theme: this.theme,
+              size: this.size,
+              message: this.groupHintMessage,
+              icon: this.groupHintIcon,
+            })
+          : nothing}
+        ${this.hasError
+          ? BlrFormCaptionRenderFunction({
+              variant: 'error',
+              theme: this.theme,
+              size: this.size,
+              message: this.groupErrorMessage,
+              icon: this.groupErrorIcon,
+            })
+          : nothing}
+      `;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      ${this.showLegend
-        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">Choose any option</legend></div>`
-        : nothing}
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        ${this.showLegend
+          ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">Choose any option</legend></div>`
+          : nothing}
 
-      <div class="blr-radio-group ${classes}">
-        ${this.options &&
-        this.options.map((option: RadioOption) => {
-          const id = calculateOptionId(option.label);
-          return html`
-            <div class="blr-radio ${classes}">
-              <input
-                id=${id || nothing}
-                class="${classes} input-control"
-                type="radio"
-                name=${this.name}
-                ?disabled=${this.disabled}
-                ?readonly=${this.readonly}
-                ?aria-disabled=${this.disabled}
-                ?invalid=${this.hasError}
-                ?aria-invalid=${this.hasError}
-                ?checked=${this.checked}
-                ?required=${this.required}
-                @input=${this.onChange}
-                @blur=${this.onBlur}
-                @focus=${this.onFocus}
-              />
-              <div class="label-wrapper">
-                ${option.label
-                  ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size })}`
-                  : nothing}
+        <div class="blr-radio-group ${classes}">
+          ${this.options &&
+          this.options.map((option: RadioOption) => {
+            const id = calculateOptionId(option.label);
+            return html`
+              <div class="blr-radio ${classes}">
+                <input
+                  id=${id || nothing}
+                  class="${classes} input-control"
+                  type="radio"
+                  name=${this.name}
+                  ?disabled=${this.disabled}
+                  ?readonly=${this.readonly}
+                  ?aria-disabled=${this.disabled}
+                  ?invalid=${this.hasError}
+                  ?aria-invalid=${this.hasError}
+                  ?checked=${this.checked}
+                  ?required=${this.required}
+                  @input=${this.onChange}
+                  @blur=${this.onBlur}
+                  @focus=${this.onFocus}
+                />
+                <div class="label-wrapper">
+                  ${option.label
+                    ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size })}`
+                    : nothing}
+                </div>
               </div>
-            </div>
-          `;
-        })}
-      </div>
+            `;
+          })}
+        </div>
 
-      ${this.showHint || this.hasError
-        ? html` <div class="caption-group ${classes}">
-            ${this.showHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
-              : nothing}
-          </div>`
-        : nothing} `;
+        ${this.showGroupErrorMessage || this.hasError
+          ? html` <div class="caption-group ${classes}">
+              ${this.showGroupErrorMessage || this.hasError
+                ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+                : nothing}
+            </div>`
+          : nothing} `;
+    }
   }
 }
 

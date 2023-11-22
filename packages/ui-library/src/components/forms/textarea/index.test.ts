@@ -5,23 +5,33 @@ import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-d
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextareaType = {
-  textareaId: '#1',
+  theme: 'Light',
+  size: 'md',
+  isResizeable: 'both',
+  cols: 40,
+  rows: 4,
+  placeholder: 'Here is the placeholder',
+  value: '',
+  minLength: 0,
+  maxLength: 140,
+  hasLabel: true,
   label: 'Label',
   labelAppendix: '(Optional)',
-  size: 'md',
-  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  maxLength: 140,
-  cols: 20,
-  rows: 5,
   errorMessage: "OMG it's an error",
-  placeholder: 'Type your message here ..',
   hintMessage: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfo',
   showHint: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-  theme: 'Light',
+  disabled: false,
+  readonly: false,
+  required: false,
+  hasError: false,
+  errorIcon: 'blr360',
+  arialabel: 'TextArea',
+  textareaId: '#674',
+  name: 'TextArea',
 };
 
 describe('blr-textarea', () => {
@@ -61,7 +71,7 @@ describe('blr-textarea', () => {
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const disabled = textarea?.getAttribute('disabled');
 
-    // in html disabled will become an empty string when its true
+    // in html disabled will become an empty string when it's true
     expect(disabled).to.be.equal('');
   });
 
@@ -147,5 +157,23 @@ describe('blr-textarea', () => {
 
     expect(rect?.width).to.be.greaterThan(0);
     expect(rect?.height).to.be.greaterThan(0);
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrTextareaRenderFunction(sampleParams));
+
+    const textareaWrapper = querySelectorDeep('.textarea-input-control', element.getRootNode() as HTMLElement);
+    const className = textareaWrapper?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrTextareaRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const textareaWrapper = querySelectorDeep('.textarea-input-control', element.getRootNode() as HTMLElement);
+    const className = textareaWrapper?.className;
+
+    expect(className).to.contain('sm');
   });
 });

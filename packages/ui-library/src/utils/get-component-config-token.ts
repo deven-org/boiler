@@ -7,7 +7,6 @@ import { componentConfig } from '../foundation/_tokens-generated/config-tokens/_
 const createComponentConfigTokenGetter = (data: any) => {
   return (keys: string[]) => {
     let currentObj = data;
-
     for (const key of keys) {
       if (currentObj.hasOwnProperty(key)) {
         currentObj = currentObj[key];

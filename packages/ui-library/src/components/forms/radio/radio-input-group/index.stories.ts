@@ -52,7 +52,7 @@ const args: BlrRadioGroupType = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  layout: true,
+  layout: '',
   showLegend: true,
   showHint: true,
   groupHintMessage: 'This is a sample hint message',

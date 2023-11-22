@@ -48,7 +48,7 @@ export class BlrTabBar extends LitElement {
   @property() variant: TabVariantType = 'standard';
   @property() tabContent: TabContentVariantType = 'labelOnly';
   @property() alignment: TabAlignmentVariantType = 'left';
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
@@ -73,142 +73,144 @@ export class BlrTabBar extends LitElement {
   };
 
   protected render() {
-    const dynamicStyles =
-      this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
+    if (this.size) {
+      const dynamicStyles =
+        this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
 
-    const setActive = (tabIndex: number) => {
-      const selectedTab = this._navItems[tabIndex];
-      selectedTab.setAttribute('aria-selected', 'true');
-      if (selectedTab.parentElement) {
-        [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
-        selectedTab.classList.add('active');
-      }
-      if (!selectedTab.classList.contains('disabled')) {
-        this._panels.forEach((panel) => {
-          panel.classList.remove('active');
-          panel.setAttribute('hidden', '');
-        });
-        this._panels[tabIndex].classList.add('active');
-        this._panels[tabIndex].removeAttribute('hidden');
-      }
-    };
+      const setActive = (tabIndex: number) => {
+        const selectedTab = this._navItems[tabIndex];
+        selectedTab.setAttribute('aria-selected', 'true');
+        if (selectedTab.parentElement) {
+          [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
+          selectedTab.classList.add('active');
+        }
+        if (!selectedTab.classList.contains('disabled')) {
+          this._panels.forEach((panel) => {
+            panel.classList.remove('active');
+            panel.setAttribute('hidden', '');
+          });
+          this._panels[tabIndex].classList.add('active');
+          this._panels[tabIndex].removeAttribute('hidden');
+        }
+      };
 
-    const handleSelect = (event: Event, label: string) => {
-      event.preventDefault();
-      const navLabels = Object.values(this._navItemsSlots).map((nav) => nav.innerText);
-      const index = navLabels.indexOf(label);
-      this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
-    };
+      const handleSelect = (event: Event, label: string) => {
+        event.preventDefault();
+        const navLabels = Object.values(this._navItemsSlots).map((nav) => nav.innerText);
+        const index = navLabels.indexOf(label);
+        this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
+      };
 
-    const classes = classMap({
-      [`${this.variant}`]: this.variant,
-      [`${this.size}`]: this.size,
-    });
+      const classes = classMap({
+        [`${this.variant}`]: this.variant,
+        [`${this.size}`]: this.size,
+      });
 
-    const navListClasses = classMap({
-      [`${this.overflowVariantStandard}`]: this.overflowVariantStandard,
-      [`${this.overflowVariantFullWidth}`]: this.overflowVariantFullWidth,
-      [`${this.alignment}`]: this.alignment,
-    });
+      const navListClasses = classMap({
+        [`${this.overflowVariantStandard}`]: this.overflowVariantStandard,
+        [`${this.overflowVariantFullWidth}`]: this.overflowVariantFullWidth,
+        [`${this.alignment}`]: this.alignment,
+      });
 
-    const iconSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Navigation',
-      'TabBar',
-      'Tab',
-      this.size.toUpperCase(),
-      'Icon',
-    ]) as SizesType;
+      const iconSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Navigation',
+        'TabBar',
+        'Tab',
+        this.size.toUpperCase(),
+        'Icon',
+      ]) as SizesType;
 
-    const iconButtonSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Action',
-      'IconButton',
-      this.size.toUpperCase(),
-      'Icon',
-    ]).toLowerCase() as SizesType;
+      const iconButtonSizeVariant = getComponentConfigToken([
+        'SizeVariant',
+        'Action',
+        'IconButton',
+        this.size.toUpperCase(),
+        'Icon',
+      ]).toLowerCase() as SizesType;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class="blr-tab-bar-group ${classes}">
-        ${this.overflowVariantStandard === 'buttons'
-          ? html`
-              <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
-                ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
-                  size: iconButtonSizeVariant,
-                  hideAria: true,
-                })}
-              </button>
-            `
-          : nothing}
-        <div class="blr-tab-bar ${this.alignment}">
-          <ul class="nav-list ${navListClasses}" role="tablist">
-            ${this.tabs.map((tab) => {
-              return html`
-                <li
-                  class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}"
-                  role="presentation"
-                >
-                  <div class="nav-item-content-wrapper">
-                    <a
-                      id=${`${tab.label.toLowerCase()} tab`}
-                      role="tab"
-                      href=${`#${tab.href}`}
-                      aria-controls=${tab.label.toLowerCase()}
-                      class="${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
-                      @click=${(e: Event) => handleSelect(e, tab.label)}
-                    >
-                      ${this.tabContent !== 'labelOnly'
-                        ? BlrIconRenderFunction({
-                            icon: calculateIconName(tab.icon, iconSizeVariant),
-                            size: iconSizeVariant,
-                            hideAria: true,
-                          })
-                        : nothing}
-                      ${this.tabContent !== 'iconOnly'
-                        ? html` <slot class="blr-semantic-action ${this.size}" name="tab">${tab.label}</slot>`
-                        : nothing}
-                    </a>
-                  </div>
-                  <div class="nav-item-underline"></div>
-                </li>
-              `;
-            })}
-          </ul>
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <div class="blr-tab-bar-group ${classes}">
+          ${this.overflowVariantStandard === 'buttons'
+            ? html`
+                <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
+                  ${BlrIconRenderFunction({
+                    icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
+                    size: iconButtonSizeVariant,
+                    hideAria: true,
+                  })}
+                </button>
+              `
+            : nothing}
+          <div class="blr-tab-bar ${this.alignment}">
+            <ul class="nav-list ${navListClasses}" role="tablist">
+              ${this.tabs.map((tab) => {
+                return html`
+                  <li
+                    class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}"
+                    role="presentation"
+                  >
+                    <div class="nav-item-content-wrapper">
+                      <a
+                        id=${`${tab.label.toLowerCase()} tab`}
+                        role="tab"
+                        href=${`#${tab.href}`}
+                        aria-controls=${tab.label.toLowerCase()}
+                        class="${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
+                        @click=${(e: Event) => handleSelect(e, tab.label)}
+                      >
+                        ${this.tabContent !== 'labelOnly'
+                          ? BlrIconRenderFunction({
+                              icon: calculateIconName(tab.icon, iconSizeVariant),
+                              size: iconSizeVariant,
+                              hideAria: true,
+                            })
+                          : nothing}
+                        ${this.tabContent !== 'iconOnly'
+                          ? html` <slot class="blr-semantic-action ${this.size}" name="tab">${tab.label}</slot>`
+                          : nothing}
+                      </a>
+                    </div>
+                    <div class="nav-item-underline"></div>
+                  </li>
+                `;
+              })}
+            </ul>
+          </div>
+          ${this.overflowVariantStandard === 'buttons'
+            ? html`
+                <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
+                  ${BlrIconRenderFunction({
+                    icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
+                    size: iconButtonSizeVariant,
+                    hideAria: true,
+                  })}
+                </button>
+              `
+            : nothing}
         </div>
-        ${this.overflowVariantStandard === 'buttons'
-          ? html`
-              <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
-                ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
-                  size: iconButtonSizeVariant,
-                  hideAria: true,
-                })}
-              </button>
-            `
-          : nothing}
-      </div>
-      <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
-        ${this.showDivider
-          ? BlrDividerRenderFunction({
-              directionVariant: 'horizontal',
-              theme: this.theme,
-            })
-          : nothing}
-      </div>
-      ${this.tabs.map((tab) => {
-        return html` <section
-          id=${tab.href}
-          class="panel-wrapper"
-          role="tabpanel"
-          aria-labelledby="${`${tab.label.toLowerCase()} tab`}"
-          hidden
-        >
-          <p>${tab.label}</p>
-        </section>`;
-      })}`;
+        <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
+          ${this.showDivider
+            ? BlrDividerRenderFunction({
+                directionVariant: 'horizontal',
+                theme: this.theme,
+              })
+            : nothing}
+        </div>
+        ${this.tabs.map((tab) => {
+          return html` <section
+            id=${tab.href}
+            class="panel-wrapper"
+            role="tabpanel"
+            aria-labelledby="${`${tab.label.toLowerCase()} tab`}"
+            hidden
+          >
+            <p>${tab.label}</p>
+          </section>`;
+        })}`;
+    }
   }
 }
 

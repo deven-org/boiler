@@ -24,7 +24,6 @@ const sampleParams: BlrTabBarType = {
   ],
   overflowVariantStandard: 'wrap',
   overflowVariantFullWidth: 'wrap',
-  size: 'md',
   showDivider: true,
   variant: 'standard',
   tabContent: 'labelAndIcon',
@@ -40,5 +39,23 @@ describe('blr-tab-bar', () => {
     const className = tabBar?.className;
 
     expect(className).to.contain('blr-tab-bar');
+  });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrTabBarRenderFunction(sampleParams));
+
+    const input = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
+    const className = input?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrTabBarRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const input = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
+    const className = input?.className;
+
+    expect(className).to.contain('sm');
   });
 });

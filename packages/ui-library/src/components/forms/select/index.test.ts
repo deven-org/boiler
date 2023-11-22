@@ -57,4 +57,22 @@ describe('blr-select', () => {
     expect(hintClassName).to.contain('hint');
     expect(errorClassName).to.contain('error');
   });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrSelectRenderFunction(sampleParams));
+
+    const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
+    const className = selectWrapper?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
+    const className = selectWrapper?.className;
+
+    expect(className).to.contain('sm');
+  });
 });

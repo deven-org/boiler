@@ -53,4 +53,50 @@ describe('blr-checkbox', () => {
     expect(hintClassName).to.contain('hint');
     expect(errorClassName).to.contain('error');
   });
+
+  it('has a size md by default', async () => {
+    const element = await fixture(BlrCheckboxRenderFunction(sampleParams));
+
+    const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
+    const className = checkbox?.className;
+
+    expect(className).to.contain('md');
+  });
+
+  it('has a size sm when "size" is set to "sm" ', async () => {
+    const element = await fixture(BlrCheckboxRenderFunction({ ...sampleParams, size: 'sm' }));
+
+    const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
+    const className = checkbox?.className;
+
+    expect(className).to.contain('sm');
+  });
+
+  it('has a error state if hasError is true', async () => {
+    const element = await fixture(
+      BlrCheckboxRenderFunction({
+        ...sampleParams,
+        hasError: true,
+      })
+    );
+
+    const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
+    const className = checkbox?.className;
+
+    expect(className).to.contain('error');
+  });
+
+  it('does not have a error state if hasError is false', async () => {
+    const element = await fixture(
+      BlrCheckboxRenderFunction({
+        ...sampleParams,
+        hasError: false,
+      })
+    );
+
+    const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
+    const className = checkbox?.className;
+
+    expect(className).not.to.contain('error');
+  });
 });

@@ -38,7 +38,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
 
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
@@ -68,92 +68,94 @@ export class BlrToggleSwitch extends LitElement {
   }
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formLight, toggleSwitchLight] : [formDark, toggleSwitchDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [formLight, toggleSwitchLight] : [formDark, toggleSwitchDark];
 
-    const classes = classMap({
-      'blr-semantic-action': true,
-      'blr-label-toggleswitch': true,
-      [`disabled`]: this.disabled || false,
-      [`readonly`]: this.readonly || false,
-      [`${this.size || 'md'}`]: this.size || 'md',
-      [`${this.variant || 'leading'}`]: this.variant || 'leading',
-    });
+      const classes = classMap({
+        'blr-semantic-action': true,
+        'blr-label-toggleswitch': true,
+        [`disabled`]: this.disabled || false,
+        [`readonly`]: this.readonly || false,
+        [`${this.size}`]: this.size,
+        [`${this.variant || 'leading'}`]: this.variant || 'leading',
+      });
 
-    const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
+      const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
 
-    const toggleIconsClass = classMap({
-      'toggle-icon-class': true,
-    });
+      const toggleIconsClass = classMap({
+        'toggle-icon-class': true,
+      });
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
-      <div class=${classes}>
-        <span class="toggle-content-col">
-          ${this.label
-            ? html` ${BlrFormLabelInline({
-                labelText: this.label,
-                forValue: this.checkInputId,
-                labelSize: this.size || 'md',
-              })}`
-            : nothing}
-          ${this.showHint && this.hintMessage
-            ? BlrFormCaptionRenderFunction({
-                message: this.hintMessage,
-                variant: 'hint',
-                icon: this.hintIcon,
-                size: this.size || 'sm',
-                theme: this.theme,
-              })
-            : nothing}
-        </span>
-        <div class="label-container">
-          <label
-            for=${this.checkInputId || nothing}
-            class=${wrapperClass}
-            ?disabled=${this.disabled}
-            ?readonly=${this.readonly}
-          >
-            <input
-              type="checkbox"
-              class="input-control"
-              id=${this.checkInputId || nothing}
-              name=${this.checkInputId || nothing}
+      return html`<style>
+          ${dynamicStyles.map((style) => style)}
+        </style>
+        <div class=${classes}>
+          <span class="toggle-content-col">
+            ${this.label
+              ? html` ${BlrFormLabelInline({
+                  labelText: this.label,
+                  forValue: this.checkInputId,
+                  labelSize: this.size || 'md',
+                })}`
+              : nothing}
+            ${this.showHint && this.hintMessage
+              ? BlrFormCaptionRenderFunction({
+                  message: this.hintMessage,
+                  variant: 'hint',
+                  icon: this.hintIcon,
+                  size: this.size || 'sm',
+                  theme: this.theme,
+                })
+              : nothing}
+          </span>
+          <div class="label-container">
+            <label
+              for=${this.checkInputId || nothing}
+              class=${wrapperClass}
               ?disabled=${this.disabled}
               ?readonly=${this.readonly}
-              .checked=${this.isSelected || nothing}
-              @change=${this.handleChange}
-              @focus=${this.onFocus}
-              @blur=${this.onBlur}
-            />
-            <span class="toggle-switch-slider"> </span>
+            >
+              <input
+                type="checkbox"
+                class="input-control"
+                id=${this.checkInputId || nothing}
+                name=${this.checkInputId || nothing}
+                ?disabled=${this.disabled}
+                ?readonly=${this.readonly}
+                .checked=${this.isSelected || nothing}
+                @change=${this.handleChange}
+                @focus=${this.onFocus}
+                @blur=${this.onBlur}
+              />
+              <span class="toggle-switch-slider"> </span>
 
-            <span class="toggle-switch-unselect toggle-icon">
-              ${BlrIconRenderFunction({
-                icon: calculateIconName('blrOn', this.size),
-                size: this.size,
-                hideAria: true,
-                classMap: toggleIconsClass,
-              })}
-            </span>
-            <span class="toggle-switch-select toggle-icon">
-              ${BlrIconRenderFunction({
-                icon: calculateIconName('blrOff', this.size),
-                size: this.size,
-                hideAria: true,
-                classMap: toggleIconsClass,
-              })}
-            </span>
-          </label>
-          ${this.variant === 'leading' && this.showStateLabel
-            ? html` ${BlrFormLabelInline({
-                labelText: this.isSelected ? this.onLabel : this.offLabel,
-                forValue: this.checkInputId,
-                labelSize: this.size || 'md',
-              })}`
-            : nothing}
-        </div>
-      </div>`;
+              <span class="toggle-switch-unselect toggle-icon">
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrOn', this.size),
+                  size: this.size,
+                  hideAria: true,
+                  classMap: toggleIconsClass,
+                })}
+              </span>
+              <span class="toggle-switch-select toggle-icon">
+                ${BlrIconRenderFunction({
+                  icon: calculateIconName('blrOff', this.size),
+                  size: this.size,
+                  hideAria: true,
+                  classMap: toggleIconsClass,
+                })}
+              </span>
+            </label>
+            ${this.variant === 'leading' && this.showStateLabel
+              ? html` ${BlrFormLabelInline({
+                  labelText: this.isSelected ? this.onLabel : this.offLabel,
+                  forValue: this.checkInputId,
+                  labelSize: this.size || 'md',
+                })}`
+              : nothing}
+          </div>
+        </div>`;
+    }
   }
 }
 
