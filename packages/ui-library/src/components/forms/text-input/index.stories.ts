@@ -32,7 +32,6 @@ export default {
       options: FormSizes,
       control: { type: 'radio' },
       table: {
-        disable: false,
         category: 'Appearance',
       },
     },
@@ -43,7 +42,6 @@ export default {
       options: InputTypes,
       control: { type: 'select' },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -53,7 +51,6 @@ export default {
       name: 'placeholder',
       defaultValue: 'Placeholder-text',
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -67,7 +64,6 @@ export default {
         label: 'Enter Text',
       },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -77,7 +73,6 @@ export default {
       description: 'Enter the max allowed length. Additional input is cut off after the max has been reached.',
       defaultValue: 200,
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -87,7 +82,6 @@ export default {
       defaultValue: true,
       control: { type: 'boolean' },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -98,7 +92,6 @@ export default {
         type: 'text',
       },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
       if: { arg: 'hasLabel', eq: true },
@@ -111,7 +104,6 @@ export default {
         type: 'text',
       },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
       if: { arg: 'hasLabel', eq: true },
@@ -122,7 +114,6 @@ export default {
       options: [undefined, ...PureIconKeys],
       control: { type: 'boolean' },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -133,7 +124,6 @@ export default {
       control: { type: 'select' },
       if: { arg: 'showInputIcon', eq: true },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -147,7 +137,6 @@ export default {
         type: 'boolean',
       },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -158,7 +147,6 @@ export default {
       control: { type: 'select' },
       if: { arg: 'showHint', eq: true },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -167,7 +155,6 @@ export default {
       name: 'hintMessage',
       if: { arg: 'showHint', eq: true },
       table: {
-        disable: false,
         category: 'Content/ Settings',
       },
     },
@@ -178,7 +165,6 @@ export default {
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
       defaultValue: false,
       table: {
-        disable: false,
         category: 'States',
       },
     },
@@ -187,7 +173,6 @@ export default {
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       defaultValue: false,
       table: {
-        disable: false,
         category: 'States',
       },
     },
@@ -197,7 +182,6 @@ export default {
       description: 'Choose if the component must hold a value after an interaction or a submit.',
       defaultValue: false,
       table: {
-        disable: false,
         category: 'Validations',
       },
     },
@@ -206,7 +190,6 @@ export default {
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
-        disable: false,
         category: 'Validations',
       },
     },
@@ -217,14 +200,12 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasError', eq: true },
       table: {
-        disable: false,
         category: 'Validations',
       },
     },
     errorMessage: {
       if: { arg: 'hasError', eq: true },
       table: {
-        disable: false,
         category: 'Validations',
       },
     },
@@ -234,7 +215,6 @@ export default {
       description:
         'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
       table: {
-        disable: false,
         category: 'Accessibility',
       },
     },
@@ -244,7 +224,6 @@ export default {
       description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -253,7 +232,6 @@ export default {
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -262,7 +240,6 @@ export default {
       description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -271,7 +248,6 @@ export default {
       description: 'Fires when some text is selected.',
       action: 'onSelect',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -280,7 +256,6 @@ export default {
       name: 'textInputId',
       description: 'Unique identifier for this component.',
       table: {
-        disable: false,
         category: 'Technical Attributes',
       },
     },
@@ -288,7 +263,6 @@ export default {
       name: 'name',
       description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
       table: {
-        disable: false,
         category: 'Technical Attributes',
       },
     },
@@ -296,7 +270,6 @@ export default {
       options: Themes,
       control: { type: 'select' },
       table: {
-        disable: false,
         category: 'Appearance',
       },
     },
@@ -556,7 +529,7 @@ export const Placeholder = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Has placeholder',
+          label: 'With placeholder',
           labelAppendix: '',
           value: '',
         })}
@@ -564,7 +537,7 @@ export const Placeholder = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: "Hasn't placeholder",
+          label: 'Without placeholder',
           labelAppendix: '',
           placeholder: '',
           value: '',
@@ -752,7 +725,6 @@ Icon.argTypes = {
   ...disabledArgTypes,
 };
 Icon.storyName = 'Icon';
-
 /**
  * The Text Input component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaption component [link to FormCaption component].
  */

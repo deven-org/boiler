@@ -125,6 +125,7 @@ export class BlrTextInput extends LitElement {
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.textInputId}
+                name="${this.name || nothing}"
                 aria-label=${this.arialabel}
                 type="${this.currentType}"
                 .value="${this.value}"
