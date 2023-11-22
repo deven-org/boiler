@@ -1,17 +1,22 @@
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const charactersLength = characters.length;
+
+const validFirstCharactersLength = charactersLength - 10;
+
+const getRandomCharacter = (validFirstChar: boolean) => {
+  if (validFirstChar) {
+    return characters.charAt(Math.floor(Math.random() * validFirstCharactersLength));
+  } else {
+    return characters.charAt(Math.floor(Math.random() * validFirstCharactersLength));
+  }
+};
+
 export const generateId = (length?: number) => {
-  let result = '';
   length = length || 12;
-
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const charactersLength = characters.length;
-
-  const validFirstCharactersLength = charactersLength - 10;
-
-  result += characters.charAt(Math.floor(Math.random() * validFirstCharactersLength));
-
+  let result = getRandomCharacter(true);
   let counter = 0;
   while (counter < length - 1) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    result += getRandomCharacter(false);
     counter += 1;
   }
   return result;
