@@ -10,8 +10,8 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
     return typeSafeNestedCss/* css */ `
       .blr-checkbox {
+        all: initial;
         display: flex;
-
 
         .input-control {
           all: initial;
