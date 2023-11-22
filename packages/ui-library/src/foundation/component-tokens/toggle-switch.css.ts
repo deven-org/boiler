@@ -37,7 +37,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           & > .blr-label-switch-wrapper {
             _Fix_: "Focus ring needed";
             _outline-offset: 2px;
-            border-radius: 15px;
+            border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
             position: relative;
             cursor: pointer;
             outline-style: solid;

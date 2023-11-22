@@ -872,10 +872,6 @@
             "value": "{core.dimensionREM.8}",
             "type": "spacing"
           }
-        },
-        "BorderRadius": {
-          "value": "{core.dimensionREM.40}",
-          "type": "borderRadius"
         }
       },
       "ContentCol": {
@@ -896,6 +892,10 @@
       },
       "Control": {
         "Container": {
+          "BorderRadius": {
+            "value": "{core.dimensionREM.40}",
+            "type": "borderRadius"
+          },
           "BorderWidth": {
             "SM": {
               "Active": {
