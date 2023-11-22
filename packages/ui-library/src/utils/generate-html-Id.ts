@@ -4,6 +4,8 @@ const charactersLength = characters.length;
 const validFirstCharactersLength = charactersLength - 10;
 
 const getRandomCharacter = (validFirstChar: boolean) => {
+  // the bitwise OR replaces Math.floor which is much faster,
+  // but will fail on very large numbers, which is not the case here
   if (validFirstChar) {
     return characters.charAt((Math.random() * validFirstCharactersLength) | 0);
   } else {
