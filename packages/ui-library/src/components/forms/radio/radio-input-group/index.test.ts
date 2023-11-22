@@ -1,6 +1,6 @@
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../../../utils/get-random.string';
+import { getRandomString } from '../../../../utils/get-random-string';
 import { BlrRadioGroupType, BlrRadioGroupRenderFunction } from './index';
 
 const sampleParams: BlrRadioGroupType = {

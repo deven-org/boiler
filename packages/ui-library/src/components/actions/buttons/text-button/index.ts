@@ -21,7 +21,7 @@ import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-
 
 const TAG_NAME = 'blr-text-button';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
-import { generateId } from '../../../../utils/generateId';
+import { generateId } from '../../../../utils/generate-html-Id';
 
 @customElement('blr-text-button')
 export class BlrTextButton extends LitElement {

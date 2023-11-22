@@ -13,7 +13,7 @@ import { BlrLoaderRenderFunction } from '../../../feedback/loader';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
-import { generateId } from '../../../../utils/generateId';
+import { generateId } from '../../../../utils/generate-html-Id';
 
 const TAG_NAME = 'blr-icon-button';
 

@@ -13,7 +13,7 @@ import { RenderBtnProps } from '../../../../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../../utils/typesafe-generic-component-renderer';
-import { generateId } from '../../../../../utils/generateId';
+import { generateId } from '../../../../../utils/generate-html-Id';
 
 const TAG_NAME = 'blr-range-legend-min-max-slider';
 

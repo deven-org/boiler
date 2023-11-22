@@ -16,7 +16,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { generateId } from '../../../utils/generateId';
+import { generateId } from '../../../utils/generate-html-Id';
 
 const TAG_NAME = 'blr-checkbox';
 

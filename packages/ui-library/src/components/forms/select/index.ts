@@ -15,7 +15,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
-import { generateId } from '../../../utils/generateId';
+import { generateId } from '../../../utils/generate-html-Id';
 
 type Option = {
   value: string;

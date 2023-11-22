@@ -15,7 +15,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
-import { generateId } from '../../../utils/generateId';
+import { generateId } from '../../../utils/generate-html-Id';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {

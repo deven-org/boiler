@@ -2,7 +2,7 @@ import { BlrTextareaRenderFunction, BlrTextareaType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../../utils/get-random.string';
+import { getRandomString } from '../../../utils/get-random-string';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',

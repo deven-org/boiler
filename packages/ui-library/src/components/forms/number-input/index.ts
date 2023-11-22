@@ -13,7 +13,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
-import { generateId } from '../../../utils/generateId';
+import { generateId } from '../../../utils/generate-html-Id';
 
 const TAG_NAME = 'blr-number-input';
 

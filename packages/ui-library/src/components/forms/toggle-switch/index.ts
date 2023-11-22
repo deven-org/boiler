@@ -16,7 +16,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 const TAG_NAME = 'blr-label-toggleswitch';
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { generateId } from '../../../utils/generateId';
+import { generateId } from '../../../utils/generate-html-Id';
 
 @customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {

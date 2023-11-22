@@ -11,7 +11,7 @@ import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { generateId } from '../../../utils/generateId';
+import { generateId } from '../../../utils/generate-html-Id';
 
 const TAG_NAME = 'blr-textarea';
 
