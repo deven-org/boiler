@@ -164,7 +164,11 @@ export class BlrCheckbox extends LitElement {
           class="${classes}"
           @mouseenter=${this.handleEnter}
           @mouseleave=${this.handleLeave}
-          @mousedown=${this.handlePress}
+          @mousedown=${(event: MouseEvent) => {
+            if (event.which === 1) {
+              this.handlePress();
+            }
+          }}
           @mouseup=${this.handleRelease}
           @touchstart=${this.handlePress}
           @touchend=${this.handleRelease}
