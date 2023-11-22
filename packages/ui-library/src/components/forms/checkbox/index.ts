@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
@@ -60,7 +59,6 @@ export class BlrCheckbox extends LitElement {
   protected handleChange(event: Event) {
     if (!this.disabled) {
       this.onChange?.(event);
-      console.log('change', this.currentCheckedState);
     }
   }
 
@@ -80,12 +78,10 @@ export class BlrCheckbox extends LitElement {
 
   protected handleEnter = () => {
     this.hovered = true;
-    console.log('hovered', this.hovered);
   };
 
   protected handleLeave = () => {
     this.hovered = false;
-    console.log('hovered', this.hovered);
   };
 
   @state() protected active = false;
@@ -93,12 +89,10 @@ export class BlrCheckbox extends LitElement {
   protected handlePress = () => {
     this.active = true;
     this.currentCheckedState = !this.currentCheckedState;
-    console.log('active', this.active);
   };
 
   protected handleRelease = () => {
     this.active = false;
-    console.log('active', this.active);
   };
 
   @state() protected currentCheckedState: boolean | undefined = this.checked;
@@ -164,14 +158,17 @@ export class BlrCheckbox extends LitElement {
           class="${classes}"
           @mouseenter=${this.handleEnter}
           @mouseleave=${this.handleLeave}
-          @mousedown=${this.handlePress}
+          @mousedown=${(event: MouseEvent) => {
+            if (event.which === 1) {
+              this.handlePress();
+            }
+          }}
           @mouseup=${this.handleRelease}
           @touchstart=${this.handlePress}
           @touchend=${this.handleRelease}
           @focusin=${this.handleFocus}
           @focusout=${this.handleBlur}
           @keydown=${(event: KeyboardEvent) => {
-            console.log(event);
             if (event.code === 'Space') {
               this.handlePress();
             }
