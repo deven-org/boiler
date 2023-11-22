@@ -100,12 +100,14 @@ export class BlrTextButton extends LitElement {
           : nothing}
         <span class="label">${this.label}</span>
         ${this.hasIcon && this.iconPosition === 'trailing'
-          ? BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: iconClasses,
-            })
+          ? html`<div class="trailing-icon-class">
+              ${BlrIconRenderFunction({
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                hideAria: true,
+                classMap: iconClasses,
+              })}
+            </div>`
           : nothing}`;
 
       return html`<style>

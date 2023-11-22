@@ -47,7 +47,7 @@ const args: BlrTextButtonType = {
   theme: 'Light',
   variant: 'cta',
   size: 'md',
-  buttonDisplay: 'block',
+  buttonDisplay: 'inline',
   label: 'Button',
   hasIcon: true,
   iconPosition: 'leading',

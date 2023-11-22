@@ -46,6 +46,7 @@ export const styleCustom = typeSafeNestedCss`
       gap: ${TextButton.Container.ItemSpacing.MD};
       padding: ${TextButton.Container.Padding.MD};
       border-radius: ${TextButton.Container.BorderRadius.MD};
+      
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.MD};
@@ -83,6 +84,12 @@ export const styleCustom = typeSafeNestedCss`
   .block {
     display: block;
     text-align: center;
+
+   & > .trailing-icon-class {
+     display:inline;
+     margin: auto;
+     color: red;
+    }
   }
 
   .inline {
@@ -91,5 +98,13 @@ export const styleCustom = typeSafeNestedCss`
 
   .inline-block {
     display: inline-block;
+    text-align: center;
+    margin: auto;
+
+    & > .trailing-icon-class {
+      display:inline;
+      text-align:center;
+      color: red;
+      }
   }
 `;
