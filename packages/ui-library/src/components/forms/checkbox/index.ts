@@ -79,17 +79,27 @@ export class BlrCheckbox extends LitElement {
 
   @state() protected hovered = false;
 
-  protected handleEnter = (event: MouseEvent) => {
+  protected handleEnter = () => {
     this.hovered = true;
     console.log('hovered', this.hovered);
   };
 
-  protected handleLeave = (event: MouseEvent) => {
+  protected handleLeave = () => {
     this.hovered = false;
     console.log('hovered', this.hovered);
   };
 
   @state() protected active = false;
+
+  protected handlePress = () => {
+    this.active = true;
+    console.log('active', this.active);
+  };
+
+  protected handleRelease = () => {
+    this.active = false;
+    console.log('active', this.active);
+  };
 
   @state() protected currentCheckedState: boolean | undefined = this.checked;
 
@@ -110,6 +120,7 @@ export class BlrCheckbox extends LitElement {
         'disabled': this.disabled || false,
         'focus': this.focused || false,
         'hover': this.hovered || false,
+        'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'readonly': this.readonly || false,
         'indeterminate': this.indeterminate || false,
@@ -121,6 +132,7 @@ export class BlrCheckbox extends LitElement {
         'disabled': this.disabled || false,
         'focus': this.focused || false,
         'hover': this.hovered || false,
+        'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'readonly': this.readonly || false,
         'indeterminate': this.indeterminate || false,
@@ -143,7 +155,15 @@ export class BlrCheckbox extends LitElement {
         <style>
           ${dynamicStyles.map((style) => style)}
         </style>
-        <div class="${classes}" @mouseenter=${this.handleEnter} @mouseleave=${this.handleLeave}>
+        <div
+          class="${classes}"
+          @mouseenter=${this.handleEnter}
+          @mouseleave=${this.handleLeave}
+          @mousedown=${this.handlePress}
+          @mouseup=${this.handleRelease}
+          @touchstart=${this.handlePress}
+          @touchend=${this.handleRelease}
+        >
           <input
             type="checkbox"
             class="input-control"
@@ -157,9 +177,19 @@ export class BlrCheckbox extends LitElement {
             @change=${this.handleChange}
             @focus=${this.handleFocus}
             @blur=${this.handleBlur}
+            @keydown=${(event: KeyboardEvent) => {
+              if (event.key === 'space') {
+                this.handlePress();
+              }
+            }}
+            @keyup=${(event: KeyboardEvent) => {
+              if (event.key === 'space') {
+                this.handleRelease();
+              }
+            }}
           />
 
-          <label class="${visualCheckboxClasses}" for="${this.checkInputId}">
+          <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true">
             ${this.indeterminate
               ? BlrIconRenderFunction({
                   icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
