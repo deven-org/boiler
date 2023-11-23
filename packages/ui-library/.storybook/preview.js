@@ -17,7 +17,7 @@ export default {
       values: [
         {
           name: 'Dark',
-          value: '#000000',
+          value: 'hsl(216 9% 10% / 1)',
         },
         {
           name: 'Light',
