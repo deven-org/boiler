@@ -2337,18 +2337,6 @@
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
           },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.4}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
-            }
-          },
           "ContentRow": {
             "PaddingLeftRight": {
               "value": "{core.dimensionPX.12}",
@@ -2369,24 +2357,48 @@
             }
           }
         },
+        "ContentCol": {
+          "PaddingTop": {
+            "SM": {
+              "value": "{core.dimensionREM.4}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            }
+          },
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            }
+          }
+        },
         "MD": {
           "HighlightLine": {
             "Height": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             }
           },
           "ContentRow": {
@@ -2415,18 +2427,6 @@
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             }
           },
           "ContentRow": {
