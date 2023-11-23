@@ -90,8 +90,9 @@ export class BlrTextButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` ${this.hasIcon && this.iconPosition === 'leading'
-          ? html`<div class="leading-icon-class">
+      const labelAndIconGroup = html` <div class="flex-container">
+        ${this.hasIcon && this.iconPosition === 'leading'
+          ? html` <div class="leading-icon-class">
               ${BlrIconRenderFunction({
                 icon: calculateIconName(this.icon, iconSizeVariant),
                 size: iconSizeVariant,
@@ -100,11 +101,7 @@ export class BlrTextButton extends LitElement {
               })}
             </div>`
           : nothing}
-        <span class="label"
-          >${this.label} <br />
-          button <br />
-          button
-        </span>
+        <span class="label">${this.label} </span>
         ${this.hasIcon && this.iconPosition === 'trailing'
           ? html`<div class="trailing-icon-class">
               ${BlrIconRenderFunction({
@@ -113,8 +110,9 @@ export class BlrTextButton extends LitElement {
                 hideAria: true,
                 classMap: iconClasses,
               })}
-            </div>`
-          : nothing}`;
+            </div> `
+          : nothing}
+      </div>`;
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}

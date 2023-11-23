@@ -83,36 +83,25 @@ export const styleCustom = typeSafeNestedCss`
 
   .block {
     display: block;
-    text-align: center;
-
-    & > .trailing-icon-class,
-    & > .leading-icon-class {
-     display:inline;
-     margin: auto;
-     vertical-align: middle;
-    }
-  }
-
-  .inline {
-    display: inline;
-    & > .trailing-icon-class,
-    & > .leading-icon-class {
-      display:inline;
-      margin: auto;
-      vertical-align: middle;
-     }
   }
 
   .inline-block {
     display: inline-block;
-    text-align: center;
-    margin: auto;
+  }
 
-    & > .trailing-icon-class,
-    & > .leading-icon-class {
-      display:inline;
-      text-align:center;
-      vertical-align: middle;
-      }
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .trailing-icon-class,
+  .leading-icon-class {
+    display: flex;
+    align-items: center;
+ }
+
+  .parent-class {
+    max-width: 100%;
   }
 `;
