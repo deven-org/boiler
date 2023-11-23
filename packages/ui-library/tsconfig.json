@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "outDir": "./dist",
     "declaration": true,
-    "declarationDir": "./types",
+    "declarationMap": true,
+    "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
-    "noEmit": true,
+    "emitDeclarationOnly": true,
     "sourceMap": true,
     "module": "ESNext",
     "target": "ESNext",
