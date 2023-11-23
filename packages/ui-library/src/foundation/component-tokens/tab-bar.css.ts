@@ -7,7 +7,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
   const { IconButton } = componentTokens.Actions;
   const { TabBar } = componentTokens.Navigation;
 
-  return typeSafeNestedCss`
+  return typeSafeNestedCss/* css */ `
       .wrapper-horizontal {
         position: relative;
         display: block;
@@ -22,10 +22,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           padding: 0px 1rem;
         }
       }
+      
       .blr-tab-bar-group {
         width: 100%;
         display: flex;
-        align-items: center;
+        align-items: start;
         position: relative;
 
         &.fullWidth {
@@ -38,7 +39,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           }
         }
 
-        .arrow {
+_FIX_START {
+ "Button arrow should be an iconButton";
+ "The IconButton shuld be wrapped, so we can apply Navigation.TabBar.ButtonWrapper.Padding";
+}
+        button.arrow {
           background: none;
           color: ${Silent.Icon.Rest};
           border: none;
@@ -48,42 +53,57 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           background-color: ${Silent.SurfaceFill.Rest};
           border-color: ${Silent.SurfaceStroke.Rest};
           color: ${Silent.Icon.Rest};
+          line-height: 0;
 
-
-          &.left {
-            padding-top: 15px;
-          }
-
-          &.right {
-            padding-top: 15px;
-          }
+          
 
           &.sm {
-            gap: ${IconButton.Container.ItemSpacing.SM};
+            padding: ${IconButton.Container.Padding.SM};
+            &.left {
+              margin: ${TabBar.ButtonWrapper.Padding.Leading.SM};
+            }
+            &.right {
+              margin: ${TabBar.ButtonWrapper.Padding.Trailing.SM};
+            }
           }
 
           &.md {
-            gap: ${IconButton.Container.ItemSpacing.MD};
+            padding: ${IconButton.Container.Padding.MD};
+            &.left {
+              margin: ${TabBar.ButtonWrapper.Padding.Leading.MD};
+            }
+            &.right {
+              margin: ${TabBar.ButtonWrapper.Padding.Trailing.MD};
+            }
+            
           }
 
           &.lg {
-            gap: ${IconButton.Container.ItemSpacing.LG};
+            padding: ${IconButton.Container.Padding.LG};
+            &.left {
+              margin: ${TabBar.ButtonWrapper.Padding.Leading.LG};
+            }
+            &.right {
+              margin: ${TabBar.ButtonWrapper.Padding.Trailing.LG};
+            }
           }
         }
+_FIX_END { "" }
 
         .blr-tab-bar {
           position: relative;
           width: 100%;
           overflow-x: auto;
-          padding-top: 15px;
-          padding-bottom: 15px;
-          margin-bottom: -15px;
+          _FIX_padding-top: 15px;
+          _FIX_padding-bottom: 15px;
+          _FIX_margin-bottom: -15px;
           max-width: calc(100% - 2rem);
 
           .nav-list {
             display: flex;
             list-style: none;
-            padding: 0 0.5rem;
+            _FIX_padding: 0 0.5rem;
+            padding: 0;
             margin: 0;
             align-items: center;
 
@@ -122,10 +142,12 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               flex-direction: column;
               flex: 0 1 0px;
               justify-content: center;
+              overflow: clip;
 
 
               &:focus-within {
                 outline: 2px solid black;
+                outline-offset: -2px;
                 border-radius: 4px;
               }
 
