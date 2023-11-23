@@ -35,7 +35,6 @@ export class BlrRadioGroup extends LitElement {
   @property() showHint = true;
   @property() groupHintIcon: SizelessIconType = 'blrInfo';
   @property() errorMessage?: string;
-  @property() showGroupErrorMessage = true;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
   @property() groupErrorIcon?: SizelessIconType;

@@ -61,7 +61,6 @@ const args: BlrRadioGroupType = {
   groupErrorMessage: '',
   groupErrorIcon: undefined,
   hideLabel: false,
-  showGroupErrorMessage: false,
 };
 
 BlrRadioGroup.args = args;
