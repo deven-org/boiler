@@ -48,6 +48,10 @@ export const styleCustom = typeSafeNestedCss`
       padding: ${TextButton.Container.Padding.XL};
       border-radius: ${TextButton.Container.BorderRadius.XL};
     }
+
+    & > blr-icon.trailing {
+      order: 1;
+    }
   }
 
   .loading {

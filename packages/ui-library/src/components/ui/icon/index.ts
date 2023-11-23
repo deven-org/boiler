@@ -49,14 +49,16 @@ export const BlrIconRenderFunction = ({
   disablePointerEvents,
   ignoreSize,
 }: BlrIconType) => {
-  return html`<blr-icon
-    class="${classMap}"
-    .icon=${icon || nothing}
-    .ignoreSize=${ignoreSize}
-    .size=${size}
-    .name=${name || nothing}
-    aria-hidden=${hideAria || nothing}
-    @click=${onClick}
-    style=${disablePointerEvents ? styleMap({ pointerEvents: 'none' }) : nothing}
-  ></blr-icon>`;
+  return html`
+    <blr-icon
+      class=${classMap}
+      .icon=${icon || nothing}
+      .ignoreSize=${ignoreSize}
+      .size=${size}
+      .name=${name || nothing}
+      aria-hidden=${hideAria || nothing}
+      @click=${onClick}
+      style=${disablePointerEvents ? styleMap({ pointerEvents: 'none' }) : nothing}
+    ></blr-icon>
+  `;
 };

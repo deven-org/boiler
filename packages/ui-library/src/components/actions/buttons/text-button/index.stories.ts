@@ -10,12 +10,11 @@ export default {
     icon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'hasIcon', eq: true },
     },
     iconPosition: {
       options: IconPositionVariant,
       control: { type: 'select' },
-      if: { arg: 'hasIcon', eq: true },
+      if: { arg: 'icon', truthy: true },
     },
     size: {
       options: ActionSizes,
@@ -47,9 +46,8 @@ const args: BlrTextButtonType = {
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
   onFocus: () => console.log('onFocus'),
-  hasIcon: true,
-  iconPosition: 'leading',
   icon: 'blr360',
+  iconPosition: 'leading',
   loading: false,
   disabled: false,
   buttonId: 'button-id',

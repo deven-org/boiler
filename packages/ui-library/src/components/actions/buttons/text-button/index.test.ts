@@ -6,7 +6,6 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 const sampleParams: BlrTextButtonType = {
   label: 'Button',
   icon: 'blr360',
-  hasIcon: true,
   iconPosition: 'leading',
   loading: false,
   disabled: false,
@@ -78,17 +77,16 @@ describe('blr-text-button', () => {
     expect(loader).not.to.exist;
   });
 
-  it('shows a trailing icon when  iconPosition is "trailing" and hasIcon is true', async () => {
+  it('shows a trailing icon when icon is selected iconPosition is "trailing"', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        hasIcon: true,
         iconPosition: 'trailing',
       })
     );
 
     const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const trailingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
+    const trailingIcon = querySelectorDeep('blr-icon.trailing', textButton?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', trailingIcon?.getRootNode() as HTMLElement);
     const rect = svg?.getBoundingClientRect();
 
@@ -101,28 +99,10 @@ describe('blr-text-button', () => {
     expect(trailingIcon).to.exist;
   });
 
-  it('does not show a trailing icon when  iconPosition is "trailing" and hasIcon is true', async () => {
+  it('shows a leading icon when icon is selected and iconPosition is "leading"', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        hasIcon: false,
-        iconPosition: 'trailing',
-      })
-    );
-
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const trailingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', trailingIcon?.getRootNode() as HTMLElement);
-
-    expect(trailingIcon).not.to.exist;
-    expect(svg).not.to.exist;
-  });
-
-  it('shows a leading icon when  iconPosition is "leading" and hasIcon is true', async () => {
-    const element = await fixture(
-      BlrTextButtonRenderFunction({
-        ...sampleParams,
-        hasIcon: true,
         iconPosition: 'leading',
       })
     );
@@ -141,20 +121,19 @@ describe('blr-text-button', () => {
     expect(leadingIcon).to.exist;
   });
 
-  it('does not show a leading icon when  iconPosition is "leading" and hasIcon is true', async () => {
+  it('does not show a icon when icon is undefined', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        hasIcon: false,
-        iconPosition: 'leading',
+        icon: undefined,
       })
     );
 
     const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const leadingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', leadingIcon?.getRootNode() as HTMLElement);
+    const icon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', icon?.getRootNode() as HTMLElement);
 
-    expect(leadingIcon).not.to.exist;
+    expect(icon).not.to.exist;
     expect(svg).not.to.exist;
   });
 });

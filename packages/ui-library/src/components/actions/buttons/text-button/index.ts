@@ -29,17 +29,14 @@ export class BlrTextButton extends LitElement {
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: SizelessIconType;
-  @property() trailingIcon?: SizelessIconType;
   @property() icon?: SizelessIconType;
+  @property() iconPosition?: IconPositionVariant = 'leading';
   @property() loading!: boolean;
   @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
-  @property() hasIcon?: boolean;
-  @property() iconPosition?: IconPositionVariant = 'leading';
   @property() innerTabIndex?: number = 0;
   @property() theme: ThemeType = 'Light';
 
@@ -94,19 +91,15 @@ export class BlrTextButton extends LitElement {
                 theme: this.theme,
               })
             : nothing}
-          ${this.leadingIcon &&
-          BlrIconRenderFunction({
-            icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-            size: iconSizeVariant,
-            hideAria: true,
-          })}
+          ${this.icon
+            ? BlrIconRenderFunction({
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                hideAria: true,
+                classMap: classMap({ trailing: this.iconPosition === 'trailing' }),
+              })
+            : nothing}
           <span class="label">${this.label}</span>
-          ${this.trailingIcon &&
-          BlrIconRenderFunction({
-            icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-            size: iconSizeVariant,
-            hideAria: true,
-          })}
         </span>
       `;
     }
