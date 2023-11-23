@@ -2329,19 +2329,22 @@
   "Navigation": {
     "TabBar": {
       "Tab": {
-        "SM": {
-          "HighlightLine": {
-            "Height": {
+        "HighlightLine": {
+          "Height": {
+            "SM": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "Icon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.12}",
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
               "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
           }
         },
@@ -2417,14 +2420,16 @@
             }
           }
         },
-        "MD": {
-          "HighlightLine": {
-            "Height": {
-              "value": "{core.dimensionPX.2}",
+        "SM": {
+          "Icon": {
+            "Sizing": {
+              "value": "{core.dimensionREM.12}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+              "description": "Defines height and width of the icon of a tab"
             }
-          },
+          }
+        },
+        "MD": {
           "Icon": {
             "Sizing": {
               "value": "{core.dimensionREM.16}",
@@ -2434,13 +2439,6 @@
           }
         },
         "LG": {
-          "HighlightLine": {
-            "Height": {
-              "value": "{core.dimensionPX.2}",
-              "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
           "Icon": {
             "Sizing": {
               "value": "{core.dimensionREM.16}",
