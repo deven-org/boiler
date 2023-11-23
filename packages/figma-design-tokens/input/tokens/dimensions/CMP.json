@@ -2337,18 +2337,6 @@
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
           },
-          "ContentRow": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionPX.12}",
-              "type": "spacing",
-              "description": "Defines the padding left and right of <ContentRow>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
-            }
-          },
           "Icon": {
             "Sizing": {
               "value": "{core.dimensionREM.12}",
@@ -2393,24 +2381,48 @@
             }
           }
         },
+        "ContentRow": {
+          "PaddingLeftRight": {
+            "SM": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing",
+              "description": "Defines the padding left and right of <ContentRow>"
+            }
+          },
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.4}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            }
+          }
+        },
         "MD": {
           "HighlightLine": {
             "Height": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionPX.16}",
-              "type": "spacing",
-              "description": "Defines the padding left and right of <ContentRow>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
           },
           "Icon": {
@@ -2427,18 +2439,6 @@
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionPX.16}",
-              "type": "spacing",
-              "description": "Defines the padding left and right of <ContentRow>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.4}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
           },
           "Icon": {
