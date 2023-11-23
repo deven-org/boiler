@@ -2441,51 +2441,56 @@
         }
       },
       "ButtonWrapper": {
-        "SM": {
-          "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8} 0 0",
-              "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
-            }
+        "InnerPadding": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           },
-          "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           }
         },
-        "MD": {
+        "Padding": {
           "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8} 0 0",
+            "SM": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+              "description": "Coded comps only!"
+            },
+            "MD": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!."
+            },
+            "LG": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!."
             }
           },
           "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.8}",
+            "SM": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
-            }
-          }
-        },
-        "LG": {
-          "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.12}",
+              "description": "Coded comps only!"
+            },
+            "MD": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
               "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
-            }
-          },
-          "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.12}",
+              "description": "Coded comps only!."
+            },
+            "LG": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
               "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+              "description": "Coded comps only!."
             }
           }
         }
