@@ -1,10 +1,10 @@
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../../../utils/get-random.string';
 import { BlrRadioGroupType, BlrRadioGroupRenderFunction } from './index';
 
 const sampleParams: BlrRadioGroupType = {
   theme: 'Light',
+  size: 'md',
   disabled: false,
   name: 'Default Name',
   required: false,
@@ -18,12 +18,11 @@ const sampleParams: BlrRadioGroupType = {
   showLegend: true,
   showHint: true,
   groupHintMessage: 'This is a sample hint message',
-  hintIcon: 'blrInfo',
+  groupHintIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
   hideLabel: false,
-  showGroupErrorMessage: false,
 };
 
 describe('blr-radio-group', () => {
