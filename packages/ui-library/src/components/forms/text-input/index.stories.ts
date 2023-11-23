@@ -42,7 +42,7 @@ export default {
       options: InputTypes,
       control: { type: 'select' },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
 
@@ -51,7 +51,7 @@ export default {
       name: 'placeholder',
       defaultValue: 'Placeholder-text',
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
 
@@ -64,7 +64,7 @@ export default {
         label: 'Enter Text',
       },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
 
@@ -73,7 +73,7 @@ export default {
       description: 'Enter the max allowed length. Additional input is cut off after the max has been reached.',
       defaultValue: 200,
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     hasLabel: {
@@ -82,7 +82,7 @@ export default {
       defaultValue: true,
       control: { type: 'boolean' },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     label: {
@@ -92,7 +92,7 @@ export default {
         type: 'text',
       },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
@@ -104,7 +104,7 @@ export default {
         type: 'text',
       },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
@@ -114,7 +114,7 @@ export default {
       options: [undefined, ...PureIconKeys],
       control: { type: 'boolean' },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     // todo it has to be renamed? Checke this
@@ -124,7 +124,7 @@ export default {
       control: { type: 'select' },
       if: { arg: 'showInputIcon', eq: true },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
 
@@ -137,7 +137,7 @@ export default {
         type: 'boolean',
       },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     // todo renaming from hintIcon to hintMessageIcon in the blrFormRenderFunction, partially solution with name overwriting
@@ -147,7 +147,7 @@ export default {
       control: { type: 'select' },
       if: { arg: 'showHint', eq: true },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     // todo renaming from hintText to hasHint in the blrFormRenderFunction, partially solution with name overwriting
@@ -155,7 +155,7 @@ export default {
       name: 'hintMessage',
       if: { arg: 'showHint', eq: true },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     //States
@@ -182,7 +182,7 @@ export default {
       description: 'Choose if the component must hold a value after an interaction or a submit.',
       defaultValue: false,
       table: {
-        category: 'Validations',
+        category: 'Validation',
       },
     },
     hasError: {
@@ -190,7 +190,7 @@ export default {
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
-        category: 'Validations',
+        category: 'Validation',
       },
     },
     // todo renaming from errorIcon to errorMessageIcon, partially solution with name overwriting
@@ -200,13 +200,13 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasError', eq: true },
       table: {
-        category: 'Validations',
+        category: 'Validation',
       },
     },
     errorMessage: {
       if: { arg: 'hasError', eq: true },
       table: {
-        category: 'Validations',
+        category: 'Validation',
       },
     },
     //Accessibility
@@ -288,33 +288,33 @@ export default {
 <p>Text Input allows users to enter enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.</p>
 <ul>
         <li> <a href="/docs/design-system-web-components-forms-textinput--docs"><strong>Docs</strong></a></li>
-        <li> <a href="#appearance"><strong>Appearance</strong></a>
+        <li> <strong>Appearance</strong>
             <ul>
                 <li> <a href="#size-variant"><strong>Size Variant</strong></a></li>
             </ul>
         </li>
-         <li> <a href="#content--settings"><strong>Content/ Settings</strong></a>
+         <li> <strong>Content / Settings</strong>
             <ul>
                 <li> <a href="#type"><strong>Type</strong></a>
                 </li>
                 <li> <a href="#placeholder"><strong>Placeholder</strong></a>
                 </li>
             </ul></li>
-        <li> <a href="#states"><strong>States</strong></a>
+        <li> <strong>States</strong>
             <ul>
                 <li> <a href="#disabled"><strong>Disabled</strong></a>
                 </li>
                 <li> <a href="#readonly"><strong>Readonly</strong></a>
                 </li>
             </ul></li>
-        <li> <a href="#validation"><strong>Validation</strong></a>
+        <li> <strong>Validation</strong>
             <ul>
                 <li> <a href="#required"><strong>Required</strong></a>
                 </li>
                 <li> <a href="#has-error"><strong>Has Error</strong></a>
                 </li>
             </ul></li>
-        <li> <a href="#dependencies"><strong>Dependencies</strong></a>
+        <li> <strong>Dependencies</strong>
             <ul>
                 <li> <a href="#form-label"><strong>Form Label</strong></a>
                 </li>
@@ -337,12 +337,12 @@ const args: BlrTextInputType = {
   theme: 'Light',
   size: 'md',
   type: 'text',
-  placeholder: 'Add a message here',
+  placeholder: 'Placeholder-text',
   value: '',
   maxLength: 200,
   hasLabel: true,
   label: 'Label',
-  labelAppendix: '(Optional)',
+  labelAppendix: '(Appendix)',
   showInputIcon: true,
   inputIcon: 'blr360',
   showHint: false,
@@ -355,7 +355,7 @@ const args: BlrTextInputType = {
   errorMessage: '',
   errorIcon: 'blrInfo',
   arialabel: 'TextInput',
-  textInputId: 'Input ID',
+  textInputId: 'Input Id',
   name: 'TextInput',
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
@@ -366,7 +366,7 @@ BlrTextInput.args = args;
 // Default parameters for Textarea component
 const defaultParams: BlrTextInputType = {
   size: 'md',
-  placeholder: 'Add a message here',
+  placeholder: 'Placeholder-text',
   value: '',
   maxLength: 140,
   label: 'Label',
@@ -440,7 +440,6 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 // All Stories
 //Appearance Size Story
 /**
- * #### Size Variant
  * The Text Input component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
@@ -453,6 +452,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           size: 'sm',
           label: 'Text Input SM',
+          placeholder: '',
           value: '',
         })}
         ${BlrTextInputRenderFunction({
@@ -460,6 +460,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           size: 'md',
           label: 'Text Input MD',
+          placeholder: '',
           value: '',
         })}
         ${BlrTextInputRenderFunction({
@@ -467,6 +468,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           size: 'lg',
           label: 'Text Input LG',
+          placeholder: '',
           value: '',
         })}
       </div>
@@ -476,12 +478,10 @@ export const SizeVariant = () => {
 SizeVariant.argTypes = {
   ...disabledArgTypes,
 };
-SizeVariant.storyName = 'Appearance';
 
 //Content/ Settings Type & Placeholder
 /**
- * #### Type
- * The Text Input component can have all the types an html input can have, except the number and the unit type, which is covered in the NumberInput component. For more information see NumberInput component [link to NumberInput component].
+ * The Text Input component can have all the types an html input can have, except the number and the unit type, which is covered in the Number Input component. For more information see NumberInput component.
  */
 export const Type = () => {
   return html`
@@ -515,7 +515,6 @@ export const Type = () => {
 Type.argTypes = {
   ...disabledArgTypes,
 };
-Type.storyName = 'Content/ Settings';
 
 /**
  * The Text Input component can display a placeholder text. This is recommended to improve usability.
@@ -549,13 +548,10 @@ export const Placeholder = () => {
 Placeholder.argTypes = {
   ...disabledArgTypes,
 };
-Placeholder.storyName = 'Placeholder';
 
 // States Disabled
 /**
- * Apart from states like Rest, Hover, Pressed and Focus, the Text Input component can also be Disabled or Readonly. The Error state is documented under Validation.
- * #### Disabled
- * The Text Input component in the Disabled state can not be interacted with. This means it can not receive focus or be selected.
+ * The Text Input component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
@@ -567,6 +563,7 @@ export const Disabled = () => {
           theme: 'Light',
           size: 'md',
           label: 'Disabled Text Input',
+          placeholder: '',
           labelAppendix: '',
           disabled: true,
           value: '',
@@ -578,7 +575,6 @@ export const Disabled = () => {
 Disabled.argTypes = {
   ...disabledArgTypes,
 };
-Disabled.storyName = 'States';
 
 /**
  * The Text Input component in the Readonly state can not be interacted with, but it can still be selected and receive focus.
@@ -594,6 +590,7 @@ export const Readonly = () => {
           size: 'md',
           label: 'Readonly',
           readonly: true,
+          placeholder: '',
           value: '',
         })}
       </div>
@@ -603,11 +600,9 @@ export const Readonly = () => {
 Readonly.argTypes = {
   ...disabledArgTypes,
 };
-Readonly.storyName = 'Readonly';
 
 // Validation Required Todo add interactive Story with Button to show the State
 /**
- * #### Required
  * The Text Input component can be set as required. If set as required, an error should be thrown, when the Text Input component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the [Dependencies](#dependencies) section below.
  * */
 export const Required = () => {
@@ -619,8 +614,8 @@ export const Required = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          placeholder: 'Please leave a short description',
-          label: 'Reason for submission',
+          placeholder: '',
+          label: 'Label-text',
           labelAppendix: '(required)',
           value: '',
         })}
@@ -636,12 +631,11 @@ Required.parameters = {
     default: '',
   },
 };
-Required.storyName = 'Validation';
 
 /**
  * The Text Input component can be set to have an error with the Has Error property. An error can be displayed after submitting a wrong value, after leaving/deselecting the Text Input or in case the Text Input was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the [Dependencies](#dependencies) section below.
  * */
-export const hasError = () => {
+export const HasError = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -650,29 +644,24 @@ export const hasError = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          placeholder: 'Please leave a short description',
-          label: 'Reason for submission',
-          labelAppendix: '(required)',
+          hasError: true,
+          placeholder: '',
+          label: 'Error',
+          labelAppendix: '',
+          errorMessage: '',
           value: '',
         })}
       </div>
     </div>
   `;
 };
-hasError.argTypes = {
+HasError.argTypes = {
   ...disabledArgTypes,
 };
-hasError.parameters = {
-  backgrounds: {
-    default: '',
-  },
-};
-hasError.storyName = 'Has Error';
 
 //Dependencies Captions
 /**
- * #### Form Label
- * The Text Input component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see FormLabel component [link to FormLabel component].
+ * The Text Input component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see [Form Label component](?path=/docs/design-system-web-components-internal-components-formlabel--docs).
  */
 export const FormLabel = () => {
   return html`
@@ -684,8 +673,8 @@ export const FormLabel = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: 'A Text Input with a Form Label',
-          labelAppendix: '(appendix)',
+          label: 'Label',
+          labelAppendix: '(Appendix)',
           value: '',
         })}
       </div>
@@ -695,9 +684,9 @@ export const FormLabel = () => {
 FormLabel.argTypes = {
   ...disabledArgTypes,
 };
-FormLabel.storyName = 'Dependencies';
+
 /**
- * The Text Input component can have a trailing clickable icon / icon button. This could be used for example to show or hide the input, when it is used to enter a password. For more information about the Icon component see Icon component [link to Icon component].
+ * The Text Input component can have a trailing clickable icon / icon button. This could be used for example to show or hide the input, when it is used to enter a password. For more information about the Icon component see [Icon component](?path=/docs/design-system-web-components-ui-icon--docs).
  */
 export const Icon = () => {
   return html`
@@ -709,10 +698,10 @@ export const Icon = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: ' A textinput with an error message',
+          label: ' Error message',
           labelAppendix: '',
           hasError: true,
-          errorMessage: 'This is an error message',
+          errorMessage: 'OMG it is an error',
           showHint: false,
           errorIcon: 'blrError',
           value: '',
@@ -724,9 +713,8 @@ export const Icon = () => {
 Icon.argTypes = {
   ...disabledArgTypes,
 };
-Icon.storyName = 'Icon';
 /**
- * The Text Input component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaption component [link to FormCaption component].
+ * The Text Input component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see FormCaption component.
  */
 export const FormCaption = () => {
   return html`
@@ -738,7 +726,7 @@ export const FormCaption = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: ' A Text Input without an Input Icon',
+          label: ' Without an Input Icon',
           labelAppendix: '',
           showHint: false,
           showInputIcon: false,
@@ -751,4 +739,3 @@ export const FormCaption = () => {
 FormCaption.argTypes = {
   ...disabledArgTypes,
 };
-FormCaption.storyName = 'Form Caption';
