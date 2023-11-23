@@ -10,7 +10,7 @@
     "build:storybook": "npm run build:storybook --workspace=@boiler/ui-library",
     "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
     "copy:static": "mkdir -p dist/assets && cp -rip static/{fonts,imgs}/* dist/assets/",
-    "build": "npm run build --workspace=@boiler/ui-library",
+    "build": "npm run build --workspace=@boiler/ui-library && npm run compile --workspace=@boiler/ui-library",
     "build:types": "npm run build:types --workspace=@boiler/ui-library",
     "lint": "npm run lint --workspace=@boiler/ui-library",
     "format": "npm run format:eslint --workspace=@boiler/ui-library && npm run format:prettier --workspace=@boiler/ui-library",
@@ -20,6 +20,7 @@
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
     "compile:icons": "npm run compile:icons --workspace=@boiler/icons",
+    "compile": "npm run compile --workspace=@boiler/ui-library",
     "tokens:generate": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
     "prepare": "husky install"
   },

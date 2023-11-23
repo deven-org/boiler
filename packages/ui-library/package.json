@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "start:storybook": "sb dev -p 1337",
+    "compile": "tsc --project tsconfig.json",
     "build:storybook": "sb build",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "build:types": "rimraf types && tsc --emitDeclarationOnly",
