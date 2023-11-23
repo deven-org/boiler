@@ -5,6 +5,7 @@
     "declaration": true,
     "declarationDir": "./types",
     "allowSyntheticDefaultImports": true,
+    "noEmit": true,
     "sourceMap": true,
     "module": "ESNext",
     "target": "ESNext",
@@ -15,5 +16,5 @@
     "strict": true
   },
   "include": ["src"],
-  "exclude": []
+  "exclude": [""]
 }

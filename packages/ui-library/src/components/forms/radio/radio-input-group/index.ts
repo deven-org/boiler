@@ -30,7 +30,6 @@ export class BlrRadioGroup extends LitElement {
   @property() errorIcon?: SizelessIconType;
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
-  @property() layout!: string;
   @property() showHint = true;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() errorMessage?: string;
@@ -43,99 +42,99 @@ export class BlrRadioGroup extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (this.size) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
-
-      const legendClasses = classMap({
-        'blr-legend': true,
-        [`${this.size}`]: this.size,
-        'error': this.hasError || false,
-      });
-
-      const legendWrapperClasses = classMap({
-        'blr-legend-wrapper': true,
-        [`${this.size}`]: this.size,
-      });
-
-      const classes = classMap({
-        [`${this.size}`]: this.size,
-        disabled: this.disabled || false,
-        readonly: this.readonly || false,
-        checked: this.checked || false,
-        error: this.hasError || false,
-        [`${this.layout}`]: this.layout,
-      });
-
-      const calculateOptionId = (label: string) => {
-        return label.replace(/ /g, '_').toLowerCase();
-      };
-
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
-        </style>
-        ${this.showLegend
-          ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">Choose any option</legend></div>`
-          : nothing}
-
-        <div class="blr-radio-group ${classes}">
-          ${this.options &&
-          this.options.map((option: RadioOption) => {
-            const id = calculateOptionId(option.label);
-            return html`
-              <div class="blr-radio ${classes}">
-                <input
-                  id=${id || nothing}
-                  class="${classes} input-control"
-                  type="radio"
-                  name=${this.name}
-                  ?disabled=${this.disabled}
-                  ?readonly=${this.readonly}
-                  ?aria-disabled=${this.disabled}
-                  ?invalid=${this.hasError}
-                  ?aria-invalid=${this.hasError}
-                  ?checked=${this.checked}
-                  ?required=${this.required}
-                  @input=${this.onChange}
-                  @blur=${this.onBlur}
-                  @focus=${this.onFocus}
-                />
-                <div class="label-wrapper">
-                  ${option.label
-                    ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size })}`
-                    : nothing}
-                </div>
-              </div>
-            `;
-          })}
-        </div>
-
-        ${this.showHint || this.hasError
-          ? html` <div class="caption-group ${classes}">
-              ${this.showHint
-                ? html`
-                    ${BlrFormHintRenderFunction({
-                      message: this.groupHintMessage || '',
-                      variant: 'hint',
-                      size: this.size,
-                      icon: this.hintIcon ? this.hintIcon : undefined,
-                      theme: this.theme,
-                    })}
-                  `
-                : nothing}
-              ${this.hasError
-                ? html`
-                    ${BlrFormHintRenderFunction({
-                      message: this.groupErrorMessage || '',
-                      variant: 'error',
-                      size: this.size,
-                      icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
-                      theme: this.theme,
-                    })}
-                  `
-                : nothing}
-            </div>`
-          : nothing} `;
+    if (!this.size) {
+      return null;
     }
+    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
+
+    const legendClasses = classMap({
+      'blr-legend': true,
+      [`${this.size}`]: this.size,
+      'error': this.hasError || false,
+    });
+
+    const legendWrapperClasses = classMap({
+      'blr-legend-wrapper': true,
+      [`${this.size}`]: this.size,
+    });
+
+    const classes = classMap({
+      [`${this.size}`]: this.size,
+      disabled: this.disabled || false,
+      readonly: this.readonly || false,
+      checked: this.checked || false,
+      error: this.hasError || false,
+    });
+
+    const calculateOptionId = (label: string) => {
+      return label.replace(/ /g, '_').toLowerCase();
+    };
+
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
+      ${this.showLegend
+        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">Choose any option</legend></div>`
+        : nothing}
+
+      <div class="blr-radio-group ${classes}">
+        ${this.options &&
+        this.options.map((option: RadioOption) => {
+          const id = calculateOptionId(option.label);
+          return html`
+            <div class="blr-radio ${classes}">
+              <input
+                id=${id || nothing}
+                class="${classes} input-control"
+                type="radio"
+                name=${this.name}
+                ?disabled=${this.disabled}
+                ?readonly=${this.readonly}
+                ?aria-disabled=${this.disabled}
+                ?invalid=${this.hasError}
+                ?aria-invalid=${this.hasError}
+                ?checked=${this.checked}
+                ?required=${this.required}
+                @input=${this.onChange}
+                @blur=${this.onBlur}
+                @focus=${this.onFocus}
+              />
+              <div class="label-wrapper">
+                ${option.label
+                  ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size || 'md' })}`
+                  : nothing}
+              </div>
+            </div>
+          `;
+        })}
+      </div>
+
+      ${this.showHint || this.hasError
+        ? html` <div class="caption-group ${classes}">
+            ${this.showHint
+              ? html`
+                  ${BlrFormHintRenderFunction({
+                    message: this.groupHintMessage || '',
+                    variant: 'hint',
+                    size: this.size,
+                    icon: this.hintIcon ? this.hintIcon : undefined,
+                    theme: this.theme,
+                  })}
+                `
+              : nothing}
+            ${this.hasError
+              ? html`
+                  ${BlrFormHintRenderFunction({
+                    message: this.groupErrorMessage || '',
+                    variant: 'error',
+                    size: this.size,
+                    icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
+                    theme: this.theme,
+                  })}
+                `
+              : nothing}
+          </div>`
+        : nothing} `;
   }
 }
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;

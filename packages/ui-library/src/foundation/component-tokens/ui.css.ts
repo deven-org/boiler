@@ -7,23 +7,23 @@ export const { tokenizedLight: buttonGroupLight, tokenizedDark: buttonGroupDark 
 
   return typeSafeNestedCss`
     .blr-button-group.xs {
-      gap: ${UI.ButtonGroup.XS.ItemSpacing};
+      gap: ${UI.ButtonGroup.Container.ItemSpacing.XS};
     }
 
     .blr-button-group.sm {
-      gap: ${UI.ButtonGroup.SM.ItemSpacing};
+      gap: ${UI.ButtonGroup.Container.ItemSpacing.SM};
     }
 
     .blr-button-group.md {
-      gap: ${UI.ButtonGroup.MD.ItemSpacing};
+      gap: ${UI.ButtonGroup.Container.ItemSpacing.MD};
     }
 
     .blr-button-group.lg {
-      gap: ${UI.ButtonGroup.LG.ItemSpacing};
+      gap: ${UI.ButtonGroup.Container.ItemSpacing.LG};
     }
 
     .blr-button-group.xl {
-      gap: ${UI.ButtonGroup.XL.ItemSpacing};
+      gap: ${UI.ButtonGroup.Container.ItemSpacing.XL};
     }
   `;
 });

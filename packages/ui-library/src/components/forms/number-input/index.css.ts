@@ -138,7 +138,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
         &:focus-within {
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${Input.Error.Focus};
+          color: ${Input.Error.Focus.color};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
