@@ -128,7 +128,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           border-style: ${Input.Error.Rest.style};
           border-color: transparent;
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focus};
+          color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
@@ -250,7 +250,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${SM.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${SM.CaptionComponent.IconWrapper.Padding};
+          padding: ${SM.CaptionComponent.IconWrapper.PaddingTop};
         }
 
         .blr-caption-text {
@@ -267,7 +267,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${MD.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${MD.CaptionComponent.IconWrapper.Padding};
+          padding: ${MD.CaptionComponent.IconWrapper.PaddingTop};
         }
 
         .blr-caption-text {
@@ -284,7 +284,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${LG.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${LG.CaptionComponent.IconWrapper.Padding};
+          padding: ${LG.CaptionComponent.IconWrapper.PaddingTop};
         }
 
         .blr-caption-text {
