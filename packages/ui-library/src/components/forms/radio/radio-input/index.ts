@@ -2,7 +2,7 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { InputSizesType, RadioOption } from '../../../../globals/types';
+import { InputSizesType } from '../../../../globals/types';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
@@ -18,6 +18,8 @@ const TAG_NAME = 'blr-radio';
 export class BlrRadio extends LitElement {
   static styles = [styleCustom];
 
+  @property() optionId!: string;
+  @property() label!: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
@@ -28,9 +30,10 @@ export class BlrRadio extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
+  @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType;
-  @property() option!: RadioOption;
   @property() showHint?: boolean;
+  @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType;
   @property() radioInputId?: string = generateId();
 
@@ -41,15 +44,16 @@ export class BlrRadio extends LitElement {
       const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
       const classes = classMap({
-        [`${this.size}`]: this.size,
-        [`disabled`]: this.disabled || false,
-        [`readonly`]: this.readonly || false,
-        [`checked`]: this.checked || this.option.checked || false,
-        [`error`]: this.hasError || false,
+        [this.size]: this.size,
+        disabled: this.disabled || false,
+        readonly: this.readonly || false,
+        checked: this.checked || false,
+        error: this.hasError || false,
       });
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
         <div class="blr-radio ${classes}">
           <input
@@ -57,12 +61,9 @@ export class BlrRadio extends LitElement {
             class="${classes} input-control"
             type="radio"
             name=${this.name}
-            value=${this.option.value || nothing}
             ?disabled=${this.disabled}
             ?readonly=${this.readonly}
-            ?aria-disabled=${this.disabled}
             ?invalid=${this.hasError}
-            ?aria-invalid=${this.hasError}
             ?checked=${this.checked}
             ?required=${this.required}
             @input=${this.onChange}
@@ -70,14 +71,16 @@ export class BlrRadio extends LitElement {
             @focus=${this.onFocus}
           />
           <div class="label-wrapper">
-            ${this.option.label
-              ? BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })
-              : nothing}
+            ${BlrFormLabelInline({
+              labelText: this.label,
+              forValue: this.optionId,
+              labelSize: this.size,
+            })}
             ${this.showHint
               ? html`
                   <div class="hint-wrapper">
                     ${BlrFormHintRenderFunction({
-                      message: this.option.hintMessage,
+                      message: this.hintMessage,
                       variant: 'hint',
                       size: this.size,
                       icon: this.hintIcon ? this.hintIcon : undefined,
@@ -90,7 +93,7 @@ export class BlrRadio extends LitElement {
               ? html`
                   <div class="error-wrapper">
                     ${BlrFormHintRenderFunction({
-                      message: this.option.errorMessage,
+                      message: this.errorMessage,
                       variant: 'error',
                       size: this.size,
                       icon: this.errorIcon ? this.errorIcon : undefined,
@@ -100,7 +103,8 @@ export class BlrRadio extends LitElement {
                 `
               : nothing}
           </div>
-        </div> `;
+        </div>
+      `;
     }
   }
 }
