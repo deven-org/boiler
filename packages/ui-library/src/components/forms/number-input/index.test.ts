@@ -16,7 +16,7 @@ const sampleParams: BlrNumberInputType = {
   labelAppendix: 'label appendix',
   numberInputId: 'egal',
   label: 'Hello',
-  showHint: false,
+  hasHint: false,
   hintIcon: 'blr360',
   errorIcon: 'blrInfo',
   value: 4,
@@ -55,7 +55,7 @@ describe('blr-number-input', () => {
     const element = await fixture(
       BlrNumberInputRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
         errorIcon: 'blrErrorFilled',

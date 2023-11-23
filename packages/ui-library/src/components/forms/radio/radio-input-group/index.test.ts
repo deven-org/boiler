@@ -16,7 +16,7 @@ const sampleParams: BlrRadioGroupType = {
   ],
   layout: 'horizontal',
   showLegend: true,
-  showHint: true,
+  hasHint: true,
   groupHintMessage: 'This is a sample hint message',
   groupHintIcon: 'blrInfo',
   hasError: false,

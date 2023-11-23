@@ -11,7 +11,7 @@ const sampleParams: BlrToggleSwitchType = {
   checked: false,
   onLabel: 'On',
   offLabel: 'Off',
-  showHint: true,
+  hasHint: true,
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   variant: 'leading',
@@ -47,11 +47,11 @@ describe('blr-label-toggleswitch', () => {
     expect(className).to.contain('sm');
   });
 
-  it('shows hint when "showHint" is true', async () => {
+  it('shows hint when "hasHint" is true', async () => {
     const element = await fixture(
       BlrToggleSwitchRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
       })
     );
 
@@ -60,11 +60,11 @@ describe('blr-label-toggleswitch', () => {
     expect(hint).to.exist;
   });
 
-  it('does not show hint when "showHint" is false', async () => {
+  it('does not show hint when "hasHint" is false', async () => {
     const element = await fixture(
       BlrToggleSwitchRenderFunction({
         ...sampleParams,
-        showHint: false,
+        hasHint: false,
       })
     );
 

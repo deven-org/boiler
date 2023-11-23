@@ -21,7 +21,7 @@ const defaultParams: BlrTextareaType = {
   disabled: false,
   readonly: false,
 
-  showHint: true,
+  hasHint: true,
   hintIcon: 'blrInfo',
   hintMessage: 'hint message',
 

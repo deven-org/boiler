@@ -32,7 +32,7 @@ export class BlrRadioGroup extends LitElement {
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
   @property() layout!: string;
-  @property() showHint = true;
+  @property() hasHint = true;
   @property() groupHintIcon: SizelessIconType = 'blrInfo';
   @property() errorMessage?: string;
   @property() groupErrorMessage?: string;
@@ -71,7 +71,7 @@ export class BlrRadioGroup extends LitElement {
       };
 
       const captionContent = html`
-        ${this.showHint
+        ${this.hasHint
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -130,7 +130,7 @@ export class BlrRadioGroup extends LitElement {
           })}
         </div>
 
-        ${this.showHint || this.hasError
+        ${this.hasHint || this.hasError
           ? html` <div class="caption-group ${classes}">
               ${BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)}
             </div>`

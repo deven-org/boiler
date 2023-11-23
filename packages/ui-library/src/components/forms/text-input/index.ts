@@ -40,7 +40,7 @@ export class BlrTextInput extends LitElement {
   @property() errorMessage?: string;
   @property() showInputIcon = true;
   @property() inputIcon: SizelessIconType = 'blr360';
-  @property() showHint = true;
+  @property() hasHint = true;
   @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() errorIcon: SizelessIconType = 'blrInfo';
@@ -102,7 +102,7 @@ export class BlrTextInput extends LitElement {
       ]).toLowerCase() as SizesType;
 
       const captionContent = html`
-        ${this.showHint
+        ${this.hasHint
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -184,7 +184,7 @@ export class BlrTextInput extends LitElement {
                 })}`
               : nothing}
           </div>
-          ${this.showHint || this.hasError
+          ${this.hasHint || this.hasError
             ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
             : nothing}
         </div>

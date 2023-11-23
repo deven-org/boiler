@@ -16,7 +16,7 @@ const sampleParams: BlrTextInputType = {
   placeholder: 'Type your message here ..',
   hintMessage: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfo',
-  showHint: true,
+  hasHint: true,
   hasLabel: true,
   showInputIcon: true,
   inputIcon: 'blr360',
@@ -90,7 +90,7 @@ describe('blr-text-input', () => {
     const element = await fixture(
       BlrTextInputRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
         errorIcon: 'blrErrorFilled',

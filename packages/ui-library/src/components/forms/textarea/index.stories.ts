@@ -34,7 +34,7 @@ const defaultParams: BlrTextareaType = {
   maxLength: 140,
   label: 'Label',
   labelAppendix: '',
-  showHint: false,
+  hasHint: false,
   hintMessage: 'This is a small hint',
   hintIcon: 'blrInfo',
   arialabel: '',
@@ -178,7 +178,7 @@ export default {
       },
       if: { arg: 'hasLabel', eq: true },
     },
-    showHint: {
+    hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
@@ -193,7 +193,7 @@ export default {
     hintMessage: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       table: {
         disable: false,
         category: 'Content/ Settings',
@@ -202,7 +202,7 @@ export default {
     hintIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       table: {
@@ -483,7 +483,7 @@ const args: BlrTextareaType = {
   hasLabel: true,
   label: 'Share your feedback',
   labelAppendix: '(optional)',
-  showHint: false,
+  hasHint: false,
   hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   showCounter: false,
@@ -520,7 +520,7 @@ const argTypesToDisable = [
   'hasLabel',
   'label',
   'labelAppendix',
-  'showHint',
+  'hasHint',
   'hintText',
   'hintIcon',
   'showCounter',
@@ -843,7 +843,7 @@ export const Captions = () => {
           size: 'md',
           placeholder: '',
           label: 'A text area with a hint',
-          showHint: true,
+          hasHint: true,
           labelAppendix: '',
           value: '',
         })}
@@ -855,7 +855,7 @@ export const Captions = () => {
           label: ' A text area with an error message',
           labelAppendix: '',
           hasError: true,
-          showHint: false,
+          hasHint: false,
           errorIcon: 'blrError',
           value: '',
         })}

@@ -37,7 +37,7 @@ export class BlrNumberInput extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType = 'blrInfo';
-  @property() showHint = true;
+  @property() hasHint = true;
   @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
   @property() value?: number;
@@ -176,7 +176,7 @@ export class BlrNumberInput extends LitElement {
       });
 
       const captionContent = html`
-        ${this.showHint
+        ${this.hasHint
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -232,7 +232,7 @@ export class BlrNumberInput extends LitElement {
               `
             : nothing}
         </div>
-        ${this.showHint || this.hasError
+        ${this.hasHint || this.hasError
           ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
           : nothing}
       `;

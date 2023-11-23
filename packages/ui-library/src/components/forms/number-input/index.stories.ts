@@ -34,10 +34,10 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     hintMessage: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
@@ -77,7 +77,7 @@ const args: BlrNumberInputType = {
   errorMessage: 'This is error message',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
-  showHint: true,
+  hasHint: true,
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   errorIcon: 'blrErrorFilled',

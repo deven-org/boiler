@@ -43,7 +43,7 @@ export class BlrTextarea extends LitElement {
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType;
   @property() hint?: string;
-  @property() showHint = true;
+  @property() hasHint = true;
   @property() hintMessage?: string;
   @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
@@ -112,7 +112,7 @@ export class BlrTextarea extends LitElement {
       const counterVariant = this.determinateCounterVariant();
 
       const captionContent = html`
-        ${this.showHint
+        ${this.hasHint
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -168,7 +168,7 @@ ${this.value}
           </textarea
           >
           <div class="${textareaInfoContainer}">
-            ${this.showHint || this.hasError
+            ${this.hasHint || this.hasError
               ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
               : nothing}
             ${this.showCounter

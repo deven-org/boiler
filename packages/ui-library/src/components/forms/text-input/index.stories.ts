@@ -22,10 +22,10 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     hintMessage: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
@@ -64,7 +64,7 @@ const args: BlrTextInputType = {
   disabled: false,
   required: false,
   readonly: false,
-  showHint: false,
+  hasHint: false,
   hintMessage: 'This is a hint message',
   hintIcon: 'blrInfo',
   maxLength: 200,

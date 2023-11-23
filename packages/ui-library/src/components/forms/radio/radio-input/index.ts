@@ -30,7 +30,7 @@ export class BlrRadio extends LitElement {
   @property() hasError?: boolean;
   @property() errorIcon?: SizelessIconType;
   @property() option!: RadioOption;
-  @property() showHint = true;
+  @property() hasHint = true;
   @property() hintIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
@@ -55,7 +55,7 @@ export class BlrRadio extends LitElement {
 
       const renderCaptionContent = (option: RadioOption) => {
         return html`
-          ${this.showHint
+          ${this.hasHint
             ? BlrFormCaptionRenderFunction({
                 variant: 'hint',
                 theme: this.theme,
@@ -102,7 +102,7 @@ export class BlrRadio extends LitElement {
               ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
               : nothing}
             <div class="caption-wrapper">
-              ${this.showHint || this.hasError
+              ${this.hasHint || this.hasError
                 ? BlrFormCaptionGroupRenderFunction({ size: this.size }, renderCaptionContent(this.option))
                 : nothing}
             </div>

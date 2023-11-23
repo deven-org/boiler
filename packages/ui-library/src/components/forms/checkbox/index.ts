@@ -35,7 +35,7 @@ export class BlrCheckbox extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType;
-  @property() showHint?: boolean;
+  @property() hasHint?: boolean;
   @property() hintIcon?: SizelessIconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
@@ -108,7 +108,7 @@ export class BlrCheckbox extends LitElement {
       ]).toLowerCase() as FormSizesType;
 
       const captionContent = html`
-        ${this.showHint
+        ${this.hasHint
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -171,7 +171,7 @@ export class BlrCheckbox extends LitElement {
                   labelSize: this.size,
                 })}`
               : nothing}
-            ${this.showHint || this.hasError
+            ${this.hasHint || this.hasError
               ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
               : nothing}
           </div>

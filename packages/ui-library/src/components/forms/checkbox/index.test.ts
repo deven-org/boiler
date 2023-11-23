@@ -14,7 +14,7 @@ const sampleParams: BlrCheckboxType = {
   size: 'md',
   errorMessage: 'This is a sample error message',
   errorIcon: undefined,
-  showHint: false,
+  hasHint: false,
   hintMessage: 'This is a sample hint',
   hintIcon: undefined,
   theme: 'Light',
@@ -35,7 +35,7 @@ describe('blr-checkbox', () => {
     const element = await fixture(
       BlrCheckboxRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
         errorIcon: 'blrErrorFilled',

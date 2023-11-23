@@ -34,7 +34,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() readonly?: boolean;
   @property() checked?: boolean;
 
-  @property() showHint?: boolean;
+  @property() hasHint?: boolean;
   @property() hintMessage?: string;
   @property() hintIcon: SizelessIconType = 'blrInfo';
 
@@ -98,7 +98,7 @@ export class BlrToggleSwitch extends LitElement {
                   labelSize: this.size || 'md',
                 })}`
               : nothing}
-            ${this.showHint && this.hintMessage
+            ${this.hasHint && this.hintMessage
               ? BlrFormCaptionRenderFunction({
                   message: this.hintMessage,
                   variant: 'hint',

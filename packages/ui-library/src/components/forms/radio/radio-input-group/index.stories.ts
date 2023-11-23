@@ -14,7 +14,7 @@ export default {
     options: { control: 'array' },
     layout: { control: 'select', options: ['horizontal', 'vertical'] },
     groupHintIcon: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
@@ -27,7 +27,7 @@ export default {
       if: { arg: 'hasError', eq: true },
     },
     groupHintMessage: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     theme: {
       options: Themes,
@@ -54,7 +54,7 @@ const args: BlrRadioGroupType = {
   ],
   layout: '',
   showLegend: true,
-  showHint: true,
+  hasHint: true,
   groupHintMessage: 'This is a sample hint message',
   groupHintIcon: 'blrInfo',
   hasError: false,

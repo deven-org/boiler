@@ -14,7 +14,7 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
@@ -47,7 +47,7 @@ const args: BlrRadioType = {
     checked: true,
     errorMessage: 'This is a sample error message',
   },
-  showHint: true,
+  hasHint: true,
   hasError: false,
   hintIcon: undefined,
   errorIcon: undefined,

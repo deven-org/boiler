@@ -9,7 +9,7 @@ const sampleParams: BlrSelectType = {
   labelAppendix: '(Optional)',
   size: 'md',
   errorMessage: 'This is error message',
-  showHint: true,
+  hasHint: true,
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   selectId: 'Peter',
@@ -37,7 +37,7 @@ describe('blr-select', () => {
     const element = await fixture(
       BlrSelectRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
         errorIcon: 'blrErrorFilled',

@@ -16,7 +16,7 @@ const sampleParams: BlrRadioType = {
     checked: true,
     errorMessage: 'This is a sample error message',
   },
-  showHint: true,
+  hasHint: true,
   hasError: false,
   theme: 'Light',
 };
@@ -35,7 +35,7 @@ describe('blr-radio', () => {
     const element = await fixture(
       BlrRadioRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
         errorIcon: 'blrErrorFilled',

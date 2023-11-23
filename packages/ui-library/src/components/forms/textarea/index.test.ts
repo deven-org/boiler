@@ -20,7 +20,7 @@ const sampleParams: BlrTextareaType = {
   errorMessage: "OMG it's an error",
   hintMessage: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfo',
-  showHint: true,
+  hasHint: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
@@ -94,7 +94,7 @@ describe('blr-textarea', () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
         errorIcon: 'blrErrorFilled',
@@ -117,7 +117,7 @@ describe('blr-textarea', () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
         hintIcon: 'blrInfo',
       })
     );
