@@ -6,21 +6,16 @@ import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',
-  sizeVariant: 'md',
-  resize: 'both',
+  size: 'md',
+  isResizeable: 'both',
   cols: 40,
   rows: 4,
-  placeholder: 'Here is the placeholder',
   value: '',
   minLength: 0,
   maxLength: 140,
   hasLabel: true,
   label: 'Label',
   labelAppendix: '(Optional)',
-  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  maxLength: 140,
-  cols: 20,
-  rows: 5,
   errorMessage: "OMG it's an error",
   placeholder: 'Type your message here ..',
   hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
@@ -33,8 +28,6 @@ const sampleParams: BlrTextareaType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorMessage: ' ',
-  errorMessageIcon: '',
   arialabel: 'TextArea',
   textareaId: '#674',
   name: 'TextArea',
@@ -100,8 +93,8 @@ describe('blr-textarea', () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
-        hasHint: true,
-        hintMessageIcon: 'blrInfo',
+        showHint: true,
+        hintIcon: 'blrInfo',
       })
     );
 

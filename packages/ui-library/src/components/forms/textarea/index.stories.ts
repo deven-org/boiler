@@ -508,6 +508,7 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
+    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -760,6 +761,7 @@ export const HasError = () => {
 HasError.argTypes = {
   ...disabledArgTypes,
 };
+
 
 //Dependencies Captions
 /**

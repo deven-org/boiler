@@ -11,7 +11,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
   } = semanticTokens;
 
   const splitPaddingFunc = () => {
-    const { cssText } = Tooltip.ContentCol.Padding;
+    const cssText = Tooltip.ContentCol.Padding;
     const value = parseFloat(cssText.trim().split(" ")[1]);
     return { doubleValue: `${value}px`, singleValue: `${value / 2}px` };
   };
