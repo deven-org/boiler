@@ -826,11 +826,11 @@ FormCaptionGroup.argTypes = {
   ...disabledArgTypes,
 };
 
-// States counter
+// States Counter
 /**
  * The Text Area component can display an optional counter. The threshold for the warning and error message can be set individually. For more information have a look at the internal [Counter](?path=/docs/design-system-web-components-internal-components-counter--docs) component.
  */
-export const counter = () => {
+export const Counter = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -850,10 +850,10 @@ export const counter = () => {
     </div>
   `;
 };
-counter.argTypes = {
+Counter.argTypes = {
   ...disabledArgTypes,
 };
-counter.parameters = {
+Counter.parameters = {
   backgrounds: {
     default: '',
   },
