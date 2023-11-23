@@ -45,8 +45,8 @@ export class BlrSelect extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() errorIcon?: SizelessIconType = 'blr360';
+  @property() hintIcon?: SizelessIconType;
+  @property() errorIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
@@ -100,9 +100,8 @@ export class BlrSelect extends LitElement {
         'blr-input-icon': true,
         [this.size]: this.size,
       });
-
       const captionContent = html`
-        ${this.hasHint
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -111,7 +110,7 @@ export class BlrSelect extends LitElement {
               icon: this.hintIcon,
             })
           : nothing}
-        ${this.hasError
+        ${this.hasError && (this.errorMessage || this.errorIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,

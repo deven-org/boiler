@@ -68,7 +68,7 @@ describe('blr-label-toggleswitch', () => {
       })
     );
 
-    const hint = querySelectorDeep('blr-form-hint', element.getRootNode() as HTMLElement);
+    const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
 
     expect(hint).not.to.exist;
   });

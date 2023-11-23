@@ -37,7 +37,7 @@ export class BlrFormCaption extends LitElement {
 
       const iconClasses = classMap({
         'blr-icon': true,
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
       });
 
       const iconSizeVariant = getComponentConfigToken([
@@ -48,8 +48,9 @@ export class BlrFormCaption extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
         <div class=${classes} aria-label=${this.arialabel || nothing}>
           ${this.icon
@@ -65,7 +66,8 @@ export class BlrFormCaption extends LitElement {
             : nothing}
           <span class="blr-caption-text">${this.message}</span>
           ${this.childElement}
-        </div>`;
+        </div>
+      `;
     }
   }
 }

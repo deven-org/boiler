@@ -112,7 +112,7 @@ export class BlrTextarea extends LitElement {
       const counterVariant = this.determinateCounterVariant();
 
       const captionContent = html`
-        ${this.hasHint
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -121,7 +121,7 @@ export class BlrTextarea extends LitElement {
               icon: this.hintIcon,
             })
           : nothing}
-        ${this.hasError
+        ${this.hasError && (this.errorMessage || this.errorIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,

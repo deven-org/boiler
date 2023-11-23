@@ -34,7 +34,6 @@ export class BlrRadioGroup extends LitElement {
   @property() layout!: string;
   @property() hasHint = true;
   @property() groupHintIcon: SizelessIconType = 'blrInfo';
-  @property() errorMessage?: string;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
   @property() groupErrorIcon?: SizelessIconType;
@@ -69,9 +68,8 @@ export class BlrRadioGroup extends LitElement {
       const calculateOptionId = (label: string) => {
         return label.replace(/ /g, '_').toLowerCase();
       };
-
       const captionContent = html`
-        ${this.hasHint
+        ${this.hasHint && (this.groupHintMessage || this.groupHintIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
@@ -80,7 +78,7 @@ export class BlrRadioGroup extends LitElement {
               icon: this.groupHintIcon,
             })
           : nothing}
-        ${this.hasError
+        ${this.hasError && (this.groupErrorMessage || this.groupErrorIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,

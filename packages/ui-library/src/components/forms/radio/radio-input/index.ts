@@ -2,14 +2,14 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { InputSizesType, RadioOption } from '../../../../globals/types';
+import { InputSizesType } from '../../../../globals/types';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
+import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
-import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
 import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-radio';
@@ -18,6 +18,8 @@ const TAG_NAME = 'blr-radio';
 export class BlrRadio extends LitElement {
   static styles = [styleCustom];
 
+  @property() optionId!: string;
+  @property() label!: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
@@ -28,9 +30,10 @@ export class BlrRadio extends LitElement {
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
+  @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType;
-  @property() option!: RadioOption;
-  @property() hasHint = true;
+  @property() hasHint?: boolean;
+  @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
@@ -40,57 +43,55 @@ export class BlrRadio extends LitElement {
       const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
       const classes = classMap({
-        [`${this.size}`]: this.size,
-        [`disabled`]: this.disabled || false,
-        [`readonly`]: this.readonly || false,
-        [`checked`]: this.checked || this.option.checked || false,
-        [`error`]: this.hasError || false,
+        [this.size]: this.size,
+        disabled: this.disabled || false,
+        readonly: this.readonly || false,
+        checked: this.checked || false,
+        error: this.hasError || false,
       });
 
-      const calculateOptionId = (label: string) => {
-        return label ? label.replace(/ /g, '_').toLowerCase() : '';
-      };
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
+          ? html`
+              <div class="hint-wrapper">
+                ${BlrFormCaptionRenderFunction({
+                  variant: 'hint',
+                  theme: this.theme,
+                  size: this.size,
+                  message: this.hintMessage,
+                  icon: this.hintIcon,
+                })}
+              </div>
+            `
+          : nothing}
+        ${this.hasError && (this.errorMessage || this.errorIcon)
+          ? html`
+              <div class="error-wrapper">
+                ${BlrFormCaptionRenderFunction({
+                  variant: 'error',
+                  theme: this.theme,
+                  size: this.size,
+                  message: this.errorMessage,
+                  icon: this.errorIcon,
+                })}
+              </div>
+            `
+          : nothing}
+      `;
 
-      const id = this.option.label ? calculateOptionId(this.option.label) : '';
-
-      const renderCaptionContent = (option: RadioOption) => {
-        return html`
-          ${this.hasHint
-            ? BlrFormCaptionRenderFunction({
-                variant: 'hint',
-                theme: this.theme,
-                size: this.size,
-                message: option.hintMessage,
-                icon: this.hintIcon,
-              })
-            : nothing}
-          ${this.hasError
-            ? BlrFormCaptionRenderFunction({
-                variant: 'error',
-                theme: this.theme,
-                size: this.size,
-                message: option.errorMessage,
-                icon: this.errorIcon,
-              })
-            : nothing}
-        `;
-      };
-
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
         <div class="blr-radio ${classes}">
           <input
-            id=${id || nothing}
+            id=${this.optionId || nothing}
             class="${classes} input-control"
             type="radio"
             name=${this.name}
-            value=${this.option.value || nothing}
             ?disabled=${this.disabled}
             ?readonly=${this.readonly}
-            ?aria-disabled=${this.disabled}
             ?invalid=${this.hasError}
-            ?aria-invalid=${this.hasError}
             ?checked=${this.checked}
             ?required=${this.required}
             @input=${this.onChange}
@@ -98,16 +99,17 @@ export class BlrRadio extends LitElement {
             @focus=${this.onFocus}
           />
           <div class="label-wrapper">
-            ${this.option.label
-              ? html`${BlrFormLabelInline({ labelText: this.option.label, forValue: this.id, labelSize: this.size })}`
+            ${BlrFormLabelInline({
+              labelText: this.label,
+              forValue: this.optionId,
+              labelSize: this.size,
+            })}
+            ${this.hasHint || this.hasError
+              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
               : nothing}
-            <div class="caption-wrapper">
-              ${this.hasHint || this.hasError
-                ? BlrFormCaptionGroupRenderFunction({ size: this.size }, renderCaptionContent(this.option))
-                : nothing}
-            </div>
           </div>
-        </div> `;
+        </div>
+      `;
     }
   }
 }

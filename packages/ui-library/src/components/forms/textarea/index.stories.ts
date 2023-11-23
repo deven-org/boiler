@@ -494,7 +494,7 @@ const args: BlrTextareaType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorMessage: ' ',
+  errorMessage: '',
   errorIcon: undefined,
   arialabel: 'TextArea',
   textareaId: '#674',

@@ -20,7 +20,7 @@ const TAG_NAME = 'blr-icon-button';
 export class BlrIconButton extends LitElement {
   static styles = [styleCustom];
 
-  @property() arialabel?: string;
+  @property() arialabel!: string;
   @property() icon?: SizelessIconType;
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -50,8 +50,8 @@ export class BlrIconButton extends LitElement {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
-        [`${this.variant}`]: this.variant,
-        [`${this.size}`]: this.size,
+        [this.variant]: this.variant,
+        [this.size]: this.size,
         disabled: this.disabled,
         loading: this.loading || false,
       });
@@ -77,10 +77,10 @@ export class BlrIconButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
-
         <span
           aria-label=${this.arialabel || nothing}
           class="blr-semantic-action blr-icon-button ${classes}"
@@ -107,7 +107,8 @@ export class BlrIconButton extends LitElement {
             hideAria: true,
             classMap: iconClasses,
           })}
-        </span>`;
+        </span>
+      `;
     }
   }
 }
