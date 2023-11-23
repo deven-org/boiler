@@ -73,6 +73,11 @@ export class BlrTextButton extends LitElement {
         icon: true,
       });
 
+      const flexContainerClasses = classMap({
+        'flex-container': true,
+        [`${this.size}`]: this.size,
+      });
+
       const loaderVariant = determineLoaderVariant(this.variant);
 
       const loaderSizeVariant = getComponentConfigToken([
@@ -90,7 +95,7 @@ export class BlrTextButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` <div class="flex-container">
+      const labelAndIconGroup = html` <div class="${flexContainerClasses}">
         ${this.hasIcon && this.iconPosition === 'leading'
           ? html` <div class="leading-icon-class">
               ${BlrIconRenderFunction({
