@@ -136,16 +136,16 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               &.active {
                 .nav-item-content-wrapper {
                   > a {
-                  color: ${TabBar.Tab.Label.Selected.Rest};
+                  color: ${TabBar.Tab.Label.TextColor.Active.Rest};
 
                   &:hover {
                     &:not(.disabled) {
                       > p {
-                        color: ${TabBar.Tab.Label.Selected.Hover};
+                        color: ${TabBar.Tab.Label.TextColor.Active.Hover};
                       }
 
                       > blr-icon {
-                        color: ${TabBar.Tab.Icon.Selected.Hover};
+                        color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
                       }
                     }
                   }
@@ -153,11 +153,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   &:focus {
                     &:not(.disabled) {
                       > p {
-                        color: ${TabBar.Tab.Label.Selected.Focus};
+                        color: ${TabBar.Tab.Label.TextColor.Active.Focus};
                       }
 
                       > blr-icon {
-                        color: ${TabBar.Tab.Icon.Selected.Focus};
+                        color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
                       }
                     }
                   }
@@ -165,11 +165,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   &:active {
                     &:not(.disabled) {
                       > p {
-                        color: ${TabBar.Tab.Label.Selected.Pressed};
+                        color: ${TabBar.Tab.Label.TextColor.Active.Pressed};
                       }
 
                       > blr-icon {
-                        color: ${TabBar.Tab.Icon.Selected.Pressed};
+                        color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
                       }
                     }
                   }
@@ -185,7 +185,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                 }
 
                 > a {
-                  color: ${TabBar.Tab.Label.Unselected.Rest};
+                  color: ${TabBar.Tab.Label.TextColor.Inactive.Rest};
                   display: flex;
                   text-decoration: none;
                   align-items: center;
@@ -202,10 +202,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   &:hover {
                     &:not(.disabled) {
                       > p {
-                        color: ${TabBar.Tab.Label.Unselected.Hover};
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Hover};
                       }
                       > blr-icon {
-                        color: ${TabBar.Tab.Icon.Unselected.Hover};
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
                       }
                     }
                   }
@@ -214,10 +214,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   &:active {
                     &:not(.disabled) {
                       > p {
-                        color: ${TabBar.Tab.Label.Unselected.Pressed};
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Pressed};
                       }
                       > blr-icon {
-                        color: ${TabBar.Tab.Icon.Unselected.Pressed};
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
                       }
                     }
                   }
@@ -225,21 +225,21 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   &:focus {
                     &:not(.disabled) {
                       > p {
-                        color: ${TabBar.Tab.Label.Unselected.Focus};
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
                       }
                       > blr-icon {
-                        color: ${TabBar.Tab.Icon.Unselected.Focus};
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
                       }
                     }
                   }
 
                   &.disabled {
                     > slot {
-                      color: ${TabBar.Tab.Label.Unselected.Disabled}
+                      color: ${TabBar.Tab.Label.TextColor.Inactive.Disabled}
                     }
 
                     > blr-icon {
-                      color: ${TabBar.Tab.Icon.Unselected.Disabled};
+                      color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
                     }
                   }
 
@@ -265,73 +265,72 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               }
 
               .nav-item-underline {
-                opacity: ${TabBar.Tab.HighlightLine.Opacity.Unselected.Rest};
+                opacity: ${TabBar.Tab.HighlightLine.Opacity.Inactive.Rest};
               }
 
               &.sm {
-                padding-top: ${TabBar.Tab.SM.ContentCol.TopPadding};
-                gap: ${TabBar.Tab.SM.ContentCol.ItemSpacing};
+                padding-top: ${TabBar.Tab.ContentCol.PaddingTop.SM};
+                gap: ${TabBar.Tab.ContentCol.ItemSpacing.SM};
 
                 .nav-item-content-wrapper {
                   > a {
-                    padding-left: ${TabBar.Tab.SM.ContentRow.PaddingLeftRight};
-                    padding-right: ${TabBar.Tab.SM.ContentRow.PaddingLeftRight};
-                    gap: ${TabBar.Tab.SM.ContentRow.ItemSpacing};
+                    padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
+                    padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
+                    gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
 
                     > blr-icon {
-                      width: ${TabBar.Tab.SM.Icon.Sizing};
-                      height: ${TabBar.Tab.SM.Icon.Sizing};
+                      width: ${TabBar.Tab.Icon.IconSize.SM};
+                      height: ${TabBar.Tab.Icon.IconSize.SM};
                     }
                   }
                 }
 
                 .nav-item-underline {
-                  height: ${TabBar.Tab.SM.HighlightLine.Height};
+                  height: ${TabBar.Tab.HighlightLine.Height.SM};
                 }
               }
 
               &.md {
-                padding-top: ${TabBar.Tab.MD.ContentCol.TopPadding};
-                gap: ${TabBar.Tab.MD.ContentCol.ItemSpacing};
+                padding-top: ${TabBar.Tab.ContentCol.PaddingTop.MD};
+                gap: ${TabBar.Tab.ContentCol.ItemSpacing.MD};
 
                 .nav-item-content-wrapper {
                   > a {
-                    padding-left: ${TabBar.Tab.MD.ContentRow.PaddingLeftRight};
-                    padding-right: ${TabBar.Tab.MD.ContentRow.PaddingLeftRight};
-                    gap: ${TabBar.Tab.MD.ContentRow.ItemSpacing};
+                    padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
+                    padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
+                    gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
 
                     > blr-icon {
-                      width: ${TabBar.Tab.MD.Icon.Sizing};
-                      height: ${TabBar.Tab.MD.Icon.Sizing};
+                      width: ${TabBar.Tab.Icon.IconSize.MD};
+                      height: ${TabBar.Tab.Icon.IconSize.MD};
                     }
                   }
                 }
 
                 .nav-item-underline {
-                  height: ${TabBar.Tab.MD.HighlightLine.Height};
+                  height: ${TabBar.Tab.HighlightLine.Height.MD};
                 }
               }
 
               &.lg {
-                padding-top: ${TabBar.Tab.LG.ContentCol.TopPadding};
-                gap: ${TabBar.Tab.LG.ContentCol.ItemSpacing};
+                padding-top: ${TabBar.Tab.ContentCol.PaddingTop.LG};
+                gap: ${TabBar.Tab.ContentCol.ItemSpacing.LG};
 
                 .nav-item-content-wrapper {
                   > a {
-                    padding-left: ${TabBar.Tab.LG.ContentRow.PaddingLeftRight};
-                    padding-right: ${TabBar.Tab.LG.ContentRow.PaddingLeftRight};
-                    gap: ${TabBar.Tab.MD.ContentRow.ItemSpacing};
-
+                    padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
+                    padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
+                    gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
 
                     > blr-icon {
-                      width: ${TabBar.Tab.LG.Icon.Sizing};
-                      height: ${TabBar.Tab.LG.Icon.Sizing};
+                      width: ${TabBar.Tab.Icon.IconSize.LG};
+                      height: ${TabBar.Tab.Icon.IconSize.LG};
                     }
                   }
                 }
 
                 .nav-item-underline {
-                  height: ${TabBar.Tab.LG.HighlightLine.Height};
+                  height: ${TabBar.Tab.HighlightLine.Height.LG};
                 }
               }
 
@@ -342,8 +341,8 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               &.active {
                 &:not(.disabled) {
                   .nav-item-underline {
-                    background-color: ${TabBar.Tab.HighlightLine.SurfaceFill.Selected.Rest};
-                    opacity: ${TabBar.Tab.HighlightLine.Opacity.Selected.Rest};
+                    background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Rest};
+                    opacity: ${TabBar.Tab.HighlightLine.Opacity.Active.Rest};
                   }
               }
             }
