@@ -12,5 +12,18 @@ export default {
         date: /Date$/,
       },
     },
+    backgrounds: {
+      default: 'Light',
+      values: [
+        {
+          name: 'Dark',
+          value: '#000000',
+        },
+        {
+          name: 'Light',
+          value: '#FFFFFF',
+        },
+      ],
+    },
   },
 };

@@ -31,6 +31,7 @@ export const BlrRadio = (params: BlrRadioType) => BlrRadioRenderFunction(params)
 BlrRadio.storyName = 'Radio';
 
 const args: BlrRadioType = {
+  optionId: 'option_1',
   theme: 'Light',
   checked: false,
   disabled: false,
@@ -38,13 +39,9 @@ const args: BlrRadioType = {
   required: false,
   readonly: false,
   size: 'md',
-  option: {
-    label: 'Option 1',
-    value: 'option1',
-    hintMessage: 'This is a sample hint message',
-    checked: true,
-    errorMessage: 'This is a sample error message',
-  },
+  label: 'Option 1',
+  hintMessage: 'This is a sample hint message',
+  errorMessage: 'This is a sample error message',
   showHint: true,
   hasError: false,
   hintIcon: undefined,
