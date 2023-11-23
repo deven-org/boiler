@@ -11,7 +11,7 @@ module.exports = {
     usedExports: true,
   },
   output: {
-    filename: '[name].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
