@@ -71,7 +71,8 @@ export const styleCustom = typeSafeNestedCss`
 
   .loading {
     & > .icon,
-    & > .label {
+    & > .label,
+    & > .flex-container {
       visibility: hidden;
     }
   }
