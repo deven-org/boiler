@@ -13,7 +13,6 @@ const sampleParams: BlrRadioGroupType = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  layout: 'horizontal',
   showLegend: true,
   showHint: true,
   groupHintMessage: 'This is a sample hint message',
@@ -79,33 +78,5 @@ describe('blr-radio-group', () => {
     const className = radioGroup?.className;
 
     expect(className).not.to.contain('error');
-  });
-
-  it('has vertical layout if layout is vertical', async () => {
-    const element = await fixture(
-      BlrRadioGroupRenderFunction({
-        ...sampleParams,
-        layout: 'vertical',
-      })
-    );
-
-    const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
-    const className = radioGroup?.className;
-
-    expect(className).to.contain('vertical');
-  });
-
-  it('has vertical layout if layout is horizontal', async () => {
-    const element = await fixture(
-      BlrRadioGroupRenderFunction({
-        ...sampleParams,
-        layout: 'horizontal',
-      })
-    );
-
-    const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
-    const className = radioGroup?.className;
-
-    expect(className).to.contain('horizontal');
   });
 });
