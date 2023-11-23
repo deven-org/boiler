@@ -950,9 +950,6 @@
       "UI.ButtonGroup.Container.ItemSpacing.XL": "84d1abd4e9ef76edb86015c523a0dfb5912e3244",
       "UI.Divider.Container.Horizontal.Height": "99c86886304f9f83153010601e78a457c3a2377f",
       "UI.Divider.Container.Vertical.Width": "1392f861f2707b9dda9ab2ccd7deac928696a142",
-      "Navigation.TabBar.Tab.SM.Icon.Sizing": "6b113eef73655ad8a509f69b111eed85029c1b26",
-      "Navigation.TabBar.Tab.MD.Icon.Sizing": "1c5cafe5f396b8d959bc6ffaef3c1410f83d08ed",
-      "Navigation.TabBar.Tab.LG.Icon.Sizing": "f5f44d23ed6dd979bfaf9799b4457688e2231230",
       "Action.BorderRadius": "9644fb0b564a7bdd9b72d09b6d1efa4fd593c08b",
       "Forms.SM.CaptionComponent.IconDimension": "f5cf91673f3a3e330390327210550e1a1705a426",
       "Forms.SM.CaptionComponent.IconWrapper.PaddingTop": "01d766852ea0e2b80da8eccc38e4e7ed770996e5",
@@ -1585,7 +1582,10 @@
       "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Hover": "08605d6465e4b7ffa3eb3422689ee17f603d17d4",
       "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Pressed": "4cbf4b735f172abc3e2f00578831e33a9d1da076",
       "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Focus": "5aa4790a9273876dbe9976cf76139a26d8debd8f",
-      "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Disabled": "4db57aaef7dacc16289639889ac20dba5b391df8"
+      "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Disabled": "4db57aaef7dacc16289639889ac20dba5b391df8",
+      "Navigation.TabBar.Tab.Icon.IconSize.SM": "6b113eef73655ad8a509f69b111eed85029c1b26",
+      "Navigation.TabBar.Tab.Icon.IconSize.MD": "1c5cafe5f396b8d959bc6ffaef3c1410f83d08ed",
+      "Navigation.TabBar.Tab.Icon.IconSize.LG": "f5f44d23ed6dd979bfaf9799b4457688e2231230"
     },
     "group": "Theme"
   },
@@ -2536,9 +2536,6 @@
       "UI.ButtonGroup.Container.ItemSpacing.XL": "84d1abd4e9ef76edb86015c523a0dfb5912e3244",
       "UI.Divider.Container.Horizontal.Height": "99c86886304f9f83153010601e78a457c3a2377f",
       "UI.Divider.Container.Vertical.Width": "1392f861f2707b9dda9ab2ccd7deac928696a142",
-      "Navigation.TabBar.Tab.SM.Icon.Sizing": "6b113eef73655ad8a509f69b111eed85029c1b26",
-      "Navigation.TabBar.Tab.MD.Icon.Sizing": "1c5cafe5f396b8d959bc6ffaef3c1410f83d08ed",
-      "Navigation.TabBar.Tab.LG.Icon.Sizing": "f5f44d23ed6dd979bfaf9799b4457688e2231230",
       "Action.BorderRadius": "9644fb0b564a7bdd9b72d09b6d1efa4fd593c08b",
       "Forms.SM.CaptionComponent.IconDimension": "f5cf91673f3a3e330390327210550e1a1705a426",
       "Forms.SM.CaptionComponent.IconWrapper.PaddingTop": "01d766852ea0e2b80da8eccc38e4e7ed770996e5",
@@ -3171,7 +3168,10 @@
       "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Hover": "08605d6465e4b7ffa3eb3422689ee17f603d17d4",
       "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Pressed": "4cbf4b735f172abc3e2f00578831e33a9d1da076",
       "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Focus": "5aa4790a9273876dbe9976cf76139a26d8debd8f",
-      "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Disabled": "4db57aaef7dacc16289639889ac20dba5b391df8"
+      "Navigation.TabBar.Tab.Icon.IconColor.Inactive.Disabled": "4db57aaef7dacc16289639889ac20dba5b391df8",
+      "Navigation.TabBar.Tab.Icon.IconSize.SM": "6b113eef73655ad8a509f69b111eed85029c1b26",
+      "Navigation.TabBar.Tab.Icon.IconSize.MD": "1c5cafe5f396b8d959bc6ffaef3c1410f83d08ed",
+      "Navigation.TabBar.Tab.Icon.IconSize.LG": "f5f44d23ed6dd979bfaf9799b4457688e2231230"
     },
     "group": "Theme"
   },

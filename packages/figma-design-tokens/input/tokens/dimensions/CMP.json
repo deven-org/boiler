@@ -2420,27 +2420,19 @@
             }
           }
         },
-        "SM": {
-          "Icon": {
-            "Sizing": {
+        "Icon": {
+          "IconSize": {
+            "SM": {
               "value": "{core.dimensionREM.12}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            }
-          }
-        },
-        "MD": {
-          "Icon": {
-            "Sizing": {
+            },
+            "MD": {
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
-            }
-          }
-        },
-        "LG": {
-          "Icon": {
-            "Sizing": {
+            },
+            "LG": {
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
