@@ -21,7 +21,7 @@ export class BlrIconLink extends LitElement {
   static styles = [iconLinkStyleCustom, iconButtonStyleCustom];
 
   @property() arialabel?: string;
-  @property() icon?: SizelessIconType;
+  @property() icon!: SizelessIconType;
   @property() href?: string;
   @property() target?: string;
   @property() onClick?: HTMLLinkElement['onclick'];

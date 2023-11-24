@@ -8,7 +8,7 @@ export default {
   title: 'Design System/Web Components/Actions/Buttons/IconButton',
   argTypes: {
     icon: {
-      options: [undefined, ...PureIconKeys],
+      options: [...PureIconKeys],
       control: { type: 'select' },
     },
     size: {

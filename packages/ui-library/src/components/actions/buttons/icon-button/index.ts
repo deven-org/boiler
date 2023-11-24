@@ -21,7 +21,7 @@ export class BlrIconButton extends LitElement {
   static styles = [styleCustom];
 
   @property() arialabel!: string;
-  @property() icon?: SizelessIconType;
+  @property() icon!: SizelessIconType;
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;
@@ -101,14 +101,12 @@ export class BlrIconButton extends LitElement {
                 theme: this.theme,
               })
             : nothing}
-          ${this.icon
-            ? BlrIconRenderFunction({
-                icon: calculateIconName(this.icon, iconSizeVariant),
-                size: iconSizeVariant,
-                hideAria: true,
-                classMap: iconClasses,
-              })
-            : nothing}
+          ${BlrIconRenderFunction({
+            icon: calculateIconName(this.icon, iconSizeVariant),
+            size: iconSizeVariant,
+            hideAria: true,
+            classMap: iconClasses,
+          })}
         </span>
       `;
     }
