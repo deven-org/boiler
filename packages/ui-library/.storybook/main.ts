@@ -8,7 +8,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  staticDirs: ['static'],
+  staticDirs: ['../../assets'],
 
   previewBody: (body) => `
     ${body}

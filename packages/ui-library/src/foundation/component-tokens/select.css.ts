@@ -221,7 +221,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
             border-style: ${Input.Error.Rest.style};
             border-color: transparent;
             outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-            color: ${UserInput.Error.Focus};
+            color: ${UserInput.Error.Focused};
             background-color: ${SurfaceFill.Error.Focus};
           }
 
