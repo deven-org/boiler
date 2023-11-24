@@ -1,9 +1,9 @@
 name: Test
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  snapshot-test:
+  unit-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +19,9 @@ jobs:
         id: node
         run: |
           echo "::set-output name=version::$(node -v)"
+
+      - name: Enable Corepack
+        run: corepack enable
 
       - name: Install yarn 4
         run: yarn set version 4.x

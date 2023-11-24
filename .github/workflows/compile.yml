@@ -1,9 +1,9 @@
 name: Compile
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  snapshot-test:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
