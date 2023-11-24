@@ -28,8 +28,11 @@ jobs:
             **/node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
 
+      - name: Install yarn 4
+        run: yarn set version 4.x
+
       - name: Install modules
-        run: npm ci
+        run: yarn
 
       - name: Run ESLint
-        run: npm run lint
+        run: yarn lint

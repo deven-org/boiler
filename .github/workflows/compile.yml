@@ -28,11 +28,14 @@ jobs:
             **/node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
 
+      - name: Install yarn 4
+        run: yarn set version 4.x
+
       - name: Install modules
-        run: npm ci
+        run: yarn
 
       - name: Generate tokens
-        run: npm run tokens:generate
+        run: yarn tokens:generate
 
       - name: Run Compile
-        run: npm run compile
+        run: yarn compile
