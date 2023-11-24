@@ -36,7 +36,7 @@ const defaultParams: BlrNumberInputType = {
   totalDigits: 0,
   unit: 'kg',
   value: 0,
-  variant: 'mode3',
+  stepperVariant: 'vertical',
 };
 
 export default {
@@ -53,13 +53,12 @@ export default {
         category: 'Appearance',
       },
     },
-    variant: {
+    stepperVariant: {
       name: 'stepperVariant',
-      description: ' Choose variant of the stepper that is used in the component.',
-      options: ['mode1', 'mode2', 'mode3'],
+      description: ' Choose stepperVariant of the stepper that is used in the component.',
+      options: ['split', 'horizontal', 'vertical'],
       control: {
         type: 'radio',
-        labels: ['vertical', 'horizontal', 'split'],
       },
       table: {
         category: 'Appearance',
@@ -77,7 +76,7 @@ export default {
       name: 'value',
       description: 'Enter the value the component should have.',
       table: {
-        category: 'Content/ Settings',
+        category: 'Conten / Settings',
       },
       control: {
         type: 'number',
@@ -88,7 +87,7 @@ export default {
       name: 'decimals',
       description: 'Enter how many decimals the value of the component has.',
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       control: {
         type: 'number',
@@ -98,23 +97,35 @@ export default {
       name: 'leadingZeros',
       description: 'Enter how many leadingZeros the value of the component has.',
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       control: {
         type: 'number',
       },
     },
+
     unit: {
       name: 'unit',
       description: 'Enter the unit for the number input.',
-      options: [Units],
+      options: [undefined, ...Units],
       control: {
         type: 'select',
       },
       table: {
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
+    //  prependUnit: {
+    //   name: 'prependUnit',
+    //   description: 'NumberInput	Content / Settings	hasUnit	Choose if unit is displayed as a prefix, suffix or if no unit should be displayed.	"none"	Radio: "none", "prefix", "suffix"	was named "prependUnit" before and did function differently	',
+    //   control: {
+    //     type: 'boolean',
+    //   },
+
+    //   table: {
+    //     category: 'Content/ Settings',
+    //   },
+    // },
     step: {
       name: 'step',
       description: 'Enter how much the value should change when the steppers buttons are used.',
@@ -142,18 +153,132 @@ export default {
       },
       table: {
         disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
-
+    labelAppendix: {
+      name: 'labelAppendix',
+      description:
+        'Enter string used as an appendix to the label. Use this to inform the user in case this field is required.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        disable: false,
+        category: 'Content / Settings',
+      },
+      if: { arg: 'hasLabel', eq: true },
+    },
+    showHint: {
+      name: 'hasHint',
+      description: ' Choose if component has a hint message. ',
+      defaultValue: true,
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        disable: false,
+        category: 'Content/ Settings',
+      },
+    },
+    hintText: {
+      name: 'hintMessage',
+      description: 'Enter string used used as hint message.',
+      if: { arg: 'showHint', eq: true },
+      table: {
+        disable: false,
+        category: 'Content/ Settings',
+      },
+    },
+    hintIcon: {
+      name: 'hintMessageIcon',
+      description: 'Select an icon which is displayed in front of the hint message.',
+      if: { arg: 'showHint', eq: true },
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      table: {
+        disable: false,
+        category: 'Content / Settings',
+      },
+    },
+    disabled: {
+      name: 'disabled',
+      description:
+        'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'States',
+      },
+    },
+    readonly: {
+      name: 'readonly',
+      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'States',
+      },
+    },
+    // Validation
+    required: {
+      name: 'required',
+      description: 'Choose if the component must hold a value after an interaction or a submit.',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'Validations',
+      },
+    },
+    hasError: {
+      name: 'hasError',
+      description: 'Choose if component has an error.',
+      defaultValue: false,
+      table: {
+        disable: false,
+        category: 'Validations',
+      },
+    },
+    errorMessage: {
+      name: 'errorMessage',
+      description: 'Enter string used used as error message.',
+      table: {
+        category: 'Validations',
+      },
+      if: { arg: 'hasError', eq: true },
+    },
+    errorIcon: {
+      name: 'errorMessageIcon',
+      description: 'Select an icon which is displayed in front of the error message.',
+      table: {
+        disable: false,
+        category: 'Validations',
+      },
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
+    },
     theme: {
       options: Themes,
       control: { type: 'select' },
     },
-    hintIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
+    //Technical attributes
+    numberInputId: {
+      name: 'numberInputId',
+      description: 'Unique identifier for this component.',
+      table: {
+        disable: false,
+        category: 'Technical Attributes',
+      },
+    },
+    name: {
+      name: 'name',
+      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
+      table: {
+        disable: false,
+        category: 'Technical Attributes',
+      },
     },
   },
   parameters: {
@@ -237,7 +362,7 @@ const args: BlrNumberInputType = {
   labelAppendix: '(Appendix)',
   numberInputId: ' ',
   placeholder: 'Placeholder-text',
-  prependUnit: false,
+  prependUnit: true,
   readonly: false,
   required: false,
   showHint: false,
@@ -247,7 +372,7 @@ const args: BlrNumberInputType = {
   totalDigits: 0,
   unit: 'kg',
   value: 0,
-  variant: 'mode3',
+  stepperVariant: 'vertical',
 };
 
 BlrNumberInput.args = args;
@@ -294,18 +419,69 @@ export const SizeVariant = () => {
 
 SizeVariant.storyName = 'Appearance';
 
-export const Example1 = () =>
+export const StepperVariant = () =>
   html`
-    <div style="max-width: 290px;">
+    <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
-        label: ' Default format',
+        stepperVariant: 'split',
+        label: 'vertical',
+        labelAppendix: '',
+        unit: '%',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        stepperVariant: 'horizontal',
+        label: 'horizontal',
+        labelAppendix: '',
+        unit: '%',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        stepperVariant: 'vertical',
+        label: 'split',
+        labelAppendix: '',
+        unit: '%',
       })}
     </div>
   `;
 
-Example1.storyName = 'Default';
+StepperVariant.storyName = 'stepperVariant';
 
+//Content/ Settings Placeholder
+/**
+ * The placeholder component can display a placeholder text. This is recommended to improve usability.
+ */
+export const Placeholder = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        theme: 'Light',
+        size: 'md',
+        label: 'Has placeholder',
+        labelAppendix: '',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        theme: 'Light',
+        size: 'md',
+        label: "Hasn't placeholder",
+        labelAppendix: '',
+        placeholder: '',
+      })}
+    </div>
+  `;
+};
+
+Placeholder.storyName = 'Content/ Settings';
 export const Example2 = () =>
   html`
     <div style="max-width: 290px;">
