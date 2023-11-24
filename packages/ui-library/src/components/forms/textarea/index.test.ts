@@ -10,7 +10,6 @@ const sampleParams: BlrTextareaType = {
   isResizeable: 'both',
   cols: 40,
   rows: 4,
-  placeholder: 'Here is the placeholder',
   value: '',
   minLength: 0,
   maxLength: 140,

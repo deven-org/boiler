@@ -27,7 +27,7 @@ export class BlrCheckbox extends LitElement {
   protected _checkboxNode!: HTMLInputElement;
 
   @property() label!: string;
-  @property() checkInputId?: string;
+  @property() checkInputId?: string = '';
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
@@ -104,7 +104,7 @@ export class BlrCheckbox extends LitElement {
   @state() protected currentCheckedState: boolean | undefined = this.checked;
 
   protected render() {
-    if (this.size) {
+    if (this.size && this.checkInputId) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, styleCustomLight] : [formDark, styleCustomDark];
 
       const classes = classMap({
