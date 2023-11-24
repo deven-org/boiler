@@ -7,6 +7,7 @@ import { getRandomString } from '../../../utils/get-random.string';
 const sampleParams: BlrTextInputType = {
   textInputId: '#1',
   label: 'Label',
+  size: 'sm',
   labelAppendix: '(Optional)',
   type: 'text',
   value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
