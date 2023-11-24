@@ -101,12 +101,14 @@ export class BlrIconButton extends LitElement {
                 theme: this.theme,
               })
             : nothing}
-          ${BlrIconRenderFunction({
-            icon: calculateIconName(this.icon, iconSizeVariant),
-            size: iconSizeVariant,
-            hideAria: true,
-            classMap: iconClasses,
-          })}
+          ${this.icon
+            ? BlrIconRenderFunction({
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                hideAria: true,
+                classMap: iconClasses,
+              })
+            : nothing}
         </span>
       `;
     }
