@@ -1702,7 +1702,7 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                     "style": "solid"
                   },
@@ -1710,7 +1710,7 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
                     "style": "solid"
                   },
@@ -1718,7 +1718,7 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
                     "style": "solid"
                   },
@@ -1726,7 +1726,7 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
                     "style": "solid"
                   },
@@ -1734,7 +1734,7 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
                     "style": "solid"
                   },
@@ -1742,7 +1742,7 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
                     "style": "solid"
                   },
@@ -1750,7 +1750,7 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Error}",
                     "style": "solid"
                   },
@@ -1760,7 +1760,7 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                     "style": "solid"
                   },
@@ -1768,7 +1768,7 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
                     "style": "solid"
                   },
@@ -1776,7 +1776,7 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
                     "style": "solid"
                   },
@@ -1784,7 +1784,7 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
                     "style": "solid"
                   },
@@ -1792,7 +1792,7 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
                     "style": "solid"
                   },
@@ -1800,7 +1800,7 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
                     "style": "solid"
                   },
@@ -1808,7 +1808,7 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
                     "style": "solid"
                   },
@@ -1820,7 +1820,7 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                     "style": "solid"
                   },
@@ -1828,7 +1828,7 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
                     "style": "solid"
                   },
@@ -1836,7 +1836,7 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
                     "style": "solid"
                   },
@@ -1844,7 +1844,7 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
                     "style": "solid"
                   },
@@ -1852,7 +1852,7 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
                     "style": "solid"
                   },
@@ -1860,7 +1860,7 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
                     "style": "solid"
                   },
@@ -1868,7 +1868,7 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Error}",
                     "style": "solid"
                   },
@@ -1878,7 +1878,7 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                     "style": "solid"
                   },
@@ -1886,7 +1886,7 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
                     "style": "solid"
                   },
@@ -1894,7 +1894,7 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
                     "style": "solid"
                   },
@@ -1902,7 +1902,7 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
                     "style": "solid"
                   },
@@ -1910,7 +1910,7 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
                     "style": "solid"
                   },
@@ -1918,7 +1918,7 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
                     "style": "solid"
                   },
@@ -1926,7 +1926,7 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
                     "style": "solid"
                   },
@@ -1938,7 +1938,7 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                     "style": "solid"
                   },
@@ -1946,7 +1946,7 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
                     "style": "solid"
                   },
@@ -1954,7 +1954,7 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
                     "style": "solid"
                   },
@@ -1962,7 +1962,7 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
                     "style": "solid"
                   },
@@ -1970,7 +1970,7 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
                     "style": "solid"
                   },
@@ -1978,7 +1978,7 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
                     "style": "solid"
                   },
@@ -1986,7 +1986,7 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Active.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Error}",
                     "style": "solid"
                   },
@@ -1996,7 +1996,7 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Rest}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                     "style": "solid"
                   },
@@ -2004,7 +2004,7 @@
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Hover}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
                     "style": "solid"
                   },
@@ -2012,7 +2012,7 @@
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Pressed}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
                     "style": "solid"
                   },
@@ -2020,7 +2020,7 @@
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Focus}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
                     "style": "solid"
                   },
@@ -2028,7 +2028,7 @@
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Disabled}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
                     "style": "solid"
                   },
@@ -2036,7 +2036,7 @@
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.ReadOnly}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
                     "style": "solid"
                   },
@@ -2044,7 +2044,7 @@
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Error}",
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
                     "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
                     "style": "solid"
                   },
