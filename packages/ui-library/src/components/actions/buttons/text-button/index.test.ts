@@ -5,14 +5,16 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrTextButtonType = {
   label: 'Button',
-  leadingIcon: undefined,
-  trailingIcon: 'blrChevronDown',
+  icon: 'blr360',
+  hasIcon: true,
+  iconPosition: 'leading',
   loading: false,
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
   loadingStatus: 'Loading',
   theme: 'Light',
+  buttonDisplay: 'inline-block',
 };
 
 describe('blr-text-button', () => {
@@ -77,11 +79,12 @@ describe('blr-text-button', () => {
     expect(loader).not.to.exist;
   });
 
-  it('shows a trailing icon when trailing icon has a value', async () => {
+  it('shows a trailing icon when  iconPosition is "trailing" and hasIcon is true', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        trailingIcon: 'blrChevronDown',
+        hasIcon: true,
+        iconPosition: 'trailing',
       })
     );
 
@@ -99,11 +102,12 @@ describe('blr-text-button', () => {
     expect(trailingIcon).to.exist;
   });
 
-  it('does not a trailing icon when trailing icon has a value', async () => {
+  it('does not show a trailing icon when  iconPosition is "trailing" and hasIcon is true', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        trailingIcon: undefined,
+        hasIcon: false,
+        iconPosition: 'trailing',
       })
     );
 
@@ -115,11 +119,12 @@ describe('blr-text-button', () => {
     expect(svg).not.to.exist;
   });
 
-  it('shows a leading icon when trailing icon has a value', async () => {
+  it('shows a leading icon when  iconPosition is "leading" and hasIcon is true', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        trailingIcon: 'blrChevronDown',
+        hasIcon: true,
+        iconPosition: 'leading',
       })
     );
 
@@ -137,11 +142,12 @@ describe('blr-text-button', () => {
     expect(leadingIcon).to.exist;
   });
 
-  it('does not a leading icon when trailing icon has a value', async () => {
+  it('does not show a leading icon when  iconPosition is "leading" and hasIcon is true', async () => {
     const element = await fixture(
       BlrTextButtonRenderFunction({
         ...sampleParams,
-        trailingIcon: undefined,
+        hasIcon: false,
+        iconPosition: 'leading',
       })
     );
 
@@ -151,5 +157,27 @@ describe('blr-text-button', () => {
 
     expect(leadingIcon).not.to.exist;
     expect(svg).not.to.exist;
+  });
+
+  it('display the button as block when "buttonDisplay" is set as block', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'block' }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+
+    if (button) {
+      const buttonCssDisplay = getComputedStyle(button)['display'];
+      expect(buttonCssDisplay).to.equal('block');
+    }
+  });
+
+  it('displays the button as inline-block when "buttonDisplay" is set as inline-block', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'inline-block' }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+
+    if (button) {
+      const buttonCssDisplay = getComputedStyle(button)['display'];
+      expect(buttonCssDisplay).to.equal('inline-block');
+    }
   });
 });

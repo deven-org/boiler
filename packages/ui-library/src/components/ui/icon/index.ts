@@ -16,9 +16,13 @@ export class BlrIcon extends LitElement {
   @property() icon: IconType = 'blr360Xs';
   @property() size: SizesType = 'md';
 
+  @property() ignoreSize?: boolean = false;
+
   protected render() {
+    const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
+
     if (IconMapping.hasOwnProperty(this.icon) && typeof IconMapping[this.icon] === 'function') {
-      return html`${IconMapping[this.icon](`blr-icon ${this.size.toLowerCase()}`)}`;
+      return html`${IconMapping[this.icon](`blr-icon ${sizeKey}`)}`;
     } else {
       return nothing;
     }
@@ -43,10 +47,12 @@ export const BlrIconRenderFunction = ({
   hideAria,
   name,
   disablePointerEvents,
+  ignoreSize,
 }: BlrIconType) => {
   return html`<blr-icon
     class="${classMap}"
     .icon=${icon || nothing}
+    .ignoreSize=${ignoreSize}
     .size=${size}
     .name=${name || nothing}
     aria-hidden=${hideAria || nothing}

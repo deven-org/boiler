@@ -7,7 +7,7 @@
   "scripts": {
     "svgo:icons": "svgo -f icon-set -o icons-optimized --config svgo.config.js",
     "precompile:icons": "rimraf icons",
-    "compile:icons": "npm run svgo:icons && node scripts/index.mjs",
+    "compile:icons": "yarn svgo:icons && node scripts/index.mjs",
     "postcompile:icons": "prettier ./icons-optimized/icons.ts --write"
   }
 }

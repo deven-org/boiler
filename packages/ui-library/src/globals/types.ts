@@ -17,8 +17,10 @@ import {
   OverflowVariantsFullWidth,
   ButtonGroupSizes,
   LabelVariants,
+  Resizes,
   ActionSizes,
   ButtonGroupAlignmentVariants,
+  ButtonDisplayOptions,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
@@ -33,6 +35,7 @@ export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];
 export type InputTypes = (typeof InputTypes)[number];
 export type ButtonGroupSizesType = (typeof ButtonGroupSizes)[number];
+export type ResizeType = (typeof Resizes)[number];
 
 export type InputSizesType = (typeof InputSizes)[number];
 export type RadioOption = {
@@ -81,3 +84,4 @@ export type ToolTipVisibility = 'onLoad' | 'onHover';
 export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
 
 export type LabelVariantType = (typeof LabelVariants)[number];
+export type ButtonDisplayType = (typeof ButtonDisplayOptions)[number];

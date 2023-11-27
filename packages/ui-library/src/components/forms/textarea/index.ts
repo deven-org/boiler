@@ -2,7 +2,7 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
-import { CounterVariantType, FormSizesType, WarningLimits } from '../../../globals/types';
+import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../../globals/types';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
@@ -21,16 +21,19 @@ export class BlrTextarea extends LitElement {
   @property() textareaId!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
+  @property() arialabel?: string;
   @property() value!: string;
   @property() placeholder?: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
+  @property() hasLabel?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
   @property() maxLength?: number;
+  @property() minLength?: number;
   @property() warningLimitType: WarningLimits = 'warningLimitInt';
   @property() warningLimitInt = 105;
   @property() warningLimitPer = 75;
@@ -43,37 +46,24 @@ export class BlrTextarea extends LitElement {
   @property() hintText?: string;
   @property() showCounter?: boolean;
   @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() isResizeable?: boolean;
+  @property() isResizeable: ResizeType = 'none';
   @property() rows?: number;
   @property() cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
-  @property() shouldFocus? = false;
-
+  @property() name?: string;
   @property() theme: ThemeType = 'Light';
 
   @state() protected count = 0;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
 
-  protected firstUpdated() {
-    if (this.shouldFocus) {
-      const textarea = this.shadowRoot?.querySelector('textarea');
-      if (textarea) {
-        textarea.focus();
-      }
-    }
-  }
-
   connectedCallback() {
     super.connectedCallback();
-
     this.count = this.value?.length || 0;
-
     this.updateCounter();
   }
 
   protected updateCounter() {
     const length = this.textareaElement?.value?.length;
-
     if (length !== undefined) {
       this.count = length;
     }
@@ -110,8 +100,7 @@ export class BlrTextarea extends LitElement {
         'error': this.hasError || false,
         'error-input': this.hasError || false,
         [`${this.size}`]: this.size,
-        'resizeable': this.isResizeable || false,
-        'shouldFocus': this.shouldFocus || false,
+        [this.isResizeable]: this.isResizeable,
       });
 
       const textareaInfoContainer = classMap({
@@ -137,7 +126,10 @@ export class BlrTextarea extends LitElement {
           <textarea
             class="blr-form-element textarea-input-control ${textareaClasses}"
             id="${this.textareaId || nothing}"
+            name="${this.name || nothing}"
+            minlength="${this.minLength || nothing}"
             maxlength="${this.maxLength || nothing}"
+            aria-label="${this.arialabel}"
             cols="${this.cols || nothing}"
             rows="${this.rows || nothing}"
             placeholder="${this.placeholder || nothing}"
@@ -149,10 +141,8 @@ export class BlrTextarea extends LitElement {
             @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
-            shouldFocus="${this.shouldFocus}"
           >
-${this.value}
-        </textarea
+${this.value}</textarea
           >
           <div class="${textareaInfoContainer}">
             ${this.showHint || this.hasError

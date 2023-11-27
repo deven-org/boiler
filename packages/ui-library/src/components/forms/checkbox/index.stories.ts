@@ -31,6 +31,14 @@ export default {
     label: {
       if: { arg: 'hasLabel', eq: true },
     },
+    checkedIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    indeterminatedIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
 
     theme: {
       options: Themes,

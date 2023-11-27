@@ -5,7 +5,14 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
-import { ActionSizesType, ActionVariantType, SizesType, FormSizesType } from '../../../../globals/types';
+import {
+  ActionSizesType,
+  ActionVariantType,
+  SizesType,
+  FormSizesType,
+  IconPositionVariant,
+  ButtonDisplayType,
+} from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
@@ -23,14 +30,16 @@ export class BlrTextButton extends LitElement {
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: SizelessIconType;
-  @property() trailingIcon?: SizelessIconType;
-  @property() loading!: boolean;
-  @property() disabled!: boolean;
+  @property() icon?: SizelessIconType;
+  @property({ type: Boolean }) hasIcon?: boolean;
+  @property() iconPosition?: IconPositionVariant = 'leading';
+  @property({ type: Boolean }) loading!: boolean;
+  @property({ type: Boolean }) disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
+  @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
   @property() theme: ThemeType = 'Light';
 
@@ -47,7 +56,7 @@ export class BlrTextButton extends LitElement {
   };
 
   protected render() {
-    if (this.size) {
+    if (this.size && this.buttonDisplay) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
@@ -57,10 +66,18 @@ export class BlrTextButton extends LitElement {
         [`${this.size}`]: this.size,
         'disabled': this.disabled,
         'loading': this.loading,
+        [this.buttonDisplay]: this.buttonDisplay,
       });
 
       const iconClasses = classMap({
-        icon: true,
+        'icon': true,
+        'leading-icon-class': this.iconPosition === 'leading',
+        'trailing-icon-class': this.iconPosition === 'trailing',
+      });
+
+      const flexContainerClasses = classMap({
+        'flex-container': true,
+        [`${this.size}`]: this.size,
       });
 
       const loaderVariant = determineLoaderVariant(this.variant);
@@ -80,21 +97,25 @@ export class BlrTextButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` ${this.leadingIcon &&
-        BlrIconRenderFunction({
-          icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-          size: iconSizeVariant,
-          hideAria: true,
-          classMap: iconClasses,
-        })}
-        <span class="label">${this.label}</span>
-        ${this.trailingIcon &&
-        BlrIconRenderFunction({
-          icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-          size: iconSizeVariant,
-          hideAria: true,
-          classMap: iconClasses,
-        })}`;
+      const labelAndIconGroup = html` <div class="${flexContainerClasses}">
+        ${this.hasIcon && this.iconPosition === 'leading'
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: iconClasses,
+            })
+          : nothing}
+        <span class="label">${this.label} </span>
+        ${this.hasIcon && this.iconPosition === 'trailing'
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: iconClasses,
+            })
+          : nothing}
+      </div>`;
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}
@@ -121,7 +142,7 @@ export class BlrTextButton extends LitElement {
                 ${labelAndIconGroup}
               `
             : labelAndIconGroup}
-        </span>`;
+        </span> `;
     }
   }
 }
