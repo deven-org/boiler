@@ -1505,9 +1505,75 @@
               "type": "sizing"
             }
           },
-          "BorderWidth": {
+          "Border": {
             "SM": {
               "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Rest}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Hover}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Pressed}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Focus}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Disabled}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.ReadOnly}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BackgroundColor.Inactive.Error}",
+                    "width": "{core.dimensionPX.1}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              }
+            }
+          },
+          "BorderRadius": {
+            "value": "{core.borderRadius.Round}",
+            "type": "borderRadius"
+          },
+          "BorderWidth": {
+            "SM": {
+              "Active": {
                 "Rest": {
                   "value": "{core.dimensionPX.0}",
                   "type": "borderWidth"
@@ -1537,7 +1603,7 @@
                   "type": "borderWidth"
                 }
               },
-              "Active": {
+              "Inactive": {
                 "Rest": {
                   "value": "{core.dimensionPX.0}",
                   "type": "borderWidth"
@@ -1692,10 +1758,6 @@
                 }
               }
             }
-          },
-          "BorderRadius": {
-            "value": "{core.borderRadius.Round}",
-            "type": "borderRadius"
           }
         },
         "Icon": {
