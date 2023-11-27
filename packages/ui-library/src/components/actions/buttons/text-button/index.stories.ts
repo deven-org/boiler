@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionSizes, ActionVariants, IconPositionVariant, buttonDisplayOptions } from '../../../../globals/constants';
+import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -22,7 +22,7 @@ export default {
       control: { type: 'select' },
     },
     buttonDisplay: {
-      options: buttonDisplayOptions,
+      options: ButtonDisplayOptions,
       control: { type: 'select' },
     },
     variant: {

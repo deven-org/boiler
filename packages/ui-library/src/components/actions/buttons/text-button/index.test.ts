@@ -159,21 +159,25 @@ describe('blr-text-button', () => {
     expect(svg).not.to.exist;
   });
 
-  it('displays the button as block when "buttonDisplay" is set as block', async () => {
+  it('display the button as block when "buttonDisplay" is set as block', async () => {
     const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'block' }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    const className = button?.className;
 
-    expect(className).to.contain('block');
+    if (button) {
+      const buttonCssDisplay = getComputedStyle(button)['display'];
+      expect(buttonCssDisplay).to.equal('block');
+    }
   });
 
   it('displays the button as inline-block when "buttonDisplay" is set as inline-block', async () => {
     const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'inline-block' }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    const className = button?.className;
 
-    expect(className).to.contain('inline-block');
+    if (button) {
+      const buttonCssDisplay = getComputedStyle(button)['display'];
+      expect(buttonCssDisplay).to.equal('inline-block');
+    }
   });
 });

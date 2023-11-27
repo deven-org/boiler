@@ -11,7 +11,7 @@ import {
   SizesType,
   FormSizesType,
   IconPositionVariant,
-  buttonDisplayType,
+  ButtonDisplayType,
 } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
@@ -39,7 +39,7 @@ export class BlrTextButton extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
-  @property() buttonDisplay: buttonDisplayType = 'block';
+  @property() buttonDisplay: ButtonDisplayType = 'block';
 
   @property() theme: ThemeType = 'Light';
 
