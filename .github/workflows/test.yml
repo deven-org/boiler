@@ -1,9 +1,9 @@
 name: Test
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  snapshot-test:
+  unit-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,19 +20,17 @@ jobs:
         run: |
           echo "::set-output name=version::$(node -v)"
 
-      - name: Get node_modules cache
-        uses: actions/cache@v3.0.2
-        id: node_modules
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}-${{ steps.node.outputs.version }}
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install yarn 4
+        run: yarn set version 4.x
 
       - name: Install modules
-        run: npm ci
+        run: yarn
 
       - name: Generate tokens
-        run: npm run tokens:generate
+        run: yarn tokens:generate
 
       - name: Run Tests
-        run: npm run test
+        run: yarn test

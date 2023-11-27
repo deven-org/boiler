@@ -12,9 +12,8 @@ export default {
       control: { type: 'select' },
     },
     options: { control: 'array' },
-    layout: { control: 'select', options: ['horizontal', 'vertical'] },
     groupHintIcon: {
-      if: { arg: 'hasHint', eq: true },
+      if: { arg: 'showHint', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
