@@ -116,8 +116,4 @@ export const styleCustom = typeSafeNestedCss`
     display: flex;
     align-items: center;
   }
-
-  .parent-class {
-    max-width: 100%;
-  }
 `;

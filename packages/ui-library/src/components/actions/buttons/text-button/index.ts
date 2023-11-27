@@ -120,31 +120,29 @@ export class BlrTextButton extends LitElement {
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>
-        <div class="parent-class">
-          <span
-            class="${classes}"
-            @click="${this.onClick}"
-            tabindex=${this.disabled ? nothing : '0'}
-            @focus=${this.handleFocus}
-            @blur=${this.handleBlur}
-            role=${this.disabled ? nothing : 'button'}
-            @keydown=${this.onClick}
-            id=${this.buttonId || nothing}
-          >
-            ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
-            ${this.loading
-              ? html`
-                  ${BlrLoaderRenderFunction({
-                    size: loaderSizeVariant,
-                    variant: loaderVariant,
-                    loadingStatus: this.loadingStatus,
-                    theme: this.theme,
-                  })}
-                  ${labelAndIconGroup}
-                `
-              : labelAndIconGroup}
-          </span>
-        </div>`;
+        <span
+          class="${classes}"
+          @click="${this.onClick}"
+          tabindex=${this.disabled ? nothing : '0'}
+          @focus=${this.handleFocus}
+          @blur=${this.handleBlur}
+          role=${this.disabled ? nothing : 'button'}
+          @keydown=${this.onClick}
+          id=${this.buttonId || nothing}
+        >
+          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.loading
+            ? html`
+                ${BlrLoaderRenderFunction({
+                  size: loaderSizeVariant,
+                  variant: loaderVariant,
+                  loadingStatus: this.loadingStatus,
+                  theme: this.theme,
+                })}
+                ${labelAndIconGroup}
+              `
+            : labelAndIconGroup}
+        </span> `;
     }
   }
 }
