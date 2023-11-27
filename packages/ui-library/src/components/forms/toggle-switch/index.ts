@@ -6,10 +6,10 @@ import { SizelessIconType } from '@boiler/icons';
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
 import { FormSizesType, IconPositionVariant } from '../../../globals/types';
 
-import { styleCustom } from './index.css';
+import { styleCustom, toggleSwitchDark, toggleSwitchLight } from './index.css';
 import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { toggleSwitchDark, toggleSwitchLight } from '../../../foundation/component-tokens/toggle-switch.css';
+
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
