@@ -2281,60 +2281,72 @@
           }
         }
       },
-      "SM": {
-        "ContentRow": {
-          "ItemSpacing": {
+      "ContentRow": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.8} 0",
-            "type": "spacing"
-          }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
-          }
-        }
-      },
-      "MD": {
-        "ContentRow": {
-          "ItemSpacing": {
+          "MD": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.8} 0",
-            "type": "spacing"
-          }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
-          }
-        }
-      },
-      "LG": {
-        "ContentRow": {
-          "ItemSpacing": {
+          "LG": {
             "value": "{core.dimensionPX.12}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
-          },
-          "Padding": {
-            "value": "{core.dimensionREM.8} 0",
-            "type": "spacing"
           }
         },
-        "ControlWrapper": {
-          "TopMargin": {
+        "Padding": {
+          "SM": {
+            "value": "{Forms.Radio.ContentRow.PaddingTopBottom.SM} 0",
+            "type": "spacing",
+            "description": "Coded comps only!"
+          },
+          "MD": {
+            "value": "{Forms.Radio.ContentRow.PaddingTopBottom.MD} 0",
+            "type": "spacing",
+            "description": "Coded comps only!"
+          },
+          "LG": {
+            "value": "{Forms.Radio.ContentRow.PaddingTopBottom.LG} 0",
+            "type": "spacing",
+            "description": "Coded comps only!"
+          }
+        },
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        }
+      },
+      "ControlWrapper": {
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          },
+          "LG": {
             "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
