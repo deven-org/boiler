@@ -73,14 +73,16 @@ const args: BlrNumberInputType = {
   placeholder: 'Enter a number',
   readonly: false,
   required: false,
-  hasError: false,
-  errorMessage: 'This is error message',
   labelAppendix: '(Optional)',
   numberInputId: 'Input ID',
+
+  hasError: false,
+  errorIcon: 'blrErrorFilled',
+  errorMessage: 'This is error message',
+
   hasHint: true,
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
-  errorIcon: 'blrErrorFilled',
 };
 
 BlrNumberInput.args = args;

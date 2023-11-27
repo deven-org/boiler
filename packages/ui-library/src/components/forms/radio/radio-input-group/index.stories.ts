@@ -13,7 +13,7 @@ export default {
     },
     options: { control: 'array' },
     groupHintIcon: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },

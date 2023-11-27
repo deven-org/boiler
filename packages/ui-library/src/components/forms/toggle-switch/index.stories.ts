@@ -11,9 +11,13 @@ export default {
       options: FormSizes,
       control: { type: 'select' },
     },
+    hintMessage: {
+      if: { arg: 'hasHint', eq: true },
+    },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasHint', eq: true },
     },
     variant: {
       options: IconPositionVariant,
