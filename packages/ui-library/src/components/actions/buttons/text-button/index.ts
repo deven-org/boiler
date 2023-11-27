@@ -39,7 +39,7 @@ export class BlrTextButton extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
-  @property() buttonDisplay: ButtonDisplayType = 'block';
+  @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
   @property() theme: ThemeType = 'Light';
 
@@ -56,7 +56,7 @@ export class BlrTextButton extends LitElement {
   };
 
   protected render() {
-    if (this.size) {
+    if (this.size && this.buttonDisplay) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
