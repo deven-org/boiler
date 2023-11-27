@@ -387,6 +387,11 @@
                 "value": "{q.surface.disabled.alpha}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
             }
           },

@@ -1505,7 +1505,6 @@
               "type": "sizing"
             }
           },
-
           "BorderRadius": {
             "value": "{core.borderRadius.Round}",
             "type": "borderRadius"
