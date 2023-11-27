@@ -52,6 +52,7 @@ const contentTextButtons = html`
     variant: 'primary',
     loadingStatus: 'Loading',
     disabled: false,
+    buttonDisplay: 'inline-block',
   })}
   ${BlrTextButtonRenderFunction({
     label: 'Nein',
@@ -61,6 +62,7 @@ const contentTextButtons = html`
     variant: 'secondary',
     loadingStatus: 'Loading',
     disabled: false,
+    buttonDisplay: 'inline-block',
   })}
 `;
 
