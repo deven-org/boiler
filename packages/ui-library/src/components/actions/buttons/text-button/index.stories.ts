@@ -36,7 +36,6 @@ const defaultParams: BlrTextButtonType = {
   loadingStatus: 'Loading',
   onBlur: () => action('onBlur'),
   onClick: () => action('onClick'),
-  onFocus: () => action('onFocus'),
 };
 
 export default {
@@ -237,7 +236,6 @@ const args: BlrTextButtonType = {
   loadingStatus: 'Loading',
   onBlur: () => action('onBlur'),
   onClick: () => action('onClick'),
-  onFocus: () => action('onFocus'),
 };
 BlrTextButton.args = args;
 
@@ -260,6 +258,8 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     disabledArgTypes[argType] = {
       table: {
         disable: true,
