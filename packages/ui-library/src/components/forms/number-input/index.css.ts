@@ -1,8 +1,11 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
+import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+const { NumberInput } = componentTokens.Forms;
+
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG } = semanticTokens.Forms;
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
 
   return typeSafeNestedCss`
@@ -16,15 +19,23 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         color: inherit;
       }
 
+      .unit{
+        color:${PrefixSuffix.OnPopulatedField.Default.Rest};
+      }
+
       > * {
         background-color: transparent;
       }
 
       &.mode1 {
+        display: grid;
+        grid-template-columns: 10% 40% 40% 10%;
+       
         &.sm {
           > .custom-stepper-button {
             width: ${StepperCombo.SM.Vertical.Width};
           }
+          
         }
 
         &.md {
@@ -38,6 +49,24 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
             width: ${StepperCombo.LG.Vertical.Width};
           }
         }
+        > .unit {
+          text-align: left;
+        }
+  
+        > input {
+          text-align: right;
+          &.sm{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+          }
+
+          &.md{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+          }
+
+          &.lg{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+          }
+        }
       }
 
       > .unit,
@@ -48,6 +77,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           font-family: ${SM.UserInput.fontFamily}, sans-serif;
           line-height: ${SM.UserInput.lineHeight};
           padding: ${SM.InputField.Padding};
+
         }
 
         &.md {
@@ -65,6 +95,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           line-height: ${LG.UserInput.lineHeight};
           padding: ${LG.InputField.Padding};
         }
+
       }
 
       &.disabled {
@@ -126,7 +157,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
         &:focus-within {
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${Input.Error.Focus};
+          color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
@@ -182,6 +213,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
               padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
             }
           }
+         
         }
 
         &.mode3 {
@@ -277,15 +309,25 @@ export const baseStyle = typeSafeNestedCss`
       }
 
       .unit {
-        order: -1;
-      }
-
-      .unit.prepend {
         order: 0;
+        padding-left:0;
+      }
+   
+      .unit.prepend {
+        order: -1;
+        text-align: right;
+        padding-right:0;
       }
 
-      & > input {
-        text-align: center;
+      > input.prepend {
+        text-align: left;
+      }
+      
+      > button:last-of-type {
+        margin-left:auto;
+      }
+      > input{
+        padding-right:0;
       }
     }
 
@@ -293,6 +335,20 @@ export const baseStyle = typeSafeNestedCss`
     &.mode3 {
       .unit.prepend {
         order: -1;
+        padding-right:0;
+      }
+      > input.prepend{
+        &.sm{
+        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+        }
+
+        &.md{
+          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+        }
+        
+        &.lg{
+          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+        }
       }
     }
   }

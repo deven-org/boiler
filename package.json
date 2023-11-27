@@ -5,28 +5,28 @@
   "main": "",
   "types": "",
   "scripts": {
-    "prestart": "npm run tokens:generate",
-    "start": "npm run start --workspace=@boiler/storybook",
-    "build:storybook": "npm run build:static --workspace=@boiler/storybook",
-    "react-example:dev": "npm run dev --workspace=@boiler/react-example-app",
-    "copy:static": "mkdir -p dist/assets && cp -rip static/{fonts,imgs}/* dist/assets/",
-    "build": "npm run build --workspace=@boiler/ui-library",
-    "build:types": "npm run build:types --workspace=@boiler/ui-library",
-    "lint": "npm run lint --workspace=@boiler/ui-library",
-    "format": "npm run format:eslint --workspace=@boiler/ui-library && npm run format:prettier --workspace=@boiler/ui-library",
-    "test": "npm run test --workspace=@boiler/ui-library",
-    "test:a11y": "npm run test:a11y --workspace=@boiler/storybook",
+    "start": "yarn tokens:generate && yarn workspace @boiler/ui-library start:storybook",
+    "build:storybook": "yarn workspace @boiler/ui-library build:storybook",
+    "react-example:dev": "yarn workspace @boiler/react-example-app dev",
+    "build": "yarn workspace @boiler/ui-library build && yarn workspace @boiler/ui-library compile",
+    "build:types": "yarn workspace @boiler/ui-library build:types",
+    "lint": "yarn workspace @boiler/ui-library lint",
+    "format": "yarn workspace @boiler/ui-library format:eslint && yarn workspace @boiler/ui-library format:prettier",
+    "test": "yarn workspace @boiler/ui-library test",
+    "test:a11y": "yarn workspace @boiler/storybook test:a11y",
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
-    "compile:icons": "npm run compile:icons --workspace=@boiler/icons",
-    "tokens:generate": "npm run tokens:generate --workspace=@boiler/figma-design-tokens",
+    "compile:icons": "yarn workspace @boiler/icons compile:icons",
+    "compile": "yarn workspace @boiler/ui-library compile",
+    "tokens:generate": "yarn workspace @boiler/figma-design-tokens tokens:generate",
     "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deven-org/BO1LER-Kitchen.git"
   },
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -39,17 +39,27 @@
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
+    "@babel/plugin-transform-class-properties": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
     "@babel/preset-typescript": "^7.23.0",
     "@boiler/figma-design-tokens": "0.0.1",
     "@boiler/react-example-app": "0.0.1",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
     "@open-wc/testing": "3.1.7",
+    "@storybook/addon-a11y": "7.4.6",
+    "@storybook/addon-actions": "7.4.6",
+    "@storybook/addon-essentials": "7.4.6",
+    "@storybook/addons": "7.4.6",
+    "@storybook/cli": "7.4.6",
+    "@storybook/manager-api": "7.4.6",
+    "@storybook/theming": "7.4.6",
+    "@storybook/web-components": "7.4.6",
+    "@storybook/web-components-webpack5": "7.4.6",
     "@types/query-selector-shadow-dom": "^1.0.1",
     "@types/react": "^18.0.27",
-    "@typescript-eslint/eslint-plugin": "^5.48.1",
-    "@typescript-eslint/parser": "^5.48.1",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "@web/dev-server-esbuild": "^0.3.3",
     "@web/test-runner": "^0.15.0",
     "babel-loader": "^9.1.2",
@@ -58,7 +68,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "deven-documentation-skeleton": "^1.5.0",
-    "eslint": "^8.32.0",
+    "eslint": "^8.53.0",
     "eslint-webpack-plugin": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^7.3.0",
     "html-webpack-plugin": "^5.5.0",
@@ -80,16 +90,18 @@
     "stylelint-config-standard": "^29.0.0",
     "svgo": "^3.0.2",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4",
+    "typescript": "^5.3.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
     "lit": "^2.6.1",
-    "nested-css-to-flat": "^1.0.5"
+    "nested-css-to-flat": "^1.0.5",
+    "rimraf": "^5.0.5"
   },
   "engines": {
     "node": "^18"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

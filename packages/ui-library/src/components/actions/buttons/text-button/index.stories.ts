@@ -1,22 +1,28 @@
 /* eslint-disable no-console */
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionSizes, ActionVariants } from '../../../../globals/constants';
+import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {
   title: 'Design System/Web Components/Actions/Buttons/TextButton',
   argTypes: {
-    leadingIcon: {
+    icon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
     },
-    trailingIcon: {
-      options: [undefined, ...PureIconKeys],
+    iconPosition: {
+      options: IconPositionVariant,
       control: { type: 'select' },
+      if: { arg: 'hasIcon', eq: true },
     },
     size: {
       options: ActionSizes,
+      control: { type: 'select' },
+    },
+    buttonDisplay: {
+      options: ButtonDisplayOptions,
       control: { type: 'select' },
     },
     variant: {
@@ -42,10 +48,11 @@ const args: BlrTextButtonType = {
   variant: 'cta',
   size: 'md',
   label: 'Button',
+  hasIcon: true,
+  iconPosition: 'leading',
+  icon: 'blr360',
   onClick: () => console.log('onClick'),
   onBlur: () => console.log('onBlur'),
-  leadingIcon: undefined,
-  trailingIcon: 'blr360',
   loading: false,
   disabled: false,
   buttonId: 'button-id',

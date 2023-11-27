@@ -207,37 +207,6 @@
         }
       }
     },
-    "Forms": {
-      "Checkbox": {
-        "SM": {
-          "Control": {
-            "Icon": {
-              "value": "SM",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-            }
-          }
-        },
-        "MD": {
-          "Control": {
-            "Icon": {
-              "value": "SM",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-            }
-          }
-        },
-        "LG": {
-          "Control": {
-            "Icon": {
-              "value": "MD",
-              "type": "componentConfig",
-              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
-            }
-          }
-        }
-      }
-    },
     "Navigation": {
       "TabBar": {
         "Tab": {
@@ -258,6 +227,31 @@
           "LG": {
             "Icon": {
               "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Forms": {
+    "Checkbox": {
+      "Control": {
+        "Icon": {
+          "SizeVariant": {
+            "SM": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            },
+            "MD": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
+            },
+            "LG": {
+              "value": "MD",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             }
