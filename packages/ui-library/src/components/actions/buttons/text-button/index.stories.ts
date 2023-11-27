@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionSizes, ActionVariants, IconPositionVariant } from '../../../../globals/constants';
+import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -19,6 +19,10 @@ export default {
     },
     size: {
       options: ActionSizes,
+      control: { type: 'select' },
+    },
+    buttonDisplay: {
+      options: ButtonDisplayOptions,
       control: { type: 'select' },
     },
     variant: {
@@ -44,11 +48,11 @@ const args: BlrTextButtonType = {
   variant: 'cta',
   size: 'md',
   label: 'Button',
-  onClick: () => console.log('onClick'),
-  onBlur: () => console.log('onBlur'),
   hasIcon: true,
   iconPosition: 'leading',
   icon: 'blr360',
+  onClick: () => console.log('onClick'),
+  onBlur: () => console.log('onBlur'),
   loading: false,
   disabled: false,
   buttonId: 'button-id',
