@@ -2111,6 +2111,10 @@
                 "ReadOnly": {
                   "value": "{core.dimensionPX.6}",
                   "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
                 }
               }
             },
@@ -2167,6 +2171,10 @@
                   "type": "sizing"
                 },
                 "ReadOnly": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Error": {
                   "value": "{core.dimensionPX.6}",
                   "type": "sizing"
                 }
@@ -2227,25 +2235,53 @@
                 "ReadOnly": {
                   "value": "{core.dimensionPX.6}",
                   "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
                 }
               }
             }
           }
         }
       },
-      "SM": {
-        "ContentCol": {
-          "ItemSpacing": {
+      "ContentCol": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
             "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
           },
-          "PaddingTop": {
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          }
+        },
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          },
+          "LG": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
-        },
+        }
+      },
+      "SM": {
         "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.8}",
@@ -2266,18 +2302,6 @@
         }
       },
       "MD": {
-        "ContentCol": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
-          }
-        },
         "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.8}",
@@ -2298,18 +2322,6 @@
         }
       },
       "LG": {
-        "ContentCol": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
-          }
-        },
         "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.12}",
