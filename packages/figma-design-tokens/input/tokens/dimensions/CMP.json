@@ -2355,108 +2355,76 @@
       }
     },
     "RadioGroup": {
-      "SM": {
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
+      "CaptionSlot": {
+        "PaddingTop": {
+          "SM": {
             "value": "{core.dimensionREM.16}",
             "type": "spacing"
-          }
-        },
-        "LegendWrapper": {
-          "PaddingBottom": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
-          }
-        },
-        "RadioStack": {
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
           },
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
           }
         }
       },
-      "MD": {
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "LegendWrapper": {
-          "PaddingBottom": {
+      "LegendWrapper": {
+        "PaddingBottom": {
+          "SM": {
             "value": "{core.dimensionREM.16}",
             "type": "spacing",
             "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
-          }
-        },
-        "RadioStack": {
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
           },
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
           }
         }
       },
-      "LG": {
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "LegendWrapper": {
-          "PaddingBottom": {
+      "RadioStackHorizontal": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionREM.16}",
             "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
-          }
-        },
-        "RadioStack": {
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
           },
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          }
+        }
+      },
+      "RadioStackVertical": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
           }
         }
       }
@@ -2828,28 +2796,6 @@
         "Typography": {
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
-        }
-      }
-    },
-    "NumberInput": {
-      "Input": {
-        "TextContainer": {
-          "ItemSpacing": {
-            "SM": {
-              "value": "{core.dimensionPX.4}",
-              "type": "spacing"
-            },
-            "MD": {
-              "value": "{core.dimensionPX.4}",
-              "type": "spacing",
-              "description": "Defines spacing between Prefix, UserInputText and Suffix"
-            },
-            "LG": {
-              "value": "{core.dimensionPX.4}",
-              "type": "spacing",
-              "description": "Defines spacing between Prefix, UserInputText and Suffix"
-            }
-          }
         }
       }
     }
