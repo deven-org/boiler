@@ -12,7 +12,6 @@ export default {
       control: { type: 'select' },
     },
     options: { control: 'array' },
-    layout: { control: 'select', options: [undefined, 'horizontal', 'vertical'] },
     hintIcon: {
       if: { arg: 'showHint', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
