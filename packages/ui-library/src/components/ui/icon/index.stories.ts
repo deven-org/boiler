@@ -48,6 +48,7 @@ BlrIcon.storyName = 'Icon';
 
 const args: BlrIconType = {
   size: 'lg',
+  ignoreSize: false,
 };
 
 BlrIcon.args = args;

@@ -5,7 +5,13 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
-import { ActionSizesType, ActionVariantType, SizesType, FormSizesType } from '../../../../globals/types';
+import {
+  ActionSizesType,
+  ActionVariantType,
+  SizesType,
+  FormSizesType,
+  IconPositionVariant,
+} from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
@@ -25,12 +31,15 @@ export class BlrTextButton extends LitElement {
   @property() onBlur?: HTMLButtonElement['onblur'];
   @property() leadingIcon?: SizelessIconType;
   @property() trailingIcon?: SizelessIconType;
+  @property() icon?: SizelessIconType;
   @property() loading!: boolean;
   @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
+  @property() hasIcon?: boolean;
+  @property() iconPosition?: IconPositionVariant = 'leading';
 
   @property() theme: ThemeType = 'Light';
 
@@ -80,21 +89,23 @@ export class BlrTextButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` ${this.leadingIcon &&
-        BlrIconRenderFunction({
-          icon: calculateIconName(this.leadingIcon, iconSizeVariant),
-          size: iconSizeVariant,
-          hideAria: true,
-          classMap: iconClasses,
-        })}
+      const labelAndIconGroup = html` ${this.hasIcon && this.iconPosition === 'leading'
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: iconClasses,
+            })
+          : nothing}
         <span class="label">${this.label}</span>
-        ${this.trailingIcon &&
-        BlrIconRenderFunction({
-          icon: calculateIconName(this.trailingIcon, iconSizeVariant),
-          size: iconSizeVariant,
-          hideAria: true,
-          classMap: iconClasses,
-        })}`;
+        ${this.hasIcon && this.iconPosition === 'trailing'
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: iconClasses,
+            })
+          : nothing}`;
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}

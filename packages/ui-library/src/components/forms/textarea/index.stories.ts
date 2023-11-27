@@ -477,7 +477,7 @@ const args: BlrTextareaType = {
   cols: 40,
   rows: 4,
   placeholder: 'Add a message here',
-  value: 'test',
+  value: '',
   minLength: 0,
   maxLength: 140,
   hasLabel: true,
@@ -545,6 +545,7 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
+    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -786,7 +787,7 @@ Required.parameters = {
 Required.storyName = 'Validation';
 
 // Validation hasError Todo add interactive Story with Button to show the State
-export const hasError = () => {
+export const HasError = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -804,10 +805,10 @@ export const hasError = () => {
     </div>
   `;
 };
-hasError.argTypes = {
+HasError.argTypes = {
   ...disabledArgTypes,
 };
-hasError.parameters = {
+HasError.parameters = {
   backgrounds: {
     default: '',
   },
@@ -818,7 +819,7 @@ hasError.parameters = {
     },
   },
 };
-hasError.storyName = 'hasError';
+HasError.storyName = 'hasError';
 
 //Dependencies Captions
 /**
@@ -843,6 +844,7 @@ export const Captions = () => {
           size: 'md',
           placeholder: '',
           label: 'A text area with a hint',
+          showHint: true,
           labelAppendix: '',
           value: '',
         })}

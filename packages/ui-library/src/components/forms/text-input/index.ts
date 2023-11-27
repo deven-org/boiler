@@ -137,7 +137,7 @@ export class BlrTextInput extends LitElement {
               />
             </div>
             ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction({
+              ? BlrIconRenderFunction({
                   icon: this.hasError
                     ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
                     : calculateIconName(this.inputIcon, iconSizeVariant),
@@ -148,10 +148,10 @@ export class BlrTextInput extends LitElement {
                   classMap: iconClasses,
                   hideAria: true,
                   disablePointerEvents: this.disabled || this.readonly,
-                })}`
+                })
               : nothing}
             ${wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction({
+              ? BlrIconRenderFunction({
                   icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
                   name: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
                   size: iconSizeVariant,
@@ -159,11 +159,11 @@ export class BlrTextInput extends LitElement {
                   hideAria: true,
                   disablePointerEvents: this.disabled || this.readonly,
                   onClick: () => this.togglePassword(),
-                })}`
+                })
               : nothing}
           </div>
           ${this.showHint || this.hasError
-            ? html`${BlrFormInfoRenderFunction({
+            ? BlrFormInfoRenderFunction({
                 theme: this.theme,
                 size: this.size,
                 showHint: this.showHint,
@@ -172,7 +172,7 @@ export class BlrTextInput extends LitElement {
                 hasError: !!this.hasError,
                 errorMessage: this.errorMessage,
                 errorIcon: this.errorIcon,
-              })}`
+              })
             : nothing}
         </div>
       `;
