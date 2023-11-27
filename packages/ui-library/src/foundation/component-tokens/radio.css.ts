@@ -39,15 +39,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
     .blr-legend-wrapper {
       &.sm {
-        padding-bottom: ${RadioGroup.SM.LegendWrapper.PaddingBottom};
+        padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.SM};
       }
 
       &.md {
-        padding-bottom: ${RadioGroup.MD.LegendWrapper.PaddingBottom};
+        padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.MD};
       }
 
       &.lg {
-        padding-bottom: ${RadioGroup.LG.LegendWrapper.PaddingBottom};
+        padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.LG};
       }
     }
 
@@ -67,17 +67,19 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         width: 100%;
 
         &.sm {
-          margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px);
+          margin-left: calc(1rem + ${Radio.Control.Container.Size.SM} + ${Radio.ContentRow.ItemSpacing.SM} - 1px);
         }
 
         &.md {
-          margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px);
+          margin-left: calc(1rem + ${Radio.Control.Container.Size.MD} + ${Radio.ContentRow.ItemSpacing.MD} - 1px);
         }
 
         &.lg {
-          margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px);
+          margin-left: calc(1rem + ${Radio.Control.Container.Size.LG} + ${Radio.ContentRow.ItemSpacing.LG} - 1px);
         }
       }
+
+      ############### CONTINUE
 
       &.sm {
         gap: ${Radio.SM.ContentRow.ItemSpacing};
