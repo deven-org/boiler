@@ -6,7 +6,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
 import { FormSizesType } from '../../../globals/types';
 
-import { styleCustomLight, styleCustomDark } from './index.css';
+import { checkboxDark, checkboxLight } from '../../../foundation/component-tokens/checkbox.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
@@ -105,7 +105,7 @@ export class BlrCheckbox extends LitElement {
 
   protected render() {
     if (this.size && this.checkInputId) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, styleCustomLight] : [formDark, styleCustomDark];
+      const dynamicStyles = this.theme === 'Light' ? [formLight, checkboxLight] : [formDark, checkboxDark];
 
       const classes = classMap({
         'blr-semantic-action': true,
