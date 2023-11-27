@@ -46,7 +46,7 @@ export class BlrTextarea extends LitElement {
   @property() hasHint = true;
   @property() hintMessage?: string;
   @property() showCounter?: boolean;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() hintIcon?: SizelessIconType;
   @property() isResizeable: ResizeType = 'none';
   @property() rows?: number;
   @property() cols?: number;

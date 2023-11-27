@@ -36,7 +36,7 @@ export class BlrToggleSwitch extends LitElement {
 
   @property() hasHint?: boolean;
   @property() hintMessage?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() hintIcon?: SizelessIconType;
 
   @property() size?: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';
