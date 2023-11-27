@@ -43,7 +43,9 @@ export function renderThemedCssStrings(renderFunc: (cT: componentTokensType, sT:
   }
 
   return {
+    // @ts-expect-error todo
     tokenizedLight,
+    // @ts-expect-error todo
     tokenizedDark,
   };
 }

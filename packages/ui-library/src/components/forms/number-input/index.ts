@@ -87,6 +87,10 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected getButtonTemplate(icon: SizelessIconType, onClick: () => void): TemplateResult<1> {
+    if (!this.size) {
+      return html``;
+    }
+
     const iconSizeVariant = getComponentConfigToken([
       'SizeVariant',
       'Action',
@@ -156,7 +160,8 @@ export class BlrNumberInput extends LitElement {
           : [wrapperDark, actionDark, StepperComboDark];
 
       const inputClasses = classMap({
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
+        prepend: !!this.prependUnit,
       });
 
       const unitClasses = classMap({
