@@ -1,4 +1,1060 @@
 {
+  "Action": {
+    "StepperButton": {
+      "Border": {
+        "Rest": {
+          "value": {
+            "color": "{Action.Silent.SurfaceStroke.Rest}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        },
+        "Hover": {
+          "value": {
+            "color": "{Action.Silent.SurfaceStroke.Hover}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        },
+        "Pressed": {
+          "value": {
+            "color": "{Action.Silent.SurfaceStroke.Pressed}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        },
+        "Focus": {
+          "value": "{Global.FocusBorder}",
+          "type": "border"
+        },
+        "Disabled": {
+          "value": {
+            "color": "{Action.Silent.SurfaceStroke.Disabled}",
+            "width": "{core.borderWidth.None}"
+          },
+          "type": "border"
+        }
+      },
+      "SM": {
+        "Width": {
+          "value": "{core.dimensionREM.32}",
+          "type": "sizing"
+        }
+      },
+      "MD": {
+        "Width": {
+          "value": "{core.dimensionREM.40}",
+          "type": "sizing"
+        }
+      },
+      "LG": {
+        "Width": {
+          "value": "{core.dimensionREM.48}",
+          "type": "sizing"
+        }
+      },
+      "Container": {
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "StepperCombo": {
+      "SM": {
+        "Vertical": {
+          "Width": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing"
+          },
+          "DividerWrapper": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8}",
+              "type": "spacing"
+            }
+          }
+        },
+        "Horizontal": {
+          "Width": {
+            "value": "{core.dimensionREM.64}",
+            "type": "sizing"
+          },
+          "DividerWrapper": {
+            "Padding": {
+              "value": "{core.dimensionREM.8} 0",
+              "type": "spacing"
+            }
+          }
+        }
+      },
+      "MD": {
+        "Vertical": {
+          "Width": {
+            "value": "{core.dimensionREM.40}",
+            "type": "sizing"
+          },
+          "DividerWrapper": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8}",
+              "type": "spacing"
+            }
+          }
+        },
+        "Horizontal": {
+          "Width": {
+            "value": "{core.dimensionREM.80}",
+            "type": "sizing"
+          },
+          "DividerWrapper": {
+            "Padding": {
+              "value": "{core.dimensionREM.8} 0",
+              "type": "spacing"
+            }
+          }
+        }
+      },
+      "LG": {
+        "Vertical": {
+          "Width": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing"
+          },
+          "DividerWrapper": {
+            "Padding": {
+              "value": "0 {core.dimensionREM.8}",
+              "type": "spacing"
+            }
+          }
+        },
+        "Horizontal": {
+          "Width": {
+            "value": "{core.dimensionREM.96}",
+            "type": "sizing"
+          },
+          "DividerWrapper": {
+            "Padding": {
+              "value": "{core.dimensionREM.8} 0",
+              "type": "spacing"
+            }
+          }
+        }
+      }
+    },
+    "Menu": {
+      "MenuItem": {
+        "Padding": {
+          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+          "type": "spacing",
+          "description": "Adds padding to the menu item"
+        },
+        "Container": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "description": "Adds space between Icons and ContentStack (Label & Description)"
+          }
+        },
+        "ContentStack": {
+          "ItemSpacing": {
+            "value": "0",
+            "type": "spacing",
+            "description": "Adds space between Label & Description"
+          }
+        },
+        "BorderRadius": {
+          "value": "{Action.BorderRadius}",
+          "type": "borderRadius",
+          "description": "Defines the border radius of a single menu item."
+        }
+      },
+      "Section": {
+        "SectionTitleWrapper": {
+          "Padding": {
+            "value": "{core.dimensionPX.16} {core.dimensionPX.16} {core.dimensionPX.8} {core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+          }
+        },
+        "SectionTitle": {
+          "value": "{core.typography.sourceSansPro.semibold.75}",
+          "type": "typography"
+        }
+      },
+      "SectionStack": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the space between each menu section"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the padding around all stacked menu sections."
+        }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius",
+        "description": "Defines the border radius of the whole menu component"
+      }
+    }
+  },
+  "Actions": {
+    "TextButton": {
+      "Container": {
+        "PaddingTopBottom": {
+          "XS": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingLeftRight": {
+          "XS": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.24}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionPX.40}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "Padding": {
+          "XS": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.XS} {Actions.TextButton.Container.PaddingLeftRight.XS}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "SM": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.SM} {Actions.TextButton.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "MD": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.MD} {Actions.TextButton.Container.PaddingLeftRight.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "LG": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.LG} {Actions.TextButton.Container.PaddingLeftRight.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "XL": {
+            "value": "{Actions.TextButton.Container.PaddingTopBottom.XL} {Actions.TextButton.Container.PaddingLeftRight.XL}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "TextDropdown": {
+      "Container": {
+        "PaddingTop": {
+          "XS": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingRight": {
+          "XS": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionPX.32}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingBottom": {
+          "XS": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingLeft": {
+          "XS": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionPX.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionPX.20}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionPX.24}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionPX.40}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "Padding": {
+          "XS": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.XS} {Actions.TextDropdown.Container.PaddingRight.XS} {Actions.TextDropdown.Container.PaddingBottom.XS} {Actions.TextDropdown.Container.PaddingLeft.XS}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "SM": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.SM} {Actions.TextDropdown.Container.PaddingRight.SM} {Actions.TextDropdown.Container.PaddingBottom.SM} {Actions.TextDropdown.Container.PaddingLeft.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "MD": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.MD} {Actions.TextDropdown.Container.PaddingRight.MD} {Actions.TextDropdown.Container.PaddingBottom.MD} {Actions.TextDropdown.Container.PaddingLeft.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "LG": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.LG} {Actions.TextDropdown.Container.PaddingRight.LG} {Actions.TextDropdown.Container.PaddingBottom.LG} {Actions.TextDropdown.Container.PaddingLeft.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "XL": {
+            "value": "{Actions.TextDropdown.Container.PaddingTop.XL} {Actions.TextDropdown.Container.PaddingRight.XL} {Actions.TextDropdown.Container.PaddingBottom.XL} {Actions.TextDropdown.Container.PaddingLeft.XL}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "IconButton": {
+      "Container": {
+        "Padding": {
+          "XS": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing"
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "0",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    },
+    "IconDropdown": {
+      "Container": {
+        "PaddingTop": {
+          "XS": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingRight": {
+          "XS": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingBottom": {
+          "XS": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.6}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "PaddingLeft": {
+          "XS": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "SM": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "MD": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          },
+          "XL": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+          }
+        },
+        "Padding": {
+          "XS": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.XS} {Actions.IconDropdown.Container.PaddingRight.XS} {Actions.IconDropdown.Container.PaddingBottom.XS} {Actions.IconDropdown.Container.PaddingLeft.XS}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "SM": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.SM} {Actions.IconDropdown.Container.PaddingRight.SM} {Actions.IconDropdown.Container.PaddingBottom.SM} {Actions.IconDropdown.Container.PaddingLeft.SM}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "MD": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.MD} {Actions.IconDropdown.Container.PaddingRight.MD} {Actions.IconDropdown.Container.PaddingBottom.MD} {Actions.IconDropdown.Container.PaddingLeft.MD}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "LG": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.LG} {Actions.IconDropdown.Container.PaddingRight.LG} {Actions.IconDropdown.Container.PaddingBottom.LG} {Actions.IconDropdown.Container.PaddingLeft.LG}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          },
+          "XL": {
+            "value": "{Actions.IconDropdown.Container.PaddingTop.XL} {Actions.IconDropdown.Container.PaddingRight.XL} {Actions.IconDropdown.Container.PaddingBottom.XL} {Actions.IconDropdown.Container.PaddingLeft.XL}",
+            "type": "spacing",
+            "description": "Do not apply in Figma, use aliases instead."
+          }
+        },
+        "ItemSpacing": {
+          "XS": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "SM": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "0",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "-{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "XL": {
+            "value": "-{core.dimensionREM.4}",
+            "type": "spacing"
+          }
+        },
+        "BorderRadius": {
+          "XS": {
+            "value": "{Actions.Container.BorderRadius.XS}",
+            "type": "borderRadius"
+          },
+          "SM": {
+            "value": "{Actions.Container.BorderRadius.SM}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{Actions.Container.BorderRadius.MD}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{Actions.Container.BorderRadius.LG}",
+            "type": "borderRadius"
+          },
+          "XL": {
+            "value": "{Actions.Container.BorderRadius.XL}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    }
+  },
+  "Feedback": {
+    "Loader": {
+      "Container": {
+        "Size": {
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.3}",
+            "type": "spacing"
+          }
+        }
+      },
+      "Background": {
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.3}",
+            "type": "borderWidth"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "borderWidth"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.3}",
+            "type": "borderWidth"
+          }
+        }
+      }
+    },
+    "Counter": {
+      "Container": {
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        },
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          },
+          "MD": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          },
+          "LG": {
+            "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
+            "type": "spacing",
+            "description": "Coded Comps Only!"
+          }
+        },
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          },
+          "MD": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.MD}",
+            "type": "borderRadius",
+            "description": "Border radius of counter container\n>>> new"
+          }
+        },
+        "BorderWidth": {
+          "SM": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth"
+          },
+          "MD": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth"
+          },
+          "LG": {
+            "value": "{core.borderWidth.Medium}",
+            "type": "borderWidth"
+          }
+        },
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.2}",
+            "type": "spacing"
+          }
+        }
+      }
+    },
+    "Tooltip": {
+      "ContentCol": {
+        "Padding": {
+          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
+          "type": "spacing"
+        },
+        "BorderRadius": {
+          "value": "{core.borderRadius.MD}",
+          "type": "borderRadius"
+        }
+      },
+      "NoseWrapper": {
+        "PaddingTopBottom": {
+          "value": "{core.dimensionREM.5}",
+          "type": "spacing",
+          "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
+        },
+        "PaddingLeftRight": {
+          "value": "{core.dimensionREM.8}",
+          "type": "spacing",
+          "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
+        }
+      },
+      "MinWidth": {
+        "value": "{core.dimensionREM.40}",
+        "type": "sizing",
+        "description": "Defines the minimum width of the tooltip."
+      },
+      "MaxWidth": {
+        "value": "{core.dimensionREM.80}",
+        "type": "sizing",
+        "description": "Defines the maximum Width of the tooltip."
+      }
+    },
+    "Dialog": {
+      "XS": {
+        "MaxWidth": {
+          "value": "400px",
+          "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
+        }
+      },
+      "SM": {
+        "MaxWidth": {
+          "value": "600px",
+          "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
+        }
+      },
+      "MD": {
+        "MaxWidth": {
+          "value": "900px",
+          "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
+        }
+      },
+      "LG": {
+        "MaxWidth": {
+          "value": "1200px",
+          "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
+        }
+      },
+      "XL": {
+        "MaxWidth": {
+          "value": "1556px",
+          "type": "sizing"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.64}",
+          "type": "spacing",
+          "description": "Defines the margin of Dialog Combined"
+        }
+      },
+      "Header": {
+        "Padding": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing"
+        }
+      },
+      "Content": {
+        "Padding": {
+          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+          "type": "spacing"
+        }
+      },
+      "Footer": {
+        "Padding": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius"
+      }
+    }
+  },
   "Forms": {
     "Checkbox": {
       "ContentCol": {
@@ -1439,1062 +2495,6 @@
           "value": "{core.typography.sourceSansPro.regular.75}",
           "type": "typography"
         }
-      }
-    }
-  },
-  "Action": {
-    "StepperButton": {
-      "Border": {
-        "Rest": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Rest}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Hover}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Pressed}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": "{Global.FocusBorder}",
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Disabled}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        }
-      },
-      "SM": {
-        "Width": {
-          "value": "{core.dimensionREM.32}",
-          "type": "sizing"
-        }
-      },
-      "MD": {
-        "Width": {
-          "value": "{core.dimensionREM.40}",
-          "type": "sizing"
-        }
-      },
-      "LG": {
-        "Width": {
-          "value": "{core.dimensionREM.48}",
-          "type": "sizing"
-        }
-      },
-      "Container": {
-        "BorderRadius": {
-          "SM": {
-            "value": "{core.borderRadius.None}",
-            "type": "borderRadius"
-          },
-          "MD": {
-            "value": "{core.borderRadius.None}",
-            "type": "borderRadius"
-          },
-          "LG": {
-            "value": "{core.borderRadius.None}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    },
-    "StepperCombo": {
-      "SM": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.32}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.64}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      },
-      "MD": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.40}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.80}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      },
-      "LG": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.48}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.96}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      }
-    },
-    "Menu": {
-      "MenuItem": {
-        "Padding": {
-          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
-          "type": "spacing",
-          "description": "Adds padding to the menu item"
-        },
-        "Container": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing",
-            "description": "Adds space between Icons and ContentStack (Label & Description)"
-          }
-        },
-        "ContentStack": {
-          "ItemSpacing": {
-            "value": "0",
-            "type": "spacing",
-            "description": "Adds space between Label & Description"
-          }
-        },
-        "BorderRadius": {
-          "value": "{Action.BorderRadius}",
-          "type": "borderRadius",
-          "description": "Defines the border radius of a single menu item."
-        }
-      },
-      "Section": {
-        "SectionTitleWrapper": {
-          "Padding": {
-            "value": "{core.dimensionPX.16} {core.dimensionPX.16} {core.dimensionPX.8} {core.dimensionPX.16}",
-            "type": "spacing",
-            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
-          }
-        },
-        "SectionTitle": {
-          "value": "{core.typography.sourceSansPro.semibold.75}",
-          "type": "typography"
-        }
-      },
-      "SectionStack": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the space between each menu section"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the padding around all stacked menu sections."
-        }
-      },
-      "BorderRadius": {
-        "value": "{core.borderRadius.LG}",
-        "type": "borderRadius",
-        "description": "Defines the border radius of the whole menu component"
-      }
-    }
-  },
-  "Actions": {
-    "TextButton": {
-      "Container": {
-        "PaddingTopBottom": {
-          "XS": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingLeftRight": {
-          "XS": {
-            "value": "{core.dimensionPX.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionPX.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionPX.16}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionPX.24}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionPX.40}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "Padding": {
-          "XS": {
-            "value": "{Actions.TextButton.Container.PaddingTopBottom.XS} {Actions.TextButton.Container.PaddingLeftRight.XS}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "SM": {
-            "value": "{Actions.TextButton.Container.PaddingTopBottom.SM} {Actions.TextButton.Container.PaddingLeftRight.SM}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "MD": {
-            "value": "{Actions.TextButton.Container.PaddingTopBottom.MD} {Actions.TextButton.Container.PaddingLeftRight.MD}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "LG": {
-            "value": "{Actions.TextButton.Container.PaddingTopBottom.LG} {Actions.TextButton.Container.PaddingLeftRight.LG}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "XL": {
-            "value": "{Actions.TextButton.Container.PaddingTopBottom.XL} {Actions.TextButton.Container.PaddingLeftRight.XL}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          }
-        },
-        "ItemSpacing": {
-          "XS": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing"
-          },
-          "SM": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
-            "type": "spacing"
-          },
-          "XL": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
-            "type": "spacing"
-          }
-        },
-        "BorderRadius": {
-          "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
-            "type": "borderRadius"
-          },
-          "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
-            "type": "borderRadius"
-          },
-          "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
-            "type": "borderRadius"
-          },
-          "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
-            "type": "borderRadius"
-          },
-          "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    },
-    "TextDropdown": {
-      "Container": {
-        "PaddingTop": {
-          "XS": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingRight": {
-          "XS": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionPX.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionPX.16}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionPX.32}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingBottom": {
-          "XS": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingLeft": {
-          "XS": {
-            "value": "{core.dimensionPX.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionPX.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionPX.20}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionPX.24}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionPX.40}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "Padding": {
-          "XS": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.XS} {Actions.TextDropdown.Container.PaddingRight.XS} {Actions.TextDropdown.Container.PaddingBottom.XS} {Actions.TextDropdown.Container.PaddingLeft.XS}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "SM": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.SM} {Actions.TextDropdown.Container.PaddingRight.SM} {Actions.TextDropdown.Container.PaddingBottom.SM} {Actions.TextDropdown.Container.PaddingLeft.SM}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "MD": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.MD} {Actions.TextDropdown.Container.PaddingRight.MD} {Actions.TextDropdown.Container.PaddingBottom.MD} {Actions.TextDropdown.Container.PaddingLeft.MD}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "LG": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.LG} {Actions.TextDropdown.Container.PaddingRight.LG} {Actions.TextDropdown.Container.PaddingBottom.LG} {Actions.TextDropdown.Container.PaddingLeft.LG}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "XL": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.XL} {Actions.TextDropdown.Container.PaddingRight.XL} {Actions.TextDropdown.Container.PaddingBottom.XL} {Actions.TextDropdown.Container.PaddingLeft.XL}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          }
-        },
-        "ItemSpacing": {
-          "XS": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          },
-          "SM": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          },
-          "XL": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          }
-        },
-        "BorderRadius": {
-          "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
-            "type": "borderRadius"
-          },
-          "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
-            "type": "borderRadius"
-          },
-          "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
-            "type": "borderRadius"
-          },
-          "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
-            "type": "borderRadius"
-          },
-          "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    },
-    "IconButton": {
-      "Container": {
-        "Padding": {
-          "XS": {
-            "value": "{core.dimensionREM.6}",
-            "type": "spacing"
-          },
-          "SM": {
-            "value": "{core.dimensionREM.6}",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing"
-          },
-          "XL": {
-            "value": "{core.dimensionREM.12}",
-            "type": "spacing"
-          }
-        },
-        "ItemSpacing": {
-          "XS": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "SM": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "XL": {
-            "value": "0",
-            "type": "spacing"
-          }
-        },
-        "BorderRadius": {
-          "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
-            "type": "borderRadius"
-          },
-          "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
-            "type": "borderRadius"
-          },
-          "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
-            "type": "borderRadius"
-          },
-          "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
-            "type": "borderRadius"
-          },
-          "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    },
-    "IconDropdown": {
-      "Container": {
-        "PaddingTop": {
-          "XS": {
-            "value": "{core.dimensionREM.6}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.6}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingRight": {
-          "XS": {
-            "value": "{core.dimensionREM.1}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.1}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.1}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingBottom": {
-          "XS": {
-            "value": "{core.dimensionREM.6}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.6}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.12}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "PaddingLeft": {
-          "XS": {
-            "value": "{core.dimensionREM.3}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "SM": {
-            "value": "{core.dimensionREM.3}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "MD": {
-            "value": "{core.dimensionREM.3}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "LG": {
-            "value": "{core.dimensionREM.2}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          },
-          "XL": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
-          }
-        },
-        "Padding": {
-          "XS": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.XS} {Actions.IconDropdown.Container.PaddingRight.XS} {Actions.IconDropdown.Container.PaddingBottom.XS} {Actions.IconDropdown.Container.PaddingLeft.XS}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "SM": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.SM} {Actions.IconDropdown.Container.PaddingRight.SM} {Actions.IconDropdown.Container.PaddingBottom.SM} {Actions.IconDropdown.Container.PaddingLeft.SM}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "MD": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.MD} {Actions.IconDropdown.Container.PaddingRight.MD} {Actions.IconDropdown.Container.PaddingBottom.MD} {Actions.IconDropdown.Container.PaddingLeft.MD}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "LG": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.LG} {Actions.IconDropdown.Container.PaddingRight.LG} {Actions.IconDropdown.Container.PaddingBottom.LG} {Actions.IconDropdown.Container.PaddingLeft.LG}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          },
-          "XL": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.XL} {Actions.IconDropdown.Container.PaddingRight.XL} {Actions.IconDropdown.Container.PaddingBottom.XL} {Actions.IconDropdown.Container.PaddingLeft.XL}",
-            "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
-          }
-        },
-        "ItemSpacing": {
-          "XS": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "SM": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "0",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "-{core.dimensionREM.2}",
-            "type": "spacing"
-          },
-          "XL": {
-            "value": "-{core.dimensionREM.4}",
-            "type": "spacing"
-          }
-        },
-        "BorderRadius": {
-          "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
-            "type": "borderRadius"
-          },
-          "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
-            "type": "borderRadius"
-          },
-          "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
-            "type": "borderRadius"
-          },
-          "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
-            "type": "borderRadius"
-          },
-          "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    }
-  },
-  "Feedback": {
-    "Loader": {
-      "Container": {
-        "Size": {
-          "SM": {
-            "value": "{core.dimensionREM.16}",
-            "type": "sizing"
-          },
-          "MD": {
-            "value": "{core.dimensionREM.24}",
-            "type": "sizing"
-          },
-          "LG": {
-            "value": "{core.dimensionREM.32}",
-            "type": "sizing"
-          }
-        },
-        "Padding": {
-          "SM": {
-            "value": "{core.dimensionREM.1}",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "{core.dimensionREM.2}",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "{core.dimensionREM.3}",
-            "type": "spacing"
-          }
-        }
-      },
-      "Background": {
-        "BorderWidth": {
-          "SM": {
-            "value": "{core.dimensionPX.2}",
-            "type": "borderWidth"
-          },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
-            "type": "borderWidth"
-          },
-          "LG": {
-            "value": "{core.dimensionPX.3}",
-            "type": "borderWidth"
-          }
-        }
-      },
-      "Foreground": {
-        "BorderWidth": {
-          "SM": {
-            "value": "{core.dimensionPX.2}",
-            "type": "borderWidth"
-          },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
-            "type": "borderWidth"
-          },
-          "LG": {
-            "value": "{core.dimensionPX.3}",
-            "type": "borderWidth"
-          }
-        }
-      }
-    },
-    "Counter": {
-      "Container": {
-        "PaddingTopBottom": {
-          "SM": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
-          },
-          "MD": {
-            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
-            "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
-          },
-          "LG": {
-            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM}",
-            "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
-          }
-        },
-        "PaddingLeftRight": {
-          "SM": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
-          },
-          "MD": {
-            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
-            "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
-          },
-          "LG": {
-            "value": "{Feedback.Counter.Container.PaddingLeftRight.SM}",
-            "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
-          }
-        },
-        "Padding": {
-          "SM": {
-            "value": "{Feedback.Counter.Container.PaddingTopBottom.SM} {Feedback.Counter.Container.PaddingLeftRight.SM}",
-            "type": "spacing",
-            "description": "Coded Comps Only!"
-          },
-          "MD": {
-            "value": "{Feedback.Counter.Container.PaddingTopBottom.MD} {Feedback.Counter.Container.PaddingLeftRight.MD}",
-            "type": "spacing",
-            "description": "Coded Comps Only!"
-          },
-          "LG": {
-            "value": "{Feedback.Counter.Container.PaddingTopBottom.LG} {Feedback.Counter.Container.PaddingLeftRight.LG}",
-            "type": "spacing",
-            "description": "Coded Comps Only!"
-          }
-        },
-        "BorderRadius": {
-          "SM": {
-            "value": "{core.borderRadius.MD}",
-            "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> new"
-          },
-          "MD": {
-            "value": "{core.borderRadius.MD}",
-            "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
-          },
-          "LG": {
-            "value": "{core.borderRadius.MD}",
-            "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> new"
-          }
-        },
-        "BorderWidth": {
-          "SM": {
-            "value": "{core.borderWidth.Medium}",
-            "type": "borderWidth"
-          },
-          "MD": {
-            "value": "{core.borderWidth.Medium}",
-            "type": "borderWidth"
-          },
-          "LG": {
-            "value": "{core.borderWidth.Medium}",
-            "type": "borderWidth"
-          }
-        },
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          },
-          "LG": {
-            "value": "{core.dimensionPX.2}",
-            "type": "spacing"
-          }
-        }
-      }
-    },
-    "Tooltip": {
-      "ContentCol": {
-        "Padding": {
-          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "BorderRadius": {
-          "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
-        }
-      },
-      "NoseWrapper": {
-        "PaddingTopBottom": {
-          "value": "{core.dimensionREM.5}",
-          "type": "spacing",
-          "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
-        },
-        "PaddingLeftRight": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing",
-          "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
-        }
-      },
-      "MinWidth": {
-        "value": "{core.dimensionREM.40}",
-        "type": "sizing",
-        "description": "Defines the minimum width of the tooltip."
-      },
-      "MaxWidth": {
-        "value": "{core.dimensionREM.80}",
-        "type": "sizing",
-        "description": "Defines the maximum Width of the tooltip."
-      }
-    },
-    "Dialog": {
-      "XS": {
-        "MaxWidth": {
-          "value": "400px",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "SM": {
-        "MaxWidth": {
-          "value": "600px",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "MD": {
-        "MaxWidth": {
-          "value": "900px",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "LG": {
-        "MaxWidth": {
-          "value": "1200px",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "XL": {
-        "MaxWidth": {
-          "value": "1556px",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "Header": {
-        "Padding": {
-          "value": "{core.dimensionPX.16}",
-          "type": "spacing"
-        }
-      },
-      "Content": {
-        "Padding": {
-          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
-          "type": "spacing"
-        }
-      },
-      "Footer": {
-        "Padding": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        }
-      },
-      "BorderRadius": {
-        "value": "{core.borderRadius.LG}",
-        "type": "borderRadius"
       }
     }
   },
