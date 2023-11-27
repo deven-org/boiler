@@ -70,7 +70,9 @@ export class BlrTextButton extends LitElement {
       });
 
       const iconClasses = classMap({
-        icon: true,
+        'icon': true,
+        'leading-icon-class': this.iconPosition === 'leading',
+        'trailing-icon-class': this.iconPosition === 'trailing',
       });
 
       const flexContainerClasses = classMap({
@@ -97,25 +99,21 @@ export class BlrTextButton extends LitElement {
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">
         ${this.hasIcon && this.iconPosition === 'leading'
-          ? html` <div class="leading-icon-class">
-              ${BlrIconRenderFunction({
-                icon: calculateIconName(this.icon, iconSizeVariant),
-                size: iconSizeVariant,
-                hideAria: true,
-                classMap: iconClasses,
-              })}
-            </div>`
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: iconClasses,
+            })
           : nothing}
         <span class="label">${this.label} </span>
         ${this.hasIcon && this.iconPosition === 'trailing'
-          ? html`<div class="trailing-icon-class">
-              ${BlrIconRenderFunction({
-                icon: calculateIconName(this.icon, iconSizeVariant),
-                size: iconSizeVariant,
-                hideAria: true,
-                classMap: iconClasses,
-              })}
-            </div> `
+          ? BlrIconRenderFunction({
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              hideAria: true,
+              classMap: iconClasses,
+            })
           : nothing}
       </div>`;
 
