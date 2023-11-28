@@ -191,36 +191,22 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<div>
-<p>Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
-</p>
- <ul>
-        <li> <a href="/docs/design-system-web-components-actions-buttons-textbutton--docs"><strong>Docs</strong></a></li>
-        <li> <strong>Appearance</strong>
-            <ul>
-                <li> <a href="#variant"><strong>Variant</strong></a></li>
-                <li> <a href="#size-variant"><strong>Size Variant</strong></a></li>
-            </ul>
-        </li>
-         <li> <strong>States</strong>
-            <ul>
-                <li> <a href="#disabled"><strong>Disabled</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <strong>Dependencies</strong>
-            <ul>
-                <li> <a href="#icon"><strong>Icon</strong></a>
-                </li>
-                 <li> <a href="#loader"><strong>Loader</strong></a>
-                </li>
-            </ul>
-        </li>
-        </ul>
-        </div>`,
+        component: `<Markdown>
+Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
+<br>
+- [**Appearance**](#appearance)
+ - [**Variant**](#variant)
+ - [**Size-Variant**](#size-variant)
+- [**States**](#states)
+ - [**Disabled**](#disabled)
+- [**Dependencies**](#disabled)
+ - [**Icon**](#icon)
+ - [**Loader**](#loader)
+</Markdown>`,
       },
     },
   },
@@ -233,7 +219,7 @@ const args: BlrTextButtonType = {
   theme: 'Light',
   variant: 'primary',
   size: 'md',
-  label: 'Button',
+  label: 'Label-text',
   hasIcon: true,
   iconPosition: 'leading',
   icon: 'blr360',
@@ -280,8 +266,8 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 //All Stories
 //Appearance Variant
 /**
- * Appearance
- * Variant
+ * ## Appearance
+ * ### Variant
  * The Text Button component comes in 6 variants: cta, primary, secondary, silent, destructive and encourage.
  */
 export const Variant = () => {
@@ -326,6 +312,7 @@ export const Variant = () => {
 Variant.argTypes = {
   ...disabledArgTypes,
 };
+Variant.story = { name: ' ' };
 //Appearance Size Variant
 /**
  * The Text Button component comes in 5 sizes: XS, SM, MD, LG and XL.
@@ -367,6 +354,8 @@ export const SizeVariant = () => {
 
 //States
 /**
+ * ## States
+ * ### Disabled
  * The Text Button component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
@@ -386,8 +375,13 @@ export const Disabled = () => {
 Disabled.argTypes = {
   ...disabledArgTypes,
 };
+Disabled.story = {
+  name: ' ',
+};
 //Dependencies Icon / Loader
 /**
+ * ## Dependencies
+ * ### Icon
  * The Text Button component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
 
@@ -413,6 +407,7 @@ export const Icon = () => {
 Icon.argTypes = {
   ...disabledArgTypes,
 };
+Icon.story = { name: ' ' };
 /**
  * The Text Button uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/design-system-web-components-feedback-loader--docs) component.
  */
