@@ -1,10 +1,10 @@
 import { LitElement, html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../../globals/types';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
-import { selectInputLight, selectInputDark } from '../../../foundation/component-tokens/select.css';
+import { selectInputLight, selectInputDark } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
@@ -38,8 +38,8 @@ export class BlrSelect extends LitElement {
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: (event: Event) => void;
-  @property() onBlur?: (event: Event) => void;
-  @property() onFocus?: (event: Event) => void;
+  @property() onBlur?: HTMLElement['blur'];
+  @property() onFocus?: HTMLElement['focus'];
   @property({ type: Array }) options: Option[] = [];
   @property() hasError?: boolean;
   @property() errorMessage?: string;
@@ -50,6 +50,16 @@ export class BlrSelect extends LitElement {
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
   @property() theme: ThemeType = 'Light';
+
+  @state() protected isFocused = false;
+
+  protected handleFocus = () => {
+    this.isFocused = true;
+  };
+
+  protected handleBlur = () => {
+    this.isFocused = false;
+  };
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     if (this.size) {
@@ -93,6 +103,7 @@ export class BlrSelect extends LitElement {
         'error-input': this.hasError || false,
         [`${this.size}`]: this.size,
         'disabled': this.disabled || false,
+        [`focus`]: this.isFocused || false,
       });
 
       const iconClasses = classMap({
@@ -125,8 +136,8 @@ export class BlrSelect extends LitElement {
                 ?disabled=${this.disabled}
                 ?required=${this.required}
                 @change=${this.onChange}
-                @focus=${this.onFocus}
-                @blur=${this.onBlur}
+                @focus=${this.handleFocus}
+                @blur=${this.handleBlur}
               >
                 ${this.options?.map((opt: Option) => {
                   return html`

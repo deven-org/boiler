@@ -6,6 +6,7 @@ const { NumberInput } = componentTokens.Forms;
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
+  const { Global } = semanticTokens;
   const { StepperCombo } = componentTokens.Action;
 
   return typeSafeNestedCss`
@@ -114,7 +115,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
 
       &:focus-within {
-        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+        outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.FocusBorder.color};
         background-color: ${SurfaceFill.Default.Focus};
 
         & > input {
@@ -156,7 +157,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         }
 
         &:focus-within {
-          outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.FocusBorder.color};
           color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
