@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
@@ -47,25 +48,58 @@ export class BlrToggleSwitch extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  @state() isSelected = false;
+  @state() protected currentCheckedState: boolean | undefined = this.checked;
 
-  // When the property is updated, set the isSelected state to the new value
   protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('checked')) {
-      this.isSelected = this.checked || false;
+      this.currentCheckedState = this.checked || false;
     }
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
   }
 
   protected handleChange(event: Event) {
     if (!this.disabled) {
-      this.isSelected = !this.isSelected;
       this.onChange?.(event);
+      this.currentCheckedState = !this.currentCheckedState;
+      console.log('change', this.currentCheckedState);
     }
   }
+
+  @state() protected focused = false;
+
+  protected handleFocus = (event: FocusEvent) => {
+    this.focused = true;
+    this.onFocus?.(event);
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    this.focused = false;
+    this.onBlur?.(event);
+  };
+
+  @state() protected hovered = false;
+
+  protected handleEnter = () => {
+    this.hovered = true;
+    console.log('hovered', this.hovered);
+  };
+
+  protected handleLeave = () => {
+    this.hovered = false;
+    console.log('hovered', this.hovered);
+  };
+
+  @state() protected active = false;
+
+  protected handlePress = () => {
+    this.active = true;
+    this.currentCheckedState = !this.currentCheckedState;
+    console.log('active', this.active);
+  };
+
+  protected handleRelease = () => {
+    this.active = false;
+    console.log('active', this.active);
+  };
 
   protected render() {
     if (this.size) {
@@ -80,7 +114,10 @@ export class BlrToggleSwitch extends LitElement {
         [`${this.variant || 'leading'}`]: this.variant || 'leading',
       });
 
-      const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
+      const wrapperClass = classMap({
+        'blr-label-switch-wrapper': true,
+        'checked': this.currentCheckedState || false,
+      });
 
       const toggleIconsClass = classMap({
         'toggle-icon-class': true,
@@ -124,7 +161,7 @@ export class BlrToggleSwitch extends LitElement {
                 name=${this.checkInputId || nothing}
                 ?disabled=${this.disabled}
                 ?readonly=${this.readonly}
-                .checked=${this.isSelected || nothing}
+                .checked=${this.currentCheckedState || nothing}
                 @change=${this.handleChange}
                 @focus=${this.onFocus}
                 @blur=${this.onBlur}
@@ -150,7 +187,7 @@ export class BlrToggleSwitch extends LitElement {
             </label>
             ${this.variant === 'leading' && this.showStateLabel
               ? html` ${BlrFormLabelInline({
-                  labelText: this.isSelected ? this.onLabel : this.offLabel,
+                  labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
                   forValue: this.checkInputId,
                   labelSize: this.size || 'md',
                 })}`

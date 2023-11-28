@@ -52,9 +52,12 @@ export class BlrCheckbox extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  connectedCallback() {
-    super.connectedCallback();
-    this.currentCheckedState = this.checked;
+  @state() protected currentCheckedState: boolean | undefined = this.checked;
+
+  protected updated(changedProperties: Map<string, boolean>) {
+    if (changedProperties.has('checked')) {
+      this.currentCheckedState = this.checked || false;
+    }
   }
 
   protected handleChange(event: Event) {
@@ -100,8 +103,6 @@ export class BlrCheckbox extends LitElement {
     this.active = false;
     console.log('active', this.active);
   };
-
-  @state() protected currentCheckedState: boolean | undefined = this.checked;
 
   protected render() {
     if (this.size && this.checkInputId) {

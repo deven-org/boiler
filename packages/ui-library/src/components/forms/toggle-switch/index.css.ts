@@ -79,7 +79,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               color: ${LabelNextToControl.Rest};
             }
 
-            &.wrapper-unselected {
+            &:not(.checked) {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Rest};
               outline-color: red;
@@ -109,7 +109,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            &.wrapper-selected {
+            &.checked {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Rest};
               outline-color: blue;
@@ -238,77 +238,79 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
           & > .label-container {
             gap: ${ToggleSwitch.ControlWithStateLabel.Container.ItemSpacing.SM};
-          }
 
-          & > .label-container > .blr-label-switch-wrapper {
-            width: ${ToggleSwitch.Control.Container.Width.SM};
-            height: ${ToggleSwitch.Control.Container.Height.SM};
+            & > .blr-label-switch-wrapper {
+              width: ${ToggleSwitch.Control.Container.Width.SM};
+              height: ${ToggleSwitch.Control.Container.Height.SM};
 
-            &.wrapper-unselected {
-              outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest};
-              outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
-              outline-width: 2px;
-              outline-offset: calc(2px * -1);
-
-              &:hover {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
+              &:not(.checked) {
+                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest};
+                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+
+                &:hover {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
+                &:active {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
+
+                &[disabled] {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
+                &[readonly] {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
               }
-              &:active {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
+              &.checked {
+                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest};
+                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
-              }
+                
+                &:hover {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
+                &:active {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
 
-              &[disabled] {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
-                outline-width: 2px;
-                outline-offset: calc(2px * -1);
-              }
-              &[readonly] {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
-                outline-width: 2px;
-                outline-offset: calc(2px * -1);
+                &[disabled] {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
+                &[readonly] {
+                  outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly};
+                  outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly} * -1);
+                  outline-width: 2px;
+                  outline-offset: calc(2px * -1);
+                }
               }
             }
-            &.wrapper-selected {
-              outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest};
-              outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest} * -1);
-              outline-width: 2px;
-              outline-offset: calc(2px * -1);
-              
-              &:hover {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover} * -1);
-                outline-width: 2px;
-                outline-offset: calc(2px * -1);
-              }
-              &:active {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed} * -1);
-                outline-width: 2px;
-                outline-offset: calc(2px * -1);
-              }
-
-              &[disabled] {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled} * -1);
-                outline-width: 2px;
-                outline-offset: calc(2px * -1);
-              }
-              &[readonly] {
-                outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly};
-                outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly} * -1);
-                outline-width: 2px;
-                outline-offset: calc(2px * -1);
-              }
-            }
           }
+
+
 
           & > .label-container > .blr-label-switch-wrapper & > input {
             width: ${ToggleSwitch.Control.Container.Width.SM};
@@ -363,7 +365,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             width: ${ToggleSwitch.Control.Container.Width.MD};
             height: ${ToggleSwitch.Control.Container.Height.MD};
 
-            &.wrapper-unselected {
+            &:not(.checked) {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest} * -1);
               outline-width: 2px;
@@ -395,7 +397,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(2px * -1);
               }
             }
-            &.wrapper-selected {
+            &.checked {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest} * -1);
               outline-width: 2px;
@@ -483,7 +485,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             width: ${ToggleSwitch.Control.Container.Width.LG};
             height: ${ToggleSwitch.Control.Container.Height.LG};
 
-            &.wrapper-unselected {
+            &:not(.checked) {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
               outline-width: 2px;
@@ -515,7 +517,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(2px * -1);
               }
             }
-            &.wrapper-selected {
+            &.checked {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest} * -1);
               outline-width: 2px;
