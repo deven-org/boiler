@@ -2,7 +2,7 @@
 import { html } from 'lit';
 import { BlrIconButtonType, BlrIconButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, Sizes } from '../../../../globals/constants';
+import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 // Shared Style inside the Stories
@@ -35,9 +35,9 @@ export default {
       },
     },
     size: {
+      options: ActionSizes,
       name: 'sizeVariant',
       description: 'Choose size of the component.',
-      options: Sizes,
       control: { type: 'select' },
       table: {
         category: 'Appearance',
@@ -249,6 +249,10 @@ export const SizeVariant = () => {
       <div class="stories-icon-button">
         ${BlrIconButtonRenderFunction({
           ...defaultParams,
+          size: 'xs',
+        })}
+        ${BlrIconButtonRenderFunction({
+          ...defaultParams,
           size: 'sm',
         })}
         ${BlrIconButtonRenderFunction({
@@ -258,6 +262,10 @@ export const SizeVariant = () => {
         ${BlrIconButtonRenderFunction({
           ...defaultParams,
           size: 'lg',
+        })}
+        ${BlrIconButtonRenderFunction({
+          ...defaultParams,
+          size: 'xl',
         })}
       </div>
     </div>
