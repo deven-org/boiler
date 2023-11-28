@@ -3,7 +3,7 @@ import { html } from 'lit';
 import { action } from '@storybook/addon-actions';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionSizes, ActionVariants, IconPositionVariant } from '../../../../globals/constants';
+import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 // Shared Style inside the Stories
@@ -119,6 +119,7 @@ export default {
         category: 'States',
       },
     },
+
     loading: {
       name: 'loading',
       description: 'Choose if the component is loading.',
@@ -126,6 +127,15 @@ export default {
       table: {
         category: 'States',
       },
+
+    buttonDisplay: {
+      options: ButtonDisplayOptions,
+      control: { type: 'select' },
+    },
+    variant: {
+      options: ActionVariants,
+      control: { type: 'select' },
+
     },
     //Accessibility
     arialabel: {
@@ -226,10 +236,12 @@ const args: BlrTextButtonType = {
   theme: 'Light',
   variant: 'primary',
   size: 'md',
-  label: 'Label-text',
+  label: 'Button',
   hasIcon: true,
   iconPosition: 'leading',
   icon: 'blr360',
+  onClick: () => console.log('onClick'),
+  onBlur: () => console.log('onBlur'),
   loading: false,
   disabled: false,
   buttonId: 'buttonId',
