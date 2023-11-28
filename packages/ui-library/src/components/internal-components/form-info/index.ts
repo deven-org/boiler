@@ -12,7 +12,7 @@ export class BlrFormInfo extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  @property() size: FormSizesType = 'md';
+  @property() size?: FormSizesType = 'md';
   @property() showHint = true;
   @property() hintText?: string;
   @property() hintIcon?: SizelessIconType = 'blrInfo';
@@ -21,37 +21,39 @@ export class BlrFormInfo extends LitElement {
   @property() errorIcon?: SizelessIconType = 'blrInfo';
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [formInfoLight] : [formInfoDark];
+    if (this.size) {
+      const dynamicStyles = this.theme === 'Light' ? [formInfoLight] : [formInfoDark];
 
-    return html`
-      <style>
-        ${dynamicStyles}
-      </style>
-      <div class="blr-form-info-container ${this.size}">
-        ${this.showHint
-          ? html`
-              ${BlrFormHintRenderFunction({
-                message: this.hintText,
-                variant: 'hint',
-                icon: this.hintIcon,
-                size: this.size,
-                theme: this.theme,
-              })}
-            `
-          : nothing}
-        ${this.hasError
-          ? html`
-              ${BlrFormHintRenderFunction({
-                message: this.errorMessage,
-                variant: 'error',
-                icon: this.errorIcon,
-                size: this.size,
-                theme: this.theme,
-              })}
-            `
-          : nothing}
-      </div>
-    `;
+      return html`
+        <style>
+          ${dynamicStyles}
+        </style>
+        <div class="blr-form-info-container ${this.size}">
+          ${this.showHint
+            ? html`
+                ${BlrFormHintRenderFunction({
+                  message: this.hintText,
+                  variant: 'hint',
+                  icon: this.hintIcon,
+                  size: this.size,
+                  theme: this.theme,
+                })}
+              `
+            : nothing}
+          ${this.hasError
+            ? html`
+                ${BlrFormHintRenderFunction({
+                  message: this.errorMessage,
+                  variant: 'error',
+                  icon: this.errorIcon,
+                  size: this.size,
+                  theme: this.theme,
+                })}
+              `
+            : nothing}
+        </div>
+      `;
+    }
   }
 }
 

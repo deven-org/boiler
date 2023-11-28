@@ -10,8 +10,14 @@
         "type": "color"
       },
       "error": {
-        "value": "{core.color.crimson.800.opa10}",
-        "type": "color"
+        "alpha": {
+          "value": "{core.color.crimson.800.opa10}",
+          "type": "color"
+        },
+        "beta": {
+          "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        }
       },
       "inverted": {
         "value": "{core.color.coolgray.100.solid}",
@@ -294,6 +300,10 @@
         },
         "gamma": {
           "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
+        "delta": {
+          "value": "{core.color.white.solid}",
           "type": "color"
         }
       },
