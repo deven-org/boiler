@@ -8,13 +8,13 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
   /* ToDos:
 
-  - [ ] improve styling of hover incactive
+  - [x] improve styling of hover inactive
   - [ ] Fix margin of caption-group
   - [ ] Prevent click in readOnly
   - [x] Make radios take the same space
-  - [ ] Implement different sizing tokens for the icon
+  - [ ] Implement different sizing tokens (MD & LG) for .input-control and the icon (:before)
   - [ ] Check whats going on with vertical stacking, this layout variant is not available in SB (already implemented appropriate gap tokens)
-  - [ ] Allow active active opion in error state
+  - [ ] Allow active opion in error state
   - [ ] It should be possible to predefine a selected option - setting to disabled or readonly allways resets
   - [ ] In disabled state, the legend should consume "Forms.Legend.Disabled"
   - [ ] In readOnly state, the legend should consume "Forms.Legend.ReadOnly"
