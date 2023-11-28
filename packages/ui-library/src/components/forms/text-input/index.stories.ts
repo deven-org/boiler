@@ -285,7 +285,7 @@ export default {
     docs: {
       description: {
         component: `<div>
-<p>Text Input allows users to enter enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.</p>
+<p>Text Input allows users to enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.</p>
 <ul>
         <li> <a href="/docs/design-system-web-components-forms-textinput--docs"><strong>Docs</strong></a></li>
         <li> <strong>Appearance</strong>
@@ -427,6 +427,8 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     disabledArgTypes[argType] = {
       table: {
         disable: true,
