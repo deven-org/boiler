@@ -129,9 +129,9 @@ export class BlrToggleSwitch extends LitElement {
 
       const toggleIconSizeVariant = getComponentConfigToken([
         'Forms',
-        'Checkbox',
+        'ToggleSwitch',
         'Control',
-        'Icon',
+        'AY11Icon',
         'SizeVariant',
         this.size.toUpperCase(),
       ]).toLowerCase() as FormSizesType;
@@ -182,6 +182,7 @@ export class BlrToggleSwitch extends LitElement {
                   size: this.size,
                   hideAria: true,
                   classMap: toggleIconsClass,
+                  ignoreSize: true,
                 })}
               </span>
               <span class="toggle-switch-select toggle-icon">
@@ -190,6 +191,7 @@ export class BlrToggleSwitch extends LitElement {
                   size: this.size,
                   hideAria: true,
                   classMap: toggleIconsClass,
+                  ignoreSize: true,
                 })}
               </span>
             </label>
