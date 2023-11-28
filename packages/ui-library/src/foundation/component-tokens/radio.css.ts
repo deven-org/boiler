@@ -12,6 +12,8 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
   - [ ] Fix margin of caption-group
   - [ ] Prevent click in readOnly
   - [x] Make radios take the same space
+  - [X] Make radios label line break if they have not enough space
+  - [ ] Would be nice to have an *optional* max-width for .blr-radio
   - [ ] Implement different sizing tokens (MD & LG) for .input-control and the icon (:before)
   - [ ] Check whats going on with vertical stacking, this layout variant is not available in SB (already implemented appropriate gap tokens)
   - [ ] Allow active opion in error state
@@ -103,7 +105,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       display: flex;
       align-items: flex-start;
       position: relative;
-      flex-flow: row wrap;
+      flex-flow: nnowrap;
       justify-content: space-between;
 
       &.vertical {
