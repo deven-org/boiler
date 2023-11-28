@@ -17,6 +17,7 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 const TAG_NAME = 'blr-label-toggleswitch';
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
 @customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {
@@ -41,6 +42,9 @@ export class BlrToggleSwitch extends LitElement {
 
   @property() size?: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';
+
+  @property() toggleOnIcon?: SizelessIconType = 'blrOn';
+  @property() toggleOffIcon?: SizelessIconType = 'blrOff';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -123,6 +127,15 @@ export class BlrToggleSwitch extends LitElement {
         'toggle-icon-class': true,
       });
 
+      const toggleIconSizeVariant = getComponentConfigToken([
+        'Forms',
+        'Checkbox',
+        'Control',
+        'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
+      ]).toLowerCase() as FormSizesType;
+
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>
@@ -148,12 +161,7 @@ export class BlrToggleSwitch extends LitElement {
               : nothing}
           </span>
           <div class="label-container">
-            <label
-              for=${this.checkInputId || nothing}
-              class=${wrapperClass}
-              ?disabled=${this.disabled}
-              ?readonly=${this.readonly}
-            >
+            <label for=${this.checkInputId || nothing} class=${wrapperClass}>
               <input
                 type="checkbox"
                 class="input-control"
@@ -170,7 +178,7 @@ export class BlrToggleSwitch extends LitElement {
 
               <span class="toggle-switch-unselect toggle-icon">
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrOn', this.size),
+                  icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
                   size: this.size,
                   hideAria: true,
                   classMap: toggleIconsClass,
@@ -178,7 +186,7 @@ export class BlrToggleSwitch extends LitElement {
               </span>
               <span class="toggle-switch-select toggle-icon">
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrOff', this.size),
+                  icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
                   size: this.size,
                   hideAria: true,
                   classMap: toggleIconsClass,
