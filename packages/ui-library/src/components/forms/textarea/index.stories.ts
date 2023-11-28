@@ -146,7 +146,7 @@ export default {
     },
     label: {
       name: 'label',
-      description: 'Label-text',
+      description: 'Enter string used as label text.',
       control: {
         type: 'text',
       },
@@ -367,6 +367,7 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     docs: {
       //Two examples for Code integration
       //First example for manual code integration
@@ -375,52 +376,27 @@ export default {
       //Second Example
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
-        component: `<div>
-        <p>Text Area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text.
+        component: `<Markdown>
+Text Area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text.
                 Text Area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
-        </p>
-        <ul>
-        <li> <a href="/docs/design-system-web-components-textarea--docs"><strong>Docs</strong></a></li>
-        <li> <strong>Appearance</strong>
-            <ul>
-                <li> <a href="#size-variant"><strong>Size Variant</strong></a></li>
-                <li> <a href="#resize"><strong>Resize</strong></a></li>
-            </ul>
-        </li>
-         <li> <strong>Content / Settings</strong>
-            <ul>
-                <li> <a href="#placeholder"><strong>Placeholder</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <strong>States</strong>
-            <ul>
-                <li> <a href="#disabled"><strong>Disabled</strong></a>
-                </li>
-                 <li> <a href="#readonly"><strong>Readonly</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <strong>Validation</strong>
-            <ul>
-                <li> <a href="#required"><strong>Required</strong></a>
-                </li>
-                 <li> <a href="#has-error"><strong>Has Error</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <strong>Dependencies</strong>
-            <ul>
-                <li> <a href="#form-label"><strong>Form Label</strong></a>
-                </li>
-                 <li> <a href="#form-caption-group"><strong>Form Caption Group</strong></a>
-                </li>
-                <li> <a href="#counter"><strong>Counter</strong></a>
-                </li>
-            </ul>
-        </li>
-        </ul>
-        </div>`,
+- [**Appearance**](#appearance)
+ - [**Size Variant**](#size-variant) 
+ - [**Resize**](#resize) 
+- [**Content / Settings**](#content--settings)
+ - [**Placeholder**](#placeholder) 
+ - [**Resize**](#resize)  
+- [**States**](#states)
+ - [**Disabled**](#disabled) 
+ - [**Readonly**](#readonly)
+- [**Validation**](#validation)
+ - [**Required**](#required) 
+ - [**Has Error**](#has-error)  
+- [**Dependencies**](#dependencies)
+ - [**Form-Label**](#form-label) 
+ - [**Form Caption Group**](#form-caption-group)     
+ - [**Counter**](#counter)     
+</Markdown>
+        `,
       },
     },
   },
@@ -508,6 +484,7 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
+    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -521,6 +498,8 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 // All Stories
 //Appearance Size/ Resize
 /**
+ * ## Appearance
+ * ### Size Variant
  * The Text Area component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
@@ -559,6 +538,7 @@ export const SizeVariant = () => {
 SizeVariant.argTypes = {
   ...disabledArgTypes,
 };
+SizeVariant.story = { name: ' ' };
 
 //Appearance Resize Story
 /**
@@ -623,6 +603,8 @@ Resize.argTypes = {
 
 //Content/ Settings Placeholder
 /**
+ * ## Content / Settings
+ * ### Placeholder
  * The placeholder component can display a placeholder text. This is recommended to improve usability.
  */
 export const Placeholder = () => {
@@ -654,9 +636,15 @@ export const Placeholder = () => {
 Placeholder.argTypes = {
   ...disabledArgTypes,
 };
+Placeholder.story = {
+  name: '',
+};
 
 // States Disabled
 /**
+ * ## States
+ * Apart from states like rest, hover, pressed and focus, the Text Area component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * ### Disabled
  * The Text Area Component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
@@ -680,6 +668,9 @@ export const Disabled = () => {
 };
 Disabled.argTypes = {
   ...disabledArgTypes,
+};
+Disabled.story = {
+  name: ' ',
 };
 
 // States Readonly
@@ -710,6 +701,8 @@ Readonly.argTypes = {
 
 // Validation Required Todo add interactive Story with Button to show the State
 /**
+ * ## Validation
+ * ### Required
  * The Text Area component can be set as required. If set as required, an error should be thrown, when the Text Area component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
  */
 export const Required = () => {
@@ -733,6 +726,9 @@ export const Required = () => {
 };
 Required.argTypes = {
   ...disabledArgTypes,
+};
+Required.story = {
+  name: ' ',
 };
 
 // Validation Has Error Todo add interactive Story with Button to show the State
@@ -763,6 +759,8 @@ HasError.argTypes = {
 
 //Dependencies Captions
 /**
+ * ## Dependencies
+ * ### Form Label
  * The Text Area component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label Component](?path=/docs/design-system-web-components-internal-components-formlabel--docs).
  */
 // States FormLabel
@@ -787,7 +785,9 @@ export const FormLabel = () => {
 FormLabel.argTypes = {
   ...disabledArgTypes,
 };
-
+FormLabel.story = {
+  name: ' ',
+};
 /**
  * The TextArea component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see  <a href="/docs/design-system-web-components-textarea--captions"><strong>FormCaptionGroup</strong></a> component.
  */

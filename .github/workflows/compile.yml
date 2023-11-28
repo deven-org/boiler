@@ -1,9 +1,9 @@
-name: eslint
+name: Compile
 
 on: [pull_request]
 
 jobs:
-  eslint:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,5 +29,8 @@ jobs:
       - name: Install modules
         run: yarn
 
-      - name: Run ESLint
-        run: yarn lint
+      - name: Generate tokens
+        run: yarn tokens:generate
+
+      - name: Run Compile
+        run: yarn compile

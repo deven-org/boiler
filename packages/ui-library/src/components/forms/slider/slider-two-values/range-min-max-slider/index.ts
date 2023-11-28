@@ -66,7 +66,7 @@ export class BlrRangeMinMaxSlider extends LitElement {
       onClick: btnEventHandler,
       icon: iconName,
       loading: false,
-      disabled: this.disabled,
+      disabled: this.disabled || false,
       buttonId: btnId,
       variant: this.btnVariant,
       size: this.size,

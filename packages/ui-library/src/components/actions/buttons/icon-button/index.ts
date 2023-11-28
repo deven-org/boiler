@@ -5,7 +5,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
-import { ActionVariantType, FormSizesType, SizesType } from '../../../../globals/types';
+import { ActionVariantType, ActionSizesType, SizesType, FormSizesType } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
@@ -20,7 +20,7 @@ const TAG_NAME = 'blr-icon-button';
 export class BlrIconButton extends LitElement {
   static styles = [styleCustom];
 
-  @property() arialabel?: string;
+  @property() arialabel!: string;
   @property() icon?: SizelessIconType;
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -28,7 +28,7 @@ export class BlrIconButton extends LitElement {
   @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size?: FormSizesType = 'md';
+  @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
@@ -50,8 +50,8 @@ export class BlrIconButton extends LitElement {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
-        [`${this.variant}`]: this.variant,
-        [`${this.size}`]: this.size,
+        [this.variant]: this.variant,
+        [this.size]: this.size,
         disabled: this.disabled,
         loading: this.loading || false,
       });
@@ -77,10 +77,10 @@ export class BlrIconButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
+      return html`
+        <style>
+          ${dynamicStyles}
         </style>
-
         <span
           aria-label=${this.arialabel || nothing}
           class="blr-semantic-action blr-icon-button ${classes}"
@@ -107,7 +107,8 @@ export class BlrIconButton extends LitElement {
             hideAria: true,
             classMap: iconClasses,
           })}
-        </span>`;
+        </span>
+      `;
     }
   }
 }

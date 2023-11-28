@@ -5,17 +5,14 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrSelectType = {
   name: 'Text Input',
-  hasLabel: true,
   label: 'Label',
   labelAppendix: '(Optional)',
-  showTrailingIcon: true,
   size: 'md',
   errorMessage: 'This is error message',
   showHint: true,
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   selectId: 'Peter',
-  trailingIcon: 'blrChevronDown',
   options: [
     { value: 'uschi', label: 'Uschi', disabled: true },
     { value: '1', label: 'Option 1' },
