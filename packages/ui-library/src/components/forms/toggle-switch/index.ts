@@ -112,8 +112,8 @@ export class BlrToggleSwitch extends LitElement {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-label-toggleswitch': true,
-        [`disabled`]: this.disabled || false,
-        [`readonly`]: this.readonly || false,
+        'disabled': this.disabled || false,
+        'readonly': this.readonly || false,
         [`${this.size}`]: this.size,
         [`${this.variant || 'leading'}`]: this.variant || 'leading',
       });
@@ -121,6 +121,11 @@ export class BlrToggleSwitch extends LitElement {
       const wrapperClass = classMap({
         'blr-label-switch-wrapper': true,
         'checked': this.currentCheckedState || false,
+        'disabled': this.disabled || false,
+        'readonly': this.readonly || false,
+        'hover': this.hovered || false,
+        'active': this.active || false,
+        'focus': this.focused || false,
       });
 
       const toggleIconsClass = classMap({
