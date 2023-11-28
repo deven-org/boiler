@@ -187,12 +187,12 @@ export class BlrToggleSwitch extends LitElement {
             @keydown=${(event: KeyboardEvent) => {
               console.log(event);
               if (event.code === 'Space') {
-                this.handlePress();
+                //this.handlePress();
               }
             }}
             @keyup=${(event: KeyboardEvent) => {
               if (event.code === 'Space') {
-                this.handleRelease();
+                //this.handleRelease();
               }
             }}
             tabindex="0"
