@@ -67,6 +67,13 @@ export default {
         category: 'Appearance',
       },
     },
+    buttonDisplay: {
+      options: ButtonDisplayOptions,
+      control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
+    },
     //Content / Settings
     label: {
       name: 'label',
@@ -119,7 +126,6 @@ export default {
         category: 'States',
       },
     },
-
     loading: {
       name: 'loading',
       description: 'Choose if the component is loading.',
@@ -127,15 +133,6 @@ export default {
       table: {
         category: 'States',
       },
-
-    buttonDisplay: {
-      options: ButtonDisplayOptions,
-      control: { type: 'select' },
-    },
-    variant: {
-      options: ActionVariants,
-      control: { type: 'select' },
-
     },
     //Accessibility
     arialabel: {
@@ -240,8 +237,6 @@ const args: BlrTextButtonType = {
   hasIcon: true,
   iconPosition: 'leading',
   icon: 'blr360',
-  onClick: () => console.log('onClick'),
-  onBlur: () => console.log('onBlur'),
   loading: false,
   disabled: false,
   buttonId: 'buttonId',
@@ -295,7 +290,7 @@ export const Variant = () => {
     <div class="wrapper">
       <div class="stories-textbutton">
         ${BlrTextButtonRenderFunction({
-          ...args,
+          ...defaultParams,
           variant: 'primary',
           hasIcon: false,
         })}
