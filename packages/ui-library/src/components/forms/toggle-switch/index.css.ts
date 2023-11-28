@@ -79,60 +79,60 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             &:not(.checked) {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Rest};
-              outline-color: red;
+
 
               &:hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Hover};
-                outline-color: red;
+
               }
 
               &:active {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Pressed};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Pressed};
-                outline-color: red;
+
               }
 
               &[disabled] {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Disabled};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Disabled};
-                outline-color: red;
+
               }
 
               &[readonly] {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.ReadOnly};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.ReadOnly};
-                outline-color: red;
+
               }
             }
 
             &.checked {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Rest};
-              outline-color: blue;
+
 
               &:hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Hover};
-                outline-color: blue;
+
               }
 
               &:active {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Pressed};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Pressed};
-                outline-color: blue;
+
               }
 
               &:focus {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Focus};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Focus};
-                outline-color: blue;
+
               }
 
               &[disabled] {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Disabled};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Disabled};
-                outline-color: blue;
+
               }
 
               &[readonly] {
