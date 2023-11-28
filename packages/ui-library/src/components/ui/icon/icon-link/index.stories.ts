@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { BlrIconLinkType, BlrIconLinkRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
-import { ActionVariants, FormSizes } from '../../../../globals/constants';
+import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {
@@ -12,7 +12,7 @@ export default {
       control: { type: 'select' },
     },
     size: {
-      options: FormSizes,
+      options: ActionSizes,
       control: { type: 'select' },
     },
     variant: {
