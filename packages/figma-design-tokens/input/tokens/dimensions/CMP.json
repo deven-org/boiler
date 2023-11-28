@@ -2063,11 +2063,11 @@
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionPX.12}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionPX.10}",
                   "type": "sizing"
                 },
                 "Focus": {
@@ -2125,11 +2125,11 @@
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionPX.12}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionPX.10}",
                   "type": "sizing"
                 },
                 "Focus": {
@@ -2187,11 +2187,11 @@
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionPX.12}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionPX.10}",
                   "type": "sizing"
                 },
                 "Focus": {
