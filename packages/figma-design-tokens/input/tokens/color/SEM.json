@@ -1171,6 +1171,120 @@
         "value": "{q.content.ondefault.error}",
         "type": "color"
       }
+    },
+    "PrefixSuffix": {
+      "OnPopulatedField": {
+        "Default": {
+          "Rest": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "ReadOnly": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        },
+        "Error": {
+          "Rest": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        }
+      },
+      "OnEmptyField": {
+        "Default": {
+          "Rest": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "ReadOnly": {
+            "value": "{q.content.onreadonly.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        },
+        "Error": {
+          "Rest": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        }
+      }
     }
   },
   "Global": {
