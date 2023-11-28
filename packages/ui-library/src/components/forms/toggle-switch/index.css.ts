@@ -307,43 +307,41 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                   outline-offset: calc(2px * -1);
                 }
               }
-            }
-          }
 
+              & > input {
+                width: ${ToggleSwitch.Control.Container.Width.SM};
+                height: ${ToggleSwitch.Control.Container.Height.SM};
+                _FIX?_: "margin";
+                margin: 0;
+              }
 
+              &  > .toggle-switch-slider {
+                &::after {
+                  width: ${ToggleSwitch.Control.Knob.Size.SM};
+                  height: ${ToggleSwitch.Control.Knob.Size.SM};
+                  _FIX_: "top and left will vermutlich den padding value";
+                  top: ${ToggleSwitch.Control.Container.Padding.SM};
+                  left: ${ToggleSwitch.Control.Container.Padding.SM};;
+                  _top: 2px;
+                  _left: 2px;
+                  _FIX : "END";
+                }
+              }
 
-          & > .label-container > .blr-label-switch-wrapper & > input {
-            width: ${ToggleSwitch.Control.Container.Width.SM};
-            height: ${ToggleSwitch.Control.Container.Height.SM};
-            _FIX?_: "margin";
-            margin: 0;
-          }
+              & > input:checked + .toggle-switch-slider::after {
+                _FIX_: "translate";
+                _transform: translateX(16px);
+                transform: translateX( calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM}));
+              }
 
-          & > .label-container > .blr-label-switch-wrapper > .toggle-switch-slider {
-            &::after {
-              width: ${ToggleSwitch.Control.Knob.Size.SM};
-              height: ${ToggleSwitch.Control.Knob.Size.SM};
-              _FIX_: "top and left will vermutlich den padding value";
-              top: ${ToggleSwitch.Control.Container.Padding.SM};
-              left: ${ToggleSwitch.Control.Container.Padding.SM};;
-              _top: 2px;
-              _left: 2px;
-              _FIX : "END";
-            }
-          }
+              &  > .toggle-icon {
+                height: ${ToggleSwitch.Control.Container.Height.SM};
 
-          & > .label-container > .blr-label-switch-wrapper > input:checked + .toggle-switch-slider::after {
-            _FIX_: "translate";
-            _transform: translateX(16px);
-            transform: translateX( calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM}));
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > .toggle-icon {
-            height: ${ToggleSwitch.Control.Container.Height.SM};
-
-            & > .toggle-icon-class {
-              height: ${ToggleSwitch.Control.Container.Height.SM};
-              align-items: center;
+                & > .toggle-icon-class {
+                  height: ${ToggleSwitch.Control.Container.Height.SM};
+                  align-items: center;
+                }
+              }
             }
           }
         }
@@ -429,40 +427,40 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(2px * -1);
               }
             }
-          }
 
-          & > .label-container > .blr-label-switch-wrapper & > input {
-            width: ${ToggleSwitch.Control.Container.Width.MD};
-            height: ${ToggleSwitch.Control.Container.Height.MD};
-            _FIX?_: "margin";
-            margin: 0;
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > .toggle-switch-slider {
-            &::after {
-              width: ${ToggleSwitch.Control.Knob.Size.MD};
-              height: ${ToggleSwitch.Control.Knob.Size.MD};
-              _FIX_: "top and left will vermutlich den padding value";
-              top: ${ToggleSwitch.Control.Container.Padding.MD};
-              left: ${ToggleSwitch.Control.Container.Padding.MD};;
-              _top: 2px;
-              _left: 2px;
-              _FIX : "END";
-            }
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > input:checked + .toggle-switch-slider::after {
-            _FIX_: "translate";
-            _transform: translateX(20px);
-            transform: translateX( calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > .toggle-icon {
-            height: ${ToggleSwitch.Control.Container.Height.MD};
-
-            & > .toggle-icon-class {
+            & > input {
+              width: ${ToggleSwitch.Control.Container.Width.MD};
               height: ${ToggleSwitch.Control.Container.Height.MD};
-              align-items: center;
+              _FIX?_: "margin";
+              margin: 0;
+            }
+
+            & > .toggle-switch-slider {
+              &::after {
+                width: ${ToggleSwitch.Control.Knob.Size.MD};
+                height: ${ToggleSwitch.Control.Knob.Size.MD};
+                _FIX_: "top and left will vermutlich den padding value";
+                top: ${ToggleSwitch.Control.Container.Padding.MD};
+                left: ${ToggleSwitch.Control.Container.Padding.MD};;
+                _top: 2px;
+                _left: 2px;
+                _FIX : "END";
+              }
+            }
+
+            & > input:checked + .toggle-switch-slider::after {
+              _FIX_: "translate";
+              _transform: translateX(20px);
+              transform: translateX( calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
+            }
+
+            & > .toggle-icon {
+              height: ${ToggleSwitch.Control.Container.Height.MD};
+
+              & > .toggle-icon-class {
+                height: ${ToggleSwitch.Control.Container.Height.MD};
+                align-items: center;
+              }
             }
           }
         }
@@ -548,41 +546,41 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
               }
-            } 
-          }
-
-          & > .label-container > .blr-label-switch-wrapper & > input {
-            width: ${ToggleSwitch.Control.Container.Width.LG};
-            height: ${ToggleSwitch.Control.Container.Height.LG};
-            _FIX?_: "margin";
-            margin: 0;
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > .toggle-switch-slider {
-            &::after {
-              width: ${ToggleSwitch.Control.Knob.Size.LG};
-              height: ${ToggleSwitch.Control.Knob.Size.LG};
-              _FIX_: "top and left will vermutlich den padding value";
-              top: ${ToggleSwitch.Control.Container.Padding.LG};
-              left: ${ToggleSwitch.Control.Container.Padding.LG};;
-              _top: 2px;
-              _left: 2px;
-              _FIX : "END";
             }
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > input:checked + .toggle-switch-slider::after {
-            _FIX_: "translate";
-            _transform: translateX(23px);
-            transform: translateX( calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
-          }
-
-          & > .label-container > .blr-label-switch-wrapper > .toggle-icon {
-            height: ${ToggleSwitch.Control.Container.Height.LG};
-
-            & > .toggle-icon-class {
+            
+            & > input {
+              width: ${ToggleSwitch.Control.Container.Width.LG};
               height: ${ToggleSwitch.Control.Container.Height.LG};
-              align-items: center;
+              _FIX?_: "margin";
+              margin: 0;
+            }
+
+            & > .toggle-switch-slider {
+              &::after {
+                width: ${ToggleSwitch.Control.Knob.Size.LG};
+                height: ${ToggleSwitch.Control.Knob.Size.LG};
+                _FIX_: "top and left will vermutlich den padding value";
+                top: ${ToggleSwitch.Control.Container.Padding.LG};
+                left: ${ToggleSwitch.Control.Container.Padding.LG};;
+                _top: 2px;
+                _left: 2px;
+                _FIX : "END";
+              }
+            }
+
+            & > input:checked + .toggle-switch-slider::after {
+              _FIX_: "translate";
+              _transform: translateX(23px);
+              transform: translateX( calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
+            }
+
+            & > .toggle-icon {
+              height: ${ToggleSwitch.Control.Container.Height.LG};
+
+              & > .toggle-icon-class {
+                height: ${ToggleSwitch.Control.Container.Height.LG};
+                align-items: center;
+              }
             }
           }
         }
