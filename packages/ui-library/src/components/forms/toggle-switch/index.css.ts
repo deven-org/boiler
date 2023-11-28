@@ -6,24 +6,8 @@ export const styleCustom = typeSafeNestedCss/* css */ `
     display: flex;
     align-items: flex-start;
 
-    & > input {
+    & input {
       all: initial;
-
-      &:disabled + label {
-        cursor: not-allowed;
-        pointer-events: none;
-      }
-
-      &:checked {
-        &:disabled + label {
-          cursor: not-allowed;
-          pointer-events: none;
-        }
-      }
-
-      &:focus {
-        outline-offset: 2px;
-      }
     }
   }
 `;
@@ -36,6 +20,19 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
     return typeSafeNestedCss/* css */ `
       .blr-label-toggleswitch {
+        .focus-ring {
+          position: absolute;
+          inset: 0;
+          outline-color: transparent;
+          outline-style: solid;
+
+          &.focus {
+            border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
+            outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
+            outline-offset: 2px;
+          }
+        }
+
         &.leading {
           flex-direction: column;
         }
@@ -56,6 +53,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         }
 
         & > .label-container {
+          all: initial;
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -72,7 +70,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             &:focus {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Focus};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
-              _FIX__we_need_an_extra_focus_ring___outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
             }
 
             & > .blr-form-label-inline {
@@ -130,7 +127,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Focus};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Focus};
                 outline-color: blue;
-                _FIX__we_need_an_extra_focus_ring___outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
               }
 
               &[disabled] {
@@ -143,19 +139,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.ReadOnly};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.ReadOnly};
                 outline-color: blue;
-              }
-            }
-
-            & > input {
-              appearance: none;
-              outline-offset: 2px;
-              border-radius: 15px;
-
-              
-              &:focus {
-                _outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
-                _ouline: war komisch 
-                outline: none;
               }
             }
 
@@ -308,12 +291,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              & > input {
-                width: ${ToggleSwitch.Control.Container.Width.SM};
-                height: ${ToggleSwitch.Control.Container.Height.SM};
-                _FIX?_: "margin";
-                margin: 0;
-              }
 
               &  > .toggle-switch-slider {
                 &::after {
@@ -336,10 +313,10 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
               &  > .toggle-icon {
                 height: ${ToggleSwitch.Control.Container.Height.SM};
-                margin: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
 
                 & > .toggle-icon-class {
                   width: ${ToggleSwitch.Control.AY11Icon.IconSize.SM};
+                  padding: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
                 }
               }
             }
@@ -428,12 +405,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            & > input {
-              width: ${ToggleSwitch.Control.Container.Width.MD};
-              height: ${ToggleSwitch.Control.Container.Height.MD};
-              _FIX?_: "margin";
-              margin: 0;
-            }
+
 
             & > .toggle-switch-slider {
               &::after {
@@ -456,10 +428,10 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
             & > .toggle-icon {
               height: ${ToggleSwitch.Control.Container.Height.MD};
-              margin: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
 
               & > .toggle-icon-class {
                 width: ${ToggleSwitch.Control.AY11Icon.IconSize.MD};
+                padding: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
               }
             }
           }
@@ -576,10 +548,10 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
             & > .toggle-icon {
               height: ${ToggleSwitch.Control.Container.Height.LG};
-              margin: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
 
               & > .toggle-icon-class {
                 width: ${ToggleSwitch.Control.AY11Icon.IconSize.LG};
+                padding: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
               }
             }
           }

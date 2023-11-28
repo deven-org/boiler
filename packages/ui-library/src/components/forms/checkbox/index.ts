@@ -176,19 +176,14 @@ export class BlrCheckbox extends LitElement {
           @focusin=${this.handleFocus}
           @focusout=${this.handleBlur}
           @keydown=${(event: KeyboardEvent) => {
-            console.log(event);
             if (event.code === 'Space') {
               this.handlePress();
             }
-            event.stopPropagation();
-            event.preventDefault();
           }}
           @keyup=${(event: KeyboardEvent) => {
             if (event.code === 'Space') {
               this.handleRelease();
             }
-            event.stopPropagation();
-            event.preventDefault();
           }}
           tabindex="0"
         >

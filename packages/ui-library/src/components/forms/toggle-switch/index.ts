@@ -127,6 +127,11 @@ export class BlrToggleSwitch extends LitElement {
         'toggle-icon-class': true,
       });
 
+      const focusRingClasses = classMap({
+        'focus-ring': true,
+        'focus': this.focused || false,
+      });
+
       const toggleIconSizeVariant = getComponentConfigToken([
         'Forms',
         'ToggleSwitch',
@@ -160,8 +165,35 @@ export class BlrToggleSwitch extends LitElement {
                 `
               : nothing}
           </span>
-          <div class="label-container">
+          <div
+            class="label-container"
+            @mouseenter=${this.handleEnter}
+            @mouseleave=${this.handleLeave}
+            @mousedown=${(event: MouseEvent) => {
+              if (event.which === 1) {
+                //this.handlePress();
+              }
+            }}
+            @mouseup=${this.handleRelease}
+            @touchstart=${this.handlePress}
+            @touchend=${this.handleRelease}
+            @focusin=${this.handleFocus}
+            @focusout=${this.handleBlur}
+            @keydown=${(event: KeyboardEvent) => {
+              console.log(event);
+              if (event.code === 'Space') {
+                this.handlePress();
+              }
+            }}
+            @keyup=${(event: KeyboardEvent) => {
+              if (event.code === 'Space') {
+                this.handleRelease();
+              }
+            }}
+            tabindex="0"
+          >
             <label for=${this.checkInputId || nothing} class=${wrapperClass}>
+              <div class="${focusRingClasses}"></div>
               <input
                 type="checkbox"
                 class="input-control"
@@ -173,6 +205,7 @@ export class BlrToggleSwitch extends LitElement {
                 @change=${this.handleChange}
                 @focus=${this.onFocus}
                 @blur=${this.onBlur}
+                tabindex="-1"
               />
               <span class="toggle-switch-slider"> </span>
 
