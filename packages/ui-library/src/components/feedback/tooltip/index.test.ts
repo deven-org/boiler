@@ -1,22 +1,19 @@
-import { BlrToolTipType, BlrToolTipRenderFunction } from './index';
+import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
 
-import { fixture, expect, html } from '@open-wc/testing';
+import { fixture, expect } from '@open-wc/testing';
+import { html } from 'lit';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
-const sampleParams: BlrToolTipType = {
-  theme: 'Light',
+const sampleParams: BlrTooltipType = {
   text: 'Tooltip text comes here Tooltip text comes here',
   placement: 'right',
-  toolTipArrow: 'middle',
-  elevation: true,
-  customCss: 'customToolTipCss',
-  visibility: 'onLoad',
-  itemRenderer: html` <p style="padding: 0px; margin: 0px; border-bottom: 1px dashed #ccc;">tool tip</p> `,
 };
+
+const testContent = html`<div style="height: 200px; width: 200px; background-color: lightblue"></div>`;
 
 describe('blr-tool-tip', () => {
   it('is having a tooltip containing the right className', async () => {
-    const element = await fixture(BlrToolTipRenderFunction(sampleParams));
+    const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
 
     const tooltip = querySelectorDeep('div.blr-tooltip', element.getRootNode() as HTMLElement);
     const className = tooltip?.className;
@@ -25,7 +22,7 @@ describe('blr-tool-tip', () => {
   });
 
   it('has a size sm by default', async () => {
-    const element = await fixture(BlrToolTipRenderFunction(sampleParams));
+    const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
 
     const tooltip = querySelectorDeep('div.blr-tooltip', element.getRootNode() as HTMLElement);
     const className = tooltip?.className;
@@ -34,7 +31,7 @@ describe('blr-tool-tip', () => {
   });
 
   it('has a size md when "size" is set to "md" ', async () => {
-    const element = await fixture(BlrToolTipRenderFunction({ ...sampleParams, size: 'md' }));
+    const element = await fixture(BlrTooltipRenderFunction({ ...sampleParams, size: 'md' }, testContent));
 
     const tooltip = querySelectorDeep('div.blr-tooltip', element.getRootNode() as HTMLElement);
     const className = tooltip?.className;
