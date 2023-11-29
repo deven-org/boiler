@@ -209,7 +209,7 @@ export class BlrToggleSwitch extends LitElement {
                 class="input-control"
                 id=${this.checkInputId || nothing}
                 name=${this.checkInputId || nothing}
-                ?disabled=${this.disabled}
+                ?disabled=${this.disabled || this.readonly}
                 ?readonly=${this.readonly}
                 .checked=${this.currentCheckedState || nothing}
                 @change=${this.handleChange}

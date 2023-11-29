@@ -59,6 +59,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest};
           outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest} * -1);
         }
+        .blr-label-switch-wrapper:not(.disabled):not(.readonly) {
+          cursor: pointer;
+        }
 
         & > .label-container {
           all: initial;
@@ -69,7 +72,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           & > .blr-label-switch-wrapper {
             border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
             position: relative;
-            cursor: pointer;
             outline-style: solid;
             outline-width: 0;
 
