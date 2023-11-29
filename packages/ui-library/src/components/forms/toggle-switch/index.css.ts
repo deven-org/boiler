@@ -66,8 +66,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           justify-content: flex-start;
 
           & > .blr-label-switch-wrapper {
-            _Fix_: "Focus ring needed";
-            _outline-offset: 2px;
             border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
             position: relative;
             cursor: pointer;
@@ -236,8 +234,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.sm {
           gap: ${ToggleSwitch.Container.ItemSpacing.SM};
-          _FIX?_: "width kann weg, weil es nur nervt";
-          _width: 200px;
 
           & > .toggle-content-col {
             gap: ${ToggleSwitch.ContentCol.ItemSpacing.SM};
@@ -346,8 +342,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
 
               & > input:checked + .toggle-switch-slider > .knob {
-                _FIX_: "translate";
-                _transform: translateX(16px);
                 transform: translateX( calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM}));
               }
 
@@ -473,8 +467,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              _FIX_: "translate";
-              _transform: translateX(20px);
               transform: translateX( calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
             }
 
@@ -492,8 +484,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.lg {
           gap: ${ToggleSwitch.Container.ItemSpacing.LG};
-          _FIX?_: "width kann weg, weil es nur nervt";
-          _width: 240px;
 
           & > .toggle-content-col {
             gap: ${ToggleSwitch.ContentCol.ItemSpacing.LG};
@@ -592,13 +582,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
             
-            & > input {
-              width: ${ToggleSwitch.Control.Container.Width.LG};
-              height: ${ToggleSwitch.Control.Container.Height.LG};
-              _FIX?_: "margin";
-              margin: 0;
-            }
-
             & > .toggle-switch-slider {
               & > .knob {
                 width: ${ToggleSwitch.Control.Knob.Size.LG};
@@ -609,8 +592,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              _FIX_: "translate";
-              _transform: translateX(23px);
               transform: translateX( calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
             }
 
