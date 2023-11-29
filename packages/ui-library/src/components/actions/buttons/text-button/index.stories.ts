@@ -34,6 +34,7 @@ const defaultParams: BlrTextButtonType = {
   disabled: false,
   buttonId: 'buttonId',
   loadingStatus: 'Loading',
+  buttonDisplay: 'block',
   onBlur: () => action('onBlur'),
   onClick: () => action('onClick'),
 };
@@ -191,7 +192,6 @@ export default {
     },
   },
   parameters: {
-    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {
@@ -227,6 +227,7 @@ const args: BlrTextButtonType = {
   disabled: false,
   buttonId: 'buttonId',
   loadingStatus: 'Loading',
+  buttonDisplay: 'block',
   onBlur: () => action('onBlur'),
   onClick: () => action('onClick'),
 };
