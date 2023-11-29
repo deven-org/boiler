@@ -127,7 +127,7 @@ export class BlrNumberInput extends LitElement {
       }
       case 'horizontal': {
         return html`
-          <div class="stepper-combo horizontal horizontal ${this.size}">
+          <div class="stepper-combo horizontal  ${this.size}">
             ${this.getButtonTemplate('blrMinus', this.stepperDown)}
             ${BlrDividerRenderFunction({
               directionVariant: 'vertical',
@@ -139,7 +139,7 @@ export class BlrNumberInput extends LitElement {
       }
       case 'vertical': {
         return html`
-          <div class="stepper-combo vertical vertical ${this.size}">
+          <div class="stepper-combo vertical  ${this.size}">
             ${this.getButtonTemplate('blrChevronUp', this.stepperUp)}
             ${BlrDividerRenderFunction({
               directionVariant: 'horizontal',
