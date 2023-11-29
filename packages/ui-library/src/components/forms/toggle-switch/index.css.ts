@@ -83,25 +83,40 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             &:not(.checked) {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Rest};
+              .knob {
+                outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
+              }
 
               &.hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Hover};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Hover};
+                }
               }
 
               &.active {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Pressed};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Pressed};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Pressed};
+                }
               }
 
               &.disabled {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Disabled};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Disabled};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Disabled};
+                }
               }
 
               &.readonly {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.ReadOnly};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.ReadOnly};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.ReadOnly};
+                }
               }
             }
 
@@ -112,27 +127,42 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               &.hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Hover};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Hover};
+                }
               }
 
               &.active {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Pressed};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Pressed};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Pressed};
+                }
               }
 
               &.focus {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Focus};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Focus};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Focus};
+                }
               }
 
               &.disabled {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Disabled};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Disabled};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Disabled};
+                }
               }
 
               &.readonly {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.ReadOnly};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.ReadOnly};
                 outline-color: blue;
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.ReadOnly};
+                }
               }
             }
 
@@ -454,12 +484,8 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               & > .knob {
                 width: ${ToggleSwitch.Control.Knob.Size.MD};
                 height: ${ToggleSwitch.Control.Knob.Size.MD};
-                _FIX_: "top and left will vermutlich den padding value";
                 top: ${ToggleSwitch.Control.Container.Padding.MD};
                 left: ${ToggleSwitch.Control.Container.Padding.MD};;
-                _top: 2px;
-                _left: 2px;
-                _FIX : "END";
               }
             }
 
