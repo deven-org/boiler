@@ -52,6 +52,10 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           }
         }
 
+        .knob {
+          outline: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest} solid ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
+        }
+
         & > .label-container {
           all: initial;
           display: flex;
@@ -135,8 +139,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             & > .toggle-switch-slider {
               & > .knob {
                 position: absolute;
-                z-index: 1;
-                __FIX__background-color_is_state_dependent: 0;
                 background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
                 border-radius: 50%;
                 transition: transform 0.2s ease;
@@ -220,18 +222,27 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest};
+                }
 
                 &.hover {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Hover};
+                  }
                 }
                 &.active {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Pressed} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Pressed};
+                  }
                 }
 
                 &.disabled {
@@ -239,12 +250,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Disabled} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled};
+                  }
                 }
                 &.readonly {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.ReadOnly} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.ReadOnly};
+                  }
                 }
               }
               &.checked {
@@ -252,18 +269,27 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest};
+                }
                 
                 &.hover {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Hover};
+                  }
                 }
                 &.active {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Pressed} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Pressed};
+                  }
                 }
 
                 &.disabled {
@@ -271,12 +297,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Disabled} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Disabled};
+                  }
                 }
                 &.readonly {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.ReadOnly} * -1);
                   outline-width: 2px;
                   outline-offset: calc(2px * -1);
+                  .knob {
+                    outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.ReadOnly};
+                  }
                 }
               }
 
@@ -285,12 +317,8 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 & > .knob {
                   width: ${ToggleSwitch.Control.Knob.Size.SM};
                   height: ${ToggleSwitch.Control.Knob.Size.SM};
-                  _FIX_: "top and left will vermutlich den padding value";
                   top: ${ToggleSwitch.Control.Container.Padding.SM};
                   left: ${ToggleSwitch.Control.Container.Padding.SM};;
-                  _top: 2px;
-                  _left: 2px;
-                  _FIX : "END";
                 }
               }
 
@@ -314,8 +342,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
         &.md {
           gap: ${ToggleSwitch.Container.ItemSpacing.MD};
-          _FIX?_: "width kann weg, weil es nur nervt";
-          _width: 220px;
 
           & > .toggle-content-col {
             gap: ${ToggleSwitch.ContentCol.ItemSpacing.MD};
@@ -334,18 +360,27 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest} * -1);
               outline-width: 2px;
               outline-offset: calc(2px * -1);
+              .knob {
+                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest};
+              }
               
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Hover};
+                }
               }
               &.active {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Pressed};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Pressed} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Pressed};
+                }
               }
 
               &.disabled {
@@ -353,12 +388,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Disabled} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled};
+                }
               }
               &.readonly {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.ReadOnly};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.ReadOnly} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.ReadOnly};
+                }
               }
             }
             &.checked {
@@ -366,18 +407,27 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest} * -1);
               outline-width: 2px;
               outline-offset: calc(2px * -1);
+              .knob {
+                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest};
+              }
 
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Hover} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Hover};
+                }
               }
               &.active {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Pressed};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Pressed} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Pressed};
+                }
               }
 
               &.disabled {
@@ -385,12 +435,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Disabled} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Disabled};
+                }
               }
               &.readonly {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.ReadOnly};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.ReadOnly} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.ReadOnly};
+                }
               }
             }
 
@@ -447,18 +503,27 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
               outline-width: 2px;
               outline-offset: calc(2px * -1);
+              .knob {
+                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest};
+              }
               
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover};
+                }
               }
               &.active {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Pressed};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Pressed} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Pressed};
+                }
               }
 
               &.disabled {
@@ -466,12 +531,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Disabled} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled};
+                }
               }
               &.readonly {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.ReadOnly};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.ReadOnly} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly};
+                }
               }
             }
             &.checked {
@@ -479,18 +550,27 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest} * -1);
               outline-width: 2px;
               outline-offset: calc(2px * -1);
+              .knob {
+                outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest};
+              }
 
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover};
+                }
               }
               &.active {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Pressed};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Pressed} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Pressed};
+                }
               }
 
               &.disabled {
@@ -498,12 +578,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Disabled} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled};
+                }
               }
               &.readonly {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.ReadOnly};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.ReadOnly} * -1);
                 outline-width: 2px;
                 outline-offset: calc(2px * -1);
+                .knob {
+                  outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly};
+                }
               }
             }
             
@@ -518,12 +604,8 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               & > .knob {
                 width: ${ToggleSwitch.Control.Knob.Size.LG};
                 height: ${ToggleSwitch.Control.Knob.Size.LG};
-                _FIX_: "top and left will vermutlich den padding value";
                 top: ${ToggleSwitch.Control.Container.Padding.LG};
                 left: ${ToggleSwitch.Control.Container.Padding.LG};;
-                _top: 2px;
-                _left: 2px;
-                _FIX : "END";
               }
             }
 
