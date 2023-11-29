@@ -88,10 +88,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
             }
 
-            & > .toggle-icon > .toggle-icon-class {
-              color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Rest};
-              color: blue;
-            }
+            
 
             
             & > .blr-form-label-inline {
@@ -114,12 +111,18 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               .knob {
                 outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
               }
+              .toggle-icon > .toggle-icon-class {
+                color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Rest};
+              }
 
               &.hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Hover};
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Hover};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Hover};
                 }
               }
 
@@ -129,6 +132,10 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Pressed};
                 }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Pressed};
+                  color: pink;
+                }
               }
 
               &.focus {
@@ -136,6 +143,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Focus};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Focus};
                 }
               }
 
@@ -145,6 +155,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Disabled};
                 }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Disabled};
+                }
               }
 
               &.readonly {
@@ -152,6 +165,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.ReadOnly};
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.ReadOnly};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.ReadOnly};
                 }
               }
             }
@@ -162,6 +178,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               .knob {
                 outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
               }
+              .toggle-icon > .toggle-icon-class {
+                color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
+              }
 
               &.hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
@@ -169,13 +188,20 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Hover};
                 }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Hover};
+                }
               }
+              
 
               &.active {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Pressed};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Pressed};
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Pressed};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Pressed};
                 }
               }
 
@@ -185,6 +211,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Focus};
                 }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Focus};
+                }
               }
 
               &.disabled {
@@ -192,6 +221,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Disabled};
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Disabled};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Disabled};
                 }
               }
 
@@ -201,6 +233,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 outline-color: blue;
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.ReadOnly};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.ReadOnly};
                 }
               }
             }
