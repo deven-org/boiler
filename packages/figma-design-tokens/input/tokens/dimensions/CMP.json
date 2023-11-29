@@ -2178,7 +2178,7 @@
         "AY11IconContainer": {
           "PaddingLeftRight": {
             "SM": {
-              "value": "{core.dimensionREM.2}",
+              "value": "{core.dimensionREM.0}",
               "type": "spacing"
             },
             "MD": {
