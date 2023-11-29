@@ -241,7 +241,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
             border-width: ${Input.Error.Rest.width};
             border-style: ${Input.Error.Rest.style};
             border-color: transparent;
-            outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+            outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
             color: ${UserInput.Error.Focused};
             background-color: ${SurfaceFill.Error.Focus};
           }
