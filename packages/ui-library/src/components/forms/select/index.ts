@@ -103,7 +103,7 @@ export class BlrSelect extends LitElement {
         'error-input': this.hasError || false,
         [`${this.size}`]: this.size,
         'disabled': this.disabled || false,
-        [`focus`]: this.isFocused || false,
+        'focus': this.isFocused || false,
       });
 
       const iconClasses = classMap({

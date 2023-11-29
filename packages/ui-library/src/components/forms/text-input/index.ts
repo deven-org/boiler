@@ -77,9 +77,9 @@ export class BlrTextInput extends LitElement {
       });
 
       const inputContainerClasses = classMap({
-        [`focus`]: this.isFocused || false,
-        [`error-input`]: this.hasError || false,
-        [`disabled`]: this.disabled || false,
+        'focus': this.isFocused || false,
+        'error-input': this.hasError || false,
+        'disabled': this.disabled || false,
         [`${this.size}`]: this.size,
       });
 
