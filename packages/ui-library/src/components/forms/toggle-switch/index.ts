@@ -212,7 +212,9 @@ export class BlrToggleSwitch extends LitElement {
                 @blur=${this.onBlur}
                 tabindex="-1"
               />
-              <span class="toggle-switch-slider"> </span>
+              <span class="toggle-switch-slider">
+                <span class="knob"></span>
+              </span>
 
               <span class="toggle-switch-unselect toggle-icon">
                 ${BlrIconRenderFunction({

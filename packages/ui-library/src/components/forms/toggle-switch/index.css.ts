@@ -133,9 +133,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
 
             & > .toggle-switch-slider {
-             
-              &::after {
-                content: "";
+              & > .knob {
                 position: absolute;
                 z-index: 1;
                 __FIX__background-color_is_state_dependent: 0;
@@ -145,13 +143,14 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            & > input:checked + .toggle-switch-slider::after {
+            & > input:checked + .toggle-switch-slider .knob {
               background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Rest};
             }
 
             & > .toggle-icon {
               position: absolute;
               top: 0;
+              display: flex;
 
               & > .toggle-icon-class {
                 color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
@@ -283,7 +282,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
 
               &  > .toggle-switch-slider {
-                &::after {
+                & > .knob {
                   width: ${ToggleSwitch.Control.Knob.Size.SM};
                   height: ${ToggleSwitch.Control.Knob.Size.SM};
                   _FIX_: "top and left will vermutlich den padding value";
@@ -295,7 +294,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              & > input:checked + .toggle-switch-slider::after {
+              & > input:checked + .toggle-switch-slider > .knob {
                 _FIX_: "translate";
                 _transform: translateX(16px);
                 transform: translateX( calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM}));
@@ -306,7 +305,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
                 & > .toggle-icon-class {
                   width: ${ToggleSwitch.Control.AY11Icon.IconSize.SM};
-                  padding: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
+                  padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
                 }
               }
             }
@@ -395,10 +394,8 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-
-
             & > .toggle-switch-slider {
-              &::after {
+              & > .knob {
                 width: ${ToggleSwitch.Control.Knob.Size.MD};
                 height: ${ToggleSwitch.Control.Knob.Size.MD};
                 _FIX_: "top and left will vermutlich den padding value";
@@ -410,7 +407,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            & > input:checked + .toggle-switch-slider::after {
+            & > input:checked + .toggle-switch-slider > .knob {
               _FIX_: "translate";
               _transform: translateX(20px);
               transform: translateX( calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
@@ -421,7 +418,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
               & > .toggle-icon-class {
                 width: ${ToggleSwitch.Control.AY11Icon.IconSize.MD};
-                padding: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
+                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
               }
             }
           }
@@ -518,7 +515,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
 
             & > .toggle-switch-slider {
-              &::after {
+              & > .knob {
                 width: ${ToggleSwitch.Control.Knob.Size.LG};
                 height: ${ToggleSwitch.Control.Knob.Size.LG};
                 _FIX_: "top and left will vermutlich den padding value";
@@ -530,7 +527,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            & > input:checked + .toggle-switch-slider::after {
+            & > input:checked + .toggle-switch-slider > .knob {
               _FIX_: "translate";
               _transform: translateX(23px);
               transform: translateX( calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
@@ -541,7 +538,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
               & > .toggle-icon-class {
                 width: ${ToggleSwitch.Control.AY11Icon.IconSize.LG};
-                padding: calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
+                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
               }
             }
           }
