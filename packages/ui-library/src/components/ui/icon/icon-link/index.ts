@@ -5,7 +5,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as iconLinkStyleCustom } from './index.css';
 import { styleCustom as iconButtonStyleCustom } from '../../../actions/buttons/icon-button/index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
-import { ActionVariantType, FormSizesType, SizesType } from '../../../../globals/types';
+import { ActionVariantType, ActionSizesType, SizesType, FormSizesType } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '..';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
@@ -28,7 +28,7 @@ export class BlrIconLink extends LitElement {
   @property() onBlur?: HTMLLinkElement['onblur'];
   @property() linkId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size?: FormSizesType = 'md';
+  @property() size?: ActionSizesType = 'md';
   @property() loading!: boolean;
   @property() loadingStatus!: string;
 
