@@ -53,6 +53,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         }
 
         .knob {
+          z-index: 1;
           outline-style: solid;
           outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
           outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest};
