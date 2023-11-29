@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
@@ -53,55 +52,69 @@ export class BlrCheckbox extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   @state() protected currentCheckedState: boolean | undefined = this.checked;
+  @state() protected currentIndeterminateState: boolean | undefined = this.indeterminate;
 
   protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('checked')) {
       this.currentCheckedState = this.checked || false;
     }
+
+    if (changedProperties.has('indeterminate')) {
+      this.currentIndeterminateState = this.indeterminate || false;
+      this.currentCheckedState = false;
+    }
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
+      this.currentIndeterminateState = false;
       this.onChange?.(event);
-      console.log('change', this.currentCheckedState);
     }
   }
 
   @state() protected focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
-    this.focused = true;
-    this.onFocus?.(event);
+    if (!this.disabled && !this.readonly) {
+      this.focused = true;
+      this.onFocus?.(event);
+    }
   };
 
   protected handleBlur = (event: FocusEvent) => {
-    this.focused = false;
-    this.onBlur?.(event);
+    if (!this.disabled && !this.readonly) {
+      this.focused = false;
+      this.onBlur?.(event);
+    }
   };
 
   @state() protected hovered = false;
 
   protected handleEnter = () => {
-    this.hovered = true;
-    console.log('hovered', this.hovered);
+    if (!this.disabled && !this.readonly) {
+      this.hovered = true;
+    }
   };
 
   protected handleLeave = () => {
-    this.hovered = false;
-    console.log('hovered', this.hovered);
+    if (!this.disabled && !this.readonly) {
+      this.hovered = false;
+    }
   };
 
   @state() protected active = false;
 
   protected handlePress = () => {
-    this.active = true;
-    this.currentCheckedState = !this.currentCheckedState;
-    console.log('active', this.active);
+    if (!this.disabled && !this.readonly) {
+      this.active = true;
+      this.currentCheckedState = !this.currentCheckedState;
+    }
   };
 
   protected handleRelease = () => {
-    this.active = false;
-    console.log('active', this.active);
+    if (!this.disabled && !this.readonly) {
+      this.active = false;
+    }
   };
 
   protected render() {
@@ -124,7 +137,7 @@ export class BlrCheckbox extends LitElement {
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'readonly': this.readonly || false,
-        'indeterminate': this.indeterminate || false,
+        'indeterminate': this.currentIndeterminateState || false,
       });
 
       const visualCheckboxClasses = classMap({
@@ -135,7 +148,7 @@ export class BlrCheckbox extends LitElement {
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'readonly': this.readonly || false,
-        'indeterminate': this.indeterminate || false,
+        'indeterminate': this.currentIndeterminateState || false,
         'focus': this.focused || false,
       });
 
@@ -161,6 +174,7 @@ export class BlrCheckbox extends LitElement {
         <style>
           ${dynamicStyles.map((style) => style)}
         </style>
+
         <div
           class="${classes}"
           @mouseenter=${this.handleEnter}
@@ -185,7 +199,10 @@ export class BlrCheckbox extends LitElement {
               this.handleRelease();
             }
           }}
-          tabindex="0"
+          tabindex=${this.disabled ? nothing : '0'}
+          aria-checked=${this.currentIndeterminateState ? 'mixed' : this.currentCheckedState}
+          role="checkbox"
+          aria-label=${this.label}
         >
           <input
             type="checkbox"
@@ -195,14 +212,15 @@ export class BlrCheckbox extends LitElement {
             name=${this.checkInputId || nothing}
             ?disabled=${this.disabled}
             ?checked=${this.currentCheckedState}
-            ?indeterminate=${this.indeterminate}
+            ?indeterminate=${this.currentIndeterminateState}
             ?readonly=${this.readonly}
             ?hasError=${this.hasError}
             @change=${this.handleChange}
+            aria-hidden="true"
           />
 
-          <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true">
-            ${this.indeterminate
+          <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true" tabindex="-1">
+            ${this.currentIndeterminateState
               ? BlrIconRenderFunction({
                   icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
                   hideAria: true,
@@ -219,7 +237,7 @@ export class BlrCheckbox extends LitElement {
             <div class="${focusRingClasses}"></div>
           </label>
 
-          <div class="${labelWrapperClasses}">
+          <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
             ${this.hasLabel
               ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
               : nothing}

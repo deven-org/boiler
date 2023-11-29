@@ -73,7 +73,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             outline-style: solid;
             outline-width: 0;
 
-          
             .knob {
               position: absolute;
               background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
@@ -81,17 +80,12 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               transition: transform 0.2s ease;
             }
           
-
             & > .toggle-icon {
               position: absolute;
               top: 0;
               display: flex;
-
             }
-
-            
-
-            
+      
             & > .blr-form-label-inline {
               color: ${LabelNextToControl.Rest};
             }
@@ -103,9 +97,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             & > .toggle-switch-select {
               right: 0;
             }
-
             
-
             &:not(.checked) {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Rest};
@@ -114,6 +106,17 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
               .toggle-icon > .toggle-icon-class {
                 color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Rest};
+              }
+
+              &.focus {
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Focus};
+                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Focus};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Focus};
+                }
               }
 
               &.hover {
@@ -139,16 +142,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
-              &.focus {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Focus};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
-                .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Focus};
-                }
-                .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Focus};
-                }
-              }
 
               &.disabled {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Disabled};
@@ -183,6 +176,17 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
               }
 
+              &.focus {
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Focus};
+                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Focus};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Focus};
+                }
+                .toggle-icon > .toggle-icon-class {
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Focus};
+                }
+              }
+
               &.hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Hover};
@@ -203,17 +207,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
                 .toggle-icon > .toggle-icon-class {
                   color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Pressed};
-                }
-              }
-
-              &.focus {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Focus};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Focus};
-                .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Focus};
-                }
-                .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Focus};
                 }
               }
 
