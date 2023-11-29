@@ -2264,6 +2264,27 @@
           }
         }
       }
+    },
+    "CaptionGroup": {
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Defines the gap between hint and error message"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Defines the gap between hint and error message"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Defines the gap between hint and error message"
+          }
+        }
+      }
     }
   },
   "UI": {
