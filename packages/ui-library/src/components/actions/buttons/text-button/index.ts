@@ -11,6 +11,7 @@ import {
   SizesType,
   FormSizesType,
   IconPositionVariant,
+  ButtonDisplayType,
 } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
@@ -29,17 +30,16 @@ export class BlrTextButton extends LitElement {
   @property() label = 'Button Label';
   @property() onClick?: HTMLButtonElement['onclick'];
   @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() leadingIcon?: SizelessIconType;
-  @property() trailingIcon?: SizelessIconType;
   @property() icon?: SizelessIconType;
-  @property() loading!: boolean;
-  @property() disabled!: boolean;
+  @property({ type: Boolean }) hasIcon?: boolean;
+  @property() iconPosition?: IconPositionVariant = 'leading';
+  @property({ type: Boolean }) loading!: boolean;
+  @property({ type: Boolean }) disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
-  @property() hasIcon?: boolean;
-  @property() iconPosition?: IconPositionVariant = 'leading';
+  @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
   @property() theme: ThemeType = 'Light';
 
@@ -56,7 +56,7 @@ export class BlrTextButton extends LitElement {
   };
 
   protected render() {
-    if (this.size) {
+    if (this.size && this.buttonDisplay) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
@@ -66,10 +66,18 @@ export class BlrTextButton extends LitElement {
         [`${this.size}`]: this.size,
         'disabled': this.disabled,
         'loading': this.loading,
+        [this.buttonDisplay]: this.buttonDisplay,
       });
 
       const iconClasses = classMap({
-        icon: true,
+        'icon': true,
+        'leading-icon-class': this.iconPosition === 'leading',
+        'trailing-icon-class': this.iconPosition === 'trailing',
+      });
+
+      const flexContainerClasses = classMap({
+        'flex-container': true,
+        [`${this.size}`]: this.size,
       });
 
       const loaderVariant = determineLoaderVariant(this.variant);
@@ -89,7 +97,8 @@ export class BlrTextButton extends LitElement {
         'Icon',
       ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` ${this.hasIcon && this.iconPosition === 'leading'
+      const labelAndIconGroup = html` <div class="${flexContainerClasses}">
+        ${this.hasIcon && this.iconPosition === 'leading'
           ? BlrIconRenderFunction({
               icon: calculateIconName(this.icon, iconSizeVariant),
               size: iconSizeVariant,
@@ -97,7 +106,7 @@ export class BlrTextButton extends LitElement {
               classMap: iconClasses,
             })
           : nothing}
-        <span class="label">${this.label}</span>
+        <span class="label">${this.label} </span>
         ${this.hasIcon && this.iconPosition === 'trailing'
           ? BlrIconRenderFunction({
               icon: calculateIconName(this.icon, iconSizeVariant),
@@ -105,7 +114,8 @@ export class BlrTextButton extends LitElement {
               hideAria: true,
               classMap: iconClasses,
             })
-          : nothing}`;
+          : nothing}
+      </div>`;
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}
@@ -132,7 +142,7 @@ export class BlrTextButton extends LitElement {
                 ${labelAndIconGroup}
               `
             : labelAndIconGroup}
-        </span>`;
+        </span> `;
     }
   }
 }
