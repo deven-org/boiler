@@ -188,7 +188,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
 
           &:not(.error) {
-            &.checked {
+            &.checked, &.indeterminate {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
               & .checker-icon {
@@ -236,7 +236,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               }
             }
 
-            &:not(.checked) {
+            &:not(.checked):not(.indeterminate) {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Rest};
               & .checker-icon {

@@ -1914,154 +1914,480 @@
       }
     },
     "ToggleSwitch": {
-      "A11yOffBorderRadius": {
-        "value": "{core.borderRadius.Round}",
-        "type": "borderRadius"
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        }
+      },
+      "ContentCol": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        }
       },
       "Control": {
-        "SM": {
-          "A11yIcon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "sizing"
+        "Container": {
+          "BorderRadius": {
+            "value": "{core.dimensionREM.40}",
+            "type": "borderRadius"
+          },
+          "BorderWidth": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.None}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.None}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
+            },
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.None}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.None}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
+            },
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.None}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.None}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              }
             }
           },
-          "Knob": {
-            "Sizing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "sizing"
-            }
-          },
-          "Background": {
-            "Width": {
+          "Width": {
+            "SM": {
               "value": "2.25rem",
               "type": "sizing"
             },
-            "Height": {
-              "value": "{core.dimensionREM.20}",
-              "type": "sizing"
-            },
-            "Padding": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing"
-            }
-          },
-          "IconContainer": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionREM.2}",
-              "type": "spacing"
-            }
-          },
-          "LabelGap": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing"
-          }
-        },
-        "MD": {
-          "A11yIcon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "sizing"
-            }
-          },
-          "Knob": {
-            "Sizing": {
-              "value": "{core.dimensionREM.20}",
-              "type": "sizing"
-            }
-          },
-          "Background": {
-            "Width": {
+            "MD": {
               "value": "2.75rem",
               "type": "sizing"
             },
-            "Height": {
+            "LG": {
+              "value": "3.25rem",
+              "type": "sizing"
+            }
+          },
+          "Height": {
+            "SM": {
+              "value": "{core.dimensionREM.20}",
+              "type": "sizing"
+            },
+            "MD": {
               "value": "{core.dimensionREM.24}",
               "type": "sizing"
             },
-            "Padding": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing"
-            }
-          },
-          "IconContainer": {
-            "PaddingLeftRight": {
-              "value": "{core.dimensionREM.2}",
-              "type": "spacing"
-            }
-          },
-          "LabelGap": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing"
-          }
-        },
-        "LG": {
-          "Background": {
-            "Padding": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing"
-            },
-            "Width": {
-              "value": "3.25rem",
-              "type": "sizing"
-            },
-            "Height": {
+            "LG": {
               "value": "{core.dimensionREM.28}",
               "type": "sizing"
             }
           },
-          "A11yIcon": {
-            "Sizing": {
+          "Padding": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing"
+            }
+          }
+        },
+        "AY11Icon": {
+          "IconSize": {
+            "SM": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            },
+            "LG": {
               "value": "{core.dimensionREM.16}",
               "type": "sizing"
             }
-          },
-          "Knob": {
-            "Sizing": {
+          }
+        },
+        "AY11IconContainer": {
+          "PaddingLeftRight": {
+            "SM": {
+              "value": "{core.dimensionREM.0}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.2}",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "0.21875rem",
+              "type": "spacing"
+            }
+          }
+        },
+        "Knob": {
+          "Size": {
+            "SM": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.20}",
+              "type": "sizing"
+            },
+            "LG": {
               "value": "{core.dimensionREM.24}",
               "type": "sizing"
             }
           },
-          "IconContainer": {
-            "PaddingLeftRight": {
-              "value": "0.21875rem",
-              "type": "spacing"
+          "BorderWidth": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
+            },
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
+            },
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
             }
-          },
-          "LabelGap": {
-            "value": "{core.dimensionPX.8}",
-            "type": "spacing"
           }
         }
       },
-      "SM": {
-        "Gap": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ContentColGap": {
-          "value": "{core.dimensionREM.0}",
-          "type": "spacing"
-        }
-      },
-      "MD": {
-        "Gap": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ContentColGap": {
-          "value": "{core.dimensionREM.0}",
-          "type": "spacing"
-        }
-      },
-      "LG": {
-        "Gap": {
-          "value": "{core.dimensionREM.8}",
-          "type": "spacing"
-        },
-        "ContentColGap": {
-          "value": "{core.dimensionREM.0}",
-          "type": "spacing"
+      "ControlWithStateLabel": {
+        "Container": {
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionPX.8}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.8}",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "{core.dimensionPX.8}",
+              "type": "spacing"
+            }
+          }
         }
       }
     },

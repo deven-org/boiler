@@ -89,7 +89,7 @@ export class BlrIconButton extends LitElement {
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
-          role=${this.disabled ? nothing : 'button'}
+          role="button"
           @keydown=${this.onClick}
         >
           ${this.focused ? html`<span class="focus-layer"></span>` : nothing}

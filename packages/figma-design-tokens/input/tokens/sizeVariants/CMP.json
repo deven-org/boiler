@@ -258,6 +258,29 @@
           }
         }
       }
+    },
+    "ToggleSwitch": {
+      "Control": {
+        "AY11Icon": {
+          "SizeVariant": {
+            "SM": {
+              "value": "XS",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the AY11Icon. (The default dimensions might be overrridden with a sizing token.)"
+            },
+            "MD": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the AY11Icon. (The default dimensions might be overrridden with a sizing token.)"
+            },
+            "LG": {
+              "value": "SM",
+              "type": "componentConfig",
+              "description": "Defines which size-variant of the AY11Icon. (The default dimensions might be overrridden with a sizing token.)"
+            }
+          }
+        }
+      }
     }
   }
 }
