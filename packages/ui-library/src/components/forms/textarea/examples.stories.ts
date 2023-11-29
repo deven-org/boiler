@@ -43,7 +43,7 @@ const fontStyle = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Forms/TextArea/Examples',
+  title: 'Design System/Web Components/Forms/Text Area/Examples',
   parameters: {
     viewMode: 'story',
     previewTabs: {
