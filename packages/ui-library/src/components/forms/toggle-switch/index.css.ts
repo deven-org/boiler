@@ -254,12 +254,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               color: ${LabelNextToControl.Disabled};
             }
           }
-
-          & > .label-container {
-            & > .blr-form-label-inline {
-              color: ${LabelNextToControl.Disabled};
-            }
-          }
         }
 
         &.readonly {
