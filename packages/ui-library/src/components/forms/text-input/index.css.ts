@@ -25,7 +25,6 @@ export const styleCustom = typeSafeNestedCss`
 export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
-    const { Global } = semanticTokens;
 
     return typeSafeNestedCss`
       .blr-input-inner-container {
@@ -190,7 +189,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
           border-width: ${Input.Default.Rest.width};
           border-style: ${Input.Default.Rest.style};
           border-color: transparent;
-          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.Focus};
+          outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
           background-color: ${SurfaceFill.Default.Focus};
         }
 
@@ -242,7 +241,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
             border-width: ${Input.Error.Rest.width};
             border-style: ${Input.Error.Rest.style};
             border-color: transparent;
-            outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.Focus};
+            outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
             color: ${UserInput.Error.Focused};
             background-color: ${SurfaceFill.Error.Focus};
           }

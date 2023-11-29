@@ -13,7 +13,6 @@ export const styleCustom = typeSafeNestedCss`
 export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
-    const { Global } = semanticTokens;
 
     return typeSafeNestedCss`
       .blr-select-inner-container {
@@ -176,7 +175,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           border-width: ${Input.Default.Rest.width};
           border-style: ${Input.Default.Rest.style};
           border-color: transparent;
-          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.Focus};
+          outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
           color: ${UserInput.Default.Focus};
           background-color: ${SurfaceFill.Default.Focus};
         }
