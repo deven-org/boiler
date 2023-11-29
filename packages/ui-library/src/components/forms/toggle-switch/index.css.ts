@@ -262,12 +262,6 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               color: ${LabelNextToControl.ReadOnly};
             }
           }
-
-          & > .label-container {
-            & > .blr-form-label-inline {
-              color: ${LabelNextToControl.ReadOnly};
-            }
-          }
         }
 
         &.sm {
