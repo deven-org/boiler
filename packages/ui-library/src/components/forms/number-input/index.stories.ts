@@ -14,6 +14,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrNumberInputType = {
+  theme: 'Light',
   disabled: false,
   errorIcon: undefined,
   errorMessage: '',
