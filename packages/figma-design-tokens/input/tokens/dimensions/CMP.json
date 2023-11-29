@@ -2260,6 +2260,114 @@
                   "type": "borderWidth"
                 }
               }
+            },
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
+            },
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.borderWidth.Medium}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "type": "borderWidth"
+                }
+              }
             }
           }
         }
