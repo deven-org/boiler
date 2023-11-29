@@ -61,7 +61,9 @@ export class BlrCheckbox extends LitElement {
 
     if (changedProperties.has('indeterminate')) {
       this.currentIndeterminateState = this.indeterminate || false;
-      this.currentCheckedState = false;
+      if (this.indeterminate) {
+        this.currentCheckedState = false;
+      }
     }
   }
 
