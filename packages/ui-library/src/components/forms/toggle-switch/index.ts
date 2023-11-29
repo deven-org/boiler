@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
@@ -61,48 +60,55 @@ export class BlrToggleSwitch extends LitElement {
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled) {
+    if (!this.disabled && !this.readonly) {
       this.onChange?.(event);
       this.currentCheckedState = !this.currentCheckedState;
-      console.log('change', this.currentCheckedState);
     }
   }
 
   @state() protected focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
-    this.focused = true;
-    this.onFocus?.(event);
+    if (!this.disabled && !this.readonly) {
+      this.focused = true;
+      this.onFocus?.(event);
+    }
   };
 
   protected handleBlur = (event: FocusEvent) => {
-    this.focused = false;
-    this.onBlur?.(event);
+    if (!this.disabled && !this.readonly) {
+      this.focused = false;
+      this.onBlur?.(event);
+    }
   };
 
   @state() protected hovered = false;
 
   protected handleEnter = () => {
-    this.hovered = true;
-    console.log('hovered', this.hovered);
+    if (!this.disabled && !this.readonly) {
+      this.hovered = true;
+    }
   };
 
   protected handleLeave = () => {
-    this.hovered = false;
-    console.log('hovered', this.hovered);
+    if (!this.disabled && !this.readonly) {
+      this.hovered = false;
+    }
   };
 
   @state() protected active = false;
 
   protected handlePress = () => {
-    this.active = true;
-    this.currentCheckedState = !this.currentCheckedState;
-    console.log('active', this.active);
+    if (!this.disabled && !this.readonly) {
+      this.active = true;
+      this.currentCheckedState = !this.currentCheckedState;
+    }
   };
 
   protected handleRelease = () => {
-    this.active = false;
-    console.log('active', this.active);
+    if (!this.disabled && !this.readonly) {
+      this.active = false;
+    }
   };
 
   protected render() {
@@ -185,7 +191,6 @@ export class BlrToggleSwitch extends LitElement {
             @focusin=${this.handleFocus}
             @focusout=${this.handleBlur}
             @keydown=${(event: KeyboardEvent) => {
-              console.log(event);
               if (event.code === 'Space') {
                 //this.handlePress();
               }
