@@ -1957,65 +1957,53 @@
               "Active": {
                 "Rest": {
                   "value": "{core.borderWidth.None}",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "type": "borderWidth"
                 }
               },
               "Inactive": {
                 "Rest": {
                   "value": "{core.borderWidth.None}",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "type": "borderWidth"
                 }
               }
             },
@@ -2023,65 +2011,53 @@
               "Active": {
                 "Rest": {
                   "value": "{core.borderWidth.None}",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "type": "borderWidth"
                 }
               },
               "Inactive": {
                 "Rest": {
                   "value": "{core.borderWidth.None}",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "type": "borderWidth"
                 }
               }
             },
@@ -2089,65 +2065,53 @@
               "Active": {
                 "Rest": {
                   "value": "{core.borderWidth.None}",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 }
               },
               "Inactive": {
                 "Rest": {
                   "value": "{core.borderWidth.None}",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest",
-                  "type": "borderWidth",
-                  "oldPath": "None"
+                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "type": "borderWidth"
                 }
               }
             }
