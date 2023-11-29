@@ -190,8 +190,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
           border-width: ${Input.Default.Rest.width};
           border-style: ${Input.Default.Rest.style};
           border-color: transparent;
-          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.FocusBorder.color};
-          color: ${UserInput.Default.Focus};
+          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.Focus};
           background-color: ${SurfaceFill.Default.Focus};
         }
 
@@ -243,7 +242,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
             border-width: ${Input.Error.Rest.width};
             border-style: ${Input.Error.Rest.style};
             border-color: transparent;
-            outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+            outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.Focus};
             color: ${UserInput.Error.Focused};
             background-color: ${SurfaceFill.Error.Focus};
           }

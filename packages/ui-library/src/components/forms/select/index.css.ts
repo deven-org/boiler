@@ -176,7 +176,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           border-width: ${Input.Default.Rest.width};
           border-style: ${Input.Default.Rest.style};
           border-color: transparent;
-          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.FocusBorder.color};
+          outline: ${Global.FocusBorder.width} ${Global.FocusBorder.style} ${Global.Focus};
           color: ${UserInput.Default.Focus};
           background-color: ${SurfaceFill.Default.Focus};
         }
