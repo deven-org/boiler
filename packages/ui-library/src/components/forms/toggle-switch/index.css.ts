@@ -72,14 +72,41 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             outline-style: solid;
             outline-width: 0;
 
-            &:focus {
-              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Focus};
-              outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
+          
+            .knob {
+              position: absolute;
+              background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
+              border-radius: 50%;
+              transition: transform 0.2s ease;
+            }
+          
+
+            & > .toggle-icon {
+              position: absolute;
+              top: 0;
+              display: flex;
+
             }
 
+            & > .toggle-icon > .toggle-icon-class {
+              color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Rest};
+              color: blue;
+            }
+
+            
             & > .blr-form-label-inline {
               color: ${LabelNextToControl.Rest};
             }
+
+            & > .toggle-switch-unselect {
+              left: 0;
+            }
+
+            & > .toggle-switch-select {
+              right: 0;
+            }
+
+            
 
             &:not(.checked) {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
@@ -104,6 +131,14 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
               }
 
+              &.focus {
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Focus};
+                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Focus};
+                .knob {
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Focus};
+                }
+              }
+
               &.disabled {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Disabled};
                 outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Disabled};
@@ -124,6 +159,9 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             &.checked {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Rest};
+              .knob {
+                outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest};
+              }
 
               &.hover {
                 background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
@@ -167,36 +205,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               }
             }
 
-            & > .toggle-switch-slider {
-              & > .knob {
-                position: absolute;
-                background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
-                border-radius: 50%;
-                transition: transform 0.2s ease;
-              }
-            }
-
-            & > input:checked + .toggle-switch-slider .knob {
-              background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Rest};
-            }
-
-            & > .toggle-icon {
-              position: absolute;
-              top: 0;
-              display: flex;
-
-              & > .toggle-icon-class {
-                color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
-              }
-            }
-
-            & > .toggle-switch-unselect {
-              left: 0;
-            }
-
-            & > .toggle-switch-select {
-              right: 0;
-            }
+            
           }
 
           & > .blr-form-label-inline {
