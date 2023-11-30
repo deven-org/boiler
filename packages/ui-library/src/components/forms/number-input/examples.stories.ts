@@ -5,7 +5,7 @@ import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 const defaultParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',
   disabled: false,
-  variant: 'mode3',
+  stepperVariant: 'vertical',
   theme: 'Light',
   size: 'sm',
   numberInputId: 'egal',
