@@ -5,7 +5,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
 import { FormSizesType } from '../../../globals/types';
 
-import { checkboxDark, checkboxLight } from '../../../foundation/component-tokens/checkbox.css';
+import { checkboxDark, checkboxLight } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
