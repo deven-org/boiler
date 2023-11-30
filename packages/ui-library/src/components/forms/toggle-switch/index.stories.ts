@@ -11,9 +11,13 @@ export default {
       options: FormSizes,
       control: { type: 'select' },
     },
+    hintMessage: {
+      if: { arg: 'hasHint', eq: true },
+    },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasHint', eq: true },
     },
     variant: {
       options: IconPositionVariant,
@@ -53,8 +57,8 @@ const args: BlrToggleSwitchType = {
   readonly: false,
   checked: false,
   size: 'md',
-  showHint: true,
-  hintText: 'Field is used for hint',
+  hasHint: true,
+  hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   variant: 'leading',
   onChange: logEventType,

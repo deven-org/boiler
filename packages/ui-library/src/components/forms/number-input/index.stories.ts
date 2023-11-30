@@ -27,8 +27,8 @@ const defaultParams: BlrNumberInputType = {
   hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
-  showHint: false,
-  hintText: 'This is a small hint',
+  hasHint: false,
+  hintMessage: 'This is a small hint',
   hintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
@@ -55,7 +55,7 @@ export default {
     hasLabel: true,
     label: 'Label-text',
     labelAppendix: '(Appendix)',
-    showHint: false,
+    hasHint: false,
     hintText: 'This is a small hint',
     hintIcon: 'blrInfo',
     disabled: false,
@@ -192,7 +192,7 @@ export default {
       },
       if: { arg: 'hasLabel', eq: true },
     },
-    showHint: {
+    hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
@@ -203,10 +203,10 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintText: {
+    hintMessage: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -214,7 +214,7 @@ export default {
     hintIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       table: {
@@ -273,7 +273,6 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasError', eq: true },
     },
-
     //Technical attributes
     ariaLabel: {
       name: 'araiaLabel',
@@ -688,7 +687,7 @@ export const FormCaptionGroup = () => {
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
-        showHint: true,
+        hasHint: true,
         unit: undefined,
         labelAppendix: undefined,
       })}
@@ -696,7 +695,7 @@ export const FormCaptionGroup = () => {
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
-        showHint: true,
+        hasHint: true,
         unit: undefined,
         hasError: true,
         labelAppendix: undefined,

@@ -14,7 +14,8 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 type Option = {
   value: string;
@@ -44,9 +45,9 @@ export class BlrSelect extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() errorIcon?: SizelessIconType = 'blr360';
-  @property() showHint?: boolean;
+  @property() hintIcon?: SizelessIconType;
+  @property() errorIcon?: SizelessIconType;
+  @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
   @property() theme: ThemeType = 'Light';
@@ -97,8 +98,28 @@ export class BlrSelect extends LitElement {
 
       const iconClasses = classMap({
         'blr-input-icon': true,
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
       });
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'hint',
+              theme: this.theme,
+              size: this.size,
+              message: this.hintMessage,
+              icon: this.hintIcon,
+            })
+          : nothing}
+        ${this.hasError && (this.errorMessage || this.errorIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'error',
+              theme: this.theme,
+              size: this.size,
+              message: this.errorMessage,
+              icon: this.errorIcon,
+            })
+          : nothing}
+      `;
 
       return html`
         <style>
@@ -145,17 +166,8 @@ export class BlrSelect extends LitElement {
             </div>
             ${this.renderIcon(iconClasses)}
           </div>
-          ${this.showHint || this.hasError
-            ? BlrFormInfoRenderFunction({
-                theme: this.theme,
-                size: this.size,
-                showHint: !!this.showHint,
-                hintText: this.hintMessage,
-                hintIcon: this.hintIcon,
-                hasError: !!this.hasError,
-                errorMessage: this.errorMessage,
-                errorIcon: this.errorIcon,
-              })
+          ${this.hasHint || this.hasError
+            ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
             : nothing}
         </div>
       `;

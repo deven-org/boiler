@@ -6,10 +6,11 @@ import { formDark, formLight } from '../../../../foundation/semantic-tokens/form
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../../../globals/types';
 import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
-import { BlrFormHintRenderFunction } from '../../../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-radio-group';
 
@@ -21,7 +22,7 @@ export class BlrRadioGroup extends LitElement {
   @property() readonly?: boolean;
   @property() checked?: boolean;
   @property() name?: string;
-  @property() size?: InputSizesType = 'md';
+  @property() size: InputSizesType = 'md';
   @property() required?: boolean;
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
@@ -30,10 +31,8 @@ export class BlrRadioGroup extends LitElement {
   @property() errorIcon?: SizelessIconType;
   @property() hideLabel!: boolean;
   @property() options!: RadioOption[];
-  @property() showHint = true;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() errorMessage?: string;
-  @property() showGroupErrorMessage = true;
+  @property() hasHint = true;
+  @property() groupHintIcon?: SizelessIconType;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
   @property() groupErrorIcon?: SizelessIconType;
@@ -69,6 +68,26 @@ export class BlrRadioGroup extends LitElement {
     const calculateOptionId = (label: string) => {
       return label.replace(/ /g, '_').toLowerCase();
     };
+    const captionContent = html`
+      ${this.hasHint && (this.groupHintMessage || this.groupHintIcon)
+        ? BlrFormCaptionRenderFunction({
+            variant: 'hint',
+            theme: this.theme,
+            size: this.size,
+            message: this.groupHintMessage,
+            icon: this.groupHintIcon,
+          })
+        : nothing}
+      ${this.hasError && (this.groupErrorMessage || this.groupErrorIcon)
+        ? BlrFormCaptionRenderFunction({
+            variant: 'error',
+            theme: this.theme,
+            size: this.size,
+            message: this.groupErrorMessage,
+            icon: this.groupErrorIcon,
+          })
+        : nothing}
+    `;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}
@@ -109,34 +128,14 @@ export class BlrRadioGroup extends LitElement {
         })}
       </div>
 
-      ${this.showHint || this.hasError
+      ${this.hasHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${this.showHint
-              ? html`
-                  ${BlrFormHintRenderFunction({
-                    message: this.groupHintMessage || '',
-                    variant: 'hint',
-                    size: this.size,
-                    icon: this.hintIcon ? this.hintIcon : undefined,
-                    theme: this.theme,
-                  })}
-                `
-              : nothing}
-            ${this.hasError
-              ? html`
-                  ${BlrFormHintRenderFunction({
-                    message: this.groupErrorMessage || '',
-                    variant: 'error',
-                    size: this.size,
-                    icon: this.groupErrorIcon ? this.groupErrorIcon : undefined,
-                    theme: this.theme,
-                  })}
-                `
-              : nothing}
+            ${BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)}
           </div>`
         : nothing} `;
   }
 }
+
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
 
 export const BlrRadioGroupRenderFunction = (params: BlrRadioGroupType) =>

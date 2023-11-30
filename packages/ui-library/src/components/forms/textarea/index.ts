@@ -7,10 +7,11 @@ import { BlrFormLabelRenderFunction } from '../../internal-components/form-label
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { BlrCounterRenderFunction } from '../../internal-components/counter';
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-textarea';
 
@@ -40,12 +41,12 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType;
   @property() hint?: string;
-  @property() showHint = true;
-  @property() hintText?: string;
+  @property() hasHint = true;
+  @property() hintMessage?: string;
   @property() showCounter?: boolean;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() hintIcon?: SizelessIconType;
   @property() isResizeable: ResizeType = 'none';
   @property() rows?: number;
   @property() cols?: number;
@@ -110,6 +111,27 @@ export class BlrTextarea extends LitElement {
 
       const counterVariant = this.determinateCounterVariant();
 
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'hint',
+              theme: this.theme,
+              size: this.size,
+              message: this.hintMessage,
+              icon: this.hintIcon,
+            })
+          : nothing}
+        ${this.hasError && (this.errorMessage || this.errorIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'error',
+              theme: this.theme,
+              size: this.size,
+              message: this.errorMessage,
+              icon: this.errorIcon,
+            })
+          : nothing}
+      `;
+
       return html`
         <style>
           ${dynamicStyles}
@@ -141,19 +163,12 @@ export class BlrTextarea extends LitElement {
             @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
-          >${this.value}</textarea>
+          >
+${this.value}</textarea
+          >
           <div class="${textareaInfoContainer}">
-            ${this.showHint || this.hasError
-              ? BlrFormInfoRenderFunction({
-                  theme: this.theme,
-                  size: this.size,
-                  showHint: this.showHint,
-                  hintText: this.hintText,
-                  hintIcon: this.hintIcon,
-                  hasError: !!this.hasError,
-                  errorMessage: this.errorMessage,
-                  errorIcon: this.errorIcon,
-                })
+            ${this.hasHint || this.hasError
+              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
               : nothing}
             ${this.showCounter
               ? BlrCounterRenderFunction({

@@ -7,7 +7,7 @@ import { BlrFormLabelInline } from '../../internal-components/form-label/form-la
 import { FormSizesType, IconPositionVariant } from '../../../globals/types';
 
 import { styleCustom, toggleSwitchDark, toggleSwitchLight } from './index.css';
-import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
@@ -35,9 +35,9 @@ export class BlrToggleSwitch extends LitElement {
   @property() readonly?: boolean;
   @property() checked?: boolean;
 
-  @property() showHint?: boolean;
-  @property() hintText?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() hasHint?: boolean;
+  @property() hintMessage?: string;
+  @property() hintIcon?: SizelessIconType;
 
   @property() size?: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';
@@ -164,16 +164,14 @@ export class BlrToggleSwitch extends LitElement {
                   labelSize: this.size || 'md',
                 })}`
               : nothing}
-            ${this.showHint && this.hintText
-              ? html`
-                  ${BlrFormHintRenderFunction({
-                    message: this.hintText,
-                    variant: 'hint',
-                    icon: this.hintIcon,
-                    size: this.size || 'sm',
-                    theme: this.theme,
-                  })}
-                `
+            ${this.hasHint && this.hintMessage
+              ? BlrFormCaptionRenderFunction({
+                  message: this.hintMessage,
+                  variant: 'hint',
+                  icon: this.hintIcon,
+                  size: this.size || 'sm',
+                  theme: this.theme,
+                })
               : nothing}
           </span>
           <div
