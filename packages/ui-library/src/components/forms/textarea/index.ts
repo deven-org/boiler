@@ -141,9 +141,7 @@ export class BlrTextarea extends LitElement {
             @blur=${this.blur}
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
-          >
-${this.value}</textarea
-          >
+          >${this.value}</textarea>
           <div class="${textareaInfoContainer}">
             ${this.showHint || this.hasError
               ? BlrFormInfoRenderFunction({
