@@ -1,4 +1,4 @@
-import { Label } from "../../components/forms/textarea/index.stories";
+// import { Label } from "../../components/forms/textarea/index.stories";
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
@@ -8,6 +8,17 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
   const { IconButton } = componentTokens.Actions;
   const { TabBar } = componentTokens.Navigation;
 
+  /* ToDos
+  - [ ] Use Icon Button for pagination-buttons
+  - [ ] .nav-item-content-wrapper > a - needs for some reason a lineHeight set, otherwise the height is off. So we need to drill in the appropriate token here.
+    - [ ] Create a typotoken dedicated for tab-bar
+    - [ ] Apply this new token on tabs
+    - [ ] Apply this new token on .nav-item-content-wrapper > a
+
+  
+  - [ ] Toggle and position Icon / Label individually for each Tab
+  - [ ] Add layoutvariant where I see the buttons, but no scrollbar
+  */
   return typeSafeNestedCss/* css */ `
       .wrapper-horizontal {
         position: relative;
@@ -98,7 +109,7 @@ _FIX_END { "" }
           _FIX_padding-top: 15px;
           _FIX_padding-bottom: 15px;
           _FIX_margin-bottom: -15px;
-          max-width: calc(100% - 2rem);
+          _max-width: calc(100% - 2rem);
 
           .nav-list {
             display: flex;
@@ -106,7 +117,7 @@ _FIX_END { "" }
             _FIX_padding: 0 0.5rem;
             padding: 0;
             margin: 0;
-            align-items: center;
+            _align-items: center;
 
             &.left {
               justify-content: flex-start;
