@@ -34,7 +34,7 @@ const defaultParams: BlrTextButtonType = {
   disabled: false,
   buttonId: 'buttonId',
   loadingStatus: 'Loading',
-  buttonDisplay: 'block',
+  buttonDisplay: 'inline-block',
   onBlur: () => action('onBlur'),
   onClick: () => action('onClick'),
 };
@@ -227,7 +227,7 @@ const args: BlrTextButtonType = {
   disabled: false,
   buttonId: 'buttonId',
   loadingStatus: 'Loading',
-  buttonDisplay: 'block',
+  buttonDisplay: 'inline-block',
   onBlur: () => action('onBlur'),
   onClick: () => action('onClick'),
 };
@@ -236,6 +236,8 @@ BlrTextButton.args = args;
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
+  'arialabel',
+  'variant',
   'size',
   'label',
   'hasIcon',
@@ -245,9 +247,12 @@ const argTypesToDisable = [
   'disabled',
   'buttonId',
   'loadingStatus',
-  'onChange',
-  'onFocus',
+  'buttonDisplay',
+  'onClick',
   'onBlur',
+  'onFocus',
+  'href',
+  'target',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
@@ -351,6 +356,9 @@ export const SizeVariant = () => {
       </div>
     </div>
   `;
+};
+SizeVariant.argTypes = {
+  ...disabledArgTypes,
 };
 
 //States
