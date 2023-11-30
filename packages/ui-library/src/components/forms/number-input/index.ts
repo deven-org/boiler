@@ -25,7 +25,7 @@ export class BlrNumberInput extends LitElement {
   protected _numberFieldNode!: HTMLInputElement;
 
   @property() numberInputId!: string;
-  @property() variant: 'mode1' | 'mode2' | 'mode3' = 'mode1';
+  @property() stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
   @property() label!: string;
   @property() disabled?: boolean;
   @property() placeholder?: string;
@@ -103,7 +103,7 @@ export class BlrNumberInput extends LitElement {
     const buttonClass = classMap({
       'custom-stepper-button': true,
       [iconSizeVariant]: true,
-      [this.variant]: true,
+      [this.stepperVariant]: true,
     });
 
     const button = html`
@@ -120,15 +120,15 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected renderMode() {
-    switch (this.variant) {
-      case 'mode1': {
+    switch (this.stepperVariant) {
+      case 'split': {
         return html`
           ${this.getButtonTemplate('blrMinus', this.stepperDown)} ${this.getButtonTemplate('blrPlus', this.stepperUp)}
         `;
       }
-      case 'mode2': {
+      case 'horizontal': {
         return html`
-          <div class="stepper-combo mode2 horizontal ${this.size}">
+          <div class="stepper-combo horizontal  ${this.size}">
             ${this.getButtonTemplate('blrMinus', this.stepperDown)}
             ${BlrDividerRenderFunction({
               directionVariant: 'vertical',
@@ -138,9 +138,9 @@ export class BlrNumberInput extends LitElement {
           </div>
         `;
       }
-      case 'mode3': {
+      case 'vertical': {
         return html`
-          <div class="stepper-combo mode3 vertical ${this.size}">
+          <div class="stepper-combo vertical  ${this.size}">
             ${this.getButtonTemplate('blrChevronUp', this.stepperUp)}
             ${BlrDividerRenderFunction({
               directionVariant: 'horizontal',
@@ -174,8 +174,8 @@ export class BlrNumberInput extends LitElement {
       const wrapperClasses = classMap({
         'input-wrapper': true,
         'disabled': this.disabled || false,
-        [this.size]: this.size,
-        [this.variant || 'mode1']: this.variant || 'mode1',
+        [`${this.size}`]: this.size,
+        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
       });
 

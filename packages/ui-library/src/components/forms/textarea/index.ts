@@ -164,8 +164,7 @@ export class BlrTextarea extends LitElement {
             @select="${this.onSelect}"
             @keyup="${this.updateCounter}"
           >
-${this.value}
-          </textarea
+${this.value}</textarea
           >
           <div class="${textareaInfoContainer}">
             ${this.hasHint || this.hasError
