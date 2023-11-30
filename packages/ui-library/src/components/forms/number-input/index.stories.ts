@@ -15,58 +15,57 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrNumberInputType = {
-  theme: 'Light',
-  disabled: false,
-  errorIcon: undefined,
-  errorMessage: '',
+  size: 'md',
+  stepperVariant: 'vertical',
+  placeholder: 'Placeholder-text',
+  value: undefined,
   fractionDigits: 0,
-  hasError: false,
+  totalDigits: 0,
+  prependUnit: false,
+  unit: 'kg',
+  step: 1,
   hasLabel: true,
-  hintText: 'This is a small hint',
-  hintIcon: 'blrInfo',
   label: 'Label-text',
   labelAppendix: '(Appendix)',
-  numberInputId: ' ',
-  placeholder: 'Placeholder-text',
-  prependUnit: false,
+  showHint: false,
+  hintText: 'This is a small hint',
+  hintIcon: 'blrInfo',
+  disabled: false,
   readonly: false,
   required: false,
-  showHint: false,
-  size: 'md',
-  step: 1,
-  totalDigits: 0,
-  unit: undefined,
-  value: undefined,
-  stepperVariant: 'vertical',
+  hasError: false,
+  errorMessage: '',
+  errorIcon: undefined,
+  numberInputId: ' ',
+  theme: 'Light',
 };
 
 export default {
-  title: 'Design System/Web Components/Forms/NumberInput',
-
+  title: 'Design System/Web Components/Forms/Number Input',
   args: {
-    disabled: false,
-    errorIcon: undefined,
-    errorMessage: '',
+    size: 'md',
+    stepperVariant: 'vertical',
+    placeholder: 'Placeholder-text',
+    value: undefined,
     fractionDigits: 0,
-    hasError: false,
+    totalDigits: 0,
+    prependUnit: false,
+    unit: 'kg',
+    step: 1,
     hasLabel: true,
-    hintText: 'This is a small hint',
-    hintIcon: 'blrInfo',
     label: 'Label-text',
     labelAppendix: '(Appendix)',
-    numberInputId: 'Number Input',
-    placeholder: 'Placeholder-text',
-    prependUnit: false,
+    showHint: false,
+    hintText: 'This is a small hint',
+    hintIcon: 'blrInfo',
+    disabled: false,
     readonly: false,
     required: false,
-    showHint: false,
-    size: 'md',
-    step: 1,
+    hasError: false,
+    errorMessage: '',
+    errorIcon: undefined,
+    numberInputId: ' ',
     theme: 'Light',
-    totalDigits: 0,
-    unit: undefined,
-    value: undefined,
-    stepperVariant: 'vertical',
     onChange: () => action('onChange'),
     onFocus: () => action('onFocus'),
     onSelect: () => action('onSelect'),
@@ -132,7 +131,13 @@ export default {
         type: 'number',
       },
     },
-
+    prependUnit: {
+      name: 'prependUnit',
+      description: 'NumberInput	Content / Settings	hasUnit	Choose if unit is displayed as a prefix or suffix.',
+      table: {
+        category: 'Content / Settings',
+      },
+    },
     unit: {
       name: 'unit',
       description: 'Enter the unit for the number input.',
@@ -140,14 +145,6 @@ export default {
       control: {
         type: 'select',
       },
-      table: {
-        category: 'Content / Settings',
-      },
-    },
-    hasUnit: {
-      name: 'prependUnit',
-      description: 'NumberInput	Content / Settings	hasUnit	Choose if unit is displayed as a prefix or suffix .',
-
       table: {
         category: 'Content / Settings',
       },
@@ -162,6 +159,7 @@ export default {
         category: 'Content / Settings',
       },
     },
+
     hasLabel: {
       name: 'hasLabel',
       description: 'Choose if component has a label.',
@@ -277,12 +275,14 @@ export default {
     },
 
     //Technical attributes
-    theme: {
-      options: Themes,
-      control: { type: 'select' },
+    ariaLabel: {
+      name: 'araiaLabel',
+      description:
+        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
       table: {
-        category: 'Technical Attributes',
+        category: 'Accessibility',
       },
+      control: { type: 'text' },
     },
     numberInputId: {
       name: 'numberInputId',
@@ -335,6 +335,13 @@ export default {
         category: 'Events',
       },
     },
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+      table: {
+        category: 'Technical Attributes',
+      },
+    },
   },
   // Events
   parameters: {
@@ -364,7 +371,7 @@ export default {
   },
 };
 
-export const BlrNumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderFunction(params);
+export const NumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderFunction(params);
 
 /**
  *  ## Apperance
