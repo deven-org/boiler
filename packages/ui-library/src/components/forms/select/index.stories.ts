@@ -90,8 +90,6 @@ const args: BlrSelectType = {
     { value: 'dieter', label: 'Dieter' },
   ],
   onChange: (event: Event) => console.log(event.type),
-  onFocus: (event: Event) => console.log(event.type),
-  onBlur: (event: Event) => console.log(event.type),
 };
 
 BlrSelect.args = args;

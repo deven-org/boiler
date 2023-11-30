@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, queryAll } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { tabBarDark, tabBarLight } from '../../../foundation/component-tokens/tab-bar.css';
+import { tabBarDark, tabBarLight } from './index.css';
 import {
   FormSizesType,
   TabType,

@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { textInputLight, textInputDark } from '../../../foundation/component-tokens/text-input.css';
+import { textInputLight, textInputDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../../globals/types';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
 import { SizelessIconType } from '@boiler/icons';
@@ -81,9 +81,9 @@ export class BlrTextInput extends LitElement {
       });
 
       const inputContainerClasses = classMap({
-        [`focus`]: this.isFocused || false,
-        [`error-input`]: this.hasError || false,
-        [`disabled`]: this.disabled || false,
+        'focus': this.isFocused || false,
+        'error-input': this.hasError || false,
+        'disabled': this.disabled || false,
         [`${this.size}`]: this.size,
       });
 
