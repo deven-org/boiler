@@ -311,8 +311,7 @@ _FIX_END { "" }
                     padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
                     padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
-                    _FIX_LineHeight: "not ideal yet - this needs taken care of";
-                    line-height:  1rem;
+                    line-height:  ${TabBar.Tab.Label.Typography.SM.lineHeight};
 
                     > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.SM};
@@ -335,8 +334,7 @@ _FIX_END { "" }
                     padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
                     padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
-                    _FIX_LineHeight: "not ideal yet - this needs taken care of";
-                    line-height:  1rem;
+                    line-height:  ${TabBar.Tab.Label.Typography.MD.lineHeight};
 
                     > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.MD};
@@ -359,8 +357,7 @@ _FIX_END { "" }
                     padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
                     padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
-                    _FIX_LineHeight: "not ideal yet - this needs taken care of";
-                    line-height:  1.5rem;
+                    line-height:  ${TabBar.Tab.Label.Typography.LG.lineHeight};
 
                     > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.LG};
