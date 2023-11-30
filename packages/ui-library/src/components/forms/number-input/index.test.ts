@@ -7,7 +7,7 @@ import { getRandomString } from '../../../utils/get-random.string';
 const sampleParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',
   disabled: false,
-  variant: 'mode1',
+  stepperVariant: 'vertical',
   theme: 'Light',
   readonly: true,
   required: true,
