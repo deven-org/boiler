@@ -506,6 +506,10 @@
         "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
       },
+      "PrefixSuffix": {
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+        "type": "typography"
+      },
       "UserInput": {
         "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
         "type": "typography"
@@ -597,6 +601,10 @@
         "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
       },
+      "PrefixSuffix": {
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+        "type": "typography"
+      },
       "UserInput": {
         "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
         "type": "typography"
@@ -685,6 +693,10 @@
         "description": "Apply on forms group-legends eg.: <RadioGroup>"
       },
       "Placeholder": {
+        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+        "type": "typography"
+      },
+      "PrefixSuffix": {
         "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
       },
