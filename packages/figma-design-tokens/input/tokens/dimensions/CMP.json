@@ -2329,6 +2329,25 @@
   "Navigation": {
     "TabBar": {
       "Tab": {
+        "Label": {
+          "Typography": {
+            "SM": {
+              "value": "{Action.SM.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "MD": {
+              "value": "{Action.MD.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "LG": {
+              "value": "{Action.LG.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            }
+          }
+        },
         "HighlightLine": {
           "Height": {
             "SM": {
