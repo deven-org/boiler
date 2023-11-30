@@ -4,6 +4,7 @@ import { FormSizes, Units } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
 import { html } from 'lit';
+import { action } from '@storybook/addon-actions';
 
 const sharedStyles = html`
   <style>
@@ -53,9 +54,9 @@ export default {
     hintIcon: 'blrInfo',
     label: 'Label-text',
     labelAppendix: '(Appendix)',
-    numberInputId: ' ',
+    numberInputId: 'Number Input',
     placeholder: 'Placeholder-text',
-    prependUnit: true,
+    prependUnit: false,
     readonly: false,
     required: false,
     showHint: false,
@@ -66,6 +67,10 @@ export default {
     unit: undefined,
     value: undefined,
     stepperVariant: 'vertical',
+    onChange: () => action('onChange'),
+    onFocus: () => action('onFocus'),
+    onSelect: () => action('onSelect'),
+    onBlur: () => action('onBlur'),
   },
   argTypes: {
     size: {
@@ -271,11 +276,15 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasError', eq: true },
     },
+
+    //Technical attributes
     theme: {
       options: Themes,
       control: { type: 'select' },
+      table: {
+        category: 'Technical Attributes',
+      },
     },
-    //Technical attributes
     numberInputId: {
       name: 'numberInputId',
       description: 'Unique identifier for this component.',
@@ -291,7 +300,44 @@ export default {
       },
       control: { type: 'text', label: 'Number Input' },
     },
+    onChange: {
+      name: 'onChange',
+      description: 'Fires when the value changes.',
+      action: 'onChange',
+      table: {
+        disable: false,
+        category: 'Events',
+      },
+    },
+    onFocus: {
+      name: 'onFocus',
+      description: 'Fires when the component is focused.',
+      action: 'onFocus',
+      table: {
+        disable: false,
+        category: 'Events',
+      },
+    },
+    onBlur: {
+      name: 'onBlur',
+      description: 'Fires when the component lost focus.',
+      action: 'onBlur',
+      table: {
+        disable: false,
+        category: 'Events',
+      },
+    },
+    onSelect: {
+      name: 'onSelect',
+      description: 'Fires when some text is selected.',
+      action: 'onSelect',
+      table: {
+        disable: false,
+        category: 'Events',
+      },
+    },
   },
+  // Events
   parameters: {
     viewMode: 'docs',
     layout: 'centered',
