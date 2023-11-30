@@ -27,6 +27,14 @@ export default {
       options: Themes,
       control: { type: 'select' },
     },
+    toggleOnIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
+    toggleOffIcon: {
+      options: [undefined, ...PureIconKeys],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -56,7 +64,6 @@ const args: BlrToggleSwitchType = {
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
-  isSelected: false,
 };
 
 BlrToggleSwitch.args = args;

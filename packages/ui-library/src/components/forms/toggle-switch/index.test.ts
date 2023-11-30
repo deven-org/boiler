@@ -15,7 +15,6 @@ const sampleParams: BlrToggleSwitchType = {
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   variant: 'leading',
-  isSelected: false,
   theme: 'Light',
 };
 
