@@ -273,9 +273,6 @@ export default {
       control: { type: 'select' },
       if: { arg: 'hasError', eq: true },
     },
-    errorMessage: {
-      if: { arg: 'hasError', eq: true },
-    },
     //Technical attributes
     ariaLabel: {
       name: 'araiaLabel',
