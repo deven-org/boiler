@@ -108,7 +108,7 @@ export default {
         category: 'Content / Settings',
       },
       control: {
-        type: 'number',
+        type: 'text',
         label: 'Enter Text',
       },
     },
@@ -144,10 +144,9 @@ export default {
         category: 'Content / Settings',
       },
     },
-    prependUnit: {
+    hasUnit: {
       name: 'prependUnit',
-      description:
-        'NumberInput	Content / Settings	hasUnit	Choose if unit is displayed as a prefix, suffix or if no unit should be displayed.	"none"	Radio: "none", "prefix", "suffix"	was named "prependUnit" before and did function differently	',
+      description: 'NumberInput	Content / Settings	hasUnit	Choose if unit is displayed as a prefix or suffix .',
 
       table: {
         category: 'Content / Settings',
@@ -358,7 +357,7 @@ export default {
         - [**Has Error**](#has-error)
       - [**Dependencies**](#dependencies)
         - [**Form Label**](#form-label)
-        - [**Form Caption**](#form-caption)
+        - [**Form Caption Group**](#form-caption-group)
     </Markdown>`,
       },
     },
@@ -370,7 +369,7 @@ export const BlrNumberInput = (params: BlrNumberInputType) => BlrNumberInputRend
 /**
  *  ## Apperance
  *  ### Size Variant
- * The [Component Name] component comes in 3 sizes: SM, MD and LG.
+ * The Number Input component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -420,6 +419,7 @@ export const StepperVariant = () =>
         label: 'vertical',
         labelAppendix: undefined,
         unit: 'kg',
+        value: undefined,
       })}
     </div>
     <div class="wrapper">
@@ -429,6 +429,7 @@ export const StepperVariant = () =>
         label: 'horizontal',
         labelAppendix: undefined,
         unit: 'kg',
+        value: undefined,
       })}
     </div>
     <div class="wrapper">
@@ -438,6 +439,7 @@ export const StepperVariant = () =>
         label: 'split',
         labelAppendix: undefined,
         unit: 'kg',
+        value: undefined,
       })}
     </div>
   `;
@@ -600,7 +602,7 @@ export const Required = () => {
 Required.story = { name: ' ' };
 
 /**
- * The Number Input component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Number Input or in case the Number Input was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption](#form-caption) in the dependencies section below.
+ * The Number Input component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Number Input or in case the Number Input was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 export const HasError = () => {
   return html`
@@ -671,9 +673,9 @@ export const FormLabel = () => {
 };
 
 /**
- * The Number Input component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Label Caption](?path=/docs/design-system-web-components-internal-components-formHint--docs) component.
+ * The Number Input component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Label Caption](?path=/docs/design-system-web-components-internal-components-formHint--docs) component.
  */
-export const FormCaption = () => {
+export const FormCaptionGroup = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -681,6 +683,15 @@ export const FormCaption = () => {
         ...defaultParams,
         showHint: true,
         unit: undefined,
+        labelAppendix: undefined,
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrNumberInputRenderFunction({
+        ...defaultParams,
+        showHint: true,
+        unit: undefined,
+        hasError: true,
         labelAppendix: undefined,
       })}
     </div>
