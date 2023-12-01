@@ -43,6 +43,7 @@ To get an overview of the project, read the [README](https://github.com/deven-or
 > **Contribution etiquette:**
 > - While working on your contribution, please do not copy code from other frameworks or libraries
 > - Make small and frequent commits
+> - The default language for all written and spoken communication is english
 > - Every GitHub issue should have a corresponding branch, and vice versa - every bugfix or code change should already have an issue created for it
 > - No code should be merged or pushed to the develop branch without a pull request 
 > - A merge request can only be merged if it has successful test results and at least two approvals
