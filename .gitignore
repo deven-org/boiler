@@ -6,6 +6,8 @@ storybook-static
 .idea
 .yarn/install-state.gz
 
+!packages/js-example-app/dist
+
 packages/ui-library/src/foundation/_tokens-generated/__component-tokens.Dark.generated.mjs
 packages/ui-library/src/foundation/_tokens-generated/__component-tokens.Light.generated.mjs
 packages/ui-library/src/foundation/_tokens-generated/__semantic-tokens.Dark.generated.mjs
