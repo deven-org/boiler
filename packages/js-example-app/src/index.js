@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import '@boiler/ui-library/dist/index.js'
 
 function component() {
     const element = document.createElement('div');
@@ -18,5 +19,3 @@ function component() {
   toggleButton.addEventListener("click", () => {
     blrButton.setAttribute('loading', 'true');
   });
-
-  console.log(toggleButton, button);
