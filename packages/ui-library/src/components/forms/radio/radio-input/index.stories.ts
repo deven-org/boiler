@@ -11,13 +11,21 @@ export default {
       control: { type: 'select' },
     },
     option: { control: 'array' },
+    hintMessage: {
+      if: { arg: 'hasHint', eq: true },
+    },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasHint', eq: true },
+    },
+    errorMessage: {
+      if: { arg: 'hasError', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      if: { arg: 'hasError', eq: true },
     },
     theme: {
       options: Themes,
@@ -40,11 +48,11 @@ const args: BlrRadioType = {
   readonly: false,
   size: 'md',
   label: 'Option 1',
-  hintMessage: 'This is a sample hint message',
-  errorMessage: 'This is a sample error message',
-  showHint: true,
-  hasError: false,
+  hasHint: true,
   hintIcon: undefined,
+  hintMessage: 'This is a sample hint message',
+  hasError: false,
+  errorMessage: 'This is a sample error message',
   errorIcon: undefined,
 };
 

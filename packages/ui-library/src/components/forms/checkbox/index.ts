@@ -5,16 +5,16 @@ import { classMap } from 'lit/directives/class-map.js';
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
 import { FormSizesType } from '../../../globals/types';
 
-import { styleCustomLight, styleCustomDark } from './index.css';
+import { checkboxDark, checkboxLight } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-
-import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-checkbox';
 
@@ -35,7 +35,7 @@ export class BlrCheckbox extends LitElement {
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType;
-  @property() showHint?: boolean;
+  @property() hasHint?: boolean;
   @property() hintIcon?: SizelessIconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
@@ -121,7 +121,7 @@ export class BlrCheckbox extends LitElement {
 
   protected render() {
     if (this.size && this.checkInputId) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, styleCustomLight] : [formDark, styleCustomDark];
+      const dynamicStyles = this.theme === 'Light' ? [formLight, checkboxLight] : [formDark, checkboxDark];
 
       const classes = classMap({
         'blr-semantic-action': true,
@@ -171,6 +171,35 @@ export class BlrCheckbox extends LitElement {
         'SizeVariant',
         this.size.toUpperCase(),
       ]).toLowerCase() as FormSizesType;
+
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
+          ? html`
+              <div class="hint-wrapper">
+                ${BlrFormCaptionRenderFunction({
+                  variant: 'hint',
+                  theme: this.theme,
+                  size: this.size,
+                  message: this.hintMessage,
+                  icon: this.hintIcon,
+                })}
+              </div>
+            `
+          : nothing}
+        ${this.hasError && (this.errorMessage || this.errorIcon)
+          ? html`
+              <div class="error-wrapper">
+                ${BlrFormCaptionRenderFunction({
+                  variant: 'error',
+                  theme: this.theme,
+                  size: this.size,
+                  message: this.errorMessage,
+                  icon: this.errorIcon,
+                })}
+              </div>
+            `
+          : nothing}
+      `;
 
       return html`
         <style>
@@ -241,33 +270,14 @@ export class BlrCheckbox extends LitElement {
 
           <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
             ${this.hasLabel
-              ? BlrFormLabelInline({ labelText: this.label, forValue: this.checkInputId, labelSize: this.size })
+              ? html`${BlrFormLabelInline({
+                  labelText: this.label,
+                  forValue: this.checkInputId,
+                  labelSize: this.size,
+                })}`
               : nothing}
-            ${this.showHint
-              ? html`
-                  <div class="hint-wrapper">
-                    ${BlrFormHintRenderFunction({
-                      message: this.hintMessage,
-                      variant: 'hint',
-                      size: this.size,
-                      icon: this.hintIcon ? this.hintIcon : undefined,
-                      theme: this.theme,
-                    })}
-                  </div>
-                `
-              : nothing}
-            ${this.hasError && this.hasLabel
-              ? html`
-                  <div class="error-wrapper">
-                    ${BlrFormHintRenderFunction({
-                      message: this.errorMessage,
-                      variant: 'error',
-                      size: this.size,
-                      icon: this.errorIcon ? this.errorIcon : undefined,
-                      theme: this.theme,
-                    })}
-                  </div>
-                `
+            ${this.hasHint || this.hasError
+              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
               : nothing}
           </div>
         </div>

@@ -15,10 +15,10 @@ export default {
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     hintMessage: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     errorIcon: {
       options: [undefined, ...PureIconKeys],
@@ -69,7 +69,7 @@ const args: BlrCheckboxType = {
   errorMessage: 'This is a sample error message',
   errorIcon: undefined,
 
-  showHint: false,
+  hasHint: false,
   hintMessage: 'This is a sample hint',
   hintIcon: undefined,
 

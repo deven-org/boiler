@@ -129,7 +129,7 @@ export default {
     },
 
     // todo renaming from hintText to hasHint in the blrFormRenderFunction, partially solution with name overwriting
-    showHint: {
+    hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
@@ -145,7 +145,7 @@ export default {
       name: 'hintMessageIcon',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -153,7 +153,7 @@ export default {
     // todo renaming from hintText to hasHint in the blrFormRenderFunction, partially solution with name overwriting
     hintText: {
       name: 'hintMessage',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -345,8 +345,8 @@ const args: BlrTextInputType = {
   labelAppendix: '(Appendix)',
   showInputIcon: true,
   inputIcon: 'blr360',
-  showHint: false,
-  hintText: 'This is a small hint message',
+  hasHint: false,
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
@@ -371,8 +371,8 @@ const defaultParams: BlrTextInputType = {
   maxLength: 140,
   label: 'Label',
   labelAppendix: '',
-  showHint: false,
-  hintText: 'This is a small hint message',
+  hasHint: false,
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   arialabel: 'TextInput',
   name: '',
@@ -404,7 +404,7 @@ const argTypesToDisable = [
   'hasLabel',
   'label',
   'labelAppendix',
-  'showHint',
+  'hasHint',
   'hintText',
   'hintIcon',
   'type',
@@ -704,7 +704,7 @@ export const Icon = () => {
           labelAppendix: '',
           hasError: true,
           errorMessage: 'OMG it is an error',
-          showHint: false,
+          hasHint: false,
           errorIcon: 'blrError',
           value: '',
         })}
@@ -730,7 +730,7 @@ export const FormCaption = () => {
           placeholder: '',
           label: ' Without an Input Icon',
           labelAppendix: '',
-          showHint: false,
+          hasHint: false,
           showInputIcon: false,
           value: '',
         })}
