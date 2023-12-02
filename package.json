@@ -8,6 +8,8 @@
     "start": "yarn tokens:generate && yarn workspace @boiler/ui-library start:storybook",
     "build:storybook": "yarn workspace @boiler/ui-library build:storybook",
     "react-example:dev": "yarn workspace @boiler/react-example-app dev",
+    "js-example:build": "yarn build && yarn workspace @boiler/js-example-app build",
+    "js-example:serve": "yarn workspace @boiler/js-example-app serve",
     "build": "yarn workspace @boiler/ui-library build && yarn workspace @boiler/ui-library compile",
     "build:types": "yarn workspace @boiler/ui-library build:types",
     "lint": "yarn workspace @boiler/ui-library lint",
@@ -96,6 +98,7 @@
   },
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
+    "http-server": "^14.1.1",
     "lit": "^2.6.1",
     "nested-css-to-flat": "^1.0.5",
     "rimraf": "^5.0.5"
