@@ -14,12 +14,14 @@
       "importMeta": false,
       "preserveAllComments": false
     },
-    "transform": null,
-    "target": "es5",
+    "target": "es2016",
     "loose": false,
     "externalHelpers": false,
     // Requires v1.2.50 or upper and requires target to be es2016 or upper.
-    "keepClassNames": false
+    "keepClassNames": false,
+    "transform": {
+      "decoratorVersion": "2022-03"
+    }
   },
   "isModule": true
 }
