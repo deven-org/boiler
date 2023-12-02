@@ -13,7 +13,8 @@
     "allowJs": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "useDefineForClassFields": false
   },
   "include": ["src"],
   "exclude": [""]

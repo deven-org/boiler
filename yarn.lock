@@ -1651,7 +1651,7 @@ __metadata:
     http-server: "npm:^14.1.1"
     husky: "npm:^8.0.0"
     lint-staged: "npm:^13.1.0"
-    lit: "npm:^2.6.1"
+    lit: "npm:^2.7.4"
     lit-html: "npm:^2.6.1"
     lodash.camelcase: "npm:4.3.0"
     mini-css-extract-plugin: "npm:^2.7.2"
@@ -13403,7 +13403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:^2.2.1, lit@npm:^2.6.1":
+"lit@npm:^2.2.1, lit@npm:^2.6.1, lit@npm:^2.7.4":
   version: 2.8.0
   resolution: "lit@npm:2.8.0"
   dependencies:
