@@ -2611,6 +2611,70 @@
           }
         }
       }
+    },
+    "FormLabel": {
+      "Label": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+            "type": "typography"
+          }
+        }
+      },
+      "LabelAppendix": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          }
+        }
+      },
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "0 0",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "0 0",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "0 0",
+            "type": "spacing"
+          }
+        }
+      }
     }
   },
   "UI": {

@@ -1106,6 +1106,104 @@
           }
         }
       }
+    },
+    "FormLabel": {
+      "Label": {
+        "TextColor": {
+          "Rest": {
+            "value": "{Forms.Label.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Forms.Label.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Forms.Label.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Forms.Label.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Forms.Label.Disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{Forms.Label.ReadOnly}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Forms.Label.Error}",
+            "type": "color"
+          }
+        }
+      },
+      "LabelAppendix": {
+        "TextColor": {
+          "Rest": {
+            "value": "{Forms.Label.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Forms.Label.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Forms.Label.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Forms.Label.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Forms.Label.Disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{Forms.Label.ReadOnly}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Forms.Label.Error}",
+            "type": "color"
+          }
+        }
+      },
+      "InlineLabel": {
+        "TextColor": {
+          "Rest": {
+            "value": "{Forms.Label.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Forms.Label.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Forms.Label.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Forms.Label.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Forms.Label.Disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{Forms.Label.ReadOnly}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Forms.Label.Error}",
+            "type": "color"
+          }
+        }
+      }
     }
   },
   "UI": {
