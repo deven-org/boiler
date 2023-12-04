@@ -2674,6 +2674,22 @@
             "type": "spacing"
           }
         }
+      },
+      "InlineLabel": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+            "type": "typography"
+          }
+        }
       }
     }
   },

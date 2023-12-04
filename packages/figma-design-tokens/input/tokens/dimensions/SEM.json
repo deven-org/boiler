@@ -475,10 +475,6 @@
           "type": "spacing"
         }
       },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
         "type": "typography",
@@ -552,10 +548,6 @@
           "type": "spacing"
         }
       },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
         "type": "typography",
@@ -622,10 +614,6 @@
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
           "type": "spacing"
         }
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
       },
       "LabelSlot": {
         "Padding": {
