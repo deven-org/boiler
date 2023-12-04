@@ -83,7 +83,8 @@ const componentTypes = [
   'Tooltip',
   'RadioGroup',
   'NumberInput',
-  'CaptionGroup'
+  'CaptionGroup',
+  'FormLabel',
 ];
 
 StyleDictionaryPackage.registerFormat({
