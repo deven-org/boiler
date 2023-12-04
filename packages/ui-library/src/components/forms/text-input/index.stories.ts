@@ -288,47 +288,25 @@ export default {
     },
     docs: {
       description: {
-        component: `<div>
-<p>Text Input allows users to enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.</p>
-<ul>
-        <li> <a href="/docs/design-system-web-components-forms-textinput--docs"><strong>Docs</strong></a></li>
-        <li> <strong>Appearance</strong>
-            <ul>
-                <li> <a href="#size-variant"><strong>Size Variant</strong></a></li>
-            </ul>
-        </li>
-         <li> <strong>Content / Settings</strong>
-            <ul>
-                <li> <a href="#type"><strong>Type</strong></a>
-                </li>
-                <li> <a href="#placeholder"><strong>Placeholder</strong></a>
-                </li>
-            </ul></li>
-        <li> <strong>States</strong>
-            <ul>
-                <li> <a href="#disabled"><strong>Disabled</strong></a>
-                </li>
-                <li> <a href="#readonly"><strong>Readonly</strong></a>
-                </li>
-            </ul></li>
-        <li> <strong>Validation</strong>
-            <ul>
-                <li> <a href="#required"><strong>Required</strong></a>
-                </li>
-                <li> <a href="#has-error"><strong>Has Error</strong></a>
-                </li>
-            </ul></li>
-        <li> <strong>Dependencies</strong>
-            <ul>
-                <li> <a href="#form-label"><strong>Form Label</strong></a>
-                </li>
-                <li> <a href="#icon"><strong>Icon</strong></a>
-                </li>
-                <li> <a href="#form-caption-group"><strong>Form Caption Group</strong></a>
-                </li>
-            </ul></li>
-        </ul>
-</div>`,
+        component: `<Markdown>
+Text Input allows users to enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.
+- [**Appearance**](#appearance)
+ - [**Size Variant**](#size-variant) 
+- [**Content / Settings**](#content--settings)
+ - [**Type**](#type) 
+ - [**Placeholder**](#placeholder) 
+- [**States**](#states)
+ - [**Disabled**](#disabled) 
+ - [**Readonly**](#readonly)
+- [**Validation**](#validation)
+ - [**Required**](#required) 
+ - [**Has Error**](#has-error)  
+- [**Dependencies**](#dependencies)
+ - [**Form Label**](#form-label) 
+ - [**Icon**](#icon) 
+ - [**Form Caption Group**](#form-caption-group)     
+</Markdown>
+        `,
       },
     },
   },
@@ -446,6 +424,8 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 // All Stories
 //Appearance Size Story
 /**
+ * ## Appearance
+ * ### Size Variant
  * The Text Input component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
@@ -487,9 +467,14 @@ export const SizeVariant = () => {
 SizeVariant.argTypes = {
   ...disabledArgTypes,
 };
+SizeVariant.story = {
+  name: ' ',
+};
 
 //Content/ Settings Type & Placeholder
 /**
+ * ## Content / Settings
+ * ### Type
  * The Text Input component can have all the types an html input can have, except the number and the unit type, which is covered in the Number Input component. For more information have a look at the [Number Input](/docs/design-system-web-components-forms-number-input--docs) component.
  */
 export const Type = () => {
@@ -524,6 +509,9 @@ export const Type = () => {
 };
 Type.argTypes = {
   ...disabledArgTypes,
+};
+Type.story = {
+  name: ' ',
 };
 
 /**
@@ -564,6 +552,9 @@ Placeholder.argTypes = {
 
 // States Disabled
 /**
+ * ## States
+ * Apart from states like rest, hover, pressed and focus, the Text Input component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * ### Disabled
  * The Text Input component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
@@ -589,9 +580,12 @@ export const Disabled = () => {
 Disabled.argTypes = {
   ...disabledArgTypes,
 };
+Disabled.story = {
+  name: ' ',
+};
 
 /**
- * The Text Input component in the Readonly state can not be interacted with, but it can still be selected and receive focus.
+ * The Text Input component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
 export const Readonly = () => {
   return html`
@@ -618,6 +612,8 @@ Readonly.argTypes = {
 
 // Validation Required Todo add interactive Story with Button to show the State
 /**
+ * ## Validation
+ * ### Required
  * The Text Input component can be set as required. If set as required, an error should be thrown, when the Text Input component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below..
  * */
 export const Required = () => {
@@ -646,6 +642,9 @@ Required.parameters = {
   backgrounds: {
     default: '',
   },
+};
+Required.story = {
+  name: ' ',
 };
 
 /**
@@ -678,6 +677,8 @@ HasError.argTypes = {
 
 //Dependencies Captions
 /**
+ * ## Dependencies
+ * ### Form Label
  * The Text Input component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 export const FormLabel = () => {
@@ -702,7 +703,9 @@ export const FormLabel = () => {
 FormLabel.argTypes = {
   ...disabledArgTypes,
 };
-
+FormLabel.story = {
+  name: ' ',
+};
 /**
  * The Text Input component can have a trailing clickable Icon / Icon Button component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
