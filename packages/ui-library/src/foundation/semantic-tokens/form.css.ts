@@ -5,7 +5,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix, InputIcon } =
     semanticTokens.Forms;
-  const { Select } = componentTokens.Forms;
+  const { Select, FormLabel } = componentTokens.Forms;
 
   return typeSafeNestedCss`
     .blr-form-element {
@@ -336,12 +336,12 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       &.sm {
         padding: ${SM.LabelSlot.Padding};
-        font-weight: ${SM.Label.fontWeight};
-        font-size: ${SM.Label.fontSize};
-        font-family: ${SM.Label.fontFamily}, sans-serif;
-        line-height: ${SM.Label.lineHeight};
-        gap: ${SM.LabelComponent.ItemSpacing};
-        color: ${Label.Rest};
+        font-weight: ${FormLabel.Label.Typography.SM.fontWeight};
+        font-size: ${FormLabel.Label.Typography.SM.fontSize};
+        font-family: ${FormLabel.Label.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.SM.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.SM};
+        FIX__color: ${Label.Rest};
 
         &.error {
           color: ${Label.Error};
@@ -350,21 +350,20 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       &.md {
         padding: ${MD.LabelSlot.Padding};
-        font-weight: ${MD.Label.fontWeight};
-        font-size: ${MD.Label.fontSize};
-        font-family: ${MD.Label.fontFamily}, sans-serif;
-        line-height: ${MD.Label.lineHeight};
-        gap: ${MD.LabelComponent.ItemSpacing};
+        font-weight: ${FormLabel.Label.Typography.MD.fontWeight};
+        font-size: ${FormLabel.Label.Typography.MD.fontSize};
+        font-family: ${FormLabel.Label.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.MD.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.MD};
       }
 
       &.lg {
         padding: ${LG.LabelSlot.Padding};
-        font-weight: ${LG.Label.fontWeight};
-        font-size: ${LG.Label.fontSize};
-        font-family: ${LG.Label.fontFamily}, sans-serif;
-        line-height: ${LG.Label.lineHeight};
-        color: ${Label.Rest};
-        gap: ${LG.LabelComponent.ItemSpacing};
+        font-weight: ${FormLabel.Label.Typography.LG.fontWeight};
+        font-size: ${FormLabel.Label.Typography.LG.fontSize};
+        font-family: ${FormLabel.Label.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.LG.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.LG};
 
         &.error {
           color: ${Label.Error};
@@ -398,27 +397,30 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
     }
 
     .blr-form-label-appendix {
-      padding-left: ${MD.LabelSlot.Padding};
-      font-weight: ${MD.LabelAppendix.fontWeight};
-      font-size: ${MD.LabelAppendix.fontSize};
-      font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
-      line-height: ${MD.LabelAppendix.lineHeight};
       color: ${LabelAppendix.Rest};
 
       &.sm {
         padding-left: ${SM.LabelSlot.Padding};
-        font-weight: ${SM.LabelAppendix.fontWeight};
-        font-size: ${SM.LabelAppendix.fontSize};
-        font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
-        line-height: ${MD.LabelAppendix.lineHeight};
+        font-weight: ${FormLabel.LabelAppendix.Typography.SM.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.SM.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.SM.lineHeight};
+      }
+
+      &.md {
+        padding-left: ${MD.LabelSlot.Padding};
+        font-weight: ${FormLabel.LabelAppendix.Typography.MD.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.MD.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.MD.lineHeight};
       }
 
       &.lg {
         padding-left: ${LG.LabelSlot.Padding};
-        font-weight: ${LG.LabelAppendix.fontWeight};
-        font-size: ${LG.LabelAppendix.fontSize};
-        font-family: ${LG.LabelAppendix.fontFamily}, sans-serif;
-        line-height: ${LG.LabelAppendix.lineHeight};
+        font-weight: ${FormLabel.LabelAppendix.Typography.LG.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.LG.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.LG.lineHeight};
       }
 
       .error {
