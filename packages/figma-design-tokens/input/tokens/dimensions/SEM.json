@@ -469,6 +469,24 @@
           "type": "spacing"
         }
       },
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+        "type": "typography"
+      },
+      "LabelComponent": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
+          "type": "spacing"
+        }
+      },
       "LabelSlot": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
@@ -543,6 +561,24 @@
       "InputSlot": {
         "Margin": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+        "type": "typography"
+      },
+      "LabelComponent": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
@@ -623,6 +659,14 @@
           "type": "spacing"
         }
       },
+      "Label": {
+        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+        "type": "typography"
+      },
+      "LabelAppendix": {
+        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+        "type": "typography"
+      },
       "LabelNextToControl": {
         "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
         "type": "typography"
@@ -630,6 +674,16 @@
       "LabelSlot": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
+          "type": "spacing"
+        }
+      },
+      "LabelComponent": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.4}",
+          "type": "spacing"
+        },
+        "Padding": {
+          "value": "0 0",
           "type": "spacing"
         }
       },
