@@ -60,6 +60,13 @@ export default {
   title: 'Design System/Web Components/Forms/Text Area',
   argTypes: {
     //Appearance
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
+    },
     size: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
@@ -313,7 +320,7 @@ export default {
 
     //Technical attributes
     textareaId: {
-      name: 'textareaId',
+      name: 'textAreaId',
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -360,11 +367,6 @@ export default {
         category: 'Events',
       },
     },
-
-    theme: {
-      options: Themes,
-      control: { type: 'select' },
-    },
   },
   parameters: {
     layout: 'centered',
@@ -377,7 +379,7 @@ export default {
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
         component: `<Markdown>
-Text Area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text.
+Text Area allows users to input and edit multiline text. Unlike a simple Text Input component that is typically used for single-line text, a Text Area provides a larger space for users to enter and manipulate multiple lines of text.
                 Text Area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
@@ -392,7 +394,7 @@ Text Area allows users to input and edit multiline text. Unlike a simple text in
  - [**Required**](#required) 
  - [**Has Error**](#has-error)  
 - [**Dependencies**](#dependencies)
- - [**Form-Label**](#form-label) 
+ - [**Form Label**](#form-label) 
  - [**Form Caption Group**](#form-caption-group)     
  - [**Counter**](#counter)     
 </Markdown>
@@ -421,8 +423,8 @@ const args: BlrTextareaType = {
   minLength: 0,
   maxLength: 140,
   hasLabel: true,
-  label: 'Share your feedback',
-  labelAppendix: '(optional)',
+  label: 'Label-text',
+  labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
@@ -437,7 +439,7 @@ const args: BlrTextareaType = {
   errorMessage: '',
   errorIcon: undefined,
   arialabel: 'Text Area',
-  textareaId: '#674',
+  textareaId: '#textAreaId',
   name: 'Text Area',
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
@@ -587,7 +589,7 @@ export const Resize = () => {
             ...defaultParams,
             theme: 'Light',
             size: 'md',
-            label: 'None',
+            label: 'No resize',
             placeholder: '',
             value: '',
             isResizeable: 'none',
@@ -605,7 +607,7 @@ Resize.argTypes = {
 /**
  * ## Content / Settings
  * ### Placeholder
- * The placeholder component can display a placeholder text. This is recommended to improve usability.
+ * The Text Area component can display a placeholder text. This is recommended to improve usability.
  */
 export const Placeholder = () => {
   return html`
@@ -618,6 +620,7 @@ export const Placeholder = () => {
           size: 'md',
           label: 'With placeholder',
           labelAppendix: '',
+          placeholder: 'Add a message here',
           value: '',
         })}
         ${BlrTextareaRenderFunction({
@@ -636,16 +639,14 @@ export const Placeholder = () => {
 Placeholder.argTypes = {
   ...disabledArgTypes,
 };
-Placeholder.story = {
-  name: '',
-};
+Placeholder.story = { name: ' ' };
 
 // States Disabled
 /**
  * ## States
  * Apart from states like rest, hover, pressed and focus, the Text Area component can also be disabled or readonly. The error state is documented under [validation](#validation).
  * ### Disabled
- * The Text Area Component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+ * The Text Area component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
@@ -746,6 +747,7 @@ export const HasError = () => {
           size: 'md',
           placeholder: '',
           hasError: true,
+          errorIcon: undefined,
           label: 'Error',
           value: '',
         })}
@@ -761,7 +763,7 @@ HasError.argTypes = {
 /**
  * ## Dependencies
  * ### Form Label
- * The Text Area component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label Component](?path=/docs/design-system-web-components-internal-components-formlabel--docs).
+ * The Text Area component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 // States FormLabel
 export const FormLabel = () => {
@@ -774,24 +776,18 @@ export const FormLabel = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: 'A text area with a hint',
-          hasHint: true,
-          hintMessage: 'Hint message',
-          hintIcon: 'blrInfo',
-          labelAppendix: '',
+          label: 'With label',
+          labelAppendix: '(with appendix)',
           value: '',
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          placeholder: '',
-          label: ' A text area with an error message',
+          placeholder: 'Without label',
+          label: ' ',
           labelAppendix: '',
-          hasError: true,
-          errorMessage: 'Error Message',
           hasHint: false,
-          errorIcon: 'blrError',
           value: '',
         })}
       </div>
@@ -805,7 +801,7 @@ FormLabel.story = {
   name: ' ',
 };
 /**
- * The TextArea component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see  <a href="/docs/design-system-web-components-textarea--captions"><strong>FormCaptionGroup</strong></a> component.
+ * The Text Area component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal <a href="/docs/design-system-web-components-internal-components-formcaptiongroup--docs">Form Caption Group</a> component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -819,7 +815,6 @@ export const FormCaptionGroup = () => {
           placeholder: '',
           label: 'Hint message',
           hasHint: true,
-          hintMessage: 'Hint message',
           hintIcon: 'blrInfo',
           labelAppendix: '',
           value: '',
@@ -829,12 +824,12 @@ export const FormCaptionGroup = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: 'Error message',
+          label: 'Hint and error message',
           labelAppendix: '',
           hasError: true,
-          errorMessage: 'Error Message',
-          hasHint: false,
-          errorIcon: 'blrError',
+          errorMessage: "OMG it's an error",
+          hasHint: true,
+          errorIcon: 'blrErrorFilled',
           value: '',
         })}
       </div>
