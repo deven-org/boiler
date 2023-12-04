@@ -3,8 +3,7 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix, InputIcon } =
-    semanticTokens.Forms;
+  const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, InputIcon } = semanticTokens.Forms;
   const { Select, FormLabel } = componentTokens.Forms;
 
   return typeSafeNestedCss`
@@ -307,30 +306,41 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
     .blr-form-label {
       display: flex;
       align-items: center;
-      color: ${Label.Rest};
+      color: ${FormLabel.Label.TextColor.Rest};
       word-break: break-all;
-
+      
       &:focus {
-        color: ${Label.Focus};
+        color: ${FormLabel.Label.TextColor.Focus};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Focus};
+        }
       }
 
       &:hover {
-        color: ${Label.Hover};
+        color: ${FormLabel.Label.TextColor.Hover};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Hover};
+        }
       }
 
       &:disabled {
-        color: ${Label.Disabled};
+        color: ${FormLabel.Label.TextColor.Disabled};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Disabled};
+        }
       }
 
       &[readonly] {
-        color: ${Label.ReadOnly};
+        color: ${FormLabel.Label.TextColor.ReadOnly};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.ReadOnly};
+        }
       }
 
       &.error {
-        color: ${Label.Error};
-
+        color: ${FormLabel.Label.TextColor.Error};
         .blr-form-label-appendix {
-          color: ${LabelAppendix.Error};
+          color: ${FormLabel.LabelAppendix.TextColor.Error};
         }
       }
 
@@ -341,10 +351,10 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         font-family: ${FormLabel.Label.Typography.SM.fontFamily}, sans-serif;
         line-height: ${FormLabel.Label.Typography.SM.lineHeight};
         gap: ${FormLabel.Container.ItemSpacing.SM};
-        FIX__color: ${Label.Rest};
+        __FIX__color: ${FormLabel.Label.TextColor.Rest};
 
-        &.error {
-          color: ${Label.Error};
+        &.__FIX__error {
+          color: ${FormLabel.Label.TextColor.Error};
         }
       }
 
@@ -365,11 +375,15 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${FormLabel.Label.Typography.LG.lineHeight};
         gap: ${FormLabel.Container.ItemSpacing.LG};
 
-        &.error {
-          color: ${Label.Error};
+        &.__FIX__error {
+          color: ${FormLabel.Label.TextColor.Error};
         }
       }
     }
+
+
+
+
 
     .blr-form-label-inline {
       flex: 1;
@@ -396,8 +410,11 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
     }
 
+
+
+
     .blr-form-label-appendix {
-      color: ${LabelAppendix.Rest};
+      color: ${FormLabel.LabelAppendix.TextColor.Rest};
 
       &.sm {
         padding-left: ${SM.LabelSlot.Padding};
@@ -423,11 +440,11 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         line-height: ${FormLabel.LabelAppendix.Typography.LG.lineHeight};
       }
 
-      .error {
-        color: ${Label.Error};
+      .__fix__error {
+        color: ${FormLabel.LabelAppendix.TextColor.Error};
       }
 
-      .hint {
+      .__fix__hint {
         color: ${Caption.Hint};
       }
     }

@@ -3,8 +3,8 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
-  const { Radio, RadioGroup } = componentTokens.Forms;
+  const { SM, MD, LG, Legend } = semanticTokens.Forms;
+  const { Radio, RadioGroup, FormLabel } = componentTokens.Forms;
 
   return typeSafeNestedCss`
     .blr-legend {
@@ -111,7 +111,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       transition: all 0.25s ease 0s;
 
       .blr-form-label-inline {
-        color: ${LabelNextToControl.Rest};
+        color: ${FormLabel.InlineLabel.TextColor.Rest};
         transition: all 0.25s ease 0s;
         display: flex;
         align-items: center;
@@ -253,7 +253,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
               & + .label-wrapper {
                 .blr-form-label-inline {
-                  color: ${LabelNextToControl.Hover};
+                  color: ${FormLabel.InlineLabel.TextColor.Hover};
                 }
               }
             }
@@ -274,7 +274,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
               & + .label-wrapper {
                 .blr-form-label-inline {
-                  color: ${LabelNextToControl.Pressed};
+                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
                 }
               }
             }
@@ -296,7 +296,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${LabelNextToControl.Focus};
+                color: ${FormLabel.InlineLabel.TextColor.Focus};
               }
             }
           }
@@ -381,7 +381,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             & + .label-wrapper {
               .blr-form-label-inline {
                 cursor: not-allowed;
-                color: ${LabelNextToControl.Disabled};
+                color: ${FormLabel.InlineLabel.TextColor.Disabled};
               }
             }
           }
@@ -402,7 +402,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.Error};
+              color: ${FormLabel.InlineLabel.TextColor.Error};
             }
           }
         }
@@ -423,7 +423,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }
         }
@@ -444,7 +444,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.ReadOnly};
+              color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
             }
           }
         }

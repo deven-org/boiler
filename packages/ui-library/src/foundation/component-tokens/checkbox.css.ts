@@ -3,8 +3,8 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Checkbox } = componentTokens.Forms;
-  const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+  const { Checkbox, FormLabel } = componentTokens.Forms;
+  const { SM, MD, LG } = semanticTokens.Forms;
   const { FocusBorder } = semanticTokens.Global;
 
   return typeSafeNestedCss/* css */ `
@@ -136,23 +136,23 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
         .label-wrapper {
           &:not(.disabled) {
             &:not(.error) {
-              color: ${LabelNextToControl.Rest};
+              color: ${FormLabel.InlineLabel.TextColor.Rest};
 
               &:hover {
                 &:not(.readonly) {
-                  color: ${LabelNextToControl.Hover};
+                  color: ${FormLabel.InlineLabel.TextColor.Hover};
                 }
               }
               &.focus {
-                color: ${LabelNextToControl.Focus};
+                color: ${FormLabel.InlineLabel.TextColor.Focus};
               }
               &.active {
                 &:not(.readonly) {
-                  color: ${LabelNextToControl.Pressed};
+                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
                 }
               }
               &.readonly {
-                color: ${LabelNextToControl.ReadOnly};
+                color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
                 .blr-form-label-inline {
                   cursor: not-allowed !important;
                   pointer-events: none;
@@ -161,12 +161,12 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
             }
           }
           &.error {
-            color: ${LabelNextToControl.Error};
+            color: ${FormLabel.InlineLabel.TextColor.Error};
           }
           &.disabled {
             .blr-form-label-inline {
               cursor: not-allowed;
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }  
         }
