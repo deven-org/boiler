@@ -164,10 +164,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
 
           .blr-form-label-inline {
-            font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${SM.LabelNextToControl.fontWeight};
-            line-height: ${SM.LabelNextToControl.lineHeight};
-            font-size: ${SM.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
           }
         }
       }
@@ -190,10 +190,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
 
           .blr-form-label-inline {
-            font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${MD.LabelNextToControl.fontWeight};
-            line-height: ${MD.LabelNextToControl.lineHeight};
-            font-size: ${MD.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
           }
         }
       }
@@ -216,10 +216,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
 
           .blr-form-label-inline {
-            font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${LG.LabelNextToControl.fontWeight};
-            line-height: ${LG.LabelNextToControl.lineHeight};
-            font-size: ${LG.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
           }
         }
       }

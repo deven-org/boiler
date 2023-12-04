@@ -389,24 +389,24 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       flex: 1;
 
       &.sm {
-        font-weight: ${SM.LabelNextToControl.fontWeight};
-        font-size: ${SM.LabelNextToControl.fontSize};
-        font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${SM.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
       }
 
       &.md {
-        font-weight: ${MD.LabelNextToControl.fontWeight};
-        font-size: ${MD.LabelNextToControl.fontSize};
-        font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${MD.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
       }
 
       &.lg {
-        font-weight: ${LG.LabelNextToControl.fontWeight};
-        font-size: ${LG.LabelNextToControl.fontSize};
-        font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${LG.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
       }
     }
 
