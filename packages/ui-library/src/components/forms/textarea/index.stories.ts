@@ -386,7 +386,6 @@ Text Area allows users to input and edit multiline text. Unlike a simple Text In
  - [**Resize**](#resize) 
 - [**Content / Settings**](#content--settings)
  - [**Placeholder**](#placeholder) 
- - [**Resize**](#resize)  
 - [**States**](#states)
  - [**Disabled**](#disabled) 
  - [**Readonly**](#readonly)
