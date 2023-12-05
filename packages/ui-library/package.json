@@ -21,9 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@boiler/eslint-config-boiler": "1.0.0",
-    "@boiler/figma-design-tokens": "0.0.1",
-    "@swc/core": "^1.3.96",
-    "swc-loader": "^0.2.3"
+    "@boiler/figma-design-tokens": "0.0.1"
   },
   "dependencies": {
     "@boiler/icons": "0.0.1",

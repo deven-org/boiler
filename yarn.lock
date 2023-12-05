@@ -1638,7 +1638,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.11.0"
     "@web/dev-server-esbuild": "npm:^0.3.3"
     "@web/test-runner": "npm:^0.15.0"
-    babel-loader: "npm:^9.1.2"
+    babel-loader: "npm:^9.1.3"
     chalk: "npm:^5.2.0"
     clean-webpack-plugin: "npm:^4.0.0"
     copy-webpack-plugin: "npm:^11.0.0"
@@ -1733,10 +1733,8 @@ __metadata:
     "@boiler/figma-design-tokens": "npm:0.0.1"
     "@boiler/icons": "npm:0.0.1"
     "@lit-labs/react": "npm:^1.1.1"
-    "@swc/core": "npm:^1.3.96"
     lit: "npm:^2.6.1"
     nested-css-to-flat: "npm:^1.0.5"
-    swc-loader: "npm:^0.2.3"
   languageName: unknown
   linkType: soft
 
@@ -4958,7 +4956,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.3.49, @swc/core@npm:^1.3.96":
+"@swc/core@npm:^1.3.49":
   version: 1.3.100
   resolution: "@swc/core@npm:1.3.100"
   dependencies:
@@ -7102,7 +7100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^7.0.0 || ^8.0.0 || ^9.0.0, babel-loader@npm:^9.0.0, babel-loader@npm:^9.1.2":
+"babel-loader@npm:^7.0.0 || ^8.0.0 || ^9.0.0, babel-loader@npm:^9.0.0, babel-loader@npm:^9.1.3":
   version: 9.1.3
   resolution: "babel-loader@npm:9.1.3"
   dependencies:
