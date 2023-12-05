@@ -1,9 +1,25 @@
 /* eslint-disable no-console */
 import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
-
+import { html } from 'lit';
 import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
+
+// Shared Style inside the Stories
+const sharedStyles = html`
+  <style>
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .stories-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  </style>
+`;
 
 export default {
   title: 'Design System/Web Components/Forms/Checkbox',
@@ -235,14 +251,14 @@ const args: BlrCheckboxType = {
   size: 'md',
 
   hasLabel: true,
-  label: 'Checkbox Option',
+  label: 'Label',
 
   hasError: false,
   errorMessage: 'This is a sample error message',
   errorIcon: undefined,
 
   hasHint: false,
-  hintMessage: 'This is a sample hint',
+  hintMessage: 'This is a small hint message',
   hintIcon: undefined,
   name: 'checkInputId',
   checkInputId: 'checkInputId',
@@ -257,3 +273,298 @@ const args: BlrCheckboxType = {
   onBlur: logEventType,
 };
 BlrCheckbox.args = args;
+
+// Default parameters for Checkbox component
+const defaultParams: BlrCheckboxType = {
+  theme: 'Light',
+  size: 'md',
+
+  hasLabel: true,
+  label: 'Label',
+
+  hasError: false,
+  errorMessage: 'This is a sample error message',
+  errorIcon: undefined,
+
+  hasHint: false,
+  hintMessage: 'This is a small hint message',
+  hintIcon: undefined,
+  name: 'checkInputId',
+  checkInputId: 'checkInputId',
+  disabled: false,
+  checked: false,
+  indeterminate: false,
+  readonly: false,
+  arialabel: 'check Input',
+
+  onChange: logEventType,
+  onFocus: logEventType,
+  onBlur: logEventType,
+};
+
+// All Stories
+//Appearance Size Story
+/**
+ * ## Appearance
+ * ### Size Variant
+ * The Checkbox component comes in 3 sizes: SM, MD and LG.
+ */
+export const SizeVariant = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Size SM',
+          size: 'sm',
+        })}
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Size MD',
+          size: 'md',
+        })}
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Size LG',
+          size: 'lg',
+        })}
+      </div>
+    </div>
+  `;
+};
+SizeVariant.story = {
+  name: ' ',
+};
+
+//Content / Settings
+/**
+ * ## Content / Settings
+ * ### Checked
+ * The checked state on a Checkbox indicates that the Checkbox is selected or enabled.
+ */
+export const Checked = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Checked',
+          checked: true,
+        })}
+      </div>
+    </div>
+  `;
+};
+Checked.story = {
+  name: ' ',
+};
+
+/**
+ *### Unchecked
+ * The unchecked state on a Checkbox indicates that the Checkbox is not selected.
+ */
+export const Unchecked = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Unchecked',
+          checked: false,
+        })}
+      </div>
+    </div>
+  `;
+};
+Unchecked.story = {
+  name: ' ',
+};
+
+/**
+ * ### Indeterminate
+ * An indeterminate Checkbox component is neither checked nor unchecked. It is commonly used to control a group of Checkbox components.
+ */
+export const Indeterminate = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Indeterminate',
+          indeterminate: true,
+        })}
+      </div>
+    </div>
+  `;
+};
+Indeterminate.story = {
+  name: ' ',
+};
+
+/**
+ * ## States
+ * Apart from states like rest, hover, pressed and focus, the Checkbox component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ *
+ * ### Disabled
+ * The Checkbox component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+ */
+
+export const Disabled = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Disabled',
+          disabled: true,
+        })}
+      </div>
+    </div>
+  `;
+};
+Disabled.story = {
+  name: ' ',
+};
+
+/**
+ * ### Readonly
+ * The Checkbox component in the readonly state can not be interacted with, but it can still be selected and receive focus.
+ */
+export const Readonly = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Readonly',
+          readonly: true,
+        })}
+      </div>
+    </div>
+  `;
+};
+Readonly.story = {
+  name: ' ',
+};
+
+/**
+ * ## Validation
+ *
+ * ### Required
+ * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Checkbox component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component in the dependencies section below.
+ */
+export const Required = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Required',
+        })}
+      </div>
+    </div>
+  `;
+};
+Required.story = {
+  name: ' ',
+};
+
+/**
+ * ### Has Error
+ * The Checkbox component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Checkbox or in case the Checkbox was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) in the dependencies section below.
+ */
+export const HasError = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Error',
+          hasError: true,
+          errorMessage: ' ',
+        })}
+      </div>
+    </div>
+  `;
+};
+HasError.story = {
+  name: ' ',
+};
+
+/**
+ * ## Dependencies
+ *
+ * ### Form Label
+ * The Checkbox component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ */
+
+export const FormLabel = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'With a label',
+        })}
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          hasLabel: false,
+        })}
+      </div>
+    </div>
+  `;
+};
+FormLabel.story = {
+  name: ' ',
+};
+
+/**
+ * ### Form Caption Group
+ * The Checkbox component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component. If the Checkbox component lacks a label (hasLabel=false), the Form Caption Group should remain hidden.
+ */
+export const FormCaptionGroup = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Form Label',
+          hasHint: true,
+        })}
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Form Label with a hint and error message',
+          hasHint: true,
+          hasError: true,
+          hintIcon: 'blr360',
+          errorIcon: 'blrErrorFilled',
+        })}
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Form Label with only a hint and error message',
+          hasHint: true,
+          hasError: true,
+        })}
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          label: 'Form Label with only a error message',
+          hasHint: false,
+          hasError: true,
+        })}
+      </div>
+    </div>
+  `;
+};
+FormCaptionGroup.story = {
+  name: ' ',
+};

@@ -345,7 +345,7 @@ const args: BlrTextInputType = {
   onBlur: () => action('onBlur'),
 };
 BlrTextInput.args = args;
-// Default parameters for Textarea component
+// Default parameters for Text Input component
 const defaultParams: BlrTextInputType = {
   size: 'md',
   placeholder: 'Placeholder-text',
