@@ -28,14 +28,14 @@ const defaultParams: BlrTextareaType = {
   isResizeable: 'none',
   cols: 40,
   rows: 4,
-  placeholder: 'Add a message here',
+  placeholder: 'Placeholder-text',
   value: '',
   minLength: 10,
   maxLength: 140,
-  label: 'Label',
+  label: 'Label-text',
   labelAppendix: '',
-  showHint: false,
-  hintText: 'This is a small hint',
+  hasHint: false,
+  hintMessage: 'This is a small hint',
   hintIcon: 'blrInfo',
   arialabel: '',
   name: '',
@@ -51,22 +51,28 @@ const defaultParams: BlrTextareaType = {
   readonly: false,
 
   hasError: false,
-  errorMessage: "OMG it's an error",
+  errorMessage: '',
   errorIcon: 'blr360',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
 export default {
-  title: 'Design System/Web Components/Forms/TextArea',
+  title: 'Design System/Web Components/Forms/Text Area',
   argTypes: {
     //Appearance
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
+    },
     size: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
       options: FormSizes,
       control: { type: 'radio' },
       table: {
-        disable: false,
         category: 'Appearance',
       },
     },
@@ -76,7 +82,6 @@ export default {
       options: Resizes,
       control: { type: 'select' },
       table: {
-        disable: false,
         category: 'Appearance',
       },
     },
@@ -87,7 +92,6 @@ export default {
       description: 'Enter amount of columns the component should hold.',
       defaultValue: '20',
       table: {
-        disable: false,
         category: 'Appearance',
       },
     },
@@ -98,7 +102,6 @@ export default {
       description: 'Enter amount of rows the component should have.',
       defaultValue: '5',
       table: {
-        disable: false,
         category: 'Appearance',
       },
     },
@@ -109,8 +112,7 @@ export default {
       description: 'Enter string used as placeholder text.',
       defaultValue: 'Placeholder-text',
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     value: {
@@ -118,11 +120,10 @@ export default {
       description: 'Enter the value the component should have.',
       control: {
         type: 'text',
-        label: 'Enter Text',
+        label: 'Label-text',
       },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     minLength: {
@@ -130,8 +131,7 @@ export default {
       description: 'Enter the min allowed length.',
       defaultValue: 0,
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     maxLength: {
@@ -139,8 +139,7 @@ export default {
       description: 'Enter the max allowed length. Additional input is cut off after the max has been reached.',
       defaultValue: 140,
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     hasLabel: {
@@ -149,8 +148,7 @@ export default {
       defaultValue: true,
       control: { type: 'boolean' },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     label: {
@@ -160,25 +158,23 @@ export default {
         type: 'text',
       },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
     labelAppendix: {
       name: 'labelAppendix',
       description:
-        'Enter string used as an appendix to the label. Use this to inform the user in case this field is required.',
+        ' Enter string used as an appendix to the label. Use this to inform the user if this field is required or not.',
       control: {
         type: 'text',
       },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       if: { arg: 'hasLabel', eq: true },
     },
-    showHint: {
+    hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
@@ -186,28 +182,25 @@ export default {
         type: 'boolean',
       },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
-    hintText: {
+    hintMessage: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     hintIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     showCounter: {
@@ -218,17 +211,16 @@ export default {
         type: 'boolean',
       },
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
     },
     warningLimitType: {
       if: { arg: 'showCounter', eq: true },
       table: {
         disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
-      name: 'Warning Limit Type',
+      name: 'warningLimitType',
       description: 'Choose if warning limit is defined by percentage or amount of characters.',
       options: ['warningLimitInt', 'warningLimitPer'],
       control: {
@@ -242,11 +234,10 @@ export default {
     // Only enabled if warningLimitType is Whole Number
     warningLimitInt: {
       table: {
-        disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       control: 'number',
-      name: 'Warning Limit (Whole Number)',
+      name: 'warningLimitInt',
       description: 'Enter at which amount of characters the warning state is displayed.',
       if: { arg: 'warningLimitType', eq: 'warningLimitInt' },
     },
@@ -254,10 +245,10 @@ export default {
     warningLimitPer: {
       table: {
         disable: false,
-        category: 'Content/ Settings',
+        category: 'Content / Settings',
       },
       control: { type: 'range', min: 1, max: 100, step: 1 },
-      name: 'Warning Limit (Percentage)',
+      name: 'warningLimitPer',
       if: { arg: 'warningLimitType', eq: 'warningLimitPer' },
       description: 'Enter at what percentage the warning state is displayed.',
     },
@@ -269,7 +260,6 @@ export default {
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
       defaultValue: false,
       table: {
-        disable: false,
         category: 'States',
       },
     },
@@ -278,7 +268,6 @@ export default {
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       defaultValue: false,
       table: {
-        disable: false,
         category: 'States',
       },
     },
@@ -289,8 +278,7 @@ export default {
       description: 'Choose if the component must hold a value after an interaction or a submit.',
       defaultValue: false,
       table: {
-        disable: false,
-        category: 'Validations',
+        category: 'Validation',
       },
     },
     hasError: {
@@ -298,15 +286,14 @@ export default {
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
-        disable: false,
-        category: 'Validations',
+        category: 'Validation',
       },
     },
     errorMessage: {
       name: 'errorMessage',
       description: 'Enter string used used as error message.',
       table: {
-        category: 'Validations',
+        category: 'Validation',
       },
       if: { arg: 'hasError', eq: true },
     },
@@ -314,8 +301,7 @@ export default {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
-        disable: false,
-        category: 'Validations',
+        category: 'Validation',
       },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -328,17 +314,15 @@ export default {
       description:
         'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
       table: {
-        disable: false,
         category: 'Accessibility',
       },
     },
 
     //Technical attributes
     textareaId: {
-      name: 'textareaID',
+      name: 'textAreaId',
       description: 'Unique identifier for this component.',
       table: {
-        disable: false,
         category: 'Technical Attributes',
       },
     },
@@ -346,7 +330,6 @@ export default {
       name: 'name',
       description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
       table: {
-        disable: false,
         category: 'Technical Attributes',
       },
     },
@@ -357,7 +340,6 @@ export default {
       description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -366,7 +348,6 @@ export default {
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -375,7 +356,6 @@ export default {
       description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
@@ -384,109 +364,70 @@ export default {
       description: 'Fires when some text is selected.',
       action: 'onSelect',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
-
-    theme: {
-      options: Themes,
-      control: { type: 'select' },
-    },
   },
   parameters: {
-    viewMode: 'docs',
-    previewTabs: {
-      'storybook/story/panel': {
-        hidden: true,
-      },
-    },
-    //Two examples for Code integration
+    layout: 'centered',
     docs: {
+      //Two examples for Code integration
       //First example for manual code integration
       //canvas: {sourceState: 'shown'},//show code
       //source: {type: 'code'},//additional to previous
       //Second Example
-      // source: { code: '<blr-textarea label="Text area LG" size="lg"></blr-textarea>',},
+      // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
-        component: `<div>
-        <p>Text area allows users to input and edit multiline text. Unlike a simple text input field that is typically used for single-line text, a text area provides a larger space for users to enter and manipulate multiple lines of text. +
-                Text area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
-        </p>
-        <ul>
-        <li> <a href="/docs/design-system-web-components-textarea--docs"><strong>Docs</strong></a></li>
-        <li> <a href="#appearance"><strong>Appearance</strong></a>
-            <ul>
-                <li> <a href="#sizevariant"><strong>sizeVariant</strong></a></li>
-                <li> <a href="#resize"><strong>resize</strong></a></li>
-            </ul>
-        </li>
-         <li> <a href="#content--settings"><strong>Content/ Settings</strong></a>
-            <ul>
-                <li> <a href="#placeholder"><strong>placeholder</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <a href="#states"><strong>States</strong></a>
-            <ul>
-                <li> <a href="#disabled"><strong>disabled</strong></a>
-                </li>
-                 <li> <a href="#readonly"><strong>readonly</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <a href="#validation"><strong>Validation</strong></a>
-            <ul>
-                <li> <a href="#required"><strong>required</strong></a>
-                </li>
-                 <li> <a href="#haserror"><strong>hasError</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <a href="#dependencies"><strong>Dependencies</strong></a>
-            <ul>
-                <li> <a href="#dependencies"><strong>Caption</strong></a>
-                </li>
-                 <li> <a href="#label"><strong>label</strong></a>
-                </li>
-                <li> <a href="#counter"><strong>Counter</strong></a>
-                </li>
-            </ul>
-        </li>
-        </ul>
-        </div>`,
+        component: `<Markdown>
+Text Area allows users to input and edit multiline text. Unlike a simple Text Input component that is typically used for single-line text, a Text Area provides a larger space for users to enter and manipulate multiple lines of text.
+                Text Area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
+- [**Appearance**](#appearance)
+ - [**Size Variant**](#size-variant) 
+ - [**Resize**](#resize) 
+- [**Content / Settings**](#content--settings)
+ - [**Placeholder**](#placeholder) 
+- [**States**](#states)
+ - [**Disabled**](#disabled) 
+ - [**Readonly**](#readonly)
+- [**Validation**](#validation)
+ - [**Required**](#required) 
+ - [**Has Error**](#has-error)  
+- [**Dependencies**](#dependencies)
+ - [**Form Label**](#form-label) 
+ - [**Form Caption Group**](#form-caption-group)     
+ - [**Counter**](#counter)     
+</Markdown>
+        `,
       },
     },
   },
 };
 
 //Main Component for Textarea
-export const BlrTextarea = (params: BlrTextareaType) =>
+export const TextArea = (params: BlrTextareaType) =>
   html`${sharedStyles}
     <div class="wrapper">
       ${BlrTextareaRenderFunction({
         ...params,
       })}
     </div> `;
-BlrTextarea.storyName = 'TextArea';
-
 const args: BlrTextareaType = {
   theme: 'Light',
   size: 'md',
   isResizeable: 'both',
   cols: 40,
   rows: 4,
-  placeholder: 'Add a message here',
+  placeholder: 'Placeholder-text',
   value: '',
   minLength: 0,
   maxLength: 140,
   hasLabel: true,
-  label: 'Share your feedback',
-  labelAppendix: '(optional)',
-  showHint: false,
-  hintText: 'This is a small hint message',
+  label: 'Label-text',
+  labelAppendix: '(Appendix)',
+  hasHint: false,
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
-  showCounter: false,
+  showCounter: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
@@ -494,17 +435,17 @@ const args: BlrTextareaType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorMessage: ' ',
+  errorMessage: '',
   errorIcon: undefined,
-  arialabel: 'TextArea',
-  textareaId: '#674',
-  name: 'TextArea',
+  arialabel: 'Text Area',
+  textareaId: '#textAreaId',
+  name: 'Text Area',
   onChange: () => action('onChange'),
   onFocus: () => action('onFocus'),
   onSelect: () => action('onSelect'),
   onBlur: () => action('onBlur'),
 };
-BlrTextarea.args = args;
+TextArea.args = args;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
@@ -520,7 +461,7 @@ const argTypesToDisable = [
   'hasLabel',
   'label',
   'labelAppendix',
-  'showHint',
+  'hasHint',
   'hintText',
   'hintIcon',
   'showCounter',
@@ -541,7 +482,6 @@ const argTypesToDisable = [
   'onBlur',
   'onSelect',
 ];
-
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
@@ -557,10 +497,11 @@ const generateDisabledArgTypes = (argTypes: string[]) => {
 const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 // All Stories
-//Appearance Size Story
+//Appearance Size/ Resize
 /**
- * #### sizeVariant
- * The TextArea component comes in 3 sizes: SM, MD and LG.
+ * ## Appearance
+ * ### Size Variant
+ * The Text Area component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -571,21 +512,24 @@ export const SizeVariant = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'sm',
-          label: 'Text area SM',
+          label: 'Text Area SM',
+          placeholder: '',
           value: '',
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Text area MD',
+          label: 'Text Area MD',
+          placeholder: '',
           value: '',
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'lg',
-          label: 'Text area LG',
+          label: 'Text Area LG',
+          placeholder: '',
           value: '',
         })}
       </div>
@@ -595,16 +539,11 @@ export const SizeVariant = () => {
 SizeVariant.argTypes = {
   ...disabledArgTypes,
 };
-SizeVariant.storyName = 'Appearance';
+SizeVariant.story = { name: ' ' };
 
 //Appearance Resize Story
 /**
- * #### auto
- * The resize component can be resizeable or not resizeable.
- * #### horizontal/ vertical
- * A text area that lets the user resize the area horizontally or vertically.
- * #### none
- * A text area that does not resize and uses a scroll bar to show overflow text.
+ * The Text Area component can be fully resizeable, only horizontally resizeable, only vertically resizeable or not resizeable at all.
  */
 export const Resize = () => {
   return html`
@@ -617,6 +556,7 @@ export const Resize = () => {
             theme: 'Light',
             size: 'md',
             label: 'Auto resize',
+            placeholder: '',
             value: '',
             isResizeable: 'both',
           })}
@@ -627,6 +567,7 @@ export const Resize = () => {
             theme: 'Light',
             size: 'md',
             label: 'Horizontal resize',
+            placeholder: '',
             value: '',
             isResizeable: 'horizontal',
           })}
@@ -637,6 +578,7 @@ export const Resize = () => {
             theme: 'Light',
             size: 'md',
             label: 'Vertical resize',
+            placeholder: '',
             value: '',
             isResizeable: 'vertical',
           })}
@@ -646,7 +588,8 @@ export const Resize = () => {
             ...defaultParams,
             theme: 'Light',
             size: 'md',
-            label: 'None',
+            label: 'No resize',
+            placeholder: '',
             value: '',
             isResizeable: 'none',
           })}
@@ -655,15 +598,15 @@ export const Resize = () => {
     </div>
   `;
 };
-
 Resize.argTypes = {
   ...disabledArgTypes,
 };
-Resize.storyName = 'resize';
 
 //Content/ Settings Placeholder
 /**
- * The placeholder component can display a placeholder text. This is recommended to improve usability.
+ * ## Content / Settings
+ * ### Placeholder
+ * The Text Area component can display a placeholder text. This is recommended to improve usability.
  */
 export const Placeholder = () => {
   return html`
@@ -674,15 +617,16 @@ export const Placeholder = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Has placeholder',
+          label: 'With placeholder',
           labelAppendix: '',
+          placeholder: 'Add a message here',
           value: '',
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: "Hasn't placeholder",
+          label: 'Without placeholder',
           labelAppendix: '',
           placeholder: '',
           value: '',
@@ -694,13 +638,14 @@ export const Placeholder = () => {
 Placeholder.argTypes = {
   ...disabledArgTypes,
 };
-Placeholder.storyName = 'Content/ Settings';
+Placeholder.story = { name: ' ' };
 
 // States Disabled
 /**
- * Apart from states like Rest, Hover, Pressed and Focus, the TextArea component can also be Disabled or Readonly. The Error state is documented under Validation.
- * #### disabled
- * The TextArea Component in the Disabled state can not be interacted with. This means it can not receive focus or be selected.
+ * ## States
+ * Apart from states like rest, hover, pressed and focus, the Text Area component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * ### Disabled
+ * The Text Area component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
@@ -711,7 +656,8 @@ export const Disabled = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Disabled text area',
+          label: 'Disabled',
+          placeholder: '',
           labelAppendix: '',
           disabled: true,
           value: '',
@@ -723,11 +669,13 @@ export const Disabled = () => {
 Disabled.argTypes = {
   ...disabledArgTypes,
 };
-Disabled.storyName = 'States';
+Disabled.story = {
+  name: ' ',
+};
 
 // States Readonly
 /**
- * The readonly component in the Readonly state can not be interacted with, but it can still be selected and receive focus.
+ * The Text Area component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
 export const Readonly = () => {
   return html`
@@ -739,6 +687,7 @@ export const Readonly = () => {
           theme: 'Light',
           size: 'md',
           label: 'Readonly',
+          placeholder: '',
           readonly: true,
           value: '',
         })}
@@ -749,9 +698,13 @@ export const Readonly = () => {
 Readonly.argTypes = {
   ...disabledArgTypes,
 };
-Readonly.storyName = 'readonly';
 
 // Validation Required Todo add interactive Story with Button to show the State
+/**
+ * ## Validation
+ * ### Required
+ * The Text Area component can be set as required. If set as required, an error should be thrown, when the Text Area component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
+ */
 export const Required = () => {
   return html`
     ${sharedStyles}
@@ -761,8 +714,9 @@ export const Required = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          placeholder: 'Please leave a short description',
-          label: 'Reason for submission',
+          label: 'Label-text',
+          placeholder: '',
+          required: true,
           labelAppendix: '(required)',
           value: '',
         })}
@@ -773,20 +727,14 @@ export const Required = () => {
 Required.argTypes = {
   ...disabledArgTypes,
 };
-Required.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<h3>required</h3><p>The TextArea component can be set as required. If set as required, an error should be thrown, when the TextArea component was not filled, before it was submitted. It is recommended to indicate in the labelAppendix, whether a component is required or not. For more information on the label and appendix have a look at the FormLabel in the <a href="/docs/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a> section below.</p>',
-    },
-  },
+Required.story = {
+  name: ' ',
 };
-Required.storyName = 'Validation';
 
-// Validation hasError Todo add interactive Story with Button to show the State
+// Validation Has Error Todo add interactive Story with Button to show the State
+/**
+ * The Text Area component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Text Area or in case the Text Area was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
+ */
 export const HasError = () => {
   return html`
     ${sharedStyles}
@@ -796,9 +744,10 @@ export const HasError = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          placeholder: 'Please leave a short description',
-          label: 'Reason for submission',
-          labelAppendix: '(required)',
+          placeholder: '',
+          hasError: true,
+          errorIcon: undefined,
+          label: 'Error',
           value: '',
         })}
       </div>
@@ -808,32 +757,15 @@ export const HasError = () => {
 HasError.argTypes = {
   ...disabledArgTypes,
 };
-HasError.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<p>The TextArea component can be set to have an error with the hasError property. An error can be displayed after submitting a wrong value, after leaving/deselecting the TextArea or in case the TextArea was set as required and has not been filled before submitting. For more information on the error message have a look at the FormCaption in the <a href="/docs/design-system-web-components-textarea--captions"><strong>Dependencies</strong></a> section below.</p>',
-    },
-  },
-};
-HasError.storyName = 'hasError';
 
 //Dependencies Captions
 /**
- *
- * #### FormLabel
- * The TextArea component can display an optional FormLabel component, consisting of a label and a label appendix. For more information see <a href="/docs/design-system-web-components-textarea--label"><strong>FormLabel</strong></a> component.
- *
- * #### FormCaptionGroup
- * The TextArea component can display an optional hint text and error message with or without icons. Both captions can be combined. For more information see  <a href="/docs/design-system-web-components-textarea--captions"><strong>FormCaptionGroup</strong></a> component.
- *
- * #### Counter
- * The TextArea component can display an optional counter. The threshold for the warning and error message can be set individually. For more information see <a href="/docs/design-system-web-components-textarea--counter"><strong>Counter</strong></a> component.
+ * ## Dependencies
+ * ### Form Label
+ * The Text Area component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
-export const Captions = () => {
+// States FormLabel
+export const FormLabel = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -843,8 +775,46 @@ export const Captions = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: 'A text area with a hint',
-          showHint: true,
+          label: 'With label',
+          labelAppendix: '(with appendix)',
+          value: '',
+        })}
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: 'Without label',
+          label: ' ',
+          labelAppendix: '',
+          hasHint: false,
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+FormLabel.argTypes = {
+  ...disabledArgTypes,
+};
+FormLabel.story = {
+  name: ' ',
+};
+/**
+ * The Text Area component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal <a href="/docs/design-system-web-components-internal-components-formcaptiongroup--docs">Form Caption Group</a> component.
+ */
+export const FormCaptionGroup = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-textarea">
+        ${BlrTextareaRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          size: 'md',
+          placeholder: '',
+          label: 'Hint message',
+          hasHint: true,
+          hintIcon: 'blrInfo',
           labelAppendix: '',
           value: '',
         })}
@@ -853,62 +823,25 @@ export const Captions = () => {
           theme: 'Light',
           size: 'md',
           placeholder: '',
-          label: ' A text area with an error message',
+          label: 'Hint and error message',
           labelAppendix: '',
           hasError: true,
-          showHint: false,
-          errorIcon: 'blrError',
+          errorMessage: "OMG it's an error",
+          hasHint: true,
+          errorIcon: 'blrErrorFilled',
           value: '',
         })}
       </div>
     </div>
   `;
 };
-Captions.argTypes = {
+FormCaptionGroup.argTypes = {
   ...disabledArgTypes,
 };
-
-Captions.storyName = 'Dependencies';
-
-// States Label
-export const Label = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textarea">
-        ${BlrTextareaRenderFunction({
-          ...defaultParams,
-          theme: 'Light',
-          size: 'md',
-          label: 'This is a label',
-          labelAppendix: '(optional)',
-          placeholder: '',
-          readonly: true,
-          value: '',
-        })}
-      </div>
-    </div>
-  `;
-};
-Label.argTypes = {
-  ...disabledArgTypes,
-};
-Label.parameters = {
-  backgrounds: {
-    default: '',
-  },
-  docs: {
-    description: {
-      story:
-        '<p>The Text Area can display an optional label component, consisting of a label and a label appendix. For more information review the caption component.</p>',
-    },
-  },
-};
-Label.storyName = 'label';
 
 // States Counter
 /**
- * The TextArea component can display an optional counter. The threshold for the warning and error message can be set individually. For more information see <a href="/docs/design-system-web-components-textarea--counter"><strong>counter</strong></a> component.
+ * The Text Area component can display an optional counter. The threshold for the warning and error message can be set individually. For more information have a look at the internal [Counter](?path=/docs/design-system-web-components-internal-components-counter--docs) component.
  */
 export const Counter = () => {
   return html`
@@ -919,13 +852,12 @@ export const Counter = () => {
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Text area with counter',
-          labelAppendix: '<appendix>',
+          label: 'Counter',
           showCounter: true,
           value: 'This text almost reached the maximum amount of characters.',
           warningLimitType: 'warningLimitInt',
-          warningLimitInt: 44,
-          warningLimitPer: 50,
+          warningLimitInt: 105,
+          warningLimitPer: 75,
         })}
       </div>
     </div>
@@ -939,4 +871,3 @@ Counter.parameters = {
     default: '',
   },
 };
-Counter.storyName = 'counter';

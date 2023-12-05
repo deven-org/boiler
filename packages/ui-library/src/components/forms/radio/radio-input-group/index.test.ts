@@ -4,6 +4,7 @@ import { BlrRadioGroupType, BlrRadioGroupRenderFunction } from './index';
 
 const sampleParams: BlrRadioGroupType = {
   theme: 'Light',
+  size: 'md',
   disabled: false,
   name: 'Default Name',
   required: false,
@@ -14,14 +15,13 @@ const sampleParams: BlrRadioGroupType = {
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
   showLegend: true,
-  showHint: true,
+  hasHint: true,
   groupHintMessage: 'This is a sample hint message',
-  hintIcon: 'blrInfo',
+  groupHintIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
   hideLabel: false,
-  showGroupErrorMessage: false,
 };
 
 describe('blr-radio-group', () => {

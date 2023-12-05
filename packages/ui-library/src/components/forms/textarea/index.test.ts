@@ -1,7 +1,7 @@
 import { BlrTextareaRenderFunction, BlrTextareaType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextareaType = {
@@ -17,10 +17,9 @@ const sampleParams: BlrTextareaType = {
   label: 'Label',
   labelAppendix: '(Optional)',
   errorMessage: "OMG it's an error",
-  placeholder: 'Type your message here ..',
-  hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
+  hintMessage: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
   hintIcon: 'blrInfo',
-  showHint: true,
+  hasHint: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
@@ -28,6 +27,7 @@ const sampleParams: BlrTextareaType = {
   readonly: false,
   required: false,
   hasError: false,
+  errorIcon: 'blr360',
   arialabel: 'TextArea',
   textareaId: '#674',
   name: 'TextArea',
@@ -57,6 +57,48 @@ describe('blr-textarea', () => {
     const placeholder = textarea?.getAttribute('placeholder');
 
     expect(placeholder).to.be.equal(randomString);
+  });
+
+  it('is doesnt have a placeholder attribute if placeholder is empty', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        placeholder: undefined,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const placeholder = textarea?.getAttribute('placeholder');
+
+    expect(placeholder).to.be.equal(null);
+  });
+
+  it('is is applying maxLength of 5', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        maxLength: 5,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const maxLength = textarea?.getAttribute('maxlength');
+
+    expect(maxLength).to.be.equal('5');
+  });
+
+  it('is doesnt have a maxLength attribute if maxLength is empty', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        maxLength: undefined,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const maxLength = textarea?.getAttribute('maxlength');
+
+    expect(maxLength).to.be.equal(null);
   });
 
   it('is is disabled when attribute disabled is set', async () => {
@@ -89,19 +131,65 @@ describe('blr-textarea', () => {
     expect(disabled).to.be.equal(null);
   });
 
-  it('is having a a visible hint icon', async () => {
+  it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
-        showHint: true,
+        hasHint: true,
+        hintIcon: 'blrInfo',
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
+    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
+    const hintClassName = formCaptionHint?.className;
+
+    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
+    const errorClassName = formCaptionError?.className;
+
+    expect(hintClassName).to.contain('hint');
+    expect(errorClassName).to.contain('error');
+  });
+
+  it('is having a visible hint icon', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasHint: true,
         hintIcon: 'blrInfo',
       })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
-    const formHint = querySelectorDeep('blr-form-hint', textarea?.getRootNode() as HTMLElement);
-    const hintMessageIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', hintMessageIcon?.getRootNode() as HTMLElement);
+    const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
+    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
+
+    const rect = svg?.getBoundingClientRect();
+
+    expect(rect).have.property('width');
+    expect(rect).have.property('height');
+
+    expect(rect?.width).to.be.greaterThan(0);
+    expect(rect?.height).to.be.greaterThan(0);
+  });
+
+  it('is having a visible error icon', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
+    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
 

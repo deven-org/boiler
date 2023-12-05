@@ -5,7 +5,7 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
-import { ActionVariantType, FormSizesType, SizesType } from '../../../../globals/types';
+import { ActionVariantType, ActionSizesType, SizesType, FormSizesType } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
 import { BlrIconRenderFunction } from '../../../ui/icon';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
@@ -28,7 +28,7 @@ export class BlrIconButton extends LitElement {
   @property() disabled!: boolean;
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size?: FormSizesType = 'md';
+  @property() size?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
@@ -89,7 +89,7 @@ export class BlrIconButton extends LitElement {
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
-          role=${this.disabled ? nothing : 'button'}
+          role="button"
           @keydown=${this.onClick}
         >
           ${this.focused ? html`<span class="focus-layer"></span>` : nothing}

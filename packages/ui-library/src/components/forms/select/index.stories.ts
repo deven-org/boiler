@@ -16,12 +16,12 @@ export default {
       control: { type: 'select' },
     },
     hintMessage: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     hintIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     errorMessage: {
       if: { arg: 'hasError', eq: true },
@@ -70,7 +70,7 @@ const args: BlrSelectType = {
   arialabel: 'Select',
   theme: 'Light',
   name: 'Text Input',
-  showHint: false,
+  hasHint: false,
   hintMessage: 'This is a hint message',
   hintIcon: 'blrInfo',
   label: 'Label',
@@ -90,8 +90,6 @@ const args: BlrSelectType = {
     { value: 'dieter', label: 'Dieter' },
   ],
   onChange: (event: Event) => console.log(event.type),
-  onFocus: (event: Event) => console.log(event.type),
-  onBlur: (event: Event) => console.log(event.type),
 };
 
 BlrSelect.args = args;

@@ -1,26 +1,33 @@
 import { BlrTextInputRenderFunction, BlrTextInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextInputType = {
-  textInputId: '#1',
-  label: 'Label',
-  labelAppendix: '(Optional)',
+  theme: 'Light',
+  size: 'md',
   type: 'text',
-  value: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  maxLength: 140,
-  errorIcon: 'blrInfo',
-  errorMessage: "OMG it's an error",
-  placeholder: 'Type your message here ..',
-  hintText: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  hintIcon: 'blrInfo',
-  showHint: true,
+  placeholder: 'Placeholder-text',
+  value: '',
+  maxLength: 200,
   hasLabel: true,
+  label: 'Label',
+  labelAppendix: '(Appendix)',
   showInputIcon: true,
   inputIcon: 'blr360',
-  theme: 'Light',
+  hasHint: false,
+  hintMessage: 'This is a small hint message',
+  hintIcon: 'blrInfo',
+  disabled: false,
+  readonly: false,
+  required: false,
+  hasError: false,
+  errorMessage: '',
+  errorIcon: 'blrInfo',
+  arialabel: 'TextInput',
+  textInputId: 'Input Id',
+  name: 'TextInput',
 };
 
 describe('blr-text-input', () => {
@@ -84,6 +91,29 @@ describe('blr-text-input', () => {
     const label = querySelectorDeep('blr-form-label', inputContainer?.getRootNode() as HTMLElement);
 
     expect(label).to.not.exist;
+  });
+
+  it('is shows adjacent caption components in caption group slot', async () => {
+    const element = await fixture(
+      BlrTextInputRenderFunction({
+        ...sampleParams,
+        hasHint: true,
+        hintIcon: 'blrInfo',
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
+      })
+    );
+
+    const formCaptions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+
+    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
+    const hintClassName = formCaptionHint?.className;
+
+    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
+    const errorClassName = formCaptionError?.className;
+
+    expect(hintClassName).to.contain('hint');
+    expect(errorClassName).to.contain('error');
   });
 
   it('has a size md by default', async () => {
