@@ -1647,7 +1647,6 @@ __metadata:
     eslint: "npm:^8.53.0"
     eslint-webpack-plugin: "npm:^3.2.0"
     fork-ts-checker-webpack-plugin: "npm:^7.3.0"
-    html-loader: "npm:^4.2.0"
     html-webpack-plugin: "npm:^5.5.0"
     http-server: "npm:^14.1.1"
     husky: "npm:^8.0.0"
@@ -7861,7 +7860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clean-css@npm:^5.2.2, clean-css@npm:~5.3.2":
+"clean-css@npm:^5.2.2":
   version: 5.3.3
   resolution: "clean-css@npm:5.3.3"
   dependencies:
@@ -8170,7 +8169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^10.0.0, commander@npm:^10.0.1":
+"commander@npm:^10.0.1":
   version: 10.0.1
   resolution: "commander@npm:10.0.1"
   checksum: 53f33d8927758a911094adadda4b2cbac111a5b377d8706700587650fd8f45b0bbe336de4b5c3fe47fd61f420a3d9bd452b6e0e6e5600a7e74d7bf0174f6efe3
@@ -11561,18 +11560,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-loader@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "html-loader@npm:4.2.0"
-  dependencies:
-    html-minifier-terser: "npm:^7.0.0"
-    parse5: "npm:^7.0.0"
-  peerDependencies:
-    webpack: ^5.0.0
-  checksum: e06d0c7004e15b36928549991f04980a8ade05893659b1e1307237b9ca37c7245236b23fef57681dabf3b5c172146022d2a05625fa44cbf752f6d7ce6915ea6f
-  languageName: node
-  linkType: hard
-
 "html-minifier-terser@npm:^6.0.2":
   version: 6.1.0
   resolution: "html-minifier-terser@npm:6.1.0"
@@ -11587,23 +11574,6 @@ __metadata:
   bin:
     html-minifier-terser: cli.js
   checksum: 1aa4e4f01cf7149e3ac5ea84fb7a1adab86da40d38d77a6fff42852b5ee3daccb78b615df97264e3a6a5c33e57f0c77f471d607ca1e1debd1dab9b58286f4b5a
-  languageName: node
-  linkType: hard
-
-"html-minifier-terser@npm:^7.0.0":
-  version: 7.2.0
-  resolution: "html-minifier-terser@npm:7.2.0"
-  dependencies:
-    camel-case: "npm:^4.1.2"
-    clean-css: "npm:~5.3.2"
-    commander: "npm:^10.0.0"
-    entities: "npm:^4.4.0"
-    param-case: "npm:^3.0.4"
-    relateurl: "npm:^0.2.7"
-    terser: "npm:^5.15.1"
-  bin:
-    html-minifier-terser: cli.js
-  checksum: ffc97c17299d9ec30e17269781b816ea2fc411a9206fc9e768be8f2decb1ea1470892809babb23bb4e3ab1f64d606d97e1803bf526ae3af71edc0fd3070b94b9
   languageName: node
   linkType: hard
 
@@ -18694,20 +18664,6 @@ __metadata:
   bin:
     terser: bin/terser
   checksum: 9a73ae528210242593d8bbc46af8a235fb0a7607707910a7c5cb85a7d2692d0780019dcbf34734b3cb2591111cc41628f1dce1608dccd3201b6843458ebe9e00
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.15.1":
-  version: 5.25.0
-  resolution: "terser@npm:5.25.0"
-  dependencies:
-    "@jridgewell/source-map": "npm:^0.3.3"
-    acorn: "npm:^8.8.2"
-    commander: "npm:^2.20.0"
-    source-map-support: "npm:~0.5.20"
-  bin:
-    terser: bin/terser
-  checksum: 439a5128df77d952a664b3c9d798cf2e8463c9cbd0c76e92f811ddec674ea330186ed7a3df3d28d0dd6ed358959d9bddba120d3a2bb13afddaf24576652015e5
   languageName: node
   linkType: hard
 
