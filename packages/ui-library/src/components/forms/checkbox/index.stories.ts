@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
-import { html } from 'lit';
+import { html } from 'lit-html';
 import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
