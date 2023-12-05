@@ -63,23 +63,16 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           }
         }
 
-_FIX_START {
- "Button arrow should be an iconButton";
- "The IconButton shuld be wrapped, so we can apply Navigation.TabBar.ButtonWrapper.Padding";
-}
-        button.arrow {
+        .arrow {
           background: none;
-          color: ${Silent.Icon.Rest};
           border: none;
           font: inherit;
           cursor: pointer;
           outline: inherit;
-          background-color: ${Silent.SurfaceFill.Rest};
-          border-color: ${Silent.SurfaceStroke.Rest};
-          color: ${Silent.Icon.Rest};
+          _background-color: ${Silent.SurfaceFill.Rest};
+          _border-color: ${Silent.SurfaceStroke.Rest};
+          _color: ${Silent.Icon.Rest};
           line-height: 0;
-
-          
 
           &.sm {
             padding: ${IconButton.Container.Padding.SM};
@@ -112,24 +105,17 @@ _FIX_START {
             }
           }
         }
-_FIX_END { "" }
 
         .blr-tab-bar {
           position: relative;
           width: 100%;
           overflow-x: auto;
-          _FIX_padding-top: 15px;
-          _FIX_padding-bottom: 15px;
-          _FIX_margin-bottom: -15px;
-          _max-width: calc(100% - 2rem);
 
           .nav-list {
             display: flex;
             list-style: none;
-            _FIX_padding: 0 0.5rem;
             padding: 0;
             margin: 0;
-            _align-items: center;
 
             &.left {
               justify-content: flex-start;
@@ -164,129 +150,122 @@ _FIX_END { "" }
             .nav-item-container {
               display: flex;
               flex-direction: column;
-              flex: 0 1 0px;
+              _flex: 0 1 0px;
               justify-content: center;
               overflow: clip;
 
 
-              &:focus-within {
+              &:focus-within:not(.disabled) {
                 outline: 2px solid black;
                 outline-offset: -2px;
                 border-radius: 4px;
               }
 
               &.fullWidth {
-                flex: 1 1 0px;
-              }
-
-              &.active {
-                .nav-item-content-wrapper {
-                  > a {
-                  color: ${TabBar.Tab.Label.TextColor.Active.Rest};
-
-                  &:hover {
-                    &:not(.disabled) {
-                      > p {
-                        color: ${TabBar.Tab.Label.TextColor.Active.Hover};
-                      }
-
-                      > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
-                      }
-                    }
-                  }
-
-                  &:focus {
-                    &:not(.disabled) {
-                      > p {
-                        color: ${TabBar.Tab.Label.TextColor.Active.Focus};
-                      }
-
-                      > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
-                      }
-                    }
-                  }
-
-                  &:active {
-                    &:not(.disabled) {
-                      > p {
-                        color: ${TabBar.Tab.Label.TextColor.Active.Pressed};
-                      }
-
-                      > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
-                      }
-                    }
-                  }
-                }
-                }
+                _flex: 1 1 0px;
               }
 
               .nav-item-content-wrapper {
                 display: flex;
                 justify-content: center;
+
                 &:focus-visible {
                   outline: none;
                 }
 
-                > a {
-                  color: ${TabBar.Tab.Label.TextColor.Inactive.Rest};
+                & > .nav-item {
+                  all: initial;
                   display: flex;
                   text-decoration: none;
                   align-items: center;
                   flex-shrink: 0;
 
-                  > blr-icon {
-                    align-items: center;
+                  &.selected {
+                    & > blr-icon {
+                      color: ${TabBar.Tab.Icon.IconColor.Active.Rest};
+                    }
+                    & > label {
+                      color: ${TabBar.Tab.Label.TextColor.Active.Rest};
+                    }
+
+                    &:focus {
+                      &:not(.disabled) {
+                        & > blr-icon {
+                          color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
+                        }
+                        & > label {
+                          color: ${TabBar.Tab.Label.TextColor.Active.Focus};
+                        }
+                      }
+                    }
+
+                    &:hover {
+                      &:not(.disabled) {
+                        & > blr-icon {
+                          color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
+                        }
+                        & > label {
+                          color: ${TabBar.Tab.Label.TextColor.Active.Hover};
+                        }
+                      }
+                    }
+
+                    &:active {
+                      & > blr-icon {
+                        color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
+                      }
+                      & > label {
+                        color: ${TabBar.Tab.Label.TextColor.Active.Pressed};
+                      }
+                    }
+                  }
+                  &:not(.selected) {
+                    & > blr-icon {
+                      color: ${TabBar.Tab.Icon.IconColor.Inactive.Rest};
+                    }
+                    & > label {
+                      color: ${TabBar.Tab.Label.TextColor.Inactive.Rest};
+                    }
+
+                    &:focus {
+                      & > blr-icon {
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
+                      }
+                      & > label {
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
+                      }
+                    }
+
+                    &:hover {
+                      & > blr-icon {
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
+                      }
+                      & > label {
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Hover};
+                      }
+                    }
+
+                    &:active {
+                      & > blr-icon {
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
+                      }
+                      & > label {
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Pressed};
+                      }
+                    }
+
+                    &.disabled {
+                      & > blr-icon {
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
+                      }
+                      & > label {
+                        color: ${TabBar.Tab.Label.TextColor.Inactive.Disabled};
+                      }
+                    }
                   }
 
                   &:focus-visible {
                     outline: none;
-                  }
-
-                  &:hover {
-                    &:not(.disabled) {
-                      > p {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Hover};
-                      }
-                      > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
-                      }
-                    }
-                  }
-
-
-                  &:active {
-                    &:not(.disabled) {
-                      > p {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Pressed};
-                      }
-                      > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
-                      }
-                    }
-                  }
-
-                  &:focus {
-                    &:not(.disabled) {
-                      > p {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
-                      }
-                      > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
-                      }
-                    }
-                  }
-
-                  &.disabled {
-                    > slot {
-                      color: ${TabBar.Tab.Label.TextColor.Inactive.Disabled}
-                    }
-
-                    > blr-icon {
-                      color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
-                    }
                   }
 
                   &.leading {
@@ -296,22 +275,7 @@ _FIX_END { "" }
                   &.trailing {
                     flex-direction: row-reverse;
                   }
-
-                  > p {
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                    margin-inline-start: 0;
-                    margin-inline-end: 0;
-                    padding-block-start: 0;
-                    padding-block-end: 0;
-                    padding-inline-start: 0;
-                    padding-inline-end: 0;
-                  }
                 }
-              }
-
-              .nav-item-underline {
-                opacity: ${TabBar.Tab.HighlightLine.Opacity.Inactive.Rest};
               }
 
               &.sm {
@@ -319,13 +283,13 @@ _FIX_END { "" }
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.SM};
 
                 .nav-item-content-wrapper {
-                  > a {
+                  & > .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
                     padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
                     line-height:  ${TabBar.Tab.Label.Typography.SM.lineHeight};
 
-                    > blr-icon {
+                    & > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.SM};
                       height: ${TabBar.Tab.Icon.IconSize.SM};
                     }
@@ -342,13 +306,13 @@ _FIX_END { "" }
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.MD};
 
                 .nav-item-content-wrapper {
-                  > a {
+                  & .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
                     padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
                     line-height:  ${TabBar.Tab.Label.Typography.MD.lineHeight};
 
-                    > blr-icon {
+                    & blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.MD};
                       height: ${TabBar.Tab.Icon.IconSize.MD};
                     }
@@ -365,13 +329,13 @@ _FIX_END { "" }
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.LG};
 
                 .nav-item-content-wrapper {
-                  > a {
+                  & > .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
                     padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
                     line-height:  ${TabBar.Tab.Label.Typography.LG.lineHeight};
 
-                    > blr-icon {
+                    & > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.LG};
                       height: ${TabBar.Tab.Icon.IconSize.LG};
                     }
@@ -381,18 +345,6 @@ _FIX_END { "" }
                 .nav-item-underline {
                   height: ${TabBar.Tab.HighlightLine.Height.LG};
                 }
-              }
-
-              .nav-item-underline {
-                opacity: 0;
-              }
-
-              &.active {
-                &:not(.disabled) {
-                  .nav-item-underline {
-                    background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Rest};
-                    opacity: ${TabBar.Tab.HighlightLine.Opacity.Active.Rest};
-                  }
               }
             }
           }
