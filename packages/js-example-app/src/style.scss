@@ -1,6 +1,8 @@
+@import '@boiler/ui-library/dist/assets/fonts/fonts.css';
+
 body {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 p {
@@ -8,12 +10,12 @@ p {
 }
 
 .logoWrapper {
-    height: 50vh;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  height: 50vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h2 {
@@ -45,4 +47,3 @@ h2 {
 #toggleLoadingState {
   margin: 15px 0;
 }
-
