@@ -128,7 +128,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           border-style: ${Input.Error.Rest.style};
           border-color: transparent;
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focus};
+          color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
@@ -221,7 +221,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       word-break: break-all;
     }
 
-    .hint-wrapper {
+    .caption-wrapper {
       display: flex;
       flex-direction: column;
 
@@ -238,7 +238,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
     }
 
-    .blr-form-hint {
+    .blr-form-caption {
+      display: flex;
       color: ${Caption.Hint};
 
       &.error {
@@ -250,7 +251,9 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${SM.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${SM.CaptionComponent.IconWrapper.Padding};
+          padding-top: ${SM.CaptionComponent.IconWrapper.PaddingTop};
+          height: ${SM.CaptionComponent.IconDimension};
+          width: ${SM.CaptionComponent.IconDimension};
         }
 
         .blr-caption-text {
@@ -267,7 +270,9 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${MD.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${MD.CaptionComponent.IconWrapper.Padding};
+          padding-top: ${MD.CaptionComponent.IconWrapper.PaddingTop};
+          height: ${MD.CaptionComponent.IconDimension};
+          width: ${MD.CaptionComponent.IconDimension};
         }
 
         .blr-caption-text {
@@ -284,7 +289,9 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
         gap: ${LG.CaptionComponent.ItemSpacing};
 
         .blr-icon {
-          padding: ${LG.CaptionComponent.IconWrapper.Padding};
+          padding-top: ${LG.CaptionComponent.IconWrapper.PaddingTop};
+          height: ${LG.CaptionComponent.IconDimension};
+          width: ${LG.CaptionComponent.IconDimension};
         }
 
         .blr-caption-text {

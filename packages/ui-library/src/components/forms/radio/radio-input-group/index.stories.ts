@@ -12,9 +12,8 @@ export default {
       control: { type: 'select' },
     },
     options: { control: 'array' },
-    layout: { control: 'select', options: [undefined, 'horizontal', 'vertical'] },
-    hintIcon: {
-      if: { arg: 'showHint', eq: true },
+    groupHintIcon: {
+      if: { arg: 'hasHint', eq: true },
       options: [undefined, ...getIconName(IconKeys)],
       control: { type: 'select' },
     },
@@ -27,7 +26,7 @@ export default {
       if: { arg: 'hasError', eq: true },
     },
     groupHintMessage: {
-      if: { arg: 'showHint', eq: true },
+      if: { arg: 'hasHint', eq: true },
     },
     theme: {
       options: Themes,
@@ -52,16 +51,14 @@ const args: BlrRadioGroupType = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  layout: undefined,
   showLegend: true,
-  showHint: true,
+  hasHint: true,
   groupHintMessage: 'This is a sample hint message',
-  hintIcon: 'blrInfo',
+  groupHintIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
   hideLabel: false,
-  showGroupErrorMessage: false,
 };
 
 BlrRadioGroup.args = args;

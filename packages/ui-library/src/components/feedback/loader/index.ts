@@ -31,7 +31,9 @@ export class BlrLoader extends LitElement {
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>
-        <div class="${classes}" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}></div>`;
+        <div class="loader-container ${this.size}">
+          <div class="${classes}" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}></div>
+        </div>`;
     }
   }
 }

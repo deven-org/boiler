@@ -14,6 +14,7 @@ const sampleParams: BlrTextButtonType = {
   variant: 'cta',
   loadingStatus: 'Loading',
   theme: 'Light',
+  buttonDisplay: 'inline-block',
 };
 
 describe('blr-text-button', () => {
@@ -156,5 +157,27 @@ describe('blr-text-button', () => {
 
     expect(leadingIcon).not.to.exist;
     expect(svg).not.to.exist;
+  });
+
+  it('display the button as block when "buttonDisplay" is set as block', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'block' }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+
+    if (button) {
+      const buttonCssDisplay = getComputedStyle(button)['display'];
+      expect(buttonCssDisplay).to.equal('block');
+    }
+  });
+
+  it('displays the button as inline-block when "buttonDisplay" is set as inline-block', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'inline-block' }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+
+    if (button) {
+      const buttonCssDisplay = getComputedStyle(button)['display'];
+      expect(buttonCssDisplay).to.equal('inline-block');
+    }
   });
 });

@@ -12,7 +12,8 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 const TAG_NAME = 'blr-number-input';
 
@@ -24,7 +25,7 @@ export class BlrNumberInput extends LitElement {
   protected _numberFieldNode!: HTMLInputElement;
 
   @property() numberInputId!: string;
-  @property() variant: 'mode1' | 'mode2' | 'mode3' = 'mode1';
+  @property() stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
   @property() label!: string;
   @property() disabled?: boolean;
   @property() placeholder?: string;
@@ -35,10 +36,10 @@ export class BlrNumberInput extends LitElement {
   @property() labelAppendix?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = 'blrInfo';
-  @property() showHint = true;
-  @property() hintText?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() errorIcon?: SizelessIconType;
+  @property() hasHint = true;
+  @property() hintMessage?: string;
+  @property() hintIcon?: SizelessIconType;
   @property() value?: number;
   @property() step?: number;
   @property() unit?: string;
@@ -87,6 +88,10 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected getButtonTemplate(icon: SizelessIconType, onClick: () => void): TemplateResult<1> {
+    if (!this.size) {
+      return html``;
+    }
+
     const iconSizeVariant = getComponentConfigToken([
       'SizeVariant',
       'Action',
@@ -98,7 +103,7 @@ export class BlrNumberInput extends LitElement {
     const buttonClass = classMap({
       'custom-stepper-button': true,
       [iconSizeVariant]: true,
-      [this.variant]: true,
+      [this.stepperVariant]: true,
     });
 
     const button = html`
@@ -115,15 +120,15 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected renderMode() {
-    switch (this.variant) {
-      case 'mode1': {
+    switch (this.stepperVariant) {
+      case 'split': {
         return html`
           ${this.getButtonTemplate('blrMinus', this.stepperDown)} ${this.getButtonTemplate('blrPlus', this.stepperUp)}
         `;
       }
-      case 'mode2': {
+      case 'horizontal': {
         return html`
-          <div class="stepper-combo mode2 horizontal ${this.size}">
+          <div class="stepper-combo horizontal  ${this.size}">
             ${this.getButtonTemplate('blrMinus', this.stepperDown)}
             ${BlrDividerRenderFunction({
               directionVariant: 'vertical',
@@ -133,9 +138,9 @@ export class BlrNumberInput extends LitElement {
           </div>
         `;
       }
-      case 'mode3': {
+      case 'vertical': {
         return html`
-          <div class="stepper-combo mode3 vertical ${this.size}">
+          <div class="stepper-combo vertical  ${this.size}">
             ${this.getButtonTemplate('blrChevronUp', this.stepperUp)}
             ${BlrDividerRenderFunction({
               directionVariant: 'horizontal',
@@ -170,9 +175,38 @@ export class BlrNumberInput extends LitElement {
         'input-wrapper': true,
         'disabled': this.disabled || false,
         [`${this.size}`]: this.size,
-        [this.variant || 'mode1']: this.variant || 'mode1',
+        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
       });
+
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
+          ? html`
+              <div class="hint-wrapper">
+                ${BlrFormCaptionRenderFunction({
+                  variant: 'hint',
+                  theme: this.theme,
+                  size: this.size,
+                  message: this.hintMessage,
+                  icon: this.hintIcon,
+                })}
+              </div>
+            `
+          : nothing}
+        ${this.hasError && (this.errorMessage || this.errorIcon)
+          ? html`
+              <div class="error-wrapper">
+                ${BlrFormCaptionRenderFunction({
+                  variant: 'error',
+                  theme: this.theme,
+                  size: this.size,
+                  message: this.errorMessage,
+                  icon: this.errorIcon,
+                })}
+              </div>
+            `
+          : nothing}
+      `;
 
       return html`
         <style>
@@ -210,17 +244,8 @@ export class BlrNumberInput extends LitElement {
               `
             : nothing}
         </div>
-        ${this.showHint || this.hasError
-          ? BlrFormInfoRenderFunction({
-              theme: this.theme,
-              size: this.size,
-              showHint: this.showHint,
-              hintText: this.hintText,
-              hintIcon: this.hintIcon,
-              hasError: !!this.hasError,
-              errorMessage: this.errorMessage,
-              errorIcon: this.errorIcon,
-            })
+        ${this.hasHint || this.hasError
+          ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
           : nothing}
       `;
     }

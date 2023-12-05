@@ -1,8 +1,11 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
+import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+const { NumberInput } = componentTokens.Forms;
+
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG } = semanticTokens.Forms;
+  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
 
   return typeSafeNestedCss`
@@ -16,18 +19,20 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         color: inherit;
       }
 
+      .unit{
+        color:${PrefixSuffix.OnPopulatedField.Default.Rest};
+      }
+
       > * {
         background-color: transparent;
       }
 
-      &.mode1 {
-        display: grid;
-        grid-template-columns: 10% 40% 40% 10%;
-
+      &.split {
         &.sm {
           > .custom-stepper-button {
             width: ${StepperCombo.SM.Vertical.Width};
           }
+          
         }
 
         &.md {
@@ -47,10 +52,19 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   
         > input {
           text-align: right;
+          &.sm{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+          }
+
+          &.md{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+          }
+
+          &.lg{
+            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+          }
         }
       }
-
-   
 
       > .unit,
       input {
@@ -60,6 +74,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           font-family: ${SM.UserInput.fontFamily}, sans-serif;
           line-height: ${SM.UserInput.lineHeight};
           padding: ${SM.InputField.Padding};
+
         }
 
         &.md {
@@ -77,6 +92,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           line-height: ${LG.UserInput.lineHeight};
           padding: ${LG.InputField.Padding};
         }
+
       }
 
       &.disabled {
@@ -138,7 +154,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
         &:focus-within {
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${Input.Error.Focus};
+          color: ${UserInput.Error.Focused};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {
@@ -166,7 +182,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
     return typeSafeNestedCss`
       .stepper-combo {
-        &.mode2 {
+        &.horizontal {
           display: grid;
           grid-template-columns: 1fr 0 1fr;
           justify-content: center;
@@ -194,9 +210,10 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
               padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
             }
           }
+         
         }
 
-        &.mode3 {
+        &.vertical {
           display: grid;
           grid-template-rows: 1fr 0 1fr;
           justify-content: center;
@@ -251,11 +268,11 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           cursor: not-allowed;
         }
 
-        &.mode2 {
+        &.horizontal {
           width: unset;
         }
 
-        &.mode3 {
+        &.vertical {
           width: inherit;
         }
       }
@@ -283,18 +300,20 @@ export const baseStyle = typeSafeNestedCss`
       -moz-appearance: textfield;
     }
 
-    &.mode1 {
+    &.split {
       > button:first-of-type {
         order: -2;
       }
 
       .unit {
         order: 0;
+        padding-left:0;
       }
-
+   
       .unit.prepend {
         order: -1;
         text-align: right;
+        padding-right:0;
       }
 
       > input.prepend {
@@ -304,12 +323,29 @@ export const baseStyle = typeSafeNestedCss`
       > button:last-of-type {
         margin-left:auto;
       }
+      > input{
+        padding-right:0;
+      }
     }
 
-    &.mode2,
-    &.mode3 {
+    &.horizontal,
+    &.vertical {
       .unit.prepend {
         order: -1;
+        padding-right:0;
+      }
+      > input.prepend{
+        &.sm{
+        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+        }
+
+        &.md{
+          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+        }
+        
+        &.lg{
+          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+        }
       }
     }
   }

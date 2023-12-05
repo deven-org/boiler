@@ -3,14 +3,33 @@ export const InputSizes = ['sm', 'md', 'lg'] as const;
 export const FeedbackSizes = ['sm', 'md', 'lg'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const ActionSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
-
+export const Units = [
+  'USD',
+  'EUR',
+  'JPY',
+  'GBP',
+  'kg',
+  'g',
+  'lb',
+  'oz',
+  '%',
+  'm',
+  'cm',
+  'km',
+  'in',
+  'ft',
+  'l',
+  'ml',
+  's',
+  'min',
+] as const;
 export const InputTypes = ['text', 'email', 'password'] as const;
 export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 
 export const IconPositionVariant = ['leading', 'trailing'] as const;
 export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destructive', 'encourage'] as const;
 export const FeedbackVariants = ['default', 'inverted'] as const;
-export const HintVariants = ['hint', 'error'] as const;
+export const CaptionVariants = ['hint', 'error'] as const;
 export const CounterVariants = ['default', 'warn', 'error'] as const;
 export const DividerVariations = ['vertical', 'horizontal'] as const;
 export const TabVariants = ['standard', 'fullWidth'] as const;
@@ -36,3 +55,5 @@ export const ToolTipArrowPosition = ['start', 'end', 'middle', 'hide'] as const;
 
 export const LabelVariants = ['label', 'error'] as const;
 export const Resizes = ['both', 'vertical', 'horizontal', 'none'] as const;
+
+export const ButtonDisplayOptions = ['block', 'inline-block'] as const;

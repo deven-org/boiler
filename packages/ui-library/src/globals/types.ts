@@ -8,7 +8,7 @@ import {
   DividerVariations,
   ActionVariants,
   FeedbackVariants,
-  HintVariants,
+  CaptionVariants,
   CounterVariants,
   TabVariants,
   TabContentVariants,
@@ -20,13 +20,14 @@ import {
   Resizes,
   ActionSizes,
   ButtonGroupAlignmentVariants,
+  ButtonDisplayOptions,
 } from './constants';
 
 export type SizesType = (typeof Sizes)[number];
 
 export type ActionVariantType = (typeof ActionVariants)[number];
 export type FeedbackVariantType = (typeof FeedbackVariants)[number];
-export type HintVariantType = (typeof HintVariants)[number];
+export type CaptionVariantType = (typeof CaptionVariants)[number];
 export type CounterVariantType = (typeof CounterVariants)[number];
 
 export type ActionSizesType = (typeof ActionSizes)[number];
@@ -83,3 +84,4 @@ export type ToolTipVisibility = 'onLoad' | 'onHover';
 export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
 
 export type LabelVariantType = (typeof LabelVariants)[number];
+export type ButtonDisplayType = (typeof ButtonDisplayOptions)[number];

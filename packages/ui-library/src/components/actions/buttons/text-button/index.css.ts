@@ -18,12 +18,11 @@ export const styleCustom = typeSafeNestedCss`
   .blr-text-button {
     align-items: center;
     justify-content: center;
-    display: inline-flex;
+    display: flex;
     cursor: pointer;
     position: relative;
     
     &.xs {
-      gap: ${TextButton.Container.ItemSpacing.XS};
       padding: ${TextButton.Container.Padding.XS};
       border-radius: ${TextButton.Container.BorderRadius.XS};
 
@@ -33,7 +32,6 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.sm {
-      gap: ${TextButton.Container.ItemSpacing.SM};
       padding: ${TextButton.Container.Padding.SM};
       border-radius: ${TextButton.Container.BorderRadius.SM};
 
@@ -43,9 +41,9 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.md {
-      gap: ${TextButton.Container.ItemSpacing.MD};
       padding: ${TextButton.Container.Padding.MD};
       border-radius: ${TextButton.Container.BorderRadius.MD};
+      
 
       & > .focus-layer {
         border-radius: ${TextButton.Container.BorderRadius.MD};
@@ -53,7 +51,6 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.lg {
-      gap: ${TextButton.Container.ItemSpacing.LG};
       padding: ${TextButton.Container.Padding.LG};
       border-radius: ${TextButton.Container.BorderRadius.LG};
 
@@ -63,7 +60,6 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     &.xl {
-      gap: ${TextButton.Container.ItemSpacing.XL};
       padding: ${TextButton.Container.Padding.XL};
       border-radius: ${TextButton.Container.BorderRadius.XL};
 
@@ -75,9 +71,49 @@ export const styleCustom = typeSafeNestedCss`
 
   .loading {
     & > .icon,
-    & > .label {
+    & > .label,
+    & > .flex-container {
       visibility: hidden;
     }
   }
 
+  .block {
+    display: block;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.xs {
+      gap: ${TextButton.Container.ItemSpacing.XS}
+    }
+
+    &.sm {
+      gap: ${TextButton.Container.ItemSpacing.SM}
+    }
+
+    &.md {
+      gap: ${TextButton.Container.ItemSpacing.MD}
+    }
+
+    &.lg {
+      gap: ${TextButton.Container.ItemSpacing.LG}
+    }
+
+    &.xl {
+      gap: ${TextButton.Container.ItemSpacing.XL}
+    }
+  }
+
+  .trailing-icon-class,
+  .leading-icon-class {
+    display: flex;
+    align-items: center;
+  }
 `;

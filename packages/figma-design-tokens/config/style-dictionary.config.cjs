@@ -57,6 +57,7 @@ const semanticTypes = [
   'Neutral',
   'Warning',
   'Error',
+  'PrefixSuffix',
 ];
 
 const componentTypes = [
@@ -81,6 +82,8 @@ const componentTypes = [
   'ButtonGroup',
   'Tooltip',
   'RadioGroup',
+  'NumberInput',
+  'CaptionGroup'
 ];
 
 StyleDictionaryPackage.registerFormat({

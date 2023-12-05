@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { textInputLight, textInputDark } from '../../../foundation/component-tokens/text-input.css';
+import { textInputLight, textInputDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../../globals/types';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
 import { SizelessIconType } from '@boiler/icons';
@@ -14,7 +14,8 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 
 const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { BlrFormInfoRenderFunction } from '../../internal-components/form-info';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
@@ -22,6 +23,7 @@ export class BlrTextInput extends LitElement {
 
   @property() textInputId!: string;
   @property() type: InputTypes = 'text';
+  @property() arialabel!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -33,17 +35,19 @@ export class BlrTextInput extends LitElement {
   @property() onChange?: HTMLElement['oninput'];
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
+  @property() onSelect?: HTMLElement['onselect'];
   @property() maxLength?: number;
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() showInputIcon = true;
   @property() inputIcon: SizelessIconType = 'blr360';
-  @property() showHint = true;
-  @property() hintText?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
-  @property() errorIcon: SizelessIconType = 'blrInfo';
+  @property() hasHint = true;
+  @property() hintMessage?: string;
+  @property() hintIcon?: SizelessIconType;
+  @property() errorIcon?: SizelessIconType;
   @property() hasLabel!: boolean;
+  @property() name!: string;
 
   @property() theme: ThemeType = 'Light';
 
@@ -77,9 +81,9 @@ export class BlrTextInput extends LitElement {
       });
 
       const inputContainerClasses = classMap({
-        [`focus`]: this.isFocused || false,
-        [`error-input`]: this.hasError || false,
-        [`disabled`]: this.disabled || false,
+        'focus': this.isFocused || false,
+        'error-input': this.hasError || false,
+        'disabled': this.disabled || false,
         [`${this.size}`]: this.size,
       });
 
@@ -99,6 +103,27 @@ export class BlrTextInput extends LitElement {
         'InputField',
         'Icon',
       ]).toLowerCase() as SizesType;
+
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'hint',
+              theme: this.theme,
+              size: this.size,
+              message: this.hintMessage,
+              icon: this.hintIcon,
+            })
+          : nothing}
+        ${this.hasError && (this.errorMessage || this.errorIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'error',
+              theme: this.theme,
+              size: this.size,
+              message: this.errorMessage,
+              icon: this.errorIcon,
+            })
+          : nothing}
+      `;
 
       return html`
         <style>
@@ -122,6 +147,8 @@ export class BlrTextInput extends LitElement {
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.textInputId}
+                name="${this.name || nothing}"
+                aria-label=${this.arialabel}
                 type="${this.currentType}"
                 .value="${this.value}"
                 placeholder="${this.placeholder}"
@@ -137,7 +164,7 @@ export class BlrTextInput extends LitElement {
               />
             </div>
             ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
-              ? BlrIconRenderFunction({
+              ? html`${BlrIconRenderFunction({
                   icon: this.hasError
                     ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
                     : calculateIconName(this.inputIcon, iconSizeVariant),
@@ -148,10 +175,10 @@ export class BlrTextInput extends LitElement {
                   classMap: iconClasses,
                   hideAria: true,
                   disablePointerEvents: this.disabled || this.readonly,
-                })
+                })}`
               : nothing}
             ${wasInitialPasswordField && !this.readonly
-              ? BlrIconRenderFunction({
+              ? html`${BlrIconRenderFunction({
                   icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
                   name: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
                   size: iconSizeVariant,
@@ -159,20 +186,11 @@ export class BlrTextInput extends LitElement {
                   hideAria: true,
                   disablePointerEvents: this.disabled || this.readonly,
                   onClick: () => this.togglePassword(),
-                })
+                })}`
               : nothing}
           </div>
-          ${this.showHint || this.hasError
-            ? BlrFormInfoRenderFunction({
-                theme: this.theme,
-                size: this.size,
-                showHint: this.showHint,
-                hintText: this.hintText,
-                hintIcon: this.hintIcon,
-                hasError: !!this.hasError,
-                errorMessage: this.errorMessage,
-                errorIcon: this.errorIcon,
-              })
+          ${this.hasHint || this.hasError
+            ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
             : nothing}
         </div>
       `;

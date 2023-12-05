@@ -10,10 +10,18 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
   const entries = Object.entries(props);
 
   entries.forEach(([key, value], index) => {
-    if (index === 0) {
-      templateFragments.push(`<${tagName} .${key}=`);
+    if (typeof value !== 'function') {
+      if (index === 0) {
+        templateFragments.push(`<${tagName} .${key}=`);
+      } else {
+        templateFragments.push(` .${key}=`);
+      }
     } else {
-      templateFragments.push(` .${key}=`);
+      if (index === 0) {
+        templateFragments.push(`<${tagName} @${key}=`);
+      } else {
+        templateFragments.push(` @${key}=`);
+      }
     }
 
     values.push(value);
