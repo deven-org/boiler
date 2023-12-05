@@ -40,7 +40,7 @@ const defaultParams: BlrTextButtonType = {
 };
 
 export default {
-  title: 'Design System/Web Components/Actions/Buttons/TextButton',
+  title: 'Design System/Web Components/Actions/Buttons/Text Button',
   argTypes: {
     //Appearance
     variant: {
@@ -214,7 +214,7 @@ Text Button represents a clickable button that typically displays text rather th
 
 //Main Component for Text Button
 export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderFunction(params);
-BlrTextButton.storyName = 'TextButton';
+BlrTextButton.storyName = 'Text Button';
 const args: BlrTextButtonType = {
   theme: 'Light',
   variant: 'primary',
