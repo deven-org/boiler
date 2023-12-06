@@ -27,6 +27,7 @@ export class BlrCheckbox extends LitElement {
 
   @property() label!: string;
   @property() checkInputId?: string = '';
+  @property() arialabel?: string;
 
   @property() disabled?: boolean;
   @property() checked?: boolean;
@@ -39,7 +40,7 @@ export class BlrCheckbox extends LitElement {
   @property() hintIcon?: SizelessIconType;
   @property() hintMessage?: string;
   @property() hasLabel!: boolean;
-
+  @property() name?: string;
   @property() checkedIcon?: SizelessIconType = 'blrCheckmark';
   @property() indeterminatedIcon?: SizelessIconType = 'blrMinus';
 
@@ -239,8 +240,9 @@ export class BlrCheckbox extends LitElement {
             type="checkbox"
             class="input-control"
             tabindex="-1"
+            aria-label="${this.arialabel}"
             id=${this.checkInputId || nothing}
-            name=${this.checkInputId || nothing}
+            name=${this.name || nothing}
             ?disabled=${this.disabled}
             ?checked=${this.currentCheckedState}
             ?indeterminate=${this.currentIndeterminateState}

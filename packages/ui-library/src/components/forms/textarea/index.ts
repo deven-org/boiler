@@ -64,6 +64,8 @@ export class BlrTextarea extends LitElement {
   }
 
   protected updateCounter() {
+    const event = new Event('david', { bubbles: true, composed: true });
+    this.dispatchEvent(event);
     const length = this.textareaElement?.value?.length;
     if (length !== undefined) {
       this.count = length;
@@ -162,7 +164,7 @@ export class BlrTextarea extends LitElement {
             @focus=${this.focus}
             @blur=${this.blur}
             @select="${this.onSelect}"
-            @keyup="${this.updateCounter}"
+            @keyup=${this.updateCounter}
           >
 ${this.value}</textarea
           >
