@@ -31,25 +31,30 @@ export class BlrIconButton extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrClick?: () => void;
+
   @state() protected focused = false;
 
   protected handleFocus = () => {
     if (!this.disabled) {
       this.focused = true;
-      this.dispatchEvent(new Event('blrfocus', { bubbles: true, composed: true }));
+      this.dispatchEvent(new Event('blrFocus', { bubbles: true, composed: true }));
     }
   };
 
   protected handleBlur = () => {
     if (!this.disabled) {
       this.focused = false;
-      this.dispatchEvent(new Event('blrblur', { bubbles: true, composed: true }));
+      this.dispatchEvent(new Event('blrBlur', { bubbles: true, composed: true }));
     }
   };
 
   protected handleClick = () => {
     if (!this.disabled) {
-      this.dispatchEvent(new Event('blrclick', { bubbles: true, composed: true }));
+      this.dispatchEvent(new Event('blrClick', { bubbles: true, composed: true }));
     }
   };
 

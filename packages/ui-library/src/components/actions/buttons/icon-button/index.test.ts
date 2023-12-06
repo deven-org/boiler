@@ -108,7 +108,7 @@ describe('blr-icon-button', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrclick', () => {
+    element.getRootNode()?.addEventListener('blrClick', () => {
       fired = true;
     });
 
@@ -123,7 +123,7 @@ describe('blr-icon-button', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrclick', () => {
+    element.getRootNode()?.addEventListener('blrClick', () => {
       fired = true;
     });
 
@@ -138,7 +138,7 @@ describe('blr-icon-button', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrfocus', () => {
+    element.getRootNode()?.addEventListener('blrFocus', () => {
       fired = true;
     });
 
@@ -153,7 +153,7 @@ describe('blr-icon-button', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrfocus', () => {
+    element.getRootNode()?.addEventListener('blrFocus', () => {
       fired = true;
     });
 
@@ -168,7 +168,7 @@ describe('blr-icon-button', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrblur', () => {
+    element.getRootNode()?.addEventListener('blrBlur', () => {
       fired = true;
     });
 
@@ -184,7 +184,7 @@ describe('blr-icon-button', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrblur', () => {
+    element.getRootNode()?.addEventListener('blrBlur', () => {
       fired = true;
     });
 

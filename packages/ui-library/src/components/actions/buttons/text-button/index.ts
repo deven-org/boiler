@@ -39,6 +39,11 @@ export class BlrTextButton extends LitElement {
   @property() loadingStatus!: string;
   @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrClick?: () => void;
+
   @property() theme: ThemeType = 'Light';
 
   @state() protected focused = false;
