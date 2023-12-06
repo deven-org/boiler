@@ -1,0 +1,49 @@
+@import '@boiler/ui-library/dist/assets/fonts/fonts.css';
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.logoWrapper {
+  height: 50vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.componentWrapper {
+  height: 50vh;
+  background-color: white;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  border-bottom: 1px solid #ececec;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#toggleLoadingState {
+  margin: 15px 0;
+}
