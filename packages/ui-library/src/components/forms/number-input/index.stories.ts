@@ -43,6 +43,7 @@ const defaultParams: BlrNumberInputType = {
 export default {
   title: 'Design System/Web Components/Forms/Number Input',
   args: {
+    theme: 'Light',
     size: 'md',
     stepperVariant: 'vertical',
     placeholder: 'Placeholder-text',
@@ -56,7 +57,7 @@ export default {
     label: 'Label-text',
     labelAppendix: '(Appendix)',
     hasHint: false,
-    hintText: 'This is a small hint',
+    hintMessage: 'This is a small hint',
     hintIcon: 'blrInfo',
     disabled: false,
     readonly: false,
@@ -66,10 +67,10 @@ export default {
     errorMessage: '',
     errorIcon: undefined,
     numberInputId: ' ',
-    theme: 'Light',
+    name: 'NumberInput',
     onChange: () => action('onChange'),
-    onFocus: () => action('onFocus'),
     onSelect: () => action('onSelect'),
+    onFocus: () => action('onFocus'),
     onBlur: () => action('onBlur'),
   },
   argTypes: {
@@ -139,7 +140,7 @@ export default {
     },
     prependUnit: {
       name: 'prependUnit',
-      description: 'Unit Choose if unit is displayed as a prefix or suffix.',
+      description: 'Choose if unit is displayed as a prefix or suffix.',
       table: {
         category: 'Content / Settings',
       },
@@ -209,8 +210,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintText: {
-      name: 'hintMessage',
+    hintMessage: {
       description: 'Enter string used used as hint message.',
       if: { arg: 'hasHint', eq: true },
       table: {
@@ -299,7 +299,7 @@ export default {
     },
     name: {
       name: 'name',
-      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
+      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted.',
       table: {
         category: 'Technical Attributes',
       },
@@ -345,7 +345,7 @@ export default {
       options: Themes,
       control: { type: 'select' },
       table: {
-        category: 'Technical Attributes',
+        category: 'Appearance',
       },
     },
   },
@@ -430,8 +430,8 @@ export const StepperVariant = () =>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
-        stepperVariant: 'split',
-        label: 'vertical',
+        stepperVariant: 'vertical',
+        label: 'Vertical',
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
@@ -441,7 +441,7 @@ export const StepperVariant = () =>
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
         stepperVariant: 'horizontal',
-        label: 'horizontal',
+        label: 'Horizontal',
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
@@ -450,8 +450,8 @@ export const StepperVariant = () =>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
-        stepperVariant: 'vertical',
-        label: 'split',
+        stepperVariant: 'split',
+        label: 'Split',
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
@@ -550,7 +550,7 @@ export const Disabled = () => {
 Disabled.story = { name: ' ' };
 
 /**
- * The Number Input component can display a placeholder text. This is recommended to improve usability.
+ * The Number Input component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
 export const Readonly = () => {
   return html`
@@ -578,7 +578,7 @@ export const Required = () => {
       ${BlrNumberInputRenderFunction({
         ...defaultParams,
         required: true,
-        labelAppendix: 'required',
+        labelAppendix: '(required)',
       })}
     </div>
   `;
@@ -653,7 +653,7 @@ export const FormLabel = () => {
 };
 
 /**
- * The Number Input component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formHint--docs) component.
+ * The Number Input component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
