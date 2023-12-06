@@ -203,7 +203,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintMessage: {
+    hintText: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
       if: { arg: 'hasHint', eq: true },
@@ -342,7 +342,6 @@ export default {
       },
     },
   },
-  // Events
   parameters: {
     viewMode: 'docs',
     layout: 'centered',
