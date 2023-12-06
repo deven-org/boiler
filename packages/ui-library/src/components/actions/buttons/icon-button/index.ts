@@ -22,8 +22,6 @@ export class BlrIconButton extends LitElement {
 
   @property() arialabel!: string;
   @property() icon?: SizelessIconType;
-  @property() onClick?: HTMLButtonElement['onclick'];
-  @property() onBlur?: HTMLButtonElement['onblur'];
   @property() loading?: boolean;
   @property() disabled!: boolean;
   @property() buttonId?: string;
@@ -36,13 +34,23 @@ export class BlrIconButton extends LitElement {
   @state() protected focused = false;
 
   protected handleFocus = () => {
-    console.log('focused');
-    this.focused = true;
+    if (!this.disabled) {
+      this.focused = true;
+      this.dispatchEvent(new Event('blrfocus', { bubbles: true, composed: true }));
+    }
   };
 
   protected handleBlur = () => {
-    console.log('blurred');
-    this.focused = false;
+    if (!this.disabled) {
+      this.focused = false;
+      this.dispatchEvent(new Event('blrblur', { bubbles: true, composed: true }));
+    }
+  };
+
+  protected handleClick = () => {
+    if (!this.disabled) {
+      this.dispatchEvent(new Event('blrclick', { bubbles: true, composed: true }));
+    }
   };
 
   protected render() {
@@ -84,13 +92,17 @@ export class BlrIconButton extends LitElement {
         <span
           aria-label=${this.arialabel || nothing}
           class="blr-semantic-action blr-icon-button ${classes}"
-          @click=${this.onClick}
+          @click=${this.handleClick}
           id=${this.buttonId || nothing}
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
           role="button"
-          @keydown=${this.onClick}
+          @keydown=${(event: KeyboardEvent) => {
+            if (event.code === 'Space') {
+              this.handleClick();
+            }
+          }}
         >
           ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
