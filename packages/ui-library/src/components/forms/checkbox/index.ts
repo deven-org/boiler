@@ -46,9 +46,10 @@ export class BlrCheckbox extends LitElement {
 
   @property() size?: FormSizesType = 'md';
 
-  @property() onFocus?: HTMLButtonElement['onfocus'];
-  @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() onChange?: HTMLButtonElement['onchange'];
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrChange?: () => void;
 
   @property() theme: ThemeType = 'Light';
 
@@ -71,7 +72,14 @@ export class BlrCheckbox extends LitElement {
   protected handleChange(event: Event) {
     if (!this.disabled && !this.readonly) {
       this.currentIndeterminateState = false;
-      this.onChange?.(event);
+
+      this.dispatchEvent(
+        new CustomEvent('blrChange', {
+          bubbles: true,
+          composed: true,
+          detail: { originalEvent: event, checkedState: this.currentCheckedState },
+        })
+      );
     }
   }
 
@@ -80,14 +88,24 @@ export class BlrCheckbox extends LitElement {
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled && !this.readonly) {
       this.focused = true;
-      this.onFocus?.(event);
+
+      this.dispatchEvent(
+        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
     }
   };
 
   protected handleBlur = (event: FocusEvent) => {
     if (!this.disabled && !this.readonly) {
       this.focused = false;
-      this.onBlur?.(event);
+
+      this.dispatchEvent(
+        new CustomEvent('blrBlur', {
+          bubbles: true,
+          composed: true,
+          detail: { originalEvent: event },
+        })
+      );
     }
   };
 

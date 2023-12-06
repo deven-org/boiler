@@ -48,23 +48,29 @@ export class BlrTextButton extends LitElement {
 
   @state() protected focused = false;
 
-  protected handleFocus = () => {
+  protected handleFocus = (event: Event) => {
     if (!this.disabled) {
       this.focused = true;
-      this.dispatchEvent(new Event('blrFocus', { bubbles: true, composed: true }));
+      this.dispatchEvent(
+        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
     }
   };
 
-  protected handleBlur = () => {
+  protected handleBlur = (event: Event) => {
     if (!this.disabled) {
       this.focused = false;
-      this.dispatchEvent(new Event('blrBlur', { bubbles: true, composed: true }));
+      this.dispatchEvent(
+        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
     }
   };
 
-  protected handleClick = () => {
+  protected handleClick = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(new Event('blrClick', { bubbles: true, composed: true }));
+      this.dispatchEvent(
+        new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
     }
   };
 
@@ -142,7 +148,7 @@ export class BlrTextButton extends LitElement {
           role=${this.disabled ? nothing : 'button'}
           @keydown=${(event: KeyboardEvent) => {
             if (event.code === 'Space') {
-              this.handleClick();
+              this.handleClick(event);
             }
           }}
           id=${this.buttonId || nothing}

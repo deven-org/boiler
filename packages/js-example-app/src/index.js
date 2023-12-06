@@ -6,6 +6,7 @@ const toggleDisabledState = document.querySelector('#toggleDisabledState');
 const logsContainer = document.querySelector('#logs');
 
 const blrButton = document.getElementsByTagName('blr-text-button')[0];
+const blrCheckbox = document.getElementsByTagName('blr-checkbox')[0];
 
 const addLog = (log) => {
   logsContainer.innerHTML = logsContainer.innerHTML + log + '<br>';
@@ -47,4 +48,16 @@ blrButton.addEventListener('blrFocus', () => {
 
 blrButton.addEventListener('blrBlur', () => {
   addLog('blr-text-button blurred');
+});
+
+blrCheckbox.addEventListener('blrChange', (e) => {
+  addLog('blr-checkbox changed: ' + e.detail.checkedState);
+});
+
+blrCheckbox.addEventListener('blrFocus', () => {
+  addLog('blr-checkbox focused');
+});
+
+blrCheckbox.addEventListener('blrBlur', () => {
+  addLog('blr-checkbox blurred');
 });
