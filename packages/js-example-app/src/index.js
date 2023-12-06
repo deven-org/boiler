@@ -9,6 +9,8 @@ const blrButton = document.getElementsByTagName('blr-text-button')[0];
 
 const addLog = (log) => {
   logsContainer.innerHTML = logsContainer.innerHTML + log + '<br>';
+
+  logsContainer.scrollTo(0, logsContainer.scrollHeight);
 };
 
 toggleLoadingButton.addEventListener('click', () => {
