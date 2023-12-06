@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Boiler | Vanilla JS Example App</title>
+  </head>
+  <body>
+    <div class="logoWrapper">
+      <img src="logo.svg" width="200" height="100" alt="boiler" />
+      <h2>Vanilla JS Example Application</h2>
+    </div>
+    <div class="componentWrapper">
+      <div class="component">
+        <p>Text Button</p>
+        <blr-text-button
+          theme="Light"
+          variant="cta"
+          size="md"
+          label="Button"
+          hasIcon="true"
+          iconPosition="leading"
+          icon="blr360"
+          buttonId="button-id"
+          loadingStatus="Loading"
+        ></blr-text-button>
+        <button id="toggleLoadingState">Toggle Loading State</button>
+      </div>
+      <div class="component">
+        <p>Text Input</p>
+        <blr-text-input placeholder="Enter text..." value="" hintText="Hint"></blr-text-input>
+      </div>
+      <div class="component">
+        <p>Textarea</p>
+        <blr-textarea
+          placeholder="Enter text..."
+          value=""
+          showHint="true"
+          hintText="Hint"
+          isResizeable="both"
+          showCounter="true"
+          maxLength="140"
+          warningLimitType="warningLimitInt"
+          warningLimitInt="105"
+        ></blr-textarea>
+      </div>
+      <div class="component">
+        <p>Radio Input</p>
+        <blr-radio size="md"></blr-radio>
+      </div>
+      <div class="component">
+        <p>Tab Bar</p>
+        <blr-tab-bar
+          tabs="[
+        {
+          label: 'Tab 1',
+          icon: 'blr360',
+          href: './',
+          disabled: true,
+        },
+        {
+          label: 'Tab 2',
+          icon: 'blrInfo',
+          href: './',
+        },
+        {
+          label: 'Tab 3',
+          icon: 'blrCrop',
+          href: './',
+        },
+        {
+          label: 'Tab 4',
+          icon: 'blrDocumentNew',
+          href: './',
+        },
+        {
+          label: 'Tab 5',
+          icon: 'blrDocumentTwo',
+          href: './',
+        },
+        {
+          label: 'Tab 6',
+          icon: 'blrDownload',
+          href: './',
+        },
+        {
+          label: 'Tab 7',
+          icon: 'blrHeart',
+          href: './',
+        },
+        {
+          label: 'Tab 8',
+          icon: 'blrHome',
+          href: './',
+        },
+        {
+          label: 'Tab 9',
+          icon: 'blrLockClosed',
+          href: './',
+        },
+        {
+          label: 'Tab 10',
+          icon: 'blrMusic',
+          href: './',
+        },
+        {
+          label: 'Tab 11',
+          icon: 'blrPen',
+          href: './',
+        },
+      ]"
+          variant="standard"
+          overflowVariantStandard="buttons"
+          overflowVariantFullWidth="browserOverflow"
+          size="md"
+          showDivider="true"
+          tabContent="labelAndIcon"
+          iconPosition="leading"
+          alignment="left"
+        ></blr-tab-bar>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
