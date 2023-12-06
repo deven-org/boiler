@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
+import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
