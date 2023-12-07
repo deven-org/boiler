@@ -33,10 +33,10 @@ const defaultParams: BlrTextButtonType = {
   loading: false,
   disabled: false,
   buttonId: 'buttonId',
-  loadingStatus: 'Loading',
   buttonDisplay: 'inline-block',
-  onBlur: () => action('onBlur'),
+  loadingStatus: '',
   onClick: () => action('onClick'),
+  onBlur: () => action('onBlur'),
 };
 
 export default {
@@ -54,7 +54,7 @@ export default {
     },
     size: {
       name: 'sizeVariant',
-      description: 'Choose size  of the component.',
+      description: 'Select size of the component.',
       options: ActionSizes,
       control: { type: 'select' },
       table: {
@@ -69,8 +69,9 @@ export default {
       },
     },
     buttonDisplay: {
+      description: 'Choose if button should fill its parent container or hug its content.',
       options: ButtonDisplayOptions,
-      control: { type: 'select' },
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -99,7 +100,7 @@ export default {
     },
     icon: {
       name: 'icon',
-      description: 'Select an icon which is displayed inside of the input.',
+      description: 'Select an icon which is displayed next to the label.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       if: { arg: 'hasIcon', eq: true },
@@ -109,7 +110,7 @@ export default {
     },
     iconPosition: {
       name: 'iconPosition',
-      description: 'Choose the position of the icons within the tabs.',
+      description: 'Choose the position of the icon next to the label.',
       options: IconPositionVariant,
       control: { type: 'select' },
       if: { arg: 'hasIcon', eq: true },
@@ -121,7 +122,7 @@ export default {
     disabled: {
       name: 'disabled',
       description:
-        'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
+        'Choose if component is disabled. Prevents the user to select or change the value of this component.',
       defaultValue: false,
       table: {
         category: 'States',
@@ -135,6 +136,14 @@ export default {
         category: 'States',
       },
     },
+    //Technical attributes
+    buttonId: {
+      name: 'textButtonId',
+      description: 'Unique identifier for this component.',
+      table: {
+        category: 'Technical Attributes',
+      },
+    },
     //Accessibility
     arialabel: {
       name: 'ariaLabel',
@@ -144,28 +153,7 @@ export default {
         category: 'Accessibility',
       },
     },
-    //Technical attributes
-    buttonId: {
-      name: 'textButtonId',
-      description: 'Unique identifier for this component.',
-      table: {
-        category: 'Technical Attributes',
-      },
-    },
-    href: {
-      name: 'href',
-      description: "Enter the link's destination with the href attribute.",
-      table: {
-        category: 'Technical Attributes',
-      },
-    },
-    target: {
-      name: 'target',
-      description: 'Choose where to open the linked document with the target attribute.',
-      table: {
-        category: 'Technical Attributes',
-      },
-    },
+    // Events
     onClick: {
       name: 'onClick',
       description: 'Fires when the component is clicked.',
@@ -190,8 +178,14 @@ export default {
         category: 'Events',
       },
     },
+    loadingStatus: {
+      table: {
+        disable: true,
+      },
+    },
   },
   parameters: {
+    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {
@@ -200,10 +194,10 @@ Text Button represents a clickable button that typically displays text rather th
 <br>
 - [**Appearance**](#appearance)
  - [**Variant**](#variant)
- - [**Size-Variant**](#size-variant)
+ - [**Size Variant**](#size-variant)
 - [**States**](#states)
  - [**Disabled**](#disabled)
-- [**Dependencies**](#disabled)
+- [**Dependencies**](#dependencies)
  - [**Icon**](#icon)
  - [**Loader**](#loader)
 </Markdown>`,
@@ -223,13 +217,13 @@ const args: BlrTextButtonType = {
   hasIcon: true,
   iconPosition: 'leading',
   icon: 'blr360',
-  loading: false,
   disabled: false,
+  loading: false,
   buttonId: 'buttonId',
-  loadingStatus: 'Loading',
   buttonDisplay: 'inline-block',
-  onBlur: () => action('onBlur'),
+  loadingStatus: '',
   onClick: () => action('onClick'),
+  onBlur: () => action('onBlur'),
 };
 BlrTextButton.args = args;
 
@@ -246,13 +240,10 @@ const argTypesToDisable = [
   'loading',
   'disabled',
   'buttonId',
-  'loadingStatus',
   'buttonDisplay',
   'onClick',
   'onBlur',
   'onFocus',
-  'href',
-  'target',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
@@ -283,32 +274,38 @@ export const Variant = () => {
       <div class="stories-textbutton">
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
+          variant: 'cta',
+          label: 'Cta',
+          hasIcon: false,
+        })}
+        ${BlrTextButtonRenderFunction({
+          ...defaultParams,
           variant: 'primary',
+          label: 'Primary',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'secondary',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'cta',
+          label: 'Secondary',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'silent',
+          label: 'Silent',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'destructive',
+          label: 'Destructive',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'encourage',
+          label: 'Encourage',
           hasIcon: false,
         })}
       </div>
@@ -331,26 +328,31 @@ export const SizeVariant = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'xs',
+          label: 'Button xs',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'sm',
+          label: 'Button sm',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'md',
+          label: 'Button md',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'lg',
+          label: 'Button lg',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'xl',
+          label: 'Button xl',
           hasIcon: false,
         })}
       </div>
@@ -364,6 +366,7 @@ SizeVariant.argTypes = {
 //States
 /**
  * ## States
+ * Apart from states like rest, hover, pressed and focus, the Text Button component can also be disabled or loading.
  * ### Disabled
  * The Text Button component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -375,6 +378,7 @@ export const Disabled = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           disabled: true,
+          label: 'Disabled',
           hasIcon: false,
         })}
       </div>
@@ -402,11 +406,13 @@ export const Icon = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           hasIcon: true,
+          label: 'Leading Icon',
           iconPosition: 'leading',
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           hasIcon: true,
+          label: 'Trailing Icon',
           iconPosition: 'trailing',
         })}
       </div>
