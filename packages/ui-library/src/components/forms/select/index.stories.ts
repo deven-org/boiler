@@ -16,7 +16,7 @@ const sharedStyles = html`
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.25em;
     }
   </style>
 `;
@@ -237,6 +237,7 @@ export default {
     },
   },
   parameters: {
+    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {
@@ -264,34 +265,7 @@ Select presents users with a list of options from which they can make a single s
 export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params);
 
 BlrSelect.storyName = 'Select';
-
-const args: BlrSelectType = {
-  arialabel: 'Select',
-  theme: 'Light',
-  name: 'select',
-  hasHint: false,
-  hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
-  label: 'Label-text',
-  labelAppendix: '(Appendix)',
-  size: 'md',
-  hasError: false,
-  errorMessage: "OMG it's an error",
-  errorIcon: 'blrInfo',
-  disabled: false,
-  required: false,
-  selectId: 'selectId',
-  icon: 'blrChevronDown',
-  options: [
-    { value: '0', label: 'Option 1', selected: false, disabled: true },
-    { value: '1', label: 'Option 2', selected: false, disabled: false },
-    { value: '2', label: 'Option 3', selected: true, disabled: false },
-    { value: '4', label: 'Option 4', selected: false, disabled: false },
-  ],
-  onChange: (event: Event) => console.log(event.type),
-};
-
-BlrSelect.args = args;
+BlrSelect.args = defaultParams;
 
 /**
  * ## Appearance
@@ -350,7 +324,6 @@ export const Disabled = () => {
 };
 Disabled.story = { name: ' ' };
 /**
- * ### Readonly
  * The Select component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
 export const Readonly = () => {
@@ -367,7 +340,6 @@ export const Readonly = () => {
     </div>
   `;
 };
-Readonly.story = { name: ' ' };
 
 /**
  * ## Validation
@@ -393,7 +365,6 @@ export const Required = () => {
 Required.story = { name: ' ' };
 
 /**
- * ### Has Error
  * The Select component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Select or in case the Select was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) in the dependencies section below.
  */
 export const HasError = () => {
@@ -412,7 +383,6 @@ export const HasError = () => {
     </div>
   `;
 };
-HasError.story = { name: ' ' };
 
 /**
  * ## Dependencies
@@ -436,7 +406,6 @@ export const FormLabel = () => {
 };
 FormLabel.story = { name: ' ' };
 /**
- * ### Icon
  * The Select component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
  */
 
@@ -461,10 +430,8 @@ export const Icon = () => {
     </div>
   `;
 };
-Icon.story = { name: ' ' };
 
 /**
- * ### Form Caption Group
  * The Select component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = () => {
@@ -495,7 +462,4 @@ export const FormCaptionGroup = () => {
       </div>
     </div>
   `;
-};
-FormCaptionGroup.story = {
-  name: ' ',
 };
