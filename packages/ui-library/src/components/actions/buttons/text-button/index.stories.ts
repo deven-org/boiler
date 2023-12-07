@@ -191,6 +191,9 @@ export default {
       description: {
         component: `<Markdown>
 Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
+ 
+ **NOTE**<br>
+ The Text Button component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
 <br>
 - [**Appearance**](#appearance)
  - [**Variant**](#variant)
@@ -442,8 +445,3 @@ export const Loader = () => {
 Loader.argTypes = {
   ...disabledArgTypes,
 };
-//Button as link
-/**
- *     Button as link
- * The Text Button component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
- */
