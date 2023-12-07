@@ -2,12 +2,12 @@ import { BlrRadioRenderFunction, BlrRadioType } from './index';
 import { InputSizes } from '../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
-import { html } from 'lit';
+import { html } from 'lit-html';
 
 const sharedStyles = html`
   <style>
     .wrapper {
-      padding: 20px;
+      padding: 1.25em;
     }
   </style>
 `;
@@ -19,7 +19,7 @@ export default {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
       options: InputSizes,
-      control: { type: 'select' },
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -53,7 +53,6 @@ export default {
     hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
-      defaultValue: true,
       control: {
         type: 'boolean',
       },
@@ -83,7 +82,6 @@ export default {
       name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
-      defaultValue: false,
       table: {
         category: 'States',
       },
@@ -91,7 +89,6 @@ export default {
     readonly: {
       name: 'readonly',
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
-      defaultValue: false,
       table: {
         category: 'States',
       },
@@ -99,7 +96,6 @@ export default {
     required: {
       name: 'required',
       description: 'Choose if the component must hold a value after an interaction or a submit.',
-      defaultValue: false,
       table: {
         category: 'Validations',
       },
@@ -107,7 +103,6 @@ export default {
     hasError: {
       name: 'hasError',
       description: 'Choose if component has an error.',
-      defaultValue: false,
       table: {
         category: 'Validations',
       },
@@ -221,7 +216,7 @@ BlrRadio.storyName = 'Radio';
 const args: BlrRadioType = {
   size: 'md',
   checked: false,
-  optionId: 'option_1',
+  optionId: 'optionId',
   label: 'Label',
   hasHint: false,
   hintMessage: 'This is a small hint',
@@ -239,7 +234,7 @@ const args: BlrRadioType = {
 BlrRadio.args = args;
 
 /**
- *  ## Apperance
+ *  ## Appearance
  *  ### Size Variant
  * The Radio component comes in 3 sizes: SM, MD and LG.
  */
