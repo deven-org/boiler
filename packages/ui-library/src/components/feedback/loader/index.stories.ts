@@ -6,24 +6,14 @@ import { html } from 'lit';
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
-    .wrapper {
-      display: flex;
-      justify-content: center;
-    }
-    .stories-loader {
-      /*display: flex;*/
-      /*flex-wrap: wrap;*/
-      /*flex-direction: column;*/
-      /*gap: 1rem;*/
-    }
     .size-container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100px; /* oder eine andere passende Größe */
-      height: 100px; /* oder eine andere passende Größe */
-      margin: 0.5rem; /* Abstand zwischen den Containern */
+      width: 100px;
+      height: 100px;
+      margin: 0.5rem;
     }
   </style>
 `;
@@ -81,13 +71,7 @@ Loader’s primary purpose is to provide feedback to the user that the applicati
 //Main Component for Loader
 export const BlrLoader = (params: BlrLoaderType) => BlrLoaderRenderFunction(params);
 BlrLoader.storyName = 'Loader';
-const args: BlrLoaderType = {
-  variant: 'default',
-  size: 'md',
-  theme: 'Light',
-  loadingStatus: 'Loading',
-};
-BlrLoader.args = args;
+BlrLoader.args = defaultParams;
 
 // All Stories
 //Appearance Variant/ Size Variant
@@ -99,44 +83,31 @@ BlrLoader.args = args;
 export const Variant = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-loader">
-        <div>
-          ${BlrLoaderRenderFunction({
-            ...defaultParams,
-            variant: 'default',
-            size: 'md',
-            theme: 'Light',
-            loadingStatus: 'Loading',
-          })}
-        </div>
-      </div>
-    </div>
+    ${BlrLoaderRenderFunction({
+      ...defaultParams,
+      variant: 'default',
+      size: 'md',
+      theme: 'Light',
+      loadingStatus: 'Loading',
+    })}
   `;
 };
 Variant.story = { name: ' ' };
 
 /**
- * ###  Size Variant
  * The Loader component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-loader">
-        ${FeedbackSizes.map(
-          (size) =>
-            html`<div class="size-container">
-              ${BlrLoaderRenderFunction({
-                ...defaultParams,
-                size: size,
-              })}
-            </div>`
-        )}
-      </div>
-    </div>
+    ${FeedbackSizes.map(
+      (size) =>
+        html`<div class="size-container">
+          ${BlrLoaderRenderFunction({
+            ...defaultParams,
+            size: size,
+          })}
+        </div>`
+    )}
   `;
 };
-SizeVariant.story = { name: 'Size Variant' };
-SizeVariant.story = { name: ' ' };
