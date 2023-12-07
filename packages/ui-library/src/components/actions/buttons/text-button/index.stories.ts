@@ -9,10 +9,6 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
-    .wrapper {
-      display: flex;
-      justify-content: center;
-    }
     .stories-textbutton {
       display: flex;
       flex-wrap: wrap;
@@ -212,23 +208,7 @@ Text Button represents a clickable button that typically displays text rather th
 //Main Component for Text Button
 export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderFunction(params);
 BlrTextButton.storyName = 'Text Button';
-const args: BlrTextButtonType = {
-  theme: 'Light',
-  variant: 'primary',
-  size: 'md',
-  label: 'Label-text',
-  hasIcon: true,
-  iconPosition: 'leading',
-  icon: 'blr360',
-  disabled: false,
-  loading: false,
-  buttonId: 'buttonId',
-  buttonDisplay: 'inline-block',
-  loadingStatus: '',
-  onClick: () => action('onClick'),
-  onBlur: () => action('onBlur'),
-};
-BlrTextButton.args = args;
+BlrTextButton.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
@@ -273,45 +253,43 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 export const Variant = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'cta',
-          label: 'Cta',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'primary',
-          label: 'Primary',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'secondary',
-          label: 'Secondary',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'silent',
-          label: 'Silent',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'destructive',
-          label: 'Destructive',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'encourage',
-          label: 'Encourage',
-          hasIcon: false,
-        })}
-      </div>
+    <div class="stories-textbutton">
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        variant: 'cta',
+        label: 'Cta',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        variant: 'primary',
+        label: 'Primary',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        variant: 'secondary',
+        label: 'Secondary',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        variant: 'silent',
+        label: 'Silent',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        variant: 'destructive',
+        label: 'Destructive',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        variant: 'encourage',
+        label: 'Encourage',
+        hasIcon: false,
+      })}
     </div>
   `;
 };
@@ -326,39 +304,37 @@ Variant.story = { name: ' ' };
 export const SizeVariant = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          size: 'xs',
-          label: 'Button xs',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          size: 'sm',
-          label: 'Button sm',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          size: 'md',
-          label: 'Button md',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          size: 'lg',
-          label: 'Button lg',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          size: 'xl',
-          label: 'Button xl',
-          hasIcon: false,
-        })}
-      </div>
+    <div class="stories-textbutton">
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        size: 'xs',
+        label: 'Button XS',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        size: 'sm',
+        label: 'Button SM',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        size: 'md',
+        label: 'Button MD',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        size: 'lg',
+        label: 'Button LG',
+        hasIcon: false,
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        size: 'xl',
+        label: 'Button XL',
+        hasIcon: false,
+      })}
     </div>
   `;
 };
@@ -376,15 +352,13 @@ SizeVariant.argTypes = {
 export const Disabled = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          disabled: true,
-          label: 'Disabled',
-          hasIcon: false,
-        })}
-      </div>
+    <div class="stories-textbutton">
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        disabled: true,
+        label: 'Disabled',
+        hasIcon: false,
+      })}
     </div>
   `;
 };
@@ -404,21 +378,19 @@ Disabled.story = {
 export const Icon = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          hasIcon: true,
-          label: 'Leading Icon',
-          iconPosition: 'leading',
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          hasIcon: true,
-          label: 'Trailing Icon',
-          iconPosition: 'trailing',
-        })}
-      </div>
+    <div class="stories-textbutton">
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        hasIcon: true,
+        label: 'Leading Icon',
+        iconPosition: 'leading',
+      })}
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        hasIcon: true,
+        label: 'Trailing Icon',
+        iconPosition: 'trailing',
+      })}
     </div>
   `;
 };
@@ -432,13 +404,11 @@ Icon.story = { name: ' ' };
 export const Loader = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          loading: true,
-        })}
-      </div>
+    <div class="stories-textbutton">
+      ${BlrTextButtonRenderFunction({
+        ...defaultParams,
+        loading: true,
+      })}
     </div>
   `;
 };
