@@ -230,9 +230,9 @@ const argTypesToDisable = [
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   argTypes.forEach((argType: string) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     disabledArgTypes[argType] = {
       table: {
         disable: true,
