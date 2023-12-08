@@ -34,7 +34,7 @@ It's worth noting that we are currently in the alpha stage, and while we enthusi
 > Apart from code and design contributions, everyone is always invited to contribute by engaging with the community for example by commenting and giving input on issues or by starting and taking part in discussions in GitHub. Another way to contribute is by getting more eyes on the project. Just add a star to our repository! Or, if you are on Figma, add a heart to our Figma community page or leave a comment if you like the project.
 
 
-To get an overview of the project, read the [README](https://github.com/deven-org/B01LER-Kitchen/blob/develop/README.md). Here are some resources to help you get started with open source contributions:
+To get an overview of the project and how to set it up, read the [README](https://github.com/deven-org/B01LER-Kitchen/blob/develop/README.md). For more details about our Code of Conduct see [CODE_OF_CONDUCT](https://github.com/deven-org/B01LER-Kitchen/blob/develop/CODE_OF_CONDUCT.md). Here are some resources to help you get started with open source contributions:
 - [How to install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [How to handle repositories](https://docs.gitlab.com/ee/user/project/repository/)
 - [Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)
@@ -88,31 +88,31 @@ Our project has the following file structure:
 
 ## Issues
 Before being able to contribute to B01LER, you need to get yourself assigned to an issue. For this you could either apply to solve an existing issue or create a new issue. 
+
+### Solve an existing issue
+Browse our [existing issues](https://github.com/deven-org/B01LER-Kitchen/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
+
 ### Create a new issue
 Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues). If a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One is for bugs and the other one for everything else, like new features or also improvements of existing features.
 
 <details>
 <summary>How to write a useful issue?</summary>
 <br />
-
-- It should be _reproducible_. It should contain all the instructions needed to reproduce the same outcome.
-- It should be _specific_. It's important that it addresses one specific problem.
+- Use the existing issue templates
+- It should be _specific_. It's important that it addresses one specific topic.
+- If it is a bug it should be _reproducible_. It should contain all the instructions needed to reproduce the same outcome.
 
 </details>
  After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
-
-### Solve an existing issue
-Browse our [existing issues](https://github.com/deven-org/B01LER-Kitchen/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
-
 
 ## Branch
 For contributions we are using [Gitflow as branching strategy](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20is%20a%20legacy%20Git,software%20development%20and%20DevOps%20practices). [Here](https://danielkummer.github.io/git-flow-cheatsheet/) you can also find a short cheatsheet about Gitflow.
 
 ### Branch Naming Convention
-Each branch should follow the following structure:
+The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
 
-- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. The allowed types are: `main`, `release`, `hotfix`, `develop` and `feature`.  
+- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. The allowed types are: `release`, `hotfix` and `feature`.  
 - **issueNumber:** The issue number of your task. For example: `421` 
 - **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words. For example: `text-area-storybook-documentation`  
 
@@ -130,11 +130,15 @@ yarn compile
 ```
 
 ## Pull Request
-Once your contribution is ready, it is time to create a pull request. Please create pull requests for the develop branch and not for main and also make sure that pull requests are linked to the related issue using the “Development” field in either the pull request or the issue.
+Once your contribution is ready, it is time to create a pull request. Once your contribution is ready, it is time to create a pull request.  
+Please create pull requests for the `develop` branch and not for `main`.  
+Please also make sure that pull requests are linked to the related issue using the “Development” field in either the pull request or the issue.
 
 
 ## Code Review
-After you created a pull request, your code will be reviewed by the B01LER core team and if everything looks good your code will be merged to develop and be part of a future release. In case we find things we would like you to change we will leave comments and kindly ask you to update your pull request again once you worked in the changes. Once all comments have been solved the pull request will be merged.  We will try our best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull requests, but in the end at least one member of the core team needs to approve it, before it can be merged.
+After you created a pull request, your code will be reviewed by the B01LER core team. Once the PR has two approvals, your code will be merged to develop and will be part of a future release.  
+In case we find things we would like you to change we will leave comments. We kindly ask you to update your pull request in regards of the requested changes. Once all comments have been solved the pull request will be merged.  
+We will try our best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull requests, but in the end at least one member of the core team needs to approve it, before it can be merged.
 
 
 ## B01LER Monthly
