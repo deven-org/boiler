@@ -3,6 +3,7 @@ import { InputSizes } from '../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
+import { action } from '@storybook/addon-actions';
 
 const sharedStyles = html`
   <style>
@@ -15,6 +16,13 @@ const sharedStyles = html`
 export default {
   title: 'Design System/Web Components/Forms/Radio',
   argTypes: {
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
+    },
     size: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
@@ -175,13 +183,6 @@ export default {
         category: 'Events',
       },
     },
-    theme: {
-      options: Themes,
-      control: { type: 'select' },
-      table: {
-        category: 'Technical Attributes',
-      },
-    },
   },
   parameters: {
     viewMode: 'docs',
@@ -199,6 +200,7 @@ export default {
           - [**Disabled**](#disabled)
           - [**Readonly**](#readonly)
         - [**Validation**](#validation)
+          - [**Required**](#required)
           - [**Has Error**](#has-error)
         - [**Dependencies**](#dependencies)
           - [**Form Caption Group**](#form-caption-group)
@@ -213,22 +215,30 @@ export const BlrRadio = (params: BlrRadioType) => BlrRadioRenderFunction(params)
 
 BlrRadio.storyName = 'Radio';
 
-const args: BlrRadioType = {
+const args: BlrRadioType & {
+  value: string;
+  ariaLabel: string;
+} = {
+  theme: 'Light',
   size: 'md',
+  value: '',
   checked: false,
-  optionId: 'optionId',
   label: 'Label',
   hasHint: false,
   hintMessage: 'This is a small hint',
   hintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
-  hasError: false,
-  errorMessage: 'This is a sample error message',
-  errorIcon: undefined,
-  name: 'Radio Button',
   required: false,
-  theme: 'Light',
+  hasError: false,
+  errorMessage: '',
+  ariaLabel: '',
+  errorIcon: undefined,
+  optionId: 'optionId',
+  name: 'Radio Button',
+  onChange: () => action('onChange'),
+  onFocus: () => action('onFocus'),
+  onBlur: () => action('onBlur'),
 };
 
 BlrRadio.args = args;
@@ -236,7 +246,7 @@ BlrRadio.args = args;
 /**
  *  ## Appearance
  *  ### Size Variant
- * The Radio component comes in 3 sizes: SM, MD and LG.
+ * The Radio component comes in 3 sizes: Radio SM, Radio MD and Radio LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -245,18 +255,21 @@ export const SizeVariant = () => {
       ${BlrRadio({
         ...args,
         size: 'sm',
+        label: 'SM',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
         size: 'md',
+        label: 'MD',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
         size: 'lg',
+        label: 'LG',
       })}
     </div>
   `;
@@ -275,12 +288,14 @@ export const Checked = () =>
       ${BlrRadio({
         ...args,
         checked: true,
+        label: 'Checked',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
         checked: false,
+        label: 'Unchecked',
       })}
     </div>
   `;
@@ -299,6 +314,7 @@ export const Disabled = () => {
     ${BlrRadio({
       ...args,
       disabled: true,
+      label: 'Disabled',
     })}
   `;
 };
@@ -314,14 +330,31 @@ export const Readonly = () => {
     ${BlrRadio({
       ...args,
       readonly: true,
+      label: 'Readonly',
     })}
   `;
 };
 
 /**
  * ## Validation
- * ### Has error
- * The Radio component can be set as required. If set as required, an error should be thrown, when the Radio component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
+ * ### Required
+ * The Radio component can be set as required. If set as required, an error should be thrown, when the Radio component was not checked, before it was submitted.
+ */
+export const Required = () => {
+  return html`
+    ${sharedStyles}
+    ${BlrRadio({
+      ...args,
+      required: true,
+      label: 'Required',
+    })}
+  `;
+};
+
+Required.story = { name: ' ' };
+
+/**
+The Radio component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Radio or in case the Radio was set as required and has not been checked before submitting. For more information on the error message have a look at the Form Caption Group [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 
 export const HasError = () => {
@@ -330,16 +363,15 @@ export const HasError = () => {
     ${BlrRadio({
       ...args,
       hasError: true,
+      label: 'Error',
     })}
   `;
 };
 
-HasError.story = { name: ' ' };
-
 /**
  * ## Dependencies
  * ### Form Caption Group
- * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Label Caption](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -348,14 +380,18 @@ export const FormCaptionGroup = () => {
       ${BlrRadio({
         ...args,
         hasHint: true,
-        hintIcon: undefined,
+        label: 'Hint message',
+        hintIcon: 'blr360',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
         hasError: true,
-        errorIcon: 'blr360',
+        hasHint: true,
+        label: 'Hint and error message',
+        errorMessage: "OMG it's an error",
+        errorIcon: 'blrErrorFilled',
       })}
     </div>
   `;
