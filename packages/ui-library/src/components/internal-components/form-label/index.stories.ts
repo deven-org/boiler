@@ -2,39 +2,163 @@
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizes, LabelVariants } from '../../../globals/constants';
 import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
+import { html } from 'lit-html';
+
+const sharedStyles = html`
+  <style>
+    .stories-form-label {
+      padding: 1.25rem;
+    }
+  </style>
+`;
 
 export default {
-  title: 'Design System/Web Components/Internal Components/FormLabel',
+  title: 'Design System/Web Components/Internal Components/Form Label',
   argTypes: {
     labelSize: {
+      name: 'sizeVariant',
+      description: 'Choose size of the component.',
       options: FormSizes,
-      control: { type: 'select' },
+      control: { type: 'radio' },
+      table: {
+        category: 'Appearance',
+      },
     },
     theme: {
       options: Themes,
       control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
     },
+    labelText: {
+      name: 'label',
+      description: 'Enter string used as label text.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
+    labelAppendix: {
+      name: 'labelAppendix',
+      description:
+        'Enter string used as an appendix to the label. Use this to inform the user in case this field is required.',
+      control: {
+        type: 'text',
+      },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
+
     variant: {
+      name: 'has Error',
+      description: 'Choose if component has an error.',
       options: LabelVariants,
       control: { type: 'select' },
+      table: {
+        category: 'Validation',
+      },
+    },
+    forValue: {
+      description: 'This references the id of the component to which the label is added.',
+      control: { type: 'text' },
+      table: {
+        category: 'Accessibility',
+      },
     },
   },
   parameters: {
-    viewMode: 'docs',
+    layout: 'centered',
+    docs: {
+      description: {
+        component: `<Markdown> Form Label provides a descriptive text or caption for an input field. The <label> element must be associated with an input field using the for attribute. 
+    - [**Appearance**](#appearance)
+      - [**Size Variant**](#size-variant)
+    - [**Content / Settings**](#content--settings)
+      - [**Label Appendix**](#label-appendix)
+    - [**Validation**](#validation)
+      - [**Has Error**](#has-error)
+  </Markdown>`,
+      },
+    },
   },
 };
 
 export const BlrFormLabel = (params: BlrFormLabelType) => BlrFormLabelRenderFunction(params);
+BlrFormLabel.storyName = 'Form Label';
 
-BlrFormLabel.storyName = 'FormLabel';
-
-const args: BlrFormLabelType = {
-  theme: 'Light',
-  labelText: 'Test',
-  labelAppendix: 'added',
+const defaultParams: BlrFormLabelType = {
   labelSize: 'md',
-  forValue: 'Richard',
+  theme: 'Light',
+  labelText: 'Label-text',
+  labelAppendix: '(Appendix)',
   variant: 'label',
+  forValue: 'Form Label',
 };
+BlrFormLabel.args = defaultParams;
 
-BlrFormLabel.args = args;
+/**
+ * ## Appearance
+ *  ### Size Variant
+ * The Form Label component comes in 3 sizes: SM, MD and LG.
+ */
+export const SizeVariant = () => {
+  return html`${sharedStyles}
+    <div class="stories-form-label">
+      ${BlrFormLabelRenderFunction({
+        ...defaultParams,
+        labelSize: 'sm',
+        labelText: 'Label SM',
+        labelAppendix: '',
+      })}
+    </div>
+    <div class="stories-form-label">
+      ${BlrFormLabelRenderFunction({
+        ...defaultParams,
+        labelSize: 'md',
+        labelText: 'Label MD',
+        labelAppendix: '',
+      })}
+    </div>
+    <div class="stories-form-label">
+      ${BlrFormLabelRenderFunction({
+        ...defaultParams,
+        labelSize: 'lg',
+        labelText: 'Label LG',
+        labelAppendix: '',
+      })}
+    </div>`;
+};
+SizeVariant.story = { name: ' ' };
+
+/**
+ * ## Content / Settings
+ * ### Label Appendix
+ * The Form Label component can display an appendix text next to the label text. The label appendix should be used to inform the users in case this field is required.
+ */
+export const LabelAppendix = () => {
+  return html` ${BlrFormLabelRenderFunction({
+    ...defaultParams,
+    labelSize: 'lg',
+    labelAppendix: '(Appendix)',
+  })}`;
+};
+LabelAppendix.story = { name: ' ' };
+/**
+ * ## Validation
+ *
+ * ### Has Error
+ * The Form Label component can be set to have an error.
+ */
+export const HasError = () => {
+  return html` ${BlrFormLabelRenderFunction({
+    ...defaultParams,
+    labelText: 'Error',
+    labelAppendix: '',
+    variant: 'error',
+  })}`;
+};
+HasError.story = { name: ' ' };
