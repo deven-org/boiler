@@ -1,7 +1,7 @@
 import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
 import { FeedbackSizes, FeedbackVariants } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { html } from 'lit';
+import { html } from 'lit-html';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -20,9 +20,9 @@ const sharedStyles = html`
 
 //Default parameters for Loader component
 const defaultParams: BlrLoaderType = {
+  theme: 'Light',
   variant: 'default',
   size: 'md',
-  theme: 'Light',
   loadingStatus: 'Loading',
 };
 
@@ -31,14 +31,16 @@ export default {
   argTypes: {
     //Appearance
     variant: {
+      description: 'Select variant of the component.',
       options: FeedbackVariants,
-      control: { type: 'select' },
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
     },
     size: {
       name: 'sizeVariant',
+      description: 'Choose size of the component.',
       options: FeedbackSizes,
       control: { type: 'radio' },
       table: {
@@ -50,6 +52,11 @@ export default {
       control: { type: 'select' },
       table: {
         category: 'Appearance',
+      },
+    },
+    loadingStatus: {
+      table: {
+        disable: true,
       },
     },
   },
@@ -85,14 +92,27 @@ export const Variant = () => {
     ${sharedStyles}
     ${BlrLoaderRenderFunction({
       ...defaultParams,
+      theme: 'Light',
       variant: 'default',
       size: 'md',
-      theme: 'Light',
       loadingStatus: 'Loading',
     })}
   `;
 };
 Variant.story = { name: ' ' };
+
+export const Inverted = () => {
+  return html`
+    ${sharedStyles}
+      ${BlrLoaderRenderFunction({
+        ...defaultParams,
+        variant: 'default',
+        size: 'md',
+        loadingStatus: 'Loading',
+      })}
+    </div>
+  `;
+};
 
 /**
  * The Loader component comes in 3 sizes: SM, MD and LG.
