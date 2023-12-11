@@ -12,7 +12,7 @@
     "serve:js-example": "yarn workspace @boiler/js-example-app serve",
     "build:ui-library": "yarn workspace @boiler/ui-library build && yarn workspace @boiler/ui-library compile",
     "build:js-example": "yarn build:ui-library && yarn workspace @boiler/js-example-app build",
-    "build:js-example:prod": "yarn build:ui-library && yarn workspace @boiler/js-example-app build",
+    "build:js-example:prod": "yarn build:ui-library && yarn workspace @boiler/js-example-app build:prod",
     "lint": "yarn workspace @boiler/ui-library lint",
     "format": "yarn workspace @boiler/ui-library format:eslint && yarn workspace @boiler/ui-library format:prettier",
     "test": "yarn workspace @boiler/ui-library test",
