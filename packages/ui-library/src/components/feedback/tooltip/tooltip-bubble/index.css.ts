@@ -5,16 +5,6 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
   const { Tooltip } = componentTokens.Feedback;
   const { UI } = semanticTokens;
 
-  // just for now
-  const Elevation = {
-    Lvl_1: {
-      x: 0,
-      y: 0,
-      blur: 0,
-      color: 0,
-    },
-  };
-
   const arrowHeight = "4px";
 
   return typeSafeNestedCss`
@@ -59,7 +49,12 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
 
       .elevation {
         filter: drop-shadow(0 0 1px ${Tooltip.SurfaceFill});
-        __filter: drop-shadow(${Elevation.Lvl_1.x} ${Elevation.Lvl_1.y} ${Elevation.Lvl_1.blur} ${Elevation.Lvl_1.color});
+
+        ${
+          // lets do comments like this :)
+          //__filter: drop-shadow(${Elevation.Lvl_1.x} ${Elevation.Lvl_1.y} ${Elevation.Lvl_1.blur} ${Elevation.Lvl_1.color});
+          ""
+        }
       }
 
       .arrow {
