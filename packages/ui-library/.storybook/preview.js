@@ -3,7 +3,6 @@ import '../../assets/fonts/fonts.css';
 
 export default {
   parameters: {
-    layout: 'centered',
     actions: {
       argTypesRegex: '^on[A-Z].*',
     },

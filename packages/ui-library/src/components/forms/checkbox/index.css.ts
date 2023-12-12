@@ -2,13 +2,12 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { Checkbox } = componentTokens.Forms;
-    const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
-    const { FocusBorder } = semanticTokens.Global;
+export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+  const { Checkbox } = componentTokens.Forms;
+  const { SM, MD, LG, LabelNextToControl } = semanticTokens.Forms;
+  const { FocusBorder } = semanticTokens.Global;
 
-    return typeSafeNestedCss/* css */ `
+  return typeSafeNestedCss/* css */ `
       .blr-checkbox {
         all: initial;
         display: flex;
@@ -34,9 +33,10 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         .label-wrapper {
           display: flex;
           flex-wrap: wrap;
+          flex-direction: column;
           .hint-wrapper, .error-wrapper {
             flex-basis: 100%;
-            .blr-form-hint {
+            .blr-form-caption {
               gap: 0px;
             }
           }
@@ -188,7 +188,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
           }
 
           &:not(.error) {
-            &.checked {
+            &.checked, &.indeterminate {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Active.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Active.Rest};
               & .checker-icon {
@@ -236,7 +236,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
               }
             }
 
-            &:not(.checked) {
+            &:not(.checked):not(.indeterminate) {
               background-color: ${Checkbox.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${Checkbox.Control.Container.BorderColor.Inactive.Rest};
               & .checker-icon {
@@ -581,5 +581,4 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
         }
       }
     `;
-  }
-);
+});

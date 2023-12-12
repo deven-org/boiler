@@ -6,16 +6,17 @@ import { SizelessIconType } from '@boiler/icons';
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
 import { FormSizesType, IconPositionVariant } from '../../../globals/types';
 
-import { styleCustom } from './index.css';
-import { BlrFormHintRenderFunction } from '../../internal-components/form-hint';
+import { styleCustom, toggleSwitchDark, toggleSwitchLight } from './index.css';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { toggleSwitchDark, toggleSwitchLight } from '../../../foundation/component-tokens/toggle-switch.css';
+
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 const TAG_NAME = 'blr-label-toggleswitch';
 import { BlrIconRenderFunction } from '../../ui/icon';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
 @customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {
@@ -34,12 +35,15 @@ export class BlrToggleSwitch extends LitElement {
   @property() readonly?: boolean;
   @property() checked?: boolean;
 
-  @property() showHint?: boolean;
-  @property() hintText?: string;
-  @property() hintIcon: SizelessIconType = 'blrInfo';
+  @property() hasHint?: boolean;
+  @property() hintMessage?: string;
+  @property() hintIcon?: SizelessIconType;
 
   @property() size?: FormSizesType = 'md';
   @property() variant: IconPositionVariant = 'leading';
+
+  @property() toggleOnIcon?: SizelessIconType = 'blrOn';
+  @property() toggleOffIcon?: SizelessIconType = 'blrOff';
 
   @property() onFocus?: HTMLButtonElement['onfocus'];
   @property() onBlur?: HTMLButtonElement['onblur'];
@@ -47,25 +51,65 @@ export class BlrToggleSwitch extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  @state() isSelected = false;
+  @state() protected currentCheckedState: boolean | undefined = this.checked;
 
-  // When the property is updated, set the isSelected state to the new value
   protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('checked')) {
-      this.isSelected = this.checked || false;
+      this.currentCheckedState = this.checked || false;
     }
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled) {
-      this.isSelected = !this.isSelected;
+    if (!this.disabled && !this.readonly) {
       this.onChange?.(event);
+      this.currentCheckedState = !this.currentCheckedState;
     }
   }
+
+  @state() protected focused = false;
+
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled && !this.readonly) {
+      this.focused = true;
+      this.onFocus?.(event);
+    }
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled && !this.readonly) {
+      this.focused = false;
+      this.onBlur?.(event);
+    }
+  };
+
+  @state() protected hovered = false;
+
+  protected handleEnter = () => {
+    if (!this.disabled && !this.readonly) {
+      this.hovered = true;
+    }
+  };
+
+  protected handleLeave = () => {
+    if (!this.disabled && !this.readonly) {
+      this.hovered = false;
+    }
+  };
+
+  @state() protected active = false;
+
+  protected handlePress = () => {
+    if (!this.disabled && !this.readonly) {
+      this.active = true;
+      this.currentCheckedState = !this.currentCheckedState;
+    }
+  };
+
+  protected handleRelease = () => {
+    if (!this.disabled && !this.readonly) {
+      this.active = false;
+    }
+  };
 
   protected render() {
     if (this.size) {
@@ -74,17 +118,39 @@ export class BlrToggleSwitch extends LitElement {
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-label-toggleswitch': true,
-        [`disabled`]: this.disabled || false,
-        [`readonly`]: this.readonly || false,
+        'disabled': this.disabled || false,
+        'readonly': this.readonly || false,
         [`${this.size}`]: this.size,
         [`${this.variant || 'leading'}`]: this.variant || 'leading',
       });
 
-      const wrapperClass = `blr-label-switch-wrapper ${this.isSelected ? 'wrapper-selected' : 'wrapper-unselected'}`;
+      const wrapperClass = classMap({
+        'blr-label-switch-wrapper': true,
+        'checked': this.currentCheckedState || false,
+        'disabled': this.disabled || false,
+        'readonly': this.readonly || false,
+        'hover': this.hovered || false,
+        'active': this.active || false,
+        'focus': this.focused || false,
+      });
 
       const toggleIconsClass = classMap({
         'toggle-icon-class': true,
       });
+
+      const focusRingClasses = classMap({
+        'focus-ring': true,
+        'focus': this.focused || false,
+      });
+
+      const toggleIconSizeVariant = getComponentConfigToken([
+        'Forms',
+        'ToggleSwitch',
+        'Control',
+        'AY11Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
+      ]).toLowerCase() as FormSizesType;
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}
@@ -98,59 +164,83 @@ export class BlrToggleSwitch extends LitElement {
                   labelSize: this.size || 'md',
                 })}`
               : nothing}
-            ${this.showHint && this.hintText
-              ? html`
-                  ${BlrFormHintRenderFunction({
-                    message: this.hintText,
-                    variant: 'hint',
-                    icon: this.hintIcon,
-                    size: this.size || 'sm',
-                    theme: this.theme,
-                  })}
-                `
+            ${this.hasHint && this.hintMessage
+              ? BlrFormCaptionRenderFunction({
+                  message: this.hintMessage,
+                  variant: 'hint',
+                  icon: this.hintIcon,
+                  size: this.size || 'sm',
+                  theme: this.theme,
+                })
               : nothing}
           </span>
-          <div class="label-container">
-            <label
-              for=${this.checkInputId || nothing}
-              class=${wrapperClass}
-              ?disabled=${this.disabled}
-              ?readonly=${this.readonly}
-            >
+          <div
+            class="label-container"
+            @mouseenter=${this.handleEnter}
+            @mouseleave=${this.handleLeave}
+            @mousedown=${(event: MouseEvent) => {
+              if (event.which === 1) {
+                //this.handlePress();
+              }
+            }}
+            @mouseup=${this.handleRelease}
+            @touchstart=${this.handlePress}
+            @touchend=${this.handleRelease}
+            @focusin=${this.handleFocus}
+            @focusout=${this.handleBlur}
+            @keydown=${(event: KeyboardEvent) => {
+              if (event.code === 'Space') {
+                //this.handlePress();
+              }
+            }}
+            @keyup=${(event: KeyboardEvent) => {
+              if (event.code === 'Space') {
+                //this.handleRelease();
+              }
+            }}
+            tabindex="0"
+          >
+            <label for=${this.checkInputId || nothing} class=${wrapperClass}>
+              <div class="${focusRingClasses}"></div>
               <input
                 type="checkbox"
                 class="input-control"
                 id=${this.checkInputId || nothing}
                 name=${this.checkInputId || nothing}
-                ?disabled=${this.disabled}
+                ?disabled=${this.disabled || this.readonly}
                 ?readonly=${this.readonly}
-                .checked=${this.isSelected || nothing}
+                .checked=${this.currentCheckedState || nothing}
                 @change=${this.handleChange}
                 @focus=${this.onFocus}
                 @blur=${this.onBlur}
+                tabindex="-1"
               />
-              <span class="toggle-switch-slider"> </span>
+              <span class="toggle-switch-slider">
+                <span class="knob"></span>
+              </span>
 
               <span class="toggle-switch-unselect toggle-icon">
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrOn', this.size),
+                  icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
                   size: this.size,
                   hideAria: true,
                   classMap: toggleIconsClass,
+                  ignoreSize: true,
                 })}
               </span>
               <span class="toggle-switch-select toggle-icon">
                 ${BlrIconRenderFunction({
-                  icon: calculateIconName('blrOff', this.size),
+                  icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
                   size: this.size,
                   hideAria: true,
                   classMap: toggleIconsClass,
+                  ignoreSize: true,
                 })}
               </span>
             </label>
             ${this.variant === 'leading' && this.showStateLabel
               ? html` ${BlrFormLabelInline({
-                  labelText: this.isSelected ? this.onLabel : this.offLabel,
+                  labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
                   forValue: this.checkInputId,
                   labelSize: this.size || 'md',
                 })}`

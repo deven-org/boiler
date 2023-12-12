@@ -27,10 +27,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         background-color: transparent;
       }
 
-      &.mode1 {
-        display: grid;
-        grid-template-columns: 10% 40% 40% 10%;
-       
+      &.split {
         &.sm {
           > .custom-stepper-button {
             width: ${StepperCombo.SM.Vertical.Width};
@@ -185,7 +182,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
     return typeSafeNestedCss`
       .stepper-combo {
-        &.mode2 {
+        &.horizontal {
           display: grid;
           grid-template-columns: 1fr 0 1fr;
           justify-content: center;
@@ -216,7 +213,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
          
         }
 
-        &.mode3 {
+        &.vertical {
           display: grid;
           grid-template-rows: 1fr 0 1fr;
           justify-content: center;
@@ -271,11 +268,11 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           cursor: not-allowed;
         }
 
-        &.mode2 {
+        &.horizontal {
           width: unset;
         }
 
-        &.mode3 {
+        &.vertical {
           width: inherit;
         }
       }
@@ -303,7 +300,7 @@ export const baseStyle = typeSafeNestedCss`
       -moz-appearance: textfield;
     }
 
-    &.mode1 {
+    &.split {
       > button:first-of-type {
         order: -2;
       }
@@ -331,8 +328,8 @@ export const baseStyle = typeSafeNestedCss`
       }
     }
 
-    &.mode2,
-    &.mode3 {
+    &.horizontal,
+    &.vertical {
       .unit.prepend {
         order: -1;
         padding-right:0;
