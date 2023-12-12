@@ -17,22 +17,22 @@ const sharedStyles = html`
   </style>
 `;
 const defaultParams: BlrSelectType = {
-  arialabel: 'Select',
-  theme: 'Light',
-  name: 'select',
+  size: 'md',
+  label: 'Label-text',
+  labelAppendix: '(Appendix)',
+  icon: 'blrChevronDown',
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
-  label: 'Label-text',
-  labelAppendix: '(Appendix)',
-  size: 'md',
-  hasError: false,
-  errorMessage: "OMG it's an error",
-  errorIcon: 'blrInfo',
   disabled: false,
   required: false,
+  hasError: false,
+  errorMessage: ' ',
+  errorIcon: undefined,
+  arialabel: 'Select',
+  theme: 'Light',
+  name: 'select',
   selectId: 'selectId',
-  icon: 'blrChevronDown',
   options: [
     { value: '0', label: 'Option 1', selected: false, disabled: true },
     { value: '1', label: 'Option 2', selected: false, disabled: false },
@@ -160,7 +160,7 @@ export default {
     required: {
       description: 'Choose if the component must hold a value after an interaction or a submit.',
       table: {
-        category: 'States',
+        category: 'Validation',
       },
     },
     // Validation
@@ -204,7 +204,7 @@ export default {
       },
     },
     name: {
-      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
+      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted.',
       table: {
         category: 'Technical Attributes',
       },
@@ -241,14 +241,14 @@ export default {
 Select presents users with a list of options from which they can make a single selection. It contains a list of selectable options. These options can be text-based, such as names, items, or categories.
 <br>
 - [**Appearance**](#appearance)
- - [**Size-Variant**](#size-variant)
+ - [**Size Variant**](#size-variant)
 - [**States**](#states)
  - [**Disabled**](#disabled)
  - [**Readonly**](#readonly)
- - [**Validation**](#validation)
-- [**Required**](#required)
+- [**Validation**](#validation)
+ - [**Required**](#required)
  - [**Has Error**](#has-error)
-- [**Dependencies**](#disabled)
+- [**Dependencies**](#dependencies)
  - [**Form Label**](#form-label)
  - [**Icon**](#icon)
  - [**Form Caption Group**](#form-caption-group)
@@ -275,19 +275,19 @@ export const SizeVariant = () => {
       ${BlrSelectRenderFunction({
         ...defaultParams,
         size: 'sm',
-        label: 'Select Sm',
+        label: 'Select SM',
         labelAppendix: '',
       })}
       ${BlrSelectRenderFunction({
         ...defaultParams,
         size: 'md',
-        label: 'Select md',
+        label: 'Select MD',
         labelAppendix: '',
       })}
       ${BlrSelectRenderFunction({
         ...defaultParams,
         size: 'lg',
-        label: 'Select lg',
+        label: 'Select LG',
         labelAppendix: '',
       })}
     </div>
@@ -362,8 +362,8 @@ export const HasError = () => {
       ${BlrSelectRenderFunction({
         ...defaultParams,
         hasError: true,
-        errorIcon: 'blrErrorFilled',
-        label: 'Error',
+        errorIcon: undefined,
+        label: ' ',
         labelAppendix: '',
       })}
     </div>
@@ -382,8 +382,19 @@ export const FormLabel = () => {
     <div class="stories-select">
       ${BlrSelectRenderFunction({
         ...defaultParams,
-        label: 'Label',
-        labelAppendix: '(Appendix)',
+        label: 'with Label',
+        labelAppendix: '(with Appendix)',
+      })}
+      ${BlrSelectRenderFunction({
+        ...defaultParams,
+        label: ' ',
+        labelAppendix: ' ',
+        options: [
+          { value: '0', label: 'Option 1', selected: false, disabled: true },
+          { value: '1', label: 'Option 2', selected: false, disabled: false },
+          { value: '2', label: 'Without Label', selected: true, disabled: false },
+          { value: '4', label: 'Option 4', selected: false, disabled: false },
+        ],
       })}
     </div>
   `;
@@ -406,8 +417,8 @@ export const Icon = () => {
       ${BlrSelectRenderFunction({
         ...defaultParams,
         icon: undefined,
-        label: 'Without Icon',
-        labelAppendix: "Currently doesn't work ",
+        label: 'Default Icon',
+        labelAppendix: ' ',
       })}
     </div>
   `;
@@ -423,14 +434,7 @@ export const FormCaptionGroup = () => {
       ${BlrSelectRenderFunction({
         ...defaultParams,
         hasHint: true,
-        label: 'Hint message',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: undefined,
-        hasHint: false,
-        label: 'Without Icon',
-        labelAppendix: "Currently doesn't work ",
+        labelAppendix: ' ',
       })}
       ${BlrSelectRenderFunction({
         ...defaultParams,
@@ -439,6 +443,8 @@ export const FormCaptionGroup = () => {
         labelAppendix: '',
         hasHint: true,
         hasError: true,
+        errorMessage: "OMG it's an error.",
+        errorIcon: 'blrErrorFilled',
       })}
     </div>
   `;
