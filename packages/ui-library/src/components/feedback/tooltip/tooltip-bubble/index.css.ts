@@ -3,7 +3,17 @@ import { renderThemedCssStrings } from "../../../../foundation/_tokens-generated
 
 export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { Tooltip } = componentTokens.Feedback;
-  const { UI, Elevation } = semanticTokens;
+  const { UI } = semanticTokens;
+
+  // just for now
+  const Elevation = {
+    Lvl_1: {
+      x: 0,
+      y: 0,
+      blur: 0,
+      color: 0,
+    },
+  };
 
   const arrowHeight = "4px";
 
@@ -48,8 +58,8 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
       }
 
       .elevation {
-        __filter: drop-shadow(0 0 1px ${Tooltip.SurfaceFill});
-        filter: drop-shadow(${Elevation.Lvl_1.x} ${Elevation.Lvl_1.y} ${Elevation.Lvl_1.blur} ${Elevation.Lvl_1.color});
+        filter: drop-shadow(0 0 1px ${Tooltip.SurfaceFill});
+        __filter: drop-shadow(${Elevation.Lvl_1.x} ${Elevation.Lvl_1.y} ${Elevation.Lvl_1.blur} ${Elevation.Lvl_1.color});
       }
 
       .arrow {
