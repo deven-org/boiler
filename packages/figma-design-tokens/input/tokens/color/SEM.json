@@ -1394,10 +1394,10 @@
   "Elevation": {
     "Lvl_1": {
       "value": {
-        "x": "0",
-        "y": "2",
-        "blur": "4",
-        "spread": "0",
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.2}",
+        "blur": "{core.dimensionPX.4}",
+        "spread": "{core.dimensionPX.0}",
         "color": "{q.shadow.alpha}",
         "type": "dropShadow"
       },
@@ -1405,10 +1405,10 @@
     },
     "Lvl_2": {
       "value": {
-        "x": "0",
-        "y": "4",
-        "blur": "8",
-        "spread": "0",
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.4}",
+        "blur": "{core.dimensionPX.8}",
+        "spread": "{core.dimensionPX.0}",
         "color": "{q.shadow.alpha}",
         "type": "dropShadow"
       },
