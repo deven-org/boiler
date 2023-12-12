@@ -64,8 +64,6 @@ export class BlrTextarea extends LitElement {
   }
 
   protected updateCounter() {
-    const event = new Event('david', { bubbles: true, composed: true });
-    this.dispatchEvent(event);
     const length = this.textareaElement?.value?.length;
     if (length !== undefined) {
       this.count = length;
