@@ -31,14 +31,14 @@ export default {
     direction: {
       description: 'Choose direction of the component.',
       table: {
-        category: 'Content / Settings',
+        category: 'Appearance',
       },
       options: ['horizontal', 'vertical'],
       control: {
         type: 'radio',
       },
     },
-    hasLegend: {
+    showLegend: {
       description: 'Choose if component has a legend. ',
       table: {
         category: 'Content / Settings',
@@ -69,11 +69,20 @@ export default {
         category: 'Content / Settings',
       },
     },
-    groupHintMessageIcon: {
+    groupHintIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
+    options: {
+      name: 'options',
+      description:
+        'Enter an array containing information about the label, value and disabled prop for all options that are part of the select.',
+      control: 'array',
       table: {
         category: 'Content / Settings',
       },
@@ -179,7 +188,7 @@ export default {
       options: Themes,
       control: { type: 'select' },
       table: {
-        category: 'Technical Attributes',
+        category: 'Appearance',
       },
     },
   },
@@ -220,9 +229,19 @@ export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderF
 
 BlrRadioGroup.storyName = 'Radio Group';
 
-const defaultParams: BlrRadioGroupType = {
+const defaultParams: BlrRadioGroupType & {
+  direction: 'horizontal' | 'vertical';
+  ariaLabel: string;
+  radioGroupId: string;
+} = {
+  theme: 'Light',
   size: 'md',
-  checked: false,
+  direction: 'horizontal',
+  showLegend: true,
+  legend: 'Legend-text',
+  hasHint: false,
+  groupHintMessage: 'This is a small hint',
+  groupHintIcon: 'blrInfo',
   options: [
     {
       value: '0',
@@ -253,19 +272,18 @@ const defaultParams: BlrRadioGroupType = {
       hintMessage: 'This is a small hint',
     },
   ],
-  hasHint: false,
-  groupHintMessage: 'This is a small hint',
-  groupHintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
-  hasError: false,
-  groupErrorMessage: 'This is a sample error message',
-  groupErrorIcon: undefined,
-  name: 'Radio Group Button',
-  errorIcon: 'blr360',
-  hideLabel: true,
   required: false,
-  theme: 'Light',
+  hasError: false,
+  groupErrorMessage: '',
+  groupErrorIcon: 'blrErrorFilled',
+  ariaLabel: 'Radio Group',
+  radioGroupId: 'Radio Group',
+  name: 'Radio Group ',
+  onChange: () => action('onFocus'),
+  onFocus: () => action('onFocus'),
+  onBlur: () => action('onBlur'),
 };
 
 BlrRadioGroup.args = defaultParams;
@@ -282,18 +300,21 @@ export const SizeVariant = () => {
       ${BlrRadioGroup({
         ...defaultParams,
         size: 'sm',
+        legend: 'Radio Group SM',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
         size: 'md',
+        legend: 'Radio Group MD',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
         size: 'lg',
+        legend: 'Radio Group LG',
       })}
     </div>
   `;
@@ -302,32 +323,58 @@ export const SizeVariant = () => {
 SizeVariant.story = { name: ' ' };
 
 /**
- * ## Content / Settings
- * ### Checked
- * The Radio component can be checked or unchecked. The checked state indicates that the Radio component is selected or enabled. The unchecked state indicates that the Radio component is not selected. */
+ * The Radio Group component can have a horizontal or a vertical direction..
+ *  */
+export const Direction = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      ${BlrRadioGroup({
+        ...defaultParams,
+        direction: 'vertical',
+        legend: 'Vertical',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrRadioGroup({
+        ...defaultParams,
+        direction: 'horizontal',
+        legend: 'Horizontal',
+      })}
+    </div>
+  `;
+};
 
-export const Checked = () =>
+/**
+ * ## Content / Settings
+ * ### Has Legend
+ *The Radio Group component can display a legend or no legend.
+ */
+
+export const HasLegend = () =>
   html`
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        checked: true,
+        showLegend: true,
+        legend: 'With Legend',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        checked: false,
+        showLegend: false,
       })}
     </div>
   `;
 
-Checked.story = { name: ' ' };
+HasLegend.story = { name: ' ' };
+
 /**
  * ## States
- *  Apart from states like rest, hover, pressed and focus, the Radio component can also be disabled or readonly. The error state is documented under [Validation](#validation).
+ *  Apart from states like rest, hover, pressed and focus, the Radio Group component can also be disabled or readonly. The error state is documented under [Validation](#validation).
  * ### Disabled
- * The Radio component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+ * The Radio Group component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 
 export const Disabled = () => {
@@ -335,6 +382,7 @@ export const Disabled = () => {
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
+      legend: 'Disabled',
       disabled: true,
     })}
   `;
@@ -343,13 +391,14 @@ export const Disabled = () => {
 Disabled.story = { name: ' ' };
 
 /**
- * The Radio component in the readonly state can not be interacted with, but it can still be selected and receive focus.
+ * The Radio Group component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
 export const Readonly = () => {
   return html`
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
+      legend: 'Readonly',
       readonly: true,
     })}
   `;
@@ -357,26 +406,41 @@ export const Readonly = () => {
 
 /**
  * ## Validation
- * ### Has error
- * The Radio component can be set as required. If set as required, an error should be thrown, when the Radio component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
+ * ### Required
+ *The Radio Group component can be set as required. If set as required, an error should be thrown, when the Radio Group component was not filled, before it was submitted. It is recommended to indicate in the leged appendix, whether a component is required or not.
  */
 
+export const Required = () => {
+  return html`
+    ${sharedStyles}
+    ${BlrRadioGroup({
+      ...defaultParams,
+      legend: 'Required',
+      required: true,
+    })}
+  `;
+};
+
+Required.story = { name: ' ' };
+/**
+ * The Radio Group component can be set as required. If set as required, an error should be thrown, when the Radio component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Caption Group](#form-caption-group) component in the dependencies section below.
+ */
 export const HasError = () => {
   return html`
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
+      legend: 'Error',
+      groupErrorMessage: "OMG it's an error",
       hasError: true,
     })}
   `;
 };
 
-HasError.story = { name: ' ' };
-
 /**
  * ## Dependencies
  * ### Form Caption Group
- * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Label Caption](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Radio Group component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -384,14 +448,18 @@ export const FormCaptionGroup = () => {
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
+        legend: 'Hint message',
         hasHint: true,
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        hasError: true,
+        legend: 'Hint and error message',
         errorIcon: 'blr360',
+        groupErrorMessage: "OMG it's an error",
+        hasHint: true,
+        hasError: true,
       })}
     </div>
   `;
