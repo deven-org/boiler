@@ -84,7 +84,8 @@ BlrLoader.args = defaultParams;
 //Appearance Variant/ Size Variant
 /**
  * ## Appearance
- * ###  Variant
+ * ### Variant
+ * ### Default
  * The Loader component comes in 2 variants: default and inverted. The inverted variant should be used to in cases the default variant does not have a good visibility.
  */
 export const Variant = () => {
@@ -112,6 +113,12 @@ export const Inverted = () => {
       })}
     </div>
   `;
+};
+Inverted.parameters = {
+  backgrounds: {
+    default: 'dark',
+    values: [{ name: 'dark', value: 'hsla(216, 9%, 10%, 1)' }],
+  },
 };
 
 /**
