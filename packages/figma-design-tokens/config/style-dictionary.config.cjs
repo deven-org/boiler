@@ -41,6 +41,8 @@ const semanticTypes = [
   'Label',
   'LabelSlot',
   'Legend',
+  'Lvl_1',
+  'Lvl_2',
   'UserInput',
   'Placeholder',
   'SurfaceFill',
