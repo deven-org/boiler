@@ -349,7 +349,6 @@ export default {
       },
     },
   },
-  // Events
   parameters: {
     viewMode: 'docs',
     layout: 'centered',
