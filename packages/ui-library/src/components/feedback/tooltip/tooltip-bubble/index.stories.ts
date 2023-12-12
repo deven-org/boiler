@@ -26,7 +26,8 @@ BlrTooltipBubble.storyName = 'Tooltip Bubble';
 const args: BlrTooltipBubbleType = {
   theme: 'Light',
   text: 'Tooltip text comes here Tooltip text comes here',
-  size: 'sm',
+  size: 'md',
+  visible: true,
   static: true,
 };
 

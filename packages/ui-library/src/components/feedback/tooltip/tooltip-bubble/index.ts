@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { LitElement, css, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { light, dark } from './index.css';
 import { FormSizesType } from '../../../../globals/types';
@@ -10,11 +10,21 @@ const TAG_NAME = 'blr-tooltip-bubble';
 
 @customElement('blr-tooltip-bubble')
 export class BlrTooltipBubble extends LitElement {
+  static styles = [
+    css`
+      :host([visible]) {
+        visibility: visible;
+        opacity: 1;
+      }
+    `,
+  ];
   @property() theme?: ThemeType = 'Light';
-  @property() size?: FormSizesType = 'sm';
+  @property() size?: FormSizesType = 'md';
   @property() text!: string;
   @property() hasArrow?: boolean = true;
   @property() elevation?: boolean = true;
+  @property({ reflect: true, type: Boolean })
+  visible? = false;
   @property() static?: boolean = false;
 
   protected render() {

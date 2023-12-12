@@ -12,10 +12,11 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
       left: 0;
       max-width: ${Tooltip.MaxWidth};
       min-width: ${Tooltip.MinWidth};
-      opacity: 1;
+      opacity: 0;
       position: absolute;
+      transition: opacity 0.2s;
       top: 0;
-      visibility: visible;
+      visibility: hidden;
       width: max-content;
 
       .content {

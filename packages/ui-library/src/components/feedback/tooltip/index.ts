@@ -1,10 +1,10 @@
 import { LitElement, TemplateResult, html } from 'lit';
-import { customElement, property, query } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { setupTooltip } from './setupTooltip';
+import { tooltipPosition } from './tooltip-position';
 import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble';
 import { styleCustom } from './index.css';
 
@@ -18,42 +18,39 @@ export class BlrTooltip extends LitElement {
   static styles = [styleCustom];
 
   @property() theme?: ThemeType = 'Light';
-  @property() size?: FormSizesType = 'sm';
+  @property() size?: FormSizesType = 'md';
   @property() text!: string;
   @property() hasArrow?: boolean = true;
   @property() elevation?: boolean = false;
   @property() placement?: PlacementType = 'top';
   @property() offset?: number = 4;
 
-  @query('blr-tooltip-bubble')
-  protected _tooltipBubble!: HTMLElement;
+  @state() protected visible = false;
 
-  protected _slotReference: Element | undefined = undefined;
+  protected _referenceElement: Element | undefined | null = null;
+  protected _tooltipElement: HTMLElement | null = null;
 
-  protected firstUpdated() {
-    this.hide();
-    const slot = this.shadowRoot?.querySelector('slot');
-    this._slotReference = slot?.assignedElements({ flatten: true })[0];
+  protected updated() {
+    const slot = this.renderRoot?.querySelector('slot');
+    this._referenceElement = slot?.assignedElements({ flatten: true })[0];
 
-    enterEvents.forEach((event) => this._slotReference?.addEventListener(event, this.show));
-    leaveEvents.forEach((event) => this._slotReference?.addEventListener(event, this.hide));
-  }
+    this._tooltipElement = this.renderRoot?.querySelector('blr-tooltip-bubble');
 
-  protected show = () => {
-    if (!this._slotReference) {
+    if (!this._referenceElement || !this._tooltipElement) {
       return;
     }
 
-    setupTooltip(this._slotReference, this._tooltipBubble, this.placement, this.offset);
+    enterEvents.forEach((event) => this._referenceElement?.addEventListener(event, this.show));
+    leaveEvents.forEach((event) => this._referenceElement?.addEventListener(event, this.hide));
 
-    this._tooltipBubble.style.visibility = 'visible';
-    this._tooltipBubble.style.opacity = '1';
-  };
+    if (this._referenceElement || this._tooltipElement) {
+      tooltipPosition(this._referenceElement, this._tooltipElement, this.placement, this.offset);
+    }
+  }
 
-  protected hide = () => {
-    this._tooltipBubble.style.visibility = 'hidden';
-    this._tooltipBubble.style.opacity = '0';
-  };
+  protected show = () => (this.visible = true);
+
+  protected hide = () => (this.visible = false);
 
   protected render() {
     return html` <slot></slot>
@@ -63,6 +60,7 @@ export class BlrTooltip extends LitElement {
         size: this.size,
         hasArrow: this.hasArrow,
         elevation: this.elevation,
+        visible: this.visible,
       })}`;
   }
 }

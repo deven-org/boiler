@@ -3,8 +3,8 @@ import { LitElement, html } from 'lit';
 import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
 import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizes, TooltipPlacement } from '../../../globals/constants';
-import { setupTooltip } from './setupTooltip';
-import { customElement, property, query } from 'lit/decorators.js';
+import { tooltipPosition } from './tooltip-position';
+import { customElement, property, query, state } from 'lit/decorators.js';
 import { FormSizesType } from '../../../globals/types';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble';
@@ -76,16 +76,16 @@ export class VirtualReference extends LitElement {
   @property() elevation = true;
   @property() offset = 4;
 
+  @state() protected visible = false;
+
   @query('blr-tooltip-bubble')
   protected _tooltipBubble!: HTMLElement;
 
   protected firstUpdated() {
-    this._tooltipBubble.style.visibility = 'hidden';
-    this._tooltipBubble.style.opacity = '0';
+    this.visible = false;
 
     document.addEventListener('mousemove', ({ clientX, clientY }) => {
-      this._tooltipBubble.style.visibility = 'visible';
-      this._tooltipBubble.style.opacity = '1';
+      this.visible = true;
 
       const virtualReference = {
         getBoundingClientRect() {
@@ -102,12 +102,11 @@ export class VirtualReference extends LitElement {
         },
       };
 
-      setupTooltip(virtualReference, this._tooltipBubble, this.placement, 4);
+      tooltipPosition(virtualReference, this._tooltipBubble, this.placement, 4);
     });
 
     document.addEventListener('mouseleave', () => {
-      this._tooltipBubble.style.visibility = 'hidden';
-      this._tooltipBubble.style.opacity = '0';
+      this.visible = false;
     });
   }
 
@@ -117,6 +116,7 @@ export class VirtualReference extends LitElement {
       text: this.text,
       size: this.size,
       hasArrow: this.hasArrow,
+      visible: this.visible,
       elevation: this.elevation,
     })}`;
   }

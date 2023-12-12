@@ -11,30 +11,21 @@ const sampleParams: BlrTooltipType = {
 
 const testContent = html`<div style="height: 200px; width: 200px; background-color: lightblue"></div>`;
 
-describe('blr-tool-tip', () => {
-  it('is having a tooltip containing the right className', async () => {
+describe('blr-tooltip', () => {
+  it('is having a tooltip bubble element', async () => {
     const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
 
-    const tooltip = querySelectorDeep('div.blr-tooltip', element.getRootNode() as HTMLElement);
-    const className = tooltip?.className;
+    const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
 
-    expect(className).to.contain('blr-tooltip');
+    expect(tooltip).to.exist;
   });
 
-  it('has a size sm by default', async () => {
+  it('has a size md by default', async () => {
     const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
 
-    const tooltip = querySelectorDeep('div.blr-tooltip', element.getRootNode() as HTMLElement);
-    const className = tooltip?.className;
-
-    expect(className).to.contain('sm');
-  });
-
-  it('has a size md when "size" is set to "md" ', async () => {
-    const element = await fixture(BlrTooltipRenderFunction({ ...sampleParams, size: 'md' }, testContent));
-
-    const tooltip = querySelectorDeep('div.blr-tooltip', element.getRootNode() as HTMLElement);
-    const className = tooltip?.className;
+    const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
+    const container = querySelectorDeep('div.md', tooltip?.getRootNode() as HTMLElement);
+    const className = container?.className;
 
     expect(className).to.contain('md');
   });

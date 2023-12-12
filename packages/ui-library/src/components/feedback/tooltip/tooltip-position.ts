@@ -28,22 +28,22 @@ const getArrowSettings = (tooltip: HTMLElement, paddingTopBottom: number, paddin
     : undefined;
 };
 
-export const setupTooltip = (
+export const tooltipPosition = (
   reference: Element | VirtualElementType,
   tooltip: HTMLElement,
   placement: PlacementType = 'top',
   offsetValue = 0
 ) => {
-  const side = placement.split('-')[0];
-
-  const arrowSettings = getArrowSettings(
-    tooltip,
-    parseFloat(Tooltip.NoseWrapper.PaddingTopBottom),
-    parseFloat(Tooltip.NoseWrapper.PaddingLeftRight),
-    side
-  );
-
   autoUpdate(reference, tooltip, () => {
+    const side = placement.split('-')[0];
+
+    const arrowSettings = getArrowSettings(
+      tooltip,
+      parseFloat(Tooltip.NoseWrapper.PaddingTopBottom),
+      parseFloat(Tooltip.NoseWrapper.PaddingLeftRight),
+      side
+    );
+
     computePosition(reference, tooltip, {
       placement,
       middleware: [
