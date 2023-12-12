@@ -246,7 +246,7 @@ BlrRadio.args = args;
 /**
  *  ## Appearance
  *  ### Size Variant
- * The Radio component comes in 3 sizes: Radio SM, Radio MD and Radio LG.
+ * The Radio component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -255,21 +255,21 @@ export const SizeVariant = () => {
       ${BlrRadio({
         ...args,
         size: 'sm',
-        label: 'SM',
+        label: 'Radio SM',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
         size: 'md',
-        label: 'MD',
+        label: 'Radio MD',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
         size: 'lg',
-        label: 'LG',
+        label: 'Radio LG',
       })}
     </div>
   `;
@@ -354,7 +354,7 @@ export const Required = () => {
 Required.story = { name: ' ' };
 
 /**
-The Radio component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Radio or in case the Radio was set as required and has not been checked before submitting. For more information on the error message have a look at the Form Caption Group [Form Caption Group](#form-caption-group) in the dependencies section below.
+The Radio component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Radio or in case the Radio was set as required and has not been checked before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 
 export const HasError = () => {
