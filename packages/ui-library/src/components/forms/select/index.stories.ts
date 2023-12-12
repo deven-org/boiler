@@ -263,6 +263,45 @@ export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(para
 BlrSelect.storyName = 'Select';
 BlrSelect.args = defaultParams;
 
+//disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
+const argTypesToDisable = [
+  'theme',
+  'size',
+  'hasIcon',
+  'hasLabel',
+  'label',
+  'labelAppendix',
+  'hasHint',
+  'hintText',
+  'hintIcon',
+  'disabled',
+  'readonly',
+  'required',
+  'hasError',
+  'errorMessage',
+  'errorIcon',
+  'arialabel',
+  'options',
+  'selectId',
+  'name',
+  'onChange',
+  'onFocus',
+  'onBlur',
+  'onSelect',
+];
+const generateDisabledArgTypes = (argTypes: string[]) => {
+  const disabledArgTypes = {};
+  argTypes.forEach((argType: string) => {
+    // @ts-expect-error todo
+    disabledArgTypes[argType] = {
+      table: {
+        disable: true,
+      },
+    };
+  });
+  return disabledArgTypes;
+};
+const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 /**
  * ## Appearance
  * ### Size Variant
@@ -294,6 +333,9 @@ export const SizeVariant = () => {
   `;
 };
 SizeVariant.story = { name: ' ' };
+SizeVariant.argTypes = {
+  ...disabledArgTypes,
+};
 /**
  * ## States
  * Apart from states like rest, hover, pressed and focus, the Select component can also be disabled or readonly. The error state is documented under [validation](#validation).
@@ -315,6 +357,9 @@ export const Disabled = () => {
   `;
 };
 Disabled.story = { name: ' ' };
+Disabled.argTypes = {
+  ...disabledArgTypes,
+};
 /**
  * The Select component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
@@ -329,6 +374,9 @@ export const Readonly = () => {
       })}
     </div>
   `;
+};
+Readonly.argTypes = {
+  ...disabledArgTypes,
 };
 
 /**
@@ -351,6 +399,9 @@ export const Required = () => {
   `;
 };
 Required.story = { name: ' ' };
+Required.argTypes = {
+  ...disabledArgTypes,
+};
 
 /**
  * The Select component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Select or in case the Select was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) in the dependencies section below.
@@ -369,7 +420,9 @@ export const HasError = () => {
     </div>
   `;
 };
-
+HasError.argTypes = {
+  ...disabledArgTypes,
+};
 /**
  * ## Dependencies
  *
@@ -400,6 +453,9 @@ export const FormLabel = () => {
   `;
 };
 FormLabel.story = { name: ' ' };
+FormLabel.argTypes = {
+  ...disabledArgTypes,
+};
 /**
  * The Select component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
  */
@@ -423,7 +479,9 @@ export const Icon = () => {
     </div>
   `;
 };
-
+Icon.argTypes = {
+  ...disabledArgTypes,
+};
 /**
  * The Select component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
@@ -448,4 +506,7 @@ export const FormCaptionGroup = () => {
       })}
     </div>
   `;
+};
+FormCaptionGroup.argTypes = {
+  ...disabledArgTypes,
 };
