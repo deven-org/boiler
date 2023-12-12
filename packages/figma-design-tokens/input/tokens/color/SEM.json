@@ -1392,7 +1392,7 @@
     }
   },
   "Elevation": {
-    "Lvl_1": {
+    "Lvl1": {
       "value": {
         "x": "{core.dimensionPX.0}",
         "y": "{core.dimensionPX.2}",
@@ -1403,7 +1403,7 @@
       },
       "type": "boxShadow"
     },
-    "Lvl_2": {
+    "Lvl2": {
       "value": {
         "x": "{core.dimensionPX.0}",
         "y": "{core.dimensionPX.4}",

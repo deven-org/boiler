@@ -9,6 +9,7 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
+/*
 const types = [
   'borderRadius',
   'borderWidth',
@@ -19,6 +20,7 @@ const types = [
   'pargraphSpacing',
   'letterSpacing',
 ];
+*/
 
 const semanticTypes = [
   'CTA',
@@ -60,6 +62,7 @@ const semanticTypes = [
   'Warning',
   'Error',
   'PrefixSuffix',
+  'Elevation',
 ];
 
 const componentTypes = [
