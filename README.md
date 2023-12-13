@@ -94,7 +94,7 @@ $ npm install
 The project test suite is run with
 
 ```sh
-$ npm test
+$ yarn test
 ```
 
 # License
