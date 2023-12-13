@@ -1,26 +1,26 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
-import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
-const { NumberInput } = componentTokens.Forms;
-
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
-
   return typeSafeNestedCss`
     .noPointerEvents {
       pointer-events: none;
     }
 
     .input-wrapper {
+      box-sizing: border-box;
+      width:100%;
       outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};
 
       > input {
+        display:flex;
         border: none;
         outline: none;
         color: inherit;
+   
       }
 
       .unit{
@@ -56,17 +56,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   
         > input {
           text-align: right;
-          &.sm{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
-          }
 
-          &.md{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
-          }
-
-          &.lg{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
-          }
         }
       }
 
@@ -221,10 +211,8 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           display: grid;
           grid-template-rows: 1fr 0 1fr;
           justify-content: center;
-
           &.sm {
             width: ${StepperCombo.SM.Vertical.Width};
-
             > blr-divider {
               padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
             }
@@ -285,6 +273,10 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 );
 
 export const baseStyle = typeSafeNestedCss`
+  :host {
+    --spacing: -18px;
+  }
+  
   .input-wrapper {
     display: flex;
     overflow: hidden;
@@ -311,13 +303,11 @@ export const baseStyle = typeSafeNestedCss`
 
       .unit {
         order: 0;
-        padding-left:0;
       }
    
       .unit.prepend {
         order: -1;
         text-align: right;
-        padding-right:0;
       }
 
       > input.prepend {
@@ -327,28 +317,25 @@ export const baseStyle = typeSafeNestedCss`
       > button:last-of-type {
         margin-left:auto;
       }
-      > input{
-        padding-right:0;
-      }
     }
 
     &.horizontal,
     &.vertical {
       .unit.prepend {
         order: -1;
-        padding-right:0;
       }
       > input.prepend{
+        position:relative; 
         &.sm{
-        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+        margin-left: var(--spacing);
         }
 
         &.md{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+          margin-left:var(--spacing);
         }
         
         &.lg{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+          margin-left:var(--spacing);
         }
       }
     }
