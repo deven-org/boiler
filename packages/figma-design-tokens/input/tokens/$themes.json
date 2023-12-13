@@ -3157,9 +3157,7 @@
     "id": "08249cc3818adf31affe7426f575df1543561628",
     "name": "AllCaptions",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "captions/allCaptions": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
     "$figmaModeId": "6105:0",
@@ -3173,9 +3171,7 @@
     "id": "75296d1875947aa3681aa72763fa1078814c938c",
     "name": "HintOnly",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "captions/HintOnly": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
     "$figmaModeId": "6105:1",
@@ -3189,9 +3185,7 @@
     "id": "952d14ff8cc881b46dc29b075f1927fc9d6326b9",
     "name": "ErrorOnly",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "captions/ErrorOnly": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
     "$figmaModeId": "6105:2",
@@ -3205,9 +3199,7 @@
     "id": "bb09f6c5d139043d0d6590c978e9096343ca4ba5",
     "name": "noCaptions",
     "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "captions/noCaptions": "enabled"
-    },
+    "selectedTokenSets": {},
     "group": "Caption",
     "$figmaCollectionId": "VariableCollectionId:6105:242686",
     "$figmaModeId": "6105:3",
