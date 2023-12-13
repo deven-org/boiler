@@ -147,6 +147,7 @@ export const LabelAppendix = () => {
   })}`;
 };
 LabelAppendix.story = { name: ' ' };
+
 /**
  * ## Validation
  *
