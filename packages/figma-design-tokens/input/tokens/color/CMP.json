@@ -318,9 +318,9 @@
     },
     "Radio": {
       "Control": {
-        "Background": {
-          "Unselected": {
-            "Fill": {
+        "Container": {
+          "BackgroundColor": {
+            "Inactive": {
               "Rest": {
                 "value": "{q.surface.brand.primary.rest}",
                 "type": "color",
@@ -357,46 +357,7 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
             },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Background.Unselected.Stroke.Error"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
+            "Active": {
               "Rest": {
                 "value": "{q.surface.brand.primary.rest}",
                 "type": "color",
@@ -426,45 +387,94 @@
                 "value": "{q.surface.disabled.alpha}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Rest"
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
+              }
+            }
+          },
+          "BorderColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{q.stroke.none}",
+                "value": "{q.surface.brand.primary.hover}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Hover"
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{q.stroke.none}",
+                "value": "{q.surface.brand.primary.pressed}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Pressed"
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{q.stroke.none}",
+                "value": "{q.surface.brand.primary.rest}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Focus"
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{q.stroke.none}",
+                "value": "{q.surface.disabled.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.Disabled"
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{q.stroke.none}",
+                "value": "{q.surface.disabled.alpha}",
                 "type": "color",
-                "description": "Forms.Radio.Control.Background.Selected.Stroke.ReadOnly"
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{q.surface.brand.primary.hover}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{q.surface.brand.primary.pressed}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{q.surface.brand.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{q.surface.disabled.alpha}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{q.stroke.error}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
             }
           }
         },
-        "Foreground": {
-          "Unselected": {
-            "Fill": {
+        "Icon": {
+          "IconColor": {
+            "Inactive": {
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
@@ -501,46 +511,7 @@
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
               }
             },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Focus"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.ReadOnly"
-              },
-              "Error": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Unselected.Stroke.Error"
-              }
-            }
-          },
-          "Selected": {
-            "Fill": {
+            "Active": {
               "Rest": {
                 "value": "{q.content.onbrand.alpha}",
                 "type": "color",
@@ -570,38 +541,6 @@
                 "value": "{q.content.ondisabled.inverted}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
-              }
-            },
-            "Stroke": {
-              "Rest": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Rest"
-              },
-              "Hover": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Hover"
-              },
-              "Pressed": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Pressed"
-              },
-              "Focus": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Pressed"
-              },
-              "Disabled": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.Disabled"
-              },
-              "ReadOnly": {
-                "value": "{q.stroke.none}",
-                "type": "color",
-                "description": "Forms.Radio.Control.Foreground.Selected.Stroke.ReadOnly"
               }
             }
           }

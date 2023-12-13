@@ -6,48 +6,87 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
   const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
   const { Radio, RadioGroup } = componentTokens.Forms;
 
+  /* ToDos:
+
+  - [ ] seperate radio/radio group css and move them to their component folders
+  - [ ] Fix margin of caption-group
+  - [ ] Prevent click in readOnly
+  - [ ] Would be nice to have an *optional* max-width for .blr-radio
+  - [ ] Implement different sizing tokens (MD & LG) for .input-control and the icon (:before)
+  - [ ] Check whats going on with vertical stacking, this layout variant is not available in SB (already implemented appropriate gap tokens)
+  - [ ] Allow active opion in error state
+  - [ ] It should be possible to predefine a selected option - setting to disabled or readonly allways resets
+  - [ ] In disabled state, the legend should consume "Forms.Legend.Disabled"
+  - [ ] In readOnly state, the legend should consume "Forms.Legend.ReadOnly"
+
+  */
+
   return typeSafeNestedCss`
-    .blr-legend {
+    .blr-legend-wrapper {
       &.sm {
-        font-weight: ${SM.Legend.fontWeight};
-        font-size: ${SM.Legend.fontSize};
-        font-family: ${SM.Legend.fontFamily}, sans-serif;
-        line-height: ${SM.Legend.lineHeight};
-        color: ${Legend.Default};
+        padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.SM};
       }
 
       &.md {
-        font-weight: ${MD.Legend.fontWeight};
-        font-size: ${MD.Legend.fontSize};
-        font-family: ${MD.Legend.fontFamily}, sans-serif;
-        line-height: ${MD.Legend.lineHeight};
-        color: ${Legend.Default};
+        padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.MD};
       }
 
       &.lg {
-        font-weight: ${LG.Legend.fontWeight};
-        font-size: ${LG.Legend.fontSize};
-        font-family: ${LG.Legend.fontFamily}, sans-serif;
-        line-height: ${LG.Legend.lineHeight};
-        color: ${Legend.Default};
+        padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.LG};
       }
 
-      &.error {
-        color: ${Legend.Error};
+      .blr-legend {
+        _FIX: to override constructed css;
+        margin: 0 !important;
+        &.sm {
+          font-weight: ${SM.Legend.fontWeight};
+          font-size: ${SM.Legend.fontSize};
+          font-family: ${SM.Legend.fontFamily}, sans-serif;
+          line-height: ${SM.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+  
+        &.md {
+          font-weight: ${MD.Legend.fontWeight};
+          font-size: ${MD.Legend.fontSize};
+          font-family: ${MD.Legend.fontFamily}, sans-serif;
+          line-height: ${MD.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+  
+        &.lg {
+          font-weight: ${LG.Legend.fontWeight};
+          font-size: ${LG.Legend.fontSize};
+          font-family: ${LG.Legend.fontFamily}, sans-serif;
+          line-height: ${LG.Legend.lineHeight};
+          color: ${Legend.Default};
+        }
+  
+        &.error {
+          color: ${Legend.Error};
+        }
       }
     }
 
-    .blr-legend-wrapper {
+    .caption-group {
+    
+      _FIX_: To override constructed margin;
+      all: initial;
+      margin: 0;
+    
       &.sm {
-        padding-bottom: ${RadioGroup.SM.LegendWrapper.PaddingBottom};
+        _FIX: "Can be merged with the .caption-group above";
+        padding-top: ${RadioGroup.CaptionSlot.PaddingTop.SM};
       }
 
       &.md {
-        padding-bottom: ${RadioGroup.MD.LegendWrapper.PaddingBottom};
+        _FIX: "Can be merged with the .caption-group above";
+        padding-top: ${RadioGroup.CaptionSlot.PaddingTop.MD};
       }
 
       &.lg {
-        padding-bottom: ${RadioGroup.LG.LegendWrapper.PaddingBottom};
+        _FIX: "Can be merged with the .caption-group above";
+        padding-top: ${RadioGroup.CaptionSlot.PaddingTop.LG};
       }
     }
 
@@ -55,62 +94,46 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       display: flex;
       align-items: flex-start;
       position: relative;
-      flex-flow: row wrap;
+      flex-flow: nnowrap;
+      justify-content: space-between;
 
       &.vertical {
         flex-direction: column;
       }
 
-      .caption-group {
-        margin-top: 0.5rem;
-        display: block;
-        width: 100%;
-
-        &.sm {
-          margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.SM.ContentRow.ItemSpacing} - 1px);
-        }
-
-        &.md {
-          margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.MD.ContentRow.ItemSpacing} - 1px);
-        }
-
-        &.lg {
-          margin-left: calc(1rem + ${Radio.Control.Background.Unselected.Rest} + ${Radio.LG.ContentRow.ItemSpacing} - 1px);
-        }
-      }
-
       &.sm {
-        gap: ${Radio.SM.ContentRow.ItemSpacing};
+        _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+        column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.SM};
+        row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.SM};
       }
 
       &.md {
-        gap: ${Radio.MD.ContentRow.ItemSpacing};
+        _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+        column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.MD};
+        row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.MD};
       }
 
       &.lg {
-        gap: ${Radio.LG.ContentRow.ItemSpacing};
+        _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+        column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.LG};
+        row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.LG};
       }
     }
 
-    .caption-group {
-      &.sm {
-        padding-top: ${RadioGroup.SM.CaptionContainer.PaddingTop};
-      }
-
-      &.md {
-        padding-top: ${RadioGroup.MD.CaptionContainer.PaddingTop};
-      }
-
-      &.lg {
-        padding-top: ${RadioGroup.SM.CaptionContainer.PaddingTop};
-      }
-    }
+    
+    
 
     .blr-radio {
+      _FIX_: To override constructed margin;
+      all: initial;
+      margin: 0 !important;
+
       display: flex;
+      flex-grow: 1;
       transition: all 0.25s ease 0s;
 
       .blr-form-label-inline {
+        _FIX?_: "LabelNextToControl states";
         color: ${LabelNextToControl.Rest};
         transition: all 0.25s ease 0s;
         display: flex;
@@ -122,14 +145,14 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         transition: all 0.25s ease 0s;
         appearance: none;
         margin: 0;
-        border-radius: ${Radio.ControlBorderRadius};
+        border-radius: ${Radio.Control.Container.BorderRadius};
         display: grid;
         place-content: center;
 
         &::before {
           content: "";
           transition: all 0.25s ease 0s;
-          border-radius: ${Radio.ControlBorderRadius};
+          border-radius: ${Radio.Control.Container.BorderRadius};
         }
       }
 
@@ -146,17 +169,18 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         }
       }
 
+
       &.sm {
-        gap: ${Radio.SM.ContentRow.ItemSpacing};
-        padding: ${Radio.SM.ContentRow.Padding};
+        gap: ${Radio.ContentRow.ItemSpacing.SM};
+        padding: ${Radio.ContentRow.Padding.SM};
 
         .input-control {
-          margin-top: ${Radio.SM.ControlWrapper.TopMargin};
+          margin-top: ${Radio.ControlWrapper.PaddingTop.SM};
         }
 
         .label-wrapper {
-          padding-top: ${Radio.SM.ContentCol.PaddingTop};
-          gap: ${Radio.SM.ContentCol.ItemSpacing};
+          padding-top: ${Radio.ContentCol.PaddingTop.SM};
+          gap: ${Radio.ContentCol.ItemSpacing.SM};
 
           .caption-wrapper {
             padding: ${SM.CaptionComponent.Padding};
@@ -173,16 +197,16 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
 
       &.md {
-        gap: ${Radio.MD.ContentRow.ItemSpacing};
-        padding: ${Radio.MD.ContentRow.Padding};
+        gap: ${Radio.ContentRow.ItemSpacing.MD};
+        padding: ${Radio.ContentRow.Padding.MD};
 
         .input-control {
-          margin-top: ${Radio.MD.ControlWrapper.TopMargin};
+          margin-top: ${Radio.ControlWrapper.PaddingTop.MD};
         }
 
         .label-wrapper {
-          padding-top: ${Radio.MD.ContentCol.PaddingTop};
-          gap: ${Radio.MD.ContentCol.ItemSpacing};
+          padding-top: ${Radio.ContentCol.PaddingTop.MD};
+          gap: ${Radio.ContentCol.ItemSpacing.MD};
 
           .caption-wrapper {
             padding: ${MD.CaptionComponent.Padding};
@@ -199,16 +223,16 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
 
       &.lg {
-        gap: ${Radio.LG.ContentRow.ItemSpacing};
-        padding: ${Radio.LG.ContentRow.Padding};
+        gap: ${Radio.ContentRow.ItemSpacing.LG};
+        padding: ${Radio.ContentRow.Padding.LG};
 
         .input-control {
-          margin-top: ${Radio.LG.ControlWrapper.TopMargin};
+          margin-top: ${Radio.ControlWrapper.PaddingTop.LG};
         }
 
         .label-wrapper {
-          padding-top: ${Radio.LG.ContentCol.PaddingTop};
-          gap: ${Radio.LG.ContentCol.ItemSpacing};
+          padding-top: ${Radio.ContentCol.PaddingTop.LG};
+          gap: ${Radio.ContentCol.ItemSpacing.LG};
 
           .caption-wrapper {
             padding: ${LG.CaptionComponent.Padding};
@@ -224,165 +248,155 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         }
       }
 
-      &:not(.error) {
-        .input-control {
-          background-color: ${Radio.Control.Background.Unselected.Fill.Rest};
-          width: ${Radio.Control.Background.Unselected.Rest};
-          min-width: ${Radio.Control.Background.Unselected.Rest};
-          height: ${Radio.Control.Background.Unselected.Rest};
-          min-height: ${Radio.Control.Background.Unselected.Rest};
 
-          &::before {
-            background-color: ${Radio.Control.Foreground.Unselected.Fill.Rest};
-            width: ${Radio.Control.Foreground.Unselected.Rest};
-            height: ${Radio.Control.Foreground.Unselected.Rest};
-          }
 
+      .input-control {
+        background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Rest};
+        width: ${Radio.Control.Container.Size.SM};
+        min-width: ${Radio.Control.Container.Size.SM};
+        height: ${Radio.Control.Container.Size.SM};
+        min-height: ${Radio.Control.Container.Size.SM};
+
+        &::before {
+          background-color: ${Radio.Control.Icon.IconColor.Inactive.Rest};
+          width: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
+          height: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
+        }
+
+        &:not(.disabled):not(.readonly) {
           &:hover {
-            &:not(.disabled):not(.readonly) {
-              background-color: ${Radio.Control.Background.Unselected.Fill.Hover};
-              width: ${Radio.Control.Background.Unselected.Hover};
-              height: ${Radio.Control.Background.Unselected.Hover};
-
-              &::before {
-                content: "";
-                background-color: ${Radio.Control.Foreground.Unselected.Fill.Hover};
-                width: ${Radio.Control.Foreground.Unselected.Hover};
-                height: ${Radio.Control.Foreground.Unselected.Hover};
-              }
-
-              & + .label-wrapper {
-                .blr-form-label-inline {
-                  color: ${LabelNextToControl.Hover};
-                }
-              }
-            }
-          }
-
-          &:active {
-            &:not(.disabled):not(.readonly) {
-              background-color: ${Radio.Control.Background.Unselected.Fill.Pressed};
-              width: ${Radio.Control.Background.Unselected.Pressed};
-              height: ${Radio.Control.Background.Unselected.Pressed};
-
-              &::before {
-                content: "";
-                background-color: ${Radio.Control.Foreground.Unselected.Fill.Pressed};
-                width: ${Radio.Control.Foreground.Unselected.Pressed};
-                height: ${Radio.Control.Foreground.Unselected.Pressed};
-              }
-
-              & + .label-wrapper {
-                .blr-form-label-inline {
-                  color: ${LabelNextToControl.Pressed};
-                }
-              }
-            }
-          }
-
-          &:focus {
-            background-color: ${Radio.Control.Background.Unselected.Fill.Focus};
-            width: ${Radio.Control.Background.Unselected.Focus};
-            height: ${Radio.Control.Background.Unselected.Focus};
-            outline: black solid 2px;
-            outline-offset: 2px;
-
+            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Hover};
             &::before {
               content: "";
-              background-color: ${Radio.Control.Foreground.Unselected.Fill.Focus};
-              width: ${Radio.Control.Foreground.Unselected.Focus};
-              height: ${Radio.Control.Foreground.Unselected.Focus};
+              background-color: ${Radio.Control.Icon.IconColor.Inactive.Hover};
+              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Hover};
+              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Hover};
             }
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${LabelNextToControl.Focus};
+                color: ${LabelNextToControl.Hover};
               }
             }
           }
+        
 
-          &.checked,
-          &:checked {
-            background-color: ${Radio.Control.Background.Selected.Fill.Rest};
+          &:active {
+          
+            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Pressed};
 
             &::before {
               content: "";
-              background-color: ${Radio.Control.Foreground.Selected.Fill.Rest};
-              width: ${Radio.Control.Foreground.Selected.Rest};
-              height: ${Radio.Control.Foreground.Selected.Rest};
+              background-color: ${Radio.Control.Icon.IconColor.Inactive.Pressed};
+
+              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
+              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
             }
 
+            & + .label-wrapper {
+              .blr-form-label-inline {
+                color: ${LabelNextToControl.Pressed};
+              }
+            }
+          }
+        }
+
+        &:focus {
+          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
+          _FIX_: "needs focus ring";
+          outline: black solid 2px;
+          outline-offset: 2px;
+
+          &::before {
+            content: "";
+            background-color: ${Radio.Control.Icon.IconColor.Inactive.Focus};
+            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+          }
+
+          & + .label-wrapper {
+            .blr-form-label-inline {
+              color: ${LabelNextToControl.Focus};
+            }
+          }
+        }
+
+
+        &.checked, &:checked {
+          background-color: ${Radio.Control.Container.BackgroundColor.Active.Rest};
+
+          &::before {
+            content: "";
+            background-color: ${Radio.Control.Icon.IconColor.Active.Rest};
+            width: ${Radio.Control.Icon.IconSize.SM.Active.Rest};
+            height: ${Radio.Control.Icon.IconSize.SM.Active.Rest};
+          }
+
+          &:not(.disabled):not(.readonly) {
+            
             &:hover {
-              background-color: ${Radio.Control.Background.Selected.Fill.Hover};
-              width: ${Radio.Control.Background.Selected.Hover};
-              height: ${Radio.Control.Background.Selected.Hover};
+              background-color: ${Radio.Control.Container.BackgroundColor.Active.Hover};
 
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Foreground.Selected.Fill.Hover};
-                width: ${Radio.Control.Foreground.Selected.Hover};
-                height: ${Radio.Control.Foreground.Selected.Hover};
+                background-color: ${Radio.Control.Icon.IconColor.Active.Hover};
+                width: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
+                height: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
+
               }
             }
+          
 
             &:active {
-              background-color: ${Radio.Control.Background.Selected.Fill.Pressed};
-              width: ${Radio.Control.Background.Selected.Pressed};
-              height: ${Radio.Control.Background.Selected.Pressed};
-
+              background-color: ${Radio.Control.Container.BackgroundColor.Active.Pressed};
+              
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Foreground.Selected.Fill.Pressed};
-                width: ${Radio.Control.Foreground.Selected.Pressed};
-                height: ${Radio.Control.Foreground.Selected.Pressed};
-              }
-            }
-
-            &:disabled {
-              background-color: ${Radio.Control.Background.Selected.Fill.Disabled};
-              width: ${Radio.Control.Background.Selected.Disabled};
-              height: ${Radio.Control.Background.Selected.Disabled};
-
-              &::before {
-                content: "";
-                background-color: ${Radio.Control.Foreground.Selected.Fill.Disabled};
-                width: ${Radio.Control.Foreground.Selected.Disabled};
-                height: ${Radio.Control.Foreground.Selected.Disabled};
-              }
-            }
-
-            &[readonly] {
-              background-color: ${Radio.Control.Background.Selected.Fill.ReadOnly};
-              width: ${Radio.Control.Background.Selected.ReadOnly};
-              height: ${Radio.Control.Background.Selected.ReadOnly};
-
-              &::before {
-                content: "";
-                background-color: ${Radio.Control.Foreground.Selected.Fill.ReadOnly};
-                width: ${Radio.Control.Foreground.Selected.ReadOnly};
-                height: ${Radio.Control.Foreground.Selected.ReadOnly};
+                background-color: ${Radio.Control.Icon.IconColor.Active.Pressed};
+                width: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
+                height: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
               }
             }
           }
 
           &:disabled {
-            cursor: not-allowed;
-            background-color: ${Radio.Control.Background.Unselected.Fill.Disabled};
-            width: ${Radio.Control.Background.Unselected.Disabled};
-            height: ${Radio.Control.Background.Unselected.Disabled};
+            background-color: ${Radio.Control.Container.BackgroundColor.Active.Disabled};
 
             &::before {
               content: "";
-              background-color: ${Radio.Control.Foreground.Unselected.Fill.Disabled};
-              width: ${Radio.Control.Foreground.Unselected.Disabled};
-              height: ${Radio.Control.Foreground.Unselected.Disabled};
+              background-color: ${Radio.Control.Icon.IconColor.Active.Disabled};
+              width: ${Radio.Control.Icon.IconSize.SM.Active.Disabled};
+              height: ${Radio.Control.Icon.IconSize.SM.Active.Disabled};
             }
+          }
 
-            & + .label-wrapper {
-              .blr-form-label-inline {
-                cursor: not-allowed;
-                color: ${LabelNextToControl.Disabled};
-              }
+          &[readonly] {
+            background-color: ${Radio.Control.Container.BackgroundColor.Active.ReadOnly};
+
+            &::before {
+              content: "";
+              background-color: ${Radio.Control.Icon.IconColor.Active.ReadOnly};
+              width: ${Radio.Control.Icon.IconSize.SM.Active.ReadOnly};
+              height: ${Radio.Control.Icon.IconSize.SM.Active.ReadOnly};
+            }
+          }
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Disabled};
+         
+          &::before {
+            content: "";
+            background-color: ${Radio.Control.Icon.IconColor.Inactive.Disabled};
+            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Disabled};
+            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Disabled};
+          }
+
+          & + .label-wrapper {
+            .blr-form-label-inline {
+              cursor: not-allowed;
+              color: ${LabelNextToControl.Disabled};
             }
           }
         }
@@ -390,14 +404,12 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
       &.error {
         .input-control {
-          background-color: ${Radio.Control.Background.Unselected.Fill.Error};
-          width: ${Radio.Control.Background.Unselected.Error};
-          height: ${Radio.Control.Background.Unselected.Error};
+          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Error};
 
           &::before {
-            background-color: ${Radio.Control.Foreground.Unselected.Fill.Error};
-            width: ${Radio.Control.Foreground.Unselected.Error};
-            height: ${Radio.Control.Foreground.Unselected.Error};
+            background-color: ${Radio.Control.Icon.IconColor.Inactive.Error};
+            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Error};
+            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Error};
           }
 
           & + .label-wrapper {
@@ -405,20 +417,32 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               color: ${LabelNextToControl.Error};
             }
           }
+
+          &.checked,
+          &:checked {
+            &::before {
+              width: ${Radio.Control.Icon.IconSize.SM.Active.Error};
+              height: ${Radio.Control.Icon.IconSize.SM.Active.Error};
+            }
+          }
         }
       }
 
+
+
+
+
       &.disabled {
         .input-control {
-          background-color: ${Radio.Control.Background.Unselected.Fill.Disabled};
-          width: ${Radio.Control.Background.Unselected.Disabled};
-          height: ${Radio.Control.Background.Unselected.Disabled};
+          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Disabled};
+          width: ${Radio.Control.Container.Size.SM};
+          height: ${Radio.Control.Container.Size.SM};
 
           &::before {
             content: "";
-            background-color: ${Radio.Control.Foreground.Unselected.Fill.Disabled};
-            width: ${Radio.Control.Foreground.Unselected.Disabled};
-            height: ${Radio.Control.Foreground.Unselected.Disabled};
+            background-color: ${Radio.Control.Icon.IconColor.Inactive.Disabled};
+            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
+            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
           }
 
           & + .label-wrapper {
@@ -431,15 +455,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
       &.readonly {
         .input-control {
-          background-color: ${Radio.Control.Background.Unselected.Fill.ReadOnly};
-          width: ${Radio.Control.Background.Unselected.ReadOnly};
-          height: ${Radio.Control.Background.Unselected.ReadOnly};
+          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.ReadOnly};
+          width: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
+          height: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
 
           &::before {
             content: "";
-            background-color: ${Radio.Control.Foreground.Unselected.Fill.ReadOnly};
-            width: ${Radio.Control.Foreground.Unselected.ReadOnly};
-            height: ${Radio.Control.Foreground.Unselected.ReadOnly};
+            background-color: ${Radio.Control.Icon.IconColor.Inactive.ReadOnly};
+            width: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
+            height: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
           }
 
           & + .label-wrapper {
