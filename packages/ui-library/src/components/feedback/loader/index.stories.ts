@@ -8,9 +8,6 @@ const sharedStyles = html`
   <style>
     .size-container {
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100px;
       height: 100px;
       margin: 0.5rem;
