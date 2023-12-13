@@ -31,19 +31,18 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
       }
 
       .elevation {
-        ${
-          //filter: drop-shadow(0 0 1px ${Tooltip.SurfaceFill});
-          ""
-        }
         filter: drop-shadow(${Elevation.Lvl_1.x} ${Elevation.Lvl_1.y} ${Elevation.Lvl_1.blur} ${Elevation.Lvl_1.color});
         
       }
 
-      /*
-        The layout box of the arrow element should be a square with equal width and height. 
-        Inner or pseudo-elements may have a different aspect ratio.
-        https://floating-ui.com/docs/arrow#usage
-      */
+      ${
+        /* 
+          The layout box of the arrow element should be a square with equal width and height. 
+          Inner or pseudo-elements may have a different aspect ratio.
+          https://floating-ui.com/docs/arrow#usage
+        */
+        ""
+      }
       .arrow {
         align-items: flex-end;
         display: flex;
@@ -58,7 +57,10 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         }
       }
 
-      /* Currently only used for demo purposes when Floating UI does not control the position of the arrow */
+      ${
+        /* Currently only used for demo purposes when Floating UI does not control the position of the arrow */
+        ""
+      }
       .static .arrow {
         bottom: -${arrowHeight};
         left: 50%;
