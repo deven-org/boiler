@@ -31,7 +31,7 @@ export default {
   argTypes: {
     //Appearance
     variant: {
-      description: 'Select variant of the component.',
+      description: 'Choose variant of the component.',
       options: FeedbackVariants,
       control: { type: 'radio' },
       table: {
@@ -85,8 +85,8 @@ BlrLoader.args = defaultParams;
 /**
  * ## Appearance
  * ### Variant
- * ### Default
  * The Loader component comes in 2 variants: default and inverted. The inverted variant should be used to in cases the default variant does not have a good visibility.
+ * #### Variant: Default
  */
 export const Variant = () => {
   return html`
@@ -101,7 +101,9 @@ export const Variant = () => {
   `;
 };
 Variant.story = { name: ' ' };
-
+/**
+ * #### Variant: Inverted
+ */
 export const Inverted = () => {
   return html`
     ${sharedStyles}
@@ -114,6 +116,7 @@ export const Inverted = () => {
     </div>
   `;
 };
+Inverted.story = { name: ' ' };
 Inverted.parameters = {
   backgrounds: {
     default: 'dark',
