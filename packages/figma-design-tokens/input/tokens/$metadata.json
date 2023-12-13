@@ -7,10 +7,6 @@
     "color/CMP",
     "dimensions/SEM",
     "dimensions/CMP",
-    "captions/allCaptions",
-    "captions/HintOnly",
-    "captions/ErrorOnly",
-    "captions/noCaptions",
     "sizeVariants/CMP",
     "sizeVariants/SEM"
   ]

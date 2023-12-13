@@ -2698,120 +2698,129 @@
   "Navigation": {
     "TabBar": {
       "Tab": {
-        "SM": {
-          "HighlightLine": {
-            "Height": {
+        "Label": {
+          "Typography": {
+            "SM": {
+              "value": "{Action.SM.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "MD": {
+              "value": "{Action.MD.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "LG": {
+              "value": "{Action.LG.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            }
+          }
+        },
+        "HighlightLine": {
+          "Height": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            },
+            "LG": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
-          },
-          "ContentCol": {
-            "TopPadding": {
+          }
+        },
+        "ContentCol": {
+          "PaddingTop": {
+            "SM": {
               "value": "{core.dimensionREM.4}",
               "type": "spacing",
               "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
             },
-            "ItemSpacing": {
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            }
+          },
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            },
+            "LG": {
               "value": "{core.dimensionREM.8}",
               "type": "spacing",
               "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
+          }
+        },
+        "ContentRow": {
+          "PaddingLeftRight": {
+            "SM": {
               "value": "{core.dimensionPX.12}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
-            }
-          },
-          "Icon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.12}",
-              "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
-            }
-          }
-        },
-        "MD": {
-          "HighlightLine": {
-            "Height": {
-              "value": "{core.dimensionPX.2}",
-              "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
-            }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
+            "MD": {
               "value": "{core.dimensionPX.16}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
-            }
-          },
-          "Icon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
-            }
-          }
-        },
-        "LG": {
-          "HighlightLine": {
-            "Height": {
-              "value": "{core.dimensionPX.2}",
-              "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
-            }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
+            "LG": {
               "value": "{core.dimensionPX.16}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
+            }
+          },
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             },
-            "ItemSpacing": {
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            },
+            "LG": {
               "value": "{core.dimensionPX.4}",
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
-          },
-          "Icon": {
-            "Sizing": {
+          }
+        },
+        "Icon": {
+          "IconSize": {
+            "SM": {
+              "value": "{core.dimensionREM.12}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "LG": {
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
@@ -2820,51 +2829,56 @@
         }
       },
       "ButtonWrapper": {
-        "SM": {
-          "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8} 0 0",
-              "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
-            }
+        "InnerPadding": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           },
-          "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           }
         },
-        "MD": {
+        "Padding": {
           "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8} 0 0",
+            "SM": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+              "description": "Coded comps only!"
+            },
+            "MD": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!."
+            },
+            "LG": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!."
             }
           },
           "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.8}",
+            "SM": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
-            }
-          }
-        },
-        "LG": {
-          "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.12}",
+              "description": "Coded comps only!"
+            },
+            "MD": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
               "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
-            }
-          },
-          "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.12}",
+              "description": "Coded comps only!."
+            },
+            "LG": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
               "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+              "description": "Coded comps only!."
             }
           }
         }
