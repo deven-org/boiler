@@ -1,9 +1,9 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, query, queryAll } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
+import { customElement, property, query, queryAll, state } from 'lit/decorators.js';
+import { styleCustom, tabBarDark, tabBarLight } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { tabBarDark, tabBarLight } from './index.css';
+
 import {
   FormSizesType,
   TabType,
@@ -57,6 +57,8 @@ export class BlrTabBar extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  @state() protected selectedTabIndex: number | undefined;
+
   protected scrollTab = (direction: string, speed: number, distance: number) => {
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
@@ -72,11 +74,16 @@ export class BlrTabBar extends LitElement {
     }, speed);
   };
 
+  protected handleSelect(index: number | undefined) {
+    this.selectedTabIndex = index;
+  }
+
   protected render() {
     if (this.size) {
       const dynamicStyles =
         this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
 
+      /*
       const setActive = (tabIndex: number) => {
         const selectedTab = this._navItems[tabIndex];
         selectedTab.setAttribute('aria-selected', 'true');
@@ -100,6 +107,7 @@ export class BlrTabBar extends LitElement {
         const index = navLabels.indexOf(label);
         this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
       };
+      */
 
       const classes = classMap({
         [`${this.variant}`]: this.variant,
@@ -146,20 +154,43 @@ export class BlrTabBar extends LitElement {
             : nothing}
           <div class="blr-tab-bar ${this.alignment}">
             <ul class="nav-list ${navListClasses}" role="tablist">
-              ${this.tabs.map((tab) => {
+              ${this.tabs.map((tab, index) => {
+                const navListItemClasses = classMap({
+                  'disabled': tab?.disabled || false,
+                  'nav-item': true,
+                  [`${this.size}`]: this.size || 'md',
+                  [`${this.iconPosition}`]: this.iconPosition,
+                  'selected': index === this.selectedTabIndex,
+                });
+
+                const navListItemContainer = classMap({
+                  'disabled': tab?.disabled || false,
+                  'nav-item-container': true,
+                  [`${this.size}`]: this.size || 'md',
+                  [`${this.iconPosition}`]: this.iconPosition,
+                });
+
+                const navListItemUnderline = classMap({
+                  'nav-item-underline': true,
+                  'selected': index === this.selectedTabIndex,
+                });
+
+                // spaces are not allowed as id, so best is not even to use a label als id
                 return html`
-                  <li
-                    class="nav-item-container ${this.variant} ${this.size} ${tab.disabled ? `disabled` : ``}"
-                    role="presentation"
-                  >
+                  <li class="${navListItemContainer}" role="presentation">
                     <div class="nav-item-content-wrapper">
                       <a
                         id=${`${tab.label.toLowerCase()} tab`}
                         role="tab"
                         href=${`#${tab.href}`}
                         aria-controls=${tab.label.toLowerCase()}
-                        class="${this.size} ${this.iconPosition} ${tab.disabled ? `disabled` : ``}"
-                        @click=${(e: Event) => handleSelect(e, tab.label)}
+                        class="${navListItemClasses}"
+                        @click=${() => {
+                          if (!tab.disabled) {
+                            this.handleSelect(index);
+                          }
+                        }}
+                        tabindex=${tab.disabled ? '-1' : nothing}
                       >
                         ${this.tabContent !== 'labelOnly'
                           ? BlrIconRenderFunction({
@@ -169,11 +200,13 @@ export class BlrTabBar extends LitElement {
                             })
                           : nothing}
                         ${this.tabContent !== 'iconOnly'
-                          ? html` <slot class="blr-semantic-action ${this.size}" name="tab">${tab.label}</slot>`
+                          ? html` <label class="blr-semantic-action ${this.size}" name="${tab.label}"
+                              >${tab.label}</label
+                            >`
                           : nothing}
                       </a>
                     </div>
-                    <div class="nav-item-underline"></div>
+                    <div class="${navListItemUnderline}"></div>
                   </li>
                 `;
               })}
@@ -200,6 +233,7 @@ export class BlrTabBar extends LitElement {
             : nothing}
         </div>
         ${this.tabs.map((tab) => {
+          // id can not be a href. it contains many illegal characters for sure
           return html` <section
             id=${tab.href}
             class="panel-wrapper"
