@@ -9,31 +9,25 @@ const sampleParams: BlrFormCaptionGroupType = {
   size: 'md',
 };
 
-const hintCaption =
-  BlrFormCaptionRenderFunction({
-      message: 'This is a hint',
-      variant: 'hint',
-      icon: 'blrInfo',
-      size: 'md',
-      theme: 'Light',
-      arialabel: 'Form Hint',
-  });
+const hintCaption = BlrFormCaptionRenderFunction({
+  message: 'This is a hint',
+  variant: 'hint',
+  icon: 'blrInfo',
+  size: 'md',
+  theme: 'Light',
+  arialabel: 'Form Hint',
+});
 
-const errorCaption = 
-  BlrFormCaptionRenderFunction({
-      message: 'This is an error',
-      variant: 'error',
-      icon: 'blrInfo',
-      size: 'md',
-      theme: 'Light',
-      arialabel: 'Form Error',
-    });
+const errorCaption = BlrFormCaptionRenderFunction({
+  message: 'This is an error',
+  variant: 'error',
+  icon: 'blrInfo',
+  size: 'md',
+  theme: 'Light',
+  arialabel: 'Form Error',
+});
 
-const mixedCaptions = 
-  html `
-    ${hintCaption}
-    ${errorCaption}
-  `;
+const mixedCaptions = html` ${hintCaption} ${errorCaption} `;
 
 describe('blr-form-caption-group', () => {
   it('is rendering captions inside slot', async () => {

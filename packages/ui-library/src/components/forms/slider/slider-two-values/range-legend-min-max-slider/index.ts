@@ -57,7 +57,7 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
     BlrIconButtonRenderFunction({
       arialabel: btnId,
-      onClick: btnEventHandler,
+      blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
