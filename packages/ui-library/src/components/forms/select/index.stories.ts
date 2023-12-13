@@ -17,6 +17,7 @@ const sharedStyles = html`
   </style>
 `;
 const defaultParams: BlrSelectType = {
+  theme: 'Light',
   size: 'md',
   label: 'Label-text',
   labelAppendix: '(Appendix)',
@@ -30,9 +31,8 @@ const defaultParams: BlrSelectType = {
   errorMessage: ' ',
   errorIcon: undefined,
   arialabel: 'Select',
-  theme: 'Light',
-  name: 'select',
   selectId: 'selectId',
+  name: 'select',
   options: [
     { value: '0', label: 'Option 1', selected: false, disabled: true },
     { value: '1', label: 'Option 2', selected: false, disabled: false },
@@ -63,19 +63,11 @@ export default {
       },
     },
     // Content / Settings
-    hasLabel: {
-      description: 'Choose if component has a label.',
-      control: { type: 'boolean' },
-      table: {
-        category: 'Content / Settings',
-      },
-    },
     label: {
       description: 'Enter string used as label text.',
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'hasLabel', eq: true },
     },
     labelAppendix: {
       description:
@@ -83,21 +75,12 @@ export default {
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'hasLabel', eq: true },
     },
 
-    //todo follow property has to be added to component
-    hasIcon: {
-      description: 'Choose if component has an icon.',
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'boolean' },
-      table: { category: 'Content / Settings' },
-    },
     icon: {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'hasIcon', eq: true },
       table: { category: 'Content / Settings' },
     },
     hasHint: {
@@ -154,7 +137,7 @@ export default {
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       control: { type: 'boolean' },
       table: {
-        category: 'States',
+        disabled: true,
       },
     },
     required: {
@@ -218,6 +201,7 @@ export default {
       },
     },
     onFocus: {
+      name: 'onFocus',
       action: 'onFocus',
       description: 'Fires when the component is focused.',
       table: {
@@ -244,7 +228,6 @@ Select presents users with a list of options from which they can make a single s
  - [**Size Variant**](#size-variant)
 - [**States**](#states)
  - [**Disabled**](#disabled)
- - [**Readonly**](#readonly)
 - [**Validation**](#validation)
  - [**Required**](#required)
  - [**Has Error**](#has-error)
@@ -275,7 +258,6 @@ const argTypesToDisable = [
   'hintText',
   'hintIcon',
   'disabled',
-  'readonly',
   'required',
   'hasError',
   'errorMessage',
@@ -338,7 +320,7 @@ SizeVariant.argTypes = {
 };
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Select component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * Apart from states like rest, hover, pressed and focus, the Select component can also be disabled. The error state is documented under [validation](#validation).
  *
  * ### Disabled
  * The Select component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
@@ -360,30 +342,12 @@ Disabled.story = { name: ' ' };
 Disabled.argTypes = {
   ...disabledArgTypes,
 };
-/**
- * The Select component in the readonly state can not be interacted with, but it can still be selected and receive focus.
- */
-export const Readonly = () => {
-  return html`
-    ${sharedStyles}
-    <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        label: "Currently doesn't work",
-        labelAppendix: '',
-      })}
-    </div>
-  `;
-};
-Readonly.argTypes = {
-  ...disabledArgTypes,
-};
 
 /**
  * ## Validation
  *
  * ### Required
- * The Select component can be set as required. If set as required, an error should be thrown, when the Select component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component in the dependencies section below.
+ * The Select component can be set as required. If set as required, an error should be thrown, when the Select component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
  */
 export const Required = () => {
   return html`
@@ -404,7 +368,7 @@ Required.argTypes = {
 };
 
 /**
- * The Select component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Select or in case the Select was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) in the dependencies section below.
+ * The Select component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Select or in case the Select was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 export const HasError = () => {
   return html`
@@ -414,7 +378,7 @@ export const HasError = () => {
         ...defaultParams,
         hasError: true,
         errorIcon: undefined,
-        label: ' ',
+        label: 'Error',
         labelAppendix: '',
       })}
     </div>
@@ -435,7 +399,7 @@ export const FormLabel = () => {
     <div class="stories-select">
       ${BlrSelectRenderFunction({
         ...defaultParams,
-        label: 'with Label',
+        label: 'With Label',
         labelAppendix: '(with Appendix)',
       })}
       ${BlrSelectRenderFunction({
@@ -492,6 +456,7 @@ export const FormCaptionGroup = () => {
       ${BlrSelectRenderFunction({
         ...defaultParams,
         hasHint: true,
+        label: 'Hint message',
         labelAppendix: ' ',
       })}
       ${BlrSelectRenderFunction({
@@ -501,7 +466,7 @@ export const FormCaptionGroup = () => {
         labelAppendix: '',
         hasHint: true,
         hasError: true,
-        errorMessage: "OMG it's an error.",
+        errorMessage: "OMG it's an error",
         errorIcon: 'blrErrorFilled',
       })}
     </div>
