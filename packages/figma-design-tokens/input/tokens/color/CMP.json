@@ -1069,8 +1069,8 @@
     "TabBar": {
       "Tab": {
         "HighlightLine": {
-          "SurfaceFill": {
-            "Selected": {
+          "BackgroundColor": {
+            "Active": {
               "Rest": {
                 "value": "{q.content.ondefault.brand.rest}",
                 "type": "color",
@@ -1092,7 +1092,7 @@
                 "description": "Apply as fill on HightlightLine"
               }
             },
-            "Unselected": {
+            "Inactive": {
               "Rest": {
                 "value": "{q.content.ondefault.brand.rest}",
                 "type": "color",
@@ -1114,14 +1114,14 @@
                 "description": "Apply as fill on HightlightLine"
               },
               "Disabled": {
-                "value": "{q.content.ondefault.brand.rest}",
+                "value": "{q.content.ondisabled.alpha}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               }
             }
           },
           "Opacity": {
-            "Selected": {
+            "Active": {
               "Rest": {
                 "value": "1",
                 "type": "opacity"
@@ -1139,7 +1139,7 @@
                 "type": "opacity"
               }
             },
-            "Unselected": {
+            "Inactive": {
               "Rest": {
                 "value": "0",
                 "type": "opacity"
@@ -1164,96 +1164,100 @@
           }
         },
         "Label": {
-          "Selected": {
-            "Rest": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
             },
-            "Hover": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
-            },
-            "Pressed": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
-            },
-            "Focus": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
-            }
-          },
-          "Unselected": {
-            "Rest": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Hover": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Pressed": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Focus": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Disabled": {
-              "value": "{q.content.ondisabled.alpha}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
             }
           }
         },
         "Icon": {
-          "Selected": {
-            "Rest": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
             },
-            "Hover": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
-            },
-            "Pressed": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
-            },
-            "Focus": {
-              "value": "{q.content.ondefault.brand.rest}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
-            }
-          },
-          "Unselected": {
-            "Rest": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Hover": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Pressed": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Focus": {
-              "value": "{q.content.ondefault.alpha}",
-              "type": "color"
-            },
-            "Disabled": {
-              "value": "{q.content.ondisabled.alpha}",
-              "type": "color",
-              "description": "Defines the color of the label of a tab. Apply on <label>"
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
             }
           }
         }

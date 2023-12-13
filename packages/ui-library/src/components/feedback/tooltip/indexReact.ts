@@ -1,10 +1,10 @@
 import React from 'react';
 import { createComponent } from '@lit-labs/react';
 
-import { BlrToolTip } from '.';
+import { BlrTooltip } from '.';
 
 export const BlrToolTipReact = createComponent({
-  tagName: 'blr-tool-tip',
-  elementClass: BlrToolTip,
+  tagName: 'blr-tooltip',
+  elementClass: BlrTooltip,
   react: React,
 });
