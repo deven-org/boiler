@@ -14,7 +14,6 @@ export class BlrFormCaption extends LitElement {
   @property() size: FormSizesType = 'md';
 
   protected render() {
-
     const classes = classMap({
       'blr-form-caption-group': true,
       [this.size]: this.size,
