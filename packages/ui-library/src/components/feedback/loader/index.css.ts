@@ -31,22 +31,33 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
       &.sm {
         width: ${Loader.Container.Size.SM};
         height: ${Loader.Container.Size.SM};
-        padding: ${Loader.Container.Padding.SM};
         border-width: ${Loader.Background.BorderWidth.SM};
       }
 
       &.md {
         width: ${Loader.Container.Size.MD};
         height: ${Loader.Container.Size.MD};
-        padding: ${Loader.Container.Padding.MD};
         border-width: ${Loader.Background.BorderWidth.MD};
       }
 
       &.lg {
         width: ${Loader.Container.Size.LG};
         height: ${Loader.Container.Size.LG};
-        padding: ${Loader.Container.Padding.LG};
         border-width: ${Loader.Background.BorderWidth.LG};
+      }
+    }
+
+    .loader-container {
+      &.sm {
+        padding: ${Loader.Container.Padding.SM};
+      }
+
+      &.md {
+        padding: ${Loader.Container.Padding.MD};
+      }
+
+      &.lg {
+        padding: ${Loader.Container.Padding.LG};
       }
     }
 

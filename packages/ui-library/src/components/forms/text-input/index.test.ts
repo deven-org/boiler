@@ -1,7 +1,7 @@
 import { BlrTextInputRenderFunction, BlrTextInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../../utils/get-random.string';
 
 const sampleParams: BlrTextInputType = {
@@ -16,8 +16,8 @@ const sampleParams: BlrTextInputType = {
   labelAppendix: '(Appendix)',
   showInputIcon: true,
   inputIcon: 'blr360',
-  showHint: false,
-  hintText: 'This is a small hint message',
+  hasHint: false,
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
@@ -91,6 +91,29 @@ describe('blr-text-input', () => {
     const label = querySelectorDeep('blr-form-label', inputContainer?.getRootNode() as HTMLElement);
 
     expect(label).to.not.exist;
+  });
+
+  it('is shows adjacent caption components in caption group slot', async () => {
+    const element = await fixture(
+      BlrTextInputRenderFunction({
+        ...sampleParams,
+        hasHint: true,
+        hintIcon: 'blrInfo',
+        hasError: true,
+        errorIcon: 'blrErrorFilled',
+      })
+    );
+
+    const formCaptions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+
+    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
+    const hintClassName = formCaptionHint?.className;
+
+    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
+    const errorClassName = formCaptionError?.className;
+
+    expect(hintClassName).to.contain('hint');
+    expect(errorClassName).to.contain('error');
   });
 
   it('has a size md by default', async () => {

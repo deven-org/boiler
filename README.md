@@ -2,7 +2,7 @@
 
 ## Content
 
-- [Project Title](#project-title)
+- [B01LER Kitchen](#b01ler-kitchen)
   - [Content](#content)
 - [Introduction](#introduction)
 - [Quick Start](#quick-start)
@@ -39,6 +39,8 @@ could structure this section:
 
 - yarn (any version, we will pick the right settings later)
 
+- corepack (might need to be installed additionally)
+
 ## How to start
 
 In this section you're supposed to provide the user with a step by step guide on how to install and use your project.
@@ -52,20 +54,20 @@ We've added an example below to give you an idea of how you could structure your
    $ npm init -y
    ```
 
-1. now we enable corepack for yarn and chooose right version
+2. now we enable corepack for yarn and chooose right version
 
    ```sh
    $ corepack enable
    $ yarn set version 4.x
    ```
 
-1. Next, install the app
+3. Next, install the app
 
    ```sh
    $ yarn
    ```
 
-1. Now start up your app
+4. Now start up your app
 
    ```sh
    $ yarn start

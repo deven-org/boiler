@@ -171,11 +171,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         display: flex;
         flex-direction: column;
 
-        .hint-wrapper,
-        .error-wrapper {
+        .caption-wrapper {
           flex-basis: 100%;
 
-          .blr-form-hint {
+          .blr-form-caption {
             gap: 0;
           }
         }
@@ -194,7 +193,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           padding-top: ${Radio.ContentCol.PaddingTop.SM};
           gap: ${Radio.ContentCol.ItemSpacing.SM};
 
-          .hint-wrapper {
+          .caption-wrapper {
             padding: ${SM.CaptionComponent.Padding};
             gap: ${SM.CaptionComponent.ItemSpacing};
           }
@@ -220,7 +219,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           padding-top: ${Radio.ContentCol.PaddingTop.MD};
           gap: ${Radio.ContentCol.ItemSpacing.MD};
 
-          .hint-wrapper {
+          .caption-wrapper {
             padding: ${MD.CaptionComponent.Padding};
             gap: ${MD.CaptionComponent.ItemSpacing};
           }
@@ -246,7 +245,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           padding-top: ${Radio.ContentCol.PaddingTop.LG};
           gap: ${Radio.ContentCol.ItemSpacing.LG};
 
-          .hint-wrapper {
+          .caption-wrapper {
             padding: ${LG.CaptionComponent.Padding};
             gap: ${LG.CaptionComponent.ItemSpacing};
           }
@@ -486,7 +485,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         }
       }
 
-      .blr-form-hint {
+      .blr-form-caption {
         margin-top: 0;
 
         &.sm {

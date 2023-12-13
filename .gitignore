@@ -4,6 +4,9 @@ dist
 .eslintcache
 storybook-static
 .idea
+.yarn/install-state.gz
+
+packages/js-example-app/dist
 
 .yarn/install-state.gz
 
