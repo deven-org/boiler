@@ -5,7 +5,7 @@ import { html } from 'lit';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrTooltipType = {
-  text: 'Tooltip text comes here Tooltip text comes here',
+  message: 'Tooltip text comes here Tooltip text comes here',
   placement: 'right',
 };
 
@@ -18,15 +18,5 @@ describe('blr-tooltip', () => {
     const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
 
     expect(tooltip).to.exist;
-  });
-
-  it('has a size md by default', async () => {
-    const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
-
-    const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
-    const container = querySelectorDeep('div.md', tooltip?.getRootNode() as HTMLElement);
-    const className = container?.className;
-
-    expect(className).to.contain('md');
   });
 });

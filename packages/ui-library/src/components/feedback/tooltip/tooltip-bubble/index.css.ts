@@ -23,28 +23,11 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         background-color: ${Tooltip.SurfaceFill};
         border-radius: ${Tooltip.ContentCol.BorderRadius};
         color: ${Tooltip.Content};
-        padding: ${Tooltip.ContentCol.Padding};
-      }
-
-      .sm .content {
         font-family: ${UI.Caption.SM.fontFamily}, sans-serif;
         font-size: ${UI.Caption.SM.fontSize};
         font-weight: ${UI.Caption.SM.fontWeight};
         line-height: ${UI.Caption.SM.lineHeight};
-      }
-
-      .md .content {
-        font-family: ${UI.Caption.MD.fontFamily}, sans-serif;
-        font-size: ${UI.Caption.MD.fontSize};
-        font-weight: ${UI.Caption.MD.fontWeight};
-        line-height: ${UI.Caption.MD.lineHeight};
-      }
-
-      .lg .content {
-        font-family: ${UI.Caption.LG.fontFamily}, sans-serif;
-        font-size: ${UI.Caption.LG.fontSize};
-        font-weight: ${UI.Caption.LG.fontWeight};
-        line-height: ${UI.Caption.LG.lineHeight};
+        padding: ${Tooltip.ContentCol.Padding};
       }
 
       .elevation {
@@ -56,6 +39,11 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         
       }
 
+      /*
+        The layout box of the arrow element should be a square with equal width and height. 
+        Inner or pseudo-elements may have a different aspect ratio.
+        https://floating-ui.com/docs/arrow#usage
+      */
       .arrow {
         align-items: flex-end;
         display: flex;
@@ -70,6 +58,7 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         }
       }
 
+      /* Currently only used for demo purposes when Floating UI does not control the position of the arrow */
       .static .arrow {
         bottom: -${arrowHeight};
         left: 50%;

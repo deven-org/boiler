@@ -1,7 +1,6 @@
 import { LitElement, TemplateResult, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
-import { FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { tooltipPosition } from './tooltip-position';
@@ -13,13 +12,12 @@ const TAG_NAME = 'blr-tooltip';
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 
-@customElement('blr-tooltip')
+@customElement(TAG_NAME)
 export class BlrTooltip extends LitElement {
   static styles = [styleCustom];
 
   @property() theme?: ThemeType = 'Light';
-  @property() size?: FormSizesType = 'md';
-  @property() text!: string;
+  @property() message!: string;
   @property() hasArrow?: boolean = true;
   @property() elevation?: boolean = false;
   @property() placement?: PlacementType = 'top';
@@ -56,8 +54,7 @@ export class BlrTooltip extends LitElement {
     return html` <slot></slot>
       ${BlrTooltipBubbleRenderFunction({
         theme: this.theme,
-        text: this.text,
-        size: this.size,
+        message: this.message,
         hasArrow: this.hasArrow,
         elevation: this.elevation,
         visible: this.visible,

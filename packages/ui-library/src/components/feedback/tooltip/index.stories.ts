@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 
 import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
 import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { FormSizes, TooltipPlacement } from '../../../globals/constants';
+import { TooltipPlacement } from '../../../globals/constants';
 import { tooltipPosition } from './tooltip-position';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { FormSizesType } from '../../../globals/types';
@@ -18,10 +18,6 @@ export default {
     },
     placement: {
       options: TooltipPlacement,
-      control: { type: 'select' },
-    },
-    size: {
-      options: FormSizes,
       control: { type: 'select' },
     },
   },
@@ -40,8 +36,7 @@ export const BlrTooltipVirtualReference = (params: BlrTooltipType) => {
   return html` <div style="height: 400px; width: 400px">
     <virtual-reference
       theme=${params.theme}
-      text=${params.text}
-      size=${params.size}
+      text=${params.message}
       placement=${params.placement}
       hasArrow=${params.hasArrow}
       elevation=${params.elevation}
@@ -55,8 +50,7 @@ BlrTooltipVirtualReference.storyName = 'Tooltip Virtual Reference';
 
 const args: BlrTooltipType = {
   theme: 'Light',
-  text: 'Tooltip text comes here Tooltip text comes here',
-  size: 'sm',
+  message: 'Tooltip text comes here Tooltip text comes here',
   placement: 'top',
   hasArrow: true,
   elevation: true,
@@ -113,8 +107,7 @@ export class VirtualReference extends LitElement {
   render() {
     return html`${BlrTooltipBubbleRenderFunction({
       theme: this.theme,
-      text: this.text,
-      size: this.size,
+      message: this.text,
       hasArrow: this.hasArrow,
       visible: this.visible,
       elevation: this.elevation,
