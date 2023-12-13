@@ -8,6 +8,8 @@
   - [Content](#content)
   - [:star: Introduction](#star-introduction)
     - [Benefits of B01LER](#benefits-of-b01ler)
+    - [Common misconceptions](#common-misconceptions)
+      - [1. Web Components are not accessibile](#1-web-components-are-not-accessibile)
   - [Resources](#resources)
   - [Help & Feedback](#help--feedback)
     - [Slack](#slack)
@@ -49,6 +51,10 @@ processes B01LER empowers you to create better products faster.
 3. Increased effectivity, because the time saved on building all the components can be used to build features right away
 4. Increased acceptance of DS because components work right from the beginning of project phase
 5. Immense cost savings, because the DS ramp-up phase is reduced from multiple months to days
+
+### Common misconceptions
+#### 1. Web Components are not accessibile
+Some articles claim, that Web Components are not accessibile or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
 
 
 ## Resources
