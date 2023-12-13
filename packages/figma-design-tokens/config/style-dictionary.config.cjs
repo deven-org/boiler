@@ -62,7 +62,6 @@ const semanticTypes = [
   'Warning',
   'Error',
   'PrefixSuffix',
-  'Elevation',
 ];
 
 const componentTypes = [
@@ -88,7 +87,7 @@ const componentTypes = [
   'Tooltip',
   'RadioGroup',
   'NumberInput',
-  'CaptionGroup'
+  'CaptionGroup',
 ];
 
 StyleDictionaryPackage.registerFormat({
