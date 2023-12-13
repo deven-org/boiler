@@ -8,10 +8,6 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
-    .wrapper {
-      display: flex;
-      justify-content: center;
-    }
     .stories-icon-button {
       display: flex;
       flex-wrap: wrap;
@@ -37,8 +33,8 @@ export default {
     size: {
       options: ActionSizes,
       name: 'sizeVariant',
-      description: 'Choose size of the component.',
-      control: { type: 'select' },
+      description: 'Select size of the component.',
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -63,9 +59,7 @@ export default {
     //States
     disabled: {
       name: 'disabled',
-      description:
-        'Choose if component is disabled. Prevents the user to select or change the value of this component.',
-      defaultValue: false,
+      description: 'Choose if component is disabled. Prevents the user to click or focus the component.',
       table: {
         category: 'States',
       },
@@ -73,7 +67,6 @@ export default {
     loading: {
       name: 'loading',
       description: 'Choose if the component is loading.',
-      defaultValue: false,
       table: {
         category: 'States',
       },
@@ -99,14 +92,14 @@ export default {
       name: 'href',
       description: "Enter the link's destination with the href attribute.",
       table: {
-        category: 'Technical Attributes',
+        disable: true,
       },
     },
     target: {
       name: 'target',
       description: 'Choose where to open the linked document with the target attribute.',
       table: {
-        category: 'Technical Attributes',
+        disable: true,
       },
     },
     // Events
@@ -134,38 +127,28 @@ export default {
         category: 'Events',
       },
     },
+    loadingStatus: {
+      table: {
+        disable: true,
+      },
+    },
   },
   parameters: {
+    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<div>
-<p>Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
-</p>
- <ul>
-        <li> <a href="/docs/design-system-web-components-actions-buttons-icon-button--docs"><strong>Docs</strong></a></li>
-        <li> <strong>Appearance</strong>
-            <ul>
-                <li> <a href="#variant"><strong>Variant</strong></a></li>
-                <li> <a href="#size-variant"><strong>Size Variant</strong></a></li>
-            </ul>
-        </li>
-         <li> <strong>States</strong>
-            <ul>
-                <li> <a href="#disabled"><strong>Disabled</strong></a>
-                </li>
-            </ul>
-        </li>
-         <li> <strong>Dependencies</strong>
-            <ul>
-                <li> <a href="#icon"><strong>Icon</strong></a>
-                </li>
-                 <li> <a href="#loader"><strong>Loader</strong></a>
-                </li>
-            </ul>
-        </li>
-        </ul>
-        </div>`,
+        component: `<Markdown>
+An icon component typically displays a small, visually recognizable graphic or symbol that represents a particular function, object, or concept.
+- [**Appearance**](#appearance)
+ - [**Variant**](#variant) 
+ - [**Size Variant**](#size-variant) 
+- [**States**](#states)
+ - [**Disabled**](#disabled) 
+- [**Dependencies**](#dependencies)
+ - [**Icon**](#icon) 
+ - [**Loader**](#loader)  
+        </Markdown>`,
       },
     },
   },
@@ -173,150 +156,136 @@ export default {
 export const BlrIconButton = (params: BlrIconButtonType) => BlrIconButtonRenderFunction(params);
 BlrIconButton.storyName = 'Icon Button';
 
-const args: BlrIconButtonType = {
-  theme: 'Light',
-  variant: 'primary',
-  size: 'md',
-  arialabel: 'Icon Button',
-  icon: 'blr360',
-  loading: false,
-  disabled: false,
-  buttonId: 'iconButtonId',
-  loadingStatus: 'Loading',
-};
-BlrIconButton.args = args;
-
 const defaultParams: BlrIconButtonType = {
-  theme: 'Light',
   variant: 'primary',
   size: 'md',
-  arialabel: 'Icon Button',
+  theme: 'Light',
   icon: 'blr360',
-  loading: false,
   disabled: false,
+  loading: false,
+  arialabel: 'Icon Button',
   buttonId: 'iconButtonId',
   loadingStatus: 'Loading',
 };
+BlrIconButton.args = defaultParams;
+
 //Appearance / Variant / SizeVariant
 /**
+ * ## Appearance
+ * ### Variant
  * The Icon Button component comes in 6 variants: cta, primary, secondary, silent, destructive and encourage.
  */
 export const Variant = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-icon-button">
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          variant: 'primary',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          variant: 'secondary',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          variant: 'cta',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          variant: 'silent',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          variant: 'destructive',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          variant: 'encourage',
-        })}
-      </div>
+    <div class="stories-icon-button">
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        variant: 'primary',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        variant: 'secondary',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        variant: 'cta',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        variant: 'silent',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        variant: 'destructive',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        variant: 'encourage',
+      })}
     </div>
   `;
 };
 // eslint-disable-next-line storybook/no-redundant-story-name
-Variant.storyName = 'Variant';
+Variant.story = { name: ' ' };
 /**
  * The Icon Button component comes in 5 sizes: XS, SM, MD, LG and XL.
  */
 export const SizeVariant = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-icon-button">
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          size: 'xs',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          size: 'sm',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          size: 'md',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          size: 'lg',
-        })}
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          size: 'xl',
-        })}
-      </div>
+    <div class="stories-icon-button">
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        size: 'xs',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        size: 'sm',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        size: 'md',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        size: 'lg',
+      })}
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        size: 'xl',
+      })}
     </div>
   `;
 };
 // States Disabled
 /**
- * Disabled
+ * ## States
+ * ### Disabled
  * The Icon Button component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-icon-button">
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          disabled: true,
-        })}
-      </div>
+    <div class="stories-icon-button">
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        disabled: true,
+      })}
     </div>
   `;
 };
-
+Disabled.story = { name: ' ' };
 //Dependencies Icon / Loader
 /**
+ * ## Dependencies
+ * ### Icon
  * The Icon Button component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
  */
 export const Icon = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-icon-button">
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          icon: 'blr360',
-        })}
-      </div>
+    <div class="stories-icon-button">
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        icon: 'blr360',
+      })}
     </div>
   `;
 };
+Icon.story = { name: ' ' };
+
 /**
  * The Icon Button uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](/docs/design-system-web-components-feedback-loader--docs) component.
  */
 export const Loader = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-icon-button">
-        ${BlrIconButtonRenderFunction({
-          ...defaultParams,
-          loading: true,
-        })}
-      </div>
+    <div class="stories-icon-button">
+      ${BlrIconButtonRenderFunction({
+        ...defaultParams,
+        loading: true,
+      })}
     </div>
   `;
 };
