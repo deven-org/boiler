@@ -162,7 +162,7 @@ export class BlrTextarea extends LitElement {
             @focus=${this.focus}
             @blur=${this.blur}
             @select="${this.onSelect}"
-            @keyup="${this.updateCounter}"
+            @keyup=${this.updateCounter}
           >
 ${this.value}</textarea
           >

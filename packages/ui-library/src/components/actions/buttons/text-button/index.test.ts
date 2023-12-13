@@ -180,4 +180,96 @@ describe('blr-text-button', () => {
       expect(buttonCssDisplay).to.equal('inline-block');
     }
   });
+
+  it('fires blrclick event if clicked and not disabled', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: false }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    let fired = false;
+
+    element.getRootNode()?.addEventListener('blrClick', () => {
+      fired = true;
+    });
+
+    button?.click();
+
+    expect(fired).to.be.true;
+  });
+
+  it('doesnt fires blrclick event if clicked and disabled', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: true }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    let fired = false;
+
+    element.getRootNode()?.addEventListener('blrClick', () => {
+      fired = true;
+    });
+
+    button?.click();
+
+    expect(fired).to.be.false;
+  });
+
+  it('fires blrfocus event if focused and not disabled', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: false }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    let fired = false;
+
+    element.getRootNode()?.addEventListener('blrFocus', () => {
+      fired = true;
+    });
+
+    button?.focus();
+
+    expect(fired).to.be.true;
+  });
+
+  it('doesnt fires blrfocus event if focused and disabled', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: true }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    let fired = false;
+
+    element.getRootNode()?.addEventListener('blrFocus', () => {
+      fired = true;
+    });
+
+    button?.focus();
+
+    expect(fired).to.be.false;
+  });
+
+  it('fires blrblur event if blurred and not disabled', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: false }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    let fired = false;
+
+    element.getRootNode()?.addEventListener('blrBlur', () => {
+      fired = true;
+    });
+
+    button?.focus();
+    button?.blur();
+
+    expect(fired).to.be.true;
+  });
+
+  it('doesnt fires blrblur event if blurred and disabled', async () => {
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: true }));
+
+    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
+    let fired = false;
+
+    element.getRootNode()?.addEventListener('blrBlur', () => {
+      fired = true;
+    });
+
+    button?.focus();
+    button?.blur();
+
+    expect(fired).to.be.false;
+  });
 });

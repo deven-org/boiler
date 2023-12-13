@@ -178,8 +178,6 @@ const args: BlrIconButtonType = {
   variant: 'primary',
   size: 'md',
   arialabel: 'Icon Button',
-  onClick: () => console.log('onClick'),
-  onBlur: () => console.log('onBlur'),
   icon: 'blr360',
   loading: false,
   disabled: false,
@@ -193,8 +191,6 @@ const defaultParams: BlrIconButtonType = {
   variant: 'primary',
   size: 'md',
   arialabel: 'Icon Button',
-  onClick: () => console.log('onClick'),
-  onBlur: () => console.log('onBlur'),
   icon: 'blr360',
   loading: false,
   disabled: false,
@@ -238,6 +234,7 @@ export const Variant = () => {
     </div>
   `;
 };
+// eslint-disable-next-line storybook/no-redundant-story-name
 Variant.storyName = 'Variant';
 /**
  * The Icon Button component comes in 5 sizes: XS, SM, MD, LG and XL.

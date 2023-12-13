@@ -20,7 +20,7 @@ module.exports = {
         test: /\.ts$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'swc-loader',
+          loader: 'babel-loader',
         },
       },
     ],

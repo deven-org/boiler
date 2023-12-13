@@ -28,8 +28,6 @@ export class BlrTextButton extends LitElement {
   static styles = [styleCustom];
 
   @property() label = 'Button Label';
-  @property() onClick?: HTMLButtonElement['onclick'];
-  @property() onBlur?: HTMLButtonElement['onblur'];
   @property() icon?: SizelessIconType;
   @property({ type: Boolean }) hasIcon?: boolean;
   @property() iconPosition?: IconPositionVariant = 'leading';
@@ -41,18 +39,39 @@ export class BlrTextButton extends LitElement {
   @property() loadingStatus!: string;
   @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrClick?: () => void;
+
   @property() theme: ThemeType = 'Light';
 
   @state() protected focused = false;
 
-  protected handleFocus = () => {
-    console.log('focused');
-    this.focused = true;
+  protected handleFocus = (event: Event) => {
+    if (!this.disabled) {
+      this.focused = true;
+      this.dispatchEvent(
+        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
   };
 
-  protected handleBlur = () => {
-    console.log('blurred');
-    this.focused = false;
+  protected handleBlur = (event: Event) => {
+    if (!this.disabled) {
+      this.focused = false;
+      this.dispatchEvent(
+        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
+  };
+
+  protected handleClick = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
   };
 
   protected render() {
@@ -122,12 +141,16 @@ export class BlrTextButton extends LitElement {
         </style>
         <span
           class="${classes}"
-          @click="${this.onClick}"
+          @click="${this.handleClick}"
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
           role=${this.disabled ? nothing : 'button'}
-          @keydown=${this.onClick}
+          @keydown=${(event: KeyboardEvent) => {
+            if (event.code === 'Space') {
+              this.handleClick(event);
+            }
+          }}
           id=${this.buttonId || nothing}
         >
           ${this.focused ? html`<span class="focus-layer"></span>` : nothing}

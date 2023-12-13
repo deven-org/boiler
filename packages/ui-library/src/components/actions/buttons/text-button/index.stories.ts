@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import { action } from '@storybook/addon-actions';
 import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
@@ -35,8 +34,6 @@ const defaultParams: BlrTextButtonType = {
   buttonId: 'buttonId',
   loadingStatus: 'Loading',
   buttonDisplay: 'inline-block',
-  onBlur: () => action('onBlur'),
-  onClick: () => action('onClick'),
 };
 
 export default {
@@ -228,8 +225,6 @@ const args: BlrTextButtonType = {
   buttonId: 'buttonId',
   loadingStatus: 'Loading',
   buttonDisplay: 'inline-block',
-  onBlur: () => action('onBlur'),
-  onClick: () => action('onClick'),
 };
 BlrTextButton.args = args;
 

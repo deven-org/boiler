@@ -242,10 +242,6 @@ Checkbox represents two states: checked (selected) or unchecked (deselected), it
 export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
 BlrCheckbox.storyName = 'Checkbox';
 
-const logEventType = (event: Event) => {
-  console.log('storybook:story:logEventType', event.type);
-};
-
 const args: BlrCheckboxType = {
   theme: 'Light',
   size: 'md',
@@ -267,10 +263,6 @@ const args: BlrCheckboxType = {
   indeterminate: false,
   readonly: false,
   arialabel: 'check Input',
-
-  onChange: logEventType,
-  onFocus: logEventType,
-  onBlur: logEventType,
 };
 BlrCheckbox.args = args;
 
@@ -296,10 +288,6 @@ const defaultParams: BlrCheckboxType = {
   indeterminate: false,
   readonly: false,
   arialabel: 'check Input',
-
-  onChange: logEventType,
-  onFocus: logEventType,
-  onBlur: logEventType,
 };
 
 // All Stories
