@@ -91,9 +91,9 @@ export const BlrFormLabel = (params: BlrFormLabelType) => BlrFormLabelRenderFunc
 BlrFormLabel.storyName = 'Form Label';
 
 const defaultParams: BlrFormLabelType = {
-  labelSize: 'md',
   theme: 'Light',
-  labelText: 'Label-text',
+  labelSize: 'md',
+  labelText: 'Label- text',
   labelAppendix: '(Appendix)',
   variant: 'label',
   forValue: 'Form Label',
@@ -111,24 +111,24 @@ export const SizeVariant = () => {
       ${BlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'sm',
-        labelText: 'Label SM',
-        labelAppendix: '',
+        labelText: 'Form- label',
+        labelAppendix: 'SM',
       })}
     </div>
     <div class="stories-form-label">
       ${BlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'md',
-        labelText: 'Label MD',
-        labelAppendix: '',
+        labelText: 'Form- label',
+        labelAppendix: 'MD',
       })}
     </div>
     <div class="stories-form-label">
       ${BlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'lg',
-        labelText: 'Label LG',
-        labelAppendix: '',
+        labelText: 'Form- label',
+        labelAppendix: 'LG',
       })}
     </div>`;
 };
@@ -140,11 +140,26 @@ SizeVariant.story = { name: ' ' };
  * The Form Label component can display an appendix text next to the label text. The label appendix should be used to inform the users in case this field is required.
  */
 export const LabelAppendix = () => {
-  return html` ${BlrFormLabelRenderFunction({
-    ...defaultParams,
-    labelSize: 'lg',
-    labelAppendix: '(Appendix)',
-  })}`;
+  return html`
+    ${BlrFormLabelRenderFunction({
+      ...defaultParams,
+      labelSize: 'lg',
+      labelText: 'Form label',
+      labelAppendix: '(required)',
+    })}
+    ${BlrFormLabelRenderFunction({
+      ...defaultParams,
+      labelSize: 'lg',
+      labelText: 'Form label',
+      labelAppendix: '(optional)',
+    })}
+    ${BlrFormLabelRenderFunction({
+      ...defaultParams,
+      labelSize: 'lg',
+      labelText: 'Form label',
+      labelAppendix: ' ',
+    })}
+  `;
 };
 LabelAppendix.story = { name: ' ' };
 
@@ -158,7 +173,7 @@ export const HasError = () => {
   return html` ${BlrFormLabelRenderFunction({
     ...defaultParams,
     labelText: 'Error',
-    labelAppendix: '',
+    labelAppendix: '(with Appendix)',
     variant: 'error',
   })}`;
 };
