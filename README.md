@@ -5,21 +5,20 @@
 ## Content
 
 - [B01LER](#b01ler)
-  - [Content](#content)
+  - [:page_with_curl: Content](#content)
   - [:star: Introduction](#star-introduction)
     - [Benefits of B01LER](#benefits-of-b01ler)
     - [Common misconceptions](#common-misconceptions)
       - [1. Web Components are not accessibile](#1-web-components-are-not-accessibile)
-  - [Resources](#resources)
-  - [Help & Feedback](#help--feedback)
+  - [:art: Resources](#resources)
+  - [:tipping_hand_person: Help & Feedback](#help--feedback)
     - [Slack](#slack)
     - [Teams](#teams)
     - [Email](#email)
     - [B01LER Monthly](#b01ler-monthly)
     - [Feedback](#feedback)
-  - [Requirements](#requirements)
+  - [:gear: Requirements](#requirements)
   - [:rocket: How to start](#rocket-how-to-start)
-    - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Setup](#setup)
     - [Usage](#usage)
@@ -86,27 +85,16 @@ Link to Feedback-Form will be added with [issue #428](https://github.com/deven-o
 
 
 ## Requirements
-Please list all the requirements the user has to fullfill to be able to run your code. Consider adding links to other
-tech documentations of possible dependencies to help users meet the requirements.We've added two examples of how you
-could structure this section:
 
-1. This setup is working for all operating system, testing on Windows 8, Windows 8.1, Windows 10, Mac and Linux. This
-   project is a Node.js package. You need Node Version 4 or higher and npm Version 2 or higher, check your installed
-   version with node -v and npm -v.
+This project is a Node.js package. You need Node Version 18 or higher in order to run it. Check your installed version with node -v. For more information check out the [Node.js Documentation](https://nodejs.org/en/docs/).
 
-2. To run our code you have to meet the following requirements:
-   - Node.js v18 <br> (for more information check out the [Node.js Documentation](https://nodejs.org/en/docs/))
-   - yarn (any version, we will pick the right settings later)
-   - corepack (might need to be installed additionally)
+If you don't have Yarn installed, please install it first (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
 
+In addition, you might need to install Corepack. For more information checkout out [Corepack Documentation](https://nodejs.org/api/corepack.html).
 
 ## :rocket: How to start
-### Prerequisites
-...
 
 ### Installation
-In this section you're supposed to provide the user with a step by step guide on how to install and use your project.
-We've added an example below to give you an idea of how you could structure your guide.
 
 1. First, create a folder and a package.json file
 
@@ -134,9 +122,6 @@ We've added an example below to give you an idea of how you could structure your
    ```sh
    $ yarn start
    ```
-
-</details>
-<br>
 
 ### Setup
 ...
