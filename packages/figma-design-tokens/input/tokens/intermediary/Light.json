@@ -397,7 +397,26 @@
           "value": "#FF5AFFFF",
           "type": "color"
         }
+      },
+      "ocean": {
+        "value": "#338CE9",
+        "type": "color",
+        "description": "used for browser defaults"
       }
+    },
+    "text": {
+      "value": "#000000",
+      "type": "color",
+      "description": "used for browser ui"
+    },
+    "text-inverted": {
+      "value": "#FFFFFF",
+      "type": "color",
+      "description": "used for browser ui"
+    },
+    "gray": {
+      "value": "#E6E2E2",
+      "type": "color"
     }
   }
 }
