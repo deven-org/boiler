@@ -34,7 +34,7 @@ B01LER is a fully customisable design system that enables you to easily create c
 across multiple platforms and brands.
 
 B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8941%3A1818&mode=design&t=fZvPevNIiIDONPxv-1), as well as in code in a repository (the one you have opened right now), 
-which is also [displayed in the web using Storybook](https://boilerds.com/storybook). Both the components in design and 
+which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and 
 in code are connected via the token system.
 
 Utilizing design tokens, which represent the visual properties of a design system, such as typography, color and spacing, 
@@ -58,7 +58,7 @@ Some articles claim, that Web Components are not accessibile or that they are no
 
 ## Resources
 - [Check out our Figma File](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8941%3A1818&mode=design&t=fZvPevNIiIDONPxv-1)
-- [Have a look at our components in Storybook](https://boilerds.com/storybook)
+- [Have a look at our components in Storybook](https://b01ler.onrender.com/)
 
 
 ## Help & Feedback
@@ -72,7 +72,7 @@ We are also on Microsoft Teams. Join the [B01LER](https://teams.microsoft.com/l/
 Org to join).
 
 ### Email
-You can send us messages via [boiler@accenture.com](mailto:boiler@accenture.com), which the team will try to respond 
+You can send us messages via [hello@boilerds.com](mailto:hello@boilerds.com), which the team will try to respond 
 to as quickly as possible.
 
 ### B01LER Monthly
@@ -165,5 +165,5 @@ This project is licensed under the [MIT license](./LICENSE.md).
 
 
 ## :green_heart: Code of conduct
-[The B01LER is using the Contributor Covenant Code of Conduct. You can read the whole code of conduct [here](./doc/CODE_OF_CONDUCT.md).
+The B01LER is using the Contributor Covenant Code of Conduct. You can read the whole code of conduct [here](./doc/CODE_OF_CONDUCT.md).
 
