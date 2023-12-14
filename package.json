@@ -105,7 +105,8 @@
     "rimraf": "^5.0.5"
   },
   "engines": {
-    "node": "^18"
+    "node": "^18",
+    "yarn": "^4.0.2"
   },
   "packageManager": "yarn@4.0.2"
 }

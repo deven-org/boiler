@@ -182,6 +182,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=705%3A1815&mode=dev',
+    },
     viewMode: 'docs',
     docs: {
       description: {
