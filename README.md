@@ -9,9 +9,10 @@
   - [:star: Introduction](#star-introduction)
     - [Benefits of B01LER](#benefits-of-b01ler)
     - [Common misconceptions](#common-misconceptions)
-      - [1. Web Components are not accessibile](#1-web-components-are-not-accessibile)
+      - [1. Web Components are not accessible](#1-web-components-are-not-accessible)
   - [:art: Resources](#resources)
   - [:tipping_hand_person: Help & Feedback](#help--feedback)
+    - [Discussion Board](#github-discussion-board)
     - [Slack](#slack)
     - [Teams](#teams)
     - [Email](#email)
@@ -30,19 +31,15 @@
 
 
 ## :star: Introduction
-B01LER is a fully customisable design system that enables you to easily create cohesive and consistent digital products 
-across multiple platforms and brands.
+B01LER is a fully customisable design system (DS) that enables you to easily create cohesive and consistent digital products across multiple platforms and brands.
 
-B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8941%3A1818&mode=design&t=fZvPevNIiIDONPxv-1), as well as in code in a repository (the one you have opened right now), 
-which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and 
-in code are connected via the token system.
+B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8941%3A1818&mode=design&t=fZvPevNIiIDONPxv-1), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://boilerds.com/storybook). Both the components in design and in code are connected via a token system.
 
-Utilizing design tokens, which represent the visual properties of a design system, such as typography, color and spacing, 
-B01LER is simultaneously consistent and flexible. By changing the tokens, you have the power to change the appearance of 
-the whole design system, including all the components and all the digital products build with it. In design and in code.
+A token system is a collection of values which represent the visual properties of a design system, such as typography, color and spacing.
 
-Overall, B01LER is a powerful tool that helps you work smarter, not harder. By streamlining the design and development 
-processes B01LER empowers you to create better products faster.
+Utilizing tokens, B01LER is simultaneously consistent and flexible. By changing the tokens, you have the power to change the appearance of the whole design, including all the components and all the digital products build with it. In Figma and in code.
+
+Overall, B01LER is a powerful tool that helps you work smarter, not harder. By streamlining the design and development processes B01LER empowers you to create better products faster.
 
 ### Benefits of B01LER
 1. Increased efficiency in building design systems on brand, because semantic structure and architecture are pre-built
@@ -52,8 +49,8 @@ processes B01LER empowers you to create better products faster.
 5. Immense cost savings, because the DS ramp-up phase is reduced from multiple months to days
 
 ### Common misconceptions
-#### 1. Web Components are not accessibile
-Some articles claim, that Web Components are not accessibile or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
+#### 1. Web Components are not accessible
+Some articles claim, that Web Components are not accessible or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
 
 
 ## Resources
@@ -62,6 +59,9 @@ Some articles claim, that Web Components are not accessibile or that they are no
 
 
 ## Help & Feedback
+### Github Discussion Board
+Please have a look at our [Github discussion board](https://github.com/deven-org/telemetry-functions/discussions) to raise questions or start a discussion about a future feature.
+
 ### Slack
 Slack is our main internal communications channel and will most likely be the place where you can reach us best. Join the 
 [#boiler](https://song-asg.slack.com/archives/C062PQ9DJTD) channel and say hi 👋 (you need to be part of the Accenture 
@@ -88,49 +88,60 @@ Link to Feedback-Form will be added with [issue #428](https://github.com/deven-o
 
 This project is a Node.js package. You need Node Version 18 or higher in order to run it. Check your installed version with node -v. For more information check out the [Node.js Documentation](https://nodejs.org/en/docs/).
 
-If you don't have Yarn installed, please install it first (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
+If you don't have Yarn installed, please install it first (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs).
+
+Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 In addition, you might need to install Corepack. For more information checkout out [Corepack Documentation](https://nodejs.org/api/corepack.html).
 
 ## :rocket: How to start
 
 ### Installation
-
-1. First, create a folder and a package.json file
+Note: This is not filled out yet!
+1. First, open a terminal and navigate to the folder you want to clone this project
 
    ```sh
-   $ mkdir my-app
-   $ cd my-app
-   $ npm init -y
+   $ cd git_projects
+   ```
+2. Clone the project with
+
+   ```sh
+   $ git clone git@github.com:deven-org/B01LER-Kitchen.git
    ```
 
-2. now we enable corepack for yarn and chooose right version
+3. now we enable corepack for yarn and chooose right version
 
    ```sh
    $ corepack enable
    $ yarn set version 4.x
    ```
 
-3. Next, install the app
+4. Next, install the app
 
    ```sh
    $ yarn
    ```
 
-4. Now start up your app
+5. Now start up your app
 
    ```sh
    $ yarn start
    ```
 
 ### Setup
+Note: This is not filled out yet!
+
 ...
 
 ### Usage
+Note: This is not filled out yet!
+
 ...
 
 
 ## :white_check_mark: How to test
+Note: This is not filled out yet!
+
 Please provide a short explanation on how and where to run your tests. You can also add a link to the Testing page to
 give further information. Also check out the following example to see one possibility to structure this section.
 
