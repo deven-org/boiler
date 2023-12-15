@@ -85,30 +85,37 @@ Link to Feedback-Form will be added with [issue #428](https://github.com/deven-o
 
 
 ## Requirements
+First you need to install Git. For more information checkout [Git Documentation](https://git-scm.com/doc).
 
 This project is a Node.js package. You need Node Version 18 or higher in order to run it. Check your installed version with node -v. For more information check out the [Node.js Documentation](https://nodejs.org/en/docs/).
 
-If you don't have Yarn installed, please install it first (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
+If you don't have Yarn installed, please install it (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
 
-In addition, you might need to install Corepack. For more information checkout out [Corepack Documentation](https://nodejs.org/api/corepack.html).
+In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
+
 
 ## :rocket: How to start
 
 ### Installation
+> Note: You need to run terminal as administrator on Windows machines.
 
-1. First, create a folder and a package.json file
+1. If you want to use B01LER as a starting point for your own design system, the first step is to fork the repository. This step is only required for the initial setup of you repository.
 
    ```sh
-   $ mkdir my-app
-   $ cd my-app
-   $ npm init -y
+   $ gh repo fork REPOSITORY --org "[NAME_OF_YOUR_ORG]"
+   ```
+
+In case you want to contribute to this repository, the first step is to clone the repository:
+
+   ```sh
+   $ git clone https://github.com/deven-org/B01LER-Kitchen.git
    ```
 
 2. now we enable corepack for yarn and chooose right version
 
    ```sh
    $ corepack enable
-   $ yarn set version 4.x
+   $ yarn set version 4.0.2
    ```
 
 3. Next, install the app
