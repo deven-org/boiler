@@ -2,23 +2,23 @@
 
 ![Boiler_Welcome](https://github.com/deven-org/B01LER-Kitchen/assets/122102805/f5aa5c3a-9d5b-4b98-a9df-29dd1b35b1ea)
 
-## Content
+## :page_with_curl: Content
 
 - [B01LER](#b01ler)
-  - [:page_with_curl: Content](#content)
+  - [:page_with_curl: Content](#page_with_curl-content)
   - [:star: Introduction](#star-introduction)
     - [Benefits of B01LER](#benefits-of-b01ler)
     - [Common misconceptions](#common-misconceptions)
       - [1. Web Components are not accessible](#1-web-components-are-not-accessible)
-  - [:art: Resources](#resources)
-  - [:tipping_hand_person: Help & Feedback](#help--feedback)
+  - [:art: Resources](#art-resources)
+  - [:tipping_hand_person: Help & Feedback](#tipping_hand_person-help--feedback)
     - [Discussion Board](#github-discussion-board)
     - [Slack](#slack)
     - [Teams](#teams)
     - [Email](#email)
     - [B01LER Monthly](#b01ler-monthly)
     - [Feedback](#feedback)
-  - [:gear: Requirements](#requirements)
+  - [:gear: Requirements](#gear-requirements)
   - [:rocket: How to start](#rocket-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
@@ -53,12 +53,12 @@ Overall, B01LER is a powerful tool that helps you work smarter, not harder. By s
 Some articles claim, that Web Components are not accessible or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
 
 
-## Resources
+## :art: Resources
 - [Check out our Figma File](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8941%3A1818&mode=design&t=fZvPevNIiIDONPxv-1)
 - [Have a look at our components in Storybook](https://b01ler.onrender.com/)
 
 
-## Help & Feedback
+## :tipping_hand_person: Help & Feedback
 ### Github Discussion Board
 Please have a look at our [Github discussion board](https://github.com/deven-org/telemetry-functions/discussions) to raise questions or start a discussion about a future feature.
 
@@ -84,19 +84,19 @@ post of our dedicated [Teams channel](https://teams.microsoft.com/l/channel/19%3
 Link to Feedback-Form will be added with [issue #428](https://github.com/deven-org/B01LER-Kitchen/issues/428).
 
 
-## Requirements
-First you need to install Git. Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+## :gear: Requirements
+1. First you need to install Git. Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-This project is a Node.js package. You need Node Version 18 or higher in order to run it. Check your installed version with node -v. For more information check out the [Node.js Documentation](https://nodejs.org/en/docs/).
+2. This project is a Node.js package. You need Node Version 18 or higher in order to run it. Check your installed version with node -v. For more information check out the [Node.js Documentation](https://nodejs.org/en/docs/).
 
-If you don't have Yarn installed, please install it (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
+3. If you don't have Yarn installed, please install it (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
 
 In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
+
 
 ## :rocket: How to start
 
 ### Installation
-
 > Note: You need to run terminal as administrator on Windows machines.
 
 1. First, open a terminal and navigate to the folder you want to fork or clone this project
@@ -105,13 +105,9 @@ In addition, you might need to install Corepack. For more information checkout [
    $ cd git_projects
    ```
 
-2. If you want to use B01LER as a starting point for your own design system, the first step is to fork the repository. This step is only required for the initial setup of you repository.
+2. If you want to use B01LER as a starting point for your own design system, the first step is to fork the repository. You can do this via the GitHub web interface and just follow the instructions or read the documentation [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo). This step is only required for the initial setup of you repository.
 
-   ```sh
-   $ gh repo fork REPOSITORY --org "[NAME_OF_YOUR_ORG]"
-   ```
-
-In case you want to contribute to this repository, the first step is to clone the repository:
+   In case you want to contribute to this repository, the first step is to clone the repository:
 
    ```sh
    $ git clone https://github.com/deven-org/B01LER-Kitchen.git
@@ -138,36 +134,16 @@ In case you want to contribute to this repository, the first step is to clone th
 
 ### Setup
 Note: This is not filled out yet!
-
 ...
 
 ### Usage
 Note: This is not filled out yet!
-
 ...
 
 
 ## :white_check_mark: How to test
 Note: This is not filled out yet!
-
-Please provide a short explanation on how and where to run your tests. You can also add a link to the Testing page to
-give further information. Also check out the following example to see one possibility to structure this section.
-
-Example:
-
-Local Setup
-
-```sh
-$ git clone project-name
-$ cd project
-$ npm install
-```
-
-The project test suite is run with
-
-```sh
-$ yarn test
-```
+...
 
 
 ## :v: Contribute
