@@ -85,35 +85,43 @@ Link to Feedback-Form will be added with [issue #428](https://github.com/deven-o
 
 
 ## Requirements
+First you need to install Git. Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 This project is a Node.js package. You need Node Version 18 or higher in order to run it. Check your installed version with node -v. For more information check out the [Node.js Documentation](https://nodejs.org/en/docs/).
 
-If you don't have Yarn installed, please install it first (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs).
+If you don't have Yarn installed, please install it (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs). 
 
-Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-
-In addition, you might need to install Corepack. For more information checkout out [Corepack Documentation](https://nodejs.org/api/corepack.html).
+In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
 
 ## :rocket: How to start
 
 ### Installation
-Note: This is not filled out yet!
-1. First, open a terminal and navigate to the folder you want to clone this project
+
+> Note: You need to run terminal as administrator on Windows machines.
+
+1. First, open a terminal and navigate to the folder you want to fork or clone this project
 
    ```sh
    $ cd git_projects
    ```
-2. Clone the project with
+
+2. If you want to use B01LER as a starting point for your own design system, the first step is to fork the repository. This step is only required for the initial setup of you repository.
 
    ```sh
-   $ git clone git@github.com:deven-org/B01LER-Kitchen.git
+   $ gh repo fork REPOSITORY --org "[NAME_OF_YOUR_ORG]"
+   ```
+
+In case you want to contribute to this repository, the first step is to clone the repository:
+
+   ```sh
+   $ git clone https://github.com/deven-org/B01LER-Kitchen.git
    ```
 
 3. now we enable corepack for yarn and chooose right version
 
    ```sh
    $ corepack enable
-   $ yarn set version 4.x
+   $ yarn set version 4.0.2
    ```
 
 4. Next, install the app
