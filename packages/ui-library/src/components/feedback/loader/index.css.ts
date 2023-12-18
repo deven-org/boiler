@@ -1,8 +1,31 @@
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
+const makeIterator = <TokenPart extends object>() => {
+  return (tokenPart: TokenPart, renderFunction: (key: keyof TokenPart, value: keyof TokenPart) => string) => {
+    let returnValue = "";
+
+    Object.keys(tokenPart).forEach(function (key) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+      returnValue += renderFunction(key, tokenPart[key]);
+    });
+
+    return returnValue;
+  };
+};
+
 export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark } = renderThemedCssStrings((componentTokens) => {
   const { Loader } = componentTokens.Feedback;
+
+  const forEachLoaderSize = makeIterator<typeof Loader.Container.Size>();
+
+  const test = forEachLoaderSize(Loader.Container.Size, (key, value) => {
+    return `${key}: ${value}`;
+  });
+
+  // eslint-disable-next-line no-console
+  console.log(test);
 
   return typeSafeNestedCss`
     :host {
