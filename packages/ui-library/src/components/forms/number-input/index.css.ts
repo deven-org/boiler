@@ -1,14 +1,17 @@
-import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss as css } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
+import { makeIterator } from "../../../utils/token-part-iterator-css-in-ts";
 const { NumberInput } = componentTokens.Forms;
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
 
-  return typeSafeNestedCss`
+  const forEachStepperComboSize = makeIterator<typeof StepperCombo>();
+
+  return css`
     .input-wrapper {
       outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};
@@ -19,8 +22,8 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         color: inherit;
       }
 
-      .unit{
-        color:${PrefixSuffix.OnPopulatedField.Default.Rest};
+      .unit {
+        color: ${PrefixSuffix.OnPopulatedField.Default.Rest};
       }
 
       > * {
@@ -28,40 +31,33 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
 
       &.split {
-        &.sm {
-          > .custom-stepper-button {
-            width: ${StepperCombo.SM.Vertical.Width};
-          }
-          
-        }
+        ${forEachStepperComboSize(StepperCombo, (key, tokenPart, css) => {
+          return css`
+            &.${key.toLocaleLowerCase()} {
+              & > .custom-stepper-button {
+                width: ${tokenPart.Vertical.Width};
+              }
+            }
+          `;
+        })}
 
-        &.md {
-          > .custom-stepper-button {
-            width: ${StepperCombo.MD.Vertical.Width};
-          }
-        }
-
-        &.lg {
-          > .custom-stepper-button {
-            width: ${StepperCombo.LG.Vertical.Width};
-          }
-        }
         > .unit {
           text-align: left;
         }
-  
+
         > input {
           text-align: right;
-          &.sm{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+
+          &.sm {
+            padding-right: ${NumberInput.Input.TextContainer.ItemSpacing.SM};
           }
 
-          &.md{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+          &.md {
+            padding-right: ${NumberInput.Input.TextContainer.ItemSpacing.MD};
           }
 
-          &.lg{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+          &.lg {
+            padding-right: ${NumberInput.Input.TextContainer.ItemSpacing.LG};
           }
         }
       }
@@ -74,7 +70,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           font-family: ${SM.UserInput.fontFamily}, sans-serif;
           line-height: ${SM.UserInput.lineHeight};
           padding: ${SM.InputField.Padding};
-
         }
 
         &.md {
@@ -92,7 +87,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           line-height: ${LG.UserInput.lineHeight};
           padding: ${LG.InputField.Padding};
         }
-
       }
 
       &.disabled {
@@ -180,7 +174,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
     const { StepperCombo } = componentTokens.Action;
     const { Silent } = semanticTokens.Action;
 
-    return typeSafeNestedCss`
+    return css`
       .stepper-combo {
         &.horizontal {
           display: grid;
@@ -210,7 +204,6 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
               padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
             }
           }
-         
         }
 
         &.vertical {
@@ -280,7 +273,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
   }
 );
 
-export const baseStyle = typeSafeNestedCss`
+export const baseStyle = css`
   .input-wrapper {
     display: flex;
     overflow: hidden;
@@ -307,24 +300,25 @@ export const baseStyle = typeSafeNestedCss`
 
       .unit {
         order: 0;
-        padding-left:0;
+        padding-left: 0;
       }
-   
+
       .unit.prepend {
         order: -1;
         text-align: right;
-        padding-right:0;
+        padding-right: 0;
       }
 
       > input.prepend {
         text-align: left;
       }
-      
+
       > button:last-of-type {
-        margin-left:auto;
+        margin-left: auto;
       }
-      > input{
-        padding-right:0;
+
+      > input {
+        padding-right: 0;
       }
     }
 
@@ -332,19 +326,20 @@ export const baseStyle = typeSafeNestedCss`
     &.vertical {
       .unit.prepend {
         order: -1;
-        padding-right:0;
+        padding-right: 0;
       }
-      > input.prepend{
-        &.sm{
-        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+
+      > input.prepend {
+        &.sm {
+          padding-left: ${NumberInput.Input.TextContainer.ItemSpacing.SM};
         }
 
-        &.md{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+        &.md {
+          padding-left: ${NumberInput.Input.TextContainer.ItemSpacing.MD};
         }
-        
-        &.lg{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+
+        &.lg {
+          padding-left: ${NumberInput.Input.TextContainer.ItemSpacing.LG};
         }
       }
     }
