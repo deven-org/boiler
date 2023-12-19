@@ -21,7 +21,8 @@
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
     "compile:icons": "yarn workspace @boiler/icons compile:icons",
-    "compile": "yarn workspace @boiler/ui-library compile && yarn workspace @boiler/ui-library analyze",
+    "compile": "yarn workspace @boiler/ui-library compile",
+    "analyze": "yarn workspace @boiler/ui-library analyze",
     "tokens:generate": "yarn workspace @boiler/figma-design-tokens tokens:generate",
     "prepare": "husky install"
   },
@@ -102,7 +103,7 @@
   "dependencies": {
     "@lit-labs/react": "^1.1.1",
     "http-server": "^14.1.1",
-    "lit": "^2.7.4",
+    "lit-element": "^4.0.2",
     "nested-css-to-flat": "^1.0.5",
     "rimraf": "^5.0.5"
   },

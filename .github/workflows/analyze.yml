@@ -1,0 +1,36 @@
+name: Compile
+
+on: [pull_request]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Get node version
+        id: node
+        run: |
+          echo "::set-output name=version::$(node -v)"
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install yarn 4
+        run: yarn set version 4.x
+
+      - name: Install modules
+        run: yarn
+
+      - name: Generate tokens
+        run: yarn tokens:generate
+
+      - name: Run analyze
+        run: yarn analyze
