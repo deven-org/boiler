@@ -1,4 +1,4 @@
-name: Compile
+name: Lit-Analyze
 
 on: [pull_request]
 
