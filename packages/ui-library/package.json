@@ -5,7 +5,7 @@
   "scripts": {
     "start:storybook": "sb dev -p 1337",
     "compile": "tsc --project tsconfig.json",
-    "analyze": "npx lit-analyzer \"packages/ui-library/src/**/*.{js,ts}\"",
+    "analyze": "npx lit-analyzer \"src/**/*.{js,ts}\"",
     "build:storybook": "sb build",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "build:types": "rimraf types && tsc --emitDeclarationOnly",
