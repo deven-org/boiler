@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
+import { html } from 'lit-element';
 
 export default {
   title: 'Design System/Examples',

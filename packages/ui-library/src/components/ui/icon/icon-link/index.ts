@@ -1,6 +1,6 @@
-import { LitElement, html, nothing } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html, nothing } from 'lit-element';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { customElement, property } from 'lit-element/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as iconLinkStyleCustom } from './index.css';
 import { styleCustom as iconButtonStyleCustom } from '../../../actions/buttons/icon-button/index.css';

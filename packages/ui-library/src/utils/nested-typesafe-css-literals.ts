@@ -1,4 +1,4 @@
-import { CSSResult } from 'lit';
+import { CSSResult } from 'lit-element';
 import { css as internalCss } from 'nested-css-to-flat/lit-css';
 
 type cssAttributeValue = string | number;

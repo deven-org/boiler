@@ -1,11 +1,11 @@
-import { LitElement, html, nothing } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html, nothing } from 'lit-element';
+import { customElement, property } from 'lit-element/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { SizesType } from '../../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
-import { ClassMapDirective } from 'lit-html/directives/class-map';
-import { styleMap } from 'lit/directives/style-map.js';
+import { ClassMapDirective } from 'lit-html/directives/class-map.js';
+import { styleMap } from 'lit-html/directives/style-map.js';
 
 const TAG_NAME = 'blr-icon';
 

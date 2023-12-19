@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { LitElement, html, nothing } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
-import { map } from 'lit/directives/map.js';
+import { LitElement, html, nothing } from 'lit-element';
+import { customElement, property, state } from 'lit-element/decorators.js';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { map } from 'lit-html/directives/map.js';
 import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../../../../foundation/component-tokens/slider-legend.css';
 import { FormSizesType, ActionVariantType } from '../../../../../globals/types';

@@ -1,6 +1,6 @@
-import { LitElement, html, nothing } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, query, state } from 'lit/decorators.js';
+import { LitElement, html, nothing } from 'lit-element';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { customElement, property, query, state } from 'lit-element/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
 import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../../globals/types';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';

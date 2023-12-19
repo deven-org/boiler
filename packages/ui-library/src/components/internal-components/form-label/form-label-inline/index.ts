@@ -1,4 +1,4 @@
-import { html } from 'lit';
+import { html } from 'lit-element';
 import { InputSizesType } from '../../../../globals/types';
 
 type FormLabelInlineType = {

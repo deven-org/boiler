@@ -1,7 +1,7 @@
-import { LitElement, html, nothing } from 'lit';
+import { LitElement, html, nothing } from 'lit-element';
 import { InputSizesType, LabelVariantType } from '../../../globals/types';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { customElement, property } from 'lit/decorators.js';
+import { customElement, property } from 'lit-element/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';

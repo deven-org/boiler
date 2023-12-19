@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import { LitElement, html, nothing } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { LitElement, html, nothing } from 'lit-element';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { customElement, property, state } from 'lit-element/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';

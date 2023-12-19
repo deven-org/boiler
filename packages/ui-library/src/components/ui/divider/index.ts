@@ -1,9 +1,9 @@
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html } from 'lit-element';
+import { customElement, property } from 'lit-element/decorators.js';
 import { DividerVariationTypes } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { classMap } from 'lit/directives/class-map.js';
+import { classMap } from 'lit-html/directives/class-map.js';
 import { dividerDark, dividerLight } from './index.css';
 
 const TAG_NAME = 'blr-divider';

@@ -1,4 +1,4 @@
-import { html } from 'lit';
+import { html } from 'lit-element';
 
 const blr360Lg = (className: string) =>
   html`<svg class="${className}" viewBox="0 0 32 32" fill="none">

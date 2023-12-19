@@ -1,5 +1,5 @@
-import { LitElement, TemplateResult, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { LitElement, TemplateResult, html } from 'lit-element';
+import { customElement, property, state } from 'lit-element/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';

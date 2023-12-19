@@ -3,7 +3,7 @@ import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
 import { FormSizes, Units } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
-import { html } from 'lit';
+import { html } from 'lit-element';
 import { action } from '@storybook/addon-actions';
 
 const sharedStyles = html`

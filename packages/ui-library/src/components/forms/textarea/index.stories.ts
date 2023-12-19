@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
+import { html } from 'lit-element';
 import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
 import { FormSizes, Resizes } from '../../../globals/constants';
 import { action } from '@storybook/addon-actions';

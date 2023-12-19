@@ -33,7 +33,7 @@ fs.readdir(iconDir, (err, files) => {
   console.log('\n');
 
   const template = `
-  import { html } from 'lit'; \n
+  import { html } from 'lit-element'; \n
   ${iconTemplateStrings.join('\n')}
 
   export const IconMapping = { ${icons.map((icon) => icon.name).join(',\n')} };
