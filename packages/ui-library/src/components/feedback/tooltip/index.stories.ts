@@ -1,28 +1,91 @@
-import { LitElement, html } from 'lit';
-
-import { BlrTooltipType } from './index';
-import { BlrTooltipRenderFunction } from './renderFunction';
-import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { TooltipPlacement } from '../../../globals/constants';
-import { tooltipPosition } from './tooltip-position';
-import { customElement, property, query, state } from 'lit/decorators.js';
-import { FormSizesType } from '../../../globals/types';
-import { Placement as PlacementType } from '@floating-ui/dom';
-import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
-
 // this loads the all components instances and registers their html tags
 import '../../../index';
+import { html } from 'lit-html';
+import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
+import { TooltipPlacement } from '../../../globals/constants';
+
+const sharedStyles = html`
+  <style>
+    .wrapper {
+      margin: 1.25rem;
+    }
+  </style>
+`;
 
 export default {
-  title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',
+  title: 'Design System/Web Components/Feedback/Tooltip',
   argTypes: {
     theme: {
       options: Themes,
       control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
     },
     placement: {
+      description: 'Select placement of the component to the related element.',
       options: TooltipPlacement,
       control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
+    },
+    elevation: {
+      description: 'Choose if the component should be elevated.',
+      control: { type: 'boolean' },
+      table: {
+        category: 'Appearance',
+      },
+    },
+    offset: {
+      description: 'Enter the offset between the tooltip and the related element.',
+      control: { type: 'number' },
+      table: {
+        category: 'Appearance',
+      },
+    },
+    hasArrow: {
+      description: 'Choose if component has an arrow, pointing to the related element.',
+      control: { type: 'boolean' },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
+    message: {
+      description: 'Enter the message the component should have.',
+      control: { type: 'text' },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
+  },
+
+  parameters: {
+    viewMode: 'docs',
+    layout: 'padded',
+    docs: {
+      description: {
+        component: `
+  <Markdown>
+  Tooltip is triggered by hovering the mouse cursor over the element. It is designed to be unobtrusive and usually consist
+  of a short snippet of text. Tooltip component utilizes Floating UI library for granular positioning and interactions
+  based on user events.
+  
+  - [**Appearance**](#appearance)
+    - [**Placement**](#placement)
+    - [**Elevation**](#elevation)  
+    - [**Has Arrow**](#has-arrow)
+    - [**Offset**](#offset)
+  - [**Content / Settings**](#content--settings)
+    - [**Message**](#message)
+  - [**Content / Settings**](#content--settings)
+    - [**Message**](#message)
+  - [**Dependencies**](#dependencies)
+    - [**Tooltip Bubble**](#tooltip-bubble)
+  </Markdown>
+`,
+      },
     },
   },
   parameters: {
@@ -33,94 +96,203 @@ export default {
   },
 };
 
-export const BlrTooltip = (params: BlrTooltipType) => html`<div
-  style="height: 400px; width: 400px; display: flex; justify-content: center; align-items: center; margin: auto;"
+export const Tooltip = (params: BlrTooltipType) => html`<div
+  style="height: 300px;  margin: 1.25rem; width: 300px; display: flex; justify-content: center; align-items: center; margin: auto;"
 >
   ${BlrTooltipRenderFunction(
     params,
-    html`<div style="height: 200px; width: 200px; background-color: lightblue"></div>`
+    html`<div style="height: 100px; width: 100px; background-color: lightblue"></div>`
   )}
 </div>`;
 
-export const BlrTooltipVirtualReference = (params: BlrTooltipType) => {
-  return html` <div style="height: 400px; width: 400px">
-    <virtual-reference
-      theme=${params.theme}
-      text=${params.message}
-      placement=${params.placement}
-      hasArrow=${params.hasArrow}
-      elevation=${params.elevation}
-      offset=${params.offset}
-    ></virtual-reference>
-  </div>`;
-};
-
-BlrTooltip.storyName = 'Tooltip';
-BlrTooltipVirtualReference.storyName = 'Tooltip Virtual Reference';
-
-const args: BlrTooltipType = {
+const defaultParams: BlrTooltipType = {
   theme: 'Light',
-  message: 'Tooltip text comes here Tooltip text comes here',
   placement: 'top',
-  hasArrow: true,
   elevation: true,
   offset: 4,
+  hasArrow: true,
+  message: 'Tooltip text comes here Tooltip text comes here',
 };
 
-BlrTooltip.args = args;
-BlrTooltipVirtualReference.args = args;
+Tooltip.args = defaultParams;
 
-@customElement('virtual-reference')
-export class VirtualReference extends LitElement {
-  @property() theme: ThemeType = 'Light';
-  @property() size: FormSizesType = 'sm';
-  @property() text!: string;
-  @property() placement: PlacementType = 'top';
-  @property() hasArrow = true;
-  @property() elevation = true;
-  @property() offset = 4;
+/**
+ * ## Appearance
+ * ### Placement
+ * The Tooltip component can be positioned in any of the following placements: top, top-start, top-end, right, right-start, right-end, bottom, bottom-start, bottom-end, left, left-start, and left-end.
+ */
 
-  @state() protected visible = false;
+export const Placement = () => {
+  return html`
+    ${sharedStyles}
 
-  @query('blr-tooltip-bubble')
-  protected _tooltipBubble!: HTMLElement;
+    <div class="wrapper">
+      ${Tooltip({
+        ...defaultParams,
+      })}
+    </div>
+    <div class="wrapper">
+      ${Tooltip({
+        ...defaultParams,
+        placement: 'top-start',
+      })}
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'top-end',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'right',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'right-start',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'right-end',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'bottom',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'bottom-start',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'bottom-end',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'left',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'left-start',
+        })}
+      </div>
+      <div class="wrapper">
+        ${Tooltip({
+          ...defaultParams,
+          placement: 'left-end',
+        })}
+      </div>
+    </div>
+  `;
+};
 
-  protected firstUpdated() {
-    this.visible = false;
+Placement.story = { name: ' ' };
 
-    document.addEventListener('mousemove', ({ clientX, clientY }) => {
-      this.visible = true;
+/**
+With elevation, the Tooltip component can be given a lifted appearance with subtle shadows or kept flat for a more minimalist design. 
+ */
 
-      const virtualReference = {
-        getBoundingClientRect() {
-          return {
-            width: 0,
-            height: 0,
-            x: clientX,
-            y: clientY,
-            left: clientX,
-            right: clientX,
-            top: clientY,
-            bottom: clientY,
-          };
-        },
-      };
+export const Elevation = () => {
+  return html`
+    ${sharedStyles}
+    ${Tooltip({
+      ...defaultParams,
+    })}
+    ${Tooltip({
+      ...defaultParams,
+      elevation: false,
+    })}
+  `;
+};
 
-      tooltipPosition(virtualReference, this._tooltipBubble, this.placement, 4);
-    });
+/**
+ * The Tooltip component can have a pointing arrow, directing the user's attention to the specific element, or appear as a self-contained box.
+ */
 
-    document.addEventListener('mouseleave', () => {
-      this.visible = false;
-    });
-  }
+export const HasArrow = () => {
+  return html`
+    ${sharedStyles}
+    ${Tooltip({
+      ...defaultParams,
+    })}
+    ${Tooltip({
+      ...defaultParams,
+      hasArrow: false,
+    })}
+  `;
+};
 
-  render() {
-    return html`${BlrTooltipBubbleRenderFunction({
-      theme: this.theme,
-      message: this.text,
-      hasArrow: this.hasArrow,
-      visible: this.visible,
-      elevation: this.elevation,
-    })}`;
-  }
-}
+/**
+ * The positioning of the Tooltip component can be adjusted with an offset from the associated element.
+ */
+
+export const Offset = () => {
+  return html`
+    ${sharedStyles}
+ 
+      ${Tooltip({
+        ...defaultParams,
+        offset: 0,
+        placement: 'right',
+      })}
+    </div>
+
+    ${Tooltip({
+      ...defaultParams,
+      offset: 20,
+      placement: 'right',
+    })}
+    ${Tooltip({
+      ...defaultParams,
+      offset: 40,
+      placement: 'right',
+    })}
+  `;
+};
+
+/**
+ * ## Content / Settings
+ * ### Message
+ * The Tooltip component can incorporate a message.
+ */
+export const Message = () => {
+  return html`
+    ${sharedStyles}
+    ${Tooltip({
+      ...defaultParams,
+    })}
+  `;
+};
+
+Message.story = { name: ' ' };
+
+/**
+ * ## Dependencies
+ * ### Tooltip Bubble
+ * The Tooltip component makes use of the Tooltip Bubble component. For more information have a look at the [Tooltip Bubble](?path=/docs/design-system-web-components-feedback-tooltip-tooltipbubble--docs) component.
+ */
+
+export const TooltipBubble = () => {
+  return html`
+    ${sharedStyles}
+    ${Tooltip({
+      ...defaultParams,
+    })}
+  `;
+};
+
+TooltipBubble.story = { name: ' ' };
