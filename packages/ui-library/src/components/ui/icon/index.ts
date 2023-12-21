@@ -5,6 +5,8 @@ import { styleCustom } from './index.css';
 import { SizesType } from '../../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
+import { until } from 'lit-html/directives/until.js';
+import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 
 export const TAG_NAME = 'blr-icon';
 
@@ -22,10 +24,23 @@ export class BlrIcon extends LitElement {
   protected render() {
     const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
 
+    const unfullfilledRenderResult = html`<span class="blr-icon ${sizeKey}">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+    </span>`;
+
     if (IconMapping.hasOwnProperty(this.icon) && typeof IconMapping[this.icon] === 'function') {
-      return html`${IconMapping[this.icon](`blr-icon ${sizeKey}`)}`;
+      const importedIcon = IconMapping[this.icon]();
+
+      const fullfilledRenderResult = importedIcon
+        .then((iconModule) => {
+          return html`<span class="blr-icon ${sizeKey}">${unsafeSVG(iconModule.default)}</span>`;
+        })
+        // eslint-disable-next-line no-console
+        .catch((err) => console.error(err.message));
+
+      return until(fullfilledRenderResult, unfullfilledRenderResult);
     } else {
-      return nothing;
+      return unfullfilledRenderResult;
     }
   }
 }

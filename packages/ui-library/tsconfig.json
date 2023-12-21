@@ -7,7 +7,7 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "sourceMap": true,
-    "module": "es2015",
+    "module": "es2020",
     "target": "es2020",
     "jsx": "react",
     "allowJs": true,

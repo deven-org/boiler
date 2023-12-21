@@ -3,7 +3,7 @@ import { BlrNumberInputType } from './index';
 import { BlrNumberInputRenderFunction } from './renderFunction';
 import { FormSizes, Units } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
+import { PureIconKeys } from '@boiler/icons/icons-optimized';
 import { html } from 'lit';
 import { action } from '@storybook/addon-actions';
 

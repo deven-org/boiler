@@ -17,31 +17,35 @@ export const styleCustom = typeSafeNestedCss`
     display: inline-flex;
     flex-shrink: 0;
 
-    .blr-icon.full {
+    .blr-icon {
+      line-height: 0;
+    }
+
+    .blr-icon.full > svg {
       width: 100%;
     }
 
-    .blr-icon.xxs {
+    .blr-icon.xxs > svg {
       width: ${UI.Icon.Container.Size.XXS};
     }
 
-    .blr-icon.xs {
+    .blr-icon.xs > svg {
       width: ${UI.Icon.Container.Size.XS};
     }
 
-    .blr-icon.sm {
+    .blr-icon.sm > svg {
       width: ${UI.Icon.Container.Size.SM};
     }
 
-    .blr-icon.md {
+    .blr-icon.md > svg {
       width: ${UI.Icon.Container.Size.MD};
     }
 
-    .blr-icon.lg {
+    .blr-icon.lg > svg {
       width: ${UI.Icon.Container.Size.LG};
     }
 
-    .blr-icon.xl {
+    .blr-icon.xl > svg {
       width: ${UI.Icon.Container.Size.XL};
     }
   }

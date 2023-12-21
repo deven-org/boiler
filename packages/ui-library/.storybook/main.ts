@@ -22,6 +22,15 @@ const config: StorybookConfig = {
       include: resolve(__dirname, 'packages'),
     });
 
+    config.module!.rules!.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: 'raw-loader',
+        },
+      ],
+    });
+
     // Return the altered config
     return config;
   },
