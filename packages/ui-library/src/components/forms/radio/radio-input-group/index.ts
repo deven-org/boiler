@@ -1,6 +1,6 @@
-import { LitElement, html, nothing } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map.js';
-import { customElement, property } from 'lit-element/decorators.js';
+import { LitElement, html, nothing } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';

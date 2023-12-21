@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 import { fixture, expect } from '@open-wc/testing';
 import { BlrIconRenderFunction } from '.';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const TEST_CLASS = 'test-class';

@@ -1,9 +1,9 @@
-import { LitElement, css, html, nothing } from 'lit-element';
-import { customElement, property } from 'lit-element/decorators.js';
+import { LitElement, css, html, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { light, dark } from './index.css';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 
 const TAG_NAME = 'blr-tooltip-bubble';
 

@@ -1,6 +1,6 @@
-import { LitElement, html, nothing } from 'lit-element';
-import { customElement, property, query, state } from 'lit-element/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { LitElement, html, nothing } from 'lit';
+import { customElement, property, query, state } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
 
 import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';

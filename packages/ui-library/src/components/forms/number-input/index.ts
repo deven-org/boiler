@@ -1,5 +1,5 @@
-import { LitElement, TemplateResult, html, nothing } from 'lit-element';
-import { customElement, property, query, state } from 'lit-element/decorators.js';
+import { LitElement, TemplateResult, html, nothing } from 'lit';
+import { customElement, property, query, state } from 'lit/decorators.js';
 import { baseStyle, wrapperLight, wrapperDark, StepperComboDark, StepperComboLight } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';

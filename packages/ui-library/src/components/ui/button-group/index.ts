@@ -1,6 +1,6 @@
-import { LitElement, TemplateResult, html } from 'lit-element';
-import { customElement, property } from 'lit-element/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { LitElement, TemplateResult, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 
 import { styleCustom } from './index.css';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';

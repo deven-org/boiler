@@ -2,7 +2,7 @@
 import { BlrButtonGroupType, BlrButtonGroupFunction } from './index';
 import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button';
 import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button';
-import { html } from 'lit-element';
+import { html } from 'lit';
 import { ButtonGroupAlignmentVariants, ButtonGroupSizes } from '../../../globals/constants';
 
 export default {

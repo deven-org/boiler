@@ -1,8 +1,8 @@
-import { html, LitElement, TemplateResult } from 'lit-element';
-import { customElement, property } from 'lit-element/decorators.js';
+import { html, LitElement, TemplateResult } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { FormSizesType } from '../../../globals/types';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { formCaptionGroupStyle } from './index.css';
 
 const TAG_NAME = 'blr-form-caption-group';

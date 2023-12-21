@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { css, unsafeCSS } from 'lit-element';
+import { css, unsafeCSS } from 'lit';
 
 export const wrapValuesWithCss = (obj: any) => {
   // Iterate over each key-value pair in the object

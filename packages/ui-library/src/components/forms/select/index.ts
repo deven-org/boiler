@@ -1,3 +1,6 @@
+import { LitElement, html, nothing } from 'lit';
+import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../../globals/types';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
@@ -13,9 +16,6 @@ import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-com
 
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
-import { ClassMapDirective, classMap } from 'lit-html/directives/class-map.js';
-import { LitElement, html, nothing } from 'lit-element';
-import { customElement, property, state } from 'lit-element/decorators.js';
 
 type Option = {
   value: string;

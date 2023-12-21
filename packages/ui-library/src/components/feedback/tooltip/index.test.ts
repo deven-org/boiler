@@ -1,7 +1,7 @@
 import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
-import { html } from 'lit-element';
+import { html } from 'lit';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrTooltipType = {

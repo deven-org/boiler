@@ -22,7 +22,7 @@ import {
 
 import { semanticTokens as semanticTokensDark, componentTokens as componentTokensDark } from './index.Dark.generated';
 
-import { CSSResult } from 'lit-element';
+import { CSSResult } from 'lit';
 
 export function renderThemedCssStrings(renderFunc: (cT: componentTokensType, sT: semanticTokensType) => CSSResult): {
   tokenizedLight: CSSResult;

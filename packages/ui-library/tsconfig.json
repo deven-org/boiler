@@ -14,18 +14,8 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "strict": true,
-    "useDefineForClassFields": false,
-    "plugins": [
-      {
-        "name": "ts-lit-plugin",
-        "strict": true,
-        "rules": {
-          "no-unknown-tag-name": "off",
-          "no-unknown-event": "warning"
-        }
-      }
-    ]
+    "useDefineForClassFields": false
   },
   "include": ["src"],
-  "exclude": ["src/**/*.stories.ts", "src/**/*.test.ts"]
+  "exclude": [""]
 }

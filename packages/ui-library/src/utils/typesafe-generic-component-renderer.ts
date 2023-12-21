@@ -1,4 +1,4 @@
-import { TemplateResult, html } from 'lit-element';
+import { TemplateResult, html } from 'lit';
 
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,

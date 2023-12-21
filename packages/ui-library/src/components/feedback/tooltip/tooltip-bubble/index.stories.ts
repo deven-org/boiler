@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit';
 import { BlrTooltipBubbleRenderFunction, BlrTooltipBubbleType } from '.';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 

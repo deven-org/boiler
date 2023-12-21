@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { html } from 'lit-element';
+import { html } from 'lit';
 import { BlrIconButtonType, BlrIconButtonRenderFunction } from './index';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';

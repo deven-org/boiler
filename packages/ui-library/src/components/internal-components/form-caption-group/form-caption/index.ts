@@ -1,6 +1,6 @@
-import { LitElement, TemplateResult, html, nothing } from 'lit-element';
-import { customElement, property } from 'lit-element/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { LitElement, TemplateResult, html, nothing } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, CaptionVariantType, SizesType } from '../../../../globals/types';
 import { BlrIconRenderFunction } from '../../../ui/icon';
 import { SizelessIconType } from '@boiler/icons';

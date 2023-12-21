@@ -5,7 +5,7 @@ import { BlrIconType, BlrIconRenderFunction } from './index';
 import { Sizes } from '../../../globals/constants';
 import { getIconName } from '../../../utils/get-icon-name';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { SizesType } from '../../../globals/types';
 
 export default {

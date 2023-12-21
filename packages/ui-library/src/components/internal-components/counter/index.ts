@@ -1,6 +1,6 @@
-import { LitElement, html } from 'lit-element';
-import { customElement, property } from 'lit-element/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { LitElement, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { counterLight, counterDark } from './index.css';
