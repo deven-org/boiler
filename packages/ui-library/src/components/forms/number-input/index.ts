@@ -83,7 +83,7 @@ export class BlrNumberInput extends LitElement {
       const padding = Math.max(digits - integerPart.length, 0);
       paddedInteger = '0'.repeat(padding) + integerPart;
     }
-
+    console.log(cur, fractions, digits, formattedNumber, integerPart, fractionPart, paddedInteger);
     return `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
   }
 
@@ -237,12 +237,8 @@ export class BlrNumberInput extends LitElement {
             @change=${this.handleChange}
             placeholder=${this.placeholder || nothing}
           />
-          ${!this.readonly && this.unit
-            ? html`
-                <span class="${unitClasses}">${this.unit}</span>
-                ${this.renderMode()}
-              `
-            : nothing}
+          ${!this.readonly && this.unit ? html` <span class="${unitClasses}">${this.unit}</span> ` : nothing}
+          ${this.renderMode()}
         </div>
         ${this.hasHint || this.hasError
           ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
