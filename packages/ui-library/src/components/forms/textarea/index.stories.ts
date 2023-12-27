@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
+import { html } from 'lit-html';
+import { BlrTextareaType } from './index';
+import { BlrTextareaRenderFunction } from './renderFunction';
 import { FormSizes, Resizes } from '../../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';

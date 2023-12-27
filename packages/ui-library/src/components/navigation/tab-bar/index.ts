@@ -15,15 +15,14 @@ import {
   TabContentVariantType,
   SizesType,
 } from '../../../globals/types';
-import { BlrIconRenderFunction } from '../../ui/icon';
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { BlrDividerRenderFunction } from '../../ui/divider';
+import { BlrDividerRenderFunction } from '../../ui/divider/renderFunction';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-tab-bar';
+export const TAG_NAME = 'blr-tab-bar';
 
 @customElement(TAG_NAME)
 export class BlrTabBar extends LitElement {
@@ -144,11 +143,15 @@ export class BlrTabBar extends LitElement {
           ${this.overflowVariantStandard === 'buttons'
             ? html`
                 <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
-                  ${BlrIconRenderFunction({
-                    icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
-                    size: iconButtonSizeVariant,
-                    hideAria: true,
-                  })}
+                  ${BlrIconRenderFunction(
+                    {
+                      icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
+                      size: iconButtonSizeVariant,
+                    },
+                    {
+                      'aria-hidden': true,
+                    }
+                  )}
                 </button>
               `
             : nothing}
@@ -193,11 +196,15 @@ export class BlrTabBar extends LitElement {
                         tabindex=${tab.disabled ? '-1' : nothing}
                       >
                         ${this.tabContent !== 'labelOnly'
-                          ? BlrIconRenderFunction({
-                              icon: calculateIconName(tab.icon, iconSizeVariant),
-                              size: iconSizeVariant,
-                              hideAria: true,
-                            })
+                          ? BlrIconRenderFunction(
+                              {
+                                icon: calculateIconName(tab.icon, iconSizeVariant),
+                                size: iconSizeVariant,
+                              },
+                              {
+                                'aria-hidden': true,
+                              }
+                            )
                           : nothing}
                         ${this.tabContent !== 'iconOnly'
                           ? html` <label class="blr-semantic-action ${this.size}" name="${tab.label}"
@@ -215,11 +222,15 @@ export class BlrTabBar extends LitElement {
           ${this.overflowVariantStandard === 'buttons'
             ? html`
                 <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
-                  ${BlrIconRenderFunction({
-                    icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
-                    size: iconButtonSizeVariant,
-                    hideAria: true,
-                  })}
+                  ${BlrIconRenderFunction(
+                    {
+                      icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
+                      size: iconButtonSizeVariant,
+                    },
+                    {
+                      'aria-hidden': true,
+                    }
+                  )}
                 </button>
               `
             : nothing}
@@ -249,6 +260,3 @@ export class BlrTabBar extends LitElement {
 }
 
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
-
-export const BlrTabBarRenderFunction = (params: BlrTabBarType) =>
-  genericBlrComponentRenderer<BlrTabBarType>(TAG_NAME, { ...params });

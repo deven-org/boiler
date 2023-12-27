@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizes, LabelVariants } from '../../../globals/constants';
-import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
+import { BlrFormLabelType } from './index';
+import { BlrFormLabelRenderFunction } from './renderFunction';
 
 export default {
   title: 'Design System/Web Components/Internal Components/FormLabel',

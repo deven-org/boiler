@@ -17,5 +17,5 @@
     "useDefineForClassFields": false
   },
   "include": ["src"],
-  "exclude": [""]
+  "exclude": ["src/**/*.test.ts", "src/**/*.stories.ts"]
 }

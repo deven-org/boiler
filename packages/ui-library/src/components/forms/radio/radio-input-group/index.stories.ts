@@ -1,4 +1,5 @@
-import { BlrRadioGroupRenderFunction, BlrRadioGroupType } from './index';
+import { BlrRadioGroupType } from './index';
+import { BlrRadioGroupRenderFunction } from './renderFunction';
 import { InputSizes } from '../../../../globals/constants';
 import { getIconName } from '../../../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';

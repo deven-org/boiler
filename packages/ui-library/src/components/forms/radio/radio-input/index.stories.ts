@@ -1,4 +1,5 @@
-import { BlrRadioRenderFunction, BlrRadioType } from './index';
+import { BlrRadioType } from './index';
+import { BlrRadioRenderFunction } from './renderFunction';
 import { InputSizes } from '../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';

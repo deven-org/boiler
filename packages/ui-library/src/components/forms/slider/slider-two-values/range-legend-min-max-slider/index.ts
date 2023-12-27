@@ -8,13 +8,12 @@ import { sliderDark, sliderLight } from '../../../../../foundation/component-tok
 import { FormSizesType, ActionVariantType } from '../../../../../globals/types';
 import { findToolTipPosition, setOnclickValue } from '../../../../../utils/range-slider-utils';
 
-import { BlrIconButtonRenderFunction } from '../../../../actions/buttons/icon-button';
+import { BlrIconButtonRenderFunction } from '../../../../actions/buttons/icon-button/renderFunction';
 import { RenderBtnProps } from '../../../../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-range-legend-min-max-slider';
+export const TAG_NAME = 'blr-range-legend-min-max-slider';
 
 @customElement(TAG_NAME)
 export class BlrRangeLegendMinMaxSlider extends LitElement {
@@ -234,6 +233,3 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
 }
 
 export type BlrRangeLegendMinMaxSliderType = Omit<BlrRangeLegendMinMaxSlider, keyof LitElement>;
-
-export const BlrRangeLegendMinMaxSliderRenderFunction = (params: BlrRangeLegendMinMaxSliderType) =>
-  genericBlrComponentRenderer<BlrRangeLegendMinMaxSliderType>(TAG_NAME, { ...params });

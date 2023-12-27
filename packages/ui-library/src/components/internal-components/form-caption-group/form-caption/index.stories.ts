@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, CaptionVariants } from '../../../../globals/constants';
-import { BlrFormCaptionRenderFunction, BlrFormCaptionType } from './index';
+import { BlrFormCaptionType } from './index';
+import { BlrFormCaptionRenderFunction } from './renderFunction';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {

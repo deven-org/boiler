@@ -1,5 +1,6 @@
 import { html } from 'lit';
-import { BlrTooltipBubbleRenderFunction, BlrTooltipBubbleType } from '.';
+import { BlrTooltipBubbleType } from '.';
+import { BlrTooltipBubbleRenderFunction } from './renderFunction';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
 export default {

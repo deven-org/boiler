@@ -1,4 +1,5 @@
-import { BlrTabBarRenderFunction, BlrTabBarType } from './index';
+import { BlrTabBarType } from './index';
+import { BlrTabBarRenderFunction } from './renderFunction';
 import {
   FormSizes,
   IconPositionVariant,

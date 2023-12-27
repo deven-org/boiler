@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
+import { BlrNumberInputType } from './index';
+import { BlrNumberInputRenderFunction } from './renderFunction';
 import { FormSizes, Units } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';

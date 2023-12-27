@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import { BlrIconButtonType, BlrIconButtonRenderFunction } from './index';
+import { BlrIconButtonType } from './index';
+import { BlrIconButtonRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';

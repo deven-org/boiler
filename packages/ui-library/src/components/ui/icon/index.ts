@@ -5,9 +5,8 @@ import { styleCustom } from './index.css';
 import { SizesType } from '../../../globals/types';
 import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
-import { styleMap } from 'lit/directives/style-map.js';
 
-const TAG_NAME = 'blr-icon';
+export const TAG_NAME = 'blr-icon';
 
 @customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
@@ -17,6 +16,8 @@ export class BlrIcon extends LitElement {
   @property() size: SizesType = 'md';
 
   @property() ignoreSize?: boolean = false;
+
+  @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
 
   protected render() {
     const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
@@ -31,6 +32,8 @@ export class BlrIcon extends LitElement {
 
 // BlrIconType is a new Type containing all properties of BlrIcon without the properties of LitElement
 // and some additional properties which are not part of the component, so we dont use the generic render function
+
+/*
 export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   classMap?: DirectiveResult<typeof ClassMapDirective>;
   onClick?: HTMLElement['onclick'];
@@ -38,25 +41,6 @@ export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   name?: string;
   disablePointerEvents?: boolean;
 };
+*/
 
-export const BlrIconRenderFunction = ({
-  icon,
-  size,
-  classMap,
-  onClick,
-  hideAria,
-  name,
-  disablePointerEvents,
-  ignoreSize,
-}: BlrIconType) => {
-  return html`<blr-icon
-    class="${classMap}"
-    .icon=${icon || nothing}
-    .ignoreSize=${ignoreSize}
-    .size=${size}
-    .name=${name || nothing}
-    aria-hidden=${hideAria || nothing}
-    @click=${onClick}
-    style=${disablePointerEvents ? styleMap({ pointerEvents: 'none' }) : nothing}
-  ></blr-icon>`;
-};
+export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>>;

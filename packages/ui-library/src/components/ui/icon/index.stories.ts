@@ -1,7 +1,9 @@
 import { html } from 'lit-html';
 import { IconKeys } from '@boiler/icons';
 
-import { BlrIconType, BlrIconRenderFunction } from './index';
+import { BlrIconType } from './index';
+import { BlrIconRenderFunction } from './renderFunction';
+
 import { Sizes } from '../../../globals/constants';
 import { getIconName } from '../../../utils/get-icon-name';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
@@ -39,7 +41,7 @@ export const BlrIcon = (params: BlrIconType) => {
           ${BlrIconRenderFunction({
             icon: calculateIconName(icon as string, params.size as SizesType),
             size: params.size,
-            classMap: classes,
+            class: classes,
           })}
           <span class="icon-label">${icon}</span>
         </li>`;
