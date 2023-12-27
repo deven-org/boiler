@@ -1577,6 +1577,7 @@ __metadata:
     husky: "npm:^8.0.0"
     lint-staged: "npm:^13.1.0"
     lit: "npm:^2.7.4"
+    lit-analyzer: "npm:^2.0.2"
     lit-html: "npm:^2.6.1"
     lodash.camelcase: "npm:4.3.0"
     mini-css-extract-plugin: "npm:^2.7.2"
@@ -1594,6 +1595,7 @@ __metadata:
     stylelint: "npm:^14.16.1"
     stylelint-config-standard: "npm:^29.0.0"
     svgo: "npm:^3.0.2"
+    ts-lit-plugin: "npm:^2.0.1"
     ts-node: "npm:^10.9.1"
     typescript: "npm:^5.3.0"
     webpack: "npm:^5.75.0"
@@ -5484,6 +5486,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vscode/web-custom-data@npm:^0.4.2":
+  version: 0.4.8
+  resolution: "@vscode/web-custom-data@npm:0.4.8"
+  checksum: 26a06ecd1a1b48388828855a559948410a5d13163bcc3713207d72c03c533b779032419a08528f27a49c83490fa4bacb0d4652c2cb05ca0bd095db42f177498e
+  languageName: node
+  linkType: hard
+
 "@web/browser-logs@npm:^0.2.6":
   version: 0.2.6
   resolution: "@web/browser-logs@npm:0.2.6"
@@ -8113,6 +8122,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"didyoumean2@npm:4.1.0":
+  version: 4.1.0
+  resolution: "didyoumean2@npm:4.1.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.10.2"
+    leven: "npm:^3.1.0"
+    lodash.deburr: "npm:^4.1.0"
+  checksum: 82fdfd5f81b36a6b842d0bb7758bd24110b4c860a44eb098b0bd3f5d761b9db5f8eb9f1b5cbbac4a09c11eb0ce8b98f0c13167174d85ff56c91817f179a74c19
+  languageName: node
+  linkType: hard
+
 "diff@npm:^4.0.1":
   version: 4.0.2
   resolution: "diff@npm:4.0.2"
@@ -9434,7 +9454,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0, fast-glob@npm:^3.3.1":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.2, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0, fast-glob@npm:^3.3.1":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
@@ -11932,6 +11952,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lit-analyzer@npm:^2.0.1, lit-analyzer@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "lit-analyzer@npm:2.0.2"
+  dependencies:
+    "@vscode/web-custom-data": "npm:^0.4.2"
+    chalk: "npm:^2.4.2"
+    didyoumean2: "npm:4.1.0"
+    fast-glob: "npm:^3.2.11"
+    parse5: "npm:5.1.0"
+    ts-simple-type: "npm:~2.0.0-next.0"
+    vscode-css-languageservice: "npm:4.3.0"
+    vscode-html-languageservice: "npm:3.1.0"
+    web-component-analyzer: "npm:^2.0.0"
+  bin:
+    lit-analyzer: cli.js
+  checksum: b101aad9c16f558dba146494ee7da65ca2c6e0a8430e71f3ca9ea8c6dcb68514a8311f17bf3175dc1a7a67081337d1bbe98ee6598329b6eee1a3617582a21216
+  languageName: node
+  linkType: hard
+
 "lit-element@npm:^3.3.0":
   version: 3.3.3
   resolution: "lit-element@npm:3.3.3"
@@ -12069,6 +12108,13 @@ __metadata:
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: 762998a63e095412b6099b8290903e0a8ddcb353ac6e2e0f2d7e7d03abd4275fe3c689d88960eb90b0dde4f177554d51a690f22a343932ecbc50a5d111849987
+  languageName: node
+  linkType: hard
+
+"lodash.deburr@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "lodash.deburr@npm:4.1.0"
+  checksum: 30c068e9c3b21d65d260887a8849fa7b94692f868adcc4527136c296b4e71ced7149f58e0f37154d3c56d7950cc605ad3e10b2ee0baedf5638af0befc5013ebc
   languageName: node
   linkType: hard
 
@@ -13481,6 +13527,13 @@ __metadata:
     domhandler: "npm:^5.0.2"
     parse5: "npm:^7.0.0"
   checksum: e820cacb8486e6f7ede403327d18480df086d70e32ede2f6654d8c3a8b4b8dc4a4d5c21c03c18a92ba2466c513b93ca63be4a138dd73cd0995f384eb3b9edf11
+  languageName: node
+  linkType: hard
+
+"parse5@npm:5.1.0":
+  version: 5.1.0
+  resolution: "parse5@npm:5.1.0"
+  checksum: 2b2048e9a2d5932678293685f8bd25cc2841828a6d1020f4550b0e48d9e3de814b26c8b3aa58b6ff97434fa7e65b19ff265f5236acda92bbe1ecc264eda409f5
   languageName: node
   linkType: hard
 
@@ -16124,6 +16177,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-lit-plugin@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "ts-lit-plugin@npm:2.0.1"
+  dependencies:
+    lit-analyzer: "npm:^2.0.1"
+    web-component-analyzer: "npm:^2.0.0"
+  checksum: 17146c0250991d6f69f71afd136ea7abca18b50202146c5d1535f10b87f5f9bc1bab22181f9ee881d570c99cac1c8ce8607b05c9a53e5b1dabf20c67e1b4a640
+  languageName: node
+  linkType: hard
+
 "ts-node@npm:^10.8.1, ts-node@npm:^10.9.1":
   version: 10.9.2
   resolution: "ts-node@npm:10.9.2"
@@ -16159,6 +16222,13 @@ __metadata:
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
   checksum: 5f29938489f96982a25ba650b64218e83a3357d76f7bede80195c65ab44ad279c8357264639b7abdd5d7e75fc269a83daa0e9c62fd8637a3def67254ecc9ddc2
+  languageName: node
+  linkType: hard
+
+"ts-simple-type@npm:2.0.0-next.0, ts-simple-type@npm:~2.0.0-next.0":
+  version: 2.0.0-next.0
+  resolution: "ts-simple-type@npm:2.0.0-next.0"
+  checksum: a8838487b063b2ecf5e96c3cd25b4dfd2fb758c415430e20c0683874e6ca32770ab18c63c8313452ae5be3cc4400efd189de43d8138be1af7e990cb6b8ce184e
   languageName: node
   linkType: hard
 
@@ -16345,6 +16415,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:~5.2.0":
+  version: 5.2.2
+  resolution: "typescript@npm:5.2.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 91ae3e6193d0ddb8656d4c418a033f0f75dec5e077ebbc2bd6d76439b93f35683936ee1bdc0e9cf94ec76863aa49f27159b5788219b50e1cd0cd6d110aa34b07
+  languageName: node
+  linkType: hard
+
 "typescript@patch:typescript@npm%3A^4.6.4 || ^5.2.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.0#optional!builtin<compat/typescript>":
   version: 5.3.3
   resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
@@ -16352,6 +16432,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A~5.2.0#optional!builtin<compat/typescript>":
+  version: 5.2.2
+  resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 062c1cee1990e6b9419ce8a55162b8dc917eb87f807e4de0327dbc1c2fa4e5f61bc0dd4e034d38ff541d1ed0479b53bcee8e4de3a4075c51a1724eb6216cb6f5
   languageName: node
   linkType: hard
 
@@ -16728,6 +16818,58 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vscode-css-languageservice@npm:4.3.0":
+  version: 4.3.0
+  resolution: "vscode-css-languageservice@npm:4.3.0"
+  dependencies:
+    vscode-languageserver-textdocument: "npm:^1.0.1"
+    vscode-languageserver-types: "npm:3.16.0-next.2"
+    vscode-nls: "npm:^4.1.2"
+    vscode-uri: "npm:^2.1.2"
+  checksum: 633a5c3857646f262982f5fe29243f20839621e81d78aa883822ef0fa0d9b2ec9d69e3201ee251541f8a04762f8033ad3d38c09d938ed4cecdae7df0e6a0076e
+  languageName: node
+  linkType: hard
+
+"vscode-html-languageservice@npm:3.1.0":
+  version: 3.1.0
+  resolution: "vscode-html-languageservice@npm:3.1.0"
+  dependencies:
+    vscode-languageserver-textdocument: "npm:^1.0.1"
+    vscode-languageserver-types: "npm:3.16.0-next.2"
+    vscode-nls: "npm:^4.1.2"
+    vscode-uri: "npm:^2.1.2"
+  checksum: 80c4377dd74f390183ba9c0365d83e6182f436c0ff77af535158fecfb45b044fd7643eb99b6fe755a57c223b6fd8f4e36883133fbbb65e84f838b81df58b5aa6
+  languageName: node
+  linkType: hard
+
+"vscode-languageserver-textdocument@npm:^1.0.1":
+  version: 1.0.11
+  resolution: "vscode-languageserver-textdocument@npm:1.0.11"
+  checksum: 1996a38e24571e05aa21dd4f46e0a6849e22301c9a66996762e77d9c6df3622de0bd31cd5742a0c0c47fb9dfd00b310ad08c44d08241873ea571edacd5238da6
+  languageName: node
+  linkType: hard
+
+"vscode-languageserver-types@npm:3.16.0-next.2":
+  version: 3.16.0-next.2
+  resolution: "vscode-languageserver-types@npm:3.16.0-next.2"
+  checksum: 783b1b593655413eb657c4238fe93532b1eb299f6100b85ac74e2a36cf808e2719813240da85eb3d0a6adf30e922b3bcba5d174ea5d45cfb463ea6698576cf33
+  languageName: node
+  linkType: hard
+
+"vscode-nls@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "vscode-nls@npm:4.1.2"
+  checksum: 8e88b2438e6058309c0ccae59166cf63b34f2182450a7d2bc7eeb90b414a7e9a99397f5f672284f5dbc5466578472e4fbb28b29a730e3b08342564e840fac5d6
+  languageName: node
+  linkType: hard
+
+"vscode-uri@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "vscode-uri@npm:2.1.2"
+  checksum: 4ed01e79f8caee5518d7dce567280001a00c87ff75c29421ac3693c735834f17950e79f818981c591e58c6efe681e13928470037b6ae75c948bec9b398e4c8db
+  languageName: node
+  linkType: hard
+
 "walker@npm:^1.0.8":
   version: 1.0.8
   resolution: "walker@npm:1.0.8"
@@ -16753,6 +16895,21 @@ __metadata:
   dependencies:
     defaults: "npm:^1.0.3"
   checksum: 5b61ca583a95e2dd85d7078400190efd452e05751a64accb8c06ce4db65d7e0b0cde9917d705e826a2e05cc2548f61efde115ffa374c3e436d04be45c889e5b4
+  languageName: node
+  linkType: hard
+
+"web-component-analyzer@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "web-component-analyzer@npm:2.0.0"
+  dependencies:
+    fast-glob: "npm:^3.2.2"
+    ts-simple-type: "npm:2.0.0-next.0"
+    typescript: "npm:~5.2.0"
+    yargs: "npm:^17.7.2"
+  bin:
+    wca: cli.js
+    web-component-analyzer: cli.js
+  checksum: da25adf151afe1eb308f5e1dc6617ccefd3506f144e90ed2cb9a823cf6b3512dbda1b5d43ad36bf0eba9e930683f26537aecdfde623960c6a1aae593ffa210ef
   languageName: node
   linkType: hard
 
@@ -17260,7 +17417,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.0.0":
+"yargs@npm:^17.0.0, yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:
