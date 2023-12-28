@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
@@ -18,13 +18,22 @@ export class BlrIcon extends LitElement {
   @property() size: SizesType = 'md';
 
   @property() ignoreSize?: boolean = false;
+  @property() onClick?: () => void;
 
   @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
 
   protected render() {
     const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
 
-    const unfullfilledRenderResult = html`<span class="blr-icon ${sizeKey}">
+    const unfullfilledRenderResult = html`<span
+      @click="${this.onClick}"
+      @keydown=${(event: KeyboardEvent) => {
+        if (event.code === 'Space') {
+          this.onClick?.();
+        }
+      }}
+      class="blr-icon ${sizeKey}"
+    >
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
     </span>`;
 
@@ -33,7 +42,16 @@ export class BlrIcon extends LitElement {
 
       const fullfilledRenderResult = importedIcon
         .then((iconModule) => {
-          return html`<span class="blr-icon ${sizeKey}">${unsafeSVG(iconModule.default)}</span>`;
+          return html`<span
+            @click="${this.onClick}"
+            @keydown=${(event: KeyboardEvent) => {
+              if (event.code === 'Space') {
+                this.onClick?.();
+              }
+            }}
+            class="blr-icon ${sizeKey}"
+            >${unsafeSVG(iconModule.default)}</span
+          >`;
         })
         // eslint-disable-next-line no-console
         .catch((err) => console.error(err.message));

@@ -25,18 +25,18 @@ describe('blr-icon', () => {
 describe('blr-icon', () => {
   it('svg contains md class if size is set to md and ignoreSize is false', async () => {
     const element = await fixture(BlrIconRenderFunction({ ...sampleParams, ignoreSize: false }));
-    const svgElement = querySelectorDeep('svg', element?.getRootNode() as HTMLElement);
-    const className = svgElement?.getAttribute('class'); // you can not use className here
+    const svgParentElement = querySelectorDeep('.blr-icon', element?.getRootNode() as HTMLElement);
+    const className = svgParentElement?.getAttribute('class'); // you can not use className here
 
     await expect(className).to.contain('md');
   });
 });
 
 describe('blr-icon', () => {
-  it('svg does not contain md class if size is set to md and ignoreSize is false', async () => {
+  it('svg does not contain md class if size is set to md and ignoreSize is true', async () => {
     const element = await fixture(BlrIconRenderFunction({ ...sampleParams, ignoreSize: true }));
-    const svgElement = querySelectorDeep('svg', element?.getRootNode() as HTMLElement);
-    const className = svgElement?.getAttribute('class'); // you can not use className here
+    const svgParentElement = querySelectorDeep('.blr-icon', element?.getRootNode() as HTMLElement);
+    const className = svgParentElement?.getAttribute('class'); // you can not use className here
 
     await expect(className).to.not.contain('md');
   });

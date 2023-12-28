@@ -175,9 +175,10 @@ export class BlrTextInput extends LitElement {
                   },
                   {
                     'aria-hidden': true,
-                    'name': this.hasError
-                      ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                      : calculateIconName(this.inputIcon, iconSizeVariant),
+                    'name':
+                      (this.hasError
+                        ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                        : calculateIconName(this.inputIcon, iconSizeVariant)) || '',
                   }
                 )}`
               : nothing}
@@ -192,7 +193,8 @@ export class BlrTextInput extends LitElement {
                   },
                   {
                     'aria-hidden': true,
-                    'name': this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
+                    'name':
+                      (this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon()) || '',
                   }
                 )}`
               : nothing}

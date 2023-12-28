@@ -41,7 +41,7 @@ export const BlrIcon = (params: BlrIconType) => {
           ${BlrIconRenderFunction({
             icon: calculateIconName(icon as string, params.size as SizesType),
             size: params.size,
-            class: classes,
+            classMap: classes,
           })}
           <span class="icon-label">${icon}</span>
         </li>`;
