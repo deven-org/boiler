@@ -1,9 +1,9 @@
-name: Unit-Tests
+name: Lit-Analyze
 
 on: [pull_request]
 
 jobs:
-  unit-test:
+  analyze:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,5 +32,5 @@ jobs:
       - name: Generate tokens
         run: yarn tokens:generate
 
-      - name: Run Tests
-        run: yarn test
+      - name: Run analyze
+        run: yarn analyze
