@@ -36,7 +36,7 @@ describe('blr-number-input', () => {
     expect(type).to.be.equal('number');
   });
 
-  it('is is showing random placeholder', async () => {
+  it('is showing random placeholder', async () => {
     const randomString = getRandomString();
 
     const element = await fixture(
@@ -50,6 +50,22 @@ describe('blr-number-input', () => {
     const placeholder = input?.getAttribute('placeholder');
 
     expect(placeholder).to.be.equal(randomString);
+  });
+
+  it('is showing the stepper when unit is undefined and readonly is true', async () => {
+    const className = 'custom-stepper-button';
+
+    const element = await fixture(
+      BlrNumberInputRenderFunction({
+        ...sampleParams,
+        unit: undefined,
+      })
+    );
+
+    const button = querySelectorDeep('button', element.getRootNode() as HTMLElement);
+    const classNames = button?.getAttribute('class');
+
+    expect(classNames).to.include(className);
   });
 
   it('is shows adjacent caption components in caption group slot', async () => {
