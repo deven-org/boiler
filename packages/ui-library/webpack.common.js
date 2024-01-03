@@ -17,6 +17,7 @@ module.exports = {
     chunkFilename: (pathData) => {
       return pathData.chunk.name === 'main' ? '[name].js' : 'chunk_[name].js';
     },
+
     publicPath: 'auto',
   },
   module: {
