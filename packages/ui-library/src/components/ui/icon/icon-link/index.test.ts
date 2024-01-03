@@ -1,4 +1,5 @@
-import { BlrIconLinkType, BlrIconLinkRenderFunction } from './index';
+import { BlrIconLinkRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrIconLinkType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

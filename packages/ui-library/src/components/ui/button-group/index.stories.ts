@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-import { BlrButtonGroupType, BlrButtonGroupFunction } from './index';
-import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button';
-import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button';
+import { BlrButtonGroupType } from './index';
+import { BlrButtonGroupFunction } from './renderFunction';
+import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button/renderFunction';
+import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button/renderFunction';
 import { html } from 'lit';
 import { ButtonGroupAlignmentVariants, ButtonGroupSizes } from '../../../globals/constants';
 

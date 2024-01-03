@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
-import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
+import { BlrTextInputType } from './index';
+import { BlrTextInputRenderFunction } from './renderFunction';
 import { FormSizes, InputTypes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { action } from '@storybook/addon-actions';
-import { html } from 'lit';
+import { html } from 'lit-html';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

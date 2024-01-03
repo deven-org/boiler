@@ -1,4 +1,5 @@
-import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
+import { BlrTextButtonRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrTextButtonType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

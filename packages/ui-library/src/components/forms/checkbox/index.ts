@@ -2,21 +2,20 @@ import { LitElement, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
-import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
+import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form-label/form-label-inline/renderFunction';
 import { FormSizesType } from '../../../globals/types';
 
 import { checkboxDark, checkboxLight } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { BlrIconRenderFunction } from '../../ui/icon';
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-const TAG_NAME = 'blr-checkbox';
+export const TAG_NAME = 'blr-checkbox';
 
 @customElement(TAG_NAME)
 export class BlrCheckbox extends LitElement {
@@ -272,25 +271,33 @@ export class BlrCheckbox extends LitElement {
 
           <label class="${visualCheckboxClasses}" for="${this.checkInputId}" aria-hidden="true" tabindex="-1">
             ${this.currentIndeterminateState
-              ? BlrIconRenderFunction({
-                  icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
-                  hideAria: true,
-                  classMap: checkerIconClasses,
-                  ignoreSize: true,
-                })
-              : BlrIconRenderFunction({
-                  icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
-                  hideAria: true,
-                  classMap: checkerIconClasses,
-                  ignoreSize: true,
-                })}
+              ? BlrIconRenderFunction(
+                  {
+                    icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
+                    classMap: checkerIconClasses,
+                    ignoreSize: true,
+                  },
+                  {
+                    'aria-hidden': true,
+                  }
+                )
+              : BlrIconRenderFunction(
+                  {
+                    icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
+                    classMap: checkerIconClasses,
+                    ignoreSize: true,
+                  },
+                  {
+                    'aria-hidden': true,
+                  }
+                )}
 
             <div class="${focusRingClasses}"></div>
           </label>
 
           <div class="${labelWrapperClasses}" aria-hidden="true" tabindex="-1">
             ${this.hasLabel
-              ? html`${BlrFormLabelInline({
+              ? html`${BlrFormLabelInlineRenderFunction({
                   labelText: this.label,
                   forValue: this.checkInputId,
                   labelSize: this.size,
@@ -307,6 +314,3 @@ export class BlrCheckbox extends LitElement {
 }
 
 export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;
-
-export const BlrCheckboxRenderFunction = (params: BlrCheckboxType) =>
-  genericBlrComponentRenderer<BlrCheckboxType>(TAG_NAME, { ...params });

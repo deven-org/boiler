@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { CounterVariants, FormSizes } from '../../../globals/constants';
-import { BlrCounterRenderFunction, BlrCounterType } from './index';
+import { BlrCounterType } from './index';
+import { BlrCounterRenderFunction } from './renderFunction';
 
 export default {
   title: 'Design System/Web Components/Internal Components/Counter',

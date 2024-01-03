@@ -14,13 +14,12 @@ import {
   ButtonDisplayType,
 } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
-import { BlrIconRenderFunction } from '../../../ui/icon';
+import { BlrIconRenderFunction } from '../../../ui/icon/renderFunction';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { BlrLoaderRenderFunction } from '../../../feedback/loader';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction';
 
-const TAG_NAME = 'blr-text-button';
+export const TAG_NAME = 'blr-text-button';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
 @customElement('blr-text-button')
@@ -118,21 +117,29 @@ export class BlrTextButton extends LitElement {
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">
         ${this.hasIcon && this.iconPosition === 'leading'
-          ? BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: iconClasses,
-            })
+          ? BlrIconRenderFunction(
+              {
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                classMap: iconClasses,
+              },
+              {
+                'aria-hidden': true,
+              }
+            )
           : nothing}
         <span class="label">${this.label} </span>
         ${this.hasIcon && this.iconPosition === 'trailing'
-          ? BlrIconRenderFunction({
-              icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
-              hideAria: true,
-              classMap: iconClasses,
-            })
+          ? BlrIconRenderFunction(
+              {
+                icon: calculateIconName(this.icon, iconSizeVariant),
+                size: iconSizeVariant,
+                classMap: iconClasses,
+              },
+              {
+                'aria-hidden': true,
+              }
+            )
           : nothing}
       </div>`;
 
@@ -171,6 +178,3 @@ export class BlrTextButton extends LitElement {
 }
 
 export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement>;
-
-export const BlrTextButtonRenderFunction = (params: BlrTextButtonType) =>
-  genericBlrComponentRenderer<BlrTextButtonType>(TAG_NAME, { ...params });

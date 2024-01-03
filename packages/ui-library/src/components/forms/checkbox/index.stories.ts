@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
+import { BlrCheckboxType } from './index';
+import { BlrCheckboxRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';

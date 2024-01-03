@@ -1,4 +1,5 @@
-import { BlrNumberInputRenderFunction, BlrNumberInputType } from '.';
+import { BlrNumberInputRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrNumberInputType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
