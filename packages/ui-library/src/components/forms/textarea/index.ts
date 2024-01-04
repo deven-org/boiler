@@ -63,9 +63,25 @@ export class BlrTextarea extends LitElement {
   }
 
   protected updateCounter() {
+    const scrollTop = this.textareaElement?.scrollTop;
+    const isFocused = this.textareaElement === document.activeElement;
+
     const length = this.textareaElement?.value?.length;
     if (length !== undefined) {
       this.count = length;
+    }
+
+    if (this.textareaElement && scrollTop !== undefined) {
+      requestAnimationFrame(() => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        this.textareaElement.scrollTop = scrollTop;
+        if (isFocused) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          this.textareaElement.focus();
+        }
+      });
     }
   }
 
