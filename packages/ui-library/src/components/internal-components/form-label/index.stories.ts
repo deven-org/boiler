@@ -99,7 +99,7 @@ BlrFormLabel.storyName = 'Form Label';
 const defaultParams: BlrFormLabelType = {
   theme: 'Light',
   labelSize: 'md',
-  labelText: 'Label- text',
+  labelText: 'Label-text',
   labelAppendix: '(Appendix)',
   variant: 'label',
   forValue: 'Form Label',
@@ -117,24 +117,24 @@ export const SizeVariant = () => {
       ${BlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'sm',
-        labelText: 'Form- label',
-        labelAppendix: 'SM',
+        labelText: 'Form label SM',
+        labelAppendix: '(Appendix SM)',
       })}
     </div>
     <div class="stories-form-label">
       ${BlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'md',
-        labelText: 'Form- label',
-        labelAppendix: 'MD',
+        labelText: 'Form label MD',
+        labelAppendix: '(Appendix MD)',
       })}
     </div>
     <div class="stories-form-label">
       ${BlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'lg',
-        labelText: 'Form- label',
-        labelAppendix: 'LG',
+        labelText: 'Form label LG',
+        labelAppendix: '(Appendix LG)',
       })}
     </div>`;
 };
