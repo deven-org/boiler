@@ -15,13 +15,15 @@
     "build:js-example:prod": "yarn build:ui-library && yarn workspace @boiler/js-example-app build:prod",
     "lint": "yarn workspace @boiler/ui-library lint",
     "format": "yarn workspace @boiler/ui-library format:eslint && yarn workspace @boiler/ui-library format:prettier",
-    "test": "yarn workspace @boiler/ui-library test",
-    "test:a11y": "yarn workspace @boiler/storybook test:a11y",
+    "test:ui-library": "yarn workspace @boiler/ui-library test",
+    "build-and-test:ui-library": "yarn build:ui-library && yarn workspace @boiler/ui-library test",
+    "test": "yarn build-and-test:ui-library",
     "doc:install": "deven-documentation-skeleton install",
     "doc:check": "deven-documentation-skeleton check",
     "doc:update": "deven-documentation-skeleton update",
     "compile:icons": "yarn workspace @boiler/icons compile:icons",
     "compile": "yarn workspace @boiler/ui-library compile",
+    "analyze": "yarn workspace @boiler/ui-library analyze",
     "tokens:generate": "yarn workspace @boiler/figma-design-tokens tokens:generate",
     "prepare": "husky install"
   },
@@ -49,6 +51,7 @@
     "@boiler/react-example-app": "0.0.1",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
+    "@deven-org/documentation-skeleton": "^2.1.0",
     "@open-wc/testing": "3.1.7",
     "@storybook/addon-a11y": "7.4.6",
     "@storybook/addon-actions": "7.4.6",
@@ -70,13 +73,13 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
-    "deven-documentation-skeleton": "^1.5.0",
     "eslint": "^8.53.0",
     "eslint-webpack-plugin": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^7.3.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
+    "lit-analyzer": "^2.0.2",
     "lit-html": "^2.6.1",
     "lodash.camelcase": "4.3.0",
     "mini-css-extract-plugin": "^2.7.2",
@@ -84,6 +87,7 @@
     "postcss-lit": "^1.0.1",
     "prettier": "2.8.3",
     "query-selector-shadow-dom": "^1.0.1",
+    "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.57.1",
@@ -92,6 +96,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
     "svgo": "^3.0.2",
+    "ts-lit-plugin": "^2.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.0",
     "webpack": "^5.75.0",
@@ -105,7 +110,8 @@
     "rimraf": "^5.0.5"
   },
   "engines": {
-    "node": "^18"
+    "node": "^18",
+    "yarn": "^4.0.2"
   },
   "packageManager": "yarn@4.0.2"
 }

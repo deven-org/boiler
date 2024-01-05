@@ -1,4 +1,5 @@
-import { BlrCounterRenderFunction, BlrCounterType } from './index';
+import { BlrCounterRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrCounterType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

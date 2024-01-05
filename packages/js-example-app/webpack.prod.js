@@ -9,7 +9,10 @@ module.exports = merge(common, {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: 'src/prod-assets', to: '.' }],
+      patterns: [
+        { from: 'src/prod-assets', to: '.' },
+        { from: '../ui-library/dist/*.js', to: '.' },
+      ],
     }),
   ],
 });

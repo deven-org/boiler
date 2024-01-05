@@ -20,6 +20,10 @@ export const styleCustom = typeSafeNestedCss`
   .blr-input-icon:disabled {
     cursor: none;
   }
+
+  .noPointerEvents {
+    pointer-events: none;
+  }
 `;
 
 export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(

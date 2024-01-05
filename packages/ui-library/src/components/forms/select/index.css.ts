@@ -15,6 +15,10 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
     const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
 
     return typeSafeNestedCss`
+      .blr-input-icon {
+        pointer-events: none;
+      }
+
       .blr-select-inner-container {
         flex-grow: 1;
         flex-shrink: 1;
