@@ -24,9 +24,9 @@ export default {
       },
     },
     variant: {
-      description: 'Select variant of the component.',
+      description: 'Choose variant of the component.',
       options: CounterVariants,
-      control: { type: 'select' },
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -98,7 +98,7 @@ BlrCounter.args = defaultParams;
  * ## Appearance
  *
  * ### Variant
- * The Counter component comes in 3 variants: default, warning and error.
+ * The Counter component comes in 3 variants: default, warn and error.
  */
 export const Variant = () => {
   return html`
