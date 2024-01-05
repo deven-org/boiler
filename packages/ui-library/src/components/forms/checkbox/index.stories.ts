@@ -303,7 +303,7 @@ SizeVariant.story = {
 //Content / Settings
 /**
  * ## Content / Settings
- * ### Checked / Unchecked
+ * ### Checked
  * The Checkbox component can be checked or unchecked. The checked state indicates that the Checkbox component is selected or enabled.
  * The unchecked state indicates that the Checkbox component is not selected.
  */
@@ -426,7 +426,7 @@ Readonly.story = {
 /**
  * ## Validation
  * ### Has Error
- * The Checkbox component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Checkbox or in case the Checkbox was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
+ * The Checkbox component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Checkbox or in case the Checkbox was set as required and has not been checked before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 export const HasError = () => {
   return html`
