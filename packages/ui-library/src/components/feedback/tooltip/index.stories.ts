@@ -1,13 +1,14 @@
 import { LitElement, html } from 'lit';
 
-import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
+import { BlrTooltipType } from './index';
+import { BlrTooltipRenderFunction } from './renderFunction';
 import { ThemeType, Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { TooltipPlacement } from '../../../globals/constants';
 import { tooltipPosition } from './tooltip-position';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { FormSizesType } from '../../../globals/types';
 import { Placement as PlacementType } from '@floating-ui/dom';
-import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble';
+import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
 
 export default {
   title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',

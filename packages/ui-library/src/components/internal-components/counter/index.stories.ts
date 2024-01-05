@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { CounterVariants, FormSizes } from '../../../globals/constants';
-import { BlrCounterRenderFunction, BlrCounterType } from './index';
 import { html } from 'lit-html';
+import { BlrCounterType } from './index';
+import { BlrCounterRenderFunction } from './renderFunction';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

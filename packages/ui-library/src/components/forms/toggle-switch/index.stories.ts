@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrToggleSwitchRenderFunction, BlrToggleSwitchType } from './index';
+import { BlrToggleSwitchType } from './index';
+import { BlrToggleSwitchRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, IconPositionVariant } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';

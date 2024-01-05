@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrSelectRenderFunction, BlrSelectType } from './index';
+import { BlrSelectType } from './index';
+import { BlrSelectRenderFunction } from './renderFunction';
 import { FormSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';

@@ -1,5 +1,6 @@
 import { html } from 'lit-html';
-import { BlrDividerRenderFunction, BlrDividerType } from './index';
+import { BlrDividerType } from './index';
+import { BlrDividerRenderFunction } from './renderFunction';
 import { DividerVariations } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 

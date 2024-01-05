@@ -2,20 +2,19 @@ import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { baseStyle, wrapperLight, wrapperDark, StepperComboDark, StepperComboLight } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
-import { BlrDividerRenderFunction } from '../../ui/divider';
+import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
+import { BlrDividerRenderFunction } from '../../ui/divider/renderFunction';
 import { FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { BlrIconRenderFunction } from '../../ui/icon';
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-const TAG_NAME = 'blr-number-input';
+export const TAG_NAME = 'blr-number-input';
 
 @customElement(TAG_NAME)
 export class BlrNumberInput extends LitElement {
@@ -83,7 +82,6 @@ export class BlrNumberInput extends LitElement {
       const padding = Math.max(digits - integerPart.length, 0);
       paddedInteger = '0'.repeat(padding) + integerPart;
     }
-
     return `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
   }
 
@@ -106,14 +104,22 @@ export class BlrNumberInput extends LitElement {
       [this.stepperVariant]: true,
     });
 
+    const iconClasses = classMap({
+      noPointerEvents: true,
+    });
+
     const button = html`
       <button ?disabled="${this.disabled}" class="${buttonClass}" @click=${onClick}>
-        ${BlrIconRenderFunction({
-          icon: calculateIconName(icon, iconSizeVariant),
-          size: iconSizeVariant,
-          hideAria: true,
-          disablePointerEvents: true,
-        })}
+        ${BlrIconRenderFunction(
+          {
+            classMap: iconClasses,
+            icon: calculateIconName(icon, iconSizeVariant),
+            size: iconSizeVariant,
+          },
+          {
+            'aria-hidden': true,
+          }
+        )}
       </button>
     `;
     return button;
@@ -226,7 +232,7 @@ export class BlrNumberInput extends LitElement {
           <input
             class="${inputClasses}"
             type="number"
-            .value=${!this.readonly
+            .value=${!this.readonly && this.currentValue != 0
               ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
               : nothing}
             step="${this.step || nothing}"
@@ -237,12 +243,8 @@ export class BlrNumberInput extends LitElement {
             @change=${this.handleChange}
             placeholder=${this.placeholder || nothing}
           />
-          ${!this.readonly && this.unit
-            ? html`
-                <span class="${unitClasses}">${this.unit}</span>
-                ${this.renderMode()}
-              `
-            : nothing}
+          ${!this.readonly && this.unit ? html` <span class="${unitClasses}">${this.unit}</span> ` : nothing}
+          ${this.renderMode()}
         </div>
         ${this.hasHint || this.hasError
           ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
@@ -253,6 +255,3 @@ export class BlrNumberInput extends LitElement {
 }
 
 export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement>;
-
-export const BlrNumberInputRenderFunction = (params: BlrNumberInputType) =>
-  genericBlrComponentRenderer<BlrNumberInputType>(TAG_NAME, { ...params });

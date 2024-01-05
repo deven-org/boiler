@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrIconLinkType, BlrIconLinkRenderFunction } from './index';
+import { BlrIconLinkType } from './index';
+import { BlrIconLinkRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';

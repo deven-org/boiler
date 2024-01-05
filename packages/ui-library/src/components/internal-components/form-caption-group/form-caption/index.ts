@@ -2,16 +2,15 @@ import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, CaptionVariantType, SizesType } from '../../../../globals/types';
-import { BlrIconRenderFunction } from '../../../ui/icon';
+import { BlrIconRenderFunction } from '../../../ui/icon/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
 import { styleCustom } from './index.css';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-form-caption';
+export const TAG_NAME = 'blr-form-caption';
 
 @customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {
@@ -54,15 +53,19 @@ export class BlrFormCaption extends LitElement {
         </style>
         <div class=${classes} aria-label=${this.arialabel || nothing}>
           ${this.icon
-            ? BlrIconRenderFunction({
-                icon: calculateIconName(
-                  this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
-                  iconSizeVariant
-                ),
-                size: iconSizeVariant,
-                classMap: iconClasses,
-                hideAria: true,
-              })
+            ? BlrIconRenderFunction(
+                {
+                  icon: calculateIconName(
+                    this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
+                    iconSizeVariant
+                  ),
+                  size: iconSizeVariant,
+                  classMap: iconClasses,
+                },
+                {
+                  'aria-hidden': true,
+                }
+              )
             : nothing}
           <span class="blr-caption-text">${this.message}</span>
           ${this.childElement}
@@ -73,6 +76,3 @@ export class BlrFormCaption extends LitElement {
 }
 
 export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElement>;
-
-export const BlrFormCaptionRenderFunction = (params: BlrFormCaptionType) =>
-  genericBlrComponentRenderer<BlrFormCaptionType>(TAG_NAME, { ...params });

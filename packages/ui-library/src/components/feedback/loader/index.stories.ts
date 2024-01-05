@@ -1,4 +1,5 @@
-import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
+import { BlrLoaderType } from './index';
+import { BlrLoaderRenderFunction } from './renderFunction';
 import { FeedbackSizes, FeedbackVariants } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
