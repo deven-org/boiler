@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
-import { BlrNumberInputRenderFunction, BlrNumberInputType } from './index';
+import { BlrNumberInputType } from './index';
+import { BlrNumberInputRenderFunction } from './renderFunction';
 import { FormSizes, Units } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { PureIconKeys } from '@boiler/icons/icons-optimized/icons';
+import { PureIconKeys } from '@boiler/icons/icons-optimized';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 
@@ -349,8 +350,11 @@ export default {
       },
     },
   },
-  // Events
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=7155%3A108301&mode=dev',
+    },
     viewMode: 'docs',
     layout: 'centered',
     docs: {

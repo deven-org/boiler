@@ -5,14 +5,13 @@ import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../../../globals/types';
-import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
+import { BlrFormLabelInlineRenderFunction } from '../../../internal-components/form-label/form-label-inline/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
-import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
-import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption/renderFunction';
 
-const TAG_NAME = 'blr-radio-group';
+export const TAG_NAME = 'blr-radio-group';
 
 @customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {
@@ -120,7 +119,11 @@ export class BlrRadioGroup extends LitElement {
               />
               <div class="label-wrapper">
                 ${option.label
-                  ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size || 'md' })}`
+                  ? html`${BlrFormLabelInlineRenderFunction({
+                      labelText: option.label,
+                      forValue: id,
+                      labelSize: this.size || 'md',
+                    })}`
                   : nothing}
               </div>
             </div>
@@ -137,6 +140,3 @@ export class BlrRadioGroup extends LitElement {
 }
 
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
-
-export const BlrRadioGroupRenderFunction = (params: BlrRadioGroupType) =>
-  genericBlrComponentRenderer<BlrRadioGroupType>(TAG_NAME, { ...params });

@@ -6,8 +6,6 @@
   "license": "MIT",
   "scripts": {
     "svgo:icons": "svgo -f icon-set -o icons-optimized --config svgo.config.js",
-    "precompile:icons": "rimraf icons",
-    "compile:icons": "yarn svgo:icons && node scripts/index.mjs",
-    "postcompile:icons": "prettier ./icons-optimized/icons.ts --write"
+    "compile:icons": "rimraf icons-optimized && yarn svgo:icons && node scripts/index.mjs && prettier ./icons-optimized/index.ts --write"
   }
 }

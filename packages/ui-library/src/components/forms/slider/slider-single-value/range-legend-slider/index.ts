@@ -8,14 +8,13 @@ import { sliderDark, sliderLight } from '../../../../../foundation/component-tok
 import { FormSizesType, ActionVariantType } from '../../../../../globals/types';
 import { findToolTipPosition, setOnclickValue } from '../../../../../utils/range-slider-utils';
 
-import { BlrIconButtonRenderFunction } from '../../../../actions/buttons/icon-button';
+import { BlrIconButtonRenderFunction } from '../../../../actions/buttons/icon-button/renderFunction';
 import { RenderBtnProps } from '../../../../../globals/types';
 
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-range-legend-slider';
+export const TAG_NAME = 'blr-range-legend-slider';
 
 @customElement(TAG_NAME)
 export class BlrRangeLegendSlider extends LitElement {
@@ -55,7 +54,7 @@ export class BlrRangeLegendSlider extends LitElement {
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
     html` ${BlrIconButtonRenderFunction({
       arialabel: btnId,
-      onClick: btnEventHandler,
+      blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
@@ -179,6 +178,3 @@ export class BlrRangeLegendSlider extends LitElement {
 }
 
 export type BlrRangeLegendSliderType = Omit<BlrRangeLegendSlider, keyof LitElement>;
-
-export const BlrRangeLegendSliderRenderFunction = (params: BlrRangeLegendSliderType) =>
-  genericBlrComponentRenderer<BlrRangeLegendSliderType>(TAG_NAME, { ...params });

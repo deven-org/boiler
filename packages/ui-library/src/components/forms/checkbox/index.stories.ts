@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
+import { BlrCheckboxType } from './index';
+import { BlrCheckboxRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
@@ -207,6 +208,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125200&mode=dev',
+    },
     layout: 'centered',
     docs: {
       //Two examples for Code integration
@@ -242,10 +247,6 @@ Checkbox represents two states: checked (selected) or unchecked (deselected), it
 export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
 BlrCheckbox.storyName = 'Checkbox';
 
-const logEventType = (event: Event) => {
-  console.log('storybook:story:logEventType', event.type);
-};
-
 const args: BlrCheckboxType = {
   theme: 'Light',
   size: 'md',
@@ -267,10 +268,6 @@ const args: BlrCheckboxType = {
   indeterminate: false,
   readonly: false,
   arialabel: 'check Input',
-
-  onChange: logEventType,
-  onFocus: logEventType,
-  onBlur: logEventType,
 };
 BlrCheckbox.args = args;
 
@@ -296,10 +293,6 @@ const defaultParams: BlrCheckboxType = {
   indeterminate: false,
   readonly: false,
   arialabel: 'check Input',
-
-  onChange: logEventType,
-  onFocus: logEventType,
-  onBlur: logEventType,
 };
 
 // All Stories

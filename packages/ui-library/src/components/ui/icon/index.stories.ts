@@ -1,7 +1,9 @@
 import { html } from 'lit-html';
 import { IconKeys } from '@boiler/icons';
 
-import { BlrIconType, BlrIconRenderFunction } from './index';
+import { BlrIconType } from './index';
+import { BlrIconRenderFunction } from './renderFunction';
+
 import { Sizes } from '../../../globals/constants';
 import { getIconName } from '../../../utils/get-icon-name';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
@@ -17,6 +19,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=947%3A31105&mode=dev',
+    },
     viewMode: 'docs',
   },
 };

@@ -954,12 +954,12 @@
       },
       "NoseWrapper": {
         "PaddingTopBottom": {
-          "value": "{core.dimensionREM.5}",
+          "value": "{core.dimensionPX.5}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
         },
         "PaddingLeftRight": {
-          "value": "{core.dimensionREM.8}",
+          "value": "{core.dimensionPX.8}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }
@@ -1490,275 +1490,863 @@
     },
     "Radio": {
       "Control": {
-        "Background": {
-          "Unselected": {
-            "Rest": {
+        "Container": {
+          "Size": {
+            "SM": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
             },
-            "Hover": {
+            "MD": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
             },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "Error": {
+            "LG": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
             }
           },
-          "Selected": {
-            "Rest": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
+          "BorderRadius": {
+            "value": "{core.borderRadius.Round}",
+            "type": "borderRadius"
+          },
+          "BorderWidth": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                }
+              }
             },
-            "Hover": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                }
+              }
             },
-            "Pressed": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.0}",
+                  "type": "borderWidth"
+                }
+              }
+            }
+          },
+          "Border": {
+            "SM": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              }
             },
-            "Focus": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
+            "MD": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              }
             },
-            "Disabled": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.16}",
-              "type": "sizing"
+            "LG": {
+              "Active": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              },
+              "Inactive": {
+                "Rest": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Hover": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Pressed": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Focus": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Disabled": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "ReadOnly": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                },
+                "Error": {
+                  "value": {
+                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
+                    "style": "solid"
+                  },
+                  "type": "border"
+                }
+              }
             }
           }
         },
-        "Foreground": {
-          "Unselected": {
-            "Rest": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
+        "Icon": {
+          "IconSize": {
+            "SM": {
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.12}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.10}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                }
+              },
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.8}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.10}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                }
+              }
             },
-            "Hover": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
+            "MD": {
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.12}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.10}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                }
+              },
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.8}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.10}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                }
+              }
             },
-            "Pressed": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
-            },
-            "Error": {
-              "value": "{core.dimensionPX.14}",
-              "type": "sizing"
+            "LG": {
+              "Inactive": {
+                "Rest": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.12}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.10}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.14}",
+                  "type": "sizing"
+                }
+              },
+              "Active": {
+                "Rest": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Hover": {
+                  "value": "{core.dimensionPX.8}",
+                  "type": "sizing"
+                },
+                "Pressed": {
+                  "value": "{core.dimensionPX.10}",
+                  "type": "sizing"
+                },
+                "Focus": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Disabled": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "ReadOnly": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                },
+                "Error": {
+                  "value": "{core.dimensionPX.6}",
+                  "type": "sizing"
+                }
+              }
             }
-          },
-          "Selected": {
-            "Rest": {
-              "value": "{core.dimensionPX.6}",
-              "type": "sizing"
-            },
-            "Hover": {
-              "value": "{core.dimensionPX.8}",
-              "type": "sizing"
-            },
-            "Pressed": {
-              "value": "{core.dimensionPX.10}",
-              "type": "sizing"
-            },
-            "Focus": {
-              "value": "{core.dimensionPX.6}",
-              "type": "sizing"
-            },
-            "Disabled": {
-              "value": "{core.dimensionPX.6}",
-              "type": "sizing"
-            },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.6}",
-              "type": "sizing"
-            }
-          }
-        },
-        "Unselected": {
-          "Rest": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Rest}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Hover": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Hover}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Pressed": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Pressed}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Focus": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Focus}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Disabled": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Disabled}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "ReadOnly": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.ReadOnly}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Forms.Radio.Control.Background.Unselected.Fill.Error}",
-              "width": "{core.dimensionPX.1}",
-              "style": "solid"
-            },
-            "type": "border"
           }
         }
       },
-      "ControlBorderRadius": {
-        "value": "{core.borderRadius.Round}",
-        "type": "borderRadius"
-      },
-      "SM": {
-        "ContentCol": {
-          "ItemSpacing": {
+      "ContentCol": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
             "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
           },
-          "PaddingTop": {
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing",
+            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+          }
+        },
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+          },
+          "LG": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
-        },
-        "ContentRow": {
-          "ItemSpacing": {
+        }
+      },
+      "ContentRow": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.8} 0",
-            "type": "spacing"
-          }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
-          }
-        }
-      },
-      "MD": {
-        "ContentCol": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
-          }
-        },
-        "ContentRow": {
-          "ItemSpacing": {
+          "MD": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           },
-          "Padding": {
-            "value": "{core.dimensionREM.8} 0",
-            "type": "spacing"
-          }
-        },
-        "ControlWrapper": {
-          "TopMargin": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
-          }
-        }
-      },
-      "LG": {
-        "ContentCol": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
-          }
-        },
-        "ContentRow": {
-          "ItemSpacing": {
+          "LG": {
             "value": "{core.dimensionPX.12}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
-          },
-          "Padding": {
-            "value": "{core.dimensionREM.8} 0",
-            "type": "spacing"
           }
         },
-        "ControlWrapper": {
-          "TopMargin": {
+        "Padding": {
+          "SM": {
+            "value": "{Forms.Radio.ContentRow.PaddingTopBottom.SM} 0",
+            "type": "spacing",
+            "description": "Coded comps only!"
+          },
+          "MD": {
+            "value": "{Forms.Radio.ContentRow.PaddingTopBottom.MD} 0",
+            "type": "spacing",
+            "description": "Coded comps only!"
+          },
+          "LG": {
+            "value": "{Forms.Radio.ContentRow.PaddingTopBottom.LG} 0",
+            "type": "spacing",
+            "description": "Coded comps only!"
+          }
+        },
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+          }
+        }
+      },
+      "ControlWrapper": {
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.4}",
+            "type": "spacing",
+            "description": "Can be used to align the checkbox control against the text"
+          },
+          "LG": {
             "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
@@ -1767,108 +2355,76 @@
       }
     },
     "RadioGroup": {
-      "SM": {
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
+      "CaptionSlot": {
+        "PaddingTop": {
+          "SM": {
             "value": "{core.dimensionREM.16}",
             "type": "spacing"
-          }
-        },
-        "LegendWrapper": {
-          "PaddingBottom": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
-          }
-        },
-        "RadioStack": {
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
           },
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing"
           }
         }
       },
-      "MD": {
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "LegendWrapper": {
-          "PaddingBottom": {
+      "LegendWrapper": {
+        "PaddingBottom": {
+          "SM": {
             "value": "{core.dimensionREM.16}",
             "type": "spacing",
             "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
-          }
-        },
-        "RadioStack": {
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
           },
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
           }
         }
       },
-      "LG": {
-        "CaptionContainer": {
-          "ItemSpacing": {
-            "value": "{core.dimensionREM.4}",
-            "type": "spacing"
-          },
-          "PaddingTop": {
-            "value": "{core.dimensionREM.16}",
-            "type": "spacing"
-          }
-        },
-        "LegendWrapper": {
-          "PaddingBottom": {
+      "RadioStackHorizontal": {
+        "ItemSpacing": {
+          "SM": {
             "value": "{core.dimensionREM.16}",
             "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
-          }
-        },
-        "RadioStack": {
-          "Horizontal": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
           },
-          "Vertical": {
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap between each Radio Option inside <RadioStack>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          }
+        }
+      },
+      "RadioStackVertical": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Defines the gap between each Radio Option inside <RadioStack>"
           }
         }
       }
@@ -2698,120 +3254,129 @@
   "Navigation": {
     "TabBar": {
       "Tab": {
-        "SM": {
-          "HighlightLine": {
-            "Height": {
+        "Label": {
+          "Typography": {
+            "SM": {
+              "value": "{Action.SM.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "MD": {
+              "value": "{Action.MD.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "LG": {
+              "value": "{Action.LG.Label}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            }
+          }
+        },
+        "HighlightLine": {
+          "Height": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            },
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "sizing",
+              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+            },
+            "LG": {
               "value": "{core.dimensionPX.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
-          },
-          "ContentCol": {
-            "TopPadding": {
+          }
+        },
+        "ContentCol": {
+          "PaddingTop": {
+            "SM": {
               "value": "{core.dimensionREM.4}",
               "type": "spacing",
               "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
             },
-            "ItemSpacing": {
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+            }
+          },
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing",
+              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+            },
+            "LG": {
               "value": "{core.dimensionREM.8}",
               "type": "spacing",
               "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
+          }
+        },
+        "ContentRow": {
+          "PaddingLeftRight": {
+            "SM": {
               "value": "{core.dimensionPX.12}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
-            }
-          },
-          "Icon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.12}",
-              "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
-            }
-          }
-        },
-        "MD": {
-          "HighlightLine": {
-            "Height": {
-              "value": "{core.dimensionPX.2}",
-              "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
-            }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
+            "MD": {
               "value": "{core.dimensionPX.16}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             },
-            "ItemSpacing": {
-              "value": "{core.dimensionPX.2}",
-              "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
-            }
-          },
-          "Icon": {
-            "Sizing": {
-              "value": "{core.dimensionREM.16}",
-              "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
-            }
-          }
-        },
-        "LG": {
-          "HighlightLine": {
-            "Height": {
-              "value": "{core.dimensionPX.2}",
-              "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
-            }
-          },
-          "ContentCol": {
-            "TopPadding": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
-            },
-            "ItemSpacing": {
-              "value": "{core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
-            }
-          },
-          "ContentRow": {
-            "PaddingLeftRight": {
+            "LG": {
               "value": "{core.dimensionPX.16}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
+            }
+          },
+          "ItemSpacing": {
+            "SM": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             },
-            "ItemSpacing": {
+            "MD": {
+              "value": "{core.dimensionPX.2}",
+              "type": "spacing",
+              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+            },
+            "LG": {
               "value": "{core.dimensionPX.4}",
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
-          },
-          "Icon": {
-            "Sizing": {
+          }
+        },
+        "Icon": {
+          "IconSize": {
+            "SM": {
+              "value": "{core.dimensionREM.12}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing",
+              "description": "Defines height and width of the icon of a tab"
+            },
+            "LG": {
               "value": "{core.dimensionREM.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
@@ -2820,51 +3385,56 @@
         }
       },
       "ButtonWrapper": {
-        "SM": {
-          "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8} 0 0",
-              "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
-            }
+        "InnerPadding": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           },
-          "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.8}",
-              "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
-            }
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+          },
+          "LG": {
+            "value": "{core.dimensionREM.12}",
+            "type": "spacing",
+            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           }
         },
-        "MD": {
+        "Padding": {
           "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8} 0 0",
+            "SM": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
+              "description": "Coded comps only!"
+            },
+            "MD": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!."
+            },
+            "LG": {
+              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+              "type": "spacing",
+              "description": "Coded comps only!."
             }
           },
           "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.8}",
+            "SM": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
-            }
-          }
-        },
-        "LG": {
-          "Leading": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.12}",
+              "description": "Coded comps only!"
+            },
+            "MD": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
               "type": "spacing",
-              "description": "Defines the padding of the left/leading buttons wrapper; Apply on <ButtonWrapper>"
-            }
-          },
-          "Trailing": {
-            "Padding": {
-              "value": "0 0 0 {core.dimensionREM.12}",
+              "description": "Coded comps only!."
+            },
+            "LG": {
+              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
               "type": "spacing",
-              "description": "Defines the padding of the right/trailing buttons wrapper; Apply on <ButtonWrapper>"
+              "description": "Coded comps only!."
             }
           }
         }

@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { FormSizes, LabelVariants } from '../../../globals/constants';
-import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
+import { BlrFormLabelType } from './index';
+import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 
 const sharedStyles = html`
@@ -71,6 +72,11 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125225&mode=dev',
+    },
+    viewMode: 'docs',
     layout: 'centered',
     docs: {
       description: {

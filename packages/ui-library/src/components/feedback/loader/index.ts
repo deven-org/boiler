@@ -4,9 +4,8 @@ import { customElement, property } from 'lit/decorators.js';
 import { styleCustomLight, styleCustomDark } from './index.css';
 import { ActionSizesType, FeedbackVariantType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-loader';
+export const TAG_NAME = 'blr-loader';
 
 @customElement(TAG_NAME)
 export class BlrLoader extends LitElement {
@@ -39,6 +38,3 @@ export class BlrLoader extends LitElement {
 }
 
 export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;
-
-export const BlrLoaderRenderFunction = (params: BlrLoaderType) =>
-  genericBlrComponentRenderer<BlrLoaderType>(TAG_NAME, { ...params });

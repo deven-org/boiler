@@ -3,17 +3,16 @@ import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
 import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../../globals/types';
-import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
+import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { BlrCounterRenderFunction } from '../../internal-components/counter';
-import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
+import { BlrCounterRenderFunction } from '../../internal-components/counter/renderFunction';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-const TAG_NAME = 'blr-textarea';
+export const TAG_NAME = 'blr-textarea';
 
 @customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {
@@ -64,8 +63,6 @@ export class BlrTextarea extends LitElement {
   }
 
   protected updateCounter() {
-    const event = new Event('david', { bubbles: true, composed: true });
-    this.dispatchEvent(event);
     const length = this.textareaElement?.value?.length;
     if (length !== undefined) {
       this.count = length;
@@ -189,6 +186,3 @@ ${this.value}</textarea
 }
 
 export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
-
-export const BlrTextareaRenderFunction = (params: BlrTextareaType) =>
-  genericBlrComponentRenderer<BlrTextareaType>(TAG_NAME, { ...params });

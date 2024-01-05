@@ -11,14 +11,13 @@ import {
   setOnclickValue,
 } from '../../../../../utils/range-slider-utils';
 
-import { BlrIconButtonRenderFunction } from '../../../../actions/buttons/icon-button';
+import { BlrIconButtonRenderFunction } from '../../../../actions/buttons/icon-button/renderFunction';
 import { RenderBtnProps } from '../../../../../globals/types';
 
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-range-slider';
+export const TAG_NAME = 'blr-range-slider';
 
 @customElement(TAG_NAME)
 export class BlrRangeSlider extends LitElement {
@@ -60,7 +59,7 @@ export class BlrRangeSlider extends LitElement {
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
     html` ${BlrIconButtonRenderFunction({
       arialabel: btnId,
-      onClick: btnEventHandler,
+      blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
@@ -154,6 +153,3 @@ export class BlrRangeSlider extends LitElement {
 }
 
 export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElement>;
-
-export const BlrRangeSliderRenderFunction = (params: BlrRangeSliderType) =>
-  genericBlrComponentRenderer<BlrRangeSliderType>(TAG_NAME, { ...params });

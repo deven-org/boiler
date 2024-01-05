@@ -1,4 +1,4 @@
-name: Compile
+name: TSC Compile
 
 on: [pull_request]
 
