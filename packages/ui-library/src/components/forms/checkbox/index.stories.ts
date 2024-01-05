@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrCheckboxRenderFunction, BlrCheckboxType } from './index';
+import { BlrCheckboxType } from './index';
+import { BlrCheckboxRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
@@ -207,6 +208,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125200&mode=dev',
+    },
     layout: 'centered',
     docs: {
       //Two examples for Code integration

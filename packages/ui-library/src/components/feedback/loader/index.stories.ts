@@ -1,4 +1,5 @@
-import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
+import { BlrLoaderType } from './index';
+import { BlrLoaderRenderFunction } from './renderFunction';
 import { FeedbackSizes, FeedbackVariants } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
@@ -58,6 +59,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A126742&mode=dev',
+    },
     layout: 'centered',
     docs: {
       description: {

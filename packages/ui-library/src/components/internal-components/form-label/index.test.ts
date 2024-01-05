@@ -1,4 +1,5 @@
-import { BlrFormLabelRenderFunction, BlrFormLabelType } from './index';
+import { BlrFormLabelRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrFormLabelType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

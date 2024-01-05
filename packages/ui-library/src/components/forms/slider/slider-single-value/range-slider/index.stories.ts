@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrRangeSliderType, BlrRangeSliderRenderFunction } from './index';
+import { BlrRangeSliderType } from './index';
+import { BlrRangeSliderRenderFunction } from './renderFunction';
 import { Sizes } from '../../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../../foundation/_tokens-generated/index.themes';

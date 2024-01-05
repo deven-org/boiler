@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrToggleSwitchRenderFunction, BlrToggleSwitchType } from './index';
+import { BlrToggleSwitchType } from './index';
+import { BlrToggleSwitchRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, IconPositionVariant } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
@@ -85,6 +86,12 @@ export default {
     toggleOffIcon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+    },
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125201&mode=dev',
     },
   },
 };

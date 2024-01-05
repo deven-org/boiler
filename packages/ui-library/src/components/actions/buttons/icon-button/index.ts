@@ -7,14 +7,13 @@ import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
 import { ActionVariantType, ActionSizesType, SizesType, FormSizesType } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
-import { BlrIconRenderFunction } from '../../../ui/icon';
+import { BlrIconRenderFunction } from '../../../ui/icon/renderFunction';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
-import { BlrLoaderRenderFunction } from '../../../feedback/loader';
+import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-const TAG_NAME = 'blr-icon-button';
+export const TAG_NAME = 'blr-icon-button';
 
 @customElement(TAG_NAME)
 export class BlrIconButton extends LitElement {
@@ -124,12 +123,16 @@ export class BlrIconButton extends LitElement {
                 theme: this.theme,
               })
             : nothing}
-          ${BlrIconRenderFunction({
-            icon: calculateIconName(this.icon, iconSizeVariant),
-            size: iconSizeVariant,
-            hideAria: true,
-            classMap: iconClasses,
-          })}
+          ${BlrIconRenderFunction(
+            {
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              size: iconSizeVariant,
+              classMap: iconClasses,
+            },
+            {
+              'aria-hidden': true,
+            }
+          )}
         </span>
       `;
     }
@@ -137,6 +140,3 @@ export class BlrIconButton extends LitElement {
 }
 
 export type BlrIconButtonType = Omit<BlrIconButton, keyof LitElement>;
-
-export const BlrIconButtonRenderFunction = (params: BlrIconButtonType) =>
-  genericBlrComponentRenderer<BlrIconButtonType>(TAG_NAME, { ...params });

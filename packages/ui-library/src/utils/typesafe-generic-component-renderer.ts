@@ -3,28 +3,49 @@ import { TemplateResult, html } from 'lit';
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,
   props: ComponentType,
-  children?: TemplateResult<1>
+  children?: TemplateResult<1>,
+  htmlAttributes?: { [s: string]: string | boolean | number }
 ): TemplateResult<1> => {
   const templateFragments: string[] = [];
   const values: unknown[] = [];
-  const entries = Object.entries(props);
+  const propEntries = Object.entries(props);
+  const attrEntries = Object.entries(htmlAttributes || {});
 
-  entries.forEach(([key, value], index) => {
-    if (typeof value !== 'function') {
-      if (index === 0) {
-        templateFragments.push(`<${tagName} .${key}=`);
-      } else {
-        templateFragments.push(` .${key}=`);
-      }
-    } else {
+  // we will get rid of the dots later on by defining bindings within the component property decorator
+  propEntries.forEach(([key, value], index) => {
+    if (typeof value === 'function') {
       if (index === 0) {
         templateFragments.push(`<${tagName} @${key}=`);
       } else {
         templateFragments.push(` @${key}=`);
       }
+    } else if (key === 'classMap') {
+      if (index === 0) {
+        templateFragments.push(`<${tagName} class=`);
+      } else {
+        templateFragments.push(` class=`);
+      }
+    } else {
+      if (index === 0) {
+        templateFragments.push(`<${tagName} .${key}=`);
+      } else {
+        templateFragments.push(` .${key}=`);
+      }
     }
 
     values.push(value);
+  });
+
+  attrEntries.forEach(([key, value], index) => {
+    if (typeof value !== 'boolean' || value === true) {
+      if (index === 0 && propEntries.length === 0) {
+        templateFragments.push(`<${tagName} ${key}=`);
+      } else {
+        templateFragments.push(` ${key}=`);
+      }
+
+      values.push(value);
+    }
   });
 
   if (children) {
