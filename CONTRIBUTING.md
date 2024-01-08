@@ -116,11 +116,11 @@ Before creating a new issue, please [check if your issue already exists](https:/
  After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
 
 ### Tipps to find issues
-- For a first contribution, go to labels / filter by labels and see if there are issues tagged with the "good first issue" label
+- For a first contribution, go to labels / filter by labels and see if there are issues tagged with the `good first issue` label
 - Search for the component name of the component you want to work on
 - Filter by the `💚 contributor issue` label
 - Filter by the `🚨 new::bug`, `⌨️ dev issue`, `📋 task::backlog` and/or `📋 task::ready` labels
-- Avoid tasks labeld with `🚫 blocker`, `🎨 design issue`, `📋 task::planned`, `📋 task::inProgress`, `📋 task::inReview`, `🦹 needs:contact`, `🦹 needs:documentation`, `🦹 needs:help` and/or `🦹 needs:specs` 
+- Avoid tasks labeld with `⭕️ core team issue`, `🚫 blocker`, `🎨 design issue`, `📋 task::planned`, `📋 task::inProgress`, `📋 task::inReview`, `🦹 needs:contact`, `🦹 needs:documentation`, `🦹 needs:help` and/or `🦹 needs:specs` 
 
 
 ## Branch
