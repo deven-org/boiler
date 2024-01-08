@@ -1,8 +1,8 @@
 import { BlrRadioType } from './index';
 import { BlrRadioRenderFunction } from './renderFunction';
-import { InputSizes } from '../../../../globals/constants';
+import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 
@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Forms/Radio',
+  title: 'Design System/Web Components/Forms/Radio/Radio',
   argTypes: {
     theme: {
       options: Themes,

@@ -17,7 +17,7 @@ const sharedStyles = html`
 import '../../../../index';
 
 export default {
-  title: 'Design System/Web Components/Forms/RadioButtonGroup',
+  title: 'Design System/Web Components/Forms/Radio/RadioGroup',
   argTypes: {
     size: {
       name: 'sizeVariant',
@@ -28,16 +28,16 @@ export default {
         category: 'Appearance',
       },
     },
-    direction: {
-      description: 'Choose direction of the component.',
-      table: {
-        category: 'Appearance',
-      },
-      options: ['horizontal', 'vertical'],
-      control: {
-        type: 'radio',
-      },
-    },
+    // direction: {
+    //   description: 'Choose direction of the component.',
+    //   table: {
+    //     category: 'Appearance',
+    //   },
+    //   options: ['horizontal', 'vertical'],
+    //   control: {
+    //     type: 'radio',
+    //   },
+    // },
     showLegend: {
       description: 'Choose if component has a legend. ',
       table: {
@@ -193,6 +193,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125199&mode=dev',
+    },
     viewMode: 'docs',
     layout: 'centered',
     docs: {
@@ -201,7 +205,7 @@ export default {
         Radio group is used to present users with a set of options where they can select only one choice from the available options. When a radio button is selected, a small dot or indicator usually appears inside the circle to indicate the active choice.      
         - [**Appearance**](#appearance)
           - [**Size Variant**](#size-variant)
-          - [**Direction**](#size-variant)
+      
         - [**Content / Settings**](#content--settings)
           - [**Has Legend**](#has-legend)
         - [**States**](#states)
@@ -217,12 +221,6 @@ export default {
       },
     },
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125199&mode=dev',
-    },
-  },
 };
 
 export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
@@ -230,13 +228,13 @@ export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderF
 BlrRadioGroup.storyName = 'Radio Group';
 
 const defaultParams: BlrRadioGroupType & {
-  direction: 'horizontal' | 'vertical';
+  // direction: 'horizontal' | 'vertical';
   ariaLabel: string;
   radioGroupId: string;
 } = {
   theme: 'Light',
   size: 'md',
-  direction: 'horizontal',
+  // direction: 'horizontal',
   showLegend: true,
   legend: 'Legend-text',
   hasHint: false,
@@ -277,7 +275,7 @@ const defaultParams: BlrRadioGroupType & {
   required: false,
   hasError: false,
   groupErrorMessage: '',
-  groupErrorIcon: 'blrErrorFilled',
+  groupErrorIcon: undefined,
   ariaLabel: 'Radio Group',
   radioGroupId: 'Radio Group',
   name: 'Radio Group ',
@@ -289,9 +287,9 @@ const defaultParams: BlrRadioGroupType & {
 BlrRadioGroup.args = defaultParams;
 
 /**
- *  ## Apperance
+ *  ## Appearance
  *  ### Size Variant
- * The Radio component comes in 3 sizes: SM, MD and LG.
+ * The Radio Group component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -322,28 +320,28 @@ export const SizeVariant = () => {
 
 SizeVariant.story = { name: ' ' };
 
-/**
- * The Radio Group component can have a horizontal or a vertical direction..
- *  */
-export const Direction = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      ${BlrRadioGroup({
-        ...defaultParams,
-        direction: 'vertical',
-        legend: 'Vertical',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrRadioGroup({
-        ...defaultParams,
-        direction: 'horizontal',
-        legend: 'Horizontal',
-      })}
-    </div>
-  `;
-};
+// /**
+//  * The Radio Group component can have a horizontal or a vertical direction.
+//  *  */
+// export const Direction = () => {
+//   return html`
+//     ${sharedStyles}
+//     <div class="wrapper">
+//       ${BlrRadioGroup({
+//         ...defaultParams,
+//         direction: 'vertical',
+//         legend: 'Vertical',
+//       })}
+//     </div>
+//     <div class="wrapper">
+//       ${BlrRadioGroup({
+//         ...defaultParams,
+//         direction: 'horizontal',
+//         legend: 'Horizontal',
+//       })}
+//     </div>
+//   `;
+// };
 
 /**
  * ## Content / Settings
@@ -407,7 +405,7 @@ export const Readonly = () => {
 /**
  * ## Validation
  * ### Required
- *The Radio Group component can be set as required. If set as required, an error should be thrown, when the Radio Group component was not filled, before it was submitted. It is recommended to indicate in the leged appendix, whether a component is required or not.
+ *The Radio Group component can be set as required. If set as required, an error should be thrown, when the Radio Group component was not checked, before it was submitted. It is recommended to indicate in the leged appendix, whether a component is required or not.
  */
 
 export const Required = () => {
@@ -423,7 +421,7 @@ export const Required = () => {
 
 Required.story = { name: ' ' };
 /**
- * The Radio Group component can be set as required. If set as required, an error should be thrown, when the Radio component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Caption Group](#form-caption-group) component in the dependencies section below.
+The Radio Group component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Radio Group or in case the Radio Group was set as required and has not been checked before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 export const HasError = () => {
   return html`
@@ -431,7 +429,7 @@ export const HasError = () => {
     ${BlrRadioGroup({
       ...defaultParams,
       legend: 'Error',
-      groupErrorMessage: "OMG it's an error",
+
       hasError: true,
     })}
   `;

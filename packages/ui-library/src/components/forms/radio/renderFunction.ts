@@ -1,5 +1,5 @@
-import { BlrRadioType } from '.';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { BlrRadioType, TAG_NAME } from '.';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 export const TAG_NAME = 'blr-radio';
 
