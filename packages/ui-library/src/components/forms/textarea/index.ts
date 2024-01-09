@@ -1,4 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
@@ -11,6 +12,8 @@ import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/for
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { types } from 'sass';
+import Boolean = types.Boolean;
 
 export const TAG_NAME = 'blr-textarea';
 
@@ -24,31 +27,31 @@ export class BlrTextarea extends LitElement {
   @property() arialabel?: string;
   @property() value!: string;
   @property() placeholder?: string;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() hasLabel?: boolean;
+  @property({ type: Boolean }) disabled?: boolean;
+  @property({ type: Boolean }) readonly?: boolean;
+  @property({ type: Boolean }) hasLabel?: boolean;
   @property() size?: FormSizesType = 'md';
-  @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
-  @property() maxLength?: number;
-  @property() minLength?: number;
-  @property() warningLimitType: WarningLimits = 'warningLimitInt';
-  @property() warningLimitInt = 105;
-  @property() warningLimitPer = 75;
+  @property({ type: Boolean }) required?: boolean;
+  @property({ attribute: false }) onChange?: HTMLElement['oninput'];
+  @property({ attribute: false }) onBlur?: HTMLElement['blur'];
+  @property({ attribute: false }) onFocus?: HTMLElement['focus'];
+  @property({ type: Number }) maxLength?: number;
+  @property({ type: Number }) minLength?: number;
+  @property({ type: Number }) warningLimitType: WarningLimits = 'warningLimitInt';
+  @property({ type: Number }) warningLimitInt = 105;
+  @property({ type: Number }) warningLimitPer = 75;
   @property() pattern?: string;
-  @property() hasError?: boolean;
+  @property({ type: Boolean }) hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorIcon?: SizelessIconType;
   @property() hint?: string;
-  @property() hasHint = true;
+  @property({ type: Boolean }) hasHint = true;
   @property() hintMessage?: string;
-  @property() showCounter?: boolean;
+  @property({ type: Boolean }) showCounter?: boolean;
   @property() hintIcon?: SizelessIconType;
   @property() isResizeable: ResizeType = 'none';
-  @property() rows?: number;
-  @property() cols?: number;
+  @property({ type: Number }) rows?: number;
+  @property({ type: Number }) cols?: number;
   @property() onSelect?: HTMLElement['onselect'];
   @property() name?: string;
   @property() theme: ThemeType = 'Light';
@@ -146,14 +149,14 @@ export class BlrTextarea extends LitElement {
           })}
           <textarea
             class="blr-form-element textarea-input-control ${textareaClasses}"
-            id="${this.textareaId || nothing}"
-            name="${this.name || nothing}"
-            minlength="${this.minLength || nothing}"
-            maxlength="${this.maxLength || nothing}"
-            aria-label="${this.arialabel}"
-            cols="${this.cols || nothing}"
-            rows="${this.rows || nothing}"
-            placeholder="${this.placeholder || nothing}"
+            id="${ifDefined(this.textareaId)}"
+            name="${ifDefined(this.name ? this.name : undefined)}"
+            minlength="${ifDefined(this.minLength)}"
+            maxlength="${ifDefined(this.maxLength)}"
+            aria-label="${ifDefined(this.arialabel)}"
+            cols="${ifDefined(this.cols)}"
+            rows="${ifDefined(this.rows)}"
+            placeholder="${ifDefined(this.placeholder)}"
             ?required="${this.required}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
