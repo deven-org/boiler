@@ -51,7 +51,7 @@ export default {
     value: undefined,
     fractionDigits: 0,
     totalDigits: 0,
-    prependUnit: false,
+    prependUnit: true,
     unit: 'kg',
     step: 1,
     hasLabel: true,

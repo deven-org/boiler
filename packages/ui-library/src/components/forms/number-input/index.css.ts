@@ -4,10 +4,13 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
+  const { NumberInput } = componentTokens.Forms;
+
   return typeSafeNestedCss`
     .noPointerEvents {
       pointer-events: none;
     }
+
 
     .input-wrapper {
       box-sizing: border-box;
@@ -15,22 +18,36 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};
 
-      > input {
-        display:flex;
-        border: none;
-        outline: none;
-        color: inherit;
-   
-      }
+    .input-unit-container{
+      display:flex;
+       &.sm {
+         gap: ${NumberInput.Input.TextContainer.ItemSpacing.SM};
+       }
 
-      .unit{
-        color:${PrefixSuffix.OnPopulatedField.Default.Rest};
+       &.md {
+         gap: ${NumberInput.Input.TextContainer.ItemSpacing.MD};
+       }
+       
+       &.lg {
+         gap: ${NumberInput.Input.TextContainer.ItemSpacing.LG};
+       } 
+       .unit {
+        color: ${PrefixSuffix.OnPopulatedField.Default.Rest};
       }
-
+       .input-container{
+        display:flex; 
+        > input{
+          display:flex;
+          border:none;
+          outline:none;
+        }
+       }      
+     }
+  
       > * {
         background-color: transparent;
       }
-
+      
       &.split {
         &.sm {
           > .custom-stepper-button {
@@ -50,25 +67,16 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
             width: ${StepperCombo.LG.Vertical.Width};
           }
         }
-        > .unit {
-          text-align: left;
-        }
-  
-        > input {
-          text-align: right;
-
-        }
       }
-
-      > .unit,
-      input {
+      
+      .unit,
+      input{
         &.sm {
           font-weight: ${SM.UserInput.fontWeight};
           font-size: ${SM.UserInput.fontSize};
           font-family: ${SM.UserInput.fontFamily}, sans-serif;
           line-height: ${SM.UserInput.lineHeight};
           padding: ${SM.InputField.Padding};
-
         }
 
         &.md {
@@ -86,7 +94,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           line-height: ${LG.UserInput.lineHeight};
           padding: ${LG.InputField.Padding};
         }
-
       }
 
       &.disabled {
@@ -273,70 +280,68 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 );
 
 export const baseStyle = typeSafeNestedCss`
-  :host {
-    --spacing: -18px;
-  }
-  
   .input-wrapper {
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
 
-    & > input::-webkit-outer-spin-button,
-    & > input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
+      .input-unit-container{
+        display: flex;
+        .input-container{
+         & > input::-webkit-outer-spin-button,
+         & > input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+          }
+         & > input[type="number"] {
+              -moz-appearance: textfield;
+          } 
+        }
+        &:has(.unit){
+          .unit.prepend{
+            order:-1;
+            padding-right:0;
+          }
 
-    > input {
-      flex-grow: 1;
-    }
+          .input-container.prepend{
+            order:0;
+              > input{
+              padding-left: 0px;
+            }   
+          }
+        }
+        &.split{
+          display: grid;
+          grid-template-columns: 1fr ;
 
-    > input[type="number"] {
-      -moz-appearance: textfield;
-    }
+          .input-container{  
+            > input {
+              text-align:center;
+             } 
+          }
 
-    &.split {
+          &:has(.unit){
+             grid-template-columns: 1fr 1fr;
+             text-align:right;
+
+             .input-container{  
+              > input {
+                text-align:left;
+               } 
+            } 
+          }
+        }
+      }
+    }  
+  }
+
+    &.split{
       > button:first-of-type {
-        order: -2;
+        order: -2; 
       }
 
-      .unit {
-        order: 0;
-      }
-   
-      .unit.prepend {
-        order: -1;
-        text-align: right;
-      }
-
-      > input.prepend {
-        text-align: left;
-      }
-      
       > button:last-of-type {
         margin-left:auto;
-      }
-    }
-
-    &.horizontal,
-    &.vertical {
-      .unit.prepend {
-        order: -1;
-      }
-      > input.prepend{
-        position:relative; 
-        &.sm{
-        margin-left: var(--spacing);
-        }
-
-        &.md{
-          margin-left:var(--spacing);
-        }
-        
-        &.lg{
-          margin-left:var(--spacing);
-        }
       }
     }
   }
