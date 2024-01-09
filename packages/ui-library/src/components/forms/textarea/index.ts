@@ -12,8 +12,6 @@ import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/for
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
-import { types } from 'sass';
-import Boolean = types.Boolean;
 
 export const TAG_NAME = 'blr-textarea';
 
