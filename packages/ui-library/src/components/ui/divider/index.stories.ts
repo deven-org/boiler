@@ -14,6 +14,11 @@ const sharedStyles = html`
       display: flex;
       height: 35rem;
     }
+    .divider-container {
+      padding-top: 2rem;
+      width: 300px;
+      height: 300px;
+    }
   </style>
 `;
 
@@ -45,7 +50,7 @@ export default {
       canvas: { hidden: true },
     },
     viewMode: 'docs',
-    layout: 'padded',
+    layout: 'centered',
     docs: {
       description: {
         component: `
@@ -61,16 +66,16 @@ export default {
   },
 };
 
-export const BlrDivider = (params: BlrDividerType) => BlrDividerRenderFunction(params);
-
-BlrDivider.storyName = 'Divider';
-
+export const Divider = (params: BlrDividerType) => {
+  return html` ${sharedStyles}
+    <div class="divider-container">${BlrDividerRenderFunction(params)}</div>`;
+};
 const defaultParams: BlrDividerType = {
   theme: 'Light',
   directionVariant: 'horizontal',
 };
 
-BlrDivider.args = defaultParams;
+Divider.args = defaultParams;
 
 /**
  * ## Appearance
@@ -79,15 +84,15 @@ BlrDivider.args = defaultParams;
  * The Divider component can have a horizontal or a vertical direction.
  */
 
-export const Divider = () => {
+export const Direction = () => {
   return html`
     ${sharedStyles}
-    ${BlrDivider({
+    ${Divider({
       ...defaultParams,
       directionVariant: 'horizontal',
     })}
     <div class="wrapper">
-      ${BlrDivider({
+      ${Divider({
         ...defaultParams,
         directionVariant: 'vertical',
       })}
