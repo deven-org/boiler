@@ -7,14 +7,15 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "sourceMap": true,
-    "module": "ESNext",
-    "target": "ESNext",
+    "module": "es2020",
+    "target": "es2020",
     "jsx": "react",
     "allowJs": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "useDefineForClassFields": false
   },
   "include": ["src"],
-  "exclude": [""]
+  "exclude": ["src/**/*.test.ts", "src/**/*.stories.ts"]
 }

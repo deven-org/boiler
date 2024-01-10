@@ -9,6 +9,7 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
+/*
 const types = [
   'borderRadius',
   'borderWidth',
@@ -19,6 +20,7 @@ const types = [
   'pargraphSpacing',
   'letterSpacing',
 ];
+*/
 
 const semanticTypes = [
   'CTA',
@@ -41,6 +43,8 @@ const semanticTypes = [
   'Label',
   'LabelSlot',
   'Legend',
+  'Lvl_1',
+  'Lvl_2',
   'UserInput',
   'Placeholder',
   'SurfaceFill',
@@ -83,6 +87,7 @@ const componentTypes = [
   'NumberInput',
   'CaptionGroup',
   'FormLabel',
+  ,
 ];
 
 StyleDictionaryPackage.registerFormat({

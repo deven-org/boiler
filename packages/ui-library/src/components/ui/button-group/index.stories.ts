@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
-import { BlrButtonGroupType, BlrButtonGroupFunction } from './index';
-import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button';
-import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button';
+import { BlrButtonGroupType } from './index';
+import { BlrButtonGroupFunction } from './renderFunction';
+import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button/renderFunction';
+import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button/renderFunction';
 import { html } from 'lit';
 import { ButtonGroupAlignmentVariants, ButtonGroupSizes } from '../../../globals/constants';
 
@@ -18,6 +19,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3777%3A114816&mode=dev',
+    },
     viewMode: 'docs',
   },
 };

@@ -1,4 +1,5 @@
-import { BlrTabBarRenderFunction, BlrTabBarType } from './index';
+import { BlrTabBarType } from './index';
+import { BlrTabBarRenderFunction } from './renderFunction';
 import {
   FormSizes,
   IconPositionVariant,
@@ -51,6 +52,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3231%3A94377&mode=dev',
+    },
     viewMode: 'docs',
   },
 };
