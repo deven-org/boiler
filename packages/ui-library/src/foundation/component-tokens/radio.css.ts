@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { SM, MD, LG, Legend } = semanticTokens.Forms;
-  const { Radio, RadioGroup } = componentTokens.Forms;
+  const { Radio, RadioGroup, FormLabel } = componentTokens.Forms;
 
   /* ToDos:
 
