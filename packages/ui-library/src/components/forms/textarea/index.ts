@@ -71,7 +71,9 @@ export class BlrTextarea extends LitElement {
       this.count = length;
     }
 
-    if (this.textareaElement && scrollTop !== undefined) {
+    const shouldUpdateTextarea = this.textareaElement && scrollTop !== undefined;
+
+    if (shouldUpdateTextarea) {
       requestAnimationFrame(() => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
