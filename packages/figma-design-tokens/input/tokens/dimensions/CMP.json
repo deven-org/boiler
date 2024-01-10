@@ -1062,17 +1062,17 @@
           "SM": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption."
+            "description": "Controls the vertical spacing between InlineLabel and the Caption."
           },
           "MD": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption."
+            "description": "Controls the vertical spacing between InlineLabel and the Caption."
           },
           "LG": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption."
+            "description": "Controls the vertical spacing between InlineLabel and the Caption."
           }
         },
         "PaddingTop": {
@@ -2250,7 +2250,7 @@
           "SM": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+            "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
           },
           "MD": {
             "value": "{core.dimensionPX.0}",
@@ -2272,7 +2272,7 @@
           "MD": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+            "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
           },
           "LG": {
             "value": "{core.dimensionREM.0}",
@@ -2303,7 +2303,7 @@
           "SM": {
             "value": "{Forms.Radio.ContentRow.PaddingTopBottom.SM} 0",
             "type": "spacing",
-            "description": "Coded comps only!"
+            "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
           },
           "MD": {
             "value": "{Forms.Radio.ContentRow.PaddingTopBottom.MD} 0",
@@ -3164,6 +3164,86 @@
             "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
+          }
+        }
+      }
+    },
+    "FormLabel": {
+      "Label": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+            "type": "typography"
+          }
+        }
+      },
+      "LabelAppendix": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          }
+        }
+      },
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "0 0",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "0 0",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "0 0",
+            "type": "spacing"
+          }
+        }
+      },
+      "InlineLabel": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+            "type": "typography"
           }
         }
       }
