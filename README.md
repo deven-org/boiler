@@ -33,7 +33,7 @@
 ## :star: Introduction
 B01LER is a fully customisable design system (DS) that enables you to easily create cohesive and consistent digital products across multiple platforms and brands.
 
-B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20%20%5Bv0.1%20-%20alpha%20release%5D.fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://boilerds.com/storybook). Both the components in design and in code are connected via a token system.
+B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20%20%5Bv0.1%20-%20alpha%20release%5D.fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
 
 A token system is a collection of values which represent the visual properties of a design system, such as typography, color and spacing.
 
@@ -60,7 +60,7 @@ Some articles claim, that Web Components are not accessible or that they are not
 
 ## :tipping_hand_person: Help & Feedback
 ### Github Discussion Board
-Please have a look at our [Github discussion board](https://github.com/deven-org/telemetry-functions/discussions) to raise questions or start a discussion about a future feature.
+Please have a look at our [Github discussion board](https://github.com/deven-org/B01LER-Kitchen/discussions) to raise questions or start a discussion about a future feature.
 
 ### Slack
 Slack is our main internal communications channel and will most likely be the place where you can reach us best. Join the 
@@ -147,12 +147,12 @@ Note: This is not filled out yet!
 
 
 ## :v: Contribute
-For a detailed documentation on how to contribute to the B01LER project, have a look at our [contribution guide](./doc/CONTRIBUTE.md).
+For a detailed documentation on how to contribute to the B01LER project, have a look at our [contribution guide](./CONTRIBUTING.md).
 
 
 ## :bug: Bugs and Issues
 If you would like to open an issue, you can gladly use [this page](https://github.com/deven-org/B01LER-Kitchen/issues).
-But please, have a look at the [Contribute](./doc/CONTRIBUTE.md) page before filing a bug.
+But please, have a look at the [Contribute](./CONTRIBUTING.md) page before filing a bug.
 
 
 ## :page_facing_up: License
@@ -160,5 +160,5 @@ This project is licensed under the [MIT license](./LICENSE.md).
 
 
 ## :green_heart: Code of conduct
-The B01LER is using the Contributor Covenant Code of Conduct. You can read the whole code of conduct [here](./doc/CODE_OF_CONDUCT.md).
+The B01LER is using the Contributor Covenant Code of Conduct. You can read the whole code of conduct [here](./CODE_OF_CONDUCT.md).
 

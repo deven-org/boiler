@@ -19,11 +19,13 @@ It's worth noting that we are currently in the alpha stage, and while we enthusi
 - [Issues](#issues)
   - [Create a new issue](#create-a-new-issue)
   - [Solve an existing issue](#solve-an-existing-issue)
+  - [Tipps to find issues](#tipps-to-find-issues)
 - [Branch](#branch)
   - [Branch naming convention](#branch-naming-convention)
 - [Commits](#commits)
 - [Testing / Validating](#testing-and-validating)
-- [Pull Request](#pull-request) - [B01LER Monthly](#b01ler-monthly)
+- [Pull Request](#pull-request)
+- [B01LER Monthly](#b01ler-monthly)
 
 
 ## New contributor guide
@@ -61,29 +63,34 @@ To get an overview of the project and how to set it up, read the [README](https:
 
 ## Getting started
 Here you can find a quick overview of the whole contribution process, as well as in-depth explanations of each step.  
-### :file_folder: File Structure
 
+### :file_folder: File Structure
 Our project has the following file structure:
  
-    └── .github         // GitLab CI/CD pipeline
-    └── .husky          // Git hooks configuration files and scripts
-    └── doc             // The documentation skeleton
+    └── .github             // GitLab CI/CD pipeline
+    └── .husky              // Git hooks configuration files and scripts
+    └── .vscode             // VS code extensions and settings json
+    └── .yarn               // Yarn releases folder
+    └── doc                 // The documentation skeleton   
     └── packages  
-        └── assets                 // A collection of resources, such as images and other files utilized within B01LER
-        └── eslint-config-boiler   // Specific ESLint configuration for this project  
-        └── figma-design-tokens    // Design tokens configuration files and exported token json files
-        └── icons                  // Icon configuration files and a collection of individual icon files in svg format
-        └── react-example-app      // Source code for react testing app for B01LER DS
-        └── storybook              // Configuration files and compiling tools for Storybook
+        └── assets               // Collection of resources, such as images and other files utilized in B01LER
+        └── eslint-config-boiler // Specific ESLint configuration for this project  
+        └── figma-design-tokens  // Design tokens configuration files and exported token json files
+        └── icons                // Icon configuration files and a collection of icon files in svg format
+        └── js-example-app       // Source code for js testing app for B01LER DS
+        └── react-example-app    // Source code for react testing app for B01LER DS
+        └── storybook            // Configuration files and compiling tools for Storybook
         └── ui-library         
-            └── .storybook              // Configuration files for Storybook environment and assets, fonts and theme config
+            └── .storybook          // Configuration files for Storybook environment, assets, fonts and theme
             └── src          
-                └── components             // Collection of individual B01LER DS components 
-                └── foundation             // Collection of generated token files and component and semantic tokens
-                └── globals                // Exports of constants and types
-                └── util                   // Collection of utility or helper functions
-    └── LICENCE.md      // Software license that governs the use, distribution, and modification of B01LER DS
-    └── README.md       // Introductory documentation for B01LER
+                └── components         // Collection of individual B01LER DS components 
+                └── foundation         // Collection of generated token files and component and semantic tokens
+                └── globals            // Exports of constants and types
+                └── util               // Collection of utility or helper functions
+    └── CODE_OF_CONDUCT.md  // Our Code of conduct
+    └── CONTRIBUTING.md     // The file you have open right now
+    └── LICENCE.md          // Software license that governs the use, distribution, and modification of B01LER
+    └── README.md           // Introductory documentation for B01LER
 
 
 ## Issues
@@ -92,18 +99,29 @@ Before being able to contribute to B01LER, you need to get yourself assigned to 
 ### Solve an existing issue
 Browse our [existing issues](https://github.com/deven-org/B01LER-Kitchen/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
 
+
 ### Create a new issue
 Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues). If a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One is for bugs and the other one for everything else, like new features or also improvements of existing features.
 
 <details>
 <summary>How to write a useful issue?</summary>
 <br />
-- Use the existing issue templates
-- It should be _specific_. It's important that it addresses one specific topic.
-- If it is a bug it should be _reproducible_. It should contain all the instructions needed to reproduce the same outcome.
-
+<ul>
+<li>Use the existing issue templates.</li>
+<li>It should be <i>specific</i>. It's important that it addresses one specific topic.</li>
+<li>If it is a bug it should be <i>reproducible</i>. It should contain all the instructions needed to reproduce the same outcome.</li>
+<li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Text Button - add new variant</code></li>
+</ul>
 </details>
  After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
+
+### Tipps to find issues
+- For a first contribution, go to labels / filter by labels and see if there are issues tagged with the `good first issue` label
+- Search for the component name of the component you want to work on
+- Filter by the `💚 contributor issue` label
+- Filter by the `🚨 new::bug`, `⌨️ dev issue`, `📋 task::backlog` and/or `📋 task::ready` labels
+- Avoid tasks labeld with `⭕️ core team issue`, `🚫 blocker`, `🎨 design issue`, `📋 task::planned`, `📋 task::inProgress`, `📋 task::inReview`, `🦹 needs:contact`, `🦹 needs:documentation`, `🦹 needs:help` and/or `🦹 needs:specs` 
+
 
 ## Branch
 For contributions we are using [Gitflow as branching strategy](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20is%20a%20legacy%20Git,software%20development%20and%20DevOps%20practices). [Here](https://danielkummer.github.io/git-flow-cheatsheet/) you can also find a short cheatsheet about Gitflow.
@@ -115,6 +133,7 @@ The branch name should not exceed a maximum character count of 140. Each branch 
 - **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. The allowed types are: `release`, `hotfix` and `feature`.  
 - **issueNumber:** The issue number of your task. For example: `421` 
 - **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words. For example: `text-area-storybook-documentation`  
+
 
 ## Commits
 The commits must be compliant with with the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
@@ -132,7 +151,7 @@ yarn compile
 ## Pull Request
 Once your contribution is ready, it is time to create a pull request. Once your contribution is ready, it is time to create a pull request.  
 Please create pull requests for the `develop` branch and not for `main`.  
-Please also make sure that pull requests are linked to the related issue using the “Development” field in either the pull request or the issue.
+Please also make sure that pull requests are linked to the related issue using the `Development` field in either the pull request or the issue.
 
 
 ## Code Review
