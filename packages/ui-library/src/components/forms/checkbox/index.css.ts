@@ -3,7 +3,7 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Checkbox } = componentTokens.Forms;
+  const { Checkbox, FormLabel } = componentTokens.Forms;
   //const { SM, MD, LG } = semanticTokens.Forms;
   const { FocusBorder } = semanticTokens.Global;
 
@@ -41,7 +41,7 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
             }
           }
           .blr-form-label-inline {
-            font-family: ${SM.LabelNextToControl.fontFamily}, 'sans-serif';
+            font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, 'sans-serif';
           }
         }
 
@@ -76,9 +76,9 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
             padding-top: ${Checkbox.ContentCol.PaddingTop.SM};
             gap: ${Checkbox.ContentCol.ItemSpacing.SM};
             .blr-form-label-inline {
-              font-weight: ${SM.LabelNextToControl.fontWeight};
-              line-height: ${SM.LabelNextToControl.lineHeight};
-              font-size: ${SM.LabelNextToControl.fontSize};
+              font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+              line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
+              font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
             }
           }
         }
@@ -101,9 +101,9 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
             padding-top: ${Checkbox.ContentCol.PaddingTop.MD};
             gap: ${Checkbox.ContentCol.ItemSpacing.MD};
             .blr-form-label-inline {
-              font-weight: ${MD.LabelNextToControl.fontWeight};
-              line-height: ${MD.LabelNextToControl.lineHeight};
-              font-size: ${MD.LabelNextToControl.fontSize};
+              font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+              line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
+              font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
             }
           }
         }
@@ -126,9 +126,9 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
             padding-top: ${Checkbox.ContentCol.PaddingTop.LG};
             gap: ${Checkbox.ContentCol.ItemSpacing.LG};
             .blr-form-label-inline {
-              font-weight: ${LG.LabelNextToControl.fontWeight};
-              line-height: ${LG.LabelNextToControl.lineHeight};
-              font-size: ${LG.LabelNextToControl.fontSize};
+              font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+              line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
+              font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
             }
           }
         }
@@ -136,23 +136,23 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
         .label-wrapper {
           &:not(.disabled) {
             &:not(.error) {
-              color: ${LabelNextToControl.Rest};
+              color: ${FormLabel.InlineLabel.TextColor.Rest};
 
               &:hover {
                 &:not(.readonly) {
-                  color: ${LabelNextToControl.Hover};
+                  color: ${FormLabel.InlineLabel.TextColor.Hover};
                 }
               }
               &.focus {
-                color: ${LabelNextToControl.Focus};
+                color: ${FormLabel.InlineLabel.TextColor.Focus};
               }
               &.active {
                 &:not(.readonly) {
-                  color: ${LabelNextToControl.Pressed};
+                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
                 }
               }
               &.readonly {
-                color: ${LabelNextToControl.ReadOnly};
+                color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
                 .blr-form-label-inline {
                   cursor: not-allowed !important;
                   pointer-events: none;
@@ -161,12 +161,12 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
             }
           }
           &.error {
-            color: ${LabelNextToControl.Error};
+            color: ${FormLabel.InlineLabel.TextColor.Error};
           }
           &.disabled {
             .blr-form-label-inline {
               cursor: not-allowed;
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }  
         }
