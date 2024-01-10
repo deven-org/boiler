@@ -87,7 +87,6 @@ const componentTypes = [
   'NumberInput',
   'CaptionGroup',
   'FormLabel',
-  ,
 ];
 
 StyleDictionaryPackage.registerFormat({
