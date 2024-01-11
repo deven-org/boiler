@@ -4,7 +4,7 @@ import { BlrNumberInputRenderFunction } from './renderFunction';
 import { FormSizes, Units } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized';
-import { html } from 'lit';
+import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 
 const sharedStyles = html`
@@ -361,7 +361,7 @@ export default {
       description: {
         component: `<Markdown>
       Number Input allows users to enter enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
-      - [**Apperance**](#apperance)
+      - [**Appearance**](#appearance)
         - [**Size Variant**](#size-variant)
         - [**Stepper Variant**](#stepper-variant)
       - [**Content / Settings**](#content--settings)
@@ -386,7 +386,7 @@ export default {
 export const NumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderFunction(params);
 
 /**
- * ## Apperance
+ * ## Appearance
  *  ### Size Variant
  * The Number Input component comes in 3 sizes: SM, MD and LG.
  */
