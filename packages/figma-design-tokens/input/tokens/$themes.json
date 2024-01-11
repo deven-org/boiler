@@ -1348,8 +1348,6 @@
       "q.surface.default": "daa19b0648718e4b0cf640f86106907fbc2f7b9a",
       "q.surface.error.alpha": "853a0dad067356fbcd541f322754e636962cbed0",
       "q.surface.error.beta": "21f8662253be121bdc8d482958b1d5ac6722a73e",
-      "q.surface.error.alpha": "853a0dad067356fbcd541f322754e636962cbed0",
-      "q.surface.error.beta": "21f8662253be121bdc8d482958b1d5ac6722a73e",
       "q.surface.inverted": "be62c24b18818b74bb5419601990061243356d37",
       "q.surface.readonly": "c16031a08499ee91f585067be14ebb92f9f2a1f4",
       "q.surface.warning": "4d7024ac2ed9747365004fbbaf19cf07e03d5d56",
@@ -1409,7 +1407,6 @@
       "q.content.onerror.alpha": "873de83e8ddbfbfa91a609181797f7324ce0d72b",
       "q.content.onerror.beta": "87631f7c5ab411c7c86760e1f269ed64d4661c75",
       "q.content.onerror.gamma": "28412e83dde9908dd0d0468a641c59633c5aed81",
-      "q.content.onerror.delta": "f7e8cf96ddbadb15b6bff567ffb3d317a6dca156",
       "q.content.onerror.delta": "f7e8cf96ddbadb15b6bff567ffb3d317a6dca156",
       "q.content.onwarning.alpha": "6516df79ad13cb8d3b209eb77c77f649b715b757",
       "q.content.onwarning.beta": "d1edb55190eee837334b36e08602215679d067ef",
@@ -2907,8 +2904,6 @@
       "q.surface.default": "daa19b0648718e4b0cf640f86106907fbc2f7b9a",
       "q.surface.error.alpha": "853a0dad067356fbcd541f322754e636962cbed0",
       "q.surface.error.beta": "21f8662253be121bdc8d482958b1d5ac6722a73e",
-      "q.surface.error.alpha": "853a0dad067356fbcd541f322754e636962cbed0",
-      "q.surface.error.beta": "21f8662253be121bdc8d482958b1d5ac6722a73e",
       "q.surface.inverted": "be62c24b18818b74bb5419601990061243356d37",
       "q.surface.readonly": "c16031a08499ee91f585067be14ebb92f9f2a1f4",
       "q.surface.warning": "4d7024ac2ed9747365004fbbaf19cf07e03d5d56",
@@ -2969,7 +2964,6 @@
       "q.content.onerror.beta": "87631f7c5ab411c7c86760e1f269ed64d4661c75",
       "q.content.onerror.gamma": "28412e83dde9908dd0d0468a641c59633c5aed81",
       "q.content.onerror.delta": "f7e8cf96ddbadb15b6bff567ffb3d317a6dca156",
-      "q.content.onerror.delta": "f7e8cf96ddbadb15b6bff567ffb3d317a6dca156",
       "q.content.onwarning.alpha": "6516df79ad13cb8d3b209eb77c77f649b715b757",
       "q.content.onwarning.beta": "d1edb55190eee837334b36e08602215679d067ef",
       "q.content.onwarning.gamma": "b6c544e416706a2650d683f68f84f8bccf77359c",
@@ -3000,61 +2994,5 @@
       "Forms.RadioGroup.CaptionSlot.PaddingTop.LG": "c8f1ada63ac592e9d6d96942d34d419648bc3984"
     },
     "group": "Theme"
-  },
-  {
-    "id": "08249cc3818adf31affe7426f575df1543561628",
-    "name": "AllCaptions",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {},
-    "group": "Caption",
-    "$figmaCollectionId": "VariableCollectionId:9016:11935",
-    "$figmaModeId": "9016:0",
-    "$figmaVariableReferences": {
-      "CaptionContainer": "b0d1634342d97fd63a137fc52f5f637b581a0df1",
-      "🔷 HintMsg": "0ce761be58bf5624e583377385ea94610e17be94",
-      "🔷 ErrorMsg": "3a96a0ab1babd3bb59147d6bbca724ca1fde0e82"
-    }
-  },
-  {
-    "id": "75296d1875947aa3681aa72763fa1078814c938c",
-    "name": "HintOnly",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {},
-    "group": "Caption",
-    "$figmaCollectionId": "VariableCollectionId:9016:11935",
-    "$figmaModeId": "9016:1",
-    "$figmaVariableReferences": {
-      "CaptionContainer": "b0d1634342d97fd63a137fc52f5f637b581a0df1",
-      "🔷 HintMsg": "0ce761be58bf5624e583377385ea94610e17be94",
-      "🔷 ErrorMsg": "3a96a0ab1babd3bb59147d6bbca724ca1fde0e82"
-    }
-  },
-  {
-    "id": "952d14ff8cc881b46dc29b075f1927fc9d6326b9",
-    "name": "ErrorOnly",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {},
-    "group": "Caption",
-    "$figmaCollectionId": "VariableCollectionId:9016:11935",
-    "$figmaModeId": "9016:2",
-    "$figmaVariableReferences": {
-      "CaptionContainer": "b0d1634342d97fd63a137fc52f5f637b581a0df1",
-      "🔷 HintMsg": "0ce761be58bf5624e583377385ea94610e17be94",
-      "🔷 ErrorMsg": "3a96a0ab1babd3bb59147d6bbca724ca1fde0e82"
-    }
-  },
-  {
-    "id": "bb09f6c5d139043d0d6590c978e9096343ca4ba5",
-    "name": "noCaptions",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {},
-    "group": "Caption",
-    "$figmaCollectionId": "VariableCollectionId:9016:11935",
-    "$figmaModeId": "9016:3",
-    "$figmaVariableReferences": {
-      "CaptionContainer": "b0d1634342d97fd63a137fc52f5f637b581a0df1",
-      "🔷 HintMsg": "0ce761be58bf5624e583377385ea94610e17be94",
-      "🔷 ErrorMsg": "3a96a0ab1babd3bb59147d6bbca724ca1fde0e82"
-    }
   }
 ]
