@@ -137,6 +137,13 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
         border-radius: ${InputBorderRadius};
         box-sizing: border-box;
+        background-color: ${SurfaceFill.Default.Rest};
+
+        .blr-form-select {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
 
         .blr-input-icon {
           position: relative;
