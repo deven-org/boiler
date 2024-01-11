@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
+import { html } from 'lit-html';
+import { BlrTextareaType } from './index';
+import { BlrTextareaRenderFunction } from './renderFunction';
 import { FormSizes, Resizes } from '../../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
@@ -369,6 +370,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125197&mode=dev',
+    },
     layout: 'centered',
     docs: {
       //Two examples for Code integration

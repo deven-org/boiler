@@ -79,9 +79,5 @@ export type ButtonOption = {
   loading: boolean;
 };
 
-export type ToolTipPosition = 'left' | 'right' | 'top' | 'bottom';
-export type ToolTipVisibility = 'onLoad' | 'onHover';
-export type ToolTipArrowPosition = 'start' | 'end' | 'middle' | 'hide';
-
 export type LabelVariantType = (typeof LabelVariants)[number];
 export type ButtonDisplayType = (typeof ButtonDisplayOptions)[number];

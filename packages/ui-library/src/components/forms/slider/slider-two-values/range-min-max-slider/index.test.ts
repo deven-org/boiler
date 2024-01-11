@@ -1,4 +1,5 @@
-import { BlrRangeMinMaxSliderType, BlrRangeMinMaxSliderRenderFunction } from './index';
+import { BlrRangeMinMaxSliderRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrRangeMinMaxSliderType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';

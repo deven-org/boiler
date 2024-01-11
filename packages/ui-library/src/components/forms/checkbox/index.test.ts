@@ -1,4 +1,5 @@
-import { BlrCheckboxType, BlrCheckboxRenderFunction } from './index';
+import { BlrCheckboxRenderFunction } from '@boiler/ui-library/dist/';
+import type { BlrCheckboxType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';

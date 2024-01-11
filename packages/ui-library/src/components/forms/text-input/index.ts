@@ -5,17 +5,16 @@ import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { textInputLight, textInputDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../../globals/types';
-import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
+import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { BlrIconRenderFunction } from '../../ui/icon';
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-text-input';
+export const TAG_NAME = 'blr-text-input';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
@@ -90,6 +89,7 @@ export class BlrTextInput extends LitElement {
       const iconClasses = classMap({
         'blr-input-icon': true,
         [`${this.size}`]: this.size,
+        'noPointerEvents': Boolean(this.disabled || this.readonly),
       });
 
       const getPasswordIcon = () => {
@@ -164,29 +164,39 @@ export class BlrTextInput extends LitElement {
               />
             </div>
             ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction({
-                  icon: this.hasError
-                    ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                    : calculateIconName(this.inputIcon, iconSizeVariant),
-                  name: this.hasError
-                    ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                    : calculateIconName(this.inputIcon, iconSizeVariant),
-                  size: iconSizeVariant,
-                  classMap: iconClasses,
-                  hideAria: true,
-                  disablePointerEvents: this.disabled || this.readonly,
-                })}`
+              ? html`${BlrIconRenderFunction(
+                  {
+                    icon: this.hasError
+                      ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                      : calculateIconName(this.inputIcon, iconSizeVariant),
+
+                    size: iconSizeVariant,
+                    classMap: iconClasses,
+                  },
+                  {
+                    'aria-hidden': true,
+                    'name':
+                      (this.hasError
+                        ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
+                        : calculateIconName(this.inputIcon, iconSizeVariant)) || '',
+                  }
+                )}`
               : nothing}
             ${wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction({
-                  icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-                  name: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-                  size: iconSizeVariant,
-                  classMap: iconClasses,
-                  hideAria: true,
-                  disablePointerEvents: this.disabled || this.readonly,
-                  onClick: () => this.togglePassword(),
-                })}`
+              ? html`${BlrIconRenderFunction(
+                  {
+                    icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
+
+                    size: iconSizeVariant,
+                    classMap: iconClasses,
+                    onClick: () => this.togglePassword(),
+                  },
+                  {
+                    'aria-hidden': true,
+                    'name':
+                      (this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon()) || '',
+                  }
+                )}`
               : nothing}
           </div>
           ${this.hasHint || this.hasError
@@ -199,6 +209,3 @@ export class BlrTextInput extends LitElement {
 }
 
 export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
-
-export const BlrTextInputRenderFunction = (params: BlrTextInputType) =>
-  genericBlrComponentRenderer<BlrTextInputType>(TAG_NAME, { ...params });

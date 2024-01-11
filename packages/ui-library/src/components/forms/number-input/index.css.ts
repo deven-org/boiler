@@ -9,6 +9,10 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   const { StepperCombo } = componentTokens.Action;
 
   return typeSafeNestedCss`
+    .noPointerEvents {
+      pointer-events: none;
+    }
+
     .input-wrapper {
       outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};

@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { BlrRangeLegendMinMaxSliderType, BlrRangeLegendMinMaxSliderRenderFunction } from './index';
+import { BlrRangeLegendMinMaxSliderType } from './index';
+import { BlrRangeLegendMinMaxSliderRenderFunction } from './renderFunction';
 import { Sizes } from '../../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../../foundation/_tokens-generated/index.themes';

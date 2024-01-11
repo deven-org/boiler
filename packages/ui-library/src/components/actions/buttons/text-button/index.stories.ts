@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-import { action } from '@storybook/addon-actions';
-import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
+import { html } from 'lit-html';
+import { BlrTextButtonType } from './index';
+import { BlrTextButtonRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
@@ -28,15 +28,13 @@ const defaultParams: BlrTextButtonType = {
   size: 'md',
   label: 'Label-text',
   hasIcon: true,
-  iconPosition: 'leading',
   icon: 'blr360',
-  loading: false,
+  iconPosition: 'leading',
   disabled: false,
+  loading: false,
   buttonId: 'buttonId',
-  loadingStatus: 'Loading',
   buttonDisplay: 'inline-block',
-  onBlur: () => action('onBlur'),
-  onClick: () => action('onClick'),
+  loadingStatus: '',
 };
 
 export default {
@@ -54,7 +52,7 @@ export default {
     },
     size: {
       name: 'sizeVariant',
-      description: 'Choose size  of the component.',
+      description: 'Select size of the component.',
       options: ActionSizes,
       control: { type: 'select' },
       table: {
@@ -69,8 +67,9 @@ export default {
       },
     },
     buttonDisplay: {
+      description: 'Choose if button should fill its parent container or hug its content.',
       options: ButtonDisplayOptions,
-      control: { type: 'select' },
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -99,7 +98,7 @@ export default {
     },
     icon: {
       name: 'icon',
-      description: 'Select an icon which is displayed inside of the input.',
+      description: 'Select an icon which is displayed next to the label.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       if: { arg: 'hasIcon', eq: true },
@@ -109,7 +108,7 @@ export default {
     },
     iconPosition: {
       name: 'iconPosition',
-      description: 'Choose the position of the icons within the tabs.',
+      description: 'Choose the position of the icon next to the label.',
       options: IconPositionVariant,
       control: { type: 'select' },
       if: { arg: 'hasIcon', eq: true },
@@ -121,7 +120,7 @@ export default {
     disabled: {
       name: 'disabled',
       description:
-        'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
+        'Choose if component is disabled. Prevents the user to select or change the value of this component.',
       defaultValue: false,
       table: {
         category: 'States',
@@ -135,15 +134,6 @@ export default {
         category: 'States',
       },
     },
-    //Accessibility
-    arialabel: {
-      name: 'ariaLabel',
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        category: 'Accessibility',
-      },
-    },
     //Technical attributes
     buttonId: {
       name: 'textButtonId',
@@ -152,20 +142,16 @@ export default {
         category: 'Technical Attributes',
       },
     },
-    href: {
-      name: 'href',
-      description: "Enter the link's destination with the href attribute.",
+    //Accessibility
+    arialabel: {
+      name: 'ariaLabel',
+      description:
+        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
       table: {
-        category: 'Technical Attributes',
+        disable: true,
       },
     },
-    target: {
-      name: 'target',
-      description: 'Choose where to open the linked document with the target attribute.',
-      table: {
-        category: 'Technical Attributes',
-      },
-    },
+    // Events
     onClick: {
       name: 'onClick',
       description: 'Fires when the component is clicked.',
@@ -179,7 +165,7 @@ export default {
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
-        category: 'Events',
+        disable: 'true',
       },
     },
     onBlur: {
@@ -190,20 +176,32 @@ export default {
         category: 'Events',
       },
     },
+    loadingStatus: {
+      table: {
+        disable: true,
+      },
+    },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=705%3A1815&mode=dev',
+    },
     viewMode: 'docs',
     docs: {
       description: {
         component: `<Markdown>
 Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
+ 
+ **NOTE**<br>
+ The Text Button component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
 <br>
 - [**Appearance**](#appearance)
  - [**Variant**](#variant)
- - [**Size-Variant**](#size-variant)
+ - [**Size Variant**](#size-variant)
 - [**States**](#states)
  - [**Disabled**](#disabled)
-- [**Dependencies**](#disabled)
+- [**Dependencies**](#dependencies)
  - [**Icon**](#icon)
  - [**Loader**](#loader)
 </Markdown>`,
@@ -215,23 +213,7 @@ Text Button represents a clickable button that typically displays text rather th
 //Main Component for Text Button
 export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderFunction(params);
 BlrTextButton.storyName = 'Text Button';
-const args: BlrTextButtonType = {
-  theme: 'Light',
-  variant: 'primary',
-  size: 'md',
-  label: 'Label-text',
-  hasIcon: true,
-  iconPosition: 'leading',
-  icon: 'blr360',
-  loading: false,
-  disabled: false,
-  buttonId: 'buttonId',
-  loadingStatus: 'Loading',
-  buttonDisplay: 'inline-block',
-  onBlur: () => action('onBlur'),
-  onClick: () => action('onClick'),
-};
-BlrTextButton.args = args;
+BlrTextButton.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
@@ -246,16 +228,14 @@ const argTypesToDisable = [
   'loading',
   'disabled',
   'buttonId',
-  'loadingStatus',
   'buttonDisplay',
   'onClick',
   'onBlur',
   'onFocus',
-  'href',
-  'target',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   argTypes.forEach((argType: string) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
@@ -283,32 +263,38 @@ export const Variant = () => {
       <div class="stories-textbutton">
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
+          variant: 'cta',
+          label: 'Cta',
+          hasIcon: false,
+        })}
+        ${BlrTextButtonRenderFunction({
+          ...defaultParams,
           variant: 'primary',
+          label: 'Primary',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'secondary',
-          hasIcon: false,
-        })}
-        ${BlrTextButtonRenderFunction({
-          ...defaultParams,
-          variant: 'cta',
+          label: 'Secondary',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'silent',
+          label: 'Silent',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'destructive',
+          label: 'Destructive',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           variant: 'encourage',
+          label: 'Encourage',
           hasIcon: false,
         })}
       </div>
@@ -331,26 +317,31 @@ export const SizeVariant = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'xs',
+          label: 'Button XS',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'sm',
+          label: 'Button SM',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'md',
+          label: 'Button MD',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'lg',
+          label: 'Button LG',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           size: 'xl',
+          label: 'Button XL',
           hasIcon: false,
         })}
       </div>
@@ -364,6 +355,7 @@ SizeVariant.argTypes = {
 //States
 /**
  * ## States
+ * Apart from states like rest, hover, pressed and focus, the Text Button component can also be disabled or loading.
  * ### Disabled
  * The Text Button component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -375,6 +367,7 @@ export const Disabled = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           disabled: true,
+          label: 'Disabled',
           hasIcon: false,
         })}
       </div>
@@ -402,11 +395,13 @@ export const Icon = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           hasIcon: true,
+          label: 'Leading icon',
           iconPosition: 'leading',
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           hasIcon: true,
+          label: 'Trailing icon',
           iconPosition: 'trailing',
         })}
       </div>
@@ -436,8 +431,3 @@ export const Loader = () => {
 Loader.argTypes = {
   ...disabledArgTypes,
 };
-//Button as link
-/**
- *     Button as link
- * The Text Button component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
- */
