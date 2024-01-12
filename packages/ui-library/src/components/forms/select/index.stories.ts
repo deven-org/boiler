@@ -235,7 +235,7 @@ export default {
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Select presents users with a list of options from which they can make a single selection. It contains a list of selectable options. These options can be text-based, such as names, items, or categories.
 <br>
 - [**Appearance**](#appearance)
@@ -249,7 +249,7 @@ Select presents users with a list of options from which they can make a single s
  - [**Form Label**](#form-label)
  - [**Icon**](#icon)
  - [**Form Caption Group**](#form-caption-group)
-</Markdown>`,
+</markdown>`,
       },
     },
   },
