@@ -17,7 +17,7 @@ const sharedStyles = html`
 import '../../../../index';
 
 export default {
-  title: 'Design System/Web Components/Forms/Radio/RadioGroup',
+  title: 'Design System/Web Components/Forms/Radio Group/Radio Group',
   argTypes: {
     size: {
       name: 'sizeVariant',

@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Forms/Radio/Radio',
+  title: 'Design System/Web Components/Forms/Radio Group/Radio',
   argTypes: {
     theme: {
       options: Themes,
