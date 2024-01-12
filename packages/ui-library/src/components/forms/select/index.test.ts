@@ -15,12 +15,15 @@ const sampleParams: BlrSelectType = {
   hintIcon: 'blrInfo',
   selectId: 'Peter',
   errorIcon: 'blrErrorFilled',
+
+  /*
   options: [
     { value: 'uschi', label: 'Uschi', disabled: true },
     { value: '1', label: 'Option 1' },
     { value: '2', label: 'Option 2', selected: true },
     { value: 'dieter', label: 'Dieter' },
   ],
+  */
   theme: 'Light',
 };
 

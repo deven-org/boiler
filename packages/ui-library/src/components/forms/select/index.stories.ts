@@ -35,6 +35,7 @@ const defaultParams: BlrSelectType = {
   selectId: 'selectId',
   name: 'select',
 
+  /*
   options: [
     { value: '0', label: 'Option 1', selected: false, disabled: true },
     {
@@ -47,6 +48,7 @@ const defaultParams: BlrSelectType = {
     { value: '2', label: 'Option 3', selected: true, disabled: false },
     { value: '4', label: 'Option 4', selected: false, disabled: false },
   ],
+  */
 
   onChange: (event: Event) => console.log(event.type),
 };
@@ -255,13 +257,13 @@ Select presents users with a list of options from which they can make a single s
 };
 
 const optionsAsChildren = html`
-  <option value="">--Please choose an option--</option>
-  <option value="dog">Dog</option>
-  <option value="cat">Cat</option>
-  <option value="hamster">Hamster</option>
-  <option value="parrot">Parrot</option>
-  <option value="spider">Spider</option>
-  <option value="goldfish">Goldfish</option>
+  <option value="" label="--Please choose an option--"></option>
+  <option value="dog" label="Dog"></option>
+  <option value="cat" label="Cat"></option>
+  <option value="hamster" label="Hamster"></option>
+  <option value="parrot" label="Parrot"></option>
+  <option value="spider" label="Spider"></option>
+  <option value="goldfish" label="Goldfish"></option>
 `;
 
 export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params, optionsAsChildren);
@@ -429,12 +431,14 @@ export const FormLabel = () => {
         ...defaultParams,
         label: ' ',
         labelAppendix: ' ',
+        /*
         options: [
           { value: '0', label: 'Option 1', selected: false, disabled: true },
           { value: '1', label: 'Option 2', selected: false, disabled: false },
           { value: '2', label: 'Without Label', selected: true, disabled: false },
           { value: '4', label: 'Option 4', selected: false, disabled: false },
         ],
+        */
       })}
     </div>
   `;

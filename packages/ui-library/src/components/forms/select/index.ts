@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
-import { customElement, property, queryAssignedElements, queryAssignedNodes, state } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../../globals/types';
 
@@ -17,13 +17,6 @@ import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/for
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
 import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
-
-type Option = {
-  value: string;
-  label: string;
-  selected?: boolean;
-  disabled?: boolean;
-};
 
 export const TAG_NAME = 'blr-select';
 
@@ -42,8 +35,6 @@ export class BlrSelect extends LitElement {
   @property() onChange?: (event: Event) => void;
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-
-  // @property({ type: Array }) options: Option[] = [];
 
   @property() hasError?: boolean;
   @property() errorMessage?: string;
@@ -67,15 +58,11 @@ export class BlrSelect extends LitElement {
     this.isFocused = false;
   };
 
-  protected updated() {
+  protected handleSlotChange() {
     const slot = this.renderRoot?.querySelector('slot');
 
-    if (!this._optionElements) {
-      this._optionElements = slot?.assignedElements({ flatten: false });
-      // this.requestUpdate();
-    }
-
-    console.log('updated: _optionElements', this._optionElements);
+    this._optionElements = slot?.assignedElements({ flatten: false });
+    this.requestUpdate();
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
@@ -116,8 +103,6 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
-    console.log('render: _optionElements', this._optionElements);
-
     if (this.size) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
 
@@ -159,10 +144,7 @@ export class BlrSelect extends LitElement {
           ${dynamicStyles}
         </style>
 
-        <slot></slot>
-        <hr />
-        ${JSON.stringify(this._optionElements)}
-        <hr />
+        <slot @slotchange=${this.handleSlotChange}></slot>
 
         <div class="blr-select">
           ${this.label
@@ -192,11 +174,11 @@ export class BlrSelect extends LitElement {
                   return html`
                     <option
                       class="blr-select-option"
-                      value=${opt.getAttribute('value')}
-                      ?selected=${opt.getAttribute('selected')}
-                      ?disabled=${opt.getAttribute('disabled')}
+                      value=${opt.getAttribute('value') || ''}
+                      ?selected=${opt.getAttribute('selected') === 'true'}
+                      ?disabled=${opt.getAttribute('disabled') === 'true'}
                     >
-                      ${opt.childNodes}
+                      ${opt.getAttribute('label')}
                     </option>
                   `;
                 })}
