@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property, queryAssignedElements, queryAssignedNodes, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../../globals/types';
 
@@ -42,7 +42,9 @@ export class BlrSelect extends LitElement {
   @property() onChange?: (event: Event) => void;
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property({ type: Array }) options: Option[] = [];
+
+  // @property({ type: Array }) options: Option[] = [];
+
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
@@ -55,6 +57,8 @@ export class BlrSelect extends LitElement {
 
   @state() protected isFocused = false;
 
+  protected _optionElements: Element[] | undefined;
+
   protected handleFocus = () => {
     this.isFocused = true;
   };
@@ -62,6 +66,17 @@ export class BlrSelect extends LitElement {
   protected handleBlur = () => {
     this.isFocused = false;
   };
+
+  protected updated() {
+    const slot = this.renderRoot?.querySelector('slot');
+
+    if (!this._optionElements) {
+      this._optionElements = slot?.assignedElements({ flatten: false });
+      // this.requestUpdate();
+    }
+
+    console.log('updated: _optionElements', this._optionElements);
+  }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     if (this.size) {
@@ -101,6 +116,8 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
+    console.log('render: _optionElements', this._optionElements);
+
     if (this.size) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
 
@@ -141,6 +158,12 @@ export class BlrSelect extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
+
+        <slot></slot>
+        <hr />
+        ${JSON.stringify(this._optionElements)}
+        <hr />
+
         <div class="blr-select">
           ${this.label
             ? BlrFormLabelRenderFunction({
@@ -165,16 +188,15 @@ export class BlrSelect extends LitElement {
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >
-                ${this.options?.map((opt: Option) => {
+                ${this._optionElements?.map((opt: Element) => {
                   return html`
                     <option
                       class="blr-select-option"
-                      id=${opt.value}
-                      value=${opt.value}
-                      ?selected=${opt.selected}
-                      ?disabled=${opt.disabled}
+                      value=${opt.getAttribute('value')}
+                      ?selected=${opt.getAttribute('selected')}
+                      ?disabled=${opt.getAttribute('disabled')}
                     >
-                      ${opt.label}
+                      ${opt.childNodes}
                     </option>
                   `;
                 })}

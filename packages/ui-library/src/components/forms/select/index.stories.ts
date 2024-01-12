@@ -34,6 +34,7 @@ const defaultParams: BlrSelectType = {
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
+
   options: [
     { value: '0', label: 'Option 1', selected: false, disabled: true },
     {
@@ -46,6 +47,7 @@ const defaultParams: BlrSelectType = {
     { value: '2', label: 'Option 3', selected: true, disabled: false },
     { value: '4', label: 'Option 4', selected: false, disabled: false },
   ],
+
   onChange: (event: Event) => console.log(event.type),
 };
 
@@ -252,7 +254,17 @@ Select presents users with a list of options from which they can make a single s
   },
 };
 
-export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params);
+const optionsAsChildren = html`
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+`;
+
+export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params, optionsAsChildren);
 
 BlrSelect.storyName = 'Select';
 BlrSelect.args = defaultParams;
