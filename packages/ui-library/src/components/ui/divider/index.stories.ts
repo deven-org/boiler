@@ -54,12 +54,12 @@ export default {
     docs: {
       description: {
         component: `
-  <Markdown>
+  <markdown>
   Divider is used to separate or delineate different sections of a user interface. It's typically a horizontal or vertical line, often with a visual style like a solid line or a dashed line.
 
     - [**Appearance**](#appearance)
         - [**Direction**](#direction)
-  </Markdown>
+  </markdown>
 `,
       },
     },
@@ -100,4 +100,4 @@ export const Direction = () => {
   `;
 };
 
-Divider.story = { name: ' ' };
+Direction.story = { name: ' ' };
