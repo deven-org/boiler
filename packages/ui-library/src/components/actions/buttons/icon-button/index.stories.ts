@@ -7,10 +7,8 @@ import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
-// dependencies
-import './';
-import '../../../ui/icon';
-import '../../../feedback/loader';
+// this loads the all components instances and registers their html tags
+import '../../../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

@@ -5,6 +5,9 @@ import { BlrFormLabelType } from './index';
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 const sharedStyles = html`
   <style>
     .stories-form-label {
