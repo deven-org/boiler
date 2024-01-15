@@ -1,4 +1,4 @@
-import { BlrDividerRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrDividerRenderFunction } from './renderFunction';
 import type { BlrDividerType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

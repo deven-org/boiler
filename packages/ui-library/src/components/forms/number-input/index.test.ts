@@ -1,4 +1,4 @@
-import { BlrNumberInputRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrNumberInputRenderFunction } from './renderFunction';
 import type { BlrNumberInputType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

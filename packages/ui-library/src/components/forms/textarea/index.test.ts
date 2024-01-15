@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTextareaRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrTextareaRenderFunction } from './renderFunction';
 import type { BlrTextareaType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

@@ -1,4 +1,4 @@
-import { BlrSelectRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrSelectRenderFunction } from './renderFunction';
 import type { BlrSelectType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

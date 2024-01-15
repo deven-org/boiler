@@ -1,4 +1,4 @@
-import { BlrToggleSwitchRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrToggleSwitchRenderFunction } from './renderFunction';
 import type { BlrToggleSwitchType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

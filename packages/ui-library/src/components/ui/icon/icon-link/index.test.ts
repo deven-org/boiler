@@ -1,4 +1,4 @@
-import { BlrIconLinkRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrIconLinkRenderFunction } from './renderFunction';
 import type { BlrIconLinkType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

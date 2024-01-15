@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/await-thenable */
-import { BlrIconRenderFunction } from '@boiler/ui-library/dist/';
+import { BlrIconRenderFunction } from './renderFunction';
 import type { BlrIconType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
