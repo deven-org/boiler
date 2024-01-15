@@ -1,10 +1,16 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import { BlrIconButtonType } from './index';
+import type { BlrIconButtonType } from './index';
+
 import { BlrIconButtonRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+
+// dependencies
+import './';
+import '../../../ui/icon';
+import '../../../feedback/loader';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
