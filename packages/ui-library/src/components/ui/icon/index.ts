@@ -32,12 +32,10 @@ export class BlrIcon extends LitElement {
     const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
 
     const unfullfilledRenderResult = html`<span
-      @click=${() => {
-        this.handleClick?.();
-      }}
+      @click=${this.handleClick}
       @keydown=${(event: KeyboardEvent) => {
         if (event.code === 'Space') {
-          this.handleClick?.();
+          this.handleClick(event);
         }
       }}
       class="blr-icon ${sizeKey}"
@@ -51,12 +49,10 @@ export class BlrIcon extends LitElement {
       const fullfilledRenderResult = importedIcon
         .then((iconModule) => {
           return html`<span
-            @click=${() => {
-              this.handleClick?.();
-            }}
+            @click=${this.handleClick}
             @keydown=${(event: KeyboardEvent) => {
               if (event.code === 'Space') {
-                this.handleClick?.();
+                this.handleClick(event);
               }
             }}
             class="blr-icon ${sizeKey}"
