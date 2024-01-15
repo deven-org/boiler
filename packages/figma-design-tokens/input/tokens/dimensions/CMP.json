@@ -1195,15 +1195,15 @@
       "Text": {
         "Typography": {
           "SM": {
-            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "value": "{Forms.Caption.Typography.SM}",
             "type": "typography"
           },
           "MD": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "value": "{Forms.Caption.Typography.MD}",
             "type": "typography"
           },
           "LG": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "value": "{Forms.Caption.Typography.LG}",
             "type": "typography"
           }
         }
