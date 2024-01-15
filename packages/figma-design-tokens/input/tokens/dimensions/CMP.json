@@ -3398,6 +3398,24 @@
           }
         }
       }
+    },
+    "Counter": {
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{Forms.Caption.Typography.SM}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{Forms.Caption.Typography.MD}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{Forms.Caption.Typography.LG}",
+            "type": "typography"
+          }
+        }
+      }
     }
   },
   "UI": {
