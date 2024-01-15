@@ -1056,6 +1056,159 @@
     }
   },
   "Forms": {
+    "CaptionComponent": {
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          }
+        },
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "{Forms.CaptionComponent.Container.PaddingTopBottom.SM} {Forms.CaptionComponent.Container.PaddingLeftRight.SM}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Forms.CaptionComponent.Container.PaddingTopBottom.MD} {Forms.CaptionComponent.Container.PaddingLeftRight.MD}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Forms.CaptionComponent.Container.PaddingTopBottom.LG} {Forms.CaptionComponent.Container.PaddingLeftRight.LG}",
+            "type": "spacing"
+          }
+        }
+      },
+      "IconWrapper": {
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0,5}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.5}",
+            "type": "spacing"
+          }
+        }
+      },
+      "Icon": {
+        "IconSize": {
+          "SM": {
+            "value": "{core.dimensionREM.14}",
+            "type": "sizing",
+            "description": "Defines the physical size of the icon inside the captionComponent"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          }
+        }
+      },
+      "TextWrapper": {
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "{Forms.CaptionComponent.TextWrapper.PaddingTopBottom.SM} {Forms.CaptionComponent.TextWrapper.PaddingLeftRight.SM}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Forms.CaptionComponent.TextWrapper.PaddingTopBottom.MD} {Forms.CaptionComponent.TextWrapper.PaddingLeftRight.MD}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Forms.CaptionComponent.TextWrapper.PaddingTopBottom.LG} {Forms.CaptionComponent.TextWrapper.PaddingLeftRight.LG}",
+            "type": "spacing"
+          }
+        }
+      },
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          }
+        }
+      }
+    },
     "Checkbox": {
       "ContentCol": {
         "ItemSpacing": {

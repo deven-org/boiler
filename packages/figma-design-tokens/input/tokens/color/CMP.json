@@ -1143,6 +1143,32 @@
           }
         }
       }
+    },
+    "CaptionComponent": {
+      "Text": {
+        "TextColor": {
+          "Hint": {
+            "value": "{Forms.Caption.Hint}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Forms.Caption.Error}",
+            "type": "color"
+          }
+        }
+      },
+      "Icon": {
+        "IconColor": {
+          "Hint": {
+            "value": "{Forms.Caption.Hint}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Forms.Caption.Error}",
+            "type": "color"
+          }
+        }
+      }
     }
   },
   "UI": {
