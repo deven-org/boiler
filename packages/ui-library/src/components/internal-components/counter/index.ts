@@ -5,7 +5,7 @@ import { CounterVariantType, FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { counterLight, counterDark } from './index.css';
 
-export const TAG_NAME = 'blr-counter';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrCounter extends LitElement {
