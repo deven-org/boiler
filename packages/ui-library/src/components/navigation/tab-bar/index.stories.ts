@@ -1,3 +1,4 @@
+import { html } from 'lit-html';
 import { BlrTabBarType } from './index';
 import { BlrTabBarRenderFunction } from './renderFunction';
 import {
@@ -60,7 +61,21 @@ export default {
   },
 };
 
-export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(params);
+const tabsAsChildren = html`
+  <a disabled href="./" label="Tab 1" icon="blr360">Tab 1</a>
+  <a href="./" label="Tab 2" icon="blrInfo">Tab 2</a>
+  <a href="./" label="Tab 3" icon="blrCrop">Tab 3</a>
+  <a href="./" label="Tab 4" icon="blrDocumentNew">Tab 4</a>
+  <a href="./" label="Tab 5" icon="blrDocumentTwo">Tab 5</a>
+  <a href="./" label="Tab 6" icon="blrDownload">Tab 6</a>
+  <a href="./" label="Tab 7" icon="blrHeart">Tab 7</a>
+  <a href="./" label="Tab 8" icon="blrHome">Tab 8</a>
+  <a href="./" label="Tab 9" icon="blrLockClosed">Tab 9</a>
+  <a href="./" label="Tab 10" icon="blrMusic">Tab 10</a>
+  <a href="./" label="Tab 11" icon="blrPen">Tab 11</a>
+`;
+
+export const BlrTabBar = (params: BlrTabBarType) => BlrTabBarRenderFunction(params, tabsAsChildren);
 
 BlrTabBar.storyName = 'TabBar';
 

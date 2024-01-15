@@ -1,3 +1,4 @@
+/* eslint-disable lit/binding-positions */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, query, queryAll, state } from 'lit/decorators.js';
@@ -58,6 +59,8 @@ export class BlrTabBar extends LitElement {
 
   @state() protected selectedTabIndex: number | undefined;
 
+  protected _tabBarElements: Element[] | undefined;
+
   protected scrollTab = (direction: string, speed: number, distance: number) => {
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
@@ -77,36 +80,17 @@ export class BlrTabBar extends LitElement {
     this.selectedTabIndex = index;
   }
 
+  protected handleSlotChange() {
+    const slot = this.renderRoot?.querySelector('slot');
+
+    this._tabBarElements = slot?.assignedElements({ flatten: false });
+    this.requestUpdate();
+  }
+
   protected render() {
     if (this.size) {
       const dynamicStyles =
         this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
-
-      /*
-      const setActive = (tabIndex: number) => {
-        const selectedTab = this._navItems[tabIndex];
-        selectedTab.setAttribute('aria-selected', 'true');
-        if (selectedTab.parentElement) {
-          [...selectedTab.parentElement.children].forEach((sib) => sib.classList.remove('active'));
-          selectedTab.classList.add('active');
-        }
-        if (!selectedTab.classList.contains('disabled')) {
-          this._panels.forEach((panel) => {
-            panel.classList.remove('active');
-            panel.setAttribute('hidden', '');
-          });
-          this._panels[tabIndex].classList.add('active');
-          this._panels[tabIndex].removeAttribute('hidden');
-        }
-      };
-
-      const handleSelect = (event: Event, label: string) => {
-        event.preventDefault();
-        const navLabels = Object.values(this._navItemsSlots).map((nav) => nav.innerText);
-        const index = navLabels.indexOf(label);
-        this._navItems.forEach((listItem: Element) => listItem.addEventListener('click', () => setActive(index)));
-      };
-      */
 
       const classes = classMap({
         [`${this.variant}`]: this.variant,
@@ -139,6 +123,7 @@ export class BlrTabBar extends LitElement {
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>
+
         <div class="blr-tab-bar-group ${classes}">
           ${this.overflowVariantStandard === 'buttons'
             ? html`
@@ -157,7 +142,69 @@ export class BlrTabBar extends LitElement {
             : nothing}
           <div class="blr-tab-bar ${this.alignment}">
             <ul class="nav-list ${navListClasses}" role="tablist">
-              ${this.tabs.map((tab, index) => {
+              <slot @slotchange=${this.handleSlotChange}></slot>
+              ${this._tabBarElements?.map((tab: Element, index) => {
+                const navListItemClasses = classMap({
+                  'disabled': tab.hasAttribute('disabled') || tab.getAttribute('disabled') === 'true',
+                  'nav-item': true,
+                  [`${this.size}`]: this.size || 'md',
+                  [`${this.iconPosition}`]: this.iconPosition,
+                  'selected': index === this.selectedTabIndex,
+                });
+
+                const navListItemContainer = classMap({
+                  'disabled': tab.getAttribute('disabled') === 'true',
+                  'nav-item-container': true,
+                  [`${this.size}`]: this.size || 'md',
+                  [`${this.iconPosition}`]: this.iconPosition,
+                });
+
+                const navListItemUnderline = classMap({
+                  'nav-item-underline': true,
+                  'selected': index === this.selectedTabIndex,
+                });
+
+                return html`
+                  <li class="${navListItemContainer}" role="presentation">
+                    <div class="nav-item-content-wrapper">
+                      <a
+                        id=${`${tab.getAttribute('label')?.toLowerCase()} tab`}
+                        role="tab"
+                        href=${`#${tab.getAttribute('href')}`}
+                        aria-controls=${tab.getAttribute('label')?.toLowerCase()}
+                        class="${navListItemClasses}"
+                        @click=${() => {
+                          if (!tab.hasAttribute('disabled') || tab.getAttribute('disabled') === 'false') {
+                            this.handleSelect(index);
+                          }
+                        }}
+                        tabindex=${tab.hasAttribute('disabled') && tab.getAttribute('disabled') === 'true'
+                          ? '-1'
+                          : nothing}
+                      >
+                        ${this.tabContent !== 'labelOnly' && tab.hasAttribute('icon')
+                          ? BlrIconRenderFunction(
+                              {
+                                icon: calculateIconName(tab.getAttribute('icon')!, iconSizeVariant),
+                                size: iconSizeVariant,
+                              },
+                              {
+                                'aria-hidden': true,
+                              }
+                            )
+                          : nothing}
+                        ${this.tabContent !== 'iconOnly'
+                          ? html` <label class="blr-semantic-action ${this.size}" name="${tab.getAttribute('label')}"
+                              >${tab.getAttribute('label')}</label
+                            >`
+                          : nothing}
+                      </a>
+                    </div>
+                    <div class="${navListItemUnderline}"></div>
+                  </li>
+                `;
+              })}
+              <!-- ${this.tabs.map((tab, index) => {
                 const navListItemClasses = classMap({
                   'disabled': tab?.disabled || false,
                   'nav-item': true,
@@ -216,7 +263,7 @@ export class BlrTabBar extends LitElement {
                     <div class="${navListItemUnderline}"></div>
                   </li>
                 `;
-              })}
+              })} -->
             </ul>
           </div>
           ${this.overflowVariantStandard === 'buttons'

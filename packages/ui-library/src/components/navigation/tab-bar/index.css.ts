@@ -32,6 +32,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
   - [ ] Add layoutvariant where I see the buttons, but no scrollbar
   */
   return typeSafeNestedCss/* css */ `
+      slot {
+        display: none;
+      }
+
       .wrapper-horizontal {
         position: relative;
         display: block;
@@ -163,6 +167,12 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
               &.fullWidth {
                 _flex: 1 1 0px;
+              }
+
+              .nav-item-underline {
+                &.selected {
+                background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Pressed}
+                }
               }
 
               .nav-item-content-wrapper {
