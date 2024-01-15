@@ -24,6 +24,7 @@ const logEventType = (event: Event) => {
 const defaultParams: BlrToggleSwitchType = {
   theme: 'Light',
   size: 'md',
+  checked: false,
   showStateLabel: true,
   label: 'Label-text',
   onLabel: 'On-label-text',
@@ -34,7 +35,6 @@ const defaultParams: BlrToggleSwitchType = {
   disabled: false,
   readonly: false,
   checkInputId: 'toggle-switchId',
-  checked: false,
   variant: 'trailing',
   name: 'toggle-switch-name',
   onChange: logEventType,
