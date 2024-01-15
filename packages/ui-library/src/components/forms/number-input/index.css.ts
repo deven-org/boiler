@@ -57,15 +57,15 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
         > input {
           text-align: right;
           &.sm{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+            padding-right:${NumberInput.InputField.TextWrapper.ItemSpacing.SM};
           }
 
           &.md{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+            padding-right:${NumberInput.InputField.TextWrapper.ItemSpacing.MD};
           }
 
           &.lg{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+            padding-right:${NumberInput.InputField.TextWrapper.ItemSpacing.LG};
           }
         }
       }
@@ -340,15 +340,15 @@ export const baseStyle = typeSafeNestedCss`
       }
       > input.prepend{
         &.sm{
-        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
+        padding-left:${NumberInput.InputField.TextWrapper.ItemSpacing.SM};
         }
 
         &.md{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
+          padding-left:${NumberInput.InputField.TextWrapper.ItemSpacing.MD};
         }
         
         &.lg{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
+          padding-left:${NumberInput.InputField.TextWrapper.ItemSpacing.LG};
         }
       }
     }
