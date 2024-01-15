@@ -107,12 +107,6 @@ export default {
       description:
         'Enter an array containing information about the label, value and disabled prop for all options that are part of the select.',
       control: 'array',
-      options: [
-        { value: '0', label: 'Option 1', selected: false, disabled: true },
-        { value: '1', label: 'Option 2', selected: false, disabled: false },
-        { value: '2', label: 'Option 3', selected: true, disabled: false },
-        { value: '4', label: 'Option 4', selected: false, disabled: false },
-      ],
       table: {
         category: 'Content / Settings',
       },
@@ -301,24 +295,33 @@ export const SizeVariant = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        size: 'sm',
-        label: 'Select SM',
-        labelAppendix: '',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        size: 'md',
-        label: 'Select MD',
-        labelAppendix: '',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        size: 'lg',
-        label: 'Select LG',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          size: 'sm',
+          label: 'Select SM',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          size: 'md',
+          label: 'Select MD',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          size: 'lg',
+          label: 'Select LG',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -337,12 +340,15 @@ export const Disabled = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        disabled: true,
-        label: 'Disabled',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          disabled: true,
+          label: 'Disabled',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -361,12 +367,15 @@ export const Required = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        required: true,
-        label: 'Required',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          required: true,
+          label: 'Required',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -382,13 +391,16 @@ export const HasError = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        hasError: true,
-        errorMessageIcon: undefined,
-        label: 'Error',
-        labelAppendix: '',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          hasError: true,
+          errorMessageIcon: undefined,
+          label: 'Error',
+          labelAppendix: '',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -405,24 +417,22 @@ export const FormLabel = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        label: 'With Label',
-        labelAppendix: '(with Appendix)',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        label: ' ',
-        labelAppendix: ' ',
-        /*
-        options: [
-          { value: '0', label: 'Option 1', selected: false, disabled: true },
-          { value: '1', label: 'Option 2', selected: false, disabled: false },
-          { value: '2', label: 'Without Label', selected: true, disabled: false },
-          { value: '4', label: 'Option 4', selected: false, disabled: false },
-        ],
-        */
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          label: 'With Label',
+          labelAppendix: '(with Appendix)',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          label: ' ',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -438,18 +448,24 @@ export const Icon = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: 'blrArrowUp',
-        label: 'With Icon',
-        labelAppendix: ' ',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: undefined,
-        label: 'Default Icon',
-        labelAppendix: ' ',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          icon: 'blrArrowUp',
+          label: 'With Icon',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          icon: undefined,
+          label: 'Default Icon',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
@@ -463,22 +479,28 @@ export const FormCaptionGroup = () => {
   return html`
     ${sharedStyles}
     <div class="stories-select">
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        hasHint: true,
-        label: 'Hint message',
-        labelAppendix: ' ',
-      })}
-      ${BlrSelectRenderFunction({
-        ...defaultParams,
-        icon: undefined,
-        label: 'Hint and error message',
-        labelAppendix: '',
-        hasHint: true,
-        hasError: true,
-        errorMessage: "OMG it's an error",
-        errorMessageIcon: 'blrError',
-      })}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          hasHint: true,
+          label: 'Hint message',
+          labelAppendix: ' ',
+        },
+        optionsAsChildren
+      )}
+      ${BlrSelectRenderFunction(
+        {
+          ...defaultParams,
+          icon: undefined,
+          label: 'Hint and error message',
+          labelAppendix: '',
+          hasHint: true,
+          hasError: true,
+          errorMessage: "OMG it's an error",
+          errorMessageIcon: 'blrError',
+        },
+        optionsAsChildren
+      )}
     </div>
   `;
 };
