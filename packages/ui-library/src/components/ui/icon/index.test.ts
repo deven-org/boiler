@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/await-thenable */
+import '@boiler/ui-library/dist/';
+
 import { BlrIconRenderFunction } from './renderFunction';
 import type { BlrIconType } from '@boiler/ui-library/dist/';
 
@@ -17,7 +19,6 @@ describe('blr-icon', () => {
     });
 
     const element = await fixture(BlrIconRenderFunction({ ...sampleParams, classMap: classes }));
-
     await expect(element.className).to.contain(TEST_CLASS);
   });
 });

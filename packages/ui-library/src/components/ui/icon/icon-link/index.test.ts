@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrIconLinkRenderFunction } from './renderFunction';
 import type { BlrIconLinkType } from '@boiler/ui-library/dist/';
 

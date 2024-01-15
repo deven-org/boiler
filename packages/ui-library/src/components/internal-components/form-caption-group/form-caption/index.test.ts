@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrFormCaptionRenderFunction } from './renderFunction';
 import type { BlrFormCaptionType } from '@boiler/ui-library/dist/';
 

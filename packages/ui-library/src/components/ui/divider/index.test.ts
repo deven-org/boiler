@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrDividerRenderFunction } from './renderFunction';
 import type { BlrDividerType } from '@boiler/ui-library/dist/';
 

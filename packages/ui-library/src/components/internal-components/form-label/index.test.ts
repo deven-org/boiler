@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import type { BlrFormLabelType } from '@boiler/ui-library/dist/';
 

@@ -11,7 +11,8 @@ import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 
-export const TAG_NAME = 'blr-text-input';
+import { TAG_NAME } from './renderFunction';
+
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';

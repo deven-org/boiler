@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrTabBarRenderFunction } from './renderFunction';
 import type { BlrTabBarType } from '@boiler/ui-library/dist/';
 

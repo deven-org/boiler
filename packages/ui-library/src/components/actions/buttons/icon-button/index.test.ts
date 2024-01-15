@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrIconButtonRenderFunction } from './renderFunction';
 import type { BlrIconButtonType } from '@boiler/ui-library/dist/';
 

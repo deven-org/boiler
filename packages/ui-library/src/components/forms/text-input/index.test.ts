@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrTextInputRenderFunction } from './renderFunction';
 import type { BlrTextInputType } from '@boiler/ui-library/dist/';
 

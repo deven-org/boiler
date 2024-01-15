@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrTooltipRenderFunction } from './renderFunction';
 import type { BlrTooltipType } from '@boiler/ui-library/dist/';
 

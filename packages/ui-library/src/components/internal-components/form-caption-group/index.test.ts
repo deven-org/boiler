@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrFormCaptionGroupRenderFunction } from './renderFunction';
 import type { BlrFormCaptionGroupType } from '@boiler/ui-library/dist/';
 

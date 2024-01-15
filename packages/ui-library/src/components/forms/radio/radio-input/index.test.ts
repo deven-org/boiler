@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrRadioRenderFunction } from './renderFunction';
 import type { BlrRadioType } from '@boiler/ui-library/dist/';
 

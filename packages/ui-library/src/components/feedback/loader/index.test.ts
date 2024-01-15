@@ -1,3 +1,5 @@
+import '@boiler/ui-library/dist/';
+
 import { BlrLoaderRenderFunction } from './renderFunction';
 import type { BlrLoaderType } from '@boiler/ui-library/dist/';
 
