@@ -14,8 +14,8 @@ export const styleCustom = typeSafeNestedCss/* css */ `
 
 export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { ToggleSwitch } = componentTokens.Forms;
-    const { LabelNextToControl } = semanticTokens.Forms;
+    const { ToggleSwitch, FormLabel } = componentTokens.Forms;
+
     const { FocusBorder } = semanticTokens.Global;
 
     return typeSafeNestedCss/* css */ `
@@ -48,7 +48,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           flex-direction: column;
 
           & > .blr-form-label-inline {
-            color: ${LabelNextToControl.Rest};
+            color: ${FormLabel.InlineLabel.TextColor.Rest};
           }
         }
 
@@ -89,7 +89,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
             }
       
             & > .blr-form-label-inline {
-              color: ${LabelNextToControl.Rest};
+              color: ${FormLabel.InlineLabel.TextColor.Rest};
             }
 
             & > .toggle-switch-unselect {
@@ -240,14 +240,14 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           }
 
           & > .blr-form-label-inline {
-            color: ${LabelNextToControl.Rest};
+            color: ${FormLabel.InlineLabel.TextColor.Rest};
           }
         }
 
         &.disabled {
           & > .toggle-content-col {
             & > .blr-form-label-inline {
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }
         }
@@ -255,7 +255,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
         &.readonly {
           > .toggle-content-col {
             > .blr-form-label-inline {
-              color: ${LabelNextToControl.ReadOnly};
+              color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
             }
           }
         }
