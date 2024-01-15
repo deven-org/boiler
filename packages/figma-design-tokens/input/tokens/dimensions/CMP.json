@@ -939,6 +939,22 @@
             "type": "spacing"
           }
         }
+      },
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{UI.Caption.SM}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{UI.Caption.MD}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{UI.Caption.LG}",
+            "type": "typography"
+          }
+        }
       }
     },
     "Tooltip": {
@@ -1195,15 +1211,15 @@
       "Text": {
         "Typography": {
           "SM": {
-            "value": "{Forms.Caption.Typography.SM}",
+            "value": "{UI.Caption.SM}",
             "type": "typography"
           },
           "MD": {
-            "value": "{Forms.Caption.Typography.MD}",
+            "value": "{UI.Caption.MD}",
             "type": "typography"
           },
           "LG": {
-            "value": "{Forms.Caption.Typography.LG}",
+            "value": "{UI.Caption.LG}",
             "type": "typography"
           }
         }
@@ -3394,24 +3410,6 @@
           },
           "LG": {
             "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-            "type": "typography"
-          }
-        }
-      }
-    },
-    "Counter": {
-      "Text": {
-        "Typography": {
-          "SM": {
-            "value": "{Forms.Caption.Typography.SM}",
-            "type": "typography"
-          },
-          "MD": {
-            "value": "{Forms.Caption.Typography.MD}",
-            "type": "typography"
-          },
-          "LG": {
-            "value": "{Forms.Caption.Typography.LG}",
             "type": "typography"
           }
         }

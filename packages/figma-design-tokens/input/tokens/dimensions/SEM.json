@@ -638,22 +638,6 @@
           "type": "border"
         }
       }
-    },
-    "Caption": {
-      "Typography": {
-        "SM": {
-          "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-          "type": "typography"
-        },
-        "MD": {
-          "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-          "type": "typography"
-        },
-        "LG": {
-          "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-          "type": "typography"
-        }
-      }
     }
   },
   "Global": {
