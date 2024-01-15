@@ -5,6 +5,9 @@ import { PureIconKeys } from '@boiler/icons';
 import { FormSizes, IconPositionVariant } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 export default {
   title: 'Design System/Web Components/Forms/ToggleSwitch',
   argTypes: {
