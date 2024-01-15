@@ -9,10 +9,6 @@ import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
-    .wrapper {
-      display: flex;
-      justify-content: center;
-    }
     .stories-checkbox {
       display: flex;
       flex-wrap: wrap;
@@ -51,7 +47,7 @@ export default {
       },
     },
     checkedIcon: {
-      description: '',
+      description: 'Select an icon which is displayed when checkbox is checked.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       if: { arg: 'checked', eq: true },
@@ -60,14 +56,14 @@ export default {
       },
     },
     indeterminate: {
-      description: 'Choose if component is checked.',
+      description: 'Choose if component is indeterminate.',
       control: { type: 'boolean' },
       table: {
         category: 'Content / Settings',
       },
     },
     indeterminatedIcon: {
-      description: 'Choose if component is indeterminate.',
+      description: 'Select an icon which is displayed when checkbox is indeterminate.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
       if: { arg: 'indeterminate', eq: true },
@@ -222,13 +218,12 @@ export default {
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
         component: `<Markdown>
-Checkbox represents two states: checked (selected) or unchecked (deselected), it  is usually accompanied by text labels thatdescribe the option or action associated with the Checkbox.        
+Checkbox represents two states: checked (selected) or unchecked (deselected), it  is usually accompanied by text labels that describe the option or action associated with the Checkbox.        
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
 - [**Content / Settings**](#content--settings)
- - [**Checked**](#checked) 
- - [**Unchecked**](#unchecked) 
- - [**Indeterminate**](#Indeterminate)  
+ - [**Checked / Unchecked **](#checked--unchecked) 
+ - [**Indeterminate**](#indeterminate)  
 - [**States**](#states)
  - [**Disabled**](#disabled) 
  - [**Readonly**](#readonly)
@@ -243,57 +238,32 @@ Checkbox represents two states: checked (selected) or unchecked (deselected), it
     },
   },
 };
-
-export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
-BlrCheckbox.storyName = 'Checkbox';
-
-const args: BlrCheckboxType = {
-  theme: 'Light',
-  size: 'md',
-
-  hasLabel: true,
-  label: 'Label',
-
-  hasError: false,
-  errorMessage: 'This is a sample error message',
-  errorIcon: undefined,
-
-  hasHint: false,
-  hintMessage: 'This is a small hint message',
-  hintIcon: undefined,
-  name: 'checkInputId',
-  checkInputId: 'checkInputId',
-  disabled: false,
-  checked: false,
-  indeterminate: false,
-  readonly: false,
-  arialabel: 'check Input',
-};
-BlrCheckbox.args = args;
-
 // Default parameters for Checkbox component
 const defaultParams: BlrCheckboxType = {
   theme: 'Light',
   size: 'md',
-
+  checked: false,
+  checkedIcon: 'blrCheckmark',
+  indeterminate: false,
+  indeterminatedIcon: 'blrMinus',
   hasLabel: true,
-  label: 'Label',
-
-  hasError: false,
-  errorMessage: 'This is a sample error message',
-  errorIcon: undefined,
-
+  label: 'Label-text',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: undefined,
-  name: 'checkInputId',
-  checkInputId: 'checkInputId',
+  hintIcon: 'blrInfo',
   disabled: false,
-  checked: false,
-  indeterminate: false,
   readonly: false,
+  hasError: false,
+  errorMessage: ' ',
+  errorIcon: undefined,
   arialabel: 'check Input',
+  checkInputId: 'checkInputId',
+  name: 'checkInputId',
 };
+
+export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
+BlrCheckbox.storyName = 'Checkbox';
+BlrCheckbox.args = defaultParams;
 
 // All Stories
 //Appearance Size Story
@@ -334,7 +304,8 @@ SizeVariant.story = {
 /**
  * ## Content / Settings
  * ### Checked
- * The checked state on a Checkbox indicates that the Checkbox is selected or enabled.
+ * The Checkbox component can be checked or unchecked. The checked state indicates that the Checkbox component is selected or enabled.
+ * The unchecked state indicates that the Checkbox component is not selected.
  */
 export const Checked = () => {
   return html`
@@ -346,23 +317,6 @@ export const Checked = () => {
           label: 'Checked',
           checked: true,
         })}
-      </div>
-    </div>
-  `;
-};
-Checked.story = {
-  name: ' ',
-};
-
-/**
- *### Unchecked
- * The unchecked state on a Checkbox indicates that the Checkbox is not selected.
- */
-export const Unchecked = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-checkbox">
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
           label: 'Unchecked',
@@ -372,7 +326,7 @@ export const Unchecked = () => {
     </div>
   `;
 };
-Unchecked.story = {
+Checked.story = {
   name: ' ',
 };
 
@@ -445,33 +399,34 @@ export const Readonly = () => {
 Readonly.story = {
   name: ' ',
 };
+// todo will be implemented with ticket no. #673
+// /**
+//  * ## Validation
+//  *
+//  * ### Required
+//  * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Checkbox component was not checked, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component in the dependencies section below.
+//  */
+// export const Required = () => {
+//   return html`
+//     ${sharedStyles}
+//     <div class="wrapper">
+//       <div class="stories-checkbox">
+//         ${BlrCheckboxRenderFunction({
+//           ...defaultParams,
+//           label: 'Required',
+//         })}
+//       </div>
+//     </div>
+//   `;
+// };
+// Required.story = {
+//   name: ' ',
+// };
 
 /**
  * ## Validation
- *
- * ### Required
- * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Checkbox component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component in the dependencies section below.
- */
-export const Required = () => {
-  return html`
-    ${sharedStyles}
-    <div class="wrapper">
-      <div class="stories-checkbox">
-        ${BlrCheckboxRenderFunction({
-          ...defaultParams,
-          label: 'Required',
-        })}
-      </div>
-    </div>
-  `;
-};
-Required.story = {
-  name: ' ',
-};
-
-/**
  * ### Has Error
- * The Checkbox component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Checkbox or in case the Checkbox was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) in the dependencies section below.
+ * The Checkbox component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Checkbox or in case the Checkbox was set as required and has not been checked before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
 export const HasError = () => {
   return html`
@@ -531,28 +486,17 @@ export const FormCaptionGroup = () => {
       <div class="stories-checkbox">
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
-          label: 'Form Label',
+          label: 'Hint message',
           hasHint: true,
         })}
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
-          label: 'Form Label with a hint and error message',
+          label: 'Hint and error message',
           hasHint: true,
           hasError: true,
           hintIcon: 'blr360',
+          errorMessage: "OMG it's an error",
           errorIcon: 'blrErrorFilled',
-        })}
-        ${BlrCheckboxRenderFunction({
-          ...defaultParams,
-          label: 'Form Label with only a hint and error message',
-          hasHint: true,
-          hasError: true,
-        })}
-        ${BlrCheckboxRenderFunction({
-          ...defaultParams,
-          label: 'Form Label with only a error message',
-          hasHint: false,
-          hasError: true,
         })}
       </div>
     </div>
