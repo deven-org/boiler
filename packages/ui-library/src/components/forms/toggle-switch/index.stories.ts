@@ -233,24 +233,24 @@ export const SizeVariant = () => {
         ...defaultParams,
         label: 'Toggle Switch SM',
         hasHint: false,
-        offLabel: ' ',
-        onLabel: ' ',
+        offLabel: undefined,
+        onLabel: undefined,
         size: 'sm',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch MD',
         hasHint: false,
-        offLabel: ' ',
-        onLabel: ' ',
+        offLabel: undefined,
+        onLabel: undefined,
         size: 'md',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch LG',
         hasHint: false,
-        offLabel: ' ',
-        onLabel: ' ',
+        offLabel: undefined,
+        onLabel: undefined,
         size: 'lg',
       })}
     </div>
@@ -268,7 +268,9 @@ export const HasStateLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        hasHint: false,
+        offLabel: undefined,
+        onLabel: undefined,
       })}
     </div>
   `;
@@ -286,7 +288,18 @@ export const Active = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        hasHint: false,
+        label: undefined,
+        offLabel: undefined,
+        onLabel: undefined,
+        checked: true,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        hasHint: false,
+        label: undefined,
+        offLabel: undefined,
+        onLabel: undefined,
       })}
     </div>
   `;
@@ -303,7 +316,11 @@ export const OnLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        checked: true,
+        hasHint: false,
+        label: undefined,
+        onLabel: 'This is an onLabel',
+        offLabel: undefined,
       })}
     </div>
   `;
@@ -320,7 +337,10 @@ export const OffLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        hasHint: false,
+        label: undefined,
+        offLabel: 'This is an offLabel',
+        onLabel: undefined,
       })}
     </div>
   `;
@@ -339,7 +359,11 @@ export const Disabled = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        disabled: true,
+        hasHint: false,
+        label: undefined,
+        onLabel: undefined,
+        offLabel: undefined,
       })}
     </div>
   `;
@@ -356,7 +380,11 @@ export const Readonly = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        readonly: true,
+        hasHint: false,
+        label: undefined,
+        onLabel: undefined,
+        offLabel: undefined,
       })}
     </div>
   `;
@@ -366,7 +394,7 @@ Readonly.story = { name: ' ' };
 /**
  * ## Dependencies
  * ### Form Label
- * The Toggle Switch component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the Form Label [link to FormLabel component] component.
+ * The Toggle Switch component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 export const FormLabel = () => {
   return html`
@@ -374,7 +402,17 @@ export const FormLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        label: 'With a label',
+        hasHint: false,
+        onLabel: undefined,
+        offLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        label: undefined,
+        hasHint: false,
+        onLabel: undefined,
+        offLabel: undefined,
       })}
     </div>
   `;
@@ -384,7 +422,7 @@ FormLabel.story = { name: ' ' };
 /**
  * ## Dependencies
  * ### Form Caption
- * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the Form Caption [link to FormCaption] component.
+ * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
 export const FormCaption = () => {
   return html`
@@ -392,7 +430,18 @@ export const FormCaption = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        size: 'md',
+        hintMessage: 'This is a small hint message',
+        label: undefined,
+        offLabel: undefined,
+        onLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        hintMessage: 'This is a small hint message without Icon',
+        hintIcon: undefined,
+        label: undefined,
+        offLabel: undefined,
+        onLabel: undefined,
       })}
     </div>
   `;
