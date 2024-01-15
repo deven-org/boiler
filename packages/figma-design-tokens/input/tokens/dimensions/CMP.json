@@ -3124,12 +3124,13 @@
       }
     },
     "NumberInput": {
-      "Input": {
-        "TextContainer": {
+      "InputField": {
+        "TextWrapper": {
           "ItemSpacing": {
             "SM": {
               "value": "{core.dimensionPX.4}",
-              "type": "spacing"
+              "type": "spacing",
+              "description": "Defines spacing between Prefix, UserInputText and Suffix"
             },
             "MD": {
               "value": "{core.dimensionPX.4}",
