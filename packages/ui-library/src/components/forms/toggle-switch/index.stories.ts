@@ -28,21 +28,22 @@ const defaultParams: BlrToggleSwitchType = {
   label: 'Label-text',
   onLabel: 'On-label-text',
   offLabel: 'Off-label-text',
-  hasHint: true,
+  hasHint: false,
   hintMessage: 'This is a small hint',
   hintIcon: 'blrInfo',
   disabled: false,
   readonly: false,
   checkInputId: 'toggle-switchId',
   checked: false,
-  variant: 'leading',
+  variant: 'trailing',
+  name: 'toggle-switch-name',
   onChange: logEventType,
   onFocus: logEventType,
   onBlur: logEventType,
 };
 
 export default {
-  title: 'Design System/Web Components/Forms/ToggleSwitch',
+  title: 'Design System/Web Components/Forms/Toggle Switch',
   argTypes: {
     size: {
       name: 'sizeVariant',
@@ -58,7 +59,7 @@ export default {
       options: IconPositionVariant,
       control: { type: 'radio' },
       table: {
-        category: 'Content / Settings',
+        category: 'Appearance',
       },
     },
     checked: {
@@ -102,7 +103,7 @@ export default {
     showStateLabel: {
       description: 'Choose if component has a state label.',
       table: {
-        category: 'Content / Settings',
+        disable: true,
       },
     },
     label: {
@@ -117,28 +118,14 @@ export default {
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'showStateLabel', eq: true },
+      if: { arg: 'variant', eq: 'leading' },
     },
     offLabel: {
       description: 'Enter string used as off label text.',
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'showStateLabel', eq: true },
-    },
-    toggleOnIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-      table: {
-        category: 'Content / Settings',
-      },
-    },
-    toggleOffIcon: {
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'select' },
-      table: {
-        category: 'Content / Settings',
-      },
+      if: { arg: 'variant', eq: 'trailing' },
     },
     disabled: {
       description:
@@ -200,8 +187,8 @@ They can also be used to control more complex features, such as the state of a s
  - [**Has State Label**](#has-state-label) 
 - [**Content / Settings**](#content--settings)
  - [**Active**](#active) 
- - [**On Label**](#on-label) 
- - [**Off Label**](#off-label)  
+ - [**On Label**](#onlabel) 
+ - [**Off Label**](#offlabel)  
 - [**States**](#states)
  - [**Disabled**](#disabled) 
  - [**Readonly**](#readonly)
@@ -223,7 +210,7 @@ BlrToggleSwitch.args = defaultParams;
 /**
  * ## Appearance
  * ### Size Variant
- * The Select component comes in 3 sizes: SM, MD, LG.
+ * The Toggle Switch component comes in 3 sizes: SM, MD, LG.
  */
 export const SizeVariant = () => {
   return html`
@@ -268,9 +255,19 @@ export const HasStateLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
+        variant: 'trailing',
         hasHint: false,
+        label: 'Without state label',
         offLabel: undefined,
         onLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        variant: 'leading',
+        label: 'With state label',
+        hasHint: false,
+        offLabel: 'Off',
+        onLabel: 'On',
       })}
     </div>
   `;
