@@ -40,7 +40,7 @@ export class BlrSelect extends LitElement {
   @property() errorMessage?: string;
   @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType;
-  @property() errorIcon?: SizelessIconType;
+  @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
@@ -128,13 +128,13 @@ export class BlrSelect extends LitElement {
               icon: this.hintIcon,
             })
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
               size: this.size,
               message: this.errorMessage,
-              icon: this.errorIcon,
+              icon: this.errorMessageIcon,
             })
           : nothing}
       `;

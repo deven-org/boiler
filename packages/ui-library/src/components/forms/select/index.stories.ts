@@ -30,26 +30,10 @@ const defaultParams: BlrSelectType = {
   required: false,
   hasError: false,
   errorMessage: ' ',
-  errorIcon: undefined,
+  errorMessageIcon: undefined,
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
-
-  /*
-  options: [
-    { value: '0', label: 'Option 1', selected: false, disabled: true },
-    {
-      value: '1',
-      label:
-        'To big option Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.',
-      selected: false,
-      disabled: false,
-    },
-    { value: '2', label: 'Option 3', selected: true, disabled: false },
-    { value: '4', label: 'Option 4', selected: false, disabled: false },
-  ],
-  */
-
   onChange: (event: Event) => console.log(event.type),
 };
 
@@ -171,7 +155,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
+    errorMessageIcon: {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
@@ -258,12 +242,12 @@ Select presents users with a list of options from which they can make a single s
 
 const optionsAsChildren = html`
   <option value="" label="--Please choose an option--"></option>
-  <option value="dog" label="Dog"></option>
-  <option value="cat" label="Cat"></option>
-  <option value="hamster" label="Hamster"></option>
-  <option value="parrot" label="Parrot"></option>
-  <option value="spider" label="Spider"></option>
-  <option value="goldfish" label="Goldfish"></option>
+  <option value="option1" label="Option 1"></option>
+  <option value="option2" label="Option 2"></option>
+  <option value="option3" label="Option 3"></option>
+  <option value="option4" label="Option 4"></option>
+  <option value="option5" label="Option 5"></option>
+  <option value="option6" label="Option 6"></option>
 `;
 
 export const BlrSelect = (params: BlrSelectType) => BlrSelectRenderFunction(params, optionsAsChildren);
@@ -299,7 +283,6 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
-    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -402,7 +385,7 @@ export const HasError = () => {
       ${BlrSelectRenderFunction({
         ...defaultParams,
         hasError: true,
-        errorIcon: undefined,
+        errorMessageIcon: undefined,
         label: 'Error',
         labelAppendix: '',
       })}
@@ -494,7 +477,7 @@ export const FormCaptionGroup = () => {
         hasHint: true,
         hasError: true,
         errorMessage: "OMG it's an error",
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrError',
       })}
     </div>
   `;
