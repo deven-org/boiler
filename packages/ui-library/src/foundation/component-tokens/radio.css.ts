@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { SM, MD, LG, Legend } = semanticTokens.Forms;
-  const { Radio, RadioGroup, FormLabel } = componentTokens.Forms;
+  const { Radio, RadioGroup, FormLabel, CaptionComponent } = componentTokens.Forms;
 
   /* ToDos:
 
@@ -183,8 +183,8 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.SM};
 
           .caption-wrapper {
-            padding: ${SM.CaptionComponent.Padding};
-            gap: ${SM.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.SM};
+            gap: ${CaptionComponent.Container.ItemSpacing.SM};
           }
 
           .blr-form-label-inline {
@@ -209,8 +209,8 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.MD};
 
           .caption-wrapper {
-            padding: ${MD.CaptionComponent.Padding};
-            gap: ${MD.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.MD};
+            gap: ${CaptionComponent.Container.ItemSpacing.MD};
           }
 
           .blr-form-label-inline {
@@ -235,8 +235,8 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.LG};
 
           .caption-wrapper {
-            padding: ${LG.CaptionComponent.Padding};
-            gap: ${LG.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.LG};
+            gap: ${CaptionComponent.Container.ItemSpacing.LG};
           }
 
           .blr-form-label-inline {
@@ -488,21 +488,24 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         margin-top: 0;
 
         &.sm {
-          padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${SM.Caption.fontFamily}, sans-serif;
-          font-size: ${SM.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.SM};
+          font-family: ${CaptionComponent.Text.Typography.SM.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.SM.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.SM.lineHeight};
         }
 
         &.md {
-          padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${MD.Caption.fontFamily}, sans-serif;
-          font-size: ${MD.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.MD};
+          font-family: ${CaptionComponent.Text.Typography.MD.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.MD.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.MD.lineHeight};
         }
 
         &.lg {
-          padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${LG.Caption.fontFamily}, sans-serif;
-          font-size: ${LG.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.LG};
+          font-family: ${CaptionComponent.Text.Typography.LG.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.LG.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.LG.lineHeight};
         }
       }
     }
