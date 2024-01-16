@@ -981,6 +981,12 @@
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }
+      },
+      "Text": {
+        "Typography": {
+          "value": "{UI.Caption.SM}",
+          "type": "typography"
+        }
       }
     },
     "Dialog": {

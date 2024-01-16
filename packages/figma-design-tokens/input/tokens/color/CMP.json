@@ -53,6 +53,12 @@
         "BackgroundColor": {
           "value": "{q.surface.inverted}",
           "type": "color"
+        },
+        "Elevation": {
+          "Elevated": {
+            "value": "{Elevation.Lvl_1}",
+            "type": "boxShadow"
+          }
         }
       },
       "Text": {
