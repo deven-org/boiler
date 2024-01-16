@@ -3168,12 +3168,12 @@
             "description": "Defines the gap between hint and error message"
           },
           "MD": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.5}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
           "LG": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.6}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           }
