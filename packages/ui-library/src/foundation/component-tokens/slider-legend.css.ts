@@ -172,8 +172,8 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
     .range__container {
       & > .range__pip {
-        width: ${Forms.Slider.TickMark.Sizing};
-        height: ${Forms.Slider.TickMark.Sizing};
+        width: ${Forms.Slider.TickMark.Size};
+        height: ${Forms.Slider.TickMark.Size};
         margin: 0 0 10px;
         border-width: 1px;
         border-style: solid;
