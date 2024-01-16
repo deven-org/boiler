@@ -3060,8 +3060,8 @@
       },
       "Track": {
         "Border": {
-          "Active": {
-            "Default": {
+          "Default": {
+            "Active": {
               "value": {
                 "color": "{Forms.Slider.Track.BorderColor.Default.Active}",
                 "width": "{core.dimensionPX.4}",
@@ -3069,25 +3069,25 @@
               },
               "type": "border"
             },
-            "Mute": {
-              "value": {
-                "color": "{Forms.Slider.Track.BorderColor.Mute.Active}",
-                "width": "{core.dimensionPX.4}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          },
-          "Inactive": {
-            "Default": {
+            "Inactive": {
               "value": {
                 "color": "{Forms.Slider.Track.BorderColor.Default.Inactive}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": {
+                "color": "{Forms.Slider.Track.BorderColor.Mute.Active}",
+                "width": "{core.dimensionPX.4}",
+                "style": "solid"
+              },
+              "type": "border"
             },
-            "Mute": {
+            "Inactive": {
               "value": {
                 "color": "{Forms.Slider.Track.BorderColor.Mute.Inactive}",
                 "width": "{core.dimensionPX.4}",
