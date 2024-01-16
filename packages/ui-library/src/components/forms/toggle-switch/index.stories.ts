@@ -125,7 +125,7 @@ export default {
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'variant', eq: 'trailing' },
+      if: { arg: 'variant', eq: 'leading' },
     },
     disabled: {
       description:
@@ -187,13 +187,12 @@ They can also be used to control more complex features, such as the state of a s
  - [**Has State Label**](#has-state-label) 
 - [**Content / Settings**](#content--settings)
  - [**Checked**](#checked) 
- - [**On Label**](#onlabel) 
- - [**Off Label**](#offlabel)  
+ - [**On Label**](#on-label) 
+ - [**Off Label**](#off-label)  
 - [**States**](#states)
  - [**Disabled**](#disabled) 
  - [**Readonly**](#readonly)
 - [**Dependencies**](#dependencies)
- - [**Form-Label**](#form-label) 
  - [**Form Caption**](#form-caption)  
 </Markdown>
         `,
@@ -455,8 +454,8 @@ export const FormCaption = () => {
         hintMessage: 'This is a small hint message',
         hintIcon: 'blrInfo',
         label: 'Hint message with state label',
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: 'Off',
+        onLabel: 'On',
       })}
     </div>
   `;
