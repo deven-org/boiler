@@ -25,7 +25,7 @@ type Option = {
   disabled?: boolean;
 };
 
-export const TAG_NAME = 'blr-select';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrSelect extends LitElement {

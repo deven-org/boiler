@@ -15,7 +15,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-checkbox';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrCheckbox extends LitElement {

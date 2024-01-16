@@ -7,6 +7,9 @@ import { PureIconKeys } from '@boiler/icons/icons-optimized';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 const sharedStyles = html`
   <style>
     .wrapper {

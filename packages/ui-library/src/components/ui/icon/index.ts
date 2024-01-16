@@ -7,8 +7,7 @@ import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { until } from 'lit-html/directives/until.js';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
-
-export const TAG_NAME = 'blr-icon';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrIcon extends LitElement {

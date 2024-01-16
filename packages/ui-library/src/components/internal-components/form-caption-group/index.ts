@@ -5,7 +5,7 @@ import { FormSizesType } from '../../../globals/types';
 import { classMap } from 'lit/directives/class-map.js';
 import { formCaptionGroupStyle } from './index.css';
 
-export const TAG_NAME = 'blr-form-caption-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrFormCaptionGroup extends LitElement {
