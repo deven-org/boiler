@@ -4,7 +4,8 @@ import { InputSizes } from '../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit';
-
+// this loads the all components instances and registers their html tags
+import '../../../../index';
 const sharedStyles = html`
   <style>
     .wrapper {
@@ -12,9 +13,6 @@ const sharedStyles = html`
     }
   </style>
 `;
-
-// this loads the all components instances and registers their html tags
-import '../../../../index';
 
 export default {
   title: 'Design System/Web Components/Forms/Radio Group/Radio Group',

@@ -16,12 +16,8 @@ export { BlrCheckbox } from './components/forms/checkbox';
 export { BlrNumberInput } from './components/forms/number-input';
 
 export { BlrRadio } from './components/forms/radio';
-export { BlrRadioRenderFunction } from './components/forms/radio/renderFunction';
-export type { BlrRadioType } from './components/forms/radio';
 
 export { BlrRadioGroup } from './components/forms/radio/radio-group';
-export { BlrRadioGroupRenderFunction } from './components/forms/radio/radio-group/renderFunction';
-export type { BlrRadioGroupType } from './components/forms/radio/radio-group';
 
 export { BlrSelect } from './components/forms/select';
 
