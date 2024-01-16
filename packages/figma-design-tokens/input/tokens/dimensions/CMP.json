@@ -2450,22 +2450,20 @@
       }
     },
     "TextArea": {
-      "SM": {
+      "InputField": {
         "MinHeight": {
-          "value": "{core.dimensionREM.64}",
-          "type": "sizing"
-        }
-      },
-      "MD": {
-        "MinHeight": {
-          "value": "{core.dimensionREM.80}",
-          "type": "sizing"
-        }
-      },
-      "LG": {
-        "MinHeight": {
-          "value": "{core.dimensionREM.112}",
-          "type": "sizing"
+          "SM": {
+            "value": "{core.dimensionREM.64}",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.80}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.112}",
+            "type": "sizing"
+          }
         }
       }
     },

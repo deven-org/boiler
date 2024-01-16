@@ -7,8 +7,7 @@ import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { until } from 'lit-html/directives/until.js';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
-
-export const TAG_NAME = 'blr-icon';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
@@ -18,18 +17,25 @@ export class BlrIcon extends LitElement {
   @property() size: SizesType = 'md';
 
   @property() ignoreSize?: boolean = false;
-  @property() onClick?: () => void;
-
   @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
+
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrClick?: () => void;
+
+  protected handleClick = (event: Event) => {
+    this.dispatchEvent(
+      new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
+    );
+  };
 
   protected render() {
     const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
 
     const unfullfilledRenderResult = html`<span
-      @click="${this.onClick}"
+      @click=${this.handleClick}
       @keydown=${(event: KeyboardEvent) => {
         if (event.code === 'Space') {
-          this.onClick?.();
+          this.handleClick(event);
         }
       }}
       class="blr-icon ${sizeKey}"
@@ -43,10 +49,10 @@ export class BlrIcon extends LitElement {
       const fullfilledRenderResult = importedIcon
         .then((iconModule) => {
           return html`<span
-            @click="${this.onClick}"
+            @click=${this.handleClick}
             @keydown=${(event: KeyboardEvent) => {
               if (event.code === 'Space') {
-                this.onClick?.();
+                this.handleClick(event);
               }
             }}
             class="blr-icon ${sizeKey}"

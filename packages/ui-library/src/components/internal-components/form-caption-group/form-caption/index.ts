@@ -10,7 +10,7 @@ import { styleCustom } from './index.css';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-export const TAG_NAME = 'blr-form-caption';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {

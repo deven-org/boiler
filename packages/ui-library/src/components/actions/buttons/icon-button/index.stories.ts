@@ -1,10 +1,14 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import { BlrIconButtonType } from './index';
+import type { BlrIconButtonType } from './index';
+
 import { BlrIconButtonRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+
+// this loads the all components instances and registers their html tags
+import '../../../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

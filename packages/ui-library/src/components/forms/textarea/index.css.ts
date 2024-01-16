@@ -73,15 +73,15 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
       }
 
       &.sm {
-        min-height: ${TextArea.SM.MinHeight};
+        min-height: ${TextArea.InputField.MinHeight.SM};
       }
 
       &.md {
-        min-height: ${TextArea.MD.MinHeight};
+        min-height: ${TextArea.InputField.MinHeight.MD};
       }
 
       &.lg {
-        min-height: ${TextArea.LG.MinHeight};
+        min-height: ${TextArea.InputField.MinHeight.LG};
       }
 
       .flex-container {
