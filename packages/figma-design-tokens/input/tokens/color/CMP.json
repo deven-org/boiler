@@ -888,7 +888,7 @@
     },
     "Slider": {
       "Thumb": {
-        "Fill": {
+        "BackgroundColor": {
           "Rest": {
             "value": "{q.surface.default}",
             "type": "color",
