@@ -11,7 +11,7 @@ const sharedStyles = html`
   <style>
     .stories-toggle-switch {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       flex-direction: column;
       gap: 1.25em;
     }
@@ -186,7 +186,7 @@ They can also be used to control more complex features, such as the state of a s
  - [**Size Variant**](#size-variant) 
  - [**Has State Label**](#has-state-label) 
 - [**Content / Settings**](#content--settings)
- - [**Active**](#active) 
+ - [**Checked**](#checked) 
  - [**On Label**](#onlabel) 
  - [**Off Label**](#offlabel)  
 - [**States**](#states)
@@ -276,7 +276,7 @@ HasStateLabel.story = { name: ' ' };
 
 /**
  * ## Content / Settings
- * ### Active
+ * ### Checked
  * The Toggle Switch component can be active or inactive. The active state indicates that the associated function or setting is currently enabled or turned on. The inactive state signifies that the associated function or setting is currently disabled or turned off.
  */
 export const Active = () => {
@@ -286,7 +286,7 @@ export const Active = () => {
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         hasHint: false,
-        label: undefined,
+        label: 'Active',
         offLabel: undefined,
         onLabel: undefined,
         checked: true,
@@ -294,9 +294,19 @@ export const Active = () => {
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         hasHint: false,
-        label: undefined,
+        label: 'Inactive',
         offLabel: undefined,
         onLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        variant: 'leading',
+        showStateLabel: true,
+        checked: true,
+        hasHint: false,
+        label: 'Active and Inactive state labels',
+        offLabel: 'Inactive',
+        onLabel: 'Active',
       })}
     </div>
   `;
@@ -304,7 +314,7 @@ export const Active = () => {
 Active.story = { name: ' ' };
 
 /**
- * ### OnLabel
+ * ### On Label
  * The Toggle Switch component can have an on label that is displayed when the component has a state label and is active.
  */
 export const OnLabel = () => {
@@ -315,9 +325,11 @@ export const OnLabel = () => {
         ...defaultParams,
         checked: true,
         hasHint: false,
-        label: undefined,
-        onLabel: 'This is an onLabel',
-        offLabel: undefined,
+        label: 'With on label',
+        onLabel: 'On',
+        offLabel: 'Off',
+        variant: 'leading',
+        showStateLabel: true,
       })}
     </div>
   `;
@@ -325,7 +337,7 @@ export const OnLabel = () => {
 OnLabel.story = { name: ' ' };
 
 /**
- * ### OffLabel
+ * ### Off Label
  * The Toggle Switch component can have an off label that is displayed when the component has a state label and is inactive.
  */
 export const OffLabel = () => {
@@ -334,10 +346,13 @@ export const OffLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
+        variant: 'leading',
         hasHint: false,
-        label: undefined,
-        offLabel: 'This is an offLabel',
-        onLabel: undefined,
+        label: 'With off label',
+        offLabel: 'Off',
+        onLabel: 'On',
+        showStateLabel: true,
+        checked: false,
       })}
     </div>
   `;
@@ -346,7 +361,7 @@ OffLabel.story = { name: ' ' };
 
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Toggle Switch component can also be disabled or readonly. The error state is documented under validation [link to Validation].
+ * Apart from states like rest, hover, pressed and focus, the Toggle Switch component can also be disabled or readonly.
  * ### Disabled
  * The Toggle Switch component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
@@ -356,11 +371,23 @@ export const Disabled = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
+        variant: 'trailing',
         disabled: true,
         hasHint: false,
-        label: undefined,
+        label: 'Disabled',
+        showStateLabel: true,
         onLabel: undefined,
         offLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        variant: 'leading',
+        disabled: true,
+        hasHint: false,
+        label: 'Disabled with state label',
+        showStateLabel: true,
+        onLabel: 'On Disabled',
+        offLabel: 'Off Disabled',
       })}
     </div>
   `;
@@ -377,11 +404,23 @@ export const Readonly = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
+        variant: 'trailing',
         readonly: true,
         hasHint: false,
-        label: undefined,
+        label: 'Readonly',
+        showStateLabel: true,
         onLabel: undefined,
         offLabel: undefined,
+      })}
+      ${BlrToggleSwitchRenderFunction({
+        ...defaultParams,
+        variant: 'leading',
+        readonly: true,
+        hasHint: false,
+        label: 'Readonly with state label',
+        showStateLabel: true,
+        onLabel: 'On Readonly',
+        offLabel: 'Off Readonly',
       })}
     </div>
   `;
@@ -390,36 +429,8 @@ Readonly.story = { name: ' ' };
 
 /**
  * ## Dependencies
- * ### Form Label
- * The Toggle Switch component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component.
- */
-export const FormLabel = () => {
-  return html`
-    ${sharedStyles}
-    <div class="stories-toggle-switch">
-      ${BlrToggleSwitchRenderFunction({
-        ...defaultParams,
-        label: 'With a label',
-        hasHint: false,
-        onLabel: undefined,
-        offLabel: undefined,
-      })}
-      ${BlrToggleSwitchRenderFunction({
-        ...defaultParams,
-        label: undefined,
-        hasHint: false,
-        onLabel: undefined,
-        offLabel: undefined,
-      })}
-    </div>
-  `;
-};
-FormLabel.story = { name: ' ' };
-
-/**
- * ## Dependencies
  * ### Form Caption
- * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption](/docs/design-system-web-components-internal-components-formcaptiongroup-formcaption--docs) component.
  */
 export const FormCaption = () => {
   return html`
@@ -427,16 +438,23 @@ export const FormCaption = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
+        variant: 'trailing',
+        hasHint: true,
         hintMessage: 'This is a small hint message',
-        label: undefined,
+        hintIcon: 'blrInfo',
+        showStateLabel: true,
+        label: 'Hint message',
         offLabel: undefined,
         onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hintMessage: 'This is a small hint message without Icon',
-        hintIcon: undefined,
-        label: undefined,
+        variant: 'leading',
+        showStateLabel: true,
+        hasHint: true,
+        hintMessage: 'This is a small hint message',
+        hintIcon: 'blrInfo',
+        label: 'Hint message with state label',
         offLabel: undefined,
         onLabel: undefined,
       })}
