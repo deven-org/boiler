@@ -49,13 +49,17 @@
       }
     },
     "Tooltip": {
-      "SurfaceFill": {
-        "value": "{q.surface.inverted}",
-        "type": "color"
+      "Container": {
+        "BackgroundColor": {
+          "value": "{q.surface.inverted}",
+          "type": "color"
+        }
       },
-      "Content": {
-        "value": "{q.content.oninverted.alpha}",
-        "type": "color"
+      "Text": {
+        "TextColor": {
+          "value": "{q.content.oninverted.alpha}",
+          "type": "color"
+        }
       }
     },
     "Dialog": {
