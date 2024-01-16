@@ -23,7 +23,7 @@ import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { BlrDividerRenderFunction } from '../../ui/divider/renderFunction';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
-export const TAG_NAME = 'blr-tab-bar';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrTabBar extends LitElement {

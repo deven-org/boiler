@@ -12,7 +12,8 @@ import { calculateIconName } from '../../../../utils/calculate-icon-name';
 import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 
-export const TAG_NAME = 'blr-icon-link';
+import { TAG_NAME } from './renderFunction';
+
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
 @customElement(TAG_NAME)
