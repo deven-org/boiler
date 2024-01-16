@@ -1,4 +1,6 @@
-import { BlrRadioRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrRadioRenderFunction } from './renderFunction';
 import type { BlrRadioType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

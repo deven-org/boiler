@@ -17,8 +17,7 @@ import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/for
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
 import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
-
-export const TAG_NAME = 'blr-select';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrSelect extends LitElement {

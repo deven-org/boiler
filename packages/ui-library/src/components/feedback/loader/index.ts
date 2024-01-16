@@ -5,7 +5,7 @@ import { styleCustomLight, styleCustomDark } from './index.css';
 import { ActionSizesType, FeedbackVariantType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 
-export const TAG_NAME = 'blr-loader';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrLoader extends LitElement {

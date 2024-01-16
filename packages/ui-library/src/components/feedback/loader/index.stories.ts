@@ -4,6 +4,9 @@ import { FeedbackSizes, FeedbackVariants } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>

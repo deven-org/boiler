@@ -11,7 +11,7 @@ import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes
 import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-radio-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {

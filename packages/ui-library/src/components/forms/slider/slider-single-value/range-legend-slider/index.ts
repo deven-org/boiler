@@ -14,7 +14,7 @@ import { RenderBtnProps } from '../../../../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../../foundation/_tokens-generated/index.themes';
 
-export const TAG_NAME = 'blr-range-legend-slider';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrRangeLegendSlider extends LitElement {

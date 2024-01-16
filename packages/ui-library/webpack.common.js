@@ -10,18 +10,15 @@ module.exports = {
   optimization: {
     usedExports: true,
   },
-  experiments: {
-    outputModule: true,
-  },
+
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: (pathData) => {
       return pathData.chunk.name === 'main' ? '[name].js' : 'chunk_[name].js';
     },
-    library: {
-      type: 'module',
-    },
+
+    publicPath: 'auto',
   },
   module: {
     rules: [

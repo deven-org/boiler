@@ -10,6 +10,9 @@ import { FormSizesType } from '../../../globals/types';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 export default {
   title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',
   argTypes: {
