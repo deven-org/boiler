@@ -11,7 +11,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-radio';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrRadio extends LitElement {

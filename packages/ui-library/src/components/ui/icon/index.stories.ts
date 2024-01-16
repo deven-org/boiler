@@ -10,6 +10,9 @@ import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { classMap } from 'lit/directives/class-map.js';
 import { SizesType } from '../../../globals/types';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 export default {
   title: 'Design System/Web Components/UI/Icon',
   argTypes: {

@@ -5,7 +5,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
 import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../../globals/types';
 
-export const TAG_NAME = 'blr-button-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrButtonGroup extends LitElement {

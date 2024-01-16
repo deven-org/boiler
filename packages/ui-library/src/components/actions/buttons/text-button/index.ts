@@ -18,10 +18,11 @@ import { calculateIconName } from '../../../../utils/calculate-icon-name';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction';
 
-export const TAG_NAME = 'blr-text-button';
+import { TAG_NAME } from './renderFunction';
+
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-@customElement('blr-text-button')
+@customElement(TAG_NAME)
 export class BlrTextButton extends LitElement {
   static styles = [styleCustom];
 

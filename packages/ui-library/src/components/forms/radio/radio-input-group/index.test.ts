@@ -1,4 +1,6 @@
-import { BlrRadioGroupRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrRadioGroupRenderFunction } from './renderFunction';
 import type { BlrRadioGroupType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

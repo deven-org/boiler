@@ -13,7 +13,7 @@ import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-export const TAG_NAME = 'blr-icon-button';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrIconButton extends LitElement {
