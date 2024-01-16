@@ -20,13 +20,14 @@ fs.readdir(iconDir, (err, files) => {
     if (file.endsWith('.svg')) {
       const fileName = path.parse(file).name;
       const withPrefix = `blr${fileName}`;
-      const withoutSize = withPrefix.split('_')[0];
+      const splitsWithoutSize = withPrefix.split('_').slice(0, -1);
+      const withoutSize = splitsWithoutSize.join('-');
       const name = camelCase(withPrefix);
       const nameWithoutSize = camelCase(withoutSize);
 
       iconNames.push(name);
 
-      if (pureKeys.indexOf(nameWithoutSize) === -1) {
+      if (pureKeys.indexOf(`"${nameWithoutSize}"`) === -1) {
         pureKeys.push(`"${nameWithoutSize}"`);
       }
 
