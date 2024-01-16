@@ -1,5 +1,6 @@
 import '@boiler/ui-library/dist/index.js';
 import './style.scss';
+import { BlrSelect } from '@boiler/ui-library/src';
 
 const toggleLoadingButton = document.querySelector('#toggleLoadingState');
 const toggleDisabledState = document.querySelector('#toggleDisabledState');
@@ -61,3 +62,8 @@ blrCheckbox.addEventListener('blrFocus', () => {
 blrCheckbox.addEventListener('blrBlur', () => {
   addLog('blr-checkbox blurred');
 });
+
+BlrSelect.addEventListener('blrChange', () => {
+  addLog('blr-select changed');
+});
+

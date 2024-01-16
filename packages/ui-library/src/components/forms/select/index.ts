@@ -31,7 +31,6 @@ export class BlrSelect extends LitElement {
   @property() disabled?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: (event: Event) => void;
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
 
@@ -44,6 +43,8 @@ export class BlrSelect extends LitElement {
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
   @property() theme: ThemeType = 'Light';
+
+  @property() blrChange?: () => void;
 
   @state() protected isFocused = false;
 
@@ -62,6 +63,16 @@ export class BlrSelect extends LitElement {
 
     this._optionElements = slot?.assignedElements({ flatten: false });
     this.requestUpdate();
+  }
+
+  protected handleChange(event: Event) {
+    this.dispatchEvent(
+      new CustomEvent('blrChange', {
+        bubbles: true,
+        composed: true,
+        detail: { originalEvent: event },
+      })
+    );
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
@@ -165,7 +176,7 @@ export class BlrSelect extends LitElement {
                 name=${this.name || nothing}
                 ?disabled=${this.disabled}
                 ?required=${this.required}
-                @change=${this.onChange}
+                @change=${this.handleChange}
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >

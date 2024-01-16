@@ -37,7 +37,6 @@ const defaultParams: BlrSelectType = {
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
-  onChange: (event: Event) => console.log(event.type),
 };
 
 export default {
@@ -108,7 +107,7 @@ export default {
     options: {
       name: 'children (options)',
       description:
-        'Enter an array containing information about the label, value and disabled prop for all options that are part of the select.',
+        'Enter a list of html option elements containing information about the label, value and disabled prop for all options that are part of the select.',
       control: 'array',
       table: {
         category: 'Content / Settings',
