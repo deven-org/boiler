@@ -5,6 +5,9 @@ import { getIconName } from '../../../../utils/get-icon-name';
 import { IconKeys } from '@boiler/icons';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
+// this loads the all components instances and registers their html tags
+import '../../../../index';
+
 export default {
   title: 'Design System/Web Components/Forms/RadioGroup',
   argTypes: {

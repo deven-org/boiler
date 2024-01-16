@@ -6,6 +6,9 @@ import { FormSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
@@ -36,7 +39,13 @@ const defaultParams: BlrSelectType = {
   name: 'select',
   options: [
     { value: '0', label: 'Option 1', selected: false, disabled: true },
-    { value: '1', label: 'Option 2', selected: false, disabled: false },
+    {
+      value: '1',
+      label:
+        'To big option Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.',
+      selected: false,
+      disabled: false,
+    },
     { value: '2', label: 'Option 3', selected: true, disabled: false },
     { value: '4', label: 'Option 4', selected: false, disabled: false },
   ],

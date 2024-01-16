@@ -1,4 +1,6 @@
-import { BlrCheckboxRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrCheckboxRenderFunction } from './renderFunction';
 import type { BlrCheckboxType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

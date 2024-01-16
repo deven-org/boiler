@@ -12,7 +12,7 @@ import { formDark, formLight } from '../../../foundation/semantic-tokens/form.cs
 
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-textarea';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {

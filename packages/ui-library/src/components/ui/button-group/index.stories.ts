@@ -1,10 +1,13 @@
 /* eslint-disable no-console */
 import { BlrButtonGroupType } from './index';
-import { BlrButtonGroupFunction } from './renderFunction';
+import { BlrButtonGroupRenderFunction } from './renderFunction';
 import { BlrTextButtonRenderFunction } from '../../actions/buttons/text-button/renderFunction';
 import { BlrIconButtonRenderFunction } from '../../actions/buttons/icon-button/renderFunction';
 import { html } from 'lit';
 import { ButtonGroupAlignmentVariants, ButtonGroupSizes } from '../../../globals/constants';
+
+// this loads the all components instances and registers their html tags
+import '../../../index';
 
 export default {
   title: 'Design System/Web Components/UI/Button Group',
@@ -72,8 +75,8 @@ const contentTextButtons = html`
 `;
 
 export const BlrButtonGroup = (params: BlrButtonGroupType) => html`
-  Text-Buttons ${BlrButtonGroupFunction(params, contentTextButtons)} Icon-Buttons
-  ${BlrButtonGroupFunction(params, contentIconButtons)}
+  Text-Buttons ${BlrButtonGroupRenderFunction(params, contentTextButtons)} Icon-Buttons
+  ${BlrButtonGroupRenderFunction(params, contentIconButtons)}
 `;
 
 BlrButtonGroup.storyName = 'BlrButtonGroup';

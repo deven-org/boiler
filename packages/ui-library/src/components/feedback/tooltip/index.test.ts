@@ -1,4 +1,6 @@
-import { BlrTooltipRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrTooltipRenderFunction } from './renderFunction';
 import type { BlrTooltipType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

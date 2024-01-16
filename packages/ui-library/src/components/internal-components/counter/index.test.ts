@@ -1,4 +1,6 @@
-import { BlrCounterRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrCounterRenderFunction } from './renderFunction';
 import type { BlrCounterType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
