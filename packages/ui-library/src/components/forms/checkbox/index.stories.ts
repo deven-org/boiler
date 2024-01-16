@@ -221,7 +221,7 @@ export default {
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
         component: `<markdown>
-Checkbox represents two states: checked (selected) or unchecked (deselected), it  is usually accompanied by text labels that & describe the option or action associated with the Checkbox.        
+        Checkbox represents two states: checked (selected) or unchecked (deselected). It is usually accompanied by a text label that describes the option or action associated with the Checkbox.        
 
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
