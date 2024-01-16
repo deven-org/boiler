@@ -114,7 +114,7 @@ export class BlrIconButton extends LitElement {
             }
           }}
         >
-          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
             ? BlrLoaderRenderFunction({
                 size: loaderSizeVariant,
