@@ -10,8 +10,8 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
   return typeSafeNestedCss`
     :host {
       left: 0;
-      max-width: ${Tooltip.MaxWidth};
-      min-width: ${Tooltip.MinWidth};
+      max-width: ${Tooltip.TextWrapper.MaxWidth};
+      min-width: ${Tooltip.TextWrapper.MinWidth};
       opacity: 0;
       position: absolute;
       transition: opacity 0.2s;
@@ -20,14 +20,14 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
       width: max-content;
 
       .content {
-        background-color: ${Tooltip.SurfaceFill};
-        border-radius: ${Tooltip.ContentCol.BorderRadius};
-        color: ${Tooltip.Content};
+        background-color: ${Tooltip.Container.BackgroundColor};
+        border-radius: ${Tooltip.TextWrapper.BorderRadius};
+        color: ${Tooltip.Text.TextColor};
         font-family: ${UI.Caption.SM.fontFamily}, sans-serif;
         font-size: ${UI.Caption.SM.fontSize};
         font-weight: ${UI.Caption.SM.fontWeight};
         line-height: ${UI.Caption.SM.lineHeight};
-        padding: ${Tooltip.ContentCol.Padding};
+        padding: ${Tooltip.TextWrapper.Padding};
       }
 
       .elevation {
@@ -53,7 +53,7 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         z-index: 1;
   
         & > svg > path {
-          fill: ${Tooltip.SurfaceFill};
+          fill: ${Tooltip.Container.BackgroundColor};
         }
       }
 
