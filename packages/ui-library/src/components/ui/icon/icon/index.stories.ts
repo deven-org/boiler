@@ -56,7 +56,7 @@ export default {
     ignoreSize: {
       description: 'Choose if size of the component should be defined by the parent container.',
       table: {
-        category: 'Content / Settings',
+        category: 'Appearance',
       },
     },
     arialabel: {
