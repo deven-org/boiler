@@ -296,7 +296,7 @@ export default {
     },
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Text Input allows users to enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
@@ -313,7 +313,7 @@ Text Input allows users to enter textual information or data into a designated a
  - [**Form Label**](#form-label) 
  - [**Icon**](#icon) 
  - [**Form Caption Group**](#form-caption-group)     
-</Markdown>
+</markdown>
         `,
       },
     },
