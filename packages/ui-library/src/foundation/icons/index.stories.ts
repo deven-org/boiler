@@ -31,12 +31,6 @@ export default {
         category: 'Appearance',
       },
     },
-    icon: {
-      description: 'Select the icon of the component.',
-      table: {
-        category: 'Content / Settings',
-      },
-    },
     arialabel: {
       name: 'ariaLabel',
       control: { type: 'text' },
@@ -81,8 +75,9 @@ export const Icon = (params: BlrIconType) => {
 };
 
 const defaultParams: BlrIconType = {
+  theme: 'Light',
   size: 'lg',
-  icon: 'blr360Lg',
+  arialabel: 'Icons',
 };
 
 Icon.args = defaultParams;

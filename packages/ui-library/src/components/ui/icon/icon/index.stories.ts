@@ -1,13 +1,11 @@
 import { html } from 'lit-html';
-import { BlrIconType } from '../index';
-
 import { Sizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import '../../../../index';
 import { BlrIconRenderFunction } from '../renderFunction';
 import { SizesType } from '../../../../globals/types';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
-import { PureIconKeys } from '@boiler/icons/icons-optimized';
+import { PureIconKeys, SizelessIconType } from '@boiler/icons/icons-optimized';
 
 const sharedStyles = html`
   <style>
@@ -21,8 +19,9 @@ const sharedStyles = html`
       font-family: Source Sans Pro, sans-serif;
       font-weight: 400;
       line-height: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       text-align: center;
+      padding-top: 1rem;
     }
   </style>
 `;
@@ -89,17 +88,25 @@ export default {
   },
 };
 
-export const Icon = (params: BlrIconType) => {
+export const Icon = (params: IconType) => {
   return html`${BlrIconRenderFunction({
-    icon: calculateIconName(params.icon as IconType, params.size as SizesType),
+    icon: calculateIconName(params.icon, params.size as SizesType),
     size: params.size,
+    ignoreSize: params.ignoreSize,
   })}`;
 };
 
-const defaultParams: BlrIconType = {
+type IconType = {
+  theme: string;
+  size: SizesType;
+  icon: SizelessIconType; // Update the type definition for icon
+  ignoreSize: boolean;
+  arialabel: string;
+};
+const defaultParams: IconType = {
   theme: 'Light',
   size: 'lg',
-  icon: 'blr360Lg',
+  icon: 'blr360',
   ignoreSize: false,
   arialabel: 'Icon',
 };
