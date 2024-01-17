@@ -41,11 +41,11 @@ export const generateRangeBar = (
   const { tokenizedLight, tokenizedDark } = renderThemedCssStrings((componentTokens) => {
     const { Forms } = componentTokens;
 
-    const activeDefaultColor = Forms.Slider.Track.Stroke.Active.Default;
-    const activeMuteColor = Forms.Slider.Track.Stroke.Inactive.Default;
+    const activeDefaultColor = Forms.Slider.Track.Border.Default.Active.color;
+    const activeMuteColor = Forms.Slider.Track.Border.Default.Inactive.color;
 
-    const disabledDefaultColor = Forms.Slider.Track.Stroke.Active.Mute;
-    const disbledMuteColor = Forms.Slider.Track.Stroke.Inactive.Mute;
+    const disabledDefaultColor = Forms.Slider.Track.Border.Mute.Active.color;
+    const disbledMuteColor = Forms.Slider.Track.Border.Mute.Inactive.color;
 
     const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
     const muteColor = disabled ? disbledMuteColor : activeMuteColor;
