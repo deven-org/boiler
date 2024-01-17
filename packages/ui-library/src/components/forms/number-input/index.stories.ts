@@ -362,7 +362,7 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
       Number Input allows users to enter enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
       - [**Appearance**](#appearance)
         - [**Size Variant**](#size-variant)
@@ -380,7 +380,7 @@ export default {
         - [**Icon Button**](#icon-button)
         - [**Form Label**](#form-label)
         - [**Form Caption Group**](#form-caption-group)
-    </Markdown>`,
+    </markdown>`,
       },
     },
   },

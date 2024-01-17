@@ -85,6 +85,7 @@ const componentTypes = [
   'Tooltip',
   'RadioGroup',
   'NumberInput',
+  'CaptionComponent',
   'CaptionGroup',
   'FormLabel',
 ];

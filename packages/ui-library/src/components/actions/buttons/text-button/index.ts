@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
@@ -161,7 +160,7 @@ export class BlrTextButton extends LitElement {
           }}
           id=${this.buttonId || nothing}
         >
-          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
             ? html`
                 ${BlrLoaderRenderFunction({
