@@ -105,7 +105,7 @@ type IconType = {
 };
 const defaultParams: IconType = {
   theme: 'Light',
-  size: 'lg',
+  size: 'md',
   icon: 'blr360',
   ignoreSize: false,
   arialabel: 'Icon',
