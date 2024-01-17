@@ -182,7 +182,7 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Toggle Switch allows users to choose between two mutually exclusive states, such as on/off or yes/no. It is typically a small, rectangular button with two states, represented by different icons or labels.
 They can also be used to control more complex features, such as the state of a system or the availability of a service.
 - [**Appearance**](#appearance)
@@ -197,17 +197,15 @@ They can also be used to control more complex features, such as the state of a s
  - [**Readonly**](#readonly)
 - [**Dependencies**](#dependencies)
  - [**Form Caption**](#form-caption)  
-</Markdown>
+</markdown>
         `,
       },
     },
   },
 };
 
-export const BlrToggleSwitch = (params: BlrToggleSwitchType) => BlrToggleSwitchRenderFunction(params);
-
-BlrToggleSwitch.storyName = 'ToggleSwitch';
-BlrToggleSwitch.args = defaultParams;
+export const ToggleSwitch = (params: BlrToggleSwitchType) => BlrToggleSwitchRenderFunction(params);
+ToggleSwitch.args = defaultParams;
 
 /**
  * ## Appearance
