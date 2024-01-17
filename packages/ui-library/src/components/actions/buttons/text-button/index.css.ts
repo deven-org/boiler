@@ -4,7 +4,7 @@ import { componentTokens } from "../../../../foundation/_tokens-generated/__comp
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
 const { TextButton } = componentTokens.Actions;
-const { Global } = semanticTokens;
+const { Global, Action } = semanticTokens;
 
 export const styleCustom = typeSafeNestedCss`
   .focus-layer {
@@ -74,6 +74,30 @@ export const styleCustom = typeSafeNestedCss`
     & > .label,
     & > .flex-container {
       visibility: hidden;
+    }
+
+    &.blr-text-button:hover, &.blr-text-button:focus {
+      cursor: auto;
+    
+      &.cta{
+        background-color: ${Action.CTA.SurfaceFill.Loading}
+      }
+      &.primary{
+        background-color: ${Action.Primary.SurfaceFill.Loading}
+      }
+      &.secondary{
+        background-color: ${Action.Secondary.SurfaceFill.Loading}
+      }
+      &.silent{
+        background-color: ${Action.Silent.SurfaceFill.Loading}
+      }
+      &.destructive{
+        background-color: ${Action.Destructive.SurfaceFill.Loading}
+      }
+      &.encourage{
+        background-color: ${Action.Encourage.SurfaceFill.Loading}
+      }
+
     }
   }
 
