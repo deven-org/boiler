@@ -174,7 +174,7 @@ export class BlrTabBar extends LitElement {
                         aria-controls=${`panel-${index}`}
                         class="${navListItemClasses}"
                         @click=${() => {
-                          if (isDisabled) {
+                          if (!isDisabled) {
                             this.handleSelect(index);
                           }
                         }}
