@@ -8,6 +8,7 @@ import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { until } from 'lit-html/directives/until.js';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 
 @customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
@@ -15,8 +16,10 @@ export class BlrIcon extends LitElement {
 
   @property() icon: IconType = 'blr360Xs';
   @property() size: SizesType = 'md';
-
+  @property() arialabel?: string;
   @property() ignoreSize?: boolean = false;
+  @property() onClick?: () => void;
+  @property() theme: ThemeType = 'Light';
   @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
 
   // these are not triggered directly but allows us to map it internally and bve typesafe
