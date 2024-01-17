@@ -5,6 +5,9 @@ import { html } from 'lit-html';
 import { BlrCounterType } from './index';
 import { BlrCounterRenderFunction } from './renderFunction';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>

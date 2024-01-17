@@ -958,14 +958,32 @@
       }
     },
     "Tooltip": {
-      "ContentCol": {
+      "TextWrapper": {
         "Padding": {
-          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
+          "value": "{Feedback.Tooltip.TextWrapper.PaddingTopBottm} {Feedback.Tooltip.TextWrapper.PaddingLeftRight}",
           "type": "spacing"
         },
         "BorderRadius": {
           "value": "{core.borderRadius.MD}",
           "type": "borderRadius"
+        },
+        "MinWidth": {
+          "value": "{core.dimensionREM.40}",
+          "type": "sizing",
+          "description": "Defines the minimum width of the tooltip."
+        },
+        "MaxWidth": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing",
+          "description": "Defines the maximum Width of the tooltip."
+        },
+        "PaddingTopBottm": {
+          "value": "{core.dimensionPX.6}",
+          "type": "spacing"
+        },
+        "PaddingLeftRight": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
         }
       },
       "NoseWrapper": {
@@ -980,15 +998,11 @@
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }
       },
-      "MinWidth": {
-        "value": "{core.dimensionREM.40}",
-        "type": "sizing",
-        "description": "Defines the minimum width of the tooltip."
-      },
-      "MaxWidth": {
-        "value": "{core.dimensionREM.80}",
-        "type": "sizing",
-        "description": "Defines the maximum Width of the tooltip."
+      "Text": {
+        "Typography": {
+          "value": "{UI.Caption.SM}",
+          "type": "typography"
+        }
       }
     },
     "Dialog": {
@@ -3323,12 +3337,12 @@
             "description": "Defines the gap between hint and error message"
           },
           "MD": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.5}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
           "LG": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.6}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           }

@@ -7,6 +7,9 @@ import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { action } from '@storybook/addon-actions';
 import { html } from 'lit-html';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
