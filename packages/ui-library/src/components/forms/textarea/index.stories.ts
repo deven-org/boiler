@@ -386,7 +386,7 @@ export default {
       //Second Example
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Text Area allows users to input and edit multiline text. Unlike a simple Text Input component that is typically used for single-line text, a Text Area provides a larger space for users to enter and manipulate multiple lines of text.
                 Text Area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
 - [**Appearance**](#appearance)
@@ -404,7 +404,7 @@ Text Area allows users to input and edit multiline text. Unlike a simple Text In
  - [**Form Label**](#form-label) 
  - [**Form Caption Group**](#form-caption-group)     
  - [**Counter**](#counter)     
-</Markdown>
+</markdown>
         `,
       },
     },
