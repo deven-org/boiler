@@ -26,7 +26,6 @@ export default {
       options: FormSizes,
       control: { type: 'select' },
     },
-    tabs: { control: 'array' },
     tabContent: {
       options: TabContentVariants,
       control: { type: 'select' },
@@ -84,64 +83,6 @@ BlrTabBar.storyName = 'TabBar';
 
 const args: BlrTabBarType = {
   theme: 'Light',
-  tabs: [
-    {
-      label: 'Tab 1',
-      icon: 'blr360',
-      href: './',
-      disabled: true,
-    },
-    {
-      label: 'Tab 2',
-      icon: 'blrInfo',
-      href: './',
-    },
-    {
-      label: 'Tab 3',
-      icon: 'blrCrop',
-      href: './',
-    },
-    {
-      label: 'Tab 4',
-      icon: 'blrDocumentNew',
-      href: './',
-    },
-    {
-      label: 'Tab 5',
-      icon: 'blrDocumentTwo',
-      href: './',
-    },
-    {
-      label: 'Tab 6',
-      icon: 'blrDownload',
-      href: './',
-    },
-    {
-      label: 'Tab 7',
-      icon: 'blrHeart',
-      href: './',
-    },
-    {
-      label: 'Tab 8',
-      icon: 'blrHome',
-      href: './',
-    },
-    {
-      label: 'Tab 9',
-      icon: 'blrLockClosed',
-      href: './',
-    },
-    {
-      label: 'Tab 10',
-      icon: 'blrMusic',
-      href: './',
-    },
-    {
-      label: 'Tab 11',
-      icon: 'blrPen',
-      href: './',
-    },
-  ],
   variant: 'standard',
   overflowVariantStandard: 'buttons',
   overflowVariantFullWidth: 'browserOverflow',

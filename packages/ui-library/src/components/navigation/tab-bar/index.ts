@@ -7,7 +7,6 @@ import { formDark, formLight } from '../../../foundation/semantic-tokens/form.cs
 
 import {
   FormSizesType,
-  TabType,
   TabVariantType,
   OverflowVariantTypeStandard,
   OverflowVariantTypeFullWidth,
@@ -41,7 +40,6 @@ export class BlrTabBar extends LitElement {
   @queryAll('[role=tabpanel]')
   protected _panels!: HTMLElement[];
 
-  @property() tabs!: TabType[];
   @property() overflowVariantStandard!: OverflowVariantTypeStandard;
   @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
   @property() iconPosition: IconPositionVariant = 'leading';
@@ -144,8 +142,10 @@ export class BlrTabBar extends LitElement {
             <ul class="nav-list ${navListClasses}" role="tablist">
               <slot @slotchange=${this.handleSlotChange}></slot>
               ${this._tabBarElements?.map((tab: Element, index) => {
+                const isDisabled = tab.hasAttribute('disabled') || tab.getAttribute('disabled') === 'true';
+
                 const navListItemClasses = classMap({
-                  'disabled': tab.hasAttribute('disabled') || tab.getAttribute('disabled') === 'true',
+                  'disabled': isDisabled,
                   'nav-item': true,
                   [`${this.size}`]: this.size || 'md',
                   [`${this.iconPosition}`]: this.iconPosition,
@@ -168,19 +168,17 @@ export class BlrTabBar extends LitElement {
                   <li class="${navListItemContainer}" role="presentation">
                     <div class="nav-item-content-wrapper">
                       <a
-                        id=${`${tab.getAttribute('label')?.toLowerCase()} tab`}
+                        id=${`tab-${index}`}
                         role="tab"
                         href=${`#${tab.getAttribute('href')}`}
-                        aria-controls=${tab.getAttribute('label')?.toLowerCase()}
+                        aria-controls=${`panel-${index}`}
                         class="${navListItemClasses}"
                         @click=${() => {
-                          if (!tab.hasAttribute('disabled') || tab.getAttribute('disabled') === 'false') {
+                          if (isDisabled) {
                             this.handleSelect(index);
                           }
                         }}
-                        tabindex=${tab.hasAttribute('disabled') && tab.getAttribute('disabled') === 'true'
-                          ? '-1'
-                          : nothing}
+                        tabindex=${isDisabled ? '-1' : index}
                       >
                         ${this.tabContent !== 'labelOnly' && tab.hasAttribute('icon')
                           ? BlrIconRenderFunction(
@@ -204,66 +202,6 @@ export class BlrTabBar extends LitElement {
                   </li>
                 `;
               })}
-              <!-- ${this.tabs.map((tab, index) => {
-                const navListItemClasses = classMap({
-                  'disabled': tab?.disabled || false,
-                  'nav-item': true,
-                  [`${this.size}`]: this.size || 'md',
-                  [`${this.iconPosition}`]: this.iconPosition,
-                  'selected': index === this.selectedTabIndex,
-                });
-
-                const navListItemContainer = classMap({
-                  'disabled': tab?.disabled || false,
-                  'nav-item-container': true,
-                  [`${this.size}`]: this.size || 'md',
-                  [`${this.iconPosition}`]: this.iconPosition,
-                });
-
-                const navListItemUnderline = classMap({
-                  'nav-item-underline': true,
-                  'selected': index === this.selectedTabIndex,
-                });
-
-                // spaces are not allowed as id, so best is not even to use a label als id
-                return html`
-                  <li class="${navListItemContainer}" role="presentation">
-                    <div class="nav-item-content-wrapper">
-                      <a
-                        id=${`${tab.label.toLowerCase()} tab`}
-                        role="tab"
-                        href=${`#${tab.href}`}
-                        aria-controls=${tab.label.toLowerCase()}
-                        class="${navListItemClasses}"
-                        @click=${() => {
-                          if (!tab.disabled) {
-                            this.handleSelect(index);
-                          }
-                        }}
-                        tabindex=${tab.disabled ? '-1' : nothing}
-                      >
-                        ${this.tabContent !== 'labelOnly'
-                          ? BlrIconRenderFunction(
-                              {
-                                icon: calculateIconName(tab.icon, iconSizeVariant),
-                                size: iconSizeVariant,
-                              },
-                              {
-                                'aria-hidden': true,
-                              }
-                            )
-                          : nothing}
-                        ${this.tabContent !== 'iconOnly'
-                          ? html` <label class="blr-semantic-action ${this.size}" name="${tab.label}"
-                              >${tab.label}</label
-                            >`
-                          : nothing}
-                      </a>
-                    </div>
-                    <div class="${navListItemUnderline}"></div>
-                  </li>
-                `;
-              })} -->
             </ul>
           </div>
           ${this.overflowVariantStandard === 'buttons'
@@ -290,17 +228,17 @@ export class BlrTabBar extends LitElement {
               })
             : nothing}
         </div>
-        ${this.tabs.map((tab) => {
-          // id can not be a href. it contains many illegal characters for sure
-          return html` <section
-            id=${tab.href}
-            class="panel-wrapper"
-            role="tabpanel"
-            aria-labelledby="${`${tab.label.toLowerCase()} tab`}"
-            hidden
-          >
-            <p>${tab.label}</p>
-          </section>`;
+        ${this._tabBarElements?.map((tab, index) => {
+          return index === this.selectedTabIndex
+            ? html`<section
+                id=${`#${tab.getAttribute('href')}`}
+                class="panel-wrapper"
+                role="tabpanel"
+                aria-labelledby="${`${tab.getAttribute('label')?.toLowerCase()}-tab`}"
+              >
+                <p>${tab.getAttribute('label')}</p>
+              </section>`
+            : nothing;
         })}`;
     }
   }
