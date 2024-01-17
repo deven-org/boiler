@@ -32,8 +32,6 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     }
 
     .input-unit-container {
-      display: flex;
-
       &.sm {
         gap: ${NumberInput.Input.TextContainer.ItemSpacing.SM};
       }
@@ -51,14 +49,9 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
     }
 
-    .input-container {
-      display: flex;
-
-      & > input {
-        display: flex;
-        border: none;
-        outline: none;
-      }
+    input {
+      border: none;
+      outline: none;
     }
 
     & > * {
@@ -283,6 +276,16 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 );
 
 export const baseStyle = css`
+  input[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    -moz-appearance: textfield;
+  }
+
   .input-wrapper {
     display: flex;
     overflow: hidden;
@@ -291,36 +294,25 @@ export const baseStyle = css`
     .input-unit-container {
       display: flex;
 
-      .input-container {
-        & > input::-webkit-outer-spin-button,
-        & > input::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
-
-        & > input[type="number"] {
-          -moz-appearance: textfield;
-        }
+      .unit.prepend {
+        grid-area: "first";
+        padding-right: 0;
       }
 
-      &:has(.unit) {
-        .unit.prepend {
-          order: -1;
-          padding-right: 0;
-        }
+      input.prepend {
+        grid-area: "second";
 
-        .input-container.prepend {
-          order: 0;
-
-          & > input {
-            padding-left: 0;
-          }
+        & > input {
+          padding-left: 0;
         }
       }
 
       &.split {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "first second";
+
+        text-align: right;
 
         .input-container {
           & > input {
@@ -328,15 +320,8 @@ export const baseStyle = css`
           }
         }
 
-        &:has(.unit) {
-          grid-template-columns: 1fr 1fr;
-          text-align: right;
-
-          .input-container {
-            & > input {
-              text-align: left;
-            }
-          }
+        input {
+          text-align: left;
         }
       }
     }

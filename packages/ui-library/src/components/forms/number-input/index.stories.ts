@@ -17,12 +17,12 @@ const sharedStyles = html`
 
 const defaultParams: BlrNumberInputType = {
   size: 'md',
-  stepperVariant: 'vertical',
+  stepperVariant: 'split',
   placeholder: 'Placeholder-text',
   value: undefined,
   fractionDigits: 0,
   totalDigits: 0,
-  prependUnit: false,
+  prependUnit: true,
   unit: 'kg',
   step: 1,
   hasLabel: true,
@@ -37,37 +37,14 @@ const defaultParams: BlrNumberInputType = {
   hasError: false,
   errorMessage: '',
   errorIcon: undefined,
-  numberInputId: ' ',
+  numberInputId: 'test-id',
   theme: 'Light',
 };
 
 export default {
   title: 'Design System/Web Components/Forms/Number Input',
   args: {
-    theme: 'Light',
-    size: 'md',
-    stepperVariant: 'vertical',
-    placeholder: 'Placeholder-text',
-    value: undefined,
-    fractionDigits: 0,
-    totalDigits: 0,
-    prependUnit: true,
-    unit: 'kg',
-    step: 1,
-    hasLabel: true,
-    label: 'Label-text',
-    labelAppendix: '(Appendix)',
-    hasHint: false,
-    hintMessage: 'This is a small hint',
-    hintIcon: 'blrInfo',
-    disabled: false,
-    readonly: false,
-    required: false,
-    hasError: false,
-    ariaLabel: 'Number input',
-    errorMessage: '',
-    errorIcon: undefined,
-    numberInputId: ' ',
+    ...defaultParams,
     name: 'NumberInput',
     onChange: () => action('onChange'),
     onSelect: () => action('onSelect'),
@@ -358,7 +335,7 @@ export default {
     viewMode: 'docs',
     layout: 'centered',
     docs: {
-      description: {
+      _description: {
         component: `<Markdown>
       Number Input allows users to enter enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
       - [**Appearance**](#appearance)

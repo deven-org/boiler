@@ -194,13 +194,6 @@ export class BlrNumberInput extends LitElement {
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
 
-      const inputContainer = classMap({
-        'input-container': true,
-        'prepend': !!this.prependUnit,
-        [`${this.size}`]: this.size,
-        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
-      });
-
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintIcon)
           ? html`
@@ -234,48 +227,40 @@ export class BlrNumberInput extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        ${
-          this.hasLabel
-            ? BlrFormLabelRenderFunction({
-                labelText: this.label,
-                labelSize: this.size,
-                labelAppendix: this.labelAppendix,
-                forValue: this.numberInputId,
-                theme: this.theme,
-                variant: this.hasError ? 'error' : 'label',
-              })
-            : nothing
-        }
+        ${this.hasLabel
+          ? BlrFormLabelRenderFunction({
+              labelText: this.label,
+              labelSize: this.size,
+              labelAppendix: this.labelAppendix,
+              forValue: this.numberInputId,
+              theme: this.theme,
+              variant: this.hasError ? 'error' : 'label',
+            })
+          : nothing}
         <div class="${wrapperClasses}">
           <div class="${inputAndUnitContainer}">
-            <div class="${inputContainer}">
-              <input
-                class="${inputClasses}"
-                type="number"
-                .value=${
-                  !this.readonly && this.currentValue != 0
-                    ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
-                    : nothing
-                }
-                step="${this.step || nothing}"
-                ?disabled="${this.disabled}"
-                ?readonly="${this.readonly}"
-                ?required="${this.required}"
-                hasError="${this.hasError}"
-                @change=${this.handleChange}
-                placeholder=${this.placeholder || nothing}
-              />
-            </div>
+            <input
+              class="${inputClasses}"
+              type="number"
+              .value=${!this.readonly && this.currentValue != 0
+                ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
+                : nothing}
+              step="${this.step || nothing}"
+              ?disabled="${this.disabled}"
+              ?readonly="${this.readonly}"
+              ?required="${this.required}"
+              hasError="${this.hasError}"
+              @change=${this.handleChange}
+              placeholder=${this.placeholder || nothing}
+            />
             ${!this.readonly && this.unit ? html` <div class="${unitClasses}">${this.unit}</div> ` : nothing}
-                </div>
-            ${this.renderMode()}
           </div>
-          ${
-            this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
-              : nothing
-          }
+          ${this.renderMode()}
         </div>
+
+        ${this.hasHint || this.hasError
+          ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+          : nothing}
       `;
     }
   }
