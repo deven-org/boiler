@@ -2,14 +2,14 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { InputSizesType } from '../../../../globals/types';
-import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
-import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
-import { BlrFormLabelInlineRenderFunction } from '../../../internal-components/form-label/form-label-inline/renderFunction';
-import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group/renderFunction';
+import { InputSizesType } from '../../../globals/types';
+import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
+import { radioDark, radioLight } from '../../../foundation/component-tokens/radio.css';
+import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form-label/form-label-inline/renderFunction';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption/renderFunction';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
 import { TAG_NAME } from './renderFunction';
 
