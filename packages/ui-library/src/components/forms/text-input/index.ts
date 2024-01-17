@@ -190,7 +190,7 @@ export class BlrTextInput extends LitElement {
 
                     size: iconSizeVariant,
                     classMap: iconClasses,
-                    onClick: () => this.togglePassword(),
+                    blrClick: this.togglePassword,
                   },
                   {
                     'aria-hidden': true,

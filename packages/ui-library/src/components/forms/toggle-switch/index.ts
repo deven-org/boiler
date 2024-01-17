@@ -30,6 +30,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() offLabel!: string;
   @property() showStateLabel?: boolean;
   @property() checkInputId!: string;
+  @property() name!: string;
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
