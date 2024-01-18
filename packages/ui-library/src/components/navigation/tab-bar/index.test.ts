@@ -19,17 +19,17 @@ const sampleParams: BlrTabBarType = {
 };
 
 const tabsAsChildren = html`
-  <a disabled href="./" label="Tab 1" icon="blr360">Tab 1</a>
-  <a href="./" label="Tab 2" icon="blrInfo">Tab 2</a>
-  <a href="./" label="Tab 3" icon="blrCrop">Tab 3</a>
-  <a href="./" label="Tab 4" icon="blrDocumentNew">Tab 4</a>
-  <a href="./" label="Tab 5" icon="blrDocumentTwo">Tab 5</a>
-  <a href="./" label="Tab 6" icon="blrDownload">Tab 6</a>
-  <a href="./" label="Tab 7" icon="blrHeart">Tab 7</a>
-  <a href="./" label="Tab 8" icon="blrHome">Tab 8</a>
-  <a href="./" label="Tab 9" icon="blrLockClosed">Tab 9</a>
-  <a href="./" label="Tab 10" icon="blrMusic">Tab 10</a>
-  <a href="./" label="Tab 11" icon="blrPen">Tab 11</a>
+  <p disabled label="Tab 1" icon="blr360">Tab 1</p>
+  <p label="Tab 2" icon="blrInfo">Tab 2</p>
+  <p label="Tab 3" icon="blrCrop">Tab 3</p>
+  <p label="Tab 4" icon="blrDocumentNew">Tab 4</p>
+  <p label="Tab 5" icon="blrDocumentTwo">Tab 5</p>
+  <p label="Tab 6" icon="blrDownload">Tab 6</p>
+  <p label="Tab 7" icon="blrHeart">Tab 7</p>
+  <p label="Tab 8" icon="blrHome">Tab 8</p>
+  <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
+  <p label="Tab 10" icon="blrMusic">Tab 10</p>
+  <p label="Tab 11" icon="blrPen">Tab 11</p>
 `;
 
 describe('blr-tab-bar', () => {

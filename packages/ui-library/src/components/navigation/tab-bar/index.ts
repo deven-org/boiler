@@ -167,14 +167,18 @@ export class BlrTabBar extends LitElement {
                 return html`
                   <li class="${navListItemContainer}" role="presentation">
                     <div class="nav-item-content-wrapper">
-                      <a
-                        id=${`tab-${index}`}
+                      <p
+                        id=${`#tab-${index}`}
                         role="tab"
-                        href=${`#${tab.getAttribute('href')}`}
                         aria-controls=${`panel-${index}`}
                         class="${navListItemClasses}"
                         @click=${() => {
                           if (!isDisabled) {
+                            this.handleSelect(index);
+                          }
+                        }}
+                        @keydown=${(event: KeyboardEvent) => {
+                          if (!isDisabled && event.code === 'Space') {
                             this.handleSelect(index);
                           }
                         }}
@@ -196,7 +200,7 @@ export class BlrTabBar extends LitElement {
                               >${tab.getAttribute('label')}</label
                             >`
                           : nothing}
-                      </a>
+                      </p>
                     </div>
                     <div class="${navListItemUnderline}"></div>
                   </li>
@@ -231,7 +235,7 @@ export class BlrTabBar extends LitElement {
         ${this._tabBarElements?.map((tab, index) => {
           return index === this.selectedTabIndex
             ? html`<section
-                id=${`#${tab.getAttribute('href')}`}
+                id=${`#panel-${index}`}
                 class="panel-wrapper"
                 role="tabpanel"
                 aria-labelledby="${`${tab.getAttribute('label')?.toLowerCase()}-tab`}"
