@@ -333,7 +333,6 @@ export default {
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=7155%3A108301&mode=dev',
     },
     viewMode: 'docs',
-    layout: 'centered',
     docs: {
       _description: {
         component: `<Markdown>

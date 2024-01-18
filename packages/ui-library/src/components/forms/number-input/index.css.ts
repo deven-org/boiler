@@ -277,13 +277,13 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 
 export const baseStyle = css`
   input[type="number"] {
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
     -moz-appearance: textfield;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   .input-wrapper {
@@ -293,47 +293,41 @@ export const baseStyle = css`
 
     .input-unit-container {
       display: flex;
+    }
 
-      .unit.prepend {
-        grid-area: "first";
-        padding-right: 0;
-      }
+    .input-unit-container .unit.prepend {
+      grid-area: first;
+      padding-right: 0;
+    }
 
-      input.prepend {
-        grid-area: "second";
+    .input-unit-container input.prepend {
+      grid-area: second;
+    }
 
-        & > input {
-          padding-left: 0;
-        }
-      }
+    .input-unit-container input.prepend > input {
+      padding-left: 0;
+    }
 
-      &.split {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "first second";
+    .input-unit-container.split {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "first second";
+    }
 
-        text-align: right;
+    .input-unit-container.split .input-container > input {
+      text-align: center;
+    }
 
-        .input-container {
-          & > input {
-            text-align: center;
-          }
-        }
-
-        input {
-          text-align: left;
-        }
-      }
+    .input-unit-container.split input {
+      text-align: left;
     }
   }
 
-  &.split {
-    & > button:first-of-type {
-      order: -2;
-    }
+  .split > button:first-of-type {
+    order: -2;
+  }
 
-    & > button:last-of-type {
-      margin-left: auto;
-    }
+  .split > button:last-of-type {
+    margin-left: auto;
   }
 `;
