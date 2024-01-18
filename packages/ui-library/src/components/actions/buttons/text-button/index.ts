@@ -148,12 +148,12 @@ export class BlrTextButton extends LitElement {
         </style>
         <span
           class="${classes}"
-          aria-disabled="true"
+          aria-disabled=${this.disabled ? 'true' : nothing}
           @click="${this.handleClick}"
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
-          role=${this.disabled ? nothing : 'button'}
+          role="button"
           @keydown=${(event: KeyboardEvent) => {
             if (event.code === 'Space') {
               this.handleClick(event);
