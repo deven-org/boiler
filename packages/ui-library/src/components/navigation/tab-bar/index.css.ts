@@ -156,7 +156,6 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
               flex-direction: column;
               _flex: 0 1 0px;
               justify-content: center;
-              overflow: clip;
 
 
               &:focus-within:not(.disabled) {
