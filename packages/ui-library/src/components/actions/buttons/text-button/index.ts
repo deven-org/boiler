@@ -148,6 +148,7 @@ export class BlrTextButton extends LitElement {
         </style>
         <span
           class="${classes}"
+          aria-disabled="true"
           @click="${this.handleClick}"
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
