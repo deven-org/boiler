@@ -16,9 +16,8 @@ export class BlrIcon extends LitElement {
 
   @property() icon: IconType = 'blr360Xs';
   @property() size: SizesType = 'md';
-  @property() arialabel?: string;
   @property() ignoreSize?: boolean = false;
-  @property() onClick?: () => void;
+
   @property() theme: ThemeType = 'Light';
   @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
 

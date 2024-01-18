@@ -59,14 +59,6 @@ export default {
         category: 'Appearance',
       },
     },
-    arialabel: {
-      name: 'ariaLabel',
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        category: 'Accessibility',
-      },
-    },
   },
   parameters: {
     layout: 'centered',
@@ -101,14 +93,12 @@ type IconType = {
   size: SizesType;
   icon: SizelessIconType; // Update the type definition for icon
   ignoreSize: boolean;
-  arialabel: string;
 };
 const defaultParams: IconType = {
   theme: 'Light',
   size: 'md',
   icon: 'blr360',
   ignoreSize: false,
-  arialabel: 'Icon',
 };
 
 Icon.args = defaultParams;
