@@ -302,16 +302,14 @@ export const baseStyle = css`
 
     .input-unit-container input.prepend {
       grid-area: second;
-    }
-
-    .input-unit-container input.prepend > input {
       padding-left: 0;
     }
 
     .input-unit-container.split {
+      flex: 1;
       display: inline-grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "first second";
+      grid-template-columns: 1fr auto auto 1fr;
+      grid-template-areas: "left-gap first second right-gap";
     }
 
     .input-unit-container.split .input-container > input {
@@ -328,6 +326,6 @@ export const baseStyle = css`
   }
 
   .split > button:last-of-type {
-    margin-left: auto;
+    _margin-left: auto;
   }
 `;
