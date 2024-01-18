@@ -197,7 +197,7 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
         A radio component allows users to select a single option from a list of mutually exclusive choices.
       
         - [**Appearance**](#appearance)
@@ -212,7 +212,7 @@ export default {
           - [**Has Error**](#has-error)
         - [**Dependencies**](#dependencies)
           - [**Form Caption Group**](#form-caption-group)
-      </Markdown>
+      </markdown>
       `,
       },
     },

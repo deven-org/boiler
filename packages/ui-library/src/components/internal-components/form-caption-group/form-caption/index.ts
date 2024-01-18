@@ -6,7 +6,6 @@ import { BlrIconRenderFunction } from '../../../ui/icon/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
-import { styleCustom } from './index.css';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
@@ -14,7 +13,7 @@ import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {
-  static styles = [styleCustom];
+  static styles = [];
 
   @property() message?: string;
   @property() arialabel?: string;

@@ -171,7 +171,7 @@ export default {
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 An icon component typically displays a small, visually recognizable graphic or symbol that represents a particular function, object, or concept.
 
 **NOTE**<br>
@@ -184,7 +184,7 @@ The Icon Button component can not be used as a link out of the box and we genera
 - [**Dependencies**](#dependencies)
  - [**Icon**](#icon) 
  - [**Loader**](#loader)  
-        </Markdown>`,
+        </markdown>`,
       },
     },
   },
