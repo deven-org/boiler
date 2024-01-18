@@ -1,20 +1,48 @@
 // this loads the all components instances and registers their html tags
 import '../../../index';
 import { html } from 'lit-html';
-import { BlrTooltipRenderFunction, BlrTooltipType } from './index';
+import { BlrTooltipType } from './index';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { TooltipPlacement } from '../../../globals/constants';
+import { BlrTooltipRenderFunction } from './renderFunction';
 
 const sharedStyles = html`
   <style>
     .wrapper {
       margin: 1.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      height: 100px;
+      margin: 50px auto 0;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tooltip-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .blue-box {
+      height: 50px;
+      width: 100px;
+      background-color: lightblue;
+    }
+    .label {
+      font-family: Source Sans Pro, sans-serif;
+      font-weight: 400;
+      line-height: 1rem;
+      font-size: 1rem;
+      text-align: center;
     }
   </style>
 `;
 
 export default {
-  title: 'Design System/Web Components/Feedback/Tooltip',
+  title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',
   argTypes: {
     theme: {
       options: Themes,
@@ -62,12 +90,16 @@ export default {
   },
 
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A126744&mode=dev',
+    },
     viewMode: 'docs',
     layout: 'padded',
     docs: {
       description: {
         component: `
-  <Markdown>
+  <markdown>
   Tooltip is triggered by hovering the mouse cursor over the element. It is designed to be unobtrusive and usually consist
   of a short snippet of text. Tooltip component utilizes Floating UI library for granular positioning and interactions
   based on user events.
@@ -83,26 +115,15 @@ export default {
     - [**Message**](#message)
   - [**Dependencies**](#dependencies)
     - [**Tooltip Bubble**](#tooltip-bubble)
-  </Markdown>
+  </markdown>
 `,
       },
     },
   },
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A126744&mode=dev',
-    },
-  },
 };
 
-export const Tooltip = (params: BlrTooltipType) => html`<div
-  style="height: 300px;  margin: 1.25rem; width: 300px; display: flex; justify-content: center; align-items: center; margin: auto;"
->
-  ${BlrTooltipRenderFunction(
-    params,
-    html`<div style="height: 100px; width: 100px; background-color: lightblue"></div>`
-  )}
+export const Tooltip = (params: BlrTooltipType) => html` <div class="container">
+  ${BlrTooltipRenderFunction(params, html`<div class="blue-box"></div>`)}
 </div>`;
 
 const defaultParams: BlrTooltipType = {
@@ -123,79 +144,35 @@ Tooltip.args = defaultParams;
  */
 
 export const Placement = () => {
+  const tooltips: BlrTooltipType[] = [
+    { ...defaultParams },
+    { ...defaultParams, placement: 'top-start' },
+    { ...defaultParams, placement: 'top-end' },
+    { ...defaultParams, placement: 'right' },
+    { ...defaultParams, placement: 'right-start' },
+    { ...defaultParams, placement: 'right-end' },
+    { ...defaultParams, placement: 'bottom' },
+    { ...defaultParams, placement: 'bottom-start' },
+    { ...defaultParams, placement: 'bottom-end' },
+    { ...defaultParams, placement: 'left' },
+    { ...defaultParams, placement: 'left-start' },
+    { ...defaultParams, placement: 'left-end' },
+  ];
+
   return html`
     ${sharedStyles}
 
-    <div class="wrapper">
-      ${Tooltip({
-        ...defaultParams,
-      })}
-    </div>
-    <div class="wrapper">
-      ${Tooltip({
-        ...defaultParams,
-        placement: 'top-start',
-      })}
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'top-end',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'right',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'right-start',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'right-end',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'bottom',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'bottom-start',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'bottom-end',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'left',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'left-start',
-        })}
-      </div>
-      <div class="wrapper">
-        ${Tooltip({
-          ...defaultParams,
-          placement: 'left-end',
-        })}
-      </div>
+    <div class="tooltip-container">
+      ${tooltips.map(
+        (tooltip, index) => html`
+          <div class="wrapper">
+            ${Tooltip(tooltip)}
+            <div class="label">${tooltip.placement}</div>
+          </div>
+
+          ${index % 3 === 2 ? html`<div style="flex-basis: 100%; height: 0;"></div>` : ''}
+        `
+      )}
     </div>
   `;
 };
