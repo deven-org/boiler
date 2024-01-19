@@ -7,6 +7,8 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrRadioType = {
+  checked: false,
+  disabled: false,
   name: 'Default Name',
   optionId: 'testId',
   label: 'harald',
@@ -15,8 +17,6 @@ const sampleParams: BlrRadioType = {
   hasHint: true,
   hasError: false,
   theme: 'Light',
-  checked: false,
-  disabled: false,
 };
 
 describe('blr-radio', () => {
