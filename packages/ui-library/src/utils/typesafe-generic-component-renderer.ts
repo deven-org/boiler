@@ -21,16 +21,12 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
       } else {
         templateFragments.push(` @${key}=`);
       }
-
-      values.push(value);
     } else if (key === 'classMap') {
       if (needsOpenTag) {
         templateFragments.push(`<${tagName} class=`);
       } else {
         templateFragments.push(` class=`);
       }
-
-      values.push(value);
     } else if (typeof value === 'boolean') {
       if (value === true) {
         if (needsOpenTag) {
@@ -38,8 +34,12 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
         } else {
           templateFragments.push(` ${key}=`);
         }
-
-        values.push(value);
+      } else {
+        if (needsOpenTag) {
+          templateFragments.push(`<${tagName} .${key}=`);
+        } else {
+          templateFragments.push(` .${key}=`);
+        }
       }
     } else if (typeof value === 'object') {
       if (needsOpenTag) {
@@ -47,17 +47,14 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
       } else {
         templateFragments.push(` .${key}=`);
       }
-
-      values.push(value);
     } else {
       if (needsOpenTag) {
         templateFragments.push(`<${tagName} ${key}=`);
       } else {
         templateFragments.push(` ${key}=`);
       }
-
-      values.push(value);
     }
+    values.push(value);
   });
 
   attrEntries.forEach(([key, value], index) => {
