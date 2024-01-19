@@ -102,7 +102,7 @@ export const ButtonGroup = (
       size: 'md',
       theme: 'Light',
       loading: false,
-      variant: 'secondary',
+      variant: 'silent',
       loadingStatus: 'Loading',
       disabled: false,
       arialabel: 'button_1',
@@ -110,7 +110,10 @@ export const ButtonGroup = (
     })}
   `;
 
-  return BlrButtonGroupRenderFunction(params, contentButtons);
+  return html`<div class="wrapper">
+    ${BlrButtonGroupRenderFunction(params, contentButtons)}
+    <div class="wrapper"></div>
+  </div>`;
 };
 
 const defaultParams: BlrButtonGroupType = {
@@ -128,18 +131,9 @@ ButtonGroup.args = defaultParams;
 export const Alignment = () => {
   return html`
     ${sharedStyles}
-    <div class="wrapper">
-      <h3 class="label">Button Group left</h3>
-      ${ButtonGroup({ ...defaultParams, alignment: 'left' }, 'Alignment', 'Left')}
-    </div>
-    <div class="wrapper">
-      <h3 class="label">Button Group center</h3>
-      ${ButtonGroup({ ...defaultParams, alignment: 'center' }, 'Alignment', 'Center')}
-    </div>
-    <div class="wrapper">
-      <h3 class="label">Button Group right</h3>
-      ${ButtonGroup({ ...defaultParams, alignment: 'right' }, 'Alignment', 'Right')}
-    </div>
+    <div class="wrapper">${ButtonGroup({ ...defaultParams, alignment: 'left' }, 'Alignment', 'Left')}</div>
+    <div class="wrapper">${ButtonGroup({ ...defaultParams, alignment: 'center' }, 'Alignment', 'Center')}</div>
+    <div class="wrapper">${ButtonGroup({ ...defaultParams, alignment: 'right' }, 'Alignment', 'Right')}</div>
   `;
 };
 
