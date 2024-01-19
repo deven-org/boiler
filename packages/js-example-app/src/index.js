@@ -1,6 +1,5 @@
 import '@boiler/ui-library/dist/index.js';
 import './style.scss';
-import { BlrSelect } from '@boiler/ui-library/src';
 
 const toggleLoadingButton = document.querySelector('#toggleLoadingState');
 const toggleDisabledState = document.querySelector('#toggleDisabledState');
