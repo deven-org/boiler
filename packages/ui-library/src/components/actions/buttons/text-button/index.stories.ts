@@ -370,6 +370,7 @@ export const Disabled = () => {
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
           disabled: true,
+          label: 'Disabled',
           hasIcon: false,
         })}
       </div>
