@@ -9,7 +9,7 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import '../../../../index';
 
 export default {
-  title: 'Design System/Web Components/UI/Icon',
+  title: 'Design System/Web Components/UI/Icon/Iconlink',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],

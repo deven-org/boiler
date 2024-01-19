@@ -102,6 +102,7 @@ export class BlrIconButton extends LitElement {
         <span
           aria-label=${this.arialabel || nothing}
           class="blr-semantic-action blr-icon-button ${classes}"
+          aria-disabled=${this.disabled ? 'true' : nothing}
           @click=${this.handleClick}
           id=${this.buttonId || nothing}
           tabindex=${this.disabled ? nothing : '0'}
