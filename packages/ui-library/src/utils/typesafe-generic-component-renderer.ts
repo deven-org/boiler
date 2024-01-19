@@ -19,21 +19,35 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
       } else {
         templateFragments.push(` @${key}=`);
       }
+
+      values.push(value);
     } else if (key === 'classMap') {
       if (index === 0) {
         templateFragments.push(`<${tagName} class=`);
       } else {
         templateFragments.push(` class=`);
       }
+
+      values.push(value);
+    } else if (typeof value === 'boolean') {
+      if (value === true) {
+        if (index === 0) {
+          templateFragments.push(`<${tagName} ${key}=`);
+        } else {
+          templateFragments.push(` ${key}=`);
+        }
+
+        values.push(value);
+      }
     } else {
       if (index === 0) {
-        templateFragments.push(`<${tagName} .${key}=`);
+        templateFragments.push(`<${tagName} ${key}=`);
       } else {
-        templateFragments.push(` .${key}=`);
+        templateFragments.push(` ${key}=`);
       }
-    }
 
-    values.push(value);
+      values.push(value);
+    }
   });
 
   attrEntries.forEach(([key, value], index) => {
