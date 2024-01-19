@@ -7,6 +7,7 @@ const logsContainer = document.querySelector('#logs');
 
 const blrButton = document.getElementsByTagName('blr-text-button')[0];
 const blrCheckbox = document.getElementsByTagName('blr-checkbox')[0];
+const blrSelect = document.getElementsByTagName('blr-select')[0];
 
 const addLog = (log) => {
   logsContainer.innerHTML = logsContainer.innerHTML + log + '<br>';
@@ -62,7 +63,6 @@ blrCheckbox.addEventListener('blrBlur', () => {
   addLog('blr-checkbox blurred');
 });
 
-BlrSelect.addEventListener('blrChange', () => {
+blrSelect.addEventListener('blrChange', (e) => {
   addLog('blr-select changed');
 });
-
