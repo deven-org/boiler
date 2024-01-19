@@ -41,6 +41,14 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
 
         values.push(value);
       }
+    } else if (typeof value === 'object') {
+      if (needsOpenTag) {
+        templateFragments.push(`<${tagName} .${key}=`);
+      } else {
+        templateFragments.push(` .${key}=`);
+      }
+
+      values.push(value);
     } else {
       if (needsOpenTag) {
         templateFragments.push(`<${tagName} ${key}=`);
