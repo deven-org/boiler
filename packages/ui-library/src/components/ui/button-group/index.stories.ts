@@ -37,7 +37,7 @@ export default {
   argTypes: {
     size: {
       options: ButtonGroupSizes,
-      description: ' Choose size of the component.',
+      description: 'Select size of the component.',
       control: { type: 'select' },
       table: {
         category: 'Appearance',
@@ -46,7 +46,7 @@ export default {
     alignment: {
       options: ButtonGroupAlignmentVariants,
       description: '   Choose alignment of the component.',
-      control: { type: 'select' },
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -72,50 +72,46 @@ export default {
   },
 };
 
-const contentButtons = html`
-  ${BlrTextButtonRenderFunction({
-    label: 'Yes',
-    size: 'md',
-    theme: 'Light',
-    loading: false,
-    variant: 'primary',
-    loadingStatus: 'Loading',
-    disabled: false,
-    buttonDisplay: 'inline-block',
-  })}
-  ${BlrIconButtonRenderFunction({
-    size: 'md',
-    theme: 'Light',
-    loading: false,
-    variant: 'primary',
-    loadingStatus: 'Loading',
-    disabled: false,
-    arialabel: 'button_1',
-    icon: 'blr360',
-  })}
-  ${BlrTextButtonRenderFunction({
-    label: 'No',
-    size: 'md',
-    theme: 'Light',
-    loading: false,
-    variant: 'secondary',
-    loadingStatus: 'Loading',
-    disabled: false,
-    buttonDisplay: 'inline-block',
-  })}
-  ${BlrIconButtonRenderFunction({
-    size: 'md',
-    theme: 'Light',
-    loading: false,
-    variant: 'secondary',
-    loadingStatus: 'Loading',
-    disabled: false,
-    arialabel: 'button_2',
-    icon: 'blrBookmark',
-  })}
-`;
+export const ButtonGroup = (
+  params: BlrButtonGroupType,
+  primaryLabel: string = 'Text Button',
+  secondaryLabel: string = 'Text Button'
+) => {
+  const contentButtons = html`
+    ${BlrTextButtonRenderFunction({
+      label: typeof primaryLabel === 'string' ? primaryLabel : 'Text Button',
+      size: 'md',
+      theme: 'Light',
+      loading: false,
+      variant: 'primary',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonDisplay: 'inline-block',
+    })}
+    ${BlrTextButtonRenderFunction({
+      label: secondaryLabel,
+      size: 'md',
+      theme: 'Light',
+      loading: false,
+      variant: 'secondary',
+      loadingStatus: 'Loading',
+      disabled: false,
+      buttonDisplay: 'inline-block',
+    })}
+    ${BlrIconButtonRenderFunction({
+      size: 'md',
+      theme: 'Light',
+      loading: false,
+      variant: 'secondary',
+      loadingStatus: 'Loading',
+      disabled: false,
+      arialabel: 'button_1',
+      icon: 'blr360',
+    })}
+  `;
 
-export const ButtonGroup = (params: BlrButtonGroupType) => BlrButtonGroupRenderFunction(params, contentButtons);
+  return BlrButtonGroupRenderFunction(params, contentButtons);
+};
 
 const defaultParams: BlrButtonGroupType = {
   size: 'md',
@@ -126,34 +122,25 @@ ButtonGroup.args = defaultParams;
 
 /**
  *  ## Appearance
- *  ### Aligmnet
+ *  ### Alignment
  * The Button Group component can be left, right and center aligned.
  */
-export const Aligmnet = () => {
+export const Alignment = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       <h3 class="label">Button Group left</h3>
-      ${ButtonGroup({
-        ...defaultParams,
-        alignment: 'left',
-      })}
-    </div>
-    <div class="wrapper">
-      <h3 class="label">Button Group right</h3>
-      ${ButtonGroup({
-        ...defaultParams,
-        alignment: 'right',
-      })}
+      ${ButtonGroup({ ...defaultParams, alignment: 'left' }, 'Alignment', 'Left')}
     </div>
     <div class="wrapper">
       <h3 class="label">Button Group center</h3>
-      ${ButtonGroup({
-        ...defaultParams,
-        alignment: 'center',
-      })}
+      ${ButtonGroup({ ...defaultParams, alignment: 'center' }, 'Alignment', 'Center')}
+    </div>
+    <div class="wrapper">
+      <h3 class="label">Button Group right</h3>
+      ${ButtonGroup({ ...defaultParams, alignment: 'right' }, 'Alignment', 'Right')}
     </div>
   `;
 };
 
-Aligmnet.story = { name: ' ' };
+Alignment.story = { name: ' ' };
