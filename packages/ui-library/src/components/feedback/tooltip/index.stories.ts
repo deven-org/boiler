@@ -217,7 +217,7 @@ export const Offset = () => {
         ...defaultParams,
         offset: 0,
         placement: 'right',
-        message: 'With offset',
+        message: 'Without offset',
       })}
     </div>
 
@@ -225,7 +225,7 @@ export const Offset = () => {
       ...defaultParams,
       offset: 50,
       placement: 'right',
-      message: 'Without offset',
+      message: 'With offset',
     })}
     
   `;
