@@ -5,6 +5,7 @@ import type { BlrSelectType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
+import { html } from 'lit-html';
 
 const sampleParams: BlrSelectType = {
   name: 'Text Input',
@@ -16,19 +17,23 @@ const sampleParams: BlrSelectType = {
   hintMessage: 'Field is used for hint',
   hintIcon: 'blrInfo',
   selectId: 'Peter',
-  errorIcon: 'blrErrorFilled',
-  options: [
-    { value: 'uschi', label: 'Uschi', disabled: true },
-    { value: '1', label: 'Option 1' },
-    { value: '2', label: 'Option 2', selected: true },
-    { value: 'dieter', label: 'Dieter' },
-  ],
+  errorMessageIcon: 'blrErrorFilled',
   theme: 'Light',
 };
 
+const optionsAsChildren = html`
+  <option value="" label="--Please choose an option--"></option>
+  <option value="option1" label="Option 1"></option>
+  <option value="option2" label="Option 2"></option>
+  <option value="option3" label="Option 3"></option>
+  <option value="option4" label="Option 4"></option>
+  <option value="option5" label="Option 5"></option>
+  <option value="option6" label="Option 6"></option>
+`;
+
 describe('blr-select', () => {
   it('is having a select containing the right className', async () => {
-    const element = await fixture(BlrSelectRenderFunction(sampleParams));
+    const element = await fixture(BlrSelectRenderFunction(sampleParams, optionsAsChildren));
 
     const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
     const className = select?.className;
@@ -43,7 +48,7 @@ describe('blr-select', () => {
         hasHint: true,
         hintIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
