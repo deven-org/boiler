@@ -298,11 +298,22 @@ export const baseStyle = css`
     .input-unit-container .unit.prepend {
       grid-area: first;
       padding-right: 0;
+      order: -2;
     }
 
     .input-unit-container input.prepend {
       grid-area: second;
       padding-left: 0;
+    }
+
+    .input-unit-container .unit:not(.prepend) {
+      grid-area: second;
+      padding-left: 0;
+    }
+
+    .input-unit-container input:not(.prepend) {
+      grid-area: first;
+      padding-right: 0;
     }
 
     .input-unit-container.split {
@@ -327,5 +338,15 @@ export const baseStyle = css`
 
   .split > button:last-of-type {
     _margin-left: auto;
+  }
+
+  &:not(.split) {
+    .input-unit-container {
+      width: 100%;
+    }
+
+    .input-unit-container input:not(.prepend) {
+      width: 100%;
+    }
   }
 `;

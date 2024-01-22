@@ -17,7 +17,7 @@ const sharedStyles = html`
 
 const defaultParams: BlrNumberInputType = {
   size: 'md',
-  stepperVariant: 'split',
+  stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
   value: undefined,
   fractionDigits: 0,
