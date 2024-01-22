@@ -12,10 +12,11 @@ const sharedStyles = html`
       margin: 1.25rem;
       display: flex;
       flex-direction: column;
+      flex-basis: 25%;
     }
     .container {
       height: 100px;
-      margin: 50px auto 0;
+      margin: 30px auto 0;
       width: 200px;
       display: flex;
       justify-content: center;
@@ -77,7 +78,7 @@ export default {
       description: 'Choose if component has an arrow, pointing to the related element.',
       control: { type: 'boolean' },
       table: {
-        category: 'Content / Settings',
+        category: 'Appearance',
       },
     },
     message: {
@@ -109,10 +110,6 @@ export default {
     - [**Elevation**](#elevation)  
     - [**Has Arrow**](#has-arrow)
     - [**Offset**](#offset)
-  - [**Content / Settings**](#content--settings)
-    - [**Message**](#message)
-  - [**Content / Settings**](#content--settings)
-    - [**Message**](#message)
   - [**Dependencies**](#dependencies)
     - [**Tooltip Bubble**](#tooltip-bubble)
   </markdown>
@@ -130,9 +127,9 @@ const defaultParams: BlrTooltipType = {
   theme: 'Light',
   placement: 'top',
   elevation: true,
-  offset: 4,
   hasArrow: true,
-  message: 'Tooltip text comes here Tooltip text comes here',
+  offset: 4,
+  message: 'Message-text',
 };
 
 Tooltip.args = defaultParams;
@@ -145,34 +142,25 @@ Tooltip.args = defaultParams;
 
 export const Placement = () => {
   const tooltips: BlrTooltipType[] = [
-    { ...defaultParams },
-    { ...defaultParams, placement: 'top-start' },
-    { ...defaultParams, placement: 'top-end' },
-    { ...defaultParams, placement: 'right' },
-    { ...defaultParams, placement: 'right-start' },
-    { ...defaultParams, placement: 'right-end' },
-    { ...defaultParams, placement: 'bottom' },
-    { ...defaultParams, placement: 'bottom-start' },
-    { ...defaultParams, placement: 'bottom-end' },
-    { ...defaultParams, placement: 'left' },
-    { ...defaultParams, placement: 'left-start' },
-    { ...defaultParams, placement: 'left-end' },
+    { ...defaultParams, message: 'Top' },
+    { ...defaultParams, placement: 'top-start', message: 'Top-start' },
+    { ...defaultParams, placement: 'top-end', message: 'Top-end' },
+    { ...defaultParams, placement: 'right', message: 'Right' },
+    { ...defaultParams, placement: 'right-start', message: 'Right-start' },
+    { ...defaultParams, placement: 'right-end', message: 'Right-end' },
+    { ...defaultParams, placement: 'bottom', message: 'Bottom' },
+    { ...defaultParams, placement: 'bottom-start', message: 'Bottom-start' },
+    { ...defaultParams, placement: 'bottom-end', message: 'Bottom-end' },
+    { ...defaultParams, placement: 'left', message: 'Left' },
+    { ...defaultParams, placement: 'left-start', message: 'Left-start' },
+    { ...defaultParams, placement: 'left-end', message: 'Left-end' },
   ];
 
   return html`
     ${sharedStyles}
 
     <div class="tooltip-container">
-      ${tooltips.map(
-        (tooltip, index) => html`
-          <div class="wrapper">
-            ${Tooltip(tooltip)}
-            <div class="label">${tooltip.placement}</div>
-          </div>
-
-          ${index % 3 === 2 ? html`<div style="flex-basis: 100%; height: 0;"></div>` : ''}
-        `
-      )}
+      ${tooltips.map((tooltip) => html` <div class="wrapper">${Tooltip(tooltip)}</div> `)}
     </div>
   `;
 };
@@ -188,10 +176,12 @@ export const Elevation = () => {
     ${sharedStyles}
     ${Tooltip({
       ...defaultParams,
+      message: 'With elevation',
     })}
     ${Tooltip({
       ...defaultParams,
       elevation: false,
+      message: 'Without elevation',
     })}
   `;
 };
@@ -205,10 +195,12 @@ export const HasArrow = () => {
     ${sharedStyles}
     ${Tooltip({
       ...defaultParams,
+      message: 'With arrow',
     })}
     ${Tooltip({
       ...defaultParams,
       hasArrow: false,
+      message: 'Without arrow',
     })}
   `;
 };
@@ -225,37 +217,19 @@ export const Offset = () => {
         ...defaultParams,
         offset: 0,
         placement: 'right',
+        message: 'With offset',
       })}
     </div>
 
     ${Tooltip({
       ...defaultParams,
-      offset: 20,
+      offset: 50,
       placement: 'right',
+      message: 'Without offset',
     })}
-    ${Tooltip({
-      ...defaultParams,
-      offset: 40,
-      placement: 'right',
-    })}
+    
   `;
 };
-
-/**
- * ## Content / Settings
- * ### Message
- * The Tooltip component can incorporate a message.
- */
-export const Message = () => {
-  return html`
-    ${sharedStyles}
-    ${Tooltip({
-      ...defaultParams,
-    })}
-  `;
-};
-
-Message.story = { name: ' ' };
 
 /**
  * ## Dependencies
@@ -268,6 +242,7 @@ export const TooltipBubble = () => {
     ${sharedStyles}
     ${Tooltip({
       ...defaultParams,
+      message: 'This is the tooltip bubble',
     })}
   `;
 };
