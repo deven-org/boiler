@@ -939,17 +939,51 @@
             "type": "spacing"
           }
         }
+      },
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{UI.Caption.SM}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{UI.Caption.MD}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{UI.Caption.LG}",
+            "type": "typography"
+          }
+        }
       }
     },
     "Tooltip": {
-      "ContentCol": {
+      "TextWrapper": {
         "Padding": {
-          "value": "{core.dimensionPX.6} {core.dimensionPX.8}",
+          "value": "{Feedback.Tooltip.TextWrapper.PaddingTopBottm} {Feedback.Tooltip.TextWrapper.PaddingLeftRight}",
           "type": "spacing"
         },
         "BorderRadius": {
           "value": "{core.borderRadius.MD}",
           "type": "borderRadius"
+        },
+        "MinWidth": {
+          "value": "{core.dimensionREM.40}",
+          "type": "sizing",
+          "description": "Defines the minimum width of the tooltip."
+        },
+        "MaxWidth": {
+          "value": "{core.dimensionREM.80}",
+          "type": "sizing",
+          "description": "Defines the maximum Width of the tooltip."
+        },
+        "PaddingTopBottm": {
+          "value": "{core.dimensionPX.6}",
+          "type": "spacing"
+        },
+        "PaddingLeftRight": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
         }
       },
       "NoseWrapper": {
@@ -964,15 +998,11 @@
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }
       },
-      "MinWidth": {
-        "value": "{core.dimensionREM.40}",
-        "type": "sizing",
-        "description": "Defines the minimum width of the tooltip."
-      },
-      "MaxWidth": {
-        "value": "{core.dimensionREM.80}",
-        "type": "sizing",
-        "description": "Defines the maximum Width of the tooltip."
+      "Text": {
+        "Typography": {
+          "value": "{UI.Caption.SM}",
+          "type": "typography"
+        }
       }
     },
     "Dialog": {
@@ -1056,6 +1086,159 @@
     }
   },
   "Forms": {
+    "CaptionComponent": {
+      "Container": {
+        "ItemSpacing": {
+          "SM": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.2}",
+            "type": "spacing"
+          }
+        },
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "{Forms.CaptionComponent.Container.PaddingTopBottom.SM} {Forms.CaptionComponent.Container.PaddingLeftRight.SM}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Forms.CaptionComponent.Container.PaddingTopBottom.MD} {Forms.CaptionComponent.Container.PaddingLeftRight.MD}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Forms.CaptionComponent.Container.PaddingTopBottom.LG} {Forms.CaptionComponent.Container.PaddingLeftRight.LG}",
+            "type": "spacing"
+          }
+        }
+      },
+      "IconWrapper": {
+        "PaddingTop": {
+          "SM": {
+            "value": "{core.dimensionREM.1}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0,5}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.5}",
+            "type": "spacing"
+          }
+        }
+      },
+      "Icon": {
+        "IconSize": {
+          "SM": {
+            "value": "{core.dimensionREM.14}",
+            "type": "sizing",
+            "description": "Defines the physical size of the icon inside the captionComponent"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          }
+        }
+      },
+      "TextWrapper": {
+        "PaddingLeftRight": {
+          "SM": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "PaddingTopBottom": {
+          "SM": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "Padding": {
+          "SM": {
+            "value": "{Forms.CaptionComponent.TextWrapper.PaddingTopBottom.SM} {Forms.CaptionComponent.TextWrapper.PaddingLeftRight.SM}",
+            "type": "spacing"
+          },
+          "MD": {
+            "value": "{Forms.CaptionComponent.TextWrapper.PaddingTopBottom.MD} {Forms.CaptionComponent.TextWrapper.PaddingLeftRight.MD}",
+            "type": "spacing"
+          },
+          "LG": {
+            "value": "{Forms.CaptionComponent.TextWrapper.PaddingTopBottom.LG} {Forms.CaptionComponent.TextWrapper.PaddingLeftRight.LG}",
+            "type": "spacing"
+          }
+        }
+      },
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{UI.Caption.SM}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{UI.Caption.MD}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{UI.Caption.LG}",
+            "type": "typography"
+          }
+        }
+      }
+    },
     "Checkbox": {
       "ContentCol": {
         "ItemSpacing": {
@@ -2947,123 +3130,149 @@
     },
     "Slider": {
       "Thumb": {
-        "Border": {
-          "Rest": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.Rest}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
+        "Shape": {
+          "BorderWidth": {
+            "Rest": {
+              "value": "{core.dimensionPX.2}",
+              "type": "borderWidth"
             },
-            "type": "border"
+            "Hover": {
+              "value": "{core.dimensionPX.4}",
+              "type": "borderWidth"
+            },
+            "Pressed": {
+              "value": "{core.dimensionPX.4}",
+              "type": "borderWidth"
+            },
+            "Focus": {
+              "value": "{core.dimensionPX.2}",
+              "type": "borderWidth"
+            },
+            "Disabled": {
+              "value": "{core.dimensionPX.2}",
+              "type": "borderWidth"
+            },
+            "ReadOnly": {
+              "value": "{core.dimensionPX.2}",
+              "type": "borderWidth"
+            }
           },
-          "Hover": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.Hover}",
-              "width": "{core.dimensionPX.4}",
-              "style": "solid"
+          "Border": {
+            "Rest": {
+              "value": {
+                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Rest}",
+                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Rest}",
+                "style": "solid"
+              },
+              "type": "border"
             },
-            "type": "border"
+            "Hover": {
+              "value": {
+                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Hover}",
+                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Hover}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Pressed": {
+              "value": {
+                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Pressed}",
+                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Pressed}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Focus": {
+              "value": {
+                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Focus}",
+                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Focus}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "Disabled": {
+              "value": {
+                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Disabled}",
+                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Disabled}",
+                "style": "solid"
+              },
+              "type": "border"
+            },
+            "ReadOnly": {
+              "value": {
+                "color": "{Forms.Slider.Thumb.Shape.BorderColor.ReadOnly}",
+                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.ReadOnly}",
+                "style": "solid"
+              },
+              "type": "border"
+            }
           },
-          "Pressed": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.Pressed}",
-              "width": "{core.dimensionPX.4}",
-              "style": "solid"
+          "Size": {
+            "Rest": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
             },
-            "type": "border"
-          },
-          "Focus": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.Focus}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
+            "Hover": {
+              "value": "{core.dimensionPX.20}",
+              "type": "sizing"
             },
-            "type": "border"
-          },
-          "Disabled": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.Disabled}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
+            "Pressed": {
+              "value": "{core.dimensionPX.20}",
+              "type": "sizing"
             },
-            "type": "border"
-          },
-          "ReadOnly": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.ReadOnly}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
+            "Focus": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
             },
-            "type": "border"
-          },
-          "Error": {
-            "value": {
-              "color": "{Forms.Slider.Thumb.Stroke.Error}",
-              "width": "{core.dimensionPX.2}",
-              "style": "solid"
+            "Disabled": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
             },
-            "type": "border"
+            "ReadOnly": {
+              "value": "{core.dimensionPX.14}",
+              "type": "sizing"
+            }
           }
         },
-        "Sizing": {
-          "Rest": {
-            "value": "{core.dimensionPX.14}",
-            "type": "sizing"
-          },
-          "Hover": {
-            "value": "{core.dimensionPX.20}",
-            "type": "sizing"
-          },
-          "Pressed": {
-            "value": "{core.dimensionPX.20}",
-            "type": "sizing"
-          },
-          "Focus": {
-            "value": "{core.dimensionPX.14}",
-            "type": "sizing"
-          },
-          "Disabled": {
-            "value": "{core.dimensionPX.14}",
-            "type": "sizing"
-          },
-          "Readonly": {
-            "value": "{core.dimensionPX.14}",
+        "Container": {
+          "Size": {
+            "value": "{core.dimensionPX.24}",
             "type": "sizing"
           }
         }
       },
       "Track": {
         "Border": {
-          "Active": {
-            "Default": {
+          "Default": {
+            "Active": {
               "value": {
-                "color": "{Forms.Slider.Track.Stroke.Active.Default}",
+                "color": "{Forms.Slider.Track.BorderColor.Default.Active}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Mute": {
+            "Inactive": {
               "value": {
-                "color": "{Forms.Slider.Track.Stroke.Active.Mute}",
+                "color": "{Forms.Slider.Track.BorderColor.Default.Inactive}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Inactive": {
-            "Default": {
+          "Mute": {
+            "Active": {
               "value": {
-                "color": "{Forms.Slider.Track.Stroke.Inactive.Default}",
+                "color": "{Forms.Slider.Track.BorderColor.Mute.Active}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Mute": {
+            "Inactive": {
               "value": {
-                "color": "{Forms.Slider.Track.Stroke.Inactive.Mute}",
+                "color": "{Forms.Slider.Track.BorderColor.Mute.Inactive}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
@@ -3073,45 +3282,67 @@
         }
       },
       "TickMark": {
+        "BorderWidth": {
+          "Default": {
+            "Active": {
+              "value": "{core.dimensionPX.1}",
+              "type": "borderWidth"
+            },
+            "Inactive": {
+              "value": "{core.dimensionPX.1}1",
+              "type": "borderWidth"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{core.dimensionPX.1}",
+              "type": "borderWidth"
+            },
+            "Inactive": {
+              "value": "{core.dimensionPX.1}",
+              "type": "borderWidth"
+            }
+          }
+        },
         "Border": {
-          "Active": {
-            "Default": {
+          "Default": {
+            "Active": {
               "value": {
-                "color": "{Forms.Slider.TickMark.Stroke.Active.Default}",
-                "width": "{core.dimensionPX.1}",
+                "color": "{Forms.Slider.TickMark.BorderColor.Default.Active}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Mute": {
+            "Inactive": {
               "value": {
-                "color": "{Forms.Slider.TickMark.Stroke.Active.Mute}",
-                "width": "{core.dimensionPX.1}",
+                "color": "{Forms.Slider.TickMark.BorderColor.Default.Inactive}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}1",
                 "style": "solid"
               },
               "type": "border"
             }
           },
-          "Inactive": {
-            "Default": {
+          "Mute": {
+            "Active": {
               "value": {
-                "color": "{Forms.Slider.TickMark.Stroke.Inactive.Default}",
-                "width": "{core.dimensionPX.1}1",
+                "color": "{Forms.Slider.TickMark.BorderColor.Mute.Active}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
               },
               "type": "border"
             },
-            "Mute": {
+            "Inactive": {
               "value": {
-                "color": "{Forms.Slider.TickMark.Stroke.Inactive.Mute}",
-                "width": "{core.dimensionPX.1}",
+                "color": "{Forms.Slider.TickMark.BorderColor.Mute.Inactive}",
+                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
               },
               "type": "border"
             }
           }
         },
-        "Sizing": {
+        "Size": {
           "value": "{core.dimensionPX.6}",
           "type": "sizing"
         }
@@ -3155,12 +3386,12 @@
             "description": "Defines the gap between hint and error message"
           },
           "MD": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.5}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
           "LG": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionREM.6}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           }

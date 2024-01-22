@@ -1,28 +1,14 @@
-import { BlrTabBarRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrTabBarRenderFunction } from './renderFunction';
 import type { BlrTabBarType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { html } from 'lit-html';
 
 const sampleParams: BlrTabBarType = {
   theme: 'Light',
-  tabs: [
-    {
-      label: 'Tab 1',
-      icon: 'blr360',
-      href: './',
-    },
-    {
-      label: 'Tab 2',
-      icon: 'blrInfo',
-      href: './',
-    },
-    {
-      label: 'Tab 3',
-      icon: 'blrCalendar',
-      href: './',
-    },
-  ],
   overflowVariantStandard: 'wrap',
   overflowVariantFullWidth: 'wrap',
   showDivider: true,
@@ -32,9 +18,23 @@ const sampleParams: BlrTabBarType = {
   alignment: 'left',
 };
 
+const tabsAsChildren = html`
+  <p disabled label="Tab 1" icon="blr360">Tab 1</p>
+  <p label="Tab 2" icon="blrInfo">Tab 2</p>
+  <p label="Tab 3" icon="blrCrop">Tab 3</p>
+  <p label="Tab 4" icon="blrDocumentNew">Tab 4</p>
+  <p label="Tab 5" icon="blrDocumentTwo">Tab 5</p>
+  <p label="Tab 6" icon="blrDownload">Tab 6</p>
+  <p label="Tab 7" icon="blrHeart">Tab 7</p>
+  <p label="Tab 8" icon="blrHome">Tab 8</p>
+  <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
+  <p label="Tab 10" icon="blrMusic">Tab 10</p>
+  <p label="Tab 11" icon="blrPen">Tab 11</p>
+`;
+
 describe('blr-tab-bar', () => {
   it('is having a tab bar containing the right className', async () => {
-    const element = await fixture(BlrTabBarRenderFunction(sampleParams));
+    const element = await fixture(BlrTabBarRenderFunction(sampleParams, tabsAsChildren));
 
     const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
     const className = tabBar?.className;
@@ -43,7 +43,7 @@ describe('blr-tab-bar', () => {
   });
 
   it('has a size md by default', async () => {
-    const element = await fixture(BlrTabBarRenderFunction(sampleParams));
+    const element = await fixture(BlrTabBarRenderFunction(sampleParams, tabsAsChildren));
 
     const input = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
     const className = input?.className;
@@ -52,7 +52,7 @@ describe('blr-tab-bar', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrTabBarRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrTabBarRenderFunction({ ...sampleParams, size: 'sm' }, tabsAsChildren));
 
     const input = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
     const className = input?.className;

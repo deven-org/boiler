@@ -13,7 +13,7 @@ import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-export const TAG_NAME = 'blr-icon-button';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrIconButton extends LitElement {
@@ -102,6 +102,7 @@ export class BlrIconButton extends LitElement {
         <span
           aria-label=${this.arialabel || nothing}
           class="blr-semantic-action blr-icon-button ${classes}"
+          aria-disabled=${this.disabled ? 'true' : nothing}
           @click=${this.handleClick}
           id=${this.buttonId || nothing}
           tabindex=${this.disabled ? nothing : '0'}
@@ -114,7 +115,7 @@ export class BlrIconButton extends LitElement {
             }
           }}
         >
-          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
             ? BlrLoaderRenderFunction({
                 size: loaderSizeVariant,

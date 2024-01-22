@@ -5,7 +5,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 
-export const TAG_NAME = 'blr-form-label';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrFormLabel extends LitElement {

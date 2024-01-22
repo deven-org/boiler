@@ -4,6 +4,9 @@ import { html } from 'lit-html';
 import { BlrFormCaptionRenderFunction } from './form-caption/renderFunction';
 import { FormSizes } from '../../../globals/constants';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 export default {
   title: 'Design System/Web Components/Internal Components/FormCaptionGroup',
   argTypes: {

@@ -12,7 +12,7 @@ import { formDark, formLight } from '../../../foundation/semantic-tokens/form.cs
 
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-textarea';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {
@@ -63,9 +63,27 @@ export class BlrTextarea extends LitElement {
   }
 
   protected updateCounter() {
+    const scrollTop = this.textareaElement?.scrollTop;
+    const isFocused = this.textareaElement === document.activeElement;
+
     const length = this.textareaElement?.value?.length;
     if (length !== undefined) {
       this.count = length;
+    }
+
+    const shouldUpdateTextarea = this.textareaElement && scrollTop !== undefined;
+
+    if (shouldUpdateTextarea) {
+      requestAnimationFrame(() => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        this.textareaElement.scrollTop = scrollTop;
+        if (isFocused) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          this.textareaElement.focus();
+        }
+      });
     }
   }
 

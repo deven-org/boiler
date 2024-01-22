@@ -6,6 +6,9 @@ import { PureIconKeys } from '@boiler/icons';
 import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
+// this loads the all components instances and registers their html tags
+import '../../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
@@ -190,7 +193,7 @@ export default {
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
  
  **NOTE**<br>
@@ -204,7 +207,7 @@ Text Button represents a clickable button that typically displays text rather th
 - [**Dependencies**](#dependencies)
  - [**Icon**](#icon)
  - [**Loader**](#loader)
-</Markdown>`,
+</markdown>`,
       },
     },
   },

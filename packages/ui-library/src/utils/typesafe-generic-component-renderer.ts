@@ -12,27 +12,48 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
   const attrEntries = Object.entries(htmlAttributes || {});
 
   // we will get rid of the dots later on by defining bindings within the component property decorator
-  propEntries.forEach(([key, value], index) => {
+  propEntries.forEach(([key, value]) => {
+    const needsOpenTag = templateFragments.length === 0;
+
     if (typeof value === 'function') {
-      if (index === 0) {
+      if (needsOpenTag) {
         templateFragments.push(`<${tagName} @${key}=`);
       } else {
         templateFragments.push(` @${key}=`);
       }
     } else if (key === 'classMap') {
-      if (index === 0) {
+      if (needsOpenTag) {
         templateFragments.push(`<${tagName} class=`);
       } else {
         templateFragments.push(` class=`);
       }
-    } else {
-      if (index === 0) {
+    } else if (typeof value === 'boolean') {
+      if (value === true) {
+        if (needsOpenTag) {
+          templateFragments.push(`<${tagName} ${key}=`);
+        } else {
+          templateFragments.push(` ${key}=`);
+        }
+      } else {
+        if (needsOpenTag) {
+          templateFragments.push(`<${tagName} .${key}=`);
+        } else {
+          templateFragments.push(` .${key}=`);
+        }
+      }
+    } else if (typeof value === 'object') {
+      if (needsOpenTag) {
         templateFragments.push(`<${tagName} .${key}=`);
       } else {
         templateFragments.push(` .${key}=`);
       }
+    } else {
+      if (needsOpenTag) {
+        templateFragments.push(`<${tagName} ${key}=`);
+      } else {
+        templateFragments.push(` ${key}=`);
+      }
     }
-
     values.push(value);
   });
 
