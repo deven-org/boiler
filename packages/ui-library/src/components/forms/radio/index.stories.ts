@@ -1,10 +1,13 @@
 import { BlrRadioType } from './index';
 import { BlrRadioRenderFunction } from './renderFunction';
-import { InputSizes } from '../../../../globals/constants';
+import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
+
+// this loads the all components instances and registers their html tags
+import '../../../index';
 
 const sharedStyles = html`
   <style>
@@ -15,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Forms/Radio',
+  title: 'Design System/Web Components/Forms/Radio Group/Radio',
   argTypes: {
     theme: {
       options: Themes,
@@ -194,7 +197,7 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
         A radio component allows users to select a single option from a list of mutually exclusive choices.
       
         - [**Appearance**](#appearance)
@@ -209,7 +212,7 @@ export default {
           - [**Has Error**](#has-error)
         - [**Dependencies**](#dependencies)
           - [**Form Caption Group**](#form-caption-group)
-      </Markdown>
+      </markdown>
       `,
       },
     },

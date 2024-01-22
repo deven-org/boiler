@@ -14,7 +14,7 @@ import { actionDark, actionLight } from '../../../foundation/semantic-tokens/act
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-number-input';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrNumberInput extends LitElement {

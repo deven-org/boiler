@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
@@ -19,10 +18,11 @@ import { calculateIconName } from '../../../../utils/calculate-icon-name';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction';
 
-export const TAG_NAME = 'blr-text-button';
+import { TAG_NAME } from './renderFunction';
+
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-@customElement('blr-text-button')
+@customElement(TAG_NAME)
 export class BlrTextButton extends LitElement {
   static styles = [styleCustom];
 
@@ -148,11 +148,12 @@ export class BlrTextButton extends LitElement {
         </style>
         <span
           class="${classes}"
+          aria-disabled=${this.disabled ? 'true' : nothing}
           @click="${this.handleClick}"
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
-          role=${this.disabled ? nothing : 'button'}
+          role="button"
           @keydown=${(event: KeyboardEvent) => {
             if (event.code === 'Space') {
               this.handleClick(event);
@@ -160,7 +161,7 @@ export class BlrTextButton extends LitElement {
           }}
           id=${this.buttonId || nothing}
         >
-          ${this.focused ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
             ? html`
                 ${BlrLoaderRenderFunction({

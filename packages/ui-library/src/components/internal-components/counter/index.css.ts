@@ -1,9 +1,9 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
+export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens) => {
   const { Counter } = componentTokens.Feedback;
-  const { SM, MD, LG } = semanticTokens.Forms;
+  // const { SM, MD, LG } = semanticTokens.Forms;
 
   return typeSafeNestedCss`
     .blr-counter {
@@ -20,10 +20,10 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         border-radius: ${Counter.Container.BorderRadius.SM};
         outline-width: ${Counter.Container.BorderWidth.SM};
 
-        font-family: ${SM.Caption.fontFamily}, sans-serif;
-        font-weight: ${SM.Caption.fontWeight};
-        font-size: ${SM.Caption.fontSize};
-        line-height: ${SM.Caption.lineHeight};
+        font-family: ${Counter.Text.Typography.SM.fontFamily}, sans-serif;
+        font-weight: ${Counter.Text.Typography.SM.fontWeight};
+        font-size: ${Counter.Text.Typography.SM.fontSize};
+        line-height: ${Counter.Text.Typography.SM.lineHeight};
       }
 
       &.md {
@@ -32,10 +32,10 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         border-radius: ${Counter.Container.BorderRadius.MD};
         outline-width: ${Counter.Container.BorderWidth.MD};
 
-        font-family: ${MD.Caption.fontFamily}, sans-serif;
-        font-weight: ${MD.Caption.fontWeight};
-        font-size: ${MD.Caption.fontSize};
-        line-height: ${MD.Caption.lineHeight};
+        font-family: ${Counter.Text.Typography.MD.fontFamily}, sans-serif;
+        font-weight: ${Counter.Text.Typography.MD.fontWeight};
+        font-size: ${Counter.Text.Typography.MD.fontSize};
+        line-height: ${Counter.Text.Typography.MD.lineHeight};
       }
 
       &.lg {
@@ -44,10 +44,10 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
         border-radius: ${Counter.Container.BorderRadius.LG};
         outline-width: ${Counter.Container.BorderWidth.LG};
 
-        font-family: ${LG.Caption.fontFamily}, sans-serif;
-        font-weight: ${LG.Caption.fontWeight};
-        font-size: ${LG.Caption.fontSize};
-        line-height: ${LG.Caption.lineHeight};
+        font-family: ${Counter.Text.Typography.LG.fontFamily}, sans-serif;
+        font-weight: ${Counter.Text.Typography.LG.fontWeight};
+        font-size: ${Counter.Text.Typography.LG.fontSize};
+        line-height: ${Counter.Text.Typography.LG.lineHeight};
       }
 
       &.error {

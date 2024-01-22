@@ -7,6 +7,9 @@ import { PureIconKeys } from '@boiler/icons/icons-optimized';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 const sharedStyles = html`
   <style>
     .wrapper {
@@ -335,7 +338,7 @@ export default {
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
       Number Input allows users to enter enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
       - [**Appearance**](#appearance)
         - [**Size Variant**](#size-variant)
@@ -353,7 +356,7 @@ export default {
         - [**Icon Button**](#icon-button)
         - [**Form Label**](#form-label)
         - [**Form Caption Group**](#form-caption-group)
-    </Markdown>`,
+    </markdown>`,
       },
     },
   },

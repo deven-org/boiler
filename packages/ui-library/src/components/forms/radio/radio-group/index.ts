@@ -11,7 +11,7 @@ import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes
 import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption/renderFunction';
 
-export const TAG_NAME = 'blr-radio-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {
@@ -28,7 +28,7 @@ export class BlrRadioGroup extends LitElement {
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
   @property() errorIcon?: SizelessIconType;
-  @property() hideLabel!: boolean;
+  @property() hideLabel?: boolean;
   @property() options!: RadioOption[];
   @property() hasHint = true;
   @property() groupHintIcon?: SizelessIconType;
@@ -36,6 +36,8 @@ export class BlrRadioGroup extends LitElement {
   @property() groupHintMessage?: string;
   @property() groupErrorIcon?: SizelessIconType;
   @property() showLegend?: boolean = true;
+  @property() legend?: string;
+  @property() direction?: 'vertical' | 'horizontal';
 
   @property() theme: ThemeType = 'Light';
 
@@ -92,7 +94,7 @@ export class BlrRadioGroup extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       ${this.showLegend
-        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">Choose any option</legend></div>`
+        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.legend}</legend></div>`
         : nothing}
 
       <div class="blr-radio-group ${classes}">

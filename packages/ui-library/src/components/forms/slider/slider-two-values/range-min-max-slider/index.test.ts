@@ -1,4 +1,6 @@
-import { BlrRangeMinMaxSliderRenderFunction } from '@boiler/ui-library/dist/';
+import '@boiler/ui-library/dist/';
+
+import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction';
 import type { BlrRangeMinMaxSliderType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';

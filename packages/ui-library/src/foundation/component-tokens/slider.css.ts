@@ -41,21 +41,21 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
               cursor: pointer;
               position: relative;
               z-index: 2;
-              width: ${Forms.Slider.Thumb.Sizing.Rest};
-              height: ${Forms.Slider.Thumb.Sizing.Rest};
-              background-color: ${Forms.Slider.Thumb.Fill.Rest};
-              border-width: ${Forms.Slider.Thumb.Border.Rest.width};
-              border-style: ${Forms.Slider.Thumb.Border.Rest.style};
-              border-color: ${Forms.Slider.Thumb.Border.Rest.color};
+              width: ${Forms.Slider.Thumb.Shape.Size.Rest};
+              height: ${Forms.Slider.Thumb.Shape.Size.Rest};
+              background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Rest};
+              border-width: ${Forms.Slider.Thumb.Shape.Border.Rest.width};
+              border-style: ${Forms.Slider.Thumb.Shape.Border.Rest.style};
+              border-color: ${Forms.Slider.Thumb.Shape.Border.Rest.color};
             }
 
             &::-moz-range-thumb {
-              width: ${Forms.Slider.Thumb.Sizing.Rest};
-              height: ${Forms.Slider.Thumb.Sizing.Rest};
-              background-color: ${Forms.Slider.Thumb.Fill.Rest};
-              border-width: ${Forms.Slider.Thumb.Border.Rest.width};
-              border-style: ${Forms.Slider.Thumb.Border.Rest.style};
-              border-color: ${Forms.Slider.Thumb.Border.Rest.color};
+              width: ${Forms.Slider.Thumb.Shape.Size.Rest};
+              height: ${Forms.Slider.Thumb.Shape.Size.Rest};
+              background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Rest};
+              border-width: ${Forms.Slider.Thumb.Shape.Border.Rest.width};
+              border-style: ${Forms.Slider.Thumb.Shape.Border.Rest.style};
+              border-color: ${Forms.Slider.Thumb.Shape.Border.Rest.color};
               border-radius: 50%;
               cursor: pointer;
               position: relative;
@@ -64,61 +64,61 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
 
             &:active {
               &::-webkit-slider-thumb {
-                width: ${Forms.Slider.Thumb.Sizing.Pressed};
-                height: ${Forms.Slider.Thumb.Sizing.Pressed};
-                background-color: ${Forms.Slider.Thumb.Fill.Pressed};
-                border-width: ${Forms.Slider.Thumb.Border.Pressed.width};
-                border-style: ${Forms.Slider.Thumb.Border.Pressed.style};
-                border-color: ${Forms.Slider.Thumb.Border.Pressed.color};
+                width: ${Forms.Slider.Thumb.Shape.Size.Pressed};
+                height: ${Forms.Slider.Thumb.Shape.Size.Pressed};
+                background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Pressed};
+                border-width: ${Forms.Slider.Thumb.Shape.Border.Pressed.width};
+                border-style: ${Forms.Slider.Thumb.Shape.Border.Pressed.style};
+                border-color: ${Forms.Slider.Thumb.Shape.Border.Pressed.color};
               }
 
               &::-moz-range-thumb {
-                width: ${Forms.Slider.Thumb.Sizing.Pressed};
-                height: ${Forms.Slider.Thumb.Sizing.Pressed};
-                background-color: ${Forms.Slider.Thumb.Fill.Pressed};
-                border-width: ${Forms.Slider.Thumb.Border.Pressed.width};
-                border-style: ${Forms.Slider.Thumb.Border.Pressed.style};
-                border-color: ${Forms.Slider.Thumb.Border.Pressed.color};
+                width: ${Forms.Slider.Thumb.Shape.Size.Pressed};
+                height: ${Forms.Slider.Thumb.Shape.Size.Pressed};
+                background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Pressed};
+                border-width: ${Forms.Slider.Thumb.Shape.Border.Pressed.width};
+                border-style: ${Forms.Slider.Thumb.Shape.Border.Pressed.style};
+                border-color: ${Forms.Slider.Thumb.Shape.Border.Pressed.color};
               }
             }
 
             &:hover {
               &::-webkit-slider-thumb {
-                width: ${Forms.Slider.Thumb.Sizing.Hover};
-                height: ${Forms.Slider.Thumb.Sizing.Hover};
-                background-color: ${Forms.Slider.Thumb.Fill.Hover};
-                border-width: ${Forms.Slider.Thumb.Border.Hover.width};
-                border-style: ${Forms.Slider.Thumb.Border.Hover.style};
-                border-color: ${Forms.Slider.Thumb.Border.Hover.color};
+                width: ${Forms.Slider.Thumb.Shape.Size.Hover};
+                height: ${Forms.Slider.Thumb.Shape.Size.Hover};
+                background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Hover};
+                border-width: ${Forms.Slider.Thumb.Shape.Border.Hover.width};
+                border-style: ${Forms.Slider.Thumb.Shape.Border.Hover.style};
+                border-color: ${Forms.Slider.Thumb.Shape.Border.Hover.color};
               }
 
               &::-moz-range-thumb {
-                width: ${Forms.Slider.Thumb.Sizing.Hover};
-                height: ${Forms.Slider.Thumb.Sizing.Hover};
-                background-color: ${Forms.Slider.Thumb.Fill.Hover};
-                border-width: ${Forms.Slider.Thumb.Border.Hover.width};
-                border-style: ${Forms.Slider.Thumb.Border.Hover.style};
-                border-color: ${Forms.Slider.Thumb.Border.Hover.color};
+                width: ${Forms.Slider.Thumb.Shape.Size.Hover};
+                height: ${Forms.Slider.Thumb.Shape.Size.Hover};
+                background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Hover};
+                border-width: ${Forms.Slider.Thumb.Shape.Border.Hover.width};
+                border-style: ${Forms.Slider.Thumb.Shape.Border.Hover.style};
+                border-color: ${Forms.Slider.Thumb.Shape.Border.Hover.color};
               }
             }
 
             &:disabled {
               &::-webkit-slider-thumb {
-                width: ${Forms.Slider.Thumb.Sizing.Disabled};
-                height: ${Forms.Slider.Thumb.Sizing.Disabled};
-                background-color: ${Forms.Slider.Thumb.Fill.Disabled};
-                border-width: ${Forms.Slider.Thumb.Border.Disabled.width};
-                border-style: ${Forms.Slider.Thumb.Border.Disabled.style};
-                border-color: ${Forms.Slider.Thumb.Border.Disabled.color};
+                width: ${Forms.Slider.Thumb.Shape.Size.Disabled};
+                height: ${Forms.Slider.Thumb.Shape.Size.Disabled};
+                background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Disabled};
+                border-width: ${Forms.Slider.Thumb.Shape.Border.Disabled.width};
+                border-style: ${Forms.Slider.Thumb.Shape.Border.Disabled.style};
+                border-color: ${Forms.Slider.Thumb.Shape.Border.Disabled.color};
               }
 
               &::-moz-range-thumb {
-                width: ${Forms.Slider.Thumb.Sizing.Disabled};
-                height: ${Forms.Slider.Thumb.Sizing.Disabled};
-                background-color: ${Forms.Slider.Thumb.Fill.Disabled};
-                border-width: ${Forms.Slider.Thumb.Border.Disabled.width};
-                border-style: ${Forms.Slider.Thumb.Border.Disabled.style};
-                border-color: ${Forms.Slider.Thumb.Border.Disabled.color};
+                width: ${Forms.Slider.Thumb.Shape.Size.Disabled};
+                height: ${Forms.Slider.Thumb.Shape.Size.Disabled};
+                background-color: ${Forms.Slider.Thumb.Shape.BackgroundColor.Disabled};
+                border-width: ${Forms.Slider.Thumb.Shape.Border.Disabled.width};
+                border-style: ${Forms.Slider.Thumb.Shape.Border.Disabled.style};
+                border-color: ${Forms.Slider.Thumb.Shape.Border.Disabled.color};
               }
             }
           }
@@ -143,7 +143,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
           font-size: ${Forms.Slider.Legend.Typography.fontSize};
           font-weight: ${Forms.Slider.Legend.Typography.fontWeight};
           line-height: ${Forms.Slider.Legend.Typography.lineHeight};
-          color: ${Forms.Slider.Legend.Color.Default};
+          color: ${Forms.Slider.Legend.TextColor.Default};
           word-wrap: normal;
           white-space: nowrap;
 
@@ -153,7 +153,7 @@ export const { tokenizedLight: sliderLight, tokenizedDark: sliderDark } = render
         }
 
         & > .inline-legend-disabled {
-          color: ${Forms.Slider.Legend.Color.Disabled};
+          color: ${Forms.Slider.Legend.TextColor.Disabled};
         }
       }
 

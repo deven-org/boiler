@@ -1,10 +1,14 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import { BlrIconButtonType } from './index';
+import type { BlrIconButtonType } from './index';
+
 import { BlrIconButtonRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+
+// this loads the all components instances and registers their html tags
+import '../../../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -167,7 +171,7 @@ export default {
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 An icon component typically displays a small, visually recognizable graphic or symbol that represents a particular function, object, or concept.
 
 **NOTE**<br>
@@ -180,7 +184,7 @@ The Icon Button component can not be used as a link out of the box and we genera
 - [**Dependencies**](#dependencies)
  - [**Icon**](#icon) 
  - [**Loader**](#loader)  
-        </Markdown>`,
+        </markdown>`,
       },
     },
   },

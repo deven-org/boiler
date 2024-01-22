@@ -12,7 +12,8 @@ import { formDark, formLight } from '../../../foundation/semantic-tokens/form.cs
 
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 
-export const TAG_NAME = 'blr-label-toggleswitch';
+import { TAG_NAME } from './renderFunction';
+
 import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
@@ -29,6 +30,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() offLabel!: string;
   @property() showStateLabel?: boolean;
   @property() checkInputId!: string;
+  @property() name!: string;
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;

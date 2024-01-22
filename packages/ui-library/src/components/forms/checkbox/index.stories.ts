@@ -6,6 +6,9 @@ import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
@@ -217,8 +220,9 @@ export default {
       //Second Example
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
-        component: `<Markdown>
-Checkbox represents two states: checked (selected) or unchecked (deselected), it  is usually accompanied by text labels that describe the option or action associated with the Checkbox.        
+        component: `<markdown>
+        Checkbox represents two states: checked (selected) or unchecked (deselected). It is usually accompanied by a text label that describes the option or action associated with the Checkbox.        
+
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
 - [**Content / Settings**](#content--settings)
@@ -232,7 +236,7 @@ Checkbox represents two states: checked (selected) or unchecked (deselected), it
 - [**Dependencies**](#dependencies)
  - [**Form-Label**](#form-label) 
  - [**Form Caption Group**](#form-caption-group)     
-</Markdown>
+</markdown>
         `,
       },
     },

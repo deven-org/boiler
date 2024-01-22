@@ -4,17 +4,16 @@ import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, CaptionVariantType, SizesType } from '../../../../globals/types';
 import { BlrIconRenderFunction } from '../../../ui/icon/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
+import { captionLight, captionDark } from './index.css';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
-import { styleCustom } from './index.css';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
-export const TAG_NAME = 'blr-form-caption';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {
-  static styles = [styleCustom];
+  static styles = [];
 
   @property() message?: string;
   @property() arialabel?: string;
@@ -26,7 +25,7 @@ export class BlrFormCaption extends LitElement {
 
   protected render() {
     if (this.size) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+      const dynamicStyles = this.theme === 'Light' ? [captionLight] : [captionDark];
 
       const classes = classMap({
         'blr-form-caption': true,

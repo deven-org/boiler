@@ -6,7 +6,7 @@ import { tooltipPosition } from './tooltip-position';
 import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
 import { styleCustom } from './index.css';
 
-export const TAG_NAME = 'blr-tooltip';
+import { TAG_NAME } from './renderFunction';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];

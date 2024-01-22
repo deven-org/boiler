@@ -1332,6 +1332,17 @@
     }
   },
   "Elevation": {
+    "Lvl_0": {
+      "value": {
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.0}",
+        "blur": "{core.dimensionPX.0}",
+        "spread": "{core.dimensionPX.0}",
+        "color": "{q.shadow.alpha}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
     "Lvl_1": {
       "value": {
         "x": "{core.dimensionPX.0}",
