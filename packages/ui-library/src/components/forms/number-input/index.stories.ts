@@ -99,7 +99,7 @@ export default {
         label: 'Enter Text',
       },
     },
-    fractionDigits: {
+    decimals: {
       name: 'decimals',
       description: 'Enter how many decimals the value of the component has.',
       table: {
@@ -109,7 +109,7 @@ export default {
         type: 'number',
       },
     },
-    totalDigits: {
+    leadingZeros: {
       name: 'leadingZeros',
       description: 'Enter how many leading zeros the value of the component has.',
       table: {
@@ -544,6 +544,8 @@ export const Readonly = () => {
         label: 'Readonly',
         readonly: true,
         labelAppendix: undefined,
+        fractionDigits: 1,
+        value: 20.2,
       })}
     </div>
   `;

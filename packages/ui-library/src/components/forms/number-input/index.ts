@@ -42,8 +42,8 @@ export class BlrNumberInput extends LitElement {
   @property() value?: number;
   @property() step?: number;
   @property() unit?: string;
-  @property() totalDigits?: number;
-  @property() fractionDigits?: number;
+  @property() leadingZeros?: number;
+  @property() decimals?: number;
   @property() prependUnit?: boolean;
 
   @property() theme: ThemeType = 'Light';
@@ -160,6 +160,8 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected render() {
+    const hasUnit = this.unit !== undefined && this.unit.length > 0;
+
     if (this.size) {
       const dynamicStyles =
         this.theme === 'Light'
@@ -168,12 +170,12 @@ export class BlrNumberInput extends LitElement {
 
       const inputClasses = classMap({
         [this.size]: this.size,
-        prepend: !!this.prependUnit,
+        prepend: hasUnit && !!this.prependUnit,
       });
 
       const unitClasses = classMap({
         unit: true,
-        prepend: !!this.prependUnit,
+        prepend: hasUnit && !!this.prependUnit,
         [`${this.size}`]: this.size,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
@@ -184,12 +186,13 @@ export class BlrNumberInput extends LitElement {
         [`${this.size}`]: this.size,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
-        'prepend': !!this.prependUnit,
+        'prepend': hasUnit && !!this.prependUnit,
+        'readonly': this.readonly || false,
       });
 
       const inputAndUnitContainer = classMap({
         'input-unit-container': true,
-        'prepend': !!this.prependUnit,
+        'prepend': hasUnit && !!this.prependUnit,
         [`${this.size}`]: this.size,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
@@ -242,8 +245,8 @@ export class BlrNumberInput extends LitElement {
             <input
               class="${inputClasses}"
               type="number"
-              .value=${!this.readonly && this.currentValue != 0
-                ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
+              .value=${this.currentValue != 0
+                ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
                 : nothing}
               step="${this.step || nothing}"
               ?disabled="${this.disabled}"
@@ -253,7 +256,9 @@ export class BlrNumberInput extends LitElement {
               @change=${this.handleChange}
               placeholder=${this.placeholder || nothing}
             />
-            ${!this.readonly && this.unit ? html` <div class="${unitClasses}">${this.unit}</div> ` : nothing}
+            ${this.unit !== undefined && this.unit.length
+              ? html` <div class="${unitClasses}">${this.unit}</div> `
+              : nothing}
           </div>
           ${this.renderMode()}
         </div>

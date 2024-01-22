@@ -160,7 +160,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
     }
 
-    &[readonly] {
+    &.readonly {
       outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
       background-color: ${SurfaceFill.Default.ReadOnly};
 

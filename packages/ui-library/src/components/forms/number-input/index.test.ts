@@ -24,8 +24,8 @@ const sampleParams: BlrNumberInputType = {
   errorIcon: 'blrInfo',
   value: 4,
   unit: 'gr',
-  fractionDigits: 0,
-  totalDigits: 0,
+  decimals: 0,
+  leadingZeros: 0,
 };
 
 describe('blr-number-input', () => {
