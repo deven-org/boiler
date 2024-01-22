@@ -1,4 +1,4 @@
-import { typeSafeNestedCss as css } from "../../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
@@ -6,7 +6,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   const { StepperCombo } = componentTokens.Action;
   const { NumberInput } = componentTokens.Forms;
 
-  return css`
+  return typeSafeNestedCss`
     .noPointerEvents {
       pointer-events: none;
     }
@@ -14,11 +14,17 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     .input-wrapper {
       box-sizing: border-box;
       width: 100%;
-      outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
+
+      outline-width: ${Input.Default.Rest.width};
+      outline-style: ${Input.Default.Rest.style};
+      outline-color: ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};
 
       &:focus-within {
-        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+        outline-width: ${Input.Default.Focus.width};
+        outline-style: ${Input.Default.Focus.style};
+        outline-color: ${Input.Default.Focus.color};
+
         background-color: ${SurfaceFill.Default.Focus};
 
         & > input {
@@ -33,15 +39,15 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
     .input-unit-container {
       &.sm {
-        gap: ${NumberInput.Input.TextContainer.ItemSpacing.SM};
+        gap: ${NumberInput.InputField.TextWrapper.ItemSpacing.SM};
       }
 
       &.md {
-        gap: ${NumberInput.Input.TextContainer.ItemSpacing.MD};
+        gap: ${NumberInput.InputField.TextWrapper.ItemSpacing.MD};
       }
 
       &.lg {
-        gap: ${NumberInput.Input.TextContainer.ItemSpacing.LG};
+        gap: ${NumberInput.InputField.TextWrapper.ItemSpacing.LG};
       }
 
       .unit {
@@ -176,7 +182,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
     const { StepperCombo } = componentTokens.Action;
     const { Silent } = semanticTokens.Action;
 
-    return css`
+    return typeSafeNestedCss`
       .stepper-combo {
         &.horizontal {
           display: grid;
@@ -275,7 +281,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
   }
 );
 
-export const baseStyle = css`
+export const baseStyle = typeSafeNestedCss`
   input[type="number"] {
     -moz-appearance: textfield;
   }
