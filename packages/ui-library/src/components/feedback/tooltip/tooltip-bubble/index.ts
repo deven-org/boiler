@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { light, dark } from './index.css';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
 
 @customElement(TAG_NAME)
 export class BlrTooltipBubble extends LitElement {

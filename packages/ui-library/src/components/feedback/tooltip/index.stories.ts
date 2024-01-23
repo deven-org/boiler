@@ -43,7 +43,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Feedback/Tooltip',
+  title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',
   argTypes: {
     theme: {
       options: Themes,

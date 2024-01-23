@@ -6,7 +6,7 @@ export { BlrTextButton } from './components/actions/buttons/text-button';
 // Feedback
 export { BlrLoader } from './components/feedback/loader';
 
-export { BlrTooltipBubble } from './components/internal-components/tooltip-bubble';
+export { BlrTooltipBubble } from './components/feedback/tooltip/tooltip-bubble';
 
 export { BlrTooltip } from './components/feedback/tooltip';
 
