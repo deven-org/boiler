@@ -68,8 +68,8 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     }
 
     .split {
-      ${forEachStepperComboSize(StepperCombo, (key, tokenPart, css) => {
-        return css`
+      ${forEachStepperComboSize(StepperCombo, (key, tokenPart, typeSafeCss) => {
+        return typeSafeCss`
           &.${key.toLocaleLowerCase()} {
             & > .custom-stepper-button {
               width: ${tokenPart.Vertical.Width};
