@@ -67,78 +67,64 @@
       }
     },
     "StepperCombo": {
-      "SM": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.32}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
+      "Container": {
+        "Width": {
+          "Vertical": {
+            "SM": {
+              "value": "{core.dimensionREM.32}",
+              "type": "sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.40}",
+              "type": "sizing"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.48}",
+              "type": "sizing"
             }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.64}",
-            "type": "sizing"
           },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      },
-      "MD": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.40}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.80}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
+          "Horizontal": {
+            "SM": {
+              "value": "{core.dimensionREM.64}",
+              "type": "sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.80}",
+              "type": "sizing"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.96}",
+              "type": "sizing"
             }
           }
         }
       },
-      "LG": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.48}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
+      "DividerWrapper": {
+        "Padding": {
+          "Vertical": {
+            "SM": {
+              "value": "0 {core.dimensionREM.8}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "0 {core.dimensionREM.8}",
+              "type": "spacing"
+            },
+            "LG": {
               "value": "0 {core.dimensionREM.8}",
               "type": "spacing"
             }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.96}",
-            "type": "sizing"
           },
-          "DividerWrapper": {
-            "Padding": {
+          "Horizontal": {
+            "SM": {
+              "value": "{core.dimensionREM.8} 0",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.8} 0",
+              "type": "spacing"
+            },
+            "LG": {
               "value": "{core.dimensionREM.8} 0",
               "type": "spacing"
             }

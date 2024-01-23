@@ -1691,15 +1691,15 @@
       "Actions.StepperButton.Container.BorderRadius.SM": "8d6fb9681b5493cb391dbee940bc34d6feaa5051",
       "Actions.StepperButton.Container.BorderRadius.MD": "9c3e1a8db76ee0650aa276d4fefbaaf5888235cf",
       "Actions.StepperButton.Container.BorderRadius.LG": "86a55e3ffd28f0f076ad38b7f34eed9101c6c0b1",
-      "Actions.StepperCombo.SM.Vertical.Width": "1eff8a3f8ff985a0f98328fd231ff0bba33582dd",
-      "Actions.StepperCombo.SM.Horizontal.Width": "f96fcb329c2b1840f9598868d280b1e504a0885c",
-      "Actions.StepperCombo.MD.Vertical.Width": "a25b9460fc82b0501dc3b8b42f036477c5c03f58",
-      "Actions.StepperCombo.MD.Horizontal.Width": "8606f84cf303c58d406f7fa46aff0189d455c840",
-      "Actions.StepperCombo.LG.Vertical.Width": "b4d63ffae2eb2281e5d37ff54b5a10bd79e56394",
-      "Actions.StepperCombo.LG.Horizontal.Width": "52d0c26df0f182e6137819ea16f1f4b700797de3",
       "Actions.StepperButton.Container.Width.SM": "0768fb650bb40bd0731b7b5a02a85b27d4b601a9",
       "Actions.StepperButton.Container.Width.MD": "fe193cb42b71c440788f8797f7f7270dc900517d",
-      "Actions.StepperButton.Container.Width.LG": "9b31db935d476a63ac6141ae173a055a4f8217dc"
+      "Actions.StepperButton.Container.Width.LG": "9b31db935d476a63ac6141ae173a055a4f8217dc",
+      "Actions.StepperCombo.Container.Width.Vertical.SM": "1eff8a3f8ff985a0f98328fd231ff0bba33582dd",
+      "Actions.StepperCombo.Container.Width.Horizontal.SM": "f96fcb329c2b1840f9598868d280b1e504a0885c",
+      "Actions.StepperCombo.Container.Width.Vertical.MD": "a25b9460fc82b0501dc3b8b42f036477c5c03f58",
+      "Actions.StepperCombo.Container.Width.Vertical.LG": "b4d63ffae2eb2281e5d37ff54b5a10bd79e56394",
+      "Actions.StepperCombo.Container.Width.Horizontal.MD": "8606f84cf303c58d406f7fa46aff0189d455c840",
+      "Actions.StepperCombo.Container.Width.Horizontal.LG": "52d0c26df0f182e6137819ea16f1f4b700797de3"
     },
     "group": "Theme"
   },
@@ -2241,12 +2241,6 @@
       "Actions.StepperButton.Container.BorderRadius.SM": "8d6fb9681b5493cb391dbee940bc34d6feaa5051",
       "Actions.StepperButton.Container.BorderRadius.MD": "9c3e1a8db76ee0650aa276d4fefbaaf5888235cf",
       "Actions.StepperButton.Container.BorderRadius.LG": "86a55e3ffd28f0f076ad38b7f34eed9101c6c0b1",
-      "Actions.StepperCombo.SM.Vertical.Width": "1eff8a3f8ff985a0f98328fd231ff0bba33582dd",
-      "Actions.StepperCombo.SM.Horizontal.Width": "f96fcb329c2b1840f9598868d280b1e504a0885c",
-      "Actions.StepperCombo.MD.Vertical.Width": "a25b9460fc82b0501dc3b8b42f036477c5c03f58",
-      "Actions.StepperCombo.MD.Horizontal.Width": "8606f84cf303c58d406f7fa46aff0189d455c840",
-      "Actions.StepperCombo.LG.Vertical.Width": "b4d63ffae2eb2281e5d37ff54b5a10bd79e56394",
-      "Actions.StepperCombo.LG.Horizontal.Width": "52d0c26df0f182e6137819ea16f1f4b700797de3",
       "Action.Menu.MenuItem.Container.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
       "Action.Menu.MenuItem.ContentStack.ItemSpacing": "333eea56c19cd22631f220ea5c56d59190823be7",
       "Action.Menu.MenuItem.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418",
@@ -3397,7 +3391,13 @@
       "q.content.onunspecified.inverted.beta": "e58e8029fc5f3480be093c8fac50a82614801687",
       "q.shadow.alpha": "83778a8c4ffd7b5d5c4df92bfde29340078a2dd0",
       "_internal.accent.pink.subtle": "a5817511c781de8760bf04d0dc84a07aca5c012d",
-      "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea"
+      "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea",
+      "Actions.StepperCombo.Container.Width.Vertical.SM": "1eff8a3f8ff985a0f98328fd231ff0bba33582dd",
+      "Actions.StepperCombo.Container.Width.Horizontal.SM": "f96fcb329c2b1840f9598868d280b1e504a0885c",
+      "Actions.StepperCombo.Container.Width.Vertical.MD": "a25b9460fc82b0501dc3b8b42f036477c5c03f58",
+      "Actions.StepperCombo.Container.Width.Vertical.LG": "b4d63ffae2eb2281e5d37ff54b5a10bd79e56394",
+      "Actions.StepperCombo.Container.Width.Horizontal.MD": "8606f84cf303c58d406f7fa46aff0189d455c840",
+      "Actions.StepperCombo.Container.Width.Horizontal.LG": "52d0c26df0f182e6137819ea16f1f4b700797de3"
     },
     "group": "Theme"
   }
