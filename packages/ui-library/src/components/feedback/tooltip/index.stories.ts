@@ -11,10 +11,10 @@ import { Placement as PlacementType } from '@floating-ui/dom';
 
 // this loads the all components instances and registers their html tags
 import '../../../index';
-import { BlrTooltipBubbleRenderFunction } from '../../internal-components/tooltip-bubble/renderFunction';
+import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
 
 export default {
-  title: 'Design System/Web Components/Feedback/Tooltip',
+  title: 'Design System/Web Components/Feedback/Tooltip/Tooltip',
   argTypes: {
     theme: {
       options: Themes,

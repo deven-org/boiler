@@ -1,12 +1,13 @@
 import { html } from 'lit';
 
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import '../../../index';
+import '../../../../index';
 import { BlrTooltipBubbleType } from '.';
+
+import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { BlrTooltipBubbleRenderFunction } from './renderFunction';
 
 export default {
-  title: 'Design System/Web Components/Internal Components/Tooltip Bubble',
+  title: 'Design System/Web Components/Feedback/Tooltip/Tooltip Bubble',
   argTypes: {
     theme: {
       options: Themes,
