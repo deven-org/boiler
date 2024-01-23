@@ -1,10 +1,14 @@
 /* eslint-disable no-console */
-import { BlrTextInputRenderFunction, BlrTextInputType } from './index';
+import { BlrTextInputType } from './index';
+import { BlrTextInputRenderFunction } from './renderFunction';
 import { FormSizes, InputTypes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { action } from '@storybook/addon-actions';
-import { html } from 'lit';
+import { html } from 'lit-html';
+
+// this loads the all components instances and registers their html tags
+import '../../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -280,6 +284,10 @@ export default {
   },
 
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125196&mode=dev',
+    },
     viewMode: 'docs',
     previewTabs: {
       'storybook/story/panel': {
@@ -288,7 +296,7 @@ export default {
     },
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Text Input allows users to enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
@@ -305,7 +313,7 @@ Text Input allows users to enter textual information or data into a designated a
  - [**Form Label**](#form-label) 
  - [**Icon**](#icon) 
  - [**Form Caption Group**](#form-caption-group)     
-</Markdown>
+</markdown>
         `,
       },
     },

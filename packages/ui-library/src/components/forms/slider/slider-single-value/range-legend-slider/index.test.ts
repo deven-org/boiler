@@ -1,4 +1,7 @@
-import { BlrRangeLegendSliderType, BlrRangeLegendSliderRenderFunction } from './index';
+import '@boiler/ui-library/dist/';
+
+import { BlrRangeLegendSliderRenderFunction } from './renderFunction';
+import type { BlrRangeLegendSliderType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';

@@ -1,4 +1,7 @@
-import { BlrRangeSliderType, BlrRangeSliderRenderFunction } from './index';
+import '@boiler/ui-library/dist/';
+
+import { BlrRangeSliderRenderFunction } from './renderFunction';
+import type { BlrRangeSliderType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';

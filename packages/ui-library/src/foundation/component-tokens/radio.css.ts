@@ -3,8 +3,8 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
-  const { Radio, RadioGroup } = componentTokens.Forms;
+  const { SM, MD, LG, Legend } = semanticTokens.Forms;
+  const { Radio, RadioGroup, FormLabel, CaptionComponent } = componentTokens.Forms;
 
   /* ToDos:
 
@@ -134,7 +134,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
       .blr-form-label-inline {
         _FIX?_: "LabelNextToControl states";
-        color: ${LabelNextToControl.Rest};
+        color: ${FormLabel.InlineLabel.TextColor.Rest};
         transition: all 0.25s ease 0s;
         display: flex;
         align-items: center;
@@ -183,15 +183,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.SM};
 
           .caption-wrapper {
-            padding: ${SM.CaptionComponent.Padding};
-            gap: ${SM.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.SM};
+            gap: ${CaptionComponent.Container.ItemSpacing.SM};
           }
 
           .blr-form-label-inline {
-            font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${SM.LabelNextToControl.fontWeight};
-            line-height: ${SM.LabelNextToControl.lineHeight};
-            font-size: ${SM.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
           }
         }
       }
@@ -209,15 +209,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.MD};
 
           .caption-wrapper {
-            padding: ${MD.CaptionComponent.Padding};
-            gap: ${MD.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.MD};
+            gap: ${CaptionComponent.Container.ItemSpacing.MD};
           }
 
           .blr-form-label-inline {
-            font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${MD.LabelNextToControl.fontWeight};
-            line-height: ${MD.LabelNextToControl.lineHeight};
-            font-size: ${MD.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
           }
         }
       }
@@ -235,15 +235,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.LG};
 
           .caption-wrapper {
-            padding: ${LG.CaptionComponent.Padding};
-            gap: ${LG.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.LG};
+            gap: ${CaptionComponent.Container.ItemSpacing.LG};
           }
 
           .blr-form-label-inline {
-            font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${LG.LabelNextToControl.fontWeight};
-            line-height: ${LG.LabelNextToControl.lineHeight};
-            font-size: ${LG.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
           }
         }
       }
@@ -273,9 +273,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Icon.IconSize.SM.Inactive.Hover};
             }
 
-            & + .label-wrapper {
-              .blr-form-label-inline {
-                color: ${LabelNextToControl.Hover};
+              & + .label-wrapper {
+                .blr-form-label-inline {
+                  color: ${FormLabel.InlineLabel.TextColor.Hover};
+                }
               }
             }
           }
@@ -293,13 +294,13 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
             }
 
-            & + .label-wrapper {
-              .blr-form-label-inline {
-                color: ${LabelNextToControl.Pressed};
+              & + .label-wrapper {
+                .blr-form-label-inline {
+                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
+                }
               }
             }
           }
-        }
 
         &:focus {
           background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
@@ -314,12 +315,12 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
           }
 
-          & + .label-wrapper {
-            .blr-form-label-inline {
-              color: ${LabelNextToControl.Focus};
+            & + .label-wrapper {
+              .blr-form-label-inline {
+                color: ${FormLabel.InlineLabel.TextColor.Focus};
+              }
             }
           }
-        }
 
 
         &.checked, &:checked {
@@ -393,10 +394,11 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             height: ${Radio.Control.Icon.IconSize.SM.Inactive.Disabled};
           }
 
-          & + .label-wrapper {
-            .blr-form-label-inline {
-              cursor: not-allowed;
-              color: ${LabelNextToControl.Disabled};
+            & + .label-wrapper {
+              .blr-form-label-inline {
+                cursor: not-allowed;
+                color: ${FormLabel.InlineLabel.TextColor.Disabled};
+              }
             }
           }
         }
@@ -414,7 +416,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.Error};
+              color: ${FormLabel.InlineLabel.TextColor.Error};
+            }
+          }
+
+          &.checked,
+          &:checked {
+            &::before {
+              width: ${Radio.Control.Icon.IconSize.SM.Active.Error};
+              height: ${Radio.Control.Icon.IconSize.SM.Active.Error};
             }
           }
 
@@ -447,7 +457,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }
         }
@@ -468,7 +478,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.ReadOnly};
+              color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
             }
           }
         }
@@ -478,21 +488,24 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         margin-top: 0;
 
         &.sm {
-          padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${SM.Caption.fontFamily}, sans-serif;
-          font-size: ${SM.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.SM};
+          font-family: ${CaptionComponent.Text.Typography.SM.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.SM.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.SM.lineHeight};
         }
 
         &.md {
-          padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${MD.Caption.fontFamily}, sans-serif;
-          font-size: ${MD.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.MD};
+          font-family: ${CaptionComponent.Text.Typography.MD.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.MD.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.MD.lineHeight};
         }
 
         &.lg {
-          padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${LG.Caption.fontFamily}, sans-serif;
-          font-size: ${LG.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.LG};
+          font-family: ${CaptionComponent.Text.Typography.LG.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.LG.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.LG.lineHeight};
         }
       }
     }

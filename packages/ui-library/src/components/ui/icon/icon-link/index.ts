@@ -7,13 +7,13 @@ import { styleCustom as iconButtonStyleCustom } from '../../../actions/buttons/i
 import { actionDark, actionLight } from '../../../../foundation/semantic-tokens/action.css';
 import { ActionVariantType, ActionSizesType, SizesType, FormSizesType } from '../../../../globals/types';
 import { determineLoaderVariant } from '../../../../utils/determine-loader-variant';
-import { BlrIconRenderFunction } from '..';
+import { BlrIconRenderFunction } from '../renderFunction';
 import { calculateIconName } from '../../../../utils/calculate-icon-name';
-import { BlrLoaderRenderFunction } from '../../../feedback/loader';
+import { BlrLoaderRenderFunction } from '../../../feedback/loader/renderFunction';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-icon-link';
+import { TAG_NAME } from './renderFunction';
+
 import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
 
 @customElement(TAG_NAME)
@@ -79,17 +79,18 @@ export class BlrIconLink extends LitElement {
                 loadingStatus: this.loadingStatus,
                 theme: this.theme,
               })
-            : BlrIconRenderFunction({
-                icon: calculateIconName(this.icon, iconSizeVariant),
-                size: iconSizeVariant,
-                hideAria: true,
-              })}
+            : BlrIconRenderFunction(
+                {
+                  icon: calculateIconName(this.icon, iconSizeVariant),
+                  size: iconSizeVariant,
+                },
+                {
+                  'aria-hidden': true,
+                }
+              )}
         </a>`;
     }
   }
 }
 
 export type BlrIconLinkType = Omit<BlrIconLink, keyof LitElement>;
-
-export const BlrIconLinkRenderFunction = (params: BlrIconLinkType) =>
-  genericBlrComponentRenderer<BlrIconLinkType>(TAG_NAME, { ...params });

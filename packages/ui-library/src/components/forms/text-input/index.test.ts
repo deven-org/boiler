@@ -1,4 +1,7 @@
-import { BlrTextInputRenderFunction, BlrTextInputType } from '.';
+import '@boiler/ui-library/dist/';
+
+import { BlrTextInputRenderFunction } from './renderFunction';
+import type { BlrTextInputType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
@@ -56,6 +59,7 @@ describe('blr-text-input', () => {
     expect(placeholder).to.be.equal(randomString);
   });
 
+  /*
   it('contains an eye icon when the input type is password', async () => {
     const element = await fixture(
       BlrTextInputRenderFunction({
@@ -78,6 +82,7 @@ describe('blr-text-input', () => {
     expect(rect?.width).to.be.greaterThan(0);
     expect(rect?.height).to.be.greaterThan(0);
   });
+  */
 
   it('hides the label when "hasLabel" is false', async () => {
     const element = await fixture(

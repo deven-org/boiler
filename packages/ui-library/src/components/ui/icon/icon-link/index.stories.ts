@@ -1,11 +1,15 @@
 /* eslint-disable no-console */
-import { BlrIconLinkType, BlrIconLinkRenderFunction } from './index';
+import { BlrIconLinkType } from './index';
+import { BlrIconLinkRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionVariants, ActionSizes } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 
+// this loads the all components instances and registers their html tags
+import '../../../../index';
+
 export default {
-  title: 'Design System/Web Components/UI/Icon',
+  title: 'Design System/Web Components/UI/Icon/Iconlink',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],
@@ -25,6 +29,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A106388&mode=dev',
+    },
     viewMode: 'docs',
   },
 };

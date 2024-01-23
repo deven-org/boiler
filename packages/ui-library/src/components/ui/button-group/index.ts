@@ -1,12 +1,11 @@
-import { LitElement, TemplateResult, html } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { styleCustom } from './index.css';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../../globals/types';
 
-const TAG_NAME = 'blr-button-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrButtonGroup extends LitElement {
@@ -31,6 +30,3 @@ export class BlrButtonGroup extends LitElement {
 }
 
 export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElement>;
-
-export const BlrButtonGroupFunction = (params: BlrButtonGroupType, children?: TemplateResult<1>) =>
-  genericBlrComponentRenderer<BlrButtonGroupType>(TAG_NAME, { ...params }, children);

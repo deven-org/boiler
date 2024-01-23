@@ -3,18 +3,18 @@ import { customElement, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
 
-import { BlrFormLabelInline } from '../../internal-components/form-label/form-label-inline';
+import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form-label/form-label-inline/renderFunction';
 import { FormSizesType, IconPositionVariant } from '../../../globals/types';
 
 import { styleCustom, toggleSwitchDark, toggleSwitchLight } from './index.css';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-label-toggleswitch';
-import { BlrIconRenderFunction } from '../../ui/icon';
+import { TAG_NAME } from './renderFunction';
+
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
@@ -30,6 +30,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() offLabel!: string;
   @property() showStateLabel?: boolean;
   @property() checkInputId!: string;
+  @property() name!: string;
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
@@ -158,7 +159,7 @@ export class BlrToggleSwitch extends LitElement {
         <div class=${classes}>
           <span class="toggle-content-col">
             ${this.label
-              ? html` ${BlrFormLabelInline({
+              ? html` ${BlrFormLabelInlineRenderFunction({
                   labelText: this.label,
                   forValue: this.checkInputId,
                   labelSize: this.size || 'md',
@@ -220,26 +221,34 @@ export class BlrToggleSwitch extends LitElement {
               </span>
 
               <span class="toggle-switch-unselect toggle-icon">
-                ${BlrIconRenderFunction({
-                  icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
-                  size: this.size,
-                  hideAria: true,
-                  classMap: toggleIconsClass,
-                  ignoreSize: true,
-                })}
+                ${BlrIconRenderFunction(
+                  {
+                    icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
+                    size: this.size,
+                    classMap: toggleIconsClass,
+                    ignoreSize: true,
+                  },
+                  {
+                    'aria-hidden': true,
+                  }
+                )}
               </span>
               <span class="toggle-switch-select toggle-icon">
-                ${BlrIconRenderFunction({
-                  icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
-                  size: this.size,
-                  hideAria: true,
-                  classMap: toggleIconsClass,
-                  ignoreSize: true,
-                })}
+                ${BlrIconRenderFunction(
+                  {
+                    icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
+                    size: this.size,
+                    classMap: toggleIconsClass,
+                    ignoreSize: true,
+                  },
+                  {
+                    'aria-hidden': true,
+                  }
+                )}
               </span>
             </label>
             ${this.variant === 'leading' && this.showStateLabel
-              ? html` ${BlrFormLabelInline({
+              ? html` ${BlrFormLabelInlineRenderFunction({
                   labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
                   forValue: this.checkInputId,
                   labelSize: this.size || 'md',
@@ -252,6 +261,3 @@ export class BlrToggleSwitch extends LitElement {
 }
 
 export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
-
-export const BlrToggleSwitchRenderFunction = (params: BlrToggleSwitchType) =>
-  genericBlrComponentRenderer<BlrToggleSwitchType>(TAG_NAME, { ...params });

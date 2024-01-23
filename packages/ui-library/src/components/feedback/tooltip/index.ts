@@ -1,13 +1,12 @@
-import { LitElement, TemplateResult, html } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { tooltipPosition } from './tooltip-position';
-import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble';
+import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
 import { styleCustom } from './index.css';
 
-const TAG_NAME = 'blr-tooltip';
+import { TAG_NAME } from './renderFunction';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
@@ -63,6 +62,3 @@ export class BlrTooltip extends LitElement {
 }
 
 export type BlrTooltipType = Omit<BlrTooltip, keyof LitElement>;
-
-export const BlrTooltipRenderFunction = (params: BlrTooltipType, children: TemplateResult<1>) =>
-  genericBlrComponentRenderer<BlrTooltipType>(TAG_NAME, { ...params }, children);

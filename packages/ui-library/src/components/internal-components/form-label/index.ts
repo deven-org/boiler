@@ -4,9 +4,8 @@ import { formDark, formLight } from '../../../foundation/semantic-tokens/form.cs
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-const TAG_NAME = 'blr-form-label';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrFormLabel extends LitElement {
@@ -46,6 +45,3 @@ export class BlrFormLabel extends LitElement {
 }
 
 export type BlrFormLabelType = Omit<BlrFormLabel, keyof LitElement>;
-
-export const BlrFormLabelRenderFunction = (params: BlrFormLabelType) =>
-  genericBlrComponentRenderer<BlrFormLabelType>(TAG_NAME, { ...params });

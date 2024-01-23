@@ -3,9 +3,8 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix, InputIcon } =
-    semanticTokens.Forms;
-  const { Select } = componentTokens.Forms;
+  const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, InputIcon } = semanticTokens.Forms;
+  const { Select, FormLabel } = componentTokens.Forms;
 
   return typeSafeNestedCss`
     .blr-form-element {
@@ -238,194 +237,148 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
     }
 
-    .blr-form-caption {
-      display: flex;
-      color: ${Caption.Hint};
-
-      &.error {
-        color: ${Caption.Error};
-      }
-
-      &.sm {
-        padding: ${SM.CaptionComponent.Padding};
-        gap: ${SM.CaptionComponent.ItemSpacing};
-
-        .blr-icon {
-          padding-top: ${SM.CaptionComponent.IconWrapper.PaddingTop};
-          height: ${SM.CaptionComponent.IconDimension};
-          width: ${SM.CaptionComponent.IconDimension};
-        }
-
-        .blr-caption-text {
-          padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${SM.Caption.fontFamily}, sans-serif;
-          font-weight: ${SM.Caption.fontWeight};
-          font-size: ${SM.Caption.fontSize};
-          line-height: ${SM.Caption.lineHeight};
-        }
-      }
-
-      &.md {
-        padding: ${MD.CaptionComponent.Padding};
-        gap: ${MD.CaptionComponent.ItemSpacing};
-
-        .blr-icon {
-          padding-top: ${MD.CaptionComponent.IconWrapper.PaddingTop};
-          height: ${MD.CaptionComponent.IconDimension};
-          width: ${MD.CaptionComponent.IconDimension};
-        }
-
-        .blr-caption-text {
-          padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${MD.Caption.fontFamily}, sans-serif;
-          font-weight: ${MD.Caption.fontWeight};
-          font-size: ${MD.Caption.fontSize};
-          line-height: ${MD.Caption.lineHeight};
-        }
-      }
-
-      &.lg {
-        padding: ${LG.CaptionComponent.Padding};
-        gap: ${LG.CaptionComponent.ItemSpacing};
-
-        .blr-icon {
-          padding-top: ${LG.CaptionComponent.IconWrapper.PaddingTop};
-          height: ${LG.CaptionComponent.IconDimension};
-          width: ${LG.CaptionComponent.IconDimension};
-        }
-
-        .blr-caption-text {
-          padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-weight: ${LG.Caption.fontWeight};
-          font-size: ${LG.Caption.fontSize};
-          font-family: ${LG.Caption.fontFamily}, sans-serif;
-          line-height: ${LG.Caption.lineHeight};
-        }
-      }
-    }
-
     .blr-form-label {
       display: flex;
       align-items: center;
-      color: ${Label.Rest};
+      color: ${FormLabel.Label.TextColor.Rest};
       word-break: break-all;
-
+      
       &:focus {
-        color: ${Label.Focus};
+        color: ${FormLabel.Label.TextColor.Focus};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Focus};
+        }
       }
 
       &:hover {
-        color: ${Label.Hover};
+        color: ${FormLabel.Label.TextColor.Hover};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Hover};
+        }
       }
 
       &:disabled {
-        color: ${Label.Disabled};
+        color: ${FormLabel.Label.TextColor.Disabled};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Disabled};
+        }
       }
 
       &[readonly] {
-        color: ${Label.ReadOnly};
+        color: ${FormLabel.Label.TextColor.ReadOnly};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.ReadOnly};
+        }
       }
 
       &.error {
-        color: ${Label.Error};
-
+        color: ${FormLabel.Label.TextColor.Error};
         .blr-form-label-appendix {
-          color: ${LabelAppendix.Error};
+          color: ${FormLabel.LabelAppendix.TextColor.Error};
         }
       }
 
       &.sm {
         padding: ${SM.LabelSlot.Padding};
-        font-weight: ${SM.Label.fontWeight};
-        font-size: ${SM.Label.fontSize};
-        font-family: ${SM.Label.fontFamily}, sans-serif;
-        line-height: ${SM.Label.lineHeight};
-        gap: ${SM.LabelComponent.ItemSpacing};
-        color: ${Label.Rest};
+        font-weight: ${FormLabel.Label.Typography.SM.fontWeight};
+        font-size: ${FormLabel.Label.Typography.SM.fontSize};
+        font-family: ${FormLabel.Label.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.SM.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.SM};
+        __FIX__color: ${FormLabel.Label.TextColor.Rest};
 
-        &.error {
-          color: ${Label.Error};
+        &.__FIX__error {
+          color: ${FormLabel.Label.TextColor.Error};
         }
       }
 
       &.md {
         padding: ${MD.LabelSlot.Padding};
-        font-weight: ${MD.Label.fontWeight};
-        font-size: ${MD.Label.fontSize};
-        font-family: ${MD.Label.fontFamily}, sans-serif;
-        line-height: ${MD.Label.lineHeight};
-        gap: ${MD.LabelComponent.ItemSpacing};
+        font-weight: ${FormLabel.Label.Typography.MD.fontWeight};
+        font-size: ${FormLabel.Label.Typography.MD.fontSize};
+        font-family: ${FormLabel.Label.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.MD.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.MD};
       }
 
       &.lg {
         padding: ${LG.LabelSlot.Padding};
-        font-weight: ${LG.Label.fontWeight};
-        font-size: ${LG.Label.fontSize};
-        font-family: ${LG.Label.fontFamily}, sans-serif;
-        line-height: ${LG.Label.lineHeight};
-        color: ${Label.Rest};
-        gap: ${LG.LabelComponent.ItemSpacing};
+        font-weight: ${FormLabel.Label.Typography.LG.fontWeight};
+        font-size: ${FormLabel.Label.Typography.LG.fontSize};
+        font-family: ${FormLabel.Label.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.LG.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.LG};
 
-        &.error {
-          color: ${Label.Error};
+        &.__FIX__error {
+          color: ${FormLabel.Label.TextColor.Error};
         }
       }
     }
+
+
+
+
 
     .blr-form-label-inline {
       flex: 1;
 
       &.sm {
-        font-weight: ${SM.LabelNextToControl.fontWeight};
-        font-size: ${SM.LabelNextToControl.fontSize};
-        font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${SM.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
       }
 
       &.md {
-        font-weight: ${MD.LabelNextToControl.fontWeight};
-        font-size: ${MD.LabelNextToControl.fontSize};
-        font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${MD.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
       }
 
       &.lg {
-        font-weight: ${LG.LabelNextToControl.fontWeight};
-        font-size: ${LG.LabelNextToControl.fontSize};
-        font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${LG.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
       }
     }
 
+
+
+
     .blr-form-label-appendix {
-      padding-left: ${MD.LabelSlot.Padding};
-      font-weight: ${MD.LabelAppendix.fontWeight};
-      font-size: ${MD.LabelAppendix.fontSize};
-      font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
-      line-height: ${MD.LabelAppendix.lineHeight};
-      color: ${LabelAppendix.Rest};
+      color: ${FormLabel.LabelAppendix.TextColor.Rest};
 
       &.sm {
         padding-left: ${SM.LabelSlot.Padding};
-        font-weight: ${SM.LabelAppendix.fontWeight};
-        font-size: ${SM.LabelAppendix.fontSize};
-        font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
-        line-height: ${MD.LabelAppendix.lineHeight};
+        font-weight: ${FormLabel.LabelAppendix.Typography.SM.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.SM.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.SM.lineHeight};
+      }
+
+      &.md {
+        padding-left: ${MD.LabelSlot.Padding};
+        font-weight: ${FormLabel.LabelAppendix.Typography.MD.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.MD.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.MD.lineHeight};
       }
 
       &.lg {
         padding-left: ${LG.LabelSlot.Padding};
-        font-weight: ${LG.LabelAppendix.fontWeight};
-        font-size: ${LG.LabelAppendix.fontSize};
-        font-family: ${LG.LabelAppendix.fontFamily}, sans-serif;
-        line-height: ${LG.LabelAppendix.lineHeight};
+        font-weight: ${FormLabel.LabelAppendix.Typography.LG.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.LG.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.LG.lineHeight};
       }
 
-      .error {
-        color: ${Label.Error};
+      .__fix__error {
+        color: ${FormLabel.LabelAppendix.TextColor.Error};
       }
 
-      .hint {
+      .__fix__hint {
         color: ${Caption.Hint};
       }
     }

@@ -5,14 +5,13 @@ import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../../../globals/types';
-import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
+import { BlrFormLabelInlineRenderFunction } from '../../../internal-components/form-label/form-label-inline/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
-import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
-import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
+import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption/renderFunction';
 
-const TAG_NAME = 'blr-radio-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {
@@ -29,7 +28,7 @@ export class BlrRadioGroup extends LitElement {
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
   @property() errorIcon?: SizelessIconType;
-  @property() hideLabel!: boolean;
+  @property() hideLabel?: boolean;
   @property() options!: RadioOption[];
   @property() hasHint = true;
   @property() groupHintIcon?: SizelessIconType;
@@ -37,6 +36,8 @@ export class BlrRadioGroup extends LitElement {
   @property() groupHintMessage?: string;
   @property() groupErrorIcon?: SizelessIconType;
   @property() showLegend?: boolean = true;
+  @property() legend?: string;
+  @property() direction?: 'vertical' | 'horizontal';
 
   @property() theme: ThemeType = 'Light';
 
@@ -93,7 +94,7 @@ export class BlrRadioGroup extends LitElement {
         ${dynamicStyles.map((style) => style)}
       </style>
       ${this.showLegend
-        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">Choose any option</legend></div>`
+        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.legend}</legend></div>`
         : nothing}
 
       <div class="blr-radio-group ${classes}">
@@ -120,7 +121,11 @@ export class BlrRadioGroup extends LitElement {
               />
               <div class="label-wrapper">
                 ${option.label
-                  ? html`${BlrFormLabelInline({ labelText: option.label, forValue: id, labelSize: this.size || 'md' })}`
+                  ? html`${BlrFormLabelInlineRenderFunction({
+                      labelText: option.label,
+                      forValue: id,
+                      labelSize: this.size || 'md',
+                    })}`
                   : nothing}
               </div>
             </div>
@@ -137,6 +142,3 @@ export class BlrRadioGroup extends LitElement {
 }
 
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
-
-export const BlrRadioGroupRenderFunction = (params: BlrRadioGroupType) =>
-  genericBlrComponentRenderer<BlrRadioGroupType>(TAG_NAME, { ...params });

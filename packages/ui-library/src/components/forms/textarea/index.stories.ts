@@ -1,18 +1,18 @@
 /* eslint-disable no-console */
-import { html } from 'lit';
-import { BlrTextareaRenderFunction, BlrTextareaType } from './index';
+import { html } from 'lit-html';
+import { BlrTextareaType } from './index';
+import { BlrTextareaRenderFunction } from './renderFunction';
 import { FormSizes, Resizes } from '../../../globals/constants';
 import { action } from '@storybook/addon-actions';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
+// this loads the all components instances and registers their html tags
+import '../../../index';
+
 // Shared Style inside the Stories
 const sharedStyles = html`
   <style>
-    .wrapper {
-      display: flex;
-      justify-content: center;
-    }
     .stories-textarea {
       display: flex;
       flex-wrap: wrap;
@@ -369,7 +369,10 @@ export default {
     },
   },
   parameters: {
-    layout: 'centered',
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125197&mode=dev',
+    },
     docs: {
       //Two examples for Code integration
       //First example for manual code integration
@@ -378,7 +381,7 @@ export default {
       //Second Example
       // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Text Area allows users to input and edit multiline text. Unlike a simple Text Input component that is typically used for single-line text, a Text Area provides a larger space for users to enter and manipulate multiple lines of text.
                 Text Area components are used in various contexts where users need to input or edit longer pieces of text, such as comment boxes, message composition in messaging apps, notes, and description fields in forms.
 - [**Appearance**](#appearance)
@@ -396,7 +399,7 @@ Text Area allows users to input and edit multiline text. Unlike a simple Text In
  - [**Form Label**](#form-label) 
  - [**Form Caption Group**](#form-caption-group)     
  - [**Counter**](#counter)     
-</Markdown>
+</markdown>
         `,
       },
     },

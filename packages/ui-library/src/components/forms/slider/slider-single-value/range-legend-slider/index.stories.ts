@@ -1,8 +1,12 @@
 /* eslint-disable no-console */
-import { BlrRangeLegendSliderType, BlrRangeLegendSliderRenderFunction } from './index';
+import { BlrRangeLegendSliderType } from './index';
+import { BlrRangeLegendSliderRenderFunction } from './renderFunction';
 import { Sizes } from '../../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../../foundation/_tokens-generated/index.themes';
+
+// this loads the all components instances and registers their html tags
+import '../../../../../index';
 
 export default {
   title: 'Design System/Web Components/Forms/Slider/SliderSingleValue',

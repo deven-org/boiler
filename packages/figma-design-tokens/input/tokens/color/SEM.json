@@ -874,36 +874,6 @@
         "type": "color"
       }
     },
-    "LabelAppendix": {
-      "Rest": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Hover": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Pressed": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{q.content.ondisabled.alpha}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Error": {
-        "value": "{q.content.ondefault.error}",
-        "type": "color"
-      }
-    },
     "Caption": {
       "Error": {
         "value": "{q.content.ondefault.error}",
@@ -1121,36 +1091,6 @@
       },
       "Error": {
         "value": "{q.content.onerror.beta}",
-        "type": "color"
-      }
-    },
-    "LabelNextToControl": {
-      "Rest": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Hover": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Pressed": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{q.content.ondisabled.alpha}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Error": {
-        "value": "{q.content.ondefault.error}",
         "type": "color"
       }
     },
@@ -1392,6 +1332,17 @@
     }
   },
   "Elevation": {
+    "Lvl_0": {
+      "value": {
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.0}",
+        "blur": "{core.dimensionPX.0}",
+        "spread": "{core.dimensionPX.0}",
+        "color": "{q.shadow.alpha}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
     "Lvl_1": {
       "value": {
         "x": "{core.dimensionPX.0}",

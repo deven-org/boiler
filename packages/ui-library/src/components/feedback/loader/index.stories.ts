@@ -1,7 +1,11 @@
-import { BlrLoaderType, BlrLoaderRenderFunction } from './index';
+import { BlrLoaderType } from './index';
+import { BlrLoaderRenderFunction } from './renderFunction';
 import { FeedbackSizes, FeedbackVariants } from '../../../globals/constants';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
+
+// this loads the all components instances and registers their html tags
+import '../../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -58,15 +62,19 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A126742&mode=dev',
+    },
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Loader’s primary purpose is to provide feedback to the user that the application has not frozen or become unresponsive but is actively processing data or performing an action.
 - [**Appearance**](#appearance)
  - [**Variant**](#variant) 
  - [**Size Variant**](#size-variant) 
-</Markdown>`,
+</markdown>`,
       },
     },
   },

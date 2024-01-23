@@ -1,8 +1,12 @@
 /* eslint-disable no-console */
-import { BlrRangeMinMaxSliderType, BlrRangeMinMaxSliderRenderFunction } from './index';
+import { BlrRangeMinMaxSliderType } from './index';
+import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction';
 import { Sizes } from '../../../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../../../../foundation/_tokens-generated/index.themes';
+
+// this loads the all components instances and registers their html tags
+import '../../../../../index';
 
 export default {
   title: 'Design System/Web Components/Forms/Slider/SliderTwoValues',

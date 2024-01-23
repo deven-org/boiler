@@ -2,11 +2,10 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { DividerVariationTypes } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 import { classMap } from 'lit/directives/class-map.js';
 import { dividerDark, dividerLight } from './index.css';
 
-const TAG_NAME = 'blr-divider';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
@@ -31,6 +30,3 @@ export class BlrDivider extends LitElement {
 }
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;
-
-export const BlrDividerRenderFunction = (params: BlrDividerType) =>
-  genericBlrComponentRenderer<BlrDividerType>(TAG_NAME, { ...params });

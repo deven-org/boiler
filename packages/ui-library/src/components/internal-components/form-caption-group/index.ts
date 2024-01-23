@@ -1,14 +1,14 @@
-import { html, LitElement, TemplateResult } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+
 import { FormSizesType } from '../../../globals/types';
 import { classMap } from 'lit/directives/class-map.js';
 import { formCaptionGroupStyle } from './index.css';
 
-const TAG_NAME = 'blr-form-caption-group';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
-export class BlrFormCaption extends LitElement {
+export class BlrFormCaptionGroup extends LitElement {
   static styles = [formCaptionGroupStyle];
 
   @property() size: FormSizesType = 'md';
@@ -27,7 +27,4 @@ export class BlrFormCaption extends LitElement {
   }
 }
 
-export type BlrFormCaptionGroupType = Omit<BlrFormCaption, keyof LitElement>;
-
-export const BlrFormCaptionGroupRenderFunction = (params: BlrFormCaptionGroupType, children?: TemplateResult<1>) =>
-  genericBlrComponentRenderer<BlrFormCaptionGroupType>(TAG_NAME, { ...params }, children);
+export type BlrFormCaptionGroupType = Omit<BlrFormCaptionGroup, keyof LitElement>;

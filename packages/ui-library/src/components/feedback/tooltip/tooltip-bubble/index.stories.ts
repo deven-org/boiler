@@ -1,6 +1,10 @@
 import { html } from 'lit';
-import { BlrTooltipBubbleRenderFunction, BlrTooltipBubbleType } from '.';
+import { BlrTooltipBubbleType } from '.';
+import { BlrTooltipBubbleRenderFunction } from './renderFunction';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+
+// this loads the all components instances and registers their html tags
+import '../../../../index';
 
 export default {
   title: 'Design System/Web Components/Feedback/Tooltip/TooltipBubble',
@@ -8,6 +12,12 @@ export default {
     theme: {
       options: Themes,
       control: { type: 'select' },
+    },
+  },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A126744&mode=dev',
     },
   },
 };

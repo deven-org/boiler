@@ -1,7 +1,11 @@
-import { BlrFormCaptionGroupRenderFunction, BlrFormCaptionGroupType } from './index';
+import { BlrFormCaptionGroupType } from './index';
+import { BlrFormCaptionGroupRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
-import { BlrFormCaptionRenderFunction } from './form-caption';
+import { BlrFormCaptionRenderFunction } from './form-caption/renderFunction';
 import { FormSizes } from '../../../globals/constants';
+
+// this loads the all components instances and registers their html tags
+import '../../../index';
 
 export default {
   title: 'Design System/Web Components/Internal Components/FormCaptionGroup',
@@ -12,6 +16,10 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=8273%3A7564&mode=dev',
+    },
     viewMode: 'docs',
   },
 };

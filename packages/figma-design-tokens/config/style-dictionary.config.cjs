@@ -52,9 +52,7 @@ const semanticTypes = [
   'Input',
   'InputSlot',
   'InputField',
-  'LabelAppendix',
   'InputIcon',
-  'LabelNextToControl',
   'Focus',
   'FocusBorder',
   'Feedback',
@@ -87,7 +85,9 @@ const componentTypes = [
   'Tooltip',
   'RadioGroup',
   'NumberInput',
+  'CaptionComponent',
   'CaptionGroup',
+  'FormLabel',
 ];
 
 StyleDictionaryPackage.registerFormat({

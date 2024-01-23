@@ -10,6 +10,8 @@ export const { tokenizedLight: actionLight, tokenizedDark: actionDark } = render
       &.disabled {
         pointer-events: none;
         cursor: not-allowed;
+        user-select: none;
+        -webkit-user-select: none;
       }
       
       &.xs {

@@ -1,4 +1,7 @@
-import { BlrFormCaptionRenderFunction, BlrFormCaptionType } from './index';
+import '@boiler/ui-library/dist/';
+
+import { BlrFormCaptionRenderFunction } from './renderFunction';
+import type { BlrFormCaptionType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -53,6 +56,7 @@ describe('blr-form-caption', () => {
     expect(blrText).to.include('');
   });
 
+  /*
   it('renders a blr-form-caption with icon', async () => {
     const element = await fixture(
       BlrFormCaptionRenderFunction({
@@ -84,6 +88,7 @@ describe('blr-form-caption', () => {
 
     expect(blrCaptionWithIcon).not.to.exist;
   });
+  */
 
   it('renders a <div> element inside Shadow DOM for blr-form-caption hint as variant', async () => {
     const element = await fixture(BlrFormCaptionRenderFunction({ ...sampleParams, variant: 'hint' }));

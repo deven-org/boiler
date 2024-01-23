@@ -2,17 +2,16 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { InputSizesType } from '../../../../globals/types';
-import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
-import { radioDark, radioLight } from '../../../../foundation/component-tokens/radio.css';
-import { BlrFormLabelInline } from '../../../internal-components/form-label/form-label-inline';
-import { BlrFormCaptionGroupRenderFunction } from '../../../internal-components/form-caption-group';
+import { InputSizesType } from '../../../globals/types';
+import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
+import { radioDark, radioLight } from '../../../foundation/component-tokens/radio.css';
+import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form-label/form-label-inline/renderFunction';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
-import { BlrFormCaptionRenderFunction } from '../../../internal-components/form-caption-group/form-caption';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
 
-const TAG_NAME = 'blr-radio';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrRadio extends LitElement {
@@ -99,7 +98,7 @@ export class BlrRadio extends LitElement {
             @focus=${this.onFocus}
           />
           <div class="label-wrapper">
-            ${BlrFormLabelInline({
+            ${BlrFormLabelInlineRenderFunction({
               labelText: this.label,
               forValue: this.optionId,
               labelSize: this.size,
@@ -115,6 +114,3 @@ export class BlrRadio extends LitElement {
 }
 
 export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
-
-export const BlrRadioRenderFunction = (params: BlrRadioType) =>
-  genericBlrComponentRenderer<BlrRadioType>(TAG_NAME, { ...params });

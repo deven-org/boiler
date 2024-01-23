@@ -1,9 +1,13 @@
-import { BlrRadioRenderFunction, BlrRadioType } from './index';
-import { InputSizes } from '../../../../globals/constants';
+import { BlrRadioType } from './index';
+import { BlrRadioRenderFunction } from './renderFunction';
+import { InputSizes } from '../../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
+
+// this loads the all components instances and registers their html tags
+import '../../../index';
 
 const sharedStyles = html`
   <style>
@@ -14,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Forms/Radio',
+  title: 'Design System/Web Components/Forms/Radio Group/Radio',
   argTypes: {
     theme: {
       options: Themes,
@@ -185,11 +189,15 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125199&mode=dev',
+    },
     viewMode: 'docs',
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
         A radio component allows users to select a single option from a list of mutually exclusive choices.
       
         - [**Appearance**](#appearance)
@@ -204,7 +212,7 @@ export default {
           - [**Has Error**](#has-error)
         - [**Dependencies**](#dependencies)
           - [**Form Caption Group**](#form-caption-group)
-      </Markdown>
+      </markdown>
       `,
       },
     },

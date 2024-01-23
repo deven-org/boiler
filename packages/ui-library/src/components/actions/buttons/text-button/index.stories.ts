@@ -1,9 +1,13 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextButtonType, BlrTextButtonRenderFunction } from './index';
+import { BlrTextButtonType } from './index';
+import { BlrTextButtonRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import { ActionSizes, ActionVariants, IconPositionVariant, ButtonDisplayOptions } from '../../../../globals/constants';
 import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
+
+// this loads the all components instances and registers their html tags
+import '../../../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -182,10 +186,14 @@ export default {
     },
   },
   parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=705%3A1815&mode=dev',
+    },
     viewMode: 'docs',
     docs: {
       description: {
-        component: `<Markdown>
+        component: `<markdown>
 Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
  
  **NOTE**<br>
@@ -199,7 +207,7 @@ Text Button represents a clickable button that typically displays text rather th
 - [**Dependencies**](#dependencies)
  - [**Icon**](#icon)
  - [**Loader**](#loader)
-</Markdown>`,
+</markdown>`,
       },
     },
   },

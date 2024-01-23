@@ -421,36 +421,6 @@
   },
   "Forms": {
     "SM": {
-      "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-        "type": "typography"
-      },
-      "CaptionComponent": {
-        "CaptionLabelWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
-        "IconDimension": {
-          "value": "{core.dimensionREM.14}",
-          "type": "sizing"
-        },
-        "IconWrapper": {
-          "PaddingTop": {
-            "value": "{core.dimensionREM.1}",
-            "type": "spacing"
-          }
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "CaptionSlot": {
         "Margin": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -469,33 +439,11 @@
           "type": "spacing"
         }
       },
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-        "type": "typography"
-      },
-      "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-        "type": "typography"
-      },
-      "LabelComponent": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "0 0",
-          "type": "spacing"
-        }
-      },
       "LabelSlot": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
           "type": "spacing"
         }
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
       },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
@@ -516,36 +464,6 @@
       }
     },
     "MD": {
-      "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "CaptionComponent": {
-        "CaptionLabelWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
-        "IconDimension": {
-          "value": "{core.dimensionREM.16}",
-          "type": "sizing"
-        },
-        "IconWrapper": {
-          "PaddingTop": {
-            "value": "{core.dimensionREM.0,5}",
-            "type": "spacing"
-          }
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "CaptionSlot": {
         "Margin": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -564,33 +482,11 @@
           "type": "spacing"
         }
       },
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-        "type": "typography"
-      },
-      "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "LabelComponent": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "0 0",
-          "type": "spacing"
-        }
-      },
       "LabelSlot": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
           "type": "spacing"
         }
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
       },
       "Legend": {
         "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
@@ -611,36 +507,6 @@
       }
     },
     "LG": {
-      "Caption": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "CaptionComponent": {
-        "CaptionLabelWrapper": {
-          "Padding": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
-        "IconDimension": {
-          "value": "{core.dimensionREM.16}",
-          "type": "sizing"
-        },
-        "IconWrapper": {
-          "PaddingTop": {
-            "value": "{core.dimensionREM.5}",
-            "type": "spacing"
-          }
-        },
-        "ItemSpacing": {
-          "value": "{core.dimensionREM.2}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
       "CaptionSlot": {
         "Margin": {
           "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
@@ -659,31 +525,9 @@
           "type": "spacing"
         }
       },
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
-        "type": "typography"
-      },
-      "LabelAppendix": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "LabelNextToControl": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
-      },
       "LabelSlot": {
         "Padding": {
           "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LabelComponent": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.4}",
-          "type": "spacing"
-        },
-        "Padding": {
-          "value": "0 0",
           "type": "spacing"
         }
       },

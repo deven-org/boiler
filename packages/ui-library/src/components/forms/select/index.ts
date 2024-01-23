@@ -3,28 +3,21 @@ import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../../globals/types';
-import { BlrFormLabelRenderFunction } from '../../internal-components/form-label';
+
 import { selectInputLight, selectInputDark } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
-import { BlrIconRenderFunction } from '../../ui/icon';
+
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
-import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption';
-
-type Option = {
-  value: string;
-  label: string;
-  selected?: boolean;
-  disabled?: boolean;
-};
-
-const TAG_NAME = 'blr-select';
+import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
+import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrSelect extends LitElement {
@@ -38,21 +31,24 @@ export class BlrSelect extends LitElement {
   @property() disabled?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: (event: Event) => void;
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property({ type: Array }) options: Option[] = [];
+
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType;
-  @property() errorIcon?: SizelessIconType;
+  @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
   @property() theme: ThemeType = 'Light';
 
+  @property() blrChange?: () => void;
+
   @state() protected isFocused = false;
+
+  protected _optionElements: Element[] | undefined;
 
   protected handleFocus = () => {
     this.isFocused = true;
@@ -61,6 +57,23 @@ export class BlrSelect extends LitElement {
   protected handleBlur = () => {
     this.isFocused = false;
   };
+
+  protected handleSlotChange() {
+    const slot = this.renderRoot?.querySelector('slot');
+
+    this._optionElements = slot?.assignedElements({ flatten: false });
+    this.requestUpdate();
+  }
+
+  protected handleChange(event: Event) {
+    this.dispatchEvent(
+      new CustomEvent('blrChange', {
+        bubbles: true,
+        composed: true,
+        detail: { originalEvent: event },
+      })
+    );
+  }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     if (this.size) {
@@ -73,25 +86,29 @@ export class BlrSelect extends LitElement {
       ]).toLowerCase() as SizesType;
 
       if (this.hasError) {
-        return BlrIconRenderFunction({
-          icon: calculateIconName('blrErrorFilled', iconSizeVariant),
-          size: iconSizeVariant,
-          classMap: classes,
-          hideAria: true,
-          disablePointerEvents: true,
-        });
+        return BlrIconRenderFunction(
+          {
+            icon: calculateIconName('blrErrorFilled', iconSizeVariant),
+            size: iconSizeVariant,
+            classMap: classes,
+          },
+          {
+            'aria-hidden': true,
+          }
+        );
       } else {
         const modifiedIcon = this.icon ? this.icon : 'blrChevronDown';
-        return BlrIconRenderFunction({
-          icon: calculateIconName(modifiedIcon, iconSizeVariant),
-          size: iconSizeVariant,
-          classMap: classes,
-          hideAria: true,
-          disablePointerEvents: true,
-        });
+        return BlrIconRenderFunction(
+          {
+            icon: calculateIconName(modifiedIcon, iconSizeVariant),
+            size: iconSizeVariant,
+            classMap: classes,
+          },
+          {
+            'aria-hidden': true,
+          }
+        );
       }
-
-      return nothing;
     }
   }
 
@@ -121,13 +138,13 @@ export class BlrSelect extends LitElement {
               icon: this.hintIcon,
             })
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
               size: this.size,
               message: this.errorMessage,
-              icon: this.errorIcon,
+              icon: this.errorMessageIcon,
             })
           : nothing}
       `;
@@ -136,6 +153,9 @@ export class BlrSelect extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
+
+        <slot @slotchange=${this.handleSlotChange}></slot>
+
         <div class="blr-select">
           ${this.label
             ? BlrFormLabelRenderFunction({
@@ -156,20 +176,19 @@ export class BlrSelect extends LitElement {
                 name=${this.name || nothing}
                 ?disabled=${this.disabled}
                 ?required=${this.required}
-                @change=${this.onChange}
+                @change=${this.handleChange}
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >
-                ${this.options?.map((opt: Option) => {
+                ${this._optionElements?.map((opt: Element) => {
                   return html`
                     <option
                       class="blr-select-option"
-                      id=${opt.value}
-                      value=${opt.value}
-                      ?selected=${opt.selected}
-                      ?disabled=${opt.disabled}
+                      value=${opt.getAttribute('value') || ''}
+                      ?selected=${opt.getAttribute('selected') === 'true'}
+                      ?disabled=${opt.getAttribute('disabled') === 'true'}
                     >
-                      ${opt.label}
+                      ${opt.getAttribute('label')}
                     </option>
                   `;
                 })}
@@ -187,6 +206,3 @@ export class BlrSelect extends LitElement {
 }
 
 export type BlrSelectType = Omit<BlrSelect, keyof LitElement>;
-
-export const BlrSelectRenderFunction = (params: BlrSelectType) =>
-  genericBlrComponentRenderer<BlrSelectType>(TAG_NAME, { ...params });

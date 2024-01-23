@@ -1,4 +1,7 @@
-import { BlrNumberInputRenderFunction, BlrNumberInputType } from '.';
+import '@boiler/ui-library/dist/';
+
+import { BlrNumberInputRenderFunction } from './renderFunction';
+import type { BlrNumberInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
@@ -21,8 +24,8 @@ const sampleParams: BlrNumberInputType = {
   errorIcon: 'blrInfo',
   value: 4,
   unit: 'gr',
-  fractionDigits: 0,
-  totalDigits: 0,
+  decimals: 0,
+  leadingZeros: 0,
 };
 
 describe('blr-number-input', () => {
@@ -35,7 +38,7 @@ describe('blr-number-input', () => {
     expect(type).to.be.equal('number');
   });
 
-  it('is is showing random placeholder', async () => {
+  it('is showing random placeholder', async () => {
     const randomString = getRandomString();
 
     const element = await fixture(
@@ -49,6 +52,22 @@ describe('blr-number-input', () => {
     const placeholder = input?.getAttribute('placeholder');
 
     expect(placeholder).to.be.equal(randomString);
+  });
+
+  it('is showing the stepper when unit is undefined and readonly is true', async () => {
+    const className = 'custom-stepper-button';
+
+    const element = await fixture(
+      BlrNumberInputRenderFunction({
+        ...sampleParams,
+        unit: undefined,
+      })
+    );
+
+    const button = querySelectorDeep('button', element.getRootNode() as HTMLElement);
+    const classNames = button?.getAttribute('class');
+
+    expect(classNames).to.include(className);
   });
 
   it('is shows adjacent caption components in caption group slot', async () => {
