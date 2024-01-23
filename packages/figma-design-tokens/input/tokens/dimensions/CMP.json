@@ -100,32 +100,66 @@
         }
       },
       "DividerWrapper": {
+        "Padding_V": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Horizontal"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Horizontal"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Horizontal"
+          }
+        },
+        "Padding_H": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Vertical"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Vertical"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Vertical"
+          }
+        },
         "Padding": {
-          "Vertical": {
+          "VerticalLayout": {
             "SM": {
-              "value": "0 {core.dimensionREM.8}",
+              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.SM}",
               "type": "spacing"
             },
             "MD": {
-              "value": "0 {core.dimensionREM.8}",
+              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.MD}",
               "type": "spacing"
             },
             "LG": {
-              "value": "0 {core.dimensionREM.8}",
+              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.LG}",
               "type": "spacing"
             }
           },
-          "Horizontal": {
+          "HorizontalLayout": {
             "SM": {
-              "value": "{core.dimensionREM.8} 0",
+              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.SM} 0",
               "type": "spacing"
             },
             "MD": {
-              "value": "{core.dimensionREM.8} 0",
+              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.MD} 0",
               "type": "spacing"
             },
             "LG": {
-              "value": "{core.dimensionREM.8} 0",
+              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.LG} 0",
               "type": "spacing"
             }
           }
