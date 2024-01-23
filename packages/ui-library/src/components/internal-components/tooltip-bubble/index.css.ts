@@ -1,5 +1,5 @@
-import { renderThemedCssStrings } from "../../../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStrings((componentTokens) => {
   const { Tooltip } = componentTokens.Feedback;

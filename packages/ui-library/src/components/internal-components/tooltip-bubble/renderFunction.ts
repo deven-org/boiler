@@ -1,5 +1,5 @@
 import { BlrTooltipBubbleType } from '.';
-import { genericBlrComponentRenderer } from '../../../../utils/typesafe-generic-component-renderer';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
 
 export const TAG_NAME = 'blr-tooltip-bubble';
 
