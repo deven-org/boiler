@@ -1,7 +1,7 @@
 import { LitElement, css, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { light, dark } from './index.css';
-import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { TAG_NAME } from './renderFunction';

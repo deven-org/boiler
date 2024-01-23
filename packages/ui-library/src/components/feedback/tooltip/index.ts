@@ -3,10 +3,10 @@ import { customElement, property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { tooltipPosition } from './tooltip-position';
-import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
 import { styleCustom } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
+import { BlrTooltipBubbleRenderFunction } from '../../internal-components/tooltip-bubble/renderFunction';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
