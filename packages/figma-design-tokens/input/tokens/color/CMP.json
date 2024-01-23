@@ -1187,7 +1187,7 @@
     "Divider": {
       "Container": {
         "BackgroundColor": {
-          "value": "{core.color.coolgray.800.opa30}",
+          "value": "{q.stroke.default}",
           "type": "color",
           "description": "Color of the divider\n>>> UI.Divider.Stroke"
         }
