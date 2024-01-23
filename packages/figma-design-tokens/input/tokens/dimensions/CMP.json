@@ -1,59 +1,55 @@
 {
-  "Action": {
+  "Actions": {
     "StepperButton": {
-      "Border": {
-        "Rest": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Rest}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Hover}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Pressed}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": "{Global.FocusBorder}",
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Disabled}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        }
-      },
-      "SM": {
-        "Width": {
-          "value": "{core.dimensionREM.32}",
-          "type": "sizing"
-        }
-      },
-      "MD": {
-        "Width": {
-          "value": "{core.dimensionREM.40}",
-          "type": "sizing"
-        }
-      },
-      "LG": {
-        "Width": {
-          "value": "{core.dimensionREM.48}",
-          "type": "sizing"
-        }
-      },
       "Container": {
+        "Border": {
+          "Rest": {
+            "value": {
+              "color": "{Action.Silent.SurfaceStroke.Rest}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Hover": {
+            "value": {
+              "color": "{Action.Silent.SurfaceStroke.Hover}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{Action.Silent.SurfaceStroke.Pressed}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Focus": {
+            "value": "{Global.FocusBorder}",
+            "type": "border"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{Action.Silent.SurfaceStroke.Disabled}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          }
+        },
+        "Width": {
+          "SM": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.40}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing"
+          }
+        },
         "BorderRadius": {
           "SM": {
             "value": "{core.borderRadius.None}",
@@ -150,66 +146,6 @@
         }
       }
     },
-    "Menu": {
-      "MenuItem": {
-        "Padding": {
-          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
-          "type": "spacing",
-          "description": "Adds padding to the menu item"
-        },
-        "Container": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
-            "type": "spacing",
-            "description": "Adds space between Icons and ContentStack (Label & Description)"
-          }
-        },
-        "ContentStack": {
-          "ItemSpacing": {
-            "value": "0",
-            "type": "spacing",
-            "description": "Adds space between Label & Description"
-          }
-        },
-        "BorderRadius": {
-          "value": "{Action.BorderRadius}",
-          "type": "borderRadius",
-          "description": "Defines the border radius of a single menu item."
-        }
-      },
-      "Section": {
-        "SectionTitleWrapper": {
-          "Padding": {
-            "value": "{core.dimensionPX.16} {core.dimensionPX.16} {core.dimensionPX.8} {core.dimensionPX.16}",
-            "type": "spacing",
-            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
-          }
-        },
-        "SectionTitle": {
-          "value": "{core.typography.sourceSansPro.semibold.75}",
-          "type": "typography"
-        }
-      },
-      "SectionStack": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the space between each menu section"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing",
-          "description": "Defines the padding around all stacked menu sections."
-        }
-      },
-      "BorderRadius": {
-        "value": "{core.borderRadius.LG}",
-        "type": "borderRadius",
-        "description": "Defines the border radius of the whole menu component"
-      }
-    }
-  },
-  "Actions": {
     "TextButton": {
       "Container": {
         "PaddingTopBottom": {
@@ -773,6 +709,66 @@
             "type": "borderRadius"
           }
         }
+      }
+    }
+  },
+  "Action": {
+    "Menu": {
+      "MenuItem": {
+        "Padding": {
+          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+          "type": "spacing",
+          "description": "Adds padding to the menu item"
+        },
+        "Container": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "description": "Adds space between Icons and ContentStack (Label & Description)"
+          }
+        },
+        "ContentStack": {
+          "ItemSpacing": {
+            "value": "0",
+            "type": "spacing",
+            "description": "Adds space between Label & Description"
+          }
+        },
+        "BorderRadius": {
+          "value": "{Action.BorderRadius}",
+          "type": "borderRadius",
+          "description": "Defines the border radius of a single menu item."
+        }
+      },
+      "Section": {
+        "SectionTitleWrapper": {
+          "Padding": {
+            "value": "{core.dimensionPX.16} {core.dimensionPX.16} {core.dimensionPX.8} {core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+          }
+        },
+        "SectionTitle": {
+          "value": "{core.typography.sourceSansPro.semibold.75}",
+          "type": "typography"
+        }
+      },
+      "SectionStack": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the space between each menu section"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the padding around all stacked menu sections."
+        }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius",
+        "description": "Defines the border radius of the whole menu component"
       }
     }
   },
