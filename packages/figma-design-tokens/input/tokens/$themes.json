@@ -521,7 +521,10 @@
       "UI.Caption.LG": "S:732233baef2cf63e2de78562cee881d3b5d18ee2,",
       "Forms.SM.PrefixSuffix": "S:ead9c5fb313e8bf3f41f8ff4c4d9468bc99f9648,",
       "Forms.MD.PrefixSuffix": "S:3e94547ee52a1e521c3054d2400c1b883ddbc454,",
-      "Forms.LG.PrefixSuffix": "S:348fdb06ff80287c3fe2b27605fb46f5bfdf163d,"
+      "Forms.LG.PrefixSuffix": "S:348fdb06ff80287c3fe2b27605fb46f5bfdf163d,",
+      "Feedback.Counter.Text.Typography.SM": "S:7c73101bc65738c335ccc6cd3571ffc8ca848928,",
+      "Feedback.Counter.Text.Typography.MD": "S:24b2ba93df7b382c496c73feab2c1a7f9a5b679b,",
+      "Feedback.Counter.Text.Typography.LG": "S:cabf873709b4ce257544738c64e544a27b4e9968,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
