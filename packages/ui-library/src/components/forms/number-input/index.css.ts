@@ -1,10 +1,13 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
+import { makeIterator } from "../../../utils/token-part-iterator-css-in-ts";
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
   const { NumberInput } = componentTokens.Forms;
+
+  const forEachStepperComboSize = makeIterator<typeof StepperCombo>();
 
   return typeSafeNestedCss`
     .noPointerEvents {
@@ -65,23 +68,15 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     }
 
     .split {
-      &.sm {
-        & > .custom-stepper-button {
-          width: ${StepperCombo.SM.Vertical.Width};
-        }
-      }
-
-      &.md {
-        & > .custom-stepper-button {
-          width: ${StepperCombo.MD.Vertical.Width};
-        }
-      }
-
-      &.lg {
-        & > .custom-stepper-button {
-          width: ${StepperCombo.LG.Vertical.Width};
-        }
-      }
+      ${forEachStepperComboSize(StepperCombo, (key, tokenPart, css) => {
+        return css`
+          &.${key.toLocaleLowerCase()} {
+            & > .custom-stepper-button {
+              width: ${tokenPart.Vertical.Width};
+            }
+          }
+        `;
+      })}
     }
 
     .unit,
