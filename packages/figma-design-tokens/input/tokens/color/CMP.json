@@ -1416,5 +1416,57 @@
         }
       }
     }
+  },
+  "Actions": {
+    "StepperButton": {
+      "Container": {
+        "BackgroundColor": {
+          "Rest": {
+            "value": "{Action.Silent.SurfaceFill.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Action.Silent.SurfaceFill.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Action.Silent.SurfaceFill.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Action.Silent.SurfaceFill.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Action.Silent.SurfaceFill.Focus}",
+            "type": "color"
+          }
+        }
+      },
+      "Icon": {
+        "IconColor": {
+          "Rest": {
+            "value": "{Action.Silent.Icon.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Action.Silent.Icon.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Action.Silent.Icon.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Action.Silent.Icon.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Action.Silent.Icon.Focus}",
+            "type": "color"
+          }
+        }
+      }
+    }
   }
 }
