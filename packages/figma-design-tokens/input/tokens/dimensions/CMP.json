@@ -149,7 +149,9 @@
           }
         }
       }
-    },
+    }
+  },
+  "Actions": {
     "Menu": {
       "MenuItem": {
         "Container": {
@@ -209,9 +211,7 @@
         "type": "borderRadius",
         "description": "Defines the border radius of the whole menu component"
       }
-    }
-  },
-  "Actions": {
+    },
     "TextButton": {
       "Container": {
         "PaddingTopBottom": {

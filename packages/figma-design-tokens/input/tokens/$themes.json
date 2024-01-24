@@ -440,7 +440,6 @@
       "Navigation.TabBar.Tab.Label.Actives.Rest": "S:8d36565db706edb6d13cbfeb237fd1e19bab0aa3,",
       "Navigation.TabBar.Tab.Label.Unselecteds.Rest": "S:610bb50656e3a5973cda0f7a723448cfc84744a9,",
       "Navigation.TabBar.Tab.HighlightLine.SurfaceFill.Rest": "S:6a0646595b624192862b36aaa6e502e8b3774d2a,",
-      "Action.Menu.Section.SectionTitle": "S:2051a61186bbc055cb0cf8b386a963717c94fa4c,",
       "UI.Divider.Container.BackgroundColor": "S:67b175a1c37d17de8e9d4c612107a4d558519ef2,",
       "Forms.Radio.Control.Icon.IconColor.Active.Stroke.Rest": "S:f851bbba916e87308f88af6fa47c81c63b8fd0d5,",
       "Forms.Radio.Control.Icon.IconColor.Active.Stroke.Hover": "S:1100992905920a567a1bf0796125b3304a626d64,",
@@ -524,7 +523,8 @@
       "Forms.LG.PrefixSuffix": "S:348fdb06ff80287c3fe2b27605fb46f5bfdf163d,",
       "Feedback.Counter.Text.Typography.SM": "S:7c73101bc65738c335ccc6cd3571ffc8ca848928,",
       "Feedback.Counter.Text.Typography.MD": "S:24b2ba93df7b382c496c73feab2c1a7f9a5b679b,",
-      "Feedback.Counter.Text.Typography.LG": "S:cabf873709b4ce257544738c64e544a27b4e9968,"
+      "Feedback.Counter.Text.Typography.LG": "S:cabf873709b4ce257544738c64e544a27b4e9968,",
+      "Actions.Menu.Section.SectionTitle": "S:2051a61186bbc055cb0cf8b386a963717c94fa4c,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -549,10 +549,6 @@
       "Action.StepperCombo.MD.Horizontal.Width": "8606f84cf303c58d406f7fa46aff0189d455c840",
       "Action.StepperCombo.LG.Vertical.Width": "b4d63ffae2eb2281e5d37ff54b5a10bd79e56394",
       "Action.StepperCombo.LG.Horizontal.Width": "52d0c26df0f182e6137819ea16f1f4b700797de3",
-      "Action.Menu.MenuItem.ContentStack.ItemSpacing": "333eea56c19cd22631f220ea5c56d59190823be7",
-      "Action.Menu.SectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
-      "Action.Menu.SectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
-      "Action.Menu.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5",
       "Actions.TextButton.Container.PaddingTopBottom.XS": "7b49d86b8b60a319c8297b18be8820f4d272d43d",
       "Actions.TextButton.Container.PaddingTopBottom.SM": "bd581b07ca99f0c83d524e933c1a7c0e21ae0fdd",
       "Actions.TextButton.Container.PaddingTopBottom.MD": "3e5d7399cab81dc62f4c1a3be7c90b8aebae4bbb",
@@ -1698,8 +1694,12 @@
       "q.shadow.alpha": "83778a8c4ffd7b5d5c4df92bfde29340078a2dd0",
       "_internal.accent.pink.subtle": "a5817511c781de8760bf04d0dc84a07aca5c012d",
       "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea",
-      "Action.Menu.MenuItem.ContentRow.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
-      "Action.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418"
+      "Actions.Menu.MenuItem.ContentStack.ItemSpacing": "333eea56c19cd22631f220ea5c56d59190823be7",
+      "Actions.Menu.SectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
+      "Actions.Menu.SectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
+      "Actions.Menu.MenuItem.ContentRow.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
+      "Actions.Menu.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5",
+      "Actions.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418"
     },
     "group": "Theme"
   },
@@ -2247,10 +2247,6 @@
       "Action.StepperCombo.MD.Horizontal.Width": "8606f84cf303c58d406f7fa46aff0189d455c840",
       "Action.StepperCombo.LG.Vertical.Width": "b4d63ffae2eb2281e5d37ff54b5a10bd79e56394",
       "Action.StepperCombo.LG.Horizontal.Width": "52d0c26df0f182e6137819ea16f1f4b700797de3",
-      "Action.Menu.MenuItem.ContentStack.ItemSpacing": "333eea56c19cd22631f220ea5c56d59190823be7",
-      "Action.Menu.SectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
-      "Action.Menu.SectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
-      "Action.Menu.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5",
       "Actions.TextButton.Container.PaddingTopBottom.XS": "7b49d86b8b60a319c8297b18be8820f4d272d43d",
       "Actions.TextButton.Container.PaddingTopBottom.SM": "bd581b07ca99f0c83d524e933c1a7c0e21ae0fdd",
       "Actions.TextButton.Container.PaddingTopBottom.MD": "3e5d7399cab81dc62f4c1a3be7c90b8aebae4bbb",
@@ -3396,8 +3392,12 @@
       "q.shadow.alpha": "83778a8c4ffd7b5d5c4df92bfde29340078a2dd0",
       "_internal.accent.pink.subtle": "a5817511c781de8760bf04d0dc84a07aca5c012d",
       "_internal.accent.pink.strong": "b6518d18cc6ea229e89868f15c5e80e2efac34ea",
-      "Action.Menu.MenuItem.ContentRow.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
-      "Action.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418"
+      "Actions.Menu.MenuItem.ContentStack.ItemSpacing": "333eea56c19cd22631f220ea5c56d59190823be7",
+      "Actions.Menu.SectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
+      "Actions.Menu.SectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
+      "Actions.Menu.MenuItem.ContentRow.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
+      "Actions.Menu.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5",
+      "Actions.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418"
     },
     "group": "Theme"
   }
