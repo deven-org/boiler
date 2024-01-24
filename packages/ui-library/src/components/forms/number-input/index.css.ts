@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
-  const { StepperCombo } = componentTokens.Action;
+  const { StepperCombo } = componentTokens.Actions;
   const { NumberInput } = componentTokens.Forms;
 
   return typeSafeNestedCss`
@@ -179,7 +179,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
 export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { StepperCombo } = componentTokens.Action;
+    const { StepperCombo } = componentTokens.Actions;
     const { Silent } = semanticTokens.Action;
 
     return typeSafeNestedCss`
