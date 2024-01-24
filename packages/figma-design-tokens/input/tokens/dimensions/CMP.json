@@ -152,12 +152,19 @@
     },
     "Menu": {
       "MenuItem": {
-        "Padding": {
-          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
-          "type": "spacing",
-          "description": "Adds padding to the menu item"
-        },
         "Container": {
+          "Padding": {
+            "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Adds padding to the menu item"
+          },
+          "BorderRadius": {
+            "value": "{Action.BorderRadius}",
+            "type": "borderRadius",
+            "description": "Defines the border radius of a single menu item."
+          }
+        },
+        "ContentRow": {
           "ItemSpacing": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing",
@@ -170,11 +177,6 @@
             "type": "spacing",
             "description": "Adds space between Label & Description"
           }
-        },
-        "BorderRadius": {
-          "value": "{Action.BorderRadius}",
-          "type": "borderRadius",
-          "description": "Defines the border radius of a single menu item."
         }
       },
       "Section": {
