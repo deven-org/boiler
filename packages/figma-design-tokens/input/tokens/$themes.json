@@ -1698,8 +1698,8 @@
       "Actions.Menu.SectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
       "Actions.Menu.SectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
       "Actions.Menu.MenuItem.ContentRow.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
-      "Actions.Menu.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5",
-      "Actions.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418"
+      "Actions.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418",
+      "Actions.Menu.Container.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5"
     },
     "group": "Theme"
   },
@@ -3396,8 +3396,8 @@
       "Actions.Menu.SectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
       "Actions.Menu.SectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
       "Actions.Menu.MenuItem.ContentRow.ItemSpacing": "4c15d35abad521d41e908b754dff07ce24c63860",
-      "Actions.Menu.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5",
-      "Actions.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418"
+      "Actions.Menu.MenuItem.Container.BorderRadius": "7850e05ef40efcd31fea570969e0286a4d389418",
+      "Actions.Menu.Container.BorderRadius": "a1e7e791ee2e93b8e2335c358accd51f3f3d6ae5"
     },
     "group": "Theme"
   }

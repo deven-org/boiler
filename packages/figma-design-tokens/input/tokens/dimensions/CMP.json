@@ -154,7 +154,7 @@
   "Actions": {
     "Menu": {
       "MenuItem": {
-        "Container": {
+        "ItemContainer": {
           "Padding": {
             "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
             "type": "spacing",
@@ -179,6 +179,18 @@
             "type": "spacing",
             "description": "Adds space between Label & Description"
           }
+        },
+        "ItemLabel": {
+          "Typography": {
+            "value": "{Action.MD.Label}",
+            "type": "typography"
+          }
+        },
+        "ItemDescription": {
+          "Typography": {
+            "value": "{UI.Caption.MD}",
+            "type": "typography"
+          }
         }
       },
       "Section": {
@@ -190,8 +202,10 @@
           }
         },
         "SectionTitle": {
-          "value": "{core.typography.sourceSansPro.semibold.75}",
-          "type": "typography"
+          "Typography": {
+            "value": "{core.typography.sourceSansPro.semibold.75}",
+            "type": "typography"
+          }
         }
       },
       "SectionStack": {
@@ -206,10 +220,12 @@
           "description": "Defines the padding around all stacked menu sections."
         }
       },
-      "BorderRadius": {
-        "value": "{core.borderRadius.LG}",
-        "type": "borderRadius",
-        "description": "Defines the border radius of the whole menu component"
+      "Container": {
+        "BorderRadius": {
+          "value": "{core.borderRadius.LG}",
+          "type": "borderRadius",
+          "description": "Defines the border radius of the whole menu component"
+        }
       }
     },
     "TextButton": {
@@ -3749,6 +3765,16 @@
               "description": "Coded comps only!."
             }
           }
+        }
+      }
+    }
+  },
+  "Menu": {
+    "MenuItem": {
+      "ItemIcon": {
+        "IconSize": {
+          "value": "{UI.Icon.Container.Size.SM}",
+          "type": "sizing"
         }
       }
     }
