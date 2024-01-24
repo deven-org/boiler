@@ -64,6 +64,22 @@
             "type": "borderRadius"
           }
         }
+      },
+      "Icon": {
+        "IconSize": {
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing"
+          }
+        }
       }
     },
     "StepperCombo": {
