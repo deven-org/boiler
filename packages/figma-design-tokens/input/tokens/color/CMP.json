@@ -1441,6 +1441,28 @@
             "value": "{Action.Silent.SurfaceFill.Focus}",
             "type": "color"
           }
+        },
+        "BorderColor": {
+          "Rest": {
+            "value": "{Action.Silent.SurfaceStroke.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Action.Silent.SurfaceStroke.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Action.Silent.SurfaceStroke.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Action.Silent.SurfaceStroke.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Action.Silent.SurfaceStroke.Focus}",
+            "type": "color"
+          }
         }
       },
       "Icon": {
@@ -1462,7 +1484,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.Icon.Focus}",
+            "value": "{Action.Silent.Icon.Disabled}",
             "type": "color"
           }
         }
