@@ -177,12 +177,10 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   `;
 });
 
-export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { StepperCombo } = componentTokens.Actions;
-    const { Silent } = semanticTokens.Action;
+export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings((componentTokens) => {
+  const { StepperCombo, StepperButton } = componentTokens.Actions;
 
-    return typeSafeNestedCss`
+  return typeSafeNestedCss`
       .stepper-combo {
         &.horizontal {
           display: grid;
@@ -250,22 +248,24 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         justify-content: center;
         align-items: center;
         border: none;
-        background-color: ${Silent.SurfaceFill.Rest};
-        color: ${Silent.Icon.Rest};
         padding: 0;
 
+        background-color: ${StepperButton.Container.BackgroundColor.Rest};
+        color: ${StepperButton.Icon.IconColor.Rest}
+
         &:hover:not(:disabled) {
-          background-color: ${Silent.SurfaceFill.Hover};
-          color: ${Silent.Icon.Hover};
+          background-color: ${StepperButton.Container.BackgroundColor.Hover};
+        color: ${StepperButton.Icon.IconColor.Hover}
         }
 
         &:active:not(:disabled) {
-          background-color: ${Silent.SurfaceFill.Pressed};
-          color: ${Silent.Icon.Pressed};
+          background-color: ${StepperButton.Container.BackgroundColor.Pressed};
+        color: ${StepperButton.Icon.IconColor.Pressed}
         }
 
         &:disabled {
-          color: ${Silent.Icon.Disabled};
+          background-color: ${StepperButton.Container.BackgroundColor.Disabled};
+          color: ${StepperButton.Icon.IconColor.Disabled}
           cursor: not-allowed;
         }
 
@@ -278,8 +278,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         }
       }
     `;
-  }
-);
+});
 
 export const baseStyle = typeSafeNestedCss`
   input[type="number"] {
