@@ -18,6 +18,24 @@ export const styleCustom = typeSafeNestedCss`
 
   .blr-textarea {
     max-width: fit-content;
+    &.sm {
+      > blr-form-label {
+        display: flex;
+        padding: ${SM.LabelSlot.Padding};
+      }
+    }
+    &.md {
+      > blr-form-label {
+        display: flex;
+        padding: ${MD.LabelSlot.Padding};
+      }
+    }
+    &.lg {
+      > blr-form-label {
+        display: flex;
+        padding: ${LG.LabelSlot.Padding};
+      }
+    }
   }
 
   .blr-textarea-info-container {
