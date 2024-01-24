@@ -230,11 +230,10 @@ export const Offset = () => {
     
   `;
 };
-
 /**
  * ## Dependencies
  * ### Tooltip Bubble
- * The Tooltip component makes use of the Tooltip Bubble component. For more information have a look at the [Tooltip Bubble](?path=/docs/design-system-web-components-feedback-tooltip-tooltipbubble--docs) component.
+ * The Tooltip component makes use of the Tooltip Bubble component. For more information have a look at the [Tooltip Bubble](?path=/docs/design-system-web-components-feedback-tooltip-tooltip-bubble--docs) component.
  */
 
 export const TooltipBubble = () => {
