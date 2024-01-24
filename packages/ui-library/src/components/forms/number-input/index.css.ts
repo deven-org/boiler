@@ -56,8 +56,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     }
 
     input {
-      border: none;
-      outline: none;
+      all: initial;
     }
 
     & > * {
