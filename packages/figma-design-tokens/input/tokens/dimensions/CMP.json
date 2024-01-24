@@ -25,7 +25,10 @@
             "type": "border"
           },
           "Focus": {
-            "value": "{Global.FocusBorder}",
+            "value": {
+              "color": "{Actions.StepperButton.Container.BorderColor.Focus}",
+              "width": "{core.borderWidth.None}"
+            },
             "type": "border"
           },
           "Disabled": {
