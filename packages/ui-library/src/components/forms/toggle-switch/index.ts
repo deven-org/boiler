@@ -7,7 +7,7 @@ import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form
 import { FormSizesType, IconPositionVariant } from '../../../globals/types';
 
 import { styleCustom, toggleSwitchDark, toggleSwitchLight } from './index.css';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';

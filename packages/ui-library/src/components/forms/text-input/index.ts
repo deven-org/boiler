@@ -15,7 +15,7 @@ import { TAG_NAME } from './renderFunction';
 
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
