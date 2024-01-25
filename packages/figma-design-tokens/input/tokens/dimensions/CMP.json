@@ -156,7 +156,7 @@
       "MenuItem": {
         "ItemContainer": {
           "Padding": {
-            "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+            "value": "{Actions.Menu.MenuItem.ItemContainer.Padding_V} {Actions.Menu.MenuItem.ItemContainer.Padding_H}",
             "type": "spacing",
             "description": "Adds padding to the menu item"
           },
@@ -164,6 +164,14 @@
             "value": "{Action.BorderRadius}",
             "type": "borderRadius",
             "description": "Defines the border radius of a single menu item."
+          },
+          "Padding_H": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          },
+          "Padding_V": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
           }
         },
         "ContentRow": {
