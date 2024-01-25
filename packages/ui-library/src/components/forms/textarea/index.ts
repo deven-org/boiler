@@ -88,7 +88,7 @@ export class BlrTextarea extends LitElement {
   }
 
   protected determinateCounterVariant(): CounterVariantType {
-    let counterVariant: CounterVariantType = 'default';
+    let counterVariant: CounterVariantType = 'neutral';
 
     if (this.maxLength) {
       if (this.warningLimitType === 'warningLimitPer' && this.count >= (this.maxLength / 100) * this.warningLimitPer) {

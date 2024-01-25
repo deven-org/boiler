@@ -279,21 +279,14 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.sm {
-        padding: ${SM.LabelSlot.Padding};
         font-weight: ${FormLabel.Label.Typography.SM.fontWeight};
         font-size: ${FormLabel.Label.Typography.SM.fontSize};
         font-family: ${FormLabel.Label.Typography.SM.fontFamily}, sans-serif;
         line-height: ${FormLabel.Label.Typography.SM.lineHeight};
         gap: ${FormLabel.Container.ItemSpacing.SM};
-        __FIX__color: ${FormLabel.Label.TextColor.Rest};
-
-        &.__FIX__error {
-          color: ${FormLabel.Label.TextColor.Error};
-        }
       }
 
       &.md {
-        padding: ${MD.LabelSlot.Padding};
         font-weight: ${FormLabel.Label.Typography.MD.fontWeight};
         font-size: ${FormLabel.Label.Typography.MD.fontSize};
         font-family: ${FormLabel.Label.Typography.MD.fontFamily}, sans-serif;
@@ -302,16 +295,11 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.lg {
-        padding: ${LG.LabelSlot.Padding};
         font-weight: ${FormLabel.Label.Typography.LG.fontWeight};
         font-size: ${FormLabel.Label.Typography.LG.fontSize};
         font-family: ${FormLabel.Label.Typography.LG.fontFamily}, sans-serif;
         line-height: ${FormLabel.Label.Typography.LG.lineHeight};
         gap: ${FormLabel.Container.ItemSpacing.LG};
-
-        &.__FIX__error {
-          color: ${FormLabel.Label.TextColor.Error};
-        }
       }
     }
 
