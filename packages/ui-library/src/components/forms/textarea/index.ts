@@ -154,14 +154,16 @@ export class BlrTextarea extends LitElement {
           ${dynamicStyles}
         </style>
         <div class="${classes} blr-textarea">
-          ${BlrFormLabelRenderFunction({
-            labelText: this.label,
-            labelSize: this.size,
-            labelAppendix: this.labelAppendix,
-            forValue: this.textareaId,
-            theme: this.theme,
-            variant: this.hasError ? 'error' : 'label',
-          })}
+          <div class="label-wrapper">
+            ${BlrFormLabelRenderFunction({
+              labelText: this.label,
+              labelSize: this.size,
+              labelAppendix: this.labelAppendix,
+              forValue: this.textareaId,
+              theme: this.theme,
+              variant: this.hasError ? 'error' : 'label',
+            })}
+          </div>
           <textarea
             class="blr-form-element textarea-input-control ${textareaClasses}"
             id="${this.textareaId || nothing}"
@@ -181,7 +183,8 @@ export class BlrTextarea extends LitElement {
             @select="${this.onSelect}"
             @keyup=${this.updateCounter}
           >
-${this.value}</textarea
+${this.value}
+          </textarea
           >
           <div class="${textareaInfoContainer}">
             ${this.hasHint || this.hasError
