@@ -34,19 +34,19 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
 
     .blr-text-input {
       &.sm {
-        > blr-form-label {
+        & > .label-wrapper {
           display: flex;
           padding: ${SM.LabelSlot.Padding};
         }
       }
       &.md {
-        > blr-form-label {
+        & > .label-wrapper {
           display: flex;
           padding: ${MD.LabelSlot.Padding};
         }
       }
       &.lg {
-        > blr-form-label {
+        & > .label-wrapper {
           display: flex;
           padding: ${LG.LabelSlot.Padding};
         }
