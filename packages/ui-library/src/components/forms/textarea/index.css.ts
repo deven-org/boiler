@@ -19,19 +19,19 @@ export const styleCustom = typeSafeNestedCss`
   .blr-textarea {
     max-width: fit-content;
     &.sm {
-      .label-wrapper {
+      & > .label-wrapper {
         display: flex;
         padding: ${SM.LabelSlot.Padding};
       }
     }
     &.md {
-      .label-wrapper {
+      & > .label-wrapper {
         display: flex;
         padding: ${MD.LabelSlot.Padding};
       }
     }
     &.lg {
-      .label-wrapper {
+      & > .label-wrapper {
         display: flex;
         padding: ${LG.LabelSlot.Padding};
       }
