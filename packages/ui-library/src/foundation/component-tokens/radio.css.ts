@@ -38,6 +38,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       .blr-legend {
         _FIX: to override constructed css;
         margin: 0 !important;
+
         &.sm {
           font-weight: ${SM.Legend.fontWeight};
           font-size: ${SM.Legend.fontSize};
@@ -69,7 +70,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
     }
 
     .caption-group {
-    
       _FIX_: To override constructed margin;
       all: initial;
       margin: 0;
@@ -94,7 +94,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       display: flex;
       align-items: flex-start;
       position: relative;
-      flex-flow: nnowrap;
+      flex-flow: nowrap;
       justify-content: space-between;
 
       &.vertical {
@@ -120,14 +120,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
     }
 
-    
-    
-
     .blr-radio {
       _FIX_: To override constructed margin;
       all: initial;
       margin: 0 !important;
-
       display: flex;
       flex-grow: 1;
       transition: all 0.25s ease 0s;
@@ -168,7 +164,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
         }
       }
-
 
       &.sm {
         gap: ${Radio.ContentRow.ItemSpacing.SM};
@@ -248,8 +243,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         }
       }
 
-
-
       .input-control {
         background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Rest};
         width: ${Radio.Control.Container.Size.SM};
@@ -266,6 +259,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         &:not(.disabled):not(.readonly) {
           &:hover {
             background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Hover};
+            
             &::before {
               content: "";
               background-color: ${Radio.Control.Icon.IconColor.Inactive.Hover};
@@ -273,47 +267,42 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               height: ${Radio.Control.Icon.IconSize.SM.Inactive.Hover};
             }
 
-              & + .label-wrapper {
-                .blr-form-label-inline {
-                  color: ${FormLabel.InlineLabel.TextColor.Hover};
-                }
+            & + .label-wrapper {
+              .blr-form-label-inline {
+                color: ${FormLabel.InlineLabel.TextColor.Hover};
               }
             }
           }
         
-
           &:active {
-          
             background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Pressed};
 
             &::before {
               content: "";
               background-color: ${Radio.Control.Icon.IconColor.Inactive.Pressed};
-
               width: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
               height: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
             }
 
-              & + .label-wrapper {
-                .blr-form-label-inline {
-                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
-                }
+            & + .label-wrapper {
+              .blr-form-label-inline {
+                color: ${FormLabel.InlineLabel.TextColor.Pressed};
               }
             }
           }
 
-        &:focus {
-          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
-          _FIX_: "needs focus ring";
-          outline: black solid 2px;
-          outline-offset: 2px;
+          &:focus {
+            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
+            _FIX_: "needs focus ring";
+            outline: black solid 2px;
+            outline-offset: 2px;
 
-          &::before {
-            content: "";
-            background-color: ${Radio.Control.Icon.IconColor.Inactive.Focus};
-            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
-            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
-          }
+            &::before {
+              content: "";
+              background-color: ${Radio.Control.Icon.IconColor.Inactive.Focus};
+              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+            }
 
             & + .label-wrapper {
               .blr-form-label-inline {
@@ -321,7 +310,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
               }
             }
           }
-
+        }
 
         &.checked, &:checked {
           background-color: ${Radio.Control.Container.BackgroundColor.Active.Rest};
@@ -334,7 +323,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
 
           &:not(.disabled):not(.readonly) {
-            
             &:hover {
               background-color: ${Radio.Control.Container.BackgroundColor.Active.Hover};
 
@@ -343,10 +331,8 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 background-color: ${Radio.Control.Icon.IconColor.Active.Hover};
                 width: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
                 height: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
-
               }
             }
-          
 
             &:active {
               background-color: ${Radio.Control.Container.BackgroundColor.Active.Pressed};
@@ -356,6 +342,17 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 background-color: ${Radio.Control.Icon.IconColor.Active.Pressed};
                 width: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
                 height: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
+              }
+            }
+
+            &:focus {
+              background-color: ${Radio.Control.Container.BackgroundColor.Active.Focus};
+              
+              &::before {
+                content: "";
+                background-color: ${Radio.Control.Icon.IconColor.Active.Focus};
+                width: ${Radio.Control.Icon.IconSize.SM.Active.Focus};
+                height: ${Radio.Control.Icon.IconSize.SM.Active.Focus};
               }
             }
           }
@@ -394,11 +391,10 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
             height: ${Radio.Control.Icon.IconSize.SM.Inactive.Disabled};
           }
 
-            & + .label-wrapper {
-              .blr-form-label-inline {
-                cursor: not-allowed;
-                color: ${FormLabel.InlineLabel.TextColor.Disabled};
-              }
+          & + .label-wrapper {
+            .blr-form-label-inline {
+              cursor: not-allowed;
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }
         }
@@ -437,10 +433,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
         }
       }
-
-
-
-
 
       &.disabled {
         .input-control {

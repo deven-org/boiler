@@ -40,7 +40,7 @@ export { BlrCounter } from './components/internal-components/counter';
 
 export { BlrFormCaptionGroup } from './components/internal-components/form-caption-group';
 
-export { BlrFormCaption } from './components/internal-components/form-caption-group/form-caption';
+export { BlrFormCaption } from './components/internal-components/form-caption';
 
 export { BlrFormLabel } from './components/internal-components/form-label';
 
