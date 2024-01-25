@@ -14,17 +14,9 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../../internal-components/form-label/renderFunction';
 import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
-
-type Option = {
-  value: string;
-  label: string;
-  selected?: boolean;
-  disabled?: boolean;
-};
-
 import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
@@ -39,21 +31,24 @@ export class BlrSelect extends LitElement {
   @property() disabled?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: (event: Event) => void;
   @property() onBlur?: HTMLElement['blur'];
   @property() onFocus?: HTMLElement['focus'];
-  @property({ type: Array }) options: Option[] = [];
+
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType;
-  @property() errorIcon?: SizelessIconType;
+  @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
 
   @property() theme: ThemeType = 'Light';
 
+  @property() blrChange?: () => void;
+
   @state() protected isFocused = false;
+
+  protected _optionElements: Element[] | undefined;
 
   protected handleFocus = () => {
     this.isFocused = true;
@@ -62,6 +57,23 @@ export class BlrSelect extends LitElement {
   protected handleBlur = () => {
     this.isFocused = false;
   };
+
+  protected handleSlotChange() {
+    const slot = this.renderRoot?.querySelector('slot');
+
+    this._optionElements = slot?.assignedElements({ flatten: false });
+    this.requestUpdate();
+  }
+
+  protected handleChange(event: Event) {
+    this.dispatchEvent(
+      new CustomEvent('blrChange', {
+        bubbles: true,
+        composed: true,
+        detail: { originalEvent: event },
+      })
+    );
+  }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     if (this.size) {
@@ -126,13 +138,13 @@ export class BlrSelect extends LitElement {
               icon: this.hintIcon,
             })
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
               size: this.size,
               message: this.errorMessage,
-              icon: this.errorIcon,
+              icon: this.errorMessageIcon,
             })
           : nothing}
       `;
@@ -141,6 +153,9 @@ export class BlrSelect extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
+
+        <slot @slotchange=${this.handleSlotChange}></slot>
+
         <div class="blr-select">
           ${this.label
             ? BlrFormLabelRenderFunction({
@@ -161,20 +176,19 @@ export class BlrSelect extends LitElement {
                 name=${this.name || nothing}
                 ?disabled=${this.disabled}
                 ?required=${this.required}
-                @change=${this.onChange}
+                @change=${this.handleChange}
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >
-                ${this.options?.map((opt: Option) => {
+                ${this._optionElements?.map((opt: Element) => {
                   return html`
                     <option
                       class="blr-select-option"
-                      id=${opt.value}
-                      value=${opt.value}
-                      ?selected=${opt.selected}
-                      ?disabled=${opt.disabled}
+                      value=${opt.getAttribute('value') || ''}
+                      ?selected=${opt.getAttribute('selected') === 'true'}
+                      ?disabled=${opt.getAttribute('disabled') === 'true'}
                     >
-                      ${opt.label}
+                      ${opt.getAttribute('label')}
                     </option>
                   `;
                 })}

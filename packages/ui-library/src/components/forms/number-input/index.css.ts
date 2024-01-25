@@ -1,12 +1,10 @@
 import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
-import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
-const { NumberInput } = componentTokens.Forms;
-
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
   const { StepperCombo } = componentTokens.Action;
+  const { NumberInput } = componentTokens.Forms;
 
   return typeSafeNestedCss`
     .noPointerEvents {
@@ -14,108 +12,19 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     }
 
     .input-wrapper {
-      outline: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
+      box-sizing: border-box;
+      width: 100%;
+
+      outline-width: ${Input.Default.Rest.width};
+      outline-style: ${Input.Default.Rest.style};
+      outline-color: ${Input.Default.Rest.color};
       border-radius: ${InputBorderRadius};
 
-      > input {
-        border: none;
-        outline: none;
-        color: inherit;
-      }
-
-      .unit{
-        color:${PrefixSuffix.OnPopulatedField.Default.Rest};
-      }
-
-      > * {
-        background-color: transparent;
-      }
-
-      &.split {
-        &.sm {
-          > .custom-stepper-button {
-            width: ${StepperCombo.SM.Vertical.Width};
-          }
-          
-        }
-
-        &.md {
-          > .custom-stepper-button {
-            width: ${StepperCombo.MD.Vertical.Width};
-          }
-        }
-
-        &.lg {
-          > .custom-stepper-button {
-            width: ${StepperCombo.LG.Vertical.Width};
-          }
-        }
-        > .unit {
-          text-align: left;
-        }
-  
-        > input {
-          text-align: right;
-          &.sm{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.SM};
-          }
-
-          &.md{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.MD};
-          }
-
-          &.lg{
-            padding-right:${NumberInput.Input.TextContainer.ItemSpacing.LG};
-          }
-        }
-      }
-
-      > .unit,
-      input {
-        &.sm {
-          font-weight: ${SM.UserInput.fontWeight};
-          font-size: ${SM.UserInput.fontSize};
-          font-family: ${SM.UserInput.fontFamily}, sans-serif;
-          line-height: ${SM.UserInput.lineHeight};
-          padding: ${SM.InputField.Padding};
-
-        }
-
-        &.md {
-          font-weight: ${MD.UserInput.fontWeight};
-          font-size: ${MD.UserInput.fontSize};
-          font-family: ${MD.UserInput.fontFamily}, sans-serif;
-          line-height: ${MD.UserInput.lineHeight};
-          padding: ${MD.InputField.Padding};
-        }
-
-        &.lg {
-          font-weight: ${LG.UserInput.fontWeight};
-          font-size: ${LG.UserInput.fontSize};
-          font-family: ${LG.UserInput.fontFamily}, sans-serif;
-          line-height: ${LG.UserInput.lineHeight};
-          padding: ${LG.InputField.Padding};
-        }
-
-      }
-
-      &.disabled {
-        outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
-        background-color: ${SurfaceFill.Default.Disabled};
-        cursor: not-allowed;
-
-        & > input {
-          color: ${UserInput.Default.Disabled};
-          cursor: not-allowed;
-
-          &::placeholder {
-            color: ${Placeholder.Default.Disabled};
-          }
-        }
-      }
-
       &:focus-within {
-        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
+        outline-width: ${Input.Default.Focus.width};
+        outline-style: ${Input.Default.Focus.style};
+        outline-color: ${Input.Default.Focus.color};
+
         background-color: ${SurfaceFill.Default.Focus};
 
         & > input {
@@ -126,54 +35,143 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
           }
         }
       }
+    }
 
-      &.error-input {
-        outline: ${Input.Error.Rest.width} ${Input.Error.Rest.style} ${Input.Error.Rest.color};
-        color: ${UserInput.Error.Rest};
-        background-color: ${SurfaceFill.Error.Rest};
+    .input-unit-container {
+      &.sm {
+        gap: ${NumberInput.InputField.TextWrapper.ItemSpacing.SM};
+      }
 
-        &::placeholder {
-          color: ${Placeholder.Error.Rest};
-        }
+      &.md {
+        gap: ${NumberInput.InputField.TextWrapper.ItemSpacing.MD};
+      }
 
-        &:hover {
-          outline: ${Input.Error.Hover.width} ${Input.Error.Hover.style} ${Input.Error.Hover.color};
-          color: ${UserInput.Error.Hover};
-          background-color: ${SurfaceFill.Error.Hover};
+      &.lg {
+        gap: ${NumberInput.InputField.TextWrapper.ItemSpacing.LG};
+      }
 
-          &::placeholder {
-            color: ${Placeholder.Error.Hover};
-          }
-        }
+      .unit {
+        color: ${PrefixSuffix.OnPopulatedField.Default.Rest};
+      }
+    }
 
-        &:active {
-          outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
-          color: ${UserInput.Error.Pressed};
-          background-color: ${SurfaceFill.Error.Pressed};
+    input {
+      border: none;
+      outline: none;
+    }
 
-          &::placeholder {
-            color: ${Placeholder.Error.Pressed};
-          }
-        }
+    & > * {
+      background-color: transparent;
+    }
 
-        &:focus-within {
-          outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focused};
-          background-color: ${SurfaceFill.Error.Focus};
-
-          &::placeholder {
-            color: ${Placeholder.Error.Focus};
-          }
+    .split {
+      &.sm {
+        & > .custom-stepper-button {
+          width: ${StepperCombo.SM.Vertical.Width};
         }
       }
 
-      &[readonly] {
-        outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
-        background-color: ${SurfaceFill.Default.ReadOnly};
+      &.md {
+        & > .custom-stepper-button {
+          width: ${StepperCombo.MD.Vertical.Width};
+        }
+      }
+
+      &.lg {
+        & > .custom-stepper-button {
+          width: ${StepperCombo.LG.Vertical.Width};
+        }
+      }
+    }
+
+    .unit,
+    input {
+      &.sm {
+        font-weight: ${SM.UserInput.fontWeight};
+        font-size: ${SM.UserInput.fontSize};
+        font-family: ${SM.UserInput.fontFamily}, sans-serif;
+        line-height: ${SM.UserInput.lineHeight};
+        padding: ${SM.InputField.Padding};
+      }
+
+      &.md {
+        font-weight: ${MD.UserInput.fontWeight};
+        font-size: ${MD.UserInput.fontSize};
+        font-family: ${MD.UserInput.fontFamily}, sans-serif;
+        line-height: ${MD.UserInput.lineHeight};
+        padding: ${MD.InputField.Padding};
+      }
+
+      &.lg {
+        font-weight: ${LG.UserInput.fontWeight};
+        font-size: ${LG.UserInput.fontSize};
+        font-family: ${LG.UserInput.fontFamily}, sans-serif;
+        line-height: ${LG.UserInput.lineHeight};
+        padding: ${LG.InputField.Padding};
+      }
+    }
+
+    &.disabled {
+      outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
+      background-color: ${SurfaceFill.Default.Disabled};
+      cursor: not-allowed;
+
+      & > input {
+        color: ${UserInput.Default.Disabled};
+        cursor: not-allowed;
 
         &::placeholder {
-          color: ${Placeholder.Default.ReadOnly};
+          color: ${Placeholder.Default.Disabled};
         }
+      }
+    }
+
+    &.error-input {
+      outline: ${Input.Error.Rest.width} ${Input.Error.Rest.style} ${Input.Error.Rest.color};
+      color: ${UserInput.Error.Rest};
+      background-color: ${SurfaceFill.Error.Rest};
+
+      &::placeholder {
+        color: ${Placeholder.Error.Rest};
+      }
+
+      &:hover {
+        outline: ${Input.Error.Hover.width} ${Input.Error.Hover.style} ${Input.Error.Hover.color};
+        color: ${UserInput.Error.Hover};
+        background-color: ${SurfaceFill.Error.Hover};
+
+        &::placeholder {
+          color: ${Placeholder.Error.Hover};
+        }
+      }
+
+      &:active {
+        outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
+        color: ${UserInput.Error.Pressed};
+        background-color: ${SurfaceFill.Error.Pressed};
+
+        &::placeholder {
+          color: ${Placeholder.Error.Pressed};
+        }
+      }
+
+      &:focus-within {
+        outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+        color: ${UserInput.Error.Focused};
+        background-color: ${SurfaceFill.Error.Focus};
+
+        &::placeholder {
+          color: ${Placeholder.Error.Focus};
+        }
+      }
+    }
+
+    &.readonly {
+      outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
+      background-color: ${SurfaceFill.Default.ReadOnly};
+
+      &::placeholder {
+        color: ${Placeholder.Default.ReadOnly};
       }
     }
   `;
@@ -194,7 +192,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.sm {
             width: ${StepperCombo.SM.Horizontal.Width};
 
-            > blr-divider {
+            & > blr-divider {
               padding: ${StepperCombo.SM.Horizontal.DividerWrapper.Padding};
             }
           }
@@ -202,7 +200,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.md {
             width: ${StepperCombo.MD.Horizontal.Width};
 
-            > blr-divider {
+            & > blr-divider {
               padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
             }
           }
@@ -210,11 +208,10 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.lg {
             width: ${StepperCombo.LG.Horizontal.Width};
 
-            > blr-divider {
+            & > blr-divider {
               padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
             }
           }
-         
         }
 
         &.vertical {
@@ -225,7 +222,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.sm {
             width: ${StepperCombo.SM.Vertical.Width};
 
-            > blr-divider {
+            & > blr-divider {
               padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
             }
           }
@@ -233,7 +230,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.md {
             width: ${StepperCombo.MD.Vertical.Width};
 
-            > blr-divider {
+            & > blr-divider {
               padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
             }
           }
@@ -241,7 +238,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           &.lg {
             width: ${StepperCombo.LG.Vertical.Width};
 
-            > blr-divider {
+            & > blr-divider {
               padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
             }
           }
@@ -285,72 +282,77 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
 );
 
 export const baseStyle = typeSafeNestedCss`
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   .input-wrapper {
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
 
-    & > input::-webkit-outer-spin-button,
-    & > input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+    .input-unit-container {
+      display: flex;
     }
 
-    > input {
-      flex-grow: 1;
+    .input-unit-container .unit.prepend {
+      grid-area: first;
+      padding-right: 0;
+      order: -2;
     }
 
-    > input[type="number"] {
-      -moz-appearance: textfield;
+    .input-unit-container input.prepend {
+      grid-area: second;
+      padding-left: 0;
     }
 
-    &.split {
-      > button:first-of-type {
-        order: -2;
-      }
-
-      .unit {
-        order: 0;
-        padding-left:0;
-      }
-   
-      .unit.prepend {
-        order: -1;
-        text-align: right;
-        padding-right:0;
-      }
-
-      > input.prepend {
-        text-align: left;
-      }
-      
-      > button:last-of-type {
-        margin-left:auto;
-      }
-      > input{
-        padding-right:0;
-      }
+    .input-unit-container .unit:not(.prepend) {
+      grid-area: second;
+      padding-left: 0;
     }
 
-    &.horizontal,
-    &.vertical {
-      .unit.prepend {
-        order: -1;
-        padding-right:0;
-      }
-      > input.prepend{
-        &.sm{
-        padding-left:${NumberInput.Input.TextContainer.ItemSpacing.SM};
-        }
+    .input-unit-container input:not(.prepend) {
+      grid-area: first;
+      padding-right: 0;
+    }
 
-        &.md{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.MD};
-        }
-        
-        &.lg{
-          padding-left:${NumberInput.Input.TextContainer.ItemSpacing.LG};
-        }
-      }
+    .input-unit-container.split {
+      flex: 1;
+      display: inline-grid;
+      grid-template-columns: 1fr auto auto 1fr;
+      grid-template-areas: "left-gap first second right-gap";
+    }
+
+    .input-unit-container.split .input-container > input {
+      text-align: center;
+    }
+
+    .input-unit-container.split input {
+      text-align: left;
+    }
+  }
+
+  .split > button:first-of-type {
+    order: -2;
+  }
+
+  .split > button:last-of-type {
+    _margin-left: auto;
+  }
+
+  &:not(.split) {
+    .input-unit-container {
+      width: 100%;
+    }
+
+    .input-unit-container input:not(.prepend) {
+      width: 100%;
     }
   }
 `;

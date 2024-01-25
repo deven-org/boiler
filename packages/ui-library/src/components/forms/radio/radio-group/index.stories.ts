@@ -6,6 +6,8 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit';
 // this loads the all components instances and registers their html tags
 import '../../../../index';
+import { action } from '@storybook/addon-actions';
+
 const sharedStyles = html`
   <style>
     .wrapper {
@@ -19,7 +21,7 @@ export default {
   argTypes: {
     size: {
       name: 'sizeVariant',
-      description: ' Choose size of the component. ',
+      description: ' Choose size of the component.',
       options: InputSizes,
       control: { type: 'radio' },
       table: {

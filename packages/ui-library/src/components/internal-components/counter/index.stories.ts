@@ -91,7 +91,7 @@ export const BlrCounter = (params: BlrCounterType) => BlrCounterRenderFunction(p
 BlrCounter.storyName = 'Counter';
 const defaultParams: BlrCounterType = {
   theme: 'Light',
-  variant: 'default',
+  variant: 'neutral',
   size: 'md',
   current: 3,
   max: 100,

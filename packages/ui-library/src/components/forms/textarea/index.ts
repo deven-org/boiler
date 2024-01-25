@@ -10,7 +10,7 @@ import { BlrCounterRenderFunction } from '../../internal-components/counter/rend
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
 
 import { TAG_NAME } from './renderFunction';
 
@@ -88,7 +88,7 @@ export class BlrTextarea extends LitElement {
   }
 
   protected determinateCounterVariant(): CounterVariantType {
-    let counterVariant: CounterVariantType = 'default';
+    let counterVariant: CounterVariantType = 'neutral';
 
     if (this.maxLength) {
       if (this.warningLimitType === 'warningLimitPer' && this.count >= (this.maxLength / 100) * this.warningLimitPer) {

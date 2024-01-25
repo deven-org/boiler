@@ -11,7 +11,7 @@ import { TAG_NAME } from './renderFunction';
 export class BlrCounter extends LitElement {
   static styles = [];
 
-  @property() variant: CounterVariantType = 'default';
+  @property() variant: CounterVariantType = 'neutral';
   @property() current = 0;
   @property() max = 0;
   @property() size?: FormSizesType = 'md';

@@ -9,7 +9,7 @@ import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
 
 import { TAG_NAME } from './renderFunction';
 

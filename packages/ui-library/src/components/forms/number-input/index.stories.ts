@@ -25,7 +25,7 @@ const defaultParams: BlrNumberInputType = {
   value: undefined,
   fractionDigits: 0,
   totalDigits: 0,
-  prependUnit: false,
+  prependUnit: true,
   unit: 'kg',
   step: 1,
   hasLabel: true,
@@ -40,37 +40,14 @@ const defaultParams: BlrNumberInputType = {
   hasError: false,
   errorMessage: '',
   errorIcon: undefined,
-  numberInputId: ' ',
+  numberInputId: 'test-id',
   theme: 'Light',
 };
 
 export default {
   title: 'Design System/Web Components/Forms/Number Input',
   args: {
-    theme: 'Light',
-    size: 'md',
-    stepperVariant: 'vertical',
-    placeholder: 'Placeholder-text',
-    value: undefined,
-    fractionDigits: 0,
-    totalDigits: 0,
-    prependUnit: false,
-    unit: 'kg',
-    step: 1,
-    hasLabel: true,
-    label: 'Label-text',
-    labelAppendix: '(Appendix)',
-    hasHint: false,
-    hintMessage: 'This is a small hint',
-    hintIcon: 'blrInfo',
-    disabled: false,
-    readonly: false,
-    required: false,
-    hasError: false,
-    ariaLabel: 'Number input',
-    errorMessage: '',
-    errorIcon: undefined,
-    numberInputId: ' ',
+    ...defaultParams,
     name: 'NumberInput',
     onChange: () => action('onChange'),
     onSelect: () => action('onSelect'),
@@ -122,7 +99,7 @@ export default {
         label: 'Enter Text',
       },
     },
-    fractionDigits: {
+    decimals: {
       name: 'decimals',
       description: 'Enter how many decimals the value of the component has.',
       table: {
@@ -132,7 +109,7 @@ export default {
         type: 'number',
       },
     },
-    totalDigits: {
+    leadingZeros: {
       name: 'leadingZeros',
       description: 'Enter how many leading zeros the value of the component has.',
       table: {
@@ -359,7 +336,6 @@ export default {
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=7155%3A108301&mode=dev',
     },
     viewMode: 'docs',
-    layout: 'centered',
     docs: {
       description: {
         component: `<markdown>
@@ -568,6 +544,8 @@ export const Readonly = () => {
         label: 'Readonly',
         readonly: true,
         labelAppendix: undefined,
+        fractionDigits: 1,
+        value: 20.2,
       })}
     </div>
   `;

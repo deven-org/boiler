@@ -12,7 +12,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { SizelessIconType } from '@boiler/icons';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
 import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption-group/form-caption/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
 
 import { TAG_NAME } from './renderFunction';
 
@@ -42,8 +42,8 @@ export class BlrNumberInput extends LitElement {
   @property() value?: number;
   @property() step?: number;
   @property() unit?: string;
-  @property() totalDigits?: number;
-  @property() fractionDigits?: number;
+  @property() leadingZeros?: number;
+  @property() decimals?: number;
   @property() prependUnit?: boolean;
 
   @property() theme: ThemeType = 'Light';
@@ -160,6 +160,8 @@ export class BlrNumberInput extends LitElement {
   }
 
   protected render() {
+    const hasUnit = this.unit !== undefined && this.unit.length > 0;
+
     if (this.size) {
       const dynamicStyles =
         this.theme === 'Light'
@@ -168,13 +170,14 @@ export class BlrNumberInput extends LitElement {
 
       const inputClasses = classMap({
         [this.size]: this.size,
-        prepend: !!this.prependUnit,
+        prepend: hasUnit && !!this.prependUnit,
       });
 
       const unitClasses = classMap({
         unit: true,
-        prepend: !!this.prependUnit,
+        prepend: hasUnit && !!this.prependUnit,
         [`${this.size}`]: this.size,
+        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
 
       const wrapperClasses = classMap({
@@ -183,6 +186,15 @@ export class BlrNumberInput extends LitElement {
         [`${this.size}`]: this.size,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
+        'prepend': hasUnit && !!this.prependUnit,
+        'readonly': this.readonly || false,
+      });
+
+      const inputAndUnitContainer = classMap({
+        'input-unit-container': true,
+        'prepend': hasUnit && !!this.prependUnit,
+        [`${this.size}`]: this.size,
+        [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
 
       const captionContent = html`
@@ -229,23 +241,28 @@ export class BlrNumberInput extends LitElement {
             })
           : nothing}
         <div class="${wrapperClasses}">
-          <input
-            class="${inputClasses}"
-            type="number"
-            .value=${!this.readonly && this.currentValue != 0
-              ? this.customFormat(this.currentValue || 0, this.fractionDigits || 0, this.totalDigits || 0)
+          <div class="${inputAndUnitContainer}">
+            <input
+              class="${inputClasses}"
+              type="number"
+              .value=${this.currentValue != 0
+                ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
+                : nothing}
+              step="${this.step || nothing}"
+              ?disabled="${this.disabled}"
+              ?readonly="${this.readonly}"
+              ?required="${this.required}"
+              hasError="${this.hasError}"
+              @change=${this.handleChange}
+              placeholder=${this.placeholder || nothing}
+            />
+            ${this.unit !== undefined && this.unit.length
+              ? html` <div class="${unitClasses}">${this.unit}</div> `
               : nothing}
-            step="${this.step || nothing}"
-            ?disabled="${this.disabled}"
-            ?readonly="${this.readonly}"
-            ?required="${this.required}"
-            hasError="${this.hasError}"
-            @change=${this.handleChange}
-            placeholder=${this.placeholder || nothing}
-          />
-          ${!this.readonly && this.unit ? html` <span class="${unitClasses}">${this.unit}</span> ` : nothing}
+          </div>
           ${this.renderMode()}
         </div>
+
         ${this.hasHint || this.hasError
           ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
           : nothing}

@@ -1,15 +1,15 @@
 import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { FormSizesType, CaptionVariantType, SizesType } from '../../../../globals/types';
-import { BlrIconRenderFunction } from '../../../ui/icon/renderFunction';
+import { FormSizesType, CaptionVariantType, SizesType } from '../../../globals/types';
+import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { formDark, formLight } from '../../../../foundation/semantic-tokens/form.css';
-import { calculateIconName } from '../../../../utils/calculate-icon-name';
-import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes';
-import { getComponentConfigToken } from '../../../../utils/get-component-config-token';
+import { calculateIconName } from '../../../utils/calculate-icon-name';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
+import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
 import { TAG_NAME } from './renderFunction';
+import { captionDark, captionLight } from './index.css';
 
 @customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {
@@ -25,7 +25,7 @@ export class BlrFormCaption extends LitElement {
 
   protected render() {
     if (this.size) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+      const dynamicStyles = this.theme === 'Light' ? [captionLight] : [captionDark];
 
       const classes = classMap({
         'blr-form-caption': true,

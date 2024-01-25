@@ -1,7 +1,7 @@
-import { typeSafeNestedCss as css } from "../../../../utils/nested-typesafe-css-literals";
-import { renderThemedCssStrings } from "../../../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss as css } from "../../../utils/nested-typesafe-css-literals";
+import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens) => {
+export const { tokenizedLight: captionLight, tokenizedDark: captionDark } = renderThemedCssStrings((componentTokens) => {
   const { CaptionComponent } = componentTokens.Forms;
 
   return css`
