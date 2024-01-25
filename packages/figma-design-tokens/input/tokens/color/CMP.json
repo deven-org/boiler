@@ -1635,9 +1635,7 @@
           "description": "Apply on section title"
         }
       }
-    }
-  },
-  "Actions": {
+    },
     "StepperButton": {
       "Container": {
         "BackgroundColor": {
