@@ -166,7 +166,7 @@
             "description": "Defines the border radius of a single menu item."
           },
           "Padding_H": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionPX.16}",
             "type": "spacing"
           },
           "Padding_V": {
@@ -201,10 +201,25 @@
           }
         }
       },
-      "Section": {
+      "MenuSection": {
         "SectionTitleWrapper": {
           "Padding": {
-            "value": "{core.dimensionPX.16} {core.dimensionPX.16} {core.dimensionPX.8} {core.dimensionPX.16}",
+            "value": "{Actions.Menu.MenuSection.SectionTitleWrapper.PaddingTop} {Actions.Menu.MenuSection.SectionTitleWrapper.Padding_H} {Actions.Menu.MenuSection.SectionTitleWrapper.PaddingBottom} {Actions.Menu.MenuSection.SectionTitleWrapper.Padding_H}",
+            "type": "spacing",
+            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+          },
+          "Padding_H": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+          },
+          "PaddingTop": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+          },
+          "PaddingBottom": {
+            "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
           }
@@ -213,6 +228,12 @@
           "Typography": {
             "value": "{core.typography.sourceSansPro.semibold.75}",
             "type": "typography"
+          }
+        },
+        "ItemStack": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
           }
         }
       },
