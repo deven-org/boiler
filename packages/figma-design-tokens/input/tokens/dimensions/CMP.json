@@ -1,156 +1,4 @@
 {
-  "Action": {
-    "StepperButton": {
-      "Border": {
-        "Rest": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Rest}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Hover}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Pressed}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": "{Global.FocusBorder}",
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Action.Silent.SurfaceStroke.Disabled}",
-            "width": "{core.borderWidth.None}"
-          },
-          "type": "border"
-        }
-      },
-      "SM": {
-        "Width": {
-          "value": "{core.dimensionREM.32}",
-          "type": "sizing"
-        }
-      },
-      "MD": {
-        "Width": {
-          "value": "{core.dimensionREM.40}",
-          "type": "sizing"
-        }
-      },
-      "LG": {
-        "Width": {
-          "value": "{core.dimensionREM.48}",
-          "type": "sizing"
-        }
-      },
-      "Container": {
-        "BorderRadius": {
-          "SM": {
-            "value": "{core.borderRadius.None}",
-            "type": "borderRadius"
-          },
-          "MD": {
-            "value": "{core.borderRadius.None}",
-            "type": "borderRadius"
-          },
-          "LG": {
-            "value": "{core.borderRadius.None}",
-            "type": "borderRadius"
-          }
-        }
-      }
-    },
-    "StepperCombo": {
-      "SM": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.32}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.64}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      },
-      "MD": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.40}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.80}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      },
-      "LG": {
-        "Vertical": {
-          "Width": {
-            "value": "{core.dimensionREM.48}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "0 {core.dimensionREM.8}",
-              "type": "spacing"
-            }
-          }
-        },
-        "Horizontal": {
-          "Width": {
-            "value": "{core.dimensionREM.96}",
-            "type": "sizing"
-          },
-          "DividerWrapper": {
-            "Padding": {
-              "value": "{core.dimensionREM.8} 0",
-              "type": "spacing"
-            }
-          }
-        }
-      }
-    }
-  },
   "Actions": {
     "Menu": {
       "MenuItem": {
@@ -198,6 +46,12 @@
           "Typography": {
             "value": "{UI.Caption.MD}",
             "type": "typography"
+          }
+        },
+        "ItemIcon": {
+          "IconSize": {
+            "value": "{UI.Icon.Container.Size.SM}",
+            "type": "sizing"
           }
         }
       },
@@ -254,6 +108,191 @@
           "value": "{core.borderRadius.LG}",
           "type": "borderRadius",
           "description": "Defines the border radius of the whole menu component"
+        }
+      }
+    },
+    "StepperButton": {
+      "Container": {
+        "Border": {
+          "Rest": {
+            "value": {
+              "color": "{Actions.StepperButton.Container.BorderColor.Rest}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Hover": {
+            "value": {
+              "color": "{Actions.StepperButton.Container.BorderColor.Hover}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Pressed": {
+            "value": {
+              "color": "{Actions.StepperButton.Container.BorderColor.Pressed}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Focus": {
+            "value": {
+              "color": "{Actions.StepperButton.Container.BorderColor.Focus}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          },
+          "Disabled": {
+            "value": {
+              "color": "{Actions.StepperButton.Container.BorderColor.Disabled}",
+              "width": "{core.borderWidth.None}"
+            },
+            "type": "border"
+          }
+        },
+        "Width": {
+          "SM": {
+            "value": "{core.dimensionREM.32}",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.40}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.48}",
+            "type": "sizing"
+          }
+        },
+        "BorderRadius": {
+          "SM": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          },
+          "MD": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          },
+          "LG": {
+            "value": "{core.borderRadius.None}",
+            "type": "borderRadius"
+          }
+        }
+      },
+      "Icon": {
+        "IconSize": {
+          "SM": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.16}",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.24}",
+            "type": "sizing"
+          }
+        }
+      }
+    },
+    "StepperCombo": {
+      "Container": {
+        "Width": {
+          "Vertical": {
+            "SM": {
+              "value": "{core.dimensionREM.32}",
+              "type": "sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.40}",
+              "type": "sizing"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.48}",
+              "type": "sizing"
+            }
+          },
+          "Horizontal": {
+            "SM": {
+              "value": "{core.dimensionREM.64}",
+              "type": "sizing"
+            },
+            "MD": {
+              "value": "{core.dimensionREM.80}",
+              "type": "sizing"
+            },
+            "LG": {
+              "value": "{core.dimensionREM.96}",
+              "type": "sizing"
+            }
+          }
+        }
+      },
+      "DividerWrapper": {
+        "Padding_V": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Horizontal"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Horizontal"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Horizontal"
+          }
+        },
+        "Padding_H": {
+          "SM": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Vertical"
+          },
+          "MD": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Vertical"
+          },
+          "LG": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing",
+            "description": "apply only on layoutVariant Vertical"
+          }
+        },
+        "Padding": {
+          "VerticalLayout": {
+            "SM": {
+              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.SM}",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.MD}",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.LG}",
+              "type": "spacing"
+            }
+          },
+          "HorizontalLayout": {
+            "SM": {
+              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.SM} 0",
+              "type": "spacing"
+            },
+            "MD": {
+              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.MD} 0",
+              "type": "spacing"
+            },
+            "LG": {
+              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.LG} 0",
+              "type": "spacing"
+            }
+          }
         }
       }
     },
@@ -3794,16 +3833,6 @@
               "description": "Coded comps only!."
             }
           }
-        }
-      }
-    }
-  },
-  "Menu": {
-    "MenuItem": {
-      "ItemIcon": {
-        "IconSize": {
-          "value": "{UI.Icon.Container.Size.SM}",
-          "type": "sizing"
         }
       }
     }
