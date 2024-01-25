@@ -18,19 +18,23 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
 
     :host {
       .blr-select {
-        > blr-form-label[labelsize="sm"] {
-          display: flex;
-          padding: ${SM.LabelSlot.Padding};
+        &.sm {
+          & > .label-wrapper {
+            display: flex;
+            padding: ${SM.LabelSlot.Padding};
+          }
         }
-    
-        > blr-form-label[labelsize="md"] {
-          display: flex;
-          padding: ${MD.LabelSlot.Padding};
+        &.md {
+          & > .label-wrapper {
+            display: flex;
+            padding: ${MD.LabelSlot.Padding};
+          }
         }
-    
-        > blr-form-label[labelsize="lg"] {
-          display: flex;
-          padding: ${LG.LabelSlot.Padding};
+        &.lg {
+          & > .label-wrapper {
+            display: flex;
+            padding: ${LG.LabelSlot.Padding};
+          }
         }
       }
     }
