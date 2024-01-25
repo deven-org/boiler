@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
-  const { StepperCombo } = componentTokens.Action;
+  const { StepperButton } = componentTokens.Actions;
   const { NumberInput } = componentTokens.Forms;
 
   return typeSafeNestedCss`
@@ -77,8 +77,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     }
 
     input {
-      border: none;
-      outline: none;
+      all: initial;
     }
 
     & > * {
@@ -88,19 +87,19 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     .split {
       &.sm {
         & > .custom-stepper-button {
-          width: ${StepperCombo.SM.Vertical.Width};
+          width: ${StepperButton.Container.Width.SM};
         }
       }
 
       &.md {
         & > .custom-stepper-button {
-          width: ${StepperCombo.MD.Vertical.Width};
+          width: ${StepperButton.Container.Width.MD};
         }
       }
 
       &.lg {
         & > .custom-stepper-button {
-          width: ${StepperCombo.LG.Vertical.Width};
+          width: ${StepperButton.Container.Width.LG};
         }
       }
     }
@@ -198,12 +197,10 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   `;
 });
 
-export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings(
-  (componentTokens, semanticTokens) => {
-    const { StepperCombo } = componentTokens.Action;
-    const { Silent } = semanticTokens.Action;
+export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings((componentTokens) => {
+  const { StepperCombo, StepperButton } = componentTokens.Actions;
 
-    return typeSafeNestedCss`
+  return typeSafeNestedCss`
       .stepper-combo {
         &.horizontal {
           display: grid;
@@ -211,26 +208,26 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           justify-content: center;
 
           &.sm {
-            width: ${StepperCombo.SM.Horizontal.Width};
+            width: ${StepperCombo.Container.Width.Horizontal.SM};
 
             & > blr-divider {
-              padding: ${StepperCombo.SM.Horizontal.DividerWrapper.Padding};
+              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.SM};
             }
           }
 
           &.md {
-            width: ${StepperCombo.MD.Horizontal.Width};
+            width: ${StepperCombo.Container.Width.Horizontal.MD};
 
             & > blr-divider {
-              padding: ${StepperCombo.MD.Horizontal.DividerWrapper.Padding};
+              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.MD};
             }
           }
 
           &.lg {
-            width: ${StepperCombo.LG.Horizontal.Width};
+            width: ${StepperCombo.Container.Width.Horizontal.LG};
 
             & > blr-divider {
-              padding: ${StepperCombo.LG.Horizontal.DividerWrapper.Padding};
+              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.LG};
             }
           }
         }
@@ -241,26 +238,26 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
           justify-content: center;
 
           &.sm {
-            width: ${StepperCombo.SM.Vertical.Width};
+            width: ${StepperCombo.Container.Width.Vertical.SM};
 
             & > blr-divider {
-              padding: ${StepperCombo.SM.Vertical.DividerWrapper.Padding};
+              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.SM};
             }
           }
 
           &.md {
-            width: ${StepperCombo.MD.Vertical.Width};
+            width: ${StepperCombo.Container.Width.Vertical.MD};
 
             & > blr-divider {
-              padding: ${StepperCombo.MD.Vertical.DividerWrapper.Padding};
+              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.MD};
             }
           }
 
           &.lg {
-            width: ${StepperCombo.LG.Vertical.Width};
+            width: ${StepperCombo.Container.Width.Vertical.LG};
 
             & > blr-divider {
-              padding: ${StepperCombo.LG.Vertical.DividerWrapper.Padding};
+              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.LG};
             }
           }
         }
@@ -271,22 +268,24 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         justify-content: center;
         align-items: center;
         border: none;
-        background-color: ${Silent.SurfaceFill.Rest};
-        color: ${Silent.Icon.Rest};
         padding: 0;
 
+        background-color: ${StepperButton.Container.BackgroundColor.Rest};
+        color: ${StepperButton.Icon.IconColor.Rest}
+
         &:hover:not(:disabled) {
-          background-color: ${Silent.SurfaceFill.Hover};
-          color: ${Silent.Icon.Hover};
+          background-color: ${StepperButton.Container.BackgroundColor.Hover};
+        color: ${StepperButton.Icon.IconColor.Hover}
         }
 
         &:active:not(:disabled) {
-          background-color: ${Silent.SurfaceFill.Pressed};
-          color: ${Silent.Icon.Pressed};
+          background-color: ${StepperButton.Container.BackgroundColor.Pressed};
+        color: ${StepperButton.Icon.IconColor.Pressed}
         }
 
         &:disabled {
-          color: ${Silent.Icon.Disabled};
+          background-color: ${StepperButton.Container.BackgroundColor.Disabled};
+          color: ${StepperButton.Icon.IconColor.Disabled}
           cursor: not-allowed;
         }
 
@@ -299,8 +298,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         }
       }
     `;
-  }
-);
+});
 
 export const baseStyle = typeSafeNestedCss`
   input[type="number"] {
