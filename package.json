@@ -48,7 +48,6 @@
     "@babel/preset-env": "^7.23.0",
     "@babel/preset-typescript": "^7.23.0",
     "@boiler/figma-design-tokens": "0.0.1",
-    "@boiler/react-example-app": "0.0.1",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
     "@deven-org/documentation-skeleton": "^2.1.0",
