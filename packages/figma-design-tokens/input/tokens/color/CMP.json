@@ -1402,10 +1402,230 @@
   },
   "Actions": {
     "Menu": {
-      "Surface": {
-        "Color": {
+      "Container": {
+        "BackgroundColor": {
           "value": "{q.background.level_2}",
           "type": "color"
+        }
+      },
+      "MenuItem": {
+        "ItemContainer": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Action.Primary.SurfaceFill.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Action.Primary.SurfaceFill.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Action.Primary.SurfaceFill.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Action.Primary.SurfaceFill.Focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Action.Silent.SurfaceFill.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Action.Silent.SurfaceFill.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Action.Silent.SurfaceFill.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Action.Silent.SurfaceFill.Focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Action.Silent.SurfaceFill.Disabled}",
+                "type": "color"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Action.Primary.SurfaceStroke.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Action.Primary.SurfaceStroke.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Action.Primary.SurfaceStroke.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Action.Primary.SurfaceStroke.Focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Action.Silent.SurfaceStroke.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Action.Silent.SurfaceStroke.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Action.Silent.SurfaceStroke.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Action.Silent.SurfaceStroke.Focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Action.Silent.SurfaceStroke.Disabled}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemLabel": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.alpha}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemDescription": {
+          "Active": {
+            "Rest": {
+              "value": "{q.content.onbrand.gamma}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{q.content.onbrand.gamma}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{q.content.onbrand.gamma}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{q.content.onbrand.gamma}",
+              "type": "color"
+            }
+          },
+          "TextColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemIcon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{q.content.onbrand.gamma}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.onbrand.gamma}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.onbrand.gamma}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.onbrand.gamma}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{q.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{q.content.ondisabled.alpha}",
+                "type": "color"
+              }
+            }
+          }
         }
       },
       "MenuSection": {
