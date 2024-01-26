@@ -135,6 +135,7 @@
             },
             "type": "border"
           },
+
           "Focus": {
             "value": {
               "color": "{Actions.StepperButton.Container.BorderColor.Focus}",
@@ -859,6 +860,66 @@
             "type": "borderRadius"
           }
         }
+      }
+    }
+  },
+  "Action": {
+    "Menu": {
+      "MenuItem": {
+        "Padding": {
+          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+          "type": "spacing",
+          "description": "Adds padding to the menu item"
+        },
+        "Container": {
+          "ItemSpacing": {
+            "value": "{core.dimensionPX.4}",
+            "type": "spacing",
+            "description": "Adds space between Icons and ContentStack (Label & Description)"
+          }
+        },
+        "ContentStack": {
+          "ItemSpacing": {
+            "value": "0",
+            "type": "spacing",
+            "description": "Adds space between Label & Description"
+          }
+        },
+        "BorderRadius": {
+          "value": "{Action.BorderRadius}",
+          "type": "borderRadius",
+          "description": "Defines the border radius of a single menu item."
+        }
+      },
+      "Section": {
+        "SectionTitleWrapper": {
+          "Padding": {
+            "value": "{core.dimensionPX.16} {core.dimensionPX.16} {core.dimensionPX.8} {core.dimensionPX.16}",
+            "type": "spacing",
+            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+          }
+        },
+        "SectionTitle": {
+          "value": "{core.typography.sourceSansPro.semibold.75}",
+          "type": "typography"
+        }
+      },
+      "SectionStack": {
+        "ItemSpacing": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the space between each menu section"
+        },
+        "Padding": {
+          "value": "{core.dimensionPX.12}",
+          "type": "spacing",
+          "description": "Defines the padding around all stacked menu sections."
+        }
+      },
+      "BorderRadius": {
+        "value": "{core.borderRadius.LG}",
+        "type": "borderRadius",
+        "description": "Defines the border radius of the whole menu component"
       }
     }
   },
