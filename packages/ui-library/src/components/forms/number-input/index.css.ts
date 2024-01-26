@@ -250,7 +250,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         padding: 0;
 
         background-color: ${StepperButton.Container.BackgroundColor.Rest};
-        color: ${StepperButton.Icon.IconColor.Rest}
+        color: ${StepperButton.Icon.IconColor.Rest};
 
         &:hover:not(:disabled) {
           background-color: ${StepperButton.Container.BackgroundColor.Hover};

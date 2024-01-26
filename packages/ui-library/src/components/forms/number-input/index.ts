@@ -79,8 +79,7 @@ export class BlrNumberInput extends LitElement {
 
     let paddedInteger = integerPart;
     if (digits > 0) {
-      const padding = Math.max(digits - integerPart.length, 0);
-      paddedInteger = '0'.repeat(padding) + integerPart;
+      paddedInteger = '0'.repeat(digits) + integerPart;
     }
     return `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
   }
