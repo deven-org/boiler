@@ -6,6 +6,7 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit';
 // this loads the all components instances and registers their html tags
 import '../../../../index';
+import { action } from '@storybook/addon-actions';
 
 const sharedStyles = html`
   <style>
