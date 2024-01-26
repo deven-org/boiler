@@ -749,9 +749,7 @@
           }
         }
       }
-    }
-  },
-  "Action": {
+    },
     "Menu": {
       "MenuItem": {
         "Padding": {
