@@ -110,4 +110,22 @@ describe('blr-number-input', () => {
 
     expect(className).to.contain('sm');
   });
+
+  it('correctly formats the value when leading zeros are set', async () => {
+    const element = await fixture(BlrNumberInputRenderFunction({ ...sampleParams, leadingZeros: 2 }));
+
+    const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
+    const numberValue = input?.value;
+
+    expect(numberValue).to.be.equal('004');
+  });
+
+  it('correctly formats the value when decimal places are set', async () => {
+    const element = await fixture(BlrNumberInputRenderFunction({ ...sampleParams, decimals: 2 }));
+
+    const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
+    const numberValue = input?.value;
+
+    expect(numberValue).to.be.equal('4.00');
+  });
 });
