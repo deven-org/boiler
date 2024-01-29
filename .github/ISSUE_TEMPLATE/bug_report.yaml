@@ -1,5 +1,5 @@
 name: Bug Report
-description: File a bug report
+description: Report a bug
 title: "[Bug]: "
 labels: ["🚨 new::bug"]
 projects: ["deven-org/3"]
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before opening a bug report, please [check if your issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues).
+        Before reporting a bug, please [check if the issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues).
         
         ---
         
@@ -18,8 +18,6 @@ body:
       label: Operating system
       description: "Which operating system do you use? Please provide the version as well."
       placeholder: "macOS Sonoma 14.2.1 (23C71)"
-    validations:
-      required: true
   - type: dropdown
     id: browsers
     attributes:
@@ -65,5 +63,3 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
-        - label:
-            I checked the [current issues](https://github.com/deven-org/B01LER-Kitchen/issues) for duplicate requests
