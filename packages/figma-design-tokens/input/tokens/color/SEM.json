@@ -1,5 +1,5 @@
 {
-  "Action": {
+  "Actions": {
     "CTA": {
       "SurfaceFill": {
         "Rest": {
@@ -640,45 +640,45 @@
       "UnSelected": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Action.Silent.SurfaceFill.Rest}",
+            "value": "{Actions.Silent.SurfaceFill.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.SurfaceFill.Hover}",
+            "value": "{Actions.Silent.SurfaceFill.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.SurfaceFill.Pressed}",
+            "value": "{Actions.Silent.SurfaceFill.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.SurfaceFill.Focus}",
+            "value": "{Actions.Silent.SurfaceFill.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.SurfaceFill.Disabled}",
+            "value": "{Actions.Silent.SurfaceFill.Disabled}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Action.Silent.SurfaceStroke.Rest}",
+            "value": "{Actions.Silent.SurfaceStroke.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.SurfaceStroke.Hover}",
+            "value": "{Actions.Silent.SurfaceStroke.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.SurfaceStroke.Pressed}",
+            "value": "{Actions.Silent.SurfaceStroke.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.SurfaceStroke.Focus}",
+            "value": "{Actions.Silent.SurfaceStroke.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.SurfaceStroke.Disabled}",
+            "value": "{Actions.Silent.SurfaceStroke.Disabled}",
             "type": "color"
           }
         },
@@ -752,37 +752,37 @@
       "Selected": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Action.Primary.SurfaceFill.Rest}",
+            "value": "{Actions.Primary.SurfaceFill.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Primary.SurfaceFill.Hover}",
+            "value": "{Actions.Primary.SurfaceFill.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Primary.SurfaceFill.Pressed}",
+            "value": "{Actions.Primary.SurfaceFill.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Primary.SurfaceFill.Focus}",
+            "value": "{Actions.Primary.SurfaceFill.Focus}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Action.Primary.SurfaceStroke.Rest}",
+            "value": "{Actions.Primary.SurfaceStroke.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Primary.SurfaceStroke.Hover}",
+            "value": "{Actions.Primary.SurfaceStroke.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Primary.SurfaceStroke.Pressed}",
+            "value": "{Actions.Primary.SurfaceStroke.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Primary.SurfaceStroke.Focus}",
+            "value": "{Actions.Primary.SurfaceStroke.Focus}",
             "type": "color"
           }
         },
