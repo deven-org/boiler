@@ -46,14 +46,14 @@ export class BlrIconLink extends LitElement {
 
       const loaderSize = getComponentConfigToken([
         'SizeVariant',
-        'Action',
+        'Actions',
         this.size.toUpperCase(),
         'Loader',
       ]).toLowerCase() as FormSizesType;
 
       const iconSizeVariant = getComponentConfigToken([
         'SizeVariant',
-        'Action',
+        'Actions',
         'IconButton',
         this.size.toUpperCase(),
         'Icon',

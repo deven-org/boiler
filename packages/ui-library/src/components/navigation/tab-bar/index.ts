@@ -112,7 +112,7 @@ export class BlrTabBar extends LitElement {
 
       const iconButtonSizeVariant = getComponentConfigToken([
         'SizeVariant',
-        'Action',
+        'Actions',
         'IconButton',
         this.size.toUpperCase(),
         'Icon',
