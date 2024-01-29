@@ -1148,45 +1148,63 @@
         }
       },
       "HeaderSection": {
-        "Padding": {
-          "value": "{Feedback.Dialog.HeaderSection.Padding_V} {Feedback.Dialog.HeaderSection.Padding_H}",
-          "type": "spacing"
+        "Container": {
+          "Padding": {
+            "value": "{Feedback.Dialog.HeaderSection.Container.Padding_V} {Feedback.Dialog.HeaderSection.Container.Padding_H}",
+            "type": "spacing"
+          },
+          "Padding_H": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing"
+          },
+          "Padding_V": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing"
+          }
         },
-        "Padding_H": {
-          "value": "{core.dimensionPX.16}",
-          "type": "spacing"
-        },
-        "Padding_V": {
-          "value": "{core.dimensionPX.16}",
-          "type": "spacing"
+        "Headline": {
+          "Typography": {
+            "value": "{UI.Headline.H5}",
+            "type": "typography"
+          }
         }
       },
       "ContentSection": {
-        "Padding": {
-          "value": "{Feedback.Dialog.ContentSection.Padding_V} {Feedback.Dialog.ContentSection.Padding_H}",
-          "type": "spacing"
+        "Container": {
+          "Padding": {
+            "value": "{Feedback.Dialog.ContentSection.Container.Padding_V} {Feedback.Dialog.ContentSection.Container.Padding_H}",
+            "type": "spacing"
+          },
+          "Padding_H": {
+            "value": "{core.dimensionPX.16}",
+            "type": "spacing"
+          },
+          "Padding_V": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          }
         },
-        "Padding_H": {
-          "value": "{core.dimensionPX.16}",
-          "type": "spacing"
-        },
-        "Padding_V": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+        "Text": {
+          "Typography": {
+            "value": "{UI.Paragraph.MD.Regular}",
+            "type": "typography"
+          }
         }
       },
       "FooterSection": {
-        "Padding": {
-          "value": "{Feedback.Dialog.FooterSection.Padding_V} {Feedback.Dialog.FooterSection.Padding_H}",
-          "type": "spacing"
-        },
-        "Padding_H": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
-        },
-        "Padding_V": {
-          "value": "{core.dimensionPX.8}",
-          "type": "spacing"
+        "Container": {
+          "Padding": {
+            "value": "{Feedback.Dialog.FooterSection.Container.Padding_V} {Feedback.Dialog.FooterSection.Container.Padding_H}",
+            "type": "spacing"
+          },
+          "Padding_H": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          },
+          "Padding_V": {
+            "value": "{core.dimensionPX.8}",
+            "type": "spacing"
+          }
         }
       }
     }
