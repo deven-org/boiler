@@ -759,7 +759,7 @@
             "description": "Adds padding to the menu item"
           },
           "BorderRadius": {
-            "value": "{Action.BorderRadius}",
+            "value": "{Actions.BorderRadius}",
             "type": "borderRadius",
             "description": "Defines the border radius of a single menu item."
           },
@@ -788,7 +788,7 @@
         },
         "ItemLabel": {
           "Typography": {
-            "value": "{Action.MD.Label}",
+            "value": "{Actions.MD.Label}",
             "type": "typography"
           }
         },
@@ -841,7 +841,7 @@
           }
         }
       },
-      "SectionStack": {
+      "MenuSectionStack": {
         "ItemSpacing": {
           "value": "{core.dimensionPX.12}",
           "type": "spacing",
@@ -3691,17 +3691,17 @@
         "Label": {
           "Typography": {
             "SM": {
-              "value": "{Action.SM.Label}",
+              "value": "{Actions.SM.Label}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             },
             "MD": {
-              "value": "{Action.MD.Label}",
+              "value": "{Actions.MD.Label}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             },
             "LG": {
-              "value": "{Action.LG.Label}",
+              "value": "{Actions.LG.Label}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             }

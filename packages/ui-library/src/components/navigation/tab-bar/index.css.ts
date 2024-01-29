@@ -16,7 +16,7 @@ export const styleCustom = typeSafeNestedCss`
 `;
 
 export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Silent } = semanticTokens.Action;
+  const { Silent } = semanticTokens.Actions;
   const { IconButton } = componentTokens.Actions;
   const { TabBar } = componentTokens.Navigation;
 

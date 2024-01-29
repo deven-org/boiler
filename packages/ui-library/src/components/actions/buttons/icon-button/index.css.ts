@@ -4,7 +4,7 @@ import { componentTokens } from "../../../../foundation/_tokens-generated/__comp
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
 const { IconButton } = componentTokens.Actions;
-const { Global, Action } = semanticTokens;
+const { Global, Actions } = semanticTokens;
 
 export const styleCustom = typeSafeNestedCss`
   .focus-layer {
@@ -75,22 +75,22 @@ export const styleCustom = typeSafeNestedCss`
       cursor: auto;
       text-decoration: none;
       &.cta{
-        background-color: ${Action.CTA.SurfaceFill.Loading}
+        background-color: ${Actions.CTA.SurfaceFill.Loading}
       }
       &.primary{
-        background-color: ${Action.Primary.SurfaceFill.Loading}
+        background-color: ${Actions.Primary.SurfaceFill.Loading}
       }
       &.secondary{
-        background-color: ${Action.Secondary.SurfaceFill.Loading}
+        background-color: ${Actions.Secondary.SurfaceFill.Loading}
       }
       &.silent{
-        background-color: ${Action.Silent.SurfaceFill.Loading}
+        background-color: ${Actions.Silent.SurfaceFill.Loading}
       }
       &.destructive{
-        background-color: ${Action.Destructive.SurfaceFill.Loading}
+        background-color: ${Actions.Destructive.SurfaceFill.Loading}
       }
       &.encourage{
-        background-color: ${Action.Encourage.SurfaceFill.Loading}
+        background-color: ${Actions.Encourage.SurfaceFill.Loading}
       }
     }
 
