@@ -69,10 +69,26 @@
       }
     },
     "Dialog": {
-      "Surface": {
-        "Color": {
+      "Container": {
+        "BackgroundColor": {
           "value": "{q.background.level_2}",
           "type": "color"
+        }
+      },
+      "HeaderSection": {
+        "Headline": {
+          "TextColor": {
+            "value": "{UI.Headline.Default}",
+            "type": "color"
+          }
+        }
+      },
+      "ContentSection": {
+        "Text": {
+          "TextColor": {
+            "value": "{UI.Headline.Default}",
+            "type": "color"
+          }
         }
       }
     },
