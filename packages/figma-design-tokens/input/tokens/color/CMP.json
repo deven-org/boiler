@@ -69,8 +69,8 @@
       }
     },
     "Dialog": {
-      "Surface": {
-        "Color": {
+      "Container": {
+        "BackgroundColor": {
           "value": "{q.background.level_2}",
           "type": "color"
         }

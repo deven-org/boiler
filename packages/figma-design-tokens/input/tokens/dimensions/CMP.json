@@ -1092,82 +1092,102 @@
       }
     },
     "Dialog": {
-      "XS": {
+      "Container": {
         "MaxWidth": {
-          "value": "400px",
-          "type": "sizing"
+          "XS": {
+            "value": "400px",
+            "type": "sizing"
+          },
+          "SM": {
+            "value": "600px",
+            "type": "sizing"
+          },
+          "MD": {
+            "value": "900px",
+            "type": "sizing"
+          },
+          "LG": {
+            "value": "1200px",
+            "type": "sizing"
+          },
+          "XL": {
+            "value": "1556px",
+            "type": "sizing"
+          }
         },
         "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "SM": {
-        "MaxWidth": {
-          "value": "600px",
-          "type": "sizing"
+          "XS": {
+            "value": "{core.dimensionPX.64}",
+            "type": "spacing",
+            "description": "Defines the margin of Dialog Combined"
+          },
+          "SM": {
+            "value": "{core.dimensionPX.64}",
+            "type": "spacing",
+            "description": "Defines the margin of Dialog Combined"
+          },
+          "MD": {
+            "value": "{core.dimensionPX.64}",
+            "type": "spacing",
+            "description": "Defines the margin of Dialog Combined"
+          },
+          "LG": {
+            "value": "{core.dimensionPX.64}",
+            "type": "spacing",
+            "description": "Defines the margin of Dialog Combined"
+          },
+          "XL": {
+            "value": "{core.dimensionPX.64}",
+            "type": "spacing",
+            "description": "Defines the margin of Dialog Combined"
+          }
         },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
+        "BorderRadius": {
+          "value": "{core.borderRadius.LG}",
+          "type": "borderRadius"
         }
       },
-      "MD": {
-        "MaxWidth": {
-          "value": "900px",
-          "type": "sizing"
+      "HeaderSection": {
+        "Padding": {
+          "value": "{Feedback.Dialog.HeaderSection.Padding_V} {Feedback.Dialog.HeaderSection.Padding_H}",
+          "type": "spacing"
         },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "LG": {
-        "MaxWidth": {
-          "value": "1200px",
-          "type": "sizing"
+        "Padding_H": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing"
         },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "XL": {
-        "MaxWidth": {
-          "value": "1556px",
-          "type": "sizing"
-        },
-        "Padding": {
-          "value": "{core.dimensionPX.64}",
-          "type": "spacing",
-          "description": "Defines the margin of Dialog Combined"
-        }
-      },
-      "Header": {
-        "Padding": {
+        "Padding_V": {
           "value": "{core.dimensionPX.16}",
           "type": "spacing"
         }
       },
-      "Content": {
+      "ContentSection": {
         "Padding": {
-          "value": "{core.dimensionPX.8} {core.dimensionPX.16}",
+          "value": "{Feedback.Dialog.ContentSection.Padding_V} {Feedback.Dialog.ContentSection.Padding_H}",
           "type": "spacing"
-        }
-      },
-      "Footer": {
-        "Padding": {
+        },
+        "Padding_H": {
+          "value": "{core.dimensionPX.16}",
+          "type": "spacing"
+        },
+        "Padding_V": {
           "value": "{core.dimensionPX.8}",
           "type": "spacing"
         }
       },
-      "BorderRadius": {
-        "value": "{core.borderRadius.LG}",
-        "type": "borderRadius"
+      "FooterSection": {
+        "Padding": {
+          "value": "{Feedback.Dialog.FooterSection.Padding_V} {Feedback.Dialog.FooterSection.Padding_H}",
+          "type": "spacing"
+        },
+        "Padding_H": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        },
+        "Padding_V": {
+          "value": "{core.dimensionPX.8}",
+          "type": "spacing"
+        }
       }
     }
   },
