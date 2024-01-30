@@ -924,7 +924,7 @@
           "value": "{q.content.onerror.alpha}",
           "type": "color"
         },
-        "Focused": {
+        "Focus": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
         }

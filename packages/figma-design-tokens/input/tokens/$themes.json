@@ -146,7 +146,6 @@
       "Forms.UserInput.Error.Rest": "S:e34059fc178d0a8635ccd169b91279bf7c11bfe8,",
       "Forms.UserInput.Error.Hover": "S:c8f308522e8ec2694bdf06d4c3432fc8964c1988,",
       "Forms.UserInput.Error.Pressed": "S:c8b5daf716e9f44c665c1ba69a42141f921da5bd,",
-      "Forms.UserInput.Error.Focused": "S:617f7dde4669ad897bd3331a4dc5e38371f3b5a0,",
       "Forms.Placeholder.Default.Rest": "S:106df8caa97b1c90e1fff459dc9b72df2259bb22,",
       "Forms.Placeholder.Default.Hover": "S:93c3e035ebf97755f62eae2a423120821d5b4a5a,",
       "Forms.Placeholder.Default.Pressed": "S:dd5440827f5ec3cc7dde10d479be907d6e41e642,",
@@ -529,7 +528,8 @@
       "Actions.SM.Label": "S:1602069cc7c1a8d000c1e9430433cae42e68d3b8,",
       "Actions.MD.Label": "S:ccd20e70c0c136fbb6e42b14c9c61cde0009378c,",
       "Actions.LG.Label": "S:526fc49867005d9e13c59ed035251918bfe475e2,",
-      "Actions.XL.Label": "S:44f453cf43735015201f6ad6bb2c7abb6b41ecb9,"
+      "Actions.XL.Label": "S:44f453cf43735015201f6ad6bb2c7abb6b41ecb9,",
+      "Forms.UserInput.Error.Focus": "S:617f7dde4669ad897bd3331a4dc5e38371f3b5a0,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -1108,12 +1108,12 @@
       "Navigation.TabBar.ButtonWrapper.InnerPadding.MD": "2a847be484c780391e72bea86c070dccc30c1926",
       "Navigation.TabBar.ButtonWrapper.InnerPadding.LG": "f8b9aff60ec41648f6e837b71cca0d26f8f8b811",
       "Actions.BorderRadius": "9644fb0b564a7bdd9b72d09b6d1efa4fd593c08b",
-      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
       "Actions.Container.BorderRadius.XS": "5e36961684d366416c29f0c3ceab97ef34d36700",
       "Actions.Container.BorderRadius.SM": "55b3976767f81cfcafe60433a2cfbd84990d9fca",
       "Actions.Container.BorderRadius.MD": "88f17ab4fd410867e3c2182c2338b1afb432bca9",
       "Actions.Container.BorderRadius.LG": "690ebbece9b05087cef46b33a068d6b3b2094f41",
       "Actions.Container.BorderRadius.XL": "3cffebc958db28ddc01bacb53f0762f27b90e1e1",
+      "Forms.InputBorderRadius": "07a575beef9450c94f5d81603c0ba28107f0cf0d",
       "Feedback.Counter.Container.BorderColor.Neutral": "295886cf8c1504da4c3eb3758f1b472757ab0e27",
       "Feedback.Counter.Container.BorderColor.Warning": "8f52b1726e2e580c03392194f4e612493e99b9bb",
       "Feedback.Counter.Container.BorderColor.Error": "9db5578273868bd19fafed91a98c0c6be969ed9a",
@@ -1626,7 +1626,7 @@
       "Forms.UserInput.Error.Rest": "4310dd3be1c4fd199db458dab1a1dc79a38bd5ed",
       "Forms.UserInput.Error.Hover": "b3d5a198267d3224068d953ebbe8c24dccae474e",
       "Forms.UserInput.Error.Pressed": "cc833d382ae156dd9fc1449c9f593b2a2d718433",
-      "Forms.UserInput.Error.Focused": "62089fdb23b32ff1210972a75b8c9b8e06e9f98c",
+      "Forms.UserInput.Error.Focus": "62089fdb23b32ff1210972a75b8c9b8e06e9f98c",
       "Forms.Placeholder.Default.Rest": "9fb79bd3e5c96a9657d26a4a10d2aa42f4f6b8e7",
       "Forms.Placeholder.Default.Hover": "8a727848db3a6a1f55c244c5dafbf96160e58153",
       "Forms.Placeholder.Default.Pressed": "bfb3f1b04a1a6295d46bb54b84612b1ce2c2ca1e",
@@ -1938,7 +1938,6 @@
       "Forms.UserInput.Error.Rest": "S:48cbd59a404cf69215be025f8bd7ee31cf0fe831,",
       "Forms.UserInput.Error.Hover": "S:746307f5714cd957b6535ab759dc76aff4243acb,",
       "Forms.UserInput.Error.Pressed": "S:34d26381e2c90177d613b6d645d7bd4218354667,",
-      "Forms.UserInput.Error.Focused": "S:f8d96980cb76d63a15e02fe3bc66b2295348979a,",
       "Forms.Placeholder.Default.Rest": "S:08e5a24c7914ec852afa9c0a2f2601d28a41873c,",
       "Forms.Placeholder.Default.Hover": "S:2139371485ec5e1bfb8785bfd4846f005e3f7d74,",
       "Forms.Placeholder.Default.Pressed": "S:4bc922904e57c128f1101b01a1b2a961120129b0,",
@@ -2310,7 +2309,8 @@
       "Actions.SM.Label": "S:a58ede481becc439a1ab72a0964290c0a5a81840,",
       "Actions.MD.Label": "S:2d575f5803ca659f7696f86fa5ac21882b636c63,",
       "Actions.LG.Label": "S:8fa4602cdbc854cd8025325f5c841c9829e6918e,",
-      "Actions.XL.Label": "S:01316cda2ac34b37540259c877691a29e1b02266,"
+      "Actions.XL.Label": "S:01316cda2ac34b37540259c877691a29e1b02266,",
+      "Forms.UserInput.Error.Focus": "S:f8d96980cb76d63a15e02fe3bc66b2295348979a,"
     },
     "selectedTokenSets": {
       "core/COR": "source",
@@ -3209,7 +3209,6 @@
       "Forms.UserInput.Error.Rest": "4310dd3be1c4fd199db458dab1a1dc79a38bd5ed",
       "Forms.UserInput.Error.Hover": "b3d5a198267d3224068d953ebbe8c24dccae474e",
       "Forms.UserInput.Error.Pressed": "cc833d382ae156dd9fc1449c9f593b2a2d718433",
-      "Forms.UserInput.Error.Focused": "62089fdb23b32ff1210972a75b8c9b8e06e9f98c",
       "Forms.Placeholder.Default.Rest": "9fb79bd3e5c96a9657d26a4a10d2aa42f4f6b8e7",
       "Forms.Placeholder.Default.Hover": "8a727848db3a6a1f55c244c5dafbf96160e58153",
       "Forms.Placeholder.Default.Pressed": "bfb3f1b04a1a6295d46bb54b84612b1ce2c2ca1e",
@@ -3567,7 +3566,8 @@
       "Actionss.Container.BorderRadius.LG": "690ebbece9b05087cef46b33a068d6b3b2094f41",
       "Actionss.Container.BorderRadius.XL": "3cffebc958db28ddc01bacb53f0762f27b90e1e1",
       "Actions.Menu.MenuSectionStack.ItemSpacing": "8384d5773aa4dcb65f8eddb381ca8d02e7da61fb",
-      "Actions.Menu.MenuSectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4"
+      "Actions.Menu.MenuSectionStack.Padding": "b6531e155c952c1b91cafb545cb54986064154e4",
+      "Forms.UserInput.Error.Focus": "62089fdb23b32ff1210972a75b8c9b8e06e9f98c"
     },
     "group": "Theme"
   }
