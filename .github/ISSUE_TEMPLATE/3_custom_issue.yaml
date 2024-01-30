@@ -26,8 +26,6 @@ body:
       value: |
         - [ ] #
         - [ ] ...
-    validations:
-      required: true
   - type: textarea
     id: criteria
     attributes:
