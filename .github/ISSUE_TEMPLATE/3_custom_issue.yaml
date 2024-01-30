@@ -19,6 +19,16 @@ body:
     validations:
       required: true
   - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements / Prerequisites
+      description: List open requirements and prerequisites that need to be solved before this issue can be started. You can also link other issues by adding the issue-number after the "#".
+      value: |
+        - [ ] #
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
     id: criteria
     attributes:
       label: Acceptance Criteria
