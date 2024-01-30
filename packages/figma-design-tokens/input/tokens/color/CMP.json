@@ -69,10 +69,26 @@
       }
     },
     "Dialog": {
-      "Surface": {
-        "Color": {
+      "Container": {
+        "BackgroundColor": {
           "value": "{q.background.level_2}",
           "type": "color"
+        }
+      },
+      "HeaderSection": {
+        "Headline": {
+          "TextColor": {
+            "value": "{UI.Headline.Default}",
+            "type": "color"
+          }
+        }
+      },
+      "ContentSection": {
+        "Text": {
+          "TextColor": {
+            "value": "{UI.Headline.Default}",
+            "type": "color"
+          }
         }
       }
     },
@@ -1413,41 +1429,41 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{Action.Primary.SurfaceFill.Rest}",
+                "value": "{Actions.Primary.SurfaceFill.Rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{Action.Primary.SurfaceFill.Hover}",
+                "value": "{Actions.Primary.SurfaceFill.Hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{Action.Primary.SurfaceFill.Pressed}",
+                "value": "{Actions.Primary.SurfaceFill.Pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{Action.Primary.SurfaceFill.Focus}",
+                "value": "{Actions.Primary.SurfaceFill.Focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{Action.Silent.SurfaceFill.Rest}",
+                "value": "{Actions.Silent.SurfaceFill.Rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{Action.Silent.SurfaceFill.Hover}",
+                "value": "{Actions.Silent.SurfaceFill.Hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{Action.Silent.SurfaceFill.Pressed}",
+                "value": "{Actions.Silent.SurfaceFill.Pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{Action.Silent.SurfaceFill.Focus}",
+                "value": "{Actions.Silent.SurfaceFill.Focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{Action.Silent.SurfaceFill.Disabled}",
+                "value": "{Actions.Silent.SurfaceFill.Disabled}",
                 "type": "color"
               }
             }
@@ -1455,41 +1471,41 @@
           "BorderColor": {
             "Active": {
               "Rest": {
-                "value": "{Action.Primary.SurfaceStroke.Rest}",
+                "value": "{Actions.Primary.SurfaceStroke.Rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{Action.Primary.SurfaceStroke.Hover}",
+                "value": "{Actions.Primary.SurfaceStroke.Hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{Action.Primary.SurfaceStroke.Pressed}",
+                "value": "{Actions.Primary.SurfaceStroke.Pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{Action.Primary.SurfaceStroke.Focus}",
+                "value": "{Actions.Primary.SurfaceStroke.Focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{Action.Silent.SurfaceStroke.Rest}",
+                "value": "{Actions.Silent.SurfaceStroke.Rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{Action.Silent.SurfaceStroke.Hover}",
+                "value": "{Actions.Silent.SurfaceStroke.Hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{Action.Silent.SurfaceStroke.Pressed}",
+                "value": "{Actions.Silent.SurfaceStroke.Pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{Action.Silent.SurfaceStroke.Focus}",
+                "value": "{Actions.Silent.SurfaceStroke.Focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{Action.Silent.SurfaceStroke.Disabled}",
+                "value": "{Actions.Silent.SurfaceStroke.Disabled}",
                 "type": "color"
               }
             }
@@ -1640,45 +1656,45 @@
       "Container": {
         "BackgroundColor": {
           "Rest": {
-            "value": "{Action.Silent.SurfaceFill.Rest}",
+            "value": "{Actions.Silent.SurfaceFill.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.SurfaceFill.Hover}",
+            "value": "{Actions.Silent.SurfaceFill.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.SurfaceFill.Pressed}",
+            "value": "{Actions.Silent.SurfaceFill.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.SurfaceFill.Focus}",
+            "value": "{Actions.Silent.SurfaceFill.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.SurfaceFill.Focus}",
+            "value": "{Actions.Silent.SurfaceFill.Focus}",
             "type": "color"
           }
         },
         "BorderColor": {
           "Rest": {
-            "value": "{Action.Silent.SurfaceStroke.Rest}",
+            "value": "{Actions.Silent.SurfaceStroke.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.SurfaceStroke.Hover}",
+            "value": "{Actions.Silent.SurfaceStroke.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.SurfaceStroke.Pressed}",
+            "value": "{Actions.Silent.SurfaceStroke.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.SurfaceStroke.Focus}",
+            "value": "{Actions.Silent.SurfaceStroke.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.SurfaceStroke.Focus}",
+            "value": "{Actions.Silent.SurfaceStroke.Focus}",
             "type": "color"
           }
         }
@@ -1686,23 +1702,23 @@
       "Icon": {
         "IconColor": {
           "Rest": {
-            "value": "{Action.Silent.Icon.Rest}",
+            "value": "{Actions.Silent.Icon.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.Icon.Hover}",
+            "value": "{Actions.Silent.Icon.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.Icon.Pressed}",
+            "value": "{Actions.Silent.Icon.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.Icon.Focus}",
+            "value": "{Actions.Silent.Icon.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.Icon.Disabled}",
+            "value": "{Actions.Silent.Icon.Disabled}",
             "type": "color"
           }
         }

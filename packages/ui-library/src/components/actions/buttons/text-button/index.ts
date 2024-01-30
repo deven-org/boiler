@@ -102,14 +102,14 @@ export class BlrTextButton extends LitElement {
 
       const loaderSizeVariant = getComponentConfigToken([
         'SizeVariant',
-        'Action',
+        'Actions',
         this.size.toUpperCase(),
         'Loader',
       ]).toLowerCase() as FormSizesType;
 
       const iconSizeVariant = getComponentConfigToken([
         'SizeVariant',
-        'Action',
+        'Actions',
         'TextButton',
         this.size.toUpperCase(),
         'Icon',
