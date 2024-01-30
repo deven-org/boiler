@@ -46,7 +46,7 @@ body:
       label: Affected version(s)
       description: What version of B01LER are you running? If the issue was not affecting a previous version, which was it?
       placeholder: "vX.X.X with issue, vX.X.X without issue"
-  - type: input
+  - type: textarea
     id: os-browser-env
     attributes:
       label: Operating system / Browser / Environment
