@@ -156,7 +156,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
       &:focus-within {
         outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-        color: ${UserInput.Error.Focused};
+        color: ${UserInput.Error.Focus};
         background-color: ${SurfaceFill.Error.Focus};
 
         &::placeholder {
