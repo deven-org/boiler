@@ -1,4 +1,4 @@
-name: Feature request
+name: Feature Request
 description: Request a feature
 title: "[Feature Request]: "
 labels: ["🚨 new::enhancement"]
@@ -11,9 +11,12 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Feature description
+      label: Description
       description: Describe the feature you are requesting. Please provide key information like why the feature is needed, what the feature is and what value the feature creates. You can do this by using a user story template. 
-      placeholder: "As a [persona], I [want to], [so that]."
+      value: |
+        As a [persona],
+        I [want to],
+        [so that].
     validations:
       required: true
   - type: checkboxes
