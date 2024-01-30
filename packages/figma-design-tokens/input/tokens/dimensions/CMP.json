@@ -1046,7 +1046,7 @@
     "Tooltip": {
       "TextWrapper": {
         "Padding": {
-          "value": "{Feedback.Tooltip.TextWrapper.PaddingTopBottm} {Feedback.Tooltip.TextWrapper.Padding_H}",
+          "value": "{Feedback.Tooltip.TextWrapper.Padding_V} {Feedback.Tooltip.TextWrapper.Padding_H}",
           "type": "spacing"
         },
         "BorderRadius": {
@@ -1063,7 +1063,7 @@
           "type": "sizing",
           "description": "Defines the maximum Width of the tooltip."
         },
-        "PaddingTopBottm": {
+        "Padding_V": {
           "value": "{core.dimensionPX.6}",
           "type": "spacing"
         },
