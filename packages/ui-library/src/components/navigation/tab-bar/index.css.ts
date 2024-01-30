@@ -293,8 +293,8 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
                 .nav-item-content-wrapper {
                   & > .nav-item {
-                    padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
-                    padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.SM};
+                    padding-left: ${TabBar.Tab.ContentRow.Padding_H.SM};
+                    padding-right: ${TabBar.Tab.ContentRow.Padding_H.SM};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
                     line-height:  ${TabBar.Tab.Label.Typography.SM.lineHeight};
 
@@ -316,8 +316,8 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
                 .nav-item-content-wrapper {
                   & .nav-item {
-                    padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
-                    padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.MD};
+                    padding-left: ${TabBar.Tab.ContentRow.Padding_H.MD};
+                    padding-right: ${TabBar.Tab.ContentRow.Padding_H.MD};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
                     line-height:  ${TabBar.Tab.Label.Typography.MD.lineHeight};
 
@@ -339,8 +339,8 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
                 .nav-item-content-wrapper {
                   & > .nav-item {
-                    padding-left: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
-                    padding-right: ${TabBar.Tab.ContentRow.PaddingLeftRight.LG};
+                    padding-left: ${TabBar.Tab.ContentRow.Padding_H.LG};
+                    padding-right: ${TabBar.Tab.ContentRow.Padding_H.LG};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
                     line-height:  ${TabBar.Tab.Label.Typography.LG.lineHeight};
 

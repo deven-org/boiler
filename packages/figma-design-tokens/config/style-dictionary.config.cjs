@@ -1,7 +1,7 @@
+// const kebabCase = require('lodash.kebabcase');
 const StyleDictionaryPackage = require('style-dictionary');
 const sdTransforms = require('@tokens-studio/sd-transforms');
 const { minifyDictionary, fileHeader } = StyleDictionaryPackage.formatHelpers;
-const kebabCase = require('lodash.kebabcase');
 require('./transforms/index');
 
 const themes = require('./themes.cjs');
@@ -9,85 +9,83 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
-/*
-const types = [
-  'borderRadius',
-  'borderWidth',
-  'fontFamilies',
-  'fontWeights',
-  'lineHeights',
-  'fontSizes',
-  'pargraphSpacing',
-  'letterSpacing',
-];
-*/
-
 const semanticTypes = [
+  // sizes variants
+  'XS',
+  'SM',
+  'MD',
+  'LG',
+  'XL',
+
+  // elevation  variants
+  'Lvl_1',
+  'Lvl_2',
+
+  // emphasis  variants
   'CTA',
   'Primary',
   'Secondary',
   'Silent',
   'Destructive',
   'Encourage',
-  'BorderRadius',
-  'BorderWidth',
-  'XS',
-  'SM',
-  'MD',
-  'LG',
-  'XL',
-  'Background',
-  'Fill',
+
+  // feedback  variants
+  'Neutral',
+  'Warning',
+  'Error',
+
+  // componentElements
   'Caption',
   'CaptionSlot',
   'Label',
   'LabelSlot',
   'Legend',
-  'Lvl_1',
-  'Lvl_2',
   'UserInput',
   'Placeholder',
-  'SurfaceFill',
-  'InputBorderRadius',
   'Input',
   'InputSlot',
   'InputField',
   'InputIcon',
-  'Focus',
-  'FocusBorder',
-  'Feedback',
-  'Neutral',
-  'Warning',
-  'Error',
   'PrefixSuffix',
+  'FocusBorder',
+
+  // tokenTypes
+  'BorderRadius',
+  'BorderWidth',
+  'SurfaceFill',
+  'InputBorderRadius',
+  'Fill',
+  'Background',
+
+  // semantic
+  'Focus',
+  'Feedback',
 ];
 
 const componentTypes = [
-  'TextButton',
-  'IconButton',
-  'IconDropdown',
-  'Icon',
-  'Loader',
-  'TextArea',
-  'Radio',
-  'Checkbox',
-  'ToggleSwitch',
-  'Counter',
-  'Error',
-  'Warning',
-  'Select',
-  'StepperButton',
-  'StepperCombo',
-  'Divider',
-  'TabBar',
-  'Slider',
   'ButtonGroup',
-  'Tooltip',
-  'RadioGroup',
-  'NumberInput',
   'CaptionComponent',
   'CaptionGroup',
+  'Checkbox',
+  'Counter',
+  'Divider',
   'FormLabel',
+  'Icon',
+  'IconButton',
+  'IconDropdown',
+  'Loader',
+  'RadioGroup',
+  'NumberInput',
+  'Select',
+  'Slider',
+  'StepperButton',
+  'StepperCombo',
+  'Radio',
+  'TabBar',
+  'TextButton',
+  'TextArea',
+  'ToggleSwitch',
+  'Tooltip',
 ];
 
 StyleDictionaryPackage.registerFormat({

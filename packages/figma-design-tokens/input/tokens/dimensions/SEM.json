@@ -300,10 +300,6 @@
         "type": "border"
       }
     },
-    "BorderRadius": {
-      "value": "{core.borderRadius.MD}",
-      "type": "borderRadius"
-    },
     "XS": {
       "Label": {
         "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
