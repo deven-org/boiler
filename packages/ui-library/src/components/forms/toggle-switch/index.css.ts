@@ -378,7 +378,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
                 & > .toggle-icon-class {
                   width: ${ToggleSwitch.Control.AY11Icon.IconSize.SM};
-                  padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
+                  padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.Padding_H.SM} + ${ToggleSwitch.Control.Container.Padding.SM});
                 }
               }
             }
@@ -503,7 +503,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
               & > .toggle-icon-class {
                 width: ${ToggleSwitch.Control.AY11Icon.IconSize.MD};
-                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
+                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.Padding_H.MD} + ${ToggleSwitch.Control.Container.Padding.MD});
               }
             }
           }
@@ -628,7 +628,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
               & > .toggle-icon-class {
                 width: ${ToggleSwitch.Control.AY11Icon.IconSize.LG};
-                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.PaddingLeftRight.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
+                padding: 0 calc(${ToggleSwitch.Control.AY11IconContainer.Padding_H.LG} + ${ToggleSwitch.Control.Container.Padding.LG});
               }
             }
           }
