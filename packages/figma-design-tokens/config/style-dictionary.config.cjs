@@ -117,10 +117,8 @@ const getStyleDictionaryConfig = (theme) => {
     source: [
       `input/tokens/intermediary/${theme}.json`,
       'input/tokens/core/*.json',
-      'input/tokens/color/*.json',
-      'input/tokens/dimensions/*.json',
-      'input/tokens/captions/*.json',
-      'input/tokens/sizeVariants/*.json',
+      'input/tokens/CMP/*.json',
+      'input/tokens/SEM/*.json',
     ],
     platforms: {
       /*
