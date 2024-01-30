@@ -1,0 +1,29 @@
+name: Feature Request
+description: Request a feature
+title: "[Feature Request]: "
+labels: ["🚨 new::enhancement"]
+projects: ["deven-org/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a feature request, please [check if the request already exists](https://github.com/deven-org/B01LER-Kitchen/issues).
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature you are requesting. Please provide key information like why the feature is needed, what the feature is and what value the feature creates. You can do this by using a user story template. 
+      value: |
+        As a [persona],
+        I [want to],
+        [so that].
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/deven-org/B01LER-Kitchen/blob/develop/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
