@@ -127,7 +127,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
           border-style: ${Input.Error.Rest.style};
           border-color: transparent;
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focused};
+          color: ${UserInput.Error.Focus};
           background-color: ${SurfaceFill.Error.Focus};
 
           &::placeholder {

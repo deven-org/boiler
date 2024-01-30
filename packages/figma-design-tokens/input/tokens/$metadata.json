@@ -3,11 +3,11 @@
     "core/COR",
     "intermediary/Light",
     "intermediary/Dark",
-    "color/SEM",
-    "color/CMP",
-    "dimensions/SEM",
-    "dimensions/CMP",
-    "sizeVariants/CMP",
-    "sizeVariants/SEM"
+    "SEM/color",
+    "SEM/sizes",
+    "SEM/sizeVariants",
+    "CMP/color",
+    "CMP/sizes",
+    "CMP/sizeVariants"
   ]
 }

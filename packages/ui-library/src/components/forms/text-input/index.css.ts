@@ -110,8 +110,13 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
           border: none;
           outline: none;
 
-          &::placeholder {
-            color: ${Placeholder.Error.Rest};
+          &.focus {
+            border-width: ${Input.Error.Rest.width};
+            border-style: ${Input.Error.Rest.style};
+            border-color: transparent;
+            outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
+            color: ${UserInput.Error.Focus};
+            background-color: ${SurfaceFill.Error.Focus};
           }
 
           &:hover {
@@ -267,7 +272,7 @@ export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = 
           border-style: ${Input.Error.Rest.style};
           border-color: transparent;
           outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focused};
+          color: ${UserInput.Error.Focus};
           background-color: ${SurfaceFill.Error.Focus};
         }
 

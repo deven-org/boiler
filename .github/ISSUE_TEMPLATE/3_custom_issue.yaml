@@ -1,0 +1,45 @@
+name: Issue Template
+description: Create an issue
+title: "[Component name] - [task summary]"
+projects: ["deven-org/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before creating an issue please [check if the issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues).
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / User story
+      description: Describe the issue here or formulate a user story.
+      value: |
+        As a [persona], 
+        I [want to], 
+        [so that].
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List the acceptance criteria that need to be met to solve the issue.
+      value: |
+        - [ ] Acceptance Criteria 1
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: info
+    attributes:
+      label: Additional information
+      description: Add relevant information here.
+      value: |
+        - ...
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/deven-org/B01LER-Kitchen/blob/develop/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
