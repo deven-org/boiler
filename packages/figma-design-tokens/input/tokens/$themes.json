@@ -4,13 +4,7 @@
     "name": "value",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "core/COR": "enabled",
-      "SEM/color": "disabled",
-      "CMP/color": "disabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "core/COR": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:3314",
     "$figmaModeId": "10860:7",
@@ -1003,13 +997,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "core/COR": "source",
-      "intermediary/Light": "enabled",
-      "SEM/color": "disabled",
-      "CMP/color": "disabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "intermediary/Light": "enabled"
     },
     "group": "Intermediary",
     "$figmaCollectionId": "VariableCollectionId:10860:7528",
@@ -1104,12 +1092,7 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "intermediary/Light": "source",
-      "SEM/color": "enabled",
-      "CMP/color": "disabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "SEM/color": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:5172",
     "$figmaModeId": "10860:12",
@@ -1413,12 +1396,7 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "intermediary/Dark": "source",
-      "SEM/color": "enabled",
-      "CMP/color": "disabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "SEM/color": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:5172",
     "$figmaModeId": "10860:13",
@@ -1723,11 +1701,7 @@
       "core/COR": "source",
       "intermediary/Light": "source",
       "SEM/color": "source",
-      "CMP/color": "enabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "CMP/color": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:4294",
     "$figmaModeId": "10860:8",
@@ -2048,11 +2022,7 @@
       "core/COR": "source",
       "intermediary/Dark": "source",
       "SEM/color": "source",
-      "CMP/color": "enabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "CMP/color": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:4294",
     "$figmaModeId": "10860:9",
@@ -2371,12 +2341,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "core/COR": "source",
-      "SEM/color": "disabled",
-      "CMP/color": "disabled",
-      "SEM/sizes": "enabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "SEM/sizes": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:4600",
     "$figmaModeId": "10860:10",
@@ -2396,12 +2361,8 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "core/COR": "source",
-      "SEM/color": "disabled",
-      "CMP/color": "disabled",
       "SEM/sizes": "source",
-      "CMP/sizes": "enabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "CMP/sizes": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:10860:4607",
     "$figmaModeId": "10860:11",
@@ -2979,13 +2940,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "core/COR": "source",
-      "intermediary/Light": "enabled",
-      "SEM/color": "disabled",
-      "CMP/color": "disabled",
-      "SEM/sizes": "disabled",
-      "CMP/sizes": "disabled",
-      "CMP/sizeVariants": "disabled",
-      "SEM/sizeVariants": "disabled"
+      "intermediary/Light": "enabled"
     },
     "group": "Intermediary",
     "$figmaCollectionId": "VariableCollectionId:10860:7528",
