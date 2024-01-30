@@ -1,7 +1,7 @@
+// const kebabCase = require('lodash.kebabcase');
 const StyleDictionaryPackage = require('style-dictionary');
 const sdTransforms = require('@tokens-studio/sd-transforms');
 const { minifyDictionary, fileHeader } = StyleDictionaryPackage.formatHelpers;
-const kebabCase = require('lodash.kebabcase');
 require('./transforms/index');
 
 const themes = require('./themes.cjs');
@@ -46,18 +46,20 @@ const semanticTypes = [
   'InputSlot',
   'InputField',
   'InputIcon',
+  'PrefixSuffix',
+  'FocusBorder',
 
   // tokenTypes
   'BorderRadius',
   'BorderWidth',
   'SurfaceFill',
   'InputBorderRadius',
-  'FocusBorder',
-  'Feedback',
-  'PrefixSuffix',
   'Fill',
   'Background',
+
+  // semantic
   'Focus',
+  'Feedback',
 ];
 
 const componentTypes = [
