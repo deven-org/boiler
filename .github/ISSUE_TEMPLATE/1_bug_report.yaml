@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug
+description: Report a bug or documentation error
 title: "[Bug]: "
 labels: ["🚨 new::bug"]
 projects: ["deven-org/3"]
@@ -7,41 +7,29 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before reporting a bug, please [check if the issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues).
+        Before reporting a bug or a documentation error, please [check if the issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues).
         
         ---
         
         Thanks for taking the time to fill out this bug report! We will do our best to reply to new issues within a week.
-  - type: input
-    id: os
-    attributes:
-      label: Operating system
-      description: "Which operating system do you use? Please provide the version as well."
-      placeholder: "macOS Sonoma 14.2.1 (23C71)"
   - type: dropdown
-    id: browsers
+    id: bug-type
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: What is affected?
+      description: You can select multiple options.
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - Component
+        - Accessibility
+        - Token System
+        - Documentation
         - Other (please specify in the description)
-  - type: input
-    id: version
-    attributes:
-      label: Version
-      description: What version of B01LER are you running?
-      placeholder: "v0.1.0"
-    validations:
-      required: true
   - type: textarea
     id: description
     attributes:
-      label: Bug description
+      label: Description
       description: What happened? Also tell us, what did you expect to happen?
+      placeholder: "When I do ..., I would expect ..., instead ... happens."
     validations:
       required: true
   - type: textarea
@@ -49,12 +37,21 @@ body:
     attributes:
       label: Steps to reproduce
       description: Which steps do we need to take to reproduce this error?
-  - type: textarea
-    id: logs
+      value: |
+        1. Step 1
+        2. ...
+  - type: input
+    id: version
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: Affected version(s)
+      description: What version of B01LER are you running? If the issue was not affecting a previous version, which was it?
+      placeholder: "vX.X.X with issue, vX.X.X without issue"
+  - type: input
+    id: os-browser-env
+    attributes:
+      label: Operating system / Browser / Environment
+      description: "Which operating system and browser do you use? Please provide the version as well. If the bug affects a command-line tool, please add this information as well."
+      placeholder: "OS: macOS Sonoma 14.2.1 (23C71), Browser: Chrome 121.0.6167.85, Node: 18.17.0, yarn: 4.0.2"
   - type: checkboxes
     id: terms
     attributes:
