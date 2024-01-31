@@ -37,6 +37,7 @@ const defaultParams: BlrSelectType = {
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
+  hasLabel: true,
 };
 
 export default {
@@ -60,11 +61,21 @@ export default {
       },
     },
     // Content / Settings
+    hasLabel: {
+      name: 'hasLabel',
+      description: 'Choose if component has a label.',
+      defaultValue: true,
+      control: { type: 'boolean' },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
     label: {
       description: 'Enter string used as label text.',
       table: {
         category: 'Content / Settings',
       },
+      if: { arg: 'hasLabel', eq: true },
     },
     labelAppendix: {
       description:
