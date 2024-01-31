@@ -154,16 +154,23 @@ export class BlrTextarea extends LitElement {
           ${dynamicStyles}
         </style>
         <div class="${classes} blr-textarea">
-          <div class="label-wrapper">
-            ${BlrFormLabelRenderFunction({
-              labelText: this.label,
-              labelSize: this.size,
-              labelAppendix: this.labelAppendix,
-              forValue: this.textareaId,
-              theme: this.theme,
-              variant: this.hasError ? 'error' : 'label',
-            })}
-          </div>
+        ${
+          this.hasLabel
+            ? html`
+                <div class="label-wrapper">
+                  ${BlrFormLabelRenderFunction({
+                    labelText: this.label,
+                    labelSize: this.size,
+                    labelAppendix: this.labelAppendix,
+                    forValue: this.textareaId,
+                    theme: this.theme,
+                    variant: this.hasError ? 'error' : 'label',
+                  })}
+                </div>
+              `
+            : nothing
+        }
+        </div>
           <textarea
             class="blr-form-element textarea-input-control ${textareaClasses}"
             id="${this.textareaId || nothing}"
@@ -187,18 +194,22 @@ ${this.value}
           </textarea
           >
           <div class="${textareaInfoContainer}">
-            ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
-              : nothing}
-            ${this.showCounter
-              ? BlrCounterRenderFunction({
-                  variant: counterVariant,
-                  current: this.count,
-                  max: this.maxLength || 0,
-                  size: this.size,
-                  theme: this.theme,
-                })
-              : nothing}
+            ${
+              this.hasHint || this.hasError
+                ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+                : nothing
+            }
+            ${
+              this.showCounter
+                ? BlrCounterRenderFunction({
+                    variant: counterVariant,
+                    current: this.count,
+                    max: this.maxLength || 0,
+                    size: this.size,
+                    theme: this.theme,
+                  })
+                : nothing
+            }
           </div>
         </div>
       `;

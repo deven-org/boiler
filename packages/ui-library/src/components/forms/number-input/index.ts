@@ -230,18 +230,20 @@ export class BlrNumberInput extends LitElement {
           ${dynamicStyles}
         </style>
         <div class="blr-number-input ${this.size}">
-          <div class="label-wrapper">
-            ${this.hasLabel
-              ? BlrFormLabelRenderFunction({
-                  labelText: this.label,
-                  labelSize: this.size,
-                  labelAppendix: this.labelAppendix,
-                  forValue: this.numberInputId,
-                  theme: this.theme,
-                  variant: this.hasError ? 'error' : 'label',
-                })
-              : nothing}
-          </div>
+          ${this.hasLabel
+            ? html`
+                <div class="label-wrapper">
+                  ${BlrFormLabelRenderFunction({
+                    labelText: this.label,
+                    labelSize: this.size,
+                    labelAppendix: this.labelAppendix,
+                    forValue: this.numberInputId,
+                    theme: this.theme,
+                    variant: this.hasError ? 'error' : 'label',
+                  })}
+                </div>
+              `
+            : nothing}
           <div class="${wrapperClasses}">
             <div class="${inputAndUnitContainer}">
               <input
