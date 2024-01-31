@@ -1,108 +1,108 @@
 {
-  "Semantic": {
+  "sem": {
     "Actions": {
       "CTA": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Alias.surface.brand.cta.rest}",
+            "value": "{sys.surface.brand.cta.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.brand.cta.hover}",
+            "value": "{sys.surface.brand.cta.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.brand.cta.pressed}",
+            "value": "{sys.surface.brand.cta.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.brand.cta.rest}",
+            "value": "{sys.surface.brand.cta.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.alpha}",
+            "value": "{sys.surface.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.surface.brand.cta.rest}",
+            "value": "{sys.surface.brand.cta.rest}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.brand.alpha.hover}",
+            "value": "{sys.stroke.brand.alpha.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.brand.alpha.pressed}",
+            "value": "{sys.stroke.brand.alpha.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.alpha}",
+            "value": "{sys.stroke.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           }
         },
         "Icon": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         }
@@ -110,105 +110,105 @@
       "Primary": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Alias.surface.brand.primary.rest}",
+            "value": "{sys.surface.brand.primary.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.brand.primary.hover}",
+            "value": "{sys.surface.brand.primary.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.brand.primary.pressed}",
+            "value": "{sys.surface.brand.primary.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.brand.primary.rest}",
+            "value": "{sys.surface.brand.primary.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.alpha}",
+            "value": "{sys.surface.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.surface.brand.primary.rest}",
+            "value": "{sys.surface.brand.primary.rest}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.brand.alpha.hover}",
+            "value": "{sys.stroke.brand.alpha.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.brand.alpha.pressed}",
+            "value": "{sys.stroke.brand.alpha.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.alpha}",
+            "value": "{sys.stroke.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           }
         },
         "Icon": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         }
@@ -216,105 +216,105 @@
       "Secondary": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Alias.surface.brand.secondary.rest}",
+            "value": "{sys.surface.brand.secondary.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.brand.secondary.hover}",
+            "value": "{sys.surface.brand.secondary.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.brand.secondary.pressed}",
+            "value": "{sys.surface.brand.secondary.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.brand.secondary.rest}",
+            "value": "{sys.surface.brand.secondary.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.beta}",
+            "value": "{sys.surface.disabled.beta}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.surface.brand.secondary.rest}",
+            "value": "{sys.surface.brand.secondary.rest}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Alias.stroke.brand.beta.rest}",
+            "value": "{sys.stroke.brand.beta.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.brand.beta.hover}",
+            "value": "{sys.stroke.brand.beta.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.brand.beta.pressed}",
+            "value": "{sys.stroke.brand.beta.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.brand.beta.rest}",
+            "value": "{sys.stroke.brand.beta.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.beta}",
+            "value": "{sys.stroke.disabled.beta}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.stroke.brand.beta.rest}",
+            "value": "{sys.stroke.brand.beta.rest}",
             "type": "color"
           }
         },
         "Icon": {
           "Rest": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.beta.hover}",
+            "value": "{sys.content.onbrand.beta.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.beta.pressed}",
+            "value": "{sys.content.onbrand.beta.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.beta.hover}",
+            "value": "{sys.content.onbrand.beta.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.beta.pressed}",
+            "value": "{sys.content.onbrand.beta.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           }
         }
@@ -322,105 +322,105 @@
       "Silent": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Alias.surface.brand.silent.rest}",
+            "value": "{sys.surface.brand.silent.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.brand.silent.hover}",
+            "value": "{sys.surface.brand.silent.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.brand.silent.pressed}",
+            "value": "{sys.surface.brand.silent.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.brand.silent.rest}",
+            "value": "{sys.surface.brand.silent.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.beta}",
+            "value": "{sys.surface.disabled.beta}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.surface.brand.silent.rest}",
+            "value": "{sys.surface.brand.silent.rest}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.brand.alpha.hover}",
+            "value": "{sys.stroke.brand.alpha.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.brand.alpha.pressed}",
+            "value": "{sys.stroke.brand.alpha.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.alpha}",
+            "value": "{sys.stroke.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           }
         },
         "Icon": {
           "Rest": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.beta.hover}",
+            "value": "{sys.content.onbrand.beta.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.beta.pressed}",
+            "value": "{sys.content.onbrand.beta.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.beta.hover}",
+            "value": "{sys.content.onbrand.beta.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.beta.pressed}",
+            "value": "{sys.content.onbrand.beta.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.beta.rest}",
+            "value": "{sys.content.onbrand.beta.rest}",
             "type": "color"
           }
         }
@@ -428,105 +428,105 @@
       "Destructive": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Alias.surface.brand.destructive.rest}",
+            "value": "{sys.surface.brand.destructive.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.brand.destructive.hover}",
+            "value": "{sys.surface.brand.destructive.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.brand.destructive.pressed}",
+            "value": "{sys.surface.brand.destructive.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.brand.destructive.rest}",
+            "value": "{sys.surface.brand.destructive.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.alpha}",
+            "value": "{sys.surface.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.surface.brand.destructive.rest}",
+            "value": "{sys.surface.brand.destructive.rest}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.brand.alpha.hover}",
+            "value": "{sys.stroke.brand.alpha.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.brand.alpha.pressed}",
+            "value": "{sys.stroke.brand.alpha.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.alpha}",
+            "value": "{sys.stroke.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           }
         },
         "Icon": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         }
@@ -534,105 +534,105 @@
       "Encourage": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Alias.surface.brand.encourage.rest}",
+            "value": "{sys.surface.brand.encourage.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.brand.encourage.hover}",
+            "value": "{sys.surface.brand.encourage.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.brand.encourage.pressed}",
+            "value": "{sys.surface.brand.encourage.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.brand.encourage.rest}",
+            "value": "{sys.surface.brand.encourage.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.alpha}",
+            "value": "{sys.surface.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.surface.brand.encourage.rest}",
+            "value": "{sys.surface.brand.encourage.rest}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.brand.alpha.hover}",
+            "value": "{sys.stroke.brand.alpha.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.brand.alpha.pressed}",
+            "value": "{sys.stroke.brand.alpha.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.alpha}",
+            "value": "{sys.stroke.disabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.stroke.brand.alpha.rest}",
+            "value": "{sys.stroke.brand.alpha.rest}",
             "type": "color"
           }
         },
         "Icon": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "Loading": {
-            "value": "{Alias.content.onbrand.alpha}",
+            "value": "{sys.content.onbrand.alpha}",
             "type": "color"
           }
         }
@@ -641,111 +641,111 @@
         "UnSelected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{Semantic.Actions.Silent.SurfaceFill.Rest}",
+              "value": "{sem.Actions.Silent.SurfaceFill.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Semantic.Actions.Silent.SurfaceFill.Hover}",
+              "value": "{sem.Actions.Silent.SurfaceFill.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Semantic.Actions.Silent.SurfaceFill.Pressed}",
+              "value": "{sem.Actions.Silent.SurfaceFill.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
+              "value": "{sem.Actions.Silent.SurfaceFill.Focus}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{Semantic.Actions.Silent.SurfaceFill.Disabled}",
+              "value": "{sem.Actions.Silent.SurfaceFill.Disabled}",
               "type": "color"
             }
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{Semantic.Actions.Silent.SurfaceStroke.Rest}",
+              "value": "{sem.Actions.Silent.SurfaceStroke.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Semantic.Actions.Silent.SurfaceStroke.Hover}",
+              "value": "{sem.Actions.Silent.SurfaceStroke.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Semantic.Actions.Silent.SurfaceStroke.Pressed}",
+              "value": "{sem.Actions.Silent.SurfaceStroke.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
+              "value": "{sem.Actions.Silent.SurfaceStroke.Focus}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{Semantic.Actions.Silent.SurfaceStroke.Disabled}",
+              "value": "{sem.Actions.Silent.SurfaceStroke.Disabled}",
               "type": "color"
             }
           },
           "Label": {
             "Rest": {
-              "value": "{Alias.content.ondefault.alpha}",
+              "value": "{sys.content.ondefault.alpha}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Alias.content.ondefault.alpha}",
+              "value": "{sys.content.ondefault.alpha}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Alias.content.ondefault.alpha}",
+              "value": "{sys.content.ondefault.alpha}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Alias.content.ondefault.alpha}",
+              "value": "{sys.content.ondefault.alpha}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{Alias.content.ondisabled.alpha}",
+              "value": "{sys.content.ondisabled.alpha}",
               "type": "color"
             }
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{Alias.content.ondisabled.alpha}",
+              "value": "{sys.content.ondisabled.alpha}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{Alias.content.ondisabled.alpha}",
+              "value": "{sys.content.ondisabled.alpha}",
               "type": "color"
             }
           }
@@ -753,91 +753,91 @@
         "Selected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{Semantic.Actions.Primary.SurfaceFill.Rest}",
+              "value": "{sem.Actions.Primary.SurfaceFill.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Semantic.Actions.Primary.SurfaceFill.Hover}",
+              "value": "{sem.Actions.Primary.SurfaceFill.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Semantic.Actions.Primary.SurfaceFill.Pressed}",
+              "value": "{sem.Actions.Primary.SurfaceFill.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Semantic.Actions.Primary.SurfaceFill.Focus}",
+              "value": "{sem.Actions.Primary.SurfaceFill.Focus}",
               "type": "color"
             }
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{Semantic.Actions.Primary.SurfaceStroke.Rest}",
+              "value": "{sem.Actions.Primary.SurfaceStroke.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Semantic.Actions.Primary.SurfaceStroke.Hover}",
+              "value": "{sem.Actions.Primary.SurfaceStroke.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Semantic.Actions.Primary.SurfaceStroke.Pressed}",
+              "value": "{sem.Actions.Primary.SurfaceStroke.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Semantic.Actions.Primary.SurfaceStroke.Focus}",
+              "value": "{sem.Actions.Primary.SurfaceStroke.Focus}",
               "type": "color"
             }
           },
           "Label": {
             "Rest": {
-              "value": "{Alias.content.onbrand.alpha}",
+              "value": "{sys.content.onbrand.alpha}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Alias.content.onbrand.alpha}",
+              "value": "{sys.content.onbrand.alpha}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Alias.content.onbrand.alpha}",
+              "value": "{sys.content.onbrand.alpha}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Alias.content.onbrand.alpha}",
+              "value": "{sys.content.onbrand.alpha}",
               "type": "color"
             }
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             },
             "Hover": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             },
             "Focus": {
-              "value": "{Alias.content.onbrand.gamma}",
+              "value": "{sys.content.onbrand.gamma}",
               "type": "color"
             }
           }
@@ -847,86 +847,86 @@
     "Forms": {
       "Label": {
         "Rest": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{Alias.content.ondisabled.alpha}",
+          "value": "{sys.content.ondisabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Error": {
-          "value": "{Alias.content.ondefault.error}",
+          "value": "{sys.content.ondefault.error}",
           "type": "color"
         }
       },
       "Caption": {
         "Error": {
-          "value": "{Alias.content.ondefault.error}",
+          "value": "{sys.content.ondefault.error}",
           "type": "color"
         },
         "Hint": {
-          "value": "{Alias.content.ondefault.beta}",
+          "value": "{sys.content.ondefault.beta}",
           "type": "color"
         }
       },
       "UserInput": {
         "Default": {
           "Rest": {
-            "value": "{Alias.content.ondefault.alpha}",
+            "value": "{sys.content.ondefault.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.ondefault.alpha}",
+            "value": "{sys.content.ondefault.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.ondefault.alpha}",
+            "value": "{sys.content.ondefault.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.ondefault.alpha}",
+            "value": "{sys.content.ondefault.alpha}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{Alias.content.onreadonly.alpha}",
+            "value": "{sys.content.onreadonly.alpha}",
             "type": "color"
           }
         },
         "Error": {
           "Rest": {
-            "value": "{Alias.content.onerror.alpha}",
+            "value": "{sys.content.onerror.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onerror.alpha}",
+            "value": "{sys.content.onerror.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onerror.alpha}",
+            "value": "{sys.content.onerror.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onerror.alpha}",
+            "value": "{sys.content.onerror.alpha}",
             "type": "color"
           }
         }
@@ -934,45 +934,45 @@
       "Placeholder": {
         "Default": {
           "Rest": {
-            "value": "{Alias.content.ondefault.gamma.rest}",
+            "value": "{sys.content.ondefault.gamma.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.ondefault.gamma.rest}",
+            "value": "{sys.content.ondefault.gamma.rest}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.ondefault.gamma.rest}",
+            "value": "{sys.content.ondefault.gamma.rest}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.ondefault.gamma.rest}",
+            "value": "{sys.content.ondefault.gamma.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
+            "value": "{sys.content.ondisabled.alpha}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{Alias.content.onreadonly.gamma}",
+            "value": "{sys.content.onreadonly.gamma}",
             "type": "color"
           }
         },
         "Error": {
           "Rest": {
-            "value": "{Alias.content.onerror.gamma}",
+            "value": "{sys.content.onerror.gamma}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.content.onerror.gamma}",
+            "value": "{sys.content.onerror.gamma}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.content.onerror.gamma}",
+            "value": "{sys.content.onerror.gamma}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.content.onerror.gamma}",
+            "value": "{sys.content.onerror.gamma}",
             "type": "color"
           }
         }
@@ -980,45 +980,45 @@
       "SurfaceFill": {
         "Default": {
           "Rest": {
-            "value": "{Alias.surface.default}",
+            "value": "{sys.surface.default}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.default}",
+            "value": "{sys.surface.default}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.default}",
+            "value": "{sys.surface.default}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.default}",
+            "value": "{sys.surface.default}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.surface.disabled.alpha}",
+            "value": "{sys.surface.disabled.alpha}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{Alias.surface.readonly}",
+            "value": "{sys.surface.readonly}",
             "type": "color"
           }
         },
         "Error": {
           "Rest": {
-            "value": "{Alias.surface.error.alpha}",
+            "value": "{sys.surface.error.alpha}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.surface.error.alpha}",
+            "value": "{sys.surface.error.alpha}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.surface.error.alpha}",
+            "value": "{sys.surface.error.alpha}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.surface.error.alpha}",
+            "value": "{sys.surface.error.alpha}",
             "type": "color"
           }
         }
@@ -1026,90 +1026,90 @@
       "SurfaceStroke": {
         "Default": {
           "Rest": {
-            "value": "{Alias.stroke.default}",
+            "value": "{sys.stroke.default}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.default}",
+            "value": "{sys.stroke.default}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.default}",
+            "value": "{sys.stroke.default}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.focus}",
+            "value": "{sys.stroke.focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Alias.stroke.disabled.beta}",
+            "value": "{sys.stroke.disabled.beta}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{Alias.stroke.readonly}",
+            "value": "{sys.stroke.readonly}",
             "type": "color"
           }
         },
         "Error": {
           "Rest": {
-            "value": "{Alias.stroke.error}",
+            "value": "{sys.stroke.error}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Alias.stroke.error}",
+            "value": "{sys.stroke.error}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Alias.stroke.error}",
+            "value": "{sys.stroke.error}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Alias.stroke.error}",
+            "value": "{sys.stroke.error}",
             "type": "color"
           }
         }
       },
       "InputIcon": {
         "Rest": {
-          "value": "{Alias.content.ondefault.gamma.rest}",
+          "value": "{sys.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Hover": {
-          "value": "{Alias.content.ondefault.gamma.hover}",
+          "value": "{sys.content.ondefault.gamma.hover}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{Alias.content.ondefault.gamma.pressed}",
+          "value": "{sys.content.ondefault.gamma.pressed}",
           "type": "color"
         },
         "Focus": {
-          "value": "{Alias.content.ondefault.gamma.rest}",
+          "value": "{sys.content.ondefault.gamma.rest}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{Alias.content.ondisabled.alpha}",
+          "value": "{sys.content.ondisabled.alpha}",
           "type": "color"
         },
         "Error": {
-          "value": "{Alias.content.onerror.beta}",
+          "value": "{sys.content.onerror.beta}",
           "type": "color"
         }
       },
       "Legend": {
         "Default": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{Alias.content.ondisabled.alpha}",
+          "value": "{sys.content.ondisabled.alpha}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         },
         "Error": {
-          "value": "{Alias.content.ondefault.error}",
+          "value": "{sys.content.ondefault.error}",
           "type": "color"
         }
       },
@@ -1117,54 +1117,54 @@
         "OnPopulatedField": {
           "Default": {
             "Rest": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Disabled": {
-              "value": "{Alias.content.ondisabled.alpha}",
+              "value": "{sys.content.ondisabled.alpha}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "ReadOnly": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
           },
           "Error": {
             "Rest": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{Alias.content.ondefault.beta}",
+              "value": "{sys.content.ondefault.beta}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
@@ -1173,54 +1173,54 @@
         "OnEmptyField": {
           "Default": {
             "Rest": {
-              "value": "{Alias.content.ondefault.gamma.rest}",
+              "value": "{sys.content.ondefault.gamma.rest}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{Alias.content.ondefault.gamma.rest}",
+              "value": "{sys.content.ondefault.gamma.rest}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{Alias.content.ondefault.gamma.rest}",
+              "value": "{sys.content.ondefault.gamma.rest}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{Alias.content.ondefault.gamma.rest}",
+              "value": "{sys.content.ondefault.gamma.rest}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Disabled": {
-              "value": "{Alias.content.ondisabled.alpha}",
+              "value": "{sys.content.ondisabled.alpha}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "ReadOnly": {
-              "value": "{Alias.content.onreadonly.gamma}",
+              "value": "{sys.content.onreadonly.gamma}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
           },
           "Error": {
             "Rest": {
-              "value": "{Alias.content.onerror.gamma}",
+              "value": "{sys.content.onerror.gamma}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{Alias.content.onerror.gamma}",
+              "value": "{sys.content.onerror.gamma}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{Alias.content.onerror.gamma}",
+              "value": "{sys.content.onerror.gamma}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{Alias.content.onerror.gamma}",
+              "value": "{sys.content.onerror.gamma}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
@@ -1230,14 +1230,14 @@
     },
     "Global": {
       "Focus": {
-        "value": "{Alias.stroke.focus}",
+        "value": "{sys.stroke.focus}",
         "type": "color"
       }
     },
     "Feedback": {
       "Neutral": {
         "Surface": {
-          "value": "{Alias.surface.default}",
+          "value": "{sys.surface.default}",
           "type": "color",
           "description": "Use on: Counter"
         },
@@ -1247,56 +1247,56 @@
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{Alias.content.ondefault.beta}",
+          "value": "{sys.content.ondefault.beta}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{Alias.content.ondefault.beta}",
+          "value": "{sys.content.ondefault.beta}",
           "type": "color",
           "description": "Use on: Counter"
         }
       },
       "Warning": {
         "Surface": {
-          "value": "{Alias.surface.warning}",
+          "value": "{sys.surface.warning}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "SurfaceStroke": {
-          "value": "{Alias.stroke.warning}",
+          "value": "{sys.stroke.warning}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{Alias.content.onwarning.alpha}",
+          "value": "{sys.content.onwarning.alpha}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{Alias.content.onwarning.beta}",
+          "value": "{sys.content.onwarning.beta}",
           "type": "color",
           "description": "Use on: Counter"
         }
       },
       "Error": {
         "Surface": {
-          "value": "{Alias.surface.error.alpha}",
+          "value": "{sys.surface.error.alpha}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "SurfaceStroke": {
-          "value": "{Alias.stroke.error}",
+          "value": "{sys.stroke.error}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{Alias.content.onerror.alpha}",
+          "value": "{sys.content.onerror.alpha}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{Alias.content.onerror.beta}",
+          "value": "{sys.content.onerror.beta}",
           "type": "color",
           "description": "Use on: Counter"
         }
@@ -1305,12 +1305,12 @@
         "Default": {
           "Shape": {
             "Background": {
-              "value": "{Alias.content.onunspecified.default.alpha}",
+              "value": "{sys.content.onunspecified.default.alpha}",
               "type": "color",
               "description": "Use on: Loader"
             },
             "Foreground": {
-              "value": "{Alias.content.onunspecified.default.beta}",
+              "value": "{sys.content.onunspecified.default.beta}",
               "type": "color",
               "description": "Use on: Loader"
             }
@@ -1319,12 +1319,12 @@
         "Inverted": {
           "Shape": {
             "Background": {
-              "value": "{Alias.content.onunspecified.inverted.alpha}",
+              "value": "{sys.content.onunspecified.inverted.alpha}",
               "type": "color",
               "description": "Use on: Loader"
             },
             "Foreground": {
-              "value": "{Alias.content.onunspecified.inverted.beta}",
+              "value": "{sys.content.onunspecified.inverted.beta}",
               "type": "color",
               "description": "Use on: Loader"
             }
@@ -1339,7 +1339,7 @@
           "y": "{core.dimensionPX.0}",
           "blur": "{core.dimensionPX.0}",
           "spread": "{core.dimensionPX.0}",
-          "color": "{Alias.shadow.alpha}",
+          "color": "{sys.shadow.alpha}",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -1350,7 +1350,7 @@
           "y": "{core.dimensionPX.2}",
           "blur": "{core.dimensionPX.4}",
           "spread": "{core.dimensionPX.0}",
-          "color": "{Alias.shadow.alpha}",
+          "color": "{sys.shadow.alpha}",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -1361,7 +1361,7 @@
           "y": "{core.dimensionPX.4}",
           "blur": "{core.dimensionPX.8}",
           "spread": "{core.dimensionPX.0}",
-          "color": "{Alias.shadow.alpha}",
+          "color": "{sys.shadow.alpha}",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -1370,23 +1370,23 @@
     "UI": {
       "Headline": {
         "Default": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         }
       },
       "Paragraph": {
         "Default": {
-          "value": "{Alias.content.ondefault.alpha}",
+          "value": "{sys.content.ondefault.alpha}",
           "type": "color"
         }
       },
       "Background": {
         "Level_1": {
-          "value": "{Alias.background.level_1}",
+          "value": "{sys.background.level_1}",
           "type": "color"
         },
         "Level_2": {
-          "value": "{Alias.background.level_1}",
+          "value": "{sys.background.level_1}",
           "type": "color"
         }
       }

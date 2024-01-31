@@ -1,13 +1,13 @@
 {
   "tokenSetOrder": [
     "core/COR",
-    "Alias/Light",
-    "Alias/Dark",
-    "SEM/color",
-    "SEM/sizes",
-    "SEM/sizeVariants",
-    "CMP/color",
-    "CMP/sizes",
-    "CMP/sizeVariants"
+    "sys/Light",
+    "sys/Dark",
+    "sem/color",
+    "sem/sizes",
+    "sem/sizeVariants",
+    "cmp/color",
+    "cmp/sizes",
+    "cmp/sizeVariants"
   ]
 }

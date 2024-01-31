@@ -1,10 +1,10 @@
 {
-  "Semantic": {
+  "sem": {
     "Actions": {
       "CTA": {
         "Rest": {
           "value": {
-            "color": "{Semantic.Actions.CTA.SurfaceStroke.Rest}",
+            "color": "{sem.Actions.CTA.SurfaceStroke.Rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -12,7 +12,7 @@
         },
         "Hover": {
           "value": {
-            "color": "{Semantic.Actions.CTA.SurfaceStroke.Hover}",
+            "color": "{sem.Actions.CTA.SurfaceStroke.Hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -20,7 +20,7 @@
         },
         "Pressed": {
           "value": {
-            "color": "{Semantic.Actions.CTA.SurfaceStroke.Pressed}",
+            "color": "{sem.Actions.CTA.SurfaceStroke.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -28,7 +28,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Semantic.Actions.CTA.SurfaceStroke.Focus}",
+            "color": "{sem.Actions.CTA.SurfaceStroke.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -36,7 +36,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Semantic.Actions.CTA.SurfaceStroke.Disabled}",
+            "color": "{sem.Actions.CTA.SurfaceStroke.Disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -44,7 +44,7 @@
         },
         "Loading": {
           "value": {
-            "color": "{Semantic.Actions.CTA.SurfaceStroke.Loading}",
+            "color": "{sem.Actions.CTA.SurfaceStroke.Loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -54,7 +54,7 @@
       "Primary": {
         "Rest": {
           "value": {
-            "color": "{Semantic.Actions.Primary.SurfaceStroke.Rest}",
+            "color": "{sem.Actions.Primary.SurfaceStroke.Rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -62,7 +62,7 @@
         },
         "Hover": {
           "value": {
-            "color": "{Semantic.Actions.Primary.SurfaceStroke.Hover}",
+            "color": "{sem.Actions.Primary.SurfaceStroke.Hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -70,7 +70,7 @@
         },
         "Pressed": {
           "value": {
-            "color": "{Semantic.Actions.Primary.SurfaceStroke.Pressed}",
+            "color": "{sem.Actions.Primary.SurfaceStroke.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -78,7 +78,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Semantic.Actions.Primary.SurfaceStroke.Focus}",
+            "color": "{sem.Actions.Primary.SurfaceStroke.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -86,7 +86,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Semantic.Actions.Primary.SurfaceStroke.Disabled}",
+            "color": "{sem.Actions.Primary.SurfaceStroke.Disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -94,7 +94,7 @@
         },
         "Loading": {
           "value": {
-            "color": "{Semantic.Actions.Primary.SurfaceStroke.Loading}",
+            "color": "{sem.Actions.Primary.SurfaceStroke.Loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -104,7 +104,7 @@
       "Secondary": {
         "Rest": {
           "value": {
-            "color": "{Semantic.Actions.Secondary.SurfaceStroke.Rest}",
+            "color": "{sem.Actions.Secondary.SurfaceStroke.Rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -112,7 +112,7 @@
         },
         "Hover": {
           "value": {
-            "color": "{Semantic.Actions.Secondary.SurfaceStroke.Hover}",
+            "color": "{sem.Actions.Secondary.SurfaceStroke.Hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -120,7 +120,7 @@
         },
         "Pressed": {
           "value": {
-            "color": "{Semantic.Actions.Secondary.SurfaceStroke.Pressed}",
+            "color": "{sem.Actions.Secondary.SurfaceStroke.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -128,7 +128,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Semantic.Actions.Secondary.SurfaceStroke.Focus}",
+            "color": "{sem.Actions.Secondary.SurfaceStroke.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -136,7 +136,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Semantic.Actions.Secondary.SurfaceStroke.Disabled}",
+            "color": "{sem.Actions.Secondary.SurfaceStroke.Disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -144,7 +144,7 @@
         },
         "Loading": {
           "value": {
-            "color": "{Semantic.Actions.Secondary.SurfaceStroke.Loading}",
+            "color": "{sem.Actions.Secondary.SurfaceStroke.Loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -154,7 +154,7 @@
       "Silent": {
         "Rest": {
           "value": {
-            "color": "{Semantic.Actions.Silent.SurfaceStroke.Rest}",
+            "color": "{sem.Actions.Silent.SurfaceStroke.Rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -162,7 +162,7 @@
         },
         "Hover": {
           "value": {
-            "color": "{Semantic.Actions.Silent.SurfaceStroke.Hover}",
+            "color": "{sem.Actions.Silent.SurfaceStroke.Hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -170,7 +170,7 @@
         },
         "Pressed": {
           "value": {
-            "color": "{Semantic.Actions.Silent.SurfaceStroke.Pressed}",
+            "color": "{sem.Actions.Silent.SurfaceStroke.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -178,7 +178,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
+            "color": "{sem.Actions.Silent.SurfaceStroke.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -186,7 +186,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Semantic.Actions.Silent.SurfaceStroke.Disabled}",
+            "color": "{sem.Actions.Silent.SurfaceStroke.Disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -194,7 +194,7 @@
         },
         "Loading": {
           "value": {
-            "color": "{Semantic.Actions.Silent.SurfaceStroke.Loading}",
+            "color": "{sem.Actions.Silent.SurfaceStroke.Loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -204,7 +204,7 @@
       "Destructive": {
         "Rest": {
           "value": {
-            "color": "{Semantic.Actions.Destructive.SurfaceStroke.Rest}",
+            "color": "{sem.Actions.Destructive.SurfaceStroke.Rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -212,7 +212,7 @@
         },
         "Hover": {
           "value": {
-            "color": "{Semantic.Actions.Destructive.SurfaceStroke.Hover}",
+            "color": "{sem.Actions.Destructive.SurfaceStroke.Hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -220,7 +220,7 @@
         },
         "Pressed": {
           "value": {
-            "color": "{Semantic.Actions.Destructive.SurfaceStroke.Pressed}",
+            "color": "{sem.Actions.Destructive.SurfaceStroke.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -228,7 +228,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Semantic.Actions.Destructive.SurfaceStroke.Focus}",
+            "color": "{sem.Actions.Destructive.SurfaceStroke.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -236,7 +236,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Semantic.Actions.Destructive.SurfaceStroke.Disabled}",
+            "color": "{sem.Actions.Destructive.SurfaceStroke.Disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -244,7 +244,7 @@
         },
         "Loading": {
           "value": {
-            "color": "{Semantic.Actions.Destructive.SurfaceStroke.Loading}",
+            "color": "{sem.Actions.Destructive.SurfaceStroke.Loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -254,7 +254,7 @@
       "Encourage": {
         "Rest": {
           "value": {
-            "color": "{Semantic.Actions.Encourage.SurfaceStroke.Rest}",
+            "color": "{sem.Actions.Encourage.SurfaceStroke.Rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -262,7 +262,7 @@
         },
         "Hover": {
           "value": {
-            "color": "{Semantic.Actions.Encourage.SurfaceStroke.Hover}",
+            "color": "{sem.Actions.Encourage.SurfaceStroke.Hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -270,7 +270,7 @@
         },
         "Pressed": {
           "value": {
-            "color": "{Semantic.Actions.Encourage.SurfaceStroke.Pressed}",
+            "color": "{sem.Actions.Encourage.SurfaceStroke.Pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -278,7 +278,7 @@
         },
         "Focus": {
           "value": {
-            "color": "{Semantic.Actions.Encourage.SurfaceStroke.Focus}",
+            "color": "{sem.Actions.Encourage.SurfaceStroke.Focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -286,7 +286,7 @@
         },
         "Disabled": {
           "value": {
-            "color": "{Semantic.Actions.Encourage.SurfaceStroke.Disabled}",
+            "color": "{sem.Actions.Encourage.SurfaceStroke.Disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -294,7 +294,7 @@
         },
         "Loading": {
           "value": {
-            "color": "{Semantic.Actions.Encourage.SurfaceStroke.Loading}",
+            "color": "{sem.Actions.Encourage.SurfaceStroke.Loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -578,7 +578,7 @@
         "Default": {
           "Rest": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Default.Rest}",
+              "color": "{sem.Forms.SurfaceStroke.Default.Rest}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -586,7 +586,7 @@
           },
           "Hover": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Default.Hover}",
+              "color": "{sem.Forms.SurfaceStroke.Default.Hover}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -594,7 +594,7 @@
           },
           "Pressed": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Default.Pressed}",
+              "color": "{sem.Forms.SurfaceStroke.Default.Pressed}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -602,7 +602,7 @@
           },
           "Focus": {
             "value": {
-              "color": "{Semantic.Global.Focus}",
+              "color": "{sem.Global.Focus}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -610,7 +610,7 @@
           },
           "Disabled": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Default.Disabled}",
+              "color": "{sem.Forms.SurfaceStroke.Default.Disabled}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -618,7 +618,7 @@
           },
           "ReadOnly": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Default.ReadOnly}",
+              "color": "{sem.Forms.SurfaceStroke.Default.ReadOnly}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -628,7 +628,7 @@
         "Error": {
           "Rest": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Error.Rest}",
+              "color": "{sem.Forms.SurfaceStroke.Error.Rest}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -636,7 +636,7 @@
           },
           "Hover": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Error.Hover}",
+              "color": "{sem.Forms.SurfaceStroke.Error.Hover}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -644,7 +644,7 @@
           },
           "Pressed": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Error.Pressed}",
+              "color": "{sem.Forms.SurfaceStroke.Error.Pressed}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -652,7 +652,7 @@
           },
           "Focus": {
             "value": {
-              "color": "{Semantic.Forms.SurfaceStroke.Error.Focus}",
+              "color": "{sem.Forms.SurfaceStroke.Error.Focus}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -664,7 +664,7 @@
     "Global": {
       "FocusBorder": {
         "value": {
-          "color": "{Semantic.Global.Focus}",
+          "color": "{sem.Global.Focus}",
           "width": "{core.dimensionPX.2}",
           "style": "solid"
         },
