@@ -24,7 +24,7 @@ jobs:
         run: corepack enable
 
       - name: Install yarn 4
-        run: yarn set version 4.x
+        run: yarn set version 4.0.x
 
       - name: Install modules
         run: yarn
