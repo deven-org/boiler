@@ -1,7 +1,12 @@
 import '@boiler/ui-library/dist/';
 
 import { BlrFormLabelRenderFunction } from './renderFunction';
+<<<<<<< HEAD
 import type { BlrFormLabel, BlrFormLabelType } from '.';
+=======
+import type { BlrFormLabelType } from '.';
+
+>>>>>>> 3b300a2 (feature(storybook): change folder structure (#894))
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
