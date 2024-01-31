@@ -1,8 +1,8 @@
 {
   "tokenSetOrder": [
     "core/COR",
-    "intermediary/Light",
-    "intermediary/Dark",
+    "Alias/Light",
+    "Alias/Dark",
     "SEM/color",
     "SEM/sizes",
     "SEM/sizeVariants",

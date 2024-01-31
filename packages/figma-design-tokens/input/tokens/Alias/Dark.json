@@ -239,7 +239,7 @@
         },
         "brand": {
           "rest": {
-            "value": "{q.surface.brand.primary.rest}",
+            "value": "{Alias.surface.brand.primary.rest}",
             "type": "color"
           }
         }

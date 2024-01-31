@@ -1,39 +1,39 @@
 {
-  "Actions": {
+  "Component": {
     "StepperButton": {
       "Container": {
         "Border": {
           "Rest": {
             "value": {
-              "color": "{Actions.StepperButton.Container.BorderColor.Rest}",
+              "color": "{Component.StepperButton.Container.BorderColor.Rest}",
               "width": "{core.borderWidth.None}"
             },
             "type": "border"
           },
           "Hover": {
             "value": {
-              "color": "{Actions.StepperButton.Container.BorderColor.Hover}",
+              "color": "{Component.StepperButton.Container.BorderColor.Hover}",
               "width": "{core.borderWidth.None}"
             },
             "type": "border"
           },
           "Pressed": {
             "value": {
-              "color": "{Actions.StepperButton.Container.BorderColor.Pressed}",
+              "color": "{Component.StepperButton.Container.BorderColor.Pressed}",
               "width": "{core.borderWidth.None}"
             },
             "type": "border"
           },
           "Focus": {
             "value": {
-              "color": "{Actions.StepperButton.Container.BorderColor.Focus}",
+              "color": "{Component.StepperButton.Container.BorderColor.Focus}",
               "width": "{core.borderWidth.None}"
             },
             "type": "border"
           },
           "Disabled": {
             "value": {
-              "color": "{Actions.StepperButton.Container.BorderColor.Disabled}",
+              "color": "{Component.StepperButton.Container.BorderColor.Disabled}",
               "width": "{core.borderWidth.None}"
             },
             "type": "border"
@@ -156,29 +156,29 @@
         "Padding": {
           "VerticalLayout": {
             "SM": {
-              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.SM}",
+              "value": "0 {Component.StepperCombo.DividerWrapper.Padding_H.SM}",
               "type": "spacing"
             },
             "MD": {
-              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.MD}",
+              "value": "0 {Component.StepperCombo.DividerWrapper.Padding_H.MD}",
               "type": "spacing"
             },
             "LG": {
-              "value": "0 {Actions.StepperCombo.DividerWrapper.Padding_H.LG}",
+              "value": "0 {Component.StepperCombo.DividerWrapper.Padding_H.LG}",
               "type": "spacing"
             }
           },
           "HorizontalLayout": {
             "SM": {
-              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.SM} 0",
+              "value": "{Component.StepperCombo.DividerWrapper.Padding_V.SM} 0",
               "type": "spacing"
             },
             "MD": {
-              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.MD} 0",
+              "value": "{Component.StepperCombo.DividerWrapper.Padding_V.MD} 0",
               "type": "spacing"
             },
             "LG": {
-              "value": "{Actions.StepperCombo.DividerWrapper.Padding_V.LG} 0",
+              "value": "{Component.StepperCombo.DividerWrapper.Padding_V.LG} 0",
               "type": "spacing"
             }
           }
@@ -243,27 +243,27 @@
         },
         "Padding": {
           "XS": {
-            "value": "{Actions.TextButton.Container.Padding_V.XS} {Actions.TextButton.Container.Padding_H.XS}",
+            "value": "{Component.TextButton.Container.Padding_V.XS} {Component.TextButton.Container.Padding_H.XS}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "SM": {
-            "value": "{Actions.TextButton.Container.Padding_V.SM} {Actions.TextButton.Container.Padding_H.SM}",
+            "value": "{Component.TextButton.Container.Padding_V.SM} {Component.TextButton.Container.Padding_H.SM}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "MD": {
-            "value": "{Actions.TextButton.Container.Padding_V.MD} {Actions.TextButton.Container.Padding_H.MD}",
+            "value": "{Component.TextButton.Container.Padding_V.MD} {Component.TextButton.Container.Padding_H.MD}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "LG": {
-            "value": "{Actions.TextButton.Container.Padding_V.LG} {Actions.TextButton.Container.Padding_H.LG}",
+            "value": "{Component.TextButton.Container.Padding_V.LG} {Component.TextButton.Container.Padding_H.LG}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "XL": {
-            "value": "{Actions.TextButton.Container.Padding_V.XL} {Actions.TextButton.Container.Padding_H.XL}",
+            "value": "{Component.TextButton.Container.Padding_V.XL} {Component.TextButton.Container.Padding_H.XL}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           }
@@ -274,41 +274,41 @@
             "type": "spacing"
           },
           "SM": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "value": "{Component.TextButton.Container.ItemSpacing.XS}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "value": "{Component.TextButton.Container.ItemSpacing.XS}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "value": "{Component.TextButton.Container.ItemSpacing.XS}",
             "type": "spacing"
           },
           "XL": {
-            "value": "{Actions.TextButton.Container.ItemSpacing.XS}",
+            "value": "{Component.TextButton.Container.ItemSpacing.XS}",
             "type": "spacing"
           }
         },
         "BorderRadius": {
           "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XS}",
             "type": "borderRadius"
           },
           "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
+            "value": "{Semantic.Actions.Container.BorderRadius.SM}",
             "type": "borderRadius"
           },
           "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
+            "value": "{Semantic.Actions.Container.BorderRadius.MD}",
             "type": "borderRadius"
           },
           "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
+            "value": "{Semantic.Actions.Container.BorderRadius.LG}",
             "type": "borderRadius"
           },
           "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XL}",
             "type": "borderRadius"
           }
         }
@@ -426,27 +426,27 @@
         },
         "Padding": {
           "XS": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.XS} {Actions.TextDropdown.Container.PaddingRight.XS} {Actions.TextDropdown.Container.PaddingBottom.XS} {Actions.TextDropdown.Container.PaddingLeft.XS}",
+            "value": "{Component.TextDropdown.Container.PaddingTop.XS} {Component.TextDropdown.Container.PaddingRight.XS} {Component.TextDropdown.Container.PaddingBottom.XS} {Component.TextDropdown.Container.PaddingLeft.XS}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "SM": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.SM} {Actions.TextDropdown.Container.PaddingRight.SM} {Actions.TextDropdown.Container.PaddingBottom.SM} {Actions.TextDropdown.Container.PaddingLeft.SM}",
+            "value": "{Component.TextDropdown.Container.PaddingTop.SM} {Component.TextDropdown.Container.PaddingRight.SM} {Component.TextDropdown.Container.PaddingBottom.SM} {Component.TextDropdown.Container.PaddingLeft.SM}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "MD": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.MD} {Actions.TextDropdown.Container.PaddingRight.MD} {Actions.TextDropdown.Container.PaddingBottom.MD} {Actions.TextDropdown.Container.PaddingLeft.MD}",
+            "value": "{Component.TextDropdown.Container.PaddingTop.MD} {Component.TextDropdown.Container.PaddingRight.MD} {Component.TextDropdown.Container.PaddingBottom.MD} {Component.TextDropdown.Container.PaddingLeft.MD}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "LG": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.LG} {Actions.TextDropdown.Container.PaddingRight.LG} {Actions.TextDropdown.Container.PaddingBottom.LG} {Actions.TextDropdown.Container.PaddingLeft.LG}",
+            "value": "{Component.TextDropdown.Container.PaddingTop.LG} {Component.TextDropdown.Container.PaddingRight.LG} {Component.TextDropdown.Container.PaddingBottom.LG} {Component.TextDropdown.Container.PaddingLeft.LG}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "XL": {
-            "value": "{Actions.TextDropdown.Container.PaddingTop.XL} {Actions.TextDropdown.Container.PaddingRight.XL} {Actions.TextDropdown.Container.PaddingBottom.XL} {Actions.TextDropdown.Container.PaddingLeft.XL}",
+            "value": "{Component.TextDropdown.Container.PaddingTop.XL} {Component.TextDropdown.Container.PaddingRight.XL} {Component.TextDropdown.Container.PaddingBottom.XL} {Component.TextDropdown.Container.PaddingLeft.XL}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           }
@@ -475,23 +475,23 @@
         },
         "BorderRadius": {
           "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XS}",
             "type": "borderRadius"
           },
           "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
+            "value": "{Semantic.Actions.Container.BorderRadius.SM}",
             "type": "borderRadius"
           },
           "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
+            "value": "{Semantic.Actions.Container.BorderRadius.MD}",
             "type": "borderRadius"
           },
           "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
+            "value": "{Semantic.Actions.Container.BorderRadius.LG}",
             "type": "borderRadius"
           },
           "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XL}",
             "type": "borderRadius"
           }
         }
@@ -545,23 +545,23 @@
         },
         "BorderRadius": {
           "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XS}",
             "type": "borderRadius"
           },
           "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
+            "value": "{Semantic.Actions.Container.BorderRadius.SM}",
             "type": "borderRadius"
           },
           "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
+            "value": "{Semantic.Actions.Container.BorderRadius.MD}",
             "type": "borderRadius"
           },
           "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
+            "value": "{Semantic.Actions.Container.BorderRadius.LG}",
             "type": "borderRadius"
           },
           "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XL}",
             "type": "borderRadius"
           }
         }
@@ -679,27 +679,27 @@
         },
         "Padding": {
           "XS": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.XS} {Actions.IconDropdown.Container.PaddingRight.XS} {Actions.IconDropdown.Container.PaddingBottom.XS} {Actions.IconDropdown.Container.PaddingLeft.XS}",
+            "value": "{Component.IconDropdown.Container.PaddingTop.XS} {Component.IconDropdown.Container.PaddingRight.XS} {Component.IconDropdown.Container.PaddingBottom.XS} {Component.IconDropdown.Container.PaddingLeft.XS}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "SM": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.SM} {Actions.IconDropdown.Container.PaddingRight.SM} {Actions.IconDropdown.Container.PaddingBottom.SM} {Actions.IconDropdown.Container.PaddingLeft.SM}",
+            "value": "{Component.IconDropdown.Container.PaddingTop.SM} {Component.IconDropdown.Container.PaddingRight.SM} {Component.IconDropdown.Container.PaddingBottom.SM} {Component.IconDropdown.Container.PaddingLeft.SM}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "MD": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.MD} {Actions.IconDropdown.Container.PaddingRight.MD} {Actions.IconDropdown.Container.PaddingBottom.MD} {Actions.IconDropdown.Container.PaddingLeft.MD}",
+            "value": "{Component.IconDropdown.Container.PaddingTop.MD} {Component.IconDropdown.Container.PaddingRight.MD} {Component.IconDropdown.Container.PaddingBottom.MD} {Component.IconDropdown.Container.PaddingLeft.MD}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "LG": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.LG} {Actions.IconDropdown.Container.PaddingRight.LG} {Actions.IconDropdown.Container.PaddingBottom.LG} {Actions.IconDropdown.Container.PaddingLeft.LG}",
+            "value": "{Component.IconDropdown.Container.PaddingTop.LG} {Component.IconDropdown.Container.PaddingRight.LG} {Component.IconDropdown.Container.PaddingBottom.LG} {Component.IconDropdown.Container.PaddingLeft.LG}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "XL": {
-            "value": "{Actions.IconDropdown.Container.PaddingTop.XL} {Actions.IconDropdown.Container.PaddingRight.XL} {Actions.IconDropdown.Container.PaddingBottom.XL} {Actions.IconDropdown.Container.PaddingLeft.XL}",
+            "value": "{Component.IconDropdown.Container.PaddingTop.XL} {Component.IconDropdown.Container.PaddingRight.XL} {Component.IconDropdown.Container.PaddingBottom.XL} {Component.IconDropdown.Container.PaddingLeft.XL}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           }
@@ -728,23 +728,23 @@
         },
         "BorderRadius": {
           "XS": {
-            "value": "{Actions.Container.BorderRadius.XS}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XS}",
             "type": "borderRadius"
           },
           "SM": {
-            "value": "{Actions.Container.BorderRadius.SM}",
+            "value": "{Semantic.Actions.Container.BorderRadius.SM}",
             "type": "borderRadius"
           },
           "MD": {
-            "value": "{Actions.Container.BorderRadius.MD}",
+            "value": "{Semantic.Actions.Container.BorderRadius.MD}",
             "type": "borderRadius"
           },
           "LG": {
-            "value": "{Actions.Container.BorderRadius.LG}",
+            "value": "{Semantic.Actions.Container.BorderRadius.LG}",
             "type": "borderRadius"
           },
           "XL": {
-            "value": "{Actions.Container.BorderRadius.XL}",
+            "value": "{Semantic.Actions.Container.BorderRadius.XL}",
             "type": "borderRadius"
           }
         }
@@ -754,7 +754,7 @@
       "MenuItem": {
         "ItemContainer": {
           "Padding": {
-            "value": "{Actions.Menu.MenuItem.ItemContainer.Padding_V} {Actions.Menu.MenuItem.ItemContainer.Padding_H}",
+            "value": "{Component.Menu.MenuItem.ItemContainer.Padding_V} {Component.Menu.MenuItem.ItemContainer.Padding_H}",
             "type": "spacing",
             "description": "Adds padding to the menu item"
           },
@@ -788,19 +788,19 @@
         },
         "ItemLabel": {
           "Typography": {
-            "value": "{Actions.MD.Label}",
+            "value": "{Semantic.Actions.MD.Label}",
             "type": "typography"
           }
         },
         "ItemDescription": {
           "Typography": {
-            "value": "{UI.Caption.MD}",
+            "value": "{Semantic.UI.Caption.MD}",
             "type": "typography"
           }
         },
         "ItemIcon": {
           "IconSize": {
-            "value": "{UI.Icon.Container.Size.SM}",
+            "value": "{Component.Icon.Container.Size.SM}",
             "type": "sizing"
           }
         }
@@ -808,7 +808,7 @@
       "MenuSection": {
         "SectionTitleWrapper": {
           "Padding": {
-            "value": "{Actions.Menu.MenuSection.SectionTitleWrapper.PaddingTop} {Actions.Menu.MenuSection.SectionTitleWrapper.Padding_H} {Actions.Menu.MenuSection.SectionTitleWrapper.PaddingBottom} {Actions.Menu.MenuSection.SectionTitleWrapper.Padding_H}",
+            "value": "{Component.Menu.MenuSection.SectionTitleWrapper.PaddingTop} {Component.Menu.MenuSection.SectionTitleWrapper.Padding_H} {Component.Menu.MenuSection.SectionTitleWrapper.PaddingBottom} {Component.Menu.MenuSection.SectionTitleWrapper.Padding_H}",
             "type": "spacing",
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
           },
@@ -860,9 +860,7 @@
           "description": "Defines the border radius of the whole menu component"
         }
       }
-    }
-  },
-  "Feedback": {
+    },
     "Loader": {
       "Container": {
         "Size": {
@@ -936,12 +934,12 @@
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "MD": {
-            "value": "{Feedback.Counter.Container.Padding_V.SM}",
+            "value": "{Component.Counter.Container.Padding_V.SM}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "LG": {
-            "value": "{Feedback.Counter.Container.Padding_V.SM}",
+            "value": "{Component.Counter.Container.Padding_V.SM}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           }
@@ -953,29 +951,29 @@
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "MD": {
-            "value": "{Feedback.Counter.Container.Padding_H.SM}",
+            "value": "{Component.Counter.Container.Padding_H.SM}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "LG": {
-            "value": "{Feedback.Counter.Container.Padding_H.SM}",
+            "value": "{Component.Counter.Container.Padding_H.SM}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           }
         },
         "Padding": {
           "SM": {
-            "value": "{Feedback.Counter.Container.Padding_V.SM} {Feedback.Counter.Container.Padding_H.SM}",
+            "value": "{Component.Counter.Container.Padding_V.SM} {Component.Counter.Container.Padding_H.SM}",
             "type": "spacing",
             "description": "Coded Comps Only!"
           },
           "MD": {
-            "value": "{Feedback.Counter.Container.Padding_V.MD} {Feedback.Counter.Container.Padding_H.MD}",
+            "value": "{Component.Counter.Container.Padding_V.MD} {Component.Counter.Container.Padding_H.MD}",
             "type": "spacing",
             "description": "Coded Comps Only!"
           },
           "LG": {
-            "value": "{Feedback.Counter.Container.Padding_V.LG} {Feedback.Counter.Container.Padding_H.LG}",
+            "value": "{Component.Counter.Container.Padding_V.LG} {Component.Counter.Container.Padding_H.LG}",
             "type": "spacing",
             "description": "Coded Comps Only!"
           }
@@ -1029,15 +1027,15 @@
       "Text": {
         "Typography": {
           "SM": {
-            "value": "{UI.Caption.SM}",
+            "value": "{Semantic.UI.Caption.SM}",
             "type": "typography"
           },
           "MD": {
-            "value": "{UI.Caption.MD}",
+            "value": "{Semantic.UI.Caption.MD}",
             "type": "typography"
           },
           "LG": {
-            "value": "{UI.Caption.LG}",
+            "value": "{Semantic.UI.Caption.LG}",
             "type": "typography"
           }
         }
@@ -1046,7 +1044,7 @@
     "Tooltip": {
       "TextWrapper": {
         "Padding": {
-          "value": "{Feedback.Tooltip.TextWrapper.Padding_V} {Feedback.Tooltip.TextWrapper.Padding_H}",
+          "value": "{Component.Tooltip.TextWrapper.Padding_V} {Component.Tooltip.TextWrapper.Padding_H}",
           "type": "spacing"
         },
         "BorderRadius": {
@@ -1086,7 +1084,7 @@
       },
       "Text": {
         "Typography": {
-          "value": "{UI.Caption.SM}",
+          "value": "{Semantic.UI.Caption.SM}",
           "type": "typography"
         }
       }
@@ -1150,7 +1148,7 @@
       "HeaderSection": {
         "Container": {
           "Padding": {
-            "value": "{Feedback.Dialog.HeaderSection.Container.Padding_V} {Feedback.Dialog.HeaderSection.Container.Padding_H}",
+            "value": "{Component.Dialog.HeaderSection.Container.Padding_V} {Component.Dialog.HeaderSection.Container.Padding_H}",
             "type": "spacing"
           },
           "Padding_H": {
@@ -1164,7 +1162,7 @@
         },
         "Headline": {
           "Typography": {
-            "value": "{UI.Headline.H5}",
+            "value": "{Semantic.UI.Headline.H5}",
             "type": "typography"
           }
         }
@@ -1172,7 +1170,7 @@
       "ContentSection": {
         "Container": {
           "Padding": {
-            "value": "{Feedback.Dialog.ContentSection.Container.Padding_V} {Feedback.Dialog.ContentSection.Container.Padding_H}",
+            "value": "{Component.Dialog.ContentSection.Container.Padding_V} {Component.Dialog.ContentSection.Container.Padding_H}",
             "type": "spacing"
           },
           "Padding_H": {
@@ -1186,7 +1184,7 @@
         },
         "Text": {
           "Typography": {
-            "value": "{UI.Paragraph.MD.Regular}",
+            "value": "{Semantic.UI.Paragraph.MD.Regular}",
             "type": "typography"
           }
         }
@@ -1194,7 +1192,7 @@
       "FooterSection": {
         "Container": {
           "Padding": {
-            "value": "{Feedback.Dialog.FooterSection.Container.Padding_V} {Feedback.Dialog.FooterSection.Container.Padding_H}",
+            "value": "{Component.Dialog.FooterSection.Container.Padding_V} {Component.Dialog.FooterSection.Container.Padding_H}",
             "type": "spacing"
           },
           "Padding_H": {
@@ -1207,9 +1205,7 @@
           }
         }
       }
-    }
-  },
-  "Forms": {
+    },
     "CaptionComponent": {
       "Container": {
         "ItemSpacing": {
@@ -1256,15 +1252,15 @@
         },
         "Padding": {
           "SM": {
-            "value": "{Forms.CaptionComponent.Container.Padding_V.SM} {Forms.CaptionComponent.Container.Padding_H.SM}",
+            "value": "{Component.CaptionComponent.Container.Padding_V.SM} {Component.CaptionComponent.Container.Padding_H.SM}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{Forms.CaptionComponent.Container.Padding_V.MD} {Forms.CaptionComponent.Container.Padding_H.MD}",
+            "value": "{Component.CaptionComponent.Container.Padding_V.MD} {Component.CaptionComponent.Container.Padding_H.MD}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{Forms.CaptionComponent.Container.Padding_V.LG} {Forms.CaptionComponent.Container.Padding_H.LG}",
+            "value": "{Component.CaptionComponent.Container.Padding_V.LG} {Component.CaptionComponent.Container.Padding_H.LG}",
             "type": "spacing"
           }
         }
@@ -1333,15 +1329,15 @@
         },
         "Padding": {
           "SM": {
-            "value": "{Forms.CaptionComponent.TextWrapper.Padding_V.SM} {Forms.CaptionComponent.TextWrapper.Padding_H.SM}",
+            "value": "{Component.CaptionComponent.TextWrapper.Padding_V.SM} {Component.CaptionComponent.TextWrapper.Padding_H.SM}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{Forms.CaptionComponent.TextWrapper.Padding_V.MD} {Forms.CaptionComponent.TextWrapper.Padding_H.MD}",
+            "value": "{Component.CaptionComponent.TextWrapper.Padding_V.MD} {Component.CaptionComponent.TextWrapper.Padding_H.MD}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{Forms.CaptionComponent.TextWrapper.Padding_V.LG} {Forms.CaptionComponent.TextWrapper.Padding_H.LG}",
+            "value": "{Component.CaptionComponent.TextWrapper.Padding_V.LG} {Component.CaptionComponent.TextWrapper.Padding_H.LG}",
             "type": "spacing"
           }
         }
@@ -1349,15 +1345,15 @@
       "Text": {
         "Typography": {
           "SM": {
-            "value": "{UI.Caption.SM}",
+            "value": "{Semantic.UI.Caption.SM}",
             "type": "typography"
           },
           "MD": {
-            "value": "{UI.Caption.MD}",
+            "value": "{Semantic.UI.Caption.MD}",
             "type": "typography"
           },
           "LG": {
-            "value": "{UI.Caption.LG}",
+            "value": "{Semantic.UI.Caption.LG}",
             "type": "typography"
           }
         }
@@ -1449,32 +1445,32 @@
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 }
@@ -1486,32 +1482,32 @@
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 }
@@ -1525,32 +1521,32 @@
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 }
@@ -1562,32 +1558,32 @@
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 }
@@ -1601,32 +1597,32 @@
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 }
@@ -1638,32 +1634,32 @@
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Hover": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Pressed": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Focus": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Disabled": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 },
                 "Error": {
-                  "value": "{Forms.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth",
                   "description": "Figma Only! Do not apply on codes comps"
                 }
@@ -1676,11 +1672,11 @@
               "type": "borderRadius"
             },
             "MD": {
-              "value": "{Forms.Checkbox.Control.Container.BorderRadius.SM}",
+              "value": "{Component.Checkbox.Control.Container.BorderRadius.SM}",
               "type": "borderRadius"
             },
             "LG": {
-              "value": "{Forms.Checkbox.Control.Container.BorderRadius.SM}",
+              "value": "{Component.Checkbox.Control.Container.BorderRadius.SM}",
               "type": "borderRadius"
             }
           },
@@ -1707,27 +1703,27 @@
                 "type": "sizing"
               },
               "Hover": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Pressed": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Focus": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Disabled": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "ReadOnly": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               },
               "Error": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.SM.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.SM.Rest}",
                 "type": "sizing"
               }
             },
@@ -1737,27 +1733,27 @@
                 "type": "sizing"
               },
               "Hover": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Pressed": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Focus": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Disabled": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "ReadOnly": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               },
               "Error": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.MD.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.MD.Rest}",
                 "type": "sizing"
               }
             },
@@ -1767,27 +1763,27 @@
                 "type": "sizing"
               },
               "Hover": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Pressed": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Focus": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Disabled": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "ReadOnly": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               },
               "Error": {
-                "value": "{Forms.Checkbox.Control.Icon.IconSize.LG.Rest}",
+                "value": "{Component.Checkbox.Control.Icon.IconSize.LG.Rest}",
                 "type": "sizing"
               }
             }
@@ -2009,56 +2005,56 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Active.Error}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border"
@@ -2067,56 +2063,56 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.SM.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border"
@@ -2127,56 +2123,56 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Active.Error}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border"
@@ -2185,56 +2181,56 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.MD.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border"
@@ -2245,56 +2241,56 @@
               "Active": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Rest}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Rest}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.Rest}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Hover}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Hover}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.Hover}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Pressed}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Pressed}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.Pressed}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Focus}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Focus}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.Focus}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Disabled}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Disabled}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.Disabled}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.ReadOnly}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.ReadOnly}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Active.Error}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Active.Error}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Active.Error}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Active.Error}",
                     "style": "solid"
                   },
                   "type": "border"
@@ -2303,56 +2299,56 @@
               "Inactive": {
                 "Rest": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Rest}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Rest}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.Rest}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Hover": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Hover}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Hover}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.Hover}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Pressed": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Pressed}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Pressed}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.Pressed}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Focus": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Focus}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Focus}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.Focus}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Disabled": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Disabled}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Disabled}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.Disabled}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "ReadOnly": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.ReadOnly}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.ReadOnly}",
                     "style": "solid"
                   },
                   "type": "border"
                 },
                 "Error": {
                   "value": {
-                    "color": "{Forms.Radio.Control.Container.BorderColor.Inactive.Error}",
-                    "width": "{Forms.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
+                    "color": "{Component.Radio.Control.Container.BorderColor.Inactive.Error}",
+                    "width": "{Component.Radio.Control.Container.BorderWidth.LG.Inactive.Error}",
                     "style": "solid"
                   },
                   "type": "border"
@@ -2608,17 +2604,17 @@
         },
         "Padding": {
           "SM": {
-            "value": "{Forms.Radio.ContentRow.Padding_V.SM} 0",
+            "value": "{Component.Radio.ContentRow.Padding_V.SM} 0",
             "type": "spacing",
             "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
           },
           "MD": {
-            "value": "{Forms.Radio.ContentRow.Padding_V.MD} 0",
+            "value": "{Component.Radio.ContentRow.Padding_V.MD} 0",
             "type": "spacing",
             "description": "Coded comps only!"
           },
           "LG": {
-            "value": "{Forms.Radio.ContentRow.Padding_V.LG} 0",
+            "value": "{Component.Radio.ContentRow.Padding_V.LG} 0",
             "type": "spacing",
             "description": "Coded comps only!"
           }
@@ -2821,23 +2817,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 }
               },
@@ -2847,23 +2843,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 }
               }
@@ -2875,23 +2871,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 }
               },
@@ -2901,23 +2897,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 }
               }
@@ -2929,23 +2925,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 }
               },
@@ -2955,23 +2951,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 }
               }
@@ -3075,23 +3071,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
                   "type": "borderWidth"
                 }
               },
@@ -3101,23 +3097,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
                   "type": "borderWidth"
                 }
               }
@@ -3129,23 +3125,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
                   "type": "borderWidth"
                 }
               },
@@ -3155,23 +3151,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
                   "type": "borderWidth"
                 }
               }
@@ -3183,23 +3179,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
                   "type": "borderWidth"
                 }
               },
@@ -3209,23 +3205,23 @@
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{Forms.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                  "value": "{Component.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
                   "type": "borderWidth"
                 }
               }
@@ -3284,48 +3280,48 @@
           "Border": {
             "Rest": {
               "value": {
-                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Rest}",
-                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Rest}",
+                "color": "{Component.Slider.Thumb.Shape.BorderColor.Rest}",
+                "width": "{Component.Slider.Thumb.Shape.BorderWidth.Rest}",
                 "style": "solid"
               },
               "type": "border"
             },
             "Hover": {
               "value": {
-                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Hover}",
-                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Hover}",
+                "color": "{Component.Slider.Thumb.Shape.BorderColor.Hover}",
+                "width": "{Component.Slider.Thumb.Shape.BorderWidth.Hover}",
                 "style": "solid"
               },
               "type": "border"
             },
             "Pressed": {
               "value": {
-                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Pressed}",
-                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Pressed}",
+                "color": "{Component.Slider.Thumb.Shape.BorderColor.Pressed}",
+                "width": "{Component.Slider.Thumb.Shape.BorderWidth.Pressed}",
                 "style": "solid"
               },
               "type": "border"
             },
             "Focus": {
               "value": {
-                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Focus}",
-                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Focus}",
+                "color": "{Component.Slider.Thumb.Shape.BorderColor.Focus}",
+                "width": "{Component.Slider.Thumb.Shape.BorderWidth.Focus}",
                 "style": "solid"
               },
               "type": "border"
             },
             "Disabled": {
               "value": {
-                "color": "{Forms.Slider.Thumb.Shape.BorderColor.Disabled}",
-                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.Disabled}",
+                "color": "{Component.Slider.Thumb.Shape.BorderColor.Disabled}",
+                "width": "{Component.Slider.Thumb.Shape.BorderWidth.Disabled}",
                 "style": "solid"
               },
               "type": "border"
             },
             "ReadOnly": {
               "value": {
-                "color": "{Forms.Slider.Thumb.Shape.BorderColor.ReadOnly}",
-                "width": "{Forms.Slider.Thumb.Shape.BorderWidth.ReadOnly}",
+                "color": "{Component.Slider.Thumb.Shape.BorderColor.ReadOnly}",
+                "width": "{Component.Slider.Thumb.Shape.BorderWidth.ReadOnly}",
                 "style": "solid"
               },
               "type": "border"
@@ -3370,7 +3366,7 @@
           "Default": {
             "Active": {
               "value": {
-                "color": "{Forms.Slider.Track.BorderColor.Default.Active}",
+                "color": "{Component.Slider.Track.BorderColor.Default.Active}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
@@ -3378,7 +3374,7 @@
             },
             "Inactive": {
               "value": {
-                "color": "{Forms.Slider.Track.BorderColor.Default.Inactive}",
+                "color": "{Component.Slider.Track.BorderColor.Default.Inactive}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
@@ -3388,7 +3384,7 @@
           "Mute": {
             "Active": {
               "value": {
-                "color": "{Forms.Slider.Track.BorderColor.Mute.Active}",
+                "color": "{Component.Slider.Track.BorderColor.Mute.Active}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
@@ -3396,7 +3392,7 @@
             },
             "Inactive": {
               "value": {
-                "color": "{Forms.Slider.Track.BorderColor.Mute.Inactive}",
+                "color": "{Component.Slider.Track.BorderColor.Mute.Inactive}",
                 "width": "{core.dimensionPX.4}",
                 "style": "solid"
               },
@@ -3432,16 +3428,16 @@
           "Default": {
             "Active": {
               "value": {
-                "color": "{Forms.Slider.TickMark.BorderColor.Default.Active}",
-                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+                "color": "{Component.Slider.TickMark.BorderColor.Default.Active}",
+                "width": "{Component.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
               },
               "type": "border"
             },
             "Inactive": {
               "value": {
-                "color": "{Forms.Slider.TickMark.BorderColor.Default.Inactive}",
-                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}1",
+                "color": "{Component.Slider.TickMark.BorderColor.Default.Inactive}",
+                "width": "{Component.Slider.TickMark.BorderWidth.Default.Active}1",
                 "style": "solid"
               },
               "type": "border"
@@ -3450,16 +3446,16 @@
           "Mute": {
             "Active": {
               "value": {
-                "color": "{Forms.Slider.TickMark.BorderColor.Mute.Active}",
-                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+                "color": "{Component.Slider.TickMark.BorderColor.Mute.Active}",
+                "width": "{Component.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
               },
               "type": "border"
             },
             "Inactive": {
               "value": {
-                "color": "{Forms.Slider.TickMark.BorderColor.Mute.Inactive}",
-                "width": "{Forms.Slider.TickMark.BorderWidth.Default.Active}",
+                "color": "{Component.Slider.TickMark.BorderColor.Mute.Inactive}",
+                "width": "{Component.Slider.TickMark.BorderWidth.Default.Active}",
                 "style": "solid"
               },
               "type": "border"
@@ -3601,9 +3597,7 @@
           }
         }
       }
-    }
-  },
-  "UI": {
+    },
     "Icon": {
       "Container": {
         "Size": {
@@ -3677,31 +3671,29 @@
         },
         "Vertical": {
           "Width": {
-            "value": "{UI.Divider.Container.Horizontal.Height}",
+            "value": "{Component.Divider.Container.Horizontal.Height}",
             "type": "sizing",
             "description": "The thickness of the divider\n>>> new"
           }
         }
       }
-    }
-  },
-  "Navigation": {
+    },
     "TabBar": {
       "Tab": {
         "Label": {
           "Typography": {
             "SM": {
-              "value": "{Actions.SM.Label}",
+              "value": "{Semantic.Actions.SM.Label}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             },
             "MD": {
-              "value": "{Actions.MD.Label}",
+              "value": "{Semantic.Actions.MD.Label}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             },
             "LG": {
-              "value": "{Actions.LG.Label}",
+              "value": "{Semantic.Actions.LG.Label}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             }
@@ -3839,34 +3831,34 @@
         "Padding": {
           "Leading": {
             "SM": {
-              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
+              "value": "0 {Component.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
               "description": "Coded comps only!"
             },
             "MD": {
-              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+              "value": "0 {Component.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
               "type": "spacing",
               "description": "Coded comps only!."
             },
             "LG": {
-              "value": "0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+              "value": "0 {Component.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
               "type": "spacing",
               "description": "Coded comps only!."
             }
           },
           "Trailing": {
             "SM": {
-              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.SM}",
+              "value": "0 0 0 {Component.TabBar.ButtonWrapper.InnerPadding.SM}",
               "type": "spacing",
               "description": "Coded comps only!"
             },
             "MD": {
-              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.MD}",
+              "value": "0 0 0 {Component.TabBar.ButtonWrapper.InnerPadding.MD}",
               "type": "spacing",
               "description": "Coded comps only!."
             },
             "LG": {
-              "value": "0 0 0 {Navigation.TabBar.ButtonWrapper.InnerPadding.LG}",
+              "value": "0 0 0 {Component.TabBar.ButtonWrapper.InnerPadding.LG}",
               "type": "spacing",
               "description": "Coded comps only!."
             }
