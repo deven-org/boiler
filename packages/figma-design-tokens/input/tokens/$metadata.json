@@ -1,21 +1,13 @@
 {
   "tokenSetOrder": [
     "core/COR",
-    "intermediary/Light",
-    "intermediary/Dark",
-    "color/SEM",
-    "color/CMP",
-    "dimensions/SEM",
-    "dimensions/CMP",
-    "captions/allCaptions",
-    "captions/HintOnly",
-    "captions/ErrorOnly",
-    "captions/noCaptions",
-    "sizeVariants/CMP",
-    "sizeVariants/SEM",
-    "componentConfig/CMP",
-    "componentConfig/SEM",
-    "componentConfig_v2/CMP",
-    "componentConfig_v2/SEM"
+    "Theme/Light",
+    "Theme/Dark",
+    "SEM/color",
+    "SEM/sizes",
+    "SEM/sizeVariants",
+    "CMP/color",
+    "CMP/sizes",
+    "CMP/sizeVariants"
   ]
 }

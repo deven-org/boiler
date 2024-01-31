@@ -1,5 +1,5 @@
 {
-  "Action": {
+  "Actions": {
     "CTA": {
       "SurfaceFill": {
         "Rest": {
@@ -640,45 +640,45 @@
       "UnSelected": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Action.Silent.SurfaceFill.Rest}",
+            "value": "{Actions.Silent.SurfaceFill.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.SurfaceFill.Hover}",
+            "value": "{Actions.Silent.SurfaceFill.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.SurfaceFill.Pressed}",
+            "value": "{Actions.Silent.SurfaceFill.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.SurfaceFill.Focus}",
+            "value": "{Actions.Silent.SurfaceFill.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.SurfaceFill.Disabled}",
+            "value": "{Actions.Silent.SurfaceFill.Disabled}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Action.Silent.SurfaceStroke.Rest}",
+            "value": "{Actions.Silent.SurfaceStroke.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Silent.SurfaceStroke.Hover}",
+            "value": "{Actions.Silent.SurfaceStroke.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Silent.SurfaceStroke.Pressed}",
+            "value": "{Actions.Silent.SurfaceStroke.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Silent.SurfaceStroke.Focus}",
+            "value": "{Actions.Silent.SurfaceStroke.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{Action.Silent.SurfaceStroke.Disabled}",
+            "value": "{Actions.Silent.SurfaceStroke.Disabled}",
             "type": "color"
           }
         },
@@ -752,37 +752,37 @@
       "Selected": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{Action.Primary.SurfaceFill.Rest}",
+            "value": "{Actions.Primary.SurfaceFill.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Primary.SurfaceFill.Hover}",
+            "value": "{Actions.Primary.SurfaceFill.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Primary.SurfaceFill.Pressed}",
+            "value": "{Actions.Primary.SurfaceFill.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Primary.SurfaceFill.Focus}",
+            "value": "{Actions.Primary.SurfaceFill.Focus}",
             "type": "color"
           }
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{Action.Primary.SurfaceStroke.Rest}",
+            "value": "{Actions.Primary.SurfaceStroke.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{Action.Primary.SurfaceStroke.Hover}",
+            "value": "{Actions.Primary.SurfaceStroke.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{Action.Primary.SurfaceStroke.Pressed}",
+            "value": "{Actions.Primary.SurfaceStroke.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{Action.Primary.SurfaceStroke.Focus}",
+            "value": "{Actions.Primary.SurfaceStroke.Focus}",
             "type": "color"
           }
         },
@@ -874,36 +874,6 @@
         "type": "color"
       }
     },
-    "LabelAppendix": {
-      "Rest": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Hover": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Pressed": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{q.content.ondisabled.alpha}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Error": {
-        "value": "{q.content.ondefault.error}",
-        "type": "color"
-      }
-    },
     "Caption": {
       "Error": {
         "value": "{q.content.ondefault.error}",
@@ -954,7 +924,7 @@
           "value": "{q.content.onerror.alpha}",
           "type": "color"
         },
-        "Focused": {
+        "Focus": {
           "value": "{q.content.onerror.alpha}",
           "type": "color"
         }
@@ -1035,19 +1005,19 @@
       },
       "Error": {
         "Rest": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Hover": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         },
         "Focus": {
-          "value": "{q.surface.error}",
+          "value": "{q.surface.error.alpha}",
           "type": "color"
         }
       }
@@ -1124,36 +1094,6 @@
         "type": "color"
       }
     },
-    "LabelNextToControl": {
-      "Rest": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Hover": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Pressed": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Focus": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Disabled": {
-        "value": "{q.content.ondisabled.alpha}",
-        "type": "color"
-      },
-      "ReadOnly": {
-        "value": "{q.content.ondefault.alpha}",
-        "type": "color"
-      },
-      "Error": {
-        "value": "{q.content.ondefault.error}",
-        "type": "color"
-      }
-    },
     "Legend": {
       "Default": {
         "value": "{q.content.ondefault.alpha}",
@@ -1170,6 +1110,120 @@
       "Error": {
         "value": "{q.content.ondefault.error}",
         "type": "color"
+      }
+    },
+    "PrefixSuffix": {
+      "OnPopulatedField": {
+        "Default": {
+          "Rest": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "ReadOnly": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        },
+        "Error": {
+          "Rest": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.beta}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        }
+      },
+      "OnEmptyField": {
+        "Default": {
+          "Rest": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.ondefault.gamma.rest}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Disabled": {
+            "value": "{q.content.ondisabled.alpha}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "ReadOnly": {
+            "value": "{q.content.onreadonly.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        },
+        "Error": {
+          "Rest": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Hover": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Pressed": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          },
+          "Focus": {
+            "value": "{q.content.onerror.gamma}",
+            "type": "color",
+            "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+          }
+        }
       }
     }
   },
@@ -1226,7 +1280,7 @@
     },
     "Error": {
       "Surface": {
-        "value": "{q.surface.error}",
+        "value": "{q.surface.error.alpha}",
         "type": "color",
         "description": "Use on: Counter"
       },
@@ -1278,23 +1332,34 @@
     }
   },
   "Elevation": {
-    "1": {
+    "Lvl_0": {
       "value": {
-        "x": "0",
-        "y": "2",
-        "blur": "4",
-        "spread": "0",
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.0}",
+        "blur": "{core.dimensionPX.0}",
+        "spread": "{core.dimensionPX.0}",
         "color": "{q.shadow.alpha}",
         "type": "dropShadow"
       },
       "type": "boxShadow"
     },
-    "2": {
+    "Lvl_1": {
       "value": {
-        "x": "0",
-        "y": "4",
-        "blur": "8",
-        "spread": "0",
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.2}",
+        "blur": "{core.dimensionPX.4}",
+        "spread": "{core.dimensionPX.0}",
+        "color": "{q.shadow.alpha}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
+    "Lvl_2": {
+      "value": {
+        "x": "{core.dimensionPX.0}",
+        "y": "{core.dimensionPX.4}",
+        "blur": "{core.dimensionPX.8}",
+        "spread": "{core.dimensionPX.0}",
         "color": "{q.shadow.alpha}",
         "type": "dropShadow"
       },
