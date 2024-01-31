@@ -258,9 +258,7 @@ export class BlrNumberInput extends LitElement {
                 @change=${this.handleChange}
                 placeholder=${this.placeholder || nothing}
               />
-              ${this.unit !== undefined && this.unit.length
-                ? html` <div class="${unitClasses}">${this.unit}</div> `
-                : nothing}
+              ${hasUnit ? html` <div class="${unitClasses}">${this.unit}</div> ` : nothing}
             </div>
             ${this.renderMode()}
           </div>
