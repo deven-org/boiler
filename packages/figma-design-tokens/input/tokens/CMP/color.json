@@ -1,118 +1,33 @@
 {
   "Component": {
-    "Counter": {
-      "Container": {
-        "BorderColor": {
-          "Neutral": {
-            "value": "{Semantic.Feedback.Neutral.SurfaceStroke}",
-            "type": "color"
-          },
-          "Warning": {
-            "value": "{Semantic.Feedback.Warning.SurfaceStroke}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Feedback.Error.SurfaceStroke}",
-            "type": "color"
-          }
-        },
-        "BackgroundColor": {
-          "Neutral": {
-            "value": "{Semantic.Feedback.Neutral.Surface}",
-            "type": "color"
-          },
-          "Warning": {
-            "value": "{Semantic.Feedback.Warning.Surface}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Feedback.Error.Surface}",
-            "type": "color"
-          }
-        }
-      },
+    "Blanket": {
+      "Surface": {
+        "value": "{Alias.surface.blanket}",
+        "type": "color",
+        "description": "Apply on blanket component"
+      }
+    },
+    "CaptionComponent": {
       "Text": {
         "TextColor": {
-          "Neutral": {
-            "value": "{Semantic.Feedback.Neutral.Text}",
-            "type": "color"
-          },
-          "Warning": {
-            "value": "{Semantic.Feedback.Warning.Text}",
+          "Hint": {
+            "value": "{Semantic.Forms.Caption.Hint}",
             "type": "color"
           },
           "Error": {
-            "value": "{Semantic.Feedback.Error.Text}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "Tooltip": {
-      "Container": {
-        "BackgroundColor": {
-          "value": "{Alias.surface.inverted}",
-          "type": "color"
-        },
-        "Elevation": {
-          "Elevated": {
-            "value": "{Elevation.Lvl_1}",
-            "type": "boxShadow"
-          }
-        }
-      },
-      "Text": {
-        "TextColor": {
-          "value": "{Alias.content.oninverted.alpha}",
-          "type": "color"
-        }
-      }
-    },
-    "Dialog": {
-      "Container": {
-        "BackgroundColor": {
-          "value": "{Alias.background.level_2}",
-          "type": "color"
-        }
-      },
-      "HeaderSection": {
-        "Headline": {
-          "TextColor": {
-            "value": "{Semanttic.UI.Headline.Default}",
+            "value": "{Semantic.Forms.Caption.Error}",
             "type": "color"
           }
         }
       },
-      "ContentSection": {
-        "Text": {
-          "TextColor": {
-            "value": "{Semanttic.UI.Headline.Default}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "Loader": {
-      "Background": {
-        "BorderColor": {
-          "Default": {
-            "value": "{Semantic.Feedback.Brand.Default.Shape.Background}",
+      "Icon": {
+        "IconColor": {
+          "Hint": {
+            "value": "{Semantic.Forms.Caption.Hint}",
             "type": "color"
           },
-          "Inverted": {
-            "value": "{Semantic.Feedback.Brand.Inverted.Shape.Background}",
-            "type": "color"
-          }
-        }
-      },
-      "Foreground": {
-        "BorderColor": {
-          "Default": {
-            "value": "{Semantic.Feedback.Brand.Default.Shape.Foreground}",
-            "type": "color"
-          },
-          "Inverted": {
-            "value": "{Semantic.Feedback.Brand.Inverted.Shape.Foreground}",
+          "Error": {
+            "value": "{Semantic.Forms.Caption.Error}",
             "type": "color"
           }
         }
@@ -337,6 +252,446 @@
               }
             }
           }
+        }
+      }
+    },
+    "Counter": {
+      "Container": {
+        "BorderColor": {
+          "Neutral": {
+            "value": "{Semantic.Feedback.Neutral.SurfaceStroke}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Semantic.Feedback.Warning.SurfaceStroke}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Semantic.Feedback.Error.SurfaceStroke}",
+            "type": "color"
+          }
+        },
+        "BackgroundColor": {
+          "Neutral": {
+            "value": "{Semantic.Feedback.Neutral.Surface}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Semantic.Feedback.Warning.Surface}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Semantic.Feedback.Error.Surface}",
+            "type": "color"
+          }
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "Neutral": {
+            "value": "{Semantic.Feedback.Neutral.Text}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{Semantic.Feedback.Warning.Text}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Semantic.Feedback.Error.Text}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Dialog": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{Alias.background.level_2}",
+          "type": "color"
+        }
+      },
+      "ContentSection": {
+        "Text": {
+          "TextColor": {
+            "value": "{Semanttic.UI.Headline.Default}",
+            "type": "color"
+          }
+        }
+      },
+      "HeaderSection": {
+        "Headline": {
+          "TextColor": {
+            "value": "{Semanttic.UI.Headline.Default}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Divider": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{Alias.stroke.default}",
+          "type": "color",
+          "description": "Color of the divider\n>>> UI.Divider.Stroke"
+        }
+      }
+    },
+    "FormLabel": {
+      "Label": {
+        "TextColor": {
+          "Rest": {
+            "value": "{Semantic.Forms.Label.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Semantic.Forms.Label.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Semantic.Forms.Label.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Semantic.Forms.Label.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Semantic.Forms.Label.Disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{Semantic.Forms.Label.ReadOnly}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Semantic.Forms.Label.Error}",
+            "type": "color"
+          }
+        }
+      },
+      "LabelAppendix": {
+        "TextColor": {
+          "Rest": {
+            "value": "{Semantic.Forms.Label.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Semantic.Forms.Label.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Semantic.Forms.Label.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Semantic.Forms.Label.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Semantic.Forms.Label.Disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{Semantic.Forms.Label.ReadOnly}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Semantic.Forms.Label.Error}",
+            "type": "color"
+          }
+        }
+      },
+      "InlineLabel": {
+        "TextColor": {
+          "Rest": {
+            "value": "{Semantic.Forms.Label.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Semantic.Forms.Label.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Semantic.Forms.Label.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Semantic.Forms.Label.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Semantic.Forms.Label.Disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{Semantic.Forms.Label.ReadOnly}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{Semantic.Forms.Label.Error}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Loader": {
+      "Background": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Semantic.Feedback.Brand.Default.Shape.Background}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Semantic.Feedback.Brand.Inverted.Shape.Background}",
+            "type": "color"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderColor": {
+          "Default": {
+            "value": "{Semantic.Feedback.Brand.Default.Shape.Foreground}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{Semantic.Feedback.Brand.Inverted.Shape.Foreground}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Menu": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{Alias.background.level_2}",
+          "type": "color"
+        }
+      },
+      "MenuItem": {
+        "ItemContainer": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Semantic.Actions.Primary.SurfaceFill.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Semantic.Actions.Primary.SurfaceFill.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Semantic.Actions.Primary.SurfaceFill.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Semantic.Actions.Primary.SurfaceFill.Focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Semantic.Actions.Silent.SurfaceFill.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Semantic.Actions.Silent.SurfaceFill.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Semantic.Actions.Silent.SurfaceFill.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Semantic.Actions.Silent.SurfaceFill.Disabled}",
+                "type": "color"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Semantic.Actions.Primary.SurfaceStroke.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Semantic.Actions.Primary.SurfaceStroke.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Semantic.Actions.Primary.SurfaceStroke.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Semantic.Actions.Primary.SurfaceStroke.Focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Semantic.Actions.Silent.SurfaceStroke.Rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Semantic.Actions.Silent.SurfaceStroke.Hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Semantic.Actions.Silent.SurfaceStroke.Pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Semantic.Actions.Silent.SurfaceStroke.Disabled}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemLabel": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Alias.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.onbrand.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.onbrand.alpha}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Alias.content.ondisabled.alpha}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemDescription": {
+          "Active": {
+            "Rest": {
+              "value": "{Alias.content.onbrand.gamma}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{Alias.content.onbrand.gamma}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{Alias.content.onbrand.gamma}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{Alias.content.onbrand.gamma}",
+              "type": "color"
+            }
+          },
+          "TextColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Alias.content.ondisabled.alpha}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemIcon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Alias.content.onbrand.gamma}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.onbrand.gamma}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.onbrand.gamma}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.onbrand.gamma}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.beta}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Alias.content.ondisabled.alpha}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "MenuSection": {
+        "SectionTitle": {
+          "value": "{Alias.content.ondefault.alpha}",
+          "type": "color",
+          "description": "Apply on section title"
         }
       }
     },
@@ -568,6 +923,457 @@
               }
             }
           }
+        }
+      }
+    },
+    "Slider": {
+      "Thumb": {
+        "Shape": {
+          "BackgroundColor": {
+            "Rest": {
+              "value": "{Alias.surface.default}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
+            },
+            "Hover": {
+              "value": "{Alias.surface.default}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
+            },
+            "Pressed": {
+              "value": "{Alias.surface.default}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
+            },
+            "Focus": {
+              "value": "{Alias.surface.default}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
+            },
+            "Disabled": {
+              "value": "{Alias.surface.default}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
+            },
+            "ReadOnly": {
+              "value": "{Alias.surface.default}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
+            },
+            "Error": {
+              "value": "{Alias.surface.error.alpha}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
+            }
+          },
+          "BorderColor": {
+            "Rest": {
+              "value": "{Alias.stroke.brand.beta.rest}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
+            },
+            "Hover": {
+              "value": "{Alias.stroke.brand.beta.hover}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
+            },
+            "Pressed": {
+              "value": "{Alias.stroke.brand.beta.pressed}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
+            },
+            "Focus": {
+              "value": "{Alias.stroke.brand.beta.rest}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
+            },
+            "Disabled": {
+              "value": "{Alias.stroke.disabled.beta}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
+            },
+            "ReadOnly": {
+              "value": "{Alias.stroke.readonly}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
+            },
+            "Error": {
+              "value": "{Alias.stroke.error}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
+            }
+          }
+        }
+      },
+      "Track": {
+        "BorderColor": {
+          "Default": {
+            "Active": {
+              "value": "{Alias.content.onbrand.beta.rest}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Alias.surface.brand.secondary.rest}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{Alias.content.ondisabled.alpha}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Alias.surface.disabled.alpha}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "TickMark": {
+        "BorderColor": {
+          "Default": {
+            "Active": {
+              "value": "{Alias.content.onbrand.beta.rest}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Alias.surface.brand.secondary.rest}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{Alias.content.ondisabled.alpha}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Alias.surface.disabled.alpha}",
+              "type": "color"
+            }
+          }
+        },
+        "BackgroundColor": {
+          "Default": {
+            "Active": {
+              "value": "{Alias.surface.default}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Alias.surface.default}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{Alias.surface.default}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{Alias.surface.default}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "Legend": {
+        "TextColor": {
+          "Default": {
+            "value": "{Alias.content.ondefault.beta}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Alias.content.ondisabled.alpha}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "StepperButton": {
+      "Container": {
+        "BackgroundColor": {
+          "Rest": {
+            "value": "{Semantic.Actions.Silent.SurfaceFill.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Semantic.Actions.Silent.SurfaceFill.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Semantic.Actions.Silent.SurfaceFill.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
+            "type": "color"
+          }
+        },
+        "BorderColor": {
+          "Rest": {
+            "value": "{Semantic.Actions.Silent.SurfaceStroke.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Semantic.Actions.Silent.SurfaceStroke.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Semantic.Actions.Silent.SurfaceStroke.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
+            "type": "color"
+          }
+        }
+      },
+      "Icon": {
+        "IconColor": {
+          "Rest": {
+            "value": "{Semantic.Actions.Silent.Icon.Rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{Semantic.Actions.Silent.Icon.Hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{Semantic.Actions.Silent.Icon.Pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{Semantic.Actions.Silent.Icon.Focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{Semantic.Actions.Silent.Icon.Disabled}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "TabBar": {
+      "Tab": {
+        "HighlightLine": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Disabled": {
+                "value": "{Alias.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              }
+            }
+          },
+          "Opacity": {
+            "Active": {
+              "Rest": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Hover": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Pressed": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Hover": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Pressed": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Disabled": {
+                "value": "0",
+                "type": "opacity"
+              }
+            }
+          }
+        },
+        "Label": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Alias.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.brand.rest}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{Alias.content.ondefault.alpha}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{Alias.content.ondisabled.alpha}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Tooltip": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{Alias.surface.inverted}",
+          "type": "color"
+        },
+        "Elevation": {
+          "Elevated": {
+            "value": "{Elevation.Lvl_1}",
+            "type": "boxShadow"
+          }
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "value": "{Alias.content.oninverted.alpha}",
+          "type": "color"
         }
       }
     },
@@ -906,812 +1712,6 @@
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
             }
-          }
-        }
-      }
-    },
-    "Slider": {
-      "Thumb": {
-        "Shape": {
-          "BackgroundColor": {
-            "Rest": {
-              "value": "{Alias.surface.default}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
-            },
-            "Hover": {
-              "value": "{Alias.surface.default}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
-            },
-            "Pressed": {
-              "value": "{Alias.surface.default}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
-            },
-            "Focus": {
-              "value": "{Alias.surface.default}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
-            },
-            "Disabled": {
-              "value": "{Alias.surface.default}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
-            },
-            "ReadOnly": {
-              "value": "{Alias.surface.default}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
-            },
-            "Error": {
-              "value": "{Alias.surface.error.alpha}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
-            }
-          },
-          "BorderColor": {
-            "Rest": {
-              "value": "{Alias.stroke.brand.beta.rest}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
-            },
-            "Hover": {
-              "value": "{Alias.stroke.brand.beta.hover}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
-            },
-            "Pressed": {
-              "value": "{Alias.stroke.brand.beta.pressed}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
-            },
-            "Focus": {
-              "value": "{Alias.stroke.brand.beta.rest}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
-            },
-            "Disabled": {
-              "value": "{Alias.stroke.disabled.beta}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
-            },
-            "ReadOnly": {
-              "value": "{Alias.stroke.readonly}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
-            },
-            "Error": {
-              "value": "{Alias.stroke.error}",
-              "type": "color",
-              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
-            }
-          }
-        }
-      },
-      "Track": {
-        "BorderColor": {
-          "Default": {
-            "Active": {
-              "value": "{Alias.content.onbrand.beta.rest}",
-              "type": "color"
-            },
-            "Inactive": {
-              "value": "{Alias.surface.brand.secondary.rest}",
-              "type": "color"
-            }
-          },
-          "Mute": {
-            "Active": {
-              "value": "{Alias.content.ondisabled.alpha}",
-              "type": "color"
-            },
-            "Inactive": {
-              "value": "{Alias.surface.disabled.alpha}",
-              "type": "color"
-            }
-          }
-        }
-      },
-      "TickMark": {
-        "BorderColor": {
-          "Default": {
-            "Active": {
-              "value": "{Alias.content.onbrand.beta.rest}",
-              "type": "color"
-            },
-            "Inactive": {
-              "value": "{Alias.surface.brand.secondary.rest}",
-              "type": "color"
-            }
-          },
-          "Mute": {
-            "Active": {
-              "value": "{Alias.content.ondisabled.alpha}",
-              "type": "color"
-            },
-            "Inactive": {
-              "value": "{Alias.surface.disabled.alpha}",
-              "type": "color"
-            }
-          }
-        },
-        "BackgroundColor": {
-          "Default": {
-            "Active": {
-              "value": "{Alias.surface.default}",
-              "type": "color"
-            },
-            "Inactive": {
-              "value": "{Alias.surface.default}",
-              "type": "color"
-            }
-          },
-          "Mute": {
-            "Active": {
-              "value": "{Alias.surface.default}",
-              "type": "color"
-            },
-            "Inactive": {
-              "value": "{Alias.surface.default}",
-              "type": "color"
-            }
-          }
-        }
-      },
-      "Legend": {
-        "TextColor": {
-          "Default": {
-            "value": "{Alias.content.ondefault.beta}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Alias.content.ondisabled.alpha}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "FormLabel": {
-      "Label": {
-        "TextColor": {
-          "Rest": {
-            "value": "{Semantic.Forms.Label.Rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{Semantic.Forms.Label.Hover}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{Semantic.Forms.Label.Pressed}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{Semantic.Forms.Label.Focus}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Semantic.Forms.Label.Disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{Semantic.Forms.Label.ReadOnly}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Forms.Label.Error}",
-            "type": "color"
-          }
-        }
-      },
-      "LabelAppendix": {
-        "TextColor": {
-          "Rest": {
-            "value": "{Semantic.Forms.Label.Rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{Semantic.Forms.Label.Hover}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{Semantic.Forms.Label.Pressed}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{Semantic.Forms.Label.Focus}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Semantic.Forms.Label.Disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{Semantic.Forms.Label.ReadOnly}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Forms.Label.Error}",
-            "type": "color"
-          }
-        }
-      },
-      "InlineLabel": {
-        "TextColor": {
-          "Rest": {
-            "value": "{Semantic.Forms.Label.Rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{Semantic.Forms.Label.Hover}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{Semantic.Forms.Label.Pressed}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{Semantic.Forms.Label.Focus}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Semantic.Forms.Label.Disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{Semantic.Forms.Label.ReadOnly}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Forms.Label.Error}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "CaptionComponent": {
-      "Text": {
-        "TextColor": {
-          "Hint": {
-            "value": "{Semantic.Forms.Caption.Hint}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Forms.Caption.Error}",
-            "type": "color"
-          }
-        }
-      },
-      "Icon": {
-        "IconColor": {
-          "Hint": {
-            "value": "{Semantic.Forms.Caption.Hint}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{Semantic.Forms.Caption.Error}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "Divider": {
-      "Container": {
-        "BackgroundColor": {
-          "value": "{Alias.stroke.default}",
-          "type": "color",
-          "description": "Color of the divider\n>>> UI.Divider.Stroke"
-        }
-      }
-    },
-    "Blanket": {
-      "Surface": {
-        "value": "{Alias.surface.blanket}",
-        "type": "color",
-        "description": "Apply on blanket component"
-      }
-    },
-    "TabBar": {
-      "Tab": {
-        "HighlightLine": {
-          "BackgroundColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              },
-              "Disabled": {
-                "value": "{Alias.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Apply as fill on HightlightLine"
-              }
-            }
-          },
-          "Opacity": {
-            "Active": {
-              "Rest": {
-                "value": "1",
-                "type": "opacity"
-              },
-              "Hover": {
-                "value": "1",
-                "type": "opacity"
-              },
-              "Pressed": {
-                "value": "1",
-                "type": "opacity"
-              },
-              "Focus": {
-                "value": "0",
-                "type": "opacity"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "0",
-                "type": "opacity"
-              },
-              "Hover": {
-                "value": "0",
-                "type": "opacity"
-              },
-              "Pressed": {
-                "value": "0",
-                "type": "opacity"
-              },
-              "Focus": {
-                "value": "0",
-                "type": "opacity"
-              },
-              "Disabled": {
-                "value": "0",
-                "type": "opacity"
-              }
-            }
-          }
-        },
-        "Label": {
-          "TextColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Alias.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              }
-            }
-          }
-        },
-        "Icon": {
-          "IconColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.brand.rest}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Alias.content.ondisabled.alpha}",
-                "type": "color",
-                "description": "Defines the color of the label of a tab. Apply on <label>"
-              }
-            }
-          }
-        }
-      }
-    },
-    "Menu": {
-      "Container": {
-        "BackgroundColor": {
-          "value": "{Alias.background.level_2}",
-          "type": "color"
-        }
-      },
-      "MenuItem": {
-        "ItemContainer": {
-          "BackgroundColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Semantic.Actions.Primary.SurfaceFill.Rest}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Semantic.Actions.Primary.SurfaceFill.Hover}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Semantic.Actions.Primary.SurfaceFill.Pressed}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Semantic.Actions.Primary.SurfaceFill.Focus}",
-                "type": "color"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Semantic.Actions.Silent.SurfaceFill.Rest}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Semantic.Actions.Silent.SurfaceFill.Hover}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Semantic.Actions.Silent.SurfaceFill.Pressed}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Semantic.Actions.Silent.SurfaceFill.Disabled}",
-                "type": "color"
-              }
-            }
-          },
-          "BorderColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Semantic.Actions.Primary.SurfaceStroke.Rest}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Semantic.Actions.Primary.SurfaceStroke.Hover}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Semantic.Actions.Primary.SurfaceStroke.Pressed}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Semantic.Actions.Primary.SurfaceStroke.Focus}",
-                "type": "color"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Semantic.Actions.Silent.SurfaceStroke.Rest}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Semantic.Actions.Silent.SurfaceStroke.Hover}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Semantic.Actions.Silent.SurfaceStroke.Pressed}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Semantic.Actions.Silent.SurfaceStroke.Disabled}",
-                "type": "color"
-              }
-            }
-          }
-        },
-        "ItemLabel": {
-          "TextColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Alias.content.onbrand.alpha}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.onbrand.alpha}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.onbrand.alpha}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.onbrand.alpha}",
-                "type": "color"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.alpha}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Alias.content.ondisabled.alpha}",
-                "type": "color"
-              }
-            }
-          }
-        },
-        "ItemDescription": {
-          "Active": {
-            "Rest": {
-              "value": "{Alias.content.onbrand.gamma}",
-              "type": "color"
-            },
-            "Hover": {
-              "value": "{Alias.content.onbrand.gamma}",
-              "type": "color"
-            },
-            "Pressed": {
-              "value": "{Alias.content.onbrand.gamma}",
-              "type": "color"
-            },
-            "Focus": {
-              "value": "{Alias.content.onbrand.gamma}",
-              "type": "color"
-            }
-          },
-          "TextColor": {
-            "Inactive": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Alias.content.ondisabled.alpha}",
-                "type": "color"
-              }
-            }
-          }
-        },
-        "ItemIcon": {
-          "IconColor": {
-            "Active": {
-              "Rest": {
-                "value": "{Alias.content.onbrand.gamma}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.onbrand.gamma}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.onbrand.gamma}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.onbrand.gamma}",
-                "type": "color"
-              }
-            },
-            "Inactive": {
-              "Rest": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Hover": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Pressed": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Focus": {
-                "value": "{Alias.content.ondefault.beta}",
-                "type": "color"
-              },
-              "Disabled": {
-                "value": "{Alias.content.ondisabled.alpha}",
-                "type": "color"
-              }
-            }
-          }
-        }
-      },
-      "MenuSection": {
-        "SectionTitle": {
-          "value": "{Alias.content.ondefault.alpha}",
-          "type": "color",
-          "description": "Apply on section title"
-        }
-      }
-    },
-    "StepperButton": {
-      "Container": {
-        "BackgroundColor": {
-          "Rest": {
-            "value": "{Semantic.Actions.Silent.SurfaceFill.Rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{Semantic.Actions.Silent.SurfaceFill.Hover}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{Semantic.Actions.Silent.SurfaceFill.Pressed}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Semantic.Actions.Silent.SurfaceFill.Focus}",
-            "type": "color"
-          }
-        },
-        "BorderColor": {
-          "Rest": {
-            "value": "{Semantic.Actions.Silent.SurfaceStroke.Rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{Semantic.Actions.Silent.SurfaceStroke.Hover}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{Semantic.Actions.Silent.SurfaceStroke.Pressed}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Semantic.Actions.Silent.SurfaceStroke.Focus}",
-            "type": "color"
-          }
-        }
-      },
-      "Icon": {
-        "IconColor": {
-          "Rest": {
-            "value": "{Semantic.Actions.Silent.Icon.Rest}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{Semantic.Actions.Silent.Icon.Hover}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{Semantic.Actions.Silent.Icon.Pressed}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{Semantic.Actions.Silent.Icon.Focus}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{Semantic.Actions.Silent.Icon.Disabled}",
-            "type": "color"
           }
         }
       }
