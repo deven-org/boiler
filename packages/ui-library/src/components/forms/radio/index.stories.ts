@@ -138,7 +138,7 @@ export default {
       if: { arg: 'hasError', eq: true },
     },
     ariaLabel: {
-      name: 'araiaLabel',
+      name: 'ariaLabel',
       description:
         'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
       table: {
