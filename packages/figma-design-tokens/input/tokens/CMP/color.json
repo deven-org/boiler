@@ -313,7 +313,7 @@
       "ContentSection": {
         "Text": {
           "TextColor": {
-            "value": "{Semanttic.UI.Headline.Default}",
+            "value": "{Semantic.UI.Headline.Default}",
             "type": "color"
           }
         }
@@ -321,7 +321,7 @@
       "HeaderSection": {
         "Headline": {
           "TextColor": {
-            "value": "{Semanttic.UI.Headline.Default}",
+            "value": "{Semantic.UI.Headline.Default}",
             "type": "color"
           }
         }
@@ -1365,7 +1365,7 @@
         },
         "Elevation": {
           "Elevated": {
-            "value": "{Elevation.Lvl_1}",
+            "value": "{Semantic.Elevation.Lvl_1}",
             "type": "boxShadow"
           }
         }

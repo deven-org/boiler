@@ -1331,44 +1331,42 @@
           }
         }
       }
-    }
-  },
-  "Elevation": {
-    "Lvl_0": {
-      "value": {
-        "x": "{core.dimensionPX.0}",
-        "y": "{core.dimensionPX.0}",
-        "blur": "{core.dimensionPX.0}",
-        "spread": "{core.dimensionPX.0}",
-        "color": "{Alias.shadow.alpha}",
-        "type": "dropShadow"
-      },
-      "type": "boxShadow"
     },
-    "Lvl_1": {
-      "value": {
-        "x": "{core.dimensionPX.0}",
-        "y": "{core.dimensionPX.2}",
-        "blur": "{core.dimensionPX.4}",
-        "spread": "{core.dimensionPX.0}",
-        "color": "{Alias.shadow.alpha}",
-        "type": "dropShadow"
+    "Elevation": {
+      "Lvl_0": {
+        "value": {
+          "x": "{core.dimensionPX.0}",
+          "y": "{core.dimensionPX.0}",
+          "blur": "{core.dimensionPX.0}",
+          "spread": "{core.dimensionPX.0}",
+          "color": "{Alias.shadow.alpha}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
       },
-      "type": "boxShadow"
+      "Lvl_1": {
+        "value": {
+          "x": "{core.dimensionPX.0}",
+          "y": "{core.dimensionPX.2}",
+          "blur": "{core.dimensionPX.4}",
+          "spread": "{core.dimensionPX.0}",
+          "color": "{Alias.shadow.alpha}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "Lvl_2": {
+        "value": {
+          "x": "{core.dimensionPX.0}",
+          "y": "{core.dimensionPX.4}",
+          "blur": "{core.dimensionPX.8}",
+          "spread": "{core.dimensionPX.0}",
+          "color": "{Alias.shadow.alpha}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      }
     },
-    "Lvl_2": {
-      "value": {
-        "x": "{core.dimensionPX.0}",
-        "y": "{core.dimensionPX.4}",
-        "blur": "{core.dimensionPX.8}",
-        "spread": "{core.dimensionPX.0}",
-        "color": "{Alias.shadow.alpha}",
-        "type": "dropShadow"
-      },
-      "type": "boxShadow"
-    }
-  },
-  "Semanttic": {
     "UI": {
       "Headline": {
         "Default": {
