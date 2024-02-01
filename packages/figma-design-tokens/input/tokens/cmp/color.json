@@ -39,22 +39,22 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary.hover}",
+                "value": "{sys.backgroundColor.primary_hover}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary.pressed}",
+                "value": "{sys.backgroundColor.primary_pressed}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
@@ -701,22 +701,22 @@
           "BackgroundColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary.hover}",
+                "value": "{sys.backgroundColor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary.pressed}",
+                "value": "{sys.backgroundColor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
@@ -738,22 +738,22 @@
             },
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary.hover}",
+                "value": "{sys.backgroundColor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary.pressed}",
+                "value": "{sys.backgroundColor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
@@ -777,22 +777,22 @@
           "BorderColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary.hover}",
+                "value": "{sys.backgroundColor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary.pressed}",
+                "value": "{sys.backgroundColor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
@@ -814,22 +814,22 @@
             },
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary.hover}",
+                "value": "{sys.backgroundColor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary.pressed}",
+                "value": "{sys.backgroundColor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary.rest}",
+                "value": "{sys.backgroundColor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
@@ -1013,7 +1013,7 @@
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.backgroundColor.secondary.rest}",
+              "value": "{sys.backgroundColor.secondary}",
               "type": "color"
             }
           },
@@ -1037,7 +1037,7 @@
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.backgroundColor.secondary.rest}",
+              "value": "{sys.backgroundColor.secondary}",
               "type": "color"
             }
           },
@@ -1415,22 +1415,22 @@
             },
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.encourage.rest}",
+                "value": "{sys.backgroundColor.safe}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.encourage.hover}",
+                "value": "{sys.backgroundColor.safe_hover}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.encourage.pressed}",
+                "value": "{sys.backgroundColor.safe_pressed}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.encourage.rest}",
+                "value": "{sys.backgroundColor.safe}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
               },

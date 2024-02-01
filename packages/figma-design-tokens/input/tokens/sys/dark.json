@@ -239,7 +239,7 @@
         },
         "brand": {
           "rest": {
-            "value": "{sys.backgroundColor.primary.rest}",
+            "value": "{sys.backgroundColor.primary}",
             "type": "color"
           }
         }
@@ -405,19 +405,19 @@
       "CTA": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.backgroundColor.cta.rest}",
+            "value": "{sys.backgroundColor.cta}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.backgroundColor.cta.hover}",
+            "value": "{sys.backgroundColor.cta_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.backgroundColor.cta.pressed}",
+            "value": "{sys.backgroundColor.cta_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.backgroundColor.cta.rest}",
+            "value": "{sys.backgroundColor.cta}",
             "type": "color"
           },
           "Disabled": {
@@ -425,7 +425,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.backgroundColor.cta.rest}",
+            "value": "{sys.backgroundColor.cta}",
             "type": "color"
           }
         },
@@ -511,19 +511,19 @@
       "Primary": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.backgroundColor.primary.rest}",
+            "value": "{sys.backgroundColor.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.backgroundColor.primary.hover}",
+            "value": "{sys.backgroundColor.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.backgroundColor.primary.pressed}",
+            "value": "{sys.backgroundColor.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.backgroundColor.primary.rest}",
+            "value": "{sys.backgroundColor.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -531,7 +531,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.backgroundColor.primary.rest}",
+            "value": "{sys.backgroundColor.primary}",
             "type": "color"
           }
         },
@@ -617,19 +617,19 @@
       "Secondary": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.backgroundColor.secondary.rest}",
+            "value": "{sys.backgroundColor.secondary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.backgroundColor.secondary.hover}",
+            "value": "{sys.backgroundColor.secondary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.backgroundColor.secondary.pressed}",
+            "value": "{sys.backgroundColor.secondary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.backgroundColor.secondary.rest}",
+            "value": "{sys.backgroundColor.secondary}",
             "type": "color"
           },
           "Disabled": {
@@ -637,7 +637,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.backgroundColor.secondary.rest}",
+            "value": "{sys.backgroundColor.secondary}",
             "type": "color"
           }
         },
@@ -723,19 +723,19 @@
       "Silent": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.backgroundColor.silent.rest}",
+            "value": "{sys.backgroundColor.silent}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.backgroundColor.silent.hover}",
+            "value": "{sys.backgroundColor.silent_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.backgroundColor.silent.pressed}",
+            "value": "{sys.backgroundColor.silent_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.backgroundColor.silent.rest}",
+            "value": "{sys.backgroundColor.silent}",
             "type": "color"
           },
           "Disabled": {
@@ -743,7 +743,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.backgroundColor.silent.rest}",
+            "value": "{sys.backgroundColor.silent}",
             "type": "color"
           }
         },
@@ -829,19 +829,19 @@
       "Destructive": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.backgroundColor.destructive.rest}",
+            "value": "{sys.backgroundColor.danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.backgroundColor.destructive.hover}",
+            "value": "{sys.backgroundColor.danger_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.backgroundColor.destructive.pressed}",
+            "value": "{sys.backgroundColor.danger_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.backgroundColor.destructive.rest}",
+            "value": "{sys.backgroundColor.danger}",
             "type": "color"
           },
           "Disabled": {
@@ -849,7 +849,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.backgroundColor.destructive.rest}",
+            "value": "{sys.backgroundColor.danger}",
             "type": "color"
           }
         },
@@ -935,19 +935,19 @@
       "Encourage": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.backgroundColor.encourage.rest}",
+            "value": "{sys.backgroundColor.safe}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.backgroundColor.encourage.hover}",
+            "value": "{sys.backgroundColor.safe_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.backgroundColor.encourage.pressed}",
+            "value": "{sys.backgroundColor.safe_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.backgroundColor.encourage.rest}",
+            "value": "{sys.backgroundColor.safe}",
             "type": "color"
           },
           "Disabled": {
@@ -955,7 +955,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.backgroundColor.encourage.rest}",
+            "value": "{sys.backgroundColor.safe}",
             "type": "color"
           }
         },
@@ -1315,19 +1315,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.content.onerror.alpha}",
+            "value": "{sys.content.on_danger_container}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.onerror.alpha}",
+            "value": "{sys.content.on_danger_container}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.onerror.alpha}",
+            "value": "{sys.content.on_danger_container}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.onerror.alpha}",
+            "value": "{sys.content.on_danger_container}",
             "type": "color"
           }
         }
@@ -1492,7 +1492,7 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.onerror.beta}",
+          "value": "{sys.content.on_danger_container_subtle}",
           "type": "color"
         }
       },
@@ -1692,12 +1692,12 @@
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{sys.content.onerror.alpha}",
+          "value": "{sys.content.on_danger_container}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{sys.content.onerror.beta}",
+          "value": "{sys.content.on_danger_container_subtle}",
           "type": "color",
           "description": "Use on: Counter"
         }
