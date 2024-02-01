@@ -19,12 +19,13 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrNumberInputType = {
+  theme: 'Light',
   size: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
   value: undefined,
-  fractionDigits: 0,
-  totalDigits: 0,
+  decimals: 0,
+  leadingZeros: 0,
   prependUnit: true,
   unit: 'kg',
   step: 1,
@@ -41,7 +42,6 @@ const defaultParams: BlrNumberInputType = {
   errorMessage: '',
   errorIcon: undefined,
   numberInputId: 'test-id',
-  theme: 'Light',
 };
 
 export default {
@@ -55,6 +55,13 @@ export default {
     onBlur: () => action('onBlur'),
   },
   argTypes: {
+    theme: {
+      options: Themes,
+      control: { type: 'select' },
+      table: {
+        category: 'Appearance',
+      },
+    },
     size: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
@@ -95,7 +102,7 @@ export default {
         category: 'Content / Settings',
       },
       control: {
-        type: 'text',
+        type: 'number',
         label: 'Enter Text',
       },
     },
@@ -322,13 +329,6 @@ export default {
         category: 'Events',
       },
     },
-    theme: {
-      options: Themes,
-      control: { type: 'select' },
-      table: {
-        category: 'Appearance',
-      },
-    },
   },
   parameters: {
     design: {
@@ -544,7 +544,7 @@ export const Readonly = () => {
         label: 'Readonly',
         readonly: true,
         labelAppendix: undefined,
-        fractionDigits: 1,
+        decimals: 1,
         value: 20.2,
       })}
     </div>

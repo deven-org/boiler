@@ -39,8 +39,8 @@ export const tooltipPosition = (
 
     const arrowSettings = getArrowSettings(
       tooltip,
-      parseFloat(Tooltip.NoseWrapper.PaddingTopBottom),
-      parseFloat(Tooltip.NoseWrapper.PaddingLeftRight),
+      parseFloat(Tooltip.NoseWrapper.Padding_V),
+      parseFloat(Tooltip.NoseWrapper.Padding_H),
       side
     );
 

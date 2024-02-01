@@ -7,6 +7,27 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   const { NumberInput } = componentTokens.Forms;
 
   return typeSafeNestedCss`
+  .blr-number-input {
+    &.sm {
+      & > .label-wrapper {
+        display: flex;
+        padding: ${SM.LabelSlot.Padding};
+      }
+    }
+    &.md {
+      & > .label-wrapper {
+        display: flex;
+        padding: ${MD.LabelSlot.Padding};
+      }
+    }
+    &.lg {
+      & > .label-wrapper {
+        display: flex;
+        padding: ${LG.LabelSlot.Padding};
+      }
+    }
+  }
+
     .noPointerEvents {
       pointer-events: none;
     }
@@ -156,7 +177,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
       &:focus-within {
         outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-        color: ${UserInput.Error.Focused};
+        color: ${UserInput.Error.Focus};
         background-color: ${SurfaceFill.Error.Focus};
 
         &::placeholder {
@@ -250,7 +271,7 @@ export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDar
         padding: 0;
 
         background-color: ${StepperButton.Container.BackgroundColor.Rest};
-        color: ${StepperButton.Icon.IconColor.Rest}
+        color: ${StepperButton.Icon.IconColor.Rest};
 
         &:hover:not(:disabled) {
           background-color: ${StepperButton.Container.BackgroundColor.Hover};
