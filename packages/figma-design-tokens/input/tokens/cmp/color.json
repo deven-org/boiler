@@ -2,7 +2,7 @@
   "cmp": {
     "Blanket": {
       "Surface": {
-        "value": "{sys.background.blanket}",
+        "value": "{sys.surface.blanket}",
         "type": "color",
         "description": "Apply on blanket component"
       }
@@ -39,68 +39,68 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary_hover}",
+                "value": "{sys.bgcolor.primary_hover}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary_pressed}",
+                "value": "{sys.bgcolor.primary_pressed}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.backgroundColor.danger}",
+                "value": "{sys.bgcolor.danger}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color"
               }
             }
@@ -108,68 +108,68 @@
           "BorderColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.stroke.brand.beta.rest}",
+                "value": "{sys.stroke.primary}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.stroke.brand.beta.hover}",
+                "value": "{sys.stroke.primary_hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.stroke.brand.beta.pressed}",
+                "value": "{sys.stroke.primary_pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.stroke.brand.beta.rest}",
+                "value": "{sys.stroke.primary}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.stroke.disabled.beta}",
+                "value": "{sys.stroke.neutral_xsubtle}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.stroke.readonly}",
+                "value": "{sys.stroke.neutral_xxsubtle}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.stroke.error}",
+                "value": "{sys.stroke.danger_container}",
                 "type": "color"
               }
             }
@@ -216,31 +216,31 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.backgroundColor.none}",
+                "value": "{sys.bgcolor.none}",
                 "type": "color"
               }
             }
@@ -299,7 +299,7 @@
     "Dialog": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.background.level_2}",
+          "value": "{sys.surface.level_2}",
           "type": "color"
         }
       },
@@ -323,7 +323,7 @@
     "Divider": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.stroke.default}",
+          "value": "{sys.stroke.neutral_subtle}",
           "type": "color",
           "description": "Color of the divider\n>>> UI.Divider.Stroke"
         }
@@ -456,7 +456,7 @@
     "Menu": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.background.level_2}",
+          "value": "{sys.surface.level_2}",
           "type": "color"
         }
       },
@@ -694,74 +694,74 @@
           "BackgroundColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary_hover}",
+                "value": "{sys.bgcolor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary_pressed}",
+                "value": "{sys.bgcolor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral}",
+                "value": "{sys.bgcolor.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.error}",
+                "value": "{sys.stroke.danger_container}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary_hover}",
+                "value": "{sys.bgcolor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary_pressed}",
+                "value": "{sys.bgcolor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.error}",
+                "value": "{sys.stroke.danger_container}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
@@ -770,22 +770,22 @@
           "BorderColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary_hover}",
+                "value": "{sys.bgcolor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary_pressed}",
+                "value": "{sys.bgcolor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
@@ -800,29 +800,29 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.error}",
+                "value": "{sys.stroke.danger_container}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.primary_hover}",
+                "value": "{sys.bgcolor.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.primary_pressed}",
+                "value": "{sys.bgcolor.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.primary}",
+                "value": "{sys.bgcolor.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
@@ -837,7 +837,7 @@
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.error}",
+                "value": "{sys.stroke.danger_container}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
@@ -961,37 +961,37 @@
           },
           "BorderColor": {
             "Rest": {
-              "value": "{sys.stroke.brand.beta.rest}",
+              "value": "{sys.stroke.primary}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
             },
             "Hover": {
-              "value": "{sys.stroke.brand.beta.hover}",
+              "value": "{sys.stroke.primary_hover}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
             },
             "Pressed": {
-              "value": "{sys.stroke.brand.beta.pressed}",
+              "value": "{sys.stroke.primary_pressed}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
             },
             "Focus": {
-              "value": "{sys.stroke.brand.beta.rest}",
+              "value": "{sys.stroke.primary}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
             },
             "Disabled": {
-              "value": "{sys.stroke.disabled.beta}",
+              "value": "{sys.stroke.neutral_xsubtle}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
             },
             "ReadOnly": {
-              "value": "{sys.stroke.readonly}",
+              "value": "{sys.stroke.neutral_xxsubtle}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
             },
             "Error": {
-              "value": "{sys.stroke.error}",
+              "value": "{sys.stroke.danger_container}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
             }
@@ -1002,11 +1002,11 @@
         "BorderColor": {
           "Default": {
             "Active": {
-              "value": "{sys.content.onbrand.beta.rest}",
+              "value": "{sys.content.on_silent}",
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.backgroundColor.secondary}",
+              "value": "{sys.bgcolor.secondary}",
               "type": "color"
             }
           },
@@ -1026,11 +1026,11 @@
         "BorderColor": {
           "Default": {
             "Active": {
-              "value": "{sys.content.onbrand.beta.rest}",
+              "value": "{sys.content.on_silent}",
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.backgroundColor.secondary}",
+              "value": "{sys.bgcolor.secondary}",
               "type": "color"
             }
           },
@@ -1353,7 +1353,7 @@
     "Tooltip": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.backgroundColor.inverted}",
+          "value": "{sys.bgcolor.inverted}",
           "type": "color"
         },
         "Elevation": {
@@ -1376,64 +1376,64 @@
           "BackgroundColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.backgroundColor.neutralInteractive}",
+                "value": "{sys.bgcolor.neutralInteractive}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.neutralInteractive_hover}",
+                "value": "{sys.bgcolor.neutralInteractive_hover}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.neutralInteractive_pressed}",
+                "value": "{sys.bgcolor.neutralInteractive_pressed}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.neutralInteractive}",
+                "value": "{sys.bgcolor.neutralInteractive}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.backgroundColor.safe}",
+                "value": "{sys.bgcolor.safe}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
               },
               "Hover": {
-                "value": "{sys.backgroundColor.safe_hover}",
+                "value": "{sys.bgcolor.safe_hover}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.backgroundColor.safe_pressed}",
+                "value": "{sys.bgcolor.safe_pressed}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
               },
               "Focus": {
-                "value": "{sys.backgroundColor.safe}",
+                "value": "{sys.bgcolor.safe}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral_xsubtle}",
+                "value": "{sys.bgcolor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
               }
@@ -1442,64 +1442,64 @@
           "BorderColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
               },
               "Hover": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
               },
               "Hover": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
               },
               "Pressed": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
               },
               "Focus": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
               },
               "Disabled": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
               }
@@ -1644,7 +1644,7 @@
           "BorderColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color"
               },
               "Hover": {
@@ -1675,7 +1675,7 @@
             },
             "Active": {
               "Rest": {
-                "value": "{sys.stroke.none}",
+                "value": "{sys.stroke.transparent}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
               },
