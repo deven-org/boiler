@@ -431,11 +431,11 @@
       "Background": {
         "BorderColor": {
           "Default": {
-            "value": "{sem.Feedback.Brand.Default.Shape.Background}",
+            "value": "{sys.content.informative_subtle}",
             "type": "color"
           },
           "Inverted": {
-            "value": "{sem.Feedback.Brand.Inverted.Shape.Background}",
+            "value": "{sys.content.informative_inverted_subtle}",
             "type": "color"
           }
         }
@@ -443,11 +443,11 @@
       "Foreground": {
         "BorderColor": {
           "Default": {
-            "value": "{sem.Feedback.Brand.Default.Shape.Foreground}",
+            "value": "{sys.content.informative}",
             "type": "color"
           },
           "Inverted": {
-            "value": "{sem.Feedback.Brand.Inverted.Shape.Foreground}",
+            "value": "{sys.content.informative_inverted}",
             "type": "color"
           }
         }

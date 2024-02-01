@@ -1577,38 +1577,6 @@
         "type": "color"
       }
     },
-    "Feedback": {
-      "Brand": {
-        "Default": {
-          "Shape": {
-            "Background": {
-              "value": "{sys.content.informative_subtle}",
-              "type": "color",
-              "description": "Use on: Loader"
-            },
-            "Foreground": {
-              "value": "{sys.content.informative}",
-              "type": "color",
-              "description": "Use on: Loader"
-            }
-          }
-        },
-        "Inverted": {
-          "Shape": {
-            "Background": {
-              "value": "{sys.content.informative_inverted_subtle}",
-              "type": "color",
-              "description": "Use on: Loader"
-            },
-            "Foreground": {
-              "value": "{sys.content.informative_inverted}",
-              "type": "color",
-              "description": "Use on: Loader"
-            }
-          }
-        }
-      }
-    },
     "UI": {
       "Headline": {
         "Default": {
