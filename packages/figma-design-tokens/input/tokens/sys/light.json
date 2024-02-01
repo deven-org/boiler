@@ -93,10 +93,6 @@
         "value": "{core.color.azure.600.opa20}",
         "type": "color"
       },
-      "warning_container": {
-        "value": "{core.color.gold.500.opa10}",
-        "type": "color"
-      },
       "danger": {
         "value": "{core.color.crimson.500.solid}",
         "type": "color"
@@ -111,6 +107,22 @@
       },
       "danger_container": {
         "value": "{core.color.crimson.800.opa10}",
+        "type": "color"
+      },
+      "warning": {
+        "value": "{core.color.gold.500.solid}",
+        "type": "color"
+      },
+      "warning_hover": {
+        "value": "{core.color.gold.400.solid}",
+        "type": "color"
+      },
+      "warning_pressed": {
+        "value": "{core.color.gold.300.solid}",
+        "type": "color"
+      },
+      "warning_container": {
+        "value": "{core.color.gold.500.opa10}",
         "type": "color"
       },
       "safe": {
@@ -200,11 +212,13 @@
       },
       "on_neutral_subtle": {
         "value": "{core.color.coolgray.400.solid}",
-        "type": "color"
+        "type": "color",
+        "description": "use for captions, legends and alike"
       },
       "on_neutral_xsubtle": {
         "value": "{core.color.coolgray.700.solid}",
-        "type": "color"
+        "type": "color",
+        "description": "use for secondary elements on inputs as placeholder, inputIcon, prefix, suffix"
       },
       "on_neutral_xsubtle_hover": {
         "value": "{core.color.coolgray.600.solid}",
@@ -214,7 +228,12 @@
         "value": "{core.color.coolgray.500.solid}",
         "type": "color"
       },
-      "on_neutral_error": {
+      "on_neutral_xxsubtle": {
+        "value": "{core.color.coolgray.800.solid}",
+        "type": "color",
+        "description": "use for disabled states"
+      },
+      "on_neutral_danger": {
         "value": "{core.color.crimson.500.solid}",
         "type": "color"
       },
@@ -270,6 +289,33 @@
         "value": "{core.color.azure.300.solid}",
         "type": "color"
       },
+      "on_warning": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color",
+        "description": "Forms"
+      },
+      "on_warning_hover": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color",
+        "description": "Forms"
+      },
+      "on_warning_pressed": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color",
+        "description": "Forms"
+      },
+      "on_warning_container": {
+        "value": "{core.color.gold.200.solid}",
+        "type": "color"
+      },
+      "on_warning_container_subtle": {
+        "value": "{core.color.gold.500.solid}",
+        "type": "color"
+      },
+      "on_warning_container_xsubtle": {
+        "value": "{core.color.coolgray.700.solid}",
+        "type": "color"
+      },
       "on_danger": {
         "value": "{core.color.white.solid}",
         "type": "color"
@@ -280,6 +326,18 @@
       },
       "on_danger_pressed": {
         "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "on_danger_container": {
+        "value": "{core.color.crimson.300.solid}",
+        "type": "color"
+      },
+      "on_danger_container_subtle": {
+        "value": "{core.color.crimson.500.solid}",
+        "type": "color"
+      },
+      "on_danger_container_xsubtle": {
+        "value": "{core.color.coolgray.700.solid}",
         "type": "color"
       },
       "on_safe": {
@@ -295,44 +353,8 @@
         "type": "color"
       },
       "ondisabled": {
-        "alpha": {
-          "value": "{core.color.coolgray.800.solid}",
-          "type": "color"
-        },
         "inverted": {
           "value": "{core.color.white.solid}",
-          "type": "color"
-        }
-      },
-      "on_danger_container": {
-        "value": "{core.color.crimson.300.solid}",
-        "type": "color"
-      },
-      "on_danger_container_subtle": {
-        "value": "{core.color.crimson.500.solid}",
-        "type": "color"
-      },
-      "onerror": {
-        "gamma": {
-          "value": "{core.color.coolgray.700.solid}",
-          "type": "color"
-        },
-        "delta": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        }
-      },
-      "onwarning": {
-        "alpha": {
-          "value": "{core.color.gold.200.solid}",
-          "type": "color"
-        },
-        "beta": {
-          "value": "{core.color.gold.500.solid}",
-          "type": "color"
-        },
-        "gamma": {
-          "value": "{core.color.coolgray.700.solid}",
           "type": "color"
         }
       },
@@ -414,6 +436,10 @@
             "description": "Use for components which can be used anywhere e.g: Loader"
           }
         }
+      },
+      "transparent": {
+        "value": "{core.color.neutral.transparent}",
+        "type": "color"
       }
     },
     "shadow": {
@@ -512,7 +538,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -538,7 +564,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -618,7 +644,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -644,7 +670,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -724,7 +750,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -750,7 +776,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -830,7 +856,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -856,7 +882,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -936,7 +962,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -962,7 +988,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -1035,7 +1061,7 @@
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color"
             }
           },
@@ -1057,7 +1083,7 @@
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color"
             }
           },
@@ -1079,7 +1105,7 @@
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color"
             }
           }
@@ -1197,7 +1223,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.ondisabled.alpha}",
+          "value": "{sys.content.on_neutral_xxsubtle}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1205,13 +1231,13 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.on_neutral_error}",
+          "value": "{sys.content.on_neutral_danger}",
           "type": "color"
         }
       },
       "Caption": {
         "Error": {
-          "value": "{sys.content.on_neutral_error}",
+          "value": "{sys.content.on_neutral_danger}",
           "type": "color"
         },
         "Hint": {
@@ -1238,7 +1264,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "ReadOnly": {
@@ -1284,7 +1310,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           },
           "ReadOnly": {
@@ -1294,19 +1320,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.content.onerror.gamma}",
+            "value": "{sys.content.on_danger_container_xsubtle}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.onerror.gamma}",
+            "value": "{sys.content.on_danger_container_xsubtle}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.onerror.gamma}",
+            "value": "{sys.content.on_danger_container_xsubtle}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.onerror.gamma}",
+            "value": "{sys.content.on_danger_container_xsubtle}",
             "type": "color"
           }
         }
@@ -1421,7 +1447,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.ondisabled.alpha}",
+          "value": "{sys.content.on_neutral_xxsubtle}",
           "type": "color"
         },
         "Error": {
@@ -1435,7 +1461,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.ondisabled.alpha}",
+          "value": "{sys.content.on_neutral_xxsubtle}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1443,7 +1469,7 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.on_neutral_error}",
+          "value": "{sys.content.on_neutral_danger}",
           "type": "color"
         }
       },
@@ -1471,7 +1497,7 @@
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Disabled": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
@@ -1527,7 +1553,7 @@
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Disabled": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
@@ -1539,22 +1565,22 @@
           },
           "Error": {
             "Rest": {
-              "value": "{sys.content.onerror.gamma}",
+              "value": "{sys.content.on_danger_container_xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.onerror.gamma}",
+              "value": "{sys.content.on_danger_container_xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.onerror.gamma}",
+              "value": "{sys.content.on_danger_container_xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.onerror.gamma}",
+              "value": "{sys.content.on_danger_container_xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
@@ -1603,12 +1629,12 @@
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{sys.content.onwarning.alpha}",
+          "value": "{sys.content.on_warning_container}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{sys.content.onwarning.beta}",
+          "value": "{sys.content.on_warning_container_subtle}",
           "type": "color",
           "description": "Use on: Counter"
         }

@@ -59,56 +59,49 @@
                 "description": "Also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral.300}",
+                "value": "{sys.backgroundColor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral.300}",
+                "value": "{sys.backgroundColor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.backgroundColor.error.100}",
+                "value": "{sys.backgroundColor.danger}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.onbrand.alpha}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.onbrand.alpha}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.onbrand.alpha}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.onbrand.alpha}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.inverted}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.inverted}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               },
               "Error": {
-                "value": "{sys.content.onbrand.alpha}",
-                "type": "color",
-                "description": ""
+                "value": "{sys.backgroundColor.neutral}",
+                "type": "color"
               }
             }
           },
@@ -186,37 +179,37 @@
           "IconColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary_hover}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary_pressed}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.inverted}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.inverted}",
+                "value": "{sys.content.on_neutral}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.content.onerror.delta}",
+                "value": "{sys.content.on_danger}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               }
@@ -592,7 +585,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color"
               }
             }
@@ -636,7 +629,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color"
               }
             }
@@ -680,7 +673,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color"
               }
             }
@@ -721,12 +714,12 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral.300}",
+                "value": "{sys.backgroundColor.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral.300}",
+                "value": "{sys.backgroundColor.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
@@ -758,12 +751,12 @@
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.backgroundColor.neutral.300}",
+                "value": "{sys.backgroundColor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.backgroundColor.neutral.300}",
+                "value": "{sys.backgroundColor.neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
@@ -855,69 +848,69 @@
           "IconColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.inverted}",
+                "value": "{sys.content.transparent}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.inverted}",
+                "value": "{sys.content.transparent}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_danger}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.content.onbrand.alpha}",
+                "value": "{sys.content.on_primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.inverted}",
+                "value": "{sys.content.on_neutral_xsubtle}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.inverted}",
+                "value": "{sys.content.on_neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1019,7 +1012,7 @@
           },
           "Mute": {
             "Active": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color"
             },
             "Inactive": {
@@ -1043,7 +1036,7 @@
           },
           "Mute": {
             "Active": {
-              "value": "{sys.content.ondisabled.alpha}",
+              "value": "{sys.content.on_neutral_xxsubtle}",
               "type": "color"
             },
             "Inactive": {
@@ -1082,7 +1075,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.ondisabled.alpha}",
+            "value": "{sys.content.on_neutral_xxsubtle}",
             "type": "color"
           }
         }
@@ -1208,7 +1201,7 @@
                 "description": "Apply as fill on HightlightLine"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               }
@@ -1299,7 +1292,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1348,7 +1341,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1517,32 +1510,32 @@
           "IconColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1569,12 +1562,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1605,12 +1598,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1637,12 +1630,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.ondisabled.alpha}",
+                "value": "{sys.content.on_neutral_xxsubtle}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
