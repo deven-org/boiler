@@ -960,11 +960,11 @@
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.bgcolor.silent.focus}",
+              "value": "{sys.bgcolor.silent}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.bgcolor.silent.disabled}",
+              "value": "{sys.bgcolor.neutral_off}",
               "type": "color"
             }
           },
@@ -1072,7 +1072,7 @@
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.bgcolor.primary.focus}",
+              "value": "{sys.bgcolor.primary}",
               "type": "color"
             }
           },
@@ -1313,19 +1313,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.bgcolor.error.200}",
+            "value": "{sys.bgcolor.danger_container}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.error.200}",
+            "value": "{sys.bgcolor.danger_container}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.error.200}",
+            "value": "{sys.bgcolor.danger_container}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.error.200}",
+            "value": "{sys.bgcolor.danger_container}",
             "type": "color"
           }
         }
@@ -1566,7 +1566,7 @@
       },
       "Warning": {
         "Surface": {
-          "value": "{sys.bgcolor.warning.200}",
+          "value": "{sys.bgcolor.warning_container}",
           "type": "color",
           "description": "Use on: Counter"
         },
@@ -1588,7 +1588,7 @@
       },
       "Error": {
         "Surface": {
-          "value": "{sys.bgcolor.error.200}",
+          "value": "{sys.bgcolor.danger_container}",
           "type": "color",
           "description": "Use on: Counter"
         },
