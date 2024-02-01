@@ -5,10 +5,6 @@
         "value": "{core.color.coolgray.100.opa20}",
         "type": "color"
       },
-      "inverted": {
-        "value": "{core.color.coolgray.100.solid}",
-        "type": "color"
-      },
       "level_1": {
         "value": "{core.color.white.solid}",
         "type": "color"
@@ -33,10 +29,29 @@
         "type": "color",
         "description": "disabled"
       },
+      "neutralInteractive": {
+        "value": "{core.color.coolgray.700.solid}",
+        "type": "color",
+        "description": "for toggleSwitch\n"
+      },
+      "neutralInteractive_hover": {
+        "value": "{core.color.coolgray.600.solid}",
+        "type": "color",
+        "description": "for toggleSwitch"
+      },
+      "neutralInteractive_pressed": {
+        "value": "{core.color.coolgray.500.solid}",
+        "type": "color",
+        "description": "for toggleswitch\n"
+      },
       "neutral_off": {
         "value": "{core.color.coolgray.800.opa0}",
         "type": "color",
         "description": "disabled"
+      },
+      "inverted": {
+        "value": "{core.color.coolgray.100.solid}",
+        "type": "color"
       },
       "none": {
         "value": "{core.color.neutral.transparent}",
@@ -352,40 +367,14 @@
         "value": "{core.color.white.solid}",
         "type": "color"
       },
-      "ondisabled": {
-        "inverted": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        }
+      "on_inverted": {
+        "value": "{core.color.white.solid}",
+        "type": "color",
+        "description": "Forms"
       },
-      "oninverted": {
-        "alpha": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "Forms"
-        },
-        "beta": {
-          "value": "{core.color.coolgray.700.solid}",
-          "type": "color"
-        },
-        "gamma": {
-          "rest": {
-            "value": "{core.color.coolgray.700.solid}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{core.color.coolgray.600.solid}",
-            "type": "color"
-          },
-          "pressed": {
-            "value": "{core.color.coolgray.500.solid}",
-            "type": "color"
-          }
-        },
-        "error": {
-          "value": "{core.color.crimson.500.solid}",
-          "type": "color"
-        }
+      "on_inverted_subtle": {
+        "value": "{core.color.coolgray.700.solid}",
+        "type": "color"
       },
       "onbrand": {
         "alpha": {
@@ -804,7 +793,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.backgroundColor.neutral.300}",
+            "value": "{sys.backgroundColor.neutral_xsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -840,19 +829,19 @@
         },
         "Icon": {
           "Rest": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger}",
             "type": "color"
           },
           "Disabled": {
@@ -860,25 +849,25 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger}",
             "type": "color"
           },
           "Disabled": {
@@ -886,7 +875,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_danger}",
             "type": "color"
           }
         }
@@ -910,7 +899,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.backgroundColor.neutral.300}",
+            "value": "{sys.backgroundColor.neutral_xsubtle}",
             "type": "color"
           },
           "Loading": {
@@ -946,19 +935,19 @@
         },
         "Icon": {
           "Rest": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe}",
             "type": "color"
           },
           "Disabled": {
@@ -966,25 +955,25 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe}",
             "type": "color"
           },
           "Disabled": {
@@ -992,7 +981,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.onbrand.alpha}",
+            "value": "{sys.content.on_safe}",
             "type": "color"
           }
         }
@@ -1149,19 +1138,19 @@
           },
           "Label": {
             "Rest": {
-              "value": "{sys.content.onbrand.alpha}",
+              "value": "{sys.content.on_primary}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.onbrand.alpha}",
+              "value": "{sys.content.on_primary_hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.onbrand.alpha}",
+              "value": "{sys.content.on_primary_pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.onbrand.alpha}",
+              "value": "{sys.content.on_primary}",
               "type": "color"
             }
           },
