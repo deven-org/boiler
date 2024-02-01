@@ -7,6 +7,27 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
   const { NumberInput } = componentTokens.Forms;
 
   return typeSafeNestedCss`
+  .blr-number-input {
+    &.sm {
+      & > .label-wrapper {
+        display: flex;
+        padding: ${SM.LabelSlot.Padding};
+      }
+    }
+    &.md {
+      & > .label-wrapper {
+        display: flex;
+        padding: ${MD.LabelSlot.Padding};
+      }
+    }
+    &.lg {
+      & > .label-wrapper {
+        display: flex;
+        padding: ${LG.LabelSlot.Padding};
+      }
+    }
+  }
+
     .noPointerEvents {
       pointer-events: none;
     }

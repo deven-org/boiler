@@ -229,37 +229,41 @@ export class BlrNumberInput extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        ${this.hasLabel
-          ? BlrFormLabelRenderFunction({
-              labelText: this.label,
-              labelSize: this.size,
-              labelAppendix: this.labelAppendix,
-              forValue: this.numberInputId,
-              theme: this.theme,
-              variant: this.hasError ? 'error' : 'label',
-            })
-          : nothing}
-        <div class="${wrapperClasses}">
-          <div class="${inputAndUnitContainer}">
-            <input
-              class="${inputClasses}"
-              type="number"
-              .value=${this.currentValue != 0
-                ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
-                : nothing}
-              step="${this.step || nothing}"
-              ?disabled="${this.disabled}"
-              ?readonly="${this.readonly}"
-              ?required="${this.required}"
-              hasError="${this.hasError}"
-              @change=${this.handleChange}
-              placeholder=${this.placeholder || nothing}
-            />
-            ${this.unit !== undefined && this.unit.length
-              ? html` <div class="${unitClasses}">${this.unit}</div> `
-              : nothing}
+        <div class="blr-number-input ${this.size}">
+          ${this.hasLabel
+            ? html`
+                <div class="label-wrapper">
+                  ${BlrFormLabelRenderFunction({
+                    labelText: this.label,
+                    labelSize: this.size,
+                    labelAppendix: this.labelAppendix,
+                    forValue: this.numberInputId,
+                    theme: this.theme,
+                    variant: this.hasError ? 'error' : 'label',
+                  })}
+                </div>
+              `
+            : nothing}
+          <div class="${wrapperClasses}">
+            <div class="${inputAndUnitContainer}">
+              <input
+                class="${inputClasses}"
+                type="number"
+                .value=${this.currentValue != 0
+                  ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
+                  : nothing}
+                step="${this.step || nothing}"
+                ?disabled="${this.disabled}"
+                ?readonly="${this.readonly}"
+                ?required="${this.required}"
+                hasError="${this.hasError}"
+                @change=${this.handleChange}
+                placeholder=${this.placeholder || nothing}
+              />
+              ${hasUnit ? html` <div class="${unitClasses}">${this.unit}</div> ` : nothing}
+            </div>
+            ${this.renderMode()}
           </div>
-          ${this.renderMode()}
         </div>
 
         ${this.hasHint || this.hasError
