@@ -130,7 +130,7 @@ For contributions we are using [Gitflow as branching strategy](https://www.atlas
 The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
 
-- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. The allowed types are: `release`, `hotfix` and `feature`.  
+- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. Besides the existing `main` and `develop` branches, the allowed types for newly created branches are: `release`, `hotfix`, `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It was added to be more granular in our naming convention and to differentiate between branches that implement something new (`feature`) and those that change something that already exists (`fix`).
 - **issueNumber:** The issue number of your task. For example: `421` 
 - **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words. For example: `text-area-storybook-documentation`  
 
