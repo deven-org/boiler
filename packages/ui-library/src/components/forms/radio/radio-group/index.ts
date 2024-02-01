@@ -28,15 +28,14 @@ export class BlrRadioGroup extends LitElement {
   @property() onFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
   @property() errorIcon?: SizelessIconType;
-  @property() hideLabel?: boolean;
+  @property() hasGroupLabel?: boolean;
   @property() options!: RadioOption[];
   @property() hasHint = true;
   @property() groupHintIcon?: SizelessIconType;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
   @property() groupErrorIcon?: SizelessIconType;
-  @property() showLegend?: boolean = true;
-  @property() legend?: string;
+  @property() groupLabel?: string;
   @property() direction?: 'vertical' | 'horizontal';
 
   @property() theme: ThemeType = 'Light';
@@ -93,8 +92,8 @@ export class BlrRadioGroup extends LitElement {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      ${this.showLegend
-        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.legend}</legend></div>`
+      ${this.hasGroupLabel
+        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.groupLabel}</legend></div>`
         : nothing}
 
       <div class="blr-radio-group ${classes}">
