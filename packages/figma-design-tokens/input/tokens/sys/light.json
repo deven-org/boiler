@@ -15,19 +15,14 @@
       }
     },
     "bgcolor": {
-      "neutral": {
+      "neutralWhite": {
         "value": "{core.color.white.solid}",
         "type": "color"
       },
-      "neutral_subtle": {
-        "value": "{core.color.coolgray.999.solid}",
-        "type": "color",
-        "description": "readonly"
-      },
-      "neutral_xsubtle": {
+      "neutral_dimmed": {
         "value": "{core.color.coolgray.900.solid}",
         "type": "color",
-        "description": "disabled"
+        "description": "bg for disabled, readonly"
       },
       "neutralInteractive": {
         "value": "{core.color.coolgray.700.solid}",
@@ -433,7 +428,7 @@
             "type": "color"
           },
           "disabled": {
-            "value": "{sys.bgcolor.neutral_xsubtle}",
+            "value": "{sys.bgcolor.neutral_dimmed}",
             "type": "color"
           },
           "loading": {
@@ -751,7 +746,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.neutral_xsubtle}",
+            "value": "{sys.bgcolor.neutral_dimmed}",
             "type": "color"
           },
           "Loading": {
@@ -857,7 +852,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.neutral_xsubtle}",
+            "value": "{sys.bgcolor.neutral_dimmed}",
             "type": "color"
           },
           "Loading": {
@@ -1287,27 +1282,27 @@
       "SurfaceFill": {
         "Default": {
           "Rest": {
-            "value": "{sys.bgcolor.neutral}",
+            "value": "{sys.bgcolor.neutralWhite}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.neutral}",
+            "value": "{sys.bgcolor.neutralWhite}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.neutral}",
+            "value": "{sys.bgcolor.neutralWhite}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.neutral}",
+            "value": "{sys.bgcolor.neutralWhite}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.neutral_xsubtle}",
+            "value": "{sys.bgcolor.neutral_dimmed}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.bgcolor.neutral_subtle}",
+            "value": "{sys.bgcolor.neutral_dimmed}",
             "type": "color"
           }
         },
@@ -1544,7 +1539,7 @@
     "Feedback": {
       "Neutral": {
         "Surface": {
-          "value": "{sys.bgcolor.neutral}",
+          "value": "{sys.bgcolor.neutralWhite}",
           "type": "color",
           "description": "Use on: Counter"
         },
