@@ -133,14 +133,16 @@ export class BlrTextInput extends LitElement {
         <div class="blr-text-input ${classes}">
           ${this.hasLabel
             ? html`
-                ${BlrFormLabelRenderFunction({
-                  labelText: this.label,
-                  labelSize: this.size,
-                  labelAppendix: this.labelAppendix,
-                  forValue: this.textInputId,
-                  theme: this.theme,
-                  variant: this.hasError ? 'error' : 'label',
-                })}
+                <div class="label-wrapper">
+                  ${BlrFormLabelRenderFunction({
+                    labelText: this.label,
+                    labelSize: this.size,
+                    labelAppendix: this.labelAppendix,
+                    forValue: this.textInputId,
+                    theme: this.theme,
+                    variant: this.hasError ? 'error' : 'label',
+                  })}
+                </div>
               `
             : nothing}
           <div class="blr-input-wrapper ${inputContainerClasses}">

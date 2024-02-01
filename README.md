@@ -114,7 +114,7 @@ In addition, you might need to install Corepack. For more information checkout [
    $ git clone https://github.com/deven-org/B01LER-Kitchen.git
    ```
 
-3. now we enable corepack for yarn and chooose right version
+3. now we enable corepack for yarn and choose right version
 
    ```sh
    $ corepack enable
