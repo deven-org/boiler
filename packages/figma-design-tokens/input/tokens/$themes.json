@@ -1024,8 +1024,6 @@
       "sys.stroke.brand.beta.pressed": "d03e4994b68d7dbc884599ffdbe16d059e3c42e9",
       "sys.content.onreadonly.alpha": "6f59b88c344aebea2fdd7b10e723e2129f942f58",
       "sys.content.onreadonly.gamma": "5a903fec2ef51ebe0b22092b609a03953439e4c6",
-      "sys.content.onbrand.alpha": "66139d65b6362652049bee099b229b261f66a2be",
-      "sys.content.onbrand.gamma": "6b6fdd528e263e740184d02a8383dcd55e4e4358",
       "sys.content.onbrand.beta.rest": "2f5fa408985aa73a0b6238cbf992bf55f3c9ae1a",
       "sys.content.onbrand.beta.hover": "d3d35e327e369377f74f593f6b64714f9b086363",
       "sys.content.onbrand.beta.pressed": "d569af764cb3140135f6f3fc31e778d010d5f123",
@@ -1658,7 +1656,8 @@
       "sys.content.on_warning_container_xsubtle": "8d218f45221524c13f58fffb688e0f3beeda987c",
       "sys.backgroundColor.inverted": "e192a021b4982a83b3a3fceb4dc4162452344f88",
       "sys.content.on_inverted": "da04c42e3762ae2a754fdde06c73ffdc658d1088",
-      "sys.content.on_inverted_subtle": "91b8b09ca4e32ba9cd6c30cf7a63748d51767017"
+      "sys.content.on_inverted_subtle": "91b8b09ca4e32ba9cd6c30cf7a63748d51767017",
+      "sys.content.on_primary_subtle": "6b6fdd528e263e740184d02a8383dcd55e4e4358"
     },
     "group": "Theme"
   },
@@ -1699,7 +1698,6 @@
       "sys.content.onbrand.beta.rest": "2f5fa408985aa73a0b6238cbf992bf55f3c9ae1a",
       "sys.content.onbrand.beta.hover": "d3d35e327e369377f74f593f6b64714f9b086363",
       "sys.content.onbrand.beta.pressed": "d569af764cb3140135f6f3fc31e778d010d5f123",
-      "sys.content.onbrand.gamma": "6b6fdd528e263e740184d02a8383dcd55e4e4358",
       "sys.content.ondisabled.inverted": "5030f4728db32010e778a67628a27cd7faa1eeea",
       "sys.content.onerror.delta": "264ece6cc3d95a288f4cbd69ef750e0044ad8b0b",
       "sys.content.onunspecified.default.alpha": "eca4189531d0592d42cf93e79487f7616329a365",
@@ -2348,7 +2346,8 @@
       "sys.content.on_inverted_xsubtle": "c7c4090e17f720933311c198197157f92bf5ebef",
       "sys.content.on_inverted_xsubtle_hover": "832e2290bf4c5115c388339fe6de1dea686e6eb8",
       "sys.content.on_inverted_xsubtle_pressed": "1c8ee1b2bcaace95c5b2dc0240f81f74fdbc0d95",
-      "sys.content.on_inverted_xsubtle_danger": "b1b88dadc3f977b94bbbed9e2680de7ef25cdde5"
+      "sys.content.on_inverted_xsubtle_danger": "b1b88dadc3f977b94bbbed9e2680de7ef25cdde5",
+      "sys.content.on_primary_subtle": "6b6fdd528e263e740184d02a8383dcd55e4e4358"
     },
     "group": "Theme"
   },

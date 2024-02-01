@@ -1208,37 +1208,37 @@
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.onbrand.gamma}",
+              "value": "{sys.content.on_primary_subtle}",
               "type": "color"
             }
           }
