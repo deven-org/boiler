@@ -252,29 +252,29 @@
       "Container": {
         "BorderColor": {
           "Neutral": {
-            "value": "{sem.Feedback.Neutral.SurfaceStroke}",
+            "value": "{sys.bgcolor.informative_container}",
             "type": "color"
           },
           "Warning": {
-            "value": "{sem.Feedback.Warning.SurfaceStroke}",
+            "value": "{sys.stroke.warning_container}",
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Feedback.Error.SurfaceStroke}",
+            "value": "{sys.stroke.danger_container}",
             "type": "color"
           }
         },
         "BackgroundColor": {
           "Neutral": {
-            "value": "{sem.Feedback.Neutral.Surface}",
+            "value": "{sys.bgcolor.informative_container}",
             "type": "color"
           },
           "Warning": {
-            "value": "{sem.Feedback.Warning.Surface}",
+            "value": "{sys.bgcolor.warning_container}",
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Feedback.Error.Surface}",
+            "value": "{sys.bgcolor.danger_container}",
             "type": "color"
           }
         }
@@ -282,15 +282,15 @@
       "Text": {
         "TextColor": {
           "Neutral": {
-            "value": "{sem.Feedback.Neutral.Text}",
+            "value": "{sys.content.on_informative_container}",
             "type": "color"
           },
           "Warning": {
-            "value": "{sem.Feedback.Warning.Text}",
+            "value": "{sys.content.on_warning_container}",
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Feedback.Error.Text}",
+            "value": "{sys.content.on_danger_container}",
             "type": "color"
           }
         }
@@ -1097,11 +1097,11 @@
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.silent.focus}",
+            "value": "{sys.bgcolor.silent}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.silent.focus}",
+            "value": "{sys.bgcolor.neutral_off}",
             "type": "color"
           }
         },

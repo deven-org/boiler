@@ -146,6 +146,23 @@
       "safe_pressed": {
         "value": "{core.color.limegreen.200.solid}",
         "type": "color"
+      },
+      "informative": {
+        "value": "{core.color.coolgray.400.solid}",
+        "type": "color"
+      },
+      "informative_hover": {
+        "value": "{core.color.coolgray.300.solid}",
+        "type": "color"
+      },
+      "informative_pressed": {
+        "value": "{core.color.coolgray.200.solid}",
+        "type": "color"
+      },
+      "informative_container": {
+        "value": "{core.color.azure.500.opa10}",
+        "type": "color",
+        "description": "Use on: Counter"
       }
     },
     "content": {
@@ -254,11 +271,13 @@
       },
       "on_warning_container": {
         "value": "{core.color.gold.200.solid}",
-        "type": "color"
+        "type": "color",
+        "description": "Use on: Counter"
       },
       "on_warning_container_subtle": {
         "value": "{core.color.gold.500.solid}",
-        "type": "color"
+        "type": "color",
+        "description": "Use on: Counter"
       },
       "on_warning_container_xsubtle": {
         "value": "{core.color.coolgray.700.solid}",
@@ -332,6 +351,23 @@
       "transparent": {
         "value": "{core.color.neutral.transparent}",
         "type": "color"
+      },
+      "on_Informative": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "on_Informative_hover": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "on_informative_container": {
+        "value": "{core.color.azure.100.solid}",
+        "type": "color",
+        "description": "Use on: Counter"
+      },
+      "on_Informative_pressed": {
+        "value": "{core.color.white.solid}",
+        "type": "color"
       }
     },
     "stroke": {
@@ -382,6 +418,11 @@
       "primary_pressed": {
         "value": "{core.color.azure.300.solid}",
         "type": "color"
+      },
+      "informative_container": {
+        "value": "{core.color.azure.100.opa40}",
+        "type": "color",
+        "description": "Use on: Counter"
       }
     },
     "shadow": {
@@ -1537,72 +1578,6 @@
       }
     },
     "Feedback": {
-      "Neutral": {
-        "Surface": {
-          "value": "{sys.bgcolor.neutralWhite}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "SurfaceStroke": {
-          "value": "{core.color.neutral.transparent}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "Text": {
-          "value": "{sys.content.on_neutral_subtle}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "Icon": {
-          "value": "{sys.content.on_neutral_subtle}",
-          "type": "color",
-          "description": "Use on: Counter"
-        }
-      },
-      "Warning": {
-        "Surface": {
-          "value": "{sys.bgcolor.warning_container}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "SurfaceStroke": {
-          "value": "{sys.stroke.warning_container}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "Text": {
-          "value": "{sys.content.on_warning_container}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "Icon": {
-          "value": "{sys.content.on_warning_container_subtle}",
-          "type": "color",
-          "description": "Use on: Counter"
-        }
-      },
-      "Error": {
-        "Surface": {
-          "value": "{sys.bgcolor.danger_container}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "SurfaceStroke": {
-          "value": "{sys.stroke.danger_container}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "Text": {
-          "value": "{sys.content.on_danger_container}",
-          "type": "color",
-          "description": "Use on: Counter"
-        },
-        "Icon": {
-          "value": "{sys.content.on_danger_container_subtle}",
-          "type": "color",
-          "description": "Use on: Counter"
-        }
-      },
       "Brand": {
         "Default": {
           "Shape": {
