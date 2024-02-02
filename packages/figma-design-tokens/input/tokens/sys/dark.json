@@ -239,7 +239,7 @@
         },
         "brand": {
           "rest": {
-            "value": "{sys.bgcolor.primary}",
+            "value": "{sys.bgcolor.bold.primary}",
             "type": "color"
           }
         }
@@ -405,19 +405,19 @@
       "CTA": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.bgcolor.cta}",
+            "value": "{sys.bgcolor.bold.cta}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.cta_hover}",
+            "value": "{sys.bgcolor.bold.cta_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.cta_pressed}",
+            "value": "{sys.bgcolor.bold.cta_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.cta}",
+            "value": "{sys.bgcolor.bold.cta}",
             "type": "color"
           },
           "Disabled": {
@@ -425,7 +425,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.bgcolor.cta}",
+            "value": "{sys.bgcolor.bold.cta}",
             "type": "color"
           }
         },
@@ -511,19 +511,19 @@
       "Primary": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.bgcolor.primary}",
+            "value": "{sys.bgcolor.bold.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.primary_hover}",
+            "value": "{sys.bgcolor.bold.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.primary_pressed}",
+            "value": "{sys.bgcolor.bold.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.primary}",
+            "value": "{sys.bgcolor.bold.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -531,7 +531,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.bgcolor.primary}",
+            "value": "{sys.bgcolor.bold.primary}",
             "type": "color"
           }
         },
@@ -617,19 +617,19 @@
       "Secondary": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.bgcolor.secondary}",
+            "value": "{sys.bgcolor.timid.secondary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.secondary_hover}",
+            "value": "{sys.bgcolor.timid.secondary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.secondary_pressed}",
+            "value": "{sys.bgcolor.timid.secondary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.secondary}",
+            "value": "{sys.bgcolor.timid.secondary}",
             "type": "color"
           },
           "Disabled": {
@@ -637,7 +637,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.bgcolor.secondary}",
+            "value": "{sys.bgcolor.timid.secondary}",
             "type": "color"
           }
         },
@@ -723,19 +723,19 @@
       "Silent": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.bgcolor.silent}",
+            "value": "{sys.bgcolor.timid.silent}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.silent_hover}",
+            "value": "{sys.bgcolor.timid.silent_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.silent_pressed}",
+            "value": "{sys.bgcolor.timid.silent_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.silent}",
+            "value": "{sys.bgcolor.timid.silent}",
             "type": "color"
           },
           "Disabled": {
@@ -743,7 +743,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.bgcolor.silent}",
+            "value": "{sys.bgcolor.timid.silent}",
             "type": "color"
           }
         },
@@ -829,19 +829,19 @@
       "Destructive": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.bgcolor.danger}",
+            "value": "{sys.bgcolor.bold.danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.danger_hover}",
+            "value": "{sys.bgcolor.bold.danger_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.danger_pressed}",
+            "value": "{sys.bgcolor.bold.danger_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.danger}",
+            "value": "{sys.bgcolor.bold.danger}",
             "type": "color"
           },
           "Disabled": {
@@ -849,7 +849,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.bgcolor.danger}",
+            "value": "{sys.bgcolor.bold.danger}",
             "type": "color"
           }
         },
@@ -935,19 +935,19 @@
       "Encourage": {
         "SurfaceFill": {
           "Rest": {
-            "value": "{sys.bgcolor.safe}",
+            "value": "{sys.bgcolor.bold.safe}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.safe_hover}",
+            "value": "{sys.bgcolor.bold.safe_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.safe_pressed}",
+            "value": "{sys.bgcolor.bold.safe_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.safe}",
+            "value": "{sys.bgcolor.bold.safe}",
             "type": "color"
           },
           "Disabled": {
@@ -955,7 +955,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.bgcolor.safe}",
+            "value": "{sys.bgcolor.bold.safe}",
             "type": "color"
           }
         },

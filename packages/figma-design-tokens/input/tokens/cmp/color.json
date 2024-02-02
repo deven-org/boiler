@@ -39,68 +39,68 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.bgcolor.primary_hover}",
+                "value": "{sys.bgcolor.bold.primary_hover}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.primary_pressed}",
+                "value": "{sys.bgcolor.bold.primary_pressed}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.bgcolor.danger}",
+                "value": "{sys.bgcolor.bold.danger}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color"
               }
             }
@@ -465,41 +465,41 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.primary_hover}",
+                "value": "{sys.bgcolor.bold.primary_hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.primary_pressed}",
+                "value": "{sys.bgcolor.bold.primary_pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.silent}",
+                "value": "{sys.bgcolor.timid.silent}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.silent_hover}",
+                "value": "{sys.bgcolor.timid.silent_hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.silent_pressed}",
+                "value": "{sys.bgcolor.timid.silent_pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.silent}",
+                "value": "{sys.bgcolor.timid.silent}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_off}",
+                "value": "{sys.bgcolor.timid.disabled}",
                 "type": "color"
               }
             }
@@ -694,32 +694,32 @@
           "BackgroundColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.bgcolor.primary_hover}",
+                "value": "{sys.bgcolor.bold.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.primary_pressed}",
+                "value": "{sys.bgcolor.bold.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutralWhite}",
+                "value": "{sys.bgcolor.container.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
@@ -731,32 +731,32 @@
             },
             "Active": {
               "Rest": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.bgcolor.primary_hover}",
+                "value": "{sys.bgcolor.bold.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.primary_pressed}",
+                "value": "{sys.bgcolor.bold.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
@@ -770,32 +770,32 @@
           "BorderColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.bgcolor.primary_hover}",
+                "value": "{sys.bgcolor.bold.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.primary_pressed}",
+                "value": "{sys.bgcolor.bold.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
@@ -807,32 +807,32 @@
             },
             "Active": {
               "Rest": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.bgcolor.primary_hover}",
+                "value": "{sys.bgcolor.bold.primary_hover}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.primary_pressed}",
+                "value": "{sys.bgcolor.bold.primary_pressed}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.bgcolor.primary}",
+                "value": "{sys.bgcolor.bold.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
@@ -924,32 +924,32 @@
         "Shape": {
           "BackgroundColor": {
             "Rest": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
             },
             "Hover": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
             },
             "Pressed": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
             },
             "Focus": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
             },
             "Disabled": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
             },
             "ReadOnly": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
             },
@@ -1006,7 +1006,7 @@
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.secondary}",
+              "value": "{sys.bgcolor.timid.secondary}",
               "type": "color"
             }
           },
@@ -1016,7 +1016,7 @@
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.neutral_dimmed}",
+              "value": "{sys.bgcolor.container.disabled}",
               "type": "color"
             }
           }
@@ -1030,7 +1030,7 @@
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.secondary}",
+              "value": "{sys.bgcolor.timid.secondary}",
               "type": "color"
             }
           },
@@ -1040,7 +1040,7 @@
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.neutral_dimmed}",
+              "value": "{sys.bgcolor.container.disabled}",
               "type": "color"
             }
           }
@@ -1048,21 +1048,21 @@
         "BackgroundColor": {
           "Default": {
             "Active": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color"
             }
           },
           "Mute": {
             "Active": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.neutralWhite}",
+              "value": "{sys.bgcolor.container.neutral}",
               "type": "color"
             }
           }
@@ -1085,23 +1085,23 @@
       "Container": {
         "BackgroundColor": {
           "Rest": {
-            "value": "{sys.bgcolor.silent}",
+            "value": "{sys.bgcolor.timid.silent}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.silent_hover}",
+            "value": "{sys.bgcolor.timid.silent_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.silent_pressed}",
+            "value": "{sys.bgcolor.timid.silent_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.silent}",
+            "value": "{sys.bgcolor.timid.silent}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.neutral_off}",
+            "value": "{sys.bgcolor.timid.disabled}",
             "type": "color"
           }
         },
@@ -1353,7 +1353,7 @@
     "Tooltip": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.bgcolor.inverted}",
+          "value": "{sys.surface.inverted}",
           "type": "color"
         },
         "Elevation": {
@@ -1376,64 +1376,64 @@
           "BackgroundColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.neutralInteractive}",
+                "value": "{sys.bgcolor.bold.inactive}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.bgcolor.neutralInteractive_hover}",
+                "value": "{sys.bgcolor.bold.inactive_hover}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.neutralInteractive_pressed}",
+                "value": "{sys.bgcolor.bold.inactive_pressed}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.bgcolor.neutralInteractive}",
+                "value": "{sys.bgcolor.bold.inactive}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.bgcolor.safe}",
+                "value": "{sys.bgcolor.bold.safe}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
               },
               "Hover": {
-                "value": "{sys.bgcolor.safe_hover}",
+                "value": "{sys.bgcolor.bold.safe_hover}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.safe_pressed}",
+                "value": "{sys.bgcolor.bold.safe_pressed}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
               },
               "Focus": {
-                "value": "{sys.bgcolor.safe}",
+                "value": "{sys.bgcolor.bold.safe}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.neutral_dimmed}",
+                "value": "{sys.bgcolor.container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
               }
