@@ -1086,19 +1086,19 @@
           },
           "Label": {
             "Rest": {
-              "value": "{sys.content.on_neutral}",
+              "value": "{sys.content.on_container.neutral}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_neutral}",
+              "value": "{sys.content.on_container.neutral}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_neutral}",
+              "value": "{sys.content.on_container.neutral}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_neutral}",
+              "value": "{sys.content.on_container.neutral}",
               "type": "color"
             },
             "Disabled": {
@@ -1108,19 +1108,19 @@
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Disabled": {
@@ -1130,19 +1130,19 @@
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color"
             },
             "Disabled": {
@@ -1248,19 +1248,19 @@
     "Forms": {
       "Label": {
         "Rest": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Hover": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Focus": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Disabled": {
@@ -1268,7 +1268,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Error": {
@@ -1282,26 +1282,26 @@
           "type": "color"
         },
         "Hint": {
-          "value": "{sys.content.on_neutral_subtle}",
+          "value": "{sys.content.on_surface.subtle}",
           "type": "color"
         }
       },
       "UserInput": {
         "Default": {
           "Rest": {
-            "value": "{sys.content.on_neutral}",
+            "value": "{sys.content.on_container.neutral}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_neutral}",
+            "value": "{sys.content.on_container.neutral}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_neutral}",
+            "value": "{sys.content.on_container.neutral}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_neutral}",
+            "value": "{sys.content.on_container.neutral}",
             "type": "color"
           },
           "Disabled": {
@@ -1498,7 +1498,7 @@
       },
       "Legend": {
         "Default": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Disabled": {
@@ -1506,7 +1506,7 @@
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         },
         "Error": {
@@ -1518,22 +1518,22 @@
         "OnPopulatedField": {
           "Default": {
             "Rest": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
@@ -1543,29 +1543,29 @@
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "ReadOnly": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
           },
           "Error": {
             "Rest": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_neutral_subtle}",
+              "value": "{sys.content.on_surface.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
@@ -1648,12 +1648,12 @@
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{sys.content.on_neutral_subtle}",
+          "value": "{sys.content.on_surface.subtle}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{sys.content.on_neutral_subtle}",
+          "value": "{sys.content.on_surface.subtle}",
           "type": "color",
           "description": "Use on: Counter"
         }
@@ -1736,13 +1736,13 @@
     "UI": {
       "Headline": {
         "Default": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         }
       },
       "Paragraph": {
         "Default": {
-          "value": "{sys.content.on_neutral}",
+          "value": "{sys.content.on_container.neutral}",
           "type": "color"
         }
       },

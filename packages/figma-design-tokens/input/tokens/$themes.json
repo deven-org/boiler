@@ -1606,8 +1606,6 @@
       "sys.bgcolor.container.warning": "438e0d088601c55c7773658a55ad63ffb1f5ea1e",
       "sys.bgcolor.container.safe": "c3981a1e4b150ec1828c159d9e16f947d271d631",
       "sys.bgcolor.container.informative": "14e3298b428be39ae46e74b5e2387eb07c8aecef",
-      "sys.content.on_neutral": "e73c3a35afacbc2fc3be0623a8266b5b3e075813",
-      "sys.content.on_neutral_subtle": "abe5f563312a61618fe9968687436aa58fd41bd8",
       "sys.content.on_neutral_xsubtle": "7e95dfa2db6f69e8178133b4745473c636acf439",
       "sys.content.on_neutral_xsubtle_hover": "f4a2e49dff29971f1936705ccefc1ca3a1ec04e5",
       "sys.content.on_neutral_xsubtle_pressed": "9664d52be4cf515b10e87be79e947ac067c8b4d1",
@@ -1707,7 +1705,9 @@
       "sys.surface.inverted": "0d01bc13e552a089b700ffb1e1ed06660d5e2451",
       "sys.bgcolor.bold.inactive": "6403409db062e5c5d364148fec667254bb10277e",
       "sys.bgcolor.bold.inactive_hover": "6e00de4d32eeaa5d6f877c2f9365243331f25fe2",
-      "sys.bgcolor.bold.inactive_pressed": "8407ad49ca96df13aec4cea5e5e889d2f18b8061"
+      "sys.bgcolor.bold.inactive_pressed": "8407ad49ca96df13aec4cea5e5e889d2f18b8061",
+      "sys.content.on_container.neutral": "e73c3a35afacbc2fc3be0623a8266b5b3e075813",
+      "sys.content.on_surface.subtle": "abe5f563312a61618fe9968687436aa58fd41bd8"
     },
     "group": "Theme"
   },
