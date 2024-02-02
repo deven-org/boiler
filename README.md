@@ -10,15 +10,15 @@
   - [:star: Introduction](#star-introduction)
     - [Benefits of B01LER](#benefits-of-b01ler)
     - [Common misconceptions](#common-misconceptions)
-      - [1. Web Components are not accessible](#1-web-components-are-not-accessible)
+      - [Accessibility of Web Components](#accessibility-of-web-components)
   - [:art: Resources](#art-resources)
   - [:tipping_hand_person: Help & Feedback](#tipping_hand_person-help--feedback)
-    - [Discussion Board](#github-discussion-board)
     - [Slack](#slack)
     - [Teams](#teams)
     - [Email](#email)
     - [B01LER Monthly](#b01ler-monthly)
-    - [Feedback](#feedback)
+    - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
+    - [Report an issue](#report-an-issue)
   - [:gear: Requirements](#gear-requirements)
   - [:rocket: How to start](#rocket-how-to-start)
     - [Installation](#installation)
@@ -50,7 +50,7 @@ Overall, B01LER is a powerful tool that helps you work smarter, not harder. By s
 5. Immense cost savings, because the DS ramp-up phase is reduced from multiple months to days
 
 ### Common misconceptions
-#### 1. Web Components are not accessible
+#### Accessibility of Web Components
 Some articles claim, that Web Components are not accessible or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
 
 
@@ -60,9 +60,6 @@ Some articles claim, that Web Components are not accessible or that they are not
 
 
 ## :tipping_hand_person: Help & Feedback
-### Github Discussion Board
-Please have a look at our [Github discussion board](https://github.com/deven-org/B01LER-Kitchen/discussions) to raise questions or start a discussion about a future feature.
-
 ### Slack
 Slack is our main internal communications channel and will most likely be the place where you can reach us best. Join the 
 [#boiler](https://song-asg.slack.com/archives/C062PQ9DJTD) channel and say hi 👋 (you need to be part of the Accenture 
@@ -81,8 +78,12 @@ Join the B01LER Monthly Session and ask questions, if you have any. The session 
 each month from 4 PM to 4:30 PM (CET). You can add the session to your calendar by following the guide in the pinned 
 post of our dedicated [Teams channel](https://teams.microsoft.com/l/channel/19%3Aca0a1284d8b34c62b80e983ca3af7934%40thread.tacv2/Monthly%20Session?groupId=2d176fa2-6d3a-4c70-a986-d05b5977678f&tenantId=e0793d39-0939-496d-b129-198edd916feb) for the session (you need to be part of the Accenture Org to join).
 
-### Feedback
-Link to Feedback-Form will be added with [issue #428](https://github.com/deven-org/B01LER-Kitchen/issues/428).
+### Questions, feedback or feature requests?
+We are happy about anyone who wants to participate in our community. To ask questions or give us feedback please [open a discussion on GitHub](https://github.com/deven-org/B01LER-Kitchen/discussions). For feature requests please use our [feature request template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Aenhancement&projects=deven-org%2F3&template=2_feature_request.yaml&title=%5BFeature+Request%5D%3A+).
+
+### Report an issue
+Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation.
+In case you discover a security vulnerability please review our [security policy](https://github.com/deven-org/B01LER-Kitchen/security/policy) for more details on how report it.
 
 
 ## :gear: Requirements
