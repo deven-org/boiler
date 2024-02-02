@@ -252,7 +252,7 @@
       "Container": {
         "BorderColor": {
           "Neutral": {
-            "value": "{sys.bgcolor.informative_container}",
+            "value": "{sys.bgcolor.container.informative}",
             "type": "color"
           },
           "Warning": {
@@ -266,15 +266,15 @@
         },
         "BackgroundColor": {
           "Neutral": {
-            "value": "{sys.bgcolor.informative_container}",
+            "value": "{sys.bgcolor.container.informative}",
             "type": "color"
           },
           "Warning": {
-            "value": "{sys.bgcolor.warning_container}",
+            "value": "{sys.bgcolor.container.warning}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.bgcolor.danger_container}",
+            "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           }
         }
@@ -954,7 +954,7 @@
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
             },
             "Error": {
-              "value": "{sys.bgcolor.danger_container}",
+              "value": "{sys.bgcolor.container.danger}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
             }

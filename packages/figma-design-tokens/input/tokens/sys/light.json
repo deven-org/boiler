@@ -115,9 +115,24 @@
         "value": "{core.color.crimson.300.solid}",
         "type": "color"
       },
-      "danger_container": {
-        "value": "{core.color.crimson.800.opa10}",
-        "type": "color"
+      "container": {
+        "danger": {
+          "value": "{core.color.crimson.800.opa10}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{core.color.gold.500.opa10}",
+          "type": "color"
+        },
+        "safe": {
+          "value": "{core.color.limegreen.500.opa10}",
+          "type": "color"
+        },
+        "informative": {
+          "value": "{core.color.azure.500.opa10}",
+          "type": "color",
+          "description": "Use on: Counter"
+        }
       },
       "warning": {
         "value": "{core.color.gold.500.solid}",
@@ -129,10 +144,6 @@
       },
       "warning_pressed": {
         "value": "{core.color.gold.300.solid}",
-        "type": "color"
-      },
-      "warning_container": {
-        "value": "{core.color.gold.500.opa10}",
         "type": "color"
       },
       "safe": {
@@ -158,11 +169,6 @@
       "informative_pressed": {
         "value": "{core.color.coolgray.200.solid}",
         "type": "color"
-      },
-      "informative_container": {
-        "value": "{core.color.azure.500.opa10}",
-        "type": "color",
-        "description": "Use on: Counter"
       }
     },
     "content": {
@@ -1349,19 +1355,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.bgcolor.danger_container}",
+            "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.danger_container}",
+            "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.danger_container}",
+            "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.danger_container}",
+            "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           }
         }

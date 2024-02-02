@@ -1634,11 +1634,11 @@
       "sys.surface.level_1": "4e149ba6acb0a17dd4f215fa57f08b51379580d5",
       "sys.surface.level_2": "9492b8eb4837f9c6f8574490d468b26e24a2e3f0",
       "sys.surface.blanket": "ade4c01173156ea95f71681a0b66620908d334c2",
-      "sys.bgcolor.informative_container": "dd0e417c12d30ba023e2dd6c21be675c45d8a4be",
       "sys.stroke.informative_container": "eb3dbe32752196f2204cda1534bb569039dd7046",
       "sys.content.on_informative_container": "469e1d1f70afdb1f852c6472576d47791079447a",
       "sys.content.on_warning_container": "233542fb03ba7fb90185f1e864bda928b079a9b8",
-      "sys.content.on_warning_container_subtle": "6738fb49c72104c4a6cf5cda4b788b808cd3a415"
+      "sys.content.on_warning_container_subtle": "6738fb49c72104c4a6cf5cda4b788b808cd3a415",
+      "sys.bgcolor.container.informative": "dd0e417c12d30ba023e2dd6c21be675c45d8a4be"
     },
     "group": "Theme"
   },
@@ -2311,10 +2311,8 @@
       "sys.surface.level_2": "9492b8eb4837f9c6f8574490d468b26e24a2e3f0",
       "sys.surface.blanket": "ade4c01173156ea95f71681a0b66620908d334c2",
       "sys.stroke.warning_container__": "2887d03f38394234dc6edeb95726926ec07cec1e",
-      "sys.bgcolor.informative_container": "dd0e417c12d30ba023e2dd6c21be675c45d8a4be",
       "sys.stroke.informative_container": "eb3dbe32752196f2204cda1534bb569039dd7046",
       "sys.content.on_informative_container": "469e1d1f70afdb1f852c6472576d47791079447a",
-      "sys.bgcolor.warning_container": "a62c4df7837e3efa41a7f10854c6d9bc0ae49155",
       "sys.bgcolor.danger_container__": "f5d7c9ea8b75b191078bcc16f98163cd2776540a",
       "sys.stroke.danger_container__": "c0f58c7d23543a1bd3eaabd8f3ce008ab7ff8952",
       "sys.content.on_danger_container_subtle__": "88158fcaba7ff97e6e97ce8b61ff043146707e66",
@@ -2322,7 +2320,9 @@
       "sys.content.informative_subtle__": "9711e9428782670c2d4b4f442054655bda22b7f4",
       "sys.content.informative__": "74ffe1327b4d3235af571d0df7c02ee97ca57fe1",
       "sys.content.informative_inverted_subtle__": "19a6be490b5bcf82bf348770ba89dc7194a59e4e",
-      "sys.content.informative_inverted__": "79e40c9f2e71475adbf183919403ca1af965d15c"
+      "sys.content.informative_inverted__": "79e40c9f2e71475adbf183919403ca1af965d15c",
+      "sys.bgcolor.container.warning": "a62c4df7837e3efa41a7f10854c6d9bc0ae49155",
+      "sys.bgcolor.container.informative": "dd0e417c12d30ba023e2dd6c21be675c45d8a4be"
     },
     "group": "Theme"
   },
