@@ -117,19 +117,19 @@
       },
       "container": {
         "danger": {
-          "value": "{core.color.crimson.800.opa10}",
+          "value": "{core.color.crimson.950.solid}",
           "type": "color"
         },
         "warning": {
-          "value": "{core.color.gold.500.opa10}",
+          "value": "{core.color.gold.950.solid}",
           "type": "color"
         },
         "safe": {
-          "value": "{core.color.limegreen.500.opa10}",
+          "value": "{core.color.limegreen.950.solid}",
           "type": "color"
         },
         "informative": {
-          "value": "{core.color.azure.500.opa10}",
+          "value": "{core.color.azure.950.solid}",
           "type": "color",
           "description": "Use on: Counter"
         }
