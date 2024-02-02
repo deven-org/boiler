@@ -183,57 +183,57 @@
     "content": {
       "on_container": {
         "neutral": {
-          "value": "{sys.neutrals.neutral}",
+          "value": "{sys.neutrals.100}",
           "type": "color",
           "description": "Forms"
         },
         "subtle": {
-          "value": "{sys.neutrals.subtle}",
+          "value": "{sys.neutrals.200}",
           "type": "color",
-          "description": "for prefix, suffix"
+          "description": "for prefix, suffix while input is filled or focused"
+        },
+        "xsubtle": {
+          "value": "{sys.neutrals.400}",
+          "type": "color",
+          "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
+        },
+        "xsubtle_hover": {
+          "value": "{sys.neutrals.300}",
+          "type": "color"
+        },
+        "xsubtle_pressed": {
+          "value": "{sys.neutrals.200}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{sys.neutrals.500}",
+          "type": "color",
+          "description": "use for disabled states"
         }
       },
       "on_timid": {
         "neutral": {
-          "value": "{sys.neutrals.neutral}",
+          "value": "{sys.neutrals.100}",
           "type": "color",
           "description": "Forms"
         },
         "subtle": {
-          "value": "{sys.neutrals.subtle}",
+          "value": "{sys.neutrals.200}",
           "type": "color",
           "description": "for prefix, suffix"
         }
       },
       "on_surface": {
         "neutral": {
-          "value": "{sys.neutrals.neutral}",
+          "value": "{sys.neutrals.100}",
           "type": "color",
           "description": "Forms"
         },
         "subtle": {
-          "value": "{sys.neutrals.subtle}",
+          "value": "{sys.neutrals.200}",
           "type": "color",
           "description": "use for captions, legends and alike"
         }
-      },
-      "on_neutral_xsubtle": {
-        "value": "{core.color.coolgray.700.solid}",
-        "type": "color",
-        "description": "use for secondary elements on inputs as placeholder, inputIcon, prefix, suffix"
-      },
-      "on_neutral_xsubtle_hover": {
-        "value": "{core.color.coolgray.600.solid}",
-        "type": "color"
-      },
-      "on_neutral_xsubtle_pressed": {
-        "value": "{core.color.coolgray.500.solid}",
-        "type": "color"
-      },
-      "on_neutral_xxsubtle": {
-        "value": "{core.color.coolgray.800.solid}",
-        "type": "color",
-        "description": "use for disabled states"
       },
       "on_neutral_danger": {
         "value": "{core.color.crimson.500.solid}",
@@ -412,15 +412,27 @@
       }
     },
     "neutrals": {
-      "neutral": {
+      "100": {
         "value": "{core.color.coolgray.100.solid}",
         "type": "color",
-        "description": "Forms"
+        "description": "use for content neutral"
       },
-      "subtle": {
+      "200": {
         "value": "{core.color.coolgray.400.solid}",
         "type": "color",
-        "description": "for prefix, suffix"
+        "description": "use for content subtle"
+      },
+      "300": {
+        "value": "{core.color.coolgray.600.solid}",
+        "type": "color"
+      },
+      "400": {
+        "value": "{core.color.coolgray.700.solid}",
+        "type": "color"
+      },
+      "500": {
+        "value": "{core.color.coolgray.800.solid}",
+        "type": "color"
       }
     },
     "stroke": {
@@ -574,7 +586,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -600,7 +612,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -680,7 +692,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -706,7 +718,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -786,7 +798,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -812,7 +824,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -892,7 +904,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -918,7 +930,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -998,7 +1010,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1024,7 +1036,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1097,7 +1109,7 @@
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color"
             }
           },
@@ -1119,7 +1131,7 @@
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color"
             }
           },
@@ -1141,7 +1153,7 @@
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color"
             }
           }
@@ -1259,7 +1271,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.on_neutral_xxsubtle}",
+          "value": "{sys.content.on_container.disabled}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1300,7 +1312,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "ReadOnly": {
@@ -1330,27 +1342,27 @@
       "Placeholder": {
         "Default": {
           "Rest": {
-            "value": "{sys.content.on_neutral_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_neutral_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_neutral_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_neutral_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.content.on_neutral_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           }
         },
@@ -1467,23 +1479,23 @@
       },
       "InputIcon": {
         "Rest": {
-          "value": "{sys.content.on_neutral_xsubtle}",
+          "value": "{sys.content.on_container.xsubtle}",
           "type": "color"
         },
         "Hover": {
-          "value": "{sys.content.on_neutral_xsubtle_hover}",
+          "value": "{sys.content.on_container.xsubtle_hover}",
           "type": "color"
         },
         "Pressed": {
-          "value": "{sys.content.on_neutral_xsubtle_pressed}",
+          "value": "{sys.content.on_container.xsubtle_pressed}",
           "type": "color"
         },
         "Focus": {
-          "value": "{sys.content.on_neutral_xsubtle}",
+          "value": "{sys.content.on_container.xsubtle}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.on_neutral_xxsubtle}",
+          "value": "{sys.content.on_container.disabled}",
           "type": "color"
         },
         "Error": {
@@ -1497,7 +1509,7 @@
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.on_neutral_xxsubtle}",
+          "value": "{sys.content.on_container.disabled}",
           "type": "color"
         },
         "ReadOnly": {
@@ -1533,7 +1545,7 @@
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Disabled": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
@@ -1569,32 +1581,32 @@
         "OnEmptyField": {
           "Default": {
             "Rest": {
-              "value": "{sys.content.on_neutral_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_neutral_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_neutral_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_neutral_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Disabled": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "ReadOnly": {
-              "value": "{sys.content.on_neutral_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }

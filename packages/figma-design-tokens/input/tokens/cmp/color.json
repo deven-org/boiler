@@ -199,7 +199,7 @@
                 "description": "also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
@@ -585,7 +585,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color"
               }
             }
@@ -629,7 +629,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color"
               }
             }
@@ -673,7 +673,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color"
               }
             }
@@ -905,7 +905,7 @@
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xsubtle}",
+                "value": "{sys.content.on_container.xsubtle}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
               },
@@ -1012,7 +1012,7 @@
           },
           "Mute": {
             "Active": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color"
             },
             "Inactive": {
@@ -1036,7 +1036,7 @@
           },
           "Mute": {
             "Active": {
-              "value": "{sys.content.on_neutral_xxsubtle}",
+              "value": "{sys.content.on_container.disabled}",
               "type": "color"
             },
             "Inactive": {
@@ -1075,7 +1075,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_neutral_xxsubtle}",
+            "value": "{sys.content.on_container.disabled}",
             "type": "color"
           }
         }
@@ -1201,7 +1201,7 @@
                 "description": "Apply as fill on HightlightLine"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               }
@@ -1292,7 +1292,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1341,7 +1341,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1510,32 +1510,32 @@
           "IconColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1562,12 +1562,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1598,12 +1598,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1630,12 +1630,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.on_neutral_xxsubtle}",
+                "value": "{sys.content.on_container.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
               }
