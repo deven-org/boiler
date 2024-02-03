@@ -20,7 +20,6 @@ export const { tokenizedLight: captionLight, tokenizedDark: captionDark } = rend
         gap: ${CaptionComponent.Container.ItemSpacing.SM};
 
         .blr-icon {
-          padding-top: ${CaptionComponent.IconWrapper.PaddingTop.SM};
           height: ${CaptionComponent.Icon.IconSize.SM};
           width: ${CaptionComponent.Icon.IconSize.SM};
         }
