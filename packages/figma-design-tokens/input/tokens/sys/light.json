@@ -1223,12 +1223,6 @@
       }
     },
     "Forms": {
-      "Caption": {
-        "Hint": {
-          "value": "{sys.content.on_surface.subtle}",
-          "type": "color"
-        }
-      },
       "UserInput": {
         "Default": {
           "Rest": {

@@ -11,7 +11,7 @@
       "Text": {
         "TextColor": {
           "Hint": {
-            "value": "{sem.Forms.Caption.Hint}",
+            "value": "{sys.content.on_surface.subtle}",
             "type": "color"
           },
           "Error": {
@@ -23,7 +23,7 @@
       "Icon": {
         "IconColor": {
           "Hint": {
-            "value": "{sem.Forms.Caption.Hint}",
+            "value": "{sys.content.on_surface.subtle}",
             "type": "color"
           },
           "Error": {
