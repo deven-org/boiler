@@ -1116,10 +1116,6 @@
       "cmp.Menu.MenuItem.ItemLabel.TextColor.Inactive.Pressed": "0a1e05c1eced51d143aba63745bfb0548aa04d49",
       "cmp.Menu.MenuItem.ItemLabel.TextColor.Inactive.Focus": "673ded27dc8b8d593ea2dbbe9bfae8725a7b66d5",
       "cmp.Menu.MenuItem.ItemLabel.TextColor.Inactive.Disabled": "d05823690787eb9d1f01ae7b794701b36c2df385",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Rest": "12ef4d58b3b3380ca65edd61fd3df2e957481a37",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Hover": "ab240e64864da8e3583080487d6aded88ba58363",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Pressed": "6d6a2736de73281af8f2ce34284f868f95eadc40",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Focus": "bf71b533196d3c803171a6b28428ff60f8b2b575",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Inactive.Rest": "ff6356743084f6831846604b19757498d3baf7fe",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Inactive.Hover": "ef9493a456b8129b0e465dd926a7d6bdeb49e400",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Inactive.Pressed": "8f7ad5aca56631606ef18fe0a860a536afc105f7",
@@ -1698,7 +1694,11 @@
       "sys.content.on_any.informative_inverted": "00ebc43f1998713c5d9e5c6ce562e43aca364c81",
       "sys.content.on_surface.inverted": "372382c514108ad0b7f9f41b7f24d2257b779f94",
       "sys.content.on_surface.inverted_subtle": "d0437386b64294f3cbb50c3a1762aa30c770eb31",
-      "sys.bgcolor.transparent": "1a0b4d0ef81bcd26e70b92fcc6e04f91130c6ce8"
+      "sys.bgcolor.transparent": "1a0b4d0ef81bcd26e70b92fcc6e04f91130c6ce8",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Rest": "12ef4d58b3b3380ca65edd61fd3df2e957481a37",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Hover": "ab240e64864da8e3583080487d6aded88ba58363",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Pressed": "6d6a2736de73281af8f2ce34284f868f95eadc40",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Focus": "bf71b533196d3c803171a6b28428ff60f8b2b575"
     },
     "group": "Theme"
   },
@@ -1827,10 +1827,6 @@
       "cmp.Menu.MenuItem.ItemLabel.TextColor.Inactive.Pressed": "0a1e05c1eced51d143aba63745bfb0548aa04d49",
       "cmp.Menu.MenuItem.ItemLabel.TextColor.Inactive.Focus": "673ded27dc8b8d593ea2dbbe9bfae8725a7b66d5",
       "cmp.Menu.MenuItem.ItemLabel.TextColor.Inactive.Disabled": "d05823690787eb9d1f01ae7b794701b36c2df385",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Rest": "12ef4d58b3b3380ca65edd61fd3df2e957481a37",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Hover": "ab240e64864da8e3583080487d6aded88ba58363",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Pressed": "6d6a2736de73281af8f2ce34284f868f95eadc40",
-      "cmp.Menu.MenuItem.ItemDescription.Active.Focus": "bf71b533196d3c803171a6b28428ff60f8b2b575",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Inactive.Rest": "ff6356743084f6831846604b19757498d3baf7fe",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Inactive.Hover": "ef9493a456b8129b0e465dd926a7d6bdeb49e400",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Inactive.Pressed": "8f7ad5aca56631606ef18fe0a860a536afc105f7",
@@ -2676,7 +2672,11 @@
       "sem-copy.UI.Headline.Default": "6b6fab8ff49eccf562c88488d1d02a9368e55e85",
       "sem-copy.UI.Paragraph.Default": "f17befdc28ba7d134880eb7fb0f0d386fa876b46",
       "sem-copy.UI.Background.Level_1": "04955ea76679c1bc713e02aa16ea5d0734bf5044",
-      "sem-copy.UI.Background.Level_2": "d291704f3e6f4b597c9cd3829f76e19266a414ac"
+      "sem-copy.UI.Background.Level_2": "d291704f3e6f4b597c9cd3829f76e19266a414ac",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Rest": "12ef4d58b3b3380ca65edd61fd3df2e957481a37",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Hover": "ab240e64864da8e3583080487d6aded88ba58363",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Pressed": "6d6a2736de73281af8f2ce34284f868f95eadc40",
+      "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Focus": "bf71b533196d3c803171a6b28428ff60f8b2b575"
     },
     "group": "Theme"
   },

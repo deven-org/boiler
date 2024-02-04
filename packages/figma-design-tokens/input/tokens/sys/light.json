@@ -1223,32 +1223,6 @@
       }
     },
     "Forms": {
-      "Label": {
-        "Rest": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        },
-        "Hover": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        },
-        "Pressed": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        },
-        "Focus": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{sys.content.on_container.disabled}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        }
-      },
       "Caption": {
         "Hint": {
           "value": "{sys.content.on_surface.subtle}",
