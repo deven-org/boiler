@@ -243,6 +243,10 @@
           "value": "{sys.neutrals.500}",
           "type": "color",
           "description": "use for disabled states"
+        },
+        "danger": {
+          "value": "{core.color.crimson.500.solid}",
+          "type": "color"
         }
       },
       "on_bold": {
@@ -263,10 +267,6 @@
           "value": "{core.color.white.solid}",
           "type": "color"
         }
-      },
-      "on_neutral_danger": {
-        "value": "{core.color.crimson.500.solid}",
-        "type": "color"
       },
       "on_neutral_primary": {
         "value": "{sys.bgcolor.bold.primary}",
@@ -1246,17 +1246,9 @@
         "ReadOnly": {
           "value": "{sys.content.on_container.neutral}",
           "type": "color"
-        },
-        "Error": {
-          "value": "{sys.content.on_neutral_danger}",
-          "type": "color"
         }
       },
       "Caption": {
-        "Error": {
-          "value": "{sys.content.on_neutral_danger}",
-          "type": "color"
-        },
         "Hint": {
           "value": "{sys.content.on_surface.subtle}",
           "type": "color"
@@ -1469,24 +1461,6 @@
         },
         "Error": {
           "value": "{sys.content.on_danger_container_subtle}",
-          "type": "color"
-        }
-      },
-      "Legend": {
-        "Default": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{sys.content.on_container.disabled}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{sys.content.on_container.neutral}",
-          "type": "color"
-        },
-        "Error": {
-          "value": "{sys.content.on_neutral_danger}",
           "type": "color"
         }
       },

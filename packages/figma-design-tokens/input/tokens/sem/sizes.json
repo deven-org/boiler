@@ -466,11 +466,6 @@
             "type": "spacing"
           }
         },
-        "Legend": {
-          "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        },
         "Placeholder": {
           "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
           "type": "typography"
@@ -509,11 +504,6 @@
             "type": "spacing"
           }
         },
-        "Legend": {
-          "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        },
         "Placeholder": {
           "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
           "type": "typography"
@@ -551,11 +541,6 @@
             "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
             "type": "spacing"
           }
-        },
-        "Legend": {
-          "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
         },
         "Placeholder": {
           "value": "{core.typography.sourceSansPro.regular.125FixHeight}",

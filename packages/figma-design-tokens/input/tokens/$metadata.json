@@ -3,7 +3,6 @@
     "core/COR",
     "sys/light",
     "sys/dark",
-    "sem/color",
     "sem/sizes",
     "sem/sizeVariants",
     "cmp/color",

@@ -15,7 +15,7 @@
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Forms.Caption.Error}",
+            "value": "{sys.content.on_surface.danger}",
             "type": "color"
           }
         }
@@ -27,7 +27,7 @@
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Forms.Caption.Error}",
+            "value": "{sys.content.on_surface.danger}",
             "type": "color"
           }
         }
@@ -357,7 +357,7 @@
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Forms.Label.Error}",
+            "value": "{sys.content.on_surface.danger}",
             "type": "color"
           }
         }
@@ -389,7 +389,7 @@
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Forms.Label.Error}",
+            "value": "{sys.content.on_surface.danger}",
             "type": "color"
           }
         }
@@ -421,7 +421,7 @@
             "type": "color"
           },
           "Error": {
-            "value": "{sem.Forms.Label.Error}",
+            "value": "{sys.content.on_surface.danger}",
             "type": "color"
           }
         }
@@ -1706,6 +1706,26 @@
               }
             }
           }
+        }
+      }
+    },
+    "Fieldset": {
+      "Legend": {
+        "Default": {
+          "value": "{sys.content.on_surface.neutral}",
+          "type": "color"
+        },
+        "Disabled": {
+          "value": "{sys.content.on_surface.disabled}",
+          "type": "color"
+        },
+        "ReadOnly": {
+          "value": "{sys.content.on_surface.neutral}",
+          "type": "color"
+        },
+        "Error": {
+          "value": "{sys.content.on_surface.danger}",
+          "type": "color"
         }
       }
     }

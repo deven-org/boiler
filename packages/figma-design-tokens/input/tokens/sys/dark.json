@@ -1272,13 +1272,13 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.on_neutral_danger}",
+          "value": "{sys.content.on_container.danger}",
           "type": "color"
         }
       },
       "Caption": {
         "Error": {
-          "value": "{sys.content.on_neutral_danger}",
+          "value": "{sys.content.on_container.danger}",
           "type": "color"
         },
         "Hint": {
@@ -1510,7 +1510,7 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.on_neutral_danger}",
+          "value": "{sys.content.on_container.danger}",
           "type": "color"
         }
       },

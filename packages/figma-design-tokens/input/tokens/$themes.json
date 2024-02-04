@@ -998,7 +998,6 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "cmp/color": "enabled",
-      "sem/color": "enabled",
       "sys/light": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28:985",
@@ -1504,8 +1503,6 @@
       "sem.Forms.Label.Focus": "c8cbfd5b4cb6a2c9d2ec1cf2a316d8c09118f0db",
       "sem.Forms.Label.Disabled": "7242e8d1061c42b8ca74a0731b7ce0cb787e8ca2",
       "sem.Forms.Label.ReadOnly": "88c9e56c350cc1b17a66969dcbcbfe435e994457",
-      "sem.Forms.Label.Error": "ae4af1ef857f0ced14b9d43664bf5226d2681e4d",
-      "sem.Forms.Caption.Error": "6dda73b98ae99aa3d15fa527c6d25b41d8d8d39c",
       "sem.Forms.Caption.Hint": "4ded8dcbf8a548d2dd37bdf23c9f7e44c5d6ad43",
       "sem.Forms.UserInput.Default.Rest": "04f79ce5d013ce1ff5debae64690c275a63507fb",
       "sem.Forms.UserInput.Default.Hover": "45907e11c26f19fa9b1677ad2380fcc88198821d",
@@ -1606,7 +1603,6 @@
       "sys.bgcolor.container.warning": "438e0d088601c55c7773658a55ad63ffb1f5ea1e",
       "sys.bgcolor.container.safe": "c3981a1e4b150ec1828c159d9e16f947d271d631",
       "sys.bgcolor.container.informative": "14e3298b428be39ae46e74b5e2387eb07c8aecef",
-      "sys.content.on_neutral_danger": "fd3118cadc73988d241e092d47dfd9ada6ae866b",
       "sys.content.on_neutral_primary": "c25462e7f33460435addecb5fd31101a066911b7",
       "sys.content.on_primary_subtle": "a98e537f9aec277abc1c56abccbfb73713ed1390",
       "sys.content.on_secondary": "1cffcd4bd0daf5eb219fd8f45c3552985971e65d",
@@ -1718,7 +1714,6 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "cmp/color": "enabled",
-      "sem/color": "enabled",
       "sys/dark": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28:985",
