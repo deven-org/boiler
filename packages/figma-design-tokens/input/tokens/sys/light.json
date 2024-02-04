@@ -173,6 +173,18 @@
         "silent_pressed": {
           "value": "{core.color.azure.600.opa20}",
           "type": "color"
+        },
+        "xsilent": {
+          "value": "{core.color.azure.600.opa0}",
+          "type": "color"
+        },
+        "xsilent_hover": {
+          "value": "{core.color.azure.600.opa0}",
+          "type": "color"
+        },
+        "xsilent_pressed": {
+          "value": "{core.color.azure.600.opa0}",
+          "type": "color"
         }
       },
       "none": {
@@ -246,7 +258,13 @@
         },
         "danger": {
           "value": "{core.color.crimson.500.solid}",
-          "type": "color"
+          "type": "color",
+          "description": "use on form captions, fieldset.legend, label"
+        },
+        "active": {
+          "value": "{core.color.azure.500.solid}",
+          "type": "color",
+          "description": "Use for active text which can toggle. > Tab.Label"
         }
       },
       "on_bold": {
@@ -266,15 +284,12 @@
         "neutral_pressed": {
           "value": "{core.color.white.solid}",
           "type": "color"
+        },
+        "subtle": {
+          "value": "{core.color.white.opa80}",
+          "type": "color",
+          "description": "Use for secondary texts or icons. > Menu.MenuItem.Desicription Menu.MenuItem.Icon"
         }
-      },
-      "on_neutral_primary": {
-        "value": "{sys.bgcolor.bold.primary}",
-        "type": "color"
-      },
-      "on_primary_subtle": {
-        "value": "{core.color.white.opa80}",
-        "type": "color"
       },
       "on_secondary": {
         "value": "{sys.bgcolor.bold.primary}",
@@ -1184,37 +1199,37 @@
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_primary_subtle}",
+              "value": "{sys.content.on_bold.subtle}",
               "type": "color"
             }
           }

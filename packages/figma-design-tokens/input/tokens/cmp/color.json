@@ -1159,44 +1159,44 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Hover": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Pressed": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Focus": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Hover": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Pressed": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Focus": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
@@ -1254,22 +1254,22 @@
           "TextColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Hover": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Pressed": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Focus": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1303,22 +1303,22 @@
           "IconColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Hover": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Pressed": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Focus": {
-                "value": "{sys.content.on_neutral_primary}",
+                "value": "{sys.content.on_surface.active}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
