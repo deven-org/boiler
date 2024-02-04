@@ -669,19 +669,19 @@
         },
         "Icon": {
           "Rest": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_silent_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_silent_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -689,25 +689,25 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_silent_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_silent_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -715,7 +715,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         }
@@ -775,19 +775,19 @@
         },
         "Icon": {
           "Rest": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_silent_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_silent_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -795,25 +795,25 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_silent_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_silent_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -821,7 +821,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         }
@@ -1315,19 +1315,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           }
         }
@@ -1492,7 +1492,7 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.on_danger_container_subtle}",
+          "value": "{sys.content.on_container.danger_subtle}",
           "type": "color"
         }
       },
@@ -1670,12 +1670,12 @@
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{sys.content.on_warning_container}",
+          "value": "{sys.content.on_container.warning}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{sys.content.on_warning_container_subtle}",
+          "value": "{sys.content.on_container.warning_subtle}",
           "type": "color",
           "description": "Use on: Counter"
         }
@@ -1692,12 +1692,12 @@
           "description": "Use on: Counter"
         },
         "Text": {
-          "value": "{sys.content.on_danger_container}",
+          "value": "{sys.content.on_container.danger}",
           "type": "color",
           "description": "Use on: Counter"
         },
         "Icon": {
-          "value": "{sys.content.on_danger_container_subtle}",
+          "value": "{sys.content.on_container.danger_subtle}",
           "type": "color",
           "description": "Use on: Counter"
         }

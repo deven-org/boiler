@@ -173,18 +173,6 @@
         "silent_pressed": {
           "value": "{core.color.azure.600.opa20}",
           "type": "color"
-        },
-        "xsilent": {
-          "value": "{core.color.azure.600.opa0}",
-          "type": "color"
-        },
-        "xsilent_hover": {
-          "value": "{core.color.azure.600.opa0}",
-          "type": "color"
-        },
-        "xsilent_pressed": {
-          "value": "{core.color.azure.600.opa0}",
-          "type": "color"
         }
       },
       "none": {
@@ -221,6 +209,37 @@
           "value": "{sys.neutrals.500}",
           "type": "color",
           "description": "use for disabled states"
+        },
+        "warning": {
+          "value": "{core.color.gold.200.solid}",
+          "type": "color",
+          "description": "Use on: Counter"
+        },
+        "warning_subtle": {
+          "value": "{core.color.gold.500.solid}",
+          "type": "color",
+          "description": "Use on: Counter"
+        },
+        "danger": {
+          "value": "{core.color.crimson.300.solid}",
+          "type": "color"
+        },
+        "danger_subtle": {
+          "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        },
+        "safe": {
+          "value": "{core.color.limegreen.200.solid}",
+          "type": "color"
+        },
+        "safe_subtle": {
+          "value": "{core.color.limegreen.500.solid}",
+          "type": "color"
+        },
+        "informative_subtle": {
+          "value": "{core.color.coolgray.500.solid}",
+          "type": "color",
+          "description": "Use on: Counter"
         }
       },
       "on_timid": {
@@ -238,6 +257,18 @@
           "value": "{sys.neutrals.500}",
           "type": "color",
           "description": "use for disabled states"
+        },
+        "primary": {
+          "value": "{core.color.azure.500.solid}",
+          "type": "color"
+        },
+        "primary_hover": {
+          "value": "{core.color.azure.400.solid}",
+          "type": "color"
+        },
+        "primary_pressed": {
+          "value": "{core.color.azure.300.solid}",
+          "type": "color"
         }
       },
       "on_surface": {
@@ -289,67 +320,25 @@
           "value": "{core.color.white.opa80}",
           "type": "color",
           "description": "Use for secondary texts or icons. > Menu.MenuItem.Desicription Menu.MenuItem.Icon"
+        },
+        "inverted": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Use for content on bold colors, where neutral wouldn't have enough contrast. > on bold.warning"
+        },
+        "inverted_hover": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
+        "inverted_pressed": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Forms"
         }
-      },
-      "on_secondary": {
-        "value": "{sys.bgcolor.bold.primary}",
-        "type": "color"
-      },
-      "on_secondary_hover": {
-        "value": "{core.color.azure.400.solid}",
-        "type": "color"
-      },
-      "on_secondary_pressed": {
-        "value": "{core.color.azure.300.solid}",
-        "type": "color"
-      },
-      "on_silent": {
-        "value": "{sys.bgcolor.bold.primary}",
-        "type": "color"
-      },
-      "on_silent_hover": {
-        "value": "{core.color.azure.400.solid}",
-        "type": "color"
-      },
-      "on_silent_pressed": {
-        "value": "{core.color.azure.300.solid}",
-        "type": "color"
-      },
-      "on_warning": {
-        "value": "{core.color.coolgray.100.solid}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "on_warning_hover": {
-        "value": "{core.color.coolgray.100.solid}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "on_warning_pressed": {
-        "value": "{core.color.coolgray.100.solid}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "on_warning_container": {
-        "value": "{core.color.gold.200.solid}",
-        "type": "color",
-        "description": "Use on: Counter"
-      },
-      "on_warning_container_subtle": {
-        "value": "{core.color.gold.500.solid}",
-        "type": "color",
-        "description": "Use on: Counter"
       },
       "on_warning_container_xsubtle": {
         "value": "{core.color.coolgray.700.solid}",
-        "type": "color"
-      },
-      "on_danger_container": {
-        "value": "{core.color.crimson.300.solid}",
-        "type": "color"
-      },
-      "on_danger_container_subtle": {
-        "value": "{core.color.crimson.500.solid}",
         "type": "color"
       },
       "on_danger_container_xsubtle": {
@@ -388,11 +377,6 @@
       "transparent": {
         "value": "{core.color.neutral.transparent}",
         "type": "color"
-      },
-      "on_informative_container": {
-        "value": "{core.color.azure.100.solid}",
-        "type": "color",
-        "description": "Use on: Counter"
       }
     },
     "neutrals": {
@@ -660,19 +644,19 @@
         },
         "Icon": {
           "Rest": {
-            "value": "{sys.content.on_secondary}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_secondary_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_secondary_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_secondary}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -680,25 +664,25 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_secondary}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{sys.content.on_secondary}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_secondary_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_secondary_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_secondary}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -706,7 +690,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_secondary}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         }
@@ -766,19 +750,19 @@
         },
         "Icon": {
           "Rest": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_silent_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_silent_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -786,25 +770,25 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         },
         "Label": {
           "Rest": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_silent_hover}",
+            "value": "{sys.content.on_timid.primary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_silent_pressed}",
+            "value": "{sys.content.on_timid.primary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           },
           "Disabled": {
@@ -812,7 +796,7 @@
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.content.on_silent}",
+            "value": "{sys.content.on_timid.primary}",
             "type": "color"
           }
         }
@@ -1298,19 +1282,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           }
         }
@@ -1475,7 +1459,7 @@
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.on_danger_container_subtle}",
+          "value": "{sys.content.on_container.danger_subtle}",
           "type": "color"
         }
       },

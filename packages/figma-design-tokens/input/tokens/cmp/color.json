@@ -282,15 +282,15 @@
       "Text": {
         "TextColor": {
           "Neutral": {
-            "value": "{sys.content.on_informative_container}",
+            "value": "{sys.content.on_container.informative_subtle}",
             "type": "color"
           },
           "Warning": {
-            "value": "{sys.content.on_warning_container}",
+            "value": "{sys.content.on_container.warning}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.content.on_danger_container}",
+            "value": "{sys.content.on_container.danger}",
             "type": "color"
           }
         }
@@ -1002,7 +1002,7 @@
         "BorderColor": {
           "Default": {
             "Active": {
-              "value": "{sys.content.on_silent}",
+              "value": "{sys.content.on_timid.primary}",
               "type": "color"
             },
             "Inactive": {
@@ -1026,7 +1026,7 @@
         "BorderColor": {
           "Default": {
             "Active": {
-              "value": "{sys.content.on_silent}",
+              "value": "{sys.content.on_timid.primary}",
               "type": "color"
             },
             "Inactive": {
