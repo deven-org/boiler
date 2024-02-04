@@ -1330,19 +1330,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.content.on_danger_container_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_danger_container_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_danger_container_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_danger_container_xsubtle}",
+            "value": "{sys.content.on_container.xsubtle}",
             "type": "color"
           }
         }
@@ -1557,22 +1557,22 @@
           },
           "Error": {
             "Rest": {
-              "value": "{sys.content.on_danger_container_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_danger_container_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_danger_container_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_danger_container_xsubtle}",
+              "value": "{sys.content.on_container.xsubtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
