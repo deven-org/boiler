@@ -1607,10 +1607,6 @@
       "sys.content.on_danger_container_xsubtle": "cbcb9fa80abde8b2d417c6377e3c335d7917b487",
       "sys.content.on_inverted": "372382c514108ad0b7f9f41b7f24d2257b779f94",
       "sys.content.on_inverted_subtle": "d0437386b64294f3cbb50c3a1762aa30c770eb31",
-      "sys.content.informative": "5bae43af81c3aaa6dd99b7e77c23d822e2c0e183",
-      "sys.content.informative_subtle": "5b4191aa09131fe87b8bb75f3e3286f8748a002c",
-      "sys.content.informative_inverted_subtle": "cbb9b0c70e4302c93b79f2945413be8367fc3d4d",
-      "sys.content.informative_inverted": "00ebc43f1998713c5d9e5c6ce562e43aca364c81",
       "sys.content.transparent": "6b1f88d2240f22a986775b4154b5802072cf486c",
       "sys.stroke.neutral": "c66c05afb6cebaa0d183ef1721bc275294f2b295",
       "sys.stroke.neutral_subtle": "796fb244addc9a5d0d2721fc9ee84940724b1d57",
@@ -1700,7 +1696,11 @@
       "sys.content.on_container.warning_subtle": "7fa080f04ceae45bb5a76fd53c8eaf52eba3212b",
       "sys.content.on_container.danger": "b9bcd3f5764ab56ad5ceee5ddb418d7806683d92",
       "sys.content.on_container.danger_subtle": "8024613296efe31b84e227a34d0c560001567750",
-      "sys.content.on_container.informative_subtle": "94462007d670ad3fe906e8fa15bcf0011bf1850c"
+      "sys.content.on_container.informative_subtle": "94462007d670ad3fe906e8fa15bcf0011bf1850c",
+      "sys.content.on_any.informative": "5bae43af81c3aaa6dd99b7e77c23d822e2c0e183",
+      "sys.content.on_any.informative_subtle": "5b4191aa09131fe87b8bb75f3e3286f8748a002c",
+      "sys.content.on_any.informative_inverted_subtle": "cbb9b0c70e4302c93b79f2945413be8367fc3d4d",
+      "sys.content.on_any.informative_inverted": "00ebc43f1998713c5d9e5c6ce562e43aca364c81"
     },
     "group": "Theme"
   },

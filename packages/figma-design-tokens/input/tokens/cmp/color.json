@@ -431,11 +431,11 @@
       "Background": {
         "BorderColor": {
           "Default": {
-            "value": "{sys.content.informative_subtle}",
+            "value": "{sys.content.on_any.informative_subtle}",
             "type": "color"
           },
           "Inverted": {
-            "value": "{sys.content.informative_inverted_subtle}",
+            "value": "{sys.content.on_any.informative_inverted_subtle}",
             "type": "color"
           }
         }
@@ -443,11 +443,11 @@
       "Foreground": {
         "BorderColor": {
           "Default": {
-            "value": "{sys.content.informative}",
+            "value": "{sys.content.on_any.informative}",
             "type": "color"
           },
           "Inverted": {
-            "value": "{sys.content.informative_inverted}",
+            "value": "{sys.content.on_any.informative_inverted}",
             "type": "color"
           }
         }
