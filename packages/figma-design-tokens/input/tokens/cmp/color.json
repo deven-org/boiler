@@ -1365,7 +1365,7 @@
       },
       "Text": {
         "TextColor": {
-          "value": "{sys.content.on_inverted}",
+          "value": "{sys.content.on_surface.inverted}",
           "type": "color"
         }
       }

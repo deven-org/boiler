@@ -175,7 +175,7 @@
           "type": "color"
         }
       },
-      "none": {
+      "transparent": {
         "value": "{core.color.neutral.transparent}",
         "type": "color"
       }
@@ -296,6 +296,19 @@
           "value": "{core.color.azure.500.solid}",
           "type": "color",
           "description": "Use for active text which can toggle. > Tab.Label"
+        },
+        "inverted": {
+          "value": "{core.color.white.solid}",
+          "type": "color",
+          "description": "use on surface.inverted > Tooltip.Text"
+        },
+        "inverted_subtle": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color"
+        },
+        "inverted_disabled": {
+          "value": "{core.color.coolgray.400.solid}",
+          "type": "color"
         }
       },
       "on_bold": {
@@ -336,23 +349,6 @@
           "type": "color",
           "description": "Forms"
         }
-      },
-      "on_warning_container_xsubtle": {
-        "value": "{core.color.coolgray.700.solid}",
-        "type": "color"
-      },
-      "on_danger_container_xsubtle": {
-        "value": "{core.color.coolgray.700.solid}",
-        "type": "color"
-      },
-      "on_inverted": {
-        "value": "{core.color.white.solid}",
-        "type": "color",
-        "description": "Forms"
-      },
-      "on_inverted_subtle": {
-        "value": "{core.color.coolgray.700.solid}",
-        "type": "color"
       },
       "on_any": {
         "informative": {
@@ -402,6 +398,10 @@
       },
       "500": {
         "value": "{core.color.coolgray.800.solid}",
+        "type": "color"
+      },
+      "1000": {
+        "value": "{core.color.white.solid}",
         "type": "color"
       }
     },
