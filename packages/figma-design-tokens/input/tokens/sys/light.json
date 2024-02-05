@@ -186,6 +186,11 @@
         "type": "color"
       },
       "on_surface": {
+        "disabled": {
+          "value": "{sys.neutrals.500}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
         "neutral": {
           "value": "{sys.neutrals.100}",
           "type": "color",
@@ -195,11 +200,6 @@
           "value": "{sys.neutrals.200}",
           "type": "color",
           "description": "use for captions, legends and alike"
-        },
-        "disabled": {
-          "value": "{sys.neutrals.500}",
-          "type": "color",
-          "description": "use for disabled states"
         },
         "danger": {
           "value": "{core.color.crimson.500.solid}",
@@ -412,20 +412,41 @@
       }
     },
     "stroke": {
-      "neutral": {
-        "value": "{core.color.coolgray.100.solid}",
-        "type": "color",
-        "description": "use for focus ring"
+      "global": {
+        "focusring": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "use for focus ring"
+        }
       },
-      "neutral_subtle": {
-        "value": "{core.color.coolgray.700.solid}",
-        "type": "color",
-        "description": "use for input borders"
-      },
-      "neutral_xsubtle": {
-        "value": "{core.color.coolgray.800.solid}",
-        "type": "color",
-        "description": "use for disabled"
+      "container": {
+        "disabled": {
+          "value": "{core.color.coolgray.800.solid}",
+          "type": "color",
+          "description": "use for disabled"
+        },
+        "neutral": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color",
+          "description": "use for input borders"
+        },
+        "danger": {
+          "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        },
+        "safe": {
+          "value": "{core.color.limegreen.400.solid}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{core.color.gold.500.solid}",
+          "type": "color"
+        },
+        "informative": {
+          "value": "{core.color.coolgray.400.solid}",
+          "type": "color",
+          "description": "Use on: Counter"
+        }
       },
       "neutral_xxsubtle": {
         "value": "{core.color.coolgray.900.solid}",
@@ -436,34 +457,23 @@
         "value": "{core.color.coolgray.800.opa0}",
         "type": "color"
       },
-      "danger_container": {
-        "value": "{core.color.crimson.500.solid}",
-        "type": "color"
-      },
-      "warning_container": {
-        "value": "{core.color.gold.500.solid}",
-        "type": "color"
-      },
       "transparent": {
         "value": "{core.color.neutral.transparent}",
         "type": "color"
       },
-      "primary": {
-        "value": "{sys.bgcolor.bold.primary}",
-        "type": "color"
-      },
-      "primary_hover": {
-        "value": "{core.color.azure.400.solid}",
-        "type": "color"
-      },
-      "primary_pressed": {
-        "value": "{core.color.azure.300.solid}",
-        "type": "color"
-      },
-      "informative_container": {
-        "value": "{core.color.azure.100.opa40}",
-        "type": "color",
-        "description": "Use on: Counter"
+      "timid": {
+        "secondary": {
+          "value": "{sys.bgcolor.bold.primary}",
+          "type": "color"
+        },
+        "secondary_hover": {
+          "value": "{core.color.azure.400.solid}",
+          "type": "color"
+        },
+        "secondary_pressed": {
+          "value": "{core.color.azure.300.solid}",
+          "type": "color"
+        }
       }
     },
     "shadow": {
@@ -626,27 +636,27 @@
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{sys.stroke.primary}",
+            "value": "{sys.stroke.timid.secondary}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.stroke.primary_hover}",
+            "value": "{sys.stroke.timid.secondary_hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.stroke.primary_pressed}",
+            "value": "{sys.stroke.timid.secondary_pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.stroke.primary}",
+            "value": "{sys.stroke.timid.secondary}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.stroke.neutral_xsubtle}",
+            "value": "{sys.stroke.container.disabled}",
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.stroke.primary}",
+            "value": "{sys.stroke.timid.secondary}",
             "type": "color"
           }
         },
@@ -1370,23 +1380,23 @@
       "SurfaceStroke": {
         "Default": {
           "Rest": {
-            "value": "{sys.stroke.neutral_subtle}",
+            "value": "{sys.stroke.container.neutral}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.stroke.neutral_subtle}",
+            "value": "{sys.stroke.container.neutral}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.stroke.neutral_subtle}",
+            "value": "{sys.stroke.container.neutral}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.stroke.neutral}",
+            "value": "{sys.stroke.global.focusring}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.stroke.neutral_xsubtle}",
+            "value": "{sys.stroke.container.disabled}",
             "type": "color"
           },
           "ReadOnly": {
@@ -1396,19 +1406,19 @@
         },
         "Error": {
           "Rest": {
-            "value": "{sys.stroke.danger_container}",
+            "value": "{sys.stroke.container.danger}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.stroke.danger_container}",
+            "value": "{sys.stroke.container.danger}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.stroke.danger_container}",
+            "value": "{sys.stroke.container.danger}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.stroke.danger_container}",
+            "value": "{sys.stroke.container.danger}",
             "type": "color"
           }
         }
@@ -1556,7 +1566,7 @@
     },
     "Global": {
       "Focus": {
-        "value": "{sys.stroke.neutral}",
+        "value": "{sys.stroke.global.focusring}",
         "type": "color"
       }
     },

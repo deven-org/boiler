@@ -145,23 +145,23 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.stroke.primary}",
+                "value": "{sys.stroke.timid.secondary}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.stroke.primary_hover}",
+                "value": "{sys.stroke.timid.secondary_hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.stroke.primary_pressed}",
+                "value": "{sys.stroke.timid.secondary_pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.stroke.primary}",
+                "value": "{sys.stroke.timid.secondary}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.stroke.neutral_xsubtle}",
+                "value": "{sys.stroke.container.disabled}",
                 "type": "color"
               },
               "ReadOnly": {
@@ -169,7 +169,7 @@
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.stroke.danger_container}",
+                "value": "{sys.stroke.container.danger}",
                 "type": "color"
               }
             }
@@ -256,11 +256,11 @@
             "type": "color"
           },
           "Warning": {
-            "value": "{sys.stroke.warning_container}",
+            "value": "{sys.stroke.container.warning}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.stroke.danger_container}",
+            "value": "{sys.stroke.container.danger}",
             "type": "color"
           }
         },
@@ -323,7 +323,7 @@
     "Divider": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.stroke.neutral_subtle}",
+          "value": "{sys.stroke.container.neutral}",
           "type": "color",
           "description": "Color of the divider\n>>> UI.Divider.Stroke"
         }
@@ -724,7 +724,7 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.danger_container}",
+                "value": "{sys.stroke.container.danger}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
@@ -761,7 +761,7 @@
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.danger_container}",
+                "value": "{sys.stroke.container.danger}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
@@ -800,7 +800,7 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.danger_container}",
+                "value": "{sys.stroke.container.danger}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
@@ -837,7 +837,7 @@
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.stroke.danger_container}",
+                "value": "{sys.stroke.container.danger}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
               }
@@ -961,27 +961,27 @@
           },
           "BorderColor": {
             "Rest": {
-              "value": "{sys.stroke.primary}",
+              "value": "{sys.stroke.timid.secondary}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
             },
             "Hover": {
-              "value": "{sys.stroke.primary_hover}",
+              "value": "{sys.stroke.timid.secondary_hover}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
             },
             "Pressed": {
-              "value": "{sys.stroke.primary_pressed}",
+              "value": "{sys.stroke.timid.secondary_pressed}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
             },
             "Focus": {
-              "value": "{sys.stroke.primary}",
+              "value": "{sys.stroke.timid.secondary}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
             },
             "Disabled": {
-              "value": "{sys.stroke.neutral_xsubtle}",
+              "value": "{sys.stroke.container.disabled}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
             },
@@ -991,7 +991,7 @@
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
             },
             "Error": {
-              "value": "{sys.stroke.danger_container}",
+              "value": "{sys.stroke.container.danger}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
             }
