@@ -1400,7 +1400,7 @@
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.stroke.neutral_xxsubtle}",
+            "value": "{sys.stroke.container.disabled}",
             "type": "color"
           }
         },

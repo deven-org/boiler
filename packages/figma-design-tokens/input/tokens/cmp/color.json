@@ -165,7 +165,7 @@
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.stroke.neutral_xxsubtle}",
+                "value": "{sys.stroke.container.disabled}",
                 "type": "color"
               },
               "Error": {
@@ -986,7 +986,7 @@
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
             },
             "ReadOnly": {
-              "value": "{sys.stroke.neutral_xxsubtle}",
+              "value": "{sys.stroke.container.disabled}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
             },
