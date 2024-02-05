@@ -1568,6 +1568,7 @@ __metadata:
     clean-webpack-plugin: "npm:^4.0.0"
     copy-webpack-plugin: "npm:^11.0.0"
     css-loader: "npm:^6.7.3"
+    ejs: "npm:^3.1.9"
     eslint: "npm:^8.53.0"
     eslint-webpack-plugin: "npm:^3.2.0"
     fork-ts-checker-webpack-plugin: "npm:^7.3.0"
@@ -7995,7 +7996,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ejs@npm:^3.1.8":
+"ejs@npm:^3.1.8, ejs@npm:^3.1.9":
   version: 3.1.9
   resolution: "ejs@npm:3.1.9"
   dependencies:
