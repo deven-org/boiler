@@ -248,7 +248,7 @@
           "type": "color",
           "description": "Forms"
         },
-        "subtle": {
+        "neutral_subtle": {
           "value": "{sys.neutrals.200}",
           "type": "color",
           "description": "for prefix, suffix"
@@ -277,7 +277,7 @@
           "type": "color",
           "description": "Forms"
         },
-        "subtle": {
+        "neutral_subtle": {
           "value": "{sys.neutrals.200}",
           "type": "color",
           "description": "use for captions, legends and alike"
@@ -1086,19 +1086,19 @@
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Disabled": {
@@ -1108,19 +1108,19 @@
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_timid.subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Disabled": {

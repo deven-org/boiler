@@ -1654,7 +1654,6 @@
       "sys.bgcolor.bold.inactive_hover": "6e00de4d32eeaa5d6f877c2f9365243331f25fe2",
       "sys.bgcolor.bold.inactive_pressed": "8407ad49ca96df13aec4cea5e5e889d2f18b8061",
       "sys.content.on_container.neutral": "e73c3a35afacbc2fc3be0623a8266b5b3e075813",
-      "sys.content.on_surface.subtle": "abe5f563312a61618fe9968687436aa58fd41bd8",
       "sys.content.on_container.xsubtle": "7e95dfa2db6f69e8178133b4745473c636acf439",
       "sys.content.on_container.xsubtle_pressed": "9664d52be4cf515b10e87be79e947ac067c8b4d1",
       "sys.content.on_container.xsubtle_hover": "f4a2e49dff29971f1936705ccefc1ca3a1ec04e5",
@@ -1695,7 +1694,8 @@
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Hover": "ab240e64864da8e3583080487d6aded88ba58363",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Pressed": "6d6a2736de73281af8f2ce34284f868f95eadc40",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Focus": "bf71b533196d3c803171a6b28428ff60f8b2b575",
-      "sys.content.on_bold.neutral_subtle": "a98e537f9aec277abc1c56abccbfb73713ed1390"
+      "sys.content.on_bold.neutral_subtle": "a98e537f9aec277abc1c56abccbfb73713ed1390",
+      "sys.content.on_surface.neutral_subtle": "abe5f563312a61618fe9968687436aa58fd41bd8"
     },
     "group": "Theme"
   },
