@@ -177,6 +177,26 @@
         "silent_pressed": {
           "value": "{core.color.azure.600.opa20}",
           "type": "color"
+        },
+        "solid": {
+          "value": "{sys.neutrals.1000}",
+          "type": "color",
+          "description": "use on checkbox, toggleSwitch.Knob"
+        },
+        "solid_hover": {
+          "value": "{sys.neutrals.1000}",
+          "type": "color",
+          "description": "use on checkbox, toggleSwitch.Knob"
+        },
+        "solid_pressed": {
+          "value": "{sys.neutrals.1000}",
+          "type": "color",
+          "description": "use on checkbox, toggleSwitch.Knob"
+        },
+        "solid_disabled": {
+          "value": "{sys.neutrals.1000}",
+          "type": "color",
+          "description": "use on checkbox, toggleSwitch.Knob"
         }
       }
     },
@@ -447,11 +467,6 @@
           "type": "color",
           "description": "Use on: Counter"
         }
-      },
-      "neutral_xxsubtle": {
-        "value": "{core.color.coolgray.900.solid}",
-        "type": "color",
-        "description": "use for readonly"
       },
       "neutral_off": {
         "value": "{core.color.coolgray.800.opa0}",

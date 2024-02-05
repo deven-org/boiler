@@ -76,31 +76,31 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid_hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid_pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid_disabled}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid_disabled}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.timid.solid}",
                 "type": "color"
               }
             }
