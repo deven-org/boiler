@@ -29,20 +29,20 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
       }
 
       &.sm {
-        width: ${Loader.Container.Size.SM};
-        height: ${Loader.Container.Size.SM};
-        border-width: ${Loader.Background.BorderWidth.SM};
+        width: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
+        height: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
+        border-width: 0.13rem
       }
 
       &.md {
-        width: ${Loader.Container.Size.MD};
-        height: ${Loader.Container.Size.MD};
+        width: calc(${Loader.Container.Size.MD} - (${Loader.Container.Padding.MD} * 2));
+        height: calc(${Loader.Container.Size.MD} - (${Loader.Container.Padding.MD} * 2));
         border-width: ${Loader.Background.BorderWidth.MD};
       }
 
       &.lg {
-        width: ${Loader.Container.Size.LG};
-        height: ${Loader.Container.Size.LG};
+        width:  calc(${Loader.Container.Size.LG} - (${Loader.Container.Padding.LG} * 2));
+        height: calc(${Loader.Container.Size.LG} - (${Loader.Container.Padding.LG} * 2));
         border-width: ${Loader.Background.BorderWidth.LG};
       }
     }
@@ -58,6 +58,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
 
       &.lg {
         padding: ${Loader.Container.Padding.LG};
+       
       }
     }
 
