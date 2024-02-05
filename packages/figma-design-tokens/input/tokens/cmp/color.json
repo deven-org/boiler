@@ -184,12 +184,12 @@
                 "description": "also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral_hover}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral_pressed}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
@@ -555,11 +555,11 @@
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral_hover}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral_pressed}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color"
               },
               "Focus": {
@@ -595,19 +595,19 @@
           "TextColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               }
             },
@@ -639,19 +639,19 @@
           "IconColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.subtle}",
+                "value": "{sys.content.on_bold.neutral_subtle}",
                 "type": "color"
               }
             },
@@ -853,12 +853,12 @@
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral_hover}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral_pressed}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Pressed"
               },
@@ -1547,12 +1547,12 @@
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral_hover}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral_pressed}",
+                "value": "{sys.content.on_bold.neutral}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
               },

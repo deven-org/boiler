@@ -312,27 +312,24 @@
         }
       },
       "on_bold": {
-        "disabled": {
-          "value": "{sys.neutrals.500}",
-          "type": "color",
-          "description": "use for disabled states"
-        },
         "neutral": {
           "value": "{core.color.white.solid}",
           "type": "color"
         },
-        "neutral_hover": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        },
-        "neutral_pressed": {
-          "value": "{core.color.white.solid}",
-          "type": "color"
-        },
-        "subtle": {
+        "neutral_subtle": {
           "value": "{core.color.white.opa80}",
           "type": "color",
           "description": "Use for secondary texts or icons. > Menu.MenuItem.Desicription Menu.MenuItem.Icon"
+        },
+        "disabled": {
+          "value": "{sys.neutrals.400}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "disabled_subtle": {
+          "value": "{sys.neutrals.400_opa70}",
+          "type": "color",
+          "description": "use for disabled states"
         },
         "inverted": {
           "value": "{core.color.coolgray.100.solid}",
@@ -402,6 +399,10 @@
       },
       "1000": {
         "value": "{core.color.white.solid}",
+        "type": "color"
+      },
+      "400_opa70": {
+        "value": "{core.color.coolgray.700.opa70}",
         "type": "color"
       }
     },
@@ -862,7 +863,7 @@
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_bold.neutral_hover}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Pressed": {
@@ -888,7 +889,7 @@
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_bold.neutral_hover}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Pressed": {
@@ -968,7 +969,7 @@
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_bold.neutral_hover}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Pressed": {
@@ -994,7 +995,7 @@
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_bold.neutral_hover}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Pressed": {
@@ -1171,7 +1172,7 @@
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_bold.neutral_hover}",
+              "value": "{sys.content.on_bold.neutral}",
               "type": "color"
             },
             "Pressed": {
@@ -1185,37 +1186,37 @@
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_bold.subtle}",
+              "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
             }
           }
