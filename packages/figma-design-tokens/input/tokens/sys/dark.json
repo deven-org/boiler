@@ -1748,11 +1748,11 @@
       },
       "Background": {
         "Level_1": {
-          "value": "{sys.surface.level_1}",
+          "value": "{sys.bgcolor.surface.level_1}",
           "type": "color"
         },
         "Level_2": {
-          "value": "{sys.surface.level_1}",
+          "value": "{sys.bgcolor.surface.level_1}",
           "type": "color"
         }
       }

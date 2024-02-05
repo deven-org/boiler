@@ -2,7 +2,7 @@
   "cmp": {
     "Blanket": {
       "Surface": {
-        "value": "{sys.surface.blanket}",
+        "value": "{sys.bgcolor.surface.blanket}",
         "type": "color",
         "description": "Apply on blanket component"
       }
@@ -299,7 +299,7 @@
     "Dialog": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.surface.level_2}",
+          "value": "{sys.bgcolor.surface.level_2}",
           "type": "color"
         }
       },
@@ -456,7 +456,7 @@
     "Menu": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.surface.level_2}",
+          "value": "{sys.bgcolor.surface.level_2}",
           "type": "color"
         }
       },
@@ -1353,7 +1353,7 @@
     "Tooltip": {
       "Container": {
         "BackgroundColor": {
-          "value": "{sys.surface.inverted}",
+          "value": "{sys.bgcolor.surface.inverted}",
           "type": "color"
         },
         "Elevation": {
