@@ -1376,22 +1376,22 @@
           "BackgroundColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.bold.inactive}",
+                "value": "{sys.bgcolor.bold.neutral}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.bgcolor.bold.inactive_hover}",
+                "value": "{sys.bgcolor.bold.neutral_hover}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.bold.inactive_pressed}",
+                "value": "{sys.bgcolor.bold.neutral_pressed}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.bgcolor.bold.inactive}",
+                "value": "{sys.bgcolor.bold.neutral}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
               },

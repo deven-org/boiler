@@ -57,17 +57,17 @@
           "type": "color",
           "description": "bg for disabled, readonly"
         },
-        "inactive": {
+        "neutral": {
           "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "for toggleSwitch\n"
         },
-        "inactive_hover": {
+        "neutral_hover": {
           "value": "{core.color.coolgray.600.solid}",
           "type": "color",
           "description": "for toggleSwitch"
         },
-        "inactive_pressed": {
+        "neutral_pressed": {
           "value": "{core.color.coolgray.500.solid}",
           "type": "color",
           "description": "for toggleswitch\n"
