@@ -29,9 +29,6 @@ export class BlrTextarea extends LitElement {
   @property() hasLabel?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
   @property() maxLength?: number;
   @property() minLength?: number;
   @property() warningLimitType: WarningLimits = 'warningLimitInt';
@@ -49,9 +46,14 @@ export class BlrTextarea extends LitElement {
   @property() isResizeable: ResizeType = 'none';
   @property() rows?: number;
   @property() cols?: number;
-  @property() onSelect?: HTMLElement['onselect'];
   @property() name?: string;
   @property() theme: ThemeType = 'Light';
+
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrChange?: () => void;
+  @property() blrSelect?: () => void;
 
   @state() protected count = 0;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
@@ -104,6 +106,42 @@ export class BlrTextarea extends LitElement {
 
     return counterVariant;
   }
+
+  protected handleChange = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrChange', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
+  };
+
+  protected handleFocus = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
+  };
+
+  protected handleBlur = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
+  };
+
+  protected handleSelect = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrSelect', {
+          bubbles: true,
+          composed: true,
+          detail: { originalEvent: event, value: this.textareaElement?.value },
+        })
+      );
+    }
+  };
 
   protected render() {
     if (this.size) {
@@ -184,10 +222,10 @@ export class BlrTextarea extends LitElement {
             ?required="${this.required}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
-            @input="${this.onChange}"
-            @focus=${this.focus}
-            @blur=${this.blur}
-            @select="${this.onSelect}"
+            @input=${this.handleChange}
+            @focus=${this.handleFocus}
+            @blur=${this.handleBlur}
+            @select=${this.handleSelect}
             @keyup=${this.updateCounter}
           >
 ${this.value}
