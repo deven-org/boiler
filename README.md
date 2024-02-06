@@ -26,7 +26,6 @@
     - [Usage](#usage)
   - [:white\_check\_mark: How to test](#white_check_mark-how-to-test)
   - [:v: Contribute](#v-contribute)
-  - [:bug: Bugs and Issues](#bug-bugs-and-issues)
   - [:page\_facing\_up: License](#page_facing_up-license)
   - [:green\_heart: Code of conduct](#green_heart-code-of-conduct)
 
@@ -34,7 +33,7 @@
 ## :star: Introduction
 B01LER is a fully customisable design system (DS) that enables you to easily create cohesive and consistent digital products across multiple platforms and brands.
 
-B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20%20%5Bv0.1%20-%20alpha%20release%5D.fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
+B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
 
 A token system is a collection of values which represent the visual properties of a design system, such as typography, color and spacing.
 
@@ -55,7 +54,7 @@ Some articles claim, that Web Components are not accessible or that they are not
 
 
 ## :art: Resources
-- [Check out our Figma File](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20%20%5Bv0.1%20-%20alpha%20release%5D.fig))
+- [Check out our Figma File](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig))
 - [Have a look at our components in Storybook](https://b01ler.onrender.com/)
 
 
@@ -150,11 +149,6 @@ Note: This is not filled out yet!
 
 ## :v: Contribute
 For a detailed documentation on how to contribute to the B01LER project, have a look at our [contribution guide](./CONTRIBUTING.md).
-
-
-## :bug: Bugs and Issues
-If you would like to open an issue, you can gladly use [this page](https://github.com/deven-org/B01LER-Kitchen/issues).
-But please, have a look at the [Contribute](./CONTRIBUTING.md) page before filing a bug.
 
 
 ## :page_facing_up: License
