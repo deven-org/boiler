@@ -163,7 +163,7 @@
           "type": "color"
         },
         "secondary_pressed": {
-          "value": "{core.color.azure.600.opa50}",
+          "value": "{core.color.azure.700.opa40}",
           "type": "color"
         },
         "silent": {
