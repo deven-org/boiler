@@ -514,6 +514,10 @@
         "transparent": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
+        },
+        "disabled": {
+          "value": "{core.color.neutral.transparent}",
+          "type": "color"
         }
       },
       "toggle": {
@@ -799,7 +803,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.stroke.bold.transparent}",
+            "value": "{sys.stroke.bold.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1091,7 +1095,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.container.disabled}",
+            "value": "{sys.bgcolor.bold.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1101,27 +1105,27 @@
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.stroke.neutral_off}",
+            "value": "{sys.stroke.bold.disabled}",
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           }
         },
@@ -1135,7 +1139,7 @@
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_bold.neutral_pressed}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Focus": {
@@ -1161,7 +1165,7 @@
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_bold.neutral_pressed}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Focus": {
@@ -1197,7 +1201,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.container.disabled}",
+            "value": "{sys.bgcolor.bold.disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1207,27 +1211,27 @@
         },
         "SurfaceStroke": {
           "Rest": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.stroke.neutral_off}",
+            "value": "{sys.stroke.bold.disabled}",
             "type": "color"
           },
           "Loading": {
-            "value": "{sys.stroke.transparent}",
+            "value": "{sys.stroke.bold.transparent}",
             "type": "color"
           }
         },
@@ -1241,7 +1245,7 @@
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_bold.neutral_pressed}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Focus": {
@@ -1267,7 +1271,7 @@
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_bold.neutral_pressed}",
+            "value": "{sys.content.on_bold.neutral}",
             "type": "color"
           },
           "Focus": {
@@ -1288,111 +1292,111 @@
         "UnSelected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.toggle.neutral}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.bgcolor.timid.silent_hover}",
+              "value": "{sys.bgcolor.toggle.neutral}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.bgcolor.timid.silent_pressed}",
+              "value": "{sys.bgcolor.toggle.neutral}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.toggle.disabled}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.bgcolor.timid.disabled}",
+              "value": "{sys.bgcolor.toggle.neutral}",
               "type": "color"
             }
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.toggle.transparent}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.toggle.transparent}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.toggle.transparent}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.toggle.transparent}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.toggle.transparent}",
               "type": "color"
             }
           },
           "Label": {
             "Rest": {
-              "value": "{sys.content.on_timid.neutral}",
+              "value": "{sys.content.on_toggle.neutral}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_timid.neutral}",
+              "value": "{sys.content.on_toggle.neutral}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_timid.neutral}",
+              "value": "{sys.content.on_toggle.neutral}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_timid.neutral}",
+              "value": "{sys.content.on_toggle.neutral}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_timid.disabled}",
+              "value": "{sys.content.on_toggle.disabled}",
               "type": "color"
             }
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_timid.disabled}",
+              "value": "{sys.content.on_toggle.disabled_subtle}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_timid.neutral_subtle}",
+              "value": "{sys.content.on_toggle.neutral_subtle}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_timid.disabled}",
+              "value": "{sys.content.on_toggle.disabled_subtle}",
               "type": "color"
             }
           }
@@ -1414,23 +1418,31 @@
             "Focus": {
               "value": "{sys.bgcolor.bold.primary}",
               "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.bgcolor.bold.disabled}",
+              "type": "color"
             }
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.bold.transparent}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.bold.transparent}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.bold.transparent}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.stroke.transparent}",
+              "value": "{sys.stroke.bold.transparent}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.stroke.bold.disabled}",
               "type": "color"
             }
           },
@@ -1444,11 +1456,15 @@
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_bold.neutral_pressed}",
+              "value": "{sys.content.on_bold.neutral}",
               "type": "color"
             },
             "Focus": {
               "value": "{sys.content.on_bold.neutral}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.content.on_bold.disabled}",
               "type": "color"
             }
           },
@@ -1468,6 +1484,10 @@
             "Focus": {
               "value": "{sys.content.on_bold.neutral_subtle}",
               "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.content.on_bold.disabled_subtle}",
+              "type": "color"
             }
           },
           "Icon": {
@@ -1485,6 +1505,10 @@
             },
             "Focus": {
               "value": "{sys.content.on_bold.neutral_subtle}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.content.on_bold.disabled_subtle}",
               "type": "color"
             }
           }
