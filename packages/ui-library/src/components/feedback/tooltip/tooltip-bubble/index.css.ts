@@ -27,6 +27,7 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         font-weight: ${Tooltip.Text.Typography.fontWeight};
         line-height: ${Tooltip.Text.Typography.lineHeight};
         padding: ${Tooltip.TextWrapper.Padding};
+        text-align: center;
       }
 
       .elevation {
