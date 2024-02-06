@@ -247,7 +247,12 @@
       },
       "on_container": {
         "disabled": {
-          "value": "{sys.neutrals.500}",
+          "value": "{sys.neutrals.400}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "disabled-subtle": {
+          "value": "{sys.neutrals.400_opa70}",
           "type": "color",
           "description": "use for disabled states"
         },
@@ -300,6 +305,11 @@
           "value": "{core.color.limegreen.400.solid}",
           "type": "color"
         },
+        "informative": {
+          "value": "{core.color.coolgray.400.solid}",
+          "type": "color",
+          "description": "Use on: Counter"
+        },
         "informative_subtle": {
           "value": "{core.color.coolgray.500.solid}",
           "type": "color",
@@ -344,7 +354,7 @@
       },
       "on_timid": {
         "disabled": {
-          "value": "{sys.neutrals.500}",
+          "value": "{sys.neutrals.400}",
           "type": "color",
           "description": "use for disabled states"
         },
@@ -467,10 +477,6 @@
           "type": "color",
           "description": "Use on: Counter"
         }
-      },
-      "neutral_off": {
-        "value": "{core.color.coolgray.800.opa0}",
-        "type": "color"
       },
       "transparent": {
         "value": "{core.color.neutral.transparent}",
