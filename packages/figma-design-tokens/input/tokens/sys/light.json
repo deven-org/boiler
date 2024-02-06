@@ -23,6 +23,12 @@
           "type": "color"
         }
       },
+      "toggle": {
+        "neutral": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        }
+      },
       "container": {
         "disabled": {
           "value": "{core.color.coolgray.900.solid}",
@@ -179,22 +185,22 @@
           "type": "color"
         },
         "solid": {
-          "value": "{sys.pallet.neutral.1000}",
+          "value": "{core.color.white.solid}",
           "type": "color",
           "description": "use on checkbox, toggleSwitch.Knob"
         },
         "solid_hover": {
-          "value": "{sys.pallet.neutral.1000}",
+          "value": "{core.color.white.solid}",
           "type": "color",
           "description": "use on checkbox, toggleSwitch.Knob"
         },
         "solid_pressed": {
-          "value": "{sys.pallet.neutral.1000}",
+          "value": "{core.color.white.solid}",
           "type": "color",
           "description": "use on checkbox, toggleSwitch.Knob"
         },
         "solid_disabled": {
-          "value": "{sys.pallet.neutral.1000}",
+          "value": "{core.color.white.solid}",
           "type": "color",
           "description": "use on checkbox, toggleSwitch.Knob"
         }
@@ -207,17 +213,17 @@
       },
       "on_surface": {
         "disabled": {
-          "value": "{sys.pallet.neutral.800}",
+          "value": "{core.color.coolgray.800.solid}",
           "type": "color",
           "description": "use for disabled states"
         },
         "neutral": {
-          "value": "{sys.pallet.neutral.100}",
+          "value": "{core.color.coolgray.100.solid}",
           "type": "color",
           "description": "Forms"
         },
         "neutral_subtle": {
-          "value": "{sys.pallet.neutral.400}",
+          "value": "{core.color.coolgray.400.solid}",
           "type": "color",
           "description": "use for captions, legends and alike"
         },
@@ -247,31 +253,31 @@
       },
       "on_container": {
         "disabled": {
-          "value": "{sys.pallet.neutral.700}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "use for disabled states"
         },
         "disabled-subtle": {
-          "value": "{sys.pallet.neutral.400_opa70}",
+          "value": "{core.color.coolgray.700.opa70}",
           "type": "color",
           "description": "use for disabled states"
         },
         "neutral": {
-          "value": "{sys.pallet.neutral.100}",
+          "value": "{core.color.coolgray.100.solid}",
           "type": "color",
           "description": "Forms"
         },
         "subtle": {
-          "value": "{sys.pallet.neutral.100_opa40}",
+          "value": "{core.color.coolgray.100.opa40}",
           "type": "color",
           "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
         },
         "xsubtle_hover": {
-          "value": "{sys.pallet.neutral.600}",
+          "value": "{core.color.coolgray.600.solid}",
           "type": "color"
         },
         "xsubtle_pressed": {
-          "value": "{sys.pallet.neutral.400}",
+          "value": "{core.color.coolgray.400.solid}",
           "type": "color"
         },
         "warning": {
@@ -313,12 +319,12 @@
       },
       "on_bold": {
         "disabled": {
-          "value": "{sys.pallet.neutral.700}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "use for disabled states"
         },
         "disabled_subtle": {
-          "value": "{sys.pallet.neutral.400_opa70}",
+          "value": "{core.color.coolgray.700.opa70}",
           "type": "color",
           "description": "use for disabled states"
         },
@@ -347,24 +353,51 @@
           "description": "Forms"
         }
       },
-      "on_timid": {
+      "on_toggle": {
         "disabled": {
-          "value": "{sys.pallet.neutral.700}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "use for disabled states"
         },
         "disabled_subtle": {
-          "value": "{sys.pallet.neutral.400_opa70}",
+          "value": "{core.color.coolgray.700.opa70}",
           "type": "color",
           "description": "use for disabled states"
         },
         "neutral": {
-          "value": "{sys.pallet.neutral.100}",
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
+        "transparent": {
+          "value": "{core.color.neutral.transparent}",
           "type": "color",
           "description": "Forms"
         },
         "neutral_subtle": {
-          "value": "{sys.pallet.neutral.400}",
+          "value": "{core.color.coolgray.100.opa40}",
+          "type": "color",
+          "description": "for prefix, suffix"
+        }
+      },
+      "on_timid": {
+        "disabled": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "disabled_subtle": {
+          "value": "{core.color.coolgray.700.opa70}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "neutral": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
+        "neutral_subtle": {
+          "value": "{core.color.coolgray.400.solid}",
           "type": "color",
           "description": "for prefix, suffix"
         },
@@ -438,15 +471,6 @@
         },
         "1000": {
           "value": "{core.color.white.solid}",
-          "type": "color"
-        },
-        "100_opa40": {
-          "value": "{core.color.coolgray.100.opa40}",
-          "type": "color",
-          "description": "use for content neutral"
-        },
-        "400_opa70": {
-          "value": "{core.color.coolgray.700.opa70}",
           "type": "color"
         }
       },
@@ -576,6 +600,103 @@
         },
         "secondary_pressed": {
           "value": "{core.color.azure.300.solid}",
+          "type": "color"
+        }
+      },
+      "toggle": {
+        "disabled": {
+          "value": "{core.color.coolgray.900.solid}",
+          "type": "color",
+          "description": "bg for disabled, readonly"
+        },
+        "neutral": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color",
+          "description": "for toggleSwitch\n"
+        },
+        "neutral_hover": {
+          "value": "{core.color.coolgray.600.solid}",
+          "type": "color",
+          "description": "for toggleSwitch"
+        },
+        "neutral_pressed": {
+          "value": "{core.color.coolgray.500.solid}",
+          "type": "color",
+          "description": "for toggleswitch\n"
+        },
+        "primary": {
+          "value": "{core.color.azure.500.solid}",
+          "type": "color",
+          "description": "rest"
+        },
+        "primary_hover": {
+          "value": "{core.color.azure.400.solid}",
+          "type": "color",
+          "description": "hover"
+        },
+        "primary_pressed": {
+          "value": "{core.color.azure.300.solid}",
+          "type": "color",
+          "description": "pressed"
+        },
+        "cta": {
+          "value": "{core.color.purple.500.solid}",
+          "type": "color"
+        },
+        "cta_hover": {
+          "value": "{core.color.purple.400.solid}",
+          "type": "color"
+        },
+        "cta_pressed": {
+          "value": "{core.color.purple.300.solid}",
+          "type": "color"
+        },
+        "danger": {
+          "value": "{core.color.crimson.500.solid}",
+          "type": "color"
+        },
+        "danger_hover": {
+          "value": "{core.color.crimson.400.solid}",
+          "type": "color"
+        },
+        "danger_pressed": {
+          "value": "{core.color.crimson.300.solid}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{core.color.gold.500.solid}",
+          "type": "color"
+        },
+        "warning_hover": {
+          "value": "{core.color.gold.400.solid}",
+          "type": "color"
+        },
+        "warning_pressed": {
+          "value": "{core.color.gold.300.solid}",
+          "type": "color"
+        },
+        "safe": {
+          "value": "{core.color.limegreen.400.solid}",
+          "type": "color"
+        },
+        "safe_hover": {
+          "value": "{core.color.limegreen.300.solid}",
+          "type": "color"
+        },
+        "safe_pressed": {
+          "value": "{core.color.limegreen.200.solid}",
+          "type": "color"
+        },
+        "informative": {
+          "value": "{core.color.coolgray.400.solid}",
+          "type": "color"
+        },
+        "informative_hover": {
+          "value": "{core.color.coolgray.300.solid}",
+          "type": "color"
+        },
+        "informative_pressed": {
+          "value": "{core.color.coolgray.200.solid}",
           "type": "color"
         }
       }
