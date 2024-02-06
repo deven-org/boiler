@@ -1335,19 +1335,19 @@
       "Placeholder": {
         "Default": {
           "Rest": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Disabled": {
@@ -1472,7 +1472,7 @@
       },
       "InputIcon": {
         "Rest": {
-          "value": "{sys.content.on_container.xsubtle}",
+          "value": "{sys.content.on_container.subtle}",
           "type": "color"
         },
         "Hover": {
@@ -1484,7 +1484,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{sys.content.on_container.xsubtle}",
+          "value": "{sys.content.on_container.subtle}",
           "type": "color"
         },
         "Disabled": {
@@ -1574,22 +1574,22 @@
         "OnEmptyField": {
           "Default": {
             "Rest": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },

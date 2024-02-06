@@ -1639,7 +1639,6 @@
       "sys.bgcolor.bold.inactive_hover": "6e00de4d32eeaa5d6f877c2f9365243331f25fe2",
       "sys.bgcolor.bold.inactive_pressed": "8407ad49ca96df13aec4cea5e5e889d2f18b8061",
       "sys.content.on_container.neutral": "e73c3a35afacbc2fc3be0623a8266b5b3e075813",
-      "sys.content.on_container.xsubtle": "7e95dfa2db6f69e8178133b4745473c636acf439",
       "sys.content.on_container.xsubtle_pressed": "9664d52be4cf515b10e87be79e947ac067c8b4d1",
       "sys.content.on_container.xsubtle_hover": "f4a2e49dff29971f1936705ccefc1ca3a1ec04e5",
       "sys.content.on_container.disabled": "d58ef40bee7529a6bb133defde89f05c3903a946",
@@ -1693,7 +1692,8 @@
       "sys.stroke.timid.secondary": "c63723756533250fc75f021642874f76019fc53b",
       "sys.stroke.timid.secondary_hover": "31ecc4db72f20437b01ccf36e8124bc14054fae2",
       "sys.stroke.timid.secondary_pressed": "5355efd6d8136d79e64a16b379b78037911c055f",
-      "sys.stroke.global.focusring": "c66c05afb6cebaa0d183ef1721bc275294f2b295"
+      "sys.stroke.global.focusring": "c66c05afb6cebaa0d183ef1721bc275294f2b295",
+      "sys.content.on_container.subtle": "7e95dfa2db6f69e8178133b4745473c636acf439"
     },
     "group": "Theme"
   },

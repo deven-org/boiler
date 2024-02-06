@@ -261,13 +261,8 @@
           "type": "color",
           "description": "Forms"
         },
-        "neutral_subtle": {
-          "value": "{sys.neutrals.200}",
-          "type": "color",
-          "description": "for prefix, suffix while input is filled or focused"
-        },
-        "xsubtle": {
-          "value": "{sys.neutrals.400}",
+        "subtle": {
+          "value": "{sys.neutrals.100_opa40}",
           "type": "color",
           "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
         },
@@ -285,7 +280,7 @@
           "description": "Use on: Counter"
         },
         "warning_subtle": {
-          "value": "{core.color.gold.500.solid}",
+          "value": "{core.color.gold.200.opa40}",
           "type": "color",
           "description": "Use on: Counter"
         },
@@ -294,7 +289,7 @@
           "type": "color"
         },
         "danger_subtle": {
-          "value": "{core.color.crimson.500.solid}",
+          "value": "{core.color.crimson.300.opa40}",
           "type": "color"
         },
         "safe": {
@@ -302,7 +297,7 @@
           "type": "color"
         },
         "safe_subtle": {
-          "value": "{core.color.limegreen.400.solid}",
+          "value": "{core.color.limegreen.200.opa40}",
           "type": "color"
         },
         "informative": {
@@ -311,7 +306,7 @@
           "description": "Use on: Counter"
         },
         "informative_subtle": {
-          "value": "{core.color.coolgray.500.solid}",
+          "value": "{core.color.coolgray.400.opa40}",
           "type": "color",
           "description": "Use on: Counter"
         }
@@ -435,6 +430,11 @@
       "1000": {
         "value": "{core.color.white.solid}",
         "type": "color"
+      },
+      "100_opa40": {
+        "value": "{core.color.coolgray.100.opa40}",
+        "type": "color",
+        "description": "use for content neutral"
       },
       "400_opa70": {
         "value": "{core.color.coolgray.700.opa70}",
@@ -1309,19 +1309,19 @@
       "Placeholder": {
         "Default": {
           "Rest": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Disabled": {
@@ -1329,25 +1329,25 @@
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           }
         },
         "Error": {
           "Rest": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.on_container.xsubtle}",
+            "value": "{sys.content.on_container.subtle}",
             "type": "color"
           }
         }
@@ -1446,7 +1446,7 @@
       },
       "InputIcon": {
         "Rest": {
-          "value": "{sys.content.on_container.xsubtle}",
+          "value": "{sys.content.on_container.subtle}",
           "type": "color"
         },
         "Hover": {
@@ -1458,7 +1458,7 @@
           "type": "color"
         },
         "Focus": {
-          "value": "{sys.content.on_container.xsubtle}",
+          "value": "{sys.content.on_container.subtle}",
           "type": "color"
         },
         "Disabled": {
@@ -1530,22 +1530,22 @@
         "OnEmptyField": {
           "Default": {
             "Rest": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
@@ -1555,29 +1555,29 @@
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "ReadOnly": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
           },
           "Error": {
             "Rest": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Hover": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Pressed": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             },
             "Focus": {
-              "value": "{sys.content.on_container.xsubtle}",
+              "value": "{sys.content.on_container.subtle}",
               "type": "color",
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
