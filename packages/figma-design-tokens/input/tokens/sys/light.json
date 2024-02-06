@@ -134,15 +134,15 @@
           "type": "color"
         },
         "safe": {
-          "value": "{core.color.limegreen.400.solid}",
-          "type": "color"
-        },
-        "safe_hover": {
           "value": "{core.color.limegreen.300.solid}",
           "type": "color"
         },
-        "safe_pressed": {
+        "safe_hover": {
           "value": "{core.color.limegreen.200.solid}",
+          "type": "color"
+        },
+        "safe_pressed": {
+          "value": "{core.color.limegreen.100.solid}",
           "type": "color"
         },
         "informative": {
@@ -346,15 +346,10 @@
           "type": "color",
           "description": "Use for content on bold colors, where neutral wouldn't have enough contrast. > on bold.warning"
         },
-        "inverted_hover": {
-          "value": "{core.color.coolgray.100.solid}",
+        "inverted_subtle": {
+          "value": "{core.color.coolgray.100.opa40}",
           "type": "color",
-          "description": "Forms"
-        },
-        "inverted_pressed": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color",
-          "description": "Forms"
+          "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
         }
       },
       "on_toggle": {
