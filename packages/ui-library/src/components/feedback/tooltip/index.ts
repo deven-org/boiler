@@ -19,7 +19,7 @@ export class BlrTooltip extends LitElement {
   @property() hasArrow?: boolean = true;
   @property() elevation?: boolean = false;
   @property() placement?: PlacementType = 'top';
-  @property() offset?: number = 4;
+  @property() offset?: number | string = 4;
 
   @state() protected visible = false;
 
@@ -27,6 +27,10 @@ export class BlrTooltip extends LitElement {
   protected _tooltipElement: HTMLElement | null = null;
 
   protected updated() {
+    if (typeof this.offset === 'string') {
+      this.offset = parseInt(this.offset);
+    }
+
     const slot = this.renderRoot?.querySelector('slot');
     this._referenceElement = slot?.assignedElements({ flatten: true })[0];
 
