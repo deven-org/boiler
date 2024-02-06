@@ -30,8 +30,6 @@ export class BlrIconLink extends LitElement {
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
   @property() loading!: boolean;
-  @property() loadingStatus!: string;
-
   @property() theme: ThemeType = 'Light';
 
   protected render() {
@@ -76,7 +74,6 @@ export class BlrIconLink extends LitElement {
             ? BlrLoaderRenderFunction({
                 size: loaderSize,
                 variant: loaderVariant,
-                loadingStatus: this.loadingStatus,
                 theme: this.theme,
               })
             : BlrIconRenderFunction(
