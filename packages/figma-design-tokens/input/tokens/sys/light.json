@@ -27,6 +27,10 @@
         "neutral": {
           "value": "{core.color.white.solid}",
           "type": "color"
+        },
+        "disabled": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
         }
       },
       "container": {
@@ -601,11 +605,15 @@
         "secondary_pressed": {
           "value": "{core.color.azure.300.solid}",
           "type": "color"
+        },
+        "silent": {
+          "value": "{core.color.neutral.transparent}",
+          "type": "color"
         }
       },
       "toggle": {
         "disabled": {
-          "value": "{core.color.coolgray.900.solid}",
+          "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "bg for disabled, readonly"
         },
@@ -697,6 +705,10 @@
         },
         "informative_pressed": {
           "value": "{core.color.coolgray.200.solid}",
+          "type": "color"
+        },
+        "transparent": {
+          "value": "{core.color.neutral.transparent}",
           "type": "color"
         }
       }
