@@ -31,7 +31,7 @@ export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark 
       &.sm {
         width: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
         height: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
-        border-width: 0.13rem
+        border-width: ${Loader.Background.BorderWidth.SM};
       }
 
       &.md {
