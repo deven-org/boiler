@@ -1380,7 +1380,7 @@
         },
         "ItemLabel": {
           "Typography": {
-            "value": "{sem.buttons.md.label}",
+            "value": "{sem.buttons.label.typography.md}",
             "type": "typography"
           }
         },
@@ -2901,17 +2901,17 @@
         "Label": {
           "Typography": {
             "SM": {
-              "value": "{sem.buttons.sm.label}",
+              "value": "{sem.buttons.label.typography.sm}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             },
             "MD": {
-              "value": "{sem.buttons.md.label}",
+              "value": "{sem.buttons.label.typography.md}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             },
             "LG": {
-              "value": "{sem.buttons.lg.label}",
+              "value": "{sem.buttons.label.typography.lg}",
               "type": "typography",
               "description": "Typography of the Label of a Tab-Button"
             }

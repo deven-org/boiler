@@ -1559,277 +1559,279 @@
         }
       }
     },
-    "formfields": {
-      "userinput": {
-        "textcolor": {
-          "default": {
-            "rest": {
-              "value": "{sys.content.on_container.neutral}",
-              "type": "color"
+    "forms": {
+      "inputfield": {
+        "userinput": {
+          "textcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.content.on_container.neutral}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.on_container.neutral}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.on_container.neutral}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.on_container.neutral}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.content.on_container.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.content.on_container.neutral}",
+                "type": "color"
+              }
             },
-            "hover": {
-              "value": "{sys.content.on_container.neutral}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.content.on_container.neutral}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.content.on_container.neutral}",
-              "type": "color"
-            },
-            "disabled": {
-              "value": "{sys.content.on_container.disabled}",
-              "type": "color"
-            },
-            "readonly": {
-              "value": "{sys.content.on_container.neutral}",
-              "type": "color"
-            }
-          },
-          "error": {
-            "rest": {
-              "value": "{sys.content.on_container.danger}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.content.on_container.danger}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.content.on_container.danger}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.content.on_container.danger}",
-              "type": "color"
-            }
-          }
-        }
-      },
-      "placeholder": {
-        "textcolor": {
-          "default": {
-            "rest": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "disabled": {
-              "value": "{sys.content.on_container.disabled}",
-              "type": "color"
-            },
-            "readonly": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            }
-          },
-          "error": {
-            "rest": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color"
-            }
-          }
-        }
-      },
-      "container": {
-        "bgcolor": {
-          "default": {
-            "rest": {
-              "value": "{sys.bgcolor.container.neutral}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.bgcolor.container.neutral}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.bgcolor.container.neutral}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.bgcolor.container.neutral}",
-              "type": "color"
-            },
-            "disabled": {
-              "value": "{sys.bgcolor.container.disabled}",
-              "type": "color"
-            },
-            "readonly": {
-              "value": "{sys.bgcolor.container.disabled}",
-              "type": "color"
-            }
-          },
-          "error": {
-            "rest": {
-              "value": "{sys.bgcolor.container.danger}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.bgcolor.container.danger}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.bgcolor.container.danger}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.bgcolor.container.danger}",
-              "type": "color"
+            "error": {
+              "rest": {
+                "value": "{sys.content.on_container.danger}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.on_container.danger}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.on_container.danger}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.on_container.danger}",
+                "type": "color"
+              }
             }
           }
         },
-        "bordercolor": {
-          "default": {
-            "rest": {
-              "value": "{sys.stroke.container.neutral}",
-              "type": "color"
+        "placeholder": {
+          "textcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.content.on_container.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              }
             },
-            "hover": {
-              "value": "{sys.stroke.container.neutral}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.stroke.container.neutral}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.stroke.global.focusring}",
-              "type": "color"
-            },
-            "disabled": {
-              "value": "{sys.stroke.container.disabled}",
-              "type": "color"
-            },
-            "readonly": {
-              "value": "{sys.stroke.container.disabled}",
-              "type": "color"
-            }
-          },
-          "error": {
-            "rest": {
-              "value": "{sys.stroke.container.danger}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.stroke.container.danger}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.stroke.container.danger}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.stroke.container.danger}",
-              "type": "color"
+            "error": {
+              "rest": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color"
+              }
             }
           }
-        }
-      },
-      "inputicon": {
-        "rest": {
-          "value": "{sys.content.on_container.neutral_subtle}",
-          "type": "color"
         },
-        "hover": {
-          "value": "{sys.content.on_container.xsubtle_hover}",
-          "type": "color"
-        },
-        "pressed": {
-          "value": "{sys.content.on_container.xsubtle_pressed}",
-          "type": "color"
-        },
-        "focus": {
-          "value": "{sys.content.on_container.neutral_subtle}",
-          "type": "color"
-        },
-        "disabled": {
-          "value": "{sys.content.on_container.disabled}",
-          "type": "color"
-        },
-        "error": {
-          "value": "{sys.content.on_container.danger_subtle}",
-          "type": "color"
-        }
-      },
-      "prefixsuffix": {
-        "textcolor": {
-          "default": {
-            "rest": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+        "container": {
+          "bgcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.bgcolor.container.neutral}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.bgcolor.container.neutral}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.bgcolor.container.neutral}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.bgcolor.container.neutral}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.bgcolor.container.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.bgcolor.container.disabled}",
+                "type": "color"
+              }
             },
-            "hover": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "pressed": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "focus": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "disabled": {
-              "value": "{sys.content.on_container.disabled}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "readonly": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+            "error": {
+              "rest": {
+                "value": "{sys.bgcolor.container.danger}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.bgcolor.container.danger}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.bgcolor.container.danger}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.bgcolor.container.danger}",
+                "type": "color"
+              }
             }
           },
+          "bordercolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.stroke.container.neutral}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.stroke.container.neutral}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.stroke.container.neutral}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.stroke.global.focusring}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.stroke.container.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.stroke.container.disabled}",
+                "type": "color"
+              }
+            },
+            "error": {
+              "rest": {
+                "value": "{sys.stroke.container.danger}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.stroke.container.danger}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.stroke.container.danger}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.stroke.container.danger}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "inputicon": {
+          "rest": {
+            "value": "{sys.content.on_container.neutral_subtle}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{sys.content.on_container.xsubtle_hover}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{sys.content.on_container.xsubtle_pressed}",
+            "type": "color"
+          },
+          "focus": {
+            "value": "{sys.content.on_container.neutral_subtle}",
+            "type": "color"
+          },
+          "disabled": {
+            "value": "{sys.content.on_container.disabled}",
+            "type": "color"
+          },
           "error": {
-            "rest": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+            "value": "{sys.content.on_container.danger_subtle}",
+            "type": "color"
+          }
+        },
+        "prefixsuffix": {
+          "textcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "hover": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "pressed": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "focus": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "disabled": {
+                "value": "{sys.content.on_container.disabled}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "readonly": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              }
             },
-            "hover": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "pressed": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "focus": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+            "error": {
+              "rest": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "hover": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "pressed": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              },
+              "focus": {
+                "value": "{sys.content.on_container.neutral_subtle}",
+                "type": "color",
+                "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              }
             }
           }
         }
