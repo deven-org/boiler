@@ -1042,15 +1042,15 @@
         "UnSelected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{sem.buttons.Silent.SurfaceFill.Rest}",
+              "value": "{sem.buttons.container.bgcolor.silent.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sem.buttons.Silent.SurfaceFill.Hover}",
+              "value": "{sem.buttons.container.bgcolor.silent.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sem.buttons.Silent.SurfaceFill.Pressed}",
+              "value": "{sem.buttons.container.bgcolor.silent.Pressed}",
               "type": "color"
             },
             "Focus": {
@@ -1064,23 +1064,23 @@
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{sem.buttons.Silent.SurfaceStroke.Rest}",
+              "value": "{sem.buttons.container.bordercolor.silent.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sem.buttons.Silent.SurfaceStroke.Hover}",
+              "value": "{sem.buttons.container.bordercolor.silent.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sem.buttons.Silent.SurfaceStroke.Pressed}",
+              "value": "{sem.buttons.container.bordercolor.silent.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sem.buttons.Silent.SurfaceStroke.Focus}",
+              "value": "{sem.buttons.container.bordercolor.silent.Focus}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sem.buttons.Silent.SurfaceStroke.Disabled}",
+              "value": "{sem.buttons.container.bordercolor.silent.Disabled}",
               "type": "color"
             }
           },
