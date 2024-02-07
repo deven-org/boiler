@@ -353,12 +353,12 @@
         }
       },
       "on_toggle": {
-        "disabled": {
+        "neutral_disabled": {
           "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "use for disabled states"
         },
-        "disabled_subtle": {
+        "neutral_disabled_subtle": {
           "value": "{core.color.coolgray.700.opa70}",
           "type": "color",
           "description": "use for disabled states"
@@ -380,25 +380,10 @@
         }
       },
       "on_timid": {
-        "disabled": {
+        "primary_disabled": {
           "value": "{core.color.coolgray.700.solid}",
           "type": "color",
           "description": "use for disabled states"
-        },
-        "disabled_subtle": {
-          "value": "{core.color.coolgray.700.opa70}",
-          "type": "color",
-          "description": "use for disabled states"
-        },
-        "neutral": {
-          "value": "{core.color.coolgray.100.solid}",
-          "type": "color",
-          "description": "Forms"
-        },
-        "neutral_subtle": {
-          "value": "{core.color.coolgray.400.solid}",
-          "type": "color",
-          "description": "for prefix, suffix"
         },
         "primary": {
           "value": "{core.color.azure.500.solid}",
@@ -411,6 +396,26 @@
         "primary_pressed": {
           "value": "{core.color.azure.300.solid}",
           "type": "color"
+        },
+        "neutral_disabled": {
+          "value": "{core.color.coolgray.700.solid}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "neutral": {
+          "value": "{core.color.coolgray.100.solid}",
+          "type": "color",
+          "description": "Forms"
+        },
+        "neutral_disabled_subtle": {
+          "value": "{core.color.coolgray.700.opa70}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "neutral_subtle": {
+          "value": "{core.color.coolgray.400.solid}",
+          "type": "color",
+          "description": "for prefix, suffix"
         }
       },
       "on_any": {
@@ -930,7 +935,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_timid.disabled}",
+            "value": "{sys.content.on_timid.primary_disabled}",
             "type": "color"
           },
           "Loading": {
@@ -956,7 +961,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_timid.disabled}",
+            "value": "{sys.content.on_timid.primary_disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1036,7 +1041,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_timid.disabled}",
+            "value": "{sys.content.on_timid.primary_disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1062,7 +1067,7 @@
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.on_timid.disabled}",
+            "value": "{sys.content.on_timid.primary_disabled}",
             "type": "color"
           },
           "Loading": {
@@ -1287,111 +1292,111 @@
         "UnSelected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{sys.bgcolor.toggle.neutral}",
+              "value": "{sys.bgcolor.timid.silent}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.bgcolor.toggle.neutral}",
+              "value": "{sys.bgcolor.timid.silent_hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.bgcolor.toggle.neutral}",
+              "value": "{sys.bgcolor.timid.silent_pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.bgcolor.toggle.disabled}",
+              "value": "{sys.bgcolor.timid.disabled}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.bgcolor.toggle.neutral}",
+              "value": "{sys.bgcolor.timid.silent}",
               "type": "color"
             }
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{sys.stroke.toggle.transparent}",
+              "value": "{sys.stroke.timid.silent}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.stroke.toggle.transparent}",
+              "value": "{sys.stroke.timid.silent}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.stroke.toggle.transparent}",
+              "value": "{sys.stroke.timid.silent}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.stroke.toggle.transparent}",
+              "value": "{sys.stroke.timid.silent}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.stroke.toggle.transparent}",
+              "value": "{sys.stroke.timid.silent}",
               "type": "color"
             }
           },
           "Label": {
             "Rest": {
-              "value": "{sys.content.on_toggle.neutral}",
+              "value": "{sys.content.on_timid.neutral}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_toggle.neutral}",
+              "value": "{sys.content.on_timid.neutral}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_toggle.neutral}",
+              "value": "{sys.content.on_timid.neutral}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_toggle.neutral}",
+              "value": "{sys.content.on_timid.neutral}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_toggle.disabled}",
+              "value": "{sys.content.on_timid.neutral_disabled}",
               "type": "color"
             }
           },
           "DescriptionText": {
             "Rest": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_toggle.disabled_subtle}",
+              "value": "{sys.content.on_timid.neutral_disabled_subtle}",
               "type": "color"
             }
           },
           "Icon": {
             "Rest": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sys.content.on_toggle.neutral_subtle}",
+              "value": "{sys.content.on_timid.neutral_subtle}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sys.content.on_toggle.disabled_subtle}",
+              "value": "{sys.content.on_timid.neutral_disabled_subtle}",
               "type": "color"
             }
           }

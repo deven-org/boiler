@@ -585,7 +585,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_timid.disabled}",
+                "value": "{sys.content.on_timid.primary_disabled}",
                 "type": "color"
               }
             }
@@ -629,7 +629,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_timid.disabled}",
+                "value": "{sys.content.on_timid.primary_disabled}",
                 "type": "color"
               }
             }
@@ -673,7 +673,7 @@
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.on_timid.disabled}",
+                "value": "{sys.content.on_timid.primary_disabled}",
                 "type": "color"
               }
             }
