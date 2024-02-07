@@ -76,23 +76,23 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.timid.solid}",
+                "value": "{sys.bgcolor.toggle.neutral}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.timid.solid_hover}",
+                "value": "{sys.bgcolor.toggle.neutral}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.timid.solid_pressed}",
+                "value": "{sys.bgcolor.toggle.neutral}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.timid.solid}",
+                "value": "{sys.bgcolor.toggle.neutral}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.timid.solid_disabled}",
+                "value": "{sys.bgcolor.toggle.disabled}",
                 "type": "color"
               },
               "ReadOnly": {
@@ -100,7 +100,7 @@
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.bgcolor.timid.solid}",
+                "value": "{sys.bgcolor.toggle.neutral}",
                 "type": "color"
               }
             }
@@ -145,31 +145,31 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.stroke.timid.secondary}",
+                "value": "{sys.stroke.toggle.primary}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.stroke.timid.secondary_hover}",
+                "value": "{sys.stroke.toggle.primary_hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.stroke.timid.secondary_pressed}",
+                "value": "{sys.stroke.toggle.primary_pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.stroke.timid.secondary}",
+                "value": "{sys.stroke.toggle.primary}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.stroke.container.disabled}",
+                "value": "{sys.stroke.toggle.disabled}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.stroke.container.disabled}",
+                "value": "{sys.stroke.toggle.disabled}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.stroke.container.danger}",
+                "value": "{sys.stroke.toggle.danger}",
                 "type": "color"
               }
             }
@@ -216,31 +216,31 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               },
               "ReadOnly": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               },
               "Error": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.on_toggle.transparent}",
                 "type": "color"
               }
             }
