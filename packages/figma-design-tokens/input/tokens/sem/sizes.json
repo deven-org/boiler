@@ -4,7 +4,7 @@
       "cta": {
         "rest": {
           "value": {
-            "color": "{sem.actions.cta.surfacestroke.rest}",
+            "color": "{sem.buttons.container.bordercolor.cta.rest}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -12,7 +12,7 @@
         },
         "hover": {
           "value": {
-            "color": "{sem.actions.cta.surfacestroke.hover}",
+            "color": "{sem.buttons.container.bordercolor.cta.hover}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -20,7 +20,7 @@
         },
         "pressed": {
           "value": {
-            "color": "{sem.actions.cta.surfacestroke.pressed}",
+            "color": "{sem.buttons.container.bordercolor.cta.pressed}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -28,7 +28,7 @@
         },
         "focus": {
           "value": {
-            "color": "{sem.actions.cta.surfacestroke.focus}",
+            "color": "{sem.buttons.container.bordercolor.cta.focus}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -36,7 +36,7 @@
         },
         "disabled": {
           "value": {
-            "color": "{sem.actions.cta.surfacestroke.disabled}",
+            "color": "{sem.buttons.container.bordercolor.cta.disabled}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
@@ -44,7 +44,7 @@
         },
         "loading": {
           "value": {
-            "color": "{sem.actions.cta.surfacestroke.loading}",
+            "color": "{sem.buttons.container.bordercolor.cta.loading}",
             "width": "{core.dimensionPX.1}",
             "style": "solid"
           },
