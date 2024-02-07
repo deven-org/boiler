@@ -1042,15 +1042,15 @@
         "UnSelected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{sem.Actions.Silent.SurfaceFill.Rest}",
+              "value": "{sem.buttons.Silent.SurfaceFill.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sem.Actions.Silent.SurfaceFill.Hover}",
+              "value": "{sem.buttons.Silent.SurfaceFill.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sem.Actions.Silent.SurfaceFill.Pressed}",
+              "value": "{sem.buttons.Silent.SurfaceFill.Pressed}",
               "type": "color"
             },
             "Focus": {
@@ -1064,23 +1064,23 @@
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{sem.Actions.Silent.SurfaceStroke.Rest}",
+              "value": "{sem.buttons.Silent.SurfaceStroke.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sem.Actions.Silent.SurfaceStroke.Hover}",
+              "value": "{sem.buttons.Silent.SurfaceStroke.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sem.Actions.Silent.SurfaceStroke.Pressed}",
+              "value": "{sem.buttons.Silent.SurfaceStroke.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sem.Actions.Silent.SurfaceStroke.Focus}",
+              "value": "{sem.buttons.Silent.SurfaceStroke.Focus}",
               "type": "color"
             },
             "Disabled": {
-              "value": "{sem.Actions.Silent.SurfaceStroke.Disabled}",
+              "value": "{sem.buttons.Silent.SurfaceStroke.Disabled}",
               "type": "color"
             }
           },
@@ -1154,15 +1154,15 @@
         "Selected": {
           "SurfaceFill": {
             "Rest": {
-              "value": "{sem.Actions.Primary.SurfaceFill.Rest}",
+              "value": "{sem.buttons.container.bgcolor.primary.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sem.Actions.Primary.SurfaceFill.Hover}",
+              "value": "{sem.buttons.container.bgcolor.primary.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sem.Actions.Primary.SurfaceFill.Pressed}",
+              "value": "{sem.buttons.container.bgcolor.primary.Pressed}",
               "type": "color"
             },
             "Focus": {
@@ -1172,19 +1172,19 @@
           },
           "SurfaceStroke": {
             "Rest": {
-              "value": "{sem.Actions.Primary.SurfaceStroke.Rest}",
+              "value": "{sem.buttons.container.bordercolor.primary.Rest}",
               "type": "color"
             },
             "Hover": {
-              "value": "{sem.Actions.Primary.SurfaceStroke.Hover}",
+              "value": "{sem.buttons.container.bordercolor.primary.Hover}",
               "type": "color"
             },
             "Pressed": {
-              "value": "{sem.Actions.Primary.SurfaceStroke.Pressed}",
+              "value": "{sem.buttons.container.bordercolor.primary.Pressed}",
               "type": "color"
             },
             "Focus": {
-              "value": "{sem.Actions.Primary.SurfaceStroke.Focus}",
+              "value": "{sem.buttons.container.bordercolor.primary.Focus}",
               "type": "color"
             }
           },

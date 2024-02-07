@@ -507,41 +507,41 @@
           "BorderColor": {
             "Active": {
               "Rest": {
-                "value": "{sem.Actions.Primary.SurfaceStroke.Rest}",
+                "value": "{sem.buttons.container.bordercolor.primary.Rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sem.Actions.Primary.SurfaceStroke.Hover}",
+                "value": "{sem.buttons.container.bordercolor.primary.Hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sem.Actions.Primary.SurfaceStroke.Pressed}",
+                "value": "{sem.buttons.container.bordercolor.primary.Pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sem.Actions.Primary.SurfaceStroke.Focus}",
+                "value": "{sem.buttons.container.bordercolor.primary.Focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sem.Actions.Silent.SurfaceStroke.Rest}",
+                "value": "{sem.buttons.Silent.SurfaceStroke.Rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sem.Actions.Silent.SurfaceStroke.Hover}",
+                "value": "{sem.buttons.Silent.SurfaceStroke.Hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sem.Actions.Silent.SurfaceStroke.Pressed}",
+                "value": "{sem.buttons.Silent.SurfaceStroke.Pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sem.Actions.Silent.SurfaceStroke.Focus}",
+                "value": "{sem.buttons.Silent.SurfaceStroke.Focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sem.Actions.Silent.SurfaceStroke.Disabled}",
+                "value": "{sem.buttons.Silent.SurfaceStroke.Disabled}",
                 "type": "color"
               }
             }
@@ -1107,23 +1107,23 @@
         },
         "BorderColor": {
           "Rest": {
-            "value": "{sem.Actions.Silent.SurfaceStroke.Rest}",
+            "value": "{sem.buttons.Silent.SurfaceStroke.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sem.Actions.Silent.SurfaceStroke.Hover}",
+            "value": "{sem.buttons.Silent.SurfaceStroke.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sem.Actions.Silent.SurfaceStroke.Pressed}",
+            "value": "{sem.buttons.Silent.SurfaceStroke.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sem.Actions.Silent.SurfaceStroke.Focus}",
+            "value": "{sem.buttons.Silent.SurfaceStroke.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sem.Actions.Silent.SurfaceStroke.Focus}",
+            "value": "{sem.buttons.Silent.SurfaceStroke.Focus}",
             "type": "color"
           }
         }
@@ -1131,23 +1131,23 @@
       "Icon": {
         "IconColor": {
           "Rest": {
-            "value": "{sem.Actions.Silent.Icon.Rest}",
+            "value": "{sem.buttons.Silent.Icon.Rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sem.Actions.Silent.Icon.Hover}",
+            "value": "{sem.buttons.Silent.Icon.Hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sem.Actions.Silent.Icon.Pressed}",
+            "value": "{sem.buttons.Silent.Icon.Pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sem.Actions.Silent.Icon.Focus}",
+            "value": "{sem.buttons.Silent.Icon.Focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sem.Actions.Silent.Icon.Disabled}",
+            "value": "{sem.buttons.Silent.Icon.Disabled}",
             "type": "color"
           }
         }
