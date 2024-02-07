@@ -11,7 +11,7 @@ const sampleParams: BlrIconButtonType = {
   icon: 'blrChevronDown',
   loading: false,
   disabled: false,
-  buttonId: 'button-id',
+  iconButtonId: 'button-id',
   variant: 'cta',
   loadingStatus: 'Loading',
   theme: 'Light',
@@ -55,7 +55,7 @@ describe('blr-icon-button', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
     const className = iconButton?.className;
@@ -107,13 +107,13 @@ describe('blr-icon-button', () => {
     expect(className).not.to.contain('disabled');
   });
 
-  it('fires blrclick event if clicked and not disabled', async () => {
+  it('fires onClick event if clicked and not disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrClick', () => {
+    element.getRootNode()?.addEventListener('onClick', () => {
       fired = true;
     });
 
@@ -122,13 +122,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.true;
   });
 
-  it('doesnt fires blrclick event if clicked and disabled', async () => {
+  it('doesnt fires onClick event if clicked and disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrClick', () => {
+    element.getRootNode()?.addEventListener('onClick', () => {
       fired = true;
     });
 
@@ -137,13 +137,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires blrfocus event if focused and not disabled', async () => {
+  it('fires onFocus event if focused and not disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrFocus', () => {
+    element.getRootNode()?.addEventListener('onFocus', () => {
       fired = true;
     });
 
@@ -152,13 +152,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.true;
   });
 
-  it('doesnt fires blrfocus event if focused and disabled', async () => {
+  it('doesnt fires onFocus event if focused and disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrFocus', () => {
+    element.getRootNode()?.addEventListener('onFocus', () => {
       fired = true;
     });
 
@@ -167,13 +167,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires blrblur event if blurred and not disabled', async () => {
+  it('fires onBlur event if blurred and not disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrBlur', () => {
+    element.getRootNode()?.addEventListener('onBlur', () => {
       fired = true;
     });
 
@@ -183,13 +183,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.true;
   });
 
-  it('doesnt fires blrblur event if blurred and disabled', async () => {
+  it('doesnt fires onBlur event if blurred and disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrBlur', () => {
+    element.getRootNode()?.addEventListener('onBlur', () => {
       fired = true;
     });
 

@@ -26,23 +26,21 @@ const sharedStyles = html`
 const argTypesToDisable = [
   'theme',
   'variant',
+  'sizeVariant',
   'icon',
-  'size',
   'disabled',
   'loading',
   'readonly',
   'required',
-  'buttonId',
+  'iconButtonId',
   'hasError',
   'errorMessage',
   'errorIcon',
   'arialabel',
-  'textareaId',
   'name',
   'onChange',
   'onFocus',
   'onBlur',
-  'onSelect',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
@@ -72,9 +70,8 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
+    sizeVariant: {
       options: ActionSizes,
-      name: 'sizeVariant',
       description: 'Select size of the component.',
       control: { type: 'select' },
       table: {
@@ -123,21 +120,19 @@ export default {
       },
     },
     //Technical attributes
-    buttonId: {
-      name: 'buttonId',
+    iconButtonId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
       },
     },
-
     // Events
     onChange: {
       name: 'onChange',
       description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
-        disable: true,
+        category: 'Events',
       },
     },
     onFocus: {
@@ -145,7 +140,7 @@ export default {
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
-        disable: true,
+        category: 'Events',
       },
     },
     onBlur: {
@@ -153,7 +148,7 @@ export default {
       description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
-        disable: true,
+        category: 'Events',
       },
     },
     loadingStatus: {
@@ -195,12 +190,12 @@ BlrIconButton.storyName = 'Icon Button';
 const defaultParams: BlrIconButtonType = {
   theme: 'Light',
   variant: 'primary',
-  size: 'md',
+  sizeVariant: 'md',
   icon: 'blr360',
   disabled: false,
   loading: false,
   arialabel: 'Icon Button',
-  buttonId: 'iconButtonId',
+  iconButtonId: 'iconButtonId',
   loadingStatus: 'Loading',
 };
 BlrIconButton.args = defaultParams;
@@ -255,23 +250,23 @@ export const SizeVariant = () => {
     <div class="stories-icon-button">
       ${BlrIconButtonRenderFunction({
         ...defaultParams,
-        size: 'xs',
+        sizeVariant: 'xs',
       })}
       ${BlrIconButtonRenderFunction({
         ...defaultParams,
-        size: 'sm',
+        sizeVariant: 'sm',
       })}
       ${BlrIconButtonRenderFunction({
         ...defaultParams,
-        size: 'md',
+        sizeVariant: 'md',
       })}
       ${BlrIconButtonRenderFunction({
         ...defaultParams,
-        size: 'lg',
+        sizeVariant: 'lg',
       })}
       ${BlrIconButtonRenderFunction({
         ...defaultParams,
-        size: 'xl',
+        sizeVariant: 'xl',
       })}
     </div>
   `;

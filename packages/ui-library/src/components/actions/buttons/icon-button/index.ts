@@ -23,17 +23,17 @@ export class BlrIconButton extends LitElement {
   @property() icon?: SizelessIconType;
   @property() loading?: boolean;
   @property() disabled!: boolean;
-  @property() buttonId?: string;
+  @property() iconButtonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size?: ActionSizesType = 'md';
+  @property() sizeVariant?: ActionSizesType = 'md';
   @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
 
   // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() blrFocus?: () => void;
-  @property() blrBlur?: () => void;
-  @property() blrClick?: () => void;
+  @property() onFocus?: () => void;
+  @property() onBlur?: () => void;
+  @property() onClick?: () => void;
 
   @state() protected focused = false;
 
@@ -41,7 +41,7 @@ export class BlrIconButton extends LitElement {
     if (!this.disabled) {
       this.focused = true;
       this.dispatchEvent(
-        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('onFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };
@@ -50,7 +50,7 @@ export class BlrIconButton extends LitElement {
     if (!this.disabled) {
       this.focused = false;
       this.dispatchEvent(
-        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('onBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };
@@ -58,18 +58,18 @@ export class BlrIconButton extends LitElement {
   protected handleClick = (event: Event) => {
     if (!this.disabled) {
       this.dispatchEvent(
-        new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('onClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
         [this.variant]: this.variant,
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
         disabled: this.disabled,
         loading: this.loading || false,
       });
@@ -83,7 +83,7 @@ export class BlrIconButton extends LitElement {
       const loaderSizeVariant = getComponentConfigToken([
         'SizeVariant',
         'Actions',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
         'Loader',
       ]).toLowerCase() as FormSizesType;
 
@@ -91,7 +91,7 @@ export class BlrIconButton extends LitElement {
         'SizeVariant',
         'Actions',
         'IconButton',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
         'Icon',
       ]).toLowerCase() as SizesType;
 
@@ -104,7 +104,7 @@ export class BlrIconButton extends LitElement {
           class="blr-semantic-action blr-icon-button ${classes}"
           aria-disabled=${this.disabled ? 'true' : nothing}
           @click=${this.handleClick}
-          id=${this.buttonId || nothing}
+          id=${this.iconButtonId || nothing}
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}

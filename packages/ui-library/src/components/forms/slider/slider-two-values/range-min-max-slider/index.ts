@@ -62,13 +62,13 @@ export class BlrRangeMinMaxSlider extends LitElement {
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
     html` ${BlrIconButtonRenderFunction({
       arialabel: btnId,
-      blrClick: btnEventHandler,
+      onClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
-      buttonId: btnId,
+      iconButtonId: btnId,
       variant: this.btnVariant,
-      size: this.size,
+      sizeVariant: this.size,
       loadingStatus: 'Loading',
       theme: this.theme,
     })}`;
