@@ -734,7 +734,7 @@
       }
     },
     "shadow": {
-      "alpha": {
+      "100": {
         "value": "{core.color.coolgray.100.opa30}",
         "type": "color",
         "description": "Apply on elevation Box shadow"

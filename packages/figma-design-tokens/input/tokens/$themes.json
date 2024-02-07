@@ -1596,7 +1596,6 @@
       "sys.bgcolor.container.informative": "14e3298b428be39ae46e74b5e2387eb07c8aecef",
       "sys.content.transparent": "6b1f88d2240f22a986775b4154b5802072cf486c",
       "sys.stroke.transparent": "8b9a10968da651b0b3c4c1ebc0b6c68050565ce9",
-      "sys.shadow.alpha": "7acabfab9523ae18852f63cd82d0248e2414258e",
       "_internal.accent.pink.subtle": "3454a9c00fefa33cf5038cbf3fc3569198905506",
       "_internal.accent.pink.strong": "61714016a2ea41c197e67797bd783d265f0d1aac",
       "sem.Actions.Primary.SurfaceFill.focus": "daf3947889d6c0c639e42fc97ccb9dd8db4ae964",
@@ -1691,7 +1690,8 @@
       "sys.bgcolor.bold.neutral": "6403409db062e5c5d364148fec667254bb10277e",
       "sys.bgcolor.bold.neutral_hover": "6e00de4d32eeaa5d6f877c2f9365243331f25fe2",
       "sys.bgcolor.bold.neutral_pressed": "8407ad49ca96df13aec4cea5e5e889d2f18b8061",
-      "sys.content.on_container.neutral_subtle": "7e95dfa2db6f69e8178133b4745473c636acf439"
+      "sys.content.on_container.neutral_subtle": "7e95dfa2db6f69e8178133b4745473c636acf439",
+      "sys.shadow.100": "7acabfab9523ae18852f63cd82d0248e2414258e"
     },
     "group": "Theme"
   },
@@ -2372,7 +2372,6 @@
       "sys.content.onunspecified.default.beta": "17bcb01b82f685d9fb5b071761fa0c63113e3b02",
       "sys.content.onunspecified.inverted.alpha": "34e67391ce77ae095a826b27fd4b0c9aac339f52",
       "sys.content.onunspecified.inverted.beta": "f925ed6fad1015b3c3816e2653c5380d1f0ad48f",
-      "sys.shadow.alpha": "7acabfab9523ae18852f63cd82d0248e2414258e",
       "_internal.accent.pink.subtle": "3454a9c00fefa33cf5038cbf3fc3569198905506",
       "_internal.accent.pink.strong": "61714016a2ea41c197e67797bd783d265f0d1aac",
       "sem-copy.Actions.CTA.SurfaceFill.Rest": "1158f5740fb7cb91acdb646d590334b42f9134da",
@@ -2669,7 +2668,8 @@
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Pressed": "6d6a2736de73281af8f2ce34284f868f95eadc40",
       "cmp.Menu.MenuItem.ItemDescription.TextColor.Active.Focus": "bf71b533196d3c803171a6b28428ff60f8b2b575",
       "sys.bgcolor.surface.blanket": "b12df8e6b12ad5285fa3a88b2168de38e3b794d4",
-      "sys.bgcolor.surface.inverted": "08aada7a16f40a49a852c419e4b20e3408593e42"
+      "sys.bgcolor.surface.inverted": "08aada7a16f40a49a852c419e4b20e3408593e42",
+      "sys.shadow.100": "7acabfab9523ae18852f63cd82d0248e2414258e"
     },
     "group": "Theme"
   },
