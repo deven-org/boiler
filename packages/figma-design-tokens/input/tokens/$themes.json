@@ -1363,10 +1363,6 @@
       "sem.Feedback.Brand.Default.Shape.Foreground": "beecdb7eedd34a65f46cd5de2b8c5126b26e24b0",
       "sem.Feedback.Brand.Inverted.Shape.Background": "9cccb6280ad615174f98e00ec46ba36d26612f9e",
       "sem.Feedback.Brand.Inverted.Shape.Foreground": "575bbe17b003d26ba36364f54c7be2711cff3554",
-      "sem.UI.Headline.Default": "9359d5ee2cfbdfb7741fd36702b3ec0fa4acf2bb",
-      "sem.UI.Paragraph.Default": "5562967b542d2e4326dd90e763547ae86e47ed97",
-      "sem.UI.Background.Level_1": "67e4fd1468654d2173081b2c16fda45142fa8c8a",
-      "sem.UI.Background.Level_2": "766caf97b4e112fb09c1da451835c47f4ef7f68e",
       "sys.bgcolor.container.danger": "97e093619563badf0bb2e56cf34cce500c9ae88e",
       "sys.bgcolor.container.warning": "438e0d088601c55c7773658a55ad63ffb1f5ea1e",
       "sys.bgcolor.container.safe": "c3981a1e4b150ec1828c159d9e16f947d271d631",
@@ -1681,7 +1677,11 @@
       "sem.formfields.prefixsuffix.textcolor.error.Hover": "2b18fff0d22824a398f36cf4cbcccdd28b3441bb",
       "sem.formfields.prefixsuffix.textcolor.error.Pressed": "f7c0882a97d7a33ec518f524ff1f0c03e53716be",
       "sem.formfields.prefixsuffix.textcolor.error.Focus": "cbe800e97452e69476ee631a189a072fc0d3d8e6",
-      "sem.global.focus": "61e9945f190be30df996380d9834aa31915783cf"
+      "sem.global.focus": "61e9945f190be30df996380d9834aa31915783cf",
+      "sem.ui.headline.Default": "9359d5ee2cfbdfb7741fd36702b3ec0fa4acf2bb",
+      "sem.ui.paragraph.Default": "5562967b542d2e4326dd90e763547ae86e47ed97",
+      "sem.ui.background.Level_1": "67e4fd1468654d2173081b2c16fda45142fa8c8a",
+      "sem.ui.background.Level_2": "766caf97b4e112fb09c1da451835c47f4ef7f68e"
     },
     "group": "Theme"
   },
@@ -2060,10 +2060,6 @@
       "sem.Feedback.Brand.Default.Shape.Foreground": "beecdb7eedd34a65f46cd5de2b8c5126b26e24b0",
       "sem.Feedback.Brand.Inverted.Shape.Background": "9cccb6280ad615174f98e00ec46ba36d26612f9e",
       "sem.Feedback.Brand.Inverted.Shape.Foreground": "575bbe17b003d26ba36364f54c7be2711cff3554",
-      "sem.UI.Headline.Default": "9359d5ee2cfbdfb7741fd36702b3ec0fa4acf2bb",
-      "sem.UI.Paragraph.Default": "5562967b542d2e4326dd90e763547ae86e47ed97",
-      "sem.UI.Background.Level_1": "67e4fd1468654d2173081b2c16fda45142fa8c8a",
-      "sem.UI.Background.Level_2": "766caf97b4e112fb09c1da451835c47f4ef7f68e",
       "sys.surface.default": "5d65fa2b04dea80bb95c06b32a9ad6a210df668c",
       "sys.surface.error.alpha": "1562b47651d9ba0dfcc3d684e9eef032a3dfb188",
       "sys.surface.error.beta": "3661c2eeec4e822e6078442045b597b829cf9533",
@@ -2652,7 +2648,11 @@
       "sem.formfields.prefixsuffix.textcolor.error.Hover": "2b18fff0d22824a398f36cf4cbcccdd28b3441bb",
       "sem.formfields.prefixsuffix.textcolor.error.Pressed": "f7c0882a97d7a33ec518f524ff1f0c03e53716be",
       "sem.formfields.prefixsuffix.textcolor.error.Focus": "cbe800e97452e69476ee631a189a072fc0d3d8e6",
-      "sem.global.focus": "61e9945f190be30df996380d9834aa31915783cf"
+      "sem.global.focus": "61e9945f190be30df996380d9834aa31915783cf",
+      "sem.ui.headline.Default": "9359d5ee2cfbdfb7741fd36702b3ec0fa4acf2bb",
+      "sem.ui.paragraph.Default": "5562967b542d2e4326dd90e763547ae86e47ed97",
+      "sem.ui.background.Level_1": "67e4fd1468654d2173081b2c16fda45142fa8c8a",
+      "sem.ui.background.Level_2": "766caf97b4e112fb09c1da451835c47f4ef7f68e"
     },
     "group": "Theme"
   },

@@ -306,7 +306,7 @@
       "ContentSection": {
         "Text": {
           "TextColor": {
-            "value": "{sem.UI.Headline.Default}",
+            "value": "{sem.ui.headline.Default}",
             "type": "color"
           }
         }
@@ -314,7 +314,7 @@
       "HeaderSection": {
         "Headline": {
           "TextColor": {
-            "value": "{sem.UI.Headline.Default}",
+            "value": "{sem.ui.headline.Default}",
             "type": "color"
           }
         }
