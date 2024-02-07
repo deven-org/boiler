@@ -306,7 +306,7 @@
       "ContentSection": {
         "Text": {
           "TextColor": {
-            "value": "{sem.ui.headline.Default}",
+            "value": "{sem.ui.headline.default}",
             "type": "color"
           }
         }
@@ -314,7 +314,7 @@
       "HeaderSection": {
         "Headline": {
           "TextColor": {
-            "value": "{sem.ui.headline.Default}",
+            "value": "{sem.ui.headline.default}",
             "type": "color"
           }
         }
@@ -507,41 +507,41 @@
           "BorderColor": {
             "Active": {
               "Rest": {
-                "value": "{sem.buttons.container.bordercolor.primary.Rest}",
+                "value": "{sem.buttons.container.bordercolor.primary.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sem.buttons.container.bordercolor.primary.Hover}",
+                "value": "{sem.buttons.container.bordercolor.primary.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sem.buttons.container.bordercolor.primary.Pressed}",
+                "value": "{sem.buttons.container.bordercolor.primary.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sem.buttons.container.bordercolor.primary.Focus}",
+                "value": "{sem.buttons.container.bordercolor.primary.focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sem.buttons.container.bordercolor.silent.Rest}",
+                "value": "{sem.buttons.container.bordercolor.silent.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sem.buttons.container.bordercolor.silent.Hover}",
+                "value": "{sem.buttons.container.bordercolor.silent.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sem.buttons.container.bordercolor.silent.Pressed}",
+                "value": "{sem.buttons.container.bordercolor.silent.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sem.buttons.container.bordercolor.silent.Focus}",
+                "value": "{sem.buttons.container.bordercolor.silent.focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sem.buttons.container.bordercolor.silent.Disabled}",
+                "value": "{sem.buttons.container.bordercolor.silent.disabled}",
                 "type": "color"
               }
             }
@@ -1107,23 +1107,23 @@
         },
         "BorderColor": {
           "Rest": {
-            "value": "{sem.buttons.container.bordercolor.silent.Rest}",
+            "value": "{sem.buttons.container.bordercolor.silent.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sem.buttons.container.bordercolor.silent.Hover}",
+            "value": "{sem.buttons.container.bordercolor.silent.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sem.buttons.container.bordercolor.silent.Pressed}",
+            "value": "{sem.buttons.container.bordercolor.silent.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sem.buttons.container.bordercolor.silent.Focus}",
+            "value": "{sem.buttons.container.bordercolor.silent.focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sem.buttons.container.bordercolor.silent.Focus}",
+            "value": "{sem.buttons.container.bordercolor.silent.focus}",
             "type": "color"
           }
         }
@@ -1131,23 +1131,23 @@
       "Icon": {
         "IconColor": {
           "Rest": {
-            "value": "{sem.buttons.icon.iconcolor.silent.Rest}",
+            "value": "{sem.buttons.icon.iconcolor.silent.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sem.buttons.icon.iconcolor.silent.Hover}",
+            "value": "{sem.buttons.icon.iconcolor.silent.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sem.buttons.icon.iconcolor.silent.Pressed}",
+            "value": "{sem.buttons.icon.iconcolor.silent.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sem.buttons.icon.iconcolor.silent.Focus}",
+            "value": "{sem.buttons.icon.iconcolor.silent.focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sem.buttons.icon.iconcolor.silent.Disabled}",
+            "value": "{sem.buttons.icon.iconcolor.silent.disabled}",
             "type": "color"
           }
         }
@@ -1358,7 +1358,7 @@
         },
         "Elevation": {
           "Elevated": {
-            "value": "{sem.Elevation.Lvl_1}",
+            "value": "{sem.elevation.lvl_1}",
             "type": "boxShadow"
           }
         }
