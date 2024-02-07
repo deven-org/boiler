@@ -383,6 +383,20 @@
         "type": "color",
         "description": "Apply on elevation Box shadow"
       }
+    },
+    "test": {
+      "value": "{core.color.azure.500.solid}",
+      "type": "color",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "mix",
+            "value": ".5",
+            "space": "lch",
+            "color": "{core.color.white.solid}"
+          }
+        }
+      }
     }
   },
   "_internal": {

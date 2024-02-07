@@ -3,7 +3,7 @@
     "CTA": {
       "SurfaceFill": {
         "Rest": {
-          "value": "{q.surface.brand.cta.rest}",
+          "value": "{q.test}",
           "type": "color"
         },
         "Hover": {
