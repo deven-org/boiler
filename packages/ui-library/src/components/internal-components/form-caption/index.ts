@@ -50,7 +50,7 @@ export class BlrFormCaption extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class=${classes} aria-label=${this.arialabel || nothing}>
+        <div class=${classes} role="grid">
           ${this.icon
             ? BlrIconRenderFunction(
                 {
@@ -66,7 +66,7 @@ export class BlrFormCaption extends LitElement {
                 }
               )
             : nothing}
-          <span class="blr-caption-text">${this.message}</span>
+          <span class="blr-caption-text" aria-label=${this.arialabel || nothing} role="caption">${this.message}</span>
           ${this.childElement}
         </div>
       `;
