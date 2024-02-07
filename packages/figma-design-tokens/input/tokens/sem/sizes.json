@@ -563,7 +563,7 @@
         "Default": {
           "Rest": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Default.Rest}",
+              "color": "{sem.formfields.container.bordercolor.default.Rest}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -571,7 +571,7 @@
           },
           "Hover": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Default.Hover}",
+              "color": "{sem.formfields.container.bordercolor.default.Hover}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -579,7 +579,7 @@
           },
           "Pressed": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Default.Pressed}",
+              "color": "{sem.formfields.container.bordercolor.default.Pressed}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -587,7 +587,7 @@
           },
           "Focus": {
             "value": {
-              "color": "{sem.Global.Focus}",
+              "color": "{sem.global.focus}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -595,7 +595,7 @@
           },
           "Disabled": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Default.Disabled}",
+              "color": "{sem.formfields.container.bordercolor.default.Disabled}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -603,7 +603,7 @@
           },
           "ReadOnly": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Default.ReadOnly}",
+              "color": "{sem.formfields.container.bordercolor.default.ReadOnly}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -613,7 +613,7 @@
         "Error": {
           "Rest": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Error.Rest}",
+              "color": "{sem.formfields.container.bordercolor.error.Rest}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -621,7 +621,7 @@
           },
           "Hover": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Error.Hover}",
+              "color": "{sem.formfields.container.bordercolor.error.Hover}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -629,7 +629,7 @@
           },
           "Pressed": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Error.Pressed}",
+              "color": "{sem.formfields.container.bordercolor.error.Pressed}",
               "width": "{core.dimensionPX.1}",
               "style": "solid"
             },
@@ -637,7 +637,7 @@
           },
           "Focus": {
             "value": {
-              "color": "{sem.Forms.SurfaceStroke.Error.Focus}",
+              "color": "{sem.formfields.container.bordercolor.error.Focus}",
               "width": "{core.dimensionPX.2}",
               "style": "solid"
             },
@@ -649,7 +649,7 @@
     "Global": {
       "FocusBorder": {
         "value": {
-          "color": "{sem.Global.Focus}",
+          "color": "{sem.global.focus}",
           "width": "{core.dimensionPX.2}",
           "style": "solid"
         },

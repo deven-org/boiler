@@ -1533,188 +1533,194 @@
         }
       }
     },
-    "Forms": {
-      "UserInput": {
-        "Default": {
-          "Rest": {
-            "value": "{sys.content.on_container.neutral}",
-            "type": "color"
+    "formfields": {
+      "userinput": {
+        "textcolor": {
+          "default": {
+            "Rest": {
+              "value": "{sys.content.on_container.neutral}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.content.on_container.neutral}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.content.on_container.neutral}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.content.on_container.neutral}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.content.on_container.disabled}",
+              "type": "color"
+            },
+            "ReadOnly": {
+              "value": "{sys.content.on_container.neutral}",
+              "type": "color"
+            }
           },
-          "Hover": {
-            "value": "{sys.content.on_container.neutral}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.content.on_container.neutral}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.content.on_container.neutral}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{sys.content.on_container.disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{sys.content.on_container.neutral}",
-            "type": "color"
-          }
-        },
-        "Error": {
-          "Rest": {
-            "value": "{sys.content.on_container.danger}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{sys.content.on_container.danger}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.content.on_container.danger}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.content.on_container.danger}",
-            "type": "color"
-          }
-        }
-      },
-      "Placeholder": {
-        "Default": {
-          "Rest": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{sys.content.on_container.disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          }
-        },
-        "Error": {
-          "Rest": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.content.on_container.neutral_subtle}",
-            "type": "color"
+          "error": {
+            "Rest": {
+              "value": "{sys.content.on_container.danger}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.content.on_container.danger}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.content.on_container.danger}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.content.on_container.danger}",
+              "type": "color"
+            }
           }
         }
       },
-      "SurfaceFill": {
-        "Default": {
-          "Rest": {
-            "value": "{sys.bgcolor.container.neutral}",
-            "type": "color"
+      "placeholder": {
+        "textcolor": {
+          "default": {
+            "Rest": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.content.on_container.disabled}",
+              "type": "color"
+            },
+            "ReadOnly": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            }
           },
-          "Hover": {
-            "value": "{sys.bgcolor.container.neutral}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.bgcolor.container.neutral}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.bgcolor.container.neutral}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{sys.bgcolor.container.disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{sys.bgcolor.container.disabled}",
-            "type": "color"
-          }
-        },
-        "Error": {
-          "Rest": {
-            "value": "{sys.bgcolor.container.danger}",
-            "type": "color"
-          },
-          "Hover": {
-            "value": "{sys.bgcolor.container.danger}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.bgcolor.container.danger}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.bgcolor.container.danger}",
-            "type": "color"
+          "error": {
+            "Rest": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.content.on_container.neutral_subtle}",
+              "type": "color"
+            }
           }
         }
       },
-      "SurfaceStroke": {
-        "Default": {
-          "Rest": {
-            "value": "{sys.stroke.container.neutral}",
-            "type": "color"
+      "container": {
+        "bgcolor": {
+          "default": {
+            "Rest": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.bgcolor.container.disabled}",
+              "type": "color"
+            },
+            "ReadOnly": {
+              "value": "{sys.bgcolor.container.disabled}",
+              "type": "color"
+            }
           },
-          "Hover": {
-            "value": "{sys.stroke.container.neutral}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.stroke.container.neutral}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.stroke.global.focusring}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{sys.stroke.container.disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{sys.stroke.container.disabled}",
-            "type": "color"
+          "error": {
+            "Rest": {
+              "value": "{sys.bgcolor.container.danger}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.bgcolor.container.danger}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.bgcolor.container.danger}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.bgcolor.container.danger}",
+              "type": "color"
+            }
           }
         },
-        "Error": {
-          "Rest": {
-            "value": "{sys.stroke.container.danger}",
-            "type": "color"
+        "bordercolor": {
+          "default": {
+            "Rest": {
+              "value": "{sys.stroke.container.neutral}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.stroke.container.neutral}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.stroke.container.neutral}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.stroke.global.focusring}",
+              "type": "color"
+            },
+            "Disabled": {
+              "value": "{sys.stroke.container.disabled}",
+              "type": "color"
+            },
+            "ReadOnly": {
+              "value": "{sys.stroke.container.disabled}",
+              "type": "color"
+            }
           },
-          "Hover": {
-            "value": "{sys.stroke.container.danger}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.stroke.container.danger}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.stroke.container.danger}",
-            "type": "color"
+          "error": {
+            "Rest": {
+              "value": "{sys.stroke.container.danger}",
+              "type": "color"
+            },
+            "Hover": {
+              "value": "{sys.stroke.container.danger}",
+              "type": "color"
+            },
+            "Pressed": {
+              "value": "{sys.stroke.container.danger}",
+              "type": "color"
+            },
+            "Focus": {
+              "value": "{sys.stroke.container.danger}",
+              "type": "color"
+            }
           }
         }
       },
@@ -1744,9 +1750,9 @@
           "type": "color"
         }
       },
-      "PrefixSuffix": {
-        "OnPopulatedField": {
-          "Default": {
+      "prefixsuffix": {
+        "textcolor": {
+          "default": {
             "Rest": {
               "value": "{sys.content.on_container.neutral_subtle}",
               "type": "color",
@@ -1778,63 +1784,7 @@
               "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
             }
           },
-          "Error": {
-            "Rest": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Hover": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Pressed": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Focus": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            }
-          }
-        },
-        "OnEmptyField": {
-          "Default": {
-            "Rest": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Hover": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Pressed": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Focus": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "Disabled": {
-              "value": "{sys.content.on_container.disabled}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            },
-            "ReadOnly": {
-              "value": "{sys.content.on_container.neutral_subtle}",
-              "type": "color",
-              "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
-            }
-          },
-          "Error": {
+          "error": {
             "Rest": {
               "value": "{sys.content.on_container.neutral_subtle}",
               "type": "color",
@@ -1859,8 +1809,8 @@
         }
       }
     },
-    "Global": {
-      "Focus": {
+    "global": {
+      "focus": {
         "value": "{sys.stroke.global.focusring}",
         "type": "color"
       }
