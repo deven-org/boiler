@@ -6,7 +6,7 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit';
 // this loads the all components instances and registers their html tags
 import '../../../../index';
-import { action } from '@storybook/addon-actions';
+import { BlrRadioRenderFunction } from '../renderFunction';
 
 const sharedStyles = html`
   <style>
@@ -78,38 +78,6 @@ export default {
         category: 'Content / Settings',
       },
     },
-    options: {
-      name: 'options',
-      description:
-        'Enter an array containing information about the label, value and disabled prop for all options that are part of the select.',
-      control: 'array',
-      table: {
-        category: 'Content / Settings',
-      },
-    },
-    disabled: {
-      name: 'disabled',
-      description:
-        'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
-
-      table: {
-        category: 'States',
-      },
-    },
-    readonly: {
-      name: 'readonly',
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
-      table: {
-        category: 'States',
-      },
-    },
-    required: {
-      name: 'required',
-      description: 'Choose if the component must hold a value after an interaction or a submit.',
-      table: {
-        category: 'Validations',
-      },
-    },
     hasError: {
       name: 'hasError',
       description: 'Choose if component has an error.',
@@ -158,32 +126,6 @@ export default {
       },
       control: { type: 'text', label: 'Radio' },
     },
-    onChange: {
-      name: 'onChange',
-      description: 'Fires when the value changes.',
-      action: 'onChange',
-      table: {
-        category: 'Events',
-      },
-    },
-    onFocus: {
-      name: 'onFocus',
-      description: 'Fires when the component is focused.',
-      action: 'onFocus',
-      table: {
-        disable: false,
-        category: 'Events',
-      },
-    },
-    onBlur: {
-      name: 'onBlur',
-      description: 'Fires when the component lost focus.',
-      action: 'onBlur',
-      table: {
-        disable: false,
-        category: 'Events',
-      },
-    },
     theme: {
       options: Themes,
       control: { type: 'select' },
@@ -205,14 +147,9 @@ export default {
         Radio group is used to present users with a set of options where they can select only one choice from the available options. When a radio button is selected, a small dot or indicator usually appears inside the circle to indicate the active choice.      
         - [**Appearance**](#appearance)
           - [**Size Variant**](#size-variant)
-      
         - [**Content / Settings**](#content--settings)
           - [**Has Group Label**](#has-group-label)
-        - [**States**](#states)
-          - [**Disabled**](#disabled)
-          - [**Readonly**](#readonly)
         - [**Validation**](#validation)
-          - [**Required**](#required)
           - [**Has Error**](#has-error)
         - [**Dependencies**](#dependencies)
           - [**Form Caption Group**](#form-caption-group)
@@ -223,7 +160,34 @@ export default {
   },
 };
 
-export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
+const sampleRadioInputs = html`
+  ${BlrRadioRenderFunction({
+    checked: false,
+    disabled: false,
+    name: 'Radio 1',
+    optionId: 'radio1',
+    label: 'harald',
+    required: false,
+    readonly: false,
+    hasHint: true,
+    hasError: false,
+    theme: 'Light',
+  })}
+  ${BlrRadioRenderFunction({
+    checked: false,
+    disabled: false,
+    name: 'Radio 2',
+    optionId: 'radio2',
+    label: 'oscar',
+    required: false,
+    readonly: false,
+    hasHint: true,
+    hasError: false,
+    theme: 'Light',
+  })}
+`;
+
+export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params, sampleRadioInputs);
 
 BlrRadioGroup.storyName = 'Radio Group';
 
@@ -240,48 +204,12 @@ const defaultParams: BlrRadioGroupType & {
   hasHint: false,
   groupHintMessage: 'This is a small hint',
   groupHintIcon: 'blrInfo',
-  options: [
-    {
-      value: '0',
-      label: 'Option 1',
-      checked: false,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-    {
-      value: '1',
-      label: 'Option 2',
-      checked: false,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-    {
-      value: '2',
-      label: 'Option 3',
-      checked: true,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-    {
-      value: '4',
-      label: 'Option 4',
-      checked: false,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-  ],
-  disabled: false,
-  readonly: false,
-  required: false,
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
   ariaLabel: 'Radio Group',
   radioGroupId: 'Radio Group',
   name: 'Radio Group ',
-  onChange: () => action('onFocus'),
-  onFocus: () => action('onFocus'),
-  onBlur: () => action('onBlur'),
 };
 
 BlrRadioGroup.args = defaultParams;
@@ -368,58 +296,6 @@ export const HasGroupLabel = () =>
 
 HasGroupLabel.story = { name: ' ' };
 
-/**
- * ## States
- *  Apart from states like rest, hover, pressed and focus, the Radio Group component can also be disabled or readonly. The error state is documented under [Validation](#validation).
- * ### Disabled
- * The Radio Group component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
- */
-
-export const Disabled = () => {
-  return html`
-    ${sharedStyles}
-    ${BlrRadioGroup({
-      ...defaultParams,
-      groupLabel: 'Disabled',
-      disabled: true,
-    })}
-  `;
-};
-
-Disabled.story = { name: ' ' };
-
-/**
- * The Radio Group component in the readonly state can not be interacted with, but it can still be selected and receive focus.
- */
-export const Readonly = () => {
-  return html`
-    ${sharedStyles}
-    ${BlrRadioGroup({
-      ...defaultParams,
-      groupLabel: 'Readonly',
-      readonly: true,
-    })}
-  `;
-};
-
-/**
- * ## Validation
- * ### Required
- *The Radio Group component can be set as required. If set as required, an error should be thrown, when the Radio Group component was not checked, before it was submitted. It is recommended to indicate in the leged appendix, whether a component is required or not.
- */
-
-export const Required = () => {
-  return html`
-    ${sharedStyles}
-    ${BlrRadioGroup({
-      ...defaultParams,
-      groupLabel: 'Required',
-      required: true,
-    })}
-  `;
-};
-
-Required.story = { name: ' ' };
 /**
 The Radio Group component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Radio Group or in case the Radio Group was set as required and has not been checked before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
