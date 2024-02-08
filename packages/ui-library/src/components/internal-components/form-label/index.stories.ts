@@ -17,7 +17,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Internal Components/Form Label',
+  title: 'Components/Web Components/Internal Components/Form Label',
   argTypes: {
     labelSize: {
       name: 'sizeVariant',

@@ -1,7 +1,7 @@
 import { html } from 'lit-html';
 import { IconKeys } from '@boiler/icons';
-import { BlrIconType } from '../../components/ui/icon/index';
-import { BlrIconRenderFunction } from '../../components/ui/icon/renderFunction';
+import { BlrIconType } from '../../components/icon/index';
+import { BlrIconRenderFunction } from '../../components/icon/renderFunction';
 
 import { Sizes } from '../../globals/constants';
 import { getIconName } from '../../utils/get-icon-name';

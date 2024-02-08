@@ -5,7 +5,7 @@ import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { FormSizes } from '../../../globals/constants';
 
 export default {
-  title: 'Design System/Web Components/Internal Components/Form Caption Group',
+  title: 'Components/Web Components/Internal Components/Form Caption Group',
   argTypes: {
     size: {
       options: FormSizes,

@@ -15,7 +15,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Internal Components/Form Caption',
+  title: 'Components/Web Components/Internal Components/Form Caption',
   argTypes: {
     size: {
       options: FormSizes,

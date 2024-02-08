@@ -2,7 +2,7 @@ import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { FormSizesType, CaptionVariantType, SizesType } from '../../../globals/types';
-import { BlrIconRenderFunction } from '../../ui/icon/renderFunction';
+import { BlrIconRenderFunction } from '../../icon/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { calculateIconName } from '../../../utils/calculate-icon-name';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';

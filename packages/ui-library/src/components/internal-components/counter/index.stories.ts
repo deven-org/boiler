@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Design System/Web Components/Internal Components/Counter',
+  title: 'Components/Web Components/Internal Components/Counter',
   argTypes: {
     theme: {
       options: Themes,
