@@ -16,7 +16,6 @@ export class BlrFormCaption extends LitElement {
   static styles = [];
 
   @property() message?: string;
-  @property() arialabel?: string;
   @property() icon?: SizelessIconType;
   @property() variant: CaptionVariantType = 'hint';
   @property() size?: FormSizesType = 'md';
@@ -50,7 +49,7 @@ export class BlrFormCaption extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class=${classes} role="grid">
+        <div class=${classes}>
           ${this.icon
             ? BlrIconRenderFunction(
                 {
@@ -66,7 +65,7 @@ export class BlrFormCaption extends LitElement {
                 }
               )
             : nothing}
-          <span class="blr-caption-text" aria-label=${this.arialabel || nothing} role="caption">${this.message}</span>
+          <span class="blr-caption-text">${this.message}</span>
           ${this.childElement}
         </div>
       `;
