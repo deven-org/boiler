@@ -307,7 +307,7 @@
         "value": "{core.color.neutral.transparent}",
         "type": "color"
       },
-      "on_surface": {
+      "surface": {
         "disabled": {
           "regular": {
             "value": "{core.color.coolgray.800.solid}",
@@ -357,7 +357,7 @@
           }
         }
       },
-      "on_container": {
+      "container": {
         "subtle": {
           "disabled": {
             "value": "{core.color.coolgray.700.opa70}",
@@ -427,7 +427,7 @@
           "type": "color"
         }
       },
-      "on_bold": {
+      "bold": {
         "regular": {
           "disabled": {
             "value": "{core.color.coolgray.700.solid}",
@@ -499,7 +499,7 @@
           }
         }
       },
-      "on_toggle": {
+      "toggle": {
         "regular": {
           "disabled": {
             "value": "{core.color.coolgray.700.solid}",
@@ -576,7 +576,7 @@
           "description": "Forms"
         }
       },
-      "on_timid": {
+      "timid": {
         "regular": {
           "disabled": {
             "value": "{core.color.coolgray.700.solid}",
@@ -616,7 +616,7 @@
           }
         }
       },
-      "on_any": {
+      "any": {
         "informative": {
           "value": "{core.color.azure.400.solid}",
           "type": "color",
@@ -639,7 +639,7 @@
         }
       }
     },
-    "stroke": {
+    "bordercolor": {
       "timid": {
         "secondary_disabled": {
           "value": "{core.color.coolgray.700.solid}",
