@@ -1,10 +1,8 @@
 import '@boiler/ui-library/dist/';
-
 import { BlrButtonGroupRenderFunction } from './renderFunction';
-
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrButtonGroupType } from '.';
+import type { BlrButtonGroupType } from '@boiler/ui-library/dist/';
 import { BlrTextButtonRenderFunction } from '../buttons/text-button/renderFunction';
 
 const sampleParams: BlrButtonGroupType = {

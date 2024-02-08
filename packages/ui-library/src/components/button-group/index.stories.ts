@@ -1,11 +1,13 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import { BlrButtonGroupType } from './index';
-import { BlrButtonGroupRenderFunction } from './renderFunction';
-import '../../index';
+
 import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
 import { BlrIconButtonRenderFunction } from '../buttons/icon-button/renderFunction';
 import { BlrTextButtonRenderFunction } from '../buttons/text-button/renderFunction';
+
+import { BlrButtonGroupRenderFunction } from './renderFunction';
+import '../../index';
+import { BlrButtonGroupType } from '.';
 
 const sharedStyles = html`
   <style>
@@ -73,8 +75,8 @@ export default {
 
 export const ButtonGroup = (
   params: BlrButtonGroupType,
-  primaryLabel = 'Text Button',
-  secondaryLabel = 'Text Button'
+  primaryLabel: string = 'Text Button',
+  secondaryLabel: string = 'Text Button'
 ) => {
   const contentButtons = html`
     ${BlrTextButtonRenderFunction({

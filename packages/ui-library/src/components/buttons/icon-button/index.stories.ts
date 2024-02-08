@@ -43,6 +43,7 @@ const argTypesToDisable = [
   'onBlur',
   'onSelect',
 ];
+
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {

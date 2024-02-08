@@ -5,7 +5,7 @@ import type { BlrNumberInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../../utils/get-random.string';
+import { getRandomString } from '../../utils/get-random.string';
 
 const sampleParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',
