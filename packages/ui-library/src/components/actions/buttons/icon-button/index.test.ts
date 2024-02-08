@@ -13,7 +13,6 @@ const sampleParams: BlrIconButtonType = {
   disabled: false,
   buttonId: 'button-id',
   variant: 'cta',
-  loadingStatus: 'Loading',
   theme: 'Light',
 };
 
