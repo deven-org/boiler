@@ -8,7 +8,6 @@ storybook-static
 package-lock.json
 
 packages/js-example-app/dist
-packages/js-example-app/src/assets/index.html
 
 .yarn/install-state.gz
 
