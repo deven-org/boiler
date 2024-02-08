@@ -31,9 +31,9 @@ export class BlrIconButton extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() onFocus?: () => void;
-  @property() onBlur?: () => void;
-  @property() onClick?: () => void;
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrClick?: () => void;
 
   @state() protected focused = false;
 
@@ -41,7 +41,7 @@ export class BlrIconButton extends LitElement {
     if (!this.disabled) {
       this.focused = true;
       this.dispatchEvent(
-        new CustomEvent('onFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };
@@ -50,7 +50,7 @@ export class BlrIconButton extends LitElement {
     if (!this.disabled) {
       this.focused = false;
       this.dispatchEvent(
-        new CustomEvent('onBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };
@@ -58,7 +58,7 @@ export class BlrIconButton extends LitElement {
   protected handleClick = (event: Event) => {
     if (!this.disabled) {
       this.dispatchEvent(
-        new CustomEvent('onClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };

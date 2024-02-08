@@ -107,13 +107,13 @@ describe('blr-icon-button', () => {
     expect(className).not.to.contain('disabled');
   });
 
-  it('fires onClick event if clicked and not disabled', async () => {
+  it('fires blrclick event if clicked and not disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('onClick', () => {
+    element.getRootNode()?.addEventListener('blrClick', () => {
       fired = true;
     });
 
@@ -122,13 +122,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.true;
   });
 
-  it('doesnt fires onClick event if clicked and disabled', async () => {
+  it('doesnt fires blrclick event if clicked and disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('onClick', () => {
+    element.getRootNode()?.addEventListener('blrClick', () => {
       fired = true;
     });
 
@@ -137,13 +137,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires onFocus event if focused and not disabled', async () => {
+  it('fires blrfocus event if focused and not disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('onFocus', () => {
+    element.getRootNode()?.addEventListener('blrFocus', () => {
       fired = true;
     });
 
@@ -152,13 +152,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.true;
   });
 
-  it('doesnt fires onFocus event if focused and disabled', async () => {
+  it('doesnt fires blrfocus event if focused and disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('onFocus', () => {
+    element.getRootNode()?.addEventListener('blrFocus', () => {
       fired = true;
     });
 
@@ -167,13 +167,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires onBlur event if blurred and not disabled', async () => {
+  it('fires blrblur event if blurred and not disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('onBlur', () => {
+    element.getRootNode()?.addEventListener('blrBlur', () => {
       fired = true;
     });
 
@@ -183,13 +183,13 @@ describe('blr-icon-button', () => {
     expect(fired).to.be.true;
   });
 
-  it('doesnt fires onBlur event if blurred and disabled', async () => {
+  it('doesnt fires blrblur event if blurred and disabled', async () => {
     const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('onBlur', () => {
+    element.getRootNode()?.addEventListener('blrBlur', () => {
       fired = true;
     });
 
