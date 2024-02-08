@@ -8,6 +8,7 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         { from: 'src/assets', to: '.' },
+
         { from: '../ui-library/dist', to: '.' },
       ],
     }),

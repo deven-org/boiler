@@ -5,10 +5,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-index": "yarn run -T ejs src/index.ejs baseURL=. -o src/assets/index.html",
-    "build-index:prod": "yarn run -T ejs src/index.ejs baseURL=js-example-app -o src/assets/index.html",
-    "build": "yarn run build-index && webpack --config webpack.dev.js",
-    "build:prod": "yarn run build-index:prod && webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
     "serve": "http-server ./dist"
   },
   "keywords": [],
