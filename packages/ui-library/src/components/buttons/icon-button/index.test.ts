@@ -4,7 +4,7 @@ import { BlrIconButtonRenderFunction } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrIconButtonType } from '.';
+import type { BlrIconButtonType } from '@boiler/ui-library/dist/';
 
 const sampleParams: BlrIconButtonType = {
   arialabel: 'Button',

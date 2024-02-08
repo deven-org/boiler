@@ -1,13 +1,12 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
 
+import '../../index';
 import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
 import { BlrIconButtonRenderFunction } from '../buttons/icon-button/renderFunction';
 import { BlrTextButtonRenderFunction } from '../buttons/text-button/renderFunction';
-
-import { BlrButtonGroupRenderFunction } from './renderFunction';
-import '../../index';
 import { BlrButtonGroupType } from '.';
+import { BlrButtonGroupRenderFunction } from './renderFunction';
 
 const sharedStyles = html`
   <style>

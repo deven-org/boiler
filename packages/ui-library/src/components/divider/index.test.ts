@@ -4,7 +4,7 @@ import { BlrDividerRenderFunction } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrDividerType } from '.';
+import type { BlrDividerType } from '@boiler/ui-library/dist/';
 
 const sampleParams: BlrDividerType = { theme: 'Light', directionVariant: 'vertical' };
 
