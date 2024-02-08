@@ -5,19 +5,19 @@
         "bgcolor": {
           "primary": {
             "rest": {
-              "value": "{sys.bgcolor.timid.secondary}",
+              "value": "{sys.bgcolor.timid.secondary.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.timid.secondary_hover}",
+              "value": "{sys.bgcolor.timid.secondary.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.timid.secondary_pressed}",
+              "value": "{sys.bgcolor.timid.secondary.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.bgcolor.timid.secondary}",
+              "value": "{sys.bgcolor.timid.secondary.rest}",
               "type": "color"
             },
             "disabled": {
@@ -25,25 +25,25 @@
               "type": "color"
             },
             "loading": {
-              "value": "{sys.bgcolor.timid.secondary}",
+              "value": "{sys.bgcolor.timid.secondary.rest}",
               "type": "color"
             }
           },
           "silent": {
             "rest": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.timid.silent.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.timid.silent_hover}",
+              "value": "{sys.bgcolor.timid.silent.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.timid.silent_pressed}",
+              "value": "{sys.bgcolor.timid.silent.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.timid.silent.rest}",
               "type": "color"
             },
             "disabled": {
@@ -51,25 +51,25 @@
               "type": "color"
             },
             "loading": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.timid.silent.rest}",
               "type": "color"
             }
           },
           "destructive": {
             "rest": {
-              "value": "{sys.bgcolor.bold.danger}",
+              "value": "{sys.bgcolor.bold.danger.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.bold.danger_hover}",
+              "value": "{sys.bgcolor.bold.danger.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.bold.danger_pressed}",
+              "value": "{sys.bgcolor.bold.danger.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.bgcolor.bold.danger}",
+              "value": "{sys.bgcolor.bold.danger.rest}",
               "type": "color"
             },
             "disabled": {
@@ -77,25 +77,25 @@
               "type": "color"
             },
             "loading": {
-              "value": "{sys.bgcolor.bold.danger}",
+              "value": "{sys.bgcolor.bold.danger.rest}",
               "type": "color"
             }
           },
           "encourage": {
             "rest": {
-              "value": "{sys.bgcolor.bold.safe}",
+              "value": "{sys.bgcolor.bold.safe.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.bold.safe_hover}",
+              "value": "{sys.bgcolor.bold.safe.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.bold.safe_pressed}",
+              "value": "{sys.bgcolor.bold.safe.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.bgcolor.bold.safe}",
+              "value": "{sys.bgcolor.bold.safe.rest}",
               "type": "color"
             },
             "disabled": {
@@ -103,25 +103,25 @@
               "type": "color"
             },
             "loading": {
-              "value": "{sys.bgcolor.bold.safe}",
+              "value": "{sys.bgcolor.bold.safe.rest}",
               "type": "color"
             }
           },
           "secondary": {
             "rest": {
-              "value": "{sys.bgcolor.timid.secondary}",
+              "value": "{sys.bgcolor.timid.secondary.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.timid.secondary_hover}",
+              "value": "{sys.bgcolor.timid.secondary.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.timid.secondary_pressed}",
+              "value": "{sys.bgcolor.timid.secondary.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.bgcolor.timid.secondary}",
+              "value": "{sys.bgcolor.timid.secondary.rest}",
               "type": "color"
             },
             "disabled": {
@@ -129,7 +129,7 @@
               "type": "color"
             },
             "loading": {
-              "value": "{sys.bgcolor.timid.secondary}",
+              "value": "{sys.bgcolor.timid.secondary.rest}",
               "type": "color"
             }
           }
@@ -313,7 +313,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             },
             "loading": {
@@ -391,7 +391,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             },
             "loading": {
@@ -417,7 +417,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             },
             "loading": {
@@ -447,7 +447,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             },
             "loading": {
@@ -525,7 +525,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             },
             "loading": {
@@ -551,7 +551,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             },
             "loading": {
@@ -567,15 +567,15 @@
         "bgcolor": {
           "inactive": {
             "rest": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.timid.silent.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.timid.silent_hover}",
+              "value": "{sys.bgcolor.timid.silent.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.timid.silent_pressed}",
+              "value": "{sys.bgcolor.timid.silent.pressed}",
               "type": "color"
             },
             "focus": {
@@ -583,25 +583,25 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.bgcolor.timid.silent}",
+              "value": "{sys.bgcolor.timid.silent.rest}",
               "type": "color"
             }
           },
           "active": {
             "rest": {
-              "value": "{sys.bgcolor.bold.primary}",
+              "value": "{sys.bgcolor.bold.primary.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.bgcolor.bold.primary_hover}",
+              "value": "{sys.bgcolor.bold.primary.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.bgcolor.bold.primary_pressed}",
+              "value": "{sys.bgcolor.bold.primary.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.bgcolor.bold.primary}",
+              "value": "{sys.bgcolor.bold.primary.rest}",
               "type": "color"
             },
             "disabled": {
@@ -699,7 +699,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled}",
+              "value": "{sys.content.on_bold.regular.disabled}",
               "type": "color"
             }
           }
@@ -747,7 +747,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled_subtle}",
+              "value": "{sys.content.on_bold.subtle.disabled}",
               "type": "color"
             }
           }
@@ -795,7 +795,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.on_bold.disabled_subtle}",
+              "value": "{sys.content.on_bold.subtle.disabled}",
               "type": "color"
             }
           }

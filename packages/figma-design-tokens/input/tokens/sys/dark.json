@@ -239,7 +239,7 @@
         },
         "brand": {
           "rest": {
-            "value": "{sys.bgcolor.bold.primary}",
+            "value": "{sys.bgcolor.bold.primary.rest}",
             "type": "color"
           }
         }
@@ -469,7 +469,7 @@
           "description": "bg for disabled, readonly"
         },
         "neutral": {
-          "value": "{core.color.coolgray.300.solid}",
+          "value": "{core.color.coolgray.500.solid}",
           "type": "color",
           "description": "for toggleSwitch\n"
         },
@@ -479,12 +479,12 @@
           "description": "for toggleSwitch"
         },
         "neutral_pressed": {
-          "value": "{core.color.coolgray.500.solid}",
+          "value": "{core.color.coolgray.300.solid}",
           "type": "color",
           "description": "for toggleswitch\n"
         },
         "primary": {
-          "value": "{core.color.azure.400.solid}",
+          "value": "{core.color.azure.600.solid}",
           "type": "color",
           "description": "rest"
         },
@@ -494,12 +494,12 @@
           "description": "hover"
         },
         "primary_pressed": {
-          "value": "{core.color.azure.600.solid}",
+          "value": "{core.color.azure.400.solid}",
           "type": "color",
           "description": "pressed"
         },
         "cta": {
-          "value": "{core.color.purple.400.solid}",
+          "value": "{core.color.purple.600.solid}",
           "type": "color"
         },
         "cta_hover": {
@@ -507,11 +507,11 @@
           "type": "color"
         },
         "cta_pressed": {
-          "value": "{core.color.purple.600.solid}",
+          "value": "{core.color.purple.400.solid}",
           "type": "color"
         },
         "danger": {
-          "value": "{core.color.crimson.400.solid}",
+          "value": "{core.color.crimson.600.solid}",
           "type": "color"
         },
         "danger_hover": {
@@ -519,11 +519,11 @@
           "type": "color"
         },
         "danger_pressed": {
-          "value": "{core.color.crimson.600.solid}",
+          "value": "{core.color.crimson.400.solid}",
           "type": "color"
         },
         "warning": {
-          "value": "{core.color.gold.400.solid}",
+          "value": "{core.color.gold.600.solid}",
           "type": "color"
         },
         "warning_hover": {
@@ -531,11 +531,11 @@
           "type": "color"
         },
         "warning_pressed": {
-          "value": "{core.color.gold.600.solid}",
+          "value": "{core.color.gold.400.solid}",
           "type": "color"
         },
         "safe": {
-          "value": "{core.color.limegreen.300.solid}",
+          "value": "{core.color.limegreen.500.solid}",
           "type": "color"
         },
         "safe_hover": {
@@ -543,11 +543,11 @@
           "type": "color"
         },
         "safe_pressed": {
-          "value": "{core.color.limegreen.500.solid}",
+          "value": "{core.color.limegreen.300.solid}",
           "type": "color"
         },
         "informative": {
-          "value": "{core.color.coolgray.300.solid}",
+          "value": "{core.color.coolgray.500.solid}",
           "type": "color"
         },
         "informative_hover": {
@@ -555,7 +555,7 @@
           "type": "color"
         },
         "informative_pressed": {
-          "value": "{core.color.coolgray.500.solid}",
+          "value": "{core.color.coolgray.300.solid}",
           "type": "color"
         }
       },
@@ -588,26 +588,6 @@
         "silent_pressed": {
           "value": "{core.color.azure.600.opa20}",
           "type": "color"
-        },
-        "solid": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "use on checkbox, toggleSwitch.Knob"
-        },
-        "solid_hover": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "use on checkbox, toggleSwitch.Knob"
-        },
-        "solid_pressed": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "use on checkbox, toggleSwitch.Knob"
-        },
-        "solid_disabled": {
-          "value": "{core.color.white.solid}",
-          "type": "color",
-          "description": "use on checkbox, toggleSwitch.Knob"
         }
       }
     },
@@ -855,7 +835,7 @@
           "description": "use for disabled states"
         },
         "secondary": {
-          "value": "{sys.bgcolor.bold.primary}",
+          "value": "{sys.bgcolor.bold.primary.rest}",
           "type": "color"
         },
         "secondary_hover": {
