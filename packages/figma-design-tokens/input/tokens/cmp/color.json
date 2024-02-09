@@ -486,41 +486,41 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.bgcolor.bold.primary.rest}",
+                "value": "{sem.selectables.container.bgcolor.active.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.bold.primary.hover}",
+                "value": "{sem.selectables.container.bgcolor.active.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.bold.primary.pressed}",
+                "value": "{sem.selectables.container.bgcolor.active.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.bold.primary.rest}",
+                "value": "{sem.selectables.container.bgcolor.active.rest}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.timid.silent.rest}",
+                "value": "{sem.selectables.container.bgcolor.inactive.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.bgcolor.timid.silent.hover}",
+                "value": "{sem.selectables.container.bgcolor.inactive.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.timid.silent.pressed}",
+                "value": "{sem.selectables.container.bgcolor.inactive.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.bgcolor.timid.silent.rest}",
+                "value": "{sem.selectables.container.bgcolor.inactive.rest}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.timid.disabled}",
+                "value": "{sem.selectables.container.bgcolor.inactive.disabled}",
                 "type": "color"
               }
             }
@@ -528,41 +528,41 @@
           "BorderColor": {
             "Active": {
               "Rest": {
-                "value": "{sem.buttons.container.bordercolor.primary.rest}",
+                "value": "{sem.selectables.container.bordercolor.active.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sem.buttons.container.bordercolor.primary.hover}",
+                "value": "{sem.selectables.container.bordercolor.active.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sem.buttons.container.bordercolor.primary.pressed}",
+                "value": "{sem.selectables.container.bordercolor.active.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sem.buttons.container.bordercolor.primary.focus}",
+                "value": "{sem.selectables.container.bordercolor.active.rest}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sem.buttons.container.bordercolor.silent.rest}",
+                "value": "{sem.selectables.container.bordercolor.inactive.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sem.buttons.container.bordercolor.silent.hover}",
+                "value": "{sem.selectables.container.bordercolor.inactive.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sem.buttons.container.bordercolor.silent.pressed}",
+                "value": "{sem.selectables.container.bordercolor.inactive.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sem.buttons.container.bordercolor.silent.focus}",
+                "value": "{sem.selectables.container.bordercolor.inactive.rest}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sem.buttons.container.bordercolor.silent.disabled}",
+                "value": "{sem.selectables.container.bordercolor.inactive.disabled}",
                 "type": "color"
               }
             }
@@ -572,41 +572,41 @@
           "TextColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sem.selectables.label.textcolor.active.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sem.selectables.label.textcolor.active.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sem.selectables.label.textcolor.active.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sem.selectables.label.textcolor.active.focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.timid.regular.neutral}",
+                "value": "{sem.selectables.label.textcolor.inactive.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.timid.regular.neutral}",
+                "value": "{sem.selectables.label.textcolor.inactive.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.timid.regular.neutral}",
+                "value": "{sem.selectables.label.textcolor.inactive.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.timid.regular.neutral}",
+                "value": "{sem.selectables.label.textcolor.inactive.focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.timid.regular.disabled}",
+                "value": "{sem.selectables.label.textcolor.inactive.disabled}",
                 "type": "color"
               }
             }
@@ -616,41 +616,41 @@
           "TextColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.textsecondary.textcolor.active.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.textsecondary.textcolor.active.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.textsecondary.textcolor.active.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.textsecondary.textcolor.active.focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.timid.regular.disabled}",
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.disabled}",
                 "type": "color"
               }
             }
@@ -660,41 +660,41 @@
           "IconColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.icon.iconcolor.active.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.icon.iconcolor.active.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.icon.iconcolor.active.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.neutral_subtle}",
+                "value": "{sem.selectables.icon.iconcolor.active.focus}",
                 "type": "color"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.icon.iconcolor.inactive.rest}",
                 "type": "color"
               },
               "Hover": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.icon.iconcolor.inactive.hover}",
                 "type": "color"
               },
               "Pressed": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.icon.iconcolor.inactive.pressed}",
                 "type": "color"
               },
               "Focus": {
-                "value": "{sys.content.timid.subtle.neutral}",
+                "value": "{sem.selectables.icon.iconcolor.inactive.focus}",
                 "type": "color"
               },
               "Disabled": {
-                "value": "{sys.content.timid.regular.disabled}",
+                "value": "{sem.selectables.icon.iconcolor.inactive.disabled}",
                 "type": "color"
               }
             }
@@ -869,69 +869,69 @@
           "IconColor": {
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.transparent}",
+                "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.ReadOnly"
               },
               "Error": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
               }
             },
             "Active": {
               "Rest": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
               },
               "Hover": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
               },
               "Pressed": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
               },
               "Focus": {
-                "value": "{sys.content.on_bold.neutral}",
+                "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
               }
@@ -1417,12 +1417,12 @@
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
               }
@@ -1449,12 +1449,12 @@
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
               }
