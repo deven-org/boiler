@@ -821,7 +821,7 @@
         },
         "Text": {
           "Typography": {
-            "value": "{Semantic.UI.Paragraph.MD.Regular}",
+            "value": "{sem.ui.paragraph.md.regular}",
             "type": "typography"
           }
         }
@@ -843,7 +843,7 @@
         },
         "Headline": {
           "Typography": {
-            "value": "{Semantic.UI.Headline.H5}",
+            "value": "{sem.ui.headline.h5}",
             "type": "typography"
           }
         }
