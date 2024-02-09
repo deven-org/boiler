@@ -8,7 +8,6 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrLoaderType = {
   variant: 'default',
-  loadingStatus: 'Loading',
   theme: 'Light',
 };
 

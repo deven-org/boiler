@@ -66,7 +66,6 @@ export type ButtonOption = {
   label: string;
   variant: string;
   size: FormSizesType;
-  loadingStatus: string;
   disabled: boolean;
   buttonId: string;
   trailingIcon: string;
