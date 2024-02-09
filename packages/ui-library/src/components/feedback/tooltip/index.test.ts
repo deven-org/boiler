@@ -12,7 +12,10 @@ const sampleParams: BlrTooltipType = {
   placement: 'right',
 };
 
-const testContent = html`<div style="height: 200px; width: 200px; background-color: lightblue"></div>`;
+const testContent = html`<div
+  className="blue-box"
+  style="height: 200px; width: 200px; background-color: lightblue"
+></div>`;
 
 describe('blr-tooltip', () => {
   it('is having a tooltip bubble element', async () => {
@@ -20,6 +23,11 @@ describe('blr-tooltip', () => {
 
     const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
 
+    expect(tooltip).to.exist;
+  });
+  it('is rendering the tooltip child element', async () => {
+    const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
+    const tooltip = querySelectorDeep('.blue-box', element.getRootNode() as HTMLElement);
     expect(tooltip).to.exist;
   });
 });
