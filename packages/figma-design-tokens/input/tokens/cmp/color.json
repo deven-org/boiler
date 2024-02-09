@@ -76,37 +76,37 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bgcolor.toggle.primary.rest}",
+                "value": "{sys.bgcolor.inverse.primary.rest}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.bgcolor.toggle.primary.hover}",
+                "value": "{sys.bgcolor.inverse.primary.hover}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.bgcolor.toggle.primary.pressed}",
+                "value": "{sys.bgcolor.inverse.primary.pressed}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.bgcolor.toggle.primary.rest}",
+                "value": "{sys.bgcolor.inverse.primary.rest}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.toggle.disabled}",
+                "value": "{sys.bgcolor.inverse.disabled}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.toggle.disabled}",
+                "value": "{sys.bgcolor.inverse.disabled}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.bgcolor.toggle.danger.rest}",
+                "value": "{sys.bgcolor.inverse.danger.rest}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               }
@@ -152,37 +152,37 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.bordercolor.toggle.primary.rest}",
+                "value": "{sys.bordercolor.inverse.primary.rest}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.bordercolor.toggle.primary.hover}",
+                "value": "{sys.bordercolor.inverse.primary.hover}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.bordercolor.toggle.primary.pressed}",
+                "value": "{sys.bordercolor.inverse.primary.pressed}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.bordercolor.toggle.primary.rest}",
+                "value": "{sys.bordercolor.inverse.primary.rest}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.bordercolor.toggle.disabled}",
+                "value": "{sys.bordercolor.inverse.disabled}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.bordercolor.toggle.disabled}",
+                "value": "{sys.bordercolor.inverse.disabled}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.bordercolor.toggle.danger.rest}",
+                "value": "{sys.bordercolor.inverse.danger.rest}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               }
@@ -230,37 +230,37 @@
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Hover": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Pressed": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Focus": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Disabled": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "ReadOnly": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               },
               "Error": {
-                "value": "{sys.content.toggle.transparent}",
+                "value": "{sys.content.inverse.transparent}",
                 "type": "color",
                 "description": "Also applies to indeterminate"
               }
@@ -450,27 +450,27 @@
     },
     "InputIcon": {
       "Rest": {
-        "value": "{sys.bgcolor.bold.informative.rest}",
+        "value": "{sys.content.inverse.regular.informative.rest}",
         "type": "color"
       },
       "Hover": {
-        "value": "{sys.bgcolor.bold.informative.hover}",
+        "value": "{sys.content.inverse.regular.informative.hover}",
         "type": "color"
       },
       "Pressed": {
-        "value": "{sys.bgcolor.bold.informative.pressed}",
+        "value": "{sys.content.inverse.regular.informative.pressed}",
         "type": "color"
       },
       "Focus": {
-        "value": "{sys.bgcolor.bold.informative.rest}",
+        "value": "{sys.content.inverse.regular.informative.rest}",
         "type": "color"
       },
       "Disabled": {
-        "value": "{sys.content.bold.regular.disabled}",
+        "value": "{sys.content.inverse.regular.disabled}",
         "type": "color"
       },
       "Error": {
-        "value": "{sys.bgcolor.bold.danger.rest}",
+        "value": "{sys.content.inverse.regular.danger.rest}",
         "type": "color"
       }
     },
