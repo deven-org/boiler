@@ -4,9 +4,7 @@
     "name": "value",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "core/COR": "enabled",
-      "sem/shadows": "disabled",
-      "cmp/shadows": "disabled"
+      "core/COR": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28:5",
     "$figmaModeId": "28:0",
@@ -1000,9 +998,7 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "cmp/color": "enabled",
-      "sys/light": "enabled",
-      "sem/shadows": "disabled",
-      "cmp/shadows": "disabled"
+      "sys/light": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28:985",
     "$figmaModeId": "28:1",
@@ -1694,9 +1690,7 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "cmp/color": "enabled",
-      "sys/dark": "enabled",
-      "sem/shadows": "disabled",
-      "cmp/shadows": "disabled"
+      "sys/dark": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28:985",
     "$figmaModeId": "28:2",
@@ -2667,9 +2661,7 @@
     "selectedTokenSets": {
       "core/COR": "source",
       "cmp/sizes": "enabled",
-      "sem/sizes": "enabled",
-      "sem/shadows": "disabled",
-      "cmp/shadows": "disabled"
+      "sem/sizes": "enabled"
     },
     "group": "Sizes",
     "$figmaCollectionId": "VariableCollectionId:28:2056",
