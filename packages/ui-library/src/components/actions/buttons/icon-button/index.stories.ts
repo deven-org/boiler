@@ -70,7 +70,7 @@ export default {
         category: 'Appearance',
       },
     },
-    sizeVariant: {
+    size: {
       options: ActionSizes,
       description: 'Select size of the component.',
       control: { type: 'select' },
@@ -149,11 +149,6 @@ export default {
       action: 'onBlur',
       table: {
         category: 'Events',
-      },
-    },
-    loadingStatus: {
-      table: {
-        disable: true,
       },
     },
   },

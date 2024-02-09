@@ -120,7 +120,6 @@ export class BlrIconButton extends LitElement {
             ? BlrLoaderRenderFunction({
                 size: loaderSizeVariant,
                 variant: loaderVariant,
-                loadingStatus: this.loadingStatus,
                 theme: this.theme,
               })
             : nothing}
