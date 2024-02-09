@@ -1,1 +1,0 @@
-{"fullyTracked":false,"platform":"darwin","arch":"arm64","nodeVersion":"v18.12.1","command":"node ./config/generate-index-files.mjs","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}
