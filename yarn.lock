@@ -1624,6 +1624,7 @@ __metadata:
     lodash.kebabcase: "npm:4.1.1"
     maketypes: "npm:^1.1.2"
     style-dictionary: "npm:^3.7.2"
+    wireit: "npm:^0.14.4"
   languageName: unknown
   linkType: soft
 
