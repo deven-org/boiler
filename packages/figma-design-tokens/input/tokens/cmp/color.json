@@ -11,11 +11,11 @@
       "Text": {
         "TextColor": {
           "Hint": {
-            "value": "{sys.content.surface.neutral.subtle}",
+            "value": "{sys.content.surface.subtle.neutral}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.content.surface.danger.regular}",
+            "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
@@ -23,11 +23,11 @@
       "Icon": {
         "IconColor": {
           "Hint": {
-            "value": "{sys.content.surface.neutral.subtle}",
+            "value": "{sys.content.surface.subtle.neutral}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.content.surface.danger.regular}",
+            "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
@@ -354,31 +354,31 @@
       "Label": {
         "TextColor": {
           "Rest": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.surface.disabled.regular}",
+            "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.content.surface.danger.regular}",
+            "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
@@ -386,31 +386,31 @@
       "LabelAppendix": {
         "TextColor": {
           "Rest": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.surface.disabled.regular}",
+            "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.content.surface.danger.regular}",
+            "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
@@ -418,31 +418,31 @@
       "InlineLabel": {
         "TextColor": {
           "Rest": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.content.surface.disabled.regular}",
+            "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
           "ReadOnly": {
-            "value": "{sys.content.surface.neutral.regular}",
+            "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
           "Error": {
-            "value": "{sys.content.surface.danger.regular}",
+            "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
@@ -452,11 +452,11 @@
       "Background": {
         "BorderColor": {
           "Default": {
-            "value": "{sys.content.any.informative_subtle}",
+            "value": "{sys.static.subtle.primary_dimmed}",
             "type": "color"
           },
           "Inverted": {
-            "value": "{sys.content.any.informative_inverted_subtle}",
+            "value": "{sys.static.subtle.white}",
             "type": "color"
           }
         }
@@ -464,11 +464,11 @@
       "Foreground": {
         "BorderColor": {
           "Default": {
-            "value": "{sys.content.any.informative}",
+            "value": "{sys.static.regular.primary_dimmed}",
             "type": "color"
           },
           "Inverted": {
-            "value": "{sys.content.any.informative_inverted}",
+            "value": "{sys.static.regular.white}",
             "type": "color"
           }
         }
@@ -703,7 +703,7 @@
       },
       "MenuSection": {
         "SectionTitle": {
-          "value": "{sys.content.surface.neutral.regular}",
+          "value": "{sys.content.surface.regular.neutral}",
           "type": "color",
           "description": "Apply on section title"
         }
@@ -1092,7 +1092,7 @@
       "Legend": {
         "TextColor": {
           "Default": {
-            "value": "{sys.content.surface.neutral.subtle}",
+            "value": "{sys.content.surface.subtle.neutral}",
             "type": "color"
           },
           "Disabled": {
@@ -1180,44 +1180,44 @@
           "BackgroundColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Hover": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Pressed": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Focus": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               }
             },
             "Inactive": {
               "Rest": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Hover": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Pressed": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
               "Focus": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Apply as fill on HightlightLine"
               },
@@ -1275,22 +1275,22 @@
           "TextColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Hover": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Pressed": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Focus": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1324,22 +1324,22 @@
           "IconColor": {
             "Active": {
               "Rest": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Hover": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Pressed": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               },
               "Focus": {
-                "value": "{sys.content.surface.active.regular}",
+                "value": "{sys.content.surface.regular.link}",
                 "type": "color",
                 "description": "Defines the color of the label of a tab. Apply on <label>"
               }
@@ -1386,7 +1386,7 @@
       },
       "Text": {
         "TextColor": {
-          "value": "{sys.content.surface.inverted.neutral}",
+          "value": "{sys.content.surface.inverted.regular.neutral}",
           "type": "color"
         }
       }
@@ -1733,19 +1733,19 @@
     "Fieldset": {
       "Legend": {
         "Default": {
-          "value": "{sys.content.surface.neutral.regular}",
+          "value": "{sys.content.surface.regular.neutral}",
           "type": "color"
         },
         "Disabled": {
-          "value": "{sys.content.surface.disabled.regular}",
+          "value": "{sys.content.surface.regular.disabled}",
           "type": "color"
         },
         "ReadOnly": {
-          "value": "{sys.content.surface.neutral.regular}",
+          "value": "{sys.content.surface.regular.neutral}",
           "type": "color"
         },
         "Error": {
-          "value": "{sys.content.surface.danger.regular}",
+          "value": "{sys.content.surface.regular.danger}",
           "type": "color"
         }
       }
