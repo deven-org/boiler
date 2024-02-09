@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as iconLinkStyleCustom } from './index.css';
 import { styleCustom as iconButtonStyleCustom } from '../../buttons/icon-button/index.css';
@@ -13,7 +13,7 @@ import { getComponentConfigToken } from '../../../utils/get-component-config-tok
 import { BlrLoaderRenderFunction } from '../../loader/renderFunction';
 import { TAG_NAME, BlrIconRenderFunction } from '../renderFunction';
 
-@customElement(TAG_NAME)
+//@customElement(TAG_NAME)
 export class BlrIconLink extends LitElement {
   static styles = [iconLinkStyleCustom, iconButtonStyleCustom];
 
@@ -88,6 +88,10 @@ export class BlrIconLink extends LitElement {
         </a>`;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrIconLink);
 }
 
 export type BlrIconLinkType = Omit<BlrIconLink, keyof LitElement>;

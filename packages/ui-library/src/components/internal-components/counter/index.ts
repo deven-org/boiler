@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../../globals/types';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
@@ -7,7 +7,7 @@ import { counterLight, counterDark } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
 
-@customElement(TAG_NAME)
+//@customElement(TAG_NAME)
 export class BlrCounter extends LitElement {
   static styles = [];
 
@@ -36,5 +36,6 @@ export class BlrCounter extends LitElement {
     }
   }
 }
+customElements.define(TAG_NAME, BlrCounter);
 
 export type BlrCounterType = Omit<BlrCounter, keyof LitElement>;

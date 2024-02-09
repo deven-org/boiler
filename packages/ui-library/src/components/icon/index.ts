@@ -71,6 +71,10 @@ export class BlrIcon extends LitElement {
   }
 }
 
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrIcon);
+}
+
 // BlrIconType is a new Type containing all properties of BlrIcon without the properties of LitElement
 // and some additional properties which are not part of the component, so we dont use the generic render function
 
