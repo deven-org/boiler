@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"darwin","arch":"arm64","nodeVersion":"v18.12.1","command":"make_types -i ../ui-library/src/foundation/_tokens-generated/componentTokensType.generated.ts ../ui-library/src/foundation/_tokens-generated/component.generated.json componentTokens","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}

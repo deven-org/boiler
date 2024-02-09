@@ -1600,6 +1600,7 @@ __metadata:
     typescript: "npm:^5.3.0"
     webpack: "npm:^5.75.0"
     webpack-cli: "npm:^5.0.1"
+    wireit: "npm:^0.14.4"
   languageName: unknown
   linkType: soft
 
@@ -13045,6 +13046,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"proper-lockfile@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "proper-lockfile@npm:4.1.2"
+  dependencies:
+    graceful-fs: "npm:^4.2.4"
+    retry: "npm:^0.12.0"
+    signal-exit: "npm:^3.0.2"
+  checksum: 10c0/2f265dbad15897a43110a02dae55105c04d356ec4ed560723dcb9f0d34bc4fb2f13f79bb930e7561be10278e2314db5aca2527d5d3dcbbdee5e6b331d1571f6d
+  languageName: node
+  linkType: hard
+
 "protocolify@npm:~3.0.0":
   version: 3.0.0
   resolution: "protocolify@npm:3.0.0"
@@ -15869,6 +15881,21 @@ __metadata:
   version: 2.0.1
   resolution: "wildcard@npm:2.0.1"
   checksum: 10c0/08f70cd97dd9a20aea280847a1fe8148e17cae7d231640e41eb26d2388697cbe65b67fd9e68715251c39b080c5ae4f76d71a9a69fa101d897273efdfb1b58bf7
+  languageName: node
+  linkType: hard
+
+"wireit@npm:^0.14.4":
+  version: 0.14.4
+  resolution: "wireit@npm:0.14.4"
+  dependencies:
+    braces: "npm:^3.0.2"
+    chokidar: "npm:^3.5.3"
+    fast-glob: "npm:^3.2.11"
+    jsonc-parser: "npm:^3.0.0"
+    proper-lockfile: "npm:^4.1.2"
+  bin:
+    wireit: bin/wireit.js
+  checksum: 10c0/72978bb2274e632857d82e0608dee0269fa0595478848a4af1233c9e13394ccb4454e4106ea8d690beafddf0008f5f5ddfe635e6c471fed1dfd5a1355335a751
   languageName: node
   linkType: hard
 
