@@ -4,7 +4,7 @@ import { BlrFormCaptionGroupRenderFunction } from './renderFunction';
 import { BlrFormCaptionGroupType } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep } from 'query-selector-shadow-dom';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { html } from 'lit-html';
 
@@ -35,8 +35,8 @@ const mixedCaptions = html` ${hintCaption} ${errorCaption} `;
 describe('blr-form-caption-group', () => {
   it('is rendering captions inside slot', async () => {
     const element = await fixture(BlrFormCaptionGroupRenderFunction(sampleParams, mixedCaptions));
-    const caption = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+    const captions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
 
-    expect(caption).to.exist;
+    expect(captions).to.be.lengthOf(2);
   });
 });
