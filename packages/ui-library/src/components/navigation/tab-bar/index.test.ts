@@ -4,7 +4,7 @@ import { BlrTabBarRenderFunction } from './renderFunction';
 import type { BlrTabBarType } from '@boiler/ui-library/dist/';
 
 import { fixture, expect } from '@open-wc/testing';
-import { querySelectorDeep } from 'query-selector-shadow-dom';
+import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { html } from 'lit-html';
 
 const sampleParams: BlrTabBarType = {
@@ -45,8 +45,8 @@ describe('blr-tab-bar', () => {
   it('has a size md by default', async () => {
     const element = await fixture(BlrTabBarRenderFunction(sampleParams, tabsAsChildren));
 
-    const input = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
-    const className = input?.className;
+    const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
+    const className = tabBar?.className;
 
     expect(className).to.contain('md');
   });
@@ -54,9 +54,18 @@ describe('blr-tab-bar', () => {
   it('has a size sm when "size" is set to "sm" ', async () => {
     const element = await fixture(BlrTabBarRenderFunction({ ...sampleParams, size: 'sm' }, tabsAsChildren));
 
-    const input = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
-    const className = input?.className;
+    const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
+    const className = tabBar?.className;
 
     expect(className).to.contain('sm');
+  });
+
+  it('is rendering tabs inside slot', async () => {
+    const element = await fixture(BlrTabBarRenderFunction({ ...sampleParams, size: 'sm' }, tabsAsChildren));
+
+    const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
+    const tabs = querySelectorAllDeep('.nav-item-container', tabBar?.getRootNode() as HTMLElement);
+
+    expect(tabs).to.be.lengthOf(11);
   });
 });
