@@ -367,14 +367,6 @@
             "type": "color",
             "description": "Use on: Counter"
           }
-        },
-        "xsubtle_hover": {
-          "value": "{core.color.coolgray.600.solid}",
-          "type": "color"
-        },
-        "xsubtle_pressed": {
-          "value": "{core.color.coolgray.400.solid}",
-          "type": "color"
         }
       },
       "bold": {

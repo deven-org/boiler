@@ -994,32 +994,6 @@
             }
           }
         },
-        "inputicon": {
-          "rest": {
-            "value": "{sys.content.container.subtle.neutral}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{sys.content.container.xsubtle_hover}",
-            "type": "color"
-          },
-          "pressed": {
-            "value": "{sys.content.container.xsubtle_pressed}",
-            "type": "color"
-          },
-          "focus": {
-            "value": "{sys.content.container.subtle.neutral}",
-            "type": "color"
-          },
-          "disabled": {
-            "value": "{sys.content.container.regular.disabled}",
-            "type": "color"
-          },
-          "error": {
-            "value": "{sys.content.container.subtle.danger}",
-            "type": "color"
-          }
-        },
         "prefixsuffix": {
           "textcolor": {
             "default": {

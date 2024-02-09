@@ -448,6 +448,32 @@
         }
       }
     },
+    "InputIcon": {
+      "Rest": {
+        "value": "{sys.bgcolor.bold.informative.rest}",
+        "type": "color"
+      },
+      "Hover": {
+        "value": "{sys.bgcolor.bold.informative.hover}",
+        "type": "color"
+      },
+      "Pressed": {
+        "value": "{sys.bgcolor.bold.informative.pressed}",
+        "type": "color"
+      },
+      "Focus": {
+        "value": "{sys.bgcolor.bold.informative.rest}",
+        "type": "color"
+      },
+      "Disabled": {
+        "value": "{sys.content.bold.regular.disabled}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{sys.bgcolor.bold.danger.rest}",
+        "type": "color"
+      }
+    },
     "Loader": {
       "Background": {
         "BorderColor": {
