@@ -62,7 +62,6 @@ export default {
   argTypes: {
     //Appearance
     variant: {
-      name: 'variant',
       description: 'Select variant of the component.',
       options: ActionVariants,
       control: { type: 'select' },
@@ -70,7 +69,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
+    sizeVariant: {
       options: ActionSizes,
       description: 'Select size of the component.',
       control: { type: 'select' },
@@ -87,7 +86,6 @@ export default {
     },
     // Content / Settings
     icon: {
-      name: 'icon',
       description: 'Select the icon of the component.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -97,14 +95,12 @@ export default {
     },
     //States
     disabled: {
-      name: 'disabled',
       description: 'Choose if component is disabled. Prevents the user to click or focus the component.',
       table: {
         category: 'States',
       },
     },
     loading: {
-      name: 'loading',
       description: 'Choose if the component is loading.',
       table: {
         category: 'States',
@@ -128,7 +124,6 @@ export default {
     },
     // Events
     onChange: {
-      name: 'onChange',
       description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
@@ -136,7 +131,6 @@ export default {
       },
     },
     onFocus: {
-      name: 'onFocus',
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
@@ -144,7 +138,6 @@ export default {
       },
     },
     onBlur: {
-      name: 'onBlur',
       description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
