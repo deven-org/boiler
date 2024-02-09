@@ -4,9 +4,11 @@
     "sys/light",
     "sys/dark",
     "sem/colors",
+    "sem/shadows",
     "sem/sizes",
     "sem/sizeVariants",
     "cmp/color",
+    "cmp/shadows",
     "cmp/sizes",
     "cmp/sizeVariants"
   ]

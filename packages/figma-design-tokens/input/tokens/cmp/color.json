@@ -1402,12 +1402,6 @@
         "BackgroundColor": {
           "value": "{sys.bgcolor.surface.inverted}",
           "type": "color"
-        },
-        "Elevation": {
-          "Elevated": {
-            "value": "{sem.elevation.lvl_1}",
-            "type": "boxShadow"
-          }
         }
       },
       "Text": {
