@@ -58,14 +58,6 @@ export default {
         category: 'Content / Setting',
       },
     },
-    arialabel: {
-      options: [undefined, ...PureIconKeys],
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        category: 'Accessibility',
-      },
-    },
   },
   parameters: {
     design: {
@@ -97,7 +89,6 @@ BlrFormCaption.storyName = 'Form Caption';
 const args: BlrFormCaptionType = {
   theme: 'Light',
   message: 'Message-text',
-  arialabel: 'Hint',
   icon: 'blr360',
   variant: 'hint',
   size: 'sm',

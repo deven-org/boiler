@@ -18,7 +18,6 @@ const hintCaption = BlrFormCaptionRenderFunction({
   icon: 'blrInfo',
   size: 'md',
   theme: 'Light',
-  arialabel: 'Form Hint',
 });
 
 const errorCaption = BlrFormCaptionRenderFunction({
@@ -27,7 +26,6 @@ const errorCaption = BlrFormCaptionRenderFunction({
   icon: 'blrInfo',
   size: 'md',
   theme: 'Light',
-  arialabel: 'Form Error',
 });
 
 const mixedCaptions = html` ${hintCaption} ${errorCaption} `;
