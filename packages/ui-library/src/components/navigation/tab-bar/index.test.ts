@@ -62,10 +62,8 @@ describe('blr-tab-bar', () => {
 
   it('is rendering tabs inside slot', async () => {
     const element = await fixture(BlrTabBarRenderFunction({ ...sampleParams, size: 'sm' }, tabsAsChildren));
-
-    const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
-    const tabs = querySelectorAllDeep('.nav-item-container', tabBar?.getRootNode() as HTMLElement);
-
-    expect(tabs).to.be.lengthOf(11);
+    const tabs = querySelectorAllDeep('.nav-item-container', element?.getRootNode() as HTMLElement);
+    const tabsLength = tabsAsChildren.strings[0].trim().split('</p>').filter(Boolean).length;
+    expect(tabs).to.be.lengthOf(tabsLength);
   });
 });

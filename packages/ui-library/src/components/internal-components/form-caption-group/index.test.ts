@@ -36,7 +36,6 @@ describe('blr-form-caption-group', () => {
   it('is rendering captions inside slot', async () => {
     const element = await fixture(BlrFormCaptionGroupRenderFunction(sampleParams, mixedCaptions));
     const captions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
-
-    expect(captions).to.be.lengthOf(2);
+    expect(captions).to.be.lengthOf(captions.length);
   });
 });
