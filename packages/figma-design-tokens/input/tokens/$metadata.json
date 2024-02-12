@@ -6,10 +6,12 @@
     "sem/colors",
     "sem/shadows",
     "sem/sizes",
+    "sem/borders",
     "sem/sizeVariants",
     "cmp/color",
     "cmp/shadows",
     "cmp/sizes",
+    "cmp/borders",
     "cmp/sizeVariants"
   ]
 }
