@@ -5,6 +5,7 @@
     "core/typography",
     "sys/light",
     "sys/dark",
+    "sys/sizes",
     "sem/colors",
     "sem/sizes",
     "sem/borders",
