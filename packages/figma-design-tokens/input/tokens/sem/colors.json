@@ -3,7 +3,59 @@
     "buttons": {
       "container": {
         "bgcolor": {
+          "cta": {
+            "rest": {
+              "value": "{sys.bgcolor.bold.cta.rest}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sys.bgcolor.bold.cta.hover}",
+              "type": "color"
+            },
+            "pressed": {
+              "value": "{sys.bgcolor.bold.cta.pressed}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sys.bgcolor.bold.cta.rest}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sys.bgcolor.bold.disabled}",
+              "type": "color"
+            },
+            "loading": {
+              "value": "{sys.bgcolor.bold.cta.rest}",
+              "type": "color"
+            }
+          },
           "primary": {
+            "rest": {
+              "value": "{sys.bgcolor.bold.primary.rest}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sys.bgcolor.bold.primary.hover}",
+              "type": "color"
+            },
+            "pressed": {
+              "value": "{sys.bgcolor.bold.primary.pressed}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sys.bgcolor.bold.primary.rest}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sys.bgcolor.bold.primary.disabled}",
+              "type": "color"
+            },
+            "loading": {
+              "value": "{sys.bgcolor.bold.primary.rest}",
+              "type": "color"
+            }
+          },
+          "secondary": {
             "rest": {
               "value": "{sys.bgcolor.secondary.rest}",
               "type": "color"
@@ -106,35 +158,35 @@
               "value": "{sys.bgcolor.bold.safe.rest}",
               "type": "color"
             }
-          },
-          "secondary": {
-            "rest": {
-              "value": "{sys.bgcolor.secondary.rest}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.bgcolor.secondary.hover}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.bgcolor.secondary.pressed}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.bgcolor.secondary.rest}",
-              "type": "color"
-            },
-            "disabled": {
-              "value": "{sys.bgcolor.secondary.disabled}",
-              "type": "color"
-            },
-            "loading": {
-              "value": "{sys.bgcolor.secondary.rest}",
-              "type": "color"
-            }
           }
         },
         "bordercolor": {
+          "cta": {
+            "rest": {
+              "value": "{sys.bordercolor.bold.cta.rest}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sys.bordercolor.bold.cta.hover}",
+              "type": "color"
+            },
+            "pressed": {
+              "value": "{sys.bordercolor.bold.cta.pressed}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sys.bordercolor.bold.cta.rest}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sys.bordercolor.bold.disabled}",
+              "type": "color"
+            },
+            "loading": {
+              "value": "{sys.bordercolor.bold.cta.rest}",
+              "type": "color"
+            }
+          },
           "primary": {
             "rest": {
               "value": "{sys.bordercolor.bold.primary.rest}",
@@ -264,37 +316,37 @@
               "value": "{sys.bordercolor.bold.safe.rest}",
               "type": "color"
             }
-          },
-          "cta": {
-            "rest": {
-              "value": "{sys.bordercolor.bold.cta.rest}",
-              "type": "color"
-            },
-            "hover": {
-              "value": "{sys.bordercolor.bold.cta.hover}",
-              "type": "color"
-            },
-            "pressed": {
-              "value": "{sys.bordercolor.bold.cta.pressed}",
-              "type": "color"
-            },
-            "focus": {
-              "value": "{sys.bordercolor.bold.cta.rest}",
-              "type": "color"
-            },
-            "disabled": {
-              "value": "{sys.bordercolor.bold.disabled}",
-              "type": "color"
-            },
-            "loading": {
-              "value": "{sys.bordercolor.bold.cta.rest}",
-              "type": "color"
-            }
           }
         }
       },
       "icon": {
         "iconcolor": {
+          "cta": {
+            "rest": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "pressed": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sys.content.bold.regular.disabled}",
+              "type": "color"
+            },
+            "loading": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            }
+          },
           "primary": {
             "rest": {
               "value": "{sys.content.bold.regular.primary}",
@@ -429,6 +481,32 @@
       },
       "label": {
         "textcolor": {
+          "cta": {
+            "rest": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "pressed": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sys.content.bold.regular.disabled}",
+              "type": "color"
+            },
+            "loading": {
+              "value": "{sys.content.bold.regular.cta}",
+              "type": "color"
+            }
+          },
           "primary": {
             "rest": {
               "value": "{sys.content.bold.regular.primary}",
