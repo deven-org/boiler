@@ -2,9 +2,9 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.Forms;
-  const { StepperButton } = componentTokens.Actions;
-  const { NumberInput } = componentTokens.Forms;
+  // const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.sem.forms.captionslot;
+  const { inputfield } = semanticTokens.sem.forms;
+  const { StepperButton, NumberInput } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     .noPointerEvents {
@@ -15,23 +15,22 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       box-sizing: border-box;
       width: 100%;
 
-      outline-width: ${Input.Default.Rest.width};
-      outline-style: ${Input.Default.Rest.style};
-      outline-color: ${Input.Default.Rest.color};
-      border-radius: ${InputBorderRadius};
+      outline-width: ${inputfield.container.border.default.rest.width};
+      outline-style: ${inputfield.container.border.default.rest.style};
+      outline-color: ${inputfield.container.border.default.rest.color};
+      border-radius: ${inputfield.container.borderradius};
 
       &:focus-within {
-        outline-width: ${Input.Default.Focus.width};
-        outline-style: ${Input.Default.Focus.style};
-        outline-color: ${Input.Default.Focus.color};
-
-        background-color: ${SurfaceFill.Default.Focus};
+        outline-width: ${inputfield.container.border.default.focus.width};
+        outline-style: ${inputfield.container.border.default.focus.style};
+        outline-color: ${inputfield.container.border.default.focus.color};
+        background-color: ${inputfield.container.bgcolor.default.focus};
 
         & > input {
-          color: ${UserInput.Default.Focus};
+          color: ${inputfield.userinput.textcolor.default.focus};
 
           &::placeholder {
-            color: ${Placeholder.Default.Focus};
+            color: ${inputfield.placeholder.textcolor.default.focus};
           }
         }
       }
@@ -51,7 +50,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
 
       .unit {
-        color: ${PrefixSuffix.OnPopulatedField.Default.Rest};
+        color: ${inputfield.prefixsuffix.textcolor.default.rest};
       }
     }
 
@@ -83,101 +82,102 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
     }
 
-    .unit,
+    .unit
     input {
       &.sm {
-        font-weight: ${SM.UserInput.fontWeight};
-        font-size: ${SM.UserInput.fontSize};
-        font-family: ${SM.UserInput.fontFamily}, sans-serif;
-        line-height: ${SM.UserInput.lineHeight};
-        padding: ${SM.InputField.Padding};
+        font-weight: ${inputfield.userinput.typography.sm.fontWeight};
+        font-size: ${inputfield.userinput.typography.sm.fontSize};
+        font-family: ${inputfield.userinput.typography.sm.fontFamily}, sans-serif;
+        line-height: ${inputfield.userinput.typography.sm.lineHeight};
+        padding: ${inputfield.container.padding.sm};
       }
 
       &.md {
-        font-weight: ${MD.UserInput.fontWeight};
-        font-size: ${MD.UserInput.fontSize};
-        font-family: ${MD.UserInput.fontFamily}, sans-serif;
-        line-height: ${MD.UserInput.lineHeight};
-        padding: ${MD.InputField.Padding};
+        font-weight: ${inputfield.userinput.typography.md.fontWeight};
+        font-size: ${inputfield.userinput.typography.md.fontSize};
+        font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
+        line-height: ${inputfield.userinput.typography.md.lineHeight};
+        padding: ${inputfield.container.padding.md};
       }
 
       &.lg {
-        font-weight: ${LG.UserInput.fontWeight};
-        font-size: ${LG.UserInput.fontSize};
-        font-family: ${LG.UserInput.fontFamily}, sans-serif;
-        line-height: ${LG.UserInput.lineHeight};
-        padding: ${LG.InputField.Padding};
+        font-weight: ${inputfield.userinput.typography.lg.fontWeight};
+        font-size: ${inputfield.userinput.typography.lg.fontSize};
+        font-family: ${inputfield.userinput.typography.lg.fontFamily}, sans-serif;
+        line-height: ${inputfield.userinput.typography.lg.lineHeight};
+        padding: ${inputfield.container.padding.lg};
       }
     }
 
     &.disabled {
-      outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
-      background-color: ${SurfaceFill.Default.Disabled};
+      outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style} ${inputfield.container.border.default.disabled.color};
+      background-color: ${inputfield.container.bgcolor.default.disabled};
       cursor: not-allowed;
 
       & > input {
-        color: ${UserInput.Default.Disabled};
+        color: ${inputfield.userinput.textcolor.default.disabled};
         cursor: not-allowed;
 
         &::placeholder {
-          color: ${Placeholder.Default.Disabled};
+          color: ${inputfield.placeholder.textcolor.default.disabled};
         }
       }
     }
 
     &.error-input {
-      outline: ${Input.Error.Rest.width} ${Input.Error.Rest.style} ${Input.Error.Rest.color};
-      color: ${UserInput.Error.Rest};
-      background-color: ${SurfaceFill.Error.Rest};
+      outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style} ${inputfield.container.border.error.rest.color};
+      color: ${inputfield.userinput.textcolor.error.rest};
+      background-color: ${inputfield.container.bgcolor.error.rest};
 
       &::placeholder {
-        color: ${Placeholder.Error.Rest};
+        color: ${inputfield.placeholder.textcolor.error.rest};
       }
 
       &:hover {
-        outline: ${Input.Error.Hover.width} ${Input.Error.Hover.style} ${Input.Error.Hover.color};
-        color: ${UserInput.Error.Hover};
-        background-color: ${SurfaceFill.Error.Hover};
+        outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style} ${inputfield.container.border.error.hover.color};
+        color: ${inputfield.userinput.textcolor.error.hover};
+        background-color: ${inputfield.container.bgcolor.error.hover};
 
         &::placeholder {
-          color: ${Placeholder.Error.Hover};
+          color: ${inputfield.placeholder.textcolor.error.hover};
         }
       }
 
       &:active {
-        outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
-        color: ${UserInput.Error.Pressed};
-        background-color: ${SurfaceFill.Error.Pressed};
+        outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style} ${inputfield.container.border.error.pressed.color};
+        color: ${inputfield.userinput.textcolor.error.pressed};
+        background-color: ${inputfield.container.bgcolor.error.pressed};
 
         &::placeholder {
-          color: ${Placeholder.Error.Pressed};
+          color: ${inputfield.placeholder.textcolor.error.pressed};
         }
       }
 
       &:focus-within {
-        outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-        color: ${UserInput.Error.Focus};
-        background-color: ${SurfaceFill.Error.Focus};
+        outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style} ${inputfield.container.border.error.focus.color};
+        color: ${inputfield.userinput.textcolor.error.focus};
+        background-color: ${inputfield.container.bgcolor.error.focus};
 
         &::placeholder {
-          color: ${Placeholder.Error.Focus};
+          color: ${inputfield.placeholder.textcolor.error.focus};
         }
       }
     }
 
     &.readonly {
-      outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
-      background-color: ${SurfaceFill.Default.ReadOnly};
+      outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style} ${inputfield.container.border.default.readonly.color};
+      color: ${inputfield.userinput.textcolor.default.readonly};
+      background-color: ${inputfield.container.bgcolor.default.readonly};
 
       &::placeholder {
-        color: ${Placeholder.Default.ReadOnly};
+        color: ${inputfield.placeholder.textcolor.default.readonly};
       }
     }
   `;
 });
 
 export const { tokenizedLight: StepperComboLight, tokenizedDark: StepperComboDark } = renderThemedCssStrings((componentTokens) => {
-  const { StepperCombo, StepperButton } = componentTokens.Actions;
+  const { StepperCombo, StepperButton } = componentTokens.cmp;
 
   return typeSafeNestedCss`
       .stepper-combo {
