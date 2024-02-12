@@ -248,39 +248,42 @@
           }
         }
       },
-      "timid": {
+      "secondary": {
         "disabled": {
           "value": "{core.color.coolgray.900.opa0}",
           "type": "color",
           "description": "disabled"
         },
-        "secondary": {
-          "rest": {
-            "value": "{core.color.azure.800.opa30}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{core.color.azure.700.opa30}",
-            "type": "color"
-          },
-          "pressed": {
-            "value": "{core.color.azure.700.opa40}",
-            "type": "color"
-          }
+        "rest": {
+          "value": "{core.color.azure.400.opa20}",
+          "type": "color"
         },
-        "silent": {
-          "rest": {
-            "value": "{core.color.azure.600.opa0}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{core.color.azure.600.opa10}",
-            "type": "color"
-          },
-          "pressed": {
-            "value": "{core.color.azure.600.opa20}",
-            "type": "color"
-          }
+        "hover": {
+          "value": "{core.color.azure.400.opa30}",
+          "type": "color"
+        },
+        "pressed": {
+          "value": "{core.color.azure.400.opa40}",
+          "type": "color"
+        }
+      },
+      "silent": {
+        "disabled": {
+          "value": "{core.color.coolgray.900.opa0}",
+          "type": "color",
+          "description": "disabled"
+        },
+        "rest": {
+          "value": "{core.color.azure.600.opa0}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{core.color.azure.600.opa10}",
+          "type": "color"
+        },
+        "pressed": {
+          "value": "{core.color.azure.600.opa20}",
+          "type": "color"
         }
       },
       "surface": {
@@ -345,25 +348,25 @@
             "description": "use for disabled states"
           },
           "neutral": {
-            "value": "{core.color.coolgray.800.opa40}",
+            "value": "{core.color.coolgray.800.opa70}",
             "type": "color",
             "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
           },
           "danger": {
-            "value": "{core.color.crimson.800.opa40}",
+            "value": "{core.color.crimson.800.opa70}",
             "type": "color"
           },
           "warning": {
-            "value": "{core.color.gold.800.opa40}",
+            "value": "{core.color.gold.800.opa70}",
             "type": "color",
             "description": "Use on: Counter"
           },
           "safe": {
-            "value": "{core.color.limegreen.800.opa40}",
+            "value": "{core.color.limegreen.800.opa70}",
             "type": "color"
           },
           "informative": {
-            "value": "{core.color.coolgray.800.opa40}",
+            "value": "{core.color.coolgray.800.opa70}",
             "type": "color",
             "description": "Use on: Counter"
           }
@@ -670,43 +673,86 @@
           "description": "Forms"
         }
       },
-      "timid": {
-        "regular": {
+      "secondary": {
+        "disabled": {
+          "value": "{core.color.coolgray.300.solid}",
+          "type": "color",
+          "description": "use for disabled states"
+        },
+        "rest": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        },
+        "pressed": {
+          "value": "{core.color.white.solid}",
+          "type": "color"
+        }
+      },
+      "silent": {
+        "primary": {
           "disabled": {
-            "value": "{core.color.coolgray.700.solid}",
+            "value": "{core.color.coolgray.300.solid}",
             "type": "color",
             "description": "use for disabled states"
           },
-          "primary": {
+          "rest": {
+            "value": "{core.color.white.solid}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{core.color.white.solid}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{core.color.white.solid}",
+            "type": "color"
+          }
+        },
+        "neutral": {
+          "regular": {
+            "disabled": {
+              "value": "{core.color.coolgray.300.solid}",
+              "type": "color",
+              "description": "use for disabled states"
+            },
             "rest": {
-              "value": "{core.color.azure.500.solid}",
+              "value": "{core.color.white.solid}",
               "type": "color"
             },
             "hover": {
-              "value": "{core.color.azure.400.solid}",
+              "value": "{core.color.white.solid}",
               "type": "color"
             },
             "pressed": {
-              "value": "{core.color.azure.300.solid}",
+              "value": "{core.color.white.solid}",
               "type": "color"
             }
           },
-          "neutral": {
-            "value": "{core.color.coolgray.100.solid}",
-            "type": "color",
-            "description": "Forms"
-          }
-        },
-        "subtle": {
-          "disabled": {
-            "value": "{core.color.coolgray.700.opa70}",
-            "type": "color",
-            "description": "use for disabled states"
-          },
-          "neutral": {
-            "value": "{core.color.coolgray.400.solid}",
-            "type": "color",
-            "description": "for prefix, suffix"
+          "subtle": {
+            "disabled": {
+              "value": "{core.color.coolgray.300.opa70}",
+              "type": "color",
+              "description": "use for disabled states"
+            },
+            "rest": {
+              "value": "{core.color.white.opa70}",
+              "type": "color",
+              "description": "for prefix, suffix"
+            },
+            "hover": {
+              "value": "{core.color.white.opa70}",
+              "type": "color",
+              "description": "for prefix, suffix"
+            },
+            "pressed": {
+              "value": "{core.color.white.opa70}",
+              "type": "color",
+              "description": "for prefix, suffix"
+            }
           }
         }
       },
@@ -1061,30 +1107,40 @@
           }
         }
       },
-      "timid": {
-        "secondary_disabled": {
-          "value": "{core.color.coolgray.700.solid}",
+      "secondary": {
+        "disabled": {
+          "value": "{core.color.coolgray.300.solid}",
           "type": "color",
           "description": "use for disabled states"
         },
-        "silent_disabled": {
+        "rest": {
+          "value": "{core.color.azure.400.solid}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{core.color.azure.500.solid}",
+          "type": "color"
+        },
+        "pressed": {
+          "value": "{core.color.azure.600.solid}",
+          "type": "color"
+        }
+      },
+      "silent": {
+        "disabled": {
           "value": "{core.color.neutral.transparent}",
           "type": "color",
           "description": "use for disabled states"
         },
-        "secondary": {
-          "value": "{sys.bgcolor.bold.primary.rest}",
+        "rest": {
+          "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "secondary_hover": {
-          "value": "{core.color.azure.400.solid}",
+        "hover": {
+          "value": "{core.color.neutral.transparent}",
           "type": "color"
         },
-        "secondary_pressed": {
-          "value": "{core.color.azure.300.solid}",
-          "type": "color"
-        },
-        "silent": {
+        "pressed": {
           "value": "{core.color.neutral.transparent}",
           "type": "color"
         }

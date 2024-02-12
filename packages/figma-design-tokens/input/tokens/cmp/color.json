@@ -1008,22 +1008,22 @@
           },
           "BorderColor": {
             "Rest": {
-              "value": "{sys.bordercolor.timid.secondary}",
+              "value": "{sys.bordercolor.secondary.rest}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
             },
             "Hover": {
-              "value": "{sys.bordercolor.timid.secondary_hover}",
+              "value": "{sys.bordercolor.secondary.hover}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
             },
             "Pressed": {
-              "value": "{sys.bordercolor.timid.secondary_pressed}",
+              "value": "{sys.bordercolor.secondary.pressed}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
             },
             "Focus": {
-              "value": "{sys.bordercolor.timid.secondary}",
+              "value": "{sys.bordercolor.secondary.rest}",
               "type": "color",
               "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
             },
@@ -1049,11 +1049,11 @@
         "BorderColor": {
           "Default": {
             "Active": {
-              "value": "{sys.content.timid.regular.primary.rest}",
+              "value": "{sys.content.secondary.rest}",
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.timid.secondary.rest}",
+              "value": "{sys.bgcolor.secondary.rest}",
               "type": "color"
             }
           },
@@ -1073,11 +1073,11 @@
         "BorderColor": {
           "Default": {
             "Active": {
-              "value": "{sys.content.timid.regular.primary.rest}",
+              "value": "{sys.content.secondary.rest}",
               "type": "color"
             },
             "Inactive": {
-              "value": "{sys.bgcolor.timid.secondary.rest}",
+              "value": "{sys.bgcolor.secondary.rest}",
               "type": "color"
             }
           },
@@ -1132,23 +1132,23 @@
       "Container": {
         "BackgroundColor": {
           "Rest": {
-            "value": "{sys.bgcolor.timid.silent.rest}",
+            "value": "{sys.bgcolor.silent.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.timid.silent.hover}",
+            "value": "{sys.bgcolor.silent.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.timid.silent.pressed}",
+            "value": "{sys.bgcolor.silent.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.timid.silent.rest}",
+            "value": "{sys.bgcolor.silent.rest}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.timid.disabled}",
+            "value": "{sys.bgcolor.secondary.disabled}",
             "type": "color"
           }
         },
