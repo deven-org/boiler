@@ -22,6 +22,7 @@ const componentTypes = [
   'Icon',
   'IconButton',
   'IconDropdown',
+  'InputIcon',
   'Loader',
   'RadioGroup',
   'NumberInput',
