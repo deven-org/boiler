@@ -3,16 +3,16 @@ import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literal
 import { componentTokens } from "../../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
-const { IconButton } = componentTokens.Actions;
-const { Global, Actions } = semanticTokens;
+const { IconButton } = componentTokens.cmp;
+const { global, buttons } = semanticTokens.sem;
 
 export const styleCustom = typeSafeNestedCss`
   .focus-layer {
     position: absolute;
     inset: 0;
-    outline-color: ${Global.FocusBorder.color};
-    outline-style: ${Global.FocusBorder.style};
-    outline-width: ${Global.FocusBorder.width};
+    outline-color: ${global.focusring.border.color};
+    outline-style: ${global.focusring.border.style};
+    outline-width: ${global.focusring.border.width};
   }
 
   .blr-icon-button {
@@ -75,22 +75,22 @@ export const styleCustom = typeSafeNestedCss`
       cursor: auto;
       text-decoration: none;
       &.cta{
-        background-color: ${Actions.CTA.SurfaceFill.Loading}
+        background-color: ${buttons.container.bgcolor.cta.loading}
       }
       &.primary{
-        background-color: ${Actions.Primary.SurfaceFill.Loading}
+        background-color: ${buttons.container.bgcolor.primary.loading}
       }
       &.secondary{
-        background-color: ${Actions.Secondary.SurfaceFill.Loading}
+        background-color: ${buttons.container.bgcolor.secondary.loading}
       }
       &.silent{
-        background-color: ${Actions.Silent.SurfaceFill.Loading}
+        background-color: ${buttons.container.bgcolor.silent.loading}
       }
       &.destructive{
-        background-color: ${Actions.Destructive.SurfaceFill.Loading}
+        background-color: ${buttons.container.bgcolor.destructive.loading}
       }
       &.encourage{
-        background-color: ${Actions.Encourage.SurfaceFill.Loading}
+        background-color: ${buttons.container.bgcolor.encourage.loading}
       }
     }
 
