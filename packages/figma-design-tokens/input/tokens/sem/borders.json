@@ -309,88 +309,90 @@
     "forms": {
       "inputfield": {
         "container": {
-          "default": {
-            "rest": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.default.rest}",
-                "width": "{sem.forms.inputfield.container.borderwidth.rest}",
-                "style": "solid"
+          "border": {
+            "default": {
+              "rest": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.default.rest}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.rest}",
+                  "style": "solid"
+                },
+                "type": "border"
               },
-              "type": "border"
+              "hover": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.default.hover}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.hover}",
+                  "style": "solid"
+                },
+                "type": "border"
+              },
+              "pressed": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.default.pressed}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
+                  "style": "solid"
+                },
+                "type": "border"
+              },
+              "focus": {
+                "value": {
+                  "color": "{sem.global.focusring.bordercolor}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.focus}",
+                  "style": "solid"
+                },
+                "type": "border"
+              },
+              "disabled": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.default.disabled}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.disabled}",
+                  "style": "solid"
+                },
+                "type": "border"
+              },
+              "readonly": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.default.readonly}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.readonly}",
+                  "style": "solid"
+                },
+                "type": "border"
+              }
             },
-            "hover": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.default.hover}",
-                "width": "{sem.forms.inputfield.container.borderwidth.hover}",
-                "style": "solid"
+            "error": {
+              "rest": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.error.rest}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.rest}",
+                  "style": "solid"
+                },
+                "type": "border"
               },
-              "type": "border"
-            },
-            "pressed": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.default.pressed}",
-                "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
-                "style": "solid"
+              "hover": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.error.hover}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.hover}",
+                  "style": "solid"
+                },
+                "type": "border"
               },
-              "type": "border"
-            },
-            "focus": {
-              "value": {
-                "color": "{sem.global.focusring.bordercolor}",
-                "width": "{sem.forms.inputfield.container.borderwidth.focus}",
-                "style": "solid"
+              "pressed": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.error.pressed}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
+                  "style": "solid"
+                },
+                "type": "border"
               },
-              "type": "border"
-            },
-            "disabled": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.default.disabled}",
-                "width": "{sem.forms.inputfield.container.borderwidth.disabled}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "readonly": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.default.readonly}",
-                "width": "{sem.forms.inputfield.container.borderwidth.readonly}",
-                "style": "solid"
-              },
-              "type": "border"
-            }
-          },
-          "error": {
-            "rest": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.error.rest}",
-                "width": "{sem.forms.inputfield.container.borderwidth.rest}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "hover": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.error.hover}",
-                "width": "{sem.forms.inputfield.container.borderwidth.hover}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "pressed": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.error.pressed}",
-                "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
-                "style": "solid"
-              },
-              "type": "border"
-            },
-            "focus": {
-              "value": {
-                "color": "{sem.forms.inputfield.container.bordercolor.error.focus}",
-                "width": "{sem.forms.inputfield.container.borderwidth.focus}",
-                "style": "solid"
-              },
-              "type": "border"
+              "focus": {
+                "value": {
+                  "color": "{sem.forms.inputfield.container.bordercolor.error.focus}",
+                  "width": "{sem.forms.inputfield.container.borderwidth.focus}",
+                  "style": "solid"
+                },
+                "type": "border"
+              }
             }
           }
         }
