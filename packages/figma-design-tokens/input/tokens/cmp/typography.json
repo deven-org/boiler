@@ -1,0 +1,190 @@
+{
+  "cmp": {
+    "CaptionComponent": {
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{sem.ui.caption.sm}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{sem.ui.caption.md}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{sem.ui.caption.lg}",
+            "type": "typography"
+          }
+        }
+      }
+    },
+    "Counter": {
+      "Text": {
+        "Typography": {
+          "SM": {
+            "value": "{sem.ui.caption.sm}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{sem.ui.caption.md}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{sem.ui.caption.lg}",
+            "type": "typography"
+          }
+        }
+      }
+    },
+    "Dialog": {
+      "ContentSection": {
+        "Text": {
+          "Typography": {
+            "value": "{sem.ui.paragraph.md.regular}",
+            "type": "typography"
+          }
+        }
+      },
+      "HeaderSection": {
+        "Headline": {
+          "Typography": {
+            "value": "{sem.ui.headline.h5}",
+            "type": "typography"
+          }
+        }
+      }
+    },
+    "Fieldset": {
+      "Legend": {
+        "SM": {
+          "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+          "type": "typography",
+          "description": "Apply on forms group-legends eg.: <RadioGroup>"
+        },
+        "MD": {
+          "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+          "type": "typography",
+          "description": "Apply on forms group-legends eg.: <RadioGroup>"
+        },
+        "LG": {
+          "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+          "type": "typography",
+          "description": "Apply on forms group-legends eg.: <RadioGroup>"
+        }
+      }
+    },
+    "FormLabel": {
+      "Label": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+            "type": "typography"
+          }
+        }
+      },
+      "LabelAppendix": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          }
+        }
+      },
+      "InlineLabel": {
+        "Typography": {
+          "SM": {
+            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "type": "typography"
+          },
+          "MD": {
+            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "type": "typography"
+          },
+          "LG": {
+            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+            "type": "typography"
+          }
+        }
+      }
+    },
+    "Menu": {
+      "MenuItem": {
+        "ItemLabel": {
+          "Typography": {
+            "value": "{sem.buttons.label.typography.md}",
+            "type": "typography"
+          }
+        },
+        "ItemDescription": {
+          "Typography": {
+            "value": "{sem.ui.caption.md}",
+            "type": "typography"
+          }
+        }
+      },
+      "MenuSection": {
+        "SectionTitle": {
+          "Typography": {
+            "value": "{core.typography.sourceSansPro.semibold.75}",
+            "type": "typography"
+          }
+        }
+      }
+    },
+    "Slider": {
+      "Legend": {
+        "Typography": {
+          "value": "{core.typography.sourceSansPro.regular.75}",
+          "type": "typography"
+        }
+      }
+    },
+    "TabBar": {
+      "Tab": {
+        "Label": {
+          "Typography": {
+            "SM": {
+              "value": "{sem.buttons.label.typography.sm}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "MD": {
+              "value": "{sem.buttons.label.typography.md}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            },
+            "LG": {
+              "value": "{sem.buttons.label.typography.lg}",
+              "type": "typography",
+              "description": "Typography of the Label of a Tab-Button"
+            }
+          }
+        }
+      }
+    },
+    "Tooltip": {
+      "Text": {
+        "Typography": {
+          "value": "{sem.ui.caption.sm}",
+          "type": "typography"
+        }
+      }
+    }
+  }
+}

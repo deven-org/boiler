@@ -1,0 +1,166 @@
+{
+  "sem": {
+    "buttons": {
+      "label": {
+        "typography": {
+          "xs": {
+            "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
+            "type": "typography"
+          },
+          "sm": {
+            "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+            "type": "typography"
+          },
+          "md": {
+            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+            "type": "typography"
+          },
+          "lg": {
+            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+            "type": "typography"
+          },
+          "xl": {
+            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+            "type": "typography"
+          }
+        }
+      }
+    },
+    "forms": {
+      "inputfield": {
+        "placeholder": {
+          "typography": {
+            "sm": {
+              "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+              "type": "typography"
+            },
+            "md": {
+              "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+              "type": "typography"
+            },
+            "lg": {
+              "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+              "type": "typography"
+            }
+          }
+        },
+        "prefixsuffix": {
+          "typography": {
+            "sm": {
+              "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+              "type": "typography"
+            },
+            "md": {
+              "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+              "type": "typography"
+            },
+            "lg": {
+              "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+              "type": "typography"
+            }
+          }
+        },
+        "userinput": {
+          "typography": {
+            "sm": {
+              "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+              "type": "typography"
+            },
+            "md": {
+              "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+              "type": "typography"
+            },
+            "lg": {
+              "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+              "type": "typography"
+            }
+          }
+        }
+      }
+    },
+    "ui": {
+      "headline": {
+        "h1": {
+          "value": "{core.typography.sourceSansPro.bold.400}",
+          "type": "typography"
+        },
+        "h2": {
+          "value": "{core.typography.sourceSansPro.bold.300}",
+          "type": "typography"
+        },
+        "h3": {
+          "value": "{core.typography.sourceSansPro.bold.300}",
+          "type": "typography"
+        },
+        "h4": {
+          "value": "{core.typography.sourceSansPro.bold.150}",
+          "type": "typography"
+        },
+        "h5": {
+          "value": "{core.typography.sourceSansPro.bold.125}",
+          "type": "typography"
+        },
+        "h6": {
+          "value": "{core.typography.sourceSansPro.bold.100}",
+          "type": "typography"
+        }
+      },
+      "paragraph": {
+        "xs": {
+          "regular": {
+            "value": "{core.typography.sourceSansPro.regular.75}",
+            "type": "typography"
+          },
+          "strong": {
+            "value": "{core.typography.sourceSansPro.semibold.75}",
+            "type": "typography"
+          }
+        },
+        "sm": {
+          "regular": {
+            "value": "{core.typography.sourceSansPro.regular.87}",
+            "type": "typography"
+          },
+          "strong": {
+            "value": "{core.typography.sourceSansPro.semibold.87}",
+            "type": "typography"
+          }
+        },
+        "md": {
+          "regular": {
+            "value": "{core.typography.sourceSansPro.regular.100}",
+            "type": "typography"
+          },
+          "strong": {
+            "value": "{core.typography.sourceSansPro.semibold.100}",
+            "type": "typography"
+          }
+        },
+        "lg": {
+          "regular": {
+            "value": "{core.typography.sourceSansPro.regular.125}",
+            "type": "typography"
+          },
+          "strong": {
+            "value": "{core.typography.sourceSansPro.semibold.125}",
+            "type": "typography"
+          }
+        }
+      },
+      "caption": {
+        "sm": {
+          "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+          "type": "typography"
+        },
+        "md": {
+          "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+          "type": "typography"
+        },
+        "lg": {
+          "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+          "type": "typography"
+        }
+      }
+    }
+  }
+}

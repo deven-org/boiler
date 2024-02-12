@@ -161,22 +161,6 @@
             "type": "spacing"
           }
         }
-      },
-      "Text": {
-        "Typography": {
-          "SM": {
-            "value": "{sem.ui.caption.sm}",
-            "type": "typography"
-          },
-          "MD": {
-            "value": "{sem.ui.caption.md}",
-            "type": "typography"
-          },
-          "LG": {
-            "value": "{sem.ui.caption.lg}",
-            "type": "typography"
-          }
-        }
       }
     },
     "CaptionGroup": {
@@ -730,22 +714,6 @@
             "type": "spacing"
           }
         }
-      },
-      "Text": {
-        "Typography": {
-          "SM": {
-            "value": "{sem.ui.caption.sm}",
-            "type": "typography"
-          },
-          "MD": {
-            "value": "{sem.ui.caption.md}",
-            "type": "typography"
-          },
-          "LG": {
-            "value": "{sem.ui.caption.lg}",
-            "type": "typography"
-          }
-        }
       }
     },
     "Dialog": {
@@ -818,12 +786,6 @@
             "value": "{core.dimensionPX.8}",
             "type": "spacing"
           }
-        },
-        "Text": {
-          "Typography": {
-            "value": "{sem.ui.paragraph.md.regular}",
-            "type": "typography"
-          }
         }
       },
       "HeaderSection": {
@@ -839,12 +801,6 @@
           "Padding_V": {
             "value": "{core.dimensionPX.16}",
             "type": "spacing"
-          }
-        },
-        "Headline": {
-          "Typography": {
-            "value": "{sem.ui.headline.h5}",
-            "type": "typography"
           }
         }
       },
@@ -883,58 +839,7 @@
         }
       }
     },
-    "Fieldset": {
-      "Legend": {
-        "SM": {
-          "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        },
-        "MD": {
-          "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        },
-        "LG": {
-          "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        }
-      }
-    },
     "FormLabel": {
-      "Label": {
-        "Typography": {
-          "SM": {
-            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-            "type": "typography"
-          },
-          "MD": {
-            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-            "type": "typography"
-          },
-          "LG": {
-            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
-            "type": "typography"
-          }
-        }
-      },
-      "LabelAppendix": {
-        "Typography": {
-          "SM": {
-            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-            "type": "typography"
-          },
-          "MD": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-            "type": "typography"
-          },
-          "LG": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-            "type": "typography"
-          }
-        }
-      },
       "Container": {
         "ItemSpacing": {
           "SM": {
@@ -962,22 +867,6 @@
           "LG": {
             "value": "0 0",
             "type": "spacing"
-          }
-        }
-      },
-      "InlineLabel": {
-        "Typography": {
-          "SM": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-            "type": "typography"
-          },
-          "MD": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-            "type": "typography"
-          },
-          "LG": {
-            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-            "type": "typography"
           }
         }
       }
@@ -1378,18 +1267,6 @@
             "description": "Adds space between Label & Description"
           }
         },
-        "ItemLabel": {
-          "Typography": {
-            "value": "{sem.buttons.label.typography.md}",
-            "type": "typography"
-          }
-        },
-        "ItemDescription": {
-          "Typography": {
-            "value": "{sem.ui.caption.md}",
-            "type": "typography"
-          }
-        },
         "ItemIcon": {
           "IconSize": {
             "value": "{cmp.Icon.Container.Size.SM}",
@@ -1418,12 +1295,6 @@
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
-          }
-        },
-        "SectionTitle": {
-          "Typography": {
-            "value": "{core.typography.sourceSansPro.semibold.75}",
-            "type": "typography"
           }
         },
         "ItemStack": {
@@ -2164,12 +2035,6 @@
           "value": "{core.dimensionPX.6}",
           "type": "sizing"
         }
-      },
-      "Legend": {
-        "Typography": {
-          "value": "{core.typography.sourceSansPro.regular.75}",
-          "type": "typography"
-        }
       }
     },
     "StepperButton": {
@@ -2377,25 +2242,6 @@
         }
       },
       "Tab": {
-        "Label": {
-          "Typography": {
-            "SM": {
-              "value": "{sem.buttons.label.typography.sm}",
-              "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
-            },
-            "MD": {
-              "value": "{sem.buttons.label.typography.md}",
-              "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
-            },
-            "LG": {
-              "value": "{sem.buttons.label.typography.lg}",
-              "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
-            }
-          }
-        },
         "HighlightLine": {
           "Height": {
             "SM": {
@@ -3355,12 +3201,6 @@
           "value": "{core.dimensionPX.8}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
-        }
-      },
-      "Text": {
-        "Typography": {
-          "value": "{sem.ui.caption.sm}",
-          "type": "typography"
         }
       }
     }

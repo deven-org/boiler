@@ -4,9 +4,11 @@
     "name": "value",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "core/COR": "enabled",
-      "sem/borders": "disabled",
-      "cmp/borders": "disabled"
+      "sem/typography": "disabled",
+      "cmp/typography": "disabled",
+      "core/color": "disabled",
+      "core/typography": "disabled",
+      "core/sizes": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28:5",
     "$figmaModeId": "28:0",
@@ -998,11 +1000,13 @@
     "name": "Light",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "core/COR": "source",
       "cmp/color": "enabled",
       "sys/light": "enabled",
-      "sem/borders": "disabled",
-      "cmp/borders": "disabled"
+      "sem/typography": "disabled",
+      "cmp/typography": "disabled",
+      "core/color": "disabled",
+      "core/typography": "disabled",
+      "core/sizes": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:28:985",
     "$figmaModeId": "28:1",
@@ -1692,11 +1696,13 @@
     "name": "Dark",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "core/COR": "source",
       "cmp/color": "enabled",
       "sys/dark": "enabled",
-      "sem/borders": "disabled",
-      "cmp/borders": "disabled"
+      "sem/typography": "disabled",
+      "cmp/typography": "disabled",
+      "core/color": "disabled",
+      "core/typography": "disabled",
+      "core/sizes": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:28:985",
     "$figmaModeId": "28:2",
@@ -2665,11 +2671,13 @@
     "name": "value",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "core/COR": "source",
       "cmp/sizes": "enabled",
       "sem/sizes": "enabled",
-      "sem/borders": "disabled",
-      "cmp/borders": "disabled"
+      "sem/typography": "disabled",
+      "cmp/typography": "disabled",
+      "core/color": "disabled",
+      "core/typography": "disabled",
+      "core/sizes": "source"
     },
     "group": "Sizes",
     "$figmaCollectionId": "VariableCollectionId:28:2056",
