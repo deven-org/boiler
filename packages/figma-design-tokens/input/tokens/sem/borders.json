@@ -7,7 +7,7 @@
             "rest": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.cta.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -15,7 +15,7 @@
             "hover": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.cta.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -23,7 +23,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.cta.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -31,7 +31,7 @@
             "focus": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.cta.focus}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -39,7 +39,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.cta.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -47,7 +47,7 @@
             "loading": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.cta.loading}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -57,7 +57,7 @@
             "rest": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.primary.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -65,7 +65,7 @@
             "hover": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.primary.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -73,7 +73,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.primary.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -81,7 +81,7 @@
             "focus": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.primary.focus}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -89,7 +89,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.primary.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -97,7 +97,7 @@
             "loading": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.primary.loading}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -107,7 +107,7 @@
             "rest": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.secondary.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -115,7 +115,7 @@
             "hover": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.secondary.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -123,7 +123,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.secondary.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -131,7 +131,7 @@
             "focus": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.secondary.focus}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -139,7 +139,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.secondary.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -147,7 +147,7 @@
             "loading": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.secondary.loading}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -157,7 +157,7 @@
             "rest": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.silent.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -165,7 +165,7 @@
             "hover": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.silent.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -173,7 +173,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.silent.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -181,7 +181,7 @@
             "focus": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.silent.focus}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -189,7 +189,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.silent.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -197,7 +197,7 @@
             "loading": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.silent.loading}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -207,7 +207,7 @@
             "rest": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.destructive.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -215,7 +215,7 @@
             "hover": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.destructive.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -223,7 +223,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.destructive.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -231,7 +231,7 @@
             "focus": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.destructive.focus}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -239,7 +239,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.destructive.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -247,7 +247,7 @@
             "loading": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.destructive.loading}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -257,7 +257,7 @@
             "rest": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.encourage.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -265,7 +265,7 @@
             "hover": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.encourage.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -273,7 +273,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.encourage.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -281,7 +281,7 @@
             "focus": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.encourage.focus}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -289,7 +289,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.encourage.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -297,7 +297,7 @@
             "loading": {
               "value": {
                 "color": "{sem.buttons.container.bordercolor.encourage.loading}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.buttons.container.borderwidth}",
                 "style": "solid"
               },
               "type": "border"
@@ -313,7 +313,7 @@
             "rest": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.default.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.rest}",
                 "style": "solid"
               },
               "type": "border"
@@ -321,7 +321,7 @@
             "hover": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.default.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.hover}",
                 "style": "solid"
               },
               "type": "border"
@@ -329,15 +329,15 @@
             "pressed": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.default.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
                 "style": "solid"
               },
               "type": "border"
             },
             "focus": {
               "value": {
-                "color": "{sem.global.focus}",
-                "width": "{core.dimensionPX.2}",
+                "color": "{sem.global.focusring.bordercolor}",
+                "width": "{sem.forms.inputfield.container.borderwidth.focus}",
                 "style": "solid"
               },
               "type": "border"
@@ -345,7 +345,7 @@
             "disabled": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.default.disabled}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.disabled}",
                 "style": "solid"
               },
               "type": "border"
@@ -353,7 +353,7 @@
             "readonly": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.default.readonly}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.readonly}",
                 "style": "solid"
               },
               "type": "border"
@@ -363,7 +363,7 @@
             "rest": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.error.rest}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.rest}",
                 "style": "solid"
               },
               "type": "border"
@@ -371,7 +371,7 @@
             "hover": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.error.hover}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.hover}",
                 "style": "solid"
               },
               "type": "border"
@@ -379,7 +379,7 @@
             "pressed": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.error.pressed}",
-                "width": "{core.dimensionPX.1}",
+                "width": "{sem.forms.inputfield.container.borderwidth.pressed}",
                 "style": "solid"
               },
               "type": "border"
@@ -387,7 +387,7 @@
             "focus": {
               "value": {
                 "color": "{sem.forms.inputfield.container.bordercolor.error.focus}",
-                "width": "{core.dimensionPX.2}",
+                "width": "{sem.forms.inputfield.container.borderwidth.focus}",
                 "style": "solid"
               },
               "type": "border"
@@ -397,13 +397,15 @@
       }
     },
     "global": {
-      "focusborder": {
-        "value": {
-          "color": "{sem.global.focus}",
-          "width": "{core.dimensionPX.2}",
-          "style": "solid"
-        },
-        "type": "border"
+      "focusring": {
+        "border": {
+          "value": {
+            "color": "{sem.global.focusring.bordercolor}",
+            "width": "{core.dimensionPX.2}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
       }
     }
   }

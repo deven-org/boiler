@@ -4,25 +4,29 @@
       "container": {
         "borderradius": {
           "xs": {
-            "value": "{core.borderRadius.MD}",
+            "value": "{sys.borderRadius.md}",
             "type": "borderRadius"
           },
           "sm": {
-            "value": "{core.borderRadius.MD}",
+            "value": "{sys.borderRadius.md}",
             "type": "borderRadius"
           },
           "md": {
-            "value": "{core.borderRadius.MD}",
+            "value": "{sys.borderRadius.md}",
             "type": "borderRadius"
           },
           "lg": {
-            "value": "{core.borderRadius.MD}",
+            "value": "{sys.borderRadius.md}",
             "type": "borderRadius"
           },
           "xl": {
-            "value": "{core.borderRadius.MD}",
+            "value": "{sys.borderRadius.md}",
             "type": "borderRadius"
           }
+        },
+        "borderwidth": {
+          "value": "{sys.borderWidth.medium}",
+          "type": "borderWidth"
         }
       }
     },
@@ -102,8 +106,34 @@
             }
           },
           "borderradius": {
-            "value": "{core.borderRadius.MD}",
+            "value": "{sys.borderRadius.md}",
             "type": "borderRadius"
+          },
+          "borderwidth": {
+            "rest": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "hover": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "pressed": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "focus": {
+              "value": "{sys.borderWidth.bold}",
+              "type": "borderWidth"
+            },
+            "disabled": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "readonly": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            }
           }
         }
       },
@@ -137,6 +167,14 @@
             "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
             "type": "spacing"
           }
+        }
+      }
+    },
+    "global": {
+      "focusring": {
+        "borderwidth": {
+          "value": "{sys.borderWidth.heavy}",
+          "type": "borderWidth"
         }
       }
     }

@@ -292,15 +292,15 @@
           "type": "color"
         },
         "level_1": {
-          "value": "{core.color.white.solid}",
+          "value": "{core.color.black.solid}",
           "type": "color"
         },
         "level_2": {
-          "value": "{core.color.white.solid}",
+          "value": "{core.color.coolgray.100.solid}",
           "type": "color"
         },
         "inverted": {
-          "value": "{core.color.coolgray.100.solid}",
+          "value": "{core.color.coolgray.950.solid}",
           "type": "color"
         }
       }
@@ -759,28 +759,28 @@
       "surface": {
         "subtle": {
           "disabled": {
-            "value": "{core.color.coolgray.700.opa70}",
+            "value": "{core.color.coolgray.300.opa70}",
             "type": "color",
             "description": "use for disabled states"
           },
           "neutral": {
-            "value": "{core.color.coolgray.400.solid}",
+            "value": "{core.color.coolgray.800.solid}",
             "type": "color",
             "description": "use for captions, legends and alike"
           }
         },
         "regular": {
           "disabled": {
-            "value": "{core.color.coolgray.700.solid}",
+            "value": "{core.color.coolgray.300.solid}",
             "type": "color",
-            "description": "use for disabled states",
             "inverted": {
               "value": "{core.color.coolgray.400.solid}",
               "type": "color"
-            }
+            },
+            "description": "use for disabled states"
           },
           "neutral": {
-            "value": "{core.color.coolgray.100.solid}",
+            "value": "{core.color.white.solid}",
             "type": "color",
             "description": "Forms"
           },
@@ -798,24 +798,24 @@
         "inverted": {
           "regular": {
             "disabled": {
-              "value": "{core.color.coolgray.300.solid}",
+              "value": "{core.color.coolgray.700.solid}",
               "type": "color",
               "description": "use on surface.inverted > Tooltip.Text"
             },
             "neutral": {
-              "value": "{core.color.white.solid}",
+              "value": "{core.color.coolgray.100.solid}",
               "type": "color",
               "description": "use on surface.inverted > Tooltip.Text"
             }
           },
           "subtle": {
             "disabled": {
-              "value": "{core.color.coolgray.300.opa70}",
+              "value": "{core.color.coolgray.700.opa70}",
               "type": "color",
               "description": "use on surface.inverted > Tooltip.Text"
             },
             "neutral": {
-              "value": "{core.color.coolgray.700.solid}",
+              "value": "{core.color.coolgray.100.opa70}",
               "type": "color"
             }
           }

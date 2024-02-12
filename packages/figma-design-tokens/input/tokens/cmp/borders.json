@@ -504,35 +504,35 @@
           "Rest": {
             "value": {
               "color": "{cmp.StepperButton.Container.BorderColor.Rest}",
-              "width": "{core.borderWidth.None}"
+              "width": "{sys.borderWidth.none}"
             },
             "type": "border"
           },
           "Hover": {
             "value": {
               "color": "{cmp.StepperButton.Container.BorderColor.Hover}",
-              "width": "{core.borderWidth.None}"
+              "width": "{sys.borderWidth.none}"
             },
             "type": "border"
           },
           "Pressed": {
             "value": {
               "color": "{cmp.StepperButton.Container.BorderColor.Pressed}",
-              "width": "{core.borderWidth.None}"
+              "width": "{sys.borderWidth.none}"
             },
             "type": "border"
           },
           "Focus": {
             "value": {
               "color": "{cmp.StepperButton.Container.BorderColor.Focus}",
-              "width": "{core.borderWidth.None}"
+              "width": "{sys.borderWidth.none}"
             },
             "type": "border"
           },
           "Disabled": {
             "value": {
               "color": "{cmp.StepperButton.Container.BorderColor.Disabled}",
-              "width": "{core.borderWidth.None}"
+              "width": "{sys.borderWidth.none}"
             },
             "type": "border"
           }

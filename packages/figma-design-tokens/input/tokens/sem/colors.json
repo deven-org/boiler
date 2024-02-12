@@ -1055,9 +1055,11 @@
       }
     },
     "global": {
-      "focus": {
-        "value": "{sys.bordercolor.global.focusring}",
-        "type": "color"
+      "focusring": {
+        "bordercolor": {
+          "value": "{sys.bordercolor.global.focusring}",
+          "type": "color"
+        }
       }
     },
     "ui": {
@@ -1079,7 +1081,7 @@
           "type": "color"
         },
         "level_2": {
-          "value": "{sys.bgcolor.surface.level_1}",
+          "value": "{sys.bgcolor.surface.level_2}",
           "type": "color"
         }
       }

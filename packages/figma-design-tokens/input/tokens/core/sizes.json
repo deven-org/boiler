@@ -228,59 +228,15 @@
         "type": "dimension"
       }
     },
-    "borderRadius": {
+    "borderradius": {
       "base": {
         "value": "4",
         "type": "borderRadius"
-      },
-      "SM": {
-        "value": "{core.borderRadius.base}*0.5",
-        "type": "borderRadius"
-      },
-      "MD": {
-        "value": "{core.borderRadius.base}*1",
-        "type": "borderRadius"
-      },
-      "LG": {
-        "value": "{core.borderRadius.base}*2",
-        "type": "borderRadius"
-      },
-      "XL": {
-        "value": "{core.borderRadius.base}*3",
-        "type": "borderRadius"
-      },
-      "Round": {
-        "value": "9999",
-        "type": "borderRadius"
-      },
-      "None": {
-        "value": "0",
-        "type": "borderRadius"
       }
     },
-    "borderWidth": {
+    "borderwidth": {
       "base": {
         "value": "1",
-        "type": "borderWidth"
-      },
-      "Thin": {
-        "value": "{core.borderWidth.base}*0.5",
-        "type": "borderWidth"
-      },
-      "Medium": {
-        "value": "{core.borderWidth.base}*1",
-        "type": "borderWidth"
-      },
-      "Bold": {
-        "value": "{core.borderWidth.base}*2",
-        "type": "borderWidth"
-      },
-      "Heavy": {
-        "value": "{core.borderWidth.base}*3",
-        "type": "borderWidth"
-      },
-      "None": {
-        "value": "0",
         "type": "borderWidth"
       }
     }
