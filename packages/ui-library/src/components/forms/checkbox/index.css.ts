@@ -3,9 +3,8 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Checkbox, FormLabel } = componentTokens.Forms;
-  //const { SM, MD, LG } = semanticTokens.Forms;
-  const { FocusBorder } = semanticTokens.Global;
+  const { Checkbox, FormLabel } = componentTokens.cmp;
+  const { focusring } = semanticTokens.sem.global;
 
   return typeSafeNestedCss/* css */ `
       .blr-checkbox {
@@ -52,9 +51,9 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
           outline-style: solid;
 
           &.focus {
-            outline-width: ${FocusBorder.width};
+            outline-width: ${focusring.border.width};
             outline-offset: 2px;
-            outline-color: ${FocusBorder.color};
+            outline-color: ${focusring.border.color};
           }
         }
       

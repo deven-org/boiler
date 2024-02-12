@@ -47,7 +47,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.bgcolor.bold.primary.disabled}",
+              "value": "{sys.bgcolor.bold.disabled}",
               "type": "color"
             },
             "loading": {

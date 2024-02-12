@@ -2,7 +2,7 @@ import { renderThemedCssStrings } from "../../../../foundation/_tokens-generated
 import { typeSafeNestedCss } from "../../../../utils/nested-typesafe-css-literals";
 
 export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStrings((componentTokens) => {
-  const { Tooltip } = componentTokens.Feedback;
+  const { Tooltip } = componentTokens.cmp;
 
   const arrowHeight = "4px";
 
