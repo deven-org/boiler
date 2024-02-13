@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 
 import { semanticTokens } from "../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
-const { SM, MD, LG } = semanticTokens.Forms;
+const { captionslot } = semanticTokens.sem.forms;
 
 export const styleCustom = typeSafeNestedCss`
   :host {
@@ -26,27 +26,27 @@ export const styleCustom = typeSafeNestedCss`
 
     &.sm {
       > blr-counter {
-        margin: ${SM.CaptionSlot.Margin};
+        margin: ${captionslot.margin.sm};
       }
     }
 
     &.md {
       > blr-counter {
-        margin: ${MD.CaptionSlot.Margin};
+        margin: ${captionslot.margin.md};
       }
     }
 
     &.lg {
       > blr-counter {
-        margin: ${LG.CaptionSlot.Margin};
+        margin: ${captionslot.margin.lg};
       }
     }
   }
 `;
 
 export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { SM, MD, LG } = semanticTokens.Forms;
-  const { TextArea } = componentTokens.Forms;
+  const { captionslot } = semanticTokens.sem.forms;
+  const { TextArea } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     .textarea-input-control {
@@ -91,15 +91,15 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
         flex-wrap: wrap;
   
         &.sm {
-          margin: ${SM.CaptionSlot.Margin};
+          margin: ${captionslot.margin.sm};
         }
   
         &.md {
-          margin: ${MD.CaptionSlot.Margin};
+          margin: ${captionslot.margin.md};
         }
   
         &.lg {
-          margin: ${LG.CaptionSlot.Margin};
+          margin: ${captionslot.margin.lg};
         }
       }
     }
