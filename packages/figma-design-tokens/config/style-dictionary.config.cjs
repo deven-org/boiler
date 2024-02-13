@@ -9,7 +9,7 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
-const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui'];
+const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui', 'Actions', 'Forms'];
 
 const componentTypes = [
   'ButtonGroup',
