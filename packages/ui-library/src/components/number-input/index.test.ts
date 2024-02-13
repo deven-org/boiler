@@ -3,7 +3,7 @@ import '@boiler/ui-library/dist/';
 import { BlrNumberInputRenderFunction } from './renderFunction';
 import type { BlrNumberInputType } from '.';
 
-import { fixture, expect } from '@open-wc/testing';
+import { fixture, expect, nextFrame } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string';
 
@@ -26,6 +26,8 @@ const sampleParams: BlrNumberInputType = {
   unit: 'gr',
   decimals: 0,
   leadingZeros: 0,
+  stepIncreaseAriaLabel: '+',
+  stepDecreaseAriaLabel: '\u2212',
 };
 
 describe('blr-number-input', () => {
@@ -128,4 +130,50 @@ describe('blr-number-input', () => {
 
     expect(numberValue).to.be.equal('4.00');
   });
+
+  for (const stepperVariant of ['split', 'horizontal', 'vertical'] as const) {
+    it(`has functional stepper buttons with aria labels - stepperVariant="${stepperVariant}"`, async () => {
+      const className = 'custom-stepper-button';
+      const stepIncreaseAriaLabel = 'INC';
+      const stepDecreaseAriaLabel = 'DEC';
+      const step = 5;
+
+      const element = await fixture(
+        BlrNumberInputRenderFunction({
+          ...sampleParams,
+          stepperVariant,
+          stepIncreaseAriaLabel,
+          stepDecreaseAriaLabel,
+          step,
+          value: 1,
+        })
+      );
+
+      const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
+      expect(input?.value).to.be.equal('1');
+      // We have an initialized input at a chosen value of 1
+
+      const incQuery = `button.${className}[aria-label="${stepIncreaseAriaLabel}"]`;
+      const incButtons = querySelectorAllDeep(incQuery, element.getRootNode() as HTMLElement);
+      expect(incButtons.length).to.be.equal(1);
+      const incButton = incButtons[0];
+      // We have exactly 1 stepper button that has our chosen increase aria label
+
+      incButton.click();
+      await nextFrame();
+      expect(input?.value).to.be.equal('6');
+      // Clicking the stepper button with the increase label increases the value by our chosen step (1 + 5 = 6)
+
+      const decQuery = `button.${className}[aria-label="${stepDecreaseAriaLabel}"]`;
+      const decButtons = querySelectorAllDeep(decQuery, element.getRootNode() as HTMLElement);
+      expect(decButtons.length).to.be.equal(1);
+      const decButton = decButtons[0];
+      // We have exactly 1 stepper button that has our chosen decrease aria label
+
+      decButton.click();
+      await nextFrame();
+      expect(input?.value).to.be.equal('1');
+      // Clicking the stepper button with the decrease label decreases the value by our chosen step (6 - 5 = 1)
+    });
+  }
 });

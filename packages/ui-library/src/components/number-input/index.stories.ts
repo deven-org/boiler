@@ -42,6 +42,8 @@ const defaultParams: BlrNumberInputType = {
   errorMessage: '',
   errorIcon: undefined,
   numberInputId: 'test-id',
+  stepIncreaseAriaLabel: '+',
+  stepDecreaseAriaLabel: '\u2212',
 };
 
 export default {
@@ -268,16 +270,6 @@ export default {
       if: { arg: 'hasError', eq: true },
     },
     //Technical attributes
-    ariaLabel: {
-      name: 'ariaLabel',
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        category: 'Accessibility',
-      },
-      control: { type: 'text', defaultValue: 'Default value' },
-    },
-
     numberInputId: {
       name: 'numberInputId',
       description: 'Unique identifier for this component.',
@@ -329,6 +321,24 @@ export default {
         category: 'Events',
       },
     },
+    // Accessibility attributes
+    stepIncreaseAriaLabel: {
+      name: 'stepIncreaseAriaLabel',
+      description: 'Labels the "up" or increase stepper button to assistive technologies, such as screen readers.',
+      table: {
+        category: 'Accessibility',
+      },
+      control: { type: 'text', defaultValue: '+' },
+    },
+    stepDecreaseAriaLabel: {
+      name: 'stepDecreaseAriaLabel',
+      description:
+        'Labels the "down" or decrease stepper button to assistive technologies, such as screen readers.\nNote that the default value is not a hyphen (-) but the minus sign \\u2212 (\u2212).',
+      table: {
+        category: 'Accessibility',
+      },
+      control: { type: 'text', defaultValue: '\u2212' },
+    },
   },
   parameters: {
     design: {
@@ -379,6 +389,7 @@ export const SizeVariant = () => {
         size: 'sm',
         label: 'Number input SM',
         value: undefined,
+        numberInputId: 'test-sm',
       })}
     </div>
     <div class="wrapper">
@@ -388,6 +399,7 @@ export const SizeVariant = () => {
         size: 'md',
         label: 'Number input MD',
         value: undefined,
+        numberInputId: 'test-md',
       })}
     </div>
     <div class="wrapper">
@@ -397,6 +409,7 @@ export const SizeVariant = () => {
         size: 'lg',
         label: 'Number input LG',
         value: undefined,
+        numberInputId: 'test-lg',
       })}
     </div>
   `;
@@ -418,6 +431,7 @@ export const StepperVariant = () =>
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
+        numberInputId: 'test-vert',
       })}
     </div>
     <div class="wrapper">
@@ -428,6 +442,7 @@ export const StepperVariant = () =>
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
+        numberInputId: 'test-hor',
       })}
     </div>
     <div class="wrapper">
@@ -438,6 +453,7 @@ export const StepperVariant = () =>
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
+        numberInputId: 'test-split',
       })}
     </div>
   `;
@@ -457,6 +473,7 @@ export const Placeholder = () => {
         label: 'With placeholder',
         labelAppendix: undefined,
         value: undefined,
+        numberInputId: 'test-with',
       })}
     </div>
     <div class="wrapper">
@@ -467,6 +484,7 @@ export const Placeholder = () => {
         labelAppendix: undefined,
         placeholder: '',
         value: undefined,
+        numberInputId: 'test-without',
       })}
     </div>
   `;
@@ -486,6 +504,7 @@ export const HasUnit = () => {
         label: 'No unit',
         unit: undefined,
         labelAppendix: undefined,
+        numberInputId: 'test-no',
       })}
     </div>
     <div class="wrapper">
@@ -495,6 +514,7 @@ export const HasUnit = () => {
         prependUnit: true,
         unit: 'kg',
         labelAppendix: undefined,
+        numberInputId: 'test-kg-pre',
       })}
     </div>
     <div class="wrapper">
@@ -505,6 +525,7 @@ export const HasUnit = () => {
         value: undefined,
         unit: 'kg',
         labelAppendix: undefined,
+        numberInputId: 'test-kg-suff',
       })}
     </div>
   `;
@@ -525,6 +546,7 @@ export const Disabled = () => {
         label: 'Disabled',
         disabled: true,
         labelAppendix: undefined,
+        numberInputId: 'test-disabled',
       })}
     </div>
   `;
@@ -546,6 +568,7 @@ export const Readonly = () => {
         labelAppendix: undefined,
         decimals: 1,
         value: 20.2,
+        numberInputId: 'test-readonly',
       })}
     </div>
   `;
@@ -564,6 +587,7 @@ export const Required = () => {
         ...defaultParams,
         required: true,
         labelAppendix: '(required)',
+        numberInputId: 'test-req',
       })}
     </div>
   `;
@@ -583,6 +607,7 @@ export const HasError = () => {
         label: 'Error',
         hasError: true,
         labelAppendix: undefined,
+        numberInputId: 'test-error',
       })}
     </div>
   `;
@@ -602,6 +627,7 @@ export const IconButton = () => {
         unit: 'kg',
         labelAppendix: undefined,
         stepperVariant: 'split',
+        numberInputId: 'test-icon',
       })}
     </div>
   `;
@@ -622,6 +648,7 @@ export const FormLabel = () => {
         label: 'With label',
         labelAppendix: '(with appendix)',
         value: undefined,
+        numberInputId: 'test-label',
       })}
     </div>
     <div class="wrapper">
@@ -632,6 +659,7 @@ export const FormLabel = () => {
         labelAppendix: '',
         hasHint: false,
         value: undefined,
+        numberInputId: 'test-no-label',
       })}
     </div>
   `;
@@ -650,6 +678,7 @@ export const FormCaptionGroup = () => {
         label: 'Hint message',
         hintIcon: 'blrInfo',
         labelAppendix: '',
+        numberInputId: 'test-hint',
       })}
     </div>
     <div class="wrapper">
@@ -661,6 +690,7 @@ export const FormCaptionGroup = () => {
         errorMessage: "OMG it's an error",
         hasHint: true,
         errorIcon: 'blrErrorFilled',
+        numberInputId: 'test-hint-error',
       })}
     </div>
   `;
