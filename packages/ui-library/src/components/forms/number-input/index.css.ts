@@ -103,7 +103,7 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
       }
     }
 
-    .unit
+    .unit,
     input {
       &.sm {
         font-weight: ${inputfield.userinput.typography.sm.fontWeight};
