@@ -54,25 +54,6 @@
         }
       }
     },
-    "Fieldset": {
-      "Legend": {
-        "SM": {
-          "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        },
-        "MD": {
-          "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        },
-        "LG": {
-          "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-          "type": "typography",
-          "description": "Apply on forms group-legends eg.: <RadioGroup>"
-        }
-      }
-    },
     "FormLabel": {
       "Label": {
         "Typography": {
@@ -144,6 +125,25 @@
             "value": "{core.typography.sourceSansPro.semibold.75}",
             "type": "typography"
           }
+        }
+      }
+    },
+    "RadioGroup": {
+      "Legend": {
+        "SM": {
+          "value": "{sem.buttons.label.typography.sm}",
+          "type": "typography",
+          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+        },
+        "MD": {
+          "value": "{sem.buttons.label.typography.md}",
+          "type": "typography",
+          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+        },
+        "LG": {
+          "value": "{sem.buttons.label.typography.lg}",
+          "type": "typography",
+          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
         }
       }
     },

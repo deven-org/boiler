@@ -881,6 +881,28 @@
       }
     },
     "forms": {
+      "fieldset": {
+        "legend": {
+          "textcolor": {
+            "default": {
+              "value": "{sys.content.surface.regular.neutral}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sys.content.surface.regular.disabled}",
+              "type": "color"
+            },
+            "readonly": {
+              "value": "{sys.content.surface.regular.neutral}",
+              "type": "color"
+            },
+            "error": {
+              "value": "{sys.content.surface.regular.danger}",
+              "type": "color"
+            }
+          }
+        }
+      },
       "inputfield": {
         "userinput": {
           "textcolor": {

@@ -970,6 +970,28 @@
         }
       }
     },
+    "RadioGroup": {
+      "Legend": {
+        "textcolor": {
+          "default": {
+            "value": "{sem.forms.fieldset.legend.textcolor.default}",
+            "type": "color"
+          },
+          "disabled": {
+            "value": "{sem.forms.fieldset.legend.textcolor.disabled}",
+            "type": "color"
+          },
+          "readonly": {
+            "value": "{sem.forms.fieldset.legend.textcolor.readonly}",
+            "type": "color"
+          },
+          "error": {
+            "value": "{sem.forms.fieldset.legend.textcolor.error}",
+            "type": "color"
+          }
+        }
+      }
+    },
     "Slider": {
       "Thumb": {
         "Shape": {
@@ -1728,26 +1750,6 @@
               }
             }
           }
-        }
-      }
-    },
-    "Fieldset": {
-      "Legend": {
-        "Default": {
-          "value": "{sys.content.surface.regular.neutral}",
-          "type": "color"
-        },
-        "Disabled": {
-          "value": "{sys.content.surface.regular.disabled}",
-          "type": "color"
-        },
-        "ReadOnly": {
-          "value": "{sys.content.surface.regular.neutral}",
-          "type": "color"
-        },
-        "Error": {
-          "value": "{sys.content.surface.regular.danger}",
-          "type": "color"
         }
       }
     }
