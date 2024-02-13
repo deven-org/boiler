@@ -12,7 +12,7 @@ export const styleCustom = typeSafeNestedCss`
 
 export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
-    const { inputfield, inputslot } = semanticTokens.sem.forms;
+    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
     const { InputIcon } = _componentTokens.cmp;
 
     return typeSafeNestedCss`
@@ -22,19 +22,19 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         &.sm {
           & > .label-wrapper {
             display: flex;
-            padding: ${SM.LabelSlot.Padding};
+            padding: ${labelslot.padding.sm};
           }
         }
         &.md {
           & > .label-wrapper {
             display: flex;
-            padding: ${MD.LabelSlot.Padding};
+            padding: ${labelslot.padding.md};
           }
         }
         &.lg {
           & > .label-wrapper {
             display: flex;
-            padding: ${LG.LabelSlot.Padding};
+            padding: ${labelslot.padding.lg};
           }
         }
       }
