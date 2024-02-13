@@ -25,4 +25,9 @@ describe('blr-tooltip', () => {
 
     expect(tooltip).to.exist;
   });
+
+  it('is rendering the tooltip child element', async () => {
+    const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
+    expect(element.childNodes[1]).to.exist;
+  });
 });
