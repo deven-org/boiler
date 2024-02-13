@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 
 import { semanticTokens } from "../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
-const { captionslot } = semanticTokens.sem.forms;
+const { captionslot, labelslot } = semanticTokens.sem.forms;
 
 export const styleCustom = typeSafeNestedCss`
   :host {
@@ -21,19 +21,19 @@ export const styleCustom = typeSafeNestedCss`
     &.sm {
       & > .label-wrapper {
         display: flex;
-        padding: ${SM.LabelSlot.Padding};
+        padding: ${labelslot.padding.sm};
       }
     }
     &.md {
       & > .label-wrapper {
         display: flex;
-        padding: ${MD.LabelSlot.Padding};
+        padding: ${labelslot.padding.md};
       }
     }
     &.lg {
       & > .label-wrapper {
         display: flex;
-        padding: ${LG.LabelSlot.Padding};
+        padding: ${labelslot.padding.lg};
       }
     }
   }
