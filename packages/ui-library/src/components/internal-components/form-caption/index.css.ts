@@ -2,7 +2,7 @@ import { typeSafeNestedCss as css } from "../../../utils/nested-typesafe-css-lit
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: captionLight, tokenizedDark: captionDark } = renderThemedCssStrings((componentTokens) => {
-  const { CaptionComponent } = componentTokens.Forms;
+  const { CaptionComponent } = componentTokens.cmp;
 
   return css`
     .blr-form-caption {
