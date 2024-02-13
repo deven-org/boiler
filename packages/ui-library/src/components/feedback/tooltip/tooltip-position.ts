@@ -9,9 +9,7 @@ import {
 } from '@floating-ui/dom';
 import { componentTokens } from '../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs';
 
-const {
-  Feedback: { Tooltip },
-} = componentTokens;
+const { Tooltip } = componentTokens.cmp;
 
 const getArrowSettings = (tooltip: HTMLElement, paddingTopBottom: number, paddingLeftRight: number, side: string) => {
   const element = tooltip.shadowRoot?.querySelector('.arrow') as HTMLElement;
