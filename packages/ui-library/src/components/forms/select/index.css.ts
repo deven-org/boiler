@@ -16,6 +16,30 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
     const { InputIcon } = _componentTokens.cmp;
 
     return typeSafeNestedCss`
+
+    :host {
+      .blr-select {
+        &.sm {
+          & > .label-wrapper {
+            display: flex;
+            padding: ${SM.LabelSlot.Padding};
+          }
+        }
+        &.md {
+          & > .label-wrapper {
+            display: flex;
+            padding: ${MD.LabelSlot.Padding};
+          }
+        }
+        &.lg {
+          & > .label-wrapper {
+            display: flex;
+            padding: ${LG.LabelSlot.Padding};
+          }
+        }
+      }
+    }
+
       slot {
         display: none;
       }

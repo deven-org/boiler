@@ -84,7 +84,6 @@ export const ButtonGroup = (
       theme: 'Light',
       loading: false,
       variant: 'primary',
-      loadingStatus: 'Loading',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
@@ -94,7 +93,6 @@ export const ButtonGroup = (
       theme: 'Light',
       loading: false,
       variant: 'secondary',
-      loadingStatus: 'Loading',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
@@ -103,7 +101,6 @@ export const ButtonGroup = (
       theme: 'Light',
       loading: false,
       variant: 'silent',
-      loadingStatus: 'Loading',
       disabled: false,
       arialabel: 'button_1',
       icon: 'blr360',

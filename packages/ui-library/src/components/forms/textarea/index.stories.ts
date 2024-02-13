@@ -3,7 +3,6 @@ import { html } from 'lit-html';
 import { BlrTextareaType } from './index';
 import { BlrTextareaRenderFunction } from './renderFunction';
 import { FormSizes, Resizes } from '../../../globals/constants';
-import { action } from '@storybook/addon-actions';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons';
 
@@ -25,31 +24,30 @@ const sharedStyles = html`
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   size: 'md',
-  isResizeable: 'none',
+  isResizeable: 'both',
   cols: 40,
   rows: 4,
   placeholder: 'Placeholder-text',
   value: '',
   minLength: 10,
   maxLength: 140,
+  hasLabel: true,
   label: 'Label-text',
-  labelAppendix: '',
+  labelAppendix: '(Appendix)',
   hasHint: false,
-  hintMessage: 'This is a small hint',
+  hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
-  arialabel: '',
-  name: '',
-  showCounter: false,
+  arialabel: 'Text Area',
+  name: 'Text Area',
+  showCounter: true,
   theme: 'Light',
-  textareaId: '',
+  textareaId: '#textAreaId',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-
   required: false,
   disabled: false,
   readonly: false,
-
   hasError: false,
   errorMessage: '',
   errorIcon: 'blr360',
@@ -414,41 +412,8 @@ export const TextArea = (params: BlrTextareaType) =>
         ...params,
       })}
     </div> `;
-const args: BlrTextareaType = {
-  theme: 'Light',
-  size: 'md',
-  isResizeable: 'both',
-  cols: 40,
-  rows: 4,
-  placeholder: 'Placeholder-text',
-  value: '',
-  minLength: 0,
-  maxLength: 140,
-  hasLabel: true,
-  label: 'Label-text',
-  labelAppendix: '(Appendix)',
-  hasHint: false,
-  hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
-  showCounter: true,
-  warningLimitType: 'warningLimitInt',
-  warningLimitInt: 105,
-  warningLimitPer: 75,
-  disabled: false,
-  readonly: false,
-  required: false,
-  hasError: false,
-  errorMessage: '',
-  errorIcon: undefined,
-  arialabel: 'Text Area',
-  textareaId: '#textAreaId',
-  name: 'Text Area',
-  onChange: () => action('onChange'),
-  onFocus: () => action('onFocus'),
-  onSelect: () => action('onSelect'),
-  onBlur: () => action('onBlur'),
-};
-TextArea.args = args;
+
+TextArea.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [

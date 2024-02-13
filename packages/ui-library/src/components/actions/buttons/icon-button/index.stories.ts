@@ -156,11 +156,6 @@ export default {
         disable: true,
       },
     },
-    loadingStatus: {
-      table: {
-        disable: true,
-      },
-    },
   },
   parameters: {
     design: {
@@ -201,7 +196,6 @@ const defaultParams: BlrIconButtonType = {
   loading: false,
   arialabel: 'Icon Button',
   buttonId: 'iconButtonId',
-  loadingStatus: 'Loading',
 };
 BlrIconButton.args = defaultParams;
 

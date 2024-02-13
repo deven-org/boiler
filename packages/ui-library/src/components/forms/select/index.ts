@@ -27,7 +27,8 @@ export class BlrSelect extends LitElement {
   @property() selectId!: string;
   @property() labelAppendix?: string;
   @property() name!: string;
-  @property() label?: string;
+  @property() hasLabel?: boolean;
+  @property() label!: string;
   @property() disabled?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
@@ -156,16 +157,20 @@ export class BlrSelect extends LitElement {
 
         <slot @slotchange=${this.handleSlotChange}></slot>
 
-        <div class="blr-select">
-          ${this.label
-            ? BlrFormLabelRenderFunction({
-                labelText: this.label,
-                labelAppendix: this.labelAppendix,
-                labelSize: this.size,
-                forValue: this.selectId,
-                theme: this.theme,
-                variant: this.hasError ? 'error' : 'label',
-              })
+        <div class="blr-select ${this.size}">
+          ${this.hasLabel
+            ? html`
+                <div class="label-wrapper">
+                  ${BlrFormLabelRenderFunction({
+                    labelText: this.label,
+                    labelAppendix: this.labelAppendix,
+                    labelSize: this.size,
+                    forValue: this.selectId,
+                    theme: this.theme,
+                    variant: this.hasError ? 'error' : 'label',
+                  })}
+                </div>
+              `
             : nothing}
           <div class="blr-select-wrapper ${inputClasses}">
             <div class="blr-select-inner-container">

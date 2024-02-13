@@ -26,7 +26,6 @@ export class BlrIconButton extends LitElement {
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
-  @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
 
@@ -120,7 +119,6 @@ export class BlrIconButton extends LitElement {
             ? BlrLoaderRenderFunction({
                 size: loaderSizeVariant,
                 variant: loaderVariant,
-                loadingStatus: this.loadingStatus,
                 theme: this.theme,
               })
             : nothing}
