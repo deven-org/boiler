@@ -2,7 +2,7 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
-const { ButtonGroup } = componentTokens.UI;
+const { ButtonGroup } = componentTokens.cmp;
 
 export const styleCustom = typeSafeNestedCss`
   .blr-button-group {
