@@ -15,10 +15,9 @@ export const styleCustom = typeSafeNestedCss`
   }
 `;
 
-export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Silent } = semanticTokens.Actions;
-  const { IconButton } = componentTokens.Actions;
-  const { TabBar } = componentTokens.Navigation;
+export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens) => {
+  const { IconButton } = componentTokens.cmp;
+  const { TabBar } = componentTokens.cmp;
 
   /* ToDos
   - [ ] Use Icon Button for pagination-buttons
@@ -73,9 +72,6 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           font: inherit;
           cursor: pointer;
           outline: inherit;
-          _background-color: ${Silent.SurfaceFill.Rest};
-          _border-color: ${Silent.SurfaceStroke.Rest};
-          _color: ${Silent.Icon.Rest};
           line-height: 0;
 
           &.sm {
