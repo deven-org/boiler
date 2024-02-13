@@ -6,7 +6,7 @@ import { BlrIconRenderFunction } from './renderFunction';
 import { fixture, expect } from '@open-wc/testing';
 import { classMap } from 'lit/directives/class-map.js';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrIconType } from '@boiler/ui-library/dist/';
+import type { BlrIconType } from '.';
 
 const TEST_CLASS = 'test-class';
 

@@ -1,7 +1,7 @@
 import '@boiler/ui-library/dist/';
 
 import { BlrTextButtonRenderFunction } from './renderFunction';
-import type { BlrTextButtonType } from '@boiler/ui-library/dist/';
+import type { BlrTextButtonType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

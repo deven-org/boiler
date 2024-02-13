@@ -1,7 +1,7 @@
 import '@boiler/ui-library/dist/';
 
 import { BlrTooltipBubbleRenderFunction } from './renderFunction';
-import type { BlrTooltipBubbleType } from '@boiler/ui-library/dist/';
+import type { BlrTooltipBubbleType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
