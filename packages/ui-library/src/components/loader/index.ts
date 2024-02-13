@@ -1,13 +1,12 @@
 import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { styleCustomLight, styleCustomDark } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
 
-@customElement(TAG_NAME)
 export class BlrLoader extends LitElement {
   static styles = [];
 
@@ -33,6 +32,10 @@ export class BlrLoader extends LitElement {
         </div>`;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrLoader);
 }
 
 export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;

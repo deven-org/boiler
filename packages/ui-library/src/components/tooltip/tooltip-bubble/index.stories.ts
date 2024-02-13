@@ -7,7 +7,7 @@ import { BlrTooltipBubbleRenderFunction } from './renderFunction';
 import { Themes } from '../../../foundation/_tokens-generated/index.themes';
 
 export default {
-  title: 'Components/Web Components/Tooltip/Tooltip Bubble',
+  title: 'Components/Tooltip/Tooltip Bubble',
   argTypes: {
     theme: {
       options: Themes,

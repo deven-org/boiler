@@ -1,5 +1,5 @@
-import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
-import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
+import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens) => {
   const { Counter } = componentTokens.Feedback;

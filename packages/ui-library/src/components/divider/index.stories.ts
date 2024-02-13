@@ -24,7 +24,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Divider/Divider',
+  title: 'Components/Divider/Divider',
   argTypes: {
     directionVariant: {
       description: 'Choose direction of the component.',

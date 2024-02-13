@@ -1,20 +1,17 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, query, state } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
 import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../globals/types';
-import { BlrFormLabelRenderFunction } from '../internal-components/form-label/renderFunction';
+import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrCounterRenderFunction } from '../internal-components/counter/renderFunction';
-import { BlrFormCaptionGroupRenderFunction } from '../internal-components/form-caption-group/renderFunction';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { BlrCounterRenderFunction } from '../counter/renderFunction';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 
-import { BlrFormCaptionRenderFunction } from '../internal-components/form-caption/renderFunction';
-
-import { TAG_NAME } from './renderFunction';
-
-@customElement(TAG_NAME)
 export class BlrTextarea extends LitElement {
   static styles = [styleCustom];
 
@@ -253,6 +250,10 @@ ${this.value}
       `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrTextarea);
 }
 
 export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;

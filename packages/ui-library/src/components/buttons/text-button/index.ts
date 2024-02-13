@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { actionDark, actionLight } from '../../../foundation/semantic-tokens/action.css';
@@ -22,7 +22,6 @@ import { TAG_NAME } from './renderFunction';
 
 import { getComponentConfigToken } from '../../../utils/get-component-config-token';
 
-@customElement(TAG_NAME)
 export class BlrTextButton extends LitElement {
   static styles = [styleCustom];
 
@@ -174,6 +173,10 @@ export class BlrTextButton extends LitElement {
         </span> `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrTextButton);
 }
 
 export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement>;

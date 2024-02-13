@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-
 import '../../index';
 import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
 import { BlrIconButtonRenderFunction } from '../buttons/icon-button/renderFunction';
@@ -33,7 +32,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Button Group/Button Group',
+  title: 'Components/Button Group/Button Group',
   argTypes: {
     size: {
       options: ButtonGroupSizes,

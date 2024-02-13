@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property, query, state } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
@@ -8,13 +8,12 @@ import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
 import { FormSizesType } from '../../globals/types';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../internal-components/form-caption/renderFunction';
-import { BlrFormLabelInlineRenderFunction } from '../internal-components/form-label/form-label-inline/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { checkboxLight, checkboxDark } from './index.css';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrCheckbox extends LitElement {
   static styles = [];
 
@@ -308,6 +307,10 @@ export class BlrCheckbox extends LitElement {
       `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrCheckbox);
 }
 
 export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;

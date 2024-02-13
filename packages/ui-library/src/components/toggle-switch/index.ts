@@ -1,24 +1,18 @@
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property, query, state } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
-
-import { BlrFormLabelInlineRenderFunction } from '../internal-components/form-label/form-label-inline/renderFunction';
-import { FormSizesType, IconPositionVariant } from '../../globals/types';
-
-import { styleCustom, toggleSwitchDark, toggleSwitchLight } from './index.css';
-import { BlrFormCaptionRenderFunction } from '../internal-components/form-caption/renderFunction';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-
 import { TAG_NAME } from './renderFunction';
-
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { FormSizesType, IconPositionVariant } from '../../globals/types';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
+import { styleCustom, toggleSwitchLight, toggleSwitchDark } from './index.css';
 
-@customElement(TAG_NAME)
 export class BlrToggleSwitch extends LitElement {
   static styles = [styleCustom];
 
@@ -258,6 +252,10 @@ export class BlrToggleSwitch extends LitElement {
         </div>`;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrToggleSwitch);
 }
 
 export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;

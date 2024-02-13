@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../../../foundation/component-tokens/slider.css';
@@ -19,7 +19,6 @@ import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes
 
 import { TAG_NAME } from './renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrRangeSlider extends LitElement {
   static styles = [styleCustom];
 
@@ -149,6 +148,10 @@ export class BlrRangeSlider extends LitElement {
         </fieldset>
       </div>`;
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrRangeSlider);
 }
 
 export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElement>;

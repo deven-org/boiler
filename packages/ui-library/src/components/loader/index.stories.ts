@@ -1,8 +1,6 @@
 import { BlrLoaderType } from './index';
 import { BlrLoaderRenderFunction } from './renderFunction';
-
 import { html } from 'lit-html';
-
 // this loads the all components instances and registers their html tags
 import '../../index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -28,7 +26,7 @@ const defaultParams: BlrLoaderType = {
 };
 
 export default {
-  title: 'Components/Web Components/Loader/Loader',
+  title: 'Components/Loader/Loader',
   argTypes: {
     //Appearance
     variant: {

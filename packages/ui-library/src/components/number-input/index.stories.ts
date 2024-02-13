@@ -45,7 +45,7 @@ const defaultParams: BlrNumberInputType = {
 };
 
 export default {
-  title: 'Components/Web Components/Number Input',
+  title: 'Components/Number Input/Number Input',
   args: {
     ...defaultParams,
     name: 'NumberInput',

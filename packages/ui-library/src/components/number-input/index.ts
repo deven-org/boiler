@@ -1,22 +1,20 @@
 import { LitElement, TemplateResult, html, nothing } from 'lit';
-import { customElement, property, query, state } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { baseStyle, wrapperLight, wrapperDark, StepperComboDark, StepperComboLight } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { BlrFormLabelRenderFunction } from '../internal-components/form-label/renderFunction';
-import { FormSizesType } from '../../globals/types';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { SizelessIconType } from '@boiler/icons';
-import { actionDark, actionLight } from '../../foundation/semantic-tokens/action.css';
-import { BlrFormCaptionGroupRenderFunction } from '../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../internal-components/form-caption/renderFunction';
-
 import { TAG_NAME } from './renderFunction';
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
+import { SizelessIconType } from '@boiler/icons';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
+import { FormSizesType } from '../../globals/types';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
+import { BlrIconRenderFunction } from '../icon/renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrNumberInput extends LitElement {
   static styles = [baseStyle];
 
@@ -272,6 +270,10 @@ export class BlrNumberInput extends LitElement {
       `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrNumberInput);
 }
 
 export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement>;

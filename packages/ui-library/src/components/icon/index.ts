@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { SizesType } from '../../globals/types';
@@ -10,7 +10,6 @@ import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
-@customElement(TAG_NAME)
 export class BlrIcon extends LitElement {
   static styles = [styleCustom];
 
@@ -79,6 +78,12 @@ if (!customElements.get(TAG_NAME)) {
 // and some additional properties which are not part of the component, so we dont use the generic render function
 
 /*
+ 
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrIconLink);
+}
+
+
 export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & {
   classMap?: DirectiveResult<typeof ClassMapDirective>;
   onClick?: HTMLElement['onclick'];

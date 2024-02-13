@@ -8,7 +8,7 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { Sizes } from '../../../../globals/constants';
 
 export default {
-  title: 'Components/Web Components/Slider/SliderTwoValues',
+  title: 'Components/Slider/SliderTwoValues',
   argTypes: {
     incrementIcon: {
       options: [undefined, ...PureIconKeys],

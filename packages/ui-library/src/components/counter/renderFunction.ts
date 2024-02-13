@@ -1,5 +1,5 @@
 import { BlrCounterType } from '.';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 
 export const TAG_NAME = 'blr-counter';
 

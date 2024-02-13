@@ -1,13 +1,11 @@
 import { LitElement, html, nothing } from 'lit';
-import { InputSizesType, LabelVariantType } from '../../../globals/types';
-import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
-import { customElement, property } from 'lit/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-
 import { TAG_NAME } from './renderFunction';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { property } from 'lit/decorators.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { InputSizesType, LabelVariantType } from '../../globals/types';
 
-@customElement(TAG_NAME)
 export class BlrFormLabel extends LitElement {
   static styles = [];
 
@@ -42,6 +40,10 @@ export class BlrFormLabel extends LitElement {
         </label>`;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrFormLabel);
 }
 
 export type BlrFormLabelType = Omit<BlrFormLabel, keyof LitElement>;

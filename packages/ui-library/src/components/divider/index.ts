@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 
 import { classMap } from 'lit/directives/class-map.js';
 import { dividerDark, dividerLight } from './index.css';
@@ -8,7 +8,6 @@ import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { DividerVariationTypes } from '../../globals/types';
 
-@customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
   @property() directionVariant: DividerVariationTypes = 'vertical';
   @property() theme: ThemeType = 'Light';
@@ -28,6 +27,10 @@ export class BlrDivider extends LitElement {
       <div class="${dividerClasses}"></div>
     `;
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrDivider);
 }
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;

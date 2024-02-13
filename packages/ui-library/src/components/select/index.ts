@@ -1,25 +1,21 @@
 import { LitElement, html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../globals/types';
-
 import { selectInputLight, selectInputDark } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { DirectiveResult } from 'lit-html/directive';
-
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
-
-import { BlrFormCaptionGroupRenderFunction } from '../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../internal-components/form-caption/renderFunction';
-import { BlrFormLabelRenderFunction } from '../internal-components/form-label/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { TAG_NAME } from './renderFunction';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrSelect extends LitElement {
   static styles = [styleCustom];
 
@@ -208,6 +204,10 @@ export class BlrSelect extends LitElement {
       `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrSelect);
 }
 
 export type BlrSelectType = Omit<BlrSelect, keyof LitElement>;

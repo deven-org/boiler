@@ -5,8 +5,6 @@ import { BlrSelectRenderFunction } from './renderFunction';
 import { FormSizes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-
-// this loads the all components instances and registers their html tags
 import '../../index';
 
 // Shared Style inside the Stories
@@ -41,7 +39,7 @@ const defaultParams: BlrSelectType = {
 };
 
 export default {
-  title: 'Components/Web Components/Select',
+  title: 'Components/Select/Select',
   argTypes: {
     // Appearance
     size: {

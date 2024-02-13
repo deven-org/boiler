@@ -1,7 +1,7 @@
 /* eslint-disable lit/binding-positions */
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, query, queryAll, state } from 'lit/decorators.js';
+import { property, query, queryAll, state } from 'lit/decorators.js';
 import { styleCustom, tabBarDark, tabBarLight } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
@@ -23,7 +23,6 @@ import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
 
-@customElement(TAG_NAME)
 export class BlrTabBar extends LitElement {
   static styles = [styleCustom];
 
@@ -245,6 +244,10 @@ export class BlrTabBar extends LitElement {
         })}`;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrTabBar);
 }
 
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;

@@ -3,17 +3,18 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as iconLinkStyleCustom } from './index.css';
-import { styleCustom as iconButtonStyleCustom } from '../../buttons/icon-button/index.css';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { actionLight, actionDark } from '../../../foundation/semantic-tokens/action.css';
-import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../../globals/types';
-import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { determineLoaderVariant } from '../../../utils/determine-loader-variant';
-import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-import { BlrLoaderRenderFunction } from '../../loader/renderFunction';
-import { TAG_NAME, BlrIconRenderFunction } from '../renderFunction';
+import { styleCustom as iconButtonStyleCustom } from '../buttons/icon-button/index.css';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
+import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../globals/types';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { determineLoaderVariant } from '../../utils/determine-loader-variant';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrIconRenderFunction } from '../icon/renderFunction';
+import { BlrLoaderRenderFunction } from '../loader/renderFunction';
+import { TAG_NAME } from './renderFunction';
 
-//@customElement(TAG_NAME)
+//
 export class BlrIconLink extends LitElement {
   static styles = [iconLinkStyleCustom, iconButtonStyleCustom];
 

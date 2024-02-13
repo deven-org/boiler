@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { LitElement, html, nothing } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
 import { styleCustom } from './index.css';
@@ -15,7 +15,6 @@ import { ThemeType } from '../../../../foundation/_tokens-generated/index.themes
 
 import { TAG_NAME } from './renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrRangeLegendMinMaxSlider extends LitElement {
   static styles = [styleCustom];
 
@@ -229,6 +228,10 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
         </fieldset>
       </div>`;
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrRangeLegendMinMaxSlider);
 }
 
 export type BlrRangeLegendMinMaxSliderType = Omit<BlrRangeLegendMinMaxSlider, keyof LitElement>;

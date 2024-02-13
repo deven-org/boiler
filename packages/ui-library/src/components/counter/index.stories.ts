@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { CounterVariants, FormSizes } from '../../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { CounterVariants, FormSizes } from '../../globals/constants';
 import { html } from 'lit-html';
 import { BlrCounterType } from './index';
 import { BlrCounterRenderFunction } from './renderFunction';
 
 // this loads the all components instances and registers their html tags
-import '../../../index';
+import '../../index';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Internal Components/Counter',
+  title: 'Components/Counter/Counter',
   argTypes: {
     theme: {
       options: Themes,
@@ -81,6 +81,12 @@ Counter provides a visual representation of a numeric quantity and typically inc
 - [**Appearance**](#appearance)
  - [**Variant**](#variant) 
  - [**Size Variant**](#size-variant) 
+
+The Counter is intended to be used when creating new components. Currently it is used like this in the following components:
+
+ - [**Text Area**](?path=/docs/components-text-area-text-area--docs)
+
+It is not intended to use the Counter directly when creating new applications.
 </Markdown>`,
       },
     },

@@ -1,12 +1,10 @@
 /* eslint-disable no-console */
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { FormSizes, LabelVariants } from '../../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { FormSizes, LabelVariants } from '../../globals/constants';
 import { BlrFormLabelType } from './index';
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
-
-// this loads the all components instances and registers their html tags
-import '../../../index';
+import '../../index';
 
 const sharedStyles = html`
   <style>
@@ -17,7 +15,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Internal Components/Form Label',
+  title: 'Components/Form Label/Form Label',
   argTypes: {
     labelSize: {
       name: 'sizeVariant',
@@ -83,13 +81,28 @@ export default {
     layout: 'centered',
     docs: {
       description: {
-        component: `<Markdown> Form Label provides a descriptive text or caption for an input field. The <label> element must be associated with an input field using the for attribute. 
-    - [**Appearance**](#appearance)
-      - [**Size Variant**](#size-variant)
-    - [**Content / Settings**](#content--settings)
-      - [**Label Appendix**](#label-appendix)
-    - [**Validation**](#validation)
-      - [**Has Error**](#has-error)
+        component: `<Markdown>
+        Form Label provides a descriptive text or caption for an input field. The <label> element must be associated with an input field using the for attribute. 
+
+        - [**Appearance**](#appearance)
+          - [**Size Variant**](#size-variant)
+        
+        - [**Content / Settings**](#content--settings)
+          - [**Label Appendix**](#label-appendix)
+        
+        - [**Validation**](#validation)
+          - [**Has Error**](#has-error)
+        
+        The Form Label is intended to be used when creating new components. Currently, it is used like this in the following components:
+        
+        - [**Checkbox**](?path=/docs/components-checkbox-checkbox--docs)
+        - [**Number Input**](?path=/docs/components-number-input-number-input--docs)
+        - [**Select**](?path=/docs/components-select-select--docs)
+        - [**Text Input**](?path=/docs/components-text-input-text-input--docs)
+        - [**Text Area**](?path=/docs/components-text-area-text-area--docs)
+        
+        It is not intended to use the Form Label directly when creating new applications.
+        
   </Markdown>`,
       },
     },

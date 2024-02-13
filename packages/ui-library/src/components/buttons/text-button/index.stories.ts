@@ -39,7 +39,7 @@ const defaultParams: BlrTextButtonType = {
 };
 
 export default {
-  title: 'Components/Web Components/Buttons/Text Button',
+  title: 'Components/Buttons/Text Button',
   argTypes: {
     //Appearance
     variant: {

@@ -9,7 +9,7 @@ import { Themes } from '../../../../foundation/_tokens-generated/index.themes';
 import { Sizes } from '../../../../globals/constants';
 
 export default {
-  title: 'Components/Web Components/Slider/SliderSingleValue',
+  title: 'Components/Slider/SliderSingleValue',
   argTypes: {
     incrementIcon: {
       options: [undefined, ...PureIconKeys],

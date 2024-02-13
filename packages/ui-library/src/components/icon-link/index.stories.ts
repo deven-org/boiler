@@ -1,15 +1,14 @@
 /* eslint-disable no-console */
 import { BlrIconLinkType } from './index';
 import { BlrIconLinkRenderFunction } from './renderFunction';
-import { PureIconKeys } from '@boiler/icons';
-
+import { PureIconKeys } from '@boiler/icons/icons-optimized';
 // this loads the all components instances and registers their html tags
-import '../../../index';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { ActionSizes, ActionVariants } from '../../../globals/constants';
+import '../../index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { ActionSizes, ActionVariants } from '../../globals/constants';
 
 export default {
-  title: 'Components/Web Components/Icon/Iconlink',
+  title: 'Components/Icon Link/Icon Link',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],
@@ -39,7 +38,7 @@ export default {
 
 export const BlrIconLink = (params: BlrIconLinkType) => BlrIconLinkRenderFunction(params);
 
-BlrIconLink.storyName = 'IconLink';
+BlrIconLink.storyName = 'Icon Link';
 
 const args: BlrIconLinkType = {
   theme: 'Light',

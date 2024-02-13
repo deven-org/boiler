@@ -2,10 +2,11 @@ import { BlrFormCaptionGroupType } from './index';
 import { BlrFormCaptionGroupRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { FormSizes } from '../../../globals/constants';
+import { FormSizes } from '../../globals/constants';
+import '../../index';
 
 export default {
-  title: 'Components/Web Components/Internal Components/Form Caption Group',
+  title: 'Components/Form Caption Group/Form Caption Group',
   argTypes: {
     size: {
       options: FormSizes,
@@ -31,6 +32,17 @@ export default {
 
 Technically both instances of the Form Caption are placed inside slots that are stacked above each other. The Form Caption Group only has one property named size to change the spacing in between the slots depending on the size of the component. For more information have a look at the internal [Form Caption](/docs/design-system-web-components-internal-components-form-caption--docs)  component
 
+The Form Caption Group is intended to be used when creating new components. Currently, it is used like this in the following components:
+        
+- [**Checkbox**](?path=/docs/components-checkbox-checkbox--docs)
+- [**Number Input**](?path=/docs/components-number-input-number-input--docs)
+- [**Radio**](?path=/docs/components-radio-group-radio--docs)
+- [**Radio Group**](?path=/docs/components-radio-group-radio-group--docs)
+- [**Select**](?path=/docs/components-select-select--docs)
+- [**Text Input**](?path=/docs/components-text-input-text-input--docs)
+- [**Text Area**](?path=/docs/components-text-area-text-area--docs)
+
+It is not intended to use the Form Caption Group directly when creating new applications.
       </Markdown>
       `,
       },

@@ -1,19 +1,17 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../../foundation/component-tokens/radio.css';
 import { InputSizesType, RadioOption } from '../../../globals/types';
-import { BlrFormLabelInlineRenderFunction } from '../../internal-components/form-label/form-label-inline/renderFunction';
+import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { BlrFormCaptionGroupRenderFunction } from '../../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../../internal-components/form-caption/renderFunction';
+import { BlrFormCaptionGroupRenderFunction } from '../../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../../form-caption/renderFunction';
+import { BlrFormLabelInlineRenderFunction } from '../../form-label/form-label-inline/renderFunction';
 
-import { TAG_NAME } from './renderFunction';
-
-@customElement(TAG_NAME)
 export class BlrRadioGroup extends LitElement {
   static styles = [styleCustom];
 
@@ -138,6 +136,10 @@ export class BlrRadioGroup extends LitElement {
           </div>`
         : nothing} `;
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrRadioGroup);
 }
 
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;

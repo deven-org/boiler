@@ -36,13 +36,13 @@ export { BlrTextarea } from './components/textarea';
 export { BlrToggleSwitch } from './components/toggle-switch';
 
 // Internal
-export { BlrCounter } from './components/internal-components/counter';
+export { BlrCounter } from './components/counter';
 
-export { BlrFormCaptionGroup } from './components/internal-components/form-caption-group';
+export { BlrFormCaptionGroup } from './components/form-caption-group';
 
-export { BlrFormCaption } from './components/internal-components/form-caption';
+export { BlrFormCaption } from './components/form-caption';
 
-export { BlrFormLabel } from './components/internal-components/form-label';
+export { BlrFormLabel } from './components/form-label';
 
 // Navigation
 export { BlrTabBar } from './components/tab-bar';
@@ -54,4 +54,4 @@ export { BlrDivider } from './components/divider';
 
 export { BlrIcon } from './components/icon';
 
-export { BlrIconLink } from './components/icon/icon-link';
+export { BlrIconLink } from './components/icon-link';

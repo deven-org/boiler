@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes, CaptionVariants } from '../../../globals/constants';
+import { FormSizes, CaptionVariants } from '../../globals/constants';
 import { BlrFormCaptionType } from './index';
 import { BlrFormCaptionRenderFunction } from './renderFunction';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
+import '../../index';
 
 const sharedStyles = html`
   <style>
@@ -15,7 +16,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Internal Components/Form Caption',
+  title: 'Components/Form Caption/Form Caption',
   argTypes: {
     size: {
       options: FormSizes,
@@ -70,11 +71,19 @@ export default {
       description: {
         component: `<Markdown>
         Form Caption provides either a brief hint or error message to a related form element such as Text Input or Select. It is typically displayed below the form element, and it can be used to provide additional information about the type of information a user has to provide, like an example of the correct data format.
+
         - [**Appearance**](#appearance)
           - [**Variant**](#variant)
           - [**Size Variant**](#size-variant)
         - [**Dependencies**](#dependencies)
           - [**Icon**](#icon)
+        
+        The Form Caption is intended to be used when creating new components. Currently, it is used like this in the following components:
+        
+        - [**Form Caption Group**](?path=/docs/components-form-caption-group-form-caption-group--docs)
+        - [**Toggle Switch**](?path=/docs/components-toggle-switch-toggle-switch--docs)
+        
+        It is not intended to use the Form Caption directly when creating new applications.
       </Markdown>
       `,
       },

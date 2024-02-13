@@ -1,17 +1,15 @@
 import { LitElement, TemplateResult, html, nothing } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { FormSizesType, CaptionVariantType, SizesType } from '../../../globals/types';
-import { BlrIconRenderFunction } from '../../icon/renderFunction';
-import { SizelessIconType } from '@boiler/icons';
-import { calculateIconName } from '../../../utils/calculate-icon-name';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { getComponentConfigToken } from '../../../utils/get-component-config-token';
-
 import { TAG_NAME } from './renderFunction';
 import { captionDark, captionLight } from './index.css';
+import { SizelessIconType } from '@boiler/icons';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/types';
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrIconRenderFunction } from '../icon/renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrFormCaption extends LitElement {
   static styles = [];
 
@@ -71,6 +69,10 @@ export class BlrFormCaption extends LitElement {
       `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrFormCaption);
 }
 
 export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElement>;

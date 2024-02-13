@@ -1,23 +1,20 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { textInputLight, textInputDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
-import { BlrFormLabelRenderFunction } from '../internal-components/form-label/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-
+import { calculateIconName } from '../../utils/calculate-icon-name';
+import { getComponentConfigToken } from '../../utils/get-component-config-token';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
+import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { TAG_NAME } from './renderFunction';
 
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../internal-components/form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../internal-components/form-caption/renderFunction';
-
-@customElement(TAG_NAME)
 export class BlrTextInput extends LitElement {
   static styles = [styleCustom];
 
@@ -241,6 +238,10 @@ export class BlrTextInput extends LitElement {
       `;
     }
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrTextInput);
 }
 
 export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;

@@ -26,7 +26,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Text Input',
+  title: 'Components/Text Input/Text Input',
   argTypes: {
     //Appearance
     size: {

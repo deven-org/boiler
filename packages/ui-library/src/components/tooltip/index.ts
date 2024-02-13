@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { tooltipPosition } from './tooltip-position';
 import { styleCustom } from './index.css';
@@ -10,7 +10,6 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 
-@customElement(TAG_NAME)
 export class BlrTooltip extends LitElement {
   static styles = [styleCustom];
 
@@ -62,6 +61,10 @@ export class BlrTooltip extends LitElement {
         visible: this.visible,
       })}`;
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrTooltip);
 }
 
 export type BlrTooltipType = Omit<BlrTooltip, keyof LitElement>;

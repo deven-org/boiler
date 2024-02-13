@@ -1,13 +1,12 @@
 import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 
-import { FormSizesType } from '../../../globals/types';
+import { FormSizesType } from '../../globals/types';
 import { classMap } from 'lit/directives/class-map.js';
 import { formCaptionGroupStyle } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
 
-@customElement(TAG_NAME)
 export class BlrFormCaptionGroup extends LitElement {
   static styles = [formCaptionGroupStyle];
 
@@ -25,6 +24,10 @@ export class BlrFormCaptionGroup extends LitElement {
       </div>
     `;
   }
+}
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrFormCaptionGroup);
 }
 
 export type BlrFormCaptionGroupType = Omit<BlrFormCaptionGroup, keyof LitElement>;

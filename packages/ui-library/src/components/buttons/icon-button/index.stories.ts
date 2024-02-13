@@ -60,7 +60,7 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 //Main Showcase Storybook IconButton, main argType Table
 export default {
-  title: 'Components/Web Components/Buttons/Icon Button',
+  title: 'Components/Buttons/Icon Button',
   argTypes: {
     //Appearance
     variant: {

@@ -1,4 +1,4 @@
-import { InputSizesType } from '../../../../globals/types';
+import { InputSizesType } from '../../../globals/types';
 
 export type BlrFormLabelInlineType = {
   labelText: string;

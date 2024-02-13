@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Web Components/Radio Group/Radio Group',
+  title: 'Components/Radio Group/Radio Group',
   argTypes: {
     size: {
       name: 'sizeVariant',

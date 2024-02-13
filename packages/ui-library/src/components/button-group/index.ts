@@ -6,7 +6,6 @@ import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/ty
 
 import { TAG_NAME } from './renderFunction';
 
-// @customElement(TAG_NAME)
 export class BlrButtonGroup extends LitElement {
   static styles = [styleCustom];
 
@@ -27,6 +26,11 @@ export class BlrButtonGroup extends LitElement {
     `;
   }
 }
+
 customElements.define(TAG_NAME, BlrButtonGroup);
+
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrButtonGroup);
+}
 
 export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElement>;
