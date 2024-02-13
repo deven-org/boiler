@@ -13,8 +13,6 @@ export class BlrLoader extends LitElement {
 
   @property() size?: ActionSizesType = 'md';
   @property() variant?: FeedbackVariantType;
-  @property() loadingStatus!: string;
-
   @property() theme: ThemeType = 'Light';
 
   protected render() {
@@ -31,7 +29,7 @@ export class BlrLoader extends LitElement {
           ${dynamicStyles.map((style) => style)}
         </style>
         <div class="loader-container ${this.size}">
-          <div class="${classes}" role="status" aria-live="polite" ?aria-label=${this.loadingStatus}></div>
+          <div class="${classes}" role="status" aria-live="polite"></div>
         </div>`;
     }
   }

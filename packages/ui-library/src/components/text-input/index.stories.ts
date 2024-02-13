@@ -4,7 +4,6 @@ import { BlrTextInputRenderFunction } from './renderFunction';
 import { FormSizes, InputTypes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { action } from '@storybook/addon-actions';
 import { html } from 'lit-html';
 
 // this loads the all components instances and registers their html tags
@@ -227,34 +226,34 @@ export default {
       },
     },
     // Events
-    onChange: {
-      name: 'onChange',
+    blrChange: {
+      name: 'blrChange',
       description: 'Fires when the value changes.',
-      action: 'onChange',
+      action: 'blrChange',
       table: {
         category: 'Events',
       },
     },
-    onSelect: {
-      name: 'onSelect',
+    blrSelect: {
+      name: 'blrSelect',
       description: 'Fires when some text is selected.',
-      action: 'onSelect',
+      action: 'blrSelect',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
@@ -323,36 +322,6 @@ Text Input allows users to enter textual information or data into a designated a
 export const BlrTextInput = (params: BlrTextInputType) => BlrTextInputRenderFunction(params);
 BlrTextInput.storyName = 'Text Input';
 
-const args: BlrTextInputType = {
-  theme: 'Light',
-  size: 'md',
-  type: 'text',
-  placeholder: 'Placeholder-text',
-  value: '',
-  maxLength: 200,
-  hasLabel: true,
-  label: 'Label-text',
-  labelAppendix: '(Appendix)',
-  showInputIcon: true,
-  inputIcon: 'blr360',
-  hasHint: false,
-  hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
-  disabled: false,
-  readonly: false,
-  required: false,
-  hasError: false,
-  errorMessage: '',
-  errorIcon: undefined,
-  arialabel: 'TextInput',
-  textInputId: 'Input Id',
-  name: 'TextInput',
-  onChange: () => action('onChange'),
-  onSelect: () => action('onSelect'),
-  onFocus: () => action('onFocus'),
-  onBlur: () => action('onBlur'),
-};
-BlrTextInput.args = args;
 // Default parameters for Text Input component
 const defaultParams: BlrTextInputType = {
   size: 'md',
@@ -360,20 +329,18 @@ const defaultParams: BlrTextInputType = {
   value: '',
   maxLength: 140,
   label: 'Label-text',
-  labelAppendix: '',
+  labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
   arialabel: 'TextInput',
-  name: '',
+  name: 'TextInput',
   theme: 'Light',
-  textInputId: '',
+  textInputId: 'Input Id',
   hasLabel: true,
-
   required: false,
   disabled: false,
   readonly: false,
-
   hasError: false,
   errorMessage: '',
   errorIcon: 'blrInfo',
@@ -381,6 +348,8 @@ const defaultParams: BlrTextInputType = {
   inputIcon: 'blr360',
   showInputIcon: true,
 };
+
+BlrTextInput.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
@@ -408,10 +377,10 @@ const argTypesToDisable = [
   'errorIcon',
   'arialabel',
   'name',
-  'onChange',
-  'onFocus',
-  'onBlur',
-  'onSelect',
+  'blrChange',
+  'blrSelect',
+  'blrFocus',
+  'blrBlur',
 ];
 
 const generateDisabledArgTypes = (argTypes: string[]) => {

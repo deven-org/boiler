@@ -53,7 +53,6 @@ const args: BlrIconLinkType = {
   size: 'md',
   href: '#',
   target: '_self',
-  loadingStatus: 'Loading',
 };
 
 BlrIconLink.args = args;

@@ -25,7 +25,6 @@ const defaultParams: BlrLoaderType = {
   theme: 'Light',
   variant: 'default',
   size: 'md',
-  loadingStatus: 'Loading',
 };
 
 export default {
@@ -54,11 +53,6 @@ export default {
       control: { type: 'select' },
       table: {
         category: 'Appearance',
-      },
-    },
-    loadingStatus: {
-      table: {
-        disable: true,
       },
     },
   },
@@ -102,7 +96,6 @@ export const Variant = () => {
       theme: 'Light',
       variant: 'default',
       size: 'md',
-      loadingStatus: 'Loading',
     })}
   `;
 };
@@ -117,7 +110,6 @@ export const Inverted = () => {
         ...defaultParams,
         variant: 'default',
         size: 'md',
-        loadingStatus: 'Loading',
       })}
     </div>
   `;

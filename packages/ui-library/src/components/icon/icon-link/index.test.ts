@@ -14,7 +14,6 @@ const sampleParams: BlrIconLinkType = {
   variant: 'cta',
   href: '#',
   target: '_self',
-  loadingStatus: 'Loading',
   theme: 'Light',
 };
 

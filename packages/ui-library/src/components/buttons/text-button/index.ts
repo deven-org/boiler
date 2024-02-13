@@ -35,7 +35,6 @@ export class BlrTextButton extends LitElement {
   @property() buttonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() size?: ActionSizesType = 'md';
-  @property() loadingStatus!: string;
   @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
   // these are not triggered directly but allows us to map it internally and bve typesafe
@@ -167,7 +166,6 @@ export class BlrTextButton extends LitElement {
                 ${BlrLoaderRenderFunction({
                   size: loaderSizeVariant,
                   variant: loaderVariant,
-                  loadingStatus: this.loadingStatus,
                   theme: this.theme,
                 })}
                 ${labelAndIconGroup}

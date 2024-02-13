@@ -3,6 +3,6 @@
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "runem.lit-analyzer"
+    "runem.lit-plugin"
   ]
 }

@@ -36,7 +36,6 @@ const defaultParams: BlrTextButtonType = {
   loading: false,
   buttonId: 'buttonId',
   buttonDisplay: 'inline-block',
-  loadingStatus: '',
 };
 
 export default {
@@ -176,11 +175,6 @@ export default {
       action: 'onBlur',
       table: {
         category: 'Events',
-      },
-    },
-    loadingStatus: {
-      table: {
-        disable: true,
       },
     },
   },

@@ -16,7 +16,6 @@ const testContent = BlrTextButtonRenderFunction({
   theme: 'Light',
   loading: false,
   variant: 'primary',
-  loadingStatus: 'Loading',
   disabled: false,
 });
 
