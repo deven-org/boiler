@@ -3,8 +3,8 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { semanticTokens } from "../../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
-const { CaptionGroup } = componentTokens.Forms;
-const { SM, MD, LG } = semanticTokens.Forms;
+const { CaptionGroup } = componentTokens.cmp;
+const { captionslot } = semanticTokens.sem.forms;
 
 export const formCaptionGroupStyle = typeSafeNestedCss`
   .blr-form-caption-group {
@@ -13,17 +13,17 @@ export const formCaptionGroupStyle = typeSafeNestedCss`
     
     &.sm {
       gap: ${CaptionGroup.Container.ItemSpacing.SM};
-      margin: ${SM.CaptionSlot.Margin};
+      margin: ${captionslot.margin.sm};
     }
 
     &.md {
       gap: ${CaptionGroup.Container.ItemSpacing.MD};
-      margin: ${MD.CaptionSlot.Margin};
+      margin: ${captionslot.margin.md};
     }
 
     &.lg {
       gap: ${CaptionGroup.Container.ItemSpacing.LG};
-      margin: ${LG.CaptionSlot.Margin};
+      margin: ${captionslot.margin.lg};
     }
   }
 `;
