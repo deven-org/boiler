@@ -2,7 +2,7 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = renderThemedCssStrings((componentTokens) => {
-  const { Counter } = componentTokens.Feedback;
+  const { Counter } = componentTokens.cmp;
   // const { SM, MD, LG } = semanticTokens.Forms;
 
   return typeSafeNestedCss`
