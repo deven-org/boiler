@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../../foundation/_tokens-generated/in
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   // const { UserInput, SurfaceFill, Placeholder, Input, InputBorderRadius, SM, MD, LG, PrefixSuffix } = semanticTokens.sem.forms.captionslot;
-  const { inputfield } = semanticTokens.sem.forms;
+  const { inputfield, labelslot } = semanticTokens.sem.forms;
   const { StepperButton, NumberInput } = componentTokens.cmp;
 
   return typeSafeNestedCss`
@@ -11,19 +11,19 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
     &.sm {
       & > .label-wrapper {
         display: flex;
-        padding: ${SM.LabelSlot.Padding};
+        padding: ${labelslot.padding.sm};
       }
     }
     &.md {
       & > .label-wrapper {
         display: flex;
-        padding: ${MD.LabelSlot.Padding};
+        padding: ${labelslot.padding.md};
       }
     }
     &.lg {
       & > .label-wrapper {
         display: flex;
-        padding: ${LG.LabelSlot.Padding};
+        padding: ${labelslot.padding.lg};
       }
     }
   }
