@@ -2,7 +2,7 @@ import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
 
 import { componentTokens } from "../../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
-const { UI } = componentTokens;
+const { Icon } = componentTokens.cmp;
 
 /*
   the full class is used by "ignoreSize" attribute, so that consumers can take care about sizing
@@ -26,27 +26,27 @@ export const styleCustom = typeSafeNestedCss`
     }
 
     .blr-icon.xxs > svg {
-      width: ${UI.Icon.Container.Size.XXS};
+      width: ${Icon.Container.Size.XXS};
     }
 
     .blr-icon.xs > svg {
-      width: ${UI.Icon.Container.Size.XS};
+      width: ${Icon.Container.Size.XS};
     }
 
     .blr-icon.sm > svg {
-      width: ${UI.Icon.Container.Size.SM};
+      width: ${Icon.Container.Size.SM};
     }
 
     .blr-icon.md > svg {
-      width: ${UI.Icon.Container.Size.MD};
+      width: ${Icon.Container.Size.MD};
     }
 
     .blr-icon.lg > svg {
-      width: ${UI.Icon.Container.Size.LG};
+      width: ${Icon.Container.Size.LG};
     }
 
     .blr-icon.xl > svg {
-      width: ${UI.Icon.Container.Size.XL};
+      width: ${Icon.Container.Size.XL};
     }
   }
 `;
