@@ -90,11 +90,11 @@ export class BlrNumberInput extends LitElement {
     }
 
     const iconSizeVariant = getComponentConfigToken([
-      'SizeVariant',
-      'Actions',
+      'cmp',
       'StepperButton',
-      this.size.toUpperCase(),
       'Icon',
+      'SizeVariant',
+      this.size.toUpperCase(),
     ]).toLowerCase() as FormSizesType;
 
     const buttonClass = classMap({

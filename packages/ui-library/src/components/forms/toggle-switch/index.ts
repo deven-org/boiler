@@ -145,7 +145,7 @@ export class BlrToggleSwitch extends LitElement {
       });
 
       const toggleIconSizeVariant = getComponentConfigToken([
-        'Forms',
+        'cmp',
         'ToggleSwitch',
         'Control',
         'AY11Icon',

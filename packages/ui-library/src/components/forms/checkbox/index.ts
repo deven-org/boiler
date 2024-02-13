@@ -182,7 +182,7 @@ export class BlrCheckbox extends LitElement {
       });
 
       const checkerIconSizeVariant = getComponentConfigToken([
-        'Forms',
+        'cmp',
         'Checkbox',
         'Control',
         'Icon',

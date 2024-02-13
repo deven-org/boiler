@@ -1,29 +1,29 @@
 {
-  "Semantic": {
-    "Actions": {
-      "Loader": {
-        "SizeVariant": {
-          "XS": {
+  "sem": {
+    "buttons": {
+      "loader": {
+        "sizevariant": {
+          "xs": {
             "value": "SM",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
-          "SM": {
+          "sm": {
             "value": "SM",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
-          "MD": {
+          "md": {
             "value": "MD",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
-          "LG": {
+          "lg": {
             "value": "MD",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
-          "XL": {
+          "xl": {
             "value": "LG",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
@@ -31,21 +31,21 @@
         }
       }
     },
-    "Forms": {
-      "InputField": {
-        "Icon": {
-          "SizeVariant": {
-            "SM": {
+    "forms": {
+      "inputfield": {
+        "icon": {
+          "sizevariant": {
+            "sm": {
               "value": "SM",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             },
-            "MD": {
+            "md": {
               "value": "MD",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             },
-            "LG": {
+            "lg": {
               "value": "MD",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"

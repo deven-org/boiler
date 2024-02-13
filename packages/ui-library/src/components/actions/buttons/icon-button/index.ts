@@ -80,18 +80,20 @@ export class BlrIconButton extends LitElement {
       const loaderVariant = determineLoaderVariant(this.variant);
 
       const loaderSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Actions',
-        this.size.toUpperCase(),
-        'Loader',
+        'sem',
+        'buttons',
+        'loader',
+        'sizevariant',
+        // this.size.toUpperCase(),
+        this.size,
       ]).toLowerCase() as FormSizesType;
 
       const iconSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Actions',
+        'cmp',
         'IconButton',
-        this.size.toUpperCase(),
         'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
       return html`
