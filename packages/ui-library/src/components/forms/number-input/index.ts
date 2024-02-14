@@ -113,7 +113,7 @@ export class BlrNumberInput extends LitElement {
           {
             classMap: iconClasses,
             icon: calculateIconName(icon, iconSizeVariant),
-            size: iconSizeVariant,
+            sizeVariant: iconSizeVariant,
           },
           {
             'aria-hidden': true,
@@ -136,7 +136,7 @@ export class BlrNumberInput extends LitElement {
           <div class="stepper-combo horizontal  ${this.size}">
             ${this.getButtonTemplate('blrMinus', this.stepperDown)}
             ${BlrDividerRenderFunction({
-              directionVariant: 'vertical',
+              direction: 'vertical',
               theme: this.theme,
             })}
             ${this.getButtonTemplate('blrPlus', this.stepperUp)}
@@ -148,7 +148,7 @@ export class BlrNumberInput extends LitElement {
           <div class="stepper-combo vertical  ${this.size}">
             ${this.getButtonTemplate('blrChevronUp', this.stepperUp)}
             ${BlrDividerRenderFunction({
-              directionVariant: 'horizontal',
+              direction: 'horizontal',
               theme: this.theme,
             })}
             ${this.getButtonTemplate('blrChevronDown', this.stepperDown)}
