@@ -78,6 +78,11 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
     input {
       all: initial;
+      color: ${UserInput.Default.Rest};
+
+      &::placeholder {
+        color: ${Placeholder.Default.Rest};
+      }
     }
 
     & > * {
