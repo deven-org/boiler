@@ -82,7 +82,7 @@ We are happy about anyone who wants to participate in our community. To ask ques
 
 ### Report an issue
 Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation.
-In case you discover a security vulnerability please review our [security policy](https://github.com/deven-org/B01LER-Kitchen/security/policy) for more details on how report it.
+In case you discover a security vulnerability please review our [security policy](https://github.com/deven-org/B01LER-Kitchen/security/policy) for more details on how to report it.
 
 
 ## :gear: Requirements
