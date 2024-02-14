@@ -3,7 +3,7 @@ import { BlrButtonGroupRenderFunction } from './renderFunction';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrButtonGroupType } from '.';
-import { BlrTextButtonRenderFunction } from '../buttons/text-button/renderFunction';
+import { BlrTextButtonRenderFunction } from '../text-button/renderFunction';
 
 const sampleParams: BlrButtonGroupType = {
   size: 'md',
