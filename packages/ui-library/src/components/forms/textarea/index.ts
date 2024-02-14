@@ -37,7 +37,7 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType;
+  @property() errorIcon?: SizelessIconType = undefined;
   @property() hint?: string;
   @property() hasHint = true;
   @property() hintMessage?: string;
@@ -148,8 +148,9 @@ export class BlrTextarea extends LitElement {
       const dynamicStyles = this.theme === 'Light' ? [formLight, textAreaLight] : [formDark, textAreaDark];
 
       const classes = classMap({
+        'blr-textarea': true,
+        'error': this.hasError || false,
         [`${this.size}`]: this.size,
-        error: this.hasError || false,
       });
 
       const textareaClasses = classMap({
@@ -161,6 +162,8 @@ export class BlrTextarea extends LitElement {
 
       const textareaInfoContainer = classMap({
         'blr-textarea-info-container': true,
+        'hint': this.hasHint || false,
+        'error': this.hasError || false,
         [`${this.size}`]: this.size,
       });
 
@@ -191,25 +194,21 @@ export class BlrTextarea extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class="${classes} blr-textarea">
-        ${
-          this.hasLabel
-            ? html`
-                <div class="label-wrapper">
-                  ${BlrFormLabelRenderFunction({
-                    labelText: this.label,
-                    labelSize: this.size,
-                    labelAppendix: this.labelAppendix,
-                    forValue: this.textareaId,
-                    theme: this.theme,
-                    variant: this.hasError ? 'error' : 'label',
-                  })}
-                </div>
-              `
-            : nothing
-        }
-        </div>
+        <div class="${classes}">
+          ${this.hasLabel
+            ? html`<div class="label-wrapper">
+                ${BlrFormLabelRenderFunction({
+                  labelText: this.label,
+                  labelSize: this.size,
+                  labelAppendix: this.labelAppendix,
+                  forValue: this.textareaId,
+                  theme: this.theme,
+                  variant: this.hasError ? 'error' : 'label',
+                })}
+              </div>`
+            : nothing}
           <textarea
+            .value=${this.value}
             class="blr-form-element textarea-input-control ${textareaClasses}"
             id="${this.textareaId || nothing}"
             name="${this.name || nothing}"
@@ -227,27 +226,20 @@ export class BlrTextarea extends LitElement {
             @blur=${this.handleBlur}
             @select=${this.handleSelect}
             @keyup=${this.updateCounter}
-          >
-${this.value}
-          </textarea
-          >
+          ></textarea>
           <div class="${textareaInfoContainer}">
-            ${
-              this.hasHint || this.hasError
-                ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
-                : nothing
-            }
-            ${
-              this.showCounter
-                ? BlrCounterRenderFunction({
-                    variant: counterVariant,
-                    current: this.count,
-                    max: this.maxLength || 0,
-                    size: this.size,
-                    theme: this.theme,
-                  })
-                : nothing
-            }
+            ${this.hasHint || this.hasError
+              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              : nothing}
+            ${this.showCounter
+              ? BlrCounterRenderFunction({
+                  variant: counterVariant,
+                  current: this.count,
+                  max: this.maxLength || 0,
+                  size: this.size,
+                  theme: this.theme,
+                })
+              : nothing}
           </div>
         </div>
       `;
