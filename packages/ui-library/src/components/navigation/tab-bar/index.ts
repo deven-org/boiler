@@ -227,7 +227,7 @@ export class BlrTabBar extends LitElement {
         <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
           ${this.showDivider
             ? BlrDividerRenderFunction({
-                directionVariant: 'horizontal',
+                direction: 'horizontal',
                 theme: this.theme,
               })
             : nothing}
