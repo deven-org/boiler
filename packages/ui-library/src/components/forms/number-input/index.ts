@@ -113,7 +113,7 @@ export class BlrNumberInput extends LitElement {
           {
             classMap: iconClasses,
             icon: calculateIconName(icon, iconSizeVariant),
-            size: iconSizeVariant,
+            sizeVariant: iconSizeVariant,
           },
           {
             'aria-hidden': true,

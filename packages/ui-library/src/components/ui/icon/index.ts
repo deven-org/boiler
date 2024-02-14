@@ -15,7 +15,7 @@ export class BlrIcon extends LitElement {
   static styles = [styleCustom];
 
   @property() icon: IconType = 'blr360Xs';
-  @property() size: SizesType = 'md';
+  @property() sizeVariant: SizesType = 'md';
   @property() ignoreSize?: boolean = false;
 
   @property() theme: ThemeType = 'Light';
@@ -31,7 +31,7 @@ export class BlrIcon extends LitElement {
   };
 
   protected render() {
-    const sizeKey = this.ignoreSize ? 'full' : this.size.toLowerCase();
+    const sizeKey = this.ignoreSize ? 'full' : this.sizeVariant.toLowerCase();
 
     const unfullfilledRenderResult = html`<span
       @click=${this.handleClick}
