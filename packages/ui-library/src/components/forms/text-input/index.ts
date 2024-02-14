@@ -32,10 +32,6 @@ export class BlrTextInput extends LitElement {
   @property() readonly?: boolean;
   @property() size?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
-  @property() onSelect?: HTMLElement['onselect'];
   @property() maxLength?: number;
   @property() pattern?: string;
   @property() hasError?: boolean;
@@ -48,8 +44,13 @@ export class BlrTextInput extends LitElement {
   @property() errorIcon?: SizelessIconType;
   @property() hasLabel!: boolean;
   @property() name!: string;
-
   @property() theme: ThemeType = 'Light';
+
+  // these are not triggered directly but allows us to map it internally and bve typesafe
+  @property() blrFocus?: () => void;
+  @property() blrBlur?: () => void;
+  @property() blrChange?: () => void;
+  @property() blrSelect?: () => void;
 
   @state() protected currentType: InputTypes = this.type;
   @state() protected isFocused = false;
@@ -59,11 +60,41 @@ export class BlrTextInput extends LitElement {
   };
 
   protected handleFocus = () => {
-    this.isFocused = true;
+    if (!this.disabled) {
+      this.isFocused = true;
+      this.dispatchEvent(
+        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
   };
 
   protected handleBlur = () => {
-    this.isFocused = false;
+    if (!this.disabled) {
+      this.isFocused = false;
+      this.dispatchEvent(
+        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
+  };
+
+  protected handleChange = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrChange', { bubbles: true, composed: true, detail: { originalEvent: event } })
+      );
+    }
+  };
+
+  protected handleSelect = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(
+        new CustomEvent('blrSelect', {
+          bubbles: true,
+          composed: true,
+          detail: { originalEvent: event },
+        })
+      );
+    }
   };
 
   protected render() {
@@ -158,12 +189,13 @@ export class BlrTextInput extends LitElement {
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
-                @input=${this.onChange}
+                @input=${this.handleChange}
                 @blur=${this.handleBlur}
                 @focus=${this.handleFocus}
                 maxlength="${this.maxLength}"
                 pattern="${this.pattern}"
                 hasError="${this.hasError}"
+                @select=${this.handleSelect}
               />
             </div>
             ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
