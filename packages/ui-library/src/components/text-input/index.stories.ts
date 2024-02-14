@@ -344,6 +344,7 @@ const defaultParams: BlrTextInputType = {
   hasError: false,
   errorMessage: '',
   errorIcon: 'blrInfo',
+
   type: 'text',
   inputIcon: 'blr360',
   showInputIcon: true,

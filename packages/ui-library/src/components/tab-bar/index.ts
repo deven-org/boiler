@@ -127,7 +127,7 @@ export class BlrTabBar extends LitElement {
                   ${BlrIconRenderFunction(
                     {
                       icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
-                      size: iconButtonSizeVariant,
+                      sizeVariant: iconButtonSizeVariant,
                     },
                     {
                       'aria-hidden': true,
@@ -186,7 +186,7 @@ export class BlrTabBar extends LitElement {
                           ? BlrIconRenderFunction(
                               {
                                 icon: calculateIconName(tab.getAttribute('icon')!, iconSizeVariant),
-                                size: iconSizeVariant,
+                                sizeVariant: iconSizeVariant,
                               },
                               {
                                 'aria-hidden': true,
@@ -212,7 +212,7 @@ export class BlrTabBar extends LitElement {
                   ${BlrIconRenderFunction(
                     {
                       icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
-                      size: iconButtonSizeVariant,
+                      sizeVariant: iconButtonSizeVariant,
                     },
                     {
                       'aria-hidden': true,
@@ -225,7 +225,7 @@ export class BlrTabBar extends LitElement {
         <div class="wrapper-horizontal ${this.overflowVariantStandard} ${this.overflowVariantFullWidth}">
           ${this.showDivider
             ? BlrDividerRenderFunction({
-                directionVariant: 'horizontal',
+                direction: 'horizontal',
                 theme: this.theme,
               })
             : nothing}

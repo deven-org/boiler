@@ -50,7 +50,7 @@ const defaultParams: BlrTextareaType = {
   readonly: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: 'blr360',
+  errorIcon: '',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
@@ -453,7 +453,6 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
-    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,

@@ -29,7 +29,7 @@ const sharedStyles = html`
 export default {
   title: 'Components/Icon',
   argTypes: {
-    size: {
+    sizeVariant: {
       options: Sizes,
       description: 'Select size of the component.',
       control: { type: 'select' },
@@ -98,21 +98,21 @@ export default {
 
 export const Icon = (params: IconType) => {
   return html`${BlrIconRenderFunction({
-    icon: calculateIconName(params.icon, params.size as SizesType),
-    size: params.size,
+    icon: calculateIconName(params.icon, params.sizeVariant as SizesType),
+    sizeVariant: params.sizeVariant,
     ignoreSize: params.ignoreSize,
   })}`;
 };
 
 type IconType = {
   theme: string;
-  size: SizesType;
+  sizeVariant: SizesType;
   icon: SizelessIconType; // Update the type definition for icon
   ignoreSize: boolean;
 };
 const defaultParams: IconType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   icon: 'blr360',
   ignoreSize: false,
 };
@@ -131,33 +131,33 @@ export const SizeVariant = () => {
       <h3 class="label">Icon XXS</h3>
       ${Icon({
         ...defaultParams,
-        size: 'xxs',
+        sizeVariant: 'xxs',
       })}
       <h3 class="label">Icon XS</h3>
       ${Icon({
         ...defaultParams,
-        size: 'xs',
+        sizeVariant: 'xs',
       })}
 
       <h3 class="label">Icon SM</h3>
       ${Icon({
         ...defaultParams,
-        size: 'sm',
+        sizeVariant: 'sm',
       })}
       <h3 class="label">Icon MD</h3>
       ${Icon({
         ...defaultParams,
-        size: 'md',
+        sizeVariant: 'md',
       })}
       <h3 class="label">Icon LG</h3>
       ${Icon({
         ...defaultParams,
-        size: 'lg',
+        sizeVariant: 'lg',
       })}
       <h3 class="label">Icon XL</h3>
       ${Icon({
         ...defaultParams,
-        size: 'xl',
+        sizeVariant: 'xl',
       })}
     </div>
   `;

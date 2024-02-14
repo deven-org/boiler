@@ -6,7 +6,7 @@ import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrDividerType } from '.';
 
-const sampleParams: BlrDividerType = { theme: 'Light', directionVariant: 'vertical' };
+const sampleParams: BlrDividerType = { theme: 'Light', direction: 'vertical' };
 
 describe('blr-divider', () => {
   it('renders a <div> element inside Shadow DOM', async () => {
@@ -32,7 +32,7 @@ describe('blr-divider', () => {
   });
 
   it('should render horizontal line', async () => {
-    const element = await fixture(BlrDividerRenderFunction({ ...sampleParams, directionVariant: 'horizontal' }));
+    const element = await fixture(BlrDividerRenderFunction({ ...sampleParams, direction: 'horizontal' }));
     const dividerDiv = querySelectorDeep('.blr-divider', element.getRootNode() as HTMLElement);
     const className = dividerDiv?.className;
 

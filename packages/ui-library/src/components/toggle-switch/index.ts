@@ -218,7 +218,7 @@ export class BlrToggleSwitch extends LitElement {
                 ${BlrIconRenderFunction(
                   {
                     icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
-                    size: this.size,
+                    sizeVariant: this.size,
                     classMap: toggleIconsClass,
                     ignoreSize: true,
                   },
@@ -231,7 +231,7 @@ export class BlrToggleSwitch extends LitElement {
                 ${BlrIconRenderFunction(
                   {
                     icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
-                    size: this.size,
+                    sizeVariant: this.size,
                     classMap: toggleIconsClass,
                     ignoreSize: true,
                   },

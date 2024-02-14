@@ -16,7 +16,7 @@ import '../../index';
 export default {
   title: 'Foundation/Icons',
   argTypes: {
-    size: {
+    sizeVariant: {
       options: Sizes,
       description: 'Select size of the component.',
       control: { type: 'select' },
@@ -63,8 +63,8 @@ export const Icon = (params: BlrIconType) => {
       ${allIcons.map((icon) => {
         return html`<li>
           ${BlrIconRenderFunction({
-            icon: calculateIconName(icon as string, params.size as SizesType),
-            size: params.size,
+            icon: calculateIconName(icon as string, params.sizeVariant as SizesType),
+            sizeVariant: params.sizeVariant,
             classMap: classes,
           })}
           <span class="icon-label">${icon}</span>
@@ -76,7 +76,7 @@ export const Icon = (params: BlrIconType) => {
 
 const defaultParams: BlrIconType = {
   theme: 'Light',
-  size: 'lg',
+  sizeVariant: 'lg',
   arialabel: 'Icons',
 };
 

@@ -40,7 +40,11 @@ export const styleCustom = typeSafeNestedCss`
 
   .blr-textarea-info-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
+
+    &.hint, &.error{
+      justify-content: space-between;
+    }
 
     &.sm {
       > blr-counter {
@@ -63,9 +67,8 @@ export const styleCustom = typeSafeNestedCss`
 `;
 
 export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { SM, MD, LG } = semanticTokens.Forms;
   const { TextArea } = componentTokens.Forms;
-
+  const { SurfaceFill } = semanticTokens.Forms;
   return typeSafeNestedCss`
     .textarea-input-control {
       resize: none;
@@ -73,6 +76,7 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
       max-width: 100%;
       word-break: break-all;
       width: 100%;
+      background-color: ${SurfaceFill.Default.Rest};
 
       &.both {
         resize: both;
@@ -100,25 +104,6 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
 
       &.lg {
         min-height: ${TextArea.InputField.MinHeight.LG};
-      }
-
-      .flex-container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-  
-        &.sm {
-          margin: ${SM.CaptionSlot.Margin};
-        }
-  
-        &.md {
-          margin: ${MD.CaptionSlot.Margin};
-        }
-  
-        &.lg {
-          margin: ${LG.CaptionSlot.Margin};
-        }
       }
     }
   `;
