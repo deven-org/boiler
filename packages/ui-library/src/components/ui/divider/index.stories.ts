@@ -25,7 +25,7 @@ const sharedStyles = html`
 export default {
   title: 'Design System/Web Components/UI/Divider',
   argTypes: {
-    directionVariant: {
+    direction: {
       description: 'Choose direction of the component.',
       options: DividerVariations,
       control: { type: 'select' },
@@ -72,7 +72,7 @@ export const Divider = (params: BlrDividerType) => {
 };
 const defaultParams: BlrDividerType = {
   theme: 'Light',
-  directionVariant: 'horizontal',
+  direction: 'horizontal',
 };
 
 Divider.args = defaultParams;
@@ -89,12 +89,12 @@ export const Direction = () => {
     ${sharedStyles}
     ${Divider({
       ...defaultParams,
-      directionVariant: 'horizontal',
+      direction: 'horizontal',
     })}
     <div class="wrapper">
       ${Divider({
         ...defaultParams,
-        directionVariant: 'vertical',
+        direction: 'vertical',
       })}
     </div>
   `;

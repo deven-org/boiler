@@ -9,7 +9,7 @@ import { TAG_NAME } from './renderFunction';
 
 @customElement(TAG_NAME)
 export class BlrDivider extends LitElement {
-  @property() directionVariant: DividerVariationTypes = 'vertical';
+  @property() direction: DividerVariationTypes = 'vertical';
   @property() theme: ThemeType = 'Light';
 
   protected render() {
@@ -17,7 +17,7 @@ export class BlrDivider extends LitElement {
 
     const dividerClasses = classMap({
       'blr-divider': true,
-      [this.directionVariant]: true,
+      [this.direction]: true,
     });
 
     return html`
