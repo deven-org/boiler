@@ -1,7 +1,7 @@
 import '@boiler/ui-library/dist/';
 
 import { BlrTextareaRenderFunction } from './renderFunction';
-import type { BlrTextareaType } from '@boiler/ui-library/dist/';
+import { BlrTextareaType } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
