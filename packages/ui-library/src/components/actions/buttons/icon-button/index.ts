@@ -126,7 +126,7 @@ export class BlrIconButton extends LitElement {
           ${BlrIconRenderFunction(
             {
               icon: calculateIconName(this.icon, iconSizeVariant),
-              size: iconSizeVariant,
+              sizeVariant: iconSizeVariant,
               classMap: iconClasses,
             },
             {

@@ -91,7 +91,7 @@ export class BlrSelect extends LitElement {
         return BlrIconRenderFunction(
           {
             icon: calculateIconName('blrErrorFilled', iconSizeVariant),
-            size: iconSizeVariant,
+            sizeVariant: iconSizeVariant,
             classMap: classes,
           },
           {
@@ -103,7 +103,7 @@ export class BlrSelect extends LitElement {
         return BlrIconRenderFunction(
           {
             icon: calculateIconName(modifiedIcon, iconSizeVariant),
-            size: iconSizeVariant,
+            sizeVariant: iconSizeVariant,
             classMap: classes,
           },
           {

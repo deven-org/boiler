@@ -80,7 +80,7 @@ export class BlrIconLink extends LitElement {
             : BlrIconRenderFunction(
                 {
                   icon: calculateIconName(this.icon, iconSizeVariant),
-                  size: iconSizeVariant,
+                  sizeVariant: iconSizeVariant,
                 },
                 {
                   'aria-hidden': true,

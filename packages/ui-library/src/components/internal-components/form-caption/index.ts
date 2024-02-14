@@ -57,7 +57,7 @@ export class BlrFormCaption extends LitElement {
                     this.variant === 'hint' || this.variant === 'error' ? this.icon : '',
                     iconSizeVariant
                   ),
-                  size: iconSizeVariant,
+                  sizeVariant: iconSizeVariant,
                   classMap: iconClasses,
                 },
                 {
