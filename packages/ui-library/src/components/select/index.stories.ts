@@ -39,7 +39,7 @@ const defaultParams: BlrSelectType = {
 };
 
 export default {
-  title: 'Components/Select/Select',
+  title: 'Components/Select',
   argTypes: {
     // Appearance
     size: {

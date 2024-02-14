@@ -27,7 +27,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Icon/Icon',
+  title: 'Components/Icon',
   argTypes: {
     size: {
       options: Sizes,
@@ -72,15 +72,15 @@ export default {
         
         The Icon is intended to be used when creating new components. Currently, it is used like this in the following components:
         
-        - [**Text Button**](?path=/docs/components-buttons-text-button--docs)
-        - [**Checkbox**](?path=/docs/components-checkbox-checkbox--docs)
-        - [**Form Caption**](?path=/docs/components-form-caption-form-caption--docs)
-        - [**Select**](?path=/docs/components-select-select--docs)
-        - [**Text Input**](?path=/docs/components-text-input-text-input--docs)
-        - [**Toggle Switch**](?path=/docs/components-toggle-switch-toggle-switch--docs)
-        - [**Tab Bar**](?path=/docs/components-tabbar-tabbar--docs)
-        - [**Icon Link**](?path=/docs/components-icon-link-icon-link--docs)
-        - [**Number Input**](?path=/docs/components-number-input-number-input--docs)
+        - [**Text Button**](?path=/docs/components-text-button--docs)
+        - [**Checkbox**](?path=/docs/components-checkbox--docs)
+        - [**Form Caption**](?path=/docs/components-form-caption--docs)
+        - [**Select**](?path=/docs/components-select--docs)
+        - [**Text Input**](?path=/docs/components-text-input--docs)
+        - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
+        - [**Tab Bar**](?path=/docs/components-tabbar--docs)
+        - [**Icon Link**](?path=/docs/components-icon-link--docs)
+        - [**Number Input**](?path=/docs/components-number-input--docs)
         
         It is not intended to use the Icon directly when creating new applications.
         

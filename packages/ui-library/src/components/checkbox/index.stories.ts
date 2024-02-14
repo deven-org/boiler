@@ -22,7 +22,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Checkbox/Checkbox',
+  title: 'Components/Checkbox',
   argTypes: {
     // Appearance
     size: {

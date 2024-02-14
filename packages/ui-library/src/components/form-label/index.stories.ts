@@ -15,7 +15,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Form Label/Form Label',
+  title: 'Components/Form Label',
   argTypes: {
     labelSize: {
       name: 'sizeVariant',
@@ -95,11 +95,11 @@ export default {
         
         The Form Label is intended to be used when creating new components. Currently, it is used like this in the following components:
         
-        - [**Checkbox**](?path=/docs/components-checkbox-checkbox--docs)
-        - [**Number Input**](?path=/docs/components-number-input-number-input--docs)
-        - [**Select**](?path=/docs/components-select-select--docs)
-        - [**Text Input**](?path=/docs/components-text-input-text-input--docs)
-        - [**Text Area**](?path=/docs/components-text-area-text-area--docs)
+        - [**Checkbox**](?path=/docs/components-checkbox--docs)
+        - [**Number Input**](?path=/docs/components-number-input--docs)
+        - [**Select**](?path=/docs/components-select--docs)
+        - [**Text Input**](?path=/docs/components-text-input--docs)
+        - [**Text Area**](?path=/docs/components-text-area--docs)
         
         It is not intended to use the Form Label directly when creating new applications.
         

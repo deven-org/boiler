@@ -8,7 +8,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { ActionSizes, ActionVariants } from '../../globals/constants';
 
 export default {
-  title: 'Components/Icon Link/Icon Link',
+  title: 'Components/Icon Link',
   argTypes: {
     icon: {
       options: [undefined, ...PureIconKeys],

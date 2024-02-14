@@ -4,8 +4,9 @@ import { Placement as PlacementType } from '@floating-ui/dom';
 import { tooltipPosition } from './tooltip-position';
 import { styleCustom } from './index.css';
 import { TAG_NAME } from './renderFunction';
-import { BlrTooltipBubbleRenderFunction } from './tooltip-bubble/renderFunction';
+
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];

@@ -5,7 +5,7 @@ import type { BlrTextInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../../utils/get-random.string';
+import { getRandomString } from '../../utils/get-random.string';
 
 const sampleParams: BlrTextInputType = {
   theme: 'Light',

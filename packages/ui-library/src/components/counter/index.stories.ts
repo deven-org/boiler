@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Counter/Counter',
+  title: 'Components/Counter',
   argTypes: {
     theme: {
       options: Themes,
@@ -84,7 +84,7 @@ Counter provides a visual representation of a numeric quantity and typically inc
 
 The Counter is intended to be used when creating new components. Currently it is used like this in the following components:
 
- - [**Text Area**](?path=/docs/components-text-area-text-area--docs)
+ - [**Text Area**](?path=/docs/components-text-area--docs)
 
 It is not intended to use the Counter directly when creating new applications.
 </Markdown>`,

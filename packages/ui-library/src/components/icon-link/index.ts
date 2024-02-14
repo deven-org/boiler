@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom as iconLinkStyleCustom } from './index.css';
-import { styleCustom as iconButtonStyleCustom } from '../buttons/icon-button/index.css';
+import { styleCustom as iconButtonStyleCustom } from '../icon-button/index.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
 import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../globals/types';

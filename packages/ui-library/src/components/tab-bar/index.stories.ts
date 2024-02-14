@@ -16,7 +16,7 @@ import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import '../../index';
 
 export default {
-  title: 'Components/TabBar/TabBar',
+  title: 'Components/TabBar',
   argTypes: {
     theme: {
       options: Themes,

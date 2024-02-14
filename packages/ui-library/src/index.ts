@@ -1,12 +1,12 @@
 // Actions
-export { BlrIconButton } from './components/buttons/icon-button';
+export { BlrIconButton } from './components/icon-button';
 
-export { BlrTextButton } from './components/buttons/text-button';
+export { BlrTextButton } from './components/text-button';
 
 // Feedback
 export { BlrLoader } from './components/loader';
 
-export { BlrTooltipBubble } from './components/tooltip/tooltip-bubble';
+export { BlrTooltipBubble } from './components/tooltip-bubble';
 
 export { BlrTooltip } from './components/tooltip';
 
@@ -17,17 +17,17 @@ export { BlrNumberInput } from './components/number-input';
 
 export { BlrRadio } from './components/radio';
 
-export { BlrRadioGroup } from './components/radio/radio-group';
+export { BlrRadioGroup } from './components/radio-group';
 
 export { BlrSelect } from './components/select';
 
-export { BlrRangeSlider } from './components/slider/slider-single-value/range-slider';
+export { BlrRangeSlider } from './components/slider-single-value/range-slider';
 
-export { BlrRangeLegendSlider } from './components/slider/slider-single-value/range-legend-slider';
+export { BlrRangeLegendSlider } from './components/slider-single-value/range-legend-slider';
 
-export { BlrRangeMinMaxSlider } from './components/slider/slider-two-values/range-min-max-slider';
+export { BlrRangeMinMaxSlider } from './components/slider-two-values/range-min-max-slider';
 
-export { BlrRangeLegendMinMaxSlider } from './components/slider/slider-two-values/range-legend-min-max-slider';
+export { BlrRangeLegendMinMaxSlider } from './components/slider-two-values/range-legend-min-max-slider';
 
 export { BlrTextInput } from './components/text-input';
 

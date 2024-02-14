@@ -55,7 +55,7 @@ const defaultParams: BlrTextareaType = {
 
 //Main Showcase Storybook Textarea, main argType Table
 export default {
-  title: 'Components/Text Area/Text Area',
+  title: 'Components/Text Area',
   argTypes: {
     //Appearance
     theme: {

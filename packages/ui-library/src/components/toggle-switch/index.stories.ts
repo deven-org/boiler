@@ -43,7 +43,7 @@ const defaultParams: BlrToggleSwitchType = {
 };
 
 export default {
-  title: 'Components/Toggle Switch/Toggle Switch',
+  title: 'Components/Toggle Switch',
   argTypes: {
     size: {
       name: 'sizeVariant',

@@ -26,7 +26,7 @@ const defaultParams: BlrLoaderType = {
 };
 
 export default {
-  title: 'Components/Loader/Loader',
+  title: 'Components/Loader',
   argTypes: {
     //Appearance
     variant: {

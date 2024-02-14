@@ -16,7 +16,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Form Caption/Form Caption',
+  title: 'Components/Form Caption',
   argTypes: {
     size: {
       options: FormSizes,
@@ -80,8 +80,8 @@ export default {
         
         The Form Caption is intended to be used when creating new components. Currently, it is used like this in the following components:
         
-        - [**Form Caption Group**](?path=/docs/components-form-caption-group-form-caption-group--docs)
-        - [**Toggle Switch**](?path=/docs/components-toggle-switch-toggle-switch--docs)
+        - [**Form Caption Group**](?path=/docs/components-form-caption-group--docs)
+        - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
         It is not intended to use the Form Caption directly when creating new applications.
       </Markdown>

@@ -2,8 +2,8 @@
 import { html } from 'lit';
 import '../../index';
 import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
-import { BlrIconButtonRenderFunction } from '../buttons/icon-button/renderFunction';
-import { BlrTextButtonRenderFunction } from '../buttons/text-button/renderFunction';
+import { BlrIconButtonRenderFunction } from '../icon-button/renderFunction';
+import { BlrTextButtonRenderFunction } from '../text-button/renderFunction';
 import { BlrButtonGroupType } from '.';
 import { BlrButtonGroupRenderFunction } from './renderFunction';
 
@@ -32,7 +32,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Button Group/Button Group',
+  title: 'Components/Button Group',
   argTypes: {
     size: {
       options: ButtonGroupSizes,
