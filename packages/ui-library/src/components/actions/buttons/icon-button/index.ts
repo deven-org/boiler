@@ -84,7 +84,6 @@ export class BlrIconButton extends LitElement {
         'buttons',
         'loader',
         'sizevariant',
-        // this.size.toUpperCase(),
         this.size,
       ]).toLowerCase() as FormSizesType;
 
