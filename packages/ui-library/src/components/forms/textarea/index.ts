@@ -189,7 +189,7 @@ export class BlrTextarea extends LitElement {
             })
           : nothing}
       `;
-      //prettier-ignore
+
       return html`
         <style>
           ${dynamicStyles}
@@ -208,6 +208,7 @@ export class BlrTextarea extends LitElement {
               </div>`
             : nothing}
           <textarea
+            .value=${this.value}
             class="blr-form-element textarea-input-control ${textareaClasses}"
             id="${this.textareaId || nothing}"
             name="${this.name || nothing}"
@@ -225,7 +226,7 @@ export class BlrTextarea extends LitElement {
             @blur=${this.handleBlur}
             @select=${this.handleSelect}
             @keyup=${this.updateCounter}
-          >${this.value}</textarea>
+          ></textarea>
           <div class="${textareaInfoContainer}">
             ${this.hasHint || this.hasError
               ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)

@@ -343,6 +343,8 @@ const defaultParams: BlrTextInputType = {
   readonly: false,
   hasError: false,
   errorMessage: '',
+  errorIcon: 'blrInfo',
+
   type: 'text',
   inputIcon: 'blr360',
   showInputIcon: true,
@@ -386,6 +388,7 @@ const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     disabledArgTypes[argType] = {
       table: {
         disable: true,
