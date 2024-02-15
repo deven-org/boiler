@@ -367,6 +367,7 @@ export default {
     },
   },
   parameters: {
+    badges: ['Draft', 'New', 'Stable', 'Deprecated', 'Updated'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125197&mode=dev',
@@ -412,7 +413,6 @@ export const TextArea = (params: BlrTextareaType) =>
         ...params,
       })}
     </div> `;
-
 TextArea.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
