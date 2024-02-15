@@ -292,11 +292,11 @@
           "type": "color"
         },
         "level_1": {
-          "value": "{core.color.black.solid}",
+          "value": "{core.color.coolgray.100.solid}",
           "type": "color"
         },
         "level_2": {
-          "value": "{core.color.coolgray.100.solid}",
+          "value": "{core.color.coolgray.200.solid}",
           "type": "color"
         },
         "inverted": {
