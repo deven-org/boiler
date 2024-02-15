@@ -15,7 +15,15 @@ import { TAG_NAME } from './renderFunction';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
+import { BlrSelectedValueChangeEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
 
+export type BlrSelectEventHandlers = {
+  blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
+};
+
+/**
+ * @fires blrSelectedValueChange Selected value changed
+ */
 export class BlrSelect extends LitElement {
   static styles = [styleCustom];
 
@@ -41,8 +49,6 @@ export class BlrSelect extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  @property() blrSelectedValueChange?: () => void;
-
   @state() protected isFocused = false;
 
   protected _optionElements: Element[] | undefined;
@@ -63,13 +69,7 @@ export class BlrSelect extends LitElement {
   }
 
   protected handleChange(event: Event) {
-    this.dispatchEvent(
-      new CustomEvent('blrSelectedValueChange', {
-        bubbles: true,
-        composed: true,
-        detail: { originalEvent: event },
-      })
-    );
+    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event }));
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
@@ -210,4 +210,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrSelect);
 }
 
-export type BlrSelectType = Omit<BlrSelect, keyof LitElement>;
+export type BlrSelectType = Omit<BlrSelect, keyof LitElement> & BlrSelectEventHandlers;
