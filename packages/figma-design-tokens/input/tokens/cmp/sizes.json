@@ -2066,6 +2066,10 @@
             "value": "{sys.borderRadius.none}",
             "type": "borderRadius"
           }
+        },
+        "BorderWidth": {
+          "value": "{sem.buttons.container.borderwidth}",
+          "type": "borderWidth"
         }
       },
       "Icon": {
