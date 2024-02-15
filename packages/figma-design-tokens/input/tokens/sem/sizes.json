@@ -138,33 +138,89 @@
         }
       },
       "inputslot": {
-        "margin": {
+        "margin_v": {
           "sm": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "margin_h": {
+          "sm": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "margin": {
+          "sm": {
+            "value": "{sem.forms.inputslot.margin_v.sm} {sem.forms.inputslot.margin_h.sm}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{sem.forms.inputslot.margin_v.md} {sem.forms.inputslot.margin_h.md}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{sem.forms.inputslot.margin_v.lg} {sem.forms.inputslot.margin_h.lg}",
             "type": "spacing"
           }
         }
       },
       "labelslot": {
-        "padding": {
+        "padding_v": {
           "sm": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "padding_h": {
+          "sm": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "padding": {
+          "sm": {
+            "value": "{sem.forms.labelslot.padding_v.sm} {sem.forms.labelslot.padding_h.sm}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{sem.forms.labelslot.padding_v.md} {sem.forms.labelslot.padding_h.md}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{sem.forms.labelslot.padding_v.lg} {sem.forms.labelslot.padding_h.lg}",
             "type": "spacing"
           }
         }
