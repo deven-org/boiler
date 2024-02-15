@@ -77,4 +77,8 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrIcon);
 }
 
+if (!customElements.get(TAG_NAME)) {
+  customElements.define(TAG_NAME, BlrIcon);
+}
+
 export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & BlrIconEventHandlers;
