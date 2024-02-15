@@ -1,9 +1,7 @@
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
-
 import { classMap } from 'lit/directives/class-map.js';
 import { dividerDark, dividerLight } from './index.css';
-
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { DividerVariationTypes } from '../../globals/types';
