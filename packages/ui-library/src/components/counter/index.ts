@@ -4,10 +4,8 @@ import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { counterLight, counterDark } from './index.css';
-
 import { TAG_NAME } from './renderFunction';
 
-//
 export class BlrCounter extends LitElement {
   static styles = [];
 
