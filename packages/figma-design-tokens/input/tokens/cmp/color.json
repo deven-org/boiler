@@ -765,12 +765,12 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.neutral}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
@@ -802,12 +802,12 @@
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
@@ -841,12 +841,12 @@
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
               },
@@ -878,12 +878,12 @@
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
               },
               "Disabled": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
               },
               "ReadOnly": {
-                "value": "{sys.bgcolor.container.disabled}",
+                "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
               },
@@ -964,6 +964,11 @@
                 "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
                 "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
               }
             }
           }

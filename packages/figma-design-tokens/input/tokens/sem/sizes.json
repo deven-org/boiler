@@ -182,45 +182,31 @@
         }
       },
       "labelslot": {
-        "padding_v": {
-          "sm": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing"
-          },
-          "md": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing"
-          },
-          "lg": {
-            "value": "{core.dimensionREM.0}",
-            "type": "spacing"
-          }
-        },
-        "padding_h": {
-          "sm": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing"
-          },
-          "md": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing"
-          },
-          "lg": {
-            "value": "{core.dimensionPX.0}",
-            "type": "spacing"
-          }
-        },
         "padding": {
           "sm": {
-            "value": "{sem.forms.labelslot.padding_v.sm} {sem.forms.labelslot.padding_h.sm}",
+            "value": "0 0 {sem.forms.labelslot.padding_bottom.sm} 0",
             "type": "spacing"
           },
           "md": {
-            "value": "{sem.forms.labelslot.padding_v.md} {sem.forms.labelslot.padding_h.md}",
+            "value": "0 0 {sem.forms.labelslot.padding_bottom.md} 0",
             "type": "spacing"
           },
           "lg": {
-            "value": "{sem.forms.labelslot.padding_v.lg} {sem.forms.labelslot.padding_h.lg}",
+            "value": "0 0 {sem.forms.labelslot.padding_bottom.lg} 0",
+            "type": "spacing"
+          }
+        },
+        "padding_bottom": {
+          "sm": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionREM.8}",
             "type": "spacing"
           }
         }
