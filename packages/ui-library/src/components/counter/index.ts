@@ -36,7 +36,6 @@ export class BlrCounter extends LitElement {
     }
   }
 }
-customElements.define(TAG_NAME, BlrCounter);
 
 if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCounter);

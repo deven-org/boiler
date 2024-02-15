@@ -27,8 +27,6 @@ export class BlrButtonGroup extends LitElement {
   }
 }
 
-customElements.define(TAG_NAME, BlrButtonGroup);
-
 if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrButtonGroup);
 }
