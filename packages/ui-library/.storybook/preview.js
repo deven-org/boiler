@@ -5,7 +5,7 @@ export default {
   parameters: {
     options: {
       storySort: {
-        method: 'alphabetical', // Sort alphabetically
+        method: 'alphabetical',
         order: ['Foundation', 'Components'],
         locales: 'en-US',
       },
