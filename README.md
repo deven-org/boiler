@@ -94,6 +94,14 @@ In case you discover a security vulnerability please review our [security policy
 
 In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
 
+### Figma
+Figma is a collaborative tool used for designing user interfaces. Figma can be run on any operating system that can run a browser which can help designers, developers and various other stakeholders to collaborate seamlessly. Sharing designs, managing permissions on a granular level and requesting feedback are some of the many features that help teams work in a more agile fashion.
+
+### Tokens Studio
+Tokens Studio for Figma (also known as Figma Tokens) is a plugin for Figma that allows users to integrate design tokens into their Figma designs.
+Before you start working with B01LER Design System for Figma, make sure to install the Tokens Studio for Figma (Figma Tokens) plugin so you can access and customize the UI kit easily.
+
+The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
 
 ## :rocket: How to start
 
