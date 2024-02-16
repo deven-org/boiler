@@ -9,6 +9,7 @@ const blrButton = document.getElementsByTagName('blr-text-button')[0];
 const blrCheckbox = document.getElementsByTagName('blr-checkbox')[0];
 const blrSelect = document.getElementsByTagName('blr-select')[0];
 const blrTextInput = document.getElementsByTagName('blr-text-input')[0];
+const blrNumberInput = document.getElementsByTagName('blr-number-input')[0];
 const blrTextArea = document.getElementsByTagName('blr-textarea')[0];
 
 const addLog = (log) => {
@@ -79,6 +80,18 @@ blrTextInput.addEventListener('blrBlur', () => {
 
 blrTextInput.addEventListener('blrTextValueChange', () => {
   addLog('blr-text-input changed');
+});
+
+blrNumberInput.addEventListener('blrFocus', () => {
+  addLog('blr-number-input focused');
+});
+
+blrNumberInput.addEventListener('blrBlur', () => {
+  addLog('blr-number-input blurred');
+});
+
+blrNumberInput.addEventListener('blrNumberValueChange', () => {
+  addLog('blr-number-input value changed');
 });
 
 blrTextArea.addEventListener('blrFocus', () => {

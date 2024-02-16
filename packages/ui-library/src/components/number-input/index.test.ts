@@ -3,9 +3,10 @@ import '@boiler/ui-library/dist/';
 import { BlrNumberInputRenderFunction } from './renderFunction';
 import type { BlrNumberInputType } from '.';
 
-import { fixture, expect, nextFrame } from '@open-wc/testing';
+import { fixture, expect, nextFrame, oneEvent } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string';
+import { BlrFocusEvent } from '../../globals/events';
 
 const sampleParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',
@@ -95,7 +96,7 @@ describe('blr-number-input', () => {
     expect(errorClassName).to.contain('error');
   });
 
-  it('has a size md by default', async () => {
+  it('has a sizeVariant md by default', async () => {
     const element = await fixture(BlrNumberInputRenderFunction(sampleParams));
 
     const numberInputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
@@ -104,8 +105,8 @@ describe('blr-number-input', () => {
     expect(className).to.contain('md');
   });
 
-  it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrNumberInputRenderFunction({ ...sampleParams, size: 'sm' }));
+  it('has a sizeVariant sm when "sizeVariant" is set to "sm" ', async () => {
+    const element = await fixture(BlrNumberInputRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const numberInputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
     const className = numberInputWrapper?.className;
@@ -176,4 +177,29 @@ describe('blr-number-input', () => {
       // Clicking the stepper button with the decrease label decreases the value by our chosen step (6 - 5 = 1)
     });
   }
+
+  it('fires blrFocus and blrBlur events', async () => {
+    const element = await fixture(
+      BlrNumberInputRenderFunction({
+        ...sampleParams,
+      })
+    );
+
+    const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
+
+    setTimeout(() => {
+      input!.focus();
+    });
+    const focusEvent: BlrFocusEvent = await oneEvent(element, 'blrFocus');
+    expect(focusEvent.detail.originalEvent).to.exist;
+
+    // just finding something else to focus instead, it's not important what
+    const stepper = querySelectorDeep('button', element.getRootNode() as HTMLElement);
+
+    setTimeout(() => {
+      stepper!.focus();
+    });
+    const blurEvent: BlrFocusEvent = await oneEvent(element, 'blrBlur');
+    expect(blurEvent.detail.originalEvent).to.exist;
+  });
 });

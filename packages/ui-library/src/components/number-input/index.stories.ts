@@ -20,7 +20,7 @@ const sharedStyles = html`
 
 const defaultParams: BlrNumberInputType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
   value: undefined,
@@ -64,9 +64,9 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
+    sizeVariant: {
       name: 'sizeVariant',
-      description: ' Choose size of the component. ',
+      description: ' Choose sizeVariant of the component. ',
       options: FormSizes,
       control: { type: 'radio' },
       table: {
@@ -285,37 +285,47 @@ export default {
       },
       control: { type: 'text', label: 'Number Input' },
     },
-    onChange: {
-      name: 'onChange',
+    //Events
+    blrNumberValueChange: {
+      name: 'blrNumberValueChange',
       description: 'Fires when the value changes.',
-      action: 'onChange',
+      action: 'blrNumberValueChange',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onSelect: {
-      name: 'onSelect',
+    blrSelect: {
+      name: 'blrSelect',
       description: 'Fires when some text is selected.',
-      action: 'onSelect',
+      action: 'blrSelect',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
+      table: {
+        disable: false,
+        category: 'Events',
+      },
+    },
+    blrNumberStepperClick: {
+      name: 'blrNumberStepperClick',
+      description: 'Fires when one of the stepper buttons is clicked.',
+      action: 'blrNumberStepperClick',
       table: {
         disable: false,
         category: 'Events',
@@ -352,7 +362,7 @@ export default {
         component: `<markdown>
       Number Input allows users to  enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
       - [**Appearance**](#appearance)
-        - [**Size Variant**](#size-variant)
+        - [**SizeVariant**](#sizeVariant)
         - [**Stepper Variant**](#stepper-variant)
       - [**Content / Settings**](#content--settings)
         - [**Placeholder**](#placeholder)
@@ -377,17 +387,17 @@ export const NumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderF
 
 /**
  * ## Appearance
- *  ### Size Variant
+ *  ### Size
  * The Number Input component comes in 3 sizes: SM, MD and LG.
  */
-export const SizeVariant = (params: BlrNumberInputType) => {
+export const Size = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...params,
         labelAppendix: undefined,
-        size: 'sm',
+        sizeVariant: 'sm',
         label: 'Number input SM',
         value: undefined,
         numberInputId: 'test-sm',
@@ -397,7 +407,7 @@ export const SizeVariant = (params: BlrNumberInputType) => {
       ${BlrNumberInputRenderFunction({
         ...params,
         labelAppendix: undefined,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'Number input MD',
         value: undefined,
         numberInputId: 'test-md',
@@ -407,7 +417,7 @@ export const SizeVariant = (params: BlrNumberInputType) => {
       ${BlrNumberInputRenderFunction({
         ...params,
         labelAppendix: undefined,
-        size: 'lg',
+        sizeVariant: 'lg',
         label: 'Number input LG',
         value: undefined,
         numberInputId: 'test-lg',
@@ -416,7 +426,7 @@ export const SizeVariant = (params: BlrNumberInputType) => {
   `;
 };
 
-SizeVariant.story = { name: ' ' };
+Size.story = { name: ' ' };
 
 /**
 The Number Input component has 3 stepper variants: vertical, horizontal and split.
@@ -470,7 +480,7 @@ export const Placeholder = (params: BlrNumberInputType) => {
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...params,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'With placeholder',
         labelAppendix: undefined,
         value: undefined,
@@ -480,7 +490,7 @@ export const Placeholder = (params: BlrNumberInputType) => {
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
         ...params,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'Without placeholder',
         labelAppendix: undefined,
         placeholder: '',
