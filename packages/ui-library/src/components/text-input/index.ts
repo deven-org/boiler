@@ -46,7 +46,7 @@ export class BlrTextInput extends LitElement {
   // these are not triggered directly but allows us to map it internally and bve typesafe
   @property() blrFocus?: () => void;
   @property() blrBlur?: () => void;
-  @property() blrChange?: () => void;
+  @property() blrTextValueChange?: () => void;
   @property() blrSelect?: () => void;
 
   @state() protected currentType: InputTypes = this.type;
@@ -77,7 +77,7 @@ export class BlrTextInput extends LitElement {
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
       this.dispatchEvent(
-        new CustomEvent('blrChange', { bubbles: true, composed: true, detail: { originalEvent: event } })
+        new CustomEvent('blrTextValueChange', { bubbles: true, composed: true, detail: { originalEvent: event } })
       );
     }
   };

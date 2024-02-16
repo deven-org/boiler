@@ -41,7 +41,7 @@ export class BlrSelect extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
-  @property() blrChange?: () => void;
+  @property() blrSelectedValueChange?: () => void;
 
   @state() protected isFocused = false;
 
@@ -64,7 +64,7 @@ export class BlrSelect extends LitElement {
 
   protected handleChange(event: Event) {
     this.dispatchEvent(
-      new CustomEvent('blrChange', {
+      new CustomEvent('blrSelectedValueChange', {
         bubbles: true,
         composed: true,
         detail: { originalEvent: event },

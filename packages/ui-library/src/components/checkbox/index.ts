@@ -44,7 +44,7 @@ export class BlrCheckbox extends LitElement {
   // these are not triggered directly but allows us to map it internally and bve typesafe
   @property() blrFocus?: () => void;
   @property() blrBlur?: () => void;
-  @property() blrChange?: () => void;
+  @property() blrCheckedChange?: () => void;
 
   @property() theme: ThemeType = 'Light';
 
@@ -69,7 +69,7 @@ export class BlrCheckbox extends LitElement {
       this.currentIndeterminateState = false;
 
       this.dispatchEvent(
-        new CustomEvent('blrChange', {
+        new CustomEvent('blrCheckedChange', {
           bubbles: true,
           composed: true,
           detail: { originalEvent: event, checkedState: this.currentCheckedState },
