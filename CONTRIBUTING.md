@@ -1,4 +1,5 @@
 # Contributing
+
 Welcome to our B01LER Contribution Page! We truly appreciate your interest in contributing to our project! 🎨✨
 
 Dive into the heart of our project by contributing to its foundational elements: Explore this page to discover ways you
@@ -12,8 +13,8 @@ It's worth noting that we are currently in the alpha stage, and while we enthusi
 understand that, at this moment, we may not have the capacity to manage a large influx of them. Your contributions are
 greatly appreciated as we continue to grow and develop our project!
 
-
 ## :page_with_curl: Content
+
 - [Contributing](#contributing)
   - [:page_with_curl: Content](#page_with_curl-content)
   - [:new: New contributor guide](#new-new-contributor-guide)
@@ -30,7 +31,6 @@ greatly appreciated as we continue to grow and develop our project!
   - [:test_tube: Testing / Validating](#test_tube-testing-and-validating)
   - [:arrow_heading_up: Pull Request](#arrow_heading_up-pull-request)
   - [:mag: Code Review](mag-code-review)
-
 
 ## :new: New contributor guide
 
@@ -136,7 +136,7 @@ other one for everything else, like new features or also improvements of existin
 <li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Text Button - add new variant</code></li>
 </ul>
 </details>
- After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
+After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
 
 ### Tipps to find issues
 
@@ -160,10 +160,14 @@ For contributions we are using
 The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
 
-- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. Besides the existing `main` and `develop` branches, the allowed types for newly created branches are: `release`, `hotfix`, `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It was added to be more granular in our naming convention and to differentiate between branches that implement something new (`feature`) and those that change something that already exists (`fix`).
+- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. Besides the
+  existing `main` and `develop` branches, the allowed types for newly created branches are: `release`, `hotfix`,
+  `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It
+  was added to be more granular in our naming convention and to differentiate between branches that implement something
+  new (`feature`) and those that change something that already exists (`fix`).
 - **issueNumber:** The issue number of your task. For example: `421`
-- **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words. For example: `text-area-storybook-documentation`
-
+- **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words.
+  For example: `text-area-storybook-documentation`
 
 ## :handshake: Commits
 
@@ -194,6 +198,6 @@ pull request or the issue.
 After you created a pull request, your code will be reviewed by the B01LER core team. Once the PR has two approvals,
 your code will be merged to develop and will be part of a future release.  
 In case we find things we would like you to change we will leave comments. We kindly ask you to update your pull request
-in regards of the requested changes. Once all comments have been solved the pull request will be merged.   We will try
-our best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull
+in regards of the requested changes. Once all comments have been solved the pull request will be merged. We will try our
+best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull
 requests, but in the end at least one member of the core team needs to approve it, before it can be merged.
