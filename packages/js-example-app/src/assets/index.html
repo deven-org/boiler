@@ -24,7 +24,6 @@
             iconPosition="leading"
             icon="blr360"
             buttonId="button-id"
-            loadingStatus="Loading"
           ></blr-text-button>
           <button id="toggleLoadingState">Toggle Loading State</button>
           <button id="toggleDisabledState">Toggle Disabled State</button>
@@ -54,6 +53,29 @@
         </div>
 
         <div class="component">
+          <p>Number Input</p>
+          <blr-number-input
+            value="1000"
+            size="md"
+            steppervariant="vertical"
+            placeholder="Placeholder-text"
+            fractiondigits="10"
+            totaldigits="10"
+            prependunit="true"
+            unit="kg"
+            step="1"
+            haslabel="true"
+            label="Label-text"
+            labelappendix="(Appendix)"
+            numberinputid="test-id"
+            theme="Light"
+            name="NumberInput"
+            decimals="10"
+            leadingzeros="3"
+          ></blr-number-input>
+        </div>
+
+        <div class="component">
           <p>Textarea</p>
           <blr-textarea
             placeholder="Enter text..."
@@ -69,8 +91,28 @@
         </div>
 
         <div class="component">
+          <p>Tooltip</p>
+
+          <blr-tooltip
+            theme="Light"
+            placement="top"
+            elevation="true"
+            hasarrow="true"
+            offset="20"
+            message="Message-text"
+          >
+            <blr-text-button theme="Light" variant="secondary" size="md" label="Hover me"></blr-text-button>
+          </blr-tooltip>
+        </div>
+
+        <div class="component">
           <p>Radio Input</p>
           <blr-radio size="md"></blr-radio>
+        </div>
+
+        <div class="component">
+          <p>Text Input</p>
+          <blr-text-input size="md" placeholder="Placeholder-text" value="" maxlength="140" label="Label-text" labelappendix="(Appendix)" arialabel="TextInput" name="TextInput" theme="Light" textinputid="Input Id" haslabel="true" type="text" inputicon="blr360" showinputicon="true"></blr-text-input>
         </div>
 
         <div class="component">
@@ -84,18 +126,18 @@
             tabContent="labelAndIcon"
             iconPosition="leading"
             alignment="left"
-          ><p disabled label="Tab 1" icon="blr360">Tab 1</p>
-          <p label="Tab 2" icon="blrInfo">Tab 2</p>
-          <p label="Tab 3" icon="blrCrop">Tab 3</p>
-          <p label="Tab 4" icon="blrDocumentNew">Tab 4</p>
-          <p label="Tab 5" icon="blrDocumentTwo">Tab 5</p>
-          <p label="Tab 6" icon="blrDownload">Tab 6</p>
-          <p label="Tab 7" icon="blrHeart">Tab 7</p>
-          <p label="Tab 8" icon="blrHome">Tab 8</p>
-          <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
-          <p label="Tab 10" icon="blrMusic">Tab 10</p>
-          <p label="Tab 11" icon="blrPen">Tab 11</p>
-        </blr-tab-bar>
+            ><p disabled label="Tab 1" icon="blr360">Tab 1</p>
+            <p label="Tab 2" icon="blrInfo">Tab 2</p>
+            <p label="Tab 3" icon="blrCrop">Tab 3</p>
+            <p label="Tab 4" icon="blrDocumentNew">Tab 4</p>
+            <p label="Tab 5" icon="blrDocumentTwo">Tab 5</p>
+            <p label="Tab 6" icon="blrDownload">Tab 6</p>
+            <p label="Tab 7" icon="blrHeart">Tab 7</p>
+            <p label="Tab 8" icon="blrHome">Tab 8</p>
+            <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
+            <p label="Tab 10" icon="blrMusic">Tab 10</p>
+            <p label="Tab 11" icon="blrPen">Tab 11</p>
+          </blr-tab-bar>
         </div>
       </div>
 

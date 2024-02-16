@@ -40,13 +40,14 @@ All regular B01LER team meetings are in our [B01LER Core calendar](https://myema
 |Meeting Name                 |When                                                                  |Who                                                                   |Why                                                                                 |
 |-----------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
 |B01LER Daily                 |Wednesdays, Thursdays (beginning of Planning or Refinement) & Fridays |Complete B01LER Team                                                  |Updating eachother                                                                  |
-|B01LER Planning              |Every 2nd Thursday (When there is no Refinement)                      |Complete B01LER Team                                                  |Closing the previous and planning the next iteration                                |
+|B01LER Planning              |Every 2nd Thursday (When there is no Refinement)                      |Complete B01LER Team                                                  |Celebrate outcome of the last iteration, present outcome of the pre-planning        |
 |B01LER Refinement            |Every 2nd Thursday (When there is no Planning)                        |Complete B01LER Team                                                  |Refining issues for upcomming iterations                                            |
 |B01LER Retro                 |Every 4th Thursday (After Planning)                                   |Complete B01LER Team                                                  |Looking back at the last two iterations to improve things in the future             |
 |B01LER Design Review         |Tuesdays & Thursdays                                                  |B01LER Design Lead and every team member that needs a design review   |Getting approval from design for code implementations                               |
 |B01LER Pair Programming Hour |Fridays                                                               |Everyone from the B01LER Team that wants to join                      |Collaborate and learn from each other by tackling coding challanges together        |
-|B01LER Weekly Checkup        |Thursdays                                                             |B01LER Leadership                                                     |Discuss and decide on general product topics and check the roadmap                  |
-|B01LER Marketing Weekly      |Thursdays                                                             |B01LER Leadership                                                     |Discuss and decide on general marketing topics                                      |
+|B01LER Pre-Planning          |Thursdays                                                             |B01LER Leadership (and/or stand-ins)                                  |Discuss objectives and prepare a set of issues to finish int he next iteration      |
+|B01LER Weekly Checkup        |Thursdays                                                             |B01LER Leadership (and/or stand-ins)                                  |Discuss and decide on general product topics and check the roadmap                  |
+|B01LER Marketing Weekly      |Thursdays                                                             |B01LER Leadership (and/or stand-ins)                                  |Discuss and decide on general marketing topics                                      |
 |B01LER Monthly               |Last Thursday of a month                                              |Everyone who wants to join                                            |Giving an update, answering questions and sometimes deep dives into specific topics |
 
 
@@ -86,6 +87,7 @@ Here is a checklist for project management to follow when onboarding a new colle
 - [ ] **WBS Authorization** - to book hours on the projects WBS, new colleagues need to be authorized first. Authorization can be requested by the controlling team.
 - [ ] **Myscheduling** - new colleagues need to be planned in myscheduling by the product & project management lead.
 - [ ] **Project forecast** - new colleagues need to be added to the project forecast by the product & project management lead.
+- [ ] **Sales Deck Update** - new colleagues need to be added to the contributor overview in the internal sales deck.
 
 
 ## How to get support
