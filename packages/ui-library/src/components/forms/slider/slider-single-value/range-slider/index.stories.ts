@@ -37,6 +37,7 @@ export default {
     },
   },
   parameters: {
+    badges: ['Draft'],
     viewMode: 'docs',
   },
 };

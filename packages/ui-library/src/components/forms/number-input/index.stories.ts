@@ -331,6 +331,7 @@ export default {
     },
   },
   parameters: {
+    badges: ['Draft'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=7155%3A108301&mode=dev',
@@ -339,7 +340,7 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-      Number Input allows users to enter enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
+      Number Input allows users to  enter numbers into a designated area. Users can interact with the Number Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current number insertion point.
       - [**Appearance**](#appearance)
         - [**Size Variant**](#size-variant)
         - [**Stepper Variant**](#stepper-variant)

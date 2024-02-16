@@ -47,7 +47,6 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
-    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -90,7 +89,6 @@ export default {
     },
     // Content / Settings
     icon: {
-      name: 'icon',
       description: 'Select the icon of the component.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -100,7 +98,6 @@ export default {
     },
     //States
     disabled: {
-      name: 'disabled',
       description: 'Choose if component is disabled. Prevents the user to click or focus the component.',
       table: {
         category: 'States',
@@ -124,7 +121,6 @@ export default {
     },
     //Technical attributes
     buttonId: {
-      name: 'buttonId',
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -133,7 +129,6 @@ export default {
 
     // Events
     onChange: {
-      name: 'onChange',
       description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
@@ -141,7 +136,6 @@ export default {
       },
     },
     onFocus: {
-      name: 'onFocus',
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
@@ -149,7 +143,6 @@ export default {
       },
     },
     onBlur: {
-      name: 'onBlur',
       description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
@@ -158,6 +151,7 @@ export default {
     },
   },
   parameters: {
+    badges: ['New'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A106388&mode=dev',
