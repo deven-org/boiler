@@ -42,17 +42,7 @@ export default {
         },
         title: 'Draft',
         tooltip: {
-          title: 'This is Beta',
-          desc: 'here is a description',
-          links: [
-            { title: 'Read more', href: 'https:boilerds.com' },
-            {
-              title: 'Leave Feedback',
-              onClick: () => {
-                alert('thanks for the feedback');
-              },
-            },
-          ],
+          desc: 'Design, Code and/or Documentation are not finished. Components labeled as "Draft" are not yet ready for broader use.',
         },
       },
       [BADGE.NEW]: {
@@ -68,17 +58,7 @@ export default {
         },
         title: 'New',
         tooltip: {
-          title: 'This is Beta',
-          desc: 'here is a description',
-          links: [
-            { title: 'Read more', href: 'https:boilerds.com' },
-            {
-              title: 'Leave Feedback',
-              onClick: () => {
-                alert('thanks for the feedback');
-              },
-            },
-          ],
+          desc: 'Newly introduced component, which has been tested and approved by the core team. Updates to Design, Code and/or Documentation are still possible.',
         },
       },
       [BADGE.STABLE]: {
@@ -94,17 +74,7 @@ export default {
         },
         title: 'Stable',
         tooltip: {
-          title: 'This is Beta',
-          desc: 'here is a description',
-          links: [
-            { title: 'Read more', href: 'https:boilerds.com' },
-            {
-              title: 'Leave Feedback',
-              onClick: () => {
-                alert('thanks for the feedback');
-              },
-            },
-          ],
+          desc: 'Proven stable over multiple releases, the component has reached a mature and reliable state, suitable for widespread use.',
         },
       },
       [BADGE.DEPRECATED]: {
@@ -120,17 +90,7 @@ export default {
         },
         title: 'Deprecated',
         tooltip: {
-          title: 'This is Beta',
-          desc: 'here is a description',
-          links: [
-            { title: 'Read more', href: 'https:boilerds.com' },
-            {
-              title: 'Leave Feedback',
-              onClick: () => {
-                alert('thanks for the feedback');
-              },
-            },
-          ],
+          desc: 'No longer receives active support and is not recommended for new implementations. Might be made unavailable soon. Transition to alternatives is advised.',
         },
       },
       [BADGE.UPDATED]: {
@@ -146,17 +106,7 @@ export default {
         },
         title: 'Updated',
         tooltip: {
-          title: 'This is Beta',
-          desc: 'here is a description',
-          links: [
-            { title: 'Read more', href: 'https:boilerds.com' },
-            {
-              title: 'Leave Feedback',
-              onClick: () => {
-                alert('thanks for the feedback');
-              },
-            },
-          ],
+          desc: 'A previously stable component with new functionalities, which could still receive updates and has not yet reached a mature and reliable state.',
         },
       },
     },
