@@ -3,6 +3,13 @@ import '../../assets/fonts/fonts.css';
 
 export default {
   parameters: {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Foundation', 'Components'],
+        locales: 'en-US',
+      },
+    },
     actions: {
       argTypesRegex: '^on[A-Z].*',
     },
