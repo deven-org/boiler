@@ -42,6 +42,8 @@ const defaultParams: BlrNumberInputType = {
   errorMessage: '',
   errorIcon: undefined,
   numberInputId: 'test-id',
+  stepIncreaseAriaLabel: '+',
+  stepDecreaseAriaLabel: '\u2212',
 };
 
 export default {
@@ -268,16 +270,6 @@ export default {
       if: { arg: 'hasError', eq: true },
     },
     //Technical attributes
-    ariaLabel: {
-      name: 'ariaLabel',
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        category: 'Accessibility',
-      },
-      control: { type: 'text', defaultValue: 'Default value' },
-    },
-
     numberInputId: {
       name: 'numberInputId',
       description: 'Unique identifier for this component.',
@@ -329,6 +321,24 @@ export default {
         category: 'Events',
       },
     },
+    // Accessibility attributes
+    stepIncreaseAriaLabel: {
+      name: 'stepIncreaseAriaLabel',
+      description: 'Labels the "up" or increase stepper button to assistive technologies, such as screen readers.',
+      table: {
+        category: 'Accessibility',
+      },
+      control: { type: 'text', defaultValue: '+' },
+    },
+    stepDecreaseAriaLabel: {
+      name: 'stepDecreaseAriaLabel',
+      description:
+        'Labels the "down" or decrease stepper button to assistive technologies, such as screen readers.\nNote that the default value is not a hyphen (-) but the minus sign \\u2212 (\u2212).',
+      table: {
+        category: 'Accessibility',
+      },
+      control: { type: 'text', defaultValue: '\u2212' },
+    },
   },
   parameters: {
     design: {
@@ -369,34 +379,37 @@ export const NumberInput = (params: BlrNumberInputType) => BlrNumberInputRenderF
  *  ### Size Variant
  * The Number Input component comes in 3 sizes: SM, MD and LG.
  */
-export const SizeVariant = () => {
+export const SizeVariant = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         labelAppendix: undefined,
         size: 'sm',
         label: 'Number input SM',
         value: undefined,
+        numberInputId: 'test-sm',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         labelAppendix: undefined,
         size: 'md',
         label: 'Number input MD',
         value: undefined,
+        numberInputId: 'test-md',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         labelAppendix: undefined,
         size: 'lg',
         label: 'Number input LG',
         value: undefined,
+        numberInputId: 'test-lg',
       })}
     </div>
   `;
@@ -408,36 +421,39 @@ SizeVariant.story = { name: ' ' };
 The Number Input component has 3 stepper variants: vertical, horizontal and split.
  */
 
-export const StepperVariant = () =>
+export const StepperVariant = (params: BlrNumberInputType) =>
   html`
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         stepperVariant: 'vertical',
         label: 'Vertical',
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
+        numberInputId: 'test-vert',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         stepperVariant: 'horizontal',
         label: 'Horizontal',
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
+        numberInputId: 'test-hor',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         stepperVariant: 'split',
         label: 'Split',
         labelAppendix: undefined,
         unit: 'kg',
         value: undefined,
+        numberInputId: 'test-split',
       })}
     </div>
   `;
@@ -447,26 +463,28 @@ export const StepperVariant = () =>
  ### Placeholder
  * The Number Input component can display a placeholder text. This is recommended to improve usability.
  */
-export const Placeholder = () => {
+export const Placeholder = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         size: 'md',
         label: 'With placeholder',
         labelAppendix: undefined,
         value: undefined,
+        numberInputId: 'test-with',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         size: 'md',
         label: 'Without placeholder',
         labelAppendix: undefined,
         placeholder: '',
         value: undefined,
+        numberInputId: 'test-without',
       })}
     </div>
   `;
@@ -477,34 +495,36 @@ Placeholder.story = { name: ' ' };
 /**
  * The Number Input component can display a unit either as a prefix or a suffix.
  */
-export const HasUnit = () => {
+export const HasUnit = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'No unit',
         unit: undefined,
         labelAppendix: undefined,
+        numberInputId: 'test-no',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'Unit prefix',
         prependUnit: true,
         unit: 'kg',
         labelAppendix: undefined,
+        numberInputId: 'test-kg-pre',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'Unit suffix',
         prependUnit: false,
-        value: undefined,
         unit: 'kg',
         labelAppendix: undefined,
+        numberInputId: 'test-kg-suff',
       })}
     </div>
   `;
@@ -516,15 +536,16 @@ export const HasUnit = () => {
  * ### Disabled
 The Number Input component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
 */
-export const Disabled = () => {
+export const Disabled = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'Disabled',
         disabled: true,
         labelAppendix: undefined,
+        numberInputId: 'test-disabled',
       })}
     </div>
   `;
@@ -535,17 +556,18 @@ Disabled.story = { name: ' ' };
 /**
  * The Number Input component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
-export const Readonly = () => {
+export const Readonly = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'Readonly',
         readonly: true,
         labelAppendix: undefined,
         decimals: 1,
         value: 20.2,
+        numberInputId: 'test-readonly',
       })}
     </div>
   `;
@@ -556,14 +578,15 @@ export const Readonly = () => {
  * ### Required
  * The Number Input component can be set as required. If set as required, an error should be thrown, when the Number Input component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
  */
-export const Required = () => {
+export const Required = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         required: true,
         labelAppendix: '(required)',
+        numberInputId: 'test-req',
       })}
     </div>
   `;
@@ -574,15 +597,16 @@ Required.story = { name: ' ' };
 /**
  * The Number Input component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Number Input or in case the Number Input was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
-export const HasError = () => {
+export const HasError = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'Error',
         hasError: true,
         labelAppendix: undefined,
+        numberInputId: 'test-error',
       })}
     </div>
   `;
@@ -593,15 +617,16 @@ export const HasError = () => {
  * ### Icon Button
  * The Number Input component makes use of the Icon Button component for increasing or decreasing the value. For more information have a look at the [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) component.
  */
-export const IconButton = () => {
+export const IconButton = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         unit: 'kg',
         labelAppendix: undefined,
         stepperVariant: 'split',
+        numberInputId: 'test-icon',
       })}
     </div>
   `;
@@ -612,26 +637,28 @@ IconButton.story = { name: ' ' };
 /**
  * The Number Input component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
-export const FormLabel = () => {
+export const FormLabel = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         placeholder: '',
         label: 'With label',
         labelAppendix: '(with appendix)',
         value: undefined,
+        numberInputId: 'test-label',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         placeholder: 'Without label',
         label: ' ',
         labelAppendix: '',
         hasHint: false,
         value: undefined,
+        numberInputId: 'test-no-label',
       })}
     </div>
   `;
@@ -640,27 +667,29 @@ export const FormLabel = () => {
 /**
  * The Number Input component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
  */
-export const FormCaptionGroup = () => {
+export const FormCaptionGroup = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         hasHint: true,
         label: 'Hint message',
         hintIcon: 'blrInfo',
         labelAppendix: '',
+        numberInputId: 'test-hint',
       })}
     </div>
     <div class="wrapper">
       ${BlrNumberInputRenderFunction({
-        ...defaultParams,
+        ...params,
         label: 'Hint and error message',
         labelAppendix: undefined,
         hasError: true,
         errorMessage: "OMG it's an error",
         hasHint: true,
         errorIcon: 'blrErrorFilled',
+        numberInputId: 'test-hint-error',
       })}
     </div>
   `;

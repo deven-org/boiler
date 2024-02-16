@@ -43,6 +43,8 @@ export class BlrNumberInput extends LitElement {
   @property() leadingZeros?: number;
   @property() decimals?: number;
   @property() prependUnit?: boolean;
+  @property() stepIncreaseAriaLabel?: string = '+';
+  @property() stepDecreaseAriaLabel?: string = '\u2212'; // minus-sign (not minus-hyphen)
 
   @property() theme: ThemeType = 'Light';
 
@@ -82,10 +84,13 @@ export class BlrNumberInput extends LitElement {
     return `${paddedInteger}${fractionPart ? `.${fractionPart}` : ''}`;
   }
 
-  protected getButtonTemplate(icon: SizelessIconType, onClick: () => void): TemplateResult<1> {
+  protected getStepperButtonTemplate(direction: 'increase' | 'decrease', icon: SizelessIconType): TemplateResult<1> {
     if (!this.size) {
       return html``;
     }
+
+    const ariaLabel = direction === 'increase' ? this.stepIncreaseAriaLabel! : this.stepDecreaseAriaLabel!;
+    const onClick = direction === 'increase' ? this.stepperUp : this.stepperDown;
 
     const iconSizeVariant = getComponentConfigToken([
       'cmp',
@@ -106,7 +111,13 @@ export class BlrNumberInput extends LitElement {
     });
 
     const button = html`
-      <button ?disabled="${this.disabled}" class="${buttonClass}" @click=${onClick}>
+      <button
+        aria-label=${ariaLabel}
+        aria-controls=${this.numberInputId}
+        ?disabled="${this.disabled}"
+        class="${buttonClass}"
+        @click=${onClick}
+      >
         ${BlrIconRenderFunction(
           {
             classMap: iconClasses,
@@ -126,30 +137,31 @@ export class BlrNumberInput extends LitElement {
     switch (this.stepperVariant) {
       case 'split': {
         return html`
-          ${this.getButtonTemplate('blrMinus', this.stepperDown)} ${this.getButtonTemplate('blrPlus', this.stepperUp)}
+          ${this.getStepperButtonTemplate('decrease', 'blrMinus')}
+          ${this.getStepperButtonTemplate('increase', 'blrPlus')}
         `;
       }
       case 'horizontal': {
         return html`
           <div class="stepper-combo horizontal  ${this.size}">
-            ${this.getButtonTemplate('blrMinus', this.stepperDown)}
+            ${this.getStepperButtonTemplate('decrease', 'blrMinus')}
             ${BlrDividerRenderFunction({
               direction: 'vertical',
               theme: this.theme,
             })}
-            ${this.getButtonTemplate('blrPlus', this.stepperUp)}
+            ${this.getStepperButtonTemplate('increase', 'blrPlus')}
           </div>
         `;
       }
       case 'vertical': {
         return html`
           <div class="stepper-combo vertical  ${this.size}">
-            ${this.getButtonTemplate('blrChevronUp', this.stepperUp)}
+            ${this.getStepperButtonTemplate('increase', 'blrChevronUp')}
             ${BlrDividerRenderFunction({
               direction: 'horizontal',
               theme: this.theme,
             })}
-            ${this.getButtonTemplate('blrChevronDown', this.stepperDown)}
+            ${this.getStepperButtonTemplate('decrease', 'blrChevronDown')}
           </div>
         `;
       }
@@ -245,6 +257,7 @@ export class BlrNumberInput extends LitElement {
           <div class="${wrapperClasses}">
             <div class="${inputAndUnitContainer}">
               <input
+                id="${this.numberInputId}"
                 class="${inputClasses}"
                 type="number"
                 .value=${this.currentValue != 0
