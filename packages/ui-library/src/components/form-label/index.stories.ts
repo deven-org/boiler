@@ -4,6 +4,8 @@ import { FormSizes, LabelVariants } from '../../globals/constants';
 import { BlrFormLabelType } from './index';
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
+import { LitElement } from 'lit';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 import '../../index';
 
 const sharedStyles = html`
@@ -109,7 +111,22 @@ export default {
   },
 };
 
-export const BlrFormLabel = (params: BlrFormLabelType) => BlrFormLabelRenderFunction(params);
+// The label is not creating a shadow root itself, but errors if it is outside
+// of one. Thus, we're creating a helper component for the stories, that wraps it.
+class WrappedBlrLabel extends LitElement {
+  labelProps: BlrFormLabelType;
+
+  protected render() {
+    return BlrFormLabelRenderFunction(this.labelProps);
+  }
+}
+
+customElements.define('label-story', WrappedBlrLabel);
+
+const WrappedBlrFormLabelRenderFunction = (params: BlrFormLabelType) =>
+  genericBlrComponentRenderer('label-story', { labelProps: params });
+
+export const BlrFormLabel = (params: BlrFormLabelType) => WrappedBlrFormLabelRenderFunction(params);
 BlrFormLabel.storyName = 'Form Label';
 
 const defaultParams: BlrFormLabelType = {
@@ -130,7 +147,7 @@ BlrFormLabel.args = defaultParams;
 export const SizeVariant = () => {
   return html`${sharedStyles}
     <div class="stories-form-label">
-      ${BlrFormLabelRenderFunction({
+      ${WrappedBlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'sm',
         labelText: 'Form label SM',
@@ -138,7 +155,7 @@ export const SizeVariant = () => {
       })}
     </div>
     <div class="stories-form-label">
-      ${BlrFormLabelRenderFunction({
+      ${WrappedBlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'md',
         labelText: 'Form label MD',
@@ -146,7 +163,7 @@ export const SizeVariant = () => {
       })}
     </div>
     <div class="stories-form-label">
-      ${BlrFormLabelRenderFunction({
+      ${WrappedBlrFormLabelRenderFunction({
         ...defaultParams,
         labelSize: 'lg',
         labelText: 'Form label LG',
@@ -163,19 +180,19 @@ SizeVariant.story = { name: ' ' };
  */
 export const LabelAppendix = () => {
   return html`
-    ${BlrFormLabelRenderFunction({
+    ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
       labelSize: 'lg',
       labelText: 'Form label',
       labelAppendix: '(required)',
     })}
-    ${BlrFormLabelRenderFunction({
+    ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
       labelSize: 'lg',
       labelText: 'Form label',
       labelAppendix: '(optional)',
     })}
-    ${BlrFormLabelRenderFunction({
+    ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
       labelSize: 'lg',
       labelText: 'Form label',
@@ -192,7 +209,7 @@ LabelAppendix.story = { name: ' ' };
  * The Form Label component can be set to have an error.
  */
 export const HasError = () => {
-  return html` ${BlrFormLabelRenderFunction({
+  return html` ${WrappedBlrFormLabelRenderFunction({
     ...defaultParams,
     labelText: 'Error',
     labelAppendix: '(with Appendix)',
