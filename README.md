@@ -140,6 +140,8 @@ The plugin allows both designers and developers to inspect tokens that have been
    $ yarn start
    ```
 
+> Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentationon how to use them and the parameters that they can accept.
+
 ### Setup
 Note: This is not filled out yet!
 ...
