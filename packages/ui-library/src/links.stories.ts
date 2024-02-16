@@ -2,7 +2,7 @@
 import { html } from 'lit';
 
 export default {
-  title: 'Design System/Examples',
+  title: 'Examples/Vanilla-JS Example App',
   argTypes: {},
 };
 
