@@ -2,8 +2,6 @@ import '../../assets/iconGallery/iconGallery.css';
 import '../../assets/fonts/fonts.css';
 import { BADGE } from './badges';
 
-export { BlrIcon } from '../src/components/ui/icon';
-
 export default {
   parameters: {
     options: {
