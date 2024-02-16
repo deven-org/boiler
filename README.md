@@ -143,7 +143,7 @@ The plugin allows both designers and developers to inspect tokens that have been
 > Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentationon how to use them and the parameters that they can accept.
 
 ### Setup
-Note: This is not filled out yet!
+Please refer to the 'Getting Started section' in our [Figma file](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8311-4751&mode=design&t=SPtTkLRxRECGO4Ga-0) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)) for detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
 ...
 
 
