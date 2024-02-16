@@ -27,6 +27,7 @@ Welcome to the B01LER team! 👋 We are thrilled to have you on board. This "Get
 - [Barkley Taylor](https://github.com/bar-tay)
 - [Rubiraj Ethirajulu](https://github.com/RubirajAccenture)
 - [Ang Sherpa](https://github.com/angsherpa456)
+- [Roman Yakovliev](https://https://github.com/veilvokay)
 
 ### Product & Project Management    
 - [Thorben Hartmann](https://github.com/thrbnhrtmnn) (Lead, community leader)
