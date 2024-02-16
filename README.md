@@ -23,7 +23,6 @@
   - [:rocket: How to start](#rocket-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
-    - [Usage](#usage)
   - [:white\_check\_mark: How to test](#white_check_mark-how-to-test)
   - [:v: Contribute](#v-contribute)
   - [:page\_facing\_up: License](#page_facing_up-license)
@@ -142,10 +141,6 @@ The plugin allows both designers and developers to inspect tokens that have been
    ```
 
 ### Setup
-Note: This is not filled out yet!
-...
-
-### Usage
 Note: This is not filled out yet!
 ...
 
