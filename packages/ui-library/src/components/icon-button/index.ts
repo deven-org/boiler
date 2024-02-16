@@ -24,7 +24,6 @@ export class BlrIconButton extends LitElement {
   @property() iconButtonId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() sizeVariant?: ActionSizesType = 'md';
-  @property() loadingStatus!: string;
 
   @property() theme: ThemeType = 'Light';
 

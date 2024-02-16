@@ -57,7 +57,6 @@ export class BlrRangeSlider extends LitElement {
       iconButtonId: btnId,
       variant: this.btnVariant,
       sizeVariant: this.size,
-      loadingStatus: 'Loading',
       theme: this.theme,
     })}`;
 

@@ -44,7 +44,6 @@ const argTypesToDisable = [
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
   argTypes.forEach((argType: string) => {
-    // @ts-expect-error todo
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -183,7 +182,6 @@ const defaultParams: BlrIconButtonType = {
   loading: false,
   arialabel: 'Icon Button',
   iconButtonId: 'iconButtonId',
-  loadingStatus: 'Loading',
 };
 BlrIconButton.args = defaultParams;
 
