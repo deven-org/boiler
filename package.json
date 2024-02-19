@@ -102,6 +102,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@geometricpanda/storybook-addon-badges": "^2.0.2",
     "@lit-labs/react": "^1.1.1",
     "http-server": "^14.1.1",
     "lit": "^2.7.4",

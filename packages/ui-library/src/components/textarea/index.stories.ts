@@ -106,7 +106,6 @@ export default {
 
     //Content/ Settings
     placeholder: {
-      name: 'placeholder',
       description: 'Enter string used as placeholder text.',
       defaultValue: 'Placeholder-text',
       table: {
@@ -114,7 +113,6 @@ export default {
       },
     },
     value: {
-      name: 'value',
       description: 'Enter the value the component should have.',
       control: {
         type: 'text',
@@ -125,7 +123,6 @@ export default {
       },
     },
     minLength: {
-      name: 'minLength',
       description: 'Enter the min allowed length.',
       defaultValue: 0,
       table: {
@@ -133,7 +130,6 @@ export default {
       },
     },
     maxLength: {
-      name: 'maxLength',
       description: 'Enter the max allowed length. Additional input is cut off after the max has been reached.',
       defaultValue: 140,
       table: {
@@ -141,7 +137,6 @@ export default {
       },
     },
     hasLabel: {
-      name: 'hasLabel',
       description: 'Choose if component has a label.',
       defaultValue: true,
       control: { type: 'boolean' },
@@ -150,7 +145,6 @@ export default {
       },
     },
     label: {
-      name: 'label',
       description: 'Enter string used as label text.',
       control: {
         type: 'text',
@@ -161,7 +155,6 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     labelAppendix: {
-      name: 'labelAppendix',
       description:
         ' Enter string used as an appendix to the label. Use this to inform the user if this field is required or not.',
       control: {
@@ -173,7 +166,6 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     hasHint: {
-      name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
       control: {
@@ -184,7 +176,6 @@ export default {
       },
     },
     hintMessage: {
-      name: 'hintMessage',
       description: 'Enter string used used as hint message.',
       if: { arg: 'hasHint', eq: true },
       table: {
@@ -253,7 +244,6 @@ export default {
 
     //States
     disabled: {
-      name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
       defaultValue: false,
@@ -262,7 +252,6 @@ export default {
       },
     },
     readonly: {
-      name: 'readonly',
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       defaultValue: false,
       table: {
@@ -272,7 +261,6 @@ export default {
 
     // Validation
     required: {
-      name: 'required',
       description: 'Choose if the component must hold a value after an interaction or a submit.',
       defaultValue: false,
       table: {
@@ -280,7 +268,6 @@ export default {
       },
     },
     hasError: {
-      name: 'hasError',
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
@@ -325,7 +312,6 @@ export default {
       },
     },
     name: {
-      name: 'name',
       description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
       table: {
         category: 'Technical Attributes',
@@ -367,17 +353,12 @@ export default {
     },
   },
   parameters: {
+    badges: ['Draft'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125197&mode=dev',
     },
     docs: {
-      //Two examples for Code integration
-      //First example for manual code integration
-      //canvas: {sourceState: 'shown'},//show code
-      //source: {type: 'code'},//additional to previous
-      //Second Example
-      // source: { code: '<blr-textarea label="Text Area LG" size="lg"></blr-textarea>',},
       description: {
         component: `<markdown>
 Text Area allows users to input and edit multiline text. Unlike a simple Text Input component that is typically used for single-line text, a Text Area provides a larger space for users to enter and manipulate multiple lines of text.
@@ -412,7 +393,6 @@ export const TextArea = (params: BlrTextareaType) =>
         ...params,
       })}
     </div> `;
-
 TextArea.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
