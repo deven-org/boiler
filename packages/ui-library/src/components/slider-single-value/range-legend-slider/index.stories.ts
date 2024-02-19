@@ -35,6 +35,7 @@ export default {
     },
   },
   parameters: {
+    badges: ['Draft'],
     previewTabs: {
       canvas: { hidden: true },
     },

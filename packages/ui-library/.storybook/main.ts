@@ -3,7 +3,12 @@ import { resolve } from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y', '@storybook/addon-designs'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    '@storybook/addon-designs',
+    '@geometricpanda/storybook-addon-badges',
+  ],
   framework: '@storybook/web-components-webpack5',
   docs: {
     autodocs: true,
