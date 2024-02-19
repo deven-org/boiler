@@ -61,6 +61,7 @@ export default {
     },
   },
   parameters: {
+    badges: ['New'],
     layout: 'centered',
     docs: {
       description: {
