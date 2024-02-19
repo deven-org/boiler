@@ -121,7 +121,7 @@ The plugin allows both designers and developers to inspect tokens that have been
    $ git clone https://github.com/deven-org/B01LER-Kitchen.git
    ```
 
-3. now we enable corepack for yarn and choose right version
+3. Now we enable corepack for yarn and choose right version
 
    ```sh
    $ corepack enable
@@ -143,7 +143,19 @@ The plugin allows both designers and developers to inspect tokens that have been
 > Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentationon how to use them and the parameters that they can accept.
 
 ### Setup
-Please refer to the 'Getting Started section' in our [Figma file](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8311-4751&mode=design&t=SPtTkLRxRECGO4Ga-0) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)) for detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
+
+> Note: To be able to edit tokens, you must own a pro license of token studio
+
+1. First, open your Copy of the B01LER and bookmark Tokens Studio in the Plugins panel
+2. Next, launch Tokens Studio using 'New Empty File' since no tokens have been defined yet
+3. Connect your repository to Tokens Studio. First, generate and copy a new Personal Access Token in Github. You can use either Tokens (Classic) or 'Fine-grained tokens'. Next, use the copied token to add GitHub as a Sync Provider. Click the 'Settings tab' in Tokens Studio and in the 'Add new menu', select GitHub. Use the Personal Token that you copied to authenticate yourself and to connect your cloned B01LER repository.
+4. If the entered credential are correct you will be asked to Pull from git. Please accept this dialog. The tokens tab should now contain all tokens sets of B01LER available.
+
+Please refer to the 'Getting Started' section in our [Figma file](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8311-4751&mode=design&t=SPtTkLRxRECGO4Ga-0) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)) for more detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
+
+...
+
+The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
 ...
 
 
