@@ -67,8 +67,8 @@ export const styleCustom = typeSafeNestedCss`
 `;
 
 export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { TextArea } = componentTokens.Forms;
-  const { SurfaceFill } = semanticTokens.Forms;
+  const { TextArea } = componentTokens.cmp;
+  const { inputfield } = semanticTokens.sem.forms;
   return typeSafeNestedCss`
     .textarea-input-control {
       resize: none;
@@ -76,7 +76,7 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
       max-width: 100%;
       word-break: break-all;
       width: 100%;
-      background-color: ${SurfaceFill.Default.Rest};
+      background-color: ${inputfield.container.bgcolor.default.rest};
 
       &.both {
         resize: both;
