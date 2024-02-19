@@ -14,7 +14,30 @@ import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { TAG_NAME } from './renderFunction';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrSelectEvent,
+  BlrTextValueChangeEvent,
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrSelectEvent,
+  createBlrTextValueChangeEvent,
+} from '../../globals/events';
 
+export type BlrTextInputEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrTextValueChange?: (event: BlrTextValueChangeEvent) => void;
+  blrSelect?: (event: BlrSelectEvent) => void;
+};
+
+/**
+ * @fires blrFocus TextInput received focus
+ * @fires blrBlur TextInput lost focus
+ * @fires blrTextValueChange TextInput value changed
+ * @fires blrSelect Text in TextInput got selected
+ */
 export class BlrTextInput extends LitElement {
   static styles = [styleCustom];
 
@@ -43,12 +66,6 @@ export class BlrTextInput extends LitElement {
   @property() name!: string;
   @property() theme: ThemeType = 'Light';
 
-  // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() blrFocus?: () => void;
-  @property() blrBlur?: () => void;
-  @property() blrChange?: () => void;
-  @property() blrSelect?: () => void;
-
   @state() protected currentType: InputTypes = this.type;
   @state() protected isFocused = false;
 
@@ -56,41 +73,29 @@ export class BlrTextInput extends LitElement {
     this.currentType = this.currentType === 'password' ? 'text' : 'password';
   };
 
-  protected handleFocus = () => {
+  protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
       this.isFocused = true;
-      this.dispatchEvent(
-        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
-  protected handleBlur = () => {
+  protected handleBlur = (event: FocusEvent) => {
     if (!this.disabled) {
       this.isFocused = false;
-      this.dispatchEvent(
-        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
 
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrChange', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event }));
     }
   };
 
   protected handleSelect = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrSelect', {
-          bubbles: true,
-          composed: true,
-          detail: { originalEvent: event },
-        })
-      );
+      this.dispatchEvent(createBlrSelectEvent({ originalEvent: event }));
     }
   };
 
@@ -245,4 +250,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTextInput);
 }
 
-export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement>;
+export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement> & BlrTextInputEventHandlers;

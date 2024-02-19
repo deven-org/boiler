@@ -53,7 +53,7 @@ blrButton.addEventListener('blrBlur', () => {
   addLog('blr-text-button blurred');
 });
 
-blrCheckbox.addEventListener('blrChange', (e) => {
+blrCheckbox.addEventListener('blrCheckedChange', (e) => {
   addLog('blr-checkbox changed: ' + e.detail.checkedState);
 });
 
@@ -65,7 +65,7 @@ blrCheckbox.addEventListener('blrBlur', () => {
   addLog('blr-checkbox blurred');
 });
 
-blrSelect.addEventListener('blrChange', () => {
+blrSelect.addEventListener('blrSelectedValueChange', () => {
   addLog('blr-select changed');
 });
 
@@ -77,7 +77,7 @@ blrTextInput.addEventListener('blrBlur', () => {
   addLog('blr-text-input blurred');
 });
 
-blrTextInput.addEventListener('blrChange', () => {
+blrTextInput.addEventListener('blrTextValueChange', () => {
   addLog('blr-text-input changed');
 });
 
@@ -94,5 +94,5 @@ blrTextArea.addEventListener('blrChange', () => {
 });
 
 blrTextArea.addEventListener('blrSelect', () => {
-  addLog('blr-textarea selected',);
+  addLog('blr-textarea selected');
 });

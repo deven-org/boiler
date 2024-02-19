@@ -13,7 +13,26 @@ import { checkboxLight, checkboxDark } from './index.css';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrCheckedChangeEvent,
+  createBlrCheckedChangeEvent,
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+} from '../../globals/events';
 
+export type BlrCheckboxEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrCheckedChange?: (event: BlrCheckedChangeEvent) => void;
+};
+
+/**
+ * @fires blrFocus Checkbox received focus
+ * @fires blrBlur Checkbox lost focus
+ * @fires blrCheckedChange Checkbox state changed (event.checkState)
+ */
 export class BlrCheckbox extends LitElement {
   static styles = [];
 
@@ -41,11 +60,6 @@ export class BlrCheckbox extends LitElement {
 
   @property() size?: FormSizesType = 'md';
 
-  // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() blrFocus?: () => void;
-  @property() blrBlur?: () => void;
-  @property() blrChange?: () => void;
-
   @property() theme: ThemeType = 'Light';
 
   @state() protected currentCheckedState: boolean | undefined = this.checked;
@@ -69,10 +83,9 @@ export class BlrCheckbox extends LitElement {
       this.currentIndeterminateState = false;
 
       this.dispatchEvent(
-        new CustomEvent('blrChange', {
-          bubbles: true,
-          composed: true,
-          detail: { originalEvent: event, checkedState: this.currentCheckedState },
+        createBlrCheckedChangeEvent({
+          originalEvent: event,
+          checkedState: this.currentCheckedState,
         })
       );
     }
@@ -84,9 +97,7 @@ export class BlrCheckbox extends LitElement {
     if (!this.disabled && !this.readonly) {
       this.focused = true;
 
-      this.dispatchEvent(
-        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
@@ -94,13 +105,7 @@ export class BlrCheckbox extends LitElement {
     if (!this.disabled && !this.readonly) {
       this.focused = false;
 
-      this.dispatchEvent(
-        new CustomEvent('blrBlur', {
-          bubbles: true,
-          composed: true,
-          detail: { originalEvent: event },
-        })
-      );
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
 
@@ -313,4 +318,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCheckbox);
 }
 
-export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement>;
+export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement> & BlrCheckboxEventHandlers;

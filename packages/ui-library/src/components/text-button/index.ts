@@ -19,7 +19,26 @@ import { getComponentConfigToken } from '../../utils/get-component-config-token'
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { BlrLoaderRenderFunction } from '../loader/renderFunction';
 import { TAG_NAME } from './renderFunction';
+import {
+  BlrBlurEvent,
+  BlrClickEvent,
+  BlrFocusEvent,
+  createBlrBlurEvent,
+  createBlrClickEvent,
+  createBlrFocusEvent,
+} from '../../globals/events';
 
+export type BlrTextButtonEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrClick?: (event: BlrClickEvent) => void;
+};
+
+/**
+ * @fires blrFocus Button received focus
+ * @fires blrBlur Button lost focus
+ * @fires blrClick Button was clicked
+ */
 export class BlrTextButton extends LitElement {
   static styles = [styleCustom];
 
@@ -34,38 +53,27 @@ export class BlrTextButton extends LitElement {
   @property() size?: ActionSizesType = 'md';
   @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
-  // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() blrFocus?: () => void;
-  @property() blrBlur?: () => void;
-  @property() blrClick?: () => void;
-
   @property() theme: ThemeType = 'Light';
 
   @state() protected focused = false;
 
-  protected handleFocus = (event: Event) => {
+  protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
       this.focused = true;
-      this.dispatchEvent(
-        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
-  protected handleBlur = (event: Event) => {
+  protected handleBlur = (event: FocusEvent) => {
     if (!this.disabled) {
       this.focused = false;
-      this.dispatchEvent(
-        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
 
-  protected handleClick = (event: Event) => {
+  protected handleClick = (event: MouseEvent | KeyboardEvent) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrClickEvent({ originalEvent: event }));
     }
   };
 
@@ -178,4 +186,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTextButton);
 }
 
-export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement>;
+export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement> & BlrTextButtonEventHandlers;
