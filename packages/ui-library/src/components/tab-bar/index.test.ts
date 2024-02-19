@@ -47,7 +47,6 @@ describe('blr-tab-bar', () => {
 
     const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
     const className = tabBar?.className;
-
     expect(className).to.contain('md');
   });
 
@@ -56,7 +55,6 @@ describe('blr-tab-bar', () => {
 
     const tabBar = querySelectorDeep('.blr-tab-bar-group', element.getRootNode() as HTMLElement);
     const className = tabBar?.className;
-
     expect(className).to.contain('sm');
   });
 
