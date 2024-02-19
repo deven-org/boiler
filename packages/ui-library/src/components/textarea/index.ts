@@ -11,7 +11,30 @@ import { BlrCounterRenderFunction } from '../counter/renderFunction';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrSelectEvent,
+  BlrTextValueChangeEvent,
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrSelectEvent,
+  createBlrTextValueChangeEvent,
+} from '../../globals/events';
 
+export type BlrTextareaEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrTextValueChange?: (event: BlrTextValueChangeEvent) => void;
+  blrSelect?: (event: BlrSelectEvent) => void;
+};
+
+/**
+ * @fires blrFocus Textarea received focus
+ * @fires blrBlur Textarea lost focus
+ * @fires blrTextValueChange Textarea value changed
+ * @fires blrSelect Text in Textarea got selected
+ */
 export class BlrTextarea extends LitElement {
   static styles = [styleCustom];
 
@@ -45,12 +68,6 @@ export class BlrTextarea extends LitElement {
   @property() cols?: number;
   @property() name?: string;
   @property() theme: ThemeType = 'Light';
-
-  // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() blrFocus?: () => void;
-  @property() blrBlur?: () => void;
-  @property() blrChange?: () => void;
-  @property() blrSelect?: () => void;
 
   @state() protected count = 0;
   @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
@@ -106,37 +123,25 @@ export class BlrTextarea extends LitElement {
 
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrChange', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event }));
     }
   };
 
-  protected handleFocus = (event: Event) => {
+  protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrFocus', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
-  protected handleBlur = (event: Event) => {
+  protected handleBlur = (event: FocusEvent) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrBlur', { bubbles: true, composed: true, detail: { originalEvent: event } })
-      );
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
 
   protected handleSelect = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(
-        new CustomEvent('blrSelect', {
-          bubbles: true,
-          composed: true,
-          detail: { originalEvent: event, value: this.textareaElement?.value },
-        })
-      );
+      this.dispatchEvent(createBlrSelectEvent({ originalEvent: event }));
     }
   };
 
@@ -248,4 +253,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTextarea);
 }
 
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement>;
+export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement> & BlrTextareaEventHandlers;
