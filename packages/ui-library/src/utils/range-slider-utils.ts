@@ -45,10 +45,10 @@ export const generateRangeBar = (
     const activeMuteColor = Slider.Track.Border.Default.Inactive.color;
 
     const disabledDefaultColor = Slider.Track.Border.Mute.Active.color;
-    const disbledMuteColor = Slider.Track.Border.Mute.Inactive.color;
+    const disabledMuteColor = Slider.Track.Border.Mute.Inactive.color;
 
     const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
-    const muteColor = disabled ? disbledMuteColor : activeMuteColor;
+    const muteColor = disabled ? disabledMuteColor : activeMuteColor;
 
     const twoKnobStartValue = isMinLesserThanMax ? startValueToSlider : endValueToSlider;
     const twoKnobEndValue = isMinLesserThanMax ? endValueToSlider : startValueToSlider;

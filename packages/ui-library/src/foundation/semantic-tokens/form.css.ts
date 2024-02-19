@@ -236,7 +236,7 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.lg {
-        margin: ${forms.captionslot.margin.md};
+        margin: ${forms.captionslot.margin.lg};
       }
     }
 

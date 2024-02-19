@@ -3,7 +3,6 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens) => {
-  // const { } = semanticTokens.sem.forms;
   const { Radio, RadioGroup, FormLabel, CaptionComponent } = componentTokens.cmp;
 
   /* ToDos:
