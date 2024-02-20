@@ -29,9 +29,9 @@ export class BlrTextButton extends LitElement {
   @property() iconPosition?: IconPositionVariant = 'leading';
   @property({ type: Boolean }) loading!: boolean;
   @property({ type: Boolean }) disabled!: boolean;
-  @property() buttonId?: string;
+  @property() textButtonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size?: ActionSizesType = 'md';
+  @property() sizeVariant?: ActionSizesType = 'md';
   @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
 
   // these are not triggered directly but allows us to map it internally and bve typesafe
@@ -70,14 +70,14 @@ export class BlrTextButton extends LitElement {
   };
 
   protected render() {
-    if (this.size && this.buttonDisplay) {
+    if (this.sizeVariant && this.buttonDisplay) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-text-button': true,
         [this.variant]: this.variant,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         'disabled': this.disabled,
         'loading': this.loading,
         [this.buttonDisplay]: this.buttonDisplay,
@@ -91,7 +91,7 @@ export class BlrTextButton extends LitElement {
 
       const flexContainerClasses = classMap({
         'flex-container': true,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       const loaderVariant = determineLoaderVariant(this.variant);
@@ -99,7 +99,7 @@ export class BlrTextButton extends LitElement {
       const loaderSizeVariant = getComponentConfigToken([
         'SizeVariant',
         'Actions',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
         'Loader',
       ]).toLowerCase() as FormSizesType;
 
@@ -107,7 +107,7 @@ export class BlrTextButton extends LitElement {
         'SizeVariant',
         'Actions',
         'TextButton',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
         'Icon',
       ]).toLowerCase() as SizesType;
 
@@ -155,7 +155,7 @@ export class BlrTextButton extends LitElement {
               this.handleClick(event);
             }
           }}
-          id=${this.buttonId || nothing}
+          id=${this.textButtonId || nothing}
         >
           ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
