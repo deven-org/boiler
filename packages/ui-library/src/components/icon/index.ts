@@ -9,7 +9,15 @@ import { until } from 'lit-html/directives/until.js';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { BlrClickEvent, createBlrClickEvent } from '../../globals/events';
 
+export type BlrIconEventHandlers = {
+  blrClick?: (event: BlrClickEvent) => void;
+};
+
+/**
+ * @fires blrClick Icon was clicked
+ */
 export class BlrIcon extends LitElement {
   static styles = [styleCustom];
 
@@ -20,13 +28,8 @@ export class BlrIcon extends LitElement {
   @property() theme: ThemeType = 'Light';
   @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
 
-  // these are not triggered directly but allows us to map it internally and bve typesafe
-  @property() blrClick?: () => void;
-
-  protected handleClick = (event: Event) => {
-    this.dispatchEvent(
-      new CustomEvent('blrClick', { bubbles: true, composed: true, detail: { originalEvent: event } })
-    );
+  protected handleClick = (event: MouseEvent | KeyboardEvent) => {
+    this.dispatchEvent(createBlrClickEvent({ originalEvent: event }));
   };
 
   protected render() {
@@ -74,4 +77,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrIcon);
 }
 
-export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>>;
+export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & BlrIconEventHandlers;

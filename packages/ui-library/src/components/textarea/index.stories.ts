@@ -319,34 +319,30 @@ export default {
     },
 
     // Events
-    onChange: {
-      name: 'onChange',
+    blrChange: {
       description: 'Fires when the value changes.',
-      action: 'onChange',
+      action: 'blrChange',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
-      description: 'Fires when the component is focused.',
-      action: 'onFocus',
-      table: {
-        category: 'Events',
-      },
-    },
-    onBlur: {
-      name: 'onBlur',
-      description: 'Fires when the component lost focus.',
-      action: 'onBlur',
-      table: {
-        category: 'Events',
-      },
-    },
-    onSelect: {
-      name: 'onSelect',
+    blrSelect: {
       description: 'Fires when some text is selected.',
-      action: 'onSelect',
+      action: 'blrSelect',
+      table: {
+        category: 'Events',
+      },
+    },
+    blrFocus: {
+      description: 'Fires when the component is focused.',
+      action: 'blrFocus',
+      table: {
+        category: 'Events',
+      },
+    },
+    blrBlur: {
+      description: 'Fires when the component lost focus.',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
@@ -425,10 +421,10 @@ const argTypesToDisable = [
   'arialabel',
   'textareaId',
   'name',
-  'onChange',
-  'onFocus',
-  'onBlur',
-  'onSelect',
+  'blrChange',
+  'blrSelect',
+  'blrFocus',
+  'blrBlur',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
