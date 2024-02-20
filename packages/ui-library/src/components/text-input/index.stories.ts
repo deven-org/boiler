@@ -226,10 +226,10 @@ export default {
       },
     },
     // Events
-    blrChange: {
-      name: 'blrChange',
+    blrTextValueChange: {
+      name: 'blrTextValueChange',
       description: 'Fires when the value changes.',
-      action: 'blrChange',
+      action: 'blrTextValueChange',
       table: {
         category: 'Events',
       },
@@ -379,7 +379,7 @@ const argTypesToDisable = [
   'errorIcon',
   'arialabel',
   'name',
-  'blrChange',
+  'blrTextValueChange',
   'blrSelect',
   'blrFocus',
   'blrBlur',

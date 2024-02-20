@@ -160,8 +160,7 @@ The 'Getting Started' section also explains the logic behind our token names and
 
 
 ## :white_check_mark: How to test
-Note: This is not filled out yet!
-...
+Learn about our testing approach [here](./doc/TESTING.md).
 
 ## :toolbox: How to build
 > Note: Each command must be run from the root directory of the project
