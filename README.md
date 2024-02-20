@@ -20,7 +20,7 @@
     - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
     - [Report an issue](#report-an-issue)
   - [:gear: Requirements](#gear-requirements)
-  - [:rocket: How to start](#rocket-how-to-start)
+  - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
   - [:white\_check\_mark: How to test](#white_check_mark-how-to-test)
@@ -102,7 +102,7 @@ Before you start working with B01LER Design System for Figma, make sure to insta
 
 The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
 
-## :rocket: How to start
+## :arrow_forward: How to start
 
 ### Installation
 > Note: You need to run terminal as administrator on Windows machines.
@@ -140,7 +140,7 @@ The plugin allows both designers and developers to inspect tokens that have been
    $ yarn start
    ```
 
-> Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentationon how to use them and the parameters that they can accept.
+> Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentation how to use them and the parameters that they can accept.
 
 ### Setup
 
@@ -160,6 +160,38 @@ The 'Getting Started' section also explains the logic behind our token names and
 
 
 ## :white_check_mark: How to test
+Note: This is not filled out yet!
+...
+
+## :toolbox: How to build
+> Note: Each command must be run from the root directory of the project
+
+The B01LER UI Library can be built using the following command:
+
+   ```sh
+   $ yarn build:ui-library
+   ```
+
+B01LER can also be built with Storybook bundled alongside it which provides you with a sandbox to experiment with our components:
+
+   ```sh
+   $ yarn build:storybook
+   ```
+
+B01LER comes with an example vanilla JS application to demonstrate how easy it is to use components in your app. To build this example app, run the following command:
+
+   ```sh
+   $ yarn build:js-example
+   ```
+
+In the generated `dist` folder, the generated `index.html` file can be opened in the browser to preview our components.
+...
+
+## rocket: How to deploy
+Note: This is not filled out yet!
+...
+
+## :building_construction: How to develop
 Note: This is not filled out yet!
 ...
 
