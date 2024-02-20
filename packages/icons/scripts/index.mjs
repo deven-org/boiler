@@ -46,7 +46,7 @@ fs.readdir(iconDir, (err, files) => {
 
     export const PureIconKeys = [
       ${pureKeys.join(',\n')}
-    ];
+    ] as const;
 
     export const IconMapping = { ${iconNames.map((icon) => icon).join(',\n')} };
     export type IconType = keyof typeof IconMapping;
