@@ -1,11 +1,8 @@
-# Introduction
-
+# Contributing
 Welcome to our B01LER Contribution Page! We truly appreciate your interest in contributing to our project! 🎨✨
 
 Dive into the heart of our project by contributing to its foundational elements: Explore this page to discover ways you
 can contribute — your involvement is greatly appreciated!
-
-### Who can contribute?
 
 Curious about who can contribute to our project? The answer is simple: everyone is welcome! Whether you're a developer,
 designer, manager, or administrator of any kind, your contributions are highly valued. We believe in fostering a diverse
@@ -15,24 +12,27 @@ It's worth noting that we are currently in the alpha stage, and while we enthusi
 understand that, at this moment, we may not have the capacity to manage a large influx of them. Your contributions are
 greatly appreciated as we continue to grow and develop our project!
 
-## Table of contents
 
-- [New contributor guide](#new-contributor-guide)
-- [Contribution process overview](#contribution-process-overview)
-- [Getting started](#getting-started)
-  - [:file_folder: File Structure](#file_folder-file-structure)
-- [Issues](#issues)
-  - [Create a new issue](#create-a-new-issue)
-  - [Solve an existing issue](#solve-an-existing-issue)
-  - [Tipps to find issues](#tipps-to-find-issues)
-- [Branch](#branch)
-  - [Branch naming convention](#branch-naming-convention)
-- [Commits](#commits)
-- [Testing / Validating](#testing-and-validating)
-- [Pull Request](#pull-request)
-- [B01LER Monthly](#b01ler-monthly)
+## :page_with_curl: Content
+- [Contributing](#contributing)
+  - [:page_with_curl: Content](#page_with_curl-content)
+  - [:new: New contributor guide](#new-new-contributor-guide)
+  - [:arrows_counterclockwise: Contribution process overview](#arrows_counterclockwise-contribution-process-overview)
+  - [:rocket: Getting started](#rocket-getting-started)
+    - [:file_folder: File Structure](#file_folder-file-structure)
+  - [:clipboard: Issues](#clipboard-issues)
+    - [Create a new issue](#create-a-new-issue)
+    - [Solve an existing issue](#solve-an-existing-issue)
+    - [Tipps to find issues](#tipps-to-find-issues)
+  - [:arrow_heading_down: Branch](#arrow_heading_down-branch)
+    - [Branch naming convention](#branch-naming-convention)
+  - [:handshake: Commits](#handshake-commits)
+  - [:test_tube: Testing / Validating](#test_tube-testing-and-validating)
+  - [:arrow_heading_up: Pull Request](#arrow_heading_up-pull-request)
+  - [:mag: Code Review](mag-code-review)
 
-## New contributor guide
+
+## :new: New contributor guide
 
 > **NOTE**
 >
@@ -54,7 +54,7 @@ resources to help you get started with open source contributions:
 - [Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)
 - [Creating merge requests](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
 
-> **Contribution etiquette:**
+> ** Contribution etiquette:**
 >
 > - While working on your contribution, please do not copy code from other frameworks or libraries
 > - Make small and frequent commits
@@ -64,7 +64,7 @@ resources to help you get started with open source contributions:
 > - No code should be merged or pushed to the develop branch without a pull request
 > - A merge request can only be merged if it has successful test results and at least two approvals
 
-## Contribution process overview
+## :arrows_counterclockwise: Contribution process overview
 
 1. Getting Started (Understand the projects file structure)
 2. Create new issue / select an existing issue
@@ -74,7 +74,7 @@ resources to help you get started with open source contributions:
 6. Create new pull request
 7. Code Review
 
-## Getting started
+## :rocket: Getting started
 
 Here you can find a quick overview of the whole contribution process, as well as in-depth explanations of each step.
 
@@ -106,7 +106,7 @@ Our project has the following file structure:
     └── LICENCE.md          // Software license that governs the use, distribution, and modification of B01LER
     └── README.md           // Introductory documentation for B01LER
 
-## Issues
+## :clipboard: Issues
 
 Before being able to contribute to B01LER, you need to get yourself assigned to an issue. For this you could either
 apply to solve an existing issue or create a new issue.
@@ -149,7 +149,7 @@ other one for everything else, like new features or also improvements of existin
   `📋 task::inProgress`, `📋 task::inReview`, `🦹 needs:contact`, `🦹 needs:documentation`, `🦹 needs:help` and/or
   `🦹 needs:specs`
 
-## Branch
+## :arrow_heading_down: Branch
 
 For contributions we are using
 [Gitflow as branching strategy](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20is%20a%20legacy%20Git,software%20development%20and%20DevOps%20practices).
@@ -160,20 +160,19 @@ For contributions we are using
 The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
 
-- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. The allowed types
-  are: `release`, `hotfix` and `feature`.
+- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. Besides the existing `main` and `develop` branches, the allowed types for newly created branches are: `release`, `hotfix`, `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It was added to be more granular in our naming convention and to differentiate between branches that implement something new (`feature`) and those that change something that already exists (`fix`).
 - **issueNumber:** The issue number of your task. For example: `421`
-- **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words.
-  For example: `text-area-storybook-documentation`
+- **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words. For example: `text-area-storybook-documentation`
 
-## Commits
+
+## :handshake: Commits
 
 The commits must be compliant with with the
 [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/). The commit header should not
 exceed a maximum character count of 140. The scope is allowed to be one of the following options: 'all', 'ui-library',
 'icons', 'figma-design-tokens', 'tokens', or 'storybook'.
 
-## Testing and validating
+## :test_tube: Testing and validating
 
 Please, before submitting any contribution, be sure that your branch is passing all the tests.
 
@@ -182,7 +181,7 @@ yarn test
 yarn compile
 ```
 
-## Pull Request
+## :arrow_heading_up: Pull Request
 
 Once your contribution is ready, it is time to create a pull request. Once your contribution is ready, it is time to
 create a pull request.  
@@ -190,7 +189,7 @@ Please create pull requests for the `develop` branch and not for `main`.
 Please also make sure that pull requests are linked to the related issue using the `Development` field in either the
 pull request or the issue.
 
-## Code Review
+## :mag: Code Review
 
 After you created a pull request, your code will be reviewed by the B01LER core team. Once the PR has two approvals,
 your code will be merged to develop and will be part of a future release.  
@@ -198,14 +197,3 @@ In case we find things we would like you to change we will leave comments. We ki
 in regards of the requested changes. Once all comments have been solved the pull request will be merged.   We will try
 our best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull
 requests, but in the end at least one member of the core team needs to approve it, before it can be merged.
-
-## B01LER Monthly
-
-Join the B01LER Monthly Session and ask questions, if you have any. The session takes place on the last Thursday of each
-month from 4 PM to 4:30 PM (CET). You can add the session to your calendar by following the guide in the pinned post of
-our
-[Teams channel](https://teams.microsoft.com/l/channel/19%3Aca0a1284d8b34c62b80e983ca3af7934%40thread.tacv2/Monthly%20Session?groupId=2d176fa2-6d3a-4c70-a986-d05b5977678f&tenantId=e0793d39-0939-496d-b129-198edd916feb).
-
-> **NOTE**
->
-> You need to be part of the Accenture Org to be able to join the session.

@@ -226,10 +226,10 @@ export default {
       },
     },
     // Events
-    blrChange: {
-      name: 'blrChange',
+    blrTextValueChange: {
+      name: 'blrTextValueChange',
       description: 'Fires when the value changes.',
-      action: 'blrChange',
+      action: 'blrTextValueChange',
       table: {
         category: 'Events',
       },
@@ -283,6 +283,7 @@ export default {
   },
 
   parameters: {
+    badges: ['Draft'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125196&mode=dev',
@@ -378,7 +379,7 @@ const argTypesToDisable = [
   'errorIcon',
   'arialabel',
   'name',
-  'blrChange',
+  'blrTextValueChange',
   'blrSelect',
   'blrFocus',
   'blrBlur',

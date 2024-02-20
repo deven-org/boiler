@@ -1,48 +1,76 @@
 # Testing
-
-This chapter should provide the user with all needed information around testing within your project.
+This chapter provides the user with all needed information around testing within this project.
 
 ## Content
-
-- [Different kind of tests](#different-kind-of-tests)
-- [Tooling](#tooling)
-- [How to write tests](#how-to-write-tests)
-- [How to run tests](#how-to-run-tests)
+- [Testing](#testing)
+  - [Content](#content)
+  - [Different kind of tests](#different-kind-of-tests)
+  - [Testing strategy](#testing-strategy)
+  - [Tooling](#tooling)
+     - [open-wc-testing](#open-wc-testing)
+  - [How to write tests](#how-to-write-tests)
+     - [Directory structure](#directory-structure)
+     - [Examples](#examples)
+  - [How to run tests](#how-to-run-tests)
+  - [Contributing](#contributing)
 
 ## Different kind of tests
+Component test - It ensures that each component render correctly and respond to user interactions as expected in isolation.
 
-This section should display all the different kinds of tests that you write in your project. Explain what each kind of test is for and why you use them in your project. You can also give an outlook on new tests that should be added in the future of your project. If you have a QA in place, also mention what kind of tests they perform and add contact persons.
+In future other testing types like Integration Testing, Performance Testing can be added in the Continuous Integration process.
+
+## Testing strategy
+The tests are crafted to validate the functionality of the software, ensuring it operates as designed and identifying bugs and errors before they are deployed to production. Testing serves as a proactive measure to identify issues early in the development phase. Our objective is to create component test for each individual component within the codebase, guaranteeing their intended functionality and preventing regressions from new changes.
 
 ## Tooling
+### open-wc-testing
+This repository contains tests written using the `@open-wc/testing` library. `@open-wc/testing` provides a suite of
+tools and utilities for testing web components, following modern best practices and standards.
 
-We're using [web-test-runner](https://modern-web.dev/docs/test-runner/overview/) to run our tests. It enables us to use a brought variety of testing tools provided by [open-wc/testing](https://open-wc.org/docs/testing/testing-package/).
+[Read more here](https://open-wc.org/docs/testing/testing-package/).
 
 ## How to write tests
+To write tests using `@open-wc/testing`, follow these steps:
 
-### ... within the open-wc testing framework
+1. Import the necessary functions and utilities from `@open-wc/testing`.
+2. Write your test cases using the provided utilities such as `fixture`, `html`, `litFixture`, etc.
 
-All tests need to be located within the component folder inside a `test` folder. Otherwise the test-runner won't be able to locate the test. [open-wc/testing](https://open-wc.org/docs/testing/testing-package/) offers various tools for testing, such as snapshot testing or accessibility testing of the web-component.
+### Directory structure
+- `src/components/`: Contains the source code of the components and respective test for it.
 
-### ... with pa11y-ci for accesibility testing
+### Examples
+```sh
+import { fixture, html, expect } from '@open-wc/testing';
+import './my-component.js';
 
-For standard testing, you just have to run `npm run test:a11y`.
+describe('MyComponent', () => {
+  it('renders the component', async () => {
+    const el = await fixture(html`<my-component></my-component>`);
+    expect(el).to.exist;
+  });
 
-Additionaly, if you want to write custom test cases, the file `src/components/pa11y-custom.config.js` exists. It allows you to add an array of additional `parameters` to the story you're going to test.
-
-```js
-{ story: 'BlrTextButton--blr-text-button', parameters: ['icon:boilerChevronDownGreen'] }
+  it('displays the correct title', async () => {
+    const el = await fixture(html`<my-component title="Hello"></my-component>`);
+    expect(el.title).to.equal('Hello');
+  });
+});
 ```
 
-While `story` names the story to test, the `parameters` come from the story url in storybook and represent the chosen controls of the story.
-
 ## How to run tests
+Local Setup:
 
-### ... with pa11y-ci for accesibility testing
+```sh
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Install the dependencies by running `yarn`.
+4. Run the tests using the command `yarn test`.
+```
 
-1. **Run the `test:a11y`** command. This command consists of several tasks:
+The project test suite is run with
 
-   1. `build-storybook` builds a static storybook folder `storybook-static` in the root directory.
-   2. `sb extract` then extracts all available stories into a stories.json inside `storybook-static`.
-   3. Now the new `pa11y.ci` file is beeing created. It transforms the stories from `stories.json` into a list of urls of all components that are going to be tested.
+```sh
+$ yarn run test
+```
 
-### ... within the open-wc testing framework
+## Contributing
+Contributions are welcome! Before opening a [bug report](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+) or a [feature request](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Aenhancement&projects=deven-org%2F3&template=2_feature_request.yaml&title=%5BFeature+Request%5D%3A+) please check out our [contribution guide](https://github.com/deven-org/B01LER-Kitchen/blob/main/doc/CONTRIBUTE.md) and our [code of conduct](https://github.com/deven-org/B01LER-Kitchen/blob/main/CODE_OF_CONDUCT.md). In case you discover a security vulnerability please review our [security policy](https://github.com/deven-org/B01LER-Kitchen/security/policy) for more details on how to report it.
