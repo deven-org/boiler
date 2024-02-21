@@ -208,9 +208,9 @@ const argTypesToDisable = [
   'disabled',
   'textButtonId',
   'buttonDisplay',
-  'onClick',
-  'onBlur',
-  'onFocus',
+  'blrClick',
+  'blrBlur',
+  'blrFocus',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
