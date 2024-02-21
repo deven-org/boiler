@@ -187,7 +187,7 @@ In the generated `dist` folder, the generated `index.html` file can be opened in
 ...
 
 ## rocket: How to deploy
-Note: This is not filled out yet!
+Learn about our approach to deployment [here](./doc/DEPLOYMENT.md).
 ...
 
 ## :building_construction: How to develop

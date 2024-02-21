@@ -1,5 +1,5 @@
 # Deployment
-This chapter should provide the user with all needed information around the deployment of your project. Please provide a short introduction here.
+This chapter should provide the user with all needed information around the deployment of your project.
 
 ## Content
 - [Tooling](#tooling)
