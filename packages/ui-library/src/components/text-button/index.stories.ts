@@ -34,7 +34,7 @@ const defaultParams: BlrTextButtonType = {
   iconPosition: 'leading',
   disabled: false,
   loading: false,
-  buttonId: 'buttonId',
+  textButtonId: 'buttonId',
   buttonDisplay: 'inline-block',
 };
 
@@ -135,8 +135,7 @@ export default {
       },
     },
     //Technical attributes
-    buttonId: {
-      name: 'textButtonId',
+    textButtonId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',

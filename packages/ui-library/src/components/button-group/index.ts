@@ -9,14 +9,14 @@ import { TAG_NAME } from './renderFunction';
 export class BlrButtonGroup extends LitElement {
   static styles = [styleCustom];
 
-  @property() size: ButtonGroupSizesType = 'md';
+  @property() sizeVariant: ButtonGroupSizesType = 'md';
   @property() alignment: ButtonGroupAlignmentType = 'center';
 
   protected render() {
     const classes = classMap({
       'blr-button-group': true,
       [this.alignment]: this.alignment,
-      [this.size]: this.size,
+      [this.sizeVariant]: this.sizeVariant,
     });
 
     return html`

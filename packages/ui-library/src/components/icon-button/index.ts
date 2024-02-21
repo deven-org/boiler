@@ -40,9 +40,9 @@ export class BlrIconButton extends LitElement {
   @property() icon?: SizelessIconType;
   @property() loading?: boolean;
   @property() disabled!: boolean;
-  @property() buttonId?: string;
+  @property() iconButtonId?: string;
   @property() variant: ActionVariantType = 'primary';
-  @property() size?: ActionSizesType = 'md';
+  @property() sizeVariant?: ActionSizesType = 'md';
 
   @property() theme: ThemeType = 'Light';
 
@@ -69,12 +69,12 @@ export class BlrIconButton extends LitElement {
   };
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
 
       const classes = classMap({
         [this.variant]: this.variant,
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
         disabled: this.disabled,
         loading: this.loading || false,
       });
@@ -88,7 +88,7 @@ export class BlrIconButton extends LitElement {
       const loaderSizeVariant = getComponentConfigToken([
         'SizeVariant',
         'Actions',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
         'Loader',
       ]).toLowerCase() as FormSizesType;
 
@@ -96,7 +96,7 @@ export class BlrIconButton extends LitElement {
         'SizeVariant',
         'Actions',
         'IconButton',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
         'Icon',
       ]).toLowerCase() as SizesType;
 
@@ -109,7 +109,7 @@ export class BlrIconButton extends LitElement {
           class="blr-semantic-action blr-icon-button ${classes}"
           aria-disabled=${this.disabled ? 'true' : nothing}
           @click=${this.handleClick}
-          id=${this.buttonId || nothing}
+          id=${this.iconButtonId || nothing}
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
