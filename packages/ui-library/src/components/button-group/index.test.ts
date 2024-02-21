@@ -6,7 +6,7 @@ import type { BlrButtonGroupType } from '.';
 import { BlrTextButtonRenderFunction } from '../text-button/renderFunction';
 
 const sampleParams: BlrButtonGroupType = {
-  size: 'md',
+  sizeVariant: 'md',
   alignment: 'left',
 };
 
