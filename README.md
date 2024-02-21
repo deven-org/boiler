@@ -143,8 +143,7 @@ Note: This is not filled out yet!
 
 
 ## :white_check_mark: How to test
-Note: This is not filled out yet!
-...
+Learn about our testing approach [here](./doc/TESTING.md).
 
 
 ## :v: Contribute
