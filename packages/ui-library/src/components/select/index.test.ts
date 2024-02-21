@@ -83,4 +83,11 @@ describe('blr-select', () => {
 
     expect(className).to.contain('sm');
   });
+
+  it('is rendering options inside slot', async () => {
+    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, size: 'sm' }, optionsAsChildren));
+    const options = querySelectorAllDeep('.blr-select-option', element?.getRootNode() as HTMLElement);
+    const optionsLength = optionsAsChildren.strings[0].trim().split('</option>').filter(Boolean).length;
+    expect(options).to.be.lengthOf(optionsLength);
+  });
 });
