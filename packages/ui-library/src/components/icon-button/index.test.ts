@@ -11,7 +11,7 @@ const sampleParams: BlrIconButtonType = {
   icon: 'blrChevronDown',
   loading: false,
   disabled: false,
-  buttonId: 'button-id',
+  iconButtonId: 'button-id',
   variant: 'cta',
   theme: 'Light',
 };
@@ -54,7 +54,7 @@ describe('blr-icon-button', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrIconButtonRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
     const className = iconButton?.className;
