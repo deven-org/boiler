@@ -50,7 +50,7 @@ const defaultParams: BlrTextareaType = {
   readonly: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: '',
+  errorIcon: 'blr360',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
