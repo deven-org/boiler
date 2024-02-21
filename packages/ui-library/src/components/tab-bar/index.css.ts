@@ -15,10 +15,9 @@ export const styleCustom = typeSafeNestedCss`
   }
 `;
 
-export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Silent } = semanticTokens.Actions;
-  const { IconButton } = componentTokens.Actions;
-  const { TabBar } = componentTokens.Navigation;
+export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens) => {
+  const { IconButton } = componentTokens.cmp;
+  const { TabBar } = componentTokens.cmp;
 
   /* ToDos
   - [ ] Use Icon Button for pagination-buttons
@@ -59,8 +58,10 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
         &.fullWidth {
           justify-content: space-evenly;
+
           .blr-tab-bar {
             max-width: none;
+
             .nav-list {
               justify-content: space-between;
             }
@@ -73,16 +74,15 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           font: inherit;
           cursor: pointer;
           outline: inherit;
-          _background-color: ${Silent.SurfaceFill.Rest};
-          _border-color: ${Silent.SurfaceStroke.Rest};
-          _color: ${Silent.Icon.Rest};
           line-height: 0;
 
           &.sm {
             padding: ${IconButton.Container.Padding.SM};
+
             &.left {
               margin: ${TabBar.ButtonWrapper.Padding.Leading.SM};
             }
+
             &.right {
               margin: ${TabBar.ButtonWrapper.Padding.Trailing.SM};
             }
@@ -90,9 +90,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
           &.md {
             padding: ${IconButton.Container.Padding.MD};
+
             &.left {
               margin: ${TabBar.ButtonWrapper.Padding.Leading.MD};
             }
+
             &.right {
               margin: ${TabBar.ButtonWrapper.Padding.Trailing.MD};
             }
@@ -101,9 +103,11 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
 
           &.lg {
             padding: ${IconButton.Container.Padding.LG};
+
             &.left {
               margin: ${TabBar.ButtonWrapper.Padding.Leading.LG};
             }
+
             &.right {
               margin: ${TabBar.ButtonWrapper.Padding.Trailing.LG};
             }
@@ -154,7 +158,6 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
             .nav-item-container {
               display: flex;
               flex-direction: column;
-              _flex: 0 1 0px;
               justify-content: center;
 
 
@@ -162,10 +165,6 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                 outline: 2px solid black;
                 outline-offset: -2px;
                 border-radius: 4px;
-              }
-
-              &.fullWidth {
-                _flex: 1 1 0px;
               }
 
               .nav-item-underline {
@@ -190,18 +189,23 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                   flex-shrink: 0;
 
                   &.selected {
+
                     & > blr-icon {
                       color: ${TabBar.Tab.Icon.IconColor.Active.Rest};
                     }
+
                     & > label {
                       color: ${TabBar.Tab.Label.TextColor.Active.Rest};
                     }
 
                     &:focus {
+
                       &:not(.disabled) {
+
                         & > blr-icon {
                           color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
                         }
+
                         & > label {
                           color: ${TabBar.Tab.Label.TextColor.Active.Focus};
                         }
@@ -209,10 +213,13 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     }
 
                     &:hover {
+
                       &:not(.disabled) {
+
                         & > blr-icon {
                           color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
                         }
+
                         & > label {
                           color: ${TabBar.Tab.Label.TextColor.Active.Hover};
                         }
@@ -220,25 +227,31 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     }
 
                     &:active {
+
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
                       }
+
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Active.Pressed};
                       }
                     }
                   }
                   &:not(.selected) {
+
                     & > blr-icon {
                       color: ${TabBar.Tab.Icon.IconColor.Inactive.Rest};
                     }
+
                     & > label {
                       color: ${TabBar.Tab.Label.TextColor.Inactive.Rest};
                     }
 
                     &:focus {
+
                       & > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
+                        color
+                        : ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
                       }
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
@@ -246,27 +259,33 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                     }
 
                     &:hover {
+
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
                       }
+
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Inactive.Hover};
                       }
                     }
 
                     &:active {
+
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
                       }
+
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Inactive.Pressed};
                       }
                     }
 
                     &.disabled {
+
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
                       }
+
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Inactive.Disabled};
                       }
@@ -292,6 +311,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.SM};
 
                 .nav-item-content-wrapper {
+
                   & > .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.Padding_H.SM};
                     padding-right: ${TabBar.Tab.ContentRow.Padding_H.SM};
@@ -315,6 +335,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.MD};
 
                 .nav-item-content-wrapper {
+
                   & .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.Padding_H.MD};
                     padding-right: ${TabBar.Tab.ContentRow.Padding_H.MD};
@@ -338,6 +359,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.LG};
 
                 .nav-item-content-wrapper {
+
                   & > .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.Padding_H.LG};
                     padding-right: ${TabBar.Tab.ContentRow.Padding_H.LG};

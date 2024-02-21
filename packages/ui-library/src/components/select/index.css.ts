@@ -12,32 +12,32 @@ export const styleCustom = typeSafeNestedCss`
 
 export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
-    const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, InputIcon } = semanticTokens.Forms;
+    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
+    const { InputIcon } = _componentTokens.cmp;
 
     return typeSafeNestedCss`
-
-    :host {
-      .blr-select {
-        &.sm {
-          & > .label-wrapper {
-            display: flex;
-            padding: ${SM.LabelSlot.Padding};
+      :host {
+        .blr-select {
+          &.sm {
+            & > .label-wrapper {
+              display: flex;
+              padding: ${labelslot.padding.sm};
+            }
           }
-        }
-        &.md {
-          & > .label-wrapper {
-            display: flex;
-            padding: ${MD.LabelSlot.Padding};
+          &.md {
+            & > .label-wrapper {
+              display: flex;
+              padding: ${labelslot.padding.md};
+            }
           }
-        }
-        &.lg {
-          & > .label-wrapper {
-            display: flex;
-            padding: ${LG.LabelSlot.Padding};
+          &.lg {
+            & > .label-wrapper {
+              display: flex;
+              padding: ${labelslot.padding.lg};
+            }
           }
         }
       }
-    }
 
       slot {
         display: none;
@@ -53,49 +53,47 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
 
         .blr-form-select {
           all: initial;
-          border-radius: ${InputBorderRadius};
+          border-radius: ${inputfield.container.borderradius};
           box-sizing: border-box;
           width: 100%;
           border: none;
           outline: none;
-          color: ${UserInput.Default.Rest};
+          color: ${inputfield.userinput.textcolor.default.rest};
 
           &::placeholder {
-            color: ${Placeholder.Default.Rest};
+            color: ${inputfield.placeholder.textcolor.default.rest};
           }
 
           &:hover {
             &::placeholder {
-              color: ${Placeholder.Default.Hover};
+              color: ${inputfield.placeholder.textcolor.default.hover};
             }
           }
 
           &:active {
             &::placeholder {
-              color: ${Placeholder.Default.Pressed};
+              color: ${inputfield.placeholder.textcolor.default.pressed};
             }
           }
 
           &[readonly] {
             &::placeholder {
-              color: ${Placeholder.Default.ReadOnly};
+              color: ${inputfield.placeholder.textcolor.default.readonly};
             }
           }
 
           &.disabled {
-            color: ${UserInput.Default.Disabled};
-
+            color: ${inputfield.userinput.textcolor.default.disabled};
             &::placeholder {
-              color: ${Placeholder.Default.Disabled};
+              color: ${inputfield.placeholder.textcolor.default.disabled};
             }
           }
 
           &.focus {
             border: none;
             outline: none;
-
             &::placeholder {
-              color: ${Placeholder.Default.Focus};
+              color: ${inputfield.placeholder.textcolor.default.focus};
             }
           }
 
@@ -104,7 +102,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
             outline: none;
 
             &::placeholder {
-              color: ${Placeholder.Error.Rest};
+              color: ${inputfield.placeholder.textcolor.error.rest};
             }
 
             &:hover {
@@ -112,7 +110,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
               outline: none;
 
               &::placeholder {
-                color: ${Placeholder.Error.Hover};
+                color: ${inputfield.placeholder.textcolor.error.hover};
               }
             }
 
@@ -121,7 +119,7 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
               outline: none;
 
               &::placeholder {
-                color: ${Placeholder.Error.Pressed};
+                color: ${inputfield.placeholder.textcolor.error.pressed};
               }
             }
 
@@ -130,30 +128,30 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
               outline: none;
 
               &::placeholder {
-                color: ${Placeholder.Error.Focus};
+                color: ${inputfield.placeholder.textcolor.error.focus};
               }
             }
           }
 
           &.sm {
-            font-weight: ${SM.UserInput.fontWeight};
-            font-size: ${SM.UserInput.fontSize};
-            font-family: ${SM.UserInput.fontFamily}, sans-serif;
-            line-height: ${SM.UserInput.lineHeight};
+            font-weight: ${inputfield.userinput.typography.sm.fontWeight};
+            font-size: ${inputfield.userinput.typography.sm.fontSize};
+            font-family: ${inputfield.userinput.typography.sm.fontFamily}, sans-serif;
+            line-height: ${inputfield.userinput.typography.sm.lineHeight};
           }
 
           &.md {
-            font-weight: ${MD.UserInput.fontWeight};
-            font-size: ${MD.UserInput.fontSize};
-            font-family: ${MD.UserInput.fontFamily}, sans-serif;
-            line-height: ${MD.UserInput.lineHeight};
+            font-weight: ${inputfield.userinput.typography.md.fontWeight};
+            font-size: ${inputfield.userinput.typography.md.fontSize};
+            font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
+            line-height: ${inputfield.userinput.typography.md.lineHeight};
           }
 
           &.lg {
-            font-weight: ${LG.UserInput.fontWeight};
-            font-size: ${LG.UserInput.fontSize};
-            font-family: ${LG.UserInput.fontFamily}, sans-serif;
-            line-height: ${LG.UserInput.lineHeight};
+            font-weight: ${inputfield.userinput.typography.lg.fontWeight};
+            font-size: ${inputfield.userinput.typography.lg.fontSize};
+            font-family: ${inputfield.userinput.typography.lg.fontFamily}, sans-serif;
+            line-height: ${inputfield.userinput.typography.lg.lineHeight};
           }
         }
       }
@@ -162,10 +160,11 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
-        border-radius: ${InputBorderRadius};
+        border: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
+          ${inputfield.container.border.default.rest.color};
+        border-radius: ${inputfield.container.borderradius};
         box-sizing: border-box;
-        background-color: ${SurfaceFill.Default.Rest};
+        background-color: ${inputfield.container.bgcolor.default.rest};
 
         .blr-form-select {
           text-overflow: ellipsis;
@@ -175,57 +174,59 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
 
         .blr-input-icon {
           position: relative;
-          color: ${Placeholder.Default.Rest};
+          color: ${0};
         }
 
         &.sm {
-          padding: ${SM.InputField.Padding};
-          margin: ${SM.InputSlot.Margin};
+          padding: ${inputfield.container.padding.sm};
+          margin: ${inputslot.margin.sm};
         }
 
         &.md {
-          padding: ${MD.InputField.Padding};
-          margin: ${MD.InputSlot.Margin};
+          padding: ${inputfield.container.padding.md};
+          margin: ${inputslot.margin.md};
         }
 
         &.lg {
-          padding: ${LG.InputField.Padding};
-          margin: ${LG.InputSlot.Margin};
+          padding: ${inputfield.container.padding.lg};
+          margin: ${inputslot.margin.lg};
         }
 
         &:hover {
-          border-width: ${Input.Default.Hover.width};
-          border-style: ${Input.Default.Hover.style};
-          border-color: ${Input.Default.Hover.color};
-          color: ${UserInput.Default.Hover};
-          background-color: ${SurfaceFill.Default.Hover};
+          border-width: ${inputfield.container.border.default.hover.width};
+          border-style: ${inputfield.container.border.default.hover.style};
+          border-color: ${inputfield.container.border.default.hover.color};
+          color: ${inputfield.userinput.textcolor.default.hover};
+          background-color: ${inputfield.container.bgcolor.default.hover};
 
           &.blr-input-icon {
-            color: ${InputIcon.Hover};
+            color: ${InputIcon.Icon.IconColor.Rest};
           }
 
           &.error-select:not(.disabled) + .blr-input-icon {
-            color: ${Input.Error.Rest.color};
+            color: ${inputfield.container.border.error.rest.color};
             cursor: default;
           }
         }
 
         &.focus {
-          border-width: ${Input.Default.Rest.width};
-          border-style: ${Input.Default.Rest.style};
+          border-width: ${inputfield.container.border.default.rest.width};
+          border-style: ${inputfield.container.border.default.rest.style};
           border-color: transparent;
-          outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
-          color: ${UserInput.Default.Focus};
-          background-color: ${SurfaceFill.Default.Focus};
+          outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
+            ${inputfield.container.border.default.focus.color};
+          color: ${inputfield.userinput.textcolor.default.focus};
+          background-color: ${inputfield.container.bgcolor.default.focus};
         }
 
         &.disabled {
-          border-width: ${Input.Default.ReadOnly.width};
-          border-style: ${Input.Default.Disabled.style};
+          border-width: ${inputfield.container.border.default.readonly.width};
+          border-style: ${inputfield.container.border.default.disabled.style};
           border-color: transparent;
-          outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
-          color: ${UserInput.Default.Disabled};
-          background-color: ${SurfaceFill.Default.Disabled};
+          outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
+            ${inputfield.container.border.default.disabled.color};
+          color: ${inputfield.userinput.textcolor.default.disabled};
+          background-color: ${inputfield.container.bgcolor.default.disabled};
           cursor: not-allowed;
 
           .blr-form-select {
@@ -236,65 +237,69 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           }
 
           .blr-input-icon {
-            color: ${Placeholder.Default.Rest};
+            color: ${InputIcon.Icon.IconColor.Rest};
           }
         }
 
         &[readonly] {
-          border-width: ${Input.Default.ReadOnly.width};
-          border-style: ${Input.Default.ReadOnly.style};
+          border-width: ${inputfield.container.border.default.readonly.width};
+          border-style: ${inputfield.container.border.default.readonly.style};
           border-color: transparent;
-          outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
-          background-color: ${SurfaceFill.Default.ReadOnly};
+          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
+            ${inputfield.container.border.default.readonly.color};
+          background-color: ${inputfield.container.bgcolor.default.readonly};
         }
 
         &:active {
-          border-width: ${Input.Default.Pressed.width};
-          border-style: ${Input.Default.Pressed.style};
+          border-width: ${inputfield.container.border.default.pressed.width};
+          border-style: ${inputfield.container.border.default.pressed.style};
           border-color: transparent;
-          outline: ${Input.Default.Pressed.width} ${Input.Default.Pressed.style} ${Input.Default.Pressed.color};
-          color: ${UserInput.Default.Pressed};
-          background-color: ${SurfaceFill.Default.Pressed};
+          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
+            ${inputfield.container.border.default.pressed.color};
+          color: ${inputfield.userinput.textcolor.default.pressed};
+          background-color: ${inputfield.container.bgcolor.default.pressed};
         }
 
         &.error-input {
-          border-width: ${Input.Error.Rest.width};
-          border-style: ${Input.Error.Rest.style};
-          border-color: ${Input.Error.Rest.color};
-          background-color: ${SurfaceFill.Error.Rest};
+          border-width: ${inputfield.container.border.error.rest.width};
+          border-style: ${inputfield.container.border.error.rest.style};
+          border-color: ${inputfield.container.border.error.rest.color};
+          background-color: ${inputfield.container.bgcolor.error.rest};
 
           &.focus {
-            border-width: ${Input.Error.Rest.width};
-            border-style: ${Input.Error.Rest.style};
+            border-width: ${inputfield.container.border.error.rest.width};
+            border-style: ${inputfield.container.border.error.rest.style};
             border-color: transparent;
-            outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-            color: ${UserInput.Error.Focus};
-            background-color: ${SurfaceFill.Error.Focus};
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
+            color: ${inputfield.userinput.textcolor.error.focus};
+            background-color: ${inputfield.container.bgcolor.error.focus};
           }
 
           &:hover {
-            border-width: ${Input.Error.Hover.width};
-            border-style: ${Input.Error.Hover.style};
-            color: ${UserInput.Error.Hover};
-            background-color: ${SurfaceFill.Error.Hover};
+            border-width: ${inputfield.container.border.error.hover.width};
+            border-style: ${inputfield.container.border.error.hover.style};
+            color: ${inputfield.userinput.textcolor.error.hover};
+            background-color: ${inputfield.container.bgcolor.error.hover};
           }
 
           &:active {
-            border-width: ${Input.Error.Pressed.width};
-            border-style: ${Input.Error.Pressed.style};
-            border-color: ${Input.Error.Pressed.color};
-            outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
-            color: ${UserInput.Error.Pressed};
-            background-color: ${SurfaceFill.Error.Pressed};
+            border-width: ${inputfield.container.border.error.pressed.width};
+            border-style: ${inputfield.container.border.error.pressed.style};
+            border-color: ${inputfield.container.border.error.pressed.color};
+            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
+              ${inputfield.container.border.error.pressed.color};
+            color: ${inputfield.userinput.textcolor.error.pressed};
+            background-color: ${inputfield.container.bgcolor.error.pressed};
           }
 
           .blr-input-icon {
-            color: ${Input.Error.Rest.color};
+            color: ${InputIcon.Icon.IconColor.Error};
           }
 
           .blr-form-select {
             background: transparent;
-            color: ${UserInput.Error.Rest};
+            color: ${inputfield.userinput.textcolor.error.rest};
           }
         }
       }

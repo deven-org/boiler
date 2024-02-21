@@ -131,11 +131,12 @@ export class BlrTextInput extends LitElement {
       };
 
       const iconSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Forms',
-        this.size.toUpperCase(),
-        'InputField',
-        'Icon',
+        'sem',
+        'forms',
+        'inputfield',
+        'icon',
+        'sizevariant',
+        this.size,
       ]).toLowerCase() as SizesType;
 
       const captionContent = html`

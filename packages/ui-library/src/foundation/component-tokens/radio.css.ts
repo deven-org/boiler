@@ -2,9 +2,8 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { SM, MD, LG, Legend } = semanticTokens.Forms;
-  const { Radio, RadioGroup, FormLabel, CaptionComponent } = componentTokens.Forms;
+export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens) => {
+  const { Radio, RadioGroup, FormLabel, CaptionComponent } = componentTokens.cmp;
 
   /* ToDos:
 
@@ -36,56 +35,69 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
 
       .blr-legend {
-        _FIX: to override constructed css;
+        ${
+          // to override constructed css
+          ""
+        }
         margin: 0 !important;
+        color: ${RadioGroup.Legend.textcolor.default};
 
         &.sm {
-          font-weight: ${SM.Legend.fontWeight};
-          font-size: ${SM.Legend.fontSize};
-          font-family: ${SM.Legend.fontFamily}, sans-serif;
-          line-height: ${SM.Legend.lineHeight};
-          color: ${Legend.Default};
+          font-weight: ${RadioGroup.Legend.SM.fontWeight};
+          font-size: ${RadioGroup.Legend.SM.fontSize};
+          font-family: ${RadioGroup.Legend.SM.fontFamily}, sans-serif;
+          line-height: ${RadioGroup.Legend.SM.lineHeight};
         }
   
         &.md {
-          font-weight: ${MD.Legend.fontWeight};
-          font-size: ${MD.Legend.fontSize};
-          font-family: ${MD.Legend.fontFamily}, sans-serif;
-          line-height: ${MD.Legend.lineHeight};
-          color: ${Legend.Default};
+          font-weight: ${RadioGroup.Legend.MD.fontWeight};
+          font-size: ${RadioGroup.Legend.MD.fontSize};
+          font-family: ${RadioGroup.Legend.MD.fontFamily}, sans-serif;
+          line-height: ${RadioGroup.Legend.MD.lineHeight};
         }
   
         &.lg {
-          font-weight: ${LG.Legend.fontWeight};
-          font-size: ${LG.Legend.fontSize};
-          font-family: ${LG.Legend.fontFamily}, sans-serif;
-          line-height: ${LG.Legend.lineHeight};
-          color: ${Legend.Default};
+          font-weight: ${RadioGroup.Legend.LG.fontWeight};
+          font-size: ${RadioGroup.Legend.LG.fontSize};
+          font-family: ${RadioGroup.Legend.LG.fontFamily}, sans-serif;
+          line-height: ${RadioGroup.Legend.LG.lineHeight};
         }
   
         &.error {
-          color: ${Legend.Error};
+          color: ${RadioGroup.Legend.textcolor.error};
         }
       }
     }
 
     .caption-group {
-      _FIX_: To override constructed margin;
+      ${
+        // To override constructed margin
+        ""
+      }
       all: initial;
       margin: 0;
     
       &.sm {
-        _FIX: "Can be merged with the .caption-group above";
+        ${
+          // Can be merged with the .caption-group above
+          ""
+        }
         padding-top: ${RadioGroup.CaptionSlot.PaddingTop.SM};
       }
 
       &.md {
-        _FIX: "Can be merged with the .caption-group above";
+        ${
+          // Can be merged with the .caption-group above
+          ""
+        }
         padding-top: ${RadioGroup.CaptionSlot.PaddingTop.MD};
       }
 
       &.lg {
-        _FIX: "Can be merged with the .caption-group above";
+        ${
+          // Can be merged with the .caption-group above
+          ""
+        }
         padding-top: ${RadioGroup.CaptionSlot.PaddingTop.LG};
       }
     }

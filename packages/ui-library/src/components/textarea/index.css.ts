@@ -3,7 +3,7 @@ import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index
 
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 
-const { SM, MD, LG } = semanticTokens.Forms;
+const { captionslot, labelslot } = semanticTokens.sem.forms;
 
 export const styleCustom = typeSafeNestedCss`
   :host {
@@ -21,19 +21,19 @@ export const styleCustom = typeSafeNestedCss`
     &.sm {
       & > .label-wrapper {
         display: flex;
-        padding: ${SM.LabelSlot.Padding};
+        padding: ${labelslot.padding.sm};
       }
     }
     &.md {
       & > .label-wrapper {
         display: flex;
-        padding: ${MD.LabelSlot.Padding};
+        padding: ${labelslot.padding.md};
       }
     }
     &.lg {
       & > .label-wrapper {
         display: flex;
-        padding: ${LG.LabelSlot.Padding};
+        padding: ${labelslot.padding.lg};
       }
     }
   }
@@ -42,33 +42,33 @@ export const styleCustom = typeSafeNestedCss`
     display: flex;
     justify-content: right;
 
-    &.hint, &.error{
+    &.hint, &.error {
       justify-content: space-between;
     }
 
     &.sm {
-      > blr-counter {
-        margin: ${SM.CaptionSlot.Margin};
+      & > blr-counter {
+        margin: ${captionslot.margin.sm};
       }
     }
 
     &.md {
-      > blr-counter {
-        margin: ${MD.CaptionSlot.Margin};
+      & > blr-counter {
+        margin: ${captionslot.margin.md};
       }
     }
 
     &.lg {
-      > blr-counter {
-        margin: ${LG.CaptionSlot.Margin};
+      & > blr-counter {
+        margin: ${captionslot.margin.lg};
       }
     }
   }
 `;
 
 export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { TextArea } = componentTokens.Forms;
-  const { SurfaceFill } = semanticTokens.Forms;
+  const { inputfield } = semanticTokens.sem.forms;
+
   return typeSafeNestedCss`
     .textarea-input-control {
       resize: none;
@@ -76,7 +76,7 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
       max-width: 100%;
       word-break: break-all;
       width: 100%;
-      background-color: ${SurfaceFill.Default.Rest};
+      background-color: ${inputfield.container.bgcolor.default.rest};
 
       &.both {
         resize: both;
@@ -95,15 +95,15 @@ export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = re
       }
 
       &.sm {
-        min-height: ${TextArea.InputField.MinHeight.SM};
+        min-height: ${captionslot.margin.sm};
       }
 
       &.md {
-        min-height: ${TextArea.InputField.MinHeight.MD};
+        min-height: ${captionslot.margin.md};
       }
 
       &.lg {
-        min-height: ${TextArea.InputField.MinHeight.LG};
+        min-height: ${captionslot.margin.lg};
       }
     }
   `;

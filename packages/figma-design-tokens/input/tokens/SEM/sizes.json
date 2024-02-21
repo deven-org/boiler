@@ -1,673 +1,224 @@
 {
-  "Actions": {
-    "CTA": {
-      "Rest": {
-        "value": {
-          "color": "{Actions.CTA.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Actions.CTA.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Actions.CTA.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Actions.CTA.SurfaceStroke.Focus}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Actions.CTA.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Actions.CTA.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      }
-    },
-    "Primary": {
-      "Rest": {
-        "value": {
-          "color": "{Actions.Primary.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Actions.Primary.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Actions.Primary.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Actions.Primary.SurfaceStroke.Focus}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Actions.Primary.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Actions.Primary.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      }
-    },
-    "Secondary": {
-      "Rest": {
-        "value": {
-          "color": "{Actions.Secondary.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Actions.Secondary.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Actions.Secondary.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Actions.Secondary.SurfaceStroke.Focus}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Actions.Secondary.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Actions.Secondary.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      }
-    },
-    "Silent": {
-      "Rest": {
-        "value": {
-          "color": "{Actions.Silent.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Actions.Silent.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Actions.Silent.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Actions.Silent.SurfaceStroke.Focus}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Actions.Silent.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Actions.Silent.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      }
-    },
-    "Destructive": {
-      "Rest": {
-        "value": {
-          "color": "{Actions.Destructive.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Actions.Destructive.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Actions.Destructive.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Actions.Destructive.SurfaceStroke.Focus}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Actions.Destructive.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Actions.Destructive.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      }
-    },
-    "Encourage": {
-      "Rest": {
-        "value": {
-          "color": "{Actions.Encourage.SurfaceStroke.Rest}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Hover": {
-        "value": {
-          "color": "{Actions.Encourage.SurfaceStroke.Hover}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Pressed": {
-        "value": {
-          "color": "{Actions.Encourage.SurfaceStroke.Pressed}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Focus": {
-        "value": {
-          "color": "{Actions.Encourage.SurfaceStroke.Focus}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Disabled": {
-        "value": {
-          "color": "{Actions.Encourage.SurfaceStroke.Disabled}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      },
-      "Loading": {
-        "value": {
-          "color": "{Actions.Encourage.SurfaceStroke.Loading}",
-          "width": "{core.dimensionPX.1}",
-          "style": "solid"
-        },
-        "type": "border"
-      }
-    },
-    "XS": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.50FixHeight}",
-        "type": "typography"
-      }
-    },
-    "SM": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-        "type": "typography"
-      }
-    },
-    "MD": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-        "type": "typography"
-      }
-    },
-    "LG": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-        "type": "typography"
-      }
-    },
-    "XL": {
-      "Label": {
-        "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
-        "type": "typography"
-      }
-    },
-    "Container": {
-      "BorderRadius": {
-        "XS": {
-          "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
-        },
-        "SM": {
-          "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
-        },
-        "MD": {
-          "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
-        },
-        "LG": {
-          "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
-        },
-        "XL": {
-          "value": "{core.borderRadius.MD}",
-          "type": "borderRadius"
-        }
-      }
-    }
-  },
-  "UI": {
-    "Headline": {
-      "H1": {
-        "value": "{core.typography.sourceSansPro.bold.400}",
-        "type": "typography"
-      },
-      "H2": {
-        "value": "{core.typography.sourceSansPro.bold.300}",
-        "type": "typography"
-      },
-      "H3": {
-        "value": "{core.typography.sourceSansPro.bold.300}",
-        "type": "typography"
-      },
-      "H4": {
-        "value": "{core.typography.sourceSansPro.bold.150}",
-        "type": "typography"
-      },
-      "H5": {
-        "value": "{core.typography.sourceSansPro.bold.125}",
-        "type": "typography"
-      },
-      "H6": {
-        "value": "{core.typography.sourceSansPro.bold.100}",
-        "type": "typography"
-      }
-    },
-    "Paragraph": {
-      "XS": {
-        "Regular": {
-          "value": "{core.typography.sourceSansPro.regular.75}",
-          "type": "typography"
-        },
-        "Strong": {
-          "value": "{core.typography.sourceSansPro.semibold.75}",
-          "type": "typography"
-        }
-      },
-      "SM": {
-        "Regular": {
-          "value": "{core.typography.sourceSansPro.regular.87}",
-          "type": "typography"
-        },
-        "Strong": {
-          "value": "{core.typography.sourceSansPro.semibold.87}",
-          "type": "typography"
-        }
-      },
-      "MD": {
-        "Regular": {
-          "value": "{core.typography.sourceSansPro.regular.100}",
-          "type": "typography"
-        },
-        "Strong": {
-          "value": "{core.typography.sourceSansPro.semibold.100}",
-          "type": "typography"
-        }
-      },
-      "LG": {
-        "Regular": {
-          "value": "{core.typography.sourceSansPro.regular.125}",
-          "type": "typography"
-        },
-        "Strong": {
-          "value": "{core.typography.sourceSansPro.semibold.125}",
-          "type": "typography"
-        }
-      }
-    },
-    "Caption": {
-      "SM": {
-        "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-        "type": "typography"
-      },
-      "MD": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "LG": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      }
-    }
-  },
-  "Forms": {
-    "SM": {
-      "CaptionSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "InputField": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        }
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "Legend": {
-        "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-        "type": "typography",
-        "description": "Apply on forms group-legends eg.: <RadioGroup>"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "PrefixSuffix": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      },
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
-        "type": "typography"
-      }
-    },
-    "MD": {
-      "CaptionSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "InputField": {
-        "Padding": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.12}",
-          "type": "spacing"
-        }
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "Legend": {
-        "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-        "type": "typography",
-        "description": "Apply on forms group-legends eg.: <RadioGroup>"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "PrefixSuffix": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      },
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
-        "type": "typography"
-      }
-    },
-    "LG": {
-      "CaptionSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.8} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "InputField": {
-        "Padding": {
-          "value": "{core.dimensionREM.12} {core.dimensionPX.16}",
-          "type": "spacing"
-        }
-      },
-      "InputSlot": {
-        "Margin": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "LabelSlot": {
-        "Padding": {
-          "value": "{core.dimensionREM.0} {core.dimensionPX.0} {core.dimensionPX.8} {core.dimensionPX.0}",
-          "type": "spacing"
-        }
-      },
-      "Legend": {
-        "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-        "type": "typography",
-        "description": "Apply on forms group-legends eg.: <RadioGroup>"
-      },
-      "Placeholder": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
-      },
-      "PrefixSuffix": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
-      },
-      "UserInput": {
-        "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
-        "type": "typography"
-      }
-    },
-    "InputBorderRadius": {
-      "value": "{core.borderRadius.MD}",
-      "type": "borderRadius"
-    },
-    "Input": {
-      "Default": {
-        "Rest": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Rest}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
+  "sem": {
+    "buttons": {
+      "container": {
+        "borderradius": {
+          "xs": {
+            "value": "{sys.borderRadius.md}",
+            "type": "borderRadius"
           },
-          "type": "border"
+          "sm": {
+            "value": "{sys.borderRadius.md}",
+            "type": "borderRadius"
+          },
+          "md": {
+            "value": "{sys.borderRadius.md}",
+            "type": "borderRadius"
+          },
+          "lg": {
+            "value": "{sys.borderRadius.md}",
+            "type": "borderRadius"
+          },
+          "xl": {
+            "value": "{sys.borderRadius.md}",
+            "type": "borderRadius"
+          }
         },
-        "Hover": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Hover}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Pressed}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Global.Focus}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Disabled": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.Disabled}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "ReadOnly": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Default.ReadOnly}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        }
-      },
-      "Error": {
-        "Rest": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Rest}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Hover": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Hover}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Pressed": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Pressed}",
-            "width": "{core.dimensionPX.1}",
-            "style": "solid"
-          },
-          "type": "border"
-        },
-        "Focus": {
-          "value": {
-            "color": "{Forms.SurfaceStroke.Error.Focus}",
-            "width": "{core.dimensionPX.2}",
-            "style": "solid"
-          },
-          "type": "border"
+        "borderwidth": {
+          "value": "{sys.borderWidth.medium}",
+          "type": "borderWidth"
         }
       }
-    }
-  },
-  "Global": {
-    "FocusBorder": {
-      "value": {
-        "color": "{Global.Focus}",
-        "width": "{core.dimensionPX.2}",
-        "style": "solid"
+    },
+    "forms": {
+      "captionslot": {
+        "margintop": {
+          "sm": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        },
+        "margin": {
+          "sm": {
+            "value": "{sem.forms.captionslot.margintop.sm} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{sem.forms.captionslot.margintop.md} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{sem.forms.captionslot.margintop.lg} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        }
       },
-      "type": "border"
+      "inputfield": {
+        "container": {
+          "padding_v": {
+            "sm": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing"
+            },
+            "md": {
+              "value": "{core.dimensionREM.8}",
+              "type": "spacing"
+            },
+            "lg": {
+              "value": "{core.dimensionREM.12}",
+              "type": "spacing"
+            }
+          },
+          "padding_h": {
+            "sm": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing"
+            },
+            "md": {
+              "value": "{core.dimensionPX.12}",
+              "type": "spacing"
+            },
+            "lg": {
+              "value": "{core.dimensionPX.16}",
+              "type": "spacing"
+            }
+          },
+          "padding": {
+            "sm": {
+              "value": "{sem.forms.inputfield.container.padding_v.sm} {sem.forms.inputfield.container.padding_h.sm}",
+              "type": "spacing"
+            },
+            "md": {
+              "value": "{sem.forms.inputfield.container.padding_v.md} {sem.forms.inputfield.container.padding_h.md}",
+              "type": "spacing"
+            },
+            "lg": {
+              "value": "{sem.forms.inputfield.container.padding_v.lg} {sem.forms.inputfield.container.padding_h.lg}",
+              "type": "spacing"
+            }
+          },
+          "borderradius": {
+            "value": "{sys.borderRadius.md}",
+            "type": "borderRadius"
+          },
+          "borderwidth": {
+            "rest": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "hover": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "pressed": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "focus": {
+              "value": "{sys.borderWidth.bold}",
+              "type": "borderWidth"
+            },
+            "disabled": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            },
+            "readonly": {
+              "value": "{sys.borderWidth.medium}",
+              "type": "borderWidth"
+            }
+          }
+        }
+      },
+      "inputslot": {
+        "margin_v": {
+          "sm": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionREM.0}",
+            "type": "spacing"
+          }
+        },
+        "margin_h": {
+          "sm": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionPX.0}",
+            "type": "spacing"
+          }
+        },
+        "margin": {
+          "sm": {
+            "value": "{sem.forms.inputslot.margin_v.sm} {sem.forms.inputslot.margin_h.sm}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{sem.forms.inputslot.margin_v.md} {sem.forms.inputslot.margin_h.md}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{sem.forms.inputslot.margin_v.lg} {sem.forms.inputslot.margin_h.lg}",
+            "type": "spacing"
+          }
+        }
+      },
+      "labelslot": {
+        "padding": {
+          "sm": {
+            "value": "0 0 {sem.forms.labelslot.padding_bottom.sm} 0",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "0 0 {sem.forms.labelslot.padding_bottom.md} 0",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "0 0 {sem.forms.labelslot.padding_bottom.lg} 0",
+            "type": "spacing"
+          }
+        },
+        "padding_bottom": {
+          "sm": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "md": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          },
+          "lg": {
+            "value": "{core.dimensionREM.8}",
+            "type": "spacing"
+          }
+        }
+      }
+    },
+    "global": {
+      "focusring": {
+        "borderwidth": {
+          "value": "{sys.borderWidth.heavy}",
+          "type": "borderWidth"
+        }
+      }
     }
   }
 }

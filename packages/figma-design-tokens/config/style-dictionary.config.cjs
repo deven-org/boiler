@@ -9,58 +9,7 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
-const semanticTypes = [
-  // sizes variants
-  'XS',
-  'SM',
-  'MD',
-  'LG',
-  'XL',
-
-  // elevation  variants
-  'Lvl_1',
-  'Lvl_2',
-
-  // emphasis  variants
-  'CTA',
-  'Primary',
-  'Secondary',
-  'Silent',
-  'Destructive',
-  'Encourage',
-
-  // feedback  variants
-  'Neutral',
-  'Warning',
-  'Error',
-
-  // componentElements
-  'Caption',
-  'CaptionSlot',
-  'Label',
-  'LabelSlot',
-  'Legend',
-  'UserInput',
-  'Placeholder',
-  'Input',
-  'InputSlot',
-  'InputField',
-  'InputIcon',
-  'PrefixSuffix',
-  'FocusBorder',
-
-  // tokenTypes
-  'BorderRadius',
-  'BorderWidth',
-  'SurfaceFill',
-  'InputBorderRadius',
-  'Fill',
-  'Background',
-
-  // semantic
-  'Focus',
-  'Feedback',
-];
+const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui'];
 
 const componentTypes = [
   'ButtonGroup',
@@ -73,6 +22,7 @@ const componentTypes = [
   'Icon',
   'IconButton',
   'IconDropdown',
+  'InputIcon',
   'Loader',
   'RadioGroup',
   'NumberInput',
@@ -115,10 +65,11 @@ StyleDictionaryPackage.registerFormat({
 const getStyleDictionaryConfig = (theme) => {
   return {
     source: [
-      `input/tokens/intermediary/${theme}.json`,
       'input/tokens/core/*.json',
-      'input/tokens/CMP/*.json',
-      'input/tokens/SEM/*.json',
+      `input/tokens/sys/${theme}.json`,
+      'input/tokens/sys/sizes.json',
+      'input/tokens/sem/*.json',
+      'input/tokens/cmp/*.json',
     ],
     platforms: {
       /*

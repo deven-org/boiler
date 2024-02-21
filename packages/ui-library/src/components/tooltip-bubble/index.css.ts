@@ -2,7 +2,7 @@ import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStrings((componentTokens) => {
-  const { Tooltip } = componentTokens.Feedback;
+  const { Tooltip } = componentTokens.cmp;
 
   const arrowHeight = "4px";
 
@@ -31,10 +31,10 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
       }
 
       .elevation {
-        filter: drop-shadow(${Tooltip.Container.Elevation.Elevated.x} ${Tooltip.Container.Elevation.Elevated.y} ${
-    Tooltip.Container.Elevation.Elevated.blur
-  } ${Tooltip.Container.Elevation.Elevated.color});
-        
+        filter: drop-shadow(
+          ${Tooltip.Container.Elevation.Elevated.x} ${Tooltip.Container.Elevation.Elevated.y} ${Tooltip.Container.Elevation.Elevated.blur}
+            ${Tooltip.Container.Elevation.Elevated.color}
+        );
       }
 
       ${
@@ -45,6 +45,7 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         */
         ""
       }
+
       .arrow {
         align-items: flex-end;
         display: flex;
@@ -53,7 +54,7 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         position: absolute;
         width: 12px;
         z-index: 1;
-  
+
         & > svg > path {
           fill: ${Tooltip.Container.BackgroundColor};
         }
@@ -63,6 +64,7 @@ export const { tokenizedLight: light, tokenizedDark: dark } = renderThemedCssStr
         /* Currently only used for demo purposes when Floating UI does not control the position of the arrow */
         ""
       }
+
       .static .arrow {
         bottom: -${arrowHeight};
         left: 50%;
