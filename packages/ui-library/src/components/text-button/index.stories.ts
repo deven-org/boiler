@@ -27,14 +27,14 @@ const sharedStyles = html`
 const defaultParams: BlrTextButtonType = {
   theme: 'Light',
   variant: 'primary',
-  size: 'md',
+  sizeVariant: 'md',
   label: 'Label-text',
   hasIcon: true,
   icon: 'blr360',
   iconPosition: 'leading',
   disabled: false,
   loading: false,
-  buttonId: 'buttonId',
+  textButtonId: 'buttonId',
   buttonDisplay: 'inline-block',
 };
 
@@ -51,8 +51,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: 'Select size of the component.',
       options: ActionSizes,
       control: { type: 'select' },
@@ -136,8 +135,7 @@ export default {
       },
     },
     //Technical attributes
-    buttonId: {
-      name: 'textButtonId',
+    textButtonId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -217,14 +215,14 @@ const argTypesToDisable = [
   'theme',
   'arialabel',
   'variant',
-  'size',
+  'sizeVariant',
   'label',
   'hasIcon',
   'iconPosition',
   'icon',
   'loading',
   'disabled',
-  'buttonId',
+  'textButtonId',
   'buttonDisplay',
   'onClick',
   'onBlur',
@@ -232,9 +230,7 @@ const argTypesToDisable = [
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   argTypes.forEach((argType: string) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -312,31 +308,31 @@ export const SizeVariant = () => {
       <div class="stories-textbutton">
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'xs',
+          sizeVariant: 'xs',
           label: 'Button XS',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'sm',
+          sizeVariant: 'sm',
           label: 'Button SM',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Button MD',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'lg',
+          sizeVariant: 'lg',
           label: 'Button LG',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'xl',
+          sizeVariant: 'xl',
           label: 'Button XL',
           hasIcon: false,
         })}
