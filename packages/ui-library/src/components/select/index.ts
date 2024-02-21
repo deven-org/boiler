@@ -158,12 +158,12 @@ export class BlrSelect extends LitElement {
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
-                    labelText: this.label,
+                    label: this.label,
                     labelAppendix: this.labelAppendix,
-                    labelSize: this.size,
+                    sizeVariant: this.size,
                     forValue: this.selectId,
                     theme: this.theme,
-                    variant: this.hasError ? 'error' : 'label',
+                    hasError: Boolean(this.label),
                   })}
                 </div>
               `

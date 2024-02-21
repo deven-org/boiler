@@ -9,10 +9,10 @@ import { LitElement } from 'lit';
 
 const sampleParams: BlrFormLabelType = {
   theme: 'Light',
-  labelText: 'Label text',
+  label: 'Label text',
   labelAppendix: 'Appendix txt',
   forValue: 'for_txt',
-  variant: 'label',
+  hasError: false,
 };
 
 // The label is not creating a shadow root itself, but errors if it is outside
@@ -49,7 +49,7 @@ describe('blr-form-label', () => {
     const element = await fixture(
       WrappedBlrFormLabelRenderFunction({
         ...sampleParams,
-        labelText: 'New label',
+        label: 'New label',
         labelAppendix: '',
       })
     );
@@ -79,7 +79,7 @@ describe('blr-form-label', () => {
     const element = await fixture(
       WrappedBlrFormLabelRenderFunction({
         ...sampleParams,
-        labelText: 'New label',
+        label: 'New label',
         labelAppendix: '',
       })
     );
@@ -102,12 +102,12 @@ describe('blr-form-label', () => {
     const element = await fixture(
       WrappedBlrFormLabelRenderFunction({
         ...sampleParams,
-        variant: 'error',
+        hasError: true,
       })
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const errorLabel = blrLabel?.getAttribute('class');
-    expect(errorLabel).to.contain('error');
+    expect(errorLabel).to.contain('true');
   });
 
   it('has a size md by default', async () => {
@@ -120,7 +120,7 @@ describe('blr-form-label', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(WrappedBlrFormLabelRenderFunction({ ...sampleParams, labelSize: 'sm' }));
+    const element = await fixture(WrappedBlrFormLabelRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const label = querySelectorDeep('label', element.getRootNode() as HTMLElement);
     const className = label?.className;

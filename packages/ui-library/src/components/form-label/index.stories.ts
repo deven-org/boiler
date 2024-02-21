@@ -19,8 +19,7 @@ const sharedStyles = html`
 export default {
   title: 'Components/Form Label',
   argTypes: {
-    labelSize: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: 'Choose size of the component.',
       options: FormSizes,
       control: { type: 'radio' },
@@ -35,8 +34,7 @@ export default {
         category: 'Appearance',
       },
     },
-    labelText: {
-      name: 'label',
+    label: {
       description: 'Enter string used as label text.',
       control: {
         type: 'text',
@@ -57,8 +55,7 @@ export default {
       },
     },
 
-    variant: {
-      name: 'has Error',
+    hasError: {
       description: 'Choose if component has an error.',
       options: LabelVariants,
       control: { type: 'select' },
@@ -132,10 +129,10 @@ BlrFormLabel.storyName = 'Form Label';
 
 const defaultParams: BlrFormLabelType = {
   theme: 'Light',
-  labelSize: 'md',
-  labelText: 'Label-text',
+  sizeVariant: 'md',
+  label: 'Label-text',
   labelAppendix: '(Appendix)',
-  variant: 'label',
+  hasError: false,
   forValue: 'Form Label',
 };
 BlrFormLabel.args = defaultParams;
@@ -150,24 +147,24 @@ export const SizeVariant = () => {
     <div class="stories-form-label">
       ${WrappedBlrFormLabelRenderFunction({
         ...defaultParams,
-        labelSize: 'sm',
-        labelText: 'Form label SM',
+        sizeVariant: 'sm',
+        label: 'Form label SM',
         labelAppendix: '(Appendix SM)',
       })}
     </div>
     <div class="stories-form-label">
       ${WrappedBlrFormLabelRenderFunction({
         ...defaultParams,
-        labelSize: 'md',
-        labelText: 'Form label MD',
+        sizeVariant: 'md',
+        label: 'Form label MD',
         labelAppendix: '(Appendix MD)',
       })}
     </div>
     <div class="stories-form-label">
       ${WrappedBlrFormLabelRenderFunction({
         ...defaultParams,
-        labelSize: 'lg',
-        labelText: 'Form label LG',
+        sizeVariant: 'lg',
+        label: 'Form label LG',
         labelAppendix: '(Appendix LG)',
       })}
     </div>`;
@@ -183,20 +180,20 @@ export const LabelAppendix = () => {
   return html`
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      labelSize: 'lg',
-      labelText: 'Form label',
+      sizeVariant: 'lg',
+      label: 'Form label',
       labelAppendix: '(required)',
     })}
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      labelSize: 'lg',
-      labelText: 'Form label',
+      sizeVariant: 'lg',
+      label: 'Form label',
       labelAppendix: '(optional)',
     })}
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      labelSize: 'lg',
-      labelText: 'Form label',
+      sizeVariant: 'lg',
+      label: 'Form label',
       labelAppendix: ' ',
     })}
   `;
@@ -212,9 +209,9 @@ LabelAppendix.story = { name: ' ' };
 export const HasError = () => {
   return html` ${WrappedBlrFormLabelRenderFunction({
     ...defaultParams,
-    labelText: 'Error',
+    label: 'Error',
     labelAppendix: '(with Appendix)',
-    variant: 'error',
+    hasError: true,
   })}`;
 };
 HasError.story = { name: ' ' };
