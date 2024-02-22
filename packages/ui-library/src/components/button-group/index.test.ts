@@ -12,7 +12,6 @@ const sampleParams: BlrButtonGroupType = {
 
 const testContent = BlrTextButtonRenderFunction({
   label: 'Jaok',
-  size: 'md',
   theme: 'Light',
   loading: false,
   variant: 'primary',
