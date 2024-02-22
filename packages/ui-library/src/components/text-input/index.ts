@@ -174,7 +174,7 @@ export class BlrTextInput extends LitElement {
                     labelAppendix: this.labelAppendix,
                     forValue: this.textInputId,
                     theme: this.theme,
-                    hasError: Boolean(this.label),
+                    hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
