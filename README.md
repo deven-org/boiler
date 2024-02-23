@@ -149,7 +149,7 @@ The plugin allows both designers and developers to inspect tokens that have been
 > Note: To be able to edit tokens, you must own a pro license of token studio
 
 1. First, open your Copy of the B01LER and bookmark Tokens Studio in the Plugins panel
-2. Next, launch Tokens Studio using 'New Empty File' since no tokens have been defined yet
+2. Launch Tokens Studio using 'New Empty File' since no tokens have been defined yet
 3. Connect your repository to Tokens Studio. First, generate and copy a new Personal Access Token in Github. You can use either Tokens (Classic) or 'Fine-grained tokens'. Next, use the copied token to add GitHub as a Sync Provider. Click the 'Settings tab' in Tokens Studio and in the 'Add new menu', select GitHub. Use the Personal Token that you copied to authenticate yourself and to connect your cloned B01LER repository.
 4. If the entered credential are correct you will be asked to Pull from git. Please accept this dialog. The tokens tab should now contain all tokens sets of B01LER available.
 
