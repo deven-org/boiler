@@ -20,6 +20,8 @@
     - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
     - [Report an issue](#report-an-issue)
   - [:gear: Requirements](#gear-requirements)
+    - [Figma](#figma)
+    - [Tokens Studio](#tokens-studio)
   - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
