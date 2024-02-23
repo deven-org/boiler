@@ -181,8 +181,6 @@ B01LER comes with an example vanilla JS application to demonstrate how easy it i
    ```sh
    $ yarn build:js-example
    ```
-
-In the generated `dist` folder, the generated `index.html` file can be opened in the browser to preview our components.
 ...
 
 ## rocket: How to deploy
