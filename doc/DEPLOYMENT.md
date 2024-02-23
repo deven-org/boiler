@@ -34,4 +34,4 @@ If you have a release management setup in place, please describe the process and
 Please write down your deployment schedule. Consider using screenshots or graphs for better visualization.
 
 ## Support
-If someone needs support while deploying your project, please list the possible contact persons or communication channels where people can get support.
+If support is needed while deploying BO1LER, please refer to our [README feedback section](README.md#tipping_hand_person-help--feedback) where we list the many ways that we can be reached to support you.
