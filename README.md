@@ -102,7 +102,7 @@ Figma is a collaborative tool used for designing user interfaces. Figma can be r
 Tokens Studio for Figma (also known as Figma Tokens) is a plugin for Figma that allows users to integrate design tokens into their Figma designs.
 Before you start working with B01LER Design System for Figma, make sure to install the Tokens Studio for Figma (Figma Tokens) plugin so you can access and customize the UI kit easily.
 
-The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
+The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed.
 
 ## :arrow_forward: How to start
 
@@ -148,15 +148,14 @@ The plugin allows both designers and developers to inspect tokens that have been
 
 > Note: To be able to edit tokens, you must own a pro license of token studio
 
-1. First, open your Copy of the B01LER and bookmark Tokens Studio in the Plugins panel
-2. Launch Tokens Studio using 'New Empty File' since no tokens have been defined yet
+1. First, open your Copy of the B01LER and bookmark Tokens Studio in the Plugins panel.
+2. Launch Tokens Studio using 'New Empty File' since no tokens have been defined yet.
 3. Connect your repository to Tokens Studio. First, generate and copy a new Personal Access Token in Github. You can use either Tokens (Classic) or 'Fine-grained tokens'. Next, use the copied token to add GitHub as a Sync Provider. Click the 'Settings tab' in Tokens Studio and in the 'Add new menu', select GitHub. Use the Personal Token that you copied to authenticate yourself and to connect your cloned B01LER repository.
 4. If the entered credential are correct you will be asked to Pull from git. Please accept this dialog. The tokens tab should now contain all tokens sets of B01LER available.
 
 Please refer to the 'Getting Started' section in our [Figma file](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=8311-4751&mode=design&t=SPtTkLRxRECGO4Ga-0) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)) for more detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
 
-...
-
+The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
 
 ## :white_check_mark: How to test
 Learn about our testing approach [here](./doc/TESTING.md).
@@ -181,11 +180,11 @@ B01LER comes with an example vanilla JS application to demonstrate how easy it i
    ```sh
    $ yarn build:js-example
    ```
-...
 
-## rocket: How to deploy
+In the generated `dist` folder, the generated `index.html` file can be opened in the browser to preview our components.
+
+## :rocket: How to deploy
 Learn about our approach to deployment [here](./doc/DEPLOYMENT.md).
-...
 
 ## :building_construction: How to develop
 Note: This is not filled out yet!
