@@ -26,6 +26,8 @@
     - [Installation](#installation)
     - [Setup](#setup)
   - [:white\_check\_mark: How to test](#white_check_mark-how-to-test)
+  - [:toolbox: How to build](#toolbox-how-to-build)
+  - [:rocket: How to deploy](#rocket-how-to-deploy)
   - [:v: Contribute](#v-contribute)
   - [:page\_facing\_up: License](#page_facing_up-license)
   - [:green\_heart: Code of conduct](#green_heart-code-of-conduct)
