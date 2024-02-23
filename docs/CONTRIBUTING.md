@@ -24,7 +24,7 @@ greatly appreciated as we continue to grow and develop our project!
   - [:clipboard: Issues](#clipboard-issues)
     - [Create a new issue](#create-a-new-issue)
     - [Solve an existing issue](#solve-an-existing-issue)
-    - [Tipps to find issues](#tipps-to-find-issues)
+    - [Tips to find issues](#tips-to-find-issues)
   - [:arrow_heading_down: Branch](#arrow_heading_down-branch)
     - [Branch naming convention](#branch-naming-convention)
   - [:handshake: Commits](#handshake-commits)
@@ -111,7 +111,7 @@ other one for everything else, like new features or also improvements of existin
 </details>
 After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
 
-### Tipps to find issues
+### Tips to find issues
 
 - For a first contribution, go to labels / filter by labels and see if there are issues tagged with the
   `good first issue` label

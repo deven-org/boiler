@@ -2,7 +2,7 @@
 
 Welcome to the B01LER team! 👋 We are thrilled to have you on board. This "Get Started" guide is designed to make your
 onboarding process smooth and enjoyable and to learn about all the neccessary organizational aspects. Whether you're a
-seasoned professional or a newcommer, we've got you covered. Let's dive in and unleash the potential of B01LER together!
+seasoned professional or a newcomer, we've got you covered. Let's dive in and unleash the potential of B01LER together!
 
 ## Content
 
