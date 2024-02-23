@@ -1,4 +1,5 @@
 # Contributing
+
 Welcome to our B01LER Contribution Page! We truly appreciate your interest in contributing to our project! 🎨✨
 
 Dive into the heart of our project by contributing to its foundational elements: Explore this page to discover ways you
@@ -12,8 +13,8 @@ It's worth noting that we are currently in the alpha stage, and while we enthusi
 understand that, at this moment, we may not have the capacity to manage a large influx of them. Your contributions are
 greatly appreciated as we continue to grow and develop our project!
 
-
 ## :page_with_curl: Content
+
 - [Contributing](#contributing)
   - [:page_with_curl: Content](#page_with_curl-content)
   - [:new: New contributor guide](#new-new-contributor-guide)
@@ -31,7 +32,6 @@ greatly appreciated as we continue to grow and develop our project!
   - [:arrow_heading_up: Pull Request](#arrow_heading_up-pull-request)
   - [:mag: Code Review](mag-code-review)
 
-
 ## :new: New contributor guide
 
 > **NOTE**
@@ -44,10 +44,9 @@ greatly appreciated as we continue to grow and develop our project!
 > to contribute is by getting more eyes on the project. Just add a star to our repository! Or, if you are on Figma, add
 > a heart to our Figma community page or leave a comment if you like the project.
 
-To get an overview of the project and how to set it up, read the
-[README](https://github.com/deven-org/B01LER-Kitchen/blob/develop/README.md). For more details about our Code of Conduct
-see [CODE_OF_CONDUCT](https://github.com/deven-org/B01LER-Kitchen/blob/develop/CODE_OF_CONDUCT.md). Here are some
-resources to help you get started with open source contributions:
+To get an overview of the project and how to set it up, read the [README](/README.md). For more details about our Code
+of Conduct see [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md). Here are some resources to help you get started with open source
+contributions:
 
 - [How to install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [How to handle repositories](https://docs.gitlab.com/ee/user/project/repository/)
@@ -66,7 +65,7 @@ resources to help you get started with open source contributions:
 
 ## :arrows_counterclockwise: Contribution process overview
 
-1. Getting Started (Understand the projects file structure)
+1. Getting Started
 2. Create new issue / select an existing issue
 3. Create new branch
 4. Commit your changes
@@ -76,35 +75,9 @@ resources to help you get started with open source contributions:
 
 ## :rocket: Getting started
 
-Here you can find a quick overview of the whole contribution process, as well as in-depth explanations of each step.
-
-### :file_folder: File Structure
-
-Our project has the following file structure:
-
-    └── .github             // GitLab CI/CD pipeline
-    └── .husky              // Git hooks configuration files and scripts
-    └── .vscode             // VS code extensions and settings json
-    └── .yarn               // Yarn releases folder
-    └── doc                 // The documentation skeleton
-    └── packages
-        └── assets               // Collection of resources, such as images and other files utilized in B01LER
-        └── eslint-config-boiler // Specific ESLint configuration for this project
-        └── figma-design-tokens  // Design tokens configuration files and exported token json files
-        └── icons                // Icon configuration files and a collection of icon files in svg format
-        └── js-example-app       // Source code for js testing app for B01LER DS
-        └── storybook            // Configuration files and compiling tools for Storybook
-        └── ui-library
-            └── .storybook          // Configuration files for Storybook environment, assets, fonts and theme
-            └── src
-                └── components         // Collection of individual B01LER DS components
-                └── foundation         // Collection of generated token files and component and semantic tokens
-                └── globals            // Exports of constants and types
-                └── util               // Collection of utility or helper functions
-    └── CODE_OF_CONDUCT.md  // Our Code of conduct
-    └── CONTRIBUTING.md     // The file you have open right now
-    └── LICENCE.md          // Software license that governs the use, distribution, and modification of B01LER
-    └── README.md           // Introductory documentation for B01LER
+The best way to get started is by reading the [README](/README.md). It contains links to all other parts of the project
+documentation, like the [ARCHITECTURE](ARCHITECTURE.md) documentation for example, where one can also find an overview
+of the projects file structure.
 
 ## :clipboard: Issues
 
@@ -136,7 +109,7 @@ other one for everything else, like new features or also improvements of existin
 <li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Text Button - add new variant</code></li>
 </ul>
 </details>
- After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
+After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
 
 ### Tipps to find issues
 
@@ -160,10 +133,14 @@ For contributions we are using
 The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
 
-- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. Besides the existing `main` and `develop` branches, the allowed types for newly created branches are: `release`, `hotfix`, `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It was added to be more granular in our naming convention and to differentiate between branches that implement something new (`feature`) and those that change something that already exists (`fix`).
+- **branchType:** As defined in the Gitflow branching strategy, there are different types of branches. Besides the
+  existing `main` and `develop` branches, the allowed types for newly created branches are: `release`, `hotfix`,
+  `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It
+  was added to be more granular in our naming convention and to differentiate between branches that implement something
+  new (`feature`) and those that change something that already exists (`fix`).
 - **issueNumber:** The issue number of your task. For example: `421`
-- **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words. For example: `text-area-storybook-documentation`
-
+- **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words.
+  For example: `text-area-storybook-documentation`
 
 ## :handshake: Commits
 
@@ -194,6 +171,6 @@ pull request or the issue.
 After you created a pull request, your code will be reviewed by the B01LER core team. Once the PR has two approvals,
 your code will be merged to develop and will be part of a future release.  
 In case we find things we would like you to change we will leave comments. We kindly ask you to update your pull request
-in regards of the requested changes. Once all comments have been solved the pull request will be merged.   We will try
-our best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull
+in regards of the requested changes. Once all comments have been solved the pull request will be merged. We will try our
+best to respond within a week to new pull requests. Contributors are also invited to review other contributors pull
 requests, but in the end at least one member of the core team needs to approve it, before it can be merged.
