@@ -16,22 +16,22 @@ We also deploy our JS Example app to [Render](https://b01ler.onrender.com/js-exa
 - [Support](#support)
 
 ## Tooling
-Note: This is not filled out yet!
+Please explain what kind of tools you use for your deployment, why you have choosen them and how to work with them.
 
 
 ## How to deploy
-Note: This is not filled out yet!
+In this section you should discribe the deployment process for your project. Think about how developers  who are unfamiliar with the project can deploy it to the respective enviroments.
 
 
 ## Versioning
-Note: This is not filled out yet!
+Please describe briefly how you manage the versioning of your project.
 
 
 ## Release Management
-Note: This is not filled out yet!
+If you have a release management setup in place, please describe the process and who to contact if support is needed.
 
 ## Deployment Schedule
-Note: This is not filled out yet!
+Please write down your deployment schedule. Consider using screenshots or graphs for better visualization.
 
 ## Support
-Note: This is not filled out yet!
+If someone needs support while deploying your project, please list the possible contact persons or communication channels where people can get support.
