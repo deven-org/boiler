@@ -157,9 +157,6 @@ Please refer to the 'Getting Started' section in our [Figma file](https://www.fi
 
 ...
 
-The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
-...
-
 
 ## :white_check_mark: How to test
 Learn about our testing approach [here](./doc/TESTING.md).
