@@ -23,6 +23,10 @@
   - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
+    - [:framed_picture: Icons Set](#framed_picture-icons-set)
+      - [Structure](#structure)
+      - [Adding Icons](#adding-icons)
+      - [Removing Icons](#removing-icons)
   - [:white_check_mark: How to test](#white_check_mark-how-to-test)
   - [:toolbox: How to build](#toolbox-how-to-build)
   - [:rocket: How to deploy](#rocket-how-to-deploy)
@@ -147,6 +151,58 @@ The plugin allows both designers and developers to inspect tokens that have been
 Please refer to the 'Getting Started' section in our [Figma file](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig)) for more detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
 
 The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
+
+## :framed_picture: Icons Set
+
+## Icons Set
+After you setup the project, you can start working on your desired icons. B01LER comes with a set of predefined icons in the variety of sizes: small, extra small, extra extra small, medium (default), large, extra large. All the default icons can be seen in our [Storybook](https://b01ler.onrender.com/?path=/docs/foundation-icons--docs).
+
+### Structure
+In the project you will find 2 folders containing icons. One of them represents an input folder and the other one - output after compiling.
+
+    └── packages
+        └── icons               // Icon configuration files and a collection of icon files in svg format
+            └── icon-set         // Input folder for the icons
+            └── icons-optimized         // Output folder (after building icons)
+
+### Adding Icons
+For the new icons to work properly, you should add each of your icons in all size variations (xxs, xs, sm, md, lg, xl). Icons in B01LER project follow a naming convention for the icons, for example: `icon_name_md.svg`, it is needed for the complier to transform them into: `blrIconName` with the according size.
+Follow these steps to add your first icon:
+
+> Note: B01LER only supports icons in black and white.
+
+1. Navigate to `/icon-set` folder, paste your icon here (with all according resolutions) and run:
+
+   ```sh
+   $ yarn compile:icons
+   ```
+2. To check that your icon has been added run your porject locally and inspect the Icons tab:
+
+   ```sh
+   $ yarn start
+   ```
+### Removing Icons
+Removing is slightly more difficult than adding, because there are multiple components which are using some of the icons by default. You can see the full list of these components below:
+
+- Checkbox
+- Form Caption
+- Icon
+- Icon Button
+- Icon Link
+- Number Input
+- Select
+- TabBar
+- Text Button
+- Text Input
+- Toggle Switch
+
+> Note: if you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
+
+To remove any icon, sinmply navigate to `/icon-set` folder, delete icons you don't need in all resolutions and run:
+
+   ```sh
+   $ yarn compile:icons
+   ```
 
 ## :white_check_mark: How to test
 Learn about our testing approach [here](./doc/TESTING.md).
