@@ -4,15 +4,15 @@
       "Text": {
         "Typography": {
           "SM": {
-            "value": "{sem.ui.caption.sm}",
+            "value": "{sem.ui.caption.100}",
             "type": "typography"
           },
           "MD": {
-            "value": "{sem.ui.caption.md}",
+            "value": "{sem.ui.caption.200}",
             "type": "typography"
           },
           "LG": {
-            "value": "{sem.ui.caption.lg}",
+            "value": "{sem.ui.caption.300}",
             "type": "typography"
           }
         }
@@ -22,15 +22,15 @@
       "Text": {
         "Typography": {
           "SM": {
-            "value": "{sem.ui.caption.sm}",
+            "value": "{sem.ui.caption.100}",
             "type": "typography"
           },
           "MD": {
-            "value": "{sem.ui.caption.md}",
+            "value": "{sem.ui.caption.200}",
             "type": "typography"
           },
           "LG": {
-            "value": "{sem.ui.caption.lg}",
+            "value": "{sem.ui.caption.300}",
             "type": "typography"
           }
         }
@@ -40,7 +40,7 @@
       "ContentSection": {
         "Text": {
           "Typography": {
-            "value": "{sem.ui.paragraph.md.regular}",
+            "value": "{sem.ui.paragraph.200.regular}",
             "type": "typography"
           }
         }
@@ -114,7 +114,7 @@
         },
         "ItemDescription": {
           "Typography": {
-            "value": "{sem.ui.caption.md}",
+            "value": "{sem.ui.caption.200}",
             "type": "typography"
           }
         }
@@ -181,7 +181,7 @@
     "Tooltip": {
       "Text": {
         "Typography": {
-          "value": "{sem.ui.caption.sm}",
+          "value": "{sem.ui.caption.100}",
           "type": "typography"
         }
       }

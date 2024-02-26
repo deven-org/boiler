@@ -982,19 +982,19 @@
             },
             "error": {
               "rest": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color"
               },
               "hover": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color"
               },
               "pressed": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color"
               },
               "focus": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color"
               }
             }
@@ -1130,22 +1130,22 @@
             },
             "error": {
               "rest": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color",
                 "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
               },
               "hover": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color",
                 "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
               },
               "pressed": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color",
                 "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
               },
               "focus": {
-                "value": "{sys.content.container.subtle.neutral}",
+                "value": "{sys.content.container.subtle.danger}",
                 "type": "color",
                 "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
               }

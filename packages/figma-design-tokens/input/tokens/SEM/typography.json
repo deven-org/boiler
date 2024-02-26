@@ -29,20 +29,22 @@
     "forms": {
       "fieldset": {
         "legend": {
-          "sm": {
-            "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-            "type": "typography",
-            "description": "Apply on forms group-legends eg.: <RadioGroup>"
-          },
-          "md": {
-            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-            "type": "typography",
-            "description": "Apply on forms group-legends eg.: <RadioGroup>"
-          },
-          "lg": {
-            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-            "type": "typography",
-            "description": "Apply on forms group-legends eg.: <RadioGroup>"
+          "typography": {
+            "sm": {
+              "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+              "type": "typography",
+              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+            },
+            "md": {
+              "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+              "type": "typography",
+              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+            },
+            "lg": {
+              "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+              "type": "typography",
+              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+            }
           }
         }
       },
@@ -125,7 +127,7 @@
         }
       },
       "paragraph": {
-        "xs": {
+        "50": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.75}",
             "type": "typography"
@@ -135,7 +137,7 @@
             "type": "typography"
           }
         },
-        "sm": {
+        "100": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.87}",
             "type": "typography"
@@ -145,7 +147,7 @@
             "type": "typography"
           }
         },
-        "md": {
+        "200": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.100}",
             "type": "typography"
@@ -155,7 +157,7 @@
             "type": "typography"
           }
         },
-        "lg": {
+        "300": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.125}",
             "type": "typography"
@@ -167,15 +169,16 @@
         }
       },
       "caption": {
-        "sm": {
+        "100": {
           "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-          "type": "typography"
+          "type": "typography",
+          "description": "Apply on captions"
         },
-        "md": {
+        "200": {
           "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
           "type": "typography"
         },
-        "lg": {
+        "300": {
           "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
           "type": "typography"
         }
