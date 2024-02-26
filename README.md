@@ -30,7 +30,7 @@
 ## :star: Introduction
 B01LER is a fully customisable design system (DS) that enables you to easily create cohesive and consistent digital products across multiple platforms and brands.
 
-B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
+B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
 
 A token system is a collection of values which represent the visual properties of a design system, such as typography, color and spacing.
 
@@ -50,7 +50,7 @@ Overall, B01LER is a powerful tool that helps you work smarter, not harder. By s
 Some articles claim, that Web Components are not accessible or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
 
 ## :art: Resources
-- [Check out our Figma File](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig))
+- [Check out our Figma File](https://www./file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig))
 - [Have a look at our components in Storybook](https://b01ler.onrender.com/)
 
 ## :tipping_hand_person: Help & Feedback
