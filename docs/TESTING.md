@@ -5,12 +5,12 @@ This chapter provides the user with all needed information around testing within
 - [Testing](#testing)
   - [Content](#content)
   - [Different kind of tests](#different-kind-of-tests)
-  - [Testing strategy](#testing-strategy)
+  - [Testing Strategy](#testing-strategy)
   - [Tooling](#tooling)
-    - [open-wc-testing](#open-wc-testing)
+     - [open-wc-testing](#open-wc-testing)
   - [How to write tests](#how-to-write-tests)
-    - [Directory structure](#directory-structure)
-    - [Examples](#examples)
+     - [Directory Structure](#directory-structure)
+     - [Examples](#examples)
   - [How to run tests](#how-to-run-tests)
   - [Contributing](#contributing)
 
@@ -19,21 +19,23 @@ Component test - It ensures that each component render correctly and respond to 
 
 In future other testing types like Integration Testing, Performance Testing can be added in the Continuous Integration process.
 
-## Testing strategy
+## Testing Strategy
 The tests are crafted to validate the functionality of the software, ensuring it operates as designed and identifying bugs and errors before they are deployed to production. Testing serves as a proactive measure to identify issues early in the development phase. Our objective is to create component test for each individual component within the codebase, guaranteeing their intended functionality and preventing regressions from new changes.
 
 ## Tooling
 ### open-wc-testing
-This repository contains tests written using the `@open-wc/testing` library. `@open-wc/testing` provides a suite of tools and utilities for testing web components, following modern best practices and standards.
+This repository contains tests written using the `@open-wc/testing` library. `@open-wc/testing` provides a suite of
+tools and utilities for testing web components, following modern best practices and standards.
 
 [Read more here](https://open-wc.org/docs/testing/testing-package/).
 
 ## How to write tests
 To write tests using `@open-wc/testing`, follow these steps:
+
 1. Import the necessary functions and utilities from `@open-wc/testing`.
 2. Write your test cases using the provided utilities such as `fixture`, `html`, `litFixture`, etc.
 
-### Directory structure
+### Directory Structure
 - `src/components/`: Contains the source code of the components and respective test for it.
 
 ### Examples
