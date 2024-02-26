@@ -153,8 +153,7 @@ Please refer to the 'Getting Started' section in our [Figma file](https://www.fi
 The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
 
 ## :framed_picture: Icons Set
-
-After you setup the project, you can start working on your desired icons. B01LER comes with a set of predefined icons in the variety of sizes: small, extra small, extra extra small, medium (default), large, extra large. All the default icons can be seen in our [Storybook](https://b01ler.onrender.com/?path=/docs/foundation-icons--docs).
+After you setup the project, you can start implementing your desired icons. B01LER comes with a set of predefined icons in the variety of sizes: small, extra small, extra extra small, medium (default), large, extra large. All the default icons can be seen in our [Storybook](https://b01ler.onrender.com/?path=/docs/foundation-icons--docs).
 
 ### Structure
 In the project you will find 2 folders containing icons. One of them represents an input folder and the other one - output after compiling.
@@ -195,7 +194,7 @@ Removing is slightly more difficult than adding, because there are multiple comp
 - Text Input
 - Toggle Switch
 
-> Note: if you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
+> Note: If you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
 
 To remove any icon, sinmply navigate to `/icon-set` folder, delete icons you don't need in all resolutions and run:
 
