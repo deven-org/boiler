@@ -171,7 +171,8 @@
       "caption": {
         "100": {
           "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
-          "type": "typography"
+          "type": "typography",
+          "description": "Apply on captions"
         },
         "200": {
           "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
