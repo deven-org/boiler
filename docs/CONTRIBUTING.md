@@ -58,10 +58,10 @@ The best way to get started is by reading the [README](/README.md). It contains 
 Before being able to contribute to B01LER, you need to get yourself assigned to an issue. For this you could either apply to solve an existing issue or create a new issue.
 
 ### Solve an existing issue
-Browse our [existing issues](https://github.com/deven-org/B01LER-Kitchen/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
+Browse our [existing issues](https://github.com/deven-org/boiler/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
 
 ### Create a new issue
-Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues). If a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One is for bugs and the other one for everything else, like new features or also improvements of existing features.
+Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/boiler/issues). If a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One is for bugs and the other one for everything else, like new features or also improvements of existing features.
 
 <details>
 <summary>How to write a useful issue?</summary>
