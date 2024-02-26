@@ -1,0 +1,1762 @@
+{
+  "cmp": {
+    "Blanket": {
+      "Surface": {
+        "value": "{sys.bgcolor.surface.blanket}",
+        "type": "color",
+        "description": "Apply on blanket component"
+      }
+    },
+    "CaptionComponent": {
+      "Text": {
+        "TextColor": {
+          "Hint": {
+            "value": "{sys.content.surface.subtle.neutral}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      },
+      "Icon": {
+        "IconColor": {
+          "Hint": {
+            "value": "{sys.content.surface.subtle.neutral}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Checkbox": {
+      "Control": {
+        "Container": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.primary.hover}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.primary.pressed}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{sys.bgcolor.bold.danger.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bgcolor.inverse.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.inverse.primary.hover}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.inverse.primary.pressed}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.inverse.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.inverse.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.inverse.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{sys.bgcolor.inverse.danger.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sys.bordercolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{sys.bordercolor.bold.primary.hover}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{sys.bordercolor.bold.primary.pressed}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{sys.bordercolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{sys.bordercolor.bold.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{sys.bordercolor.bold.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{sys.bordercolor.bold.danger.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bordercolor.inverse.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{sys.bordercolor.inverse.primary.hover}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{sys.bordercolor.inverse.primary.pressed}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{sys.bordercolor.inverse.primary.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{sys.bordercolor.inverse.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{sys.bordercolor.inverse.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{sys.bordercolor.inverse.danger.rest}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{sys.content.bold.regular.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{sys.content.bold.regular.disabled}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{sys.content.bold.regular.danger}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Hover": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Pressed": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Focus": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Disabled": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "ReadOnly": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              },
+              "Error": {
+                "value": "{sys.content.inverse.transparent}",
+                "type": "color",
+                "description": "Also applies to indeterminate"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Counter": {
+      "Container": {
+        "BorderColor": {
+          "Neutral": {
+            "value": "{sys.bgcolor.container.informative}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{sys.bordercolor.container.warning}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.bordercolor.container.danger}",
+            "type": "color"
+          }
+        },
+        "BackgroundColor": {
+          "Neutral": {
+            "value": "{sys.bgcolor.container.informative}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{sys.bgcolor.container.warning}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.bgcolor.container.danger}",
+            "type": "color"
+          }
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "Neutral": {
+            "value": "{sys.content.container.subtle.informative}",
+            "type": "color"
+          },
+          "Warning": {
+            "value": "{sys.content.container.regular.warning}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.container.regular.danger}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Dialog": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{sys.bgcolor.surface.level_2}",
+          "type": "color"
+        }
+      },
+      "ContentSection": {
+        "Text": {
+          "TextColor": {
+            "value": "{sem.ui.headline.default}",
+            "type": "color"
+          }
+        }
+      },
+      "HeaderSection": {
+        "Headline": {
+          "TextColor": {
+            "value": "{sem.ui.headline.default}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Divider": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{sys.bordercolor.container.neutral}",
+          "type": "color",
+          "description": "Color of the divider\n>>> UI.Divider.Stroke"
+        }
+      }
+    },
+    "FormLabel": {
+      "Label": {
+        "TextColor": {
+          "Rest": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sys.content.surface.regular.disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      },
+      "LabelAppendix": {
+        "TextColor": {
+          "Rest": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sys.content.surface.regular.disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      },
+      "InlineLabel": {
+        "TextColor": {
+          "Rest": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sys.content.surface.regular.disabled}",
+            "type": "color"
+          },
+          "ReadOnly": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "InputIcon": {
+      "Icon": {
+        "IconColor": {
+          "Rest": {
+            "value": "{sys.content.inverse.regular.informative.rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sys.content.inverse.regular.informative.hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sys.content.inverse.regular.informative.pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sys.content.inverse.regular.informative.rest}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sys.content.inverse.regular.disabled}",
+            "type": "color"
+          },
+          "Error": {
+            "value": "{sys.content.inverse.regular.danger.rest}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Loader": {
+      "Background": {
+        "BorderColor": {
+          "Default": {
+            "value": "{sys.static.subtle.primary_dimmed}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{sys.static.subtle.white}",
+            "type": "color"
+          }
+        }
+      },
+      "Foreground": {
+        "BorderColor": {
+          "Default": {
+            "value": "{sys.static.regular.primary_dimmed}",
+            "type": "color"
+          },
+          "Inverted": {
+            "value": "{sys.static.regular.white}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Menu": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{sys.bgcolor.surface.level_2}",
+          "type": "color"
+        }
+      },
+      "MenuItem": {
+        "ItemContainer": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sem.selectables.container.bgcolor.active.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.container.bgcolor.active.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.container.bgcolor.active.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.container.bgcolor.active.rest}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sem.selectables.container.bgcolor.inactive.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.container.bgcolor.inactive.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.container.bgcolor.inactive.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.container.bgcolor.inactive.rest}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sem.selectables.container.bgcolor.inactive.disabled}",
+                "type": "color"
+              }
+            }
+          },
+          "BorderColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sem.selectables.container.bordercolor.active.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.container.bordercolor.active.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.container.bordercolor.active.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.container.bordercolor.active.rest}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sem.selectables.container.bordercolor.inactive.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.container.bordercolor.inactive.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.container.bordercolor.inactive.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.container.bordercolor.inactive.rest}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sem.selectables.container.bordercolor.inactive.disabled}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemLabel": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sem.selectables.label.textcolor.active.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.label.textcolor.active.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.label.textcolor.active.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.label.textcolor.active.focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sem.selectables.label.textcolor.inactive.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.label.textcolor.inactive.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.label.textcolor.inactive.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.label.textcolor.inactive.focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sem.selectables.label.textcolor.inactive.disabled}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemDescription": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sem.selectables.textsecondary.textcolor.active.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.textsecondary.textcolor.active.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.textsecondary.textcolor.active.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.textsecondary.textcolor.active.focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sem.selectables.textsecondary.textcolor.inactive.disabled}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "ItemIcon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sem.selectables.icon.iconcolor.active.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.icon.iconcolor.active.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.icon.iconcolor.active.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.icon.iconcolor.active.focus}",
+                "type": "color"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sem.selectables.icon.iconcolor.inactive.rest}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sem.selectables.icon.iconcolor.inactive.hover}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sem.selectables.icon.iconcolor.inactive.pressed}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sem.selectables.icon.iconcolor.inactive.focus}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sem.selectables.icon.iconcolor.inactive.disabled}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      },
+      "MenuSection": {
+        "SectionTitle": {
+          "value": "{sys.content.surface.regular.neutral}",
+          "type": "color",
+          "description": "Apply on section title"
+        }
+      }
+    },
+    "Radio": {
+      "Control": {
+        "Container": {
+          "BackgroundColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.primary.hover}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.primary.pressed}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.bordercolor.container.danger}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.primary.hover}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.primary.pressed}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.bordercolor.container.danger}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
+              }
+            }
+          },
+          "BorderColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.primary.hover}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.primary.pressed}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.bordercolor.container.danger}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.primary.hover}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.primary.pressed}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.primary.rest}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Selected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.bordercolor.container.danger}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Background.Unselected.Fill.Error"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.content.bold.regular.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.content.bold.regular.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.content.bold.regular.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.content.bold.regular.disabled}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Selected.Fill.ReadOnly"
+              },
+              "Error": {
+                "value": "{sys.content.bold.regular.primary}",
+                "type": "color",
+                "description": "Forms.Radio.Control.Foreground.Unselected.Fill.Error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "RadioGroup": {
+      "Legend": {
+        "textcolor": {
+          "default": {
+            "value": "{sem.forms.fieldset.legend.textcolor.default}",
+            "type": "color"
+          },
+          "disabled": {
+            "value": "{sem.forms.fieldset.legend.textcolor.disabled}",
+            "type": "color"
+          },
+          "readonly": {
+            "value": "{sem.forms.fieldset.legend.textcolor.readonly}",
+            "type": "color"
+          },
+          "error": {
+            "value": "{sem.forms.fieldset.legend.textcolor.error}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "Slider": {
+      "Thumb": {
+        "Shape": {
+          "BackgroundColor": {
+            "Rest": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Rest"
+            },
+            "Hover": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Hover"
+            },
+            "Pressed": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Pressed"
+            },
+            "Focus": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Focus"
+            },
+            "Disabled": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Disabled"
+            },
+            "ReadOnly": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.ReadOnly"
+            },
+            "Error": {
+              "value": "{sys.bgcolor.container.danger}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Fill.Error"
+            }
+          },
+          "BorderColor": {
+            "Rest": {
+              "value": "{sys.bordercolor.secondary.rest}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Rest"
+            },
+            "Hover": {
+              "value": "{sys.bordercolor.secondary.hover}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Hover"
+            },
+            "Pressed": {
+              "value": "{sys.bordercolor.secondary.pressed}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Pressed"
+            },
+            "Focus": {
+              "value": "{sys.bordercolor.secondary.rest}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Focus"
+            },
+            "Disabled": {
+              "value": "{sys.bordercolor.container.disabled}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Disabled"
+            },
+            "ReadOnly": {
+              "value": "{sys.bordercolor.container.disabled}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.ReadOnly"
+            },
+            "Error": {
+              "value": "{sys.bordercolor.container.danger}",
+              "type": "color",
+              "description": "Forms.Checkbox.Control.Background.Unselected.Stroke.Error"
+            }
+          }
+        }
+      },
+      "Track": {
+        "BorderColor": {
+          "Default": {
+            "Active": {
+              "value": "{sys.content.secondary.rest}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{sys.bgcolor.secondary.rest}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{sys.content.container.regular.disabled}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{sys.bgcolor.container.disabled}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "TickMark": {
+        "BorderColor": {
+          "Default": {
+            "Active": {
+              "value": "{sys.content.secondary.rest}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{sys.bgcolor.secondary.rest}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{sys.content.container.regular.disabled}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{sys.bgcolor.container.disabled}",
+              "type": "color"
+            }
+          }
+        },
+        "BackgroundColor": {
+          "Default": {
+            "Active": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            }
+          },
+          "Mute": {
+            "Active": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            },
+            "Inactive": {
+              "value": "{sys.bgcolor.container.neutral}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "Legend": {
+        "TextColor": {
+          "Default": {
+            "value": "{sys.content.surface.subtle.neutral}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sys.content.container.regular.disabled}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "StepperButton": {
+      "Container": {
+        "BackgroundColor": {
+          "Rest": {
+            "value": "{sys.bgcolor.silent.rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sys.bgcolor.silent.hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sys.bgcolor.silent.pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sys.bgcolor.silent.rest}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sys.bgcolor.secondary.disabled}",
+            "type": "color"
+          }
+        },
+        "BorderColor": {
+          "Rest": {
+            "value": "{sem.buttons.container.bordercolor.silent.rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sem.buttons.container.bordercolor.silent.hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sem.buttons.container.bordercolor.silent.pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sem.buttons.container.bordercolor.silent.focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sem.buttons.container.bordercolor.silent.focus}",
+            "type": "color"
+          }
+        }
+      },
+      "Icon": {
+        "IconColor": {
+          "Rest": {
+            "value": "{sem.buttons.icon.iconcolor.silent.rest}",
+            "type": "color"
+          },
+          "Hover": {
+            "value": "{sem.buttons.icon.iconcolor.silent.hover}",
+            "type": "color"
+          },
+          "Pressed": {
+            "value": "{sem.buttons.icon.iconcolor.silent.pressed}",
+            "type": "color"
+          },
+          "Focus": {
+            "value": "{sem.buttons.icon.iconcolor.silent.focus}",
+            "type": "color"
+          },
+          "Disabled": {
+            "value": "{sem.buttons.icon.iconcolor.silent.disabled}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "TabBar": {
+      "Tab": {
+        "HighlightLine": {
+          "BackgroundColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Hover": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Pressed": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Focus": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Hover": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Pressed": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Focus": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              },
+              "Disabled": {
+                "value": "{sys.content.container.regular.disabled}",
+                "type": "color",
+                "description": "Apply as fill on HightlightLine"
+              }
+            }
+          },
+          "Opacity": {
+            "Active": {
+              "Rest": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Hover": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Pressed": {
+                "value": "1",
+                "type": "opacity"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Hover": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Pressed": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Focus": {
+                "value": "0",
+                "type": "opacity"
+              },
+              "Disabled": {
+                "value": "0",
+                "type": "opacity"
+              }
+            }
+          }
+        },
+        "Label": {
+          "TextColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Hover": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Pressed": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Focus": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sys.content.container.regular.disabled}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            }
+          }
+        },
+        "Icon": {
+          "IconColor": {
+            "Active": {
+              "Rest": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Hover": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Pressed": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              },
+              "Focus": {
+                "value": "{sys.content.surface.regular.link}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            },
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sys.content.container.regular.disabled}",
+                "type": "color",
+                "description": "Defines the color of the label of a tab. Apply on <label>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Tooltip": {
+      "Container": {
+        "BackgroundColor": {
+          "value": "{sys.bgcolor.surface.inverted}",
+          "type": "color"
+        }
+      },
+      "Text": {
+        "TextColor": {
+          "value": "{sys.content.surface.inverted.regular.neutral}",
+          "type": "color"
+        }
+      }
+    },
+    "ToggleSwitch": {
+      "Control": {
+        "Container": {
+          "BackgroundColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.neutral.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.neutral.hover}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.neutral.pressed}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.neutral.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Fill.ReadOnly"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.bgcolor.bold.safe.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Rest\n"
+              },
+              "Hover": {
+                "value": "{sys.bgcolor.bold.safe.hover}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bgcolor.bold.safe.pressed}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Pressed\n"
+              },
+              "Focus": {
+                "value": "{sys.bgcolor.bold.safe.rest}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bgcolor.bold.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Selected.Fill.ReadOnly"
+              }
+            }
+          },
+          "BorderColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Rest"
+              },
+              "Hover": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Background.Unselected.Stroke.ReadOnly"
+              }
+            }
+          }
+        },
+        "AY11Icon": {
+          "IconColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.content.bold.subtle.neutral}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.content.bold.subtle.neutral}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.content.bold.subtle.neutral}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.content.bold.subtle.neutral}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.content.bold.subtle.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.content.bold.subtle.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.content.bold.subtle.safe}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Rest"
+              },
+              "Hover": {
+                "value": "{sys.content.bold.subtle.safe}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Hover"
+              },
+              "Pressed": {
+                "value": "{sys.content.bold.subtle.safe}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Pressed"
+              },
+              "Focus": {
+                "value": "{sys.content.bold.subtle.safe}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Focus"
+              },
+              "Disabled": {
+                "value": "{sys.content.bold.subtle.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.Disabled"
+              },
+              "ReadOnly": {
+                "value": "{sys.content.bold.subtle.disabled}",
+                "type": "color",
+                "description": "Forms.ToggleSwitch.Control.Foreground.Selected.Fill.ReadOnly"
+              }
+            }
+          }
+        },
+        "Knob": {
+          "BackgroundColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sys.static.subtle.disabled}",
+                "type": "color"
+              },
+              "ReadOnly": {
+                "value": "{sys.static.subtle.disabled}",
+                "type": "color"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{sys.static.regular.white}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{sys.static.subtle.disabled}",
+                "type": "color"
+              },
+              "ReadOnly": {
+                "value": "{sys.static.subtle.disabled}",
+                "type": "color"
+              }
+            }
+          },
+          "BorderColor": {
+            "Inactive": {
+              "Rest": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
+                "type": "color"
+              },
+              "ReadOnly": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Inactive.Rest}",
+                "type": "color"
+              }
+            },
+            "Active": {
+              "Rest": {
+                "value": "{sys.bordercolor.transparent}",
+                "type": "color"
+              },
+              "Hover": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
+                "type": "color"
+              },
+              "Pressed": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
+                "type": "color"
+              },
+              "Focus": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
+                "type": "color"
+              },
+              "Disabled": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
+                "type": "color"
+              },
+              "ReadOnly": {
+                "value": "{cmp.ToggleSwitch.Control.Knob.BorderColor.Active.Rest}",
+                "type": "color"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

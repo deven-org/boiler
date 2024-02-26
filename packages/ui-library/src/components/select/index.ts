@@ -75,11 +75,12 @@ export class BlrSelect extends LitElement {
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
     if (this.size) {
       const iconSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Forms',
-        this.size.toUpperCase(),
-        'InputField',
-        'Icon',
+        'sem',
+        'forms',
+        'inputfield',
+        'icon',
+        'sizevariant',
+        this.size,
       ]).toLowerCase() as SizesType;
 
       if (this.hasError) {

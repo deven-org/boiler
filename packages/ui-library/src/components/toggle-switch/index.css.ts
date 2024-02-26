@@ -14,9 +14,8 @@ export const styleCustom = typeSafeNestedCss/* css */ `
 
 export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDark } = renderThemedCssStrings(
   (componentTokens, semanticTokens) => {
-    const { ToggleSwitch, FormLabel } = componentTokens.Forms;
-
-    const { FocusBorder } = semanticTokens.Global;
+    const { ToggleSwitch, FormLabel } = componentTokens.cmp;
+    const { focusring } = semanticTokens.sem.global;
 
     return typeSafeNestedCss/* css */ `
       .blr-label-toggleswitch {
@@ -28,7 +27,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
 
           &.focus {
             border-radius: ${ToggleSwitch.Control.Container.BorderRadius};
-            outline: ${FocusBorder.width} ${FocusBorder.style} ${FocusBorder.color};
+            outline: ${focusring.border.width} ${focusring.border.style} ${focusring.border.color};
             outline-offset: 2px;
           }
         }

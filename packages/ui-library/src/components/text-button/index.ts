@@ -105,18 +105,19 @@ export class BlrTextButton extends LitElement {
       const loaderVariant = determineLoaderVariant(this.variant);
 
       const loaderSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Actions',
-        this.sizeVariant.toUpperCase(),
-        'Loader',
+        'sem',
+        'buttons',
+        'loader',
+        'sizevariant',
+        this.sizeVariant,
       ]).toLowerCase() as FormSizesType;
 
       const iconSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Actions',
+        'cmp',
         'TextButton',
-        this.sizeVariant.toUpperCase(),
         'Icon',
+        'SizeVariant',
+        this.sizeVariant.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">

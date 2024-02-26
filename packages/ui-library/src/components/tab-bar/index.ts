@@ -100,20 +100,20 @@ export class BlrTabBar extends LitElement {
       });
 
       const iconSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Navigation',
+        'cmp',
         'TabBar',
         'Tab',
-        this.size.toUpperCase(),
         'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
       ]) as SizesType;
 
       const iconButtonSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Actions',
+        'cmp',
         'IconButton',
-        this.size.toUpperCase(),
         'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
       return html`<style>
