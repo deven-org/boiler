@@ -27,14 +27,14 @@ const sharedStyles = html`
 const defaultParams: BlrTextButtonType = {
   theme: 'Light',
   variant: 'primary',
-  size: 'md',
+  sizeVariant: 'md',
   label: 'Label-text',
   hasIcon: true,
   icon: 'blr360',
   iconPosition: 'leading',
   disabled: false,
   loading: false,
-  buttonId: 'buttonId',
+  textButtonId: 'buttonId',
   buttonDisplay: 'inline-block',
 };
 
@@ -43,7 +43,6 @@ export default {
   argTypes: {
     //Appearance
     variant: {
-      name: 'variant',
       description: 'Select variant of the component.',
       options: ActionVariants,
       control: { type: 'select' },
@@ -51,8 +50,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: 'Select size of the component.',
       options: ActionSizes,
       control: { type: 'select' },
@@ -77,7 +75,6 @@ export default {
     },
     //Content / Settings
     label: {
-      name: 'label',
       description: 'Enter string used as label text.',
       control: {
         type: 'text',
@@ -87,7 +84,6 @@ export default {
       },
     },
     hasIcon: {
-      name: 'hasIcon',
       description: 'Choose if component has an icon.',
       defaultValue: true,
       control: {
@@ -98,7 +94,6 @@ export default {
       },
     },
     icon: {
-      name: 'icon',
       description: 'Select an icon which is displayed next to the label.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -108,7 +103,6 @@ export default {
       },
     },
     iconPosition: {
-      name: 'iconPosition',
       description: 'Choose the position of the icon next to the label.',
       options: IconPositionVariant,
       control: { type: 'select' },
@@ -119,7 +113,6 @@ export default {
     },
     //States
     disabled: {
-      name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.',
       defaultValue: false,
@@ -136,43 +129,33 @@ export default {
       },
     },
     //Technical attributes
-    buttonId: {
-      name: 'textButtonId',
+    textButtonId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
       },
     },
-    //Accessibility
-    arialabel: {
-      name: 'ariaLabel',
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        disable: true,
-      },
-    },
     // Events
-    onClick: {
-      name: 'onClick',
+    blrClick: {
+      name: 'blrClick',
       description: 'Fires when the component is clicked.',
-      action: 'onClick',
+      action: 'blrClick',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
-        disable: 'true',
+        category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
@@ -215,27 +198,23 @@ BlrTextButton.args = defaultParams;
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
-  'arialabel',
   'variant',
-  'size',
+  'sizeVariant',
   'label',
   'hasIcon',
   'iconPosition',
   'icon',
   'loading',
   'disabled',
-  'buttonId',
+  'textButtonId',
   'buttonDisplay',
-  'onClick',
-  'onBlur',
-  'onFocus',
+  'blrClick',
+  'blrBlur',
+  'blrFocus',
 ];
 const generateDisabledArgTypes = (argTypes: string[]) => {
   const disabledArgTypes = {};
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   argTypes.forEach((argType: string) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     disabledArgTypes[argType] = {
       table: {
         disable: true,
@@ -313,31 +292,31 @@ export const SizeVariant = () => {
       <div class="stories-textbutton">
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'xs',
+          sizeVariant: 'xs',
           label: 'Button XS',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'sm',
+          sizeVariant: 'sm',
           label: 'Button SM',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Button MD',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'lg',
+          sizeVariant: 'lg',
           label: 'Button LG',
           hasIcon: false,
         })}
         ${BlrTextButtonRenderFunction({
           ...defaultParams,
-          size: 'xl',
+          sizeVariant: 'xl',
           label: 'Button XL',
           hasIcon: false,
         })}

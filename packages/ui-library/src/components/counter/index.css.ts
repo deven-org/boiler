@@ -13,6 +13,7 @@ export const { tokenizedLight: counterLight, tokenizedDark: counterDark } = rend
       outline-color: ${Counter.Container.BorderColor.Neutral};
       outline-style: solid;
       white-space: nowrap;
+      display: initial;
 
       &.sm {
         padding: ${Counter.Container.Padding.SM};

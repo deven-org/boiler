@@ -200,12 +200,12 @@ export class BlrTextarea extends LitElement {
           ${this.hasLabel
             ? html`<div class="label-wrapper">
                 ${BlrFormLabelRenderFunction({
-                  labelText: this.label,
-                  labelSize: this.size,
+                  label: this.label,
+                  sizeVariant: this.size,
                   labelAppendix: this.labelAppendix,
                   forValue: this.textareaId,
                   theme: this.theme,
-                  variant: this.hasError ? 'error' : 'label',
+                  hasError: Boolean(this.label),
                 })}
               </div>`
             : nothing}

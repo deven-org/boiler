@@ -13,7 +13,7 @@ const sampleParams: BlrTextButtonType = {
   iconPosition: 'leading',
   loading: false,
   disabled: false,
-  buttonId: 'button-id',
+  textButtonId: 'button-id',
   variant: 'cta',
   theme: 'Light',
   buttonDisplay: 'inline-block',
@@ -39,7 +39,7 @@ describe('blr-text-button', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
     const className = textButton?.className;

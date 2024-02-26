@@ -56,9 +56,9 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
-      buttonId: btnId,
+      iconButtonId: btnId,
       variant: this.btnVariant,
-      size: this.size,
+      sizeVariant: this.size,
       theme: this.theme,
     });
 

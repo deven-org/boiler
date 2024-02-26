@@ -34,7 +34,7 @@ const sharedStyles = html`
 export default {
   title: 'Components/Button Group',
   argTypes: {
-    size: {
+    sizeVariant: {
       options: ButtonGroupSizes,
       description: 'Select size of the component.',
       control: { type: 'select' },
@@ -57,7 +57,7 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Text Button or Icon Button components, or the combination of both. For more information have a look at the [Text Button](?path=/docs/design-system-web-components-actions-buttons-text-button--docs) and the Icon Button [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) components.
+        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Text Button or Icon Button components, or the combination of both. For more information have a look at the [Text Button](?path=/docs/design-system-web-components-actions-buttons-text-button--docs) and the [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) components.
         - [**Appearance**](#appearance)
           - [**Alignment**](#alignment)
       </markdown>
@@ -80,7 +80,6 @@ export const ButtonGroup = (
   const contentButtons = html`
     ${BlrTextButtonRenderFunction({
       label: typeof primaryLabel === 'string' ? primaryLabel : 'Text Button',
-      size: 'md',
       theme: 'Light',
       loading: false,
       variant: 'primary',
@@ -89,7 +88,6 @@ export const ButtonGroup = (
     })}
     ${BlrTextButtonRenderFunction({
       label: secondaryLabel,
-      size: 'md',
       theme: 'Light',
       loading: false,
       variant: 'secondary',
@@ -97,7 +95,6 @@ export const ButtonGroup = (
       buttonDisplay: 'inline-block',
     })}
     ${BlrIconButtonRenderFunction({
-      size: 'md',
       theme: 'Light',
       loading: false,
       variant: 'silent',
@@ -114,7 +111,7 @@ export const ButtonGroup = (
 };
 
 const defaultParams: BlrButtonGroupType = {
-  size: 'md',
+  sizeVariant: 'md',
   alignment: 'left',
 };
 
