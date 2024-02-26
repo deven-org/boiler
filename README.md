@@ -28,6 +28,7 @@
       - [Adding Icons](#adding-icons)
       - [Changing Icons](#changing-icons)
       - [Removing Icons](#removing-icons)
+    - [Usage](#usage)
   - [:white_check_mark: How to test](#white_check_mark-how-to-test)
   - [:toolbox: How to build](#toolbox-how-to-build)
   - [:rocket: How to deploy](#rocket-how-to-deploy)
