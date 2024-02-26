@@ -127,7 +127,7 @@
         }
       },
       "paragraph": {
-        "50": {
+        "s_50": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.75}",
             "type": "typography"
@@ -137,7 +137,7 @@
             "type": "typography"
           }
         },
-        "100": {
+        "s_100": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.87}",
             "type": "typography"
@@ -147,7 +147,7 @@
             "type": "typography"
           }
         },
-        "200": {
+        "s_200": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.100}",
             "type": "typography"
@@ -157,7 +157,7 @@
             "type": "typography"
           }
         },
-        "300": {
+        "s_300": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.125}",
             "type": "typography"
@@ -169,16 +169,16 @@
         }
       },
       "caption": {
-        "100": {
+        "s_100": {
           "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
           "type": "typography",
           "description": "Apply on captions"
         },
-        "200": {
+        "s_200": {
           "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
           "type": "typography"
         },
-        "300": {
+        "s_300": {
           "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
           "type": "typography"
         }
