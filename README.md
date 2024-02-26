@@ -154,7 +154,6 @@ The 'Getting Started' section also explains the logic behind our token names and
 
 ## :framed_picture: Icons Set
 
-## Icons Set
 After you setup the project, you can start working on your desired icons. B01LER comes with a set of predefined icons in the variety of sizes: small, extra small, extra extra small, medium (default), large, extra large. All the default icons can be seen in our [Storybook](https://b01ler.onrender.com/?path=/docs/foundation-icons--docs).
 
 ### Structure
