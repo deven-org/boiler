@@ -3,7 +3,12 @@ import { resolve } from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    '@storybook/addon-designs',
+    '@geometricpanda/storybook-addon-badges',
+  ],
   framework: '@storybook/web-components-webpack5',
   docs: {
     autodocs: true,
@@ -20,6 +25,15 @@ const config: StorybookConfig = {
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: resolve(__dirname, 'packages'),
+    });
+
+    config.module!.rules!.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: 'raw-loader',
+        },
+      ],
     });
 
     // Return the altered config

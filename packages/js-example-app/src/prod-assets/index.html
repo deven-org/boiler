@@ -18,16 +18,28 @@
           <blr-text-button
             theme="Light"
             variant="cta"
-            size="md"
+            sizeVariant="md"
             label="Button"
             hasIcon="true"
             iconPosition="leading"
             icon="blr360"
-            buttonId="button-id"
-            loadingStatus="Loading"
+            textButtonId="button-id"
           ></blr-text-button>
           <button id="toggleLoadingState">Toggle Loading State</button>
           <button id="toggleDisabledState">Toggle Disabled State</button>
+        </div>
+
+        <div class="component">
+          <p>Select</p>
+          <blr-select label="Boiler Select Component">
+            <option value="" label="--Please choose an option--"></option>
+            <option value="option1" label="Option 1"></option>
+            <option value="option2" label="Option 2"></option>
+            <option value="option3" label="Option 3"></option>
+            <option value="option4" label="Option 4"></option>
+            <option value="option5" label="Option 5"></option>
+            <option value="option6" label="Option 6"></option>
+          </blr-select>
         </div>
 
         <div class="component">
@@ -38,6 +50,29 @@
         <div class="component">
           <p>Text Input</p>
           <blr-text-input placeholder="Enter text..." value="" hintText="Hint"></blr-text-input>
+        </div>
+
+        <div class="component">
+          <p>Number Input</p>
+          <blr-number-input
+            value="1000"
+            size="md"
+            steppervariant="vertical"
+            placeholder="Placeholder-text"
+            fractiondigits="10"
+            totaldigits="10"
+            prependunit="true"
+            unit="kg"
+            step="1"
+            haslabel="true"
+            label="Label-text"
+            labelappendix="(Appendix)"
+            numberinputid="test-id"
+            theme="Light"
+            name="NumberInput"
+            decimals="10"
+            leadingzeros="3"
+          ></blr-number-input>
         </div>
 
         <div class="component">
@@ -56,6 +91,21 @@
         </div>
 
         <div class="component">
+          <p>Tooltip</p>
+
+          <blr-tooltip
+            theme="Light"
+            placement="top"
+            elevation="true"
+            hasarrow="true"
+            offset="20"
+            message="Message-text"
+          >
+            <blr-text-button theme="Light" variant="secondary" size="md" label="Hover me"></blr-text-button>
+          </blr-tooltip>
+        </div>
+
+        <div class="component">
           <p>Radio Input</p>
           <blr-radio size="md"></blr-radio>
         </div>
@@ -63,64 +113,6 @@
         <div class="component">
           <p>Tab Bar</p>
           <blr-tab-bar
-            tabs="[
-          {
-            label: 'Tab 1',
-            icon: 'blr360',
-            href: './',
-            disabled: true,
-          },
-          {
-            label: 'Tab 2',
-            icon: 'blrInfo',
-            href: './',
-          },
-          {
-            label: 'Tab 3',
-            icon: 'blrCrop',
-            href: './',
-          },
-          {
-            label: 'Tab 4',
-            icon: 'blrDocumentNew',
-            href: './',
-          },
-          {
-            label: 'Tab 5',
-            icon: 'blrDocumentTwo',
-            href: './',
-          },
-          {
-            label: 'Tab 6',
-            icon: 'blrDownload',
-            href: './',
-          },
-          {
-            label: 'Tab 7',
-            icon: 'blrHeart',
-            href: './',
-          },
-          {
-            label: 'Tab 8',
-            icon: 'blrHome',
-            href: './',
-          },
-          {
-            label: 'Tab 9',
-            icon: 'blrLockClosed',
-            href: './',
-          },
-          {
-            label: 'Tab 10',
-            icon: 'blrMusic',
-            href: './',
-          },
-          {
-            label: 'Tab 11',
-            icon: 'blrPen',
-            href: './',
-          },
-        ]"
             variant="standard"
             overflowVariantStandard="buttons"
             overflowVariantFullWidth="browserOverflow"
@@ -129,7 +121,18 @@
             tabContent="labelAndIcon"
             iconPosition="leading"
             alignment="left"
-          ></blr-tab-bar>
+            ><p disabled label="Tab 1" icon="blr360">Tab 1</p>
+            <p label="Tab 2" icon="blrInfo">Tab 2</p>
+            <p label="Tab 3" icon="blrCrop">Tab 3</p>
+            <p label="Tab 4" icon="blrDocumentNew">Tab 4</p>
+            <p label="Tab 5" icon="blrDocumentTwo">Tab 5</p>
+            <p label="Tab 6" icon="blrDownload">Tab 6</p>
+            <p label="Tab 7" icon="blrHeart">Tab 7</p>
+            <p label="Tab 8" icon="blrHome">Tab 8</p>
+            <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
+            <p label="Tab 10" icon="blrMusic">Tab 10</p>
+            <p label="Tab 11" icon="blrPen">Tab 11</p>
+          </blr-tab-bar>
         </div>
       </div>
 

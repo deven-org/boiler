@@ -2,9 +2,8 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
-export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { SM, MD, LG, LabelNextToControl, Legend } = semanticTokens.Forms;
-  const { Radio, RadioGroup } = componentTokens.Forms;
+export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderThemedCssStrings((componentTokens) => {
+  const { Radio, RadioGroup, FormLabel, CaptionComponent } = componentTokens.cmp;
 
   /* ToDos:
 
@@ -36,56 +35,69 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
 
       .blr-legend {
-        _FIX: to override constructed css;
+        ${
+          // to override constructed css
+          ""
+        }
         margin: 0 !important;
+        color: ${RadioGroup.Legend.textcolor.default};
+
         &.sm {
-          font-weight: ${SM.Legend.fontWeight};
-          font-size: ${SM.Legend.fontSize};
-          font-family: ${SM.Legend.fontFamily}, sans-serif;
-          line-height: ${SM.Legend.lineHeight};
-          color: ${Legend.Default};
+          font-weight: ${RadioGroup.Legend.SM.fontWeight};
+          font-size: ${RadioGroup.Legend.SM.fontSize};
+          font-family: ${RadioGroup.Legend.SM.fontFamily}, sans-serif;
+          line-height: ${RadioGroup.Legend.SM.lineHeight};
         }
   
         &.md {
-          font-weight: ${MD.Legend.fontWeight};
-          font-size: ${MD.Legend.fontSize};
-          font-family: ${MD.Legend.fontFamily}, sans-serif;
-          line-height: ${MD.Legend.lineHeight};
-          color: ${Legend.Default};
+          font-weight: ${RadioGroup.Legend.MD.fontWeight};
+          font-size: ${RadioGroup.Legend.MD.fontSize};
+          font-family: ${RadioGroup.Legend.MD.fontFamily}, sans-serif;
+          line-height: ${RadioGroup.Legend.MD.lineHeight};
         }
   
         &.lg {
-          font-weight: ${LG.Legend.fontWeight};
-          font-size: ${LG.Legend.fontSize};
-          font-family: ${LG.Legend.fontFamily}, sans-serif;
-          line-height: ${LG.Legend.lineHeight};
-          color: ${Legend.Default};
+          font-weight: ${RadioGroup.Legend.LG.fontWeight};
+          font-size: ${RadioGroup.Legend.LG.fontSize};
+          font-family: ${RadioGroup.Legend.LG.fontFamily}, sans-serif;
+          line-height: ${RadioGroup.Legend.LG.lineHeight};
         }
   
         &.error {
-          color: ${Legend.Error};
+          color: ${RadioGroup.Legend.textcolor.error};
         }
       }
     }
 
     .caption-group {
-    
-      _FIX_: To override constructed margin;
+      ${
+        // To override constructed margin
+        ""
+      }
       all: initial;
       margin: 0;
     
       &.sm {
-        _FIX: "Can be merged with the .caption-group above";
+        ${
+          // Can be merged with the .caption-group above
+          ""
+        }
         padding-top: ${RadioGroup.CaptionSlot.PaddingTop.SM};
       }
 
       &.md {
-        _FIX: "Can be merged with the .caption-group above";
+        ${
+          // Can be merged with the .caption-group above
+          ""
+        }
         padding-top: ${RadioGroup.CaptionSlot.PaddingTop.MD};
       }
 
       &.lg {
-        _FIX: "Can be merged with the .caption-group above";
+        ${
+          // Can be merged with the .caption-group above
+          ""
+        }
         padding-top: ${RadioGroup.CaptionSlot.PaddingTop.LG};
       }
     }
@@ -94,7 +106,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       display: flex;
       align-items: flex-start;
       position: relative;
-      flex-flow: nnowrap;
+      flex-flow: nowrap;
       justify-content: space-between;
 
       &.vertical {
@@ -120,21 +132,17 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
       }
     }
 
-    
-    
-
     .blr-radio {
       _FIX_: To override constructed margin;
       all: initial;
       margin: 0 !important;
-
       display: flex;
       flex-grow: 1;
       transition: all 0.25s ease 0s;
 
       .blr-form-label-inline {
         _FIX?_: "LabelNextToControl states";
-        color: ${LabelNextToControl.Rest};
+        color: ${FormLabel.InlineLabel.TextColor.Rest};
         transition: all 0.25s ease 0s;
         display: flex;
         align-items: center;
@@ -169,7 +177,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         }
       }
 
-
       &.sm {
         gap: ${Radio.ContentRow.ItemSpacing.SM};
         padding: ${Radio.ContentRow.Padding.SM};
@@ -183,15 +190,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.SM};
 
           .caption-wrapper {
-            padding: ${SM.CaptionComponent.Padding};
-            gap: ${SM.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.SM};
+            gap: ${CaptionComponent.Container.ItemSpacing.SM};
           }
 
           .blr-form-label-inline {
-            font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${SM.LabelNextToControl.fontWeight};
-            line-height: ${SM.LabelNextToControl.lineHeight};
-            font-size: ${SM.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
           }
         }
       }
@@ -209,15 +216,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.MD};
 
           .caption-wrapper {
-            padding: ${MD.CaptionComponent.Padding};
-            gap: ${MD.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.MD};
+            gap: ${CaptionComponent.Container.ItemSpacing.MD};
           }
 
           .blr-form-label-inline {
-            font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${MD.LabelNextToControl.fontWeight};
-            line-height: ${MD.LabelNextToControl.lineHeight};
-            font-size: ${MD.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
           }
         }
       }
@@ -235,20 +242,18 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           gap: ${Radio.ContentCol.ItemSpacing.LG};
 
           .caption-wrapper {
-            padding: ${LG.CaptionComponent.Padding};
-            gap: ${LG.CaptionComponent.ItemSpacing};
+            padding: ${CaptionComponent.Container.Padding.LG};
+            gap: ${CaptionComponent.Container.ItemSpacing.LG};
           }
 
           .blr-form-label-inline {
-            font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
-            font-weight: ${LG.LabelNextToControl.fontWeight};
-            line-height: ${LG.LabelNextToControl.lineHeight};
-            font-size: ${LG.LabelNextToControl.fontSize};
+            font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
+            font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+            line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
+            font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
           }
         }
       }
-
-
 
       .input-control {
         background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Rest};
@@ -266,6 +271,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         &:not(.disabled):not(.readonly) {
           &:hover {
             background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Hover};
+            
             &::before {
               content: "";
               background-color: ${Radio.Control.Icon.IconColor.Inactive.Hover};
@@ -275,52 +281,48 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${LabelNextToControl.Hover};
+                color: ${FormLabel.InlineLabel.TextColor.Hover};
               }
             }
           }
         
-
           &:active {
-          
             background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Pressed};
 
             &::before {
               content: "";
               background-color: ${Radio.Control.Icon.IconColor.Inactive.Pressed};
-
               width: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
               height: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
             }
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${LabelNextToControl.Pressed};
+                color: ${FormLabel.InlineLabel.TextColor.Pressed};
+              }
+            }
+          }
+
+          &:focus {
+            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
+            _FIX_: "needs focus ring";
+            outline: black solid 2px;
+            outline-offset: 2px;
+
+            &::before {
+              content: "";
+              background-color: ${Radio.Control.Icon.IconColor.Inactive.Focus};
+              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+            }
+
+            & + .label-wrapper {
+              .blr-form-label-inline {
+                color: ${FormLabel.InlineLabel.TextColor.Focus};
               }
             }
           }
         }
-
-        &:focus {
-          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
-          _FIX_: "needs focus ring";
-          outline: black solid 2px;
-          outline-offset: 2px;
-
-          &::before {
-            content: "";
-            background-color: ${Radio.Control.Icon.IconColor.Inactive.Focus};
-            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
-            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
-          }
-
-          & + .label-wrapper {
-            .blr-form-label-inline {
-              color: ${LabelNextToControl.Focus};
-            }
-          }
-        }
-
 
         &.checked, &:checked {
           background-color: ${Radio.Control.Container.BackgroundColor.Active.Rest};
@@ -333,7 +335,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
 
           &:not(.disabled):not(.readonly) {
-            
             &:hover {
               background-color: ${Radio.Control.Container.BackgroundColor.Active.Hover};
 
@@ -342,10 +343,8 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 background-color: ${Radio.Control.Icon.IconColor.Active.Hover};
                 width: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
                 height: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
-
               }
             }
-          
 
             &:active {
               background-color: ${Radio.Control.Container.BackgroundColor.Active.Pressed};
@@ -355,6 +354,17 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
                 background-color: ${Radio.Control.Icon.IconColor.Active.Pressed};
                 width: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
                 height: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
+              }
+            }
+
+            &:focus {
+              background-color: ${Radio.Control.Container.BackgroundColor.Active.Focus};
+              
+              &::before {
+                content: "";
+                background-color: ${Radio.Control.Icon.IconColor.Active.Focus};
+                width: ${Radio.Control.Icon.IconSize.SM.Active.Focus};
+                height: ${Radio.Control.Icon.IconSize.SM.Active.Focus};
               }
             }
           }
@@ -396,7 +406,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           & + .label-wrapper {
             .blr-form-label-inline {
               cursor: not-allowed;
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }
         }
@@ -414,7 +424,15 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.Error};
+              color: ${FormLabel.InlineLabel.TextColor.Error};
+            }
+          }
+
+          &.checked,
+          &:checked {
+            &::before {
+              width: ${Radio.Control.Icon.IconSize.SM.Active.Error};
+              height: ${Radio.Control.Icon.IconSize.SM.Active.Error};
             }
           }
 
@@ -427,10 +445,6 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
           }
         }
       }
-
-
-
-
 
       &.disabled {
         .input-control {
@@ -447,7 +461,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.Disabled};
+              color: ${FormLabel.InlineLabel.TextColor.Disabled};
             }
           }
         }
@@ -468,7 +482,7 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
 
           & + .label-wrapper {
             .blr-form-label-inline {
-              color: ${LabelNextToControl.ReadOnly};
+              color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
             }
           }
         }
@@ -478,21 +492,24 @@ export const { tokenizedLight: radioLight, tokenizedDark: radioDark } = renderTh
         margin-top: 0;
 
         &.sm {
-          padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${SM.Caption.fontFamily}, sans-serif;
-          font-size: ${SM.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.SM};
+          font-family: ${CaptionComponent.Text.Typography.SM.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.SM.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.SM.lineHeight};
         }
 
         &.md {
-          padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${MD.Caption.fontFamily}, sans-serif;
-          font-size: ${MD.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.MD};
+          font-family: ${CaptionComponent.Text.Typography.MD.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.MD.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.MD.lineHeight};
         }
 
         &.lg {
-          padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${LG.Caption.fontFamily}, sans-serif;
-          font-size: ${LG.Caption.fontSize};
+          padding: ${CaptionComponent.TextWrapper.Padding.LG};
+          font-family: ${CaptionComponent.Text.Typography.LG.fontFamily}, sans-serif;
+          font-size: ${CaptionComponent.Text.Typography.LG.fontSize};
+          line-height: ${CaptionComponent.Text.Typography.LG.lineHeight};
         }
       }
     }

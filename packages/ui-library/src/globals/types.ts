@@ -50,12 +50,6 @@ export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
 export type ButtonGroupAlignmentType = (typeof ButtonGroupAlignmentVariants)[number];
 
-export type TabType = {
-  label: string;
-  icon: SizelessIconType;
-  href: string;
-  disabled?: boolean;
-};
 export type TabVariantType = (typeof TabVariants)[number];
 export type TabContentVariantType = (typeof TabContentVariants)[number];
 export type TabAlignmentVariantType = (typeof TabAlignmentVariants)[number];
@@ -72,7 +66,6 @@ export type ButtonOption = {
   label: string;
   variant: string;
   size: FormSizesType;
-  loadingStatus: string;
   disabled: boolean;
   buttonId: string;
   trailingIcon: string;

@@ -39,16 +39,16 @@ export const generateRangeBar = (
   isMinLesserThanMax?: boolean
 ) => {
   const { tokenizedLight, tokenizedDark } = renderThemedCssStrings((componentTokens) => {
-    const { Forms } = componentTokens;
+    const { Slider } = componentTokens.cmp;
 
-    const activeDefaultColor = Forms.Slider.Track.Stroke.Active.Default;
-    const activeMuteColor = Forms.Slider.Track.Stroke.Inactive.Default;
+    const activeDefaultColor = Slider.Track.Border.Default.Active.color;
+    const activeMuteColor = Slider.Track.Border.Default.Inactive.color;
 
-    const disabledDefaultColor = Forms.Slider.Track.Stroke.Active.Mute;
-    const disbledMuteColor = Forms.Slider.Track.Stroke.Inactive.Mute;
+    const disabledDefaultColor = Slider.Track.Border.Mute.Active.color;
+    const disabledMuteColor = Slider.Track.Border.Mute.Inactive.color;
 
     const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
-    const muteColor = disabled ? disbledMuteColor : activeMuteColor;
+    const muteColor = disabled ? disabledMuteColor : activeMuteColor;
 
     const twoKnobStartValue = isMinLesserThanMax ? startValueToSlider : endValueToSlider;
     const twoKnobEndValue = isMinLesserThanMax ? endValueToSlider : startValueToSlider;

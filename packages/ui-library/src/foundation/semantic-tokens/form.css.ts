@@ -3,162 +3,170 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { UserInput, SurfaceFill, SM, MD, LG, Input, InputBorderRadius, Placeholder, Caption, Label, LabelAppendix, InputIcon } =
-    semanticTokens.Forms;
-  const { Select } = componentTokens.Forms;
+  const { forms } = semanticTokens.sem;
+  const { Select, FormLabel, InputIcon } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     .blr-form-element {
       all: initial;
       width: 100%;
-      color: ${UserInput.Default.Rest};
-      font-weight: ${MD.UserInput.fontWeight};
-      font-size: ${MD.UserInput.fontSize};
-      font-family: ${MD.UserInput.fontFamily}, sans-serif;
-      border: ${Input.Default.Rest.width} ${Input.Default.Rest.style} ${Input.Default.Rest.color};
-      border-radius: ${InputBorderRadius};
+      color: ${forms.inputfield.userinput.textcolor.default.rest};
+      font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
+      font-size: ${forms.inputfield.userinput.typography.md.fontSize};
+      font-family: ${forms.inputfield.userinput.typography.md.fontFamily}, sans-serif;
+
+      border-width: ${forms.inputfield.container.border.default.rest.width};
+      border-style: ${forms.inputfield.container.border.default.rest.style};
+      border-color: ${forms.inputfield.container.border.default.rest.color};
+      border-radius: ${forms.inputfield.container.borderradius};
       box-sizing: border-box;
 
       &::placeholder {
-        color: ${Placeholder.Default.Rest};
+        color: ${forms.inputfield.placeholder.textcolor.default.rest};
       }
 
       &:hover {
-        border-width: ${Input.Default.Hover.width};
-        border-style: ${Input.Default.Hover.style};
-        border-color: ${Input.Default.Hover.color};
-        color: ${UserInput.Default.Hover};
-        background-color: ${SurfaceFill.Default.Hover};
+        border-width: ${forms.inputfield.container.border.default.hover.width};
+        border-style: ${forms.inputfield.container.border.default.hover.style};
+        border-color: ${forms.inputfield.container.border.default.hover.color};
+        color: ${forms.inputfield.userinput.textcolor.default.hover};
+        background-color: ${forms.inputfield.container.bgcolor.default.hover};
 
         &::placeholder {
-          color: ${Placeholder.Default.Hover};
+          color: ${forms.inputfield.placeholder.textcolor.default.hover};
         }
       }
 
       &:active {
-        border-width: ${Input.Default.Pressed.width};
-        border-style: ${Input.Default.Pressed.style};
+        border-width: ${forms.inputfield.container.border.default.pressed.width};
+        border-style: ${forms.inputfield.container.border.default.pressed.style};
         border-color: transparent;
-        outline: ${Input.Default.Pressed.width} ${Input.Default.Pressed.style} ${Input.Default.Pressed.color};
-        color: ${UserInput.Default.Pressed};
-        background-color: ${SurfaceFill.Default.Pressed};
+        outline: ${forms.inputfield.container.border.default.pressed.width} ${forms.inputfield.container.border.default.pressed.style}
+          ${forms.inputfield.container.border.default.pressed.color};
+        color: ${forms.inputfield.userinput.textcolor.default.pressed};
+        background-color: ${forms.inputfield.container.bgcolor.default.pressed};
 
         &::placeholder {
-          color: ${Placeholder.Default.Pressed};
+          color: ${forms.inputfield.placeholder.textcolor.default.pressed};
         }
       }
 
       &[readonly] {
-        border-width: ${Input.Default.ReadOnly.width};
-        border-style: ${Input.Default.ReadOnly.style};
+        border-width: ${forms.inputfield.container.border.default.readonly.width};
+        border-style: ${forms.inputfield.container.border.default.readonly.style};
         border-color: transparent;
-        outline: ${Input.Default.Hover.width} ${Input.Default.ReadOnly.style} ${Input.Default.ReadOnly.color};
-        background-color: ${SurfaceFill.Default.ReadOnly};
+        outline: ${forms.inputfield.container.border.default.hover.width} ${forms.inputfield.container.border.default.readonly.style}
+          ${forms.inputfield.container.border.default.readonly.color};
+        background-color: ${forms.inputfield.container.bgcolor.default.readonly};
 
         &::placeholder {
-          color: ${Placeholder.Default.ReadOnly};
+          color: ${forms.inputfield.placeholder.textcolor.default.readonly};
         }
       }
 
       &:disabled {
-        border-width: ${Input.Default.ReadOnly.width};
-        border-style: ${Input.Default.Disabled.style};
+        border-width: ${forms.inputfield.container.border.default.readonly.width};
+        border-style: ${forms.inputfield.container.border.default.disabled.style};
         border-color: transparent;
-        outline: ${Input.Default.Disabled.width} ${Input.Default.Disabled.style} ${Input.Default.Disabled.color};
-        color: ${UserInput.Default.Disabled};
-        background-color: ${SurfaceFill.Default.Disabled};
+        outline: ${forms.inputfield.container.border.default.disabled.width} ${forms.inputfield.container.border.default.disabled.style}
+          ${forms.inputfield.container.border.default.disabled.color};
+        color: ${forms.inputfield.userinput.textcolor.default.disabled};
+        background-color: ${forms.inputfield.container.bgcolor.default.disabled};
         cursor: not-allowed;
 
         &::placeholder {
-          color: ${Placeholder.Default.Disabled};
+          color: ${forms.inputfield.placeholder.textcolor.default.disabled};
         }
       }
 
       &:focus {
-        border-width: ${Input.Default.Rest.width};
-        border-style: ${Input.Default.Rest.style};
+        border-width: ${forms.inputfield.container.border.default.rest.width};
+        border-style: ${forms.inputfield.container.border.default.rest.style};
         border-color: transparent;
-        outline: ${Input.Default.Focus.width} ${Input.Default.Focus.style} ${Input.Default.Focus.color};
-        color: ${UserInput.Default.Focus};
-        background-color: ${SurfaceFill.Default.Focus};
+        outline: ${forms.inputfield.container.border.default.focus.width} ${forms.inputfield.container.border.default.focus.style}
+          ${forms.inputfield.container.border.default.focus.color};
+        color: ${forms.inputfield.userinput.textcolor.default.focus};
+        background-color: ${forms.inputfield.container.bgcolor.default.focus};
 
         &::placeholder {
-          color: ${Placeholder.Default.Focus};
+          color: ${forms.inputfield.placeholder.textcolor.default.focus};
         }
       }
 
       &.error-input {
-        border-width: ${Input.Error.Rest.width};
-        border-style: ${Input.Error.Rest.style};
-        border-color: ${Input.Error.Rest.color};
-        color: ${UserInput.Error.Rest};
-        background-color: ${SurfaceFill.Error.Rest};
+        border-width: ${forms.inputfield.container.border.error.rest.width};
+        border-style: ${forms.inputfield.container.border.error.rest.style};
+        border-color: ${forms.inputfield.container.border.error.rest.color};
+        color: ${forms.inputfield.userinput.textcolor.error.rest};
+        background-color: ${forms.inputfield.container.bgcolor.error.rest};
 
         &::placeholder {
-          color: ${Placeholder.Error.Rest};
+          color: ${forms.inputfield.placeholder.textcolor.error.rest};
         }
 
         &:hover {
-          border-width: ${Input.Error.Hover.width};
-          border-style: ${Input.Error.Hover.style};
-          border-color: ${Input.Error.Hover.color};
-          color: ${UserInput.Error.Hover};
-          background-color: ${SurfaceFill.Error.Hover};
+          border-width: ${forms.inputfield.container.border.error.hover.width};
+          border-style: ${forms.inputfield.container.border.error.hover.style};
+          border-color: ${forms.inputfield.container.border.error.hover.color};
+          color: ${forms.inputfield.userinput.textcolor.error.hover};
+          background-color: ${forms.inputfield.container.bgcolor.error.hover};
 
           &::placeholder {
-            color: ${Placeholder.Error.Hover};
+            color: ${forms.inputfield.placeholder.textcolor.error.hover};
           }
         }
 
         &:active {
-          border-width: ${Input.Error.Pressed.width};
-          border-style: ${Input.Error.Pressed.style};
-          border-style: ${Input.Error.Pressed.color};
-          outline: ${Input.Error.Pressed.width} ${Input.Error.Pressed.style} ${Input.Error.Pressed.color};
-          color: ${UserInput.Error.Pressed};
-          background-color: ${SurfaceFill.Error.Pressed};
+          border-width: ${forms.inputfield.container.border.error.pressed.width};
+          border-style: ${forms.inputfield.container.border.error.pressed.style};
+          border-style: ${forms.inputfield.container.border.error.pressed.color};
+          outline: ${forms.inputfield.container.border.error.pressed.width} ${forms.inputfield.container.border.error.pressed.style}
+            ${forms.inputfield.container.border.error.pressed.color};
+          color: ${forms.inputfield.userinput.textcolor.error.pressed};
+          background-color: ${forms.inputfield.container.bgcolor.error.pressed};
 
           &::placeholder {
-            color: ${Placeholder.Error.Pressed};
+            color: ${forms.inputfield.placeholder.textcolor.error.pressed};
           }
         }
 
         &:focus {
-          border-width: ${Input.Error.Rest.width};
-          border-style: ${Input.Error.Rest.style};
+          border-width: ${forms.inputfield.container.border.error.rest.width};
+          border-style: ${forms.inputfield.container.border.error.rest.style};
           border-color: transparent;
-          outline: ${Input.Error.Focus.width} ${Input.Error.Focus.style} ${Input.Error.Focus.color};
-          color: ${UserInput.Error.Focused};
-          background-color: ${SurfaceFill.Error.Focus};
+          outline: ${forms.inputfield.container.border.error.focus.width} ${forms.inputfield.container.border.error.focus.style}
+            ${forms.inputfield.container.border.error.focus.color};
+          color: ${forms.inputfield.userinput.textcolor.error.focus};
+          background-color: ${forms.inputfield.container.bgcolor.error.focus};
 
           &::placeholder {
-            color: ${Placeholder.Error.Focus};
+            color: ${forms.inputfield.placeholder.textcolor.error.focus};
           }
         }
       }
 
       &.sm {
-        font-weight: ${SM.UserInput.fontWeight};
-        font-size: ${SM.UserInput.fontSize};
-        font-family: ${SM.UserInput.fontFamily}, sans-serif;
-        line-height: ${SM.UserInput.lineHeight};
-        padding: ${SM.InputField.Padding};
+        font-weight: ${forms.inputfield.userinput.typography.sm.fontWeight};
+        font-size: ${forms.inputfield.userinput.typography.sm.fontSize};
+        font-family: ${forms.inputfield.userinput.typography.sm.fontFamily}, sans-serif;
+        line-height: ${forms.inputfield.userinput.typography.sm.lineHeight};
+        padding: ${forms.inputfield.container.padding.sm};
       }
 
       &.md {
-        font-weight: ${MD.UserInput.fontWeight};
-        font-size: ${MD.UserInput.fontSize};
-        font-family: ${MD.UserInput.fontFamily}, sans-serif;
-        line-height: ${MD.UserInput.lineHeight};
-        padding: ${MD.InputField.Padding};
+        font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
+        font-size: ${forms.inputfield.userinput.typography.md.fontSize};
+        font-family: ${forms.inputfield.userinput.typography.md.fontFamily}, sans-serif;
+        line-height: ${forms.inputfield.userinput.typography.md.lineHeight};
+        padding: ${forms.inputfield.container.padding.md};
       }
 
       &.lg {
-        font-weight: ${LG.UserInput.fontWeight};
-        font-size: ${LG.UserInput.fontSize};
-        font-family: ${LG.UserInput.fontFamily}, sans-serif;
-        line-height: ${LG.UserInput.lineHeight};
-        padding: ${LG.InputField.Padding};
+        font-weight: ${forms.inputfield.userinput.typography.lg.fontWeight};
+        font-size: ${forms.inputfield.userinput.typography.lg.fontSize};
+        font-family: ${forms.inputfield.userinput.typography.lg.fontFamily}, sans-serif;
+        line-height: ${forms.inputfield.userinput.typography.lg.lineHeight};
+        padding: ${forms.inputfield.container.padding.lg};
       }
     }
 
@@ -169,18 +177,18 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       .blr-input-icon {
         position: absolute;
-        color: ${Placeholder.Default.Rest};
+        color: ${forms.inputfield.placeholder.textcolor.default.rest};
       }
 
       &.error-input {
         .blr-input-icon {
-          color: ${Input.Error.Rest.color};
+          color: ${forms.inputfield.userinput.textcolor.error.rest};
         }
       }
 
       &.sm {
-        padding: ${SM.LabelSlot.Padding};
-        margin: ${SM.InputSlot.Margin};
+        padding: ${forms.labelslot.padding.sm};
+        margin: ${forms.inputslot.margin.sm};
 
         .blr-input-icon {
           right: ${Select.SM.IconPaddingRight};
@@ -188,8 +196,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.md {
-        padding: ${MD.LabelSlot.Padding};
-        margin: ${MD.InputSlot.Margin};
+        padding: ${forms.labelslot.padding.md};
+        margin: ${forms.inputslot.margin.md};
 
         .blr-input-icon {
           right: ${Select.MD.IconPaddingRight};
@@ -197,8 +205,8 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       }
 
       &.lg {
-        padding: ${LG.LabelSlot.Padding};
-        margin: ${LG.InputSlot.Margin};
+        padding: ${forms.labelslot.padding.lg};
+        margin: ${forms.inputslot.margin.lg};
 
         .blr-input-icon {
           right: ${Select.LG.IconPaddingRight};
@@ -207,11 +215,11 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
 
       &:hover {
         & input:not(:disabled) + .blr-input-icon {
-          color: ${InputIcon.Hover};
+          color: ${InputIcon.Icon.IconColor.Hover};
         }
 
         & .error-input:not(:disabled) + .blr-input-icon {
-          color: ${Input.Error.Rest.color};
+          color: ${forms.inputfield.userinput.textcolor.error.rest};
           cursor: default;
         }
       }
@@ -226,149 +234,81 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       flex-direction: column;
 
       &.sm {
-        margin: ${SM.CaptionSlot.Margin};
+        margin: ${forms.captionslot.margin.sm};
       }
 
       &.md {
-        margin: ${MD.CaptionSlot.Margin};
+        margin: ${forms.captionslot.margin.md};
       }
 
       &.lg {
-        margin: ${MD.CaptionSlot.Margin};
-      }
-    }
-
-    .blr-form-caption {
-      display: flex;
-      color: ${Caption.Hint};
-
-      &.error {
-        color: ${Caption.Error};
-      }
-
-      &.sm {
-        padding: ${SM.CaptionComponent.Padding};
-        gap: ${SM.CaptionComponent.ItemSpacing};
-
-        .blr-icon {
-          padding-top: ${SM.CaptionComponent.IconWrapper.PaddingTop};
-          height: ${SM.CaptionComponent.IconDimension};
-          width: ${SM.CaptionComponent.IconDimension};
-        }
-
-        .blr-caption-text {
-          padding: ${SM.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${SM.Caption.fontFamily}, sans-serif;
-          font-weight: ${SM.Caption.fontWeight};
-          font-size: ${SM.Caption.fontSize};
-          line-height: ${SM.Caption.lineHeight};
-        }
-      }
-
-      &.md {
-        padding: ${MD.CaptionComponent.Padding};
-        gap: ${MD.CaptionComponent.ItemSpacing};
-
-        .blr-icon {
-          padding-top: ${MD.CaptionComponent.IconWrapper.PaddingTop};
-          height: ${MD.CaptionComponent.IconDimension};
-          width: ${MD.CaptionComponent.IconDimension};
-        }
-
-        .blr-caption-text {
-          padding: ${MD.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-family: ${MD.Caption.fontFamily}, sans-serif;
-          font-weight: ${MD.Caption.fontWeight};
-          font-size: ${MD.Caption.fontSize};
-          line-height: ${MD.Caption.lineHeight};
-        }
-      }
-
-      &.lg {
-        padding: ${LG.CaptionComponent.Padding};
-        gap: ${LG.CaptionComponent.ItemSpacing};
-
-        .blr-icon {
-          padding-top: ${LG.CaptionComponent.IconWrapper.PaddingTop};
-          height: ${LG.CaptionComponent.IconDimension};
-          width: ${LG.CaptionComponent.IconDimension};
-        }
-
-        .blr-caption-text {
-          padding: ${LG.CaptionComponent.CaptionLabelWrapper.Padding};
-          font-weight: ${LG.Caption.fontWeight};
-          font-size: ${LG.Caption.fontSize};
-          font-family: ${LG.Caption.fontFamily}, sans-serif;
-          line-height: ${LG.Caption.lineHeight};
-        }
+        margin: ${forms.captionslot.margin.lg};
       }
     }
 
     .blr-form-label {
       display: flex;
       align-items: center;
-      color: ${Label.Rest};
+      color: ${FormLabel.Label.TextColor.Rest};
       word-break: break-all;
 
       &:focus {
-        color: ${Label.Focus};
+        color: ${FormLabel.Label.TextColor.Focus};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Focus};
+        }
       }
 
       &:hover {
-        color: ${Label.Hover};
+        color: ${FormLabel.Label.TextColor.Hover};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Hover};
+        }
       }
 
       &:disabled {
-        color: ${Label.Disabled};
+        color: ${FormLabel.Label.TextColor.Disabled};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.Disabled};
+        }
       }
 
       &[readonly] {
-        color: ${Label.ReadOnly};
+        color: ${FormLabel.Label.TextColor.ReadOnly};
+        .blr-form-label-appendix {
+          color: ${FormLabel.LabelAppendix.TextColor.ReadOnly};
+        }
       }
 
       &.error {
-        color: ${Label.Error};
-
+        color: ${FormLabel.Label.TextColor.Error};
         .blr-form-label-appendix {
-          color: ${LabelAppendix.Error};
+          color: ${FormLabel.LabelAppendix.TextColor.Error};
         }
       }
 
       &.sm {
-        padding: ${SM.LabelSlot.Padding};
-        font-weight: ${SM.Label.fontWeight};
-        font-size: ${SM.Label.fontSize};
-        font-family: ${SM.Label.fontFamily}, sans-serif;
-        line-height: ${SM.Label.lineHeight};
-        gap: ${SM.LabelComponent.ItemSpacing};
-        color: ${Label.Rest};
-
-        &.error {
-          color: ${Label.Error};
-        }
+        font-weight: ${FormLabel.Label.Typography.SM.fontWeight};
+        font-size: ${FormLabel.Label.Typography.SM.fontSize};
+        font-family: ${FormLabel.Label.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.SM.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.SM};
       }
 
       &.md {
-        padding: ${MD.LabelSlot.Padding};
-        font-weight: ${MD.Label.fontWeight};
-        font-size: ${MD.Label.fontSize};
-        font-family: ${MD.Label.fontFamily}, sans-serif;
-        line-height: ${MD.Label.lineHeight};
-        gap: ${MD.LabelComponent.ItemSpacing};
+        font-weight: ${FormLabel.Label.Typography.MD.fontWeight};
+        font-size: ${FormLabel.Label.Typography.MD.fontSize};
+        font-family: ${FormLabel.Label.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.MD.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.MD};
       }
 
       &.lg {
-        padding: ${LG.LabelSlot.Padding};
-        font-weight: ${LG.Label.fontWeight};
-        font-size: ${LG.Label.fontSize};
-        font-family: ${LG.Label.fontFamily}, sans-serif;
-        line-height: ${LG.Label.lineHeight};
-        color: ${Label.Rest};
-        gap: ${LG.LabelComponent.ItemSpacing};
-
-        &.error {
-          color: ${Label.Error};
-        }
+        font-weight: ${FormLabel.Label.Typography.LG.fontWeight};
+        font-size: ${FormLabel.Label.Typography.LG.fontSize};
+        font-family: ${FormLabel.Label.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.Label.Typography.LG.lineHeight};
+        gap: ${FormLabel.Container.ItemSpacing.LG};
       }
     }
 
@@ -376,57 +316,52 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       flex: 1;
 
       &.sm {
-        font-weight: ${SM.LabelNextToControl.fontWeight};
-        font-size: ${SM.LabelNextToControl.fontSize};
-        font-family: ${SM.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${SM.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
       }
 
       &.md {
-        font-weight: ${MD.LabelNextToControl.fontWeight};
-        font-size: ${MD.LabelNextToControl.fontSize};
-        font-family: ${MD.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${MD.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
       }
 
       &.lg {
-        font-weight: ${LG.LabelNextToControl.fontWeight};
-        font-size: ${LG.LabelNextToControl.fontSize};
-        font-family: ${LG.LabelNextToControl.fontFamily}, sans-serif;
-        line-height: ${LG.LabelNextToControl.lineHeight};
+        font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
+        font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
+        font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
       }
     }
 
     .blr-form-label-appendix {
-      padding-left: ${MD.LabelSlot.Padding};
-      font-weight: ${MD.LabelAppendix.fontWeight};
-      font-size: ${MD.LabelAppendix.fontSize};
-      font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
-      line-height: ${MD.LabelAppendix.lineHeight};
-      color: ${LabelAppendix.Rest};
+      color: ${FormLabel.LabelAppendix.TextColor.Rest};
 
       &.sm {
-        padding-left: ${SM.LabelSlot.Padding};
-        font-weight: ${SM.LabelAppendix.fontWeight};
-        font-size: ${SM.LabelAppendix.fontSize};
-        font-family: ${MD.LabelAppendix.fontFamily}, sans-serif;
-        line-height: ${MD.LabelAppendix.lineHeight};
+        padding-left: ${forms.labelslot.padding.sm};
+        font-weight: ${FormLabel.LabelAppendix.Typography.SM.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.SM.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.SM.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.SM.lineHeight};
+      }
+
+      &.md {
+        padding-left: ${forms.labelslot.padding.md};
+        font-weight: ${FormLabel.LabelAppendix.Typography.MD.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.MD.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.MD.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.MD.lineHeight};
       }
 
       &.lg {
-        padding-left: ${LG.LabelSlot.Padding};
-        font-weight: ${LG.LabelAppendix.fontWeight};
-        font-size: ${LG.LabelAppendix.fontSize};
-        font-family: ${LG.LabelAppendix.fontFamily}, sans-serif;
-        line-height: ${LG.LabelAppendix.lineHeight};
-      }
-
-      .error {
-        color: ${Label.Error};
-      }
-
-      .hint {
-        color: ${Caption.Hint};
+        padding-left: ${forms.labelslot.padding.lg};
+        font-weight: ${FormLabel.LabelAppendix.Typography.LG.fontWeight};
+        font-size: ${FormLabel.LabelAppendix.Typography.LG.fontSize};
+        font-family: ${FormLabel.LabelAppendix.Typography.LG.fontFamily}, sans-serif;
+        line-height: ${FormLabel.LabelAppendix.Typography.LG.lineHeight};
       }
     }
   `;

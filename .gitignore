@@ -11,10 +11,8 @@ packages/js-example-app/dist
 
 .yarn/install-state.gz
 
-packages/ui-library/src/foundation/_tokens-generated/__component-tokens.Dark.generated.mjs
-packages/ui-library/src/foundation/_tokens-generated/__component-tokens.Light.generated.mjs
-packages/ui-library/src/foundation/_tokens-generated/__semantic-tokens.Dark.generated.mjs
-packages/ui-library/src/foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs
+packages/ui-library/src/foundation/_tokens-generated/__component-tokens.*.generated.mjs
+packages/ui-library/src/foundation/_tokens-generated/__semantic-tokens.*.generated.mjs
 packages/ui-library/src/foundation/_tokens-generated/_border-radius.generated.scss
 packages/ui-library/src/foundation/_tokens-generated/_border-width.generated.scss
 packages/ui-library/src/foundation/_tokens-generated/_color.generated.scss
@@ -25,8 +23,7 @@ packages/ui-library/src/foundation/_tokens-generated/_letter-spacing.generated.s
 packages/ui-library/src/foundation/_tokens-generated/_line-heights.generated.scss
 packages/ui-library/src/foundation/_tokens-generated/_pargraph-spacing.generated.scss
 packages/ui-library/src/foundation/_tokens-generated/config-tokens/__component-config.generated.mjs
-packages/ui-library/src/foundation/_tokens-generated/index.Dark.generated.ts
-packages/ui-library/src/foundation/_tokens-generated/index.Light.generated.ts
+packages/ui-library/src/foundation/_tokens-generated/index.*.generated.ts
 packages/ui-library/src/foundation/_tokens-generated/index.generated.scss
 packages/ui-library/src/foundation/_tokens-generated/index.themes.ts
 

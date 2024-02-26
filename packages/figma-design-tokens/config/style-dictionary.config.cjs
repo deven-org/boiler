@@ -1,7 +1,7 @@
+// const kebabCase = require('lodash.kebabcase');
 const StyleDictionaryPackage = require('style-dictionary');
 const sdTransforms = require('@tokens-studio/sd-transforms');
 const { minifyDictionary, fileHeader } = StyleDictionaryPackage.formatHelpers;
-const kebabCase = require('lodash.kebabcase');
 require('./transforms/index');
 
 const themes = require('./themes.cjs');
@@ -9,85 +9,33 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
-/*
-const types = [
-  'borderRadius',
-  'borderWidth',
-  'fontFamilies',
-  'fontWeights',
-  'lineHeights',
-  'fontSizes',
-  'pargraphSpacing',
-  'letterSpacing',
-];
-*/
-
-const semanticTypes = [
-  'CTA',
-  'Primary',
-  'Secondary',
-  'Silent',
-  'Destructive',
-  'Encourage',
-  'BorderRadius',
-  'BorderWidth',
-  'XS',
-  'SM',
-  'MD',
-  'LG',
-  'XL',
-  'Background',
-  'Fill',
-  'Caption',
-  'CaptionSlot',
-  'Label',
-  'LabelSlot',
-  'Legend',
-  'Lvl_1',
-  'Lvl_2',
-  'UserInput',
-  'Placeholder',
-  'SurfaceFill',
-  'InputBorderRadius',
-  'Input',
-  'InputSlot',
-  'InputField',
-  'LabelAppendix',
-  'InputIcon',
-  'LabelNextToControl',
-  'Focus',
-  'FocusBorder',
-  'Feedback',
-  'Neutral',
-  'Warning',
-  'Error',
-  'PrefixSuffix',
-];
+const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui'];
 
 const componentTypes = [
-  'TextButton',
+  'ButtonGroup',
+  'CaptionComponent',
+  'CaptionGroup',
+  'Checkbox',
+  'Counter',
+  'Divider',
+  'FormLabel',
+  'Icon',
   'IconButton',
   'IconDropdown',
-  'Icon',
+  'InputIcon',
   'Loader',
-  'TextArea',
-  'Radio',
-  'Checkbox',
-  'ToggleSwitch',
-  'Counter',
-  'Error',
-  'Warning',
-  'Select',
-  'StepperButton',
-  'StepperCombo',
-  'Divider',
-  'TabBar',
-  'Slider',
-  'ButtonGroup',
-  'Tooltip',
   'RadioGroup',
   'NumberInput',
-  'CaptionGroup',
+  'Select',
+  'Slider',
+  'StepperButton',
+  'StepperCombo',
+  'Radio',
+  'TabBar',
+  'TextButton',
+  'TextArea',
+  'ToggleSwitch',
+  'Tooltip',
 ];
 
 StyleDictionaryPackage.registerFormat({
@@ -117,12 +65,11 @@ StyleDictionaryPackage.registerFormat({
 const getStyleDictionaryConfig = (theme) => {
   return {
     source: [
-      `input/tokens/intermediary/${theme}.json`,
       'input/tokens/core/*.json',
-      'input/tokens/color/*.json',
-      'input/tokens/dimensions/*.json',
-      'input/tokens/captions/*.json',
-      'input/tokens/sizeVariants/*.json',
+      `input/tokens/sys/${theme.toLowerCase()}.json`,
+      'input/tokens/sys/sizes.json',
+      'input/tokens/sem/*.json',
+      'input/tokens/cmp/*.json',
     ],
     platforms: {
       /*

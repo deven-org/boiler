@@ -11,7 +11,7 @@ const createComponentConfigTokenGetter = (data: any) => {
       if (currentObj.hasOwnProperty(key)) {
         currentObj = currentObj[key];
       } else {
-        console.log('createComponentConfigTokenGetter: did not found ' + key);
+        throw new Error('createComponentConfigTokenGetter: did not found ' + key);
         return 'xxs'; // Key not found
       }
     }
