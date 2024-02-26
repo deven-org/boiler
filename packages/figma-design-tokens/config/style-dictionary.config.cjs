@@ -66,7 +66,7 @@ const getStyleDictionaryConfig = (theme) => {
   return {
     source: [
       'input/tokens/core/*.json',
-      `input/tokens/sys/${theme}.json`,
+      `input/tokens/sys/${theme.toLowerCase()}.json`,
       'input/tokens/sys/sizes.json',
       'input/tokens/sem/*.json',
       'input/tokens/cmp/*.json',
