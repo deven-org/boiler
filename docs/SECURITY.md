@@ -1,11 +1,8 @@
 # Security Policy
-
 ## Supported Versions
-
 Security updates are only applied to the latest published version.
 
 ## Reporting a Vulnerability
-
 Please do not disclose security vulnerabilities in public issues, disclosures, or pull requests.
 
 Instead, please send an email to [boiler.security@accenture.com](mailto:boiler.security@accenture.com).
