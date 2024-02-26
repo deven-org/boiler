@@ -17,6 +17,7 @@
     - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
     - [Report an issue](#report-an-issue)
   - [:gear: Requirements](#gear-requirements)
+  - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
   - [:rocket: How to start](#rocket-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
@@ -70,6 +71,9 @@ We are happy about anyone who wants to participate in our community. To ask ques
 
 ### Report an issue
 Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/boiler/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation. In case you discover a security vulnerability please review our [security policy](/docs/SECURITY.md) for more details on how to report it.
+
+## :triangular_ruler: Architecture
+Get to know about our Architecture [here](./docs/ARCHITECTURE.md).
 
 ## :gear: Requirements
 1. First you need to install Git. Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
