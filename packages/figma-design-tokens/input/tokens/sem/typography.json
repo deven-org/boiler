@@ -29,20 +29,22 @@
     "forms": {
       "fieldset": {
         "legend": {
-          "sm": {
-            "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
-            "type": "typography",
-            "description": "Apply on forms group-legends eg.: <RadioGroup>"
-          },
-          "md": {
-            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
-            "type": "typography",
-            "description": "Apply on forms group-legends eg.: <RadioGroup>"
-          },
-          "lg": {
-            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
-            "type": "typography",
-            "description": "Apply on forms group-legends eg.: <RadioGroup>"
+          "typography": {
+            "sm": {
+              "value": "{core.typography.sourceSansPro.semibold.75FixHeight}",
+              "type": "typography",
+              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+            },
+            "md": {
+              "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+              "type": "typography",
+              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+            },
+            "lg": {
+              "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+              "type": "typography",
+              "description": "Apply on forms group-legends eg.: <RadioGroup>"
+            }
           }
         }
       },
