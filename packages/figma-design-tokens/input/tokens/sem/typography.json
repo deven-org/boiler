@@ -127,7 +127,7 @@
         }
       },
       "paragraph": {
-        "xs": {
+        "50": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.75}",
             "type": "typography"
@@ -137,7 +137,7 @@
             "type": "typography"
           }
         },
-        "sm": {
+        "100": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.87}",
             "type": "typography"
@@ -147,7 +147,7 @@
             "type": "typography"
           }
         },
-        "md": {
+        "200": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.100}",
             "type": "typography"
@@ -157,7 +157,7 @@
             "type": "typography"
           }
         },
-        "lg": {
+        "300": {
           "regular": {
             "value": "{core.typography.sourceSansPro.regular.125}",
             "type": "typography"
@@ -169,15 +169,15 @@
         }
       },
       "caption": {
-        "sm": {
+        "100": {
           "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
           "type": "typography"
         },
-        "md": {
+        "200": {
           "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
           "type": "typography"
         },
-        "lg": {
+        "300": {
           "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
           "type": "typography"
         }
