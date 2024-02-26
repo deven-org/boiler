@@ -1,5 +1,5 @@
 # B01LER
-![B01LER_UpdateImg_1100-480@2x](https://github.com/deven-org/B01LER-Kitchen/assets/122102805/bae176fa-d423-4353-9805-c4e9e4c29ba1)
+![B01LER_UpdateImg_1100-480@2x](https://github.com/deven-org/boiler/assets/122102805/7f55e1fd-955f-4c9f-890d-3d5a03f5c3aa)
 
 ## :page_with_curl: Content
 - [B01LER](#b01ler)
@@ -67,10 +67,10 @@ You can send us messages via [hello@boilerds.com](mailto:hello@boilerds.com), wh
 Join the B01LER Monthly Session and ask questions, if you have any. The session takes place on the last Thursday of each month from 4 PM to 4:30 PM (CET). You can add the session to your calendar by following the guide in the pinned post of our dedicated [Teams channel](https://teams.microsoft.com/l/channel/19%3Aca0a1284d8b34c62b80e983ca3af7934%40thread.tacv2/Monthly%20Session?groupId=2d176fa2-6d3a-4c70-a986-d05b5977678f&tenantId=e0793d39-0939-496d-b129-198edd916feb) for the session (you need to be part of the Accenture Org to join).
 
 ### Questions, feedback or feature requests?
-We are happy about anyone who wants to participate in our community. To ask questions or give us feedback please [open a discussion on GitHub](https://github.com/deven-org/B01LER-Kitchen/discussions). For feature requests please use our [feature request template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Aenhancement&projects=deven-org%2F3&template=2_feature_request.yaml&title=%5BFeature+Request%5D%3A+).
+We are happy about anyone who wants to participate in our community. To ask questions or give us feedback please [open a discussion on GitHub](https://github.com/deven-org/boiler/discussions). For feature requests please use our [feature request template](https://github.com/deven-org/boiler/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Aenhancement&projects=deven-org%2F3&template=2_feature_request.yaml&title=%5BFeature+Request%5D%3A+).
 
 ### Report an issue
-Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation. In case you discover a security vulnerability please review our [security policy](/docs/SECURITY.md) for more details on how to report it.
+Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/boiler/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation. In case you discover a security vulnerability please review our [security policy](/docs/SECURITY.md) for more details on how to report it.
 
 ## :triangular_ruler: Architecture
 Get to know about our Architecture [here](./docs/ARCHITECTURE.md).
@@ -97,7 +97,7 @@ In addition, you might need to install Corepack. For more information checkout [
    In case you want to contribute to this repository, the first step is to clone the repository:
 
    ```sh
-   $ git clone https://github.com/deven-org/B01LER-Kitchen.git
+   $ git clone https://github.com/deven-org/boiler.git
    ```
 
 3. now we enable corepack for yarn and choose right version
