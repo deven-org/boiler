@@ -15,32 +15,32 @@ import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inlin
 export class BlrRadio extends LitElement {
   static styles = [styleCustom];
 
-  @property() optionId!: string;
+  @property() radioId!: string;
   @property() label!: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
   @property() checked?: boolean;
   @property() name?: string;
-  @property() size?: InputSizesType = 'md';
+  @property() sizeVariant?: InputSizesType = 'md';
   @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
+  @property() blrChange?: HTMLElement['oninput'];
+  @property() blrBlur?: HTMLElement['blur'];
+  @property() blrFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType;
+  @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() hintMessage?: string;
-  @property() hintIcon?: SizelessIconType;
+  @property() hintMessageIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
       const classes = classMap({
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
         disabled: this.disabled || false,
         readonly: this.readonly || false,
         checked: this.checked || false,
@@ -48,28 +48,28 @@ export class BlrRadio extends LitElement {
       });
 
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintIcon)
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? html`
               <div class="hint-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  size: this.size,
+                  size: this.sizeVariant,
                   message: this.hintMessage,
-                  icon: this.hintIcon,
+                  icon: this.hintMessageIcon,
                 })}
               </div>
             `
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? html`
               <div class="error-wrapper">
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  size: this.size,
+                  size: this.sizeVariant,
                   message: this.errorMessage,
-                  icon: this.errorIcon,
+                  icon: this.errorMessageIcon,
                 })}
               </div>
             `
@@ -82,7 +82,7 @@ export class BlrRadio extends LitElement {
         </style>
         <div class="blr-radio ${classes}">
           <input
-            id=${this.optionId || nothing}
+            id=${this.radioId || nothing}
             class="${classes} input-control"
             type="radio"
             name=${this.name}
@@ -91,18 +91,18 @@ export class BlrRadio extends LitElement {
             ?invalid=${this.hasError}
             ?checked=${this.checked}
             ?required=${this.required}
-            @input=${this.onChange}
-            @blur=${this.onBlur}
-            @focus=${this.onFocus}
+            @input=${this.blrChange}
+            @blur=${this.blrBlur}
+            @focus=${this.blrFocus}
           />
           <div class="label-wrapper">
             ${BlrFormLabelInlineRenderFunction({
               labelText: this.label,
-              forValue: this.optionId,
-              labelSize: this.size,
+              forValue: this.radioId,
+              labelSize: this.sizeVariant,
             })}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
               : nothing}
           </div>
         </div>
