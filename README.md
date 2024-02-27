@@ -95,7 +95,7 @@ Before you start working with B01LER Design System for Figma, make sure to insta
 
 The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
 
-## :rocket: How to start
+## :arrow_forward: How to start
 
 ### Installation
 > **Note:** You need to run terminal as administrator on Windows machines.
