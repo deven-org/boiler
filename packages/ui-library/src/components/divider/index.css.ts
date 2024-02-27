@@ -2,20 +2,20 @@ import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 export const { tokenizedLight: dividerLight, tokenizedDark: dividerDark } = renderThemedCssStrings((componentTokens) => {
-  const { UI } = componentTokens;
+  const { Divider } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     .blr-divider {
-      background-color: ${UI.Divider.Container.BackgroundColor};
+      background-color: ${Divider.Container.BackgroundColor};
 
       &.vertical {
-        width: ${UI.Divider.Container.Vertical.Width};
+        width: ${Divider.Container.Vertical.Width};
         height: 100%;
       }
 
       &.horizontal {
         width: 100%;
-        height: ${UI.Divider.Container.Horizontal.Height};
+        height: ${Divider.Container.Horizontal.Height};
       }
     }
   `;

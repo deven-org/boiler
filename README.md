@@ -1,5 +1,5 @@
 # B01LER
-![B01LER_UpdateImg_1100-480@2x](https://github.com/deven-org/B01LER-Kitchen/assets/122102805/bae176fa-d423-4353-9805-c4e9e4c29ba1)
+![B01LER_UpdateImg_1100-480@2x](https://github.com/deven-org/boiler/assets/122102805/7f55e1fd-955f-4c9f-890d-3d5a03f5c3aa)
 
 ## :page_with_curl: Content
 - [B01LER](#b01ler)
@@ -19,6 +19,7 @@
   - [:gear: Requirements](#gear-requirements)
     - [Figma](#figma)
     - [Tokens Studio](#tokens-studio)
+  - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
   - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
@@ -32,7 +33,7 @@
 ## :star: Introduction
 B01LER is a fully customisable design system (DS) that enables you to easily create cohesive and consistent digital products across multiple platforms and brands.
 
-B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
+B01LER provides pre-built components that exist in design in the form of a [component library in Figma](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig)), as well as in code in a repository (the one you have opened right now), which is also [displayed in the web using Storybook](https://b01ler.onrender.com/). Both the components in design and in code are connected via a token system.
 
 A token system is a collection of values which represent the visual properties of a design system, such as typography, color and spacing.
 
@@ -52,7 +53,7 @@ Overall, B01LER is a powerful tool that helps you work smarter, not harder. By s
 Some articles claim, that Web Components are not accessible or that they are not complying with standard accessibility guidelines. The argument says that assistive technologies like screenreaders can not access the shadow DOM and for example are not able to "see" aria or role attributes that are needed to make components accessible. This is wrong. Modern screenreaders are not "looking" at the DOM. Instead they are accessing the accessibility tree, which is provided by the browser and also contains information from the shadow DOM.
 
 ## :art: Resources
-- [Check out our Figma File](https://www.figma.com/file/zPHgVJFeLAhdM4MdOymhPb/B01LER--%5Bv0.1---alpha-release%5D?type=design&node-id=8941%3A1818&mode=design&t=owVepZzAwdrehnmL-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/boilerds/B01LER-v1-alpha%20release.fig))
+- [Check out our Figma File](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig))
 - [Have a look at our components in Storybook](https://b01ler.onrender.com/)
 
 ## :tipping_hand_person: Help & Feedback
@@ -69,10 +70,13 @@ You can send us messages via [hello@boilerds.com](mailto:hello@boilerds.com), wh
 Join the B01LER Monthly Session and ask questions, if you have any. The session takes place on the last Thursday of each month from 4 PM to 4:30 PM (CET). You can add the session to your calendar by following the guide in the pinned post of our dedicated [Teams channel](https://teams.microsoft.com/l/channel/19%3Aca0a1284d8b34c62b80e983ca3af7934%40thread.tacv2/Monthly%20Session?groupId=2d176fa2-6d3a-4c70-a986-d05b5977678f&tenantId=e0793d39-0939-496d-b129-198edd916feb) for the session (you need to be part of the Accenture Org to join).
 
 ### Questions, feedback or feature requests?
-We are happy about anyone who wants to participate in our community. To ask questions or give us feedback please [open a discussion on GitHub](https://github.com/deven-org/B01LER-Kitchen/discussions). For feature requests please use our [feature request template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Aenhancement&projects=deven-org%2F3&template=2_feature_request.yaml&title=%5BFeature+Request%5D%3A+).
+We are happy about anyone who wants to participate in our community. To ask questions or give us feedback please [open a discussion on GitHub](https://github.com/deven-org/boiler/discussions). For feature requests please use our [feature request template](https://github.com/deven-org/boiler/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Aenhancement&projects=deven-org%2F3&template=2_feature_request.yaml&title=%5BFeature+Request%5D%3A+).
 
 ### Report an issue
-Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/B01LER-Kitchen/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation. In case you discover a security vulnerability please review our [security policy](/docs/SECURITY.md) for more details on how to report it.
+Please let us know in case you are finding any bugs by reporting them with our [bug report template](https://github.com/deven-org/boiler/issues/new?assignees=&labels=%F0%9F%9A%A8+new%3A%3Abug&projects=deven-org%2F3&template=1_bug_report.yaml&title=%5BBug%5D%3A+). The template can also be used to report issues with our documentation. In case you discover a security vulnerability please review our [security policy](/docs/SECURITY.md) for more details on how to report it.
+
+## :triangular_ruler: Architecture
+Get to know about our Architecture [here](./docs/ARCHITECTURE.md).
 
 ## :gear: Requirements
 1. First you need to install Git. Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
@@ -80,6 +84,16 @@ Please let us know in case you are finding any bugs by reporting them with our [
 3. If you don't have Yarn installed, please install it (any version, we will pick the right settings later). For more information check out the [Yarn Documentation](https://classic.yarnpkg.com/en/docs).
 
 In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
+
+
+### Figma
+Figma is a collaborative tool used for designing user interfaces. Figma can be run on any operating system that can run a browser which can help designers, developers and various other stakeholders to collaborate seamlessly. Sharing designs, managing permissions on a granular level and requesting feedback are some of the many features that help teams work in a more agile fashion.
+
+### Tokens Studio
+Tokens Studio for Figma (also known as Figma Tokens) is a plugin for Figma that allows users to integrate design tokens into their Figma designs.
+Before you start working with B01LER Design System for Figma, make sure to install the Tokens Studio for Figma (Figma Tokens) plugin so you can access and customize the UI kit easily.
+
+The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
 
 ## :rocket: How to start
 
@@ -97,7 +111,7 @@ In addition, you might need to install Corepack. For more information checkout [
    In case you want to contribute to this repository, the first step is to clone the repository:
 
    ```sh
-   $ git clone https://github.com/deven-org/B01LER-Kitchen.git
+   $ git clone https://github.com/deven-org/boiler.git
    ```
 
 3. Now we enable corepack for yarn and choose right version

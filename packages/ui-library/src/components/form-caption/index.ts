@@ -36,11 +36,11 @@ export class BlrFormCaption extends LitElement {
       });
 
       const iconSizeVariant = getComponentConfigToken([
-        'SizeVariant',
-        'Forms',
-        this.size.toUpperCase(),
+        'cmp',
         'CaptionComponent',
         'Icon',
+        'SizeVariant',
+        this.size.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
       return html`

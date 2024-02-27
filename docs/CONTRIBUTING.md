@@ -26,7 +26,7 @@ It's worth noting that we are currently in the alpha stage, and while we enthusi
 
 ## :new: New contributor guide
 > **NOTE:**
-> This documentation is focused towards contributions from developers, if you are looking for a guide for design contributions, please read the [contribute documentation in Figma](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?type=design&node-id=9020%3A1058&mode=design&t=7cANsYeeqQcDmGpq-1). Apart from code and design contributions, everyone is always invited to contribute by engaging with the community for example by commenting and giving input on issues or by starting and taking part in discussions in GitHub. Another way to contribute is by getting more eyes on the project. Just add a star to our repository! Or, if you are on Figma, add a heart to our Figma community page or leave a comment if you like the project.
+> This documentation is focused towards contributions from developers, if you are looking for a guide for design contributions, please read the [contribute documentation in Figma](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=9020%3A1058&mode=design&t=ZatzD7omF9pxalvP-1). Apart from code and design contributions, everyone is always invited to contribute by engaging with the community for example by commenting and giving input on issues or by starting and taking part in discussions in GitHub. Another way to contribute is by getting more eyes on the project. Just add a star to our repository! Or, if you are on Figma, add a heart to our Figma community page or leave a comment if you like the project.
 
 To get an overview of the project and how to set it up, read the [README](/README.md). For more details about our Code of Conduct see [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md). Here are some resources to help you get started with open source contributions:
 - [How to install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -58,10 +58,10 @@ The best way to get started is by reading the [README](/README.md). It contains 
 Before being able to contribute to B01LER, you need to get yourself assigned to an issue. For this you could either apply to solve an existing issue or create a new issue.
 
 ### Solve an existing issue
-Browse our [existing issues](https://github.com/deven-org/B01LER-Kitchen/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
+Browse our [existing issues](https://github.com/deven-org/boiler/issues) to find one that interests you. If you would like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is still relevant and give you approval to start working. Waiting for approval makes it less likely to get a rejected pull request. We will do our best to reply to you within a week.
 
 ### Create a new issue
-Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/B01LER-Kitchen/issues). If a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One is for bugs and the other one for everything else, like new features or also improvements of existing features.
+Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/boiler/issues). If a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One is for bugs and the other one for everything else, like new features or also improvements of existing features.
 
 <details>
 <summary>How to write a useful issue?</summary>

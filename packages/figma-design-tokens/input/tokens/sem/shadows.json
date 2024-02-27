@@ -1,0 +1,28 @@
+{
+  "sem": {
+    "elevation": {
+      "lvl_1": {
+        "value": {
+          "x": "0",
+          "y": "{core.dimensionPX.4}",
+          "blur": "{core.dimensionPX.4}",
+          "spread": "0",
+          "color": "{sys.shadow.100}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "lvl_0": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "0",
+          "spread": "0",
+          "color": "{sys.shadow.100}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      }
+    }
+  }
+}

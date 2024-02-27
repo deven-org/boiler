@@ -1,0 +1,14 @@
+{
+  "cmp": {
+    "Tooltip": {
+      "Container": {
+        "Elevation": {
+          "Elevated": {
+            "value": "{sem.elevation.lvl_1}",
+            "type": "boxShadow"
+          }
+        }
+      }
+    }
+  }
+}

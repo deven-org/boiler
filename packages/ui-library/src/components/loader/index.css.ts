@@ -2,7 +2,7 @@ import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
 export const { tokenizedLight: styleCustomLight, tokenizedDark: styleCustomDark } = renderThemedCssStrings((componentTokens) => {
-  const { Loader } = componentTokens.Feedback;
+  const { Loader } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     :host {

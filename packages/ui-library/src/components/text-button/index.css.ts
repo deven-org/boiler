@@ -2,16 +2,16 @@ import { componentTokens } from "../../foundation/_tokens-generated/__component-
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-const { TextButton } = componentTokens.Actions;
-const { Global, Actions } = semanticTokens;
+const { TextButton } = componentTokens.cmp;
+const { global, buttons } = semanticTokens.sem;
 
 export const styleCustom = typeSafeNestedCss`
   .focus-layer {
     position: absolute;
     inset: 0;
-    outline-color: ${Global.FocusBorder.color};
-    outline-style: ${Global.FocusBorder.style};
-    outline-width: ${Global.FocusBorder.width};
+    outline-color: ${global.focusring.border.color};
+    outline-style: ${global.focusring.border.style};
+    outline-width: ${global.focusring.border.width};
   }
 
   .blr-text-button {
@@ -78,25 +78,29 @@ export const styleCustom = typeSafeNestedCss`
     &.blr-text-button:hover, &.blr-text-button:focus {
       cursor: auto;
     
-      &.cta{
-        background-color: ${Actions.CTA.SurfaceFill.Loading}
-      }
-      &.primary{
-        background-color: ${Actions.Primary.SurfaceFill.Loading}
-      }
-      &.secondary{
-        background-color: ${Actions.Secondary.SurfaceFill.Loading}
-      }
-      &.silent{
-        background-color: ${Actions.Silent.SurfaceFill.Loading}
-      }
-      &.destructive{
-        background-color: ${Actions.Destructive.SurfaceFill.Loading}
-      }
-      &.encourage{
-        background-color: ${Actions.Encourage.SurfaceFill.Loading}
+      &.cta {
+        background-color: ${buttons.container.bgcolor.cta.focus};
       }
 
+      &.primary {
+        background-color: ${buttons.container.bgcolor.primary.focus};
+      }
+
+      &.secondary {
+        background-color: ${buttons.container.bgcolor.secondary.focus};
+      }
+
+      &.silent {
+        background-color: ${buttons.container.bgcolor.silent.focus};
+      }
+      
+      &.destructive {
+        background-color: ${buttons.container.bgcolor.destructive.focus};
+      }
+
+      &.encourage {
+        background-color: ${buttons.container.bgcolor.encourage.focus};
+      }
     }
   }
 

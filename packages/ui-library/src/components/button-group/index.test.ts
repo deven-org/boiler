@@ -12,7 +12,7 @@ const sampleParams: BlrButtonGroupType = {
 
 const testContent = BlrTextButtonRenderFunction({
   label: 'Jaok',
-  theme: 'Light',
+  theme: 'light',
   loading: false,
   variant: 'primary',
   disabled: false,
