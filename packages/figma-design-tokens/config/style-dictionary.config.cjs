@@ -14,6 +14,7 @@ const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui'];
 const componentTypes = [
   'ButtonGroup',
   'ButtonText',
+  'ButtonIcon',
   'CaptionComponent',
   'CaptionGroup',
   'Checkbox',
@@ -21,7 +22,6 @@ const componentTypes = [
   'Divider',
   'FormLabel',
   'Icon',
-  'IconButton',
   'IconDropdown',
   'InputIcon',
   'Loader',

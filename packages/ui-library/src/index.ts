@@ -1,5 +1,5 @@
 // Actions
-export { BlrIconButton } from './components/icon-button';
+export { BlrButtonIcon } from './components/button-icon';
 
 export { BlrButtonText } from './components/button-text';
 

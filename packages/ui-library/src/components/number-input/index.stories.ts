@@ -364,7 +364,7 @@ export default {
         - [**Required**](#required)
         - [**Has Error**](#has-error)
       - [**Dependencies**](#dependencies)
-        - [**Icon Button**](#icon-button)
+        - [**Button Icon**](#button-icon)
         - [**Form Label**](#form-label)
         - [**Form Caption Group**](#form-caption-group)
     </markdown>`,
@@ -615,10 +615,10 @@ export const HasError = (params: BlrNumberInputType) => {
 
 /**
  * ## Dependencies
- * ### Icon Button
- * The Number Input component makes use of the Icon Button component for increasing or decreasing the value. For more information have a look at the [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) component.
+ * ### Button Icon
+ * The Number Input component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/design-system-web-components-actions-buttons-button-icon--docs) component.
  */
-export const IconButton = (params: BlrNumberInputType) => {
+export const ButtonIcon = (params: BlrNumberInputType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -633,7 +633,7 @@ export const IconButton = (params: BlrNumberInputType) => {
   `;
 };
 
-IconButton.story = { name: ' ' };
+ButtonIcon.story = { name: ' ' };
 
 /**
  * The Number Input component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.

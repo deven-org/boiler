@@ -907,7 +907,7 @@
         }
       }
     },
-    "IconButton": {
+    "ButtonIcon": {
       "Container": {
         "Padding": {
           "XS": {

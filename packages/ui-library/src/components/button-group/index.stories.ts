@@ -2,7 +2,7 @@
 import { html } from 'lit';
 import '../../index';
 import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
-import { BlrIconButtonRenderFunction } from '../icon-button/renderFunction';
+import { BlrButtonIconRenderFunction } from '../button-icon/renderFunction';
 import { BlrButtonTextRenderFunction } from '../button-text/renderFunction';
 import { BlrButtonGroupType } from '.';
 import { BlrButtonGroupRenderFunction } from './renderFunction';
@@ -57,7 +57,7 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Button Text or Icon Button components, or the combination of both. For more information have a look at the [Button Text](?path=/docs/design-system-web-components-actions-buttons-button-text--docs) and the [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) components.
+        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Button Text or Button Icon components, or the combination of both. For more information have a look at the [Button Text](?path=/docs/design-system-web-components-actions-buttons-button-text--docs) and the [Button Icon](?path=/docs/design-system-web-components-actions-buttons-button-icon--docs) components.
         - [**Appearance**](#appearance)
           - [**Alignment**](#alignment)
       </markdown>
@@ -94,7 +94,7 @@ export const ButtonGroup = (
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
-    ${BlrIconButtonRenderFunction({
+    ${BlrButtonIconRenderFunction({
       theme: 'Light',
       loading: false,
       variant: 'silent',

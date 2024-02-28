@@ -684,7 +684,7 @@ FormLabel.story = {
   name: ' ',
 };
 /**
- * The Text Input component can have a trailing clickable Icon / Icon Button component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
+ * The Text Input component can have a trailing clickable Icon / Button Icon component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
 export const Icon = () => {
   return html`
