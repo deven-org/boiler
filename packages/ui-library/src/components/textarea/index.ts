@@ -205,7 +205,7 @@ export class BlrTextarea extends LitElement {
                   labelAppendix: this.labelAppendix,
                   forValue: this.textareaId,
                   theme: this.theme,
-                  hasError: Boolean(this.label),
+                  hasError: Boolean(this.hasError),
                 })}
               </div>`
             : nothing}
