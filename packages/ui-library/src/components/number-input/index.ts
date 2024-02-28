@@ -311,7 +311,7 @@ export class BlrNumberInput extends LitElement {
                     labelAppendix: this.labelAppendix,
                     forValue: this.numberInputId,
                     theme: this.theme,
-                    hasError: Boolean(this.label),
+                    hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
