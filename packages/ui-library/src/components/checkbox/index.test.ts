@@ -34,6 +34,21 @@ describe('blr-checkbox', () => {
     expect(className).to.contain('input-control');
   });
 
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrCheckboxRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        errorIcon: undefined,
+      })
+    );
+    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
+    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorMessageIcon).to.not.exist;
+  });
+
   it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
       BlrCheckboxRenderFunction({

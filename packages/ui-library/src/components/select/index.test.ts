@@ -66,6 +66,23 @@ describe('blr-select', () => {
     expect(errorClassName).to.contain('error');
   });
 
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrSelectRenderFunction({
+        ...sampleParams,
+        hasHint: false,
+        hasError: true,
+        errorMessageIcon: undefined,
+      })
+    );
+
+    const labelWrapper = querySelectorDeep('.label-wrapper', element?.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
+    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const errorIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorIcon).to.not.exist;
+  });
+
   it('has a size md by default', async () => {
     const element = await fixture(BlrSelectRenderFunction(sampleParams));
 
