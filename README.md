@@ -178,7 +178,7 @@ Follow these steps to add your first icon:
    ```sh
    $ yarn compile:icons
    ```
-2. To check that your icon has been added run your porject locally and inspect the Icons tab:
+2. To check that your icon has been added run your project locally and inspect the Icons tab:
 
    ```sh
    $ yarn start
@@ -238,7 +238,7 @@ To check that changes have applied do the following:
    $ yarn start
    ```
 
-2. Navigate to the Checkbox tab in your loval Storybook
+2. Navigate to the Checkbox tab in your local Storybook
 
 3. Check the checkbox
 
@@ -259,7 +259,7 @@ Removing is slightly more difficult than adding, because there are multiple comp
 
 > Note: If you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
 
-To remove any icon, sinmply navigate to `/icon-set` folder, delete icons you don't need in all resolutions and run:
+To remove any icon, simply navigate to `/icon-set` folder, delete icons you don't need in all resolutions and run:
 
    ```sh
    $ yarn compile:icons
