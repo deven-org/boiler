@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { FormSizes, LabelVariants } from '../../globals/constants';
+import { FormSizes } from '../../globals/constants';
 import { BlrFormLabelType } from './index';
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
@@ -54,11 +54,9 @@ export default {
         category: 'Content / Settings',
       },
     },
-
     hasError: {
       description: 'Choose if component has an error.',
-      options: LabelVariants,
-      control: { type: 'select' },
+      defaultValue: false,
       table: {
         category: 'Validation',
       },
@@ -86,10 +84,8 @@ export default {
 
         - [**Appearance**](#appearance)
           - [**Size Variant**](#size-variant)
-        
         - [**Content / Settings**](#content--settings)
           - [**Label Appendix**](#label-appendix)
-        
         - [**Validation**](#validation)
           - [**Has Error**](#has-error)
         
@@ -139,7 +135,7 @@ BlrFormLabel.args = defaultParams;
 
 /**
  * ## Appearance
- *  ### Size Variant
+ * ### Size Variant
  * The Form Label component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
@@ -180,19 +176,19 @@ export const LabelAppendix = () => {
   return html`
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      sizeVariant: 'lg',
+      sizeVariant: 'md',
       label: 'Form label',
       labelAppendix: '(required)',
     })}
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      sizeVariant: 'lg',
+      sizeVariant: 'md',
       label: 'Form label',
       labelAppendix: '(optional)',
     })}
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      sizeVariant: 'lg',
+      sizeVariant: 'md',
       label: 'Form label',
       labelAppendix: ' ',
     })}
