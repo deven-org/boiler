@@ -32,5 +32,7 @@
     "node_modules": false,
     "package-lock.json": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "lit-plugin.rules.no-missing-import": "off",
+  "lit-plugin.strict": true
 }
