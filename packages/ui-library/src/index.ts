@@ -1,7 +1,7 @@
 // Actions
 export { BlrIconButton } from './components/icon-button';
 
-export { BlrTextButton } from './components/text-button';
+export { BlrButtonText } from './components/button-text';
 
 // Feedback
 export { BlrLoader } from './components/loader';

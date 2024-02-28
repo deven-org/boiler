@@ -3,7 +3,7 @@ import { html } from 'lit';
 import '../../index';
 import { ButtonGroupSizes, ButtonGroupAlignmentVariants } from '../../globals/constants';
 import { BlrIconButtonRenderFunction } from '../icon-button/renderFunction';
-import { BlrTextButtonRenderFunction } from '../text-button/renderFunction';
+import { BlrButtonTextRenderFunction } from '../button-text/renderFunction';
 import { BlrButtonGroupType } from '.';
 import { BlrButtonGroupRenderFunction } from './renderFunction';
 
@@ -57,7 +57,7 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Text Button or Icon Button components, or the combination of both. For more information have a look at the [Text Button](?path=/docs/design-system-web-components-actions-buttons-text-button--docs) and the [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) components.
+        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Button Text or Icon Button components, or the combination of both. For more information have a look at the [Button Text](?path=/docs/design-system-web-components-actions-buttons-button-text--docs) and the [Icon Button](?path=/docs/design-system-web-components-actions-buttons-icon-button--docs) components.
         - [**Appearance**](#appearance)
           - [**Alignment**](#alignment)
       </markdown>
@@ -74,19 +74,19 @@ export default {
 
 export const ButtonGroup = (
   params: BlrButtonGroupType,
-  primaryLabel: string = 'Text Button',
-  secondaryLabel: string = 'Text Button'
+  primaryLabel: string = 'Button Text',
+  secondaryLabel: string = 'Button Text'
 ) => {
   const contentButtons = html`
-    ${BlrTextButtonRenderFunction({
-      label: typeof primaryLabel === 'string' ? primaryLabel : 'Text Button',
+    ${BlrButtonTextRenderFunction({
+      label: typeof primaryLabel === 'string' ? primaryLabel : 'Button Text',
       theme: 'Light',
       loading: false,
       variant: 'primary',
       disabled: false,
       buttonDisplay: 'inline-block',
     })}
-    ${BlrTextButtonRenderFunction({
+    ${BlrButtonTextRenderFunction({
       label: secondaryLabel,
       theme: 'Light',
       loading: false,

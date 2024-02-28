@@ -73,7 +73,7 @@ export default {
         
         The Icon is intended to be used when creating new components. Currently, it is used like this in the following components:
         
-        - [**Text Button**](?path=/docs/components-text-button--docs)
+        - [**Button Text**](?path=/docs/components-button-text--docs)
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
         - [**Form Caption**](?path=/docs/components-form-caption--docs)
         - [**Select**](?path=/docs/components-select--docs)

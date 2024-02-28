@@ -190,7 +190,7 @@
         }
       }
     },
-    "TextButton": {
+    "ButtonText": {
       "Icon": {
         "SizeVariant": {
           "XS": {

@@ -13,6 +13,7 @@ const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui'];
 
 const componentTypes = [
   'ButtonGroup',
+  'ButtonText',
   'CaptionComponent',
   'CaptionGroup',
   'Checkbox',
@@ -32,7 +33,6 @@ const componentTypes = [
   'StepperCombo',
   'Radio',
   'TabBar',
-  'TextButton',
   'TextArea',
   'ToggleSwitch',
   'Tooltip',

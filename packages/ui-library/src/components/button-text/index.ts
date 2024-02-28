@@ -28,7 +28,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events';
 
-export type BlrTextButtonEventHandlers = {
+export type BlrButtonTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
   blrBlur?: (event: BlrBlurEvent) => void;
   blrClick?: (event: BlrClickEvent) => void;
@@ -39,7 +39,7 @@ export type BlrTextButtonEventHandlers = {
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
-export class BlrTextButton extends LitElement {
+export class BlrButtonText extends LitElement {
   static styles = [styleCustom];
 
   @property() label = 'Button Label';
@@ -48,7 +48,7 @@ export class BlrTextButton extends LitElement {
   @property() iconPosition?: IconPositionVariant = 'leading';
   @property({ type: Boolean }) loading!: boolean;
   @property({ type: Boolean }) disabled!: boolean;
-  @property() textButtonId?: string;
+  @property() buttonTextId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() sizeVariant?: ActionSizesType = 'md';
   @property() buttonDisplay?: ButtonDisplayType = 'inline-block';
@@ -83,7 +83,7 @@ export class BlrTextButton extends LitElement {
 
       const classes = classMap({
         'blr-semantic-action': true,
-        'blr-text-button': true,
+        'blr-button-text': true,
         [this.variant]: this.variant,
         [`${this.sizeVariant}`]: this.sizeVariant,
         'disabled': this.disabled,
@@ -114,7 +114,7 @@ export class BlrTextButton extends LitElement {
 
       const iconSizeVariant = getComponentConfigToken([
         'cmp',
-        'TextButton',
+        'ButtonText',
         'Icon',
         'SizeVariant',
         this.sizeVariant.toUpperCase(),
@@ -166,7 +166,7 @@ export class BlrTextButton extends LitElement {
               this.handleClick(event);
             }
           }}
-          id=${this.textButtonId || nothing}
+          id=${this.buttonTextId || nothing}
         >
           ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
           ${this.loading
@@ -185,7 +185,7 @@ export class BlrTextButton extends LitElement {
 }
 
 if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTextButton);
+  customElements.define(TAG_NAME, BlrButtonText);
 }
 
-export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement> & BlrTextButtonEventHandlers;
+export type BlrButtonTextType = Omit<BlrButtonText, keyof LitElement> & BlrButtonTextEventHandlers;
