@@ -653,6 +653,7 @@ export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
         ...params,
         hasHint: true,
         label: 'Hint message',
+        hintMessage: 'This is a small hint',
         hintIcon: 'blrInfo',
         labelAppendix: '',
         inputFieldNumberId: 'test-hint',
@@ -666,6 +667,8 @@ export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
         hasError: true,
         errorMessage: "OMG it's an error",
         hasHint: true,
+        hintMessage: 'This is a small hint',
+        hintIcon: 'blrInfo',
         errorIcon: 'blrErrorFilled',
         inputFieldNumberId: 'test-hint-error',
       })}

@@ -81,4 +81,21 @@ describe('blr-radio-group', () => {
 
     expect(className).not.to.contain('error');
   });
+
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrRadioGroupRenderFunction({
+        ...sampleParams,
+        hasHint: false,
+        hasError: false,
+        errorIcon: undefined,
+      })
+    );
+
+    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
+    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorMessageIcon).to.not.exist;
+  });
 });

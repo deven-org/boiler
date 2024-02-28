@@ -96,6 +96,22 @@ describe('blr-input-field-number', () => {
     expect(errorClassName).to.contain('error');
   });
 
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrInputFieldNumberRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        errorIcon: undefined,
+      })
+    );
+
+    const textInput = querySelectorDeep('.blr-input-field-number', element.getRootNode() as HTMLElement);
+    const formError = querySelectorDeep('.blr-form-caption', textInput?.getRootNode() as HTMLElement);
+    const errorIcon = formError?.getAttribute('errorIcon');
+
+    expect(errorIcon).to.not.exist;
+  });
+
   it('has a sizeVariant md by default', async () => {
     const element = await fixture(BlrInputFieldNumberRenderFunction(sampleParams));
 

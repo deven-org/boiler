@@ -61,7 +61,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property() labelAppendix?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType;
+  @property() errorIcon?: SizelessIconType = undefined;
   @property() hasHint = true;
   @property() hintMessage?: string;
   @property() hintIcon?: SizelessIconType;

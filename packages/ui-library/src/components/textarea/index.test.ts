@@ -118,6 +118,23 @@ describe('blr-textarea', () => {
     expect(disabled).to.be.equal('');
   });
 
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasHint: false,
+        hasError: false,
+        errorMessageIcon: undefined,
+      })
+    );
+
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const formCaption = querySelectorDeep('.blr-form-caption', textarea?.getRootNode() as HTMLElement);
+
+    const errorMessageIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorMessageIcon).to.not.exist;
+  });
+
   it('is is disabled when attribute disabled is set', async () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
