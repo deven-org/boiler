@@ -17,12 +17,20 @@
     - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
     - [Report an issue](#report-an-issue)
   - [:gear: Requirements](#gear-requirements)
+    - [Figma](#figma)
+    - [Tokens Studio](#tokens-studio)
   - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
-  - [:rocket: How to start](#rocket-how-to-start)
+  - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
-    - [Usage](#usage)
+    - [Icon Kit Setup](#icon-kit-setup)
+      - [Structure](#structure)
+      - [Adding Icons](#adding-icons)
+      - [Changing Icons](#changing-icons)
+      - [Removing Icons](#removing-icons)
   - [:white_check_mark: How to test](#white_check_mark-how-to-test)
+  - [:toolbox: How to build](#toolbox-how-to-build)
+  - [:rocket: How to deploy](#rocket-how-to-deploy)
   - [:v: Contribute](#v-contribute)
   - [:page_facing_up: License](#page_facing_up-license)
   - [:green_heart: Code of conduct](#green_heart-code-of-conduct)
@@ -82,7 +90,18 @@ Get to know about our Architecture [here](./docs/ARCHITECTURE.md).
 
 In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
 
-## :rocket: How to start
+
+### Figma
+Figma is a collaborative tool used for designing user interfaces. Figma can be run on any operating system that can run a browser which can help designers, developers and various other stakeholders to collaborate seamlessly. Sharing designs, managing permissions on a granular level and requesting feedback are some of the many features that help teams work in a more agile fashion.
+
+### Tokens Studio
+Tokens Studio for Figma (also known as Figma Tokens) is a plugin for Figma that allows users to integrate design tokens into their Figma designs.
+Before you start working with B01LER Design System for Figma, make sure to install the Tokens Studio for Figma (Figma Tokens) plugin so you can access and customize the UI kit easily.
+
+The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
+
+## :arrow_forward: How to start
+
 ### Installation
 > **Note:** You need to run terminal as administrator on Windows machines.
 
@@ -100,7 +119,7 @@ In addition, you might need to install Corepack. For more information checkout [
    $ git clone https://github.com/deven-org/boiler.git
    ```
 
-3. now we enable corepack for yarn and choose right version
+3. Now we enable corepack for yarn and choose right version
 
    ```sh
    $ corepack enable
@@ -119,14 +138,165 @@ In addition, you might need to install Corepack. For more information checkout [
    $ yarn start
    ```
 
-### Setup
-Note: This is not filled out yet! ...
+> Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentation how to use them and the parameters that they can accept.
 
-### Usage
-Note: This is not filled out yet! ...
+### Setup
+
+> Note: To be able to edit tokens, you must own a pro license of token studio
+
+1. First, open your Copy of the B01LER and bookmark Tokens Studio in the Plugins panel.
+2. Launch Tokens Studio using 'New Empty File' since no tokens have been defined yet.
+3. Connect your repository to Tokens Studio. First, generate and copy a new Personal Access Token in Github. You can use either Tokens (Classic) or 'Fine-grained tokens'. Next, use the copied token to add GitHub as a Sync Provider. Click the 'Settings tab' in Tokens Studio and in the 'Add new menu', select GitHub. Use the Personal Token that you copied to authenticate yourself and to connect your cloned B01LER repository.
+4. If the entered credential are correct you will be asked to Pull from git. Please accept this dialog. The tokens tab should now contain all tokens sets of B01LER available.
+
+Please refer to the 'Getting Started' section in our [Figma file](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig)) for more detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
+
+The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
+
+### Icon Kit Setup
+After you setup the project, you can start implementing your desired icons. B01LER comes with a set of predefined icons in the variety of sizes: small, extra small, extra extra small, medium (default), large, extra large. All the default icons can be seen in our [Storybook](https://b01ler.onrender.com/?path=/docs/foundation-icons--docs).
+
+#### Structure
+In the project you will find 2 folders containing icons. One of them represents an input folder and the other one - output after compiling.
+
+    └── packages
+        └── icons               // Icon configuration files and a collection of icon files in svg format
+            └── icon-set         // Input folder for the icons
+            └── icons-optimized         // Output folder (after building icons)
+
+To properly compile icons inside the B01LER project you need to follow a naming convention for them, as an example: `icon_name_md.svg`. In this case we are looking at a medium sized icon `..._md.svg` (each icon has multiple size variations: xxs, xs, sm, md, lg, xl). After you compile your Icons Set, every icon's name will be converted to `blrIconName` and you will be referencing them by this name in your project.
+
+#### Adding Icons
+For the new icons to work properly, you should add each of your icons in all size variations.
+Follow these steps to add your first icon:
+
+> Note: B01LER only supports icons in black and white.
+
+1. Navigate to `/icon-set` folder, paste your icon here (with all according resolutions) and run:
+
+   ```sh
+   $ yarn compile:icons
+   ```
+2. To check that your icon has been added run your project locally and inspect the Icons tab:
+
+   ```sh
+   $ yarn start
+   ```
+
+#### Changing Icons
+It is also possible to just change existing icon file without renaming it.
+
+1. Navigate to `/icon-set` folder
+
+2. Pick and open an icon you want to replace. For example: `packages/icons/icon-set/Book_md.svg`
+
+3. Replace the `<svg>` and `<path>` tags with yours
+
+4. Compile and run your project locally with:
+
+   ```sh
+   $ yarn compile:icons
+   $ yarn start
+   ```
+
+5. If now you navigate to the local Storybook and inspect Icons tab, you will see that the icon `blrBook` is updated
+
+> Note: Remember that every icon has multiple files with different icon sizes. You need to replace all of them with new icons in respective sizes.
+
+#### Replacing default Icons
+Some of the components have the default icons connected to them (you can see the full list of these components in [Removing Icons](#removing-icons) section), but it is possible to change them.
+
+We will take `packages/ui-library/src/components/checkbox` component as an example in this case.
+If you open this folder and navigate to `index.stories.ts` file, inside you will be able to see the default parameters for this component.
+
+```
+const defaultParams: BlrCheckboxType = {
+  ...
+  size: 'md',
+  checked: false,
+  checkedIcon: 'blrCheckmark', // the default icon is set to 'blrCheckmark'
+  ...
+};
+```
+
+To change the default icon you simply need to replace the value of `checkedIcon` with the name of the icon you want. For example:
+
+```
+const defaultParams: BlrCheckboxType ={
+   ...
+   checkedIcon: 'blr360',
+   ...
+};
+```
+
+To check that changes have applied do the following:
+
+1. Run you project locally with:
+
+   ```sh
+   $ yarn start
+   ```
+
+2. Navigate to the Checkbox tab in your local Storybook
+
+3. Check the checkbox
+
+#### Removing Icons
+Removing is slightly more difficult than adding, because there are multiple components which are using some of the icons by default. You can see the full list of these components below:
+
+- Checkbox
+- Form Caption
+- Icon
+- Icon Button
+- Icon Link
+- Number Input
+- Select
+- TabBar
+- Text Button
+- Text Input
+- Toggle Switch
+
+> Note: If you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
+
+To remove any icon, simply navigate to `/icon-set` folder, delete icons you don't need in all resolutions and run:
+
+   ```sh
+   $ yarn compile:icons
+   ```
 
 ## :white_check_mark: How to test
-Learn about our testing approach [here](./docs/TESTING.md).
+Learn about our testing approach [here](./doc/TESTING.md).
+
+## :toolbox: How to build
+> Note: Each command must be run from the root directory of the project
+
+The B01LER UI Library can be built using the following command:
+
+   ```sh
+   $ yarn build:ui-library
+   ```
+
+B01LER can also be built with Storybook bundled alongside it which provides you with a sandbox to experiment with our components:
+
+   ```sh
+   $ yarn build:storybook
+   ```
+
+B01LER comes with an example vanilla JS application to demonstrate how easy it is to use components in your app. To build this example app, run the following command:
+
+   ```sh
+   $ yarn build:js-example
+   ```
+
+In the generated `dist` folder, the generated `index.html` file can be opened in the browser to preview our components.
+
+## :rocket: How to deploy
+Learn about our approach to deployment [here](./doc/DEPLOYMENT.md).
+
+## :building_construction: How to develop
+Note: This is not filled out yet!
+...
+
 
 ## :v: Contribute
 For a detailed documentation on how to contribute to the B01LER project, have a look at our [contribution guide](./docs/CONTRIBUTING.md).

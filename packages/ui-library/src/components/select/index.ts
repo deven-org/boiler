@@ -164,7 +164,7 @@ export class BlrSelect extends LitElement {
                     sizeVariant: this.size,
                     forValue: this.selectId,
                     theme: this.theme,
-                    hasError: Boolean(this.label),
+                    hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
