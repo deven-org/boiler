@@ -23,6 +23,11 @@
   - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
+    - [Icon Kit Setup](#icon-kit-setup)
+      - [Structure](#structure)
+      - [Adding Icons](#adding-icons)
+      - [Changing Icons](#changing-icons)
+      - [Removing Icons](#removing-icons)
   - [:white_check_mark: How to test](#white_check_mark-how-to-test)
   - [:toolbox: How to build](#toolbox-how-to-build)
   - [:rocket: How to deploy](#rocket-how-to-deploy)
@@ -147,6 +152,117 @@ The plugin allows both designers and developers to inspect tokens that have been
 Please refer to the 'Getting Started' section in our [Figma file](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig)) for more detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
 
 The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
+
+### Icon Kit Setup
+After you setup the project, you can start implementing your desired icons. B01LER comes with a set of predefined icons in the variety of sizes: small, extra small, extra extra small, medium (default), large, extra large. All the default icons can be seen in our [Storybook](https://b01ler.onrender.com/?path=/docs/foundation-icons--docs).
+
+#### Structure
+In the project you will find 2 folders containing icons. One of them represents an input folder and the other one - output after compiling.
+
+    └── packages
+        └── icons               // Icon configuration files and a collection of icon files in svg format
+            └── icon-set         // Input folder for the icons
+            └── icons-optimized         // Output folder (after building icons)
+
+To properly compile icons inside the B01LER project you need to follow a naming convention for them, as an example: `icon_name_md.svg`. In this case we are looking at a medium sized icon `..._md.svg` (each icon has multiple size variations: xxs, xs, sm, md, lg, xl). After you compile your Icons Set, every icon's name will be converted to `blrIconName` and you will be referencing them by this name in your project.
+
+#### Adding Icons
+For the new icons to work properly, you should add each of your icons in all size variations.
+Follow these steps to add your first icon:
+
+> Note: B01LER only supports icons in black and white.
+
+1. Navigate to `/icon-set` folder, paste your icon here (with all according resolutions) and run:
+
+   ```sh
+   $ yarn compile:icons
+   ```
+2. To check that your icon has been added run your project locally and inspect the Icons tab:
+
+   ```sh
+   $ yarn start
+   ```
+
+#### Changing Icons
+It is also possible to just change existing icon file without renaming it.
+
+1. Navigate to `/icon-set` folder
+
+2. Pick and open an icon you want to replace. For example: `packages/icons/icon-set/Book_md.svg`
+
+3. Replace the `<svg>` and `<path>` tags with yours
+
+4. Compile and run your project locally with:
+
+   ```sh
+   $ yarn compile:icons
+   $ yarn start
+   ```
+
+5. If now you navigate to the local Storybook and inspect Icons tab, you will see that the icon `blrBook` is updated
+
+> Note: Remember that every icon has multiple files with different icon sizes. You need to replace all of them with new icons in respective sizes.
+
+#### Replacing default Icons
+Some of the components have the default icons connected to them (you can see the full list of these components in [Removing Icons](#removing-icons) section), but it is possible to change them.
+
+We will take `packages/ui-library/src/components/checkbox` component as an example in this case.
+If you open this folder and navigate to `index.stories.ts` file, inside you will be able to see the default parameters for this component.
+
+```
+const defaultParams: BlrCheckboxType = {
+  ...
+  size: 'md',
+  checked: false,
+  checkedIcon: 'blrCheckmark', // the default icon is set to 'blrCheckmark'
+  ...
+};
+```
+
+To change the default icon you simply need to replace the value of `checkedIcon` with the name of the icon you want. For example:
+
+```
+const defaultParams: BlrCheckboxType ={
+   ...
+   checkedIcon: 'blr360',
+   ...
+};
+```
+
+To check that changes have applied do the following:
+
+1. Run you project locally with:
+
+   ```sh
+   $ yarn start
+   ```
+
+2. Navigate to the Checkbox tab in your local Storybook
+
+3. Check the checkbox
+
+#### Removing Icons
+Removing is slightly more difficult than adding, because there are multiple components which are using some of the icons by default. You can see the full list of these components below:
+
+- Checkbox
+- Form Caption
+- Icon
+- Icon Button
+- Icon Link
+- Number Input
+- Select
+- TabBar
+- Text Button
+- Text Input
+- Toggle Switch
+
+> Note: If you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
+
+To remove any icon, simply navigate to `/icon-set` folder, delete icons you don't need in all resolutions and run:
+
+   ```sh
+   $ yarn compile:icons
+   ```
 
 ## :white_check_mark: How to test
 Learn about our testing approach [here](./doc/TESTING.md).
