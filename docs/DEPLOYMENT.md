@@ -1,5 +1,11 @@
 # Deployment
-This chapter should provide the user with all needed information around the deployment of your project. Please provide a short introduction here.
+This chapter should provide the user with all needed information around the deployment of your project.
+
+Currently, the B01LER project is getting deployed to [render.com](https://render.com) periodically. In the near future, we intend on implementing a more formal deployment schedule so that the latest version of the project will be available to view and interact with.
+
+The project can be viewed [here](https://b01ler.onrender.com/). This link allows you to experiment with the project and learn about how you can use components via Storybook.
+
+We also deploy our JS Example app to [Render](https://b01ler.onrender.com/js-example-app). This application shows you how our components look when implemented in a vanilla Javascript application.
 
 ## Content
 - [Tooling](#tooling)
@@ -28,4 +34,4 @@ If you have a release management setup in place, please describe the process and
 Please write down your deployment schedule. Consider using screenshots or graphs for better visualization.
 
 ## Support
-If someone needs support while deploying your project, please list the possible contact persons or communication channels where people can get support.
+If support is needed while deploying BO1LER, please refer to our [README feedback section](/README.md#tipping_hand_person-help--feedback) where we list the many ways that we can be reached to support you.
