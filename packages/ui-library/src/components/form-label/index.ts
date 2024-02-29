@@ -48,7 +48,7 @@ export class BlrFormLabel extends LitElement {
       const labelClasses = classMap({
         'blr-form-label': true,
         [`${this.sizeVariant}`]: this.sizeVariant,
-        [`${this.hasError}`]: this.hasError,
+        'error': this.hasError,
       });
 
       const spanClasses = classMap({
