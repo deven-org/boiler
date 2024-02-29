@@ -17,12 +17,15 @@
     - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
     - [Report an issue](#report-an-issue)
   - [:gear: Requirements](#gear-requirements)
+    - [Figma](#figma)
+    - [Tokens Studio](#tokens-studio)
   - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
-  - [:rocket: How to start](#rocket-how-to-start)
+  - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
-    - [Usage](#usage)
   - [:white_check_mark: How to test](#white_check_mark-how-to-test)
+  - [:toolbox: How to build](#toolbox-how-to-build)
+  - [:rocket: How to deploy](#rocket-how-to-deploy)
   - [:v: Contribute](#v-contribute)
   - [:page_facing_up: License](#page_facing_up-license)
   - [:green_heart: Code of conduct](#green_heart-code-of-conduct)
@@ -82,7 +85,18 @@ Get to know about our Architecture [here](./docs/ARCHITECTURE.md).
 
 In addition, you might need to install Corepack. For more information checkout [Corepack Documentation](https://nodejs.org/api/corepack.html).
 
-## :rocket: How to start
+
+### Figma
+Figma is a collaborative tool used for designing user interfaces. Figma can be run on any operating system that can run a browser which can help designers, developers and various other stakeholders to collaborate seamlessly. Sharing designs, managing permissions on a granular level and requesting feedback are some of the many features that help teams work in a more agile fashion.
+
+### Tokens Studio
+Tokens Studio for Figma (also known as Figma Tokens) is a plugin for Figma that allows users to integrate design tokens into their Figma designs.
+Before you start working with B01LER Design System for Figma, make sure to install the Tokens Studio for Figma (Figma Tokens) plugin so you can access and customize the UI kit easily.
+
+The plugin allows both designers and developers to inspect tokens that have been applied to components. An overview of all tokens for a component can be viewed with deep inspect or the specific tokens used for the building blocks of a component can also be viewed 
+
+## :arrow_forward: How to start
+
 ### Installation
 > **Note:** You need to run terminal as administrator on Windows machines.
 
@@ -100,7 +114,7 @@ In addition, you might need to install Corepack. For more information checkout [
    $ git clone https://github.com/deven-org/boiler.git
    ```
 
-3. now we enable corepack for yarn and choose right version
+3. Now we enable corepack for yarn and choose right version
 
    ```sh
    $ corepack enable
@@ -119,14 +133,54 @@ In addition, you might need to install Corepack. For more information checkout [
    $ yarn start
    ```
 
-### Setup
-Note: This is not filled out yet! ...
+> Note: This command will also open up Storybook locally. This provides you with a full list of available components that you can experiment with. Each component in Storybook also contains detailed documentation how to use them and the parameters that they can accept.
 
-### Usage
-Note: This is not filled out yet! ...
+### Setup
+
+> Note: To be able to edit tokens, you must own a pro license of token studio
+
+1. First, open your Copy of the B01LER and bookmark Tokens Studio in the Plugins panel.
+2. Launch Tokens Studio using 'New Empty File' since no tokens have been defined yet.
+3. Connect your repository to Tokens Studio. First, generate and copy a new Personal Access Token in Github. You can use either Tokens (Classic) or 'Fine-grained tokens'. Next, use the copied token to add GitHub as a Sync Provider. Click the 'Settings tab' in Tokens Studio and in the 'Add new menu', select GitHub. Use the Personal Token that you copied to authenticate yourself and to connect your cloned B01LER repository.
+4. If the entered credential are correct you will be asked to Pull from git. Please accept this dialog. The tokens tab should now contain all tokens sets of B01LER available.
+
+Please refer to the 'Getting Started' section in our [Figma file](https://www.figma.com/file/kG44mSWhEp2VcMvMqbJrRY/B01LER-%5Bv0.2--alpha-release%5D?type=design&node-id=1134%3A44297&mode=design&t=ZatzD7omF9pxalvP-1) (the link to the Figma file above is exclusively for members of the Accenture organization, while those outside the organization can download the file [here](https://boilerds.com/B01LER%20[v0.2%20-alpha%20release].fig)) for more detailed instructions on how to set up the library, configure Figma Tokens Studio and customize the project assets to meet your requirements.
+
+The 'Getting Started' section also explains the logic behind our token names and enable you to find and change the right tokens when rebranding B01LER or when you want to extend or change some functionality of a component.
 
 ## :white_check_mark: How to test
-Learn about our testing approach [here](./docs/TESTING.md).
+Learn about our testing approach [here](./doc/TESTING.md).
+
+## :toolbox: How to build
+> Note: Each command must be run from the root directory of the project
+
+The B01LER UI Library can be built using the following command:
+
+   ```sh
+   $ yarn build:ui-library
+   ```
+
+B01LER can also be built with Storybook bundled alongside it which provides you with a sandbox to experiment with our components:
+
+   ```sh
+   $ yarn build:storybook
+   ```
+
+B01LER comes with an example vanilla JS application to demonstrate how easy it is to use components in your app. To build this example app, run the following command:
+
+   ```sh
+   $ yarn build:js-example
+   ```
+
+In the generated `dist` folder, the generated `index.html` file can be opened in the browser to preview our components.
+
+## :rocket: How to deploy
+Learn about our approach to deployment [here](./doc/DEPLOYMENT.md).
+
+## :building_construction: How to develop
+Note: This is not filled out yet!
+...
+
 
 ## :v: Contribute
 For a detailed documentation on how to contribute to the B01LER project, have a look at our [contribution guide](./docs/CONTRIBUTING.md).
