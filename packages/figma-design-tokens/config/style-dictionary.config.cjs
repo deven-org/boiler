@@ -26,7 +26,7 @@ const componentTypes = [
   'InputIcon',
   'Loader',
   'RadioGroup',
-  'NumberInput',
+  'InputNumber',
   'Select',
   'Slider',
   'StepperButton',

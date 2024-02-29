@@ -13,7 +13,7 @@ export { BlrTooltip } from './components/tooltip';
 // Forms
 export { BlrCheckbox } from './components/checkbox';
 
-export { BlrNumberInput } from './components/number-input';
+export { BlrInputNumber } from './components/input-number';
 
 export { BlrRadio } from './components/radio';
 
