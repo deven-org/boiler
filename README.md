@@ -262,15 +262,15 @@ To check that changes have applied do the following:
 #### Removing Icons
 Removing is slightly more difficult than adding, because there are multiple components which are using some of the icons by default. You can see the full list of these components below:
 
+- Button Icon
+- Button Text
 - Checkbox
 - Form Caption
 - Icon
-- Icon Button
-- Number Input
+- Input Number
+- Input Text
 - Select
 - TabBar
-- Text Button
-- Text Input
 - Toggle Switch
 
 > Note: If you use any of those components, make sure that you either haven't removed the icons they use from the project, or replaced missing icons with yours.
