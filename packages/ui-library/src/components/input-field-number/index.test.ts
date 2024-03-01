@@ -1,13 +1,13 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrInputNumberRenderFunction } from './renderFunction';
-import type { BlrInputNumberType } from '.';
+import { BlrInputFieldNumberRenderFunction } from './renderFunction';
+import type { BlrInputFieldNumberType } from '.';
 
 import { fixture, expect, nextFrame } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string';
 
-const sampleParams: BlrInputNumberType = {
+const sampleParams: BlrInputFieldNumberType = {
   placeholder: 'Type your message here ..',
   disabled: false,
   stepperVariant: 'vertical',
@@ -17,7 +17,7 @@ const sampleParams: BlrInputNumberType = {
   hasLabel: true,
   hasError: true,
   labelAppendix: 'label appendix',
-  inputNumberId: 'egal',
+  inputFieldNumberId: 'egal',
   label: 'Hello',
   hasHint: false,
   hintIcon: 'blr360',
@@ -30,9 +30,9 @@ const sampleParams: BlrInputNumberType = {
   stepDecreaseAriaLabel: '\u2212',
 };
 
-describe('blr-input-number', () => {
+describe('blr-input-field-number', () => {
   it('input is of type "number"', async () => {
-    const element = await fixture(BlrInputNumberRenderFunction(sampleParams));
+    const element = await fixture(BlrInputFieldNumberRenderFunction(sampleParams));
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
     const type = input?.type;
@@ -44,7 +44,7 @@ describe('blr-input-number', () => {
     const randomString = getRandomString();
 
     const element = await fixture(
-      BlrInputNumberRenderFunction({
+      BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         placeholder: randomString,
       })
@@ -60,7 +60,7 @@ describe('blr-input-number', () => {
     const className = 'custom-stepper-button';
 
     const element = await fixture(
-      BlrInputNumberRenderFunction({
+      BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         unit: undefined,
       })
@@ -74,7 +74,7 @@ describe('blr-input-number', () => {
 
   it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
-      BlrInputNumberRenderFunction({
+      BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         hasHint: true,
         hintIcon: 'blrInfo',
@@ -83,7 +83,7 @@ describe('blr-input-number', () => {
       })
     );
 
-    const captionWrapper = querySelectorDeep('blr-input-number', element.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep('blr-input-field-number', element.getRootNode() as HTMLElement);
     const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;
@@ -96,25 +96,25 @@ describe('blr-input-number', () => {
   });
 
   it('has a size md by default', async () => {
-    const element = await fixture(BlrInputNumberRenderFunction(sampleParams));
+    const element = await fixture(BlrInputFieldNumberRenderFunction(sampleParams));
 
-    const inputNumberWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
-    const className = inputNumberWrapper?.className;
+    const inputFieldNumberWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
+    const className = inputFieldNumberWrapper?.className;
 
     expect(className).to.contain('md');
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrInputNumberRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrInputFieldNumberRenderFunction({ ...sampleParams, size: 'sm' }));
 
-    const inputNumberWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
-    const className = inputNumberWrapper?.className;
+    const inputFieldNumberWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
+    const className = inputFieldNumberWrapper?.className;
 
     expect(className).to.contain('sm');
   });
 
   it('correctly formats the value when leading zeros are set', async () => {
-    const element = await fixture(BlrInputNumberRenderFunction({ ...sampleParams, leadingZeros: 2 }));
+    const element = await fixture(BlrInputFieldNumberRenderFunction({ ...sampleParams, leadingZeros: 2 }));
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
     const numberValue = input?.value;
@@ -123,7 +123,7 @@ describe('blr-input-number', () => {
   });
 
   it('correctly formats the value when decimal places are set', async () => {
-    const element = await fixture(BlrInputNumberRenderFunction({ ...sampleParams, decimals: 2 }));
+    const element = await fixture(BlrInputFieldNumberRenderFunction({ ...sampleParams, decimals: 2 }));
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
     const numberValue = input?.value;
@@ -139,7 +139,7 @@ describe('blr-input-number', () => {
       const step = 5;
 
       const element = await fixture(
-        BlrInputNumberRenderFunction({
+        BlrInputFieldNumberRenderFunction({
           ...sampleParams,
           stepperVariant,
           stepIncreaseAriaLabel,

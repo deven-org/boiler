@@ -3,10 +3,10 @@ import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index
 
 export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { inputfield, labelslot } = semanticTokens.sem.forms;
-  const { StepperButton, InputNumber } = componentTokens.cmp;
+  const { StepperButton, InputFieldNumber } = componentTokens.cmp;
 
   return typeSafeNestedCss`
-  .blr-input-number {
+  .blr-input-field-number {
     &.sm {
       & > .label-wrapper {
         display: flex;
@@ -58,15 +58,15 @@ export const { tokenizedLight: wrapperLight, tokenizedDark: wrapperDark } = rend
 
     .input-unit-container {
       &.sm {
-        gap: ${InputNumber.InputField.TextWrapper.ItemSpacing.SM};
+        gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.SM};
       }
 
       &.md {
-        gap: ${InputNumber.InputField.TextWrapper.ItemSpacing.MD};
+        gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.MD};
       }
 
       &.lg {
-        gap: ${InputNumber.InputField.TextWrapper.ItemSpacing.LG};
+        gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.LG};
       }
 
       .unit {

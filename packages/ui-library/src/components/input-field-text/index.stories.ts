@@ -452,7 +452,7 @@ SizeVariant.story = {
 /**
  * ## Content / Settings
  * ### Type
- * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Number component. For more information have a look at the [Input Number](/docs/design-system-web-components-forms-input-number--docs) component.
+ * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Field Number component. For more information have a look at the [Input Field Number](/docs/design-system-web-components-forms-input-field-number--docs) component.
  */
 export const Type = () => {
   return html`

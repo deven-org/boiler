@@ -36,7 +36,7 @@ Technically both instances of the Form Caption are placed inside slots that are 
 The Form Caption Group is intended to be used when creating new components. Currently, it is used like this in the following components:
         
 - [**Checkbox**](?path=/docs/components-checkbox--docs)
-- [**Input Number**](?path=/docs/components-input-number--docs)
+- [**Input Field Number**](?path=/docs/components-input-field-number--docs)
 - [**Radio**](?path=/docs/components-radio--docs)
 - [**Radio Group**](?path=/docs/components-radio-group--docs)
 - [**Select**](?path=/docs/components-select--docs)

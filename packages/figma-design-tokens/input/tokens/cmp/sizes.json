@@ -1317,7 +1317,7 @@
         }
       }
     },
-    "InputNumber": {
+    "InputFieldNumber": {
       "InputField": {
         "TextWrapper": {
           "ItemSpacing": {

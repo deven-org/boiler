@@ -15,13 +15,13 @@ import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 
-export class BlrInputNumber extends LitElement {
+export class BlrInputFieldNumber extends LitElement {
   static styles = [baseStyle];
 
   @query('input')
   protected _numberFieldNode!: HTMLInputElement;
 
-  @property() inputNumberId!: string;
+  @property() inputFieldNumberId!: string;
   @property() stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
   @property() label!: string;
   @property() disabled?: boolean;
@@ -113,7 +113,7 @@ export class BlrInputNumber extends LitElement {
     const button = html`
       <button
         aria-label=${ariaLabel}
-        aria-controls=${this.inputNumberId}
+        aria-controls=${this.inputFieldNumberId}
         ?disabled="${this.disabled}"
         class="${buttonClass}"
         @click=${onClick}
@@ -240,7 +240,7 @@ export class BlrInputNumber extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class="blr-input-number ${this.size}">
+        <div class="blr-input-field-number ${this.size}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -248,7 +248,7 @@ export class BlrInputNumber extends LitElement {
                     label: this.label,
                     sizeVariant: this.size,
                     labelAppendix: this.labelAppendix,
-                    forValue: this.inputNumberId,
+                    forValue: this.inputFieldNumberId,
                     theme: this.theme,
                     hasError: Boolean(this.hasError),
                   })}
@@ -258,7 +258,7 @@ export class BlrInputNumber extends LitElement {
           <div class="${wrapperClasses}">
             <div class="${inputAndUnitContainer}">
               <input
-                id="${this.inputNumberId}"
+                id="${this.inputFieldNumberId}"
                 class="${inputClasses}"
                 type="number"
                 .value=${this.currentValue != 0
@@ -287,7 +287,7 @@ export class BlrInputNumber extends LitElement {
 }
 
 if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrInputNumber);
+  customElements.define(TAG_NAME, BlrInputFieldNumber);
 }
 
-export type BlrInputNumberType = Omit<BlrInputNumber, keyof LitElement>;
+export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElement>;
