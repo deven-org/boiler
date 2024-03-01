@@ -29,7 +29,7 @@ export { BlrRangeMinMaxSlider } from './components/slider-two-values/range-min-m
 
 export { BlrRangeLegendMinMaxSlider } from './components/slider-two-values/range-legend-min-max-slider';
 
-export { BlrTextInput } from './components/text-input';
+export { BlrInputFieldText } from './components/input-field-text';
 
 export { BlrTextarea } from './components/textarea';
 

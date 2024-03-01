@@ -94,7 +94,7 @@ export default {
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
         - [**Input Number**](?path=/docs/components-input-number--docs)
         - [**Select**](?path=/docs/components-select--docs)
-        - [**Text Input**](?path=/docs/components-text-input--docs)
+        - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
         - [**Text Area**](?path=/docs/components-text-area--docs)
         
         It is not intended to use the Form Label directly when creating new applications.

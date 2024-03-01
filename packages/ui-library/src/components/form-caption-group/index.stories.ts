@@ -40,7 +40,7 @@ The Form Caption Group is intended to be used when creating new components. Curr
 - [**Radio**](?path=/docs/components-radio--docs)
 - [**Radio Group**](?path=/docs/components-radio-group--docs)
 - [**Select**](?path=/docs/components-select--docs)
-- [**Text Input**](?path=/docs/components-text-input--docs)
+- [**Input Field Text**](?path=/docs/components-input-field-text--docs)
 - [**Text Area**](?path=/docs/components-text-area--docs)
 
 It is not intended to use the Form Caption Group directly when creating new applications.
