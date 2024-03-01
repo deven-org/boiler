@@ -76,12 +76,12 @@ export default {
         - [**Button Text**](?path=/docs/components-button-text--docs)
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
         - [**Form Caption**](?path=/docs/components-form-caption--docs)
-        - [**Select**](?path=/docs/components-select--docs)
-        - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
-        - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
-        - [**Tab Bar**](?path=/docs/components-tabbar--docs)
         - [**Icon Link**](?path=/docs/components-icon-link--docs)
+        - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
         - [**Input Field Number**](?path=/docs/components-input-field-number--docs)
+        - [**Select**](?path=/docs/components-select--docs)
+        - [**Tab Bar**](?path=/docs/components-tabbar--docs)
+        - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
         It is not intended to use the Icon directly when creating new applications.
         

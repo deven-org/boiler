@@ -57,7 +57,7 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Button Text or Button Icon components, or the combination of both. For more information have a look at the [Button Text](?path=/docs/design-system-web-components-actions-buttons-button-text--docs) and the [Button Icon](?path=/docs/design-system-web-components-actions-buttons-button-icon--docs) components.
+        Button Group allows users to select one option from the group. They are visually cohesive, meaning they share a similar appearance in terms of size, style, and often color. This consistency helps users quickly identify that these buttons are related. The Button Group component utilizes the slot element, rendering multiple Button Text or Button Icon components, or the combination of both. For more information have a look at the [Button Text](?path=/docs/components-button-text--docs) and the [Button Icon](?path=/docs/components-button-icon--docs) components.
         - [**Appearance**](#appearance)
           - [**Alignment**](#alignment)
       </markdown>

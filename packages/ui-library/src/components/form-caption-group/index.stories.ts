@@ -37,10 +37,10 @@ The Form Caption Group is intended to be used when creating new components. Curr
         
 - [**Checkbox**](?path=/docs/components-checkbox--docs)
 - [**Input Field Number**](?path=/docs/components-input-field-number--docs)
+- [**Input Field Text**](?path=/docs/components-input-field-text--docs)
 - [**Radio**](?path=/docs/components-radio--docs)
 - [**Radio Group**](?path=/docs/components-radio-group--docs)
 - [**Select**](?path=/docs/components-select--docs)
-- [**Input Field Text**](?path=/docs/components-input-field-text--docs)
 - [**Text Area**](?path=/docs/components-text-area--docs)
 
 It is not intended to use the Form Caption Group directly when creating new applications.

@@ -34,7 +34,7 @@ const defaultParams: BlrButtonTextType = {
   iconPosition: 'leading',
   disabled: false,
   loading: false,
-  buttonTextId: 'buttonId',
+  buttonTextId: 'buttonTextId',
   buttonDisplay: 'inline-block',
 };
 

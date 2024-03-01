@@ -157,7 +157,7 @@ export default {
 An icon component typically displays a small, visually recognizable graphic or symbol that represents a particular function, object, or concept.
 
 **NOTE**<br>
-The Button Icon component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
+Button Icon components are clickable buttons that display an icon or symbol instead of text. They are typically used to represent a specific action or function, such as sharing, printing, or saving.
 - [**Appearance**](#appearance)
  - [**Variant**](#variant) 
  - [**Size Variant**](#size-variant) 

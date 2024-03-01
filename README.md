@@ -267,8 +267,8 @@ Removing is slightly more difficult than adding, because there are multiple comp
 - Checkbox
 - Form Caption
 - Icon
-- Input Number
-- Input Text
+- Input Field Number
+- Input Field Text
 - Select
 - TabBar
 - Toggle Switch
