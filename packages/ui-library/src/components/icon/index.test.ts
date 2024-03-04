@@ -24,8 +24,8 @@ describe('blr-icon', () => {
 });
 
 describe('blr-icon', () => {
-  it('svg contains md class if sizeVariant is set to md and ignoreSize is false', async () => {
-    const element = await fixture(BlrIconRenderFunction({ ...sampleParams, ignoreSize: false }));
+  it('svg contains md class if sizeVariant is set to md and fillParent is false', async () => {
+    const element = await fixture(BlrIconRenderFunction({ ...sampleParams, fillParent: false }));
     const svgParentElement = querySelectorDeep('.blr-icon', element?.getRootNode() as HTMLElement);
     const className = svgParentElement?.getAttribute('class'); // you can not use className here
 
@@ -34,8 +34,8 @@ describe('blr-icon', () => {
 });
 
 describe('blr-icon', () => {
-  it('svg does not contain md class if sizeVariant is set to md and ignoreSize is true', async () => {
-    const element = await fixture(BlrIconRenderFunction({ ...sampleParams, ignoreSize: true }));
+  it('svg does not contain md class if sizeVariant is set to md and fillParent is true', async () => {
+    const element = await fixture(BlrIconRenderFunction({ ...sampleParams, fillParent: true }));
     const svgParentElement = querySelectorDeep('.blr-icon', element?.getRootNode() as HTMLElement);
     const className = svgParentElement?.getAttribute('class'); // you can not use className here
 
