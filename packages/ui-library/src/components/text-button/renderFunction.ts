@@ -1,7 +1,8 @@
 import { BlrTextButtonType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-text-button';
+export const TextButtonTagName = `${componentsPrefix}-text-button`;
 
 export const BlrTextButtonRenderFunction = (params: BlrTextButtonType) =>
-  genericBlrComponentRenderer<BlrTextButtonType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrTextButtonType>(TextButtonTagName, { ...params });

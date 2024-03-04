@@ -1,10 +1,11 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrIconButtonRenderFunction } from './renderFunction';
+import { BlrIconButtonRenderFunction, IconButtonTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrIconButtonType } from '.';
+import { LoaderTagName } from '../loader/renderFunction';
 
 const sampleParams: BlrIconButtonType = {
   arialabel: 'Button',
@@ -16,7 +17,7 @@ const sampleParams: BlrIconButtonType = {
   theme: 'Light',
 };
 
-describe('blr-icon-button', () => {
+describe(`${IconButtonTagName}`, () => {
   it('is having a button containing the right className', async () => {
     const element = await fixture(BlrIconButtonRenderFunction(sampleParams));
 
@@ -71,7 +72,7 @@ describe('blr-icon-button', () => {
     );
 
     const iconButton = querySelectorDeep('.blr-icon-button', element.getRootNode() as HTMLElement);
-    const loader = querySelectorDeep('blr-loader', iconButton?.getRootNode() as HTMLElement);
+    const loader = querySelectorDeep(`${LoaderTagName}`, iconButton?.getRootNode() as HTMLElement);
 
     expect(loader).to.exist;
   });

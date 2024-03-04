@@ -5,7 +5,7 @@ import { styleCustom } from './index.css';
 import { InputSizesType } from '../../globals/types';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { radioDark, radioLight } from '../../foundation/component-tokens/radio.css';
-import { TAG_NAME } from './renderFunction';
+import { RadioTagName } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
@@ -111,8 +111,8 @@ export class BlrRadio extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrRadio);
+if (!customElements.get(RadioTagName)) {
+  customElements.define(RadioTagName, BlrRadio);
 }
 
 export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;

@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrCounterRenderFunction } from './renderFunction';
+import { BlrCounterRenderFunction, CounterTagName } from './renderFunction';
 import type { BlrCounterType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -8,12 +8,12 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrCounterType = {
   theme: 'Light',
-  variant: 'default',
+  variant: 'neutral',
   current: 3,
   max: 100,
 };
 
-describe('blr-counter', () => {
+describe(`${CounterTagName}`, () => {
   it('renders a <div> element inside Shadow DOM for blr-counter', async () => {
     const element = await fixture(BlrCounterRenderFunction(sampleParams));
     const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);

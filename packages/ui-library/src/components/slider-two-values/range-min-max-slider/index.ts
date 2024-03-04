@@ -2,7 +2,7 @@ import { LitElement, html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { RangeMinMaxSliderTagName } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { sliderLight, sliderDark } from '../../../foundation/component-tokens/slider-legend.css';
@@ -207,8 +207,8 @@ export class BlrRangeMinMaxSlider extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrRangeMinMaxSlider);
+if (!customElements.get(RangeMinMaxSliderTagName)) {
+  customElements.define(RangeMinMaxSliderTagName, BlrRangeMinMaxSlider);
 }
 
 export type BlrRangeMinMaxSliderType = Omit<BlrRangeMinMaxSlider, keyof LitElement>;

@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrFormCaptionRenderFunction } from './renderFunction';
+import { BlrFormCaptionRenderFunction, FormCaptionTagName } from './renderFunction';
 import { BlrFormCaptionType } from './index';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -12,17 +12,16 @@ const sampleParams: BlrFormCaptionType = {
   icon: 'blr360',
   variant: 'hint',
   size: 'sm',
-  arialabel: 'Form Hint',
 };
 
-describe('blr-form-caption', () => {
-  it('renders a <div> element inside Shadow DOM for blr-form-caption', async () => {
+describe(`${FormCaptionTagName}`, () => {
+  it(`renders a <div> element inside Shadow DOM for ${FormCaptionTagName}`, async () => {
     const element = await fixture(BlrFormCaptionRenderFunction(sampleParams));
     const blrCaption = querySelectorDeep('div.blr-form-caption', element.getRootNode() as HTMLElement);
     expect(blrCaption).to.exist;
   });
 
-  it('renders a blr-form-caption with new value', async () => {
+  it(`renders a ${FormCaptionTagName} with new value`, async () => {
     const element = await fixture(
       BlrFormCaptionRenderFunction({
         ...sampleParams,
@@ -39,7 +38,7 @@ describe('blr-form-caption', () => {
     expect(blrText).to.include('New hint message added');
   });
 
-  it('renders a blr-form-caption with empty block', async () => {
+  it(`renders a ${FormCaptionTagName} with empty block`, async () => {
     const element = await fixture(
       BlrFormCaptionRenderFunction({
         ...sampleParams,
@@ -90,13 +89,13 @@ describe('blr-form-caption', () => {
   });
   */
 
-  it('renders a <div> element inside Shadow DOM for blr-form-caption hint as variant', async () => {
+  it(`renders a <div> element inside Shadow DOM for ${FormCaptionTagName} hint as variant`, async () => {
     const element = await fixture(BlrFormCaptionRenderFunction({ ...sampleParams, variant: 'hint' }));
     const blrLabel = querySelectorDeep('div.blr-form-caption.hint', element.getRootNode() as HTMLElement);
     expect(blrLabel).to.exist;
   });
 
-  it('renders a <div> element inside Shadow DOM for blr-form-caption error as variant', async () => {
+  it(`renders a <div> element inside Shadow DOM for ${FormCaptionTagName} error as variant`, async () => {
     const element = await fixture(BlrFormCaptionRenderFunction({ ...sampleParams, variant: 'error' }));
     const blrLabel = querySelectorDeep('div.blr-form-caption.error', element.getRootNode() as HTMLElement);
     expect(blrLabel).to.exist;

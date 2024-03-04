@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
 import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../globals/types';
-import { TAG_NAME } from './renderFunction';
+import { TextareaTagName } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
@@ -249,8 +249,8 @@ export class BlrTextarea extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTextarea);
+if (!customElements.get(TextareaTagName)) {
+  customElements.define(TextareaTagName, BlrTextarea);
 }
 
 export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement> & BlrTextareaEventHandlers;

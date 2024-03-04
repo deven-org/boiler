@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrRadioGroupRenderFunction } from './renderFunction';
+import { BlrRadioGroupRenderFunction, RadioGroupTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -18,17 +18,16 @@ const sampleParams: BlrRadioGroupType = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  showLegend: true,
+  hasGroupLabel: true,
   hasHint: true,
   groupHintMessage: 'This is a sample hint message',
   groupHintIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
-  hideLabel: false,
 };
 
-describe('blr-radio-group', () => {
+describe(`${RadioGroupTagName}`, () => {
   it('is having a radioGroup containing the right className', async () => {
     const element = await fixture(BlrRadioGroupRenderFunction(sampleParams));
 

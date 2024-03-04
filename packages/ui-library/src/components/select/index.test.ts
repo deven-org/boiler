@@ -1,11 +1,12 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrSelectRenderFunction } from './renderFunction';
+import { BlrSelectRenderFunction, SelectTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { html } from 'lit-html';
 import { BlrSelectType } from '.';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
 
 const sampleParams: BlrSelectType = {
   name: 'Text Input',
@@ -31,7 +32,7 @@ const optionsAsChildren = html`
   <option value="option6" label="Option 6"></option>
 `;
 
-describe('blr-select', () => {
+describe(`${SelectTagName}`, () => {
   it('is having a select containing the right className', async () => {
     const element = await fixture(BlrSelectRenderFunction(sampleParams, optionsAsChildren));
 
@@ -54,7 +55,7 @@ describe('blr-select', () => {
 
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
     const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep(`${FormCaptionTagName}`, captionWrapper?.getRootNode() as HTMLElement);
 
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;

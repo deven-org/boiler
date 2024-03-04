@@ -1,11 +1,12 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTextInputRenderFunction } from './renderFunction';
+import { BlrTextInputRenderFunction, TextInputTagName } from './renderFunction';
 import type { BlrTextInputType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
 
 const sampleParams: BlrTextInputType = {
   theme: 'Light',
@@ -33,7 +34,7 @@ const sampleParams: BlrTextInputType = {
   name: 'TextInput',
 };
 
-describe('blr-text-input', () => {
+describe(`${TextInputTagName}`, () => {
   it('is having a input containing the right className', async () => {
     const element = await fixture(BlrTextInputRenderFunction(sampleParams));
 
@@ -109,7 +110,7 @@ describe('blr-text-input', () => {
       })
     );
 
-    const formCaptions = querySelectorAllDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep(`${FormCaptionTagName}`, element.getRootNode() as HTMLElement);
 
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;

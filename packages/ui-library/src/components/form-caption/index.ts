@@ -1,7 +1,7 @@
 import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
+import { FormCaptionTagName } from './renderFunction';
 import { captionDark, captionLight } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -71,8 +71,8 @@ export class BlrFormCaption extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrFormCaption);
+if (!customElements.get(FormCaptionTagName)) {
+  customElements.define(FormCaptionTagName, BlrFormCaption);
 }
 
 export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElement>;

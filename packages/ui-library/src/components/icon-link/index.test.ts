@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrIconLinkRenderFunction } from './renderFunction';
+import { BlrIconLinkRenderFunction, IconLinkTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -17,7 +17,7 @@ const sampleParams: BlrIconLinkType = {
   theme: 'Light',
 };
 
-describe('blr-icon-link', () => {
+describe(`${IconLinkTagName}`, () => {
   it('is having a a containing the right className', async () => {
     const element = await fixture(BlrIconLinkRenderFunction(sampleParams));
 

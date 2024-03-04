@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property, query, queryAll, state } from 'lit/decorators.js';
 import { styleCustom, tabBarDark, tabBarLight } from './index.css';
 
-import { TAG_NAME } from './renderFunction';
+import { TabBarTagName } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
 import {
@@ -246,8 +246,8 @@ export class BlrTabBar extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTabBar);
+if (!customElements.get(TabBarTagName)) {
+  customElements.define(TabBarTagName, BlrTabBar);
 }
 
 export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;

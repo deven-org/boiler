@@ -7,7 +7,7 @@ import { DirectiveResult } from 'lit-html/directive';
 import { ClassMapDirective } from 'lit-html/directives/class-map';
 import { until } from 'lit-html/directives/until.js';
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
-import { TAG_NAME } from './renderFunction';
+import { IconTagName } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrClickEvent, createBlrClickEvent } from '../../globals/events';
 
@@ -73,8 +73,8 @@ export class BlrIcon extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrIcon);
+if (!customElements.get(IconTagName)) {
+  customElements.define(IconTagName, BlrIcon);
 }
 
 export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & BlrIconEventHandlers;

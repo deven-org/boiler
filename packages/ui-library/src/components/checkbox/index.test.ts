@@ -1,10 +1,11 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrCheckboxRenderFunction } from './renderFunction';
+import { BlrCheckboxRenderFunction, CheckboxTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import type { BlrCheckboxType } from '.';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
 
 const sampleParams: BlrCheckboxType = {
   label: 'Checkbox Option',
@@ -24,7 +25,7 @@ const sampleParams: BlrCheckboxType = {
   hasLabel: true,
 };
 
-describe('blr-checkbox', () => {
+describe(`${CheckboxTagName}`, () => {
   it('is having a checkbox containing the right className', async () => {
     const element = await fixture(BlrCheckboxRenderFunction(sampleParams));
 
@@ -46,7 +47,7 @@ describe('blr-checkbox', () => {
     );
 
     const captionWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep(`${FormCaptionTagName}`, captionWrapper?.getRootNode() as HTMLElement);
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;
 

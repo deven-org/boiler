@@ -1,11 +1,12 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrNumberInputRenderFunction } from './renderFunction';
+import { BlrNumberInputRenderFunction, NumberInputTagName } from './renderFunction';
 import type { BlrNumberInputType } from '.';
 
 import { fixture, expect, nextFrame } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
 
 const sampleParams: BlrNumberInputType = {
   placeholder: 'Type your message here ..',
@@ -30,7 +31,7 @@ const sampleParams: BlrNumberInputType = {
   stepDecreaseAriaLabel: '\u2212',
 };
 
-describe('blr-number-input', () => {
+describe(`${NumberInputTagName}`, () => {
   it('input is of type "number"', async () => {
     const element = await fixture(BlrNumberInputRenderFunction(sampleParams));
 
@@ -83,8 +84,8 @@ describe('blr-number-input', () => {
       })
     );
 
-    const captionWrapper = querySelectorDeep('blr-number-input', element.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const captionWrapper = querySelectorDeep(`${NumberInputTagName}`, element.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep(`${FormCaptionTagName}`, captionWrapper?.getRootNode() as HTMLElement);
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;
 

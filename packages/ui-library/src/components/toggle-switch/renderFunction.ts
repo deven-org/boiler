@@ -1,7 +1,8 @@
 import { BlrToggleSwitchType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-label-toggleswitch';
+export const ToggleSwitchTagName = `${componentsPrefix}-label-toggleswitch`;
 
 export const BlrToggleSwitchRenderFunction = (params: BlrToggleSwitchType) =>
-  genericBlrComponentRenderer<BlrToggleSwitchType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrToggleSwitchType>(ToggleSwitchTagName, { ...params });

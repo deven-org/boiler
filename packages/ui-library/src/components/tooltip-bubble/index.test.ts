@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTooltipBubbleRenderFunction } from './renderFunction';
+import { BlrTooltipBubbleRenderFunction, TooltipBubbleTagName } from './renderFunction';
 import type { BlrTooltipBubbleType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -11,11 +11,11 @@ const sampleParams: BlrTooltipBubbleType = {
   static: true,
 };
 
-describe('blr-tooltip-bubble', () => {
+describe(`${TooltipBubbleTagName}`, () => {
   it('is having a tooltip bubble element', async () => {
     const element = await fixture(BlrTooltipBubbleRenderFunction(sampleParams));
 
-    const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
+    const tooltip = querySelectorDeep(`${TooltipBubbleTagName}`, element.getRootNode() as HTMLElement);
 
     expect(tooltip).to.exist;
   });

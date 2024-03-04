@@ -104,10 +104,7 @@ export const ButtonGroup = (
     })}
   `;
 
-  return html`<div class="wrapper">
-    ${BlrButtonGroupRenderFunction(params, contentButtons)}
-    <div class="wrapper"></div>
-  </div>`;
+  return html` <div class="wrapper">${BlrButtonGroupRenderFunction(params, contentButtons)}</div>`;
 };
 
 const defaultParams: BlrButtonGroupType = {
@@ -124,10 +121,9 @@ ButtonGroup.args = defaultParams;
  */
 export const Alignment = () => {
   return html`
-    ${sharedStyles}
-    <div class="wrapper">${ButtonGroup({ ...defaultParams, alignment: 'left' }, 'Alignment', 'Left')}</div>
-    <div class="wrapper">${ButtonGroup({ ...defaultParams, alignment: 'center' }, 'Alignment', 'Center')}</div>
-    <div class="wrapper">${ButtonGroup({ ...defaultParams, alignment: 'right' }, 'Alignment', 'Right')}</div>
+    ${sharedStyles} ${ButtonGroup({ ...defaultParams, alignment: 'left' }, 'Alignment', 'Left')}
+    ${ButtonGroup({ ...defaultParams, alignment: 'center' }, 'Alignment', 'Center')}
+    ${ButtonGroup({ ...defaultParams, alignment: 'right' }, 'Alignment', 'Right')}
   `;
 };
 

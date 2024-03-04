@@ -5,7 +5,7 @@ import { styleCustom } from './index.css';
 import { sliderDark, sliderLight } from '../../../foundation/component-tokens/slider.css';
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 
-import { TAG_NAME } from './renderFunction';
+import { RangeSliderTagName } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { findPercentage, generateRangeBar, setOnclickValue, findNearestValue } from '../../../utils/range-slider-utils';
@@ -142,8 +142,8 @@ export class BlrRangeSlider extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrRangeSlider);
+if (!customElements.get(RangeSliderTagName)) {
+  customElements.define(RangeSliderTagName, BlrRangeSlider);
 }
 
 export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElement>;

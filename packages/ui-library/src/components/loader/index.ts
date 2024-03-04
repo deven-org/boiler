@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { styleCustomLight, styleCustomDark } from './index.css';
 
-import { TAG_NAME } from './renderFunction';
+import { LoaderTagName } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
 
@@ -34,8 +34,8 @@ export class BlrLoader extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrLoader);
+if (!customElements.get(LoaderTagName)) {
+  customElements.define(LoaderTagName, BlrLoader);
 }
 
 export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;

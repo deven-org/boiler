@@ -1,8 +1,9 @@
 // import { TAG_NAME } from '.';
 import type { BlrRangeSliderType } from '.';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-range-slider';
+export const RangeSliderTagName = `${componentsPrefix}-range-slider`;
 
 export const BlrRangeSliderRenderFunction = (params: BlrRangeSliderType) =>
-  genericBlrComponentRenderer<BlrRangeSliderType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrRangeSliderType>(RangeSliderTagName, { ...params });

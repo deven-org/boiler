@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTextButtonRenderFunction } from './renderFunction';
+import { BlrTextButtonRenderFunction, TextButtonTagName } from './renderFunction';
 import type { BlrTextButtonType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -19,7 +19,7 @@ const sampleParams: BlrTextButtonType = {
   buttonDisplay: 'inline-block',
 };
 
-describe('blr-text-button', () => {
+describe(`${TextButtonTagName}`, () => {
   it('is having a button containing the right className', async () => {
     const element = await fixture(BlrTextButtonRenderFunction(sampleParams));
 

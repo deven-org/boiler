@@ -1,7 +1,8 @@
 import { BlrNumberInputType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-number-input';
+export const NumberInputTagName = `${componentsPrefix}-number-input`;
 
 export const BlrNumberInputRenderFunction = (params: BlrNumberInputType) =>
-  genericBlrComponentRenderer<BlrNumberInputType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrNumberInputType>(NumberInputTagName, { ...params });

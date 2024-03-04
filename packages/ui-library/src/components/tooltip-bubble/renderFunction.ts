@@ -1,7 +1,8 @@
 import { BlrTooltipBubbleType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-tooltip-bubble';
+export const TooltipBubbleTagName = `${componentsPrefix}-tooltip-bubble`;
 
 export const BlrTooltipBubbleRenderFunction = (params: BlrTooltipBubbleType) =>
-  genericBlrComponentRenderer<BlrTooltipBubbleType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrTooltipBubbleType>(TooltipBubbleTagName, { ...params });

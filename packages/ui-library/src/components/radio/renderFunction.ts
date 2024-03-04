@@ -1,7 +1,8 @@
 import { BlrRadioType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-radio';
+export const RadioTagName = `${componentsPrefix}-radio`;
 
 export const BlrRadioRenderFunction = (params: BlrRadioType) =>
-  genericBlrComponentRenderer<BlrRadioType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrRadioType>(RadioTagName, { ...params });

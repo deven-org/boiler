@@ -1,7 +1,7 @@
 import { LitElement, html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
+import { CheckboxTagName } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
@@ -314,8 +314,8 @@ export class BlrCheckbox extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrCheckbox);
+if (!customElements.get(CheckboxTagName)) {
+  customElements.define(CheckboxTagName, BlrCheckbox);
 }
 
 export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement> & BlrCheckboxEventHandlers;

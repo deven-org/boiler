@@ -15,7 +15,16 @@
       <div class="componentWrapper">
         <div class="component">
           <p>Text Button</p>
-          <blr-text-button
+          <<%= componentsPrefix %>-button-group sizevariant="md" alignment="left">
+            <<%= componentsPrefix %>-text-button label="Text Button" theme="Light" variant="primary" buttondisplay="inline-block"></<%= componentsPrefix %>-text-button>
+            <<%= componentsPrefix %>-text-button label="Text Button" theme="Light" variant="secondary" buttondisplay="inline-block"></<%= componentsPrefix %>-text-button>
+            <<%= componentsPrefix %>-icon-button theme="Light" variant="silent" arialabel="button_1" icon="blr360"></<%= componentsPrefix %>-icon-button>
+          </<%= componentsPrefix %>-button-group>
+        </div>
+
+        <div class="component">
+          <p>Text Button</p>
+          <<%= componentsPrefix %>-text-button
             theme="Light"
             variant="cta"
             sizeVariant="md"
@@ -24,14 +33,14 @@
             iconPosition="leading"
             icon="blr360"
             textButtonId="button-id"
-          ></blr-text-button>
+          ></<%= componentsPrefix %>-text-button>
           <button id="toggleLoadingState">Toggle Loading State</button>
           <button id="toggleDisabledState">Toggle Disabled State</button>
         </div>
 
         <div class="component">
           <p>Select</p>
-          <blr-select label="Boiler Select Component">
+          <<%= componentsPrefix %>-select label="Boiler Select Component">
             <option value="" label="--Please choose an option--"></option>
             <option value="option1" label="Option 1"></option>
             <option value="option2" label="Option 2"></option>
@@ -39,22 +48,22 @@
             <option value="option4" label="Option 4"></option>
             <option value="option5" label="Option 5"></option>
             <option value="option6" label="Option 6"></option>
-          </blr-select>
+          </<%= componentsPrefix %>-select>
         </div>
 
         <div class="component">
           <p>Checkbox</p>
-          <blr-checkbox hasLabel="true" label="Please check" checkInputId="Test123"></blr-checkbox>
+          <<%= componentsPrefix %>-checkbox hasLabel="true" label="Please check" checkInputId="Test123"></<%= componentsPrefix %>-checkbox>
         </div>
 
         <div class="component">
           <p>Text Input</p>
-          <blr-text-input placeholder="Enter text..." value="" hintText="Hint"></blr-text-input>
+          <<%= componentsPrefix %>-text-input placeholder="Enter text..." value="" hintText="Hint"></<%= componentsPrefix %>-text-input>
         </div>
 
         <div class="component">
           <p>Number Input</p>
-          <blr-number-input
+          <<%= componentsPrefix %>-number-input
             value="1000"
             size="md"
             steppervariant="vertical"
@@ -72,12 +81,12 @@
             name="NumberInput"
             decimals="10"
             leadingzeros="3"
-          ></blr-number-input>
+          ></<%= componentsPrefix %>-number-input>
         </div>
 
         <div class="component">
           <p>Textarea</p>
-          <blr-textarea
+          <<%= componentsPrefix %>-textarea
             placeholder="Enter text..."
             value=""
             showHint="true"
@@ -87,13 +96,13 @@
             maxLength="140"
             warningLimitType="warningLimitInt"
             warningLimitInt="105"
-          ></blr-textarea>
+          ></<%= componentsPrefix %>-textarea>
         </div>
 
         <div class="component">
           <p>Tooltip</p>
 
-          <blr-tooltip
+          <<%= componentsPrefix %>-tooltip
             theme="Light"
             placement="top"
             elevation="true"
@@ -101,18 +110,18 @@
             offset="20"
             message="Message-text"
           >
-            <blr-text-button theme="Light" variant="secondary" size="md" label="Hover me"></blr-text-button>
-          </blr-tooltip>
+            <<%= componentsPrefix %>-text-button theme="Light" variant="secondary" size="md" label="Hover me"></<%= componentsPrefix %>-text-button>
+          </<%= componentsPrefix %>-tooltip>
         </div>
 
         <div class="component">
           <p>Radio Input</p>
-          <blr-radio size="md"></blr-radio>
+          <<%= componentsPrefix %>-radio size="md"></<%= componentsPrefix %>-radio>
         </div>
 
         <div class="component">
           <p>Tab Bar</p>
-          <blr-tab-bar
+          <<%= componentsPrefix %>-tab-bar
             variant="standard"
             overflowVariantStandard="buttons"
             overflowVariantFullWidth="browserOverflow"
@@ -132,13 +141,12 @@
             <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
             <p label="Tab 10" icon="blrMusic">Tab 10</p>
             <p label="Tab 11" icon="blrPen">Tab 11</p>
-          </blr-tab-bar>
+          </<%= componentsPrefix %>-tab-bar>
         </div>
       </div>
 
       <div id="logs" class="logsWrapper"></div>
     </div>
-
     <script src="<%= baseURL %>/main.js"></script>
   </body>
 </html>

@@ -1,7 +1,8 @@
 import type { BlrTextareaType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-textarea';
+export const TextareaTagName = `${componentsPrefix}-textarea`;
 
 export const BlrTextareaRenderFunction = (params: BlrTextareaType) =>
-  genericBlrComponentRenderer<BlrTextareaType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrTextareaType>(TextareaTagName, { ...params });

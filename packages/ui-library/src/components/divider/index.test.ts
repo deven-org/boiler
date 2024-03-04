@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrDividerRenderFunction } from './renderFunction';
+import { BlrDividerRenderFunction, DividerTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -8,7 +8,7 @@ import type { BlrDividerType } from '.';
 
 const sampleParams: BlrDividerType = { theme: 'Light', direction: 'vertical' };
 
-describe('blr-divider', () => {
+describe(`${DividerTagName}`, () => {
   it('renders a <div> element inside Shadow DOM', async () => {
     const element = await fixture(BlrDividerRenderFunction(sampleParams));
     const dividerDiv = querySelectorDeep('div.blr-divider', element.getRootNode() as HTMLElement);

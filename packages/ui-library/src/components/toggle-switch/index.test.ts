@@ -1,10 +1,11 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrToggleSwitchRenderFunction } from './renderFunction';
+import { BlrToggleSwitchRenderFunction, ToggleSwitchTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrToggleSwitchType } from '.';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
 
 const sampleParams: BlrToggleSwitchType = {
   label: 'Toggle Switch Option',
@@ -21,7 +22,7 @@ const sampleParams: BlrToggleSwitchType = {
   theme: 'Light',
 };
 
-describe('blr-label-toggleswitch', () => {
+describe(`${ToggleSwitchTagName}`, () => {
   it('is having an input switch containing the right className', async () => {
     const element = await fixture(BlrToggleSwitchRenderFunction(sampleParams));
 
@@ -57,7 +58,7 @@ describe('blr-label-toggleswitch', () => {
       })
     );
 
-    const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+    const hint = querySelectorDeep(`${FormCaptionTagName}`, element.getRootNode() as HTMLElement);
 
     expect(hint).to.exist;
   });
@@ -70,7 +71,7 @@ describe('blr-label-toggleswitch', () => {
       })
     );
 
-    const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
+    const hint = querySelectorDeep(`${FormCaptionTagName}`, element.getRootNode() as HTMLElement);
 
     expect(hint).not.to.exist;
   });

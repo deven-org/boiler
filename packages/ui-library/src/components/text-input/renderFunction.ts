@@ -1,7 +1,8 @@
 import { BlrTextInputType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-text-input';
+export const TextInputTagName = `${componentsPrefix}-text-input`;
 
 export const BlrTextInputRenderFunction = (params: BlrTextInputType) =>
-  genericBlrComponentRenderer<BlrTextInputType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrTextInputType>(TextInputTagName, { ...params });

@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTabBarRenderFunction } from './renderFunction';
+import { BlrTabBarRenderFunction, TabBarTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
@@ -32,7 +32,7 @@ const tabsAsChildren = html`
   <p label="Tab 11" icon="blrPen">Tab 11</p>
 `;
 
-describe('blr-tab-bar', () => {
+describe(`${TabBarTagName}`, () => {
   it('is having a tab bar containing the right className', async () => {
     const element = await fixture(BlrTabBarRenderFunction(sampleParams, tabsAsChildren));
 

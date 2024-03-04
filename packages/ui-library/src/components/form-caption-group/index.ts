@@ -5,7 +5,7 @@ import { FormSizesType } from '../../globals/types';
 import { classMap } from 'lit/directives/class-map.js';
 import { formCaptionGroupStyle } from './index.css';
 
-import { TAG_NAME } from './renderFunction';
+import { FormCaptionGroupTagName } from './renderFunction';
 
 export class BlrFormCaptionGroup extends LitElement {
   static styles = [formCaptionGroupStyle];
@@ -26,8 +26,8 @@ export class BlrFormCaptionGroup extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrFormCaptionGroup);
+if (!customElements.get(FormCaptionGroupTagName)) {
+  customElements.define(FormCaptionGroupTagName, BlrFormCaptionGroup);
 }
 
 export type BlrFormCaptionGroupType = Omit<BlrFormCaptionGroup, keyof LitElement>;

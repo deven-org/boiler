@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { TAG_NAME } from './renderFunction';
+import { FormLabelTagName } from './renderFunction';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -67,8 +67,8 @@ export class BlrFormLabel extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrFormLabel);
+if (!customElements.get(FormLabelTagName)) {
+  customElements.define(FormLabelTagName, BlrFormLabel);
 }
 
 export type BlrFormLabelType = Omit<BlrFormLabel, keyof LitElement | 'createRenderRoot' | 'error'>;

@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { TAG_NAME } from './renderFunction';
+import { ToggleSwitchTagName } from './renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
@@ -254,8 +254,8 @@ export class BlrToggleSwitch extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrToggleSwitch);
+if (!customElements.get(ToggleSwitchTagName)) {
+  customElements.define(ToggleSwitchTagName, BlrToggleSwitch);
 }
 
 export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;

@@ -1,8 +1,9 @@
 import { TemplateResult } from 'lit-html';
 import { BlrSelectType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-select';
+export const SelectTagName = `${componentsPrefix}-select`;
 
 export const BlrSelectRenderFunction = (params: BlrSelectType, children?: TemplateResult<1>) =>
-  genericBlrComponentRenderer<BlrSelectType>(TAG_NAME, { ...params }, children);
+  genericBlrComponentRenderer<BlrSelectType>(SelectTagName, { ...params }, children);

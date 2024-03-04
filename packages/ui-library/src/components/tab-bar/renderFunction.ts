@@ -1,8 +1,9 @@
 import { TemplateResult } from 'lit-html';
 import { BlrTabBarType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-tab-bar';
+export const TabBarTagName = `${componentsPrefix}-tab-bar`;
 
 export const BlrTabBarRenderFunction = (params: BlrTabBarType, children?: TemplateResult<1>) =>
-  genericBlrComponentRenderer<BlrTabBarType>(TAG_NAME, { ...params }, children);
+  genericBlrComponentRenderer<BlrTabBarType>(TabBarTagName, { ...params }, children);

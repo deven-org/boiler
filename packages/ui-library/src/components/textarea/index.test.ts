@@ -1,9 +1,11 @@
 import '@boiler/ui-library/dist/';
 import { getRandomString } from '../../utils/get-random.string';
-import { BlrTextareaRenderFunction } from './renderFunction';
+import { BlrTextareaRenderFunction, TextareaTagName } from './renderFunction';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
 import type { BlrTextareaType } from '.';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
+import { IconTagName } from '../icon/renderFunction';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',
@@ -34,7 +36,7 @@ const sampleParams: BlrTextareaType = {
   name: 'TextArea',
 };
 
-describe('blr-textarea', () => {
+describe(`${TextareaTagName}`, () => {
   it('is having a textarea containing the right className', async () => {
     const element = await fixture(BlrTextareaRenderFunction(sampleParams));
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
@@ -144,7 +146,7 @@ describe('blr-textarea', () => {
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep(`${FormCaptionTagName}`, textarea?.getRootNode() as HTMLElement);
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;
 
@@ -165,8 +167,8 @@ describe('blr-textarea', () => {
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
-    const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
-    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const formHint = querySelectorDeep(`${FormCaptionTagName}`, textarea?.getRootNode() as HTMLElement);
+    const hintIcon = querySelectorDeep(`${IconTagName}`, formHint?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();

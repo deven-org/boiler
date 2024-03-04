@@ -1,7 +1,8 @@
 import { BlrRangeLegendMinMaxSliderType } from '.';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-range-legend-min-max-slider';
+export const RangeLegendMinMaxSliderTagName = `${componentsPrefix}-range-legend-min-max-slider`;
 
 export const BlrRangeLegendMinMaxSliderRenderFunction = (params: BlrRangeLegendMinMaxSliderType) =>
-  genericBlrComponentRenderer<BlrRangeLegendMinMaxSliderType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrRangeLegendMinMaxSliderType>(RangeLegendMinMaxSliderTagName, { ...params });

@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { IconButtonTagName } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
 import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../globals/types';
@@ -145,8 +145,8 @@ export class BlrIconButton extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrIconButton);
+if (!customElements.get(IconButtonTagName)) {
+  customElements.define(IconButtonTagName, BlrIconButton);
 }
 
 export type BlrIconButtonType = Omit<BlrIconButton, keyof LitElement> & BlrIconButtonEventHandlers;

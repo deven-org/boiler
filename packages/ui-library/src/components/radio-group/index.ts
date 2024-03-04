@@ -10,7 +10,7 @@ import { InputSizesType, RadioOption } from '../../globals/types';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { RadioGroupTagName } from './renderFunction';
 
 export class BlrRadioGroup extends LitElement {
   static styles = [styleCustom];
@@ -138,8 +138,8 @@ export class BlrRadioGroup extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrRadioGroup);
+if (!customElements.get(RadioGroupTagName)) {
+  customElements.define(RadioGroupTagName, BlrRadioGroup);
 }
 
 export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;

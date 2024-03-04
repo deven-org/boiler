@@ -1,7 +1,8 @@
 import { BlrCheckboxType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-checkbox';
+export const CheckboxTagName = `${componentsPrefix}-checkbox`;
 
 export const BlrCheckboxRenderFunction = (params: BlrCheckboxType) =>
-  genericBlrComponentRenderer<BlrCheckboxType>(TAG_NAME, { ...params });
+  genericBlrComponentRenderer<BlrCheckboxType>(CheckboxTagName, { ...params });

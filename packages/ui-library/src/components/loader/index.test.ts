@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrLoaderRenderFunction } from './renderFunction';
+import { BlrLoaderRenderFunction, LoaderTagName } from './renderFunction';
 import type { BlrLoaderType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -11,7 +11,7 @@ const sampleParams: BlrLoaderType = {
   theme: 'Light',
 };
 
-describe('blr-loader', () => {
+describe(`${LoaderTagName}`, () => {
   it('is having a statusRole containing the right className', async () => {
     const element = await fixture(BlrLoaderRenderFunction(sampleParams));
 

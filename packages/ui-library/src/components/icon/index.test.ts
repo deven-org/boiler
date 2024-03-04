@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 import '@boiler/ui-library/dist/';
 
-import { BlrIconRenderFunction } from './renderFunction';
+import { BlrIconRenderFunction, IconTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { classMap } from 'lit/directives/class-map.js';
@@ -12,7 +12,7 @@ const TEST_CLASS = 'test-class';
 
 const sampleParams: BlrIconType = { sizeVariant: 'md' };
 
-describe('blr-icon', () => {
+describe(`${IconTagName}`, () => {
   it('containing the right className', async () => {
     const classes = classMap({
       [`${TEST_CLASS}`]: true,
@@ -21,9 +21,7 @@ describe('blr-icon', () => {
     const element = await fixture(BlrIconRenderFunction({ ...sampleParams, classMap: classes }));
     await expect(element.className).to.contain(TEST_CLASS);
   });
-});
 
-describe('blr-icon', () => {
   it('svg contains md class if sizeVariant is set to md and ignoreSize is false', async () => {
     const element = await fixture(BlrIconRenderFunction({ ...sampleParams, ignoreSize: false }));
     const svgParentElement = querySelectorDeep('.blr-icon', element?.getRootNode() as HTMLElement);
@@ -31,9 +29,7 @@ describe('blr-icon', () => {
 
     await expect(className).to.contain('md');
   });
-});
 
-describe('blr-icon', () => {
   it('svg does not contain md class if sizeVariant is set to md and ignoreSize is true', async () => {
     const element = await fixture(BlrIconRenderFunction({ ...sampleParams, ignoreSize: true }));
     const svgParentElement = querySelectorDeep('.blr-icon', element?.getRootNode() as HTMLElement);

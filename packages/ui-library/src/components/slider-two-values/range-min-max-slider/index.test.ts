@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction';
+import { BlrRangeMinMaxSliderRenderFunction, RangeMinMaxSliderTagName } from './renderFunction';
 import type { BlrRangeMinMaxSliderType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -24,7 +24,7 @@ const sampleParams: BlrRangeMinMaxSliderType = {
   onChange: () => null,
 };
 
-describe('blr-range-slider', () => {
+describe(`${RangeMinMaxSliderTagName}`, () => {
   it('is having a slider containing the right className', async () => {
     const element = await fixture(BlrRangeMinMaxSliderRenderFunction(sampleParams));
     const inputWrapper = querySelectorDeep('.range-wrapper', element.getRootNode() as HTMLElement);

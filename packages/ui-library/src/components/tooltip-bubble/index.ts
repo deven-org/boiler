@@ -2,7 +2,7 @@ import { LitElement, css, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { light, dark } from './index.css';
 import { classMap } from 'lit/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
+import { TooltipBubbleTagName } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 export class BlrTooltipBubble extends LitElement {
@@ -46,8 +46,8 @@ export class BlrTooltipBubble extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTooltipBubble);
+if (!customElements.get(TooltipBubbleTagName)) {
+  customElements.define(TooltipBubbleTagName, BlrTooltipBubble);
 }
 
 export type BlrTooltipBubbleType = Omit<BlrTooltipBubble, keyof LitElement>;

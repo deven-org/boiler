@@ -1,8 +1,9 @@
 import { TemplateResult } from 'lit';
 import { BlrButtonGroupType } from '.';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { componentsPrefix } from '../../../../../prefix.js';
 
-export const TAG_NAME = 'blr-button-group';
+export const ButtonGroupTagName = `${componentsPrefix}-button-group`;
 
 export const BlrButtonGroupRenderFunction = (params: BlrButtonGroupType, children?: TemplateResult<1>) =>
-  genericBlrComponentRenderer<BlrButtonGroupType>(TAG_NAME, { ...params }, children);
+  genericBlrComponentRenderer<BlrButtonGroupType>(ButtonGroupTagName, { ...params }, children);

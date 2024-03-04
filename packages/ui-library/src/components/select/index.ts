@@ -11,7 +11,7 @@ import { DirectiveResult } from 'lit-html/directive';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { SelectTagName } from './renderFunction';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
@@ -207,8 +207,8 @@ export class BlrSelect extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrSelect);
+if (!customElements.get(SelectTagName)) {
+  customElements.define(SelectTagName, BlrSelect);
 }
 
 export type BlrSelectType = Omit<BlrSelect, keyof LitElement> & BlrSelectEventHandlers;

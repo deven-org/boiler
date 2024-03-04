@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrRangeSliderRenderFunction } from './renderFunction';
+import { BlrRangeSliderRenderFunction, RangeSliderTagName } from './renderFunction';
 import type { BlrRangeSliderType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
@@ -23,7 +23,7 @@ const sampleParams: BlrRangeSliderType = {
   onChange: () => null,
 };
 
-describe('blr-range-slider', () => {
+describe(`${RangeSliderTagName}`, () => {
   it('is having a slider containing the right className', async () => {
     const element = await fixture(BlrRangeSliderRenderFunction(sampleParams));
     const inputWrapper = querySelectorDeep('.range-wrapper', element.getRootNode() as HTMLElement);

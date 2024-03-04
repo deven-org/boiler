@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
 import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/types';
 
-import { TAG_NAME } from './renderFunction';
+import { ButtonGroupTagName } from './renderFunction';
 
 export class BlrButtonGroup extends LitElement {
   static styles = [styleCustom];
@@ -27,8 +27,8 @@ export class BlrButtonGroup extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrButtonGroup);
+if (!customElements.get(ButtonGroupTagName)) {
+  customElements.define(ButtonGroupTagName, BlrButtonGroup);
 }
 
 export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElement>;

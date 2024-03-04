@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrFormLabelRenderFunction } from './renderFunction';
+import { BlrFormLabelRenderFunction, FormLabelTagName } from './renderFunction';
 import type { BlrFormLabel, BlrFormLabelType } from '.';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -30,7 +30,7 @@ customElements.define('label-test', WrappedBlrLabel);
 const WrappedBlrFormLabelRenderFunction = (params: BlrFormLabelType) =>
   genericBlrComponentRenderer('label-test', { labelProps: params });
 
-describe('blr-form-label', () => {
+describe(`${FormLabelTagName}`, () => {
   it('renders a <label> element inside Shadow DOM', async () => {
     const element = await fixture(WrappedBlrFormLabelRenderFunction(sampleParams));
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);

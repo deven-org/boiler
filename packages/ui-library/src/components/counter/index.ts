@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { counterLight, counterDark } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { CounterTagName } from './renderFunction';
 
 export class BlrCounter extends LitElement {
   static styles = [];
@@ -35,8 +35,8 @@ export class BlrCounter extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrCounter);
+if (!customElements.get(CounterTagName)) {
+  customElements.define(CounterTagName, BlrCounter);
 }
 
 export type BlrCounterType = Omit<BlrCounter, keyof LitElement>;

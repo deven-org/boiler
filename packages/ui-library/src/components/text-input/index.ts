@@ -13,7 +13,7 @@ import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderF
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { TextInputTagName } from './renderFunction';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -246,8 +246,8 @@ export class BlrTextInput extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTextInput);
+if (!customElements.get(TextInputTagName)) {
+  customElements.define(TextInputTagName, BlrTextInput);
 }
 
 export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement> & BlrTextInputEventHandlers;

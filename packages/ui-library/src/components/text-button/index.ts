@@ -18,7 +18,7 @@ import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { BlrLoaderRenderFunction } from '../loader/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { TextButtonTagName } from './renderFunction';
 import {
   BlrBlurEvent,
   BlrClickEvent,
@@ -182,8 +182,8 @@ export class BlrTextButton extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTextButton);
+if (!customElements.get(TextButtonTagName)) {
+  customElements.define(TextButtonTagName, BlrTextButton);
 }
 
 export type BlrTextButtonType = Omit<BlrTextButton, keyof LitElement> & BlrTextButtonEventHandlers;

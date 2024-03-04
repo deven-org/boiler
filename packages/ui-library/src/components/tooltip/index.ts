@@ -3,10 +3,10 @@ import { property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { tooltipPosition } from './tooltip-position';
 import { styleCustom } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { TooltipTagName } from './renderFunction';
 
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
+import { BlrTooltipBubbleRenderFunction, TooltipBubbleTagName } from '../tooltip-bubble/renderFunction';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
@@ -34,7 +34,7 @@ export class BlrTooltip extends LitElement {
     const slot = this.renderRoot?.querySelector('slot');
     this._referenceElement = slot?.assignedElements({ flatten: true })[0];
 
-    this._tooltipElement = this.renderRoot?.querySelector('blr-tooltip-bubble');
+    this._tooltipElement = this.renderRoot?.querySelector(`${TooltipBubbleTagName}`);
 
     if (!this._referenceElement || !this._tooltipElement) {
       return;
@@ -64,8 +64,8 @@ export class BlrTooltip extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTooltip);
+if (!customElements.get(TooltipTagName)) {
+  customElements.define(TooltipTagName, BlrTooltip);
 }
 
 export type BlrTooltipType = Omit<BlrTooltip, keyof LitElement>;

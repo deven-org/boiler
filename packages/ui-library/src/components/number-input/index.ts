@@ -2,7 +2,7 @@ import { LitElement, TemplateResult, html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { baseStyle, wrapperLight, wrapperDark, StepperComboDark, StepperComboLight } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
+import { NumberInputTagName } from './renderFunction';
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -285,8 +285,8 @@ export class BlrNumberInput extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrNumberInput);
+if (!customElements.get(NumberInputTagName)) {
+  customElements.define(NumberInputTagName, BlrNumberInput);
 }
 
 export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement>;

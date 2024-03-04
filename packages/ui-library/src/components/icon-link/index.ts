@@ -12,7 +12,7 @@ import { determineLoaderVariant } from '../../utils/determine-loader-variant';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { BlrLoaderRenderFunction } from '../loader/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { IconLinkTagName } from './renderFunction';
 
 //
 export class BlrIconLink extends LitElement {
@@ -89,8 +89,8 @@ export class BlrIconLink extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrIconLink);
+if (!customElements.get(IconLinkTagName)) {
+  customElements.define(IconLinkTagName, BlrIconLink);
 }
 
 export type BlrIconLinkType = Omit<BlrIconLink, keyof LitElement>;

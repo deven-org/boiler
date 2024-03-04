@@ -1,10 +1,11 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrRadioRenderFunction } from './renderFunction';
+import { BlrRadioRenderFunction, RadioTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrRadioType } from '.';
+import { FormCaptionTagName } from '../form-caption/renderFunction';
 
 const sampleParams: BlrRadioType = {
   checked: false,
@@ -19,7 +20,7 @@ const sampleParams: BlrRadioType = {
   theme: 'Light',
 };
 
-describe('blr-radio', () => {
+describe(`${RadioTagName}`, () => {
   it('is having a radio containing the right className', async () => {
     const element = await fixture(BlrRadioRenderFunction(sampleParams));
 
@@ -42,7 +43,7 @@ describe('blr-radio', () => {
 
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
     const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep(`${FormCaptionTagName}`, captionWrapper?.getRootNode() as HTMLElement);
 
     const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
     const hintClassName = formCaptionHint?.className;

@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { dividerDark, dividerLight } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { DividerTagName } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { DividerVariationTypes } from '../../globals/types';
 
@@ -27,8 +27,8 @@ export class BlrDivider extends LitElement {
   }
 }
 
-if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrDivider);
+if (!customElements.get(DividerTagName)) {
+  customElements.define(DividerTagName, BlrDivider);
 }
 
 export type BlrDividerType = Omit<BlrDivider, keyof LitElement>;

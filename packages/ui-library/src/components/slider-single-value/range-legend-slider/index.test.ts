@@ -1,6 +1,6 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrRangeLegendSliderRenderFunction } from './renderFunction';
+import { BlrRangeLegendSliderRenderFunction, RangeLegendSliderTagName } from './renderFunction';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
@@ -21,7 +21,7 @@ const sampleParams: BlrRangeLegendSliderType = {
   onChange: () => null,
 };
 
-describe('blr-range-slider', () => {
+describe(`${RangeLegendSliderTagName}`, () => {
   it('is having a slider containing the right className', async () => {
     const element = await fixture(BlrRangeLegendSliderRenderFunction(sampleParams));
     const inputWrapper = querySelectorDeep('.input-wrapper', element.getRootNode() as HTMLElement);
