@@ -1,1 +1,1 @@
-export const componentsPrefix = 'adac';
+export const componentsPrefix = 'blr';
