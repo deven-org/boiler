@@ -23,7 +23,7 @@ export class BlrIcon extends LitElement {
 
   @property() icon: IconType = 'blr360Xs';
   @property() sizeVariant: SizesType = 'md';
-  @property() ignoreSize?: boolean = false;
+  @property() fillParent?: boolean = true;
 
   @property() theme: ThemeType = 'Light';
   @property() classMap?: DirectiveResult<typeof ClassMapDirective>;
@@ -33,7 +33,7 @@ export class BlrIcon extends LitElement {
   };
 
   protected render() {
-    const sizeKey = this.ignoreSize ? 'full' : this.sizeVariant.toLowerCase();
+    const sizeKey = this.fillParent ? 'full' : this.sizeVariant.toLowerCase();
 
     const unfullfilledRenderResult = html`<span
       @click=${this.handleClick}
