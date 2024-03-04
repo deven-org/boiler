@@ -104,7 +104,7 @@ export const ButtonGroup = (
     })}
   `;
 
-  return html` <div class="wrapper">${BlrButtonGroupRenderFunction(params, contentButtons)}</div>`;
+  return html`<div class="wrapper">${BlrButtonGroupRenderFunction(params, contentButtons)}</div>`;
 };
 
 const defaultParams: BlrButtonGroupType = {
