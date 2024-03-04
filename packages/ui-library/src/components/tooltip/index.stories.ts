@@ -5,6 +5,7 @@ import { BlrTooltipType } from './index';
 import { BlrTooltipRenderFunction } from './renderFunction';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { TooltipPlacement } from '../../globals/constants';
+import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
 
 const sharedStyles = html`
   <style>
@@ -121,7 +122,25 @@ export default {
 };
 
 export const Tooltip = (params: BlrTooltipType) => html` <div class="container">
-  ${BlrTooltipRenderFunction(params, html`<div class="blue-box"></div>`)}
+  ${BlrTooltipRenderFunction(
+    params,
+    html`
+      <div slot="target">
+        <button>Test</button>
+      </div>
+
+      <div slot="floater">
+        ${BlrTooltipBubbleRenderFunction({
+          theme: 'Light',
+          message: 'Hello',
+          hasArrow: true,
+          elevation: true,
+          visible: true,
+          static: true,
+        })}
+      </div>
+    `
+  )}
 </div>`;
 
 const defaultParams: BlrTooltipType = {

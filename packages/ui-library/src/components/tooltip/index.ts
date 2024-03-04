@@ -6,7 +6,7 @@ import { styleCustom } from './index.css';
 import { TAG_NAME } from './renderFunction';
 
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
+// import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
@@ -31,10 +31,13 @@ export class BlrTooltip extends LitElement {
       this.offset = parseInt(this.offset);
     }
 
-    const slot = this.renderRoot?.querySelector('slot');
-    this._referenceElement = slot?.assignedElements({ flatten: true })[0];
+    const targetSlot = this.renderRoot?.querySelector('slot[name="target"]');
+    this._referenceElement = targetSlot?.assignedElements({ flatten: true })[0];
 
-    this._tooltipElement = this.renderRoot?.querySelector('blr-tooltip-bubble');
+    const triggerSlot = this.renderRoot?.querySelector('slot[name="floater"]');
+    this._tooltipElement = triggerSlot?.assignedElements({ flatten: true })[0];
+
+    //console.log({ ref: this._referenceElement, target: this._tooltipElement });
 
     if (!this._referenceElement || !this._tooltipElement) {
       return;
@@ -48,19 +51,22 @@ export class BlrTooltip extends LitElement {
     }
   }
 
-  protected show = () => (this.visible = true);
+  protected show = () => {
+    this.visible = true;
+    //console.log('enter');
+  };
 
-  protected hide = () => (this.visible = false);
+  protected hide = () => {
+    this.visible = false;
+    //console.log('leave');
+  };
 
   protected render() {
-    return html` <slot></slot>
-      ${BlrTooltipBubbleRenderFunction({
-        theme: this.theme,
-        message: this.message,
-        hasArrow: this.hasArrow,
-        elevation: this.elevation,
-        visible: this.visible,
-      })}`;
+    return html`
+      <slot name="floater"> </slot>
+
+      <slot name="target"> </slot>
+    `;
   }
 }
 
