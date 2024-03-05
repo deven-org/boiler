@@ -303,7 +303,7 @@ export class BlrCheckbox extends LitElement {
                 })}`
               : nothing}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
               : nothing}
           </div>
         </div>

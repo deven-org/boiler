@@ -8,7 +8,7 @@ import '../../index';
 export default {
   title: 'Components/Form Caption Group',
   argTypes: {
-    size: {
+    sizeVariant: {
       options: FormSizes,
       control: { type: 'radio' },
       description:
@@ -73,7 +73,7 @@ export const BlrFormCaptionGroup = (params: BlrFormCaptionGroupType) =>
 BlrFormCaptionGroup.storyName = 'Form Caption Group';
 
 const args: BlrFormCaptionGroupType = {
-  size: 'sm',
+  sizeVariant: 'sm',
 };
 
 BlrFormCaptionGroup.args = args;

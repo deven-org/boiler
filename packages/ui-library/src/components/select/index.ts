@@ -201,7 +201,7 @@ export class BlrSelect extends LitElement {
             ${this.renderIcon(iconClasses)}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
             : nothing}
         </div>
       `;

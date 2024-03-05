@@ -238,7 +238,7 @@ export class BlrTextInput extends LitElement {
               : nothing}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
             : nothing}
         </div>
       `;

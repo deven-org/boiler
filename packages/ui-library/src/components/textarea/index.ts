@@ -231,7 +231,7 @@ export class BlrTextarea extends LitElement {
           ></textarea>
           <div class="${textareaInfoContainer}">
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
               : nothing}
             ${this.showCounter
               ? BlrCounterRenderFunction({

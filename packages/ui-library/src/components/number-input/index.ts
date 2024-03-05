@@ -279,7 +279,7 @@ export class BlrNumberInput extends LitElement {
         </div>
 
         ${this.hasHint || this.hasError
-          ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
           : nothing}
       `;
     }

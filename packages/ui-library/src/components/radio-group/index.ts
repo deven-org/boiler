@@ -132,7 +132,7 @@ export class BlrRadioGroup extends LitElement {
 
       ${this.hasHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)}
           </div>`
         : nothing} `;
   }
