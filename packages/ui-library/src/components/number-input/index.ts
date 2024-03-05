@@ -323,19 +323,18 @@ export class BlrNumberInput extends LitElement {
                 id="${this.numberInputId}"
                 class="${inputClasses}"
                 type="number"
-                .value=${this.currentValue != 0
+                .value=${this.currentValue || ''
                   ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
-                  : nothing}
-                step="${this.step || nothing}"
+                  : ''}
+                step="${this.step || ''}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
-                hasError="${this.hasError}"
                 @change=${this.handleChange}
                 @blur=${this.handleBlur}
                 @focus=${this.handleFocus}
                 @select=${this.handleSelect}
-                placeholder=${this.placeholder || nothing}
+                placeholder=${this.placeholder || ''}
               />
               ${hasUnit ? html` <div class="${unitClasses}">${this.unit}</div> ` : nothing}
             </div>
