@@ -10,26 +10,26 @@ export class BlrCounter extends LitElement {
   static styles = [];
 
   @property() variant: CounterVariantType = 'neutral';
-  @property() current = 0;
-  @property() max = 0;
-  @property() size?: FormSizesType = 'md';
+  @property({ type: Number }) value = 0;
+  @property({ type: Number }) maxValue = 0;
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [counterLight] : [counterDark];
 
       const classes = classMap({
         'blr-counter': true,
         [this.variant]: this.variant,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       return html`
         <style>
           ${dynamicStyles}
         </style>
-        <div class=${classes}>${this.current} / ${this.max}</div>
+        <div class=${classes}>${this.value} / ${this.maxValue}</div>
       `;
     }
   }

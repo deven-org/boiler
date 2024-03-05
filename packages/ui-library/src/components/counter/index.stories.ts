@@ -35,8 +35,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: 'Choose size of the component.',
       options: FormSizes,
       control: { type: 'radio' },
@@ -44,15 +43,13 @@ export default {
         category: 'Appearance',
       },
     },
-    current: {
-      name: 'value',
+    value: {
       description: 'Enter the value the component should hold.',
       table: {
         category: 'Content / Settings',
       },
     },
-    max: {
-      name: 'maxValue',
+    maxValue: {
       description: 'Enter the max value the component should be able to hold.',
       table: {
         category: 'Content / Settings',
@@ -99,9 +96,9 @@ BlrCounter.storyName = 'Counter';
 const defaultParams: BlrCounterType = {
   theme: 'Light',
   variant: 'neutral',
-  size: 'md',
-  current: 3,
-  max: 100,
+  sizeVariant: 'md',
+  value: 3,
+  maxValue: 100,
 };
 BlrCounter.args = defaultParams;
 
@@ -147,7 +144,7 @@ export const SizeVariant = () => {
         html`<div class="wrapper">
           ${BlrCounterRenderFunction({
             ...defaultParams,
-            size: size,
+            sizeVariant: size,
           })}
         </div>`
     )}

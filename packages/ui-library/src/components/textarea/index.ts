@@ -236,9 +236,9 @@ export class BlrTextarea extends LitElement {
             ${this.showCounter
               ? BlrCounterRenderFunction({
                   variant: counterVariant,
-                  current: this.count,
-                  max: this.maxLength || 0,
-                  size: this.size,
+                  value: this.count,
+                  maxValue: this.maxLength || 0,
+                  sizeVariant: this.size,
                   theme: this.theme,
                 })
               : nothing}
