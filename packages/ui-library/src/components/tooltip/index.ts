@@ -23,49 +23,54 @@ export class BlrTooltip extends LitElement {
 
   @state() protected visible = false;
 
-  protected _referenceElement: Element | undefined | null = null;
-  protected _tooltipElement: HTMLElement | null = null;
+  // protected _targetElement: Element | undefined | null = null;
+  // protected _triggerElement: HTMLElement | null = null;
+  protected _bubble: HTMLElement | null = null;
+
+  protected _floaterElement: Element | undefined | null = null;
+  protected _triggerElement: HTMLElement | null = null;
 
   protected updated() {
     if (typeof this.offset === 'string') {
       this.offset = parseInt(this.offset);
     }
 
-    const targetSlot = this.renderRoot?.querySelector('slot[name="target"]');
-    this._referenceElement = targetSlot?.assignedElements({ flatten: true })[0];
+    const floaterSlot = this.renderRoot?.querySelector('slot[name="floater"]') as HTMLSlotElement;
+    this._floaterElement = floaterSlot?.assignedElements({ flatten: true })[0];
 
-    const triggerSlot = this.renderRoot?.querySelector('slot[name="floater"]');
-    this._tooltipElement = triggerSlot?.assignedElements({ flatten: true })[0];
+    const triggerSlot = this.renderRoot?.querySelector('slot[name="trigger"]') as HTMLSlotElement;
+    this._triggerElement = triggerSlot?.assignedElements({ flatten: true })[0].querySelector('blr-tooltip-bubble'); // needs to be independent, but doesn't work unless directly selecting element
 
-    //console.log({ ref: this._referenceElement, target: this._tooltipElement });
-
-    if (!this._referenceElement || !this._tooltipElement) {
+    if (!this._floaterElement || !this._triggerElement) {
       return;
     }
 
-    enterEvents.forEach((event) => this._referenceElement?.addEventListener(event, this.show));
-    leaveEvents.forEach((event) => this._referenceElement?.addEventListener(event, this.hide));
+    enterEvents.forEach((event) => this._floaterElement?.addEventListener(event, this.show));
+    leaveEvents.forEach((event) => this._floaterElement?.addEventListener(event, this.hide));
 
-    if (this._referenceElement || this._tooltipElement) {
-      tooltipPosition(this._referenceElement, this._tooltipElement, this.placement, this.offset);
+    if (this._floaterElement || this._triggerElement) {
+      tooltipPosition(this._floaterElement, this._triggerElement, this.placement, this.offset);
     }
   }
 
   protected show = () => {
     this.visible = true;
-    //console.log('enter');
+    // only for bubble
+    this._triggerElement.visible = true;
   };
 
   protected hide = () => {
     this.visible = false;
-    //console.log('leave');
+    // only for bubble
+    this._triggerElement.visible = false;
   };
 
   protected render() {
     return html`
+      <slot name="trigger"> </slot>
+
       <slot name="floater"> </slot>
 
-      <slot name="target"> </slot>
     `;
   }
 }

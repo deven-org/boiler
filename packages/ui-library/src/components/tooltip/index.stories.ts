@@ -125,18 +125,17 @@ export const Tooltip = (params: BlrTooltipType) => html` <div class="container">
   ${BlrTooltipRenderFunction(
     params,
     html`
-      <div slot="target">
-        <button>Test</button>
+      <div slot="floater">
+        <button>test</button>
       </div>
 
-      <div slot="floater">
+      <div slot="trigger">
         ${BlrTooltipBubbleRenderFunction({
           theme: 'Light',
           message: 'Hello',
           hasArrow: true,
           elevation: true,
-          visible: true,
-          static: true,
+          visible: false,
         })}
       </div>
     `
@@ -144,10 +143,7 @@ export const Tooltip = (params: BlrTooltipType) => html` <div class="container">
 </div>`;
 
 const defaultParams: BlrTooltipType = {
-  theme: 'Light',
   placement: 'top',
-  elevation: true,
-  hasArrow: true,
   offset: 4,
   message: 'Message-text',
 };
