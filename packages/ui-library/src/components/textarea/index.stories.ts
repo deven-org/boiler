@@ -23,7 +23,7 @@ const sharedStyles = html`
 
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
-  size: 'md',
+  sizeVariant: 'md',
   isResizeable: 'both',
   cols: 40,
   rows: 4,
@@ -65,8 +65,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: ' Choose size of the component. ',
       options: FormSizes,
       control: { type: 'radio' },
@@ -454,7 +453,7 @@ export const SizeVariant = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'sm',
+          sizeVariant: 'sm',
           label: 'Text Area SM',
           placeholder: '',
           value: '',
@@ -462,7 +461,7 @@ export const SizeVariant = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Text Area MD',
           placeholder: '',
           value: '',
@@ -470,7 +469,7 @@ export const SizeVariant = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'lg',
+          sizeVariant: 'lg',
           label: 'Text Area LG',
           placeholder: '',
           value: '',
@@ -497,7 +496,7 @@ export const Resize = () => {
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'Auto resize',
             placeholder: '',
             value: '',
@@ -508,7 +507,7 @@ export const Resize = () => {
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'Horizontal resize',
             placeholder: '',
             value: '',
@@ -519,7 +518,7 @@ export const Resize = () => {
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'Vertical resize',
             placeholder: '',
             value: '',
@@ -530,7 +529,7 @@ export const Resize = () => {
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'No resize',
             placeholder: '',
             value: '',
@@ -559,7 +558,7 @@ export const Placeholder = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'With placeholder',
           labelAppendix: '',
           placeholder: 'Add a message here',
@@ -568,7 +567,7 @@ export const Placeholder = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Without placeholder',
           labelAppendix: '',
           placeholder: '',
@@ -598,7 +597,7 @@ export const Disabled = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Disabled',
           placeholder: '',
           labelAppendix: '',
@@ -628,7 +627,7 @@ export const Readonly = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Readonly',
           placeholder: '',
           readonly: true,
@@ -656,7 +655,7 @@ export const Required = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Label-text',
           placeholder: '',
           required: true,
@@ -686,7 +685,7 @@ export const HasError = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           hasError: true,
           errorIcon: undefined,
@@ -716,7 +715,7 @@ export const FormLabel = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'With label',
           labelAppendix: '(with appendix)',
@@ -725,7 +724,7 @@ export const FormLabel = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: 'Without label',
           label: ' ',
           labelAppendix: '',
@@ -753,7 +752,7 @@ export const FormCaptionGroup = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
           hasHint: true,
@@ -764,7 +763,7 @@ export const FormCaptionGroup = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Hint and error message',
           labelAppendix: '',
@@ -794,7 +793,7 @@ export const Counter = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Counter',
           showCounter: true,
           value: 'This text almost reached the maximum amount of characters.',

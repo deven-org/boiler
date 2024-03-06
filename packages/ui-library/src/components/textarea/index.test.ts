@@ -7,7 +7,7 @@ import type { BlrTextareaType } from '.';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   isResizeable: 'both',
   cols: 40,
   rows: 4,
@@ -239,7 +239,7 @@ describe('blr-textarea', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrTextareaRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrTextareaRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const textareaWrapper = querySelectorDeep('.textarea-input-control', element.getRootNode() as HTMLElement);
     const className = textareaWrapper?.className;
