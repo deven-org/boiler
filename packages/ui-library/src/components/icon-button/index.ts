@@ -134,6 +134,7 @@ export class BlrIconButton extends LitElement {
               icon: calculateIconName(this.icon, iconSizeVariant),
               sizeVariant: iconSizeVariant,
               classMap: iconClasses,
+              fillParent: false,
             },
             {
               'aria-hidden': true,

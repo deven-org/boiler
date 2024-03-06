@@ -220,7 +220,6 @@ export class BlrToggleSwitch extends LitElement {
                     icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
                     sizeVariant: this.size,
                     classMap: toggleIconsClass,
-                    ignoreSize: true,
                   },
                   {
                     'aria-hidden': true,
@@ -233,7 +232,6 @@ export class BlrToggleSwitch extends LitElement {
                     icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
                     sizeVariant: this.size,
                     classMap: toggleIconsClass,
-                    ignoreSize: true,
                   },
                   {
                     'aria-hidden': true,

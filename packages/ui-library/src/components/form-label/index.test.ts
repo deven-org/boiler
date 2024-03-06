@@ -107,7 +107,7 @@ describe('blr-form-label', () => {
     );
     const blrLabel = querySelectorDeep('label.blr-form-label', element.getRootNode() as HTMLElement);
     const errorLabel = blrLabel?.getAttribute('class');
-    expect(errorLabel).to.contain('true');
+    expect(errorLabel).to.contain('error');
   });
 
   it('has a size md by default', async () => {

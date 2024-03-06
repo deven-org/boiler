@@ -174,7 +174,7 @@ export class BlrTextInput extends LitElement {
                     labelAppendix: this.labelAppendix,
                     forValue: this.textInputId,
                     theme: this.theme,
-                    hasError: Boolean(this.label),
+                    hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
@@ -207,9 +207,9 @@ export class BlrTextInput extends LitElement {
                     icon: this.hasError
                       ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
                       : calculateIconName(this.inputIcon, iconSizeVariant),
-
                     sizeVariant: iconSizeVariant,
                     classMap: iconClasses,
+                    fillParent: false,
                   },
                   {
                     'aria-hidden': true,
@@ -224,9 +224,9 @@ export class BlrTextInput extends LitElement {
               ? html`${BlrIconRenderFunction(
                   {
                     icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-
                     sizeVariant: iconSizeVariant,
                     classMap: iconClasses,
+                    fillParent: false,
                     blrClick: this.togglePassword,
                   },
                   {

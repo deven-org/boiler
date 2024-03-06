@@ -276,7 +276,6 @@ export class BlrCheckbox extends LitElement {
                   {
                     icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
-                    ignoreSize: true,
                   },
                   {
                     'aria-hidden': true,
@@ -286,7 +285,6 @@ export class BlrCheckbox extends LitElement {
                   {
                     icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
-                    ignoreSize: true,
                   },
                   {
                     'aria-hidden': true,

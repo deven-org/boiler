@@ -53,7 +53,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    ignoreSize: {
+    fillParent: {
       description: 'Choose if size of the component should be defined by the parent container.',
       table: {
         category: 'Appearance',
@@ -101,21 +101,22 @@ export const Icon = (params: IconType) => {
   return html`${BlrIconRenderFunction({
     icon: calculateIconName(params.icon, params.sizeVariant as SizesType),
     sizeVariant: params.sizeVariant,
-    ignoreSize: params.ignoreSize,
+    fillParent: params.fillParent,
   })}`;
 };
 
+// TODO: fix the type mismatch
 type IconType = {
   theme: string;
   sizeVariant: SizesType;
   icon: SizelessIconType; // Update the type definition for icon
-  ignoreSize: boolean;
+  fillParent: boolean;
 };
 const defaultParams: IconType = {
   theme: 'Light',
   sizeVariant: 'md',
   icon: 'blr360',
-  ignoreSize: false,
+  fillParent: false,
 };
 
 Icon.args = defaultParams;

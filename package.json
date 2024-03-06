@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deven-org/BO1LER-Kitchen.git"
+    "url": "git+https://github.com/deven-org/boiler.git"
   },
   "private": true,
   "workspaces": [
@@ -38,9 +38,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/deven-org/BO1LER-Kitchen/issues"
+    "url": "https://github.com/deven-org/boiler/issues"
   },
-  "homepage": "https://github.com/deven-org/BO1LER-Kitchen#readme",
+  "homepage": "https://github.com/deven-org/boiler#readme",
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.0",
@@ -72,6 +72,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "ejs": "^3.1.9",
     "eslint": "^8.53.0",
     "eslint-webpack-plugin": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^7.3.0",

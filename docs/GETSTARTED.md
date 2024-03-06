@@ -3,10 +3,13 @@ Welcome to the B01LER team! 👋 We are thrilled to have you on board. This "Get
 
 ## Content
 - [Team Overview](#team-overview)
+  - [Designers](#designers)
+  - [Developlers](#developers)
+  - [Product & Project Management](#product--project-management)
 - [Regular Meetings](#regular-meetings)
 - [Communication Channels](#communication-channels)
 - [Access Checklist](#access-checklist)
-- [Project Management Checklist](#project-management-checklist)
+- [Project Management Onboarding Checklist](#project-management-onboarding-checklist)
 - [How to get support](#how-to-get-support)
 - [Link Archive](#link-archive)
 
@@ -40,7 +43,8 @@ All regular B01LER team meetings are in our [B01LER Core calendar](https://myema
 | B01LER Refinement            | Every 2nd Thursday (When there is no Planning)                    | Complete B01LER Team                                                | Refining issues for upcomming iterations                                            |
 | B01LER Retro                 | Every 4th Thursday (After Planning)                               | Complete B01LER Team                                                | Looking back at the last two iterations to improve things in the future             |
 | B01LER Design Review         | Tuesdays & Thursdays                                              | B01LER Design Lead and every team member that needs a design review | Getting approval from design for code implementations                               |
-| B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER Team that wants to join                    | Collaborate and learn from each other by tackling coding challanges together        |
+| B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER (Dev) Team that wants to join              | Collaborate and learn from each other by tackling coding challanges together        |
+| B01LER Open Door             | Mondays & Wednesdays                                              | Everyone from the B01LER (Dev) Team that wants to join              | Giving guidance and/or answering questions about issues junior devs are working on  |
 | B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss objectives and prepare a set of issues to finish int he next iteration      |
 | B01LER Weekly Checkup        | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general product topics and check the roadmap                  |
 | B01LER Marketing Weekly      | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general marketing topics                                      |
@@ -63,19 +67,18 @@ Here is a list of all our communicataion channels and what we are using them for
 
 ## Access Checklist
 Here is a checklist with all the accesses that new colleages need when working in the B01LER project. Every entry has a description on how to recieve access and a whom to contact.
-- [ ] **GitHub** - access to the [deven-org](https://github.com/orgs/deven-org/people) and the [b01ler team](https://github.com/orgs/deven-org/teams/bo1ler) can be provided by an any of the team leads or other org-owners. Access to the deven-org also results in access to the [B01LER Project](https://github.com/orgs/deven-org/projects/3/views/1?pane=info).
-- [ ] **Figma** - access to the [B01LER DS Figma team](https://www.figma.com/files/1248234047942466966/team/1290961933739934842) can be provided by the design lead and stand-ins or the product & project lead.
-- [ ] **Outlook groups** - access to the [B01LER Core](https://outlook.office365.com/groups/accenture.com/boiler-core/members) and the [B01LER](https://outlook.office365.com/groups/accenture.com/boiler-ds/members) Outlook group can be provided by any of the leads or stand-ins. With the invite, new colleagues will also be added to the B01LER Teams channel.
-- [ ] **Slack channels** - all Slack channels are open to join for anyone in the song-asg.slack org and everyone already on the channels can add new members, to get access to the org, a UHD ticket has to be created.
-- [ ] **Mailing lists** - access to the mailing lists can be provided by the product & project management lead and stand-in.
-- [ ] **Parabol** - access to [Parabol team](https://action.parabol.co/team/lk4SUDAJz2/) can be provided by the product & project management lead.
+- [ ] **GitHub** - Access to the [deven-org](https://github.com/orgs/deven-org/people) and the [b01ler team](https://github.com/orgs/deven-org/teams/bo1ler) can be provided by an any of the team leads or other org-owners. Access to the deven-org also results in access to the [B01LER Project](https://github.com/orgs/deven-org/projects/3/views/1?pane=info).
+- [ ] **Figma** - Everyone with an Accenture email address can view the [B01LER DS Figma team](https://www.figma.com/files/1248234047942466966/team/1290961933739934842) after joining the Accenture Global Figma organisation. Editing rights can be provided by the Design lead and stand-in or the Product & Project Management lead.
+- [ ] **Outlook groups** - Access to the [B01LER Core](https://outlook.office365.com/groups/accenture.com/boiler-core/members) and the [B01LER](https://outlook.office365.com/groups/accenture.com/boiler-ds/members) Outlook group can be provided by any of the leads or stand-ins. With the invite, new colleagues will also be added to the B01LER Teams channel.
+- [ ] **Slack channels** - All Slack channels are open to join for anyone in the song-asg.slack org and everyone already on the channels can add new members, to get access to the org, a UHD ticket has to be created.
+- [ ] **Mailing lists** - Access to the mailing lists can be provided by the product & project management lead and stand-in.
+- [ ] **Parabol** - Access to [Parabol team](https://action.parabol.co/team/lk4SUDAJz2/) can be provided by the product & project management lead.
 
-## Project Management Checklist
+## Project Management Onboarding Checklist
 Here is a checklist for project management to follow when onboarding a new colleage.
 - [ ] **WBS Authorization** - to book hours on the projects WBS, new colleagues need to be authorized first. Authorization can be requested by the controlling team.
 - [ ] **Myscheduling** - new colleagues need to be planned in myscheduling by the product & project management lead.
 - [ ] **Project forecast** - new colleagues need to be added to the project forecast by the product & project management lead.
-- [ ] **Sales Deck Update** - new colleagues need to be added to the contributor overview in the internal sales deck.
 
 ## How to get support
 For further support you can always reach out to [Thorben Hartmann](https://song-asg.slack.com/team/UDF7P0Y5D) or any of the other team leads via Slack.

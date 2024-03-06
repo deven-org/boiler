@@ -123,6 +123,7 @@ export class BlrNumberInput extends LitElement {
             classMap: iconClasses,
             icon: calculateIconName(icon, iconSizeVariant),
             sizeVariant: iconSizeVariant,
+            fillParent: false,
           },
           {
             'aria-hidden': true,
@@ -249,7 +250,7 @@ export class BlrNumberInput extends LitElement {
                     labelAppendix: this.labelAppendix,
                     forValue: this.numberInputId,
                     theme: this.theme,
-                    hasError: Boolean(this.label),
+                    hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
