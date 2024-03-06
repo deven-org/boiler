@@ -207,9 +207,9 @@ export class BlrTextInput extends LitElement {
                     icon: this.hasError
                       ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
                       : calculateIconName(this.inputIcon, iconSizeVariant),
-
                     sizeVariant: iconSizeVariant,
                     classMap: iconClasses,
+                    fillParent: false,
                   },
                   {
                     'aria-hidden': true,
@@ -224,9 +224,9 @@ export class BlrTextInput extends LitElement {
               ? html`${BlrIconRenderFunction(
                   {
                     icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-
                     sizeVariant: iconSizeVariant,
                     classMap: iconClasses,
+                    fillParent: false,
                     blrClick: this.togglePassword,
                   },
                   {

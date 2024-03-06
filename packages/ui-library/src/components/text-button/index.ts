@@ -127,6 +127,7 @@ export class BlrTextButton extends LitElement {
                 icon: calculateIconName(this.icon, iconSizeVariant),
                 sizeVariant: iconSizeVariant,
                 classMap: iconClasses,
+                fillParent: false,
               },
               {
                 'aria-hidden': true,
@@ -140,6 +141,7 @@ export class BlrTextButton extends LitElement {
                 icon: calculateIconName(this.icon, iconSizeVariant),
                 sizeVariant: iconSizeVariant,
                 classMap: iconClasses,
+                fillParent: false,
               },
               {
                 'aria-hidden': true,

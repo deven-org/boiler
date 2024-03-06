@@ -89,6 +89,7 @@ export class BlrSelect extends LitElement {
             icon: calculateIconName('blrErrorFilled', iconSizeVariant),
             sizeVariant: iconSizeVariant,
             classMap: classes,
+            fillParent: false,
           },
           {
             'aria-hidden': true,
@@ -101,6 +102,7 @@ export class BlrSelect extends LitElement {
             icon: calculateIconName(modifiedIcon, iconSizeVariant),
             sizeVariant: iconSizeVariant,
             classMap: classes,
+            fillParent: false,
           },
           {
             'aria-hidden': true,
