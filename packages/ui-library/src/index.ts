@@ -74,8 +74,6 @@ export { BlrIcon } from './components/icon';
 
 export { BlrIconLink } from './components/icon-link';
 
-// Tag Names
-
 export const TagNames = {
   TextButton: TextButtonTagName,
   IconButton: IconButtonTagName,
