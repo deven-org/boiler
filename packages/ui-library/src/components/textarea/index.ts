@@ -38,7 +38,7 @@ export type BlrTextareaEventHandlers = {
 export class BlrTextarea extends LitElement {
   static styles = [styleCustom];
 
-  @property() textareaId!: string;
+  @property() textAreaId!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() arialabel?: string;
@@ -57,13 +57,13 @@ export class BlrTextarea extends LitElement {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() errorIcon?: SizelessIconType = undefined;
+  @property() errorMessageIcon?: SizelessIconType = undefined;
   @property() hint?: string;
   @property() hasHint = true;
   @property() hintMessage?: string;
-  @property() showCounter?: boolean;
-  @property() hintIcon?: SizelessIconType;
-  @property() isResizeable: ResizeType = 'none';
+  @property() hasCounter?: boolean;
+  @property() hintMessageIcon?: SizelessIconType;
+  @property() resize: ResizeType = 'none';
   @property() rows?: number;
   @property() cols?: number;
   @property() name?: string;
@@ -159,7 +159,7 @@ export class BlrTextarea extends LitElement {
         'error': this.hasError || false,
         'error-input': this.hasError || false,
         [`${this.sizeVariant}`]: this.sizeVariant,
-        [this.isResizeable]: this.isResizeable,
+        [this.resize]: this.resize,
       });
 
       const textareaInfoContainer = classMap({
@@ -172,22 +172,22 @@ export class BlrTextarea extends LitElement {
       const counterVariant = this.determinateCounterVariant();
 
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintIcon)
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
               size: this.sizeVariant,
               message: this.hintMessage,
-              icon: this.hintIcon,
+              icon: this.hintMessageIcon,
             })
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
               size: this.sizeVariant,
               message: this.errorMessage,
-              icon: this.errorIcon,
+              icon: this.errorMessageIcon,
             })
           : nothing}
       `;
@@ -203,7 +203,7 @@ export class BlrTextarea extends LitElement {
                   label: this.label,
                   sizeVariant: this.sizeVariant,
                   labelAppendix: this.labelAppendix,
-                  forValue: this.textareaId,
+                  forValue: this.textAreaId,
                   theme: this.theme,
                   hasError: Boolean(this.hasError),
                 })}
@@ -212,7 +212,7 @@ export class BlrTextarea extends LitElement {
           <textarea
             .value=${this.value}
             class="blr-form-element textarea-input-control ${textareaClasses}"
-            id="${this.textareaId || nothing}"
+            id="${this.textAreaId || nothing}"
             name="${this.name || nothing}"
             minlength="${this.minLength || nothing}"
             maxlength="${this.maxLength || nothing}"
@@ -233,7 +233,7 @@ export class BlrTextarea extends LitElement {
             ${this.hasHint || this.hasError
               ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
               : nothing}
-            ${this.showCounter
+            ${this.hasCounter
               ? BlrCounterRenderFunction({
                   variant: counterVariant,
                   current: this.count,

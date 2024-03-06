@@ -24,7 +24,7 @@ const sharedStyles = html`
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   sizeVariant: 'md',
-  isResizeable: 'both',
+  resize: 'both',
   cols: 40,
   rows: 4,
   placeholder: 'Placeholder-text',
@@ -36,12 +36,12 @@ const defaultParams: BlrTextareaType = {
   labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   arialabel: 'Text Area',
   name: 'Text Area',
-  showCounter: true,
+  hasCounter: true,
   theme: 'Light',
-  textareaId: '#textAreaId',
+  textAreaId: '#textAreaId',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
@@ -50,7 +50,7 @@ const defaultParams: BlrTextareaType = {
   readonly: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: 'blr360',
+  errorMessageIcon: 'blr360',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
@@ -73,8 +73,7 @@ export default {
         category: 'Appearance',
       },
     },
-    isResizeable: {
-      name: 'resize',
+    resize: {
       description: 'Select if and how the component can be resized.',
       options: Resizes,
       control: { type: 'select' },
@@ -181,8 +180,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
-      name: 'hintMessageIcon',
+    hintMessageIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
@@ -191,7 +189,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    showCounter: {
+    hasCounter: {
       name: 'hasCounter',
       description: 'Choose if component has a counter.',
       defaultValue: true,
@@ -203,7 +201,7 @@ export default {
       },
     },
     warningLimitType: {
-      if: { arg: 'showCounter', eq: true },
+      if: { arg: 'hasCounter', eq: true },
       table: {
         disable: false,
         category: 'Content / Settings',
@@ -281,8 +279,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
-      name: 'errorMessageIcon',
+    errorMessageIcon: {
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         category: 'Validation',
@@ -303,8 +300,7 @@ export default {
     },
 
     //Technical attributes
-    textareaId: {
-      name: 'textAreaId',
+    textAreaId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -318,9 +314,9 @@ export default {
     },
 
     // Events
-    blrChange: {
+    blrTextValueChange: {
       description: 'Fires when the value changes.',
-      action: 'blrChange',
+      action: 'blrTextValueChange',
       table: {
         category: 'Events',
       },
@@ -394,7 +390,7 @@ TextArea.args = defaultParams;
 const argTypesToDisable = [
   'theme',
   'size',
-  'isResizeable',
+  'resize',
   'cols',
   'rows',
   'placeholder',
@@ -406,8 +402,8 @@ const argTypesToDisable = [
   'labelAppendix',
   'hasHint',
   'hintText',
-  'hintIcon',
-  'showCounter',
+  'hintMessageIcon',
+  'hasCounter',
   'warningLimitType',
   'warningLimitInt',
   'warningLimitPer',
@@ -416,11 +412,11 @@ const argTypesToDisable = [
   'required',
   'hasError',
   'errorMessage',
-  'errorIcon',
+  'errorMessageIcon',
   'arialabel',
-  'textareaId',
+  'textAreaId',
   'name',
-  'blrChange',
+  'blrTextValueChange',
   'blrSelect',
   'blrFocus',
   'blrBlur',
@@ -500,7 +496,7 @@ export const Resize = () => {
             label: 'Auto resize',
             placeholder: '',
             value: '',
-            isResizeable: 'both',
+            resize: 'both',
           })}
         </div>
         <div>
@@ -511,7 +507,7 @@ export const Resize = () => {
             label: 'Horizontal resize',
             placeholder: '',
             value: '',
-            isResizeable: 'horizontal',
+            resize: 'horizontal',
           })}
         </div>
         <div>
@@ -522,7 +518,7 @@ export const Resize = () => {
             label: 'Vertical resize',
             placeholder: '',
             value: '',
-            isResizeable: 'vertical',
+            resize: 'vertical',
           })}
         </div>
         <div>
@@ -533,7 +529,7 @@ export const Resize = () => {
             label: 'No resize',
             placeholder: '',
             value: '',
-            isResizeable: 'none',
+            resize: 'none',
           })}
         </div>
       </div>
@@ -688,7 +684,7 @@ export const HasError = () => {
           sizeVariant: 'md',
           placeholder: '',
           hasError: true,
-          errorIcon: undefined,
+          errorMessageIcon: undefined,
           label: 'Error',
           value: '',
         })}
@@ -756,7 +752,7 @@ export const FormCaptionGroup = () => {
           placeholder: '',
           label: 'Hint message',
           hasHint: true,
-          hintIcon: 'blrInfo',
+          hintMessageIcon: 'blrInfo',
           labelAppendix: '',
           value: '',
         })}
@@ -770,7 +766,7 @@ export const FormCaptionGroup = () => {
           hasError: true,
           errorMessage: "OMG it's an error",
           hasHint: true,
-          errorIcon: 'blrErrorFilled',
+          errorMessageIcon: 'blrErrorFilled',
           value: '',
         })}
       </div>
@@ -795,7 +791,7 @@ export const Counter = () => {
           theme: 'Light',
           sizeVariant: 'md',
           label: 'Counter',
-          showCounter: true,
+          hasCounter: true,
           value: 'This text almost reached the maximum amount of characters.',
           warningLimitType: 'warningLimitInt',
           warningLimitInt: 105,
