@@ -1,4 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
 import { styleCustom, textAreaDark, textAreaLight } from './index.css';
@@ -44,28 +45,28 @@ export class BlrTextarea extends LitElement {
   @property() arialabel?: string;
   @property() value!: string;
   @property() placeholder?: string;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() hasLabel?: boolean;
+  @property({ type: Boolean }) disabled?: boolean;
+  @property({ type: Boolean }) readonly?: boolean;
+  @property({ type: Boolean }) hasLabel?: boolean;
   @property() sizeVariant?: FormSizesType = 'md';
-  @property() required?: boolean;
-  @property() maxLength?: number;
-  @property() minLength?: number;
+  @property({ type: Boolean }) required?: boolean;
+  @property({ type: Number }) maxLength?: number;
+  @property({ type: Number }) minLength?: number;
   @property() warningLimitType: WarningLimits = 'warningLimitInt';
-  @property() warningLimitInt = 105;
-  @property() warningLimitPer = 75;
+  @property({ type: Number }) warningLimitInt = 105;
+  @property({ type: Number }) warningLimitPer = 75;
   @property() pattern?: string;
-  @property() hasError?: boolean;
+  @property({ type: Boolean }) hasError?: boolean;
   @property() errorMessage?: string;
   @property() errorMessageIcon?: SizelessIconType = undefined;
   @property() hint?: string;
-  @property() hasHint = true;
+  @property({ type: Boolean }) hasHint = true;
   @property() hintMessage?: string;
-  @property() hasCounter?: boolean;
+  @property({ type: Boolean }) hasCounter?: boolean;
   @property() hintMessageIcon?: SizelessIconType;
   @property() resize: ResizeType = 'none';
-  @property() rows?: number;
-  @property() cols?: number;
+  @property({ type: Number }) rows?: number;
+  @property({ type: Number }) cols?: number;
   @property() name?: string;
   @property() theme: ThemeType = 'Light';
 
@@ -212,14 +213,14 @@ export class BlrTextarea extends LitElement {
           <textarea
             .value=${this.value}
             class="blr-form-element textarea-input-control ${textareaClasses}"
-            id="${this.textAreaId || nothing}"
-            name="${this.name || nothing}"
-            minlength="${this.minLength || nothing}"
-            maxlength="${this.maxLength || nothing}"
-            aria-label="${this.arialabel}"
-            cols="${this.cols || nothing}"
-            rows="${this.rows || nothing}"
-            placeholder="${this.placeholder || nothing}"
+            id="${ifDefined(this.textAreaId ? this.textAreaId : undefined)}"
+            name="${this.name || ''}"
+            minlength="${this.minLength || ''}"
+            maxlength="${ifDefined(this.maxLength ?? 0 > 0 ? this.maxLength : undefined)}"
+            aria-label="${this.arialabel || ''}"
+            cols="${this.cols || ' '}"
+            rows="${this.rows || ' '}"
+            placeholder="${ifDefined(this.placeholder ? this.placeholder : undefined)}"
             ?required="${this.required}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
