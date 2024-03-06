@@ -38,6 +38,15 @@ export class BlrRadioGroup extends LitElement {
 
   @property() theme: ThemeType = 'Light';
 
+  protected _optionElements: Element[] | undefined;
+
+  protected handleSlotChange() {
+    const slot = this.renderRoot?.querySelector('slot');
+
+    this._optionElements = slot?.assignedElements({ flatten: false });
+    this.requestUpdate();
+  }
+
   protected render() {
     if (!this.size) {
       return null;
@@ -86,6 +95,51 @@ export class BlrRadioGroup extends LitElement {
           })
         : nothing}
     `;
+
+    return html`<style>
+        ${dynamicStyles.map((style) => style)}
+      </style>
+      ${this.hasGroupLabel
+        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.groupLabel}</legend></div>`
+        : nothing}
+
+      <div class="blr-radio-group ${classes}">
+        <slot style="display: none;" @slotchange=${this.handleSlotChange}></slot>
+
+        ${this.options &&
+        this.options.map((option: RadioOption) => {
+          const id = calculateOptionId(option.label);
+          return html`
+            <div class="blr-radio ${classes}">
+              <input
+                id=${id || nothing}
+                class="${classes} input-control"
+                type="radio"
+                name=${this.name}
+                ?disabled=${this.disabled}
+                ?readonly=${this.readonly}
+                ?aria-disabled=${this.disabled}
+                ?invalid=${this.hasError}
+                ?aria-invalid=${this.hasError}
+                ?checked=${this.checked}
+                ?required=${this.required}
+                @input=${this.onChange}
+                @blur=${this.onBlur}
+                @focus=${this.onFocus}
+              />
+              <div class="label-wrapper">
+                ${option.label
+                  ? html`${BlrFormLabelInlineRenderFunction({
+                      labelText: option.label,
+                      forValue: id,
+                      labelSize: this.size || 'md',
+                    })}`
+                  : nothing}
+              </div>
+            </div>
+          `;
+        })}
+      </div>`;
 
     return html`<style>
         ${dynamicStyles.map((style) => style)}

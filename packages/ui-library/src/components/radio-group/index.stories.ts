@@ -225,7 +225,39 @@ export default {
   },
 };
 
-export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
+export const BlrRadioGroup = (params: BlrRadioGroupType) =>
+  BlrRadioGroupRenderFunction(
+    params,
+    html`
+      <blr-radio
+        theme="Light"
+        size="md"
+        value=""
+        label="Label"
+        arialabel=""
+        optionid="optionId"
+        name="Radio Button"
+      ></blr-radio>
+      <blr-radio
+        theme="Light"
+        size="md"
+        value=""
+        label="Label"
+        arialabel=""
+        optionid="optionId"
+        name="Radio Button"
+      ></blr-radio>
+      <blr-radio
+        theme="Light"
+        size="md"
+        value=""
+        label="Label"
+        arialabel=""
+        optionid="optionId"
+        name="Radio Button"
+      ></blr-radio>
+    `
+  );
 
 BlrRadioGroup.storyName = 'Radio Group';
 
