@@ -1,16 +1,16 @@
 import '@boiler/ui-library/dist/index.js';
 import './style.scss';
-import {componentsPrefix} from '../../../prefix';
+import {TagNames} from '@boiler/ui-library/dist/index.js';
 
 const toggleLoadingButton = document.querySelector('#toggleLoadingState');
 const toggleDisabledState = document.querySelector('#toggleDisabledState');
 const logsContainer = document.querySelector('#logs');
 
-const button = document.getElementsByTagName(`${componentsPrefix}-text-button`)[0];
-const checkbox = document.getElementsByTagName(`${componentsPrefix}-checkbox`)[0];
-const select = document.getElementsByTagName(`${componentsPrefix}-select`)[0];
-const textInput = document.getElementsByTagName(`${componentsPrefix}-text-input`)[0];
-const textArea = document.getElementsByTagName(`${componentsPrefix}-textarea`)[0];
+const textButton = document.getElementsByTagName(`${TagNames.TextButton}`)[2];
+const checkbox = document.getElementsByTagName(`${TagNames.Checkbox}`)[0];
+const select = document.getElementsByTagName(`${TagNames.Select}`)[0];
+const textInput = document.getElementsByTagName(`${TagNames.TextInput}`)[0];
+const textArea = document.getElementsByTagName(`${TagNames.Textarea}`)[0];
 
 const addLog = (log) => {
   logsContainer.innerHTML = logsContainer.innerHTML + log + '<br>';
@@ -22,78 +22,78 @@ toggleLoadingButton.addEventListener('click', () => {
   const currentState = button.getAttribute('loading');
 
   if (currentState) {
-    button.removeAttribute('loading');
+    textButton.removeAttribute('loading');
     addLog('Set text button loading state to false');
   } else {
-    button.setAttribute('loading', 'true');
+    textButton.setAttribute('loading', 'true');
     addLog('Set text button loading state to true');
   }
 });
 
 toggleDisabledState.addEventListener('click', () => {
-  const currentState = button.getAttribute('disabled');
+  const currentState = textButton.getAttribute('disabled');
 
   if (currentState) {
-    button.removeAttribute('disabled');
+    textButton.removeAttribute('disabled');
     addLog('Set text button disabled state to false');
   } else {
-    button.setAttribute('disabled', 'true');
+    textButton.setAttribute('disabled', 'true');
     addLog('Set text button loading state to true');
   }
 });
 
-button.addEventListener('blrClick', () => {
-  addLog(`${componentsPrefix}-text-button clicked`);
+textButton.addEventListener('blrClick', () => {
+  addLog(`${TagNames.TextButton} clicked`);
 });
 
-button.addEventListener('blrFocus', () => {
-  addLog(`${componentsPrefix}-text-button focused`);
+textButton.addEventListener('blrFocus', () => {
+  addLog(`${TagNames.TextButton} focused`);
 });
 
-button.addEventListener('blrBlur', () => {
-  addLog(`${componentsPrefix}-text-button blurred`);
+textButton.addEventListener('blrBlur', () => {
+  addLog(`${TagNames.TextButton} blurred`);
 });
 
 checkbox.addEventListener('blrCheckedChange', (e) => {
-  addLog(`${componentsPrefix}-checkbox changed: ${e.detail.checkedState}`);
+  addLog(`${TagNames.Checkbox} changed: ${e.detail.checkedState}`);
 });
 
 checkbox.addEventListener('blrFocus', () => {
-  addLog(`${componentsPrefix}-checkbox focused`);
+  addLog(`${TagNames.Checkbox} focused`);
 });
 
 checkbox.addEventListener('blrBlur', () => {
-  addLog(`${componentsPrefix}-checkbox blurred`);
+  addLog(`${TagNames.Checkbox} blurred`);
 });
 
 select.addEventListener('blrSelectedValueChange', () => {
-  addLog(`${componentsPrefix}-select changed`);
+  addLog(`${TagNames.Select} changed`);
 });
 
 textInput.addEventListener('blrFocus', () => {
-  addLog(`${componentsPrefix}-text-input focused`);
+  addLog(`${TagNames.TextInput} focused`);
 });
 
 textInput.addEventListener('blrBlur', () => {
-  addLog(`${componentsPrefix}-text-input blurred`);
+  addLog(`${TagNames.TextInput} blurred`);
 });
 
 textInput.addEventListener('blrTextValueChange', () => {
-  addLog(`${componentsPrefix}-text-input changed`);
+  addLog(`${TagNames.TextInput} changed`);
 });
 
 textArea.addEventListener('blrFocus', () => {
-  addLog(`${componentsPrefix}-textarea focused`);
+  addLog(`${TagNames.Textarea} focused`);
 });
 
 textArea.addEventListener('blrBlur', () => {
-  addLog(`${componentsPrefix}-textarea blurred`);
+  addLog(`${TagNames.Textarea} blurred`);
 });
 
 textArea.addEventListener('blrChange', () => {
-  addLog(`${componentsPrefix}-textarea changed`);
+  addLog(`${TagNames.Textarea} changed`);
 });
 
 textArea.addEventListener('blrSelect', () => {
-  addLog(`${componentsPrefix}-textarea selected`);
+  addLog(`${TagNames.Textarea} selected`);
 });
