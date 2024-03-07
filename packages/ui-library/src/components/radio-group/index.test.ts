@@ -18,14 +18,12 @@ const sampleParams: BlrRadioGroupType = {
     { label: 'Option 2', value: 'option2', hintMessage: 'Hint 2', errorMessage: 'Error Message 2' },
     { label: 'Option 3', value: 'option3', hintMessage: 'Hint 3', errorMessage: 'Error Message 3' },
   ],
-  showLegend: true,
   hasHint: true,
   groupHintMessage: 'This is a sample hint message',
   groupHintIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
-  hideLabel: false,
 };
 
 describe('blr-radio-group', () => {
