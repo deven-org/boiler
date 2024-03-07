@@ -107,8 +107,9 @@ export class BlrRadioGroup extends LitElement {
         <slot style="display: none;" @slotchange=${this.handleSlotChange}></slot>
 
         ${this.options &&
-        this.options.map((option: RadioOption) => {
+        this._optionElements?.map((option: Element) => {
           const id = calculateOptionId(option.label);
+
           return html`
             <div class="blr-radio ${classes}">
               <input

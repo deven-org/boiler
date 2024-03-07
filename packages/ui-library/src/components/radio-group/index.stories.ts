@@ -248,11 +248,11 @@ export const BlrRadioGroup = (params: BlrRadioGroupType) =>
         name="Radio Button"
       ></blr-radio>
       <blr-radio
-        theme="Light"
-        size="md"
+        theme="dark"
+        size="lg"
         value=""
-        label="Label"
-        arialabel=""
+        label="Label #3"
+        arialabel="Label #3"
         optionid="optionId"
         name="Radio Button"
       ></blr-radio>
