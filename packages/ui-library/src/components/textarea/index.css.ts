@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";

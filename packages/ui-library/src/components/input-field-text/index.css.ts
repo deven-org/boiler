@@ -1,8 +1,8 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
-export const styleCustom = typeSafeNestedCss`
+export const styleCustom = typeSafeNestedCss/* css */ `
   .blr-input-field-text {
     display: flex;
     flex-direction: column;
@@ -24,16 +24,12 @@ export const styleCustom = typeSafeNestedCss`
   .noPointerEvents {
     pointer-events: none;
   }
-`;
 
-export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTextDark } = renderThemedCssStrings(
-  (_componentTokens, semanticTokens) => {
-    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
-    const { InputIcon } = _componentTokens.cmp;
+  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+    const { inputfield, inputslot, labelslot } = sem.forms;
 
-    return typeSafeNestedCss`
-      .blr-input-field-text {
-
+    return typeSafeCss/* css */ `
+     .blr-input-field-text.${theme} {
         &.sm {
 
           & > .label-wrapper {
@@ -210,7 +206,13 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
           background-color: ${inputfield.container.bgcolor.default.hover};
 
           &.blr-input-icon {
-            color: ${InputIcon.Icon.IconColor.Hover};
+            color: ${
+              ""
+              /* 
+                TODO: dont mix cmp and sem
+                $ {InputIcon.Icon.IconColor.Hover};
+              */
+            }
           }
 
           &.error-input:not(.disabled) + .blr-input-icon {
@@ -310,8 +312,7 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
             background: transparent;
             color: ${inputfield.userinput.textcolor.error.rest};
           }
-        }
-      }
-    `;
-  }
-);
+      }      
+    }`;
+  })}
+`;

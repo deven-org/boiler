@@ -1,36 +1,24 @@
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-export const styleCustom = typeSafeNestedCss`
-  .panel-wrapper {
-    margin-top: 2rem;
+export const staticStyles = typeSafeNestedCss`
+  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+    const { ButtonIcon } = cmp;
+    const { TabBar } = cmp;
 
-    > slot {
-      display: none;
+    return typeSafeCss/* css */ `
+      .panel-wrapper {
+        margin-top: 2rem;
+    
+        & > slot {
+          display: none;
+    
+          &.active {
+            display: block;
+          }
+        }
+      } 
 
-      &.active {
-        display: block;
-      }
-    }
-  }
-`;
-
-export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens) => {
-  const { ButtonIcon } = componentTokens.cmp;
-  const { TabBar } = componentTokens.cmp;
-
-  /* ToDos
-  - [ ] Use Button Icon for pagination-buttons
-  - [ ] .nav-item-content-wrapper > a - needs for some reason a lineHeight set, otherwise the height is off. So we need to drill in the appropriate token here.
-    - [ ] Create a typotoken dedicated for tab-bar
-    - [ ] Apply this new token on tabs
-    - [ ] Apply this new token on .nav-item-content-wrapper > a
-
-  
-  - [ ] Toggle and position Icon / Label individually for each Tab
-  - [ ] Add layoutvariant where I see the buttons, but no scrollbar
-  */
-  return typeSafeNestedCss/* css */ `
       slot {
         display: none;
       }
@@ -50,7 +38,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         }
       }
       
-      .blr-tab-bar-group {
+      .blr-tab-bar-group.${theme} {
         width: 100%;
         display: flex;
         align-items: start;
@@ -382,4 +370,5 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
         }
       }
     `;
-});
+  })}
+`;

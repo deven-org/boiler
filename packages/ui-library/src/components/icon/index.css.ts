@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
 import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 
@@ -12,7 +12,7 @@ const { Icon } = componentTokens.cmp;
   when only setting their widths
 */
 
-export const styleCustom = typeSafeNestedCss`
+export const styleCustom = typeSafeNestedCss/* css */ `
   :host {
     display: inline-flex;
     flex-shrink: 0;

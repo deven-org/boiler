@@ -2,8 +2,6 @@ import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { inputFieldTextLight, inputFieldTextDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -101,28 +99,28 @@ export class BlrInputFieldText extends LitElement {
 
   protected render() {
     if (this.size) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, inputFieldTextLight] : [formDark, inputFieldTextDark];
-
       const wasInitialPasswordField = Boolean(this.type === 'password');
 
       const classes = classMap({
-        [`${this.size}`]: this.size,
+        'blr-input-field-text': true,
+        [this.size]: this.size,
+        [this.theme]: this.theme,
       });
 
       const inputClasses = classMap({
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
       });
 
       const inputContainerClasses = classMap({
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
       });
 
       const iconClasses = classMap({
         'blr-input-icon': true,
-        [`${this.size}`]: this.size,
+        [this.size]: this.size,
         'noPointerEvents': Boolean(this.disabled || this.readonly),
       });
 
@@ -161,10 +159,7 @@ export class BlrInputFieldText extends LitElement {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-        <div class="blr-input-field-text ${classes}">
+        <div class="${classes}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">

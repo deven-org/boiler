@@ -1,11 +1,11 @@
 import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
 const { ButtonText } = componentTokens.cmp;
 const { global, buttons } = semanticTokens.sem;
 
-export const styleCustom = typeSafeNestedCss`
+export const styleCustom = typeSafeNestedCss/* css */ `
   .focus-layer {
     position: absolute;
     inset: 0;
