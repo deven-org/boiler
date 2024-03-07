@@ -389,7 +389,7 @@ TextArea.args = defaultParams;
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
-  'size',
+  'sizeVariant',
   'resize',
   'cols',
   'rows',
