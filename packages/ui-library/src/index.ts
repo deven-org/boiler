@@ -10,6 +10,8 @@ export { BlrTooltipBubble } from './components/tooltip-bubble';
 
 export { BlrTooltip } from './components/tooltip';
 
+export { BlrFloater } from './components/floater';
+
 // Forms
 export { BlrCheckbox } from './components/checkbox';
 

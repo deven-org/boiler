@@ -56,21 +56,20 @@ export class BlrTooltip extends LitElement {
   protected show = () => {
     this.visible = true;
     // only for bubble
-    this._triggerElement.visible = true;
+    // this._triggerElement.visible = true;
   };
 
   protected hide = () => {
     this.visible = false;
     // only for bubble
-    this._triggerElement.visible = false;
+    // this._triggerElement.visible = false;
   };
 
   protected render() {
     return html`
-      <slot name="trigger"> </slot>
+      <slot name="trigger"></slot>
 
       <slot name="floater"> </slot>
-
     `;
   }
 }
