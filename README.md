@@ -248,7 +248,6 @@ Removing is slightly more difficult than adding, because there are multiple comp
 - Form Caption
 - Icon
 - Icon Button
-- Icon Link
 - Number Input
 - Select
 - TabBar
