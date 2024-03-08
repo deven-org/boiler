@@ -172,7 +172,7 @@ export class BlrTextButton extends LitElement {
           ${this.loading
             ? html`
                 ${BlrLoaderRenderFunction({
-                  size: loaderSizeVariant,
+                  sizeVariant: loaderSizeVariant,
                   variant: loaderVariant,
                   theme: this.theme,
                 })}

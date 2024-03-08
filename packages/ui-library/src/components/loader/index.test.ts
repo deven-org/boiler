@@ -32,7 +32,7 @@ describe('blr-loader', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrLoaderRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrLoaderRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const loader = querySelectorDeep('div.blr-loader', element.getRootNode() as HTMLElement);
     const className = loader?.className;

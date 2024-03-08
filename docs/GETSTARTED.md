@@ -68,7 +68,7 @@ Here is a list of all our communicataion channels and what we are using them for
 ## Access Checklist
 Here is a checklist with all the accesses that new colleages need when working in the B01LER project. Every entry has a description on how to recieve access and a whom to contact.
 - [ ] **GitHub** - Access to the [deven-org](https://github.com/orgs/deven-org/people) and the [b01ler team](https://github.com/orgs/deven-org/teams/bo1ler) can be provided by an any of the team leads or other org-owners. Access to the deven-org also results in access to the [B01LER Project](https://github.com/orgs/deven-org/projects/3/views/1?pane=info).
-- [ ] **Figma** - Everyone with an Accenture email address can view the [B01LER DS Figma team](https://www.figma.com/files/1248234047942466966/team/1290961933739934842) after joining the Accenture Global Figma organisation. Editing rights can be provided by the Design lead and stand-in or the Product & Project Management lead.
+- [ ] **Figma** - Everyone with an Accenture email address should be able to view the [B01LER DS Figma team](https://www.figma.com/files/1248234047942466966/team/1290961933739934842) after joining the Accenture Global Figma organisation. Select "Use single sign-on" in the login and enter your Accenture-Mail to join the organisation. For Editing rights or when encountering problems, contact the design lead, design lead stand-in or the Product & Project Management lead.
 - [ ] **Outlook groups** - Access to the [B01LER Core](https://outlook.office365.com/groups/accenture.com/boiler-core/members) and the [B01LER](https://outlook.office365.com/groups/accenture.com/boiler-ds/members) Outlook group can be provided by any of the leads or stand-ins. With the invite, new colleagues will also be added to the B01LER Teams channel.
 - [ ] **Slack channels** - All Slack channels are open to join for anyone in the song-asg.slack org and everyone already on the channels can add new members, to get access to the org, a UHD ticket has to be created.
 - [ ] **Mailing lists** - Access to the mailing lists can be provided by the product & project management lead and stand-in.
@@ -79,6 +79,7 @@ Here is a checklist for project management to follow when onboarding a new colle
 - [ ] **WBS Authorization** - to book hours on the projects WBS, new colleagues need to be authorized first. Authorization can be requested by the controlling team.
 - [ ] **Myscheduling** - new colleagues need to be planned in myscheduling by the product & project management lead.
 - [ ] **Project forecast** - new colleagues need to be added to the project forecast by the product & project management lead.
+- [ ] **Pennyworth** - the product & project management lead needs to add new colleagues to the planning in pennyworth.
 
 ## How to get support
 For further support you can always reach out to [Thorben Hartmann](https://song-asg.slack.com/team/UDF7P0Y5D) or any of the other team leads via Slack.

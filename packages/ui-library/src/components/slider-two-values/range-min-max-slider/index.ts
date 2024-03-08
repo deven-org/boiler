@@ -18,12 +18,12 @@ export class BlrRangeMinMaxSlider extends LitElement {
 
   @property() rangeInputId!: string;
 
-  @property() startValue!: number;
-  @property() endValue!: number;
-  @property() minValue!: number;
-  @property() maxValue!: number;
+  @property({ type: Number }) startValue!: number;
+  @property({ type: Number }) endValue!: number;
+  @property({ type: Number }) minValue!: number;
+  @property({ type: Number }) maxValue!: number;
   @property() units?: string = '';
-  @property() stepFactor!: number;
+  @property({ type: Number }) stepFactor!: number;
 
   @property() size: FormSizesType = 'md';
   @property() btnVariant: ActionVariantType = 'silent';
@@ -31,8 +31,8 @@ export class BlrRangeMinMaxSlider extends LitElement {
   @property() incrementIcon!: SizelessIconType;
   @property() decrementIcon!: SizelessIconType;
 
-  @property() showLegend?: boolean = true;
-  @property() disabled?: boolean = false;
+  @property({ type: Boolean }) showLegend?: boolean = true;
+  @property({ type: Boolean }) disabled?: boolean = false;
 
   @property() theme: ThemeType = 'Light';
 
