@@ -22,7 +22,7 @@ const sharedStyles = html`
 const defaultParams: BlrLoaderType = {
   theme: 'Light',
   variant: 'default',
-  size: 'md',
+  sizeVariant: 'md',
 };
 
 export default {
@@ -37,8 +37,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: 'Choose size of the component.',
       options: FeedbackSizes,
       control: { type: 'radio' },
@@ -94,7 +93,7 @@ export const Variant = () => {
       ...defaultParams,
       theme: 'Light',
       variant: 'default',
-      size: 'md',
+      sizeVariant: 'md',
     })}
   `;
 };
@@ -108,7 +107,7 @@ export const Inverted = () => {
       ${BlrLoaderRenderFunction({
         ...defaultParams,
         variant: 'default',
-        size: 'md',
+        sizeVariant: 'md',
       })}
     </div>
   `;
@@ -132,7 +131,7 @@ export const SizeVariant = () => {
         html`<div class="size-container">
           ${BlrLoaderRenderFunction({
             ...defaultParams,
-            size: size,
+            sizeVariant: size,
           })}
         </div>`
     )}

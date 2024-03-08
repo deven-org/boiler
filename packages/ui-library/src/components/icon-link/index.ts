@@ -71,7 +71,7 @@ export class BlrIconLink extends LitElement {
         >
           ${this.loading
             ? BlrLoaderRenderFunction({
-                size: loaderSize,
+                sizeVariant: loaderSize,
                 variant: loaderVariant,
                 theme: this.theme,
               })
