@@ -3,11 +3,91 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "generate-json-structure": "node ./config/generate-json-structure.mjs",
-    "generate-typescript-semantic-structure": "make_types -i ../ui-library/src/foundation/_tokens-generated/semanticTokensType.generated.ts ../ui-library/src/foundation/_tokens-generated/semantic.generated.json semanticTokens",
-    "generate-typescript-component-structure": "make_types -i ../ui-library/src/foundation/_tokens-generated/componentTokensType.generated.ts ../ui-library/src/foundation/_tokens-generated/component.generated.json componentTokens",
-    "generate-index-files": "node ./config/generate-index-files.mjs",
-    "tokens:generate": "node ./config/style-dictionary.config.cjs && yarn generate-index-files && yarn generate-json-structure && yarn generate-typescript-semantic-structure && yarn generate-typescript-component-structure && prettier ../ui-library/src/foundation/_tokens-generated/* --write"
+    "generate-json-structure": "wireit",
+    "generate-typescript-semantic-structure": "wireit",
+    "generate-typescript-component-structure": "wireit",
+    "generate-index-files": "wireit",
+    "tokens:generate:raw": "wireit",
+    "tokens:generate": "wireit"
+  },
+  "wireit": {
+    "generate-json-structure": {
+      "command": "node ./config/generate-json-structure.mjs",
+      "dependencies": [
+        "tokens:generate:raw"
+      ],
+      "files": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/__component-tokens.*.generated.mjs",
+        "@boiler/ui-library/src/foundation/_tokens-generated/__semantic-tokens.*.generated.mjs"
+      ],
+      "output": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/component.generated.json",
+        "@boiler/ui-library/src/foundation/_tokens-generated/semantic.generated.json"
+      ]
+    },
+    "generate-typescript-semantic-structure": {
+      "command": "make_types -i ../ui-library/src/foundation/_tokens-generated/semanticTokensType.generated.ts ../ui-library/src/foundation/_tokens-generated/semantic.generated.json semanticTokens",
+      "dependencies": [
+        "generate-json-structure"
+      ],
+      "files": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/semantic.generated.json"
+      ],
+      "output": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/semanticTokensType.generated.ts"
+      ]
+    },
+    "generate-typescript-component-structure": {
+      "command": "make_types -i ../ui-library/src/foundation/_tokens-generated/componentTokensType.generated.ts ../ui-library/src/foundation/_tokens-generated/component.generated.json componentTokens",
+      "dependencies": [
+        "generate-json-structure"
+      ],
+      "files": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/component.generated.json"
+      ],
+      "output": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/componentTokensType.generated.ts"
+      ]
+    },
+    "generate-index-files": {
+      "command": "node ./config/generate-index-files.mjs",
+      "dependencies": [
+        "tokens:generate:raw"
+      ],
+      "files": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/__component-tokens.*.generated.mjs",
+        "@boiler/ui-library/src/foundation/_tokens-generated/__semantic-tokens.*.generated.mjs"
+      ],
+      "output": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/index.*.generated.ts",
+        "@boiler/ui-library/src/foundation/_tokens-generated/index.themes.ts"
+      ]
+    },
+    "tokens:generate:raw": {
+      "command": "node ./config/style-dictionary.config.cjs",
+      "files": [
+        "input/tokens/**/*.json"
+      ],
+      "output": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/__component-tokens.*.generated.mjs",
+        "@boiler/ui-library/src/foundation/_tokens-generated/__semantic-tokens.*.generated.mjs"
+      ]
+    },
+    "tokens:generate": {
+      "command": "prettier ../ui-library/src/foundation/_tokens-generated/* --write",
+      "dependencies": [
+        "generate-index-files",
+        "generate-json-structure",
+        "generate-typescript-semantic-structure",
+        "generate-typescript-component-structure"
+      ],
+      "files": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/*"
+      ],
+      "output": [
+        "@boiler/ui-library/src/foundation/_tokens-generated/*"
+      ]
+    }
   },
   "author": "",
   "license": "MIT",

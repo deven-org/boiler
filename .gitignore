@@ -5,6 +5,7 @@ dist
 storybook-static
 .idea
 .yarn/install-state.gz
+.wireit
 package-lock.json
 
 packages/js-example-app/dist
