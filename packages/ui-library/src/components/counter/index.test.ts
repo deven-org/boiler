@@ -8,7 +8,7 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 
 const sampleParams: BlrCounterType = {
   theme: 'Light',
-  variant: 'default',
+  variant: 'neutral',
   current: 3,
   max: 100,
 };
