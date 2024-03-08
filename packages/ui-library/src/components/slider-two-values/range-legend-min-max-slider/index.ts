@@ -22,8 +22,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
 
   @property() startValue!: string;
   @property() endValue!: string;
-  @property() list!: Array<string>;
-  @property() stepFactor!: number;
+  @property({ type: Array }) list!: Array<string>;
+  @property({ type: Number }) stepFactor!: number;
 
   @property() size: FormSizesType = 'md';
   @property() btnVariant: ActionVariantType = 'silent';
@@ -31,8 +31,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
   @property() incrementIcon!: SizelessIconType;
   @property() decrementIcon!: SizelessIconType;
 
-  @property() showLegend?: boolean = true;
-  @property() disabled?: boolean = false;
+  @property({ type: Boolean }) showLegend?: boolean = true;
+  @property({ type: Boolean }) disabled?: boolean = false;
 
   @property() theme: ThemeType = 'Light';
 
