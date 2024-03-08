@@ -80,7 +80,6 @@ export default {
         - [**Text Input**](?path=/docs/components-text-input--docs)
         - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         - [**Tab Bar**](?path=/docs/components-tabbar--docs)
-        - [**Icon Link**](?path=/docs/components-icon-link--docs)
         - [**Number Input**](?path=/docs/components-number-input--docs)
         
         It is not intended to use the Icon directly when creating new applications.
