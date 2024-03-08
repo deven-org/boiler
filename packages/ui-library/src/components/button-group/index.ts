@@ -1,12 +1,13 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
 import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/types';
 
 import { TAG_NAME } from './renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrButtonGroup extends LitElement {
+export class BlrButtonGroup extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() sizeVariant: ButtonGroupSizesType = 'md';
@@ -31,4 +32,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrButtonGroup);
 }
 
-export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElement>;
+export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElementCustom>;
