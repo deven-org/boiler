@@ -31,7 +31,7 @@ export default {
         component: `<Markdown>
         The Form Caption Group is a combination of two Form Caption components, which allow to show both a hint and an error message or only one of each. 
 
-Technically both instances of the Form Caption are placed inside slots that are stacked above each other. The Form Caption Group only has one property named size to change the spacing in between the slots depending on the size of the component. For more information have a look at the internal [Form Caption](/docs/design-system-web-components-internal-components-form-caption--docs)  component
+Technically both instances of the Form Caption are placed inside slots that are stacked above each other. The Form Caption Group only has one property named size to change the spacing in between the slots depending on the size of the component. For more information have a look at the internal [Form Caption](?path=/docs/components-form-caption--docs)  component
 
 The Form Caption Group is intended to be used when creating new components. Currently, it is used like this in the following components:
         
@@ -52,14 +52,14 @@ It is not intended to use the Form Caption Group directly when creating new appl
 };
 
 const hintCaption = BlrFormCaptionRenderFunction({
-  message: 'hint',
+  message: 'Hint-Message-Text',
   variant: 'hint',
   icon: 'blrInfo',
   theme: 'Light',
 });
 
 const errorCaption = BlrFormCaptionRenderFunction({
-  message: 'error',
+  message: 'Error-Message-Text',
   variant: 'error',
   icon: 'blrErrorFilled',
   theme: 'Light',
