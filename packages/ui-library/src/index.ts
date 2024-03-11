@@ -35,6 +35,12 @@ export { BlrTextarea } from './components/textarea';
 
 export { BlrToggleSwitch } from './components/toggle-switch';
 
+export { BlrForm } from './components/form';
+
+export { BlrFormExampleWithSlot } from './components/form-example-with-slot';
+
+export { BlrFormExampleWithoutSlot } from './components/form-example-without-slot';
+
 // Internal
 export { BlrCounter } from './components/counter';
 

@@ -14,6 +14,7 @@ import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { TAG_NAME } from './renderFunction';
+import { TestingMixin } from '../../mixin/testing';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -38,7 +39,7 @@ export type BlrTextInputEventHandlers = {
  * @fires blrTextValueChange TextInput value changed
  * @fires blrSelect Text in TextInput got selected
  */
-export class BlrTextInput extends LitElement {
+export class BlrTextInput extends TestingMixin(LitElement) {
   static styles = [styleCustom];
 
   @property() textInputId!: string;
@@ -196,8 +197,7 @@ export class BlrTextInput extends LitElement {
                 @blur=${this.handleBlur}
                 @focus=${this.handleFocus}
                 maxlength="${this.maxLength}"
-                pattern="${this.pattern}"
-                hasError="${this.hasError}"
+                pattern="${this.pattern || nothing}"
                 @select=${this.handleSelect}
               />
             </div>

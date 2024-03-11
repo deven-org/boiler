@@ -42,7 +42,7 @@ export class BlrCheckbox extends LitElement {
   @property() label!: string;
   @property() checkInputId?: string = '';
   @property() arialabel?: string;
-
+  @property() required?: boolean;
   @property() disabled?: boolean;
   @property() checked?: boolean;
   @property() indeterminate?: boolean;
@@ -262,10 +262,11 @@ export class BlrCheckbox extends LitElement {
             id=${this.checkInputId || nothing}
             name=${this.name || nothing}
             ?disabled=${this.disabled}
-            ?checked=${this.currentCheckedState}
+            ?checked=${this.checked}
             ?indeterminate=${this.currentIndeterminateState}
             ?readonly=${this.readonly}
             ?hasError=${this.hasError}
+            ?required="${this.required}"
             @change=${this.handleChange}
             aria-hidden="true"
           />
