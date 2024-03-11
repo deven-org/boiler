@@ -23,8 +23,9 @@ const sharedStyles = html`
 
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
-  size: 'md',
-  isResizeable: 'both',
+  theme: 'Light',
+  sizeVariant: 'md',
+  resize: 'both',
   cols: 40,
   rows: 4,
   placeholder: 'Placeholder-text',
@@ -36,21 +37,20 @@ const defaultParams: BlrTextareaType = {
   labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
-  arialabel: 'Text Area',
-  name: 'Text Area',
-  showCounter: true,
-  theme: 'Light',
-  textareaId: '#textAreaId',
+  hintMessageIcon: 'blrInfo',
+  hasCounter: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-  required: false,
   disabled: false,
   readonly: false,
+  required: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: 'blr360',
+  errorMessageIcon: 'blr360',
+  arialabel: 'Text Area',
+  textAreaId: '#textAreaId',
+  name: 'Text Area',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
@@ -65,8 +65,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: ' Choose size of the component. ',
       options: FormSizes,
       control: { type: 'radio' },
@@ -74,8 +73,7 @@ export default {
         category: 'Appearance',
       },
     },
-    isResizeable: {
-      name: 'resize',
+    resize: {
       description: 'Select if and how the component can be resized.',
       options: Resizes,
       control: { type: 'select' },
@@ -182,8 +180,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
-      name: 'hintMessageIcon',
+    hintMessageIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
@@ -192,7 +189,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    showCounter: {
+    hasCounter: {
       name: 'hasCounter',
       description: 'Choose if component has a counter.',
       defaultValue: true,
@@ -204,7 +201,7 @@ export default {
       },
     },
     warningLimitType: {
-      if: { arg: 'showCounter', eq: true },
+      if: { arg: 'hasCounter', eq: true },
       table: {
         disable: false,
         category: 'Content / Settings',
@@ -282,8 +279,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
-      name: 'errorMessageIcon',
+    errorMessageIcon: {
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         category: 'Validation',
@@ -304,8 +300,7 @@ export default {
     },
 
     //Technical attributes
-    textareaId: {
-      name: 'textAreaId',
+    textAreaId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -319,9 +314,9 @@ export default {
     },
 
     // Events
-    blrChange: {
+    blrTextValueChange: {
       description: 'Fires when the value changes.',
-      action: 'blrChange',
+      action: 'blrTextValueChange',
       table: {
         category: 'Events',
       },
@@ -394,8 +389,8 @@ TextArea.args = defaultParams;
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
-  'size',
-  'isResizeable',
+  'sizeVariant',
+  'resize',
   'cols',
   'rows',
   'placeholder',
@@ -407,8 +402,8 @@ const argTypesToDisable = [
   'labelAppendix',
   'hasHint',
   'hintText',
-  'hintIcon',
-  'showCounter',
+  'hintMessageIcon',
+  'hasCounter',
   'warningLimitType',
   'warningLimitInt',
   'warningLimitPer',
@@ -417,11 +412,11 @@ const argTypesToDisable = [
   'required',
   'hasError',
   'errorMessage',
-  'errorIcon',
+  'errorMessageIcon',
   'arialabel',
-  'textareaId',
+  'textAreaId',
   'name',
-  'blrChange',
+  'blrTextValueChange',
   'blrSelect',
   'blrFocus',
   'blrBlur',
@@ -454,7 +449,7 @@ export const SizeVariant = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'sm',
+          sizeVariant: 'sm',
           label: 'Text Area SM',
           placeholder: '',
           value: '',
@@ -462,7 +457,7 @@ export const SizeVariant = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Text Area MD',
           placeholder: '',
           value: '',
@@ -470,7 +465,7 @@ export const SizeVariant = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'lg',
+          sizeVariant: 'lg',
           label: 'Text Area LG',
           placeholder: '',
           value: '',
@@ -497,44 +492,44 @@ export const Resize = () => {
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'Auto resize',
             placeholder: '',
             value: '',
-            isResizeable: 'both',
+            resize: 'both',
           })}
         </div>
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'Horizontal resize',
             placeholder: '',
             value: '',
-            isResizeable: 'horizontal',
+            resize: 'horizontal',
           })}
         </div>
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'Vertical resize',
             placeholder: '',
             value: '',
-            isResizeable: 'vertical',
+            resize: 'vertical',
           })}
         </div>
         <div>
           ${BlrTextareaRenderFunction({
             ...defaultParams,
             theme: 'Light',
-            size: 'md',
+            sizeVariant: 'md',
             label: 'No resize',
             placeholder: '',
             value: '',
-            isResizeable: 'none',
+            resize: 'none',
           })}
         </div>
       </div>
@@ -559,7 +554,7 @@ export const Placeholder = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'With placeholder',
           labelAppendix: '',
           placeholder: 'Add a message here',
@@ -568,7 +563,7 @@ export const Placeholder = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Without placeholder',
           labelAppendix: '',
           placeholder: '',
@@ -598,7 +593,7 @@ export const Disabled = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Disabled',
           placeholder: '',
           labelAppendix: '',
@@ -628,7 +623,7 @@ export const Readonly = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Readonly',
           placeholder: '',
           readonly: true,
@@ -656,7 +651,7 @@ export const Required = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Label-text',
           placeholder: '',
           required: true,
@@ -686,10 +681,10 @@ export const HasError = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           hasError: true,
-          errorIcon: undefined,
+          errorMessageIcon: undefined,
           label: 'Error',
           value: '',
         })}
@@ -716,7 +711,7 @@ export const FormLabel = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'With label',
           labelAppendix: '(with appendix)',
@@ -725,7 +720,7 @@ export const FormLabel = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: 'Without label',
           label: ' ',
           labelAppendix: '',
@@ -753,25 +748,25 @@ export const FormCaptionGroup = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
           hasHint: true,
-          hintIcon: 'blrInfo',
+          hintMessageIcon: 'blrInfo',
           labelAppendix: '',
           value: '',
         })}
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Hint and error message',
           labelAppendix: '',
           hasError: true,
           errorMessage: "OMG it's an error",
           hasHint: true,
-          errorIcon: 'blrErrorFilled',
+          errorMessageIcon: 'blrErrorFilled',
           value: '',
         })}
       </div>
@@ -794,9 +789,9 @@ export const Counter = () => {
         ${BlrTextareaRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Counter',
-          showCounter: true,
+          hasCounter: true,
           value: 'This text almost reached the maximum amount of characters.',
           warningLimitType: 'warningLimitInt',
           warningLimitInt: 105,
