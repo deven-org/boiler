@@ -20,6 +20,7 @@
     - [Figma](#figma)
     - [Tokens Studio](#tokens-studio)
   - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
+  - [:leftwards_arrow_with_hook: Prefixes](#leftwards_arrow_with_hook-prefixes)
   - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
@@ -82,6 +83,23 @@ Please let us know in case you are finding any bugs by reporting them with our [
 
 ## :triangular_ruler: Architecture
 Get to know about our Architecture [here](./docs/ARCHITECTURE.md).
+
+## :leftwards_arrow_with_hook: Prefixes
+BO1LER uses the 'blr' prefix in three main areas: custom component tag names, events and icons
+
+### Components
+The names of BO1LER components follow the W3C Custom Elements specification. Component prefixes can easily be customized by updating the exported TAG_NAME in each `renderFunction` file. The `renderFunction` file can be found in the directory of each component in our `ui-library` package. In order for your component to be valid, the name must contain at least one dash, it must start with a lowercase character of the alphabet and it cannot contain reserved tag names that already exist in the HTML spec. For a full list of reserved tag names and more tips on naming Custom Elements, please explore [this guide](https://webcomponents.guide/learn/components/naming-your-components/) to ensure that your naming convention is compliant.
+
+### Events
+BO1LER uses custom event names in our components that come prefixed with `blr` by default. This is done to avoid using the same names in HTML. Users may still need to use native events without having to worry about naming collisions. The exported event names can be customized in the [events.ts file](./packages/ui-library/src/globals/events.ts). For example, the focus event can be updated with a new prefix of your choosing by changing the value:
+
+```
+export const BlrFocusEventName = 'blrFocus';
+```
+
+### Icons
+The prefixes of our icons can easily be renamed by opening the [index.mjs file](./packages/icons/scripts/index.mjs) in the `icons` directory. This file is responsible for optimizing our icons, assigning a prefix and exporting their type and exporting their keys. Simply replace the value of the variable `withPrefix` with a prefix of your choosing and run `yarn compile:icons` from the root directory for your changes to take effect. Remember to update the test files and the .stories.ts files with your chosen prefix for the app to function as expected.
+
 
 ## :gear: Requirements
 1. First you need to install Git. Git is needed to clone the project to your local machine. If you don't have it installed yet you can follow this [installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
