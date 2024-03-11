@@ -106,7 +106,7 @@ BlrCounter.args = defaultParams;
  * ## Appearance
  *
  * ### Variant
- * The Counter component comes in 3 variants: default, warn and error.
+ * The Counter component comes in 3 variants: neutral, warn and error.
  */
 export const Variant = () => {
   return html`
