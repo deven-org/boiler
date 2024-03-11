@@ -22,7 +22,7 @@ export class BlrCounter extends LitElement {
       const classes = classMap({
         'blr-counter': true,
         [this.variant]: this.variant,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
       });
 
       return html`
