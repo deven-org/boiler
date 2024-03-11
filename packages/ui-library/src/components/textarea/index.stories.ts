@@ -23,6 +23,7 @@ const sharedStyles = html`
 
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
+  theme: 'Light',
   sizeVariant: 'md',
   resize: 'both',
   cols: 40,
@@ -37,20 +38,19 @@ const defaultParams: BlrTextareaType = {
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintMessageIcon: 'blrInfo',
-  arialabel: 'Text Area',
-  name: 'Text Area',
   hasCounter: true,
-  theme: 'Light',
-  textAreaId: '#textAreaId',
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
-  required: false,
   disabled: false,
   readonly: false,
+  required: false,
   hasError: false,
   errorMessage: '',
   errorMessageIcon: 'blr360',
+  arialabel: 'Text Area',
+  textAreaId: '#textAreaId',
+  name: 'Text Area',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
