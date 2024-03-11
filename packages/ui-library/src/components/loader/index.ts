@@ -10,24 +10,24 @@ import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
 export class BlrLoader extends LitElement {
   static styles = [];
 
-  @property() size?: ActionSizesType = 'md';
+  @property() sizeVariant?: ActionSizesType = 'md';
   @property() variant?: FeedbackVariantType;
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [styleCustomLight] : [styleCustomDark];
 
       const classes = classMap({
         'blr-loader': true,
         [`${this.variant}`]: this.variant || '',
-        [`${this.size}`]: this.size || 'md',
+        [`${this.sizeVariant}`]: this.sizeVariant || 'md',
       });
 
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>
-        <div class="loader-container ${this.size}">
+        <div class="loader-container ${this.sizeVariant}">
           <div class="${classes}" role="status" aria-live="polite"></div>
         </div>`;
     }
