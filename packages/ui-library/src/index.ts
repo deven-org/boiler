@@ -53,5 +53,3 @@ export { BlrButtonGroup } from './components/button-group';
 export { BlrDivider } from './components/divider';
 
 export { BlrIcon } from './components/icon';
-
-export { BlrIconLink } from './components/icon-link';
