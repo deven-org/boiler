@@ -34,15 +34,15 @@ export class BlrSelect extends LitElement {
   @property() hasLabel?: boolean;
   @property() label!: string;
   @property() disabled?: boolean;
-  @property() size?: FormSizesType = 'md';
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
+  @property() blrBlur?: HTMLElement['blur'];
+  @property() blrFocus?: HTMLElement['focus'];
 
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon?: SizelessIconType;
+  @property() hintMessageIcon?: SizelessIconType;
   @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
@@ -73,14 +73,14 @@ export class BlrSelect extends LitElement {
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
-    if (this.size) {
+    if (this.sizeVariant) {
       const iconSizeVariant = getComponentConfigToken([
         'sem',
         'forms',
         'inputfield',
         'icon',
         'sizevariant',
-        this.size,
+        this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
       if (this.hasError) {
@@ -113,36 +113,36 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
 
       const inputClasses = classMap({
         'error': this.hasError || false,
         'error-input': this.hasError || false,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         'disabled': this.disabled || false,
         'focus': this.isFocused || false,
       });
 
       const iconClasses = classMap({
         'blr-input-icon': true,
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
       });
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintIcon)
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              size: this.size,
+              size: this.sizeVariant,
               message: this.hintMessage,
-              icon: this.hintIcon,
+              icon: this.hintMessageIcon,
             })
           : nothing}
         ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              size: this.size,
+              size: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -156,14 +156,14 @@ export class BlrSelect extends LitElement {
 
         <slot @slotchange=${this.handleSlotChange}></slot>
 
-        <div class="blr-select ${this.size}">
+        <div class="blr-select ${this.sizeVariant}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
                     labelAppendix: this.labelAppendix,
-                    sizeVariant: this.size,
+                    sizeVariant: this.sizeVariant,
                     forValue: this.selectId,
                     theme: this.theme,
                     hasError: Boolean(this.hasError),
@@ -174,7 +174,7 @@ export class BlrSelect extends LitElement {
           <div class="blr-select-wrapper ${inputClasses}">
             <div class="blr-select-inner-container">
               <select
-                aria-label=${this.arialabel || nothing}
+                aria-label=${this.ariaLabel || nothing}
                 class="blr-form-select ${inputClasses}"
                 id=${this.selectId || nothing}
                 name=${this.name || nothing}
@@ -201,7 +201,7 @@ export class BlrSelect extends LitElement {
             ${this.renderIcon(iconClasses)}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;

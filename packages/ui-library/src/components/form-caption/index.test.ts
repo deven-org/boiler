@@ -12,7 +12,6 @@ const sampleParams: BlrFormCaptionType = {
   icon: 'blr360',
   variant: 'hint',
   size: 'sm',
-  arialabel: 'Form Hint',
 };
 
 describe('blr-form-caption', () => {
