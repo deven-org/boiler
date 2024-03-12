@@ -9,7 +9,7 @@ import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { findPercentage, generateRangeBar, setOnclickValue, findNearestValue } from '../../../utils/range-slider-utils';
-import { BlrIconButtonRenderFunction } from '../../icon-button/renderFunction';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
 
 export class BlrRangeSlider extends LitElement {
   static styles = [styleCustom];
@@ -48,13 +48,13 @@ export class BlrRangeSlider extends LitElement {
   }
 
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
-    html` ${BlrIconButtonRenderFunction({
+    html` ${BlrButtonIconRenderFunction({
       arialabel: btnId,
       blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
-      iconButtonId: btnId,
+      buttonIconId: btnId,
       variant: this.btnVariant,
       sizeVariant: this.size,
       theme: this.theme,

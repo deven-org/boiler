@@ -1,13 +1,13 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTextInputRenderFunction } from './renderFunction';
-import type { BlrTextInputType } from '.';
+import { BlrInputFieldTextRenderFunction } from './renderFunction';
+import type { BlrInputFieldTextType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string';
 
-const sampleParams: BlrTextInputType = {
+const sampleParams: BlrInputFieldTextType = {
   theme: 'Light',
   size: 'md',
   type: 'text',
@@ -28,14 +28,14 @@ const sampleParams: BlrTextInputType = {
   hasError: false,
   errorMessage: '',
   errorIcon: 'blrInfo',
-  arialabel: 'TextInput',
-  textInputId: 'Input Id',
-  name: 'TextInput',
+  arialabel: 'InputFieldText',
+  inputFieldTextId: 'Input Id',
+  name: 'InputFieldText',
 };
 
-describe('blr-text-input', () => {
+describe('blr-input-field-text', () => {
   it('is having a input containing the right className', async () => {
-    const element = await fixture(BlrTextInputRenderFunction(sampleParams));
+    const element = await fixture(BlrInputFieldTextRenderFunction(sampleParams));
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
     const className = input?.className;
@@ -47,7 +47,7 @@ describe('blr-text-input', () => {
     const randomString = getRandomString();
 
     const element = await fixture(
-      BlrTextInputRenderFunction({
+      BlrInputFieldTextRenderFunction({
         ...sampleParams,
         placeholder: randomString,
       })
@@ -62,15 +62,15 @@ describe('blr-text-input', () => {
   /*
   it('contains an eye icon when the input type is password', async () => {
     const element = await fixture(
-      BlrTextInputRenderFunction({
+      BlrInputFieldTextRenderFunction({
         ...sampleParams,
         type: 'password',
       })
     );
 
-    const textInputContainer = querySelectorDeep('.blr-input-inner-container', element.getRootNode() as HTMLElement);
+    const inputFieldTextContainer = querySelectorDeep('.blr-input-inner-container', element.getRootNode() as HTMLElement);
 
-    const passwordIcon = querySelectorDeep('blr-icon', textInputContainer?.getRootNode() as HTMLElement);
+    const passwordIcon = querySelectorDeep('blr-icon', inputFieldTextContainer?.getRootNode() as HTMLElement);
 
     const svg = querySelectorDeep('svg', passwordIcon?.getRootNode() as HTMLElement);
 
@@ -86,7 +86,7 @@ describe('blr-text-input', () => {
 
   it('hides the label when "hasLabel" is false', async () => {
     const element = await fixture(
-      BlrTextInputRenderFunction({
+      BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: false,
       })
@@ -100,7 +100,7 @@ describe('blr-text-input', () => {
 
   it('is shows adjacent caption components in caption group slot', async () => {
     const element = await fixture(
-      BlrTextInputRenderFunction({
+      BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasHint: true,
         hintIcon: 'blrInfo',
@@ -122,7 +122,7 @@ describe('blr-text-input', () => {
   });
 
   it('has a size md by default', async () => {
-    const element = await fixture(BlrTextInputRenderFunction(sampleParams));
+    const element = await fixture(BlrInputFieldTextRenderFunction(sampleParams));
 
     const inputWrapper = querySelectorDeep('.blr-input-wrapper', element.getRootNode() as HTMLElement);
     const className = inputWrapper?.className;
@@ -131,7 +131,7 @@ describe('blr-text-input', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrTextInputRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrInputFieldTextRenderFunction({ ...sampleParams, size: 'sm' }));
 
     const inputWrapper = querySelectorDeep('.blr-input-wrapper', element.getRootNode() as HTMLElement);
     const className = inputWrapper?.className;
@@ -141,27 +141,27 @@ describe('blr-text-input', () => {
 
   it('has a label if hasLabel is true', async () => {
     const element = await fixture(
-      BlrTextInputRenderFunction({
+      BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: true,
       })
     );
 
-    const textInput = querySelectorDeep('.blr-text-input', element.getRootNode() as HTMLElement);
-    const label = querySelectorDeep('.blr-form-label', textInput?.getRootNode() as HTMLElement);
+    const inputFieldText = querySelectorDeep('.blr-input-field-text', element.getRootNode() as HTMLElement);
+    const label = querySelectorDeep('.blr-form-label', inputFieldText?.getRootNode() as HTMLElement);
     expect(label).to.exist;
   });
 
   it('does not have a label if hasLabel is false', async () => {
     const element = await fixture(
-      BlrTextInputRenderFunction({
+      BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasLabel: false,
       })
     );
 
-    const textInput = querySelectorDeep('.blr-text-input', element.getRootNode() as HTMLElement);
-    const label = querySelectorDeep('.blr-form-label', textInput?.getRootNode() as HTMLElement);
+    const inputFieldText = querySelectorDeep('.blr-input-field-text', element.getRootNode() as HTMLElement);
+    const label = querySelectorDeep('.blr-form-label', inputFieldText?.getRootNode() as HTMLElement);
     expect(label).not.to.exist;
   });
 });

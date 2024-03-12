@@ -70,7 +70,7 @@ Before creating a new issue, please [check if your issue already exists](https:/
 <li>Use the existing issue templates.</li>
 <li>It should be <i>specific</i>. It's important that it addresses one specific topic.</li>
 <li>If it is a bug it should be <i>reproducible</i>. It should contain all the instructions needed to reproduce the same outcome.</li>
-<li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Text Button - add new variant</code></li>
+<li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Button Text - add new variant</code></li>
 </ul>
 </details>
 After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.

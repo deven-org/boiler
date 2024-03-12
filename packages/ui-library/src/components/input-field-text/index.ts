@@ -3,7 +3,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { textInputLight, textInputDark } from './index.css';
+import { inputFieldTextLight, inputFieldTextDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -25,7 +25,7 @@ import {
   createBlrTextValueChangeEvent,
 } from '../../globals/events';
 
-export type BlrTextInputEventHandlers = {
+export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
   blrBlur?: (event: BlrBlurEvent) => void;
   blrTextValueChange?: (event: BlrTextValueChangeEvent) => void;
@@ -33,15 +33,15 @@ export type BlrTextInputEventHandlers = {
 };
 
 /**
- * @fires blrFocus TextInput received focus
- * @fires blrBlur TextInput lost focus
- * @fires blrTextValueChange TextInput value changed
- * @fires blrSelect Text in TextInput got selected
+ * @fires blrFocus InputFieldText received focus
+ * @fires blrBlur InputFieldText lost focus
+ * @fires blrTextValueChange InputFieldText value changed
+ * @fires blrSelect Text in InputFieldText got selected
  */
-export class BlrTextInput extends LitElement {
+export class BlrInputFieldText extends LitElement {
   static styles = [styleCustom];
 
-  @property() textInputId!: string;
+  @property() inputFieldTextId!: string;
   @property() type: InputTypes = 'text';
   @property() arialabel!: string;
   @property() label!: string;
@@ -101,7 +101,7 @@ export class BlrTextInput extends LitElement {
 
   protected render() {
     if (this.size) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, textInputLight] : [formDark, textInputDark];
+      const dynamicStyles = this.theme === 'Light' ? [formLight, inputFieldTextLight] : [formDark, inputFieldTextDark];
 
       const wasInitialPasswordField = Boolean(this.type === 'password');
 
@@ -164,7 +164,7 @@ export class BlrTextInput extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class="blr-text-input ${classes}">
+        <div class="blr-input-field-text ${classes}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -172,7 +172,7 @@ export class BlrTextInput extends LitElement {
                     label: this.label,
                     sizeVariant: this.size,
                     labelAppendix: this.labelAppendix,
-                    forValue: this.textInputId,
+                    forValue: this.inputFieldTextId,
                     theme: this.theme,
                     hasError: Boolean(this.hasError),
                   })}
@@ -183,7 +183,7 @@ export class BlrTextInput extends LitElement {
             <div class="blr-input-inner-container">
               <input
                 class="blr-form-input ${inputClasses}"
-                id=${this.textInputId}
+                id=${this.inputFieldTextId}
                 name="${this.name || nothing}"
                 aria-label=${this.arialabel}
                 type="${this.currentType}"
@@ -247,7 +247,7 @@ export class BlrTextInput extends LitElement {
 }
 
 if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrTextInput);
+  customElements.define(TAG_NAME, BlrInputFieldText);
 }
 
-export type BlrTextInputType = Omit<BlrTextInput, keyof LitElement> & BlrTextInputEventHandlers;
+export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElement> & BlrInputFieldTextEventHandlers;

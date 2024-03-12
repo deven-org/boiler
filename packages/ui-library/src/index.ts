@@ -1,7 +1,7 @@
 // Actions
-export { BlrIconButton } from './components/icon-button';
+export { BlrButtonIcon } from './components/button-icon';
 
-export { BlrTextButton } from './components/text-button';
+export { BlrButtonText } from './components/button-text';
 
 // Feedback
 export { BlrLoader } from './components/loader';
@@ -13,7 +13,7 @@ export { BlrTooltip } from './components/tooltip';
 // Forms
 export { BlrCheckbox } from './components/checkbox';
 
-export { BlrNumberInput } from './components/number-input';
+export { BlrInputFieldNumber } from './components/input-field-number';
 
 export { BlrRadio } from './components/radio';
 
@@ -29,7 +29,7 @@ export { BlrRangeMinMaxSlider } from './components/slider-two-values/range-min-m
 
 export { BlrRangeLegendMinMaxSlider } from './components/slider-two-values/range-legend-min-max-slider';
 
-export { BlrTextInput } from './components/text-input';
+export { BlrInputFieldText } from './components/input-field-text';
 
 export { BlrTextarea } from './components/textarea';
 

@@ -8,7 +8,7 @@ import { html } from 'lit-html';
 import { BlrSelectType } from '.';
 
 const sampleParams: BlrSelectType = {
-  name: 'Text Input',
+  name: 'Input Field Text',
   label: 'Label',
   labelAppendix: '(Optional)',
   sizeVariant: 'md',

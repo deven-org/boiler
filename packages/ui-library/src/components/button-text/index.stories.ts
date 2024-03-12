@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrTextButtonType } from './index';
-import { BlrTextButtonRenderFunction } from './renderFunction';
+import { BlrButtonTextType } from './index';
+import { BlrButtonTextRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
 import '../../index';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -15,7 +15,7 @@ const sharedStyles = html`
       display: flex;
       justify-content: center;
     }
-    .stories-textbutton {
+    .stories-buttontext {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -24,7 +24,7 @@ const sharedStyles = html`
   </style>
 `;
 
-const defaultParams: BlrTextButtonType = {
+const defaultParams: BlrButtonTextType = {
   theme: 'Light',
   variant: 'primary',
   sizeVariant: 'md',
@@ -34,12 +34,12 @@ const defaultParams: BlrTextButtonType = {
   iconPosition: 'leading',
   disabled: false,
   loading: false,
-  textButtonId: 'buttonId',
+  buttonTextId: 'buttonTextId',
   buttonDisplay: 'inline-block',
 };
 
 export default {
-  title: 'Components/Text Button',
+  title: 'Components/Button Text',
   argTypes: {
     //Appearance
     variant: {
@@ -129,7 +129,7 @@ export default {
       },
     },
     //Technical attributes
-    textButtonId: {
+    buttonTextId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -171,10 +171,10 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-Text Button represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Text Button is the text label, which communicates the button's action or function to the user.
+Button Text represents a clickable button that typically displays text rather than icons or symbols. The main feature of a Button Text is the text label, which communicates the button's action or function to the user.
  
  **NOTE**<br>
- The Text Button component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
+ The Button Text component can not be used as a link out of the box and we generally do not recommend to use a button as a link. However, if you still want to use the component as a link, just wrap an <a>-tag around the component, which has a href and a target property.
 <br>
 - [**Appearance**](#appearance)
  - [**Variant**](#variant)
@@ -190,10 +190,10 @@ Text Button represents a clickable button that typically displays text rather th
   },
 };
 
-//Main Component for Text Button
-export const BlrTextButton = (params: BlrTextButtonType) => BlrTextButtonRenderFunction(params);
-BlrTextButton.storyName = 'Text Button';
-BlrTextButton.args = defaultParams;
+//Main Component for Button Text
+export const BlrButtonText = (params: BlrButtonTextType) => BlrButtonTextRenderFunction(params);
+BlrButtonText.storyName = 'Button Text';
+BlrButtonText.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
@@ -206,7 +206,7 @@ const argTypesToDisable = [
   'icon',
   'loading',
   'disabled',
-  'textButtonId',
+  'buttonTextId',
   'buttonDisplay',
   'blrClick',
   'blrBlur',
@@ -230,44 +230,44 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 /**
  * ## Appearance
  * ### Variant
- * The Text Button component comes in 6 variants: cta, primary, secondary, silent, destructive and encourage.
+ * The Button Text component comes in 6 variants: cta, primary, secondary, silent, destructive and encourage.
  */
 export const Variant = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
+      <div class="stories-buttontext">
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'cta',
           label: 'Cta',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'primary',
           label: 'Primary',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'secondary',
           label: 'Secondary',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'silent',
           label: 'Silent',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'destructive',
           label: 'Destructive',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           variant: 'encourage',
           label: 'Encourage',
@@ -283,38 +283,38 @@ Variant.argTypes = {
 Variant.story = { name: ' ' };
 //Appearance Size Variant
 /**
- * The Text Button component comes in 5 sizes: XS, SM, MD, LG and XL.
+ * The Button Text component comes in 5 sizes: XS, SM, MD, LG and XL.
  */
 export const SizeVariant = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
+      <div class="stories-buttontext">
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'xs',
           label: 'Button XS',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'sm',
           label: 'Button SM',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'md',
           label: 'Button MD',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'lg',
           label: 'Button LG',
           hasIcon: false,
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           sizeVariant: 'xl',
           label: 'Button XL',
@@ -331,16 +331,16 @@ SizeVariant.argTypes = {
 //States
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Text Button component can also be disabled or loading.
+ * Apart from states like rest, hover, pressed and focus, the Button Text component can also be disabled or loading.
  * ### Disabled
- * The Text Button component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+ * The Button Text component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
+      <div class="stories-buttontext">
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           disabled: true,
           label: 'Disabled',
@@ -360,21 +360,21 @@ Disabled.story = {
 /**
  * ## Dependencies
  * ### Icon
- * The Text Button component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
+ * The Button Text component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
 
 export const Icon = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
+      <div class="stories-buttontext">
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           hasIcon: true,
           label: 'Leading icon',
           iconPosition: 'leading',
         })}
-        ${BlrTextButtonRenderFunction({
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           hasIcon: true,
           label: 'Trailing icon',
@@ -389,14 +389,14 @@ Icon.argTypes = {
 };
 Icon.story = { name: ' ' };
 /**
- * The Text Button uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/design-system-web-components-feedback-loader--docs) component.
+ * The Button Text uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/design-system-web-components-feedback-loader--docs) component.
  */
 export const Loader = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textbutton">
-        ${BlrTextButtonRenderFunction({
+      <div class="stories-buttontext">
+        ${BlrButtonTextRenderFunction({
           ...defaultParams,
           loading: true,
         })}
