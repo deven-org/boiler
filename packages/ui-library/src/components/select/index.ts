@@ -47,6 +47,8 @@ export class BlrSelect extends LitElement {
   @property() disabled?: boolean;
   @property() sizeVariant?: FormSizesType = 'md';
   @property() required?: boolean;
+  @property() blrBlur?: HTMLElement['blur'];
+  @property() blrFocus?: HTMLElement['focus'];
 
   @property() hasError?: boolean;
   @property() errorMessage?: string;

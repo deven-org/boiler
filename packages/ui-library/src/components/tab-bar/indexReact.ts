@@ -3,7 +3,7 @@ import { createComponent, EventName } from '@lit-labs/react';
 
 import { BlrTabBar } from '.';
 
-export const BlrTextInputReact = createComponent({
+export const BlrInputFieldTextReact = createComponent({
   tagName: 'blr-tab-bar',
   elementClass: BlrTabBar,
   react: React,

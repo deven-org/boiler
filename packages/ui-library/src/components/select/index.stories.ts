@@ -180,14 +180,13 @@ export default {
     },
     // Events
     blrSelectedValueChange: {
-      description: 'Fires when some text is selected.',
       action: 'blrSelectedValueChange',
+      description: 'Fires when the value changes.',
       table: {
         category: 'Events',
       },
     },
     blrFocus: {
-      name: 'blrFocus',
       description: 'Fires when the component is focused.',
       action: 'blrFocus',
       table: {
@@ -195,7 +194,6 @@ export default {
       },
     },
     blrBlur: {
-      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
       action: 'blrBlur',
       table: {

@@ -14,8 +14,8 @@
     <div class="contentWrapper">
       <div class="componentWrapper">
         <div class="component">
-          <p>Text Button</p>
-          <blr-text-button
+          <p>Button Text</p>
+          <blr-button-text
             theme="Light"
             variant="cta"
             sizeVariant="md"
@@ -23,8 +23,8 @@
             hasIcon="true"
             iconPosition="leading"
             icon="blr360"
-            textButtonId="button-id"
-          ></blr-text-button>
+            buttonTextId="button-id"
+          ></blr-button-text>
           <button id="toggleLoadingState">Toggle Loading State</button>
           <button id="toggleDisabledState">Toggle Disabled State</button>
         </div>
@@ -48,13 +48,13 @@
         </div>
 
         <div class="component">
-          <p>Text Input</p>
-          <blr-text-input placeholder="Enter text..." value="" hintText="Hint"></blr-text-input>
+          <p>Input Field Text</p>
+          <blr-input-field-text placeholder="Enter text..." value="" hintText="Hint"></blr-input-field-text>
         </div>
 
         <div class="component">
-          <p>Number Input</p>
-          <blr-number-input
+          <p>Input Field Number</p>
+          <blr-input-field-number
             value="1000"
             size="md"
             steppervariant="vertical"
@@ -67,12 +67,12 @@
             haslabel="true"
             label="Label-text"
             labelappendix="(Appendix)"
-            numberinputid="test-id"
+            inputfieldnumberid="test-id"
             theme="Light"
-            name="NumberInput"
+            name="InputFieldNumber"
             decimals="10"
             leadingzeros="3"
-          ></blr-number-input>
+          ></blr-input-field-number>
         </div>
 
         <div class="component">
@@ -82,8 +82,8 @@
             value=""
             showHint="true"
             hintText="Hint"
-            isResizeable="both"
-            showCounter="true"
+            resize="both"
+            hasCounter="true"
             maxLength="140"
             warningLimitType="warningLimitInt"
             warningLimitInt="105"
@@ -101,7 +101,7 @@
             offset="20"
             message="Message-text"
           >
-            <blr-text-button theme="Light" variant="secondary" size="md" label="Hover me"></blr-text-button>
+            <blr-button-text theme="Light" variant="secondary" size="md" label="Hover me"></blr-button-text>
           </blr-tooltip>
         </div>
 

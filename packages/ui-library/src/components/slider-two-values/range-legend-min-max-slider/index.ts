@@ -10,7 +10,7 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { sliderLight, sliderDark } from '../../../foundation/component-tokens/slider-legend.css';
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils';
-import { BlrIconButtonRenderFunction } from '../../icon-button/renderFunction';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
 
 export class BlrRangeLegendMinMaxSlider extends LitElement {
   static styles = [styleCustom];
@@ -22,8 +22,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
 
   @property() startValue!: string;
   @property() endValue!: string;
-  @property() list!: Array<string>;
-  @property() stepFactor!: number;
+  @property({ type: Array }) list!: Array<string>;
+  @property({ type: Number }) stepFactor!: number;
 
   @property() size: FormSizesType = 'md';
   @property() btnVariant: ActionVariantType = 'silent';
@@ -31,8 +31,8 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
   @property() incrementIcon!: SizelessIconType;
   @property() decrementIcon!: SizelessIconType;
 
-  @property() showLegend?: boolean = true;
-  @property() disabled?: boolean = false;
+  @property({ type: Boolean }) showLegend?: boolean = true;
+  @property({ type: Boolean }) disabled?: boolean = false;
 
   @property() theme: ThemeType = 'Light';
 
@@ -50,13 +50,13 @@ export class BlrRangeLegendMinMaxSlider extends LitElement {
   }
 
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
-    BlrIconButtonRenderFunction({
+    BlrButtonIconRenderFunction({
       arialabel: btnId,
       blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
-      iconButtonId: btnId,
+      buttonIconId: btnId,
       variant: this.btnVariant,
       sizeVariant: this.size,
       theme: this.theme,

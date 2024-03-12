@@ -907,7 +907,7 @@
         }
       }
     },
-    "IconButton": {
+    "ButtonIcon": {
       "Container": {
         "Padding": {
           "XS": {
@@ -1317,7 +1317,7 @@
         }
       }
     },
-    "NumberInput": {
+    "InputFieldNumber": {
       "InputField": {
         "TextWrapper": {
           "ItemSpacing": {
@@ -2376,7 +2376,7 @@
         }
       }
     },
-    "TextButton": {
+    "ButtonText": {
       "Container": {
         "Padding_V": {
           "XS": {
@@ -2434,27 +2434,27 @@
         },
         "Padding": {
           "XS": {
-            "value": "{cmp.TextButton.Container.Padding_V.XS} {cmp.TextButton.Container.Padding_H.XS}",
+            "value": "{cmp.ButtonText.Container.Padding_V.XS} {cmp.ButtonText.Container.Padding_H.XS}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "SM": {
-            "value": "{cmp.TextButton.Container.Padding_V.SM} {cmp.TextButton.Container.Padding_H.SM}",
+            "value": "{cmp.ButtonText.Container.Padding_V.SM} {cmp.ButtonText.Container.Padding_H.SM}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "MD": {
-            "value": "{cmp.TextButton.Container.Padding_V.MD} {cmp.TextButton.Container.Padding_H.MD}",
+            "value": "{cmp.ButtonText.Container.Padding_V.MD} {cmp.ButtonText.Container.Padding_H.MD}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "LG": {
-            "value": "{cmp.TextButton.Container.Padding_V.LG} {cmp.TextButton.Container.Padding_H.LG}",
+            "value": "{cmp.ButtonText.Container.Padding_V.LG} {cmp.ButtonText.Container.Padding_H.LG}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           },
           "XL": {
-            "value": "{cmp.TextButton.Container.Padding_V.XL} {cmp.TextButton.Container.Padding_H.XL}",
+            "value": "{cmp.ButtonText.Container.Padding_V.XL} {cmp.ButtonText.Container.Padding_H.XL}",
             "type": "spacing",
             "description": "Do not apply in Figma, use aliases instead."
           }
@@ -2465,19 +2465,19 @@
             "type": "spacing"
           },
           "SM": {
-            "value": "{cmp.TextButton.Container.ItemSpacing.XS}",
+            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{cmp.TextButton.Container.ItemSpacing.XS}",
+            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{cmp.TextButton.Container.ItemSpacing.XS}",
+            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
             "type": "spacing"
           },
           "XL": {
-            "value": "{cmp.TextButton.Container.ItemSpacing.XS}",
+            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
             "type": "spacing"
           }
         },
