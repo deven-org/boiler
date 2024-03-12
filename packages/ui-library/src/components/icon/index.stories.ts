@@ -76,7 +76,6 @@ export default {
         - [**Button Text**](?path=/docs/components-button-text--docs)
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
         - [**Form Caption**](?path=/docs/components-form-caption--docs)
-        - [**Icon Link**](?path=/docs/components-icon-link--docs)
         - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
         - [**Input Field Number**](?path=/docs/components-input-field-number--docs)
         - [**Select**](?path=/docs/components-select--docs)
