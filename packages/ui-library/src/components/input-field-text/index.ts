@@ -144,7 +144,7 @@ export class BlrInputFieldText extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              size: this.size,
+              sizeVariant: this.size,
               message: this.hintMessage,
               icon: this.hintIcon,
             })
@@ -153,7 +153,7 @@ export class BlrInputFieldText extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              size: this.size,
+              sizeVariant: this.size,
               message: this.errorMessage,
               icon: this.errorIcon,
             })
