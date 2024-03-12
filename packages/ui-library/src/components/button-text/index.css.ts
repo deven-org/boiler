@@ -2,7 +2,7 @@ import { componentTokens } from "../../foundation/_tokens-generated/__component-
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-const { TextButton } = componentTokens.cmp;
+const { ButtonText } = componentTokens.cmp;
 const { global, buttons } = semanticTokens.sem;
 
 export const styleCustom = typeSafeNestedCss`
@@ -14,7 +14,7 @@ export const styleCustom = typeSafeNestedCss`
     outline-width: ${global.focusring.border.width};
   }
 
-  .blr-text-button {
+  .blr-button-text {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -22,48 +22,48 @@ export const styleCustom = typeSafeNestedCss`
     position: relative;
     
     &.xs {
-      padding: ${TextButton.Container.Padding.XS};
-      border-radius: ${TextButton.Container.BorderRadius.XS};
+      padding: ${ButtonText.Container.Padding.XS};
+      border-radius: ${ButtonText.Container.BorderRadius.XS};
 
       & > .focus-layer {
-        border-radius: ${TextButton.Container.BorderRadius.XS};
+        border-radius: ${ButtonText.Container.BorderRadius.XS};
       }
     }
 
     &.sm {
-      padding: ${TextButton.Container.Padding.SM};
-      border-radius: ${TextButton.Container.BorderRadius.SM};
+      padding: ${ButtonText.Container.Padding.SM};
+      border-radius: ${ButtonText.Container.BorderRadius.SM};
 
       & > .focus-layer {
-        border-radius: ${TextButton.Container.BorderRadius.SM};
+        border-radius: ${ButtonText.Container.BorderRadius.SM};
       }
     }
 
     &.md {
-      padding: ${TextButton.Container.Padding.MD};
-      border-radius: ${TextButton.Container.BorderRadius.MD};
+      padding: ${ButtonText.Container.Padding.MD};
+      border-radius: ${ButtonText.Container.BorderRadius.MD};
       
 
       & > .focus-layer {
-        border-radius: ${TextButton.Container.BorderRadius.MD};
+        border-radius: ${ButtonText.Container.BorderRadius.MD};
       }
     }
 
     &.lg {
-      padding: ${TextButton.Container.Padding.LG};
-      border-radius: ${TextButton.Container.BorderRadius.LG};
+      padding: ${ButtonText.Container.Padding.LG};
+      border-radius: ${ButtonText.Container.BorderRadius.LG};
 
       & > .focus-layer {
-        border-radius: ${TextButton.Container.BorderRadius.LG};
+        border-radius: ${ButtonText.Container.BorderRadius.LG};
       }
     }
 
     &.xl {
-      padding: ${TextButton.Container.Padding.XL};
-      border-radius: ${TextButton.Container.BorderRadius.XL};
+      padding: ${ButtonText.Container.Padding.XL};
+      border-radius: ${ButtonText.Container.BorderRadius.XL};
 
       & > .focus-layer {
-        border-radius: ${TextButton.Container.BorderRadius.XL};
+        border-radius: ${ButtonText.Container.BorderRadius.XL};
       }
     }
   }
@@ -75,7 +75,7 @@ export const styleCustom = typeSafeNestedCss`
       visibility: hidden;
     }
 
-    &.blr-text-button:hover, &.blr-text-button:focus {
+    &.blr-button-text:hover, &.blr-button-text:focus {
       cursor: auto;
     
       &.cta {
@@ -118,23 +118,23 @@ export const styleCustom = typeSafeNestedCss`
     align-items: center;
 
     &.xs {
-      gap: ${TextButton.Container.ItemSpacing.XS}
+      gap: ${ButtonText.Container.ItemSpacing.XS}
     }
 
     &.sm {
-      gap: ${TextButton.Container.ItemSpacing.SM}
+      gap: ${ButtonText.Container.ItemSpacing.SM}
     }
 
     &.md {
-      gap: ${TextButton.Container.ItemSpacing.MD}
+      gap: ${ButtonText.Container.ItemSpacing.MD}
     }
 
     &.lg {
-      gap: ${TextButton.Container.ItemSpacing.LG}
+      gap: ${ButtonText.Container.ItemSpacing.LG}
     }
 
     &.xl {
-      gap: ${TextButton.Container.ItemSpacing.XL}
+      gap: ${ButtonText.Container.ItemSpacing.XL}
     }
   }
 
