@@ -71,7 +71,7 @@ export default {
     docs: {
       description: {
         component: `<Markdown>
-        Form Caption provides either a brief hint or error message to a related form element such as Text Input or Select. It is typically displayed below the form element, and it can be used to provide additional information about the type of information a user has to provide, like an example of the correct data format.
+        Form Caption provides either a brief hint or error message to a related form element such as Input Field Text or Select. It is typically displayed below the form element, and it can be used to provide additional information about the type of information a user has to provide, like an example of the correct data format.
 
         - [**Appearance**](#appearance)
           - [**Variant**](#variant)

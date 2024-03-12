@@ -2,7 +2,7 @@ import { componentTokens } from "../../foundation/_tokens-generated/__component-
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
 import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 
-const { IconButton } = componentTokens.cmp;
+const { ButtonIcon } = componentTokens.cmp;
 const { global, buttons } = semanticTokens.sem;
 
 export const styleCustom = typeSafeNestedCss`
@@ -14,7 +14,7 @@ export const styleCustom = typeSafeNestedCss`
     outline-width: ${global.focusring.border.width};
   }
 
-  .blr-icon-button {
+  .blr-button-icon {
     all: inital;
     align-items: center;
     justify-content: center;
@@ -23,54 +23,54 @@ export const styleCustom = typeSafeNestedCss`
     position: relative;
 
     &.xs {
-      padding: ${IconButton.Container.Padding.XS};
-      border-radius: ${IconButton.Container.BorderRadius.XS};
+      padding: ${ButtonIcon.Container.Padding.XS};
+      border-radius: ${ButtonIcon.Container.BorderRadius.XS};
 
       & > .focus-layer {
-        border-radius: ${IconButton.Container.BorderRadius.XS};
+        border-radius: ${ButtonIcon.Container.BorderRadius.XS};
       }
     }
 
     &.sm {
-      padding: ${IconButton.Container.Padding.SM};
-      border-radius: ${IconButton.Container.BorderRadius.SM};
+      padding: ${ButtonIcon.Container.Padding.SM};
+      border-radius: ${ButtonIcon.Container.BorderRadius.SM};
 
       & > .focus-layer {
-        border-radius: ${IconButton.Container.BorderRadius.SM};
+        border-radius: ${ButtonIcon.Container.BorderRadius.SM};
       }
     }
 
     &.md {
-      padding: ${IconButton.Container.Padding.MD};
-      border-radius: ${IconButton.Container.BorderRadius.MD};
+      padding: ${ButtonIcon.Container.Padding.MD};
+      border-radius: ${ButtonIcon.Container.BorderRadius.MD};
 
       & > .focus-layer {
-        border-radius: ${IconButton.Container.BorderRadius.MD};
+        border-radius: ${ButtonIcon.Container.BorderRadius.MD};
       }
     }
 
     &.lg {
-      padding: ${IconButton.Container.Padding.LG};
-      border-radius: ${IconButton.Container.BorderRadius.LG};
+      padding: ${ButtonIcon.Container.Padding.LG};
+      border-radius: ${ButtonIcon.Container.BorderRadius.LG};
 
       & > .focus-layer {
-        border-radius: ${IconButton.Container.BorderRadius.LG};
+        border-radius: ${ButtonIcon.Container.BorderRadius.LG};
       }
     }
 
     &.xl {
-      padding: ${IconButton.Container.Padding.XL};
-      border-radius: ${IconButton.Container.BorderRadius.XL};
+      padding: ${ButtonIcon.Container.Padding.XL};
+      border-radius: ${ButtonIcon.Container.BorderRadius.XL};
 
       & > .focus-layer {
-        border-radius: ${IconButton.Container.BorderRadius.XL};
+        border-radius: ${ButtonIcon.Container.BorderRadius.XL};
       }
     }
   }
   
   .loading {
 
-   &.blr-icon-button:hover, &.blr-icon-button:focus{
+   &.blr-button-icon:hover, &.blr-button-icon:focus{
       cursor: auto;
       text-decoration: none;
       &.cta{
