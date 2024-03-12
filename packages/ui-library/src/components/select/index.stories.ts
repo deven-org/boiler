@@ -18,9 +18,11 @@ const sharedStyles = html`
     }
   </style>
 `;
+
 const defaultParams: BlrSelectType = {
   theme: 'Light',
   sizeVariant: 'md',
+  hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
   icon: 'blrChevronDown',
@@ -28,14 +30,12 @@ const defaultParams: BlrSelectType = {
   hintMessage: 'This is a small hint message',
   hintMessageIcon: 'blrInfo',
   disabled: false,
-  required: false,
   hasError: false,
   errorMessage: ' ',
   errorMessageIcon: undefined,
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
-  hasLabel: true,
 };
 
 export default {
@@ -82,7 +82,6 @@ export default {
         category: 'Content / Settings',
       },
     },
-
     icon: {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
@@ -113,15 +112,7 @@ export default {
       },
       if: { arg: 'hasHint', eq: true },
     },
-    options: {
-      name: 'children (options)',
-      description:
-        'Enter a list of html option elements containing information about the label, value and disabled prop for all options that are part of the select.',
-      control: 'array',
-      table: {
-        category: 'Content / Settings',
-      },
-    },
+
     //States
     disabled: {
       name: 'disabled',
@@ -137,15 +128,10 @@ export default {
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       control: { type: 'boolean' },
       table: {
-        disabled: true,
+        category: 'States',
       },
     },
-    required: {
-      description: 'Choose if the component must hold a value after an interaction or a submit.',
-      table: {
-        category: 'Validation',
-      },
-    },
+
     // Validation
     hasError: {
       description: 'Choose if component has an error.',
@@ -194,22 +180,24 @@ export default {
     },
     // Events
     blrSelectedValueChange: {
+      description: 'Fires when some text is selected.',
       action: 'blrSelectedValueChange',
-      description: 'Fires when the value changes.',
       table: {
         category: 'Events',
       },
     },
     blrFocus: {
-      action: 'blrFocus',
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
     blrBlur: {
-      action: 'blrBlur',
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },

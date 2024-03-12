@@ -69,6 +69,14 @@ blrSelect.addEventListener('blrSelectedValueChange', () => {
   addLog('blr-select changed');
 });
 
+blrSelect.addEventListener('blrFocus', () => {
+  addLog('blr-select focus');
+});
+
+blrSelect.addEventListener('blrBlur', () => {
+  addLog('blr-select blur');
+});
+
 blrTextInput.addEventListener('blrFocus', () => {
   addLog('blr-text-input focused');
 });
