@@ -44,8 +44,9 @@ describe('blr-range-legend-min-max-slider', () => {
         const rangeNumbersElement = querySelectorDeep('.range__numbers', inputWrapper?.getRootNode() as HTMLElement);
         const allRangePoints = querySelectorAllDeep('.range__point', rangeNumbersElement?.getRootNode() as HTMLParagraphElement);
 
-        allRangePoints.forEach(point => {
+        allRangePoints.forEach((point, i) => {
             expect(point).to.exist;
+            expect(point.textContent).to.equal(sampleParams.list[i]);
         });
         expect(allRangePoints.length).to.equal(sampleParams.list.length)
     });
