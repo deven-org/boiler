@@ -122,7 +122,6 @@ export default {
     },
     // Events
     blrClick: {
-      name: 'blrClick',
       description: 'Fires when the component is clicked.',
       action: 'blrClick',
       table: {
@@ -130,7 +129,6 @@ export default {
       },
     },
     blrFocus: {
-      name: 'blrFocus',
       description: 'Fires when the component is focused.',
       action: 'blrFocus',
       table: {
@@ -138,7 +136,6 @@ export default {
       },
     },
     blrBlur: {
-      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
       action: 'blrBlur',
       table: {

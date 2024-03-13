@@ -5,8 +5,8 @@ const toggleLoadingButton = document.querySelector('#toggleLoadingState');
 const toggleDisabledState = document.querySelector('#toggleDisabledState');
 const logsContainer = document.querySelector('#logs');
 
-const blrTextButton = document.getElementsByTagName('blr-text-button')[0];
-const blrIconButton = document.getElementsByTagName('blr-buton-icon')[0];
+const blrTextButton = document.getElementsByTagName('blr-button-text')[0];
+const blrIconButton = document.getElementsByTagName('blr-button-icon')[0];
 const blrCheckbox = document.getElementsByTagName('blr-checkbox')[0];
 const blrSelect = document.getElementsByTagName('blr-select')[0];
 const blrInputFieldText = document.getElementsByTagName('blr-input-field-text')[0];
