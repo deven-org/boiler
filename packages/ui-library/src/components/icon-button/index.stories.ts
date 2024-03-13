@@ -36,9 +36,9 @@ const argTypesToDisable = [
   'errorIcon',
   'arialabel',
   'name',
-  'onChange',
-  'onFocus',
-  'onBlur',
+  'blrClick',
+  'blrBlur',
+  'blrFocus',
 ];
 
 const generateDisabledArgTypes = (argTypes: string[]) => {
@@ -121,23 +121,26 @@ export default {
       },
     },
     // Events
-    onChange: {
-      description: 'Fires when the value changes.',
-      action: 'onChange',
+    blrClick: {
+      name: 'blrClick',
+      description: 'Fires when the component is clicked.',
+      action: 'blrClick',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
+    blrFocus: {
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    onBlur: {
+    blrBlur: {
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
