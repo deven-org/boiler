@@ -5,7 +5,6 @@ import { FormSizes, Units } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { PureIconKeys } from '@boiler/icons/icons-optimized';
 import { html } from 'lit-html';
-import { action } from '@storybook/addon-actions';
 
 // this loads the all components instances and registers their html tags
 import '../../index';
@@ -20,7 +19,7 @@ const sharedStyles = html`
 
 const defaultParams: BlrInputFieldNumberType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
   value: undefined,
@@ -51,10 +50,6 @@ export default {
   args: {
     ...defaultParams,
     name: 'InputFieldNumber',
-    onChange: () => action('onChange'),
-    onSelect: () => action('onSelect'),
-    onFocus: () => action('onFocus'),
-    onBlur: () => action('onBlur'),
   },
   argTypes: {
     theme: {
@@ -64,9 +59,8 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
-      name: 'sizeVariant',
-      description: ' Choose size of the component. ',
+    sizeVariant: {
+      description: ' Choose sizeVariant of the component. ',
       options: FormSizes,
       control: { type: 'radio' },
       table: {
@@ -74,7 +68,6 @@ export default {
       },
     },
     stepperVariant: {
-      name: 'stepperVariant',
       description: 'Choose stepperVariant of the stepper that is used in the component.',
       options: ['vertical', 'horizontal', 'split'],
       control: {
@@ -90,7 +83,6 @@ export default {
       },
     },
     placeholder: {
-      name: 'placeholder',
       description: 'Enter string used as placeholder text.',
       defaultValue: 'Placeholder-text',
       table: {
@@ -98,7 +90,6 @@ export default {
       },
     },
     value: {
-      name: 'value',
       description: 'Enter the value the component should have.',
       table: {
         category: 'Content / Settings',
@@ -109,7 +100,6 @@ export default {
       },
     },
     decimals: {
-      name: 'decimals',
       description: 'Enter how many decimals the value of the component has.',
       table: {
         category: 'Content / Settings',
@@ -119,7 +109,6 @@ export default {
       },
     },
     leadingZeros: {
-      name: 'leadingZeros',
       description: 'Enter how many leading zeros the value of the component has.',
       table: {
         category: 'Content / Settings',
@@ -129,14 +118,12 @@ export default {
       },
     },
     prependUnit: {
-      name: 'prependUnit',
       description: 'Choose if unit is displayed as a prefix or suffix.',
       table: {
         category: 'Content / Settings',
       },
     },
     unit: {
-      name: 'unit',
       description: 'Select a unit which is displayed next to the input.',
       options: [undefined, ...Units],
       control: {
@@ -147,7 +134,6 @@ export default {
       },
     },
     step: {
-      name: 'step',
       description: 'Enter how much the value should change when the stepper buttons are used.',
       control: {
         type: 'number',
@@ -158,7 +144,6 @@ export default {
     },
 
     hasLabel: {
-      name: 'hasLabel',
       description: 'Choose if component has a label.',
       defaultValue: true,
       control: { type: 'boolean' },
@@ -167,7 +152,6 @@ export default {
       },
     },
     label: {
-      name: 'label',
       description: 'Enter string used as label text.',
       control: {
         type: 'text',
@@ -178,7 +162,6 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     labelAppendix: {
-      name: 'labelAppendix',
       description:
         'Enter string used as an appendix to the label. Use this to inform the user in case this field is required.',
       control: {
@@ -190,7 +173,6 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     hasHint: {
-      name: 'hasHint',
       description: ' Choose if component has a hint message. ',
       defaultValue: true,
       control: {
@@ -218,7 +200,6 @@ export default {
       },
     },
     disabled: {
-      name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
       defaultValue: false,
@@ -227,7 +208,6 @@ export default {
       },
     },
     readonly: {
-      name: 'readonly',
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       defaultValue: false,
       table: {
@@ -236,7 +216,6 @@ export default {
     },
     // Validation
     required: {
-      name: 'required',
       description: 'Choose if the component must hold a value after an interaction or a submit.',
       defaultValue: false,
       table: {
@@ -244,7 +223,6 @@ export default {
       },
     },
     hasError: {
-      name: 'hasError',
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
@@ -252,7 +230,6 @@ export default {
       },
     },
     errorMessage: {
-      name: 'errorMessage',
       description: 'Enter string used used as error message.',
       table: {
         category: 'Validations',
@@ -271,59 +248,60 @@ export default {
     },
     //Technical attributes
     inputFieldNumberId: {
-      name: 'inputFieldNumberId',
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
       },
     },
     name: {
-      name: 'name',
       description: 'For a < form > element, the name attribute is used as a reference when the data is submitted.',
       table: {
         category: 'Technical Attributes',
       },
       control: { type: 'text', label: 'Input Field Number' },
     },
-    onChange: {
-      name: 'onChange',
+    //Events
+    blrNumberValueChange: {
       description: 'Fires when the value changes.',
-      action: 'onChange',
+      action: 'blrNumberValueChange',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
-    onSelect: {
-      name: 'onSelect',
+    blrSelect: {
+      name: 'blrSelect',
       description: 'Fires when some text is selected.',
-      action: 'onSelect',
+      action: 'blrSelect',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
+      name: 'blrFocus',
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
-        disable: false,
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
+      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
-        disable: false,
+        category: 'Events',
+      },
+    },
+    blrNumberStepperClick: {
+      name: 'blrNumberStepperClick',
+      description: 'Fires when one of the stepper buttons is clicked.',
+      action: 'blrNumberStepperClick',
+      table: {
         category: 'Events',
       },
     },
     // Accessibility attributes
     stepIncreaseAriaLabel: {
-      name: 'stepIncreaseAriaLabel',
       description: 'Labels the "up" or increase stepper button to assistive technologies, such as screen readers.',
       table: {
         category: 'Accessibility',
@@ -331,7 +309,6 @@ export default {
       control: { type: 'text', defaultValue: '+' },
     },
     stepDecreaseAriaLabel: {
-      name: 'stepDecreaseAriaLabel',
       description:
         'Labels the "down" or decrease stepper button to assistive technologies, such as screen readers.\nNote that the default value is not a hyphen (-) but the minus sign \\u2212 (\u2212).',
       table: {
@@ -387,7 +364,7 @@ export const SizeVariant = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         labelAppendix: undefined,
-        size: 'sm',
+        sizeVariant: 'sm',
         label: 'Input field number SM',
         value: undefined,
         inputFieldNumberId: 'test-sm',
@@ -397,7 +374,7 @@ export const SizeVariant = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         labelAppendix: undefined,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'Input field number MD',
         value: undefined,
         inputFieldNumberId: 'test-md',
@@ -407,7 +384,7 @@ export const SizeVariant = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         labelAppendix: undefined,
-        size: 'lg',
+        sizeVariant: 'lg',
         label: 'Input field number LG',
         value: undefined,
         inputFieldNumberId: 'test-lg',
@@ -470,7 +447,7 @@ export const Placeholder = (params: BlrInputFieldNumberType) => {
     <div class="wrapper">
       ${BlrInputFieldNumberRenderFunction({
         ...params,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'With placeholder',
         labelAppendix: undefined,
         value: undefined,
@@ -480,7 +457,7 @@ export const Placeholder = (params: BlrInputFieldNumberType) => {
     <div class="wrapper">
       ${BlrInputFieldNumberRenderFunction({
         ...params,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'Without placeholder',
         labelAppendix: undefined,
         placeholder: '',
