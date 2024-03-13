@@ -5,8 +5,8 @@ const toggleLoadingButton = document.querySelector('#toggleLoadingState');
 const toggleDisabledState = document.querySelector('#toggleDisabledState');
 const logsContainer = document.querySelector('#logs');
 
-const blrTextButton = document.getElementsByTagName('blr-button-text')[0];
-const blrIconButton = document.getElementsByTagName('blr-button-icon')[0];
+const blrButtonText = document.getElementsByTagName('blr-button-text')[0];
+const blrButtonIcon = document.getElementsByTagName('blr-button-icon')[0];
 const blrCheckbox = document.getElementsByTagName('blr-checkbox')[0];
 const blrSelect = document.getElementsByTagName('blr-select')[0];
 const blrInputFieldText = document.getElementsByTagName('blr-input-field-text')[0];
@@ -20,7 +20,7 @@ const addLog = (log) => {
 };
 
 toggleLoadingButton.addEventListener('click', () => {
-  const currentState = blrTextButton.getAttribute('loading');
+  const currentState = blrButtonText.getAttribute('loading');
 
   if (currentState) {
     blrButton.removeAttribute('loading');
@@ -32,38 +32,38 @@ toggleLoadingButton.addEventListener('click', () => {
 });
 
 toggleDisabledState.addEventListener('click', () => {
-  const currentState = blrTextButton.getAttribute('disabled');
+  const currentState = blrButtonText.getAttribute('disabled');
 
   if (currentState) {
-    blrTextButton.removeAttribute('disabled');
+    blrButtonText.removeAttribute('disabled');
     addLog('Set text button disabled state to false');
   } else {
-    blrTextButton.setAttribute('disabled', 'true');
+    blrButtonText.setAttribute('disabled', 'true');
     addLog('Set text button loading state to true');
   }
 });
 
-blrTextButton.addEventListener('blrClick', () => {
+blrButtonText.addEventListener('blrClick', () => {
   addLog('blr-text-button clicked');
 });
 
-blrTextButton.addEventListener('blrFocus', () => {
+blrButtonText.addEventListener('blrFocus', () => {
   addLog('blr-text-button focused');
 });
 
-blrTextButton.addEventListener('blrBlur', () => {
+blrButtonText.addEventListener('blrBlur', () => {
   addLog('blr-text-button blurred');
 });
 
-blrIconButton.addEventListener('blrClick', () => {
+blrButtonIcon.addEventListener('blrClick', () => {
   addLog('blr-icon-button clicked');
 });
 
-blrIconButton.addEventListener('blrFocus', () => {
+blrButtonIcon.addEventListener('blrFocus', () => {
   addLog('blr-icon-button focused');
 });
 
-blrIconButton.addEventListener('blrBlur', () => {
+blrButtonIcon.addEventListener('blrBlur', () => {
   addLog('blr-icon-button blurred');
 });
 
