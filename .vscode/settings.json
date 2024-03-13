@@ -32,5 +32,10 @@
     "node_modules": false,
     "package-lock.json": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.rulers": [
+    120 // prettier print width
+  ],
+  "lit-plugin.rules.no-missing-import": "off",
+  "lit-plugin.strict": true
 }
