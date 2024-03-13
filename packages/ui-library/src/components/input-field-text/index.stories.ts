@@ -29,7 +29,7 @@ export default {
   title: 'Components/Input Field Text',
   argTypes: {
     //Appearance
-    size: {
+    sizeVariant: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
       options: FormSizes,
@@ -112,7 +112,7 @@ export default {
       if: { arg: 'hasLabel', eq: true },
     },
     // todo it has to be renamed? Checke this
-    showInputIcon: {
+    hasIcon: {
       description: 'Choose if component has an icon.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'boolean' },
@@ -125,7 +125,7 @@ export default {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'showInputIcon', eq: true },
+      if: { arg: 'hasIcon', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -143,8 +143,8 @@ export default {
         category: 'Content / Settings',
       },
     },
-    // todo renaming from hintIcon to hintMessageIcon in the blrFormRenderFunction, partially solution with name overwriting
-    hintIcon: {
+    // todo renaming from hintMessageIcon to hintMessageIcon in the blrFormRenderFunction, partially solution with name overwriting
+    hintMessageIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       options: [undefined, ...PureIconKeys],
@@ -198,8 +198,8 @@ export default {
         category: 'Validation',
       },
     },
-    // todo renaming from errorIcon to errorMessageIcon, partially solution with name overwriting
-    errorIcon: {
+    // todo renaming from errorMessageIcon to errorMessageIcon, partially solution with name overwriting
+    errorMessageIcon: {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       options: [undefined, ...PureIconKeys],
@@ -325,7 +325,7 @@ BlrInputFieldText.storyName = 'Input Field Text';
 
 // Default parameters for Input Field Text component
 const defaultParams: BlrInputFieldTextType = {
-  size: 'md',
+  sizeVariant: 'md',
   placeholder: 'Placeholder-text',
   value: '',
   maxLength: 140,
@@ -333,7 +333,7 @@ const defaultParams: BlrInputFieldTextType = {
   labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   arialabel: 'InputFieldText',
   name: 'InputFieldText',
   theme: 'Light',
@@ -344,11 +344,11 @@ const defaultParams: BlrInputFieldTextType = {
   readonly: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: 'blrInfo',
+  errorMessageIcon: 'blrInfo',
 
   type: 'text',
-  inputIcon: 'blr360',
-  showInputIcon: true,
+  icon: 'blr360',
+  hasIcon: true,
 };
 
 BlrInputFieldText.args = defaultParams;
@@ -356,7 +356,7 @@ BlrInputFieldText.args = defaultParams;
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
-  'size',
+  'sizeVariant',
   'isResizeable',
   'placeholder',
   'value',
@@ -367,16 +367,16 @@ const argTypesToDisable = [
   'labelAppendix',
   'hasHint',
   'hintText',
-  'hintIcon',
+  'hintMessageIcon',
   'type',
-  'showInputIcon',
+  'hasIcon',
   'inputFieldTextId',
   'disabled',
   'readonly',
   'required',
   'hasError',
   'errorMessage',
-  'errorIcon',
+  'errorMessageIcon',
   'arialabel',
   'name',
   'blrTextValueChange',
@@ -413,27 +413,27 @@ export const SizeVariant = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'sm',
+          sizeVariant: 'sm',
           label: 'Input Field Text SM',
-          showInputIcon: false,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Input Field Text MD',
-          showInputIcon: false,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'lg',
+          sizeVariant: 'lg',
           label: 'Input Field Text LG',
-          showInputIcon: false,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
@@ -463,9 +463,9 @@ export const Type = () => {
           ...defaultParams,
           theme: 'Light',
           type: 'text',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Enter text',
-          showInputIcon: false,
+          hasIcon: false,
           labelAppendix: '',
           placeholder: '',
           value: '',
@@ -474,7 +474,7 @@ export const Type = () => {
           ...defaultParams,
           theme: 'Light',
           type: 'password',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Enter password',
           labelAppendix: '',
           placeholder: '',
@@ -502,20 +502,20 @@ export const Placeholder = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'With placeholder',
           placeholder: 'Add a message here',
-          showInputIcon: false,
+          hasIcon: false,
           labelAppendix: '',
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Without placeholder',
           labelAppendix: '',
-          showInputIcon: false,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
@@ -542,9 +542,9 @@ export const Disabled = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Disabled',
-          showInputIcon: false,
+          hasIcon: false,
           placeholder: '',
           labelAppendix: '',
           disabled: true,
@@ -572,10 +572,10 @@ export const Readonly = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Readonly',
           readonly: true,
-          showInputIcon: false,
+          hasIcon: false,
           placeholder: '',
           value: '',
         })}
@@ -601,11 +601,11 @@ export const Required = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Label-text',
           labelAppendix: '(required)',
-          showInputIcon: false,
+          hasIcon: false,
           value: '',
         })}
       </div>
@@ -635,13 +635,13 @@ export const HasError = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           hasError: true,
           placeholder: '',
           label: 'Error',
           labelAppendix: '',
           errorMessage: '',
-          errorIcon: undefined,
+          errorMessageIcon: undefined,
           value: '',
         })}
       </div>
@@ -666,11 +666,11 @@ export const FormLabel = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Label',
           labelAppendix: '(Appendix)',
-          showInputIcon: false,
+          hasIcon: false,
           value: '',
         })}
       </div>
@@ -694,7 +694,7 @@ export const Icon = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'With Icon',
           labelAppendix: '',
@@ -704,10 +704,10 @@ export const Icon = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Without Icon',
-          showInputIcon: false,
+          hasIcon: false,
           labelAppendix: '',
           value: '',
         })}
@@ -729,26 +729,26 @@ export const FormCaptionGroup = () => {
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
           labelAppendix: '',
           hasHint: true,
-          showInputIcon: false,
+          hasIcon: false,
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
-          size: 'md',
+          sizeVariant: 'md',
           placeholder: '',
           label: ' Hint and error message',
           labelAppendix: '',
           hasHint: true,
           hasError: true,
           errorMessage: "OMG it's an error",
-          errorIcon: 'blrErrorFilled',
-          showInputIcon: false,
+          errorMessageIcon: 'blrErrorFilled',
+          hasIcon: false,
           value: '',
         })}
       </div>
