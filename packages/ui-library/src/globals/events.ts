@@ -25,6 +25,17 @@ export function createBlrClickEvent(detail: BlrClickEventDetail): BlrClickEvent 
   return new CustomEvent(BlrClickEventName, { bubbles: true, composed: true, detail });
 }
 
+export type BlrNumberStepperClickEventDetail = {
+  originalEvent: MouseEvent | KeyboardEvent;
+  direction: 'increase' | 'decrease';
+  step: number;
+};
+export type BlrNumberStepperClickEvent = CustomEvent<BlrNumberStepperClickEventDetail>;
+export const BlrNumberStepperClickEventName = 'blrNumberStepperClick';
+export function createBlrNumberStepperClickEvent(detail: BlrNumberStepperClickEventDetail): BlrNumberStepperClickEvent {
+  return new CustomEvent(BlrNumberStepperClickEventName, { bubbles: true, composed: true, detail });
+}
+
 export type BlrSelectEventDetail = {
   originalEvent: Event;
 };
@@ -66,14 +77,27 @@ export function createBlrTextValueChangeEvent(detail: BlrTextValueChangeEventDet
   return new CustomEvent(BlrTextValueChangeEventName, { bubbles: true, composed: true, detail });
 }
 
+export type BlrNumberValueChangeEventDetail = {
+  originalEvent: Event;
+  oldValue: number;
+  newValue: number;
+};
+export type BlrNumberValueChangeEvent = CustomEvent<BlrNumberValueChangeEventDetail>;
+export const BlrNumberValueChangeEventName = 'blrNumberValueChange';
+export function createBlrNumberValueChangeEvent(detail: BlrNumberValueChangeEventDetail): BlrNumberValueChangeEvent {
+  return new CustomEvent(BlrNumberValueChangeEventName, { bubbles: true, composed: true, detail });
+}
+
 declare global {
   interface GlobalEventHandlersEventMap {
     [BlrFocusEventName]: BlrFocusEvent;
     [BlrBlurEventName]: BlrBlurEvent;
     [BlrClickEventName]: BlrClickEvent;
+    [BlrNumberStepperClickEventName]: BlrNumberStepperClickEvent;
+    [BlrSelectEventName]: BlrSelectEvent;
     [BlrCheckedChangeEventName]: BlrCheckedChangeEvent;
     [BlrSelectedValueChangeEventName]: BlrSelectedValueChangeEvent;
     [BlrTextValueChangeEventName]: BlrTextValueChangeEvent;
-    [BlrSelectEventName]: BlrSelectEvent;
+    [BlrNumberValueChangeEventName]: BlrNumberValueChangeEvent;
   }
 }

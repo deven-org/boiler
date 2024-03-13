@@ -3,13 +3,13 @@ import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const styleCustom = typeSafeNestedCss`
-  .blr-text-input {
+  .blr-input-field-text {
     display: flex;
     flex-direction: column;
     position: relative;
   }
 
-  .blr-text-input:disabled {
+  .blr-input-field-text:disabled {
     pointer-events: none;
   }
 
@@ -26,13 +26,13 @@ export const styleCustom = typeSafeNestedCss`
   }
 `;
 
-export const { tokenizedLight: textInputLight, tokenizedDark: textInputDark } = renderThemedCssStrings(
+export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTextDark } = renderThemedCssStrings(
   (_componentTokens, semanticTokens) => {
     const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
     const { InputIcon } = _componentTokens.cmp;
 
     return typeSafeNestedCss`
-      .blr-text-input {
+      .blr-input-field-text {
 
         &.sm {
 

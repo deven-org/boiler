@@ -22,7 +22,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events';
 
-export type BlrIconButtonEventHandlers = {
+export type BlrButtonIconEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
   blrBlur?: (event: BlrBlurEvent) => void;
   blrClick?: (event: BlrClickEvent) => void;
@@ -33,14 +33,14 @@ export type BlrIconButtonEventHandlers = {
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
-export class BlrIconButton extends LitElement {
+export class BlrButtonIcon extends LitElement {
   static styles = [styleCustom];
 
   @property() arialabel!: string;
   @property() icon?: SizelessIconType;
   @property() loading?: boolean;
   @property() disabled!: boolean;
-  @property() iconButtonId?: string;
+  @property() buttonIconId?: string;
   @property() variant: ActionVariantType = 'primary';
   @property() sizeVariant?: ActionSizesType = 'md';
 
@@ -95,7 +95,7 @@ export class BlrIconButton extends LitElement {
 
       const iconSizeVariant = getComponentConfigToken([
         'cmp',
-        'IconButton',
+        'ButtonIcon',
         'Icon',
         'SizeVariant',
         this.sizeVariant.toUpperCase(),
@@ -107,10 +107,10 @@ export class BlrIconButton extends LitElement {
         </style>
         <span
           aria-label=${this.arialabel || nothing}
-          class="blr-semantic-action blr-icon-button ${classes}"
+          class="blr-semantic-action blr-button-icon ${classes}"
           aria-disabled=${this.disabled ? 'true' : nothing}
           @click=${this.handleClick}
-          id=${this.iconButtonId || nothing}
+          id=${this.buttonIconId || nothing}
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
           @blur=${this.handleBlur}
@@ -147,7 +147,7 @@ export class BlrIconButton extends LitElement {
 }
 
 if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrIconButton);
+  customElements.define(TAG_NAME, BlrButtonIcon);
 }
 
-export type BlrIconButtonType = Omit<BlrIconButton, keyof LitElement> & BlrIconButtonEventHandlers;
+export type BlrButtonIconType = Omit<BlrButtonIcon, keyof LitElement> & BlrButtonIconEventHandlers;
