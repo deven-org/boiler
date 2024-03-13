@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import { BlrTextInputType } from './index';
-import { BlrTextInputRenderFunction } from './renderFunction';
+import { BlrInputFieldTextType } from './index';
+import { BlrInputFieldTextRenderFunction } from './renderFunction';
 import { FormSizes, InputTypes } from '../../globals/constants';
 import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
@@ -16,7 +16,7 @@ const sharedStyles = html`
       display: flex;
       justify-content: center;
     }
-    .stories-textinput {
+    .stories-inputfieldtext {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -26,7 +26,7 @@ const sharedStyles = html`
 `;
 
 export default {
-  title: 'Components/Text Input',
+  title: 'Components/Input Field Text',
   argTypes: {
     //Appearance
     size: {
@@ -259,8 +259,8 @@ export default {
       },
     },
     //Technical attributes
-    textInputId: {
-      name: 'textInputId',
+    inputFieldTextId: {
+      name: 'inputFieldTextId',
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
@@ -297,7 +297,7 @@ export default {
     docs: {
       description: {
         component: `<markdown>
-Text Input allows users to enter textual information or data into a designated area. Users can interact with the Text Input component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.
+Input Field Text allows users to enter textual information or data into a designated area. Users can interact with the Input Field Text component by clicking or tapping on it, which activates it for text entry. It often displays a blinking cursor to indicate the current text insertion point.
 - [**Appearance**](#appearance)
  - [**Size Variant**](#size-variant) 
 - [**Content / Settings**](#content--settings)
@@ -320,11 +320,11 @@ Text Input allows users to enter textual information or data into a designated a
   },
 };
 
-export const BlrTextInput = (params: BlrTextInputType) => BlrTextInputRenderFunction(params);
-BlrTextInput.storyName = 'Text Input';
+export const BlrInputFieldText = (params: BlrInputFieldTextType) => BlrInputFieldTextRenderFunction(params);
+BlrInputFieldText.storyName = 'Input Field Text';
 
-// Default parameters for Text Input component
-const defaultParams: BlrTextInputType = {
+// Default parameters for Input Field Text component
+const defaultParams: BlrInputFieldTextType = {
   size: 'md',
   placeholder: 'Placeholder-text',
   value: '',
@@ -334,10 +334,10 @@ const defaultParams: BlrTextInputType = {
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintIcon: 'blrInfo',
-  arialabel: 'TextInput',
-  name: 'TextInput',
+  arialabel: 'InputFieldText',
+  name: 'InputFieldText',
   theme: 'Light',
-  textInputId: 'Input Id',
+  inputFieldTextId: 'Input Id',
   hasLabel: true,
   required: false,
   disabled: false,
@@ -351,7 +351,7 @@ const defaultParams: BlrTextInputType = {
   showInputIcon: true,
 };
 
-BlrTextInput.args = defaultParams;
+BlrInputFieldText.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
@@ -370,7 +370,7 @@ const argTypesToDisable = [
   'hintIcon',
   'type',
   'showInputIcon',
-  'textInputId',
+  'inputFieldTextId',
   'disabled',
   'readonly',
   'required',
@@ -403,36 +403,36 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 /**
  * ## Appearance
  * ### Size Variant
- * The Text Input component comes in 3 sizes: SM, MD and LG.
+ * The Input Field Text component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'sm',
-          label: 'Text Input SM',
+          label: 'Input Field Text SM',
           showInputIcon: false,
           placeholder: '',
           value: '',
         })}
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
-          label: 'Text Input MD',
+          label: 'Input Field Text MD',
           showInputIcon: false,
           placeholder: '',
           value: '',
         })}
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'lg',
-          label: 'Text Input LG',
+          label: 'Input Field Text LG',
           showInputIcon: false,
           placeholder: '',
           value: '',
@@ -452,14 +452,14 @@ SizeVariant.story = {
 /**
  * ## Content / Settings
  * ### Type
- * The Text Input component can have all the types an html input can have, except the number and the unit type, which is covered in the Number Input component. For more information have a look at the [Number Input](/docs/design-system-web-components-forms-number-input--docs) component.
+ * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Field Number component. For more information have a look at the [Input Field Number](/docs/design-system-web-components-forms-input-field-number--docs) component.
  */
 export const Type = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           type: 'text',
@@ -470,7 +470,7 @@ export const Type = () => {
           placeholder: '',
           value: '',
         })}
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           type: 'password',
@@ -492,14 +492,14 @@ Type.story = {
 };
 
 /**
- * The Text Input component can display a placeholder text. This is recommended to improve usability.
+ * The Input Field Text component can display a placeholder text. This is recommended to improve usability.
  */
 export const Placeholder = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -509,7 +509,7 @@ export const Placeholder = () => {
           labelAppendix: '',
           value: '',
         })}
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -530,16 +530,16 @@ Placeholder.argTypes = {
 // States Disabled
 /**
  * ## States
- * Apart from states like rest, hover, pressed and focus, the Text Input component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * Apart from states like rest, hover, pressed and focus, the Input Field Text component can also be disabled or readonly. The error state is documented under [validation](#validation).
  * ### Disabled
- * The Text Input component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+ * The Input Field Text component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
  */
 export const Disabled = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -562,14 +562,14 @@ Disabled.story = {
 };
 
 /**
- * The Text Input component in the readonly state can not be interacted with, but it can still be selected and receive focus.
+ * The Input Field Text component in the readonly state can not be interacted with, but it can still be selected and receive focus.
  */
 export const Readonly = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -591,14 +591,14 @@ Readonly.argTypes = {
 /**
  * ## Validation
  * ### Required
- * The Text Input component can be set as required. If set as required, an error should be thrown, when the Text Input component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below..
+ * The Input Field Text component can be set as required. If set as required, an error should be thrown, when the Input Field Text component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below..
  * */
 export const Required = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -625,14 +625,14 @@ Required.story = {
 };
 
 /**
- * The Text Input component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Text Input or in case the Text Input was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
+ * The Input Field Text component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Input Field Text or in case the Input Field Text was set as required and has not been filled before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  * */
 export const HasError = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -656,14 +656,14 @@ HasError.argTypes = {
 /**
  * ## Dependencies
  * ### Form Label
- * The Text Input component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Input Field Text component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
  */
 export const FormLabel = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -684,14 +684,14 @@ FormLabel.story = {
   name: ' ',
 };
 /**
- * The Text Input component can have a trailing clickable Icon / Icon Button component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
+ * The Input Field Text component can have a trailing clickable Icon / Button Icon component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
  */
 export const Icon = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -701,7 +701,7 @@ export const Icon = () => {
           type: 'password',
           value: 'Password',
         })}
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -725,8 +725,8 @@ export const FormCaptionGroup = () => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
-      <div class="stories-textinput">
-        ${BlrTextInputRenderFunction({
+      <div class="stories-inputfieldtext">
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',
@@ -737,7 +737,7 @@ export const FormCaptionGroup = () => {
           showInputIcon: false,
           value: '',
         })}
-        ${BlrTextInputRenderFunction({
+        ${BlrInputFieldTextRenderFunction({
           ...defaultParams,
           theme: 'Light',
           size: 'md',

@@ -1,48 +1,48 @@
 import '@boiler/ui-library/dist/';
 
-import { BlrTextButtonRenderFunction } from './renderFunction';
-import type { BlrTextButtonType } from '.';
+import { BlrButtonTextRenderFunction } from './renderFunction';
+import type { BlrButtonTextType } from '.';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 
-const sampleParams: BlrTextButtonType = {
+const sampleParams: BlrButtonTextType = {
   label: 'Button',
   icon: 'blr360',
   hasIcon: true,
   iconPosition: 'leading',
   loading: false,
   disabled: false,
-  textButtonId: 'button-id',
+  buttonTextId: 'button-id',
   variant: 'cta',
   theme: 'Light',
   buttonDisplay: 'inline-block',
 };
 
-describe('blr-text-button', () => {
+describe('blr-button-text', () => {
   it('is having a button containing the right className', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction(sampleParams));
+    const element = await fixture(BlrButtonTextRenderFunction(sampleParams));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     const className = button?.className;
 
-    expect(className).to.contain('blr-text-button');
+    expect(className).to.contain('blr-button-text');
   });
 
   it('has a size md by default', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction(sampleParams));
+    const element = await fixture(BlrButtonTextRenderFunction(sampleParams));
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const className = textButton?.className;
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const className = buttonText?.className;
 
     expect(className).to.contain('md');
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const className = textButton?.className;
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const className = buttonText?.className;
 
     expect(className).to.contain('sm');
   });
@@ -50,16 +50,16 @@ describe('blr-text-button', () => {
   /*
   it('shows loading icon when loading is true', async () => {
     const element = await fixture(
-      BlrTextButtonRenderFunction({
+      BlrButtonTextRenderFunction({
         ...sampleParams,
         loading: true,
       })
     );
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const loader = querySelectorDeep('blr-loader', textButton?.getRootNode() as HTMLElement);
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const loader = querySelectorDeep('blr-loader', buttonText?.getRootNode() as HTMLElement);
 
-    const className = textButton?.className;
+    const className = buttonText?.className;
 
     expect(className).to.contain('loading');
     expect(loader).to.exist;
@@ -67,16 +67,16 @@ describe('blr-text-button', () => {
 
   it('does not show loading icon when loading is false', async () => {
     const element = await fixture(
-      BlrTextButtonRenderFunction({
+      BlrButtonTextRenderFunction({
         ...sampleParams,
         loading: false,
       })
     );
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const loader = querySelectorDeep('blr-loader', textButton?.getRootNode() as HTMLElement);
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const loader = querySelectorDeep('blr-loader', buttonText?.getRootNode() as HTMLElement);
 
-    const className = textButton?.className;
+    const className = buttonText?.className;
 
     expect(className).not.to.contain('loading');
     expect(loader).not.to.exist;
@@ -84,15 +84,15 @@ describe('blr-text-button', () => {
 
   it('shows a trailing icon when  iconPosition is "trailing" and hasIcon is true', async () => {
     const element = await fixture(
-      BlrTextButtonRenderFunction({
+      BlrButtonTextRenderFunction({
         ...sampleParams,
         hasIcon: true,
         iconPosition: 'trailing',
       })
     );
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const trailingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const trailingIcon = querySelectorDeep('blr-icon', buttonText?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', trailingIcon?.getRootNode() as HTMLElement);
     const rect = svg?.getBoundingClientRect();
 
@@ -107,15 +107,15 @@ describe('blr-text-button', () => {
 
   it('does not show a trailing icon when  iconPosition is "trailing" and hasIcon is true', async () => {
     const element = await fixture(
-      BlrTextButtonRenderFunction({
+      BlrButtonTextRenderFunction({
         ...sampleParams,
         hasIcon: false,
         iconPosition: 'trailing',
       })
     );
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const trailingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const trailingIcon = querySelectorDeep('blr-icon', buttonText?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', trailingIcon?.getRootNode() as HTMLElement);
 
     expect(trailingIcon).not.to.exist;
@@ -124,15 +124,15 @@ describe('blr-text-button', () => {
 
   it('shows a leading icon when  iconPosition is "leading" and hasIcon is true', async () => {
     const element = await fixture(
-      BlrTextButtonRenderFunction({
+      BlrButtonTextRenderFunction({
         ...sampleParams,
         hasIcon: true,
         iconPosition: 'leading',
       })
     );
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const leadingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const leadingIcon = querySelectorDeep('blr-icon', buttonText?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', leadingIcon?.getRootNode() as HTMLElement);
     const rect = svg?.getBoundingClientRect();
 
@@ -147,15 +147,15 @@ describe('blr-text-button', () => {
 
   it('does not show a leading icon when  iconPosition is "leading" and hasIcon is true', async () => {
     const element = await fixture(
-      BlrTextButtonRenderFunction({
+      BlrButtonTextRenderFunction({
         ...sampleParams,
         hasIcon: false,
         iconPosition: 'leading',
       })
     );
 
-    const textButton = querySelectorDeep('.blr-text-button', element.getRootNode() as HTMLElement);
-    const leadingIcon = querySelectorDeep('blr-icon', textButton?.getRootNode() as HTMLElement);
+    const buttonText = querySelectorDeep('.blr-button-text', element.getRootNode() as HTMLElement);
+    const leadingIcon = querySelectorDeep('blr-icon', buttonText?.getRootNode() as HTMLElement);
     const svg = querySelectorDeep('svg', leadingIcon?.getRootNode() as HTMLElement);
 
     expect(leadingIcon).not.to.exist;
@@ -164,7 +164,7 @@ describe('blr-text-button', () => {
   */
 
   it('display the button as block when "buttonDisplay" is set as block', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'block' }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, buttonDisplay: 'block' }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
 
@@ -175,7 +175,7 @@ describe('blr-text-button', () => {
   });
 
   it('displays the button as inline-block when "buttonDisplay" is set as inline-block', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, buttonDisplay: 'inline-block' }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, buttonDisplay: 'inline-block' }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
 
@@ -186,7 +186,7 @@ describe('blr-text-button', () => {
   });
 
   it('fires blrclick event if clicked and not disabled', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: false }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
@@ -201,7 +201,7 @@ describe('blr-text-button', () => {
   });
 
   it('doesnt fires blrclick event if clicked and disabled', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: true }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
@@ -216,7 +216,7 @@ describe('blr-text-button', () => {
   });
 
   it('fires blrfocus event if focused and not disabled', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: false }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
@@ -231,7 +231,7 @@ describe('blr-text-button', () => {
   });
 
   it('doesnt fires blrfocus event if focused and disabled', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: true }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
@@ -246,7 +246,7 @@ describe('blr-text-button', () => {
   });
 
   it('fires blrblur event if blurred and not disabled', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: false }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
@@ -262,7 +262,7 @@ describe('blr-text-button', () => {
   });
 
   it('doesnt fires blrblur event if blurred and disabled', async () => {
-    const element = await fixture(BlrTextButtonRenderFunction({ ...sampleParams, disabled: true }));
+    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: true }));
 
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;

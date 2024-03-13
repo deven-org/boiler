@@ -1,11 +1,11 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrNumberInput } from '.';
+import { BlrInputFieldNumber } from '.';
 
-export const BlrNumberInputReact = createComponent({
-  tagName: 'blr-number-input',
-  elementClass: BlrNumberInput,
+export const BlrInputFieldNumberReact = createComponent({
+  tagName: 'blr-input-field-number',
+  elementClass: BlrInputFieldNumber,
   react: React,
   events: {
     onInput: 'pointerdown' as EventName<PointerEvent>,

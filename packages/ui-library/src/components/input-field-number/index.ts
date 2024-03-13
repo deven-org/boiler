@@ -42,46 +42,46 @@ export type BlrNumberInputEventListeners = {
  * @fires blrSelect Text in NumberInput was selected
  * @fires blrNumberStepperClick Step button was clicked
  */
-export class BlrNumberInput extends LitElement {
+export class BlrInputFieldNumber extends LitElement {
   static styles = [baseStyle];
 
   @query('input')
   protected _numberFieldNode!: HTMLInputElement;
 
-  @property({ type: String }) numberInputId!: string;
-  @property({ type: String }) stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
-  @property({ type: String }) label!: string;
-  @property({ type: Boolean }) disabled?: boolean;
-  @property({ type: String }) placeholder?: string;
-  @property({ type: Boolean }) readonly?: boolean;
-  @property({ type: Boolean }) required?: boolean;
-  @property({ type: Boolean }) hasLabel?: boolean;
-  @property({ type: String }) sizeVariant?: FormSizesType = 'md';
-  @property({ type: String }) labelAppendix?: string;
-  @property({ type: Boolean }) hasError?: boolean;
-  @property({ type: String }) errorMessage?: string;
-  @property({ type: String }) errorIcon?: SizelessIconType;
-  @property({ type: Boolean }) hasHint = true;
-  @property({ type: String }) hintMessage?: string;
-  @property({ type: String }) hintIcon?: SizelessIconType;
-  @property({ type: Number }) value?: number;
-  @property({ type: Number }) step?: number;
-  @property({ type: String }) unit?: string;
-  @property({ type: Number }) leadingZeros?: number;
-  @property({ type: Number }) decimals?: number;
-  @property({ type: Boolean }) prependUnit?: boolean;
-  @property({ type: String }) stepIncreaseAriaLabel?: string = '+';
-  @property({ type: String }) stepDecreaseAriaLabel?: string = '\u2212'; // minus-sign (not minus-hyphen)
+  @property() inputFieldNumberId!: string;
+  @property() stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
+  @property() label!: string;
+  @property() disabled?: boolean;
+  @property() placeholder?: string;
+  @property() readonly?: boolean;
+  @property() required?: boolean;
+  @property() hasLabel?: boolean;
+  @property() sizeVariant?: FormSizesType = 'md';
+  @property() labelAppendix?: string;
+  @property() hasError?: boolean;
+  @property() errorMessage?: string;
+  @property() errorIcon?: SizelessIconType;
+  @property() hasHint = true;
+  @property() hintMessage?: string;
+  @property() hintIcon?: SizelessIconType;
+  @property() value?: number;
+  @property() step?: number;
+  @property() unit?: string;
+  @property() leadingZeros?: number;
+  @property() decimals?: number;
+  @property() prependUnit?: boolean;
+  @property() stepIncreaseAriaLabel?: string = '+';
+  @property() stepDecreaseAriaLabel?: string = '\u2212'; // minus-sign (not minus-hyphen)
 
-  @property({ type: String }) theme: ThemeType = 'Light';
+  @property() theme: ThemeType = 'Light';
 
   @state() protected currentValue = 0;
   @state() protected isFocused = false;
 
   protected stepperUp(event: MouseEvent) {
     if (this.currentValue !== undefined && this.step !== undefined) {
-      const oldValue = this.currentValue;
-      const step = this.step ?? 1;
+      const oldValue = Number(this.currentValue);
+      const step = Number(this.step ?? 1);
       const newValue = oldValue + step;
       this.currentValue = newValue;
       this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, oldValue, newValue }));
@@ -92,8 +92,8 @@ export class BlrNumberInput extends LitElement {
 
   protected stepperDown(event: MouseEvent) {
     if (this.currentValue !== undefined && this.step !== undefined) {
-      const oldValue = this.currentValue;
-      const step = this.step ?? 1;
+      const oldValue = Number(this.currentValue);
+      const step = Number(this.step ?? 1);
       const newValue = oldValue - step;
       this.currentValue = newValue;
       this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, oldValue, newValue }));
@@ -104,8 +104,7 @@ export class BlrNumberInput extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-
-    this.currentValue = this.currentValue || this.value || 0;
+    this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
   }
 
   protected handleFocus = (event: FocusEvent) => {
@@ -129,7 +128,7 @@ export class BlrNumberInput extends LitElement {
   };
 
   protected handleChange(event: Event) {
-    const oldValue = this.currentValue;
+    const oldValue = Number(this.currentValue);
     const newValue = Number(this._numberFieldNode.value) || 0;
     this.currentValue = newValue;
     this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, oldValue, newValue }));
@@ -175,7 +174,7 @@ export class BlrNumberInput extends LitElement {
     const button = html`
       <button
         aria-label=${ariaLabel}
-        aria-controls=${this.numberInputId}
+        aria-controls=${this.inputFieldNumberId}
         ?disabled="${this.disabled}"
         class="${buttonClass}"
         @click=${onClick}
@@ -302,7 +301,7 @@ export class BlrNumberInput extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class="blr-number-input ${this.sizeVariant}">
+        <div class="blr-input-field-number ${this.sizeVariant}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -310,7 +309,7 @@ export class BlrNumberInput extends LitElement {
                     label: this.label,
                     sizeVariant: this.sizeVariant,
                     labelAppendix: this.labelAppendix,
-                    forValue: this.numberInputId,
+                    forValue: this.inputFieldNumberId,
                     theme: this.theme,
                     hasError: Boolean(this.hasError),
                   })}
@@ -320,13 +319,13 @@ export class BlrNumberInput extends LitElement {
           <div class="${wrapperClasses}">
             <div class="${inputAndUnitContainer}">
               <input
-                id="${this.numberInputId}"
+                id="${this.inputFieldNumberId}"
                 class="${inputClasses}"
                 type="number"
-                .value=${this.currentValue || ''
+                .value=${this.currentValue != 0
                   ? this.customFormat(this.currentValue || 0, this.decimals || 0, this.leadingZeros || 0)
-                  : ''}
-                step="${this.step || ''}"
+                  : nothing}
+                step="${this.step || nothing}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
@@ -351,7 +350,7 @@ export class BlrNumberInput extends LitElement {
 }
 
 if (!customElements.get(TAG_NAME)) {
-  customElements.define(TAG_NAME, BlrNumberInput);
+  customElements.define(TAG_NAME, BlrInputFieldNumber);
 }
 
-export type BlrNumberInputType = Omit<BlrNumberInput, keyof LitElement> & BlrNumberInputEventListeners;
+export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElement> & BlrNumberInputEventListeners;
