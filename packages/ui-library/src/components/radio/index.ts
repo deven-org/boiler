@@ -54,7 +54,7 @@ export class BlrRadio extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  size: this.size,
+                  sizeVariant: this.size,
                   message: this.hintMessage,
                   icon: this.hintIcon,
                 })}
@@ -67,7 +67,7 @@ export class BlrRadio extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  size: this.size,
+                  sizeVariant: this.size,
                   message: this.errorMessage,
                   icon: this.errorIcon,
                 })}
@@ -102,7 +102,7 @@ export class BlrRadio extends LitElement {
               labelSize: this.size,
             })}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
               : nothing}
           </div>
         </div>
