@@ -70,8 +70,16 @@ blrSelect.addEventListener('blrSelectedValueChange', () => {
   addLog('blr-select changed');
 });
 
+blrSelect.addEventListener('blrFocus', () => {
+  addLog('blr-select focus');
+});
+
+blrSelect.addEventListener('blrBlur', () => {
+  addLog('blr-select blur');
+});
+
 blrInputFieldText.addEventListener('blrFocus', () => {
-  addLog('blr-input-field-text focused');
+  addLog('blr-text-input focused');
 });
 
 blrInputFieldText.addEventListener('blrBlur', () => {
