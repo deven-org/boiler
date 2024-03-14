@@ -10,8 +10,8 @@ export class BlrCounter extends LitElement {
   static styles = [];
 
   @property() variant: CounterVariantType = 'neutral';
-  @property({ type: Number }) value = 0;
-  @property({ type: Number }) maxValue = 0;
+  @property() value = 0;
+  @property() maxValue = 0;
   @property() sizeVariant?: FormSizesType = 'md';
   @property() theme: ThemeType = 'Light';
 
