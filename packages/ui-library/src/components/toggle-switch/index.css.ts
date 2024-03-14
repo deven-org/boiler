@@ -85,6 +85,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
               position: absolute;
               top: 0;
               display: flex;
+              align-items:center;
             }
       
             & > .blr-form-label-inline {
