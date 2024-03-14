@@ -15,14 +15,25 @@ import { TAG_NAME } from './renderFunction';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
-import { BlrSelectedValueChangeEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrSelectedValueChangeEvent,
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrSelectedValueChangeEvent,
+} from '../../globals/events';
 
 export type BlrSelectEventHandlers = {
   blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
 };
 
 /**
  * @fires blrSelectedValueChange Selected value changed
+ * @fires blrFocus Select received focus
+ * @fires blrBlur Select lost focus
  */
 export class BlrSelect extends LitElement {
   static styles = [styleCustom];
@@ -53,12 +64,18 @@ export class BlrSelect extends LitElement {
 
   protected _optionElements: Element[] | undefined;
 
-  protected handleFocus = () => {
-    this.isFocused = true;
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.isFocused = true;
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
   };
 
-  protected handleBlur = () => {
-    this.isFocused = false;
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.isFocused = false;
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
   };
 
   protected handleSlotChange() {
@@ -133,7 +150,7 @@ export class BlrSelect extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              size: this.sizeVariant,
+              sizeVariant: this.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -142,7 +159,7 @@ export class BlrSelect extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              size: this.sizeVariant,
+              sizeVariant: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -201,7 +218,7 @@ export class BlrSelect extends LitElement {
             ${this.renderIcon(iconClasses)}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;
