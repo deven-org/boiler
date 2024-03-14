@@ -111,7 +111,6 @@ export default {
       },
       if: { arg: 'hasLabel', eq: true },
     },
-    // todo it has to be renamed? Checke this
     hasIcon: {
       description: 'Choose if component has an icon.',
       options: [undefined, ...PureIconKeys],
@@ -120,8 +119,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    // todo it has to be renamed? Checke this
-    inputIcon: {
+    icon: {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -130,8 +128,6 @@ export default {
         category: 'Content / Settings',
       },
     },
-
-    // todo renaming from hintText to hasHint in the blrFormRenderFunction, partially solution with name overwriting
     hasHint: {
       name: 'hasHint',
       description: ' Choose if component has a hint message. ',
@@ -143,7 +139,6 @@ export default {
         category: 'Content / Settings',
       },
     },
-    // todo renaming from hintMessageIcon to hintMessageIcon in the blrFormRenderFunction, partially solution with name overwriting
     hintMessageIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
@@ -154,7 +149,6 @@ export default {
         category: 'Content / Settings',
       },
     },
-    // todo renaming from hintText to hasHint in the blrFormRenderFunction, partially solution with name overwriting
     hintMessage: {
       name: 'hintMessage',
       description: 'Enter string used used as hint message.',
@@ -163,7 +157,6 @@ export default {
         category: 'Content / Settings',
       },
     },
-    //States
     disabled: {
       name: 'disabled',
       description:
@@ -181,7 +174,6 @@ export default {
         category: 'States',
       },
     },
-    // Validation
     required: {
       name: 'required',
       description: 'Choose if the component must hold a value after an interaction or a submit.',
@@ -198,7 +190,6 @@ export default {
         category: 'Validation',
       },
     },
-    // todo renaming from errorMessageIcon to errorMessageIcon, partially solution with name overwriting
     errorMessageIcon: {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
@@ -216,7 +207,6 @@ export default {
         category: 'Validation',
       },
     },
-    //Accessibility
     arialabel: {
       name: 'ariaLabel',
       description:
@@ -225,7 +215,6 @@ export default {
         category: 'Accessibility',
       },
     },
-    // Events
     blrTextValueChange: {
       name: 'blrTextValueChange',
       description: 'Fires when the value changes.',
@@ -258,17 +247,17 @@ export default {
         category: 'Events',
       },
     },
-    //Technical attributes
-    inputFieldTextId: {
-      name: 'inputFieldTextId',
-      description: 'Unique identifier for this component.',
+    name: {
+      name: 'name',
+      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
       table: {
         category: 'Technical Attributes',
       },
     },
-    name: {
-      name: 'name',
-      description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
+    //Technical attributes
+    inputFieldTextId: {
+      name: 'inputFieldTextId',
+      description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
       },
@@ -325,30 +314,29 @@ BlrInputFieldText.storyName = 'Input Field Text';
 
 // Default parameters for Input Field Text component
 const defaultParams: BlrInputFieldTextType = {
+  theme: 'Light',
   sizeVariant: 'md',
+  type: 'text',
   placeholder: 'Placeholder-text',
   value: '',
   maxLength: 140,
+  hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
+  hasIcon: true,
+  icon: 'blr360',
   hasHint: false,
   hintMessage: 'This is a small hint message',
   hintMessageIcon: 'blrInfo',
-  arialabel: 'InputFieldText',
-  name: 'InputFieldText',
-  theme: 'Light',
-  inputFieldTextId: 'Input Id',
-  hasLabel: true,
-  required: false,
   disabled: false,
   readonly: false,
+  required: false,
   hasError: false,
   errorMessage: '',
   errorMessageIcon: 'blrInfo',
-
-  type: 'text',
-  icon: 'blr360',
-  hasIcon: true,
+  arialabel: 'InputFieldText',
+  name: 'InputFieldText',
+  inputFieldTextId: 'Input Id',
 };
 
 BlrInputFieldText.args = defaultParams;
@@ -357,6 +345,7 @@ BlrInputFieldText.args = defaultParams;
 const argTypesToDisable = [
   'theme',
   'sizeVariant',
+  'type',
   'isResizeable',
   'placeholder',
   'value',
@@ -368,7 +357,6 @@ const argTypesToDisable = [
   'hasHint',
   'hintText',
   'hintMessageIcon',
-  'type',
   'hasIcon',
   'inputFieldTextId',
   'disabled',

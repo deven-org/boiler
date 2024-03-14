@@ -43,6 +43,7 @@ export class BlrInputFieldText extends LitElement {
   @property() inputFieldTextId!: string;
   @property() type: InputTypes = 'text';
   @property() arialabel!: string;
+  @property() hasLabel!: boolean;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
@@ -61,7 +62,7 @@ export class BlrInputFieldText extends LitElement {
   @property() hintMessage?: string;
   @property() hintMessageIcon?: SizelessIconType;
   @property() errorMessageIcon?: SizelessIconType;
-  @property() hasLabel!: boolean;
+
   @property() name!: string;
   @property() theme: ThemeType = 'Light';
 
