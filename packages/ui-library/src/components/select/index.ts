@@ -150,7 +150,7 @@ export class BlrSelect extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              size: this.sizeVariant,
+              sizeVariant: this.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -159,7 +159,7 @@ export class BlrSelect extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              size: this.sizeVariant,
+              sizeVariant: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -218,7 +218,7 @@ export class BlrSelect extends LitElement {
             ${this.renderIcon(iconClasses)}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;

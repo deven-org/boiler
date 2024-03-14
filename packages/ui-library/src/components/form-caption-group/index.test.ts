@@ -9,7 +9,7 @@ import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { html } from 'lit-html';
 
 const sampleParams: BlrFormCaptionGroupType = {
-  size: 'md',
+  sizeVariant: 'md',
 };
 
 const hintCaption = BlrFormCaptionRenderFunction({
