@@ -14,7 +14,34 @@ import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderF
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrNumberStepperClickEvent,
+  BlrNumberValueChangeEvent,
+  BlrSelectEvent,
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrNumberStepperClickEvent,
+  createBlrNumberValueChangeEvent,
+  createBlrSelectEvent,
+} from '../../globals/events';
 
+export type BlrNumberInputEventListeners = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrNumberValueChange?: (event: BlrNumberValueChangeEvent) => void;
+  blrSelect?: (event: BlrSelectEvent) => void;
+  blrNumberStepperClick?: (event: BlrNumberStepperClickEvent) => void;
+};
+
+/**
+ * @fires blrFocus NumberInput received focus
+ * @fires blrBlur NumberInput lost focus
+ * @fires blrNumberValueChange NumberInput value changed
+ * @fires blrSelect Text in NumberInput was selected
+ * @fires blrNumberStepperClick Step button was clicked
+ */
 export class BlrInputFieldNumber extends LitElement {
   static styles = [baseStyle];
 
@@ -29,7 +56,7 @@ export class BlrInputFieldNumber extends LitElement {
   @property() readonly?: boolean;
   @property() required?: boolean;
   @property() hasLabel?: boolean;
-  @property() size?: FormSizesType = 'md';
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() labelAppendix?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
@@ -49,17 +76,28 @@ export class BlrInputFieldNumber extends LitElement {
   @property() theme: ThemeType = 'Light';
 
   @state() protected currentValue = 0;
+  @state() protected isFocused = false;
 
-  protected stepperUp() {
+  protected stepperUp(event: MouseEvent) {
     if (this.currentValue !== undefined && this.step !== undefined) {
-      this.currentValue += Number(this.step);
+      const oldValue = Number(this.currentValue);
+      const step = Number(this.step ?? 1);
+      const newValue = oldValue + step;
+      this.currentValue = newValue;
+      this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, oldValue, newValue }));
+      this.dispatchEvent(createBlrNumberStepperClickEvent({ originalEvent: event, direction: 'increase', step }));
       this.requestUpdate('currentValue');
     }
   }
 
-  protected stepperDown() {
+  protected stepperDown(event: MouseEvent) {
     if (this.currentValue !== undefined && this.step !== undefined) {
-      this.currentValue -= Number(this.step);
+      const oldValue = Number(this.currentValue);
+      const step = Number(this.step ?? 1);
+      const newValue = oldValue - step;
+      this.currentValue = newValue;
+      this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, oldValue, newValue }));
+      this.dispatchEvent(createBlrNumberStepperClickEvent({ originalEvent: event, direction: 'decrease', step }));
       this.requestUpdate('currentValue');
     }
   }
@@ -69,8 +107,31 @@ export class BlrInputFieldNumber extends LitElement {
     this.currentValue = Number(this.currentValue) || Number(this.value) || 0;
   }
 
-  protected handleChange() {
-    this.currentValue = Number(this._numberFieldNode.value) || 0;
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.isFocused = true;
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.isFocused = false;
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleSelect = (event: Event) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrSelectEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleChange(event: Event) {
+    const oldValue = Number(this.currentValue);
+    const newValue = Number(this._numberFieldNode.value) || 0;
+    this.currentValue = newValue;
+    this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, oldValue, newValue }));
   }
 
   protected customFormat(cur: number, fractions: number, digits: number): string {
@@ -85,7 +146,7 @@ export class BlrInputFieldNumber extends LitElement {
   }
 
   protected getStepperButtonTemplate(direction: 'increase' | 'decrease', icon: SizelessIconType): TemplateResult<1> {
-    if (!this.size) {
+    if (!this.sizeVariant) {
       return html``;
     }
 
@@ -97,7 +158,7 @@ export class BlrInputFieldNumber extends LitElement {
       'StepperButton',
       'Icon',
       'SizeVariant',
-      this.size.toUpperCase(),
+      this.sizeVariant.toUpperCase(),
     ]).toLowerCase() as FormSizesType;
 
     const buttonClass = classMap({
@@ -144,7 +205,7 @@ export class BlrInputFieldNumber extends LitElement {
       }
       case 'horizontal': {
         return html`
-          <div class="stepper-combo horizontal  ${this.size}">
+          <div class="stepper-combo horizontal  ${this.sizeVariant}">
             ${this.getStepperButtonTemplate('decrease', 'blrMinus')}
             ${BlrDividerRenderFunction({
               direction: 'vertical',
@@ -156,7 +217,7 @@ export class BlrInputFieldNumber extends LitElement {
       }
       case 'vertical': {
         return html`
-          <div class="stepper-combo vertical  ${this.size}">
+          <div class="stepper-combo vertical  ${this.sizeVariant}">
             ${this.getStepperButtonTemplate('increase', 'blrChevronUp')}
             ${BlrDividerRenderFunction({
               direction: 'horizontal',
@@ -172,28 +233,28 @@ export class BlrInputFieldNumber extends LitElement {
   protected render() {
     const hasUnit = this.unit !== undefined && this.unit.length > 0;
 
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles =
         this.theme === 'Light'
           ? [wrapperLight, actionLight, StepperComboLight]
           : [wrapperDark, actionDark, StepperComboDark];
 
       const inputClasses = classMap({
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
         prepend: hasUnit && !!this.prependUnit,
       });
 
       const unitClasses = classMap({
         unit: true,
         prepend: hasUnit && !!this.prependUnit,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
 
       const wrapperClasses = classMap({
         'input-wrapper': true,
         'disabled': this.disabled || false,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
         'prepend': hasUnit && !!this.prependUnit,
@@ -203,7 +264,7 @@ export class BlrInputFieldNumber extends LitElement {
       const inputAndUnitContainer = classMap({
         'input-unit-container': true,
         'prepend': hasUnit && !!this.prependUnit,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
 
@@ -214,7 +275,7 @@ export class BlrInputFieldNumber extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  size: this.size,
+                  size: this.sizeVariant,
                   message: this.hintMessage,
                   icon: this.hintIcon,
                 })}
@@ -227,7 +288,7 @@ export class BlrInputFieldNumber extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  size: this.size,
+                  size: this.sizeVariant,
                   message: this.errorMessage,
                   icon: this.errorIcon,
                 })}
@@ -240,13 +301,13 @@ export class BlrInputFieldNumber extends LitElement {
         <style>
           ${dynamicStyles}
         </style>
-        <div class="blr-input-field-number ${this.size}">
+        <div class="blr-input-field-number ${this.sizeVariant}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
-                    sizeVariant: this.size,
+                    sizeVariant: this.sizeVariant,
                     labelAppendix: this.labelAppendix,
                     forValue: this.inputFieldNumberId,
                     theme: this.theme,
@@ -268,9 +329,11 @@ export class BlrInputFieldNumber extends LitElement {
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
-                hasError="${this.hasError}"
                 @change=${this.handleChange}
-                placeholder=${this.placeholder || nothing}
+                @blur=${this.handleBlur}
+                @focus=${this.handleFocus}
+                @select=${this.handleSelect}
+                placeholder=${this.placeholder || ''}
               />
               ${hasUnit ? html` <div class="${unitClasses}">${this.unit}</div> ` : nothing}
             </div>
@@ -279,7 +342,7 @@ export class BlrInputFieldNumber extends LitElement {
         </div>
 
         ${this.hasHint || this.hasError
-          ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+          ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
           : nothing}
       `;
     }
@@ -290,4 +353,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldNumber);
 }
 
-export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElement>;
+export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElement> & BlrNumberInputEventListeners;
