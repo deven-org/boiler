@@ -164,7 +164,7 @@ export class BlrToggleSwitch extends LitElement {
                   message: this.hintMessage,
                   variant: 'hint',
                   icon: this.hintIcon,
-                  size: this.size || 'sm',
+                  sizeVariant: this.size || 'sm',
                   theme: this.theme,
                 })
               : nothing}

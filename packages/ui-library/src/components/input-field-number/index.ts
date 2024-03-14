@@ -275,7 +275,7 @@ export class BlrInputFieldNumber extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  size: this.sizeVariant,
+                  sizeVariant: this.sizeVariant,
                   message: this.hintMessage,
                   icon: this.hintIcon,
                 })}
@@ -288,7 +288,7 @@ export class BlrInputFieldNumber extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  size: this.sizeVariant,
+                  sizeVariant: this.sizeVariant,
                   message: this.errorMessage,
                   icon: this.errorIcon,
                 })}
@@ -342,7 +342,7 @@ export class BlrInputFieldNumber extends LitElement {
         </div>
 
         ${this.hasHint || this.hasError
-          ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
+          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
           : nothing}
       `;
     }
