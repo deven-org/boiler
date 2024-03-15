@@ -16,23 +16,23 @@ export class BlrFormCaption extends LitElement {
   @property() message?: string;
   @property() icon?: SizelessIconType;
   @property() variant: CaptionVariantType = 'hint';
-  @property() size?: FormSizesType = 'md';
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() childElement?: TemplateResult<1>;
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [captionLight] : [captionDark];
 
       const classes = classMap({
         'blr-form-caption': true,
         [`${this.variant}`]: this.variant,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       const iconClasses = classMap({
         'blr-icon': true,
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
       });
 
       const iconSizeVariant = getComponentConfigToken([
@@ -40,7 +40,7 @@ export class BlrFormCaption extends LitElement {
         'CaptionComponent',
         'Icon',
         'SizeVariant',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
       return html`
