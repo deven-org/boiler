@@ -9,8 +9,8 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 const sampleParams: BlrCounterType = {
   theme: 'Light',
   variant: 'neutral',
-  current: 3,
-  max: 100,
+  value: 3,
+  maxValue: 100,
 };
 
 describe('blr-counter', () => {
@@ -24,18 +24,18 @@ describe('blr-counter', () => {
     const element = await fixture(BlrCounterRenderFunction(sampleParams));
     const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);
     const blrText = blrCounter?.textContent;
-    expect(blrText).to.include(sampleParams.max);
+    expect(blrText).to.include(sampleParams.maxValue);
   });
 
   it('renders a blr-counter element includes current value', async () => {
     const element = await fixture(BlrCounterRenderFunction(sampleParams));
     const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);
     const blrText = blrCounter?.textContent;
-    expect(blrText).to.include(sampleParams.current);
+    expect(blrText).to.include(sampleParams.value);
   });
 
   it('renders a blr-counter element includes max & current value', async () => {
-    const value = `${sampleParams.current} / ${sampleParams.max}`;
+    const value = `${sampleParams.value} / ${sampleParams.maxValue}`;
     const element = await fixture(BlrCounterRenderFunction(sampleParams));
     const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);
     const blrText = blrCounter?.textContent;
@@ -64,7 +64,7 @@ describe('blr-counter', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrCounterRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrCounterRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const blrCounter = querySelectorDeep('div.blr-counter', element.getRootNode() as HTMLElement);
     const className = blrCounter?.className;
