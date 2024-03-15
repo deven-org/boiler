@@ -24,7 +24,7 @@ export class BlrCounter extends LitElement {
         [this.theme]: true,
       });
 
-      return html` <div class=${classes}>${this.current} / ${this.max}</div> `;
+      return html` <div class=${classes}>${this.value} / ${this.maxValue}</div> `;
     }
   }
 }
