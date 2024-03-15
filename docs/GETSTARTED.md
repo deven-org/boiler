@@ -77,7 +77,6 @@ Here is a checklist with all the accesses that new colleages need when working i
 ## Project Management Onboarding Checklist
 Here is a checklist for project management to follow when onboarding a new colleage.
 - [ ] **WBS Authorization** - to book hours on the projects WBS, new colleagues need to be authorized first. Authorization can be requested by the controlling team.
-- [ ] **Myscheduling** - new colleagues need to be planned in myscheduling by the product & project management lead.
 - [ ] **Project forecast** - new colleagues need to be added to the project forecast by the product & project management lead.
 - [ ] **Pennyworth** - the product & project management lead needs to add new colleagues to the planning in pennyworth.
 
