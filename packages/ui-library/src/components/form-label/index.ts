@@ -7,7 +7,7 @@ import { staticComponentFormStyles } from '../../foundation/semantic-tokens/form
 import { InputSizesType } from '../../globals/types';
 
 export class BlrFormLabel extends LitElement {
-  static styles = [staticComponentFormStyles];
+  static styles = [];
 
   @property() label = '';
   @property() labelAppendix?: string;
