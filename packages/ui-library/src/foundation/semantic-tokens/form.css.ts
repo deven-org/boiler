@@ -351,7 +351,7 @@ export const staticComponentFormStyles = typeSafeNestedCss/* css */ `
         }
       }
 
-      .blr-form-label-appendix {
+      .blr-form-label-appendix.${theme} {
         color: ${FormLabel.LabelAppendix.TextColor.Rest};
 
         &.sm {

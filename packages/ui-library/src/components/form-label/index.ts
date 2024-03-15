@@ -55,6 +55,7 @@ export class BlrFormLabel extends LitElement {
       const spanClasses = classMap({
         'blr-form-label-appendix': true,
         [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
       // Since it doesnt have a shadowRoot, lit cant apply styles to it.
