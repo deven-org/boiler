@@ -135,6 +135,22 @@
               "type": "borderWidth"
             }
           }
+        },
+        "icon": {
+          "iconsize": {
+            "sm": {
+              "value": "{core.dimensionREM.16}",
+              "type": "sizing"
+            },
+            "md": {
+              "value": "{core.dimensionREM.24}",
+              "type": "sizing"
+            },
+            "lg": {
+              "value": "{core.dimensionREM.24}",
+              "type": "sizing"
+            }
+          }
         }
       },
       "inputslot": {
