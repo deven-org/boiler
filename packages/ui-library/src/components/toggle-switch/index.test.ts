@@ -7,18 +7,20 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrToggleSwitchType } from '.';
 
 const sampleParams: BlrToggleSwitchType = {
+  toogleSwitchId: 'switch',
   label: 'Toggle Switch Option',
-  checkInputId: 'switch',
+
   disabled: false,
   readonly: false,
-  checked: false,
+  active: false,
   onLabel: 'On',
   offLabel: 'Off',
   hasHint: true,
   hintMessage: 'Field is used for hint',
-  hintIcon: 'blrInfo',
-  variant: 'leading',
+  hintMessageIcon: 'blrInfo',
+  hasStateLabel: 'leading',
   theme: 'Light',
+  name: 'Toogle Switch',
 };
 
 describe('blr-label-toggleswitch', () => {
@@ -41,7 +43,7 @@ describe('blr-label-toggleswitch', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrToggleSwitchRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrToggleSwitchRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const input = querySelectorDeep('div.blr-label-toggleswitch', element.getRootNode() as HTMLElement);
     const className = input?.className;

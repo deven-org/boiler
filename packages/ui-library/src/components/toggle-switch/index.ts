@@ -154,7 +154,7 @@ export class BlrToggleSwitch extends LitElement {
           <span class="toggle-content-col">
             ${this.hasLabel
               ? html` ${BlrFormLabelInlineRenderFunction({
-                  labelText: this.label,
+                  labelText: this.label || '',
                   forValue: this.toogleSwitchId,
                   labelSize: this.sizeVariant || 'md',
                 })}`
@@ -163,8 +163,8 @@ export class BlrToggleSwitch extends LitElement {
               ? BlrFormCaptionRenderFunction({
                   message: this.hintMessage,
                   variant: 'hint',
-                  icon: this.hintIcon,
-                  sizeVariant: this.size || 'sm',
+                  icon: this.hintMessageIcon,
+                  sizeVariant: this.sizeVariant || 'sm',
                   theme: this.theme,
                 })
               : nothing}
