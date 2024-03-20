@@ -177,7 +177,7 @@ export class BlrTextarea extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              size: this.sizeVariant,
+              sizeVariant: this.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -186,7 +186,7 @@ export class BlrTextarea extends LitElement {
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              size: this.sizeVariant,
+              sizeVariant: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -232,14 +232,14 @@ export class BlrTextarea extends LitElement {
           ></textarea>
           <div class="${textareaInfoContainer}">
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.sizeVariant }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
               : nothing}
             ${this.hasCounter
               ? BlrCounterRenderFunction({
                   variant: counterVariant,
-                  current: this.count,
-                  max: this.maxLength || 0,
-                  size: this.sizeVariant,
+                  value: this.count,
+                  maxValue: this.maxLength || 0,
+                  sizeVariant: this.sizeVariant,
                   theme: this.theme,
                 })
               : nothing}

@@ -10,12 +10,12 @@ import { TAG_NAME } from './renderFunction';
 export class BlrFormCaptionGroup extends LitElement {
   static styles = [formCaptionGroupStyle];
 
-  @property() size: FormSizesType = 'md';
+  @property() sizeVariant: FormSizesType = 'md';
 
   protected render() {
     const classes = classMap({
       'blr-form-caption-group': true,
-      [this.size]: this.size,
+      [this.sizeVariant]: this.sizeVariant,
     });
 
     return html`

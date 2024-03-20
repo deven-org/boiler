@@ -163,8 +163,8 @@ export class BlrToggleSwitch extends LitElement {
               ? BlrFormCaptionRenderFunction({
                   message: this.hintMessage,
                   variant: 'hint',
-                  icon: this.hintMessageIcon,
-                  size: this.sizeVariant || 'sm',
+                  icon: this.hintIcon,
+                  sizeVariant: this.size || 'sm',
                   theme: this.theme,
                 })
               : nothing}

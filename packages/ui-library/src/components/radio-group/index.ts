@@ -71,7 +71,7 @@ export class BlrRadioGroup extends LitElement {
         ? BlrFormCaptionRenderFunction({
             variant: 'hint',
             theme: this.theme,
-            size: this.size,
+            sizeVariant: this.size,
             message: this.groupHintMessage,
             icon: this.groupHintIcon,
           })
@@ -80,7 +80,7 @@ export class BlrRadioGroup extends LitElement {
         ? BlrFormCaptionRenderFunction({
             variant: 'error',
             theme: this.theme,
-            size: this.size,
+            sizeVariant: this.size,
             message: this.groupErrorMessage,
             icon: this.groupErrorIcon,
           })
@@ -132,7 +132,7 @@ export class BlrRadioGroup extends LitElement {
 
       ${this.hasHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)}
           </div>`
         : nothing} `;
   }
