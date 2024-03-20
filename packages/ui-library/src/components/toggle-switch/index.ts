@@ -125,7 +125,7 @@ export class BlrToggleSwitch extends LitElement {
         'disabled': this.disabled || false,
         'readonly': this.readonly || false,
         'hover': this.hovered || false,
-        'checkedd': this.checked || false,
+        'active': this.checked || false,
         'focus': this.focused || false,
       });
 
