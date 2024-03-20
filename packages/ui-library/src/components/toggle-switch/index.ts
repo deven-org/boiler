@@ -8,7 +8,7 @@ import { TAG_NAME } from './renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { FormSizesType, IconPositionVariant } from '../../globals/types';
+import { FormSizesType } from '../../globals/types';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { styleCustom, toggleSwitchLight, toggleSwitchDark } from './index.css';
@@ -22,7 +22,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() label?: string;
   @property() onLabel!: string;
   @property() offLabel!: string;
-  @property() showStateLabel?: boolean;
+
   @property() toogleSwitchId!: string;
   @property() name!: string;
   @property() hasLabel?: boolean;
@@ -35,7 +35,7 @@ export class BlrToggleSwitch extends LitElement {
   @property() hintMessageIcon?: SizelessIconType;
 
   @property() sizeVariant?: FormSizesType = 'md';
-  @property() hasStateLabel: IconPositionVariant = 'leading';
+  @property() hasStateLabel: boolean = false;
 
   @property() toggleOnIcon?: SizelessIconType = 'blrOn';
   @property() toggleOffIcon?: SizelessIconType = 'blrOff';
@@ -116,7 +116,7 @@ export class BlrToggleSwitch extends LitElement {
         'disabled': this.disabled || false,
         'readonly': this.readonly || false,
         [`${this.sizeVariant}`]: this.sizeVariant,
-        [`${this.hasStateLabel || 'leading'}`]: this.hasStateLabel || 'leading',
+        [`${this.hasStateLabel ? 'has-state-label' : ''}`]: this.hasStateLabel,
       });
 
       const wrapperClass = classMap({
@@ -240,7 +240,7 @@ export class BlrToggleSwitch extends LitElement {
                 )}
               </span>
             </label>
-            ${this.hasStateLabel === 'leading' && this.showStateLabel
+            ${this.hasStateLabel
               ? html` ${BlrFormLabelInlineRenderFunction({
                   labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
                   forValue: this.toogleSwitchId,

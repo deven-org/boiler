@@ -9,7 +9,6 @@ import { BlrToggleSwitchType } from '.';
 const sampleParams: BlrToggleSwitchType = {
   toogleSwitchId: 'switch',
   label: 'Toggle Switch Option',
-
   disabled: false,
   readonly: false,
   active: false,
@@ -18,7 +17,7 @@ const sampleParams: BlrToggleSwitchType = {
   hasHint: true,
   hintMessage: 'Field is used for hint',
   hintMessageIcon: 'blrInfo',
-  hasStateLabel: 'leading',
+  hasStateLabel: false,
   theme: 'Light',
   name: 'Toogle Switch',
 };

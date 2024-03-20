@@ -2,7 +2,7 @@
 import { BlrToggleSwitchType } from './index';
 import { BlrToggleSwitchRenderFunction } from './renderFunction';
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes, IconPositionVariant } from '../../globals/constants';
+import { FormSizes } from '../../globals/constants';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { html } from 'lit-html';
 import '../../index';
@@ -24,10 +24,10 @@ const logEventType = (event: Event) => {
 const defaultParams: BlrToggleSwitchType = {
   theme: 'Light',
   sizeVariant: 'md',
-  hasStateLabel: 'trailing',
+  hasStateLabel: false,
   active: false,
   hasLabel: true,
-  showStateLabel: true,
+
   label: 'Label-text',
   onLabel: 'On-label-text',
   offLabel: 'Off-label-text',
@@ -38,7 +38,6 @@ const defaultParams: BlrToggleSwitchType = {
   readonly: false,
   arialabel: 'Toggle Switch',
   toogleSwitchId: 'toggle-switchId',
-
   name: 'toggle-switch-name',
   blrChange: logEventType,
   blrFocus: logEventType,
@@ -58,9 +57,8 @@ export default {
     },
     hasStateLabel: {
       description: 'Choose if the control has a state label.',
-      options: IconPositionVariant,
+      options: { type: 'boolean' },
       if: { arg: 'hasLabel', eq: true },
-      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -110,13 +108,7 @@ export default {
         category: 'Appearance',
       },
     },
-    showStateLabel: {
-      description: 'Choose if component has a state label.',
-      if: { arg: 'hasLabel', eq: true },
-      table: {
-        category: 'Appearance',
-      },
-    },
+
     label: {
       description: 'Enter string used as label text.',
       if: { arg: 'hasLabel', eq: true },
@@ -129,14 +121,14 @@ export default {
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'hasStateLabel', eq: 'leading' },
+      if: { arg: 'hasStateLabel', eq: true },
     },
     offLabel: {
       description: 'Enter string used as off label text.',
       table: {
         category: 'Content / Settings',
       },
-      if: { arg: 'hasStateLabel', eq: 'leading' },
+      if: { arg: 'hasStateLabel', eq: true },
     },
     disabled: {
       description:
@@ -272,7 +264,7 @@ export const HasStateLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'trailing',
+        hasStateLabel: false,
         hasHint: false,
         label: 'Without state label',
         offLabel: undefined,
@@ -280,7 +272,7 @@ export const HasStateLabel = () => {
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'leading',
+        hasStateLabel: true,
         label: 'With state label',
         hasHint: false,
         offLabel: 'Off',
@@ -317,8 +309,8 @@ export const Active = () => {
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'leading',
-        showStateLabel: true,
+        hasStateLabel: false,
+
         active: true,
         hasHint: false,
         label: 'Active and Inactive state labels',
@@ -345,8 +337,7 @@ export const OnLabel = () => {
         label: 'With on label',
         onLabel: 'On',
         offLabel: 'Off',
-        hasStateLabel: 'leading',
-        showStateLabel: true,
+        hasStateLabel: true,
       })}
     </div>
   `;
@@ -363,12 +354,12 @@ export const OffLabel = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'leading',
+        hasStateLabel: true,
         hasHint: false,
         label: 'With off label',
         offLabel: 'Off',
         onLabel: 'On',
-        showStateLabel: true,
+
         active: false,
       })}
     </div>
@@ -388,21 +379,21 @@ export const Disabled = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'trailing',
+        hasStateLabel: false,
         disabled: true,
         hasHint: false,
         label: 'Disabled',
-        showStateLabel: true,
+
         onLabel: undefined,
         offLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'leading',
+        hasStateLabel: true,
         disabled: true,
         hasHint: false,
         label: 'Disabled with state label',
-        showStateLabel: true,
+
         onLabel: 'On Disabled',
         offLabel: 'Off Disabled',
       })}
@@ -421,21 +412,21 @@ export const Readonly = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'trailing',
+        hasStateLabel: false,
         readonly: true,
         hasHint: false,
         label: 'Readonly',
-        showStateLabel: true,
+
         onLabel: undefined,
         offLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'leading',
+        hasStateLabel: true,
         readonly: true,
         hasHint: false,
         label: 'Readonly with state label',
-        showStateLabel: true,
+
         onLabel: 'On Readonly',
         offLabel: 'Off Readonly',
       })}
@@ -455,19 +446,18 @@ export const FormCaption = () => {
     <div class="stories-toggle-switch">
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'trailing',
+        hasStateLabel: false,
         hasHint: true,
         hintMessage: 'This is a small hint message',
         hintMessageIcon: 'blrInfo',
-        showStateLabel: true,
         label: 'Hint message',
         offLabel: undefined,
         onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: 'leading',
-        showStateLabel: true,
+        hasStateLabel: true,
+
         hasHint: true,
         hintMessage: 'This is a small hint message',
         hintMessageIcon: 'blrInfo',

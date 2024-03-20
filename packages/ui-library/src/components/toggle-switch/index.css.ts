@@ -5,6 +5,9 @@ export const styleCustom = typeSafeNestedCss/* css */ `
   .blr-label-toggleswitch {
     display: flex;
     align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+
 
     & input {
       all: initial;
@@ -32,14 +35,10 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
           }
         }
 
-        &.leading {
-          flex-direction: column;
-        }
 
-        &.trailing {
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
+        &.has-state-label {
+          flex-direction: column;
+        
         }
 
         & > .toggle-content-col {
