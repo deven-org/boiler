@@ -139,7 +139,7 @@ export const { tokenizedLight: toggleSwitchLight, tokenizedDark: toggleSwitchDar
                 }
                 .toggle-icon > .toggle-icon-class {
                   color: ${ToggleSwitch.Control.AY11Icon.IconColor.Inactive.Pressed};
-                  color: pink;
+              
                 }
               }
 

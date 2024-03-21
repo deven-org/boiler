@@ -102,7 +102,7 @@ export class BlrToggleSwitch extends LitElement {
 
   protected handleRelease = () => {
     if (!this.disabled && !this.readonly) {
-      this.checked = false;
+      this.checked = true;
     }
   };
 

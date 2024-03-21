@@ -262,8 +262,6 @@ export const HasStateLabel = () => {
         hasStateLabel: false,
         hasHint: false,
         label: 'Without state label',
-        offLabel: undefined,
-        onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
@@ -292,8 +290,6 @@ export const Active = () => {
         hasHint: false,
         label: 'Active',
         hasStateLabel: true,
-        offLabel: undefined,
-        onLabel: undefined,
         active: true,
       })}
       ${BlrToggleSwitchRenderFunction({
@@ -301,13 +297,10 @@ export const Active = () => {
         hasHint: false,
         label: 'Inactive',
         hasStateLabel: true,
-        offLabel: undefined,
-        onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         hasStateLabel: true,
-
         active: true,
         hasHint: false,
         hasLabel: true,
