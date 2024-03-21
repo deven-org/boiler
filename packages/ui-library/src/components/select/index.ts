@@ -1,5 +1,5 @@
 import { LitElement, html, nothing } from 'lit';
-import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../globals/types';
@@ -7,7 +7,6 @@ import { selectInputLight, selectInputDark } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
-import { DirectiveResult } from 'lit-html/directive';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
@@ -45,7 +44,7 @@ export class BlrSelect extends LitElement {
   @property() hasLabel?: boolean;
   @property() label!: string;
   @property() disabled?: boolean;
-  @property() sizeVariant?: FormSizesType = 'md';
+  @property() sizeVariant: FormSizesType = 'md';
   @property() required?: boolean;
   @property() blrBlur?: HTMLElement['blur'];
   @property() blrFocus?: HTMLElement['focus'];
@@ -89,7 +88,12 @@ export class BlrSelect extends LitElement {
     this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event }));
   }
 
-  protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
+  protected renderIcon() {
+    const classes = classMap({
+      'icon-direction-indicator': true,
+      [this.sizeVariant]: this.sizeVariant,
+    });
+
     if (this.sizeVariant) {
       const iconSizeVariant = getComponentConfigToken([
         'sem',
@@ -100,32 +104,18 @@ export class BlrSelect extends LitElement {
         this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
-      if (this.hasError) {
-        return BlrIconRenderFunction(
-          {
-            icon: calculateIconName('blrErrorFilled', iconSizeVariant),
-            sizeVariant: iconSizeVariant,
-            classMap: classes,
-            fillParent: false,
-          },
-          {
-            'aria-hidden': true,
-          }
-        );
-      } else {
-        const modifiedIcon = this.icon ? this.icon : 'blrChevronDown';
-        return BlrIconRenderFunction(
-          {
-            icon: calculateIconName(modifiedIcon, iconSizeVariant),
-            sizeVariant: iconSizeVariant,
-            classMap: classes,
-            fillParent: false,
-          },
-          {
-            'aria-hidden': true,
-          }
-        );
-      }
+      const modifiedIcon = this.icon ? this.icon : 'blrChevronDown';
+      return BlrIconRenderFunction(
+        {
+          icon: calculateIconName(modifiedIcon, iconSizeVariant),
+          sizeVariant: iconSizeVariant,
+          classMap: classes,
+          fillParent: false,
+        },
+        {
+          'aria-hidden': true,
+        }
+      );
     }
   }
 
@@ -141,10 +131,6 @@ export class BlrSelect extends LitElement {
         'focus': this.isFocused || false,
       });
 
-      const iconClasses = classMap({
-        'blr-input-icon': true,
-        [this.sizeVariant]: this.sizeVariant,
-      });
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
@@ -215,7 +201,7 @@ export class BlrSelect extends LitElement {
                 })}
               </select>
             </div>
-            ${this.renderIcon(iconClasses)}
+            ${this.renderIcon()}
           </div>
           ${this.hasHint || this.hasError
             ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
