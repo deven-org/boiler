@@ -80,13 +80,14 @@ export default {
     hasHint: {
       description: 'Choose if component has a hint message.',
       options: { type: 'boolean' },
+      if: { arg: 'hasLabel', eq: true },
       table: {
         category: 'Content / Settings',
       },
     },
     hintMessage: {
       description: 'Enter string used used as hint message.',
-      if: { arg: 'hasHint', eq: true },
+
       table: {
         category: 'Content / Settings',
       },
@@ -229,24 +230,18 @@ export const SizeVariant = () => {
         ...defaultParams,
         label: 'Toggle Switch SM',
         hasHint: false,
-        offLabel: undefined,
-        onLabel: undefined,
         sizeVariant: 'sm',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch MD',
         hasHint: false,
-        offLabel: undefined,
-        onLabel: undefined,
         sizeVariant: 'md',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch LG',
         hasHint: false,
-        offLabel: undefined,
-        onLabel: undefined,
         sizeVariant: 'lg',
       })}
     </div>
@@ -296,6 +291,7 @@ export const Active = () => {
         ...defaultParams,
         hasHint: false,
         label: 'Active',
+        hasStateLabel: true,
         offLabel: undefined,
         onLabel: undefined,
         active: true,
@@ -304,15 +300,17 @@ export const Active = () => {
         ...defaultParams,
         hasHint: false,
         label: 'Inactive',
+        hasStateLabel: true,
         offLabel: undefined,
         onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
-        hasStateLabel: false,
+        hasStateLabel: true,
 
         active: true,
         hasHint: false,
+        hasLabel: true,
         label: 'Active and Inactive state labels',
         offLabel: 'Inactive',
         onLabel: 'Active',
