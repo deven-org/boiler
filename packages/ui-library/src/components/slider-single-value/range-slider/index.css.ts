@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../../utils/css-in-ts/nested-typesafe-css-literals";
 
 export const styleCustom = typeSafeNestedCss`
   .single-range {

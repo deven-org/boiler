@@ -1,14 +1,14 @@
 import { LitElement, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
-import { styleCustomLight, styleCustomDark } from './index.css';
+import { staticStyles } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
 
 export class BlrLoader extends LitElement {
-  static styles = [];
+  static styles = [staticStyles];
 
   @property() sizeVariant?: ActionSizesType = 'md';
   @property() variant?: FeedbackVariantType;
@@ -16,20 +16,22 @@ export class BlrLoader extends LitElement {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [styleCustomLight] : [styleCustomDark];
+      const containerClasses = classMap({
+        'loader-container': true,
+        [`${this.sizeVariant}`]: this.sizeVariant,
+        [`${this.theme}`]: true,
+      });
 
-      const classes = classMap({
+      const loaderClasses = classMap({
         'blr-loader': true,
         [`${this.variant}`]: this.variant || '',
         [`${this.sizeVariant}`]: this.sizeVariant || 'md',
+        [`${this.theme}`]: true,
       });
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
-        </style>
-        <div class="loader-container ${this.sizeVariant}">
-          <div class="${classes}" role="status" aria-live="polite"></div>
-        </div>`;
+      return html`<div class="${containerClasses}">
+        <div class="${loaderClasses}" role="status" aria-live="polite"></div>
+      </div>`;
     }
   }
 }

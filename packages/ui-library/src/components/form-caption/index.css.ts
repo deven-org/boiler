@@ -1,4 +1,4 @@
-import { typeSafeNestedCss as css } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss as css } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 export const { tokenizedLight: captionLight, tokenizedDark: captionDark } = renderThemedCssStrings((componentTokens) => {

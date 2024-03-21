@@ -4,7 +4,7 @@ import { property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
+import { staticActionStyles } from '../../foundation/semantic-tokens/action.css';
 import {
   IconPositionVariant,
   ActionVariantType,
@@ -40,7 +40,7 @@ export type BlrButtonTextEventHandlers = {
  * @fires blrClick Button was clicked
  */
 export class BlrButtonText extends LitElement {
-  static styles = [styleCustom];
+  static styles = [styleCustom, staticActionStyles];
 
   @property() label = 'Button Label';
   @property() icon?: SizelessIconType;
@@ -79,16 +79,15 @@ export class BlrButtonText extends LitElement {
 
   protected render() {
     if (this.sizeVariant && this.buttonDisplay) {
-      const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
-
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-button-text': true,
         [this.variant]: this.variant,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         'disabled': this.disabled,
         'loading': this.loading,
         [this.buttonDisplay]: this.buttonDisplay,
+        [this.theme]: this.theme,
       });
 
       const iconClasses = classMap({
@@ -99,7 +98,7 @@ export class BlrButtonText extends LitElement {
 
       const flexContainerClasses = classMap({
         'flex-container': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
       });
 
       const loaderVariant = determineLoaderVariant(this.variant);
@@ -150,9 +149,7 @@ export class BlrButtonText extends LitElement {
           : nothing}
       </div>`;
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
-        </style>
+      return html`
         <span
           class="${classes}"
           aria-disabled=${this.disabled ? 'true' : nothing}
@@ -179,7 +176,8 @@ export class BlrButtonText extends LitElement {
                 ${labelAndIconGroup}
               `
             : labelAndIconGroup}
-        </span> `;
+        </span>
+      `;
     }
   }
 }

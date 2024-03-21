@@ -1,11 +1,11 @@
 import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
 const { ButtonIcon } = componentTokens.cmp;
 const { global, buttons } = semanticTokens.sem;
 
-export const styleCustom = typeSafeNestedCss`
+export const styleCustom = typeSafeNestedCss/* css */ `
   .focus-layer {
     position: absolute;
     inset: 0;
@@ -69,26 +69,31 @@ export const styleCustom = typeSafeNestedCss`
   }
   
   .loading {
-
-   &.blr-button-icon:hover, &.blr-button-icon:focus{
+    &.blr-button-icon:hover, &.blr-button-icon:focus {
       cursor: auto;
       text-decoration: none;
-      &.cta{
+
+      &.cta {
         background-color: ${buttons.container.bgcolor.cta.loading}
       }
-      &.primary{
+
+      &.primary {
         background-color: ${buttons.container.bgcolor.primary.loading}
       }
-      &.secondary{
+
+      &.secondary {
         background-color: ${buttons.container.bgcolor.secondary.loading}
       }
-      &.silent{
+
+      &.silent {
         background-color: ${buttons.container.bgcolor.silent.loading}
       }
-      &.destructive{
+
+      &.destructive {
         background-color: ${buttons.container.bgcolor.destructive.loading}
       }
-      &.encourage{
+      
+      &.encourage {
         background-color: ${buttons.container.bgcolor.encourage.loading}
       }
     }

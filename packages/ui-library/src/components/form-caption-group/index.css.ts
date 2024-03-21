@@ -1,6 +1,6 @@
 import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
 import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
 const { CaptionGroup } = componentTokens.cmp;
 const { captionslot } = semanticTokens.sem.forms;
