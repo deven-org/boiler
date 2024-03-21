@@ -58,7 +58,7 @@ export default {
     hasStateLabel: {
       description: 'Choose if the control has a state label.',
       options: { type: 'boolean' },
-      if: { arg: 'hasLabel', eq: true },
+
       table: {
         category: 'Appearance',
       },
@@ -374,9 +374,6 @@ export const Disabled = () => {
         disabled: true,
         hasHint: false,
         label: 'Disabled',
-
-        onLabel: undefined,
-        offLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
@@ -442,8 +439,6 @@ export const FormCaption = () => {
         hintMessage: 'This is a small hint message',
         hintMessageIcon: 'blrInfo',
         label: 'Hint message',
-        offLabel: undefined,
-        onLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
