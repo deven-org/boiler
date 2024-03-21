@@ -46,8 +46,8 @@ All regular B01LER team meetings are in our [B01LER Core calendar](https://myema
 | B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER (Dev) Team that wants to join              | Collaborate and learn from each other by tackling coding challanges together        |
 | B01LER Open Door             | Mondays & Wednesdays                                              | Everyone from the B01LER (Dev) Team that wants to join              | Giving guidance and/or answering questions about issues junior devs are working on  |
 | B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss objectives and prepare a set of issues to finish int he next iteration      |
-| B01LER Weekly Checkup        | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general product topics and check the roadmap                  |
-| B01LER Marketing Weekly      | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general marketing topics                                      |
+| B01LER Weekly Checkup        | Mondays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general product topics and check the roadmap                  |
+| B01LER Marketing Weekly      | Mondays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general marketing topics                                      |
 | B01LER Monthly               | Last Thursday of a month                                          | Everyone who wants to join                                          | Giving an update, answering questions and sometimes deep dives into specific topics |
 
 ## Communication Channels
