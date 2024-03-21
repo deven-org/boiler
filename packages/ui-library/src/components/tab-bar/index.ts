@@ -128,6 +128,7 @@ export class BlrTabBar extends LitElement {
                     {
                       icon: calculateIconName('blrChevronLeft', buttonIconSizeVariant),
                       sizeVariant: buttonIconSizeVariant,
+                      fillParent: false,
                     },
                     {
                       'aria-hidden': true,
@@ -213,6 +214,7 @@ export class BlrTabBar extends LitElement {
                     {
                       icon: calculateIconName('blrChevronRight', buttonIconSizeVariant),
                       sizeVariant: buttonIconSizeVariant,
+                      fillParent: false,
                     },
                     {
                       'aria-hidden': true,
