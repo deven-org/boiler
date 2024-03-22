@@ -123,8 +123,9 @@ export class BlrTextarea extends LitElement {
   }
 
   protected handleChange = (event: Event) => {
+    const inputChangeValue = (event.target as HTMLInputElement).value;
     if (!this.disabled) {
-      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event }));
+      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event, inputState: inputChangeValue }));
     }
   };
 

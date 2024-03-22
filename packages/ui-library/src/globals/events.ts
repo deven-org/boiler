@@ -70,6 +70,7 @@ export function createBlrSelectedValueChangeEvent(
 
 export type BlrTextValueChangeEventDetail = {
   originalEvent: Event;
+  inputState: string | undefined;
 };
 export type BlrTextValueChangeEvent = CustomEvent<BlrTextValueChangeEventDetail>;
 export const BlrTextValueChangeEventName = 'blrTextValueChange';
