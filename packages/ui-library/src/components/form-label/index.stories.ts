@@ -4,9 +4,9 @@ import { FormSizes } from '../../globals/constants';
 import { BlrFormLabelType } from './index';
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
-import { LitElement } from 'lit';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 import '../../index';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 const sharedStyles = html`
   <style>
@@ -107,7 +107,7 @@ export default {
 
 // The label is not creating a shadow root itself, but errors if it is outside
 // of one. Thus, we're creating a helper component for the stories, that wraps it.
-class WrappedBlrLabel extends LitElement {
+class WrappedBlrLabel extends LitElementCustom {
   labelProps: BlrFormLabelType;
 
   protected render() {

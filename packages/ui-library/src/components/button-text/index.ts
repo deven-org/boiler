@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
@@ -27,6 +27,7 @@ import {
   createBlrClickEvent,
   createBlrFocusEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrButtonTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -39,7 +40,7 @@ export type BlrButtonTextEventHandlers = {
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
-export class BlrButtonText extends LitElement {
+export class BlrButtonText extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() label = 'Button Label';
@@ -188,4 +189,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrButtonText);
 }
 
-export type BlrButtonTextType = Omit<BlrButtonText, keyof LitElement> & BlrButtonTextEventHandlers;
+export type BlrButtonTextType = Omit<BlrButtonText, keyof LitElementCustom> & BlrButtonTextEventHandlers;

@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult, html, nothing } from 'lit';
+import { TemplateResult, html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { baseStyle, wrapperLight, wrapperDark, StepperComboDark, StepperComboLight } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
@@ -26,6 +26,7 @@ import {
   createBlrNumberValueChangeEvent,
   createBlrSelectEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrNumberInputEventListeners = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -42,7 +43,7 @@ export type BlrNumberInputEventListeners = {
  * @fires blrSelect Text in NumberInput was selected
  * @fires blrNumberStepperClick Step button was clicked
  */
-export class BlrInputFieldNumber extends LitElement {
+export class BlrInputFieldNumber extends LitElementCustom {
   static styles = [baseStyle];
 
   @query('input')
@@ -353,4 +354,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldNumber);
 }
 
-export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElement> & BlrNumberInputEventListeners;
+export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElementCustom> & BlrNumberInputEventListeners;
