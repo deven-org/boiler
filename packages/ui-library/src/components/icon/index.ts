@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
@@ -10,6 +10,7 @@ import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrClickEvent, createBlrClickEvent } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrIconEventHandlers = {
   blrClick?: (event: BlrClickEvent) => void;
@@ -18,7 +19,7 @@ export type BlrIconEventHandlers = {
 /**
  * @fires blrClick Icon was clicked
  */
-export class BlrIcon extends LitElement {
+export class BlrIcon extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() icon: IconType = 'blr360Xs';
@@ -77,4 +78,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrIcon);
 }
 
-export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElement>> & BlrIconEventHandlers;
+export type BlrIconType = Partial<Omit<BlrIcon, keyof LitElementCustom>> & BlrIconEventHandlers;

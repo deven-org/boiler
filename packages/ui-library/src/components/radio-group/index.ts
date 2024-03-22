@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -11,8 +11,9 @@ import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderF
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { TAG_NAME } from './renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrRadioGroup extends LitElement {
+export class BlrRadioGroup extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() disabled?: boolean;
@@ -142,4 +143,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadioGroup);
 }
 
-export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
+export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElementCustom>;
