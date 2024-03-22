@@ -8,7 +8,7 @@ import { BlrRadioGroupType } from '.';
 
 const sampleParams: BlrRadioGroupType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   disabled: false,
   name: 'Default Name',
   required: false,
@@ -20,7 +20,7 @@ const sampleParams: BlrRadioGroupType = {
   ],
   hasHint: true,
   groupHintMessage: 'This is a sample hint message',
-  groupHintIcon: 'blrInfo',
+  groupHintMessageIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
   groupErrorIcon: undefined,
@@ -46,7 +46,7 @@ describe('blr-radio-group', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrRadioGroupRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrRadioGroupRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const radioGroup = querySelectorDeep('.blr-radio-group', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;

@@ -49,7 +49,7 @@ export type IconPositionVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
 export type ButtonGroupAlignmentType = (typeof ButtonGroupAlignmentVariants)[number];
-
+export type RadioGroupDirection = 'horizontal' | 'vertical';
 export type TabVariantType = (typeof TabVariants)[number];
 export type TabContentVariantType = (typeof TabContentVariants)[number];
 export type TabAlignmentVariantType = (typeof TabAlignmentVariants)[number];

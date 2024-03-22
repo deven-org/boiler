@@ -6,4 +6,10 @@ export const styleCustom = typeSafeNestedCss`
   .caption-group {
     margin: 0 1rem;
   }
+  .vertical {
+    flex-direction: column;
+  }
+  .horizontal {
+    flex-direction: row;
+  }
 `;
