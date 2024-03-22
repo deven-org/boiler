@@ -12,6 +12,7 @@ import { FormSizesType, IconPositionVariant } from '../../globals/types';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { styleCustom, toggleSwitchLight, toggleSwitchDark } from './index.css';
+import { createBlrBlurEvent, createBlrCheckedChangeEvent, createBlrFocusEvent } from '../../globals/events';
 
 export class BlrToggleSwitch extends LitElement {
   static styles = [styleCustom];
@@ -58,6 +59,12 @@ export class BlrToggleSwitch extends LitElement {
     if (!this.disabled && !this.readonly) {
       this.onChange?.(event);
       this.currentCheckedState = !this.currentCheckedState;
+      this.dispatchEvent(
+        createBlrCheckedChangeEvent({
+          originalEvent: event,
+          checkedState: this.currentCheckedState,
+        })
+      );
     }
   }
 
@@ -67,6 +74,7 @@ export class BlrToggleSwitch extends LitElement {
     if (!this.disabled && !this.readonly) {
       this.focused = true;
       this.onFocus?.(event);
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
@@ -74,6 +82,7 @@ export class BlrToggleSwitch extends LitElement {
     if (!this.disabled && !this.readonly) {
       this.focused = false;
       this.onBlur?.(event);
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
 
