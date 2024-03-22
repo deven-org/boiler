@@ -21,6 +21,7 @@ export default {
     sizeVariant: {
       options: FormSizes,
       control: { type: 'radio' },
+      defaultValue: 'sm',
       description: ' Choose size of the component.',
       table: {
         category: 'Appearance',
@@ -43,20 +44,20 @@ export default {
         category: 'Appearance',
       },
     },
-
     icon: {
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
+      defaultValue: 'blr360',
       description: 'Select an icon which is displayed inside of the input.',
       table: {
-        category: 'Content / Setting',
+        category: 'Content / Settings',
       },
     },
     message: {
       options: [undefined, ...PureIconKeys],
       description: 'Enter the message the component should have.',
       table: {
-        category: 'Content / Setting',
+        category: 'Content / Settings',
       },
     },
   },
@@ -72,15 +73,12 @@ export default {
       description: {
         component: `<Markdown>
         Form Caption provides either a brief hint or error message to a related form element such as Input Field Text or Select. It is typically displayed below the form element, and it can be used to provide additional information about the type of information a user has to provide, like an example of the correct data format.
-
         - [**Appearance**](#appearance)
           - [**Variant**](#variant)
           - [**Size Variant**](#size-variant)
         - [**Dependencies**](#dependencies)
           - [**Icon**](#icon)
-        
         The Form Caption is intended to be used when creating new components. Currently, it is used like this in the following components:
-        
         - [**Form Caption Group**](?path=/docs/components-form-caption-group--docs)
         - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
@@ -99,7 +97,7 @@ BlrFormCaption.storyName = 'Form Caption';
 const args: BlrFormCaptionType = {
   theme: 'Light',
   message: 'Message-text',
-  icon: 'blr360',
+  icon: 'blrInfo',
   variant: 'hint',
   sizeVariant: 'sm',
 };
@@ -121,7 +119,7 @@ export const Variant = () => {
         theme: 'Light',
         sizeVariant: 'sm',
         message: 'Hint',
-        icon: 'blr360',
+        icon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
@@ -151,7 +149,7 @@ export const SizeVariant = () => {
         theme: 'Light',
         sizeVariant: 'sm',
         message: 'Form Caption SM',
-        icon: 'blr360',
+        icon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
@@ -160,7 +158,7 @@ export const SizeVariant = () => {
         theme: 'Light',
         sizeVariant: 'md',
         message: 'Form Caption MD',
-        icon: 'blr360',
+        icon: 'blrInfo',
       })}
     </div>
 
@@ -170,7 +168,7 @@ export const SizeVariant = () => {
         theme: 'Light',
         sizeVariant: 'lg',
         message: 'Form Caption LG',
-        icon: 'blr360',
+        icon: 'blrInfo',
       })}
     </div>
   `;
@@ -193,7 +191,7 @@ export const Icon = () => {
         theme: 'Light',
         sizeVariant: 'sm',
         message: 'With icon',
-        icon: 'blr360',
+        icon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
