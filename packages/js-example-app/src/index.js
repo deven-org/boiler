@@ -44,27 +44,27 @@ toggleDisabledState.addEventListener('click', () => {
 });
 
 blrButtonText.addEventListener('blrClick', () => {
-  addLog('blr-text-button clicked');
+  addLog('blr-button-text clicked');
 });
 
 blrButtonText.addEventListener('blrFocus', () => {
-  addLog('blr-text-button focused');
+  addLog('blr-button-text focused');
 });
 
 blrButtonText.addEventListener('blrBlur', () => {
-  addLog('blr-text-button blurred');
+  addLog('blr-button-text blurred');
 });
 
 blrButtonIcon.addEventListener('blrClick', () => {
-  addLog('blr-icon-button clicked');
+  addLog('blr-button-icon clicked');
 });
 
 blrButtonIcon.addEventListener('blrFocus', () => {
-  addLog('blr-icon-button focused');
+  addLog('blr-button-icon focused');
 });
 
 blrButtonIcon.addEventListener('blrBlur', () => {
-  addLog('blr-icon-button blurred');
+  addLog('blr-button-icon blurred');
 });
 
 blrCheckbox.addEventListener('blrCheckedChange', (e) => {
