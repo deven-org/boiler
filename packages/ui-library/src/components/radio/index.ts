@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property } from 'lit/decorators.js';
+import { property, query } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { InputSizesType } from '../../globals/types';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
@@ -11,9 +11,13 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
+import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
 
 export class BlrRadio extends LitElement {
   static styles = [styleCustom];
+
+  @query('input')
+  protected _radioNode!: HTMLInputElement;
 
   @property() optionId!: string;
   @property() label!: string;
@@ -34,6 +38,23 @@ export class BlrRadio extends LitElement {
   @property() hintIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
+
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleChange(event: Event) {
+    const selectedValue = this._radioNode.value;
+    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue }));
+  }
 
   protected render() {
     if (this.size) {
@@ -91,9 +112,9 @@ export class BlrRadio extends LitElement {
             ?invalid=${this.hasError}
             ?checked=${this.checked}
             ?required=${this.required}
-            @input=${this.onChange}
-            @blur=${this.onBlur}
-            @focus=${this.onFocus}
+            @input=${this.handleChange}
+            @focus=${this.handleFocus}
+            @blur=${this.handleBlur}
           />
           <div class="label-wrapper">
             ${BlrFormLabelInlineRenderFunction({

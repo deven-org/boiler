@@ -89,8 +89,8 @@ export class BlrSelect extends LitElement {
   }
 
   protected handleChange(event: Event) {
-    const selectValue = this._selectNode.value;
-    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event, selectValue }));
+    const selectedValue = this._selectNode.value;
+    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue }));
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {

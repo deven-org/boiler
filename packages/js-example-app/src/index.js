@@ -11,6 +11,7 @@ const blrSelect = document.getElementsByTagName('blr-select')[0];
 const blrInputFieldText = document.getElementsByTagName('blr-input-field-text')[0];
 const blrInputFieldNumber = document.getElementsByTagName('blr-input-field-number')[0];
 const blrTextArea = document.getElementsByTagName('blr-textarea')[0];
+const blrRadioInput = document.getElementsByTagName('blr-radio')[0];
 
 const addLog = (log) => {
   logsContainer.innerHTML = logsContainer.innerHTML + log + '<br>';
@@ -67,7 +68,7 @@ blrCheckbox.addEventListener('blrBlur', () => {
 });
 
 blrSelect.addEventListener('blrSelectedValueChange', (e) => {
-  addLog('blr-select changed: ' + e.detail.selectValue);
+  addLog('blr-select changed: ' + e.detail.selectedValue);
 });
 
 blrSelect.addEventListener('blrFocus', () => {
@@ -116,4 +117,16 @@ blrTextArea.addEventListener('blrTextValueChange', (e) => {
 
 blrTextArea.addEventListener('blrSelect', () => {
   addLog('blr-textarea selected');
+});
+
+blrRadioInput.addEventListener('blrFocus', () => {
+  addLog('blr-radio focused');
+});
+
+blrRadioInput.addEventListener('blrBlur', () => {
+  addLog('blr-radio blurred');
+});
+
+blrRadioInput.addEventListener('blrSelectedValueChange', (e) => {
+  addLog('blr-radio changed: ' + e.detail.selectedValue);
 });
