@@ -1925,26 +1925,6 @@
         }
       }
     },
-    "Select": {
-      "SM": {
-        "IconPaddingRight": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing"
-        }
-      },
-      "MD": {
-        "IconPaddingRight": {
-          "value": "{core.dimensionPX.12}",
-          "type": "spacing"
-        }
-      },
-      "LG": {
-        "IconPaddingRight": {
-          "value": "{core.dimensionPX.16}",
-          "type": "spacing"
-        }
-      }
-    },
     "Slider": {
       "Thumb": {
         "Shape": {

@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { forms } = semanticTokens.sem;
-  const { Select, FormLabel, InputIcon } = componentTokens.cmp;
+  const { FormLabel, InputIcon } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     .blr-form-element {
@@ -189,28 +189,16 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       &.sm {
         padding: ${forms.labelslot.padding.sm};
         margin: ${forms.inputslot.margin.sm};
-
-        .blr-input-icon {
-          right: ${Select.SM.IconPaddingRight};
-        }
       }
 
       &.md {
         padding: ${forms.labelslot.padding.md};
         margin: ${forms.inputslot.margin.md};
-
-        .blr-input-icon {
-          right: ${Select.MD.IconPaddingRight};
-        }
       }
 
       &.lg {
         padding: ${forms.labelslot.padding.lg};
         margin: ${forms.inputslot.margin.lg};
-
-        .blr-input-icon {
-          right: ${Select.LG.IconPaddingRight};
-        }
       }
 
       &:hover {
