@@ -1,6 +1,6 @@
 import { LitElement, html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
-import { property, state } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { FormSizesType, SizesType } from '../../globals/types';
 import { selectInputLight, selectInputDark } from './index.css';
@@ -37,6 +37,9 @@ export type BlrSelectEventHandlers = {
  */
 export class BlrSelect extends LitElement {
   static styles = [styleCustom];
+
+  @query('select')
+  protected _selectNode!: HTMLInputElement;
 
   @property() arialabel?: string;
   @property() selectId!: string;
@@ -86,7 +89,8 @@ export class BlrSelect extends LitElement {
   }
 
   protected handleChange(event: Event) {
-    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event }));
+    const selectValue = this._selectNode.value;
+    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event, selectValue }));
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
@@ -197,7 +201,7 @@ export class BlrSelect extends LitElement {
                 name=${this.name || nothing}
                 ?disabled=${this.disabled}
                 ?required=${this.required}
-                @change=${this.handleChange}
+                @input=${this.handleChange}
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >

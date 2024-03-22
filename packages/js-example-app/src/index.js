@@ -66,8 +66,8 @@ blrCheckbox.addEventListener('blrBlur', () => {
   addLog('blr-checkbox blurred');
 });
 
-blrSelect.addEventListener('blrSelectedValueChange', () => {
-  addLog('blr-select changed');
+blrSelect.addEventListener('blrSelectedValueChange', (e) => {
+  addLog('blr-select changed: ' + e.detail.selectValue);
 });
 
 blrSelect.addEventListener('blrFocus', () => {

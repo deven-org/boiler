@@ -59,6 +59,7 @@ export function createBlrCheckedChangeEvent(detail: BlrCheckedChangeEventDetail)
 
 export type BlrSelectedValueChangeEventDetail = {
   originalEvent: Event;
+  selectValue: string;
 };
 export type BlrSelectedValueChangeEvent = CustomEvent<BlrSelectedValueChangeEventDetail>;
 export const BlrSelectedValueChangeEventName = 'blrSelectedValueChange';
