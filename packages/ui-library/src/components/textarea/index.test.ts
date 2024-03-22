@@ -7,8 +7,8 @@ import type { BlrTextareaType } from '.';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',
-  size: 'md',
-  isResizeable: 'both',
+  sizeVariant: 'md',
+  resize: 'both',
   cols: 40,
   rows: 4,
   value: '',
@@ -19,8 +19,9 @@ const sampleParams: BlrTextareaType = {
   labelAppendix: '(Optional)',
   errorMessage: "OMG it's an error",
   hintMessage: 'Rindfleischetikettierungsüberwachungsaufgabenübertragunsgesetz',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   hasHint: true,
+  hasCounter: true,
   warningLimitType: 'warningLimitInt',
   warningLimitInt: 105,
   warningLimitPer: 75,
@@ -28,9 +29,9 @@ const sampleParams: BlrTextareaType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorIcon: 'blr360',
+  errorMessageIcon: 'blr360',
   arialabel: 'TextArea',
-  textareaId: '#674',
+  textAreaId: '#674',
   name: 'TextArea',
 };
 
@@ -137,9 +138,9 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
@@ -160,14 +161,14 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
       })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
-    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('svg', hintIcon?.getRootNode() as HTMLElement);
+    const hintMessageIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('svg', hintMessageIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
 
@@ -187,14 +188,14 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasError: true,
-        errorIcon: 'Peter',
+        errorMessageIcon: 'Peter',
       })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
-    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('path', hintIcon?.getRootNode() as HTMLElement);
+    const hintMessageIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('path', hintMessageIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
 
@@ -210,14 +211,14 @@ describe('blr-textarea', () => {
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
     const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
     const formHint = querySelectorDeep('blr-form-caption', textarea?.getRootNode() as HTMLElement);
-    const hintIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
-    const svg = querySelectorDeep('path', hintIcon?.getRootNode() as HTMLElement);
+    const hintMessageIcon = querySelectorDeep('blr-icon', formHint?.getRootNode() as HTMLElement);
+    const svg = querySelectorDeep('path', hintMessageIcon?.getRootNode() as HTMLElement);
 
     const rect = svg?.getBoundingClientRect();
 
@@ -239,11 +240,39 @@ describe('blr-textarea', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrTextareaRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrTextareaRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const textareaWrapper = querySelectorDeep('.textarea-input-control', element.getRootNode() as HTMLElement);
     const className = textareaWrapper?.className;
 
     expect(className).to.contain('sm');
+  });
+
+  it('is shows a counter when the hasCounter enabled is', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasCounter: true,
+      })
+    );
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const hasCounter = textarea?.getAttribute('hasCounter');
+
+    // in html disabled will become an empty string when it's true
+    expect(hasCounter).not.to.be.equal('');
+  });
+
+  it('is doesnt shows a counter when the hasCounter disabled is', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasCounter: false,
+      })
+    );
+    const textarea = querySelectorDeep('textarea', element.getRootNode() as HTMLElement);
+    const hasCounter = textarea?.getAttribute('hasCounter');
+
+    // in html disabled will become an empty string when it's true
+    expect(hasCounter).to.be.equal(null);
   });
 });

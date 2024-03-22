@@ -16,11 +16,11 @@ export const styleCustom = typeSafeNestedCss`
 `;
 
 export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = renderThemedCssStrings((componentTokens) => {
-  const { IconButton } = componentTokens.cmp;
+  const { ButtonIcon } = componentTokens.cmp;
   const { TabBar } = componentTokens.cmp;
 
   /* ToDos
-  - [ ] Use Icon Button for pagination-buttons
+  - [ ] Use Button Icon for pagination-buttons
   - [ ] .nav-item-content-wrapper > a - needs for some reason a lineHeight set, otherwise the height is off. So we need to drill in the appropriate token here.
     - [ ] Create a typotoken dedicated for tab-bar
     - [ ] Apply this new token on tabs
@@ -77,7 +77,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           line-height: 0;
 
           &.sm {
-            padding: ${IconButton.Container.Padding.SM};
+            padding: ${ButtonIcon.Container.Padding.SM};
 
             &.left {
               margin: ${TabBar.ButtonWrapper.Padding.Leading.SM};
@@ -89,7 +89,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           }
 
           &.md {
-            padding: ${IconButton.Container.Padding.MD};
+            padding: ${ButtonIcon.Container.Padding.MD};
 
             &.left {
               margin: ${TabBar.ButtonWrapper.Padding.Leading.MD};
@@ -102,7 +102,7 @@ export const { tokenizedLight: tabBarLight, tokenizedDark: tabBarDark } = render
           }
 
           &.lg {
-            padding: ${IconButton.Container.Padding.LG};
+            padding: ${ButtonIcon.Container.Padding.LG};
 
             &.left {
               margin: ${TabBar.ButtonWrapper.Padding.Leading.LG};

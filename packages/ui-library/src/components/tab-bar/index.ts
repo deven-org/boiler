@@ -108,9 +108,9 @@ export class BlrTabBar extends LitElement {
         this.size.toUpperCase(),
       ]) as SizesType;
 
-      const iconButtonSizeVariant = getComponentConfigToken([
+      const buttonIconSizeVariant = getComponentConfigToken([
         'cmp',
-        'IconButton',
+        'ButtonIcon',
         'Icon',
         'SizeVariant',
         this.size.toUpperCase(),
@@ -126,8 +126,8 @@ export class BlrTabBar extends LitElement {
                 <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                   ${BlrIconRenderFunction(
                     {
-                      icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
-                      sizeVariant: iconButtonSizeVariant,
+                      icon: calculateIconName('blrChevronLeft', buttonIconSizeVariant),
+                      sizeVariant: buttonIconSizeVariant,
                       fillParent: false,
                     },
                     {
@@ -212,8 +212,8 @@ export class BlrTabBar extends LitElement {
                 <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                   ${BlrIconRenderFunction(
                     {
-                      icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
-                      sizeVariant: iconButtonSizeVariant,
+                      icon: calculateIconName('blrChevronRight', buttonIconSizeVariant),
+                      sizeVariant: buttonIconSizeVariant,
                       fillParent: false,
                     },
                     {

@@ -11,7 +11,7 @@ import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { sliderLight, sliderDark } from '../../../foundation/component-tokens/slider-legend.css';
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils';
-import { BlrIconButtonRenderFunction } from '../../icon-button/renderFunction';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
 
 export class BlrRangeLegendSlider extends LitElement {
   static styles = [styleCustom];
@@ -48,13 +48,13 @@ export class BlrRangeLegendSlider extends LitElement {
   }
 
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
-    html` ${BlrIconButtonRenderFunction({
+    html` ${BlrButtonIconRenderFunction({
       arialabel: btnId,
       blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
-      iconButtonId: btnId,
+      buttonIconId: btnId,
       variant: this.btnVariant,
       sizeVariant: this.size,
       theme: this.theme,

@@ -9,14 +9,14 @@ import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { html } from 'lit-html';
 
 const sampleParams: BlrFormCaptionGroupType = {
-  size: 'md',
+  sizeVariant: 'md',
 };
 
 const hintCaption = BlrFormCaptionRenderFunction({
   message: 'This is a hint',
   variant: 'hint',
   icon: 'blrInfo',
-  size: 'md',
+  sizeVariant: 'md',
   theme: 'Light',
 });
 
@@ -24,7 +24,7 @@ const errorCaption = BlrFormCaptionRenderFunction({
   message: 'This is an error',
   variant: 'error',
   icon: 'blrInfo',
-  size: 'md',
+  sizeVariant: 'md',
   theme: 'Light',
 });
 

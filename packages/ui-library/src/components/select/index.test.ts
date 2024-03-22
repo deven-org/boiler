@@ -8,14 +8,14 @@ import { html } from 'lit-html';
 import { BlrSelectType } from '.';
 
 const sampleParams: BlrSelectType = {
-  name: 'Text Input',
+  name: 'Input Field Text',
   label: 'Label',
   labelAppendix: '(Optional)',
-  size: 'md',
+  sizeVariant: 'md',
   errorMessage: 'This is error message',
   hasHint: true,
   hintMessage: 'Field is used for hint',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   selectId: 'Peter',
   errorMessageIcon: 'blrErrorFilled',
   theme: 'Light',
@@ -46,7 +46,7 @@ describe('blr-select', () => {
       BlrSelectRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
       })
@@ -76,7 +76,7 @@ describe('blr-select', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
     const className = selectWrapper?.className;
@@ -85,7 +85,7 @@ describe('blr-select', () => {
   });
 
   it('is rendering options inside slot', async () => {
-    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, size: 'sm' }, optionsAsChildren));
+    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, sizeVariant: 'sm' }, optionsAsChildren));
     const options = querySelectorAllDeep('.blr-select-option', element?.getRootNode() as HTMLElement);
     const optionsLength = optionsAsChildren.strings[0].trim().split('</option>').filter(Boolean).length;
     expect(options).to.be.lengthOf(optionsLength);

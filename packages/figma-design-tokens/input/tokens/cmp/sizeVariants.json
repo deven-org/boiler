@@ -44,7 +44,7 @@
         }
       }
     },
-    "IconButton": {
+    "ButtonIcon": {
       "Icon": {
         "SizeVariant": {
           "XS": {
@@ -190,7 +190,7 @@
         }
       }
     },
-    "TextButton": {
+    "ButtonText": {
       "Icon": {
         "SizeVariant": {
           "XS": {

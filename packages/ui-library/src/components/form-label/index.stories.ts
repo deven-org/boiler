@@ -92,9 +92,9 @@ export default {
         The Form Label is intended to be used when creating new components. Currently, it is used like this in the following components:
         
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
-        - [**Number Input**](?path=/docs/components-number-input--docs)
+        - [**Input Field Number**](?path=/docs/components-input-field-number--docs)
+        - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
         - [**Select**](?path=/docs/components-select--docs)
-        - [**Text Input**](?path=/docs/components-text-input--docs)
         - [**Text Area**](?path=/docs/components-text-area--docs)
         
         It is not intended to use the Form Label directly when creating new applications.

@@ -18,15 +18,17 @@ const sharedStyles = html`
     }
   </style>
 `;
+
 const defaultParams: BlrSelectType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
+  hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
   icon: 'blrChevronDown',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   disabled: false,
   required: false,
   hasError: false,
@@ -35,14 +37,13 @@ const defaultParams: BlrSelectType = {
   arialabel: 'Select',
   selectId: 'selectId',
   name: 'select',
-  hasLabel: true,
 };
 
 export default {
   title: 'Components/Select',
   argTypes: {
     // Appearance
-    size: {
+    sizeVariant: {
       name: 'sizeVariant',
       description: 'Choose size of the component.',
       options: FormSizes,
@@ -78,11 +79,11 @@ export default {
     labelAppendix: {
       description:
         'Enter string used as an appendix to the label. Use this to inform the user if this field is required or not.',
+      if: { arg: 'hasLabel', eq: true },
       table: {
         category: 'Content / Settings',
       },
     },
-
     icon: {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
@@ -103,7 +104,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
+    hintMessageIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       options: [undefined, ...PureIconKeys],
@@ -113,15 +114,7 @@ export default {
       },
       if: { arg: 'hasHint', eq: true },
     },
-    options: {
-      name: 'children (options)',
-      description:
-        'Enter a list of html option elements containing information about the label, value and disabled prop for all options that are part of the select.',
-      control: 'array',
-      table: {
-        category: 'Content / Settings',
-      },
-    },
+
     //States
     disabled: {
       name: 'disabled',
@@ -132,20 +125,14 @@ export default {
       },
     },
     // todo currently missing on the component
-    readonly: {
-      name: 'readonly',
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
-      control: { type: 'boolean' },
-      table: {
-        disabled: true,
-      },
-    },
     required: {
       description: 'Choose if the component must hold a value after an interaction or a submit.',
+      control: { type: 'boolean' },
       table: {
         category: 'Validation',
       },
     },
+
     // Validation
     hasError: {
       description: 'Choose if component has an error.',
@@ -193,24 +180,23 @@ export default {
       },
     },
     // Events
-    onChange: {
-      action: 'onChange',
+    blrSelectedValueChange: {
+      action: 'blrSelectedValueChange',
       description: 'Fires when the value changes.',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
-      action: 'onFocus',
+    blrFocus: {
       description: 'Fires when the component is focused.',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    onBlur: {
-      action: 'onBlur',
+    blrBlur: {
       description: 'Fires when the component lost focus.',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
@@ -264,14 +250,14 @@ BlrSelect.args = defaultParams;
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
 const argTypesToDisable = [
   'theme',
-  'size',
+  'sizeVariant',
   'hasIcon',
   'hasLabel',
   'label',
   'labelAppendix',
   'hasHint',
   'hintText',
-  'hintIcon',
+  'hintMessageIcon',
   'disabled',
   'required',
   'hasError',
@@ -310,7 +296,7 @@ export const SizeVariant = () => {
       ${BlrSelectRenderFunction(
         {
           ...defaultParams,
-          size: 'sm',
+          sizeVariant: 'sm',
           label: 'Select SM',
           labelAppendix: '',
         },
@@ -319,7 +305,7 @@ export const SizeVariant = () => {
       ${BlrSelectRenderFunction(
         {
           ...defaultParams,
-          size: 'md',
+          sizeVariant: 'md',
           label: 'Select MD',
           labelAppendix: '',
         },
@@ -328,7 +314,7 @@ export const SizeVariant = () => {
       ${BlrSelectRenderFunction(
         {
           ...defaultParams,
-          size: 'lg',
+          sizeVariant: 'lg',
           label: 'Select LG',
           labelAppendix: '',
         },

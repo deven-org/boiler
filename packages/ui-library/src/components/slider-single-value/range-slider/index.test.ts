@@ -135,7 +135,7 @@ describe('blr-range-slider', () => {
       const wrapperElement = inputWrapper[i];
       const rootNode = wrapperElement.getRootNode() as HTMLElement;
 
-      const inlineButtonClassElements = querySelectorAllDeep('.blr-icon-button', rootNode);
+      const inlineButtonClassElements = querySelectorAllDeep('.blr-button-icon', rootNode);
 
       // Push the found .inline-legend elements into the array
       inlineButtonElements.push(...inlineButtonClassElements);
