@@ -48,7 +48,7 @@ export class BlrFormCaption extends LitElement {
           ${dynamicStyles}
         </style>
         <div class=${classes}>
-          ${this.icon
+          ${Boolean(this.icon)
             ? BlrIconRenderFunction(
                 {
                   icon: calculateIconName(
