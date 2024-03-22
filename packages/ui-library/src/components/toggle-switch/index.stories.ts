@@ -87,7 +87,7 @@ export default {
     },
     hintMessage: {
       description: 'Enter string used used as hint message.',
-
+      if: { arg: 'hasHint', eq: true },
       table: {
         category: 'Content / Settings',
       },
