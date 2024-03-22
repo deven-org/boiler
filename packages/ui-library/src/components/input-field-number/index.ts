@@ -329,7 +329,7 @@ export class BlrInputFieldNumber extends LitElement {
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
-                @change=${this.handleChange}
+                @input=${this.handleChange}
                 @blur=${this.handleBlur}
                 @focus=${this.handleFocus}
                 @select=${this.handleSelect}
