@@ -1,4 +1,5 @@
 import { TemplateResult, html } from 'lit';
+import { camelCaseToKebabCase } from './lit-element-custom';
 
 export const genericBlrComponentRenderer = <ComponentType extends { [s: string]: unknown } | ArrayLike<unknown>>(
   tagName: string,
@@ -25,14 +26,14 @@ export const genericBlrComponentRenderer = <ComponentType extends { [s: string]:
         templateFragments.push(` class=`);
       } else if (typeof value === 'boolean') {
         if (value === true) {
-          templateFragments.push(` ${key}=`);
+          templateFragments.push(` ${camelCaseToKebabCase(key)}=`);
         } else {
           templateFragments.push(` .${key}=`);
         }
       } else if (typeof value === 'object') {
         templateFragments.push(` .${key}=`);
       } else {
-        templateFragments.push(` ${key}=`);
+        templateFragments.push(` ${camelCaseToKebabCase(key)}=`);
       }
 
       values.push(value);
