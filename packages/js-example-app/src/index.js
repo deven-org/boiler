@@ -87,7 +87,7 @@ blrInputFieldText.addEventListener('blrBlur', () => {
 });
 
 blrInputFieldText.addEventListener('blrTextValueChange', (e) => {
-  addLog('blr-input-field-text changed: ' + e.detail.inputState);
+  addLog('blr-input-field-text changed: ' + e.detail.inputValue);
 });
 
 blrInputFieldNumber.addEventListener('blrFocus', () => {
@@ -111,7 +111,7 @@ blrTextArea.addEventListener('blrBlur', () => {
 });
 
 blrTextArea.addEventListener('blrTextValueChange', (e) => {
-  addLog('blr-textarea changed: ' + e.detail.inputState);
+  addLog('blr-textarea changed: ' + e.detail.inputValue);
 });
 
 blrTextArea.addEventListener('blrSelect', () => {
