@@ -30,6 +30,7 @@ const defaultParams: BlrSelectType = {
   hintMessage: 'This is a small hint message',
   hintMessageIcon: 'blrInfo',
   disabled: false,
+  required: false,
   hasError: false,
   errorMessage: ' ',
   errorMessageIcon: undefined,
@@ -78,6 +79,7 @@ export default {
     labelAppendix: {
       description:
         'Enter string used as an appendix to the label. Use this to inform the user if this field is required or not.',
+      if: { arg: 'hasLabel', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -123,12 +125,11 @@ export default {
       },
     },
     // todo currently missing on the component
-    readonly: {
-      name: 'readonly',
-      description: 'Choose if component is readonly. The user can select but not change the value of this component.',
+    required: {
+      description: 'Choose if the component must hold a value after an interaction or a submit.',
       control: { type: 'boolean' },
       table: {
-        category: 'States',
+        category: 'Validation',
       },
     },
 
