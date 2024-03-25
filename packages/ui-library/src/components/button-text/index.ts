@@ -157,6 +157,7 @@ export class BlrButtonText extends LitElementCustom {
         <span
           class="${classes}"
           aria-disabled=${this.disabled ? 'true' : nothing}
+          aria-label=${this.label}
           @click="${this.handleClick}"
           tabindex=${this.disabled ? nothing : '0'}
           @focus=${this.handleFocus}
