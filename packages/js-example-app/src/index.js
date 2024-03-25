@@ -13,6 +13,7 @@ const blrInputFieldNumber = document.getElementsByTagName('blr-input-field-numbe
 const blrTextArea = document.getElementsByTagName('blr-textarea')[0];
 const blrRadioInput = document.getElementsByTagName('blr-radio')[0];
 const blrToggleSwitch = document.getElementsByTagName('blr-label-toggleswitch')[0];
+const blrTabBar = document.getElementsByTagName('blr-tab-bar')[0];
 
 const addLog = (log) => {
   logsContainer.innerHTML = logsContainer.innerHTML + log + '<br>';
@@ -142,4 +143,16 @@ blrToggleSwitch.addEventListener('blrBlur', () => {
 
 blrToggleSwitch.addEventListener('blrCheckedChange', (e) => {
   addLog('blr-label-toggleswitch changed: ' + e.detail.checkedState);
+});
+
+blrTabBar.addEventListener('blrFocus', () => {
+  addLog('blr-tab-bar focused');
+});
+
+blrTabBar.addEventListener('blrBlur', () => {
+  addLog('blr-tab-bar blurred');
+});
+
+blrTabBar.addEventListener('blrChange', (e) => {
+  addLog('blr-tab-bar changed: ' + e.detail.changedValue);
 });

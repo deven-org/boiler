@@ -47,6 +47,16 @@ export function createBlrSelectEvent(detail: BlrSelectEventDetail): BlrSelectEve
 
 /* per-input change events */
 
+export type BlrChangeEventDetail = {
+  originalEvent: Event;
+  changedValue: string | null;
+};
+export type BlrChangeEvent = CustomEvent<BlrChangeEventDetail>;
+export const BlrChangeEventName = 'blrChange';
+export function createBlrChangeEvent(detail: BlrChangeEventDetail): BlrChangeEvent {
+  return new CustomEvent(BlrChangeEventName, { bubbles: true, composed: true, detail });
+}
+
 export type BlrCheckedChangeEventDetail = {
   originalEvent: Event;
   checkedState: boolean | undefined;
