@@ -1,5 +1,5 @@
 /* eslint-disable lit/binding-positions */
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, queryAll, state } from 'lit/decorators.js';
 import { styleCustom, tabBarDark, tabBarLight } from './index.css';
@@ -23,8 +23,9 @@ import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
 import { createBlrBlurEvent, createBlrChangeEvent, createBlrFocusEvent } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrTabBar extends LitElement {
+export class BlrTabBar extends LitElementCustom {
   static styles = [styleCustom];
 
   @query('.blr-tab-bar')
@@ -139,6 +140,7 @@ export class BlrTabBar extends LitElement {
                     {
                       icon: calculateIconName('blrChevronLeft', buttonIconSizeVariant),
                       sizeVariant: buttonIconSizeVariant,
+                      fillParent: false,
                     },
                     {
                       'aria-hidden': true,
@@ -234,6 +236,7 @@ export class BlrTabBar extends LitElement {
                     {
                       icon: calculateIconName('blrChevronRight', buttonIconSizeVariant),
                       sizeVariant: buttonIconSizeVariant,
+                      fillParent: false,
                     },
                     {
                       'aria-hidden': true,
@@ -271,4 +274,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTabBar);
 }
 
-export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
+export type BlrTabBarType = Omit<BlrTabBar, keyof LitElementCustom>;

@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -24,6 +24,7 @@ import {
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -38,7 +39,7 @@ export type BlrInputFieldTextEventHandlers = {
  * @fires blrTextValueChange InputFieldText value changed
  * @fires blrSelect Text in InputFieldText got selected
  */
-export class BlrInputFieldText extends LitElement {
+export class BlrInputFieldText extends LitElementCustom {
   static styles = [styleCustom];
 
   @query('input')
@@ -47,25 +48,26 @@ export class BlrInputFieldText extends LitElement {
   @property() inputFieldTextId!: string;
   @property() type: InputTypes = 'text';
   @property() arialabel!: string;
+  @property() hasLabel!: boolean;
   @property() label!: string;
   @property() labelAppendix?: string;
   @property() value!: string;
   @property() placeholder?: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
-  @property() size?: FormSizesType = 'md';
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() required?: boolean;
   @property() maxLength?: number;
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() showInputIcon = true;
-  @property() inputIcon: SizelessIconType = 'blr360';
+  @property() hasIcon = true;
+  @property() icon: SizelessIconType = 'blr360';
   @property() hasHint = true;
   @property() hintMessage?: string;
-  @property() hintIcon?: SizelessIconType;
-  @property() errorIcon?: SizelessIconType;
-  @property() hasLabel!: boolean;
+  @property() hintMessageIcon?: SizelessIconType;
+  @property() errorMessageIcon?: SizelessIconType;
+
   @property() name!: string;
   @property() theme: ThemeType = 'Light';
 
@@ -104,29 +106,29 @@ export class BlrInputFieldText extends LitElement {
   };
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, inputFieldTextLight] : [formDark, inputFieldTextDark];
 
       const wasInitialPasswordField = Boolean(this.type === 'password');
 
       const classes = classMap({
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       const inputClasses = classMap({
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       const inputContainerClasses = classMap({
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       const iconClasses = classMap({
         'blr-input-icon': true,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         'noPointerEvents': Boolean(this.disabled || this.readonly),
       });
 
@@ -140,26 +142,26 @@ export class BlrInputFieldText extends LitElement {
         'inputfield',
         'icon',
         'sizevariant',
-        this.size,
+        this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintIcon)
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              sizeVariant: this.size,
+              sizeVariant: this.sizeVariant,
               message: this.hintMessage,
-              icon: this.hintIcon,
+              icon: this.hintMessageIcon,
             })
           : nothing}
-        ${this.hasError && (this.errorMessage || this.errorIcon)
+        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              sizeVariant: this.size,
+              sizeVariant: this.sizeVariant,
               message: this.errorMessage,
-              icon: this.errorIcon,
+              icon: this.errorMessageIcon,
             })
           : nothing}
       `;
@@ -174,7 +176,7 @@ export class BlrInputFieldText extends LitElement {
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
-                    sizeVariant: this.size,
+                    sizeVariant: this.sizeVariant,
                     labelAppendix: this.labelAppendix,
                     forValue: this.inputFieldTextId,
                     theme: this.theme,
@@ -205,12 +207,12 @@ export class BlrInputFieldText extends LitElement {
                 @select=${this.handleSelect}
               />
             </div>
-            ${this.showInputIcon && !wasInitialPasswordField && !this.readonly
+            ${this.hasIcon && !wasInitialPasswordField && !this.readonly
               ? html`${BlrIconRenderFunction(
                   {
                     icon: this.hasError
                       ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                      : calculateIconName(this.inputIcon, iconSizeVariant),
+                      : calculateIconName(this.icon, iconSizeVariant),
                     sizeVariant: iconSizeVariant,
                     classMap: iconClasses,
                     fillParent: false,
@@ -220,7 +222,7 @@ export class BlrInputFieldText extends LitElement {
                     'name':
                       (this.hasError
                         ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                        : calculateIconName(this.inputIcon, iconSizeVariant)) || '',
+                        : calculateIconName(this.icon, iconSizeVariant)) || '',
                   }
                 )}`
               : nothing}
@@ -242,7 +244,7 @@ export class BlrInputFieldText extends LitElement {
               : nothing}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;
@@ -254,4 +256,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldText);
 }
 
-export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElement> & BlrInputFieldTextEventHandlers;
+export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElementCustom> & BlrInputFieldTextEventHandlers;

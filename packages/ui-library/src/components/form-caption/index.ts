@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult, html, nothing } from 'lit';
+import { TemplateResult, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
@@ -9,8 +9,9 @@ import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/type
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrFormCaption extends LitElement {
+export class BlrFormCaption extends LitElementCustom {
   static styles = [];
 
   @property() message?: string;
@@ -48,7 +49,7 @@ export class BlrFormCaption extends LitElement {
           ${dynamicStyles}
         </style>
         <div class=${classes}>
-          ${this.icon
+          ${Boolean(this.icon)
             ? BlrIconRenderFunction(
                 {
                   icon: calculateIconName(
@@ -75,4 +76,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrFormCaption);
 }
 
-export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElement>;
+export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElementCustom>;

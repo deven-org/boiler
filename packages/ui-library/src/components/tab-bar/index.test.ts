@@ -20,16 +20,16 @@ const sampleParams: BlrTabBarType = {
 
 const tabsAsChildren = html`
   <p disabled label="Tab 1" icon="blr360">Tab 1</p>
-  <p label="Tab 2" icon="blrInfo">Tab 2</p>
-  <p label="Tab 3" icon="blrCrop">Tab 3</p>
-  <p label="Tab 4" icon="blrDocumentNew">Tab 4</p>
-  <p label="Tab 5" icon="blrDocumentTwo">Tab 5</p>
-  <p label="Tab 6" icon="blrDownload">Tab 6</p>
-  <p label="Tab 7" icon="blrHeart">Tab 7</p>
-  <p label="Tab 8" icon="blrHome">Tab 8</p>
-  <p label="Tab 9" icon="blrLockClosed">Tab 9</p>
-  <p label="Tab 10" icon="blrMusic">Tab 10</p>
-  <p label="Tab 11" icon="blrPen">Tab 11</p>
+  <p label="Tab 2" icon="blr360">Tab 2</p>
+  <p label="Tab 3" icon="blr360">Tab 3</p>
+  <p label="Tab 4" icon="blr360">Tab 4</p>
+  <p label="Tab 5" icon="blr360">Tab 5</p>
+  <p label="Tab 6" icon="blr360">Tab 6</p>
+  <p label="Tab 7" icon="blr360">Tab 7</p>
+  <p label="Tab 8" icon="blr360">Tab 8</p>
+  <p label="Tab 9" icon="blr360">Tab 9</p>
+  <p label="Tab 10" icon="blr360">Tab 10</p>
+  <p label="Tab 11" icon="blr360">Tab 11</p>
 `;
 
 describe('blr-tab-bar', () => {

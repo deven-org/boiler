@@ -1,12 +1,13 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { TAG_NAME } from './renderFunction';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
 import { InputSizesType } from '../../globals/types';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrFormLabel extends LitElement {
+export class BlrFormLabel extends LitElementCustom {
   static styles = [];
 
   @property() label = '';
@@ -71,4 +72,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrFormLabel);
 }
 
-export type BlrFormLabelType = Omit<BlrFormLabel, keyof LitElement | 'createRenderRoot' | 'error'>;
+export type BlrFormLabelType = Omit<BlrFormLabel, keyof LitElementCustom | 'createRenderRoot' | 'error'>;

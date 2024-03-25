@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -12,8 +12,9 @@ import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderF
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrRadio extends LitElement {
+export class BlrRadio extends LitElementCustom {
   static styles = [styleCustom];
 
   @query('input')
@@ -136,4 +137,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadio);
 }
 
-export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
+export type BlrRadioType = Omit<BlrRadio, keyof LitElementCustom>;

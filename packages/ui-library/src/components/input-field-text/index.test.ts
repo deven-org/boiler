@@ -9,7 +9,7 @@ import { getRandomString } from '../../utils/get-random.string';
 
 const sampleParams: BlrInputFieldTextType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   type: 'text',
   placeholder: 'Placeholder-text',
   value: '',
@@ -17,17 +17,17 @@ const sampleParams: BlrInputFieldTextType = {
   hasLabel: true,
   label: 'Label',
   labelAppendix: '(Appendix)',
-  showInputIcon: true,
-  inputIcon: 'blr360',
+  hasIcon: true,
+  icon: 'blr360',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   disabled: false,
   readonly: false,
   required: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: 'blrInfo',
+  errorMessageIcon: 'blrInfo',
   arialabel: 'InputFieldText',
   inputFieldTextId: 'Input Id',
   name: 'InputFieldText',
@@ -103,9 +103,9 @@ describe('blr-input-field-text', () => {
       BlrInputFieldTextRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
@@ -131,7 +131,7 @@ describe('blr-input-field-text', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrInputFieldTextRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrInputFieldTextRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const inputWrapper = querySelectorDeep('.blr-input-wrapper', element.getRootNode() as HTMLElement);
     const className = inputWrapper?.className;
