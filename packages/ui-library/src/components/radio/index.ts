@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -11,8 +11,9 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrRadio extends LitElement {
+export class BlrRadio extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() optionId!: string;
@@ -54,7 +55,7 @@ export class BlrRadio extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  size: this.size,
+                  sizeVariant: this.size,
                   message: this.hintMessage,
                   icon: this.hintIcon,
                 })}
@@ -67,7 +68,7 @@ export class BlrRadio extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  size: this.size,
+                  sizeVariant: this.size,
                   message: this.errorMessage,
                   icon: this.errorIcon,
                 })}
@@ -102,7 +103,7 @@ export class BlrRadio extends LitElement {
               labelSize: this.size,
             })}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
               : nothing}
           </div>
         </div>
@@ -115,4 +116,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadio);
 }
 
-export type BlrRadioType = Omit<BlrRadio, keyof LitElement>;
+export type BlrRadioType = Omit<BlrRadio, keyof LitElementCustom>;

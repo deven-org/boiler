@@ -5,7 +5,7 @@ import type { BlrFormLabel, BlrFormLabelType } from '.';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
-import { LitElement } from 'lit';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 const sampleParams: BlrFormLabelType = {
   theme: 'Light',
@@ -17,7 +17,7 @@ const sampleParams: BlrFormLabelType = {
 
 // The label is not creating a shadow root itself, but errors if it is outside
 // of one. Thus, we're creating a helper component for the stories, that wraps it.
-class WrappedBlrLabel extends LitElement {
+class WrappedBlrLabel extends LitElementCustom {
   labelProps: BlrFormLabelType;
 
   protected render() {

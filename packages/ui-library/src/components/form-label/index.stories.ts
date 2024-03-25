@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { FormSizes, LabelVariants } from '../../globals/constants';
+import { FormSizes } from '../../globals/constants';
 import { BlrFormLabelType } from './index';
 import { BlrFormLabelRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
-import { LitElement } from 'lit';
 import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
 import '../../index';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 const sharedStyles = html`
   <style>
@@ -54,11 +54,9 @@ export default {
         category: 'Content / Settings',
       },
     },
-
     hasError: {
       description: 'Choose if component has an error.',
-      options: LabelVariants,
-      control: { type: 'select' },
+      defaultValue: false,
       table: {
         category: 'Validation',
       },
@@ -86,19 +84,17 @@ export default {
 
         - [**Appearance**](#appearance)
           - [**Size Variant**](#size-variant)
-        
         - [**Content / Settings**](#content--settings)
           - [**Label Appendix**](#label-appendix)
-        
         - [**Validation**](#validation)
           - [**Has Error**](#has-error)
         
         The Form Label is intended to be used when creating new components. Currently, it is used like this in the following components:
         
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
-        - [**Number Input**](?path=/docs/components-number-input--docs)
+        - [**Input Field Number**](?path=/docs/components-input-field-number--docs)
+        - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
         - [**Select**](?path=/docs/components-select--docs)
-        - [**Text Input**](?path=/docs/components-text-input--docs)
         - [**Text Area**](?path=/docs/components-text-area--docs)
         
         It is not intended to use the Form Label directly when creating new applications.
@@ -111,7 +107,7 @@ export default {
 
 // The label is not creating a shadow root itself, but errors if it is outside
 // of one. Thus, we're creating a helper component for the stories, that wraps it.
-class WrappedBlrLabel extends LitElement {
+class WrappedBlrLabel extends LitElementCustom {
   labelProps: BlrFormLabelType;
 
   protected render() {
@@ -139,7 +135,7 @@ BlrFormLabel.args = defaultParams;
 
 /**
  * ## Appearance
- *  ### Size Variant
+ * ### Size Variant
  * The Form Label component comes in 3 sizes: SM, MD and LG.
  */
 export const SizeVariant = () => {
@@ -180,19 +176,19 @@ export const LabelAppendix = () => {
   return html`
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      sizeVariant: 'lg',
+      sizeVariant: 'md',
       label: 'Form label',
       labelAppendix: '(required)',
     })}
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      sizeVariant: 'lg',
+      sizeVariant: 'md',
       label: 'Form label',
       labelAppendix: '(optional)',
     })}
     ${WrappedBlrFormLabelRenderFunction({
       ...defaultParams,
-      sizeVariant: 'lg',
+      sizeVariant: 'md',
       label: 'Form label',
       labelAppendix: ' ',
     })}

@@ -1,5 +1,5 @@
 /* eslint-disable lit/binding-positions */
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, queryAll, state } from 'lit/decorators.js';
 import { styleCustom, tabBarDark, tabBarLight } from './index.css';
@@ -22,8 +22,9 @@ import { getComponentConfigToken } from '../../utils/get-component-config-token'
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrTabBar extends LitElement {
+export class BlrTabBar extends LitElementCustom {
   static styles = [styleCustom];
 
   @query('.blr-tab-bar')
@@ -108,9 +109,9 @@ export class BlrTabBar extends LitElement {
         this.size.toUpperCase(),
       ]) as SizesType;
 
-      const iconButtonSizeVariant = getComponentConfigToken([
+      const buttonIconSizeVariant = getComponentConfigToken([
         'cmp',
-        'IconButton',
+        'ButtonIcon',
         'Icon',
         'SizeVariant',
         this.size.toUpperCase(),
@@ -126,8 +127,9 @@ export class BlrTabBar extends LitElement {
                 <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
                   ${BlrIconRenderFunction(
                     {
-                      icon: calculateIconName('blrChevronLeft', iconButtonSizeVariant),
-                      sizeVariant: iconButtonSizeVariant,
+                      icon: calculateIconName('blrChevronLeft', buttonIconSizeVariant),
+                      sizeVariant: buttonIconSizeVariant,
+                      fillParent: false,
                     },
                     {
                       'aria-hidden': true,
@@ -211,8 +213,9 @@ export class BlrTabBar extends LitElement {
                 <button class="arrow right ${this.size}" @click=${() => this.scrollTab('right', 30, 100)}>
                   ${BlrIconRenderFunction(
                     {
-                      icon: calculateIconName('blrChevronRight', iconButtonSizeVariant),
-                      sizeVariant: iconButtonSizeVariant,
+                      icon: calculateIconName('blrChevronRight', buttonIconSizeVariant),
+                      sizeVariant: buttonIconSizeVariant,
+                      fillParent: false,
                     },
                     {
                       'aria-hidden': true,
@@ -250,4 +253,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTabBar);
 }
 
-export type BlrTabBarType = Omit<BlrTabBar, keyof LitElement>;
+export type BlrTabBarType = Omit<BlrTabBar, keyof LitElementCustom>;

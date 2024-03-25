@@ -53,7 +53,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    ignoreSize: {
+    fillParent: {
       description: 'Choose if size of the component should be defined by the parent container.',
       table: {
         category: 'Appearance',
@@ -73,15 +73,14 @@ export default {
         
         The Icon is intended to be used when creating new components. Currently, it is used like this in the following components:
         
-        - [**Text Button**](?path=/docs/components-text-button--docs)
+        - [**Button Text**](?path=/docs/components-button-text--docs)
         - [**Checkbox**](?path=/docs/components-checkbox--docs)
         - [**Form Caption**](?path=/docs/components-form-caption--docs)
+        - [**Input Field Text**](?path=/docs/components-input-field-text--docs)
+        - [**Input Field Number**](?path=/docs/components-input-field-number--docs)
         - [**Select**](?path=/docs/components-select--docs)
-        - [**Text Input**](?path=/docs/components-text-input--docs)
-        - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         - [**Tab Bar**](?path=/docs/components-tabbar--docs)
-        - [**Icon Link**](?path=/docs/components-icon-link--docs)
-        - [**Number Input**](?path=/docs/components-number-input--docs)
+        - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
         It is not intended to use the Icon directly when creating new applications.
         
@@ -101,21 +100,22 @@ export const Icon = (params: IconType) => {
   return html`${BlrIconRenderFunction({
     icon: calculateIconName(params.icon, params.sizeVariant as SizesType),
     sizeVariant: params.sizeVariant,
-    ignoreSize: params.ignoreSize,
+    fillParent: params.fillParent,
   })}`;
 };
 
+// TODO: fix the type mismatch
 type IconType = {
   theme: string;
   sizeVariant: SizesType;
   icon: SizelessIconType; // Update the type definition for icon
-  ignoreSize: boolean;
+  fillParent: boolean;
 };
 const defaultParams: IconType = {
   theme: 'Light',
   sizeVariant: 'md',
   icon: 'blr360',
-  ignoreSize: false,
+  fillParent: false,
 };
 
 Icon.args = defaultParams;

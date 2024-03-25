@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -15,16 +15,29 @@ import { TAG_NAME } from './renderFunction';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
-import { BlrSelectedValueChangeEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
+import {
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrSelectedValueChangeEvent,
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrSelectedValueChangeEvent,
+} from '../../globals/events';
+
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrSelectEventHandlers = {
   blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
 };
 
 /**
  * @fires blrSelectedValueChange Selected value changed
+ * @fires blrFocus Select received focus
+ * @fires blrBlur Select lost focus
  */
-export class BlrSelect extends LitElement {
+export class BlrSelect extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() arialabel?: string;
@@ -34,15 +47,15 @@ export class BlrSelect extends LitElement {
   @property() hasLabel?: boolean;
   @property() label!: string;
   @property() disabled?: boolean;
-  @property() size?: FormSizesType = 'md';
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() required?: boolean;
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
+  @property() blrBlur?: HTMLElement['blur'];
+  @property() blrFocus?: HTMLElement['focus'];
 
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
-  @property() hintIcon?: SizelessIconType;
+  @property() hintMessageIcon?: SizelessIconType;
   @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
@@ -53,12 +66,18 @@ export class BlrSelect extends LitElement {
 
   protected _optionElements: Element[] | undefined;
 
-  protected handleFocus = () => {
-    this.isFocused = true;
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.isFocused = true;
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
   };
 
-  protected handleBlur = () => {
-    this.isFocused = false;
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.isFocused = false;
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
   };
 
   protected handleSlotChange() {
@@ -73,14 +92,14 @@ export class BlrSelect extends LitElement {
   }
 
   protected renderIcon(classes: DirectiveResult<typeof ClassMapDirective>) {
-    if (this.size) {
+    if (this.sizeVariant) {
       const iconSizeVariant = getComponentConfigToken([
         'sem',
         'forms',
         'inputfield',
         'icon',
         'sizevariant',
-        this.size,
+        this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
       if (this.hasError) {
@@ -89,6 +108,7 @@ export class BlrSelect extends LitElement {
             icon: calculateIconName('blrErrorFilled', iconSizeVariant),
             sizeVariant: iconSizeVariant,
             classMap: classes,
+            fillParent: false,
           },
           {
             'aria-hidden': true,
@@ -101,6 +121,7 @@ export class BlrSelect extends LitElement {
             icon: calculateIconName(modifiedIcon, iconSizeVariant),
             sizeVariant: iconSizeVariant,
             classMap: classes,
+            fillParent: false,
           },
           {
             'aria-hidden': true,
@@ -111,36 +132,36 @@ export class BlrSelect extends LitElement {
   }
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
 
       const inputClasses = classMap({
         'error': this.hasError || false,
         'error-input': this.hasError || false,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
         'disabled': this.disabled || false,
         'focus': this.isFocused || false,
       });
 
       const iconClasses = classMap({
         'blr-input-icon': true,
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
       });
       const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintIcon)
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
               theme: this.theme,
-              size: this.size,
+              sizeVariant: this.sizeVariant,
               message: this.hintMessage,
-              icon: this.hintIcon,
+              icon: this.hintMessageIcon,
             })
           : nothing}
         ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
               theme: this.theme,
-              size: this.size,
+              sizeVariant: this.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -154,17 +175,17 @@ export class BlrSelect extends LitElement {
 
         <slot @slotchange=${this.handleSlotChange}></slot>
 
-        <div class="blr-select ${this.size}">
+        <div class="blr-select ${this.sizeVariant}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
                     labelAppendix: this.labelAppendix,
-                    sizeVariant: this.size,
+                    sizeVariant: this.sizeVariant,
                     forValue: this.selectId,
                     theme: this.theme,
-                    hasError: Boolean(this.label),
+                    hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
@@ -172,7 +193,7 @@ export class BlrSelect extends LitElement {
           <div class="blr-select-wrapper ${inputClasses}">
             <div class="blr-select-inner-container">
               <select
-                aria-label=${this.arialabel || nothing}
+                aria-label=${this.ariaLabel || nothing}
                 class="blr-form-select ${inputClasses}"
                 id=${this.selectId || nothing}
                 name=${this.name || nothing}
@@ -199,7 +220,7 @@ export class BlrSelect extends LitElement {
             ${this.renderIcon(iconClasses)}
           </div>
           ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;
@@ -211,4 +232,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrSelect);
 }
 
-export type BlrSelectType = Omit<BlrSelect, keyof LitElement> & BlrSelectEventHandlers;
+export type BlrSelectType = Omit<BlrSelect, keyof LitElementCustom> & BlrSelectEventHandlers;

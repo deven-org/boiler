@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
@@ -9,9 +9,10 @@ import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
 import { findPercentage, generateRangeBar, setOnclickValue, findNearestValue } from '../../../utils/range-slider-utils';
-import { BlrIconButtonRenderFunction } from '../../icon-button/renderFunction';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
+import { LitElementCustom } from '../../../utils/lit-element-custom';
 
-export class BlrRangeSlider extends LitElement {
+export class BlrRangeSlider extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() onClickMinMax?: (param: number) => void;
@@ -48,13 +49,13 @@ export class BlrRangeSlider extends LitElement {
   }
 
   protected renderBtn = ({ btnId, btnEventHandler, iconName }: RenderBtnProps) =>
-    html` ${BlrIconButtonRenderFunction({
+    html` ${BlrButtonIconRenderFunction({
       arialabel: btnId,
       blrClick: btnEventHandler,
       icon: iconName,
       loading: false,
       disabled: this.disabled || false,
-      iconButtonId: btnId,
+      buttonIconId: btnId,
       variant: this.btnVariant,
       sizeVariant: this.size,
       theme: this.theme,
@@ -146,4 +147,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeSlider);
 }
 
-export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElement>;
+export type BlrRangeSliderType = Omit<BlrRangeSlider, keyof LitElementCustom>;

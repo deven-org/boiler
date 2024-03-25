@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult, html, nothing } from 'lit';
+import { TemplateResult, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
@@ -9,30 +9,31 @@ import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/type
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrFormCaption extends LitElement {
+export class BlrFormCaption extends LitElementCustom {
   static styles = [];
 
   @property() message?: string;
   @property() icon?: SizelessIconType;
   @property() variant: CaptionVariantType = 'hint';
-  @property() size?: FormSizesType = 'md';
+  @property() sizeVariant?: FormSizesType = 'md';
   @property() childElement?: TemplateResult<1>;
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (this.size) {
+    if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [captionLight] : [captionDark];
 
       const classes = classMap({
         'blr-form-caption': true,
         [`${this.variant}`]: this.variant,
-        [`${this.size}`]: this.size,
+        [`${this.sizeVariant}`]: this.sizeVariant,
       });
 
       const iconClasses = classMap({
         'blr-icon': true,
-        [this.size]: this.size,
+        [this.sizeVariant]: this.sizeVariant,
       });
 
       const iconSizeVariant = getComponentConfigToken([
@@ -40,7 +41,7 @@ export class BlrFormCaption extends LitElement {
         'CaptionComponent',
         'Icon',
         'SizeVariant',
-        this.size.toUpperCase(),
+        this.sizeVariant.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
       return html`
@@ -48,7 +49,7 @@ export class BlrFormCaption extends LitElement {
           ${dynamicStyles}
         </style>
         <div class=${classes}>
-          ${this.icon
+          ${Boolean(this.icon)
             ? BlrIconRenderFunction(
                 {
                   icon: calculateIconName(
@@ -75,4 +76,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrFormCaption);
 }
 
-export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElement>;
+export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElementCustom>;

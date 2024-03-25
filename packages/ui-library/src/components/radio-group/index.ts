@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -11,8 +11,9 @@ import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderF
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { TAG_NAME } from './renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrRadioGroup extends LitElement {
+export class BlrRadioGroup extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() disabled?: boolean;
@@ -71,7 +72,7 @@ export class BlrRadioGroup extends LitElement {
         ? BlrFormCaptionRenderFunction({
             variant: 'hint',
             theme: this.theme,
-            size: this.size,
+            sizeVariant: this.size,
             message: this.groupHintMessage,
             icon: this.groupHintIcon,
           })
@@ -80,7 +81,7 @@ export class BlrRadioGroup extends LitElement {
         ? BlrFormCaptionRenderFunction({
             variant: 'error',
             theme: this.theme,
-            size: this.size,
+            sizeVariant: this.size,
             message: this.groupErrorMessage,
             icon: this.groupErrorIcon,
           })
@@ -132,7 +133,7 @@ export class BlrRadioGroup extends LitElement {
 
       ${this.hasHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)}
           </div>`
         : nothing} `;
   }
@@ -142,4 +143,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadioGroup);
 }
 
-export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElement>;
+export type BlrRadioGroupType = Omit<BlrRadioGroup, keyof LitElementCustom>;

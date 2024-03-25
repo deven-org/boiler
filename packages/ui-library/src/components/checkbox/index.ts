@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
@@ -21,6 +21,7 @@ import {
   createBlrBlurEvent,
   createBlrFocusEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrCheckboxEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -33,7 +34,7 @@ export type BlrCheckboxEventHandlers = {
  * @fires blrBlur Checkbox lost focus
  * @fires blrCheckedChange Checkbox state changed (event.checkState)
  */
-export class BlrCheckbox extends LitElement {
+export class BlrCheckbox extends LitElementCustom {
   static styles = [];
 
   @query('input')
@@ -198,7 +199,7 @@ export class BlrCheckbox extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'hint',
                   theme: this.theme,
-                  size: this.size,
+                  sizeVariant: this.size,
                   message: this.hintMessage,
                   icon: this.hintIcon,
                 })}
@@ -211,7 +212,7 @@ export class BlrCheckbox extends LitElement {
                 ${BlrFormCaptionRenderFunction({
                   variant: 'error',
                   theme: this.theme,
-                  size: this.size,
+                  sizeVariant: this.size,
                   message: this.errorMessage,
                   icon: this.errorIcon,
                 })}
@@ -276,7 +277,6 @@ export class BlrCheckbox extends LitElement {
                   {
                     icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
-                    ignoreSize: true,
                   },
                   {
                     'aria-hidden': true,
@@ -286,7 +286,6 @@ export class BlrCheckbox extends LitElement {
                   {
                     icon: calculateIconName(this.checkedIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
-                    ignoreSize: true,
                   },
                   {
                     'aria-hidden': true,
@@ -305,7 +304,7 @@ export class BlrCheckbox extends LitElement {
                 })}`
               : nothing}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ size: this.size }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
               : nothing}
           </div>
         </div>
@@ -318,4 +317,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCheckbox);
 }
 
-export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement> & BlrCheckboxEventHandlers;
+export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElementCustom> & BlrCheckboxEventHandlers;
