@@ -1233,11 +1233,11 @@
           }
         },
         "HUE": {
-          "value": "220",
+          "value": "200",
           "type": "color"
         },
         "SAT": {
-          "value": "65",
+          "value": "100",
           "type": "color"
         }
       },
@@ -2781,7 +2781,7 @@
           }
         },
         "HUE": {
-          "value": "50",
+          "value": "46",
           "type": "color"
         },
         "SAT": {
@@ -3297,7 +3297,7 @@
           }
         },
         "HUE": {
-          "value": "350",
+          "value": "349",
           "type": "color"
         },
         "SAT": {
