@@ -28,8 +28,9 @@ greatly appreciated as we continue to grow and develop our project!
     - [Branch naming convention](#branch-naming-convention)
   - [:handshake: Commits](#handshake-commits)
   - [:test_tube: Testing / Validating](#test_tube-testing-and-validating)
-  - [:arrow_heading_up: Pull Request](#arrow_heading_up-pull-request)
-  - [:mag: Code Review](mag-code-review)
+  - [:mag: Pull requests & code reviews](#mag-pull-requests--code-reviews)
+    - [Tips for working on a pull request](#tips-for-working-on-a-pull-request)
+    - [Steps for looking for a pull request to review](#steps-for-looking-for-a-pull-request-to-review)
 
 ## :new: New contributor guide
 
@@ -124,7 +125,7 @@ For contributions we are using
 [Gitflow as branching strategy](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20is%20a%20legacy%20Git,software%20development%20and%20DevOps%20practices).
 [Here](https://danielkummer.github.io/git-flow-cheatsheet/) you can also find a short cheatsheet about Gitflow.
 
-### Branch Naming Convention
+### Branch naming convention
 
 The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
@@ -154,7 +155,7 @@ yarn test
 yarn compile
 ```
 
-## :mag: Pull Request & Code Reviews
+## :mag: Pull requests & Code reviews
 Once you are happy with your implementation it is time to open a pull request (PR). After doing so, your code will be 
 reviewed by the B01LER core team. Once the PR has two approvals, your code will be merged to develop and will be part 
 of a future release. 
@@ -167,7 +168,7 @@ Contributors are also invited to review other contributors pull requests, but in
 team needs to approve it, before it can be merged.
 
 
-### Tips for Developers Working on a Pull Request
+### Tips for working on a pull request
 - Please create pull requests for the `develop` branch and not for `main`.
 - Please also make sure that pull requests are linked to the related issue by using a keyword and the issue number as
 explained [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
@@ -181,7 +182,7 @@ your PR.
 - (only for Members of the Accenture Slack Channel) Post a link to the PR in the [#boiler-dev](https://song-asg.slack.com/archives/C0629BCDCSK)
 Slack channel if the review is time critical.
 
-### Steps for Developers or Designers Looking for a Pull Request to Review
+### Steps for looking for a pull request to review
 1. Find a PR
   - (only for Members of the Accenture Slack Channel) Keep an eye on posted PR links in the #boiler-dev Slack channel
   - Filter the [PR list in GitHub](https://github.com/deven-org/boiler/pulls) for label: `🦹 needs:reviewers (code)` or label: `🦹 needs:reviewers (design)`
