@@ -11,18 +11,21 @@
     - [Common misconceptions](#common-misconceptions)
       - [Accessibility of Web Components](#accessibility-of-web-components)
   - [:art: Resources](#art-resources)
-  - [:tipping_hand_person: Help & Feedback](#tipping_hand_person-help--feedback)
+  - [:tipping_hand_person: Help \& Feedback](#tipping_hand_person-help--feedback)
     - [Slack](#slack)
     - [Teams](#teams)
     - [Email](#email)
     - [B01LER Monthly](#b01ler-monthly)
     - [Questions, feedback or feature requests?](#questions-feedback-or-feature-requests)
     - [Report an issue](#report-an-issue)
+  - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
+  - [:leftwards_arrow_with_hook: Prefixes](#leftwards_arrow_with_hook-prefixes)
+    - [Components](#components)
+    - [Events](#events)
+    - [Icons](#icons)
   - [:gear: Requirements](#gear-requirements)
     - [Figma](#figma)
     - [Tokens Studio](#tokens-studio)
-  - [:triangular_ruler: Architecture](#triangular_ruler-architecture)
-  - [:leftwards_arrow_with_hook: Prefixes](#leftwards_arrow_with_hook-prefixes)
   - [:arrow_forward: How to start](#arrow_forward-how-to-start)
     - [Installation](#installation)
     - [Setup](#setup)
@@ -30,13 +33,16 @@
       - [Structure](#structure)
       - [Adding Icons](#adding-icons)
       - [Changing Icons](#changing-icons)
+      - [Replacing default Icons](#replacing-default-icons)
       - [Removing Icons](#removing-icons)
   - [:white_check_mark: How to test](#white_check_mark-how-to-test)
   - [:toolbox: How to build](#toolbox-how-to-build)
   - [:rocket: How to deploy](#rocket-how-to-deploy)
+  - [:building_construction: How to develop](#building_construction-how-to-develop)
   - [:v: Contribute](#v-contribute)
   - [:page_facing_up: License](#page_facing_up-license)
   - [:green_heart: Code of conduct](#green_heart-code-of-conduct)
+    - [This is a test](#this-is-a-test)
 
 ## :star: Introduction
 
@@ -437,3 +443,5 @@ This project is licensed under the [MIT license](./LICENSE.md).
 
 The B01LER is using the Contributor Covenant Code of Conduct. You can read the whole code of conduct
 [here](./docs/CODE_OF_CONDUCT.md).
+
+### This is a test
