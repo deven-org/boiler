@@ -86,10 +86,12 @@ export class BlrTabBar extends LitElementCustom {
     }
   };
 
-  protected handleSelect(event: Event, index: number | undefined) {
-    this.selectedTabIndex = index;
-    const changedTab = this._tabBarElements![this.selectedTabIndex!].getAttribute('label');
-    this.dispatchEvent(createBlrChangeEvent({ originalEvent: event, changedValue: changedTab }));
+  protected handleSelect(event: Event, index: number | undefined, isDisabled: boolean) {
+    if (!isDisabled) {
+      this.selectedTabIndex = index;
+      const changedTab = this._tabBarElements![this.selectedTabIndex!].getAttribute('label');
+      this.dispatchEvent(createBlrChangeEvent({ originalEvent: event, changedValue: changedTab }));
+    }
   }
 
   protected handleSlotChange() {
@@ -189,14 +191,10 @@ export class BlrTabBar extends LitElementCustom {
                         class="${navListItemClasses}"
                         @focus=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
                         @blur=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
-                        @click=${(event: Event) => {
-                          if (!isDisabled) {
-                            this.handleSelect(event, index);
-                          }
-                        }}
+                        @click=${(e: Event) => this.handleSelect(e, index, isDisabled)}
                         @keydown=${(event: KeyboardEvent) => {
-                          if (!isDisabled && event.code === 'Space') {
-                            this.handleSelect(event, index);
+                          if (event.code === 'Space') {
+                            this.handleSelect(event, index, isDisabled);
                           }
                         }}
                         tabindex=${isDisabled ? '-1' : index}
