@@ -107,6 +107,7 @@ declare global {
     [BlrClickEventName]: BlrClickEvent;
     [BlrNumberStepperClickEventName]: BlrNumberStepperClickEvent;
     [BlrSelectEventName]: BlrSelectEvent;
+    [BlrChangeEventName]: BlrChangeEvent;
     [BlrCheckedChangeEventName]: BlrCheckedChangeEvent;
     [BlrSelectedValueChangeEventName]: BlrSelectedValueChangeEvent;
     [BlrTextValueChangeEventName]: BlrTextValueChangeEvent;
