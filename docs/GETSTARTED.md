@@ -26,7 +26,6 @@ seasoned professional or a newcomer, we've got you covered. Let's dive in and un
 - [Yik Cun Chung](https://github.com/yikcunchung)
 
 ### Developers
-
 - [Christian Hoffmann](https://github.com/ChristianHoffmannS2) (Lead)
 - [David Kennedy](https://github.com/davidken91) (Stand-in lead)
 - [Manuel Seemann](https://github.com/seemann)
@@ -37,7 +36,6 @@ seasoned professional or a newcomer, we've got you covered. Let's dive in and un
 - [Roman Yakovliev](https://https://github.com/veilvokay)
 
 ### Product & Project Management
-
 - [Thorben Hartmann](https://github.com/thrbnhrtmnn) (Lead, community leader)
 - [Anđelka Dakić](https://github.com/angelicahoyss) (Stand-in lead, community leader)
 
