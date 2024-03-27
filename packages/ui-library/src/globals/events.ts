@@ -91,7 +91,6 @@ export function createBlrTextValueChangeEvent(detail: BlrTextValueChangeEventDet
 
 export type BlrNumberValueChangeEventDetail = {
   originalEvent: Event;
-  oldValue: number;
   newValue: number;
 };
 export type BlrNumberValueChangeEvent = CustomEvent<BlrNumberValueChangeEventDetail>;
