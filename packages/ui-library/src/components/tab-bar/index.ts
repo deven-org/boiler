@@ -74,12 +74,16 @@ export class BlrTabBar extends LitElementCustom {
     }, speed);
   };
 
-  protected handleFocus = (event: FocusEvent) => {
-    this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+  protected handleFocus = (event: FocusEvent, isDisabled: boolean) => {
+    if (!isDisabled) {
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
   };
 
-  protected handleBlur = (event: FocusEvent) => {
-    this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+  protected handleBlur = (event: FocusEvent, isDisabled: boolean) => {
+    if (!isDisabled) {
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
   };
 
   protected handleSelect(event: Event, index: number | undefined) {
@@ -183,16 +187,8 @@ export class BlrTabBar extends LitElementCustom {
                         role="tab"
                         aria-controls=${`panel-${index}`}
                         class="${navListItemClasses}"
-                        @focus=${(event: FocusEvent) => {
-                          if (!isDisabled) {
-                            this.handleFocus(event);
-                          }
-                        }}
-                        @blur=${(event: FocusEvent) => {
-                          if (!isDisabled) {
-                            this.handleBlur(event);
-                          }
-                        }}
+                        @focus=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
+                        @blur=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
                         @click=${(event: Event) => {
                           if (!isDisabled) {
                             this.handleSelect(event, index);
