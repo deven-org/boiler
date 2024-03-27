@@ -25,24 +25,26 @@ const defaultParams: BlrInputFieldNumberType = {
   value: undefined,
   decimals: 0,
   leadingZeros: 0,
-  prependUnit: true,
+  hasUnit: false,
   unit: 'kg',
+  unitPosition: 'prefix',
   step: 1,
   hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
   hasHint: false,
   hintMessage: 'This is a small hint',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   disabled: false,
   readonly: false,
   required: false,
   hasError: false,
   errorMessage: '',
-  errorIcon: undefined,
-  inputFieldNumberId: 'test-id',
+  errorMessageIcon: undefined,
   stepIncreaseAriaLabel: '+',
   stepDecreaseAriaLabel: '\u2212',
+  inputFieldNumberId: 'inputFieldNumberId',
+  name: 'inputFieldNumber',
 };
 
 export default {
@@ -117,11 +119,26 @@ export default {
         type: 'number',
       },
     },
-    prependUnit: {
-      description: 'Choose if unit is displayed as a prefix or suffix.',
+    hasUnit: {
+      description: 'Choose if component has a unit.',
       table: {
         category: 'Content / Settings',
       },
+    },
+    unitPosition: {
+      description: 'Choose if unit is displayed as a prefix or suffix.',
+      options: ['prefix', 'suffix'],
+      table: {
+        category: 'Content / Settings',
+      },
+      control: {
+        type: 'radio',
+        labels: {
+          prefix: 'prefix',
+          suffix: 'suffix',
+        },
+      },
+      if: { arg: 'hasUnit', eq: true },
     },
     unit: {
       description: 'Select a unit which is displayed next to the input.',
@@ -132,6 +149,7 @@ export default {
       table: {
         category: 'Content / Settings',
       },
+      if: { arg: 'hasUnit', eq: true },
     },
     step: {
       description: 'Enter how much the value should change when the stepper buttons are used.',
@@ -189,8 +207,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
-      name: 'hintMessageIcon',
+    hintMessageIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
@@ -236,8 +253,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
-      name: 'errorMessageIcon',
+    errorMessageIcon: {
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         category: 'Validations',
@@ -269,7 +285,6 @@ export default {
       },
     },
     blrSelect: {
-      name: 'blrSelect',
       description: 'Fires when some text is selected.',
       action: 'blrSelect',
       table: {
@@ -277,7 +292,6 @@ export default {
       },
     },
     blrFocus: {
-      name: 'blrFocus',
       description: 'Fires when the component is focused.',
       action: 'blrFocus',
       table: {
@@ -285,7 +299,6 @@ export default {
       },
     },
     blrBlur: {
-      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
       action: 'blrBlur',
       table: {
@@ -293,7 +306,6 @@ export default {
       },
     },
     blrNumberStepperClick: {
-      name: 'blrNumberStepperClick',
       description: 'Fires when one of the stepper buttons is clicked.',
       action: 'blrNumberStepperClick',
       table: {
@@ -489,7 +501,8 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         label: 'Unit prefix',
-        prependUnit: true,
+        hasUnit: true,
+        unitPosition: 'prefix',
         unit: 'kg',
         labelAppendix: undefined,
         inputFieldNumberId: 'test-kg-pre',
@@ -499,7 +512,8 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         label: 'Unit suffix',
-        prependUnit: false,
+        hasUnit: true,
+        unitPosition: 'suffix',
         unit: 'kg',
         labelAppendix: undefined,
         inputFieldNumberId: 'test-kg-suff',
@@ -653,7 +667,7 @@ export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
         ...params,
         hasHint: true,
         label: 'Hint message',
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         labelAppendix: '',
         inputFieldNumberId: 'test-hint',
       })}
@@ -666,7 +680,7 @@ export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
         hasError: true,
         errorMessage: "OMG it's an error",
         hasHint: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
         inputFieldNumberId: 'test-hint-error',
       })}
     </div>
