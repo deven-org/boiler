@@ -134,15 +134,15 @@ blrRadioInput.addEventListener('blrSelectedValueChange', (e) => {
 });
 
 blrToggleSwitch.addEventListener('blrFocus', () => {
-  addLog('blr-label-toggleswitch focused');
+  addLog('blr-toggleswitch focused');
 });
 
 blrToggleSwitch.addEventListener('blrBlur', () => {
-  addLog('blr-label-toggleswitch blurred');
+  addLog('blr-toggleswitch blurred');
 });
 
 blrToggleSwitch.addEventListener('blrCheckedChange', (e) => {
-  addLog('blr-label-toggleswitch changed: ' + e.detail.checkedState);
+  addLog('blr-toggleswitch changed: ' + e.detail.checkedState);
 });
 
 blrTabBar.addEventListener('blrFocus', () => {
