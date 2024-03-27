@@ -85,7 +85,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
       const step = Number(this.step ?? 1);
       const newValue = oldValue + step;
       this.currentValue = newValue;
-      this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, newValue }));
+      this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, inputValue: newValue }));
       this.dispatchEvent(createBlrNumberStepperClickEvent({ originalEvent: event, direction: 'increase', step }));
       this.requestUpdate('currentValue');
     }
@@ -97,7 +97,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
       const step = Number(this.step ?? 1);
       const newValue = oldValue - step;
       this.currentValue = newValue;
-      this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, newValue }));
+      this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, inputValue: newValue }));
       this.dispatchEvent(createBlrNumberStepperClickEvent({ originalEvent: event, direction: 'decrease', step }));
       this.requestUpdate('currentValue');
     }
@@ -131,7 +131,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
   protected handleChange(event: Event) {
     const newValue = Number(this._numberFieldNode.value) || 0;
     this.currentValue = newValue;
-    this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, newValue }));
+    this.dispatchEvent(createBlrNumberValueChangeEvent({ originalEvent: event, inputValue: newValue }));
   }
 
   protected customFormat(cur: number, fractions: number, digits: number): string {

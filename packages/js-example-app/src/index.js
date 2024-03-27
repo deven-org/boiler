@@ -102,7 +102,7 @@ blrInputFieldNumber.addEventListener('blrBlur', () => {
 });
 
 blrInputFieldNumber.addEventListener('blrNumberValueChange', (e) => {
-  addLog('blr-number-input value changed: ' + e.detail.newValue);
+  addLog('blr-number-input value changed: ' + e.detail.inputValue);
 });
 
 blrTextArea.addEventListener('blrFocus', () => {
