@@ -30,8 +30,20 @@
         </div>
 
         <div class="component">
+          <p>Icon Button</p>
+          <blr-button-icon
+            theme="Light"
+            variant="primary"
+            size-variant="md"
+            icon="blr360"
+            aria-label="Button Icon"
+            button-icon-id="buttonIconId">
+          </blr-button-icon>
+        </div>
+
+        <div class="component">
           <p>Select</p>
-          <blr-select label="Boiler Select Component">
+          <blr-select theme="Light" size-variant="md" has-label="true" label="Label-text" label-appendix="(Appendix)" icon="blrChevronDown" aria-label="Select" select-id="selectId" name="select">
             <option value="" label="--Please choose an option--"></option>
             <option value="option1" label="Option 1"></option>
             <option value="option2" label="Option 2"></option>
@@ -44,12 +56,35 @@
 
         <div class="component">
           <p>Checkbox</p>
-          <blr-checkbox has-label="true" label="Please check" check-input-id="Test123"></blr-checkbox>
+          <blr-checkbox
+            theme="Light"
+            size="md"
+            has-label="true"
+            label="Label-text"
+            aria-label="check Input"
+            check-input-id="checkInputId"
+            name="checkInputId">
+          </blr-checkbox>
         </div>
 
         <div class="component">
           <p>Input Field Text</p>
-          <blr-input-field-text placeholder="Enter text..." value="" hint-text="Hint"></blr-input-field-text>
+          <blr-input-field-text
+            theme="Light"
+            size-variant="md"
+            type="text"
+            placeholder="Placeholder-text"
+            value=""
+            max-length="140"
+            has-label="true"
+            label="Label-text"
+            label-appendix="(Appendix)"
+            has-icon="true"
+            icon="blr360"
+            aria-label="InputFieldText"
+            name="InputFieldText"
+            input-field-text-id="Input Id">
+          </blr-input-field-text>
         </div>
 
         <div class="component">
@@ -79,16 +114,25 @@
         <div class="component">
           <p>Textarea</p>
           <blr-textarea
-            placeholder="Enter text..."
-            value=""
-            show-hint="true"
-            hint-text="Hint"
+            theme="Light"
+            size-variant="md"
             resize="both"
-            has-counter="true"
+            cols="40"
+            rows="4"
+            placeholder="Placeholder-text"
+            value=""
+            min-length="10"
             max-length="140"
+            has-label="true"
+            label="Label-text"
+            label-appendix="(Appendix)"
+            has-counter="true"
             warning-limit-type="warningLimitInt"
             warning-limit-int="105"
-          ></blr-textarea>
+            aria-label="Text Area"
+            text-area-id="#textAreaId"
+            name="Text Area">
+          </blr-textarea>
         </div>
 
         <div class="component">
