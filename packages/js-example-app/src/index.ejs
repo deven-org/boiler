@@ -89,24 +89,26 @@
 
         <div class="component">
           <p>Input Field Number</p>
-            <blr-input-field-number
-              theme="Light"
-              size-variant="md"
-              stepper-variant="vertical"
-              placeholder="Placeholder-text"
-              value=""
-              decimals="0"
-              leading-zeros="0"
-              prepend-unit="true"
-              unit="kg" step="1"
-              has-label="true"
-              label="Label-text"
-              label-appendix="(Appendix)"
-              input-field-number-id="test-id"
-              step-increase-aria-label="+"
-              step-decrease-aria-label="−"
-              name="InputFieldNumber">
-          </blr-input-field-number>
+          <blr-input-field-number
+            value="1000"
+            size-variant="md"
+            stepper-variant="vertical"
+            placeholder="Placeholder-text"
+            fraction-digits="10"
+            total-digits="10"
+            has-unit="true"
+            unit-position="prefix"
+            unit="kg"
+            step="1"
+            has-label="true"
+            label="Label-text"
+            label-appendix="(Appendix)"
+            input-field-number-id="test-id"
+            theme="Light"
+            name="InputFieldNumber"
+            decimals="10"
+            leading-zeros="3"
+          ></blr-input-field-number>
         </div>
 
         <div class="component">

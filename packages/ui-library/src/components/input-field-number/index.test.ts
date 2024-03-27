@@ -21,8 +21,8 @@ const sampleParams: BlrInputFieldNumberType = {
   inputFieldNumberId: 'egal',
   label: 'Hello',
   hasHint: false,
-  hintIcon: 'blr360',
-  errorIcon: 'blrInfo',
+  hintMessageIcon: 'blr360',
+  errorMessageIcon: 'blrInfo',
   value: 4,
   unit: 'gr',
   decimals: 0,
@@ -78,9 +78,9 @@ describe('blr-input-field-number', () => {
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
