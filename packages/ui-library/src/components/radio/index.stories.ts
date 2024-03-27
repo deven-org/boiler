@@ -7,6 +7,12 @@ import { PureIconKeys } from '@boiler/icons';
 import { Themes } from '../../foundation/_tokens-generated/index.themes';
 import { InputSizes } from '../../globals/constants';
 
+// this loads the all components instances and registers their html tags
+import '../../index';
+import { PureIconKeys } from '@boiler/icons';
+import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { InputSizes } from '../../globals/constants';
+
 const sharedStyles = html`
   <style>
     .wrapper {

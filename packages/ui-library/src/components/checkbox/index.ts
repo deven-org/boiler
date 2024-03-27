@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
@@ -21,6 +21,7 @@ import {
   createBlrBlurEvent,
   createBlrFocusEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrCheckboxEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -33,7 +34,7 @@ export type BlrCheckboxEventHandlers = {
  * @fires blrBlur Checkbox lost focus
  * @fires blrCheckedChange Checkbox state changed (event.checkState)
  */
-export class BlrCheckbox extends LitElement {
+export class BlrCheckbox extends LitElementCustom {
   static styles = [];
 
   @query('input')
@@ -316,4 +317,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCheckbox);
 }
 
-export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElement> & BlrCheckboxEventHandlers;
+export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElementCustom> & BlrCheckboxEventHandlers;

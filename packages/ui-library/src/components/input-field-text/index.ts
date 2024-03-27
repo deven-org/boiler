@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -24,6 +24,7 @@ import {
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -38,7 +39,7 @@ export type BlrInputFieldTextEventHandlers = {
  * @fires blrTextValueChange InputFieldText value changed
  * @fires blrSelect Text in InputFieldText got selected
  */
-export class BlrInputFieldText extends LitElement {
+export class BlrInputFieldText extends LitElementCustom {
   static styles = [styleCustom];
   @property() inputFieldTextId!: string;
   @property() type: InputTypes = 'text';
@@ -250,4 +251,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldText);
 }
 
-export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElement> & BlrInputFieldTextEventHandlers;
+export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElementCustom> & BlrInputFieldTextEventHandlers;

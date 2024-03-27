@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
@@ -24,6 +24,8 @@ import {
   createBlrSelectedValueChangeEvent,
 } from '../../globals/events';
 
+import { LitElementCustom } from '../../utils/lit-element-custom';
+
 export type BlrSelectEventHandlers = {
   blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -35,7 +37,7 @@ export type BlrSelectEventHandlers = {
  * @fires blrFocus Select received focus
  * @fires blrBlur Select lost focus
  */
-export class BlrSelect extends LitElement {
+export class BlrSelect extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() arialabel?: string;
@@ -230,4 +232,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrSelect);
 }
 
-export type BlrSelectType = Omit<BlrSelect, keyof LitElement> & BlrSelectEventHandlers;
+export type BlrSelectType = Omit<BlrSelect, keyof LitElementCustom> & BlrSelectEventHandlers;

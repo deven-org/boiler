@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { styleCustom } from './index.css';
@@ -9,8 +9,9 @@ import { sliderLight, sliderDark } from '../../../foundation/component-tokens/sl
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 import { findPercentage, generateRangeBar, findNearestValue, setOnclickValue } from '../../../utils/range-slider-utils';
 import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
+import { LitElementCustom } from '../../../utils/lit-element-custom';
 
-export class BlrRangeMinMaxSlider extends LitElement {
+export class BlrRangeMinMaxSlider extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() onBtnClick?: (min: number, max: number) => void;
@@ -211,4 +212,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeMinMaxSlider);
 }
 
-export type BlrRangeMinMaxSliderType = Omit<BlrRangeMinMaxSlider, keyof LitElement>;
+export type BlrRangeMinMaxSliderType = Omit<BlrRangeMinMaxSlider, keyof LitElementCustom>;

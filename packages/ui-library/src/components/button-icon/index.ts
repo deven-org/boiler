@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, state } from 'lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
@@ -21,6 +21,7 @@ import {
   createBlrClickEvent,
   createBlrFocusEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrButtonIconEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -33,7 +34,7 @@ export type BlrButtonIconEventHandlers = {
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
-export class BlrButtonIcon extends LitElement {
+export class BlrButtonIcon extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() arialabel!: string;
@@ -150,4 +151,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrButtonIcon);
 }
 
-export type BlrButtonIconType = Omit<BlrButtonIcon, keyof LitElement> & BlrButtonIconEventHandlers;
+export type BlrButtonIconType = Omit<BlrButtonIcon, keyof LitElementCustom> & BlrButtonIconEventHandlers;

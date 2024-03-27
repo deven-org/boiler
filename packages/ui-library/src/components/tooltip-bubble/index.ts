@@ -1,11 +1,12 @@
-import { LitElement, css, html, nothing } from 'lit';
+import { css, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { light, dark } from './index.css';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrTooltipBubble extends LitElement {
+export class BlrTooltipBubble extends LitElementCustom {
   static styles = [
     css`
       :host([visible]) {
@@ -50,4 +51,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTooltipBubble);
 }
 
-export type BlrTooltipBubbleType = Omit<BlrTooltipBubble, keyof LitElement>;
+export type BlrTooltipBubbleType = Omit<BlrTooltipBubble, keyof LitElementCustom>;

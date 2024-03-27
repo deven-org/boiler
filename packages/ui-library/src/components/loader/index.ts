@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { styleCustomLight, styleCustomDark } from './index.css';
@@ -6,8 +6,9 @@ import { styleCustomLight, styleCustomDark } from './index.css';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrLoader extends LitElement {
+export class BlrLoader extends LitElementCustom {
   static styles = [];
 
   @property() sizeVariant?: ActionSizesType = 'md';
@@ -38,4 +39,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrLoader);
 }
 
-export type BlrLoaderType = Omit<BlrLoader, keyof LitElement>;
+export type BlrLoaderType = Omit<BlrLoader, keyof LitElementCustom>;

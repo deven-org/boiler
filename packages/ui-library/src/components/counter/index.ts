@@ -1,12 +1,13 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { counterLight, counterDark } from './index.css';
 import { TAG_NAME } from './renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrCounter extends LitElement {
+export class BlrCounter extends LitElementCustom {
   static styles = [];
 
   @property() variant: CounterVariantType = 'neutral';
@@ -39,4 +40,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCounter);
 }
 
-export type BlrCounterType = Omit<BlrCounter, keyof LitElement>;
+export type BlrCounterType = Omit<BlrCounter, keyof LitElementCustom>;
