@@ -53,8 +53,9 @@ export class BlrRadio extends LitElementCustom {
   };
 
   protected handleChange(event: Event) {
-    const selectedValue = this._radioNode.value;
-    this.dispatchEvent(createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue }));
+    this.dispatchEvent(
+      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._radioNode.value })
+    );
   }
 
   protected render() {

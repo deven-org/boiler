@@ -93,9 +93,10 @@ export class BlrInputFieldText extends LitElementCustom {
   };
 
   protected handleChange = (event: Event) => {
-    const inputValue = this._inputFieldTextNode.value;
     if (!this.disabled) {
-      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event, inputValue }));
+      this.dispatchEvent(
+        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value })
+      );
     }
   };
 

@@ -127,9 +127,8 @@ export class BlrTextarea extends LitElementCustom {
   }
 
   protected handleChange = (event: Event) => {
-    const inputValue = this._textareaNode.value;
     if (!this.disabled) {
-      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event, inputValue }));
+      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._textareaNode.value }));
     }
   };
 
