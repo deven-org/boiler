@@ -23,10 +23,10 @@ toggleLoadingButton.addEventListener('click', () => {
   const currentState = blrButtonText.getAttribute('loading');
 
   if (currentState) {
-    blrButton.removeAttribute('loading');
+    blrButtonText.removeAttribute('loading');
     addLog('Set button text loading state to false');
   } else {
-    blrButton.setAttribute('loading', 'true');
+    blrButtonText.setAttribute('loading', 'true');
     addLog('Set button text loading state to true');
   }
 });
