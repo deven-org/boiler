@@ -58,7 +58,9 @@ export class BlrRadioGroup extends LitElementCustom {
 
     const radioClasses = classMap({
       [this.sizeVariant]: this.sizeVariant,
+      error: this.hasError || false,
     });
+
     const classes = classMap({
       [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
@@ -107,7 +109,7 @@ export class BlrRadioGroup extends LitElementCustom {
             <div class="blr-radio ${radioClasses}">
               <input
                 id=${id || nothing}
-                class="${radioClasses} input-control"
+                class=" input-control ${radioClasses}"
                 type="radio"
                 name=${this.name}
                 ?disabled=${this.disabled}

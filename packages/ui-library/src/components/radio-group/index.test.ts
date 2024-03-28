@@ -23,7 +23,8 @@ const sampleParams: BlrRadioGroupType = {
   groupHintMessageIcon: 'blrInfo',
   hasError: false,
   groupErrorMessage: '',
-  groupErrorIcon: undefined,
+  groupErrorMessageIcon: undefined,
+  direction: 'horizontal',
 };
 
 describe('blr-radio-group', () => {
