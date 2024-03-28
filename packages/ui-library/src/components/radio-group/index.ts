@@ -46,22 +46,22 @@ export class BlrRadioGroup extends LitElement {
 
     const legendClasses = classMap({
       'blr-legend': true,
-      [`${this.sizeVariant}`]: this.sizeVariant,
+      [this.sizeVariant]: this.sizeVariant,
       'error': this.hasError || false,
     });
 
     const legendWrapperClasses = classMap({
       'blr-legend-wrapper': true,
-      [`${this.sizeVariant}`]: this.sizeVariant,
+      [this.sizeVariant]: this.sizeVariant,
     });
 
     const classes = classMap({
-      [`${this.sizeVariant}`]: this.sizeVariant,
+      [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
       readonly: this.readonly || false,
       checked: this.checked || false,
       error: this.hasError || false,
-      [`${this.direction}`]: this.direction,
+      [this.direction]: this.direction,
     });
 
     const calculateOptionId = (label: string) => {

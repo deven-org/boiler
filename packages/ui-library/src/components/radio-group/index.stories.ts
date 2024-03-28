@@ -235,7 +235,7 @@ const defaultParams: BlrRadioGroupType & {
   sizeVariant: 'md',
   direction: 'horizontal',
   hasLegend: true,
-  legend: '"Legend-text"',
+  legend: 'Legend-text',
   hasHint: false,
   groupHintMessage: 'This is a small hint',
   groupHintMessageIcon: 'blrInfo',
@@ -278,9 +278,9 @@ const defaultParams: BlrRadioGroupType & {
   ariaLabel: 'Radio Group',
   radioGroupId: 'Radio Group',
   name: 'Radio Group ',
-  blrChange: () => action('onFocus'),
-  blrFocus: () => action('onFocus'),
-  blrBlur: () => action('onBlur'),
+  blrChange: () => action('blrChange'),
+  blrFocus: () => action('blrFocus'),
+  blrBlur: () => action('blrBlur'),
 };
 
 BlrRadioGroup.args = defaultParams;
