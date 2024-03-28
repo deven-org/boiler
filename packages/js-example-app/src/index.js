@@ -102,20 +102,28 @@ blrInputFieldText.addEventListener('blrBlur', () => {
   addLog('blr-input-field-text blurred');
 });
 
+blrInputFieldText.addEventListener('blrSelect', () => {
+  addLog('blr-input-field-text selected');
+});
+
 blrInputFieldText.addEventListener('blrTextValueChange', (e) => {
   addLog('blr-input-field-text changed: ' + e.detail.inputValue);
 });
 
 blrInputFieldNumber.addEventListener('blrFocus', () => {
-  addLog('blr-number-input focused');
+  addLog('blr-input-field-number focused');
 });
 
 blrInputFieldNumber.addEventListener('blrBlur', () => {
-  addLog('blr-number-input blurred');
+  addLog('blr-input-field-number blurred');
+});
+
+blrInputFieldNumber.addEventListener('blrSelect', () => {
+  addLog('blr-input-field-number selected');
 });
 
 blrInputFieldNumber.addEventListener('blrNumberValueChange', (e) => {
-  addLog('blr-number-input value changed: ' + e.detail.inputValue);
+  addLog('blr-input-field-number value changed: ' + e.detail.inputValue);
 });
 
 blrTextArea.addEventListener('blrFocus', () => {
@@ -135,15 +143,15 @@ blrTextArea.addEventListener('blrSelect', () => {
 });
 
 blrRadioInput.addEventListener('blrFocus', () => {
-  addLog('blr-radio focused');
+  addLog('blr-radio-input focused');
 });
 
 blrRadioInput.addEventListener('blrBlur', () => {
-  addLog('blr-radio blurred');
+  addLog('blr-radio-input blurred');
 });
 
 blrRadioInput.addEventListener('blrSelectedValueChange', (e) => {
-  addLog('blr-radio changed: ' + e.detail.selectedValue);
+  addLog('blr-radio-input changed: ' + e.detail.selectedValue);
 });
 
 blrToggleSwitch.addEventListener('blrFocus', () => {
