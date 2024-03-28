@@ -8,18 +8,18 @@ import type { BlrCheckboxType } from '.';
 
 const sampleParams: BlrCheckboxType = {
   label: 'Checkbox Option',
-  checkInputId: 'Checky',
+  checkboxId: 'Checky',
   disabled: false,
   checked: false,
   indeterminate: false,
   readonly: false,
   hasError: false,
-  size: 'md',
+  sizeVariant: 'md',
   errorMessage: 'This is a sample error message',
-  errorIcon: undefined,
+  errorMessageIcon: undefined,
   hasHint: false,
   hintMessage: 'This is a sample hint',
-  hintIcon: undefined,
+  hintMessageIcon: undefined,
   theme: 'Light',
   hasLabel: true,
 };
@@ -39,9 +39,9 @@ describe('blr-checkbox', () => {
       BlrCheckboxRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
@@ -67,7 +67,7 @@ describe('blr-checkbox', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrCheckboxRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrCheckboxRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
     const className = checkbox?.className;
