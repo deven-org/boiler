@@ -1,11 +1,9 @@
 # Architecture
-
 The BO1LER, a fully customisable design system (DS), is developed using the [Lit](https://lit.dev/docs/) template and
 Figma. The design system serves as a core unit for UI components, styles, and guidelines, ensuring consistency and
 efficiency across our applications.
 
 ## Content
-
 - [Architecture](#architecture)
   - [Content](#content)
   - [Overall Structure](#overall-structure)
@@ -21,13 +19,11 @@ efficiency across our applications.
   - [Contributing](#contributing)
 
 ## Overall Structure
-
 The entire code is developed in TypeScript, which facilitates type checking and offers additional functionalities for
 detecting errors early in the development process. Besides configuration files, the 'Packages' directory holds essential
 content. Within this directory are subfolders named according to their contents.
 
 ### File Structure
-
 Our project has the following file structure:
 
     └── .github             // GitLab CI/CD pipeline
@@ -64,31 +60,26 @@ generation. Configuration for token generation can be found within the same fold
 utilized directly within the 'ui-library'.
 
 ### Version Control
-
 The code base, hosted on GitHub and maintained by the Deven team, is publicly accessible, inviting interested users to
 contribute to the ongoing development and maintenance efforts of the project. We encourage collaboration and welcome
 feedback from the community to enhance the project's capabilities and ensure its continued evolution.
 
 ### Documentation and Testing
-
 The project adheres to best practices for documentation, and testing. The codebase is thoroughly documented with live
 preview capability and explicit guidelines on usage and contribution procedures. Additionally, comprehensive component
 tests are integrated to verify that modifications uphold the project's integrity and functionality, preventing
 regressions or defects from emerging.
 
 ### CI-CD
-
 The changes made in project's code base adheres to a continuous integration and delivery (CI/CD) pipeline. This
 guarantees that any alterations undergo rigorous testing and validation before being released to the production
 environment.
 
 ## Technical Decisions
-
 This section lists all technical decisions. It includes explanations of the frameworks, tools and languages that are
 used in the project. It also includes the main reasons for these decisions.
 
 ### Web Components
-
 Our design system includes a wide range of reusable UI components, each carefully designed and implemented using the
 [Lit](https://lit.dev/docs/) template. These web components cover various aspects of our application's user interface,
 including buttons, input fields, tab bars, divider, and more. The reason for using Lit was that it being a
@@ -101,24 +92,20 @@ imperative to consistently employ LitElementCustom for any new components added 
 standardization, we've implemented a linting rule, no-restricted-imports, ensuring adherence across the team.
 
 ### Styles
-
 The design system provides a comprehensive set of styles, including typography, colors, spacing, and layout guidelines.
 These styles are meticulously crafted to maintain visual coherence and enhance the overall user experience.
 
 ### Events
-
 The various events, such as focus, blur, click, etc., have the 'blr' prefix appended, allowing them to be accessed as
 'blrFocus,' 'blrBlur,' 'blrClick,' and so on. One example can be seen in
 [Storybook documentation](https://b01ler.onrender.com/).
 
 ### Guidelines
-
 In addition to components and styles, the design system includes detailed guidelines and best practices for design and
 development. These guidelines cover topics such as accessibility, responsive design, interaction patterns, and naming
 conventions, empowering our team to create consistent and high-quality user interfaces.
 
 ### Figma
-
 Figma plays an essential role in our product development, as B01LER relies heavily on its functionalities. It serves as
 the platform for our design assets, including the component designs. Moreover, we utilize the
 [tokens studio plugin](https://www.figma.com/community/plugin/843461159747178978) within Figma to manage and update our
@@ -126,7 +113,6 @@ design tokens effectively. Figma allows our team to create, share, and collabora
 the design process and facilitating cross-functional collaboration.
 
 ## Contributing
-
 Contributions to the design system are welcome! If you have suggestions for new components, styles, or guidelines,
 please open an issue or submit a pull request. Your contributions help improve the consistency and quality of our user
 interfaces. Before opening a

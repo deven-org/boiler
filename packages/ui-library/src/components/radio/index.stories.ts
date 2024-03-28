@@ -3,9 +3,6 @@ import { BlrRadioRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 import '../../index';
-import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { InputSizes } from '../../globals/constants';
 
 // this loads the all components instances and registers their html tags
 import '../../index';
@@ -165,7 +162,6 @@ export default {
       control: { type: 'text', label: 'Radio' },
     },
     blrChange: {
-      name: 'blrChange',
       description: 'Fires when the value changes.',
       action: 'blrChange',
       table: {
@@ -174,7 +170,6 @@ export default {
       },
     },
     blrFocus: {
-      name: 'blrFocus',
       description: 'Fires when the component is focused.',
       action: 'blrFocus',
       table: {
@@ -183,7 +178,6 @@ export default {
       },
     },
     blrBlur: {
-      name: 'blrBlur',
       description: 'Fires when the component lost focus.',
       action: 'blrBlur',
       table: {
@@ -394,7 +388,7 @@ export const FormCaptionGroup = () => {
         ...args,
         hasHint: true,
         label: 'Hint message',
-        hintMessageIcon: 'blr360',
+        hintMessageIcon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
