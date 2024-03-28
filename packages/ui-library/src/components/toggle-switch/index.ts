@@ -12,8 +12,27 @@ import { FormSizesType, IconPositionVariant } from '../../globals/types';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { styleCustom, toggleSwitchLight, toggleSwitchDark } from './index.css';
-import { createBlrBlurEvent, createBlrCheckedChangeEvent, createBlrFocusEvent } from '../../globals/events';
+import {
+  BlrBlurEvent,
+  BlrCheckedChangeEvent,
+  BlrFocusEvent,
+  createBlrBlurEvent,
+  createBlrCheckedChangeEvent,
+  createBlrFocusEvent,
+} from '../../globals/events';
 import { LitElementCustom } from '../../utils/lit-element-custom';
+
+export type BlrToggleSwitchEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrCheckedChange?: (event: BlrCheckedChangeEvent) => void;
+};
+
+/**
+ * @fires blrFocus ToggleSwitch received focus
+ * @fires blrBlur ToggleSwitch lost focus
+ * @fires blrCheckedChange ToggleSwitch state changed (currentCheckedState)
+ */
 
 export class BlrToggleSwitch extends LitElementCustom {
   static styles = [styleCustom];
@@ -42,10 +61,6 @@ export class BlrToggleSwitch extends LitElementCustom {
   @property() toggleOnIcon?: SizelessIconType = 'blrOn';
   @property() toggleOffIcon?: SizelessIconType = 'blrOff';
 
-  @property() onFocus?: HTMLButtonElement['onfocus'];
-  @property() onBlur?: HTMLButtonElement['onblur'];
-  @property() onChange?: HTMLButtonElement['onchange'];
-
   @property() theme: ThemeType = 'Light';
 
   @state() protected currentCheckedState: boolean | undefined = this.checked;
@@ -58,7 +73,6 @@ export class BlrToggleSwitch extends LitElementCustom {
 
   protected handleChange(event: Event) {
     if (!this.disabled && !this.readonly) {
-      this.onChange?.(event);
       this.currentCheckedState = !this.currentCheckedState;
       this.dispatchEvent(
         createBlrCheckedChangeEvent({
@@ -74,7 +88,6 @@ export class BlrToggleSwitch extends LitElementCustom {
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled && !this.readonly) {
       this.focused = true;
-      this.onFocus?.(event);
       this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
@@ -82,7 +95,6 @@ export class BlrToggleSwitch extends LitElementCustom {
   protected handleBlur = (event: FocusEvent) => {
     if (!this.disabled && !this.readonly) {
       this.focused = false;
-      this.onBlur?.(event);
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
@@ -216,8 +228,8 @@ export class BlrToggleSwitch extends LitElementCustom {
                 ?readonly=${this.readonly}
                 .checked=${this.currentCheckedState || nothing}
                 @change=${this.handleChange}
-                @focus=${this.onFocus}
-                @blur=${this.onBlur}
+                @focus=${this.handleFocus}
+                @blur=${this.handleBlur}
                 tabindex="-1"
               />
               <span class="toggle-switch-slider">
@@ -266,4 +278,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrToggleSwitch);
 }
 
-export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElementCustom>;
+export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElementCustom> & BlrToggleSwitchEventHandlers;
