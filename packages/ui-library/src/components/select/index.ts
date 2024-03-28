@@ -152,7 +152,7 @@ export class BlrSelect extends LitElementCustom {
         'blr-input-icon': true,
         [this.sizeVariant]: this.sizeVariant,
       });
-      const captionContent = html`
+      const getCaptionContent = () => html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
@@ -224,8 +224,8 @@ export class BlrSelect extends LitElementCustom {
             </div>
             ${this.renderIcon(iconClasses)}
           </div>
-          ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+          ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, getCaptionContent())
             : nothing}
         </div>
       `;

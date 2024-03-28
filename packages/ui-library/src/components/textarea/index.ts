@@ -176,7 +176,7 @@ export class BlrTextarea extends LitElementCustom {
 
       const counterVariant = this.determinateCounterVariant();
 
-      const captionContent = html`
+      const getCaptionContent = () => html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
@@ -235,8 +235,8 @@ export class BlrTextarea extends LitElementCustom {
             @keyup=${this.updateCounter}
           ></textarea>
           <div class="${textareaInfoContainer}">
-            ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+            ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, getCaptionContent())
               : nothing}
             ${this.hasCounter
               ? BlrCounterRenderFunction({

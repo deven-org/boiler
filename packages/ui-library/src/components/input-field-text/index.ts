@@ -146,7 +146,7 @@ export class BlrInputFieldText extends LitElementCustom {
         this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
-      const captionContent = html`
+      const getCaptionContent = () => html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
@@ -244,8 +244,8 @@ export class BlrInputFieldText extends LitElementCustom {
                 )}`
               : nothing}
           </div>
-          ${this.hasHint || this.hasError
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+          ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, getCaptionContent())
             : nothing}
         </div>
       `;

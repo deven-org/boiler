@@ -192,7 +192,7 @@ export class BlrCheckbox extends LitElementCustom {
         this.size.toUpperCase(),
       ]).toLowerCase() as FormSizesType;
 
-      const captionContent = html`
+      const getCaptionContent = () => html`
         ${this.hasHint && (this.hintMessage || this.hintIcon)
           ? html`
               <div class="hint-wrapper">
@@ -303,8 +303,8 @@ export class BlrCheckbox extends LitElementCustom {
                   labelSize: this.size,
                 })}`
               : nothing}
-            ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)
+            ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, getCaptionContent())
               : nothing}
           </div>
         </div>
