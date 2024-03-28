@@ -26,7 +26,7 @@ const sampleParams: BlrInputFieldTextType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorMessage: '',
+  errorMessage: "OMG it's an error",
   errorMessageIcon: 'blrInfo',
   arialabel: 'InputFieldText',
   inputFieldTextId: 'Input Id',
