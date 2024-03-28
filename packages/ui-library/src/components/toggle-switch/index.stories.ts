@@ -404,9 +404,6 @@ export const Readonly = () => {
         readonly: true,
         hasHint: false,
         label: 'Readonly',
-
-        onLabel: undefined,
-        offLabel: undefined,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,

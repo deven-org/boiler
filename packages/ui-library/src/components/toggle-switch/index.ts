@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
@@ -12,8 +12,9 @@ import { FormSizesType } from '../../globals/types';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
 import { styleCustom, toggleSwitchLight, toggleSwitchDark } from './index.css';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
-export class BlrToggleSwitch extends LitElement {
+export class BlrToggleSwitch extends LitElementCustom {
   static styles = [styleCustom];
 
   @query('input')
@@ -257,4 +258,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrToggleSwitch);
 }
 
-export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElement>;
+export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElementCustom>;

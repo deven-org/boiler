@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
@@ -11,8 +11,9 @@ import { sliderLight, sliderDark } from '../../../foundation/component-tokens/sl
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils';
 import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
+import { LitElementCustom } from '../../../utils/lit-element-custom';
 
-export class BlrRangeLegendMinMaxSlider extends LitElement {
+export class BlrRangeLegendMinMaxSlider extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() onBtnClick?: (min: number, max: number) => void;
@@ -231,4 +232,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeLegendMinMaxSlider);
 }
 
-export type BlrRangeLegendMinMaxSliderType = Omit<BlrRangeLegendMinMaxSlider, keyof LitElement>;
+export type BlrRangeLegendMinMaxSliderType = Omit<BlrRangeLegendMinMaxSlider, keyof LitElementCustom>;

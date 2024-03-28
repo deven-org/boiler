@@ -16,7 +16,7 @@ const hintCaption = BlrFormCaptionRenderFunction({
   message: 'This is a hint',
   variant: 'hint',
   icon: 'blrInfo',
-  size: 'md',
+  sizeVariant: 'md',
   theme: 'Light',
 });
 
@@ -24,7 +24,7 @@ const errorCaption = BlrFormCaptionRenderFunction({
   message: 'This is an error',
   variant: 'error',
   icon: 'blrInfo',
-  size: 'md',
+  sizeVariant: 'md',
   theme: 'Light',
 });
 
