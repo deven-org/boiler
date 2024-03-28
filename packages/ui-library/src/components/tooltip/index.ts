@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { tooltipPosition } from './tooltip-position';
@@ -7,11 +7,12 @@ import { TAG_NAME } from './renderFunction';
 
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 
-export class BlrTooltip extends LitElement {
+export class BlrTooltip extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() theme?: ThemeType = 'Light';
@@ -68,4 +69,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTooltip);
 }
 
-export type BlrTooltipType = Omit<BlrTooltip, keyof LitElement>;
+export type BlrTooltipType = Omit<BlrTooltip, keyof LitElementCustom>;

@@ -1,4 +1,4 @@
-import { LitElement, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
@@ -22,6 +22,7 @@ import {
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
 } from '../../globals/events';
+import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export type BlrTextareaEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -36,7 +37,7 @@ export type BlrTextareaEventHandlers = {
  * @fires blrTextValueChange Textarea value changed
  * @fires blrSelect Text in Textarea got selected
  */
-export class BlrTextarea extends LitElement {
+export class BlrTextarea extends LitElementCustom {
   static styles = [styleCustom];
 
   @property() textAreaId!: string;
@@ -254,4 +255,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTextarea);
 }
 
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElement> & BlrTextareaEventHandlers;
+export type BlrTextareaType = Omit<BlrTextarea, keyof LitElementCustom> & BlrTextareaEventHandlers;
