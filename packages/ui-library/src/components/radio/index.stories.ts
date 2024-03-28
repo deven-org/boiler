@@ -2,6 +2,7 @@ import { BlrRadioType } from './index';
 import { BlrRadioRenderFunction } from './renderFunction';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
+import '../../index';
 
 // this loads the all components instances and registers their html tags
 import '../../index';
@@ -27,7 +28,7 @@ export default {
         category: 'Appearance',
       },
     },
-    size: {
+    sizeVariant: {
       name: 'sizeVariant',
       description: ' Choose size of the component. ',
       options: InputSizes,
@@ -80,7 +81,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
+    hintMessageIcon: {
       name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
@@ -127,7 +128,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
+    errorMessageIcon: {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
@@ -146,7 +147,7 @@ export default {
       },
       control: { type: 'text' },
     },
-    optionId: {
+    radioId: {
       name: 'radioId',
       description: 'Unique identifier for this component.',
       table: {
@@ -160,28 +161,25 @@ export default {
       },
       control: { type: 'text', label: 'Radio' },
     },
-    onChange: {
-      name: 'onChange',
+    blrChange: {
       description: 'Fires when the value changes.',
-      action: 'onChange',
+      action: 'blrChange',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         disable: false,
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         disable: false,
         category: 'Events',
@@ -229,25 +227,25 @@ const args: BlrRadioType & {
   ariaLabel: string;
 } = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   value: '',
   checked: false,
   label: 'Label',
   hasHint: false,
   hintMessage: 'This is a small hint',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   disabled: false,
   readonly: false,
   required: false,
   hasError: false,
   errorMessage: '',
   ariaLabel: '',
-  errorIcon: undefined,
-  optionId: 'optionId',
+  errorMessageIcon: undefined,
+  radioId: 'radioId',
   name: 'Radio Button',
-  onChange: () => action('onChange'),
-  onFocus: () => action('onFocus'),
-  onBlur: () => action('onBlur'),
+  blrChange: () => action('blrChange'),
+  blrFocus: () => action('blrFocus'),
+  blrBlur: () => action('blrBlr'),
 };
 
 BlrRadio.args = args;
@@ -263,21 +261,21 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrRadio({
         ...args,
-        size: 'sm',
+        sizeVariant: 'sm',
         label: 'Radio SM',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
-        size: 'md',
+        sizeVariant: 'md',
         label: 'Radio MD',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadio({
         ...args,
-        size: 'lg',
+        sizeVariant: 'lg',
         label: 'Radio LG',
       })}
     </div>
@@ -380,7 +378,7 @@ export const HasError = () => {
 /**
  * ## Dependencies
  * ### Form Caption Group
- * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Radio component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/components-form-caption-group--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -390,7 +388,7 @@ export const FormCaptionGroup = () => {
         ...args,
         hasHint: true,
         label: 'Hint message',
-        hintIcon: 'blr360',
+        hintMessageIcon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
@@ -400,7 +398,7 @@ export const FormCaptionGroup = () => {
         hasHint: true,
         label: 'Hint and error message',
         errorMessage: "OMG it's an error",
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })}
     </div>
   `;
