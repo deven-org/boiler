@@ -733,6 +733,7 @@ export const FormCaptionGroup = () => {
           label: ' Hint and error message',
           labelAppendix: '',
           hasHint: true,
+          hintMessage: 'This is a small hint',
           hasError: true,
           errorMessage: "OMG it's an error",
           errorMessageIcon: 'blrErrorFilled',

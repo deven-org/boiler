@@ -459,6 +459,7 @@ export const FormCaptionGroup = () => {
         groupErrorMessage: "OMG it's an error",
         hasHint: true,
         hasError: true,
+        groupErrorIcon: 'blrErrorFilled',
       })}
     </div>
   `;
