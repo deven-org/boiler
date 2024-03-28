@@ -102,7 +102,6 @@ export default {
       },
     },
     hintMessageIcon: {
-      name: 'hintMessageIcon',
       description: 'Select an icon which is displayed in front of the hint message.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -113,7 +112,6 @@ export default {
     },
     //States
     disabled: {
-      name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
       defaultValue: false,
@@ -122,7 +120,6 @@ export default {
       },
     },
     readonly: {
-      name: 'readonly',
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       defaultValue: false,
       table: {
@@ -130,7 +127,6 @@ export default {
       },
     },
     hasError: {
-      name: 'hasError',
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
@@ -138,7 +134,6 @@ export default {
       },
     },
     errorMessage: {
-      name: 'errorMessage',
       description: 'Enter string used used as error message.',
       table: {
         category: 'Validation',
@@ -146,7 +141,6 @@ export default {
       if: { arg: 'hasError', eq: true },
     },
     errorMessageIcon: {
-      name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         category: 'Validation',
@@ -166,14 +160,12 @@ export default {
     },
     //Technical attributes
     checkboxId: {
-      name: 'checkInputId',
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
       },
     },
     name: {
-      name: 'name',
       description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
       table: {
         category: 'Technical Attributes',
@@ -182,21 +174,18 @@ export default {
     // Events
     blrCheckedChange: {
       description: 'Fires when the value changes.',
-
       table: {
         category: 'Events',
       },
     },
     blrFocus: {
       description: 'Fires when the component is focused.',
-
       table: {
         category: 'Events',
       },
     },
     blrBlur: {
       description: 'Fires when the component lost focus.',
-
       table: {
         category: 'Events',
       },
