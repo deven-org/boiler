@@ -31,6 +31,7 @@ export const ActionVariants = ['primary', 'secondary', 'cta', 'silent', 'destruc
 export const FeedbackVariants = ['default', 'inverted'] as const;
 export const CaptionVariants = ['hint', 'error'] as const;
 export const CounterVariants = ['neutral', 'warn', 'error'] as const;
+export const UnitVariants = ['prefix', 'suffix'] as const;
 export const DividerVariations = ['vertical', 'horizontal'] as const;
 export const TabVariants = ['standard', 'fullWidth'] as const;
 export const TabContentVariants = ['labelOnly', 'iconOnly', 'labelAndIcon'] as const;

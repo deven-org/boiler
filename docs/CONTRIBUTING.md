@@ -61,7 +61,6 @@ contributions:
 > - A merge request can only be merged if it has successful test results and at least two approvals
 
 ## :arrows_counterclockwise: Contribution process overview
-
 1. Getting Started
 2. Create new issue / select an existing issue
 3. Create new branch
