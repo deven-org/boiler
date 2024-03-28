@@ -27,10 +27,10 @@ toggleLoadingButton.addEventListener('click', () => {
 
   if (currentState) {
     blrButtonText.removeAttribute('loading');
-    addLog('Set button text loading state to false');
+    addLog('Set blr-button-text loading state to false');
   } else {
     blrButtonText.setAttribute('loading', 'true');
-    addLog('Set button text loading state to true');
+    addLog('Set blr-button-text loading state to true');
   }
 });
 
@@ -39,10 +39,10 @@ toggleDisabledState.addEventListener('click', () => {
 
   if (currentState) {
     blrButtonText.removeAttribute('disabled');
-    addLog('Set text button disabled state to false');
+    addLog('Set blr-button-text disabled state to false');
   } else {
     blrButtonText.setAttribute('disabled', 'true');
-    addLog('Set text button loading state to true');
+    addLog('Set blr-button-text loading state to true');
   }
 });
 
