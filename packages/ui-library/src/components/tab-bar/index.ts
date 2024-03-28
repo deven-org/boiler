@@ -22,6 +22,7 @@ import { getComponentConfigToken } from '../../utils/get-component-config-token'
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { createBlrBlurEvent, createBlrChangeEvent, createBlrFocusEvent } from '../../globals/events';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrTabBar extends LitElementCustom {
@@ -73,8 +74,24 @@ export class BlrTabBar extends LitElementCustom {
     }, speed);
   };
 
-  protected handleSelect(index: number | undefined) {
-    this.selectedTabIndex = index;
+  protected handleFocus = (event: FocusEvent, isDisabled: boolean) => {
+    if (!isDisabled) {
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleBlur = (event: FocusEvent, isDisabled: boolean) => {
+    if (!isDisabled) {
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleSelect(event: Event, index: number | undefined, isDisabled: boolean) {
+    if (!isDisabled) {
+      this.selectedTabIndex = index;
+      const changedTab = this._tabBarElements![this.selectedTabIndex!].getAttribute('label');
+      this.dispatchEvent(createBlrChangeEvent({ originalEvent: event, changedValue: changedTab }));
+    }
   }
 
   protected handleSlotChange() {
@@ -172,14 +189,12 @@ export class BlrTabBar extends LitElementCustom {
                         role="tab"
                         aria-controls=${`panel-${index}`}
                         class="${navListItemClasses}"
-                        @click=${() => {
-                          if (!isDisabled) {
-                            this.handleSelect(index);
-                          }
-                        }}
+                        @focus=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
+                        @blur=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
+                        @click=${(e: Event) => this.handleSelect(e, index, isDisabled)}
                         @keydown=${(event: KeyboardEvent) => {
-                          if (!isDisabled && event.code === 'Space') {
-                            this.handleSelect(index);
+                          if (event.code === 'Space') {
+                            this.handleSelect(event, index, isDisabled);
                           }
                         }}
                         tabindex=${isDisabled ? '-1' : index}

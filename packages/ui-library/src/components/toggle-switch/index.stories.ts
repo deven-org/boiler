@@ -17,9 +17,6 @@ const sharedStyles = html`
     }
   </style>
 `;
-const logEventType = (event: Event) => {
-  console.log('storybook:story:logEventType', event.type);
-};
 
 const defaultParams: BlrToggleSwitchType = {
   theme: 'Light',
@@ -37,9 +34,6 @@ const defaultParams: BlrToggleSwitchType = {
   checkInputId: 'toggle-switchId',
   variant: 'trailing',
   name: 'toggle-switch-name',
-  onChange: logEventType,
-  onFocus: logEventType,
-  onBlur: logEventType,
 };
 
 export default {
@@ -146,20 +140,24 @@ export default {
         category: 'Technical attributes',
       },
     },
-    onChange: {
-      description: 'Fires when the value changes.',
+    // Events
+    blrCheckedChange: {
+      description: 'Fires when the component checked state changes.',
+      action: 'blrCheckedChange',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
+    blrFocus: {
       description: 'Fires when the component is focused.',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    onBlur: {
+    blrBlur: {
       description: 'Fires when the component lost focus.',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
@@ -218,24 +216,24 @@ export const SizeVariant = () => {
         ...defaultParams,
         label: 'Toggle Switch SM',
         hasHint: false,
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
         size: 'sm',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch MD',
         hasHint: false,
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
         size: 'md',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         label: 'Toggle Switch LG',
         hasHint: false,
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
         size: 'lg',
       })}
     </div>
@@ -256,8 +254,8 @@ export const HasStateLabel = () => {
         variant: 'trailing',
         hasHint: false,
         label: 'Without state label',
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
@@ -285,16 +283,16 @@ export const Active = () => {
         ...defaultParams,
         hasHint: false,
         label: 'Active',
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
         checked: true,
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
         hasHint: false,
         label: 'Inactive',
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
@@ -374,8 +372,8 @@ export const Disabled = () => {
         hasHint: false,
         label: 'Disabled',
         showStateLabel: true,
-        onLabel: undefined,
-        offLabel: undefined,
+        onLabel: '',
+        offLabel: '',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
@@ -407,8 +405,8 @@ export const Readonly = () => {
         hasHint: false,
         label: 'Readonly',
         showStateLabel: true,
-        onLabel: undefined,
-        offLabel: undefined,
+        onLabel: '',
+        offLabel: '',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
@@ -442,8 +440,8 @@ export const FormCaption = () => {
         hintIcon: 'blrInfo',
         showStateLabel: true,
         label: 'Hint message',
-        offLabel: undefined,
-        onLabel: undefined,
+        offLabel: '',
+        onLabel: '',
       })}
       ${BlrToggleSwitchRenderFunction({
         ...defaultParams,
