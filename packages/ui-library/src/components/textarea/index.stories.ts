@@ -47,7 +47,7 @@ const defaultParams: BlrTextareaType = {
   required: false,
   hasError: false,
   errorMessage: '',
-  errorMessageIcon: 'blr360',
+  errorMessageIcon: undefined,
   arialabel: 'Text Area',
   textAreaId: '#textAreaId',
   name: 'Text Area',

@@ -333,7 +333,7 @@ const defaultParams: BlrInputFieldTextType = {
   required: false,
   hasError: false,
   errorMessage: '',
-  errorMessageIcon: 'blrInfo',
+  errorMessageIcon: undefined,
   arialabel: 'InputFieldText',
   name: 'InputFieldText',
   inputFieldTextId: 'Input Id',

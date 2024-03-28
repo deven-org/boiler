@@ -269,7 +269,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
       });
 
-      const captionContent = html`
+      const getCaptionContent = () => html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? html`
               <div class="hint-wrapper">
@@ -344,8 +344,8 @@ export class BlrInputFieldNumber extends LitElementCustom {
           </div>
         </div>
 
-        ${this.hasHint || this.hasError
-          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+        ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
+          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, getCaptionContent())
           : nothing}
       `;
     }
