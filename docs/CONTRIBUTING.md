@@ -14,7 +14,6 @@ understand that, at this moment, we may not have the capacity to manage a large 
 greatly appreciated as we continue to grow and develop our project!
 
 ## :page_with_curl: Content
-
 - [Contributing](#contributing)
   - [:page_with_curl: Content](#page_with_curl-content)
   - [:new: New contributor guide](#new-new-contributor-guide)
@@ -32,7 +31,6 @@ greatly appreciated as we continue to grow and develop our project!
   - [:mag: Code Review](mag-code-review)
 
 ## :new: New contributor guide
-
 > **NOTE:** This documentation is focused towards contributions from developers, if you are looking for a guide for
 > design contributions, please read the
 > [contribute documentation in Figma](https://www.figma.com/community/file/1354113903886620358/b01ler). Apart from code
@@ -70,18 +68,15 @@ contributions:
 7. Code Review
 
 ## :arrow_right: Getting started
-
 The best way to get started is by reading the [README](/README.md). It contains links to all other parts of the project
 documentation, like the [ARCHITECTURE](ARCHITECTURE.md) documentation for example, where one can also find an overview
 of the projects file structure.
 
 ## :clipboard: Issues
-
 Before being able to contribute to B01LER, you need to get yourself assigned to an issue. For this you could either
 apply to solve an existing issue or create a new issue.
 
 ### Solve an existing issue
-
 Browse our [existing issues](https://github.com/deven-org/boiler/issues) to find one that interests you. If you would
 like to work on an issue, leave a comment stating your intent and assign yourself to the issue. If the issue already has
 an assignee, someone else is likely already working on it. The core team will check your issue to ensures that it is
@@ -89,7 +84,6 @@ still relevant and give you approval to start working. Waiting for approval make
 request. We will do our best to reply to you within a week.
 
 ### Create a new issue
-
 Before creating a new issue, please [check if your issue already exists](https://github.com/deven-org/boiler/issues). If
 a related issue doesn't exist, you can open a new issue using the same page. We currently have two issue templates. One
 is for bugs and the other one for everything else, like new features or also improvements of existing features.
@@ -107,7 +101,6 @@ is for bugs and the other one for everything else, like new features or also imp
 After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
 
 ### Tips to find issues
-
 - For a first contribution, go to labels / filter by labels and see if there are issues tagged with the
   `good first issue` label
 - Search for the component name of the component you want to work on
@@ -118,7 +111,6 @@ After creating an issue, don’t forget to assign it to yourself. The core team 
   `🦹 needs:specs`
 
 ## :arrow_heading_down: Branch
-
 For contributions we are using
 [Gitflow as branching strategy](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20is%20a%20legacy%20Git,software%20development%20and%20DevOps%20practices).
 [Here](https://danielkummer.github.io/git-flow-cheatsheet/) you can also find a short cheatsheet about Gitflow.
@@ -138,14 +130,12 @@ The branch name should not exceed a maximum character count of 140. Each branch 
   For example: `text-area-storybook-documentation`
 
 ## :handshake: Commits
-
 The commits must be compliant with with the
 [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/). The commit header should not
 exceed a maximum character count of 140. The scope is allowed to be one of the following options: 'all', 'ui-library',
 'icons', 'figma-design-tokens', 'tokens', or 'storybook'.
 
 ## :test_tube: Testing and validating
-
 Please, before submitting any contribution, be sure that your branch is passing all the tests.
 
 ```bash
@@ -154,7 +144,6 @@ yarn compile
 ```
 
 ## :arrow_heading_up: Pull Request
-
 Once your contribution is ready, it is time to create a pull request. Once your contribution is ready, it is time to
 create a pull request. Please create pull requests for the `develop` branch and not for `main`. Please also make sure
 that pull requests are linked to the related issue by using a keyword and the issue number as explained
@@ -162,7 +151,6 @@ that pull requests are linked to the related issue by using a keyword and the is
 or by using the `Development` field.
 
 ## :mag: Code Review
-
 After you created a pull request, your code will be reviewed by the B01LER core team. Once the PR has two approvals,
 your code will be merged to develop and will be part of a future release. In case we find things we would like you to
 change we will leave comments. We kindly ask you to update your pull request in regards of the requested changes. Once

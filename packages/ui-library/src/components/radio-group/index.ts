@@ -6,7 +6,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { radioLight, radioDark } from '../../foundation/component-tokens/radio.css';
 import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
-import { InputSizesType, RadioOption } from '../../globals/types';
+import { InputSizesType, RadioGroupDirection, RadioOption } from '../../globals/types';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
@@ -20,70 +20,76 @@ export class BlrRadioGroup extends LitElementCustom {
   @property() readonly?: boolean;
   @property() checked?: boolean;
   @property() name?: string;
-  @property() size: InputSizesType = 'md';
+  @property() sizeVariant: InputSizesType = 'md';
+  @property() hasLegend?: boolean;
   @property() required?: boolean;
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
+  @property() blrChange?: HTMLElement['oninput'];
+  @property() blrBlur?: HTMLElement['blur'];
+  @property() blrFocus?: HTMLElement['focus'];
   @property() hasError?: boolean;
   @property() errorIcon?: SizelessIconType;
-  @property() hasGroupLabel?: boolean;
   @property() options!: RadioOption[];
   @property() hasHint = true;
-  @property() groupHintIcon?: SizelessIconType;
+  @property() groupHintMessageIcon?: SizelessIconType;
   @property() groupErrorMessage?: string;
   @property() groupHintMessage?: string;
-  @property() groupErrorIcon?: SizelessIconType;
-  @property() groupLabel?: string;
-  @property() direction?: 'vertical' | 'horizontal';
+  @property() groupErrorMessageIcon?: SizelessIconType;
+  @property() legend?: string;
+  @property() direction: RadioGroupDirection = 'horizontal';
 
   @property() theme: ThemeType = 'Light';
 
   protected render() {
-    if (!this.size) {
+    if (!this.sizeVariant) {
       return null;
     }
     const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
     const legendClasses = classMap({
       'blr-legend': true,
-      [`${this.size}`]: this.size,
+      [this.sizeVariant]: this.sizeVariant,
       'error': this.hasError || false,
     });
 
     const legendWrapperClasses = classMap({
       'blr-legend-wrapper': true,
-      [`${this.size}`]: this.size,
+      [this.sizeVariant]: this.sizeVariant,
+    });
+
+    const radioClasses = classMap({
+      [this.sizeVariant]: this.sizeVariant,
+      error: this.hasError || false,
     });
 
     const classes = classMap({
-      [`${this.size}`]: this.size,
+      [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
       readonly: this.readonly || false,
       checked: this.checked || false,
       error: this.hasError || false,
+      [this.direction]: this.direction,
     });
 
     const calculateOptionId = (label: string) => {
       return label.replace(/ /g, '_').toLowerCase();
     };
     const captionContent = html`
-      ${this.hasHint && (this.groupHintMessage || this.groupHintIcon)
+      ${this.hasHint && (this.groupHintMessage || this.groupHintMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'hint',
             theme: this.theme,
-            sizeVariant: this.size,
+            sizeVariant: this.sizeVariant,
             message: this.groupHintMessage,
-            icon: this.groupHintIcon,
+            icon: this.groupHintMessageIcon,
           })
         : nothing}
-      ${this.hasError && (this.groupErrorMessage || this.groupErrorIcon)
+      ${this.hasError && (this.groupErrorMessage || this.groupErrorMessageIcon)
         ? BlrFormCaptionRenderFunction({
             variant: 'error',
             theme: this.theme,
-            sizeVariant: this.size,
+            sizeVariant: this.sizeVariant,
             message: this.groupErrorMessage,
-            icon: this.groupErrorIcon,
+            icon: this.groupErrorMessageIcon,
           })
         : nothing}
     `;
@@ -91,8 +97,8 @@ export class BlrRadioGroup extends LitElementCustom {
     return html`<style>
         ${dynamicStyles.map((style) => style)}
       </style>
-      ${this.hasGroupLabel
-        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.groupLabel}</legend></div>`
+      ${this.hasLegend
+        ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.legend}</legend></div>`
         : nothing}
 
       <div class="blr-radio-group ${classes}">
@@ -100,10 +106,10 @@ export class BlrRadioGroup extends LitElementCustom {
         this.options.map((option: RadioOption) => {
           const id = calculateOptionId(option.label);
           return html`
-            <div class="blr-radio ${classes}">
+            <div class="blr-radio ${radioClasses}">
               <input
                 id=${id || nothing}
-                class="${classes} input-control"
+                class=" input-control ${radioClasses}"
                 type="radio"
                 name=${this.name}
                 ?disabled=${this.disabled}
@@ -113,16 +119,16 @@ export class BlrRadioGroup extends LitElementCustom {
                 ?aria-invalid=${this.hasError}
                 ?checked=${this.checked}
                 ?required=${this.required}
-                @input=${this.onChange}
-                @blur=${this.onBlur}
-                @focus=${this.onFocus}
+                @input=${this.blrChange}
+                @blur=${this.blrBlur}
+                @focus=${this.blrFocus}
               />
               <div class="label-wrapper">
                 ${option.label
                   ? html`${BlrFormLabelInlineRenderFunction({
                       labelText: option.label,
                       forValue: id,
-                      labelSize: this.size || 'md',
+                      labelSize: this.sizeVariant || 'md',
                     })}`
                   : nothing}
               </div>
@@ -133,7 +139,7 @@ export class BlrRadioGroup extends LitElementCustom {
 
       ${this.hasHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.size }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)}
           </div>`
         : nothing} `;
   }
