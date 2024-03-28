@@ -5,6 +5,6 @@ import { esbuildPlugin } from '@web/dev-server-esbuild';
  */
 export default {
   nodeResolve: true,
-  files: ['src/components/**/*.test.ts'],
+  files: ['src/components/**/*.test.a11y.ts'],
   plugins: [esbuildPlugin({ ts: true })],
 };

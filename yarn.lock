@@ -1656,6 +1656,7 @@ __metadata:
     "@boiler/eslint-config-boiler": "npm:1.0.0"
     "@boiler/figma-design-tokens": "npm:0.0.1"
     "@boiler/icons": "npm:0.0.1"
+    "@faker-js/faker": "npm:^8.4.1"
     "@floating-ui/dom": "npm:^1.6.3"
     "@lit-labs/react": "npm:^1.1.1"
     "@storybook/addon-designs": "npm:^7.0.7"
@@ -2317,6 +2318,13 @@ __metadata:
   dependencies:
     "@types/chai": "npm:^4.2.12"
   checksum: 10c0/7101b30e4b059b9e7cece9ed92d201e95893f865e4c918887ebcf6264db7d713d258eb3226dd914907f44eae90cf5c9cc19ff242cba8b0d0b1df0036cd8b9dda
+  languageName: node
+  linkType: hard
+
+"@faker-js/faker@npm:^8.4.1":
+  version: 8.4.1
+  resolution: "@faker-js/faker@npm:8.4.1"
+  checksum: 10c0/4f2aecddcfdc2cc8b50b2d15d1e37302a7c7a5bbd184ae910a9d271bc11248533ca74dcdd4a9ccbe20410553e7af0f6a4d334c5b955635e09a32ddf4a64942d4
   languageName: node
   linkType: hard
 
