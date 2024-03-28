@@ -12,7 +12,7 @@ const blrSelect = document.getElementsByTagName('blr-select')[0];
 const blrInputFieldText = document.getElementsByTagName('blr-input-field-text')[0];
 const blrInputFieldNumber = document.getElementsByTagName('blr-input-field-number')[0];
 const blrTextArea = document.getElementsByTagName('blr-textarea')[0];
-const blrRadioInput = document.getElementsByTagName('blr-radio')[0];
+const blrRadio = document.getElementsByTagName('blr-radio')[0];
 const blrToggleSwitch = document.getElementsByTagName('blr-label-toggleswitch')[0];
 const blrTabBar = document.getElementsByTagName('blr-tab-bar')[0];
 
@@ -87,11 +87,11 @@ blrSelect.addEventListener('blrSelectedValueChange', (e) => {
 });
 
 blrSelect.addEventListener('blrFocus', () => {
-  addLog('blr-select focus');
+  addLog('blr-select focused');
 });
 
 blrSelect.addEventListener('blrBlur', () => {
-  addLog('blr-select blur');
+  addLog('blr-select blurred');
 });
 
 blrInputFieldText.addEventListener('blrFocus', () => {
@@ -142,16 +142,16 @@ blrTextArea.addEventListener('blrSelect', () => {
   addLog('blr-textarea selected');
 });
 
-blrRadioInput.addEventListener('blrFocus', () => {
-  addLog('blr-radio-input focused');
+blrRadio.addEventListener('blrFocus', () => {
+  addLog('blr-radio focused');
 });
 
-blrRadioInput.addEventListener('blrBlur', () => {
-  addLog('blr-radio-input blurred');
+blrRadio.addEventListener('blrBlur', () => {
+  addLog('blr-radio blurred');
 });
 
-blrRadioInput.addEventListener('blrSelectedValueChange', (e) => {
-  addLog('blr-radio-input changed: ' + e.detail.selectedValue);
+blrRadio.addEventListener('blrSelectedValueChange', (e) => {
+  addLog('blr-radio changed: ' + e.detail.selectedValue);
 });
 
 blrToggleSwitch.addEventListener('blrFocus', () => {
