@@ -181,26 +181,23 @@ export default {
       },
     },
     // Events
-    onChange: {
-      name: 'onChange',
-      description: 'Fires when the value changes.',
-      action: 'onChange',
+    blrCheckedChange: {
+      description: 'Fires when the component checked state changes.',
+      action: 'blrCheckedChange',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
       description: 'Fires when the component is focused.',
-      action: 'onFocus',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
       description: 'Fires when the component lost focus.',
-      action: 'onBlur',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },
