@@ -390,7 +390,7 @@ export const FormCaptionGroup = () => {
         ...args,
         hasHint: true,
         label: 'Hint message',
-        hintIcon: 'blr360',
+        hintIcon: 'blrInfo',
       })}
     </div>
     <div class="wrapper">
