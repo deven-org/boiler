@@ -43,12 +43,10 @@ export const styleCustom = typeSafeNestedCss`
     justify-content: right;
 
     &.hint, &.error {
-      justify-content: space-between;
-    }
+      justify-content: right;
 
-    &.sm {
-      & > blr-counter {
-        margin: ${captionslot.margin.sm};
+    &.sm      justify-content: space-between;
+    margin: ${captionslot.margin.sm};
       }
     }
 
