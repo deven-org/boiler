@@ -114,7 +114,7 @@ After creating an issue, don’t forget to assign it to yourself. The core team 
 - Search for the component name of the component you want to work on.
 - Filter by the `💚 contributor issue` label.
 - Filter by the `🚨 new::bug`, `⌨️ dev issue`, `📋 task::backlog` and/or `📋 task::ready` labels.
-- Avoid tasks labeld with `⭕️ core team issue`, `🚫 blocker`, `🎨 design issue`, `📋 task::planned`,
+- Avoid tasks labeled with `⭕️ core team issue`, `🚫 blocker`, `🎨 design issue`, `📋 task::planned`,
   `📋 task::inProgress`, `📋 task::inReview`, `🦹 needs:contact`, `🦹 needs:documentation`, `🦹 needs:help` and/or
   `🦹 needs:specs`.
 
@@ -160,7 +160,7 @@ reviewed by the B01LER core team. Once the PR has two approvals, your code will 
 of a future release. 
 
 In case we find things we would like you to change we will leave comments. We kindly ask you to update your pull request 
-in regards of the requested changes. Once all comments have been solved the pull request will be merged. We will try our 
+in regards to the requested changes. Once all comments have been solved the pull request will be merged. We will try our 
 best to respond within a week to new pull requests. 
 
 Contributors are also invited to review other contributors pull requests, but in the end at least one member of the core 
