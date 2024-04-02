@@ -169,7 +169,7 @@ team needs to approve it, before it can be merged.
 
 ### Tips for working on a pull request
 - Create pull requests for the `develop` branch and not for `main`.
-- Make sure that pull requests are linked to the related issue by using a keyword and the issue number as
+- Make sure that a pull request is linked to the related issue by using a keyword and the issue number as
 explained [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 or by using the `Development` field.
 - Change your PR from `Draft` to `Ready for Review` (you can create Draft PRs at any time, but only open PRs will be
