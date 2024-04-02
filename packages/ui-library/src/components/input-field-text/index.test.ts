@@ -26,7 +26,7 @@ const sampleParams: BlrInputFieldTextType = {
   readonly: false,
   required: false,
   hasError: false,
-  errorMessage: '',
+  errorMessage: "OMG it's an error",
   errorMessageIcon: 'blrInfo',
   arialabel: 'InputFieldText',
   inputFieldTextId: 'Input Id',
@@ -119,6 +119,22 @@ describe('blr-input-field-text', () => {
 
     expect(hintClassName).to.contain('hint');
     expect(errorClassName).to.contain('error');
+  });
+
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrInputFieldTextRenderFunction({
+        ...sampleParams,
+        hasHint: false,
+        hasError: true,
+        errorMessage: 'error',
+        errorMessageIcon: undefined,
+      })
+    );
+
+    const formCaption = querySelectorDeep('.blr-form-caption', element?.getRootNode() as HTMLElement);
+    const errorIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorIcon).to.not.exist;
   });
 
   it('has a size md by default', async () => {

@@ -21,8 +21,10 @@ const sampleParams: BlrInputFieldNumberType = {
   inputFieldNumberId: 'egal',
   label: 'Hello',
   hasHint: false,
-  hintIcon: 'blr360',
-  errorIcon: 'blrInfo',
+  hintMessage: 'This is a sample hint',
+  hintMessageIcon: 'blr360',
+  errorMessageIcon: 'blrInfo',
+  errorMessage: "OMG it's an error",
   value: 4,
   unit: 'gr',
   decimals: 0,
@@ -78,9 +80,9 @@ describe('blr-input-field-number', () => {
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
@@ -94,6 +96,21 @@ describe('blr-input-field-number', () => {
 
     expect(hintClassName).to.contain('hint');
     expect(errorClassName).to.contain('error');
+  });
+
+  it('has error Icon set to undefined', async () => {
+    const element = await fixture(
+      BlrInputFieldNumberRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        errorMessage: 'error',
+        errorMessageIcon: undefined,
+      })
+    );
+
+    const formCaption = querySelectorDeep('.blr-form-caption', element?.getRootNode() as HTMLElement);
+    const errorIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    expect(errorIcon).to.not.exist;
   });
 
   it('has a sizeVariant md by default', async () => {
