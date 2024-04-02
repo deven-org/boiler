@@ -490,13 +490,14 @@ export const FormCaptionGroup = () => {
           ...defaultParams,
           label: 'Hint message',
           hasHint: true,
+          hintIcon: 'blrInfo',
         })}
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
           label: 'Hint and error message',
           hasHint: true,
           hasError: true,
-          hintIcon: 'blr360',
+          hintIcon: 'blrInfo',
           errorMessage: "OMG it's an error",
           errorIcon: 'blrErrorFilled',
         })}
