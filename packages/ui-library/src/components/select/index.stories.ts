@@ -495,7 +495,7 @@ export const FormCaptionGroup = () => {
           hasHint: true,
           hasError: true,
           errorMessage: "OMG it's an error",
-          errorMessageIcon: 'blrError',
+          errorMessageIcon: 'blrErrorFilled',
         },
         optionsAsChildren
       )}

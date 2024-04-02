@@ -16,7 +16,6 @@ seasoned professional or a newcomer, we've got you covered. Let's dive in and un
 - [Link Archive](#link-archive)
 
 ## Team Overview
-
 ### Designers
 - [Lars Erbach](https://github.com/larserbach) (Lead)
 - [Marcel Doering](https://github.com/m-nti) (Stand-in lead)
@@ -25,12 +24,11 @@ seasoned professional or a newcomer, we've got you covered. Let's dive in and un
 ### Developers
 - [Christian Hoffmann](https://github.com/ChristianHoffmannS2) (Lead)
 - [David Kennedy](https://github.com/davidken91) (Stand-in lead)
-- [Manuel Seemann](https://github.com/seemann)
 - [Jessica Wittig](https://github.com/JpunktWpunkt)
 - [Barkley Taylor](https://github.com/bar-tay)
 - [Rubiraj Ethirajulu](https://github.com/RubirajAccenture)
 - [Ang Sherpa](https://github.com/angsherpa456)
-- [Roman Yakovliev](https://https://github.com/veilvokay)
+- [Julius Walther](https://github.com/faselbaum)
 
 ### Product & Project Management
 - [Thorben Hartmann](https://github.com/thrbnhrtmnn) (Lead, community leader)
@@ -48,17 +46,18 @@ exception is the B01LER Monthly, which is part of the
 | B01LER Planning              | Every 2nd Thursday (When there is no Refinement)                  | Complete B01LER Team                                                | Celebrate outcome of the last iteration, present outcome of the pre-planning        |
 | B01LER Refinement            | Every 2nd Thursday (When there is no Planning)                    | Complete B01LER Team                                                | Refining issues for upcomming iterations                                            |
 | B01LER Retro                 | Every 4th Thursday (After Planning)                               | Complete B01LER Team                                                | Looking back at the last two iterations to improve things in the future             |
-| B01LER Design Review         | Tuesdays & Thursdays                                              | B01LER Design Lead and every team member that needs a design review | Getting approval from design for code implementations                               |
+| B01LER Design Review (paused)| Currently Paused                                                  | B01LER Design Lead and every team member that needs a design review | Getting approval from design for code implementations                               |
 | B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER (Dev) Team that wants to join              | Collaborate and learn from each other by tackling coding challanges together        |
 | B01LER Open Door             | Mondays & Wednesdays                                              | Everyone from the B01LER (Dev) Team that wants to join              | Giving guidance and/or answering questions about issues junior devs are working on  |
 | B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss objectives and prepare a set of issues to finish int he next iteration      |
 | B01LER Weekly Checkup        | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general product topics and check the roadmap                  |
 | B01LER Marketing Weekly      | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general marketing topics                                      |
+| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev Lead, Product & Project Management, everyone who wants to join  | Discussing and deciding on dev issues or topcis that recently came up and need      |
 | B01LER Monthly               | Last Thursday of a month                                          | Everyone who wants to join                                          | Giving an update, answering questions and sometimes deep dives into specific topics |
+
 
 ## Communication Channels
 Here is a list of all our communicataion channels and what we are using them for.
-
 | Tool         | Channel                                                                                                                                                                                                                     | Usage                                                                                                                         |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Slack        | [#boiler-core](https://song-asg.slack.com/archives/C049ZPXBTKJ)                                                                                                                                                             | Team internal; Main communication channel, used for general questions, things to share and to inform the team about absences  |
@@ -74,7 +73,6 @@ Here is a list of all our communicataion channels and what we are using them for
 ## Access Checklist
 Here is a checklist with all the accesses that new colleages need when working in the B01LER project. Every entry has a
 description on how to recieve access and a whom to contact.
-
 - [ ] **GitHub** - Access to the [deven-org](https://github.com/orgs/deven-org/people) and the
       [b01ler team](https://github.com/orgs/deven-org/teams/bo1ler) can be provided by an any of the team leads or other
       org-owners. Access to the deven-org also results in access to the
@@ -97,7 +95,6 @@ description on how to recieve access and a whom to contact.
 
 ## Project Management Onboarding Checklist
 Here is a checklist for project management to follow when onboarding a new colleage.
-
 - [ ] **WBS Authorization** - to book hours on the projects WBS, new colleagues need to be authorized first.
       Authorization can be requested by the controlling team.
 - [ ] **Project forecast** - new colleagues need to be added to the project forecast by the product & project management
@@ -111,7 +108,6 @@ contact community leaders can be found in our [Code of Conduct](CODE_OF_CONDUCT.
 
 ## Link Archive
 Here you can find some useful links:
-
 - **[GitHub project](https://github.com/orgs/deven-org/projects/3/views/31?pane=info)** - This is where we are managing
   our work. Basically it is better view of all the issues in the repository. Here you can find all our boards, our
   backlogs and our roadmaps. The documentation of all this can be found in the side-panel.
