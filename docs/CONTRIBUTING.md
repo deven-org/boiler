@@ -28,8 +28,9 @@ greatly appreciated as we continue to grow and develop our project!
     - [Branch naming convention](#branch-naming-convention)
   - [:handshake: Commits](#handshake-commits)
   - [:test_tube: Testing / Validating](#test_tube-testing-and-validating)
-  - [:arrow_heading_up: Pull Request](#arrow_heading_up-pull-request)
-  - [:mag: Code Review](mag-code-review)
+  - [:mag: Pull requests & code reviews](#mag-pull-requests--code-reviews)
+    - [Tips for working on a pull request](#tips-for-working-on-a-pull-request)
+    - [Steps for looking for a pull request to review](#steps-for-looking-for-a-pull-request-to-review)
 
 ## :new: New contributor guide
 
@@ -52,13 +53,13 @@ contributions:
 
 > **Contribution etiquette:**
 >
-> - While working on your contribution, please do not copy code from other frameworks or libraries
-> - Make small and frequent commits
-> - The default language for all written and spoken communication is english
+> - While working on your contribution, please do not copy code from other frameworks or libraries.
+> - Make small and frequent commits.
+> - The default language for all written and spoken communication is english.
 > - Every GitHub issue should have a corresponding branch, and vice versa - every bugfix or code change should already
->   have an issue created for it
-> - No code should be merged or pushed to the develop branch without a pull request
-> - A merge request can only be merged if it has successful test results and at least two approvals
+>   have an issue created for it.
+> - No code should be merged or pushed to the develop branch without a pull request.
+> - A merge request can only be merged if it has successful test results and at least two approvals.
 
 ## :arrows_counterclockwise: Contribution process overview
 1. Getting Started
@@ -101,7 +102,7 @@ is for bugs and the other one for everything else, like new features or also imp
 <li>Use the existing issue templates.</li>
 <li>It should be <i>specific</i>. It's important that it addresses one specific topic.</li>
 <li>If it is a bug it should be <i>reproducible</i>. It should contain all the instructions needed to reproduce the same outcome.</li>
-<li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Button Text - add new variant</code></li>
+<li>If the issue is about a component, please add the component name to the beginning of issue title, followed by a dash and a more in detail description of the issue. For example: <code>Button Text - add new variant</code>.</li>
 </ul>
 </details>
 After creating an issue, don’t forget to assign it to yourself. The core team will then check your issue to ensures that your idea fits the scope of the project and leave an approval comment. Waiting for approval makes it less likely to get a rejected pull request.  We will do our best to reply to new issues within a week.
@@ -109,13 +110,13 @@ After creating an issue, don’t forget to assign it to yourself. The core team 
 ### Tips to find issues
 
 - For a first contribution, go to labels / filter by labels and see if there are issues tagged with the
-  `good first issue` label
-- Search for the component name of the component you want to work on
-- Filter by the `💚 contributor issue` label
-- Filter by the `🚨 new::bug`, `⌨️ dev issue`, `📋 task::backlog` and/or `📋 task::ready` labels
-- Avoid tasks labeld with `⭕️ core team issue`, `🚫 blocker`, `🎨 design issue`, `📋 task::planned`,
+  `good first issue` label.
+- Search for the component name of the component you want to work on.
+- Filter by the `💚 contributor issue` label.
+- Filter by the `🚨 new::bug`, `⌨️ dev issue`, `📋 task::backlog` and/or `📋 task::ready` labels.
+- Avoid tasks labeled with `⭕️ core team issue`, `🚫 blocker`, `🎨 design issue`, `📋 task::planned`,
   `📋 task::inProgress`, `📋 task::inReview`, `🦹 needs:contact`, `🦹 needs:documentation`, `🦹 needs:help` and/or
-  `🦹 needs:specs`
+  `🦹 needs:specs`.
 
 ## :arrow_heading_down: Branch
 
@@ -123,7 +124,7 @@ For contributions we are using
 [Gitflow as branching strategy](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20is%20a%20legacy%20Git,software%20development%20and%20DevOps%20practices).
 [Here](https://danielkummer.github.io/git-flow-cheatsheet/) you can also find a short cheatsheet about Gitflow.
 
-### Branch Naming Convention
+### Branch naming convention
 
 The branch name should not exceed a maximum character count of 140. Each branch should follow the following structure:
 `<branchType>/<issueNumber>_<summary>`
@@ -133,9 +134,9 @@ The branch name should not exceed a maximum character count of 140. Each branch 
   `feature` and `fix`. The branch type `fix` is not defined in Gitflow, but is used exactly like a `feature` branch. It
   was added to be more granular in our naming convention and to differentiate between branches that implement something
   new (`feature`) and those that change something that already exists (`fix`).
-- **issueNumber:** The issue number of your task. For example: `421`
+- **issueNumber:** The issue number of your task. For example: `421`.
 - **summary:** A few words describing the issue. When there are multiple words, you can use a hyphen to link the words.
-  For example: `text-area-storybook-documentation`
+  For example: `text-area-storybook-documentation`.
 
 ## :handshake: Commits
 
@@ -153,19 +154,46 @@ yarn test
 yarn compile
 ```
 
-## :arrow_heading_up: Pull Request
+## :mag: Pull requests & Code reviews
+Once you are happy with your implementation it is time to open a pull request (PR). After doing so, your code will be 
+reviewed by the B01LER core team. Once the PR has two approvals, your code will be merged to develop and will be part 
+of a future release. 
 
-Once your contribution is ready, it is time to create a pull request. Once your contribution is ready, it is time to
-create a pull request. Please create pull requests for the `develop` branch and not for `main`. Please also make sure
-that pull requests are linked to the related issue by using a keyword and the issue number as explained
-[here](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+In case we find things we would like you to change we will leave comments. We kindly ask you to update your pull request 
+in regards to the requested changes. Once all comments have been solved the pull request will be merged. We will try our 
+best to respond within a week to new pull requests. 
+
+Contributors are also invited to review other contributors pull requests, but in the end at least one member of the core 
+team needs to approve it, before it can be merged.
+
+
+### Tips for working on a pull request
+- Create pull requests for the `develop` branch and not for `main`.
+- Make sure that a pull request is linked to the related issue by using a keyword and the issue number as
+explained [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 or by using the `Development` field.
+- Change your PR from `Draft` to `Ready for Review` (you can create Draft PRs at any time, but only open PRs will be
+reviewed).
+- Leave the reviewers list on the right hand side untouched. We use this to track how many people are already looking at
+your PR.
+- Assign the label needs:reviewers (code) or needs:reviewers (design).
+- During iteration: Stay in touch with the reviewers that are on your case.
+- (only for Members of the Accenture Slack Channel) Post a link to the PR in the [#boiler-dev](https://song-asg.slack.com/archives/C0629BCDCSK)
+Slack channel if the review is time critical.
 
-## :mag: Code Review
-
-After you created a pull request, your code will be reviewed by the B01LER core team. Once the PR has two approvals,
-your code will be merged to develop and will be part of a future release. In case we find things we would like you to
-change we will leave comments. We kindly ask you to update your pull request in regards of the requested changes. Once
-all comments have been solved the pull request will be merged. We will try our best to respond within a week to new pull
-requests. Contributors are also invited to review other contributors pull requests, but in the end at least one member
-of the core team needs to approve it, before it can be merged.
+### Steps for looking for a pull request to review
+1. Find a PR:
+  - (only for Members of the Accenture Slack Channel) Keep an eye on posted PR links in the #boiler-dev Slack channel.
+  - Filter the [PR list in GitHub](https://github.com/deven-org/boiler/pulls) for label: `🦹 needs:reviewers (code)` or label: `🦹 needs:reviewers (design)`.
+2. Open the PR of your choice.
+3. Check the Reviewers panel to the right. Are enough reviewers on the case already (dev:2, design: 1)? If so choose a
+different PR. Otherwise proceed with (Step 4.).
+4. Request yourself as a Reviewer in the Reviewers panel to the right.
+5. Update the labels:
+  - If you are the second code reviewer, remove the label `🦹 needs:reviewers (code)`.
+  - If you are the first design reviewer, remove the label  `🦹 needs:reviewers (design)`.
+6. Complete the Review.
+7. Follow-up on your review.
+  - During iteration: Check your assigned PRs regulary or stay in touch with the PR creator.
+  - If you’re unsure about whether you’ll be able to complete the review in a timely manner remove yourself from the
+    list of reviewers & re-attach the label.
