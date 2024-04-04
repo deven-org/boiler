@@ -10,14 +10,14 @@ const sampleParams: BlrRadioType = {
   checked: false,
   disabled: false,
   name: 'Default Name',
-  optionId: 'testId',
+  radioId: 'testId',
   label: 'harald',
   required: false,
   readonly: false,
   hasHint: true,
   hasError: false,
   theme: 'Light',
-  errorIcon: undefined,
+  errorMessageIcon: undefined,
 };
 
 describe('blr-radio', () => {
@@ -35,9 +35,9 @@ describe('blr-radio', () => {
       BlrRadioRenderFunction({
         ...sampleParams,
         hasHint: true,
-        hintIcon: 'blrInfo',
+        hintMessageIcon: 'blrInfo',
         hasError: true,
-        errorIcon: 'blrErrorFilled',
+        errorMessageIcon: 'blrErrorFilled',
       })
     );
 
@@ -65,7 +65,7 @@ describe('blr-radio', () => {
   });
 
   it('has a size sm when "size" is set to "sm" ', async () => {
-    const element = await fixture(BlrRadioRenderFunction({ ...sampleParams, size: 'sm' }));
+    const element = await fixture(BlrRadioRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
     const radioGroup = querySelectorDeep('.blr-radio', element.getRootNode() as HTMLElement);
     const className = radioGroup?.className;
@@ -107,7 +107,7 @@ describe('blr-radio', () => {
         ...sampleParams,
         hasHint: false,
         hasError: true,
-        errorIcon: undefined,
+        errorMessageIcon: undefined,
       })
     );
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
