@@ -92,18 +92,18 @@ export class BlrToggleSwitch extends LitElementCustom {
     }
   };
 
-  @state() protected checked = false;
+  @state() protected pressed = false;
 
   protected handlePress = () => {
     if (!this.disabled && !this.readonly) {
-      this.checked = true;
+      this.pressed = true;
       this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
   protected handleRelease = () => {
     if (!this.disabled && !this.readonly) {
-      this.checked = true;
+      this.pressed = true;
     }
   };
 
@@ -126,7 +126,7 @@ export class BlrToggleSwitch extends LitElementCustom {
         'disabled': this.disabled || false,
         'readonly': this.readonly || false,
         'hover': this.hovered || false,
-        'active': this.checked || false,
+        'active': this.pressed || false,
         'focus': this.focused || false,
       });
 
