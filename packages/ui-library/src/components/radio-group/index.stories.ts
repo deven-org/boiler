@@ -20,7 +20,7 @@ const sharedStyles = html`
 export default {
   title: 'Components/Radio Group',
   argTypes: {
-    size: {
+    sizeVariant: {
       name: 'sizeVariant',
       description: ' Choose size of the component.',
       options: InputSizes,
@@ -29,25 +29,26 @@ export default {
         category: 'Appearance',
       },
     },
-    // direction: {
-    //   description: 'Choose direction of the component.',
-    //   table: {
-    //     category: 'Appearance',
-    //   },
-    //   options: ['horizontal', 'vertical'],
-    //   control: {
-    //     type: 'radio',
-    //   },
-    // },
-    hasGroupLabel: {
-      description: 'Choose if component has a group label. ',
+    direction: {
+      description: 'Choose direction of the component.',
+      defaultParams: 'horizontal',
+      table: {
+        category: 'Appearance',
+      },
+      options: ['horizontal', 'vertical'],
+      control: {
+        type: 'radio',
+      },
+    },
+    hasLegend: {
+      description: 'Choose if component has a legend.',
       table: {
         category: 'Content / Settings',
       },
       control: { type: 'boolean' },
     },
-    groupLabel: {
-      description: 'Enter string used as a group label.',
+    legend: {
+      description: 'Enter string used as legend text.',
       control: { type: 'text' },
       table: {
         category: 'Content / Settings',
@@ -70,7 +71,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    groupHintIcon: {
+    groupHintMessageIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
       if: { arg: 'hasHint', eq: true },
       options: [undefined, ...PureIconKeys],
@@ -126,7 +127,7 @@ export default {
       },
       if: { arg: 'hasError', eq: true },
     },
-    groupErrorIcon: {
+    groupErrorMessageIcon: {
       name: 'errorMessageIcon',
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
@@ -159,16 +160,14 @@ export default {
       },
       control: { type: 'text', label: 'Radio' },
     },
-    onChange: {
-      name: 'onChange',
+    blrChange: {
       description: 'Fires when the value changes.',
       action: 'onChange',
       table: {
         category: 'Events',
       },
     },
-    onFocus: {
-      name: 'onFocus',
+    blrFocus: {
       description: 'Fires when the component is focused.',
       action: 'onFocus',
       table: {
@@ -176,8 +175,7 @@ export default {
         category: 'Events',
       },
     },
-    onBlur: {
-      name: 'onBlur',
+    blrBlur: {
       description: 'Fires when the component lost focus.',
       action: 'onBlur',
       table: {
@@ -230,18 +228,17 @@ export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderF
 BlrRadioGroup.storyName = 'Radio Group';
 
 const defaultParams: BlrRadioGroupType & {
-  // direction: 'horizontal' | 'vertical';
   ariaLabel: string;
   radioGroupId: string;
 } = {
   theme: 'Light',
-  size: 'md',
-  // direction: 'horizontal',
-  hasGroupLabel: true,
-  groupLabel: 'Group Label Text',
+  sizeVariant: 'md',
+  direction: 'horizontal',
+  hasLegend: true,
+  legend: 'Legend-text',
   hasHint: false,
   groupHintMessage: 'This is a small hint',
-  groupHintIcon: 'blrInfo',
+  groupHintMessageIcon: 'blrInfo',
   options: [
     {
       value: '0',
@@ -277,13 +274,13 @@ const defaultParams: BlrRadioGroupType & {
   required: false,
   hasError: false,
   groupErrorMessage: '',
-  groupErrorIcon: undefined,
+  groupErrorMessageIcon: undefined,
   ariaLabel: 'Radio Group',
   radioGroupId: 'Radio Group',
   name: 'Radio Group ',
-  onChange: () => action('onFocus'),
-  onFocus: () => action('onFocus'),
-  onBlur: () => action('onBlur'),
+  blrChange: () => action('blrChange'),
+  blrFocus: () => action('blrFocus'),
+  blrBlur: () => action('blrBlur'),
 };
 
 BlrRadioGroup.args = defaultParams;
@@ -299,22 +296,22 @@ export const SizeVariant = () => {
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        size: 'sm',
-        groupLabel: 'Radio Group SM',
+        sizeVariant: 'sm',
+        legend: 'Radio Group SM',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        size: 'md',
-        groupLabel: 'Radio Group MD',
+        sizeVariant: 'md',
+        legend: 'Radio Group MD',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        size: 'lg',
-        groupLabel: 'Radio Group LG',
+        sizeVariant: 'lg',
+        legend: 'Radio Group LG',
       })}
     </div>
   `;
@@ -356,14 +353,14 @@ export const HasGroupLabel = () =>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        hasGroupLabel: true,
-        groupLabel: 'With Group Label',
+        hasLegend: true,
+        legend: 'With Group Label',
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        hasGroupLabel: false,
+        hasLegend: false,
       })}
     </div>
   `;
@@ -382,7 +379,7 @@ export const Disabled = () => {
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
-      groupLabel: 'Disabled',
+      legend: 'Disabled',
       disabled: true,
     })}
   `;
@@ -398,7 +395,7 @@ export const Readonly = () => {
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
-      groupLabel: 'Readonly',
+      legend: 'Readonly',
       readonly: true,
     })}
   `;
@@ -415,7 +412,7 @@ export const Required = () => {
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
-      groupLabel: 'Required',
+      legend: 'Required',
       required: true,
     })}
   `;
@@ -430,7 +427,7 @@ export const HasError = () => {
     ${sharedStyles}
     ${BlrRadioGroup({
       ...defaultParams,
-      groupLabel: 'Error',
+      legend: 'Error',
       hasError: true,
     })}
   `;
@@ -447,14 +444,14 @@ export const FormCaptionGroup = () => {
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        groupLabel: 'Hint message',
+        legend: 'Hint message',
         hasHint: true,
       })}
     </div>
     <div class="wrapper">
       ${BlrRadioGroup({
         ...defaultParams,
-        groupLabel: 'Hint and error message',
+        legend: 'Hint and error message',
         errorIcon: 'blr360',
         groupErrorMessage: "OMG it's an error",
         hasHint: true,
