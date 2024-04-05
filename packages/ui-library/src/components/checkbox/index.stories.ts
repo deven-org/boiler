@@ -25,8 +25,7 @@ export default {
   title: 'Components/Checkbox',
   argTypes: {
     // Appearance
-    size: {
-      name: 'sizeVariant',
+    sizeVariant: {
       description: 'Choose size of the component.',
       options: InputSizes,
       control: { type: 'radio' },
@@ -102,8 +101,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    hintIcon: {
-      name: 'hintMessageIcon',
+    hintMessageIcon: {
       description: 'Select an icon which is displayed in front of the hint message.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -114,7 +112,6 @@ export default {
     },
     //States
     disabled: {
-      name: 'disabled',
       description:
         'Choose if component is disabled. Prevents the user to select or change the value of this component.   ',
       defaultValue: false,
@@ -123,7 +120,6 @@ export default {
       },
     },
     readonly: {
-      name: 'readonly',
       description: 'Choose if component is readonly. The user can select but not change the value of this component.',
       defaultValue: false,
       table: {
@@ -131,7 +127,6 @@ export default {
       },
     },
     hasError: {
-      name: 'hasError',
       description: 'Choose if component has an error.',
       defaultValue: false,
       table: {
@@ -139,15 +134,13 @@ export default {
       },
     },
     errorMessage: {
-      name: 'errorMessage',
       description: 'Enter string used used as error message.',
       table: {
         category: 'Validation',
       },
       if: { arg: 'hasError', eq: true },
     },
-    errorIcon: {
-      name: 'errorMessageIcon',
+    errorMessageIcon: {
       description: 'Select an icon which is displayed in front of the error message.',
       table: {
         category: 'Validation',
@@ -166,15 +159,13 @@ export default {
       },
     },
     //Technical attributes
-    checkInputId: {
-      name: 'checkInputId',
+    checkboxId: {
       description: 'Unique identifier for this component.',
       table: {
         category: 'Technical Attributes',
       },
     },
     name: {
-      name: 'name',
       description: 'For a < form > element, the name attribute is used as a reference when the data is submitted. ',
       table: {
         category: 'Technical Attributes',
@@ -243,7 +234,7 @@ export default {
 // Default parameters for Checkbox component
 const defaultParams: BlrCheckboxType = {
   theme: 'Light',
-  size: 'md',
+  sizeVariant: 'md',
   checked: false,
   checkedIcon: 'blrCheckmark',
   indeterminate: false,
@@ -252,14 +243,14 @@ const defaultParams: BlrCheckboxType = {
   label: 'Label-text',
   hasHint: false,
   hintMessage: 'This is a small hint message',
-  hintIcon: 'blrInfo',
+  hintMessageIcon: 'blrInfo',
   disabled: false,
   readonly: false,
   hasError: false,
   errorMessage: ' ',
-  errorIcon: undefined,
-  arialabel: 'check Input',
-  checkInputId: 'checkInputId',
+  errorMessageIcon: undefined,
+  arialabel: 'checkbox',
+  checkboxId: 'checkboxId',
   name: 'checkInputId',
 };
 
@@ -282,17 +273,17 @@ export const SizeVariant = () => {
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
           label: 'Size SM',
-          size: 'sm',
+          sizeVariant: 'sm',
         })}
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
           label: 'Size MD',
-          size: 'md',
+          sizeVariant: 'md',
         })}
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
           label: 'Size LG',
-          size: 'lg',
+          sizeVariant: 'lg',
         })}
       </div>
     </div>
@@ -490,16 +481,16 @@ export const FormCaptionGroup = () => {
           ...defaultParams,
           label: 'Hint message',
           hasHint: true,
-          hintIcon: 'blrInfo',
+          hintMessageIcon: 'blrInfo',
         })}
         ${BlrCheckboxRenderFunction({
           ...defaultParams,
           label: 'Hint and error message',
           hasHint: true,
           hasError: true,
-          hintIcon: 'blrInfo',
+          hintMessageIcon: 'blr360',
           errorMessage: "OMG it's an error",
-          errorIcon: 'blrErrorFilled',
+          errorMessageIcon: 'blrErrorFilled',
         })}
       </div>
     </div>
