@@ -17,9 +17,6 @@ const sharedStyles = html`
     }
   </style>
 `;
-const logEventType = (event: Event) => {
-  console.log('storybook:story:logEventType', event.type);
-};
 
 const defaultParams: BlrToggleSwitchType = {
   theme: 'Light',
@@ -39,9 +36,6 @@ const defaultParams: BlrToggleSwitchType = {
   arialabel: 'Toggle Switch',
   toogleSwitchId: 'toggle-switchId',
   name: 'toggle-switch-name',
-  blrChange: logEventType,
-  blrFocus: logEventType,
-  blrBlur: logEventType,
 };
 
 export default {
@@ -150,28 +144,24 @@ export default {
         category: 'Technical attributes',
       },
     },
-    arialabel: {
-      name: 'ariaLabel',
-      description:
-        'Provides additional information about the elements purpose and functionality to assistive technologies, such as screen readers.',
-      table: {
-        category: 'Accessibility',
-      },
-    },
-    blrChange: {
-      description: 'Fires when the value changes.',
+    // Events
+    blrCheckedChange: {
+      description: 'Fires when the component checked state changes.',
+      action: 'blrCheckedChange',
       table: {
         category: 'Events',
       },
     },
     blrFocus: {
       description: 'Fires when the component is focused.',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
     blrBlur: {
       description: 'Fires when the component lost focus.',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },

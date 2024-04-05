@@ -1,6 +1,6 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, state } from 'lit/decorators.js';
+import { property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
 import { inputFieldTextLight, inputFieldTextDark } from './index.css';
@@ -41,6 +41,10 @@ export type BlrInputFieldTextEventHandlers = {
  */
 export class BlrInputFieldText extends LitElementCustom {
   static styles = [styleCustom];
+
+  @query('input')
+  protected _inputFieldTextNode!: HTMLInputElement;
+
   @property() inputFieldTextId!: string;
   @property() type: InputTypes = 'text';
   @property() arialabel!: string;
@@ -90,7 +94,9 @@ export class BlrInputFieldText extends LitElementCustom {
 
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event }));
+      this.dispatchEvent(
+        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value })
+      );
     }
   };
 

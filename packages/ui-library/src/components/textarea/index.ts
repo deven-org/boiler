@@ -40,6 +40,9 @@ export type BlrTextareaEventHandlers = {
 export class BlrTextarea extends LitElementCustom {
   static styles = [styleCustom];
 
+  @query('textarea')
+  protected _textareaNode!: HTMLInputElement;
+
   @property() textAreaId!: string;
   @property() label!: string;
   @property() labelAppendix?: string;
@@ -125,7 +128,7 @@ export class BlrTextarea extends LitElementCustom {
 
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
-      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event }));
+      this.dispatchEvent(createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._textareaNode.value }));
     }
   };
 

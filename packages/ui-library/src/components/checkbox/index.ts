@@ -32,7 +32,7 @@ export type BlrCheckboxEventHandlers = {
 /**
  * @fires blrFocus Checkbox received focus
  * @fires blrBlur Checkbox lost focus
- * @fires blrCheckedChange Checkbox state changed (event.checkState)
+ * @fires blrCheckedChange Checkbox state changed (currentCheckedState)
  */
 export class BlrCheckbox extends LitElementCustom {
   static styles = [];
