@@ -4,24 +4,41 @@ onboarding process smooth and enjoyable and to learn about all the neccessary or
 seasoned professional or a newcomer, we've got you covered. Let's dive in and unleash the potential of B01LER together!
 
 ## Content
-- [Team Overview](#team-overview)
-  - [Designers](#designers)
-  - [Developlers](#developers)
-  - [Product & Project Management](#product--project-management)
-- [Regular Meetings](#regular-meetings)
-- [Communication Channels](#communication-channels)
-- [Access Checklist](#access-checklist)
-- [Project Management Onboarding Checklist](#project-management-onboarding-checklist)
-- [How to get support](#how-to-get-support)
-- [Link Archive](#link-archive)
+- [Contributor Onboarding](#contributor-onboarding)
+- [Core Team Onboarding](#core-team-onboarding)
+  - [Team Overview](#team-overview)
+    - [Designers](#designers)
+    - [Developlers](#developers)
+    - [Product & Project Management](#product--project-management)
+  - [Regular Meetings](#regular-meetings)
+  - [Communication Channels](#communication-channels)
+  - [Access Checklist](#access-checklist)
+  - [Project Management Onboarding Checklist](#project-management-onboarding-checklist)
+  - [How to get support](#how-to-get-support)
+  - [Link Archive](#link-archive)
 
-## Team Overview
-### Designers
+
+## Contributor Onboarding
+Everything you need to know as a contributor is documented in the [CONTRIBUTING.md](CONTRIBUTING.md). 
+
+Also make sure to read the [README](/README.md), have a look at [Storybook](https://b01ler.onrender.com/) and the 
+Getting Started page in the [Figma file](https://www.figma.com/community/file/1354113903886620358/b01ler), if you need 
+more information about the product.
+
+
+## Core Team Onboarding
+To become a member of the Core Team, please get in contact with one of the Core Team leads first. You can find a list 
+of the leads in the [team overview](#team-overview). Currently you can only become a member of the Core Team if you are 
+working at Accenture. You should also be able to join most of the [regular meetings](#regular-meetings).
+
+
+### Team Overview
+#### Designers
 - [Lars Erbach](https://github.com/larserbach) (Lead)
 - [Marcel Doering](https://github.com/m-nti) (Stand-in lead)
 - [Yik Cun Chung](https://github.com/yikcunchung)
 
-### Developers
+#### Developers
 - [Christian Hoffmann](https://github.com/ChristianHoffmannS2) (Lead)
 - [David Kennedy](https://github.com/davidken91) (Stand-in lead)
 - [Jessica Wittig](https://github.com/JpunktWpunkt)
@@ -30,34 +47,35 @@ seasoned professional or a newcomer, we've got you covered. Let's dive in and un
 - [Ang Sherpa](https://github.com/angsherpa456)
 - [Julius Walther](https://github.com/faselbaum)
 
-### Product & Project Management
+#### Product & Project Management
 - [Thorben Hartmann](https://github.com/thrbnhrtmnn) (Lead, community leader)
 - [Anđelka Dakić](https://github.com/angelicahoyss) (Stand-in lead, community leader)
 
-## Regular Meetings
+
+### Regular Meetings
 All regular B01LER team meetings are in our
 [B01LER Core calendar](https://myemail.accenture.com/calendar/group/accenture.com/boiler-core/view/workweek). The only
 exception is the B01LER Monthly, which is part of the
 [B01LER calendar](https://myemail.accenture.com/calendar/group/accenture.com/boiler-ds/view/workweek).
 
-| Meeting Name                 | When                                                              | Who                                                                 | Why                                                                                 |
-| ---------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| B01LER Daily                 | Wednesdays, Thursdays (part of Planning and Refinement) & Fridays | Complete B01LER Team                                                | Updating eachother                                                                  |
-| B01LER Planning              | Every 2nd Thursday (When there is no Refinement)                  | Complete B01LER Team                                                | Celebrate outcome of the last iteration, present outcome of the pre-planning        |
-| B01LER Refinement            | Every 2nd Thursday (When there is no Planning)                    | Complete B01LER Team                                                | Refining issues for upcomming iterations                                            |
-| B01LER Retro                 | Every 4th Thursday (After Planning)                               | Complete B01LER Team                                                | Looking back at the last two iterations to improve things in the future             |
-| B01LER Design Review (paused)| Currently Paused                                                  | B01LER Design Lead and every team member that needs a design review | Getting approval from design for code implementations                               |
-| B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER (Dev) Team that wants to join              | Collaborate and learn from each other by tackling coding challanges together        |
-| B01LER Open Door             | Mondays & Wednesdays                                              | Everyone from the B01LER (Dev) Team that wants to join              | Giving guidance and/or answering questions about issues junior devs are working on  |
-| B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                | Discuss objectives and prepare a set of issues to finish int he next iteration      |
-| B01LER Weekly Checkup        | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general product topics and check the roadmap                  |
-| B01LER Marketing Weekly      | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                | Discuss and decide on general marketing topics                                      |
-| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev Lead, Product & Project Management, everyone who wants to join  | Discussing and deciding on dev issues or topcis that recently came up and need      |
-| B01LER Monthly               | Last Thursday of a month                                          | Everyone who wants to join                                          | Giving an update, answering questions and sometimes deep dives into specific topics |
+| Meeting Name                 | When                                                              | Who                                                                                            | Why                                                                                 |
+| ---------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| B01LER Daily                 | Wednesdays, Thursdays (part of Planning and Refinement) & Fridays | Complete B01LER Core Team                                                                      | Updating eachother                                                                  |
+| B01LER Planning              | Every 2nd Thursday (When there is no Refinement)                  | Complete B01LER Core Team                                                                      | Celebrate outcome of the last iteration, present outcome of the pre-planning        |
+| B01LER Refinement            | Every 2nd Thursday (When there is no Planning)                    | Complete B01LER Core Team                                                                      | Refining issues for upcomming iterations                                            |
+| B01LER Retro                 | Every 4th Thursday (After Planning)                               | Complete B01LER Core Team                                                                      | Looking back at the last two iterations to improve things in the future             |
+| B01LER Design Review (paused)| Currently Paused                                                  | B01LER Design Lead and every team member that needs a design review                            | Getting approval from design for code implementations                               |
+| B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER (Dev) Core Team that wants to join                                    | Collaborate and learn from each other by tackling coding challanges together        |
+| B01LER Open Door             | Mondays & Wednesdays                                              | Everyone from the B01LER (Dev) Core Team that wants to join                                    | Giving guidance and/or answering questions about issues junior devs are working on  |
+| B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                                           | Discuss objectives and prepare a set of issues to finish int he next iteration      |
+| B01LER Weekly Checkup        | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general product topics and check the roadmap                  |
+| B01LER Marketing Weekly      | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general marketing topics                                      |
+| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev Lead, Product & Project Management, everyone from the B01LER Core Team that wants to join  | Discussing and deciding on dev issues or topcis that recently came up and need      |
+| B01LER Monthly               | Last Thursday of a month                                          | Everyone who wants to join                                                                     | Giving an update, answering questions and sometimes deep dives into specific topics |
 
 
-## Communication Channels
-Here is a list of all our communicataion channels and what we are using them for.
+### Communication Channels
+Here is a list of all our communicataion channels including mailing lists and what we are using them for.
 | Tool         | Channel                                                                                                                                                                                                                     | Usage                                                                                                                         |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Slack        | [#boiler-core](https://song-asg.slack.com/archives/C049ZPXBTKJ)                                                                                                                                                             | Team internal; Main communication channel, used for general questions, things to share and to inform the team about absences  |
@@ -70,7 +88,7 @@ Here is a list of all our communicataion channels and what we are using them for
 | Mailing List | boiler.security@accenture.com                                                                                                                                                                                               | Contact Mail for everyone outside of accenture to report security vulnerabilities, reaches team leaders and dev stand-in lead |
 | Mailing List | boiler.dev.notifications@accenture.com                                                                                                                                                                                      | Mailing list to receive notifications from dev services like GitHub or Render, reaches developers and Product & Project lead  |
 
-## Access Checklist
+### Access Checklist
 Here is a checklist with all the accesses that new colleages need when working in the B01LER project. Every entry has a
 description on how to recieve access and a whom to contact.
 - [ ] **GitHub** - Access to the [deven-org](https://github.com/orgs/deven-org/people) and the
@@ -93,7 +111,7 @@ description on how to recieve access and a whom to contact.
 - [ ] **Parabol** - Access to [Parabol team](https://action.parabol.co/team/lk4SUDAJz2/) can be provided by the product
       & project management lead.
 
-## Project Management Onboarding Checklist
+### Project Management Onboarding Checklist
 Here is a checklist for project management to follow when onboarding a new colleage.
 - [ ] **WBS Authorization** - to book hours on the projects WBS, new colleagues need to be authorized first.
       Authorization can be requested by the controlling team.
@@ -101,12 +119,12 @@ Here is a checklist for project management to follow when onboarding a new colle
       lead.
 - [ ] **Pennyworth** - the product & project management lead needs to add new colleagues to the planning in pennyworth.
 
-## How to get support
+### How to get support
 For further support you can always reach out to [Thorben Hartmann](https://song-asg.slack.com/team/UDF7P0Y5D) or any of
 the other team leads via Slack. Another way is to reach out to our community leaders. Instructions on when and how to
 contact community leaders can be found in our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Link Archive
+### Link Archive
 Here you can find some useful links:
 - **[GitHub project](https://github.com/orgs/deven-org/projects/3/views/31?pane=info)** - This is where we are managing
   our work. Basically it is better view of all the issues in the repository. Here you can find all our boards, our
