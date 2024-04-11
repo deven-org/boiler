@@ -4,7 +4,7 @@ import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.genera
 
 export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
   const { forms } = semanticTokens.sem;
-  const { FormLabel, InputIcon } = componentTokens.cmp;
+  const { FormLabel } = componentTokens.cmp;
 
   return typeSafeNestedCss`
     .blr-form-element {
@@ -175,17 +175,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       justify-content: space-between;
       align-items: center;
 
-      .blr-input-icon {
-        position: absolute;
-        color: ${forms.inputfield.placeholder.textcolor.default.rest};
-      }
-
-      &.error-input {
-        .blr-input-icon {
-          color: ${forms.inputfield.userinput.textcolor.error.rest};
-        }
-      }
-
       &.sm {
         padding: ${forms.labelslot.padding.sm};
         margin: ${forms.inputslot.margin.sm};
@@ -199,17 +188,6 @@ export const { tokenizedLight: formLight, tokenizedDark: formDark } = renderThem
       &.lg {
         padding: ${forms.labelslot.padding.lg};
         margin: ${forms.inputslot.margin.lg};
-      }
-
-      &:hover {
-        & input:not(:disabled) + .blr-input-icon {
-          color: ${InputIcon.Icon.IconColor.Hover};
-        }
-
-        & .error-input:not(:disabled) + .blr-input-icon {
-          color: ${forms.inputfield.userinput.textcolor.error.rest};
-          cursor: default;
-        }
       }
     }
 
