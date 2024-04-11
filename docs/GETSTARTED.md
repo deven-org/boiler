@@ -41,15 +41,12 @@ working at Accenture. You should also be able to join most of the [regular meeti
 #### Developers
 - [Christian Hoffmann](https://github.com/ChristianHoffmannS2) (Lead)
 - [David Kennedy](https://github.com/davidken91) (Stand-in lead)
-- [Jessica Wittig](https://github.com/JpunktWpunkt)
 - [Barkley Taylor](https://github.com/bar-tay)
-- [Rubiraj Ethirajulu](https://github.com/RubirajAccenture)
 - [Ang Sherpa](https://github.com/angsherpa456)
 - [Julius Walther](https://github.com/faselbaum)
 
 #### Product & Project Management
 - [Thorben Hartmann](https://github.com/thrbnhrtmnn) (Lead, community leader)
-- [Anđelka Dakić](https://github.com/angelicahoyss) (Stand-in lead, community leader)
 
 
 ### Regular Meetings
