@@ -177,13 +177,30 @@ export function* renderIndex() {
               <blr-radio
                 theme="Light"
                 size-variant="md"
-                value=""
+                value="radioValue"
                 label="Label"
                 aria-label=""
                 radio-id="radioId"
                 name="Radio Button"
               >
               </blr-radio>
+            </div>
+
+            <div class="component">
+              <p>Radio Group</p>
+              <blr-radio-group
+                theme="Light"
+                size-variant="md"
+                value=""
+                label="Label"
+                aria-label=""
+                radio-id="radioId"
+                name="Radio Group"
+              >
+                <blr-radio label="male" value="male" checked></blr-radio>
+                <blr-radio label="female" value="female"></blr-radio>
+                <blr-radio label="other" value="other"></blr-radio>
+              </blr-radio-group>
             </div>
 
             <div class="component">
