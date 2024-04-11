@@ -7,11 +7,11 @@ export const staticStyles = typeSafeNestedCss`
     margin: 0 1rem;
   }
 
-  .vertical {
+  .vertical > div {
     flex-direction: column;
   }
-  
-  .horizontal {
+
+  .horizontal > div {
     flex-direction: row;
   }
 `;

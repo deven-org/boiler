@@ -1,7 +1,10 @@
 // eslint-disable-next-line no-restricted-imports
-import { LitElement as LitElementCustom } from 'lit';
+import { LitElement } from 'lit';
+import { SignalHub } from './signals.js';
 
-export { LitElementCustom };
+export class LitElementCustom extends LitElement {
+  public readonly signals: SignalHub<unknown> = {};
+}
 
 export type ElementInterface<TElement extends LitElementCustom> = Record<string | number | symbol, unknown> &
   Omit<UndefinedToOptional<TElement>, keyof LitElementCustom>;
