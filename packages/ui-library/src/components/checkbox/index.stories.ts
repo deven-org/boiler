@@ -173,19 +173,22 @@ export default {
     },
     // Events
     blrCheckedChange: {
-      description: 'Fires when the value changes.',
+      description: 'Fires when the component checked state changes.',
+      action: 'blrCheckedChange',
       table: {
         category: 'Events',
       },
     },
     blrFocus: {
       description: 'Fires when the component is focused.',
+      action: 'blrFocus',
       table: {
         category: 'Events',
       },
     },
     blrBlur: {
       description: 'Fires when the component lost focus.',
+      action: 'blrBlur',
       table: {
         category: 'Events',
       },

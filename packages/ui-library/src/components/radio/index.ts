@@ -1,6 +1,6 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property } from 'lit/decorators.js';
+import { property, query } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
 import { InputSizesType } from '../../globals/types';
 import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
@@ -11,12 +11,16 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
+import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrRadio extends LitElementCustom {
   static styles = [styleCustom];
 
-  @property() radioId!: string;
+  @query('input')
+  protected _radioNode!: HTMLInputElement;
+
+  @property() optionId!: string;
   @property() label!: string;
   @property() disabled?: boolean;
   @property() readonly?: boolean;
@@ -35,6 +39,24 @@ export class BlrRadio extends LitElementCustom {
   @property() hintMessageIcon?: SizelessIconType;
 
   @property() theme: ThemeType = 'Light';
+
+  protected handleFocus = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleBlur = (event: FocusEvent) => {
+    if (!this.disabled) {
+      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
+    }
+  };
+
+  protected handleChange(event: Event) {
+    this.dispatchEvent(
+      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._radioNode.value })
+    );
+  }
 
   protected render() {
     if (this.sizeVariant) {
@@ -83,7 +105,7 @@ export class BlrRadio extends LitElementCustom {
         </style>
         <div class="blr-radio ${classes}">
           <input
-            id=${this.radioId || nothing}
+            id=${this.optionId || nothing}
             class="${classes} input-control"
             type="radio"
             name=${this.name}
@@ -92,14 +114,14 @@ export class BlrRadio extends LitElementCustom {
             ?invalid=${this.hasError}
             ?checked=${this.checked}
             ?required=${this.required}
-            @input=${this.blrChange}
-            @blur=${this.blrBlur}
-            @focus=${this.blrFocus}
+            @input=${this.handleChange}
+            @focus=${this.handleFocus}
+            @blur=${this.handleBlur}
           />
           <div class="label-wrapper">
             ${BlrFormLabelInlineRenderFunction({
               labelText: this.label,
-              forValue: this.radioId,
+              forValue: this.optionId,
               labelSize: this.sizeVariant,
             })}
             ${this.hasHint || this.hasError
