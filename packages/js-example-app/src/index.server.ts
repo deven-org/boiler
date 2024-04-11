@@ -214,17 +214,17 @@ export function* renderIndex() {
                 tab-content="labelAndIcon"
                 icon-position="leading"
                 alignment="left"
-                ><p disabled label="Tab 1" icon="blr360">Tab 1</p>
-                <p label="Tab 2" icon="blr360">Tab 2</p>
-                <p label="Tab 3" icon="blr360">Tab 3</p>
-                <p label="Tab 4" icon="blr360">Tab 4</p>
-                <p label="Tab 5" icon="blr360">Tab 5</p>
-                <p label="Tab 6" icon="blr360">Tab 6</p>
-                <p label="Tab 7" icon="blr360">Tab 7</p>
-                <p label="Tab 8" icon="blr360">Tab 8</p>
-                <p label="Tab 9" icon="blr360">Tab 9</p>
-                <p label="Tab 10" icon="blr360">Tab 10</p>
-                <p label="Tab 11" icon="blr360">Tab 11</p>
+                ><blr-tab-bar-item disabled="true" label="Tab 1" icon="blr360">Tab 1</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 2" icon="blr360">Tab 2</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 3" icon="blr360">Tab 3</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 4" icon="blr360">Tab 4</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 5" icon="blr360">Tab 5</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 6" icon="blr360">Tab 6</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 7" icon="blr360">Tab 7</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 8" icon="blr360">Tab 8</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 9" icon="blr360">Tab 9</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 10" icon="blr360">Tab 10</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 11" icon="blr360">Tab 11</blr-tab-bar-item>
               </blr-tab-bar>
             </div>
 
