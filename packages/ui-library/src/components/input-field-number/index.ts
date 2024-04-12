@@ -1,12 +1,11 @@
 import { TemplateResult, html, nothing } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
-import { baseStyle, wrapperLight, wrapperDark, StepperComboDark, StepperComboLight } from './index.css';
+import { staticBaseStyles, staticSemanticStyles, staticComponentStyles } from './index.css';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
 import { FormSizesType, UnitVariantType } from '../../globals/types';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
@@ -44,7 +43,7 @@ export type BlrNumberInputEventListeners = {
  * @fires blrNumberStepperClick Step button was clicked
  */
 export class BlrInputFieldNumber extends LitElementCustom {
-  static styles = [baseStyle];
+  static styles = [staticBaseStyles, staticSemanticStyles, staticComponentStyles];
 
   @query('input')
   protected _numberFieldNode!: HTMLInputElement;
@@ -166,6 +165,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
       'custom-stepper-button': true,
       [iconSizeVariant]: true,
       [this.stepperVariant]: true,
+      [this.theme]: this.theme,
     });
 
     const iconClasses = classMap({
@@ -206,7 +206,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
       }
       case 'horizontal': {
         return html`
-          <div class="stepper-combo horizontal  ${this.sizeVariant}">
+          <div class="stepper-combo horizontal ${this.theme} ${this.sizeVariant}">
             ${this.getStepperButtonTemplate('decrease', 'blrMinus')}
             ${BlrDividerRenderFunction({
               direction: 'vertical',
@@ -218,7 +218,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
       }
       case 'vertical': {
         return html`
-          <div class="stepper-combo vertical  ${this.sizeVariant}">
+          <div class="stepper-combo vertical ${this.theme} ${this.sizeVariant}">
             ${this.getStepperButtonTemplate('increase', 'blrChevronUp')}
             ${BlrDividerRenderFunction({
               direction: 'horizontal',
@@ -233,39 +233,38 @@ export class BlrInputFieldNumber extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles =
-        this.theme === 'Light'
-          ? [wrapperLight, actionLight, StepperComboLight]
-          : [wrapperDark, actionDark, StepperComboDark];
-
       const inputClasses = classMap({
         [this.sizeVariant]: this.sizeVariant,
         prepend: this.unitPosition === 'prefix',
         suffix: this.unitPosition === 'suffix',
+        [this.theme]: this.theme,
       });
 
       const unitClasses = classMap({
         unit: true,
         prepend: this.unitPosition === 'prefix',
         suffix: this.unitPosition === 'suffix',
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
+        [this.theme]: this.theme,
       });
 
       const wrapperClasses = classMap({
         'input-wrapper': true,
         'disabled': this.disabled || false,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
         'error-input': this.hasError || false,
         'readonly': this.readonly || false,
+        [this.theme]: this.theme,
       });
 
       const inputAndUnitContainer = classMap({
         'input-unit-container': true,
         'prepend': this.unitPosition === 'prefix' || this.unitPosition === 'suffix',
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         [this.stepperVariant || 'split']: this.stepperVariant || 'split',
+        [this.theme]: this.theme,
       });
 
       const getCaptionContent = () => html`
@@ -298,10 +297,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-        <div class="blr-input-field-number ${this.sizeVariant}">
+        <div class="blr-input-field-number ${this.theme} ${this.sizeVariant}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -344,7 +340,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
         </div>
 
         ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, getCaptionContent())
+          ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, getCaptionContent())
           : nothing}
       `;
     }
