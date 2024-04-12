@@ -93,6 +93,7 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
         &:active {
           border-width: ${forms.inputfield.container.border.default.pressed.width};
           border-style: ${forms.inputfield.container.border.default.pressed.style};
+          border-color: transparent;
           outline: ${forms.inputfield.container.border.default.pressed.width} ${forms.inputfield.container.border.default.pressed.style}
             ${forms.inputfield.container.border.default.pressed.color};
           color: ${forms.inputfield.userinput.textcolor.default.pressed};
@@ -106,6 +107,7 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
         &[readonly] {
           border-width: ${forms.inputfield.container.border.default.readonly.width};
           border-style: ${forms.inputfield.container.border.default.readonly.style};
+          border-color: transparent;
           outline: ${forms.inputfield.container.border.default.hover.width} ${forms.inputfield.container.border.default.readonly.style}
             ${forms.inputfield.container.border.default.readonly.color};
           background-color: ${forms.inputfield.container.bgcolor.default.readonly};
@@ -118,6 +120,7 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
         &:disabled {
           border-width: ${forms.inputfield.container.border.default.readonly.width};
           border-style: ${forms.inputfield.container.border.default.disabled.style};
+          border-color: transparent;
           outline: ${forms.inputfield.container.border.default.disabled.width} ${forms.inputfield.container.border.default.disabled.style}
             ${forms.inputfield.container.border.default.disabled.color};
           color: ${forms.inputfield.userinput.textcolor.default.disabled};
@@ -131,6 +134,7 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
         &:focus {
           border-width: ${forms.inputfield.container.border.default.rest.width};
           border-style: ${forms.inputfield.container.border.default.rest.style};
+          border-color: transparent;
           outline: ${forms.inputfield.container.border.default.focus.width} ${forms.inputfield.container.border.default.focus.style}
             ${forms.inputfield.container.border.default.focus.color};
           color: ${forms.inputfield.userinput.textcolor.default.focus};
@@ -181,6 +185,7 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
           &:focus {
             border-width: ${forms.inputfield.container.border.error.rest.width};
             border-style: ${forms.inputfield.container.border.error.rest.style};
+            border-color: transparent;
             outline: ${forms.inputfield.container.border.error.focus.width} ${forms.inputfield.container.border.error.focus.style}
               ${forms.inputfield.container.border.error.focus.color};
             color: ${forms.inputfield.userinput.textcolor.error.focus};
