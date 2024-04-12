@@ -1,12 +1,13 @@
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { Checkbox, FormLabel } = componentTokens.cmp;
-  const { focusring } = semanticTokens.sem.global;
+export const staticStyles = typeSafeNestedCss/* css */ `
 
-  return typeSafeNestedCss/* css */ `
-      .blr-checkbox {
+  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+    const { Checkbox, FormLabel } = cmp;
+
+    return typeSafeCss/* css */ `
+      .blr-checkbox.${theme} {
         all: initial;
         display: flex;
 
@@ -40,19 +41,6 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
           }
           .blr-form-label-inline {
             font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, 'sans-serif';
-          }
-        }
-
-        .focus-ring {
-          position: absolute;
-          inset: 0;
-          outline-color: transparent;
-          outline-style: solid;
-
-          &.focus {
-            outline-width: ${focusring.border.width};
-            outline-offset: 2px;
-            outline-color: ${focusring.border.color};
           }
         }
       
@@ -579,4 +567,25 @@ export const { tokenizedLight: checkboxLight, tokenizedDark: checkboxDark } = re
         }
       }
     `;
-});
+  })}
+
+${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  const { focusring } = sem.global;
+
+  return typeSafeCss/* css */ `
+        .focus-ring.${theme} {
+          position: absolute;
+          inset: 0;
+          outline-color: transparent;
+          outline-style: solid;
+
+          &.focus {
+            outline-width: ${focusring.border.width};
+            outline-offset: 2px;
+            outline-color: ${focusring.border.color};
+          }
+        }
+    `;
+})}
+
+`;
