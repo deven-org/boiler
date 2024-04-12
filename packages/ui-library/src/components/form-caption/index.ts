@@ -2,7 +2,7 @@ import { TemplateResult, html, nothing } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
-import { captionDark, captionLight } from './index.css';
+import { staticStyles } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/types';
@@ -12,7 +12,7 @@ import { BlrIconRenderFunction } from '../icon/renderFunction';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrFormCaption extends LitElementCustom {
-  static styles = [];
+  static styles = [staticStyles];
 
   @property() message?: string;
   @property() icon?: SizelessIconType;
@@ -23,12 +23,11 @@ export class BlrFormCaption extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [captionLight] : [captionDark];
-
       const classes = classMap({
         'blr-form-caption': true,
-        [`${this.variant}`]: this.variant,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.variant]: this.variant,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
       const iconClasses = classMap({
@@ -45,9 +44,6 @@ export class BlrFormCaption extends LitElementCustom {
       ]).toLowerCase() as SizesType;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
         <div class=${classes}>
           ${Boolean(this.icon)
             ? BlrIconRenderFunction(
