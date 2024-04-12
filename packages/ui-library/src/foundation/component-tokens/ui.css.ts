@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
 import { renderThemedCssStrings } from "../_tokens-generated/index.pseudo.generated";
 
