@@ -6,7 +6,7 @@ import { SizelessIconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
+import { staticActionStyles } from '../../foundation/semantic-tokens/action.css';
 import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../globals/types';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant';
@@ -35,7 +35,7 @@ export type BlrButtonIconEventHandlers = {
  * @fires blrClick Button was clicked
  */
 export class BlrButtonIcon extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [styleCustom, staticActionStyles];
 
   @property() arialabel!: string;
   @property() icon?: SizelessIconType;
@@ -71,13 +71,14 @@ export class BlrButtonIcon extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [actionLight] : [actionDark];
-
       const classes = classMap({
+        'blr-semantic-action': true,
+        'blr-button-icon': true,
         [this.variant]: this.variant,
         [this.sizeVariant]: this.sizeVariant,
-        disabled: this.disabled,
-        loading: this.loading || false,
+        'disabled': this.disabled,
+        'loading': this.loading || false,
+        [this.theme]: this.theme,
       });
 
       const iconClasses = classMap({
@@ -103,12 +104,9 @@ export class BlrButtonIcon extends LitElementCustom {
       ]).toLowerCase() as SizesType;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
         <span
           aria-label=${this.arialabel || nothing}
-          class="blr-semantic-action blr-button-icon ${classes}"
+          class="${classes}"
           aria-disabled=${this.disabled ? 'true' : nothing}
           @click=${this.handleClick}
           id=${this.buttonIconId || nothing}
@@ -122,7 +120,7 @@ export class BlrButtonIcon extends LitElementCustom {
             }
           }}
         >
-          ${this.focused && !this.loading ? html`<span class="focus-layer"></span>` : nothing}
+          ${this.focused && !this.loading ? html`<span class="focus-layer ${this.theme}"></span>` : nothing}
           ${this.loading
             ? BlrLoaderRenderFunction({
                 sizeVariant: loaderSizeVariant,
