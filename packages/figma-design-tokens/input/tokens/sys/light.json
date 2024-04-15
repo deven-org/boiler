@@ -353,20 +353,20 @@
             "description": "use for secondary elements on inputs as placeholder, inputIcon. Also prefix and sufix while input is empty."
           },
           "danger": {
-            "value": "{core.color.crimson.300.opa70}",
+            "value": "{core.color.crimson.300.opa80}",
             "type": "color"
           },
           "warning": {
-            "value": "{core.color.gold.200.opa70}",
+            "value": "{core.color.gold.200.opa80}",
             "type": "color",
             "description": "Use on: Counter"
           },
           "safe": {
-            "value": "{core.color.limegreen.200.opa70}",
+            "value": "{core.color.limegreen.200.opa80}",
             "type": "color"
           },
           "informative": {
-            "value": "{core.color.coolgray.400.opa70}",
+            "value": "{core.color.coolgray.400.opa80}",
             "type": "color",
             "description": "Use on: Counter"
           }
