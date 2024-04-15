@@ -273,7 +273,7 @@
       "Container": {
         "BorderColor": {
           "Neutral": {
-            "value": "{sys.bgcolor.container.informative}",
+            "value": "{sys.bordercolor.container.informative}",
             "type": "color"
           },
           "Warning": {

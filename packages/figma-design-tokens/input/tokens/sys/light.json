@@ -336,7 +336,7 @@
             "type": "color"
           },
           "informative": {
-            "value": "{core.color.coolgray.400.solid}",
+            "value": "{core.color.coolgray.300.solid}",
             "type": "color",
             "description": "Use on: Counter"
           }
@@ -366,7 +366,7 @@
             "type": "color"
           },
           "informative": {
-            "value": "{core.color.coolgray.400.opa80}",
+            "value": "{core.color.coolgray.300.opa80}",
             "type": "color",
             "description": "Use on: Counter"
           }
@@ -890,7 +890,7 @@
           "type": "color"
         },
         "informative": {
-          "value": "{core.color.coolgray.400.solid}",
+          "value": "{core.color.azure.800.solid}",
           "type": "color",
           "description": "Use on: Counter"
         }
