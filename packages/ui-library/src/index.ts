@@ -6,9 +6,9 @@ export { BlrButtonText } from './components/button-text';
 // Feedback
 export { BlrLoader } from './components/loader';
 
-export { BlrTooltipBubble } from './components/tooltip-bubble';
-
 export { BlrTooltip } from './components/tooltip';
+
+export { BlrTooltipUsingFloatingUI } from './examples/tooltip-using-floating-ui';
 
 // Forms
 export { BlrCheckbox } from './components/checkbox';

@@ -1,67 +1,49 @@
-import { html } from 'lit';
-import { property, state } from 'lit/decorators.js';
-import { Placement as PlacementType } from '@floating-ui/dom';
-import { tooltipPosition } from './tooltip-position';
-import { styleCustom } from './index.css';
+import { css, html, nothing } from 'lit';
+import { property } from 'lit/decorators.js';
+import { light, dark } from './index.css';
+import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
-
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrTooltipBubbleRenderFunction } from '../tooltip-bubble/renderFunction';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
-const enterEvents = ['pointerenter', 'focus'];
-const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
-
 export class BlrTooltip extends LitElementCustom {
-  static styles = [styleCustom];
-
+  static styles = [
+    css`
+      :host([visible]) {
+        visibility: visible;
+        opacity: 1;
+      }
+    `,
+  ];
   @property() theme?: ThemeType = 'Light';
   @property() message!: string;
   @property() hasArrow?: boolean = true;
-  @property() elevation?: boolean = false;
-  @property() placement?: PlacementType = 'top';
-  @property() offset?: number | string = 4;
-
-  @state() protected visible = false;
-
-  protected _referenceElement: Element | undefined | null = null;
-  protected _tooltipElement: HTMLElement | null = null;
-
-  protected updated() {
-    if (typeof this.offset === 'string') {
-      this.offset = parseInt(this.offset);
-    }
-
-    const slot = this.renderRoot?.querySelector('slot');
-    this._referenceElement = slot?.assignedElements({ flatten: true })[0];
-
-    this._tooltipElement = this.renderRoot?.querySelector('blr-tooltip-bubble');
-
-    if (!this._referenceElement || !this._tooltipElement) {
-      return;
-    }
-
-    enterEvents.forEach((event) => this._referenceElement?.addEventListener(event, this.show));
-    leaveEvents.forEach((event) => this._referenceElement?.addEventListener(event, this.hide));
-
-    if (this._referenceElement || this._tooltipElement) {
-      tooltipPosition(this._referenceElement, this._tooltipElement, this.placement, this.offset);
-    }
-  }
-
-  protected show = () => (this.visible = true);
-
-  protected hide = () => (this.visible = false);
+  @property() elevation?: boolean = true;
+  @property({ reflect: true, type: Boolean })
+  visible? = false;
+  @property() static?: boolean = false;
 
   protected render() {
-    return html` <slot></slot>
-      ${BlrTooltipBubbleRenderFunction({
-        theme: this.theme,
-        message: this.message,
-        hasArrow: this.hasArrow,
-        elevation: this.elevation,
-        visible: this.visible,
-      })}`;
+    const dynamicStyles = this.theme === 'Light' ? [light] : [dark];
+
+    const classes = classMap({
+      [`elevation`]: this.elevation || false,
+      [`static`]: this.static || false,
+    });
+
+    return html`<style>
+        ${dynamicStyles}
+      </style>
+      <div class="${classes}">
+        <div class="content">${this.message}</div>
+        ${this.hasArrow
+          ? html`<div class="arrow">
+              <svg width="12" height="4" fill="none" viewBox="0 0 12 4">
+                <path d="M6 4C3.738 4 3 0 0 0h12C9 0 8.262 4 6 4Z" />
+              </svg>
+            </div>`
+          : nothing}
+      </div>`;
   }
 }
 
