@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@boiler/icons": "0.0.1",
-    "@floating-ui/dom": "^1.5.3",
+    "@floating-ui/dom": "^1.6.3",
     "@lit-labs/react": "^1.1.1",
     "lit": "^2.6.1",
     "nested-css-to-flat": "^1.0.5"

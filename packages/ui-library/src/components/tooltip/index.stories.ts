@@ -53,7 +53,8 @@ export default {
       },
     },
     placement: {
-      description: 'Select placement of the component to the related element.',
+      description:
+        'Select preferred placement of the component to the related element. If the preferred placement is not in the viewport, the component will adjust the placement on its own.',
       options: TooltipPlacement,
       control: { type: 'select' },
       table: {
@@ -103,7 +104,7 @@ export default {
         component: `
   <markdown>
   Tooltip is triggered by hovering the mouse cursor over the element. It is designed to be unobtrusive and usually consist
-  of a short snippet of text. Tooltip component utilizes Floating UI library for granular positioning and interactions
+  of a short snippet of text. Tooltip component utilizes [Floating UI](https://floating-ui.com/) library for granular positioning and interactions
   based on user events.
   
   - [**Appearance**](#appearance)
@@ -111,8 +112,6 @@ export default {
     - [**Elevation**](#elevation)  
     - [**Has Arrow**](#has-arrow)
     - [**Offset**](#offset)
-  - [**Dependencies**](#dependencies)
-    - [**Tooltip Bubble**](#tooltip-bubble)
   </markdown>
 `,
       },
@@ -138,7 +137,7 @@ Tooltip.args = defaultParams;
 /**
  * ## Appearance
  * ### Placement
- * The Tooltip component can be positioned in any of the following placements: top, top-start, top-end, right, right-start, right-end, bottom, bottom-start, bottom-end, left, left-start, and left-end.
+ * The Tooltip component can be positioned in any of the following placements: top, top-start, top-end, right, right-start, right-end, bottom, bottom-start, bottom-end, left, left-start, and left-end. Via the placement prop you can select your preferred placement, which the component will display when the viewport allows it. If the preferred placement is not in the viewport, the component will adjust the placement on its own.
  */
 
 export const Placement = () => {
@@ -231,20 +230,3 @@ export const Offset = () => {
     
   `;
 };
-/**
- * ## Dependencies
- * ### Tooltip Bubble
- * The Tooltip component makes use of the Tooltip Bubble component. For more information have a look at the [Tooltip Bubble](?path=/docs/design-system-web-components-feedback-tooltip-tooltip-bubble--docs) component.
- */
-
-export const TooltipBubble = () => {
-  return html`
-    ${sharedStyles}
-    ${Tooltip({
-      ...defaultParams,
-      message: 'This is the tooltip bubble',
-    })}
-  `;
-};
-
-TooltipBubble.story = { name: ' ' };
