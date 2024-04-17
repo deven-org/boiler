@@ -163,7 +163,7 @@ team needs to approve it, before it can be merged.
 - Make sure that a pull request is linked to the related issue by using a keyword and the issue number as
 explained [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 or by using the `Development` field.
-- Check off the acceptance criteria of the issue you are workin on to track you progress (does not apply to bug issues).
+- Check off the acceptance criteria of the issue you are working on to track your progress (does not apply to bug issues).
 - Change your PR from `Draft` to `Ready for Review`, when all acceptance criteria are met and all tests are passing (you
 can create Draft PRs at any time, but only open PRs will be reviewed).
 - Leave the reviewers list on the right hand side untouched. We use this to track how many people are already looking at
