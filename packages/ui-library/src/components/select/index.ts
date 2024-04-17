@@ -126,6 +126,29 @@ export class BlrSelect extends LitElementCustom {
     }
   }
 
+  protected renderCaptionContent() {
+    return html`
+      ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
+        ? BlrFormCaptionRenderFunction({
+            variant: 'hint',
+            theme: this.theme,
+            sizeVariant: this.sizeVariant,
+            message: this.hintMessage,
+            icon: this.hintMessageIcon,
+          })
+        : nothing}
+      ${this.hasError && (this.errorMessage || this.errorMessageIcon)
+        ? BlrFormCaptionRenderFunction({
+            variant: 'error',
+            theme: this.theme,
+            sizeVariant: this.sizeVariant,
+            message: this.errorMessage,
+            icon: this.errorMessageIcon,
+          })
+        : nothing}
+    `;
+  }
+
   protected render() {
     if (this.sizeVariant) {
       const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
@@ -137,27 +160,6 @@ export class BlrSelect extends LitElementCustom {
         'disabled': this.disabled || false,
         'focus': this.isFocused || false,
       });
-
-      const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
-          ? BlrFormCaptionRenderFunction({
-              variant: 'hint',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
-              message: this.hintMessage,
-              icon: this.hintMessageIcon,
-            })
-          : nothing}
-        ${this.hasError && (this.errorMessage || this.errorMessageIcon)
-          ? BlrFormCaptionRenderFunction({
-              variant: 'error',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
-              message: this.errorMessage,
-              icon: this.errorMessageIcon,
-            })
-          : nothing}
-      `;
 
       return html`
         <style>
@@ -211,7 +213,7 @@ export class BlrSelect extends LitElementCustom {
             ${this.renderIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, this.renderCaptionContent())
             : nothing}
         </div>
       `;
