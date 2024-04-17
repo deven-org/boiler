@@ -12,7 +12,7 @@ import { componentTokens } from '../../foundation/_tokens-generated/__component-
 const { Tooltip } = componentTokens.cmp;
 
 const getArrowSettings = (tooltip: HTMLElement, paddingTopBottom: number, paddingLeftRight: number, side: string) => {
-  const element = tooltip.shadowRoot?.querySelector('.arrow') as HTMLElement;
+  const element = tooltip.querySelector('.arrow') as HTMLElement;
 
   const padding =
     side === 'top' || 'bottom' ? paddingTopBottom : side === 'left' || 'right' ? paddingLeftRight : undefined;
