@@ -32,7 +32,7 @@ const defaultParams: BlrSelectType = {
   disabled: false,
   required: false,
   hasError: false,
-  errorMessage: ' ',
+  errorMessage: '',
   errorMessageIcon: undefined,
   arialabel: 'Select',
   selectId: 'selectId',
