@@ -904,102 +904,6 @@
         }
       },
       "inputfield": {
-        "userinput": {
-          "textcolor": {
-            "default": {
-              "rest": {
-                "value": "{sys.content.container.regular.neutral}",
-                "type": "color"
-              },
-              "hover": {
-                "value": "{sys.content.container.regular.neutral}",
-                "type": "color"
-              },
-              "pressed": {
-                "value": "{sys.content.container.regular.neutral}",
-                "type": "color"
-              },
-              "focus": {
-                "value": "{sys.content.container.regular.neutral}",
-                "type": "color"
-              },
-              "disabled": {
-                "value": "{sys.content.container.regular.disabled}",
-                "type": "color"
-              },
-              "readonly": {
-                "value": "{sys.content.container.regular.neutral}",
-                "type": "color"
-              }
-            },
-            "error": {
-              "rest": {
-                "value": "{sys.content.container.regular.danger}",
-                "type": "color"
-              },
-              "hover": {
-                "value": "{sys.content.container.regular.danger}",
-                "type": "color"
-              },
-              "pressed": {
-                "value": "{sys.content.container.regular.danger}",
-                "type": "color"
-              },
-              "focus": {
-                "value": "{sys.content.container.regular.danger}",
-                "type": "color"
-              }
-            }
-          }
-        },
-        "placeholder": {
-          "textcolor": {
-            "default": {
-              "rest": {
-                "value": "{sys.content.container.subtle.neutral}",
-                "type": "color"
-              },
-              "hover": {
-                "value": "{sys.content.container.subtle.neutral}",
-                "type": "color"
-              },
-              "pressed": {
-                "value": "{sys.content.container.subtle.neutral}",
-                "type": "color"
-              },
-              "focus": {
-                "value": "{sys.content.container.subtle.neutral}",
-                "type": "color"
-              },
-              "disabled": {
-                "value": "{sys.content.container.regular.disabled}",
-                "type": "color"
-              },
-              "readonly": {
-                "value": "{sys.content.container.subtle.neutral}",
-                "type": "color"
-              }
-            },
-            "error": {
-              "rest": {
-                "value": "{sys.content.container.subtle.danger}",
-                "type": "color"
-              },
-              "hover": {
-                "value": "{sys.content.container.subtle.danger}",
-                "type": "color"
-              },
-              "pressed": {
-                "value": "{sys.content.container.subtle.danger}",
-                "type": "color"
-              },
-              "focus": {
-                "value": "{sys.content.container.subtle.danger}",
-                "type": "color"
-              }
-            }
-          }
-        },
         "container": {
           "bgcolor": {
             "default": {
@@ -1094,6 +998,102 @@
             }
           }
         },
+        "icon": {
+          "iconcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.content.container.regular.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              }
+            },
+            "error": {
+              "rest": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              }
+            }
+          }
+        },
+        "placeholder": {
+          "textcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.content.container.regular.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.content.container.subtle.neutral}",
+                "type": "color"
+              }
+            },
+            "error": {
+              "rest": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.container.subtle.danger}",
+                "type": "color"
+              }
+            }
+          }
+        },
         "prefixsuffix": {
           "textcolor": {
             "default": {
@@ -1148,6 +1148,54 @@
                 "value": "{sys.content.container.subtle.danger}",
                 "type": "color",
                 "description": "Apply on prefix- or suffix-texts of an input which is already populated with content.  e.g: Numberfield"
+              }
+            }
+          }
+        },
+        "userinput": {
+          "textcolor": {
+            "default": {
+              "rest": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              },
+              "disabled": {
+                "value": "{sys.content.container.regular.disabled}",
+                "type": "color"
+              },
+              "readonly": {
+                "value": "{sys.content.container.regular.neutral}",
+                "type": "color"
+              }
+            },
+            "error": {
+              "rest": {
+                "value": "{sys.content.container.regular.danger}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{sys.content.container.regular.danger}",
+                "type": "color"
+              },
+              "pressed": {
+                "value": "{sys.content.container.regular.danger}",
+                "type": "color"
+              },
+              "focus": {
+                "value": "{sys.content.container.regular.danger}",
+                "type": "color"
               }
             }
           }

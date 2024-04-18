@@ -1147,7 +1147,7 @@
       },
       "global": {
         "focusring": {
-          "value": "{core.color.coolgray.100.solid}",
+          "value": "{core.color.white.solid}",
           "type": "color",
           "description": "use for focus ring"
         }
