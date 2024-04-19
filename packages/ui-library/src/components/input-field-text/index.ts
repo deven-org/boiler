@@ -2,8 +2,6 @@ import { PropertyValueMap, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { inputFieldTextLight, inputFieldTextDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -143,6 +141,7 @@ export class BlrInputFieldText extends LitElementCustom {
       'icon-input': true,
       [this.sizeVariant!]: this.sizeVariant!,
       'no-pointer-events': Boolean(this.disabled || this.type !== 'password'),
+      [this.theme]: this.theme,
     });
 
     const iconName: SizelessIconType =
@@ -164,21 +163,22 @@ export class BlrInputFieldText extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, inputFieldTextLight] : [formDark, inputFieldTextDark];
-
       const classes = classMap({
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        'blr-input-field-text': true,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
       const inputClasses = classMap({
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
       });
 
       const inputContainerClasses = classMap({
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
       const captionContent = html`
@@ -203,10 +203,7 @@ export class BlrInputFieldText extends LitElementCustom {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-        <div class="blr-input-field-text ${classes}">
+        <div class="${classes}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -222,7 +219,7 @@ export class BlrInputFieldText extends LitElementCustom {
               `
             : nothing}
           <div class="blr-input-wrapper ${inputContainerClasses}">
-            <div class="blr-input-inner-container">
+            <div class="blr-input-inner-container ${this.theme}">
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.inputFieldTextId}
@@ -246,7 +243,7 @@ export class BlrInputFieldText extends LitElementCustom {
             ${this.renderInputIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;

@@ -1,8 +1,8 @@
 import { html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { styleCustom } from './index.css';
-import { sliderDark, sliderLight } from '../../../foundation/component-tokens/slider.css';
+import { staticStyles } from './index.css';
+import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider.css';
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 
 import { TAG_NAME } from './renderFunction';
@@ -13,7 +13,7 @@ import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
 import { LitElementCustom } from '../../../utils/lit-element-custom';
 
 export class BlrRangeSlider extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticSharedStyles, staticStyles];
 
   @property() onClickMinMax?: (param: number) => void;
   @property() onChange!: (val: number, event: Event) => HTMLButtonElement['onchange'];
@@ -62,14 +62,13 @@ export class BlrRangeSlider extends LitElementCustom {
     })}`;
 
   protected render() {
-    const rangeStyle = generateRangeBar(this.theme, this.valueToSlider, 0, this.disabled);
-    const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
-    const dynamicStyles = [...generatedStyles, ...rangeStyle];
+    const dynamicStyles = [generateRangeBar(this.theme, this.valueToSlider, 0, this.disabled)];
 
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
-      [`${this.size || 'md'}`]: this.size || 'md',
+      [this.size || 'md']: this.size || 'md',
+      [this.theme]: this.theme,
     });
 
     const setValue = (btnType: string) => {

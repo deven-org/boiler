@@ -11,41 +11,42 @@
 
   This will make it possible to switch prebuild themes on the fly on a component level
 */
+import { makeIterator, typeSafeCss } from '../../utils/css-in-ts/make-token-part-iterator';
+import { componentTokens as cmpLight } from './__component-tokens.Light.generated.mjs';
+import { componentTokens as cmpDark } from './__component-tokens.Dark.generated.mjs';
+import { semanticTokens as semLight } from './__semantic-tokens.Light.generated.mjs';
+import { semanticTokens as semDark } from './__semantic-tokens.Dark.generated.mjs';
 
-import { componentTokens as componentTokensType } from './componentTokensType.generated';
-import { semanticTokens as semanticTokensType } from './semanticTokensType.generated';
+export const componentTokenTree = {
+  Light: cmpLight.cmp,
+  Dark: cmpDark.cmp,
+};
 
-import {
-  semanticTokens as semanticTokensLight,
-  componentTokens as componentTokensLight,
-} from './index.Light.generated';
+export const semanticTokenTree = {
+  Light: semLight.sem,
+  Dark: semDark.sem,
+};
 
-import { semanticTokens as semanticTokensDark, componentTokens as componentTokensDark } from './index.Dark.generated';
+export const ComponentThemeIterator = (
+  renderFunction: (
+    theme: keyof typeof componentTokenTree,
+    cmp: typeof componentTokenTree.Light,
+    css: typeof typeSafeCss
+  ) => string
+) => {
+  const it = makeIterator<typeof componentTokenTree>();
 
-import { CSSResult } from 'lit';
+  return it(componentTokenTree, renderFunction);
+};
 
-export function renderThemedCssStrings(renderFunc: (cT: componentTokensType, sT: semanticTokensType) => CSSResult): {
-  tokenizedLight: CSSResult;
-  tokenizedDark: CSSResult;
-} {
-  let tokenizedLight, tokenizedDark;
+export const SemanticThemeIterator = (
+  renderFunction: (
+    theme: keyof typeof semanticTokenTree,
+    sem: typeof semanticTokenTree.Light,
+    css: typeof typeSafeCss
+  ) => string
+) => {
+  const it = makeIterator<typeof semanticTokenTree>();
 
-  try {
-    tokenizedLight = renderFunc(componentTokensLight, semanticTokensLight);
-  } catch (error) {
-    console.error(error);
-  }
-
-  try {
-    tokenizedDark = renderFunc(componentTokensDark, semanticTokensDark);
-  } catch (error) {
-    console.error(error);
-  }
-
-  return {
-    // @ts-expect-error todo
-    tokenizedLight,
-    // @ts-expect-error todo
-    tokenizedDark,
-  };
-}
+  return it(semanticTokenTree, renderFunction);
+};

@@ -3,7 +3,7 @@ import { TAG_NAME } from './renderFunction';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
 import { InputSizesType } from '../../globals/types';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
@@ -44,19 +44,23 @@ export class BlrFormLabel extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant && !this._error) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight] : [formDark];
+      const dynamicStyles = [staticFormStyles];
 
       const labelClasses = classMap({
         'blr-form-label': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         'error': this.hasError,
+        [this.theme]: this.theme,
       });
 
       const spanClasses = classMap({
         'blr-form-label-appendix': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
+      // Since it doesnt have a shadowRoot, lit cant apply styles to it.
+      // We have to render styles inline here, which is not great
       return html`<style>
           ${dynamicStyles.map((style) => style)}
         </style>

@@ -1,6 +1,6 @@
-import { typeSafeNestedCss } from "../../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../../utils/css-in-ts/nested-typesafe-css-literals";
 
-export const styleCustom = typeSafeNestedCss`
+export const staticStyles = typeSafeNestedCss`
   .single-range {
     position: relative;
     max-width: 500px;

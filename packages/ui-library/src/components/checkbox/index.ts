@@ -4,12 +4,11 @@ import { classMap } from 'lit/directives/class-map.js';
 import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
 import { FormSizesType } from '../../globals/types';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { checkboxLight, checkboxDark } from './index.css';
+import { staticStyles } from './index.css';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
@@ -35,7 +34,7 @@ export type BlrCheckboxEventHandlers = {
  * @fires blrCheckedChange Checkbox state changed (currentCheckedState)
  */
 export class BlrCheckbox extends LitElementCustom {
-  static styles = [];
+  static styles = [staticStyles];
 
   @query('input')
   protected _checkboxNode!: HTMLInputElement;
@@ -141,13 +140,12 @@ export class BlrCheckbox extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant && this.checkboxId) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, checkboxLight] : [formDark, checkboxDark];
-
       const classes = classMap({
         'blr-semantic-action': true,
         'blr-checkbox': true,
         'error': this.hasError || false,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
       const labelWrapperClasses = classMap({
@@ -181,6 +179,7 @@ export class BlrCheckbox extends LitElementCustom {
       const focusRingClasses = classMap({
         'focus-ring': true,
         'focus': this.focused || false,
+        [this.theme]: this.theme,
       });
 
       const checkerIconSizeVariant = getComponentConfigToken([
@@ -222,10 +221,6 @@ export class BlrCheckbox extends LitElementCustom {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles.map((style) => style)}
-        </style>
-
         <div
           class="${classes}"
           @mouseenter=${this.handleEnter}
@@ -301,10 +296,11 @@ export class BlrCheckbox extends LitElementCustom {
                   labelText: this.label,
                   forValue: this.checkboxId,
                   labelSize: this.sizeVariant,
+                  theme: this.theme,
                 })}`
               : nothing}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
               : nothing}
           </div>
         </div>

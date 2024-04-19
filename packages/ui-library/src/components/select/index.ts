@@ -1,11 +1,10 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
+import { staticStyles } from './index.css';
 import { FormSizesType, SizesType } from '../../globals/types';
-import { selectInputLight, selectInputDark } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
@@ -37,7 +36,7 @@ export type BlrSelectEventHandlers = {
  * @fires blrBlur Select lost focus
  */
 export class BlrSelect extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticFormStyles, staticStyles];
 
   @query('select')
   protected _selectNode!: HTMLInputElement;
@@ -99,6 +98,7 @@ export class BlrSelect extends LitElementCustom {
     const classes = classMap({
       'icon-direction-indicator': true,
       [this.sizeVariant]: this.sizeVariant,
+      [this.theme]: this.theme,
     });
 
     if (this.sizeVariant) {
@@ -118,6 +118,7 @@ export class BlrSelect extends LitElementCustom {
           sizeVariant: iconSizeVariant,
           classMap: classes,
           fillParent: false,
+          theme: this.theme,
         },
         {
           'aria-hidden': true,
@@ -151,24 +152,19 @@ export class BlrSelect extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, selectInputLight] : [formDark, selectInputDark];
-
       const inputClasses = classMap({
         'error': this.hasError || false,
         'error-input': this.hasError || false,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
         'disabled': this.disabled || false,
         'focus': this.isFocused || false,
+        [this.theme]: this.theme,
       });
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-
         <slot @slotchange=${this.handleSlotChange}></slot>
 
-        <div class="blr-select ${this.sizeVariant}">
+        <div class="blr-select ${this.sizeVariant} ${this.theme}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -184,7 +180,7 @@ export class BlrSelect extends LitElementCustom {
               `
             : nothing}
           <div class="blr-select-wrapper ${inputClasses}">
-            <div class="blr-select-inner-container">
+            <div class="blr-select-inner-container ${this.theme}">
               <select
                 aria-label=${this.ariaLabel || nothing}
                 class="blr-form-select ${inputClasses}"
@@ -213,7 +209,10 @@ export class BlrSelect extends LitElementCustom {
             ${this.renderIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, this.renderCaptionContent())
+            ? BlrFormCaptionGroupRenderFunction(
+                { theme: this.theme, sizeVariant: this.sizeVariant },
+                this.renderCaptionContent()
+              )
             : nothing}
         </div>
       `;

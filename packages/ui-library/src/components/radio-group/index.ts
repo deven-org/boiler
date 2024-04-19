@@ -1,11 +1,11 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
+import { staticStyles as componentSpecificStaticStyles } from './index.css';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { radioLight, radioDark } from '../../foundation/component-tokens/radio.css';
-import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
+import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
 import { InputSizesType, RadioGroupDirection, RadioOption } from '../../globals/types';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
@@ -14,7 +14,7 @@ import { TAG_NAME } from './renderFunction';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrRadioGroup extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
   @property() disabled?: boolean;
   @property() readonly?: boolean;
@@ -43,7 +43,6 @@ export class BlrRadioGroup extends LitElementCustom {
     if (!this.sizeVariant) {
       return null;
     }
-    const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
 
     const legendClasses = classMap({
       'blr-legend': true,
@@ -53,15 +52,18 @@ export class BlrRadioGroup extends LitElementCustom {
 
     const legendWrapperClasses = classMap({
       'blr-legend-wrapper': true,
+      [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
     });
 
     const radioClasses = classMap({
+      [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
       error: this.hasError || false,
     });
 
     const classes = classMap({
+      [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
       disabled: this.disabled || false,
       readonly: this.readonly || false,
@@ -94,9 +96,7 @@ export class BlrRadioGroup extends LitElementCustom {
         : nothing}
     `;
 
-    return html`<style>
-        ${dynamicStyles.map((style) => style)}
-      </style>
+    return html`
       ${this.hasLegend
         ? html`<div class="${legendWrapperClasses}"><legend class="${legendClasses}">${this.legend}</legend></div>`
         : nothing}
@@ -129,6 +129,7 @@ export class BlrRadioGroup extends LitElementCustom {
                       labelText: option.label,
                       forValue: id,
                       labelSize: this.sizeVariant || 'md',
+                      theme: this.theme,
                     })}`
                   : nothing}
               </div>
@@ -139,9 +140,10 @@ export class BlrRadioGroup extends LitElementCustom {
 
       ${this.hasHint || this.hasError
         ? html` <div class="caption-group ${classes}">
-            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)}
+            ${BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)}
           </div>`
-        : nothing} `;
+        : nothing}
+    `;
   }
 }
 

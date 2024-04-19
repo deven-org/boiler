@@ -1,10 +1,9 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
 import { InputSizesType } from '../../globals/types';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { radioDark, radioLight } from '../../foundation/component-tokens/radio.css';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
+import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css';
 import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -15,7 +14,7 @@ import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEv
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrRadio extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticFormStyles, staticRadioStyles];
 
   @query('input')
   protected _radioNode!: HTMLInputElement;
@@ -60,10 +59,9 @@ export class BlrRadio extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, radioLight] : [formDark, radioDark];
-
       const classes = classMap({
         [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
         disabled: this.disabled || false,
         readonly: this.readonly || false,
         checked: this.checked || false,
@@ -100,9 +98,6 @@ export class BlrRadio extends LitElementCustom {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
         <div class="blr-radio ${classes}">
           <input
             id=${this.optionId || nothing}
@@ -123,9 +118,10 @@ export class BlrRadio extends LitElementCustom {
               labelText: this.label,
               forValue: this.optionId,
               labelSize: this.sizeVariant,
+              theme: this.theme,
             })}
             ${this.hasHint || this.hasError
-              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, captionContent)
+              ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
               : nothing}
           </div>
         </div>

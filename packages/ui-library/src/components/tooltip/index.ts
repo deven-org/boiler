@@ -3,7 +3,7 @@ import { property, state } from 'lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { classMap } from 'lit/directives/class-map.js';
 import { tooltipPosition } from './tooltip-position';
-import { styleCustom, dark, light } from './index.css';
+import { staticStyles } from './index.css';
 import { TAG_NAME } from './renderFunction';
 
 import { LitElementCustom } from '../../utils/lit-element-custom';
@@ -13,9 +13,9 @@ const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 
 export class BlrTooltip extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticStyles];
 
-  @property() theme?: ThemeType = 'Light';
+  @property() theme: ThemeType = 'Light';
   @property() message!: string;
   @property() hasArrow?: boolean = true;
   @property() elevation?: boolean = true;
@@ -54,17 +54,12 @@ export class BlrTooltip extends LitElementCustom {
   protected hide = () => (this.visible = false);
 
   protected render() {
-    const dynamicStyles = this.theme === 'Light' ? [light] : [dark];
-
     const classes = classMap({
       [`elevation`]: this.elevation || false,
       [`visible`]: this.visible || false,
     });
     return html`<slot></slot>
-      <div id="tooltipElement">
-        <style>
-          ${dynamicStyles}
-        </style>
+      <div id="tooltipElement" class=${this.theme}>
         <div class="${classes}">
           <div class="content">${this.message}</div>
           ${this.hasArrow
