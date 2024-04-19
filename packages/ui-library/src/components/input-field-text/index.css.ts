@@ -1,9 +1,10 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import type { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated";
+import { ThemeType } from "../../foundation/_tokens-generated/index.themes";
 
-export const styleCustom = typeSafeNestedCss`
+export const styleCustom = typeSafeNestedCss/*css*/ `
   .blr-input-field-text {
     display: flex;
     flex-direction: column;
@@ -13,92 +14,19 @@ export const styleCustom = typeSafeNestedCss`
   .blr-input-field-text:disabled {
     pointer-events: none;
   }
-`;
 
-function getInputIconStyles(options: { semanticTokens: semanticTokens }) {
-  const iconClassName = "icon-input";
-  const { inputfield } = options.semanticTokens.sem.forms;
+  .noPointerEvents {
+    pointer-events: none;
+  }
 
-  return typeSafeNestedCss`
-    :host {
-      .${iconClassName} {
-        cursor: pointer;
-        position: relative;
-        color: ${inputfield.icon.iconcolor.default.rest};
+  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+    const { inputfield, inputslot, labelslot } = sem.forms;
 
-        &.no-pointer-events {
-          pointer-events: none;
-          cursor: default;
-        }
-  
+    return typeSafeCss/*css*/ `
+      ${getInputIconStyles({ theme, semanticTokens: sem }).cssText}
+
+      .blr-input-field-text.${theme} {
         &.sm {
-          height: ${inputfield.icon.iconsize.sm};
-          width: ${inputfield.icon.iconsize.sm};
-        }
-        &.md {
-          height: ${inputfield.icon.iconsize.md};
-          width: ${inputfield.icon.iconsize.md};
-        }
-        &.lg {
-          height: ${inputfield.icon.iconsize.lg};
-          width: ${inputfield.icon.iconsize.lg};
-        }
-      }
-
-      .blr-input-wrapper {
-        &:hover .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.hover};
-        }
-
-        &:focus-within .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.focus};
-        }
-
-        &:active .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.pressed};
-        }
-
-        &:has(input[readonly]):not(.error-input) .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.readonly};
-        }
-
-        &.disabled .${iconClassName}{
-          color: ${inputfield.icon.iconcolor.default.disabled};
-        }
-    
-        &.error-input {
-          .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.rest};
-          }
-  
-          &:hover .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.hover};
-          }
-    
-          &:focus-within .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.focus};
-          }
-    
-          &:active .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.pressed};
-          }
-        }
-      }
-    }
-  `;
-}
-
-export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTextDark } = renderThemedCssStrings(
-  (_componentTokens, semanticTokens) => {
-    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
-
-    return typeSafeNestedCss`
-      ${getInputIconStyles({ semanticTokens }).cssText}
-
-      .blr-input-field-text {
-
-        &.sm {
-
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.sm};
@@ -106,7 +34,6 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
 
         &.md {
-
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.md};
@@ -114,7 +41,6 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
 
         &.lg {
-          
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.lg};
@@ -122,7 +48,7 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
       }
 
-      .blr-input-inner-container {
+      .blr-input-inner-container.${theme} {
         flex-grow: 1;
         flex-shrink: 1;
 
@@ -236,7 +162,7 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
       }
 
-      .blr-input-wrapper {
+      .blr-input-wrapper.${theme} {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -354,5 +280,78 @@ export const { tokenizedLight: inputFieldTextLight, tokenizedDark: inputFieldTex
         }
       }
     `;
-  }
-);
+  })}
+`;
+
+function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: semanticTokens["sem"] }) {
+  const iconClassName = "icon-input";
+  const { inputfield } = semanticTokens.forms;
+
+  return typeSafeNestedCss/*css*/ `
+    :host {
+      .${iconClassName}.${theme} {
+        cursor: pointer;
+        position: relative;
+        color: ${inputfield.icon.iconcolor.default.rest};
+
+        &.no-pointer-events {
+          pointer-events: none;
+          cursor: default;
+        }
+  
+        &.sm {
+          height: ${inputfield.icon.iconsize.sm};
+          width: ${inputfield.icon.iconsize.sm};
+        }
+        &.md {
+          height: ${inputfield.icon.iconsize.md};
+          width: ${inputfield.icon.iconsize.md};
+        }
+        &.lg {
+          height: ${inputfield.icon.iconsize.lg};
+          width: ${inputfield.icon.iconsize.lg};
+        }
+      }
+
+      .blr-input-wrapper.${theme} {
+        &:hover .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.hover};
+        }
+
+        &:focus-within .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.focus};
+        }
+
+        &:active .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.pressed};
+        }
+
+        &:has(input[readonly]):not(.error-input) .${iconClassName} {
+          color: ${inputfield.icon.iconcolor.default.readonly};
+        }
+
+        &.disabled .${iconClassName}{
+          color: ${inputfield.icon.iconcolor.default.disabled};
+        }
+    
+        &.error-input {
+          .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.rest};
+          }
+  
+          &:hover .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.hover};
+          }
+    
+          &:focus-within .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.focus};
+          }
+    
+          &:active .${iconClassName} {
+            color: ${inputfield.icon.iconcolor.error.pressed};
+          }
+        }
+      }
+    }
+  `;
+}

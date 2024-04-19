@@ -2,11 +2,11 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, queryAll, state } from 'lit/decorators.js';
-import { styleCustom, tabBarDark, tabBarLight } from './index.css';
+import { staticStyles } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { actionLight, actionDark } from '../../foundation/semantic-tokens/action.css';
+import { staticActionStyles } from '../../foundation/semantic-tokens/action.css';
 import {
   OverflowVariantTypeStandard,
   OverflowVariantTypeFullWidth,
@@ -21,12 +21,11 @@ import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { formLight, formDark } from '../../foundation/semantic-tokens/form.css';
 import { createBlrBlurEvent, createBlrChangeEvent, createBlrFocusEvent } from '../../globals/events';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrTabBar extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticStyles, staticActionStyles];
 
   @query('.blr-tab-bar')
   protected _navList!: HTMLElement;
@@ -103,18 +102,22 @@ export class BlrTabBar extends LitElementCustom {
 
   protected render() {
     if (this.size) {
-      const dynamicStyles =
-        this.theme === 'Light' ? [formLight, actionLight, tabBarLight] : [formDark, actionDark, tabBarDark];
+      const wrapperClasses = classMap({
+        'blr-tab-bar-group': true,
+        [this.variant]: this.variant,
+        [this.size]: this.size,
+        [this.theme]: this.theme,
+      });
 
-      const classes = classMap({
-        [`${this.variant}`]: this.variant,
-        [`${this.size}`]: this.size,
+      const tabBarClasses = classMap({
+        'blr-tab-bar': true,
+        [this.alignment]: this.alignment,
       });
 
       const navListClasses = classMap({
-        [`${this.overflowVariantStandard}`]: this.overflowVariantStandard,
-        [`${this.overflowVariantFullWidth}`]: this.overflowVariantFullWidth,
-        [`${this.alignment}`]: this.alignment,
+        [this.overflowVariantStandard]: this.overflowVariantStandard,
+        [this.overflowVariantFullWidth]: this.overflowVariantFullWidth,
+        [this.alignment]: this.alignment,
       });
 
       const iconSizeVariant = getComponentConfigToken([
@@ -134,11 +137,7 @@ export class BlrTabBar extends LitElementCustom {
         this.size.toUpperCase(),
       ]).toLowerCase() as SizesType;
 
-      return html`<style>
-          ${dynamicStyles.map((style) => style)}
-        </style>
-
-        <div class="blr-tab-bar-group ${classes}">
+      return html` <div class="${wrapperClasses}">
           ${this.overflowVariantStandard === 'buttons'
             ? html`
                 <button class="arrow left ${this.size}" @click=${() => this.scrollTab('left', 30, 100)}>
@@ -155,7 +154,7 @@ export class BlrTabBar extends LitElementCustom {
                 </button>
               `
             : nothing}
-          <div class="blr-tab-bar ${this.alignment}">
+          <div class="${tabBarClasses}">
             <ul class="nav-list ${navListClasses}" role="tablist">
               <slot @slotchange=${this.handleSlotChange}></slot>
               ${this._tabBarElements?.map((tab: Element, index) => {
@@ -164,16 +163,16 @@ export class BlrTabBar extends LitElementCustom {
                 const navListItemClasses = classMap({
                   'disabled': isDisabled,
                   'nav-item': true,
-                  [`${this.size}`]: this.size || 'md',
-                  [`${this.iconPosition}`]: this.iconPosition,
+                  [this.size || 'md']: this.size || 'md',
+                  [this.iconPosition]: this.iconPosition,
                   'selected': index === this.selectedTabIndex,
                 });
 
                 const navListItemContainer = classMap({
                   'disabled': tab.getAttribute('disabled') === 'true',
                   'nav-item-container': true,
-                  [`${this.size}`]: this.size || 'md',
-                  [`${this.iconPosition}`]: this.iconPosition,
+                  [this.size || 'md']: this.size || 'md',
+                  [this.iconPosition]: this.iconPosition,
                 });
 
                 const navListItemUnderline = classMap({
@@ -211,7 +210,9 @@ export class BlrTabBar extends LitElementCustom {
                             )
                           : nothing}
                         ${this.tabContent !== 'iconOnly'
-                          ? html` <label class="blr-semantic-action ${this.size}" name="${tab.getAttribute('label')}"
+                          ? html` <label
+                              class="blr-semantic-action ${this.theme} ${this.size}"
+                              name="${tab.getAttribute('label')}"
                               >${tab.getAttribute('label')}</label
                             >`
                           : nothing}

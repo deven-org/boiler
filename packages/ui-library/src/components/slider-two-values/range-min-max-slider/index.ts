@@ -1,18 +1,18 @@
 import { html, nothing } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { styleCustom } from './index.css';
+import { staticStyles } from './index.css';
 import { TAG_NAME } from './renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { sliderLight, sliderDark } from '../../../foundation/component-tokens/slider-legend.css';
+import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider-legend.css';
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
 import { findPercentage, generateRangeBar, findNearestValue, setOnclickValue } from '../../../utils/range-slider-utils';
 import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
 import { LitElementCustom } from '../../../utils/lit-element-custom';
 
 export class BlrRangeMinMaxSlider extends LitElementCustom {
-  static styles = [styleCustom];
+  static styles = [staticSharedStyles, staticStyles];
 
   @property() onBtnClick?: (min: number, max: number) => void;
   @property() onChange!: (minVal: number, maxVal: number, event: Event) => HTMLButtonElement['onchange'];
@@ -75,8 +75,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       isMinLesserThanMax
     );
 
-    const generatedStyles = this.theme === 'Light' ? [sliderLight] : [sliderDark];
-    const dynamicStyles = [...generatedStyles, ...rangeStyle];
+    const dynamicStyles = [rangeStyle];
 
     const showValue = (isMaxValue: boolean) => (event: Event) => {
       const value = Number((event.target as HTMLInputElement).value);
@@ -116,7 +115,8 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
     const classes = classMap({
       'blr-semantic-action': true,
       'blr-slider': true,
-      [`${this.size || 'md'}`]: this.size || 'md',
+      [this.size || 'md']: this.size || 'md',
+      [this.theme]: this.theme,
     });
 
     const inlineLegendStyles = classMap({
@@ -128,6 +128,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       'range__bar': true,
       'blr-slider-bar': true,
       'bar-disabled': this.disabled || false,
+      [this.theme]: this.theme,
     });
 
     return html`<style>
@@ -135,7 +136,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
       </style>
       <div class=${classes}>
         <fieldset class="range__field">
-          <div class="input-wrapper">
+          <div class="input-wrapper ${this.theme}">
             <div class="min-max-btnwrapper">
               ${this.renderBtn({
                 btnId: 'inc_btn_min',
@@ -161,7 +162,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
                 .value=${this.startValueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range"
+                class="range ${this.theme}"
                 @input=${showValue(false)}
                 ?disabled=${this.disabled}
               />
@@ -172,7 +173,7 @@ export class BlrRangeMinMaxSlider extends LitElementCustom {
                 .value=${this.endValueToSlider}
                 max="100"
                 step="${this.stepFactor}"
-                class="range"
+                class="range ${this.theme}"
                 @input=${showValue(true)}
                 ?disabled=${this.disabled}
               />

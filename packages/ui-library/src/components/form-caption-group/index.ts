@@ -3,20 +3,23 @@ import { property } from 'lit/decorators.js';
 
 import { FormSizesType } from '../../globals/types';
 import { classMap } from 'lit/directives/class-map.js';
-import { formCaptionGroupStyle } from './index.css';
+import { staticStyles } from './index.css';
 
 import { TAG_NAME } from './renderFunction';
 import { LitElementCustom } from '../../utils/lit-element-custom';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 
 export class BlrFormCaptionGroup extends LitElementCustom {
-  static styles = [formCaptionGroupStyle];
+  static styles = [staticStyles];
 
   @property() sizeVariant: FormSizesType = 'md';
+  @property() theme: ThemeType = 'Light';
 
   protected render() {
     const classes = classMap({
       'blr-form-caption-group': true,
       [this.sizeVariant]: this.sizeVariant,
+      [this.theme]: this.theme,
     });
 
     return html`
