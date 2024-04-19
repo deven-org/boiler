@@ -1,8 +1,6 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
-
-const { Icon } = componentTokens.cmp;
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
 /*
   the full class is used by "ignoreSize" attribute, so that consumers can take care about sizing
@@ -12,41 +10,47 @@ const { Icon } = componentTokens.cmp;
   when only setting their widths
 */
 
-export const styleCustom = typeSafeNestedCss`
+export const styleCustom = typeSafeNestedCss/* css */ `
   :host {
     display: inline-flex;
     flex-shrink: 0;
-
-    .blr-icon {
-      line-height: 0;
-    }
-
-    .blr-icon.full > svg {
-      width: 100%;
-    }
-
-    .blr-icon.xxs > svg {
-      width: ${Icon.Container.Size.XXS};
-    }
-
-    .blr-icon.xs > svg {
-      width: ${Icon.Container.Size.XS};
-    }
-
-    .blr-icon.sm > svg {
-      width: ${Icon.Container.Size.SM};
-    }
-
-    .blr-icon.md > svg {
-      width: ${Icon.Container.Size.MD};
-    }
-
-    .blr-icon.lg > svg {
-      width: ${Icon.Container.Size.LG};
-    }
-
-    .blr-icon.xl > svg {
-      width: ${Icon.Container.Size.XL};
-    }
   }
+
+  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+    const { Icon } = cmp;
+
+    return typeSafeCss/*css*/ `
+      .blr-icon.${theme} {
+        line-height: 0;
+
+        &.full > svg {
+          width: 100%;
+        }
+
+        &.xxs > svg {
+          width: ${Icon.Container.Size.XXS};
+        }
+
+        &.xs > svg {
+          width: ${Icon.Container.Size.XS};
+        }
+
+        &.sm > svg {
+          width: ${Icon.Container.Size.SM};
+        }
+
+        &.md > svg {
+          width: ${Icon.Container.Size.MD};
+        }
+
+        &.lg > svg {
+          width: ${Icon.Container.Size.LG};
+        }
+
+        &.xl > svg {
+          width: ${Icon.Container.Size.XL};
+        }
+      }
+    `;
+  })}
 `;

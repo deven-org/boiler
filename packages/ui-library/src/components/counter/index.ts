@@ -3,12 +3,12 @@ import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { CounterVariantType, FormSizesType } from '../../globals/types';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { counterLight, counterDark } from './index.css';
+import { staticStyles } from './index.css';
 import { TAG_NAME } from './renderFunction';
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
 export class BlrCounter extends LitElementCustom {
-  static styles = [];
+  static styles = [staticStyles];
 
   @property() variant: CounterVariantType = 'neutral';
   @property() value = 0;
@@ -18,20 +18,14 @@ export class BlrCounter extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [counterLight] : [counterDark];
-
       const classes = classMap({
         'blr-counter': true,
         [this.variant]: this.variant,
         [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: true,
       });
 
-      return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-        <div class=${classes}>${this.value} / ${this.maxValue}</div>
-      `;
+      return html` <div class=${classes}>${this.value} / ${this.maxValue}</div> `;
     }
   }
 }

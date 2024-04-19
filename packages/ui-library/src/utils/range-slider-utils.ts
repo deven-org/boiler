@@ -1,6 +1,9 @@
-import { css } from 'nested-css-to-flat/lit-css';
-import { renderThemedCssStrings } from '../foundation/_tokens-generated/index.pseudo.generated';
+import { typeSafeNestedCss } from './css-in-ts/nested-typesafe-css-literals';
 import { ThemeType } from '../foundation/_tokens-generated/index.themes';
+
+import { Cmp as ComponentTokens } from '../foundation/_tokens-generated/componentTokensType.generated';
+import { componentTokens as componentTokensLight } from '../foundation/_tokens-generated/index.Light.generated';
+import { componentTokens as componentTokensDark } from '../foundation/_tokens-generated/index.Light.generated';
 
 export const findToolTipPosition = (minVal: string, maxVal: string, offsetWidthVal: number, value: number) => {
   const min = parseFloat(minVal);
@@ -30,6 +33,11 @@ export const findPercentage = (min: number, max: number, value: number) => {
   return Math.round(percentage);
 };
 
+const ThemedTokens: { [P in ThemeType]: ComponentTokens } = {
+  Dark: componentTokensDark.cmp,
+  Light: componentTokensLight.cmp,
+};
+
 export const generateRangeBar = (
   theme: ThemeType,
   startValueToSlider: number,
@@ -38,30 +46,29 @@ export const generateRangeBar = (
   twoKnobs?: string,
   isMinLesserThanMax?: boolean
 ) => {
-  const { tokenizedLight, tokenizedDark } = renderThemedCssStrings((componentTokens) => {
-    const { Slider } = componentTokens.cmp;
+  const { Slider } = ThemedTokens[theme];
 
-    const activeDefaultColor = Slider.Track.Border.Default.Active.color;
-    const activeMuteColor = Slider.Track.Border.Default.Inactive.color;
+  const activeDefaultColor = Slider.Track.Border.Default.Active.color;
+  const activeMuteColor = Slider.Track.Border.Default.Inactive.color;
 
-    const disabledDefaultColor = Slider.Track.Border.Mute.Active.color;
-    const disabledMuteColor = Slider.Track.Border.Mute.Inactive.color;
+  const disabledDefaultColor = Slider.Track.Border.Mute.Active.color;
+  const disabledMuteColor = Slider.Track.Border.Mute.Inactive.color;
 
-    const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
-    const muteColor = disabled ? disabledMuteColor : activeMuteColor;
+  const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
+  const muteColor = disabled ? disabledMuteColor : activeMuteColor;
 
-    const twoKnobStartValue = isMinLesserThanMax ? startValueToSlider : endValueToSlider;
-    const twoKnobEndValue = isMinLesserThanMax ? endValueToSlider : startValueToSlider;
+  const twoKnobStartValue = isMinLesserThanMax ? startValueToSlider : endValueToSlider;
+  const twoKnobEndValue = isMinLesserThanMax ? endValueToSlider : startValueToSlider;
 
-    const generateGradient = twoKnobs
-      ? `linear-gradient(
+  const generateGradient = twoKnobs
+    ? `linear-gradient(
             to right,
             ${muteColor} ${twoKnobStartValue + 1}%,
             ${defaultColor} ${twoKnobStartValue}%,
             ${defaultColor} ${twoKnobEndValue}%,
             ${muteColor} ${twoKnobEndValue}%
           )`
-      : `linear-gradient(
+    : `linear-gradient(
           to right,
           ${defaultColor} 0%,
           ${defaultColor} ${startValueToSlider}%,
@@ -69,14 +76,11 @@ export const generateRangeBar = (
           ${muteColor} 100%
         )`;
 
-    return css`
-      .blr-slider-bar {
-        background: ${generateGradient};
-      }
-    `;
-  });
-
-  return theme === 'Light' ? [tokenizedLight] : [tokenizedDark];
+  return typeSafeNestedCss/*css*/ `
+    .blr-slider-bar {
+      background: ${generateGradient};
+    }
+  `;
 };
 
 export const setOnclickValue = (value: number, stepperNumber: number, btnType: string, arrLength?: number) => {

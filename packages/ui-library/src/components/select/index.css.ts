@@ -1,127 +1,143 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import type { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated";
+import { ThemeType } from "../../foundation/_tokens-generated/index.themes";
 
-export const styleCustom = typeSafeNestedCss`
+const directionIndicatorIconClassName = "icon-direction-indicator";
+
+export const staticStyles = typeSafeNestedCss/*css*/ `
+  .${directionIndicatorIconClassName} {
+    pointer-events: none;
+    position: relative;
+  }
+
   .blr-select-option {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-`;
 
-function getDirectionIndicatorIconStyles(options: { semanticTokens: semanticTokens }) {
-  const iconClassName = "icon-direction-indicator";
-  const { inputfield } = options.semanticTokens.sem.forms;
+  .blr-select > .label-wrapper {
+    display: flex;
+  }
 
-  return typeSafeNestedCss`
-    :host {
-      .${iconClassName} {
-        pointer-events: none;
-        position: relative;
-        color: ${inputfield.icon.iconcolor.default.rest};
-  
-        &.sm {
-          height: ${inputfield.icon.iconsize.sm};
-          width: ${inputfield.icon.iconsize.sm};
-        }
-        &.md {
-          height: ${inputfield.icon.iconsize.md};
-          width: ${inputfield.icon.iconsize.md};
-        }
-        &.lg {
-          height: ${inputfield.icon.iconsize.lg};
-          width: ${inputfield.icon.iconsize.lg};
-        }
+  slot {
+    display: none;
+  }
+
+  .blr-select-inner-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    .blr-form-select {
+      all: initial;
+      box-sizing: border-box;
+      width: 100%;
+      border: none;
+      outline: none;
+
+      &.focus {
+        border: none;
+        outline: none;
       }
 
-      .blr-select-wrapper {
-        &:hover .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.hover};
+      &.error-select {
+        border: none;
+        outline: none;
+
+        &:hover {
+          border: none;
+          outline: none;
         }
 
-        &:focus-within .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.focus};
+        &:active {
+          border: none;
+          outline: none;
         }
 
-        &:active .${iconClassName} {
-          color: ${inputfield.icon.iconcolor.default.pressed};
-        }
-
-        &.disabled {
-          .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.default.disabled};
-          }
-        }
-    
-        &.error, .error.disabled {
-          .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.rest};
-          }
-  
-          &:hover .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.hover};
-          }
-    
-          &:focus-within .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.focus};
-          }
-    
-          &:active .${iconClassName} {
-            color: ${inputfield.icon.iconcolor.error.pressed};
-          }
+        &.focus {
+          border: none;
+          outline: none;
         }
       }
     }
-  `;
-}
+  }
 
-export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark } = renderThemedCssStrings(
-  (_componentTokens, semanticTokens) => {
-    const { inputfield, inputslot, labelslot } = semanticTokens.sem.forms;
+  .blr-select-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 
-    return typeSafeNestedCss`
-      ${getDirectionIndicatorIconStyles({ semanticTokens }).cssText}
+    .blr-form-select {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
 
-      :host {
-        .blr-select {
-          &.sm {
-            & > .label-wrapper {
-              display: flex;
-              padding: ${labelslot.padding.sm};
-            }
+    &.focus {
+      border-color: transparent;
+    }
+
+    &.disabled {
+      border-color: transparent;
+      cursor: not-allowed;
+
+      .blr-form-select {
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: not-allowed;
+      }
+    }
+
+    &[readonly] {
+      border-color: transparent;
+    }
+
+    &:active {
+      border-color: transparent;
+    }
+
+    &.error-input {
+      &.focus {
+        border-color: transparent;
+      }
+
+      .blr-form-select {
+        background: transparent;
+      }
+    }
+  }
+
+  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+    const { inputfield, inputslot, labelslot } = sem.forms;
+
+    return typeSafeCss/*css*/ `
+      ${getDirectionIndicatorIconStyles({ theme, semanticTokens: sem }).cssText}
+
+      .blr-select.${theme} {
+        &.sm {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.sm};
           }
-          &.md {
-            & > .label-wrapper {
-              display: flex;
-              padding: ${labelslot.padding.md};
-            }
+        }
+        &.md {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.md};
           }
-          &.lg {
-            & > .label-wrapper {
-              display: flex;
-              padding: ${labelslot.padding.lg};
-            }
+        }
+        &.lg {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.lg};
           }
         }
       }
 
-      slot {
-        display: none;
-      }
-
-      .blr-select-inner-container {
-        flex-grow: 1;
-        flex-shrink: 1;
-
+      .blr-select-inner-container.${theme} {
         .blr-form-select {
-          all: initial;
           border-radius: ${inputfield.container.borderradius};
-          box-sizing: border-box;
-          width: 100%;
-          border: none;
-          outline: none;
           color: ${inputfield.userinput.textcolor.default.rest};
 
           &::placeholder {
@@ -154,43 +170,29 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           }
 
           &.focus {
-            border: none;
-            outline: none;
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.focus};
             }
           }
 
           &.error-select {
-            border: none;
-            outline: none;
-
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.error.rest};
             }
 
             &:hover {
-              border: none;
-              outline: none;
-
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.hover};
               }
             }
 
             &:active {
-              border: none;
-              outline: none;
-
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.pressed};
               }
             }
 
             &.focus {
-              border: none;
-              outline: none;
-
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.focus};
               }
@@ -220,21 +222,11 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         }
       }
 
-      .blr-select-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      .blr-select-wrapper.${theme} {
         border: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
           ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
-        box-sizing: border-box;
         background-color: ${inputfield.container.bgcolor.default.rest};
-
-        .blr-form-select {
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
-        }
 
         &.sm {
           padding: ${inputfield.container.padding.sm};
@@ -260,14 +252,12 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
 
           &.error-select:not(.disabled) {
             color: ${inputfield.container.border.error.rest.color};
-            cursor: default;
           }
         }
 
         &.focus {
           border-width: ${inputfield.container.border.default.rest.width};
           border-style: ${inputfield.container.border.default.rest.style};
-          border-color: transparent;
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
             ${inputfield.container.border.default.focus.color};
           color: ${inputfield.userinput.textcolor.default.focus};
@@ -277,25 +267,15 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         &.disabled {
           border-width: ${inputfield.container.border.default.readonly.width};
           border-style: ${inputfield.container.border.default.disabled.style};
-          border-color: transparent;
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
           background-color: ${inputfield.container.bgcolor.default.disabled};
-          cursor: not-allowed;
-
-          .blr-form-select {
-            border: none;
-            outline: none;
-            background: transparent;
-            cursor: not-allowed;
-          }
         }
 
         &[readonly] {
           border-width: ${inputfield.container.border.default.readonly.width};
           border-style: ${inputfield.container.border.default.readonly.style};
-          border-color: transparent;
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};
@@ -304,7 +284,6 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
         &:active {
           border-width: ${inputfield.container.border.default.pressed.width};
           border-style: ${inputfield.container.border.default.pressed.style};
-          border-color: transparent;
           outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
             ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
@@ -320,7 +299,6 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           &.focus {
             border-width: ${inputfield.container.border.error.rest.width};
             border-style: ${inputfield.container.border.error.rest.style};
-            border-color: transparent;
             outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
               ${inputfield.container.border.error.focus.color};
             color: ${inputfield.userinput.textcolor.error.focus};
@@ -345,11 +323,71 @@ export const { tokenizedLight: selectInputLight, tokenizedDark: selectInputDark 
           }
 
           .blr-form-select {
-            background: transparent;
             color: ${inputfield.userinput.textcolor.error.rest};
           }
         }
       }
     `;
-  }
-);
+  })}
+`;
+
+function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: semanticTokens["sem"] }) {
+  const { inputfield } = semanticTokens.forms;
+
+  return typeSafeNestedCss`
+    .${directionIndicatorIconClassName}.${theme} {
+      color: ${inputfield.icon.iconcolor.default.rest};
+
+      &.sm {
+        height: ${inputfield.icon.iconsize.sm};
+        width: ${inputfield.icon.iconsize.sm};
+      }
+      &.md {
+        height: ${inputfield.icon.iconsize.md};
+        width: ${inputfield.icon.iconsize.md};
+      }
+      &.lg {
+        height: ${inputfield.icon.iconsize.lg};
+        width: ${inputfield.icon.iconsize.lg};
+      }
+    }
+
+    .blr-select-wrapper.${theme} {
+      &:hover .${directionIndicatorIconClassName} {
+        color: ${inputfield.icon.iconcolor.default.hover};
+      }
+
+      &:focus-within .${directionIndicatorIconClassName} {
+        color: ${inputfield.icon.iconcolor.default.focus};
+      }
+
+      &:active .${directionIndicatorIconClassName} {
+        color: ${inputfield.icon.iconcolor.default.pressed};
+      }
+
+      &.disabled {
+        .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.default.disabled};
+        }
+      }
+  
+      &.error, .error.disabled {
+        .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.rest};
+        }
+
+        &:hover .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.hover};
+        }
+  
+        &:focus-within .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.focus};
+        }
+  
+        &:active .${directionIndicatorIconClassName} {
+          color: ${inputfield.icon.iconcolor.error.pressed};
+        }
+      }
+    }
+  `;
+}

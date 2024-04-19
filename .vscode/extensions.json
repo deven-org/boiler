@@ -3,6 +3,7 @@
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "runem.lit-plugin"
+    "runem.lit-plugin",
+    "bierner.comment-tagged-templates"
   ]
 }
