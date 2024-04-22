@@ -8,6 +8,7 @@ The BO1LER, a fully customisable design system (DS), is developed using the [Lit
      - [File Structure](#file-structure)
      - [Version Control](#version-control)
      - [Documentation and Testing](#documentation-and-testing)
+       - [Architecture Decision Records](#architecture-decision-records)
      - [CI/CD](#ci-cd)
   - [Technical Decisions](#technical-decisions)
      - [Web Components](#web-components)
@@ -54,6 +55,10 @@ The code base, hosted on GitHub and maintained by the Deven team, is publicly ac
 
 ### Documentation and Testing
 The project adheres to best practices for documentation, and testing. The codebase is thoroughly documented with live preview capability and explicit guidelines on usage and contribution procedures. Additionally, comprehensive component tests are integrated to verify that modifications uphold the project's integrity and functionality, preventing regressions or defects from emerging.
+
+#### Architecture Decision Records
+Architectural decisions for this project are documented in the form of ADRs within this repository.
+For more information check out: [000-documenting-architecture-decisions](./architecture/decisions/000-documenting-architecture-decisions/README.md#decision-outcome). For a list of all past architectural decisions check the [./architecture/decisions](./architecture/decisions) directory. 
 
 ### CI-CD
 The changes made in project's code base adheres to a continuous integration and delivery (CI/CD) pipeline. This guarantees that any alterations undergo rigorous testing and validation before being released to the production environment.
