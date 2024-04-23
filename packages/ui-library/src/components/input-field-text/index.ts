@@ -61,7 +61,6 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() hasIcon = true;
   @property() icon: SizelessIconType = 'blr360';
   @property() hasHint = true;
   @property() hintMessage?: string;
@@ -208,7 +207,7 @@ export class BlrInputFieldText extends LitElementCustom {
                 @select=${this.handleSelect}
               />
             </div>
-            ${this.hasIcon && !wasInitialPasswordField && !this.readonly
+            ${this.icon && !wasInitialPasswordField && !this.readonly
               ? html`${BlrIconRenderFunction(
                   {
                     icon: this.hasError

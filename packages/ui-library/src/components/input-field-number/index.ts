@@ -70,7 +70,6 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property() unit?: string;
   @property() leadingZeros?: number;
   @property() decimals?: number;
-  @property() hasUnit?: boolean;
   @property() unitPosition?: UnitVariantType;
   @property() stepIncreaseAriaLabel?: string = '+';
   @property() stepDecreaseAriaLabel?: string = '\u2212'; // minus-sign (not minus-hyphen)

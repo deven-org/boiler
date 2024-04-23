@@ -359,6 +359,7 @@ const blrSelectionOnXs = () => import(`!!raw-loader!@boiler/icons/icons-optimize
 const blrSelectionOnXxs = () => import(`!!raw-loader!@boiler/icons/icons-optimized/${'Selection_on_xxs.svg'}`);
 
 export const PureIconKeys = [
+  undefined,
   'blr360',
   'blrArrowDown',
   'blrArrowLeft',

@@ -45,7 +45,6 @@ export class BlrButtonText extends LitElementCustom {
 
   @property() label = 'Button Label';
   @property() icon?: SizelessIconType;
-  @property({ type: Boolean }) hasIcon?: boolean;
   @property() iconPosition?: IconPositionVariant = 'leading';
   @property({ type: Boolean }) loading!: boolean;
   @property({ type: Boolean }) disabled!: boolean;
@@ -122,7 +121,7 @@ export class BlrButtonText extends LitElementCustom {
       ]).toLowerCase() as SizesType;
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">
-        ${this.hasIcon && this.iconPosition === 'leading'
+        ${this.iconPosition === 'leading'
           ? BlrIconRenderFunction(
               {
                 icon: calculateIconName(this.icon, iconSizeVariant),
@@ -136,7 +135,7 @@ export class BlrButtonText extends LitElementCustom {
             )
           : nothing}
         <span class="label">${this.label} </span>
-        ${this.hasIcon && this.iconPosition === 'trailing'
+        ${this.iconPosition === 'trailing'
           ? BlrIconRenderFunction(
               {
                 icon: calculateIconName(this.icon, iconSizeVariant),
