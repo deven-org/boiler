@@ -179,7 +179,7 @@ SizeVariant.story = { name: ' ' };
 /**
  *  ## Dependencies
  *  ### Icon
- *  The Form Caption component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon-icon--docs) component.
+ *  The Form Caption component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
  */
 
 export const Icon = () => {

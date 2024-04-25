@@ -436,7 +436,7 @@ export const HasError = () => {
 /**
  * ## Dependencies
  * ### Form Caption Group
- * The Radio Group component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Radio Group component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/components-form-caption-group--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`

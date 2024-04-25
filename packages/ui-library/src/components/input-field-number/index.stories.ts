@@ -607,7 +607,7 @@ export const HasError = (params: BlrInputFieldNumberType) => {
 /**
  * ## Dependencies
  * ### Button Icon
- * The Input Field Number component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/design-system-web-components-actions-buttons-button-icon--docs) component.
+ * The Input Field Number component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/components-actions-buttons-button-icon--docs) component.
  */
 export const ButtonIcon = (params: BlrInputFieldNumberType) => {
   return html`
@@ -627,7 +627,7 @@ export const ButtonIcon = (params: BlrInputFieldNumberType) => {
 ButtonIcon.story = { name: ' ' };
 
 /**
- * The Input Field Number component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Input Field Number component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/components-form-label--docs) component.
  */
 export const FormLabel = (params: BlrInputFieldNumberType) => {
   return html`
@@ -657,7 +657,7 @@ export const FormLabel = (params: BlrInputFieldNumberType) => {
 };
 
 /**
- * The Input Field Number component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Input Field Number component can display an optional hint message and error message with icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](?path=/docs/components-form-caption-group--docs) component.
  */
 export const FormCaptionGroup = (params: BlrInputFieldNumberType) => {
   return html`
