@@ -95,6 +95,7 @@ export const styleCustom = css`
           &.focus {
             border: none;
             outline: none;
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.focus};
             }
@@ -103,6 +104,7 @@ export const styleCustom = css`
           &.error-input {
             border: none;
             outline: none;
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.error.rest};
             }
@@ -120,6 +122,7 @@ export const styleCustom = css`
             &:hover {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.hover};
               }
@@ -128,6 +131,7 @@ export const styleCustom = css`
             &:active {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.pressed};
               }
@@ -136,6 +140,7 @@ export const styleCustom = css`
             &.focus {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.focus};
               }
@@ -191,9 +196,8 @@ export const styleCustom = css`
         }
 
         &:hover {
-          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style} ${
-      inputfield.container.border.default.hover.color
-    };
+          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style}
+            ${inputfield.container.border.default.hover.color};
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
         }
@@ -228,14 +232,14 @@ export const styleCustom = css`
 
         &:active {
           outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-          ${inputfield.container.border.default.pressed.color};
+            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
         }
 
         &.error-input {
           outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
-          ${inputfield.container.border.error.rest.color};
+            ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
           &.focus {
@@ -246,7 +250,7 @@ export const styleCustom = css`
           }
 
           &:hover {
-            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style} 
+            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style};
             border-color: ${inputfield.container.border.error.hover.color};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
@@ -289,10 +293,12 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
           height: ${inputfield.icon.iconsize.sm};
           width: ${inputfield.icon.iconsize.sm};
         }
+
         &.md {
           height: ${inputfield.icon.iconsize.md};
           width: ${inputfield.icon.iconsize.md};
         }
+
         &.lg {
           height: ${inputfield.icon.iconsize.lg};
           width: ${inputfield.icon.iconsize.lg};

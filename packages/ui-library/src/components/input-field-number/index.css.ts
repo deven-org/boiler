@@ -93,12 +93,14 @@ export const staticSemanticStyles = css`
             padding: ${labelslot.padding.sm};
           }
         }
+
         &.md {
           & > .label-wrapper {
             display: flex;
             padding: ${labelslot.padding.md};
           }
         }
+
         &.lg {
           & > .label-wrapper {
             display: flex;
@@ -110,7 +112,6 @@ export const staticSemanticStyles = css`
       .input-wrapper.${theme} {
         box-sizing: border-box;
         width: 100%;
-
         outline-width: ${inputfield.container.border.default.rest.width};
         outline-style: ${inputfield.container.border.default.rest.style};
         outline-color: ${inputfield.container.border.default.rest.color};
@@ -354,7 +355,6 @@ export const staticComponentStyles = css`
         align-items: center;
         border: none;
         padding: 0;
-
         background-color: ${StepperButton.Container.BackgroundColor.Rest};
         color: ${StepperButton.Icon.IconColor.Rest};
 
@@ -370,7 +370,7 @@ export const staticComponentStyles = css`
 
         &:disabled {
           background-color: ${StepperButton.Container.BackgroundColor.Disabled};
-          color: ${StepperButton.Icon.IconColor.Disabled}
+          color: ${StepperButton.Icon.IconColor.Disabled};
           cursor: not-allowed;
         }
 

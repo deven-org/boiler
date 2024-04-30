@@ -68,7 +68,6 @@ export const staticSemanticStyles = css`
         font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
         font-size: ${forms.inputfield.userinput.typography.md.fontSize};
         font-family: ${forms.inputfield.userinput.typography.md.fontFamily}, sans-serif;
-
         border-width: ${forms.inputfield.container.border.default.rest.width};
         border-style: ${forms.inputfield.container.border.default.rest.style};
         border-color: ${forms.inputfield.container.border.default.rest.color};
@@ -280,6 +279,7 @@ export const staticComponentStyles = css`
 
         &:focus {
           color: ${formlabel.label.textcolor.focus};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.focus};
           }
@@ -287,6 +287,7 @@ export const staticComponentStyles = css`
 
         &:hover {
           color: ${formlabel.label.textcolor.hover};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.hover};
           }
@@ -294,6 +295,7 @@ export const staticComponentStyles = css`
 
         &:disabled {
           color: ${formlabel.label.textcolor.disabled};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.disabled};
           }
@@ -301,6 +303,7 @@ export const staticComponentStyles = css`
 
         &[readonly] {
           color: ${formlabel.label.textcolor.readonly};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.readonly};
           }
@@ -308,6 +311,7 @@ export const staticComponentStyles = css`
 
         &.error {
           color: ${formlabel.label.textcolor.error};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.error};
           }

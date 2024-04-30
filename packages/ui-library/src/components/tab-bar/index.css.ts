@@ -34,7 +34,7 @@ export const staticStyles = css`
         }
 
         &.browserOverflow {
-          padding: 0px 1rem;
+          padding: 0 1rem;
         }
       }
 
@@ -217,6 +217,7 @@ export const staticStyles = css`
                       }
                     }
                   }
+
                   &:not(.selected) {
                     & > blr-icon {
                       color: ${TabBar.Tab.Icon.IconColor.Inactive.Rest};
@@ -230,6 +231,7 @@ export const staticStyles = css`
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
                       }
+
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
                       }

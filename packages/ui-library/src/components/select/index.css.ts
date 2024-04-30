@@ -123,11 +123,13 @@ export const staticStyles = css`
             padding: ${labelslot.padding.sm};
           }
         }
+
         &.md {
           & > .label-wrapper {
             padding: ${labelslot.padding.md};
           }
         }
+
         &.lg {
           & > .label-wrapper {
             padding: ${labelslot.padding.lg};
@@ -164,6 +166,7 @@ export const staticStyles = css`
 
           &.disabled {
             color: ${inputfield.userinput.textcolor.default.disabled};
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.disabled};
             }
@@ -334,10 +337,12 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
         height: ${inputfield.icon.iconsize.sm};
         width: ${inputfield.icon.iconsize.sm};
       }
+
       &.md {
         height: ${inputfield.icon.iconsize.md};
         width: ${inputfield.icon.iconsize.md};
       }
+
       &.lg {
         height: ${inputfield.icon.iconsize.lg};
         width: ${inputfield.icon.iconsize.lg};

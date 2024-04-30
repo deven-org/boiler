@@ -14,16 +14,19 @@ export const staticStyles = css`
 
   .blr-textarea {
     max-width: fit-content;
+
     &.sm {
       & > .label-wrapper {
         display: flex;
       }
     }
+
     &.md {
       & > .label-wrapper {
         display: flex;
       }
     }
+
     &.lg {
       & > .label-wrapper {
         display: flex;
@@ -34,15 +37,19 @@ export const staticStyles = css`
   .blr-textarea-info-container {
     display: flex;
     justify-content: right;
+
     &.error {
       justify-content: right;
     }
+
     &.hint {
       justify-content: right;
     }
+
     &.error-message {
       justify-content: space-between;
     }
+
     &.hint-message {
       justify-content: space-between;
     }
@@ -82,11 +89,13 @@ export const staticStyles = css`
             padding: ${labelslot.padding.sm};
           }
         }
+
         &.md {
           & > .label-wrapper {
             padding: ${labelslot.padding.md};
           }
         }
+
         &.lg {
           & > .label-wrapper {
             padding: ${labelslot.padding.lg};

@@ -20,7 +20,6 @@ export const staticStyles = css`
           gap: ${counter.container.itemspacing.sm};
           border-radius: ${counter.container.borderradius.sm};
           outline-width: ${counter.container.borderwidth.sm};
-
           font-family: ${counter.text.typography.sm.fontFamily}, sans-serif;
           font-weight: ${counter.text.typography.sm.fontWeight};
           font-size: ${counter.text.typography.sm.fontSize};
@@ -32,7 +31,6 @@ export const staticStyles = css`
           gap: ${counter.container.itemspacing.md};
           border-radius: ${counter.container.borderradius.md};
           outline-width: ${counter.container.borderwidth.md};
-
           font-family: ${counter.text.typography.md.fontFamily}, sans-serif;
           font-weight: ${counter.text.typography.md.fontWeight};
           font-size: ${counter.text.typography.md.fontSize};
@@ -44,7 +42,6 @@ export const staticStyles = css`
           gap: ${counter.container.itemspacing.lg};
           border-radius: ${counter.container.borderradius.lg};
           outline-width: ${counter.container.borderwidth.lg};
-
           font-family: ${counter.text.typography.lg.fontFamily}, sans-serif;
           font-weight: ${counter.text.typography.lg.fontWeight};
           font-size: ${counter.text.typography.lg.fontSize};

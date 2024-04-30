@@ -31,15 +31,18 @@ export const staticStyles = css`
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
+
           .hint-wrapper,
           .error-wrapper {
             flex-basis: 100%;
+
             .blr-form-caption {
-              gap: 0px;
+              gap: 0;
             }
           }
+
           .blr-form-label-inline {
-            font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, "sans-serif";
+            font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, sans-serif;
           }
         }
 
@@ -61,6 +64,7 @@ export const staticStyles = css`
           & .visual-checkbox {
             padding-top: ${checkbox.contentcol.paddingtop.sm};
             gap: ${checkbox.contentcol.itemspacing.sm};
+
             .blr-form-label-inline {
               font-weight: ${formlabel.inlinelabel.typography.sm.fontWeight};
               line-height: ${formlabel.inlinelabel.typography.sm.lineHeight};
@@ -86,6 +90,7 @@ export const staticStyles = css`
           .label-wrapper {
             padding-top: ${checkbox.contentcol.paddingtop.md};
             gap: ${checkbox.contentcol.itemspacing.md};
+
             .blr-form-label-inline {
               font-weight: ${formlabel.inlinelabel.typography.md.fontWeight};
               line-height: ${formlabel.inlinelabel.typography.md.lineHeight};
@@ -111,6 +116,7 @@ export const staticStyles = css`
           .label-wrapper {
             padding-top: ${checkbox.contentcol.paddingtop.lg};
             gap: ${checkbox.contentcol.itemspacing.lg};
+
             .blr-form-label-inline {
               font-weight: ${formlabel.inlinelabel.typography.lg.fontWeight};
               line-height: ${formlabel.inlinelabel.typography.lg.lineHeight};
@@ -129,16 +135,20 @@ export const staticStyles = css`
                   color: ${formlabel.inlinelabel.textcolor.hover};
                 }
               }
+
               &.focus {
                 color: ${formlabel.inlinelabel.textcolor.focus};
               }
+
               &.active {
                 &:not(.readonly) {
                   color: ${formlabel.inlinelabel.textcolor.pressed};
                 }
               }
+
               &.readonly {
                 color: ${formlabel.inlinelabel.textcolor.readonly};
+
                 .blr-form-label-inline {
                   cursor: not-allowed !important;
                   pointer-events: none;
@@ -146,9 +156,11 @@ export const staticStyles = css`
               }
             }
           }
+
           &.error {
             color: ${formlabel.inlinelabel.textcolor.error};
           }
+
           &.disabled {
             .blr-form-label-inline {
               cursor: not-allowed;
@@ -169,6 +181,7 @@ export const staticStyles = css`
 
             cursor: not-allowed;
           }
+
           &.readonly {
             pointer-events: none;
           }
@@ -178,93 +191,113 @@ export const staticStyles = css`
             &.indeterminate {
               background-color: ${checkbox.control.container.backgroundcolor.active.rest};
               outline-color: ${checkbox.control.container.bordercolor.active.rest};
+
               & .checker-icon {
                 color: ${checkbox.control.icon.iconcolor.active.rest};
               }
 
               &.hover {
-                &:not(.disabled):not(.readonly) {
+                &:not(.disabled, .readonly) {
                   background-color: ${checkbox.control.container.backgroundcolor.active.hover};
                   outline-color: ${checkbox.control.container.bordercolor.active.hover};
+
                   & .checker-icon {
                     color: ${checkbox.control.icon.iconcolor.active.hover};
                   }
                 }
               }
+
               &.focus {
                 background-color: ${checkbox.control.container.backgroundcolor.active.focus};
                 outline-color: ${checkbox.control.container.bordercolor.active.focus};
+
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.active.focus};
                 }
               }
+
               &.active {
-                &:not(:disabled):not([readonly]) {
+                &:not(:disabled, [readonly]) {
                   background-color: ${checkbox.control.container.backgroundcolor.active.pressed};
                   outline-color: ${checkbox.control.container.bordercolor.active.pressed};
+
                   & .checker-icon {
                     color: ${checkbox.control.icon.iconcolor.active.pressed};
                   }
                 }
               }
+
               &.disabled {
                 background-color: ${checkbox.control.container.backgroundcolor.active.disabled};
                 outline-color: ${checkbox.control.container.bordercolor.active.disabled};
+
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.active.disabled};
                 }
               }
+
               &.readonly {
                 background-color: ${checkbox.control.container.backgroundcolor.active.readonly};
                 outline-color: ${checkbox.control.container.bordercolor.active.readonly};
+
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.active.readonly};
                 }
               }
             }
 
-            &:not(.checked):not(.indeterminate) {
+            &:not(.checked, .indeterminate) {
               background-color: ${checkbox.control.container.backgroundcolor.inactive.rest};
               outline-color: ${checkbox.control.container.bordercolor.inactive.rest};
+
               & .checker-icon {
                 color: ${checkbox.control.icon.iconcolor.inactive.rest};
               }
 
               &.hover {
-                &:not(.disabled):not(.readonly) {
+                &:not(.disabled, .readonly) {
                   background-color: ${checkbox.control.container.backgroundcolor.inactive.hover};
                   outline-color: ${checkbox.control.container.bordercolor.inactive.hover};
+
                   & .checker-icon {
                     color: ${checkbox.control.icon.iconcolor.inactive.hover};
                   }
                 }
               }
+
               &.focus {
                 background-color: ${checkbox.control.container.backgroundcolor.inactive.focus};
                 outline-color: ${checkbox.control.container.bordercolor.inactive.focus};
+
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.inactive.focus};
                 }
               }
+
               &.active {
-                &:not(.disabled):not(.readonly) {
+                &:not(.disabled, .readonly) {
                   background-color: ${checkbox.control.container.backgroundcolor.inactive.pressed};
                   outline-color: ${checkbox.control.container.bordercolor.inactive.pressed};
+
                   & .checker-icon {
                     color: ${checkbox.control.icon.iconcolor.inactive.pressed};
                   }
                 }
               }
+
               &.disabled {
                 background-color: ${checkbox.control.container.backgroundcolor.inactive.disabled};
                 outline-color: ${checkbox.control.container.bordercolor.inactive.disabled};
+
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.inactive.disabled};
                 }
               }
+
               &.readonly {
                 background-color: ${checkbox.control.container.backgroundcolor.inactive.readonly};
                 outline-color: ${checkbox.control.container.bordercolor.inactive.readonly};
+
                 & .checker-icon {
                   color: ${checkbox.control.icon.iconcolor.inactive.readonly};
                 }
@@ -276,13 +309,16 @@ export const staticStyles = css`
             &.checked {
               background-color: ${checkbox.control.container.backgroundcolor.active.error};
               outline-color: ${checkbox.control.container.bordercolor.active.error};
+
               & .checker-icon {
                 color: ${checkbox.control.icon.iconcolor.active.error};
               }
             }
+
             &:not(.checked) {
               background-color: ${checkbox.control.container.backgroundcolor.inactive.error};
               outline-color: ${checkbox.control.container.bordercolor.inactive.error};
+
               & .checker-icon {
                 color: ${checkbox.control.icon.iconcolor.inactive.error};
               }
@@ -297,50 +333,60 @@ export const staticStyles = css`
                 width: ${checkbox.control.icon.iconsize.sm.rest};
                 height: ${checkbox.control.icon.iconsize.sm.rest};
               }
+
               outline-width: ${checkbox.control.container.borderwidth.sm.inactive.rest};
               outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.rest} * -1);
 
               &.hover {
-                &:not(.disabled):not(.readonly) {
+                &:not(.disabled, .readonly) {
                   & .checker-icon {
                     width: ${checkbox.control.icon.iconsize.sm.hover};
                     height: ${checkbox.control.icon.iconsize.sm.hover};
                   }
+
                   outline-width: ${checkbox.control.container.borderwidth.sm.inactive.hover};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.hover} * -1);
                 }
               }
+
               &.focus {
                 & .checker-icon {
                   width: ${checkbox.control.icon.iconsize.sm.focus};
                   height: ${checkbox.control.icon.iconsize.sm.focus};
                 }
+
                 outline-width: ${checkbox.control.container.borderwidth.sm.inactive.focus};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.focus} * -1);
               }
+
               &.active {
-                &:not(.disabled):not(.readonly) {
+                &:not(.disabled, .readonly) {
                   & .checker-icon {
                     width: ${checkbox.control.icon.iconsize.sm.pressed};
                     height: ${checkbox.control.icon.iconsize.sm.pressed};
                   }
+
                   outline-width: ${checkbox.control.container.borderwidth.sm.inactive.pressed};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.pressed} * -1);
                 }
               }
+
               &.disabled {
                 & .checker-icon {
                   width: ${checkbox.control.icon.iconsize.sm.disabled};
                   height: ${checkbox.control.icon.iconsize.sm.disabled};
                 }
+
                 outline-width: ${checkbox.control.container.borderwidth.sm.inactive.disabled};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.disabled} * -1);
               }
+
               &.readonly {
                 & .checker-icon {
                   width: ${checkbox.control.icon.iconsize.sm.readonly};
                   height: ${checkbox.control.icon.iconsize.sm.readonly};
                 }
+
                 outline-width: ${checkbox.control.container.borderwidth.sm.inactive.readonly};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.readonly} * -1);
               }
@@ -350,25 +396,29 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.sm.active.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.hover} * -1);
                   }
                 }
+
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.sm.active.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.focus} * -1);
                 }
+
                 &.active {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.sm.active.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.pressed} * -1);
                   }
                 }
+
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.sm.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.disabled} * -1);
                 }
+
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.sm.active.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.readonly} * -1);
@@ -376,6 +426,7 @@ export const staticStyles = css`
               }
             }
           }
+
           &.error {
             .visual-checkbox {
               & .checker-icon {
@@ -387,6 +438,7 @@ export const staticStyles = css`
                 outline-width: ${checkbox.control.container.borderwidth.sm.inactive.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.error} * -1);
               }
+
               &.checked {
                 outline-width: ${checkbox.control.container.borderwidth.sm.active.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.error} * -1);
@@ -408,20 +460,24 @@ export const staticStyles = css`
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.hover} * -1);
                   }
                 }
+
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.focus} * -1);
                 }
+
                 &.active {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.md.inactive.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.pressed} * -1);
                   }
                 }
+
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.disabled} * -1);
                 }
+
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.readonly} * -1);
@@ -433,25 +489,29 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.active.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.md.active.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.active.hover} * -1);
                   }
                 }
+
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.focus} * -1);
                 }
+
                 &.active {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.md.active.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.md.active.pressed} * -1);
                   }
                 }
+
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.disabled} * -1);
                 }
+
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.readonly} * -1);
@@ -459,12 +519,14 @@ export const staticStyles = css`
               }
             }
           }
+
           &.error {
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.md.inactive.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.error} * -1);
               }
+
               &.checked {
                 outline-width: ${checkbox.control.container.borderwidth.md.active.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.active.error} * -1);
@@ -481,25 +543,29 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.inactive.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.hover} * -1);
                   }
                 }
+
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.focus} * -1);
                 }
+
                 &.active {
-                  &:not(:disabled):not(.readonly) {
+                  &:not(:disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.inactive.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.pressed} * -1);
                   }
                 }
+
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.disabled} * -1);
                 }
+
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.readonly} * -1);
@@ -511,25 +577,29 @@ export const staticStyles = css`
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.rest} * -1);
 
                 &.hover {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.active.hover};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.hover} * -1);
                   }
                 }
+
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.focus} * -1);
                 }
+
                 &.active {
-                  &:not(.disabled):not(.readonly) {
+                  &:not(.disabled, .readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.active.pressed};
                     outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.pressed} * -1);
                   }
                 }
+
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.disabled} * -1);
                 }
+
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.readonly} * -1);
@@ -537,12 +607,14 @@ export const staticStyles = css`
               }
             }
           }
+
           &.error:not(.disbaled) {
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.lg.inactive.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.error} * -1);
               }
+
               &.checked {
                 outline-width: ${checkbox.control.container.borderwidth.lg.active.error};
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.error} * -1);

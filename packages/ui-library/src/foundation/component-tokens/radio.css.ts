@@ -115,26 +115,26 @@ export const staticStyles = css`
         }
 
         &.sm {
-          _fix_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
           column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.SM};
           row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.SM};
         }
 
         &.md {
-          _fix_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
           column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.MD};
           row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.MD};
         }
 
         &.lg {
-          _fix_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
           column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.LG};
           row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.LG};
         }
       }
 
       .blr-radio.${theme} {
-        _fix_: To override constructed margin;
+        /* FIX: to override constructed margin; */
         all: initial;
         margin: 0 !important;
         display: flex;
@@ -142,7 +142,7 @@ export const staticStyles = css`
         transition: all 0.25s ease 0s;
 
         .blr-form-label-inline {
-          _fix?_: "LabelNextToControl states";
+          /* FIX?: "LabelNextToControl states"; */
           color: ${formlabel.inlinelabel.textcolor.rest};
           transition: all 0.25s ease 0s;
           display: flex;
@@ -269,7 +269,7 @@ export const staticStyles = css`
             height: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
           }
 
-          &:not(.disabled):not(.readonly) {
+          &:not(.disabled, .readonly) {
             &:hover {
               background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Hover};
 
@@ -306,7 +306,8 @@ export const staticStyles = css`
 
             &:focus {
               background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
-              _fix_: "needs focus ring";
+
+              /* FIX: "needs focus ring"; */
               outline: black solid 2px;
               outline-offset: 2px;
 
@@ -336,7 +337,7 @@ export const staticStyles = css`
               height: ${Radio.Control.Icon.IconSize.SM.Active.Rest};
             }
 
-            &:not(.disabled):not(.readonly) {
+            &:not(.disabled, .readonly) {
               &:hover {
                 background-color: ${Radio.Control.Container.BackgroundColor.Active.Hover};
 
