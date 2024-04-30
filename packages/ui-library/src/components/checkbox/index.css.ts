@@ -1,12 +1,11 @@
 import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss/* css */ `
-
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { checkbox, formlabel } = cmp;
 
-    return typeSafeCss/* css */ `
+    return css`
       .blr-checkbox.${theme} {
         all: initial;
         display: flex;
@@ -14,7 +13,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
         .input-control {
           all: initial;
         }
-        
+
         .visual-checkbox {
           all: initial;
           display: inline-block;
@@ -32,20 +31,21 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
-          .hint-wrapper, .error-wrapper {
+          .hint-wrapper,
+          .error-wrapper {
             flex-basis: 100%;
             .blr-form-caption {
               gap: 0px;
             }
           }
           .blr-form-label-inline {
-            font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, 'sans-serif';
+            font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, "sans-serif";
           }
         }
-      
+
         &.sm {
           gap: ${checkbox.contentrow.itemspacing.sm};
-          
+
           .visual-checkbox {
             min-width: ${checkbox.control.container.size.sm};
             height: ${checkbox.control.container.size.sm};
@@ -56,8 +56,9 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           .focus-ring {
             border-radius: ${checkbox.control.container.borderradius.sm};
           }
-          
-          & .label-wrapper, & .visual-checkbox {
+
+          & .label-wrapper,
+          & .visual-checkbox {
             padding-top: ${checkbox.contentcol.paddingtop.sm};
             gap: ${checkbox.contentcol.itemspacing.sm};
             .blr-form-label-inline {
@@ -153,7 +154,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
               cursor: not-allowed;
               color: ${formlabel.inlinelabel.textcolor.disabled};
             }
-          }  
+          }
         }
 
         .visual-checkbox {
@@ -173,7 +174,8 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           }
 
           &:not(.error) {
-            &.checked, &.indeterminate {
+            &.checked,
+            &.indeterminate {
               background-color: ${checkbox.control.container.backgroundcolor.active.rest};
               outline-color: ${checkbox.control.container.bordercolor.active.rest};
               & .checker-icon {
@@ -288,7 +290,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           }
         }
 
-
         &.sm {
           &:not(.error) {
             .visual-checkbox {
@@ -298,7 +299,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
               }
               outline-width: ${checkbox.control.container.borderwidth.sm.inactive.rest};
               outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.rest} * -1);
-              
 
               &.hover {
                 &:not(.disabled):not(.readonly) {
@@ -335,7 +335,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 }
                 outline-width: ${checkbox.control.container.borderwidth.sm.inactive.disabled};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.disabled} * -1);
-                
               }
               &.readonly {
                 & .checker-icon {
@@ -345,7 +344,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 outline-width: ${checkbox.control.container.borderwidth.sm.inactive.readonly};
                 outline-offset: calc(${checkbox.control.container.borderwidth.sm.inactive.readonly} * -1);
               }
-
 
               &.checked {
                 outline-width: ${checkbox.control.container.borderwidth.sm.active.rest};
@@ -370,16 +368,15 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.sm.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.disabled} * -1);
-                  
                 }
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.sm.active.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.sm.active.readonly} * -1);
                 }
-              }      
+              }
             }
           }
-          &.error{
+          &.error {
             .visual-checkbox {
               & .checker-icon {
                 width: ${checkbox.control.icon.iconsize.sm.error};
@@ -398,14 +395,12 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           }
         }
 
-
         &.md {
           &:not(.error) {
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.md.inactive.rest};
                 outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.rest} * -1);
-                
 
                 &.hover {
                   &.not(.disabled):not(.readonly) {
@@ -416,7 +411,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.focus} * -1);
-                  
                 }
                 &.active {
                   &:not(.disabled):not(.readonly) {
@@ -427,7 +421,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.inactive.disabled} * -1);
-                  
                 }
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.md.inactive.readonly};
@@ -448,7 +441,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.focus} * -1);
-                  
                 }
                 &.active {
                   &:not(.disabled):not(.readonly) {
@@ -459,13 +451,12 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.disabled} * -1);
-                  
                 }
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.md.active.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.md.active.readonly} * -1);
                 }
-              }      
+              }
             }
           }
           &.error {
@@ -482,14 +473,13 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           }
         }
 
-
         &.lg {
           &:not(.error) {
             .visual-checkbox {
               &:not(.checked) {
                 outline-width: ${checkbox.control.container.borderwidth.lg.inactive.rest};
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.rest} * -1);
-                
+
                 &.hover {
                   &:not(.disabled):not(.readonly) {
                     outline-width: ${checkbox.control.container.borderwidth.lg.inactive.hover};
@@ -499,7 +489,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.focus} * -1);
-                  
                 }
                 &.active {
                   &:not(:disabled):not(.readonly) {
@@ -510,7 +499,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.inactive.disabled} * -1);
-                  
                 }
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.lg.inactive.readonly};
@@ -518,7 +506,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 }
               }
 
-              &.checked{
+              &.checked {
                 outline-width: ${checkbox.control.container.borderwidth.lg.active.rest};
                 outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.rest} * -1);
 
@@ -531,7 +519,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.focus {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.focus};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.focus} * -1);
-                  
                 }
                 &.active {
                   &:not(.disabled):not(.readonly) {
@@ -542,13 +529,12 @@ export const staticStyles = typeSafeNestedCss/* css */ `
                 &.disabled {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.disabled};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.disabled} * -1);
-                  
                 }
                 &.readonly {
                   outline-width: ${checkbox.control.container.borderwidth.lg.active.readonly};
                   outline-offset: calc(${checkbox.control.container.borderwidth.lg.active.readonly} * -1);
                 }
-              }      
+              }
             }
           }
           &.error:not(.disbaled) {
@@ -568,23 +554,22 @@ export const staticStyles = typeSafeNestedCss/* css */ `
     `;
   })}
 
-${SemanticThemeIterator((theme, sem, typeSafeCss) => {
-  const { focusring } = sem.global;
+  ${SemanticThemeIterator((theme, sem, css) => {
+    const { focusring } = sem.global;
 
-  return typeSafeCss/* css */ `
-        .focus-ring.${theme} {
-          position: absolute;
-          inset: 0;
-          outline-color: transparent;
-          outline-style: solid;
+    return css`
+      .focus-ring.${theme} {
+        position: absolute;
+        inset: 0;
+        outline-color: transparent;
+        outline-style: solid;
 
-          &.focus {
-            outline-width: ${focusring.border.width};
-            outline-offset: 2px;
-            outline-color: ${focusring.border.color};
-          }
+        &.focus {
+          outline-width: ${focusring.border.width};
+          outline-offset: 2px;
+          outline-color: ${focusring.border.color};
         }
+      }
     `;
-})}
-
+  })}
 `;

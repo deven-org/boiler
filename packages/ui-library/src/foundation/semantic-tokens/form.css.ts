@@ -1,8 +1,8 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { SemanticThemeIterator, ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
-export const staticBaseStyles = typeSafeNestedCss/*css*/ `
+export const staticBaseStyles = css`
   .blr-form-element {
     all: initial;
     width: 100%;
@@ -58,11 +58,11 @@ export const staticBaseStyles = typeSafeNestedCss/*css*/ `
   }
 `;
 
-export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+export const staticSemanticStyles = css`
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { forms } = sem;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-form-element.${theme} {
         color: ${forms.inputfield.userinput.textcolor.default.rest};
         font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
@@ -270,11 +270,11 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
   })}
 `;
 
-export const staticComponentStyles = typeSafeNestedCss/*css*/ `
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticComponentStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { formlabel } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-form-label.${theme} {
         color: ${formlabel.label.textcolor.rest};
 
@@ -389,7 +389,7 @@ export const staticComponentStyles = typeSafeNestedCss/*css*/ `
   })}
 `;
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   ${staticBaseStyles.cssText}
   ${staticSemanticStyles.cssText}
   ${staticComponentStyles.cssText}

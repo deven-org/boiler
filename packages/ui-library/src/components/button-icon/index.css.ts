@@ -1,7 +1,7 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
-export const styleCustom = typeSafeNestedCss/* css */ `
+export const styleCustom = css`
   .focus-layer {
     position: absolute;
     inset: 0;
@@ -17,7 +17,8 @@ export const styleCustom = typeSafeNestedCss/* css */ `
   }
 
   .loading {
-    &.blr-button-icon:hover, &.blr-button-icon:focus {
+    &.blr-button-icon:hover,
+    &.blr-button-icon:focus {
       cursor: auto;
       text-decoration: none;
     }
@@ -27,10 +28,10 @@ export const styleCustom = typeSafeNestedCss/* css */ `
     }
   }
 
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { ButtonIcon } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-button-icon.${theme} {
         &.xs {
           padding: ${ButtonIcon.Container.Padding.XS};
@@ -80,10 +81,10 @@ export const styleCustom = typeSafeNestedCss/* css */ `
     `;
   })}
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { global, buttons } = sem;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .focus-layer.${theme} {
         outline-color: ${global.focusring.border.color};
         outline-style: ${global.focusring.border.style};
@@ -91,29 +92,30 @@ export const styleCustom = typeSafeNestedCss/* css */ `
       }
 
       .loading.${theme} {
-        &.blr-button-icon:hover, &.blr-button-icon:focus {
+        &.blr-button-icon:hover,
+        &.blr-button-icon:focus {
           &.cta {
-            background-color: ${buttons.container.bgcolor.cta.loading}
+            background-color: ${buttons.container.bgcolor.cta.loading};
           }
 
           &.primary {
-            background-color: ${buttons.container.bgcolor.primary.loading}
+            background-color: ${buttons.container.bgcolor.primary.loading};
           }
 
           &.secondary {
-            background-color: ${buttons.container.bgcolor.secondary.loading}
+            background-color: ${buttons.container.bgcolor.secondary.loading};
           }
 
           &.silent {
-            background-color: ${buttons.container.bgcolor.silent.loading}
+            background-color: ${buttons.container.bgcolor.silent.loading};
           }
 
           &.destructive {
-            background-color: ${buttons.container.bgcolor.destructive.loading}
+            background-color: ${buttons.container.bgcolor.destructive.loading};
           }
-          
+
           &.encourage {
-            background-color: ${buttons.container.bgcolor.encourage.loading}
+            background-color: ${buttons.container.bgcolor.encourage.loading};
           }
         }
       }

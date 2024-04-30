@@ -1,7 +1,7 @@
 import { SemanticThemeIterator, ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticBaseStyles = typeSafeNestedCss/* css */ `
+export const staticBaseStyles = css`
   .noPointerEvents {
     pointer-events: none;
   }
@@ -81,11 +81,11 @@ export const staticBaseStyles = typeSafeNestedCss/* css */ `
   }
 `;
 
-export const staticSemanticStyles = typeSafeNestedCss/* css */ `
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+export const staticSemanticStyles = css`
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { inputfield, labelslot } = sem.forms;
 
-    return typeSafeCss/* css */ `
+    return css`
       .blr-input-field-number.${theme} {
         &.sm {
           & > .label-wrapper {
@@ -135,7 +135,7 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
       input.${theme} {
         all: initial;
         color: ${inputfield.userinput.textcolor.default.rest};
-  
+
         &::placeholder {
           color: ${inputfield.placeholder.textcolor.default.rest};
         }
@@ -147,9 +147,7 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
         }
       }
 
-
-      .unit.${theme},
-      input.${theme} {
+      .unit.${theme}, input.${theme} {
         &.sm {
           font-weight: ${inputfield.userinput.typography.sm.fontWeight};
           font-size: ${inputfield.userinput.typography.sm.fontSize};
@@ -176,7 +174,8 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
       }
 
       &.disabled.${theme} {
-        outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style} ${inputfield.container.border.default.disabled.color};
+        outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
+          ${inputfield.container.border.default.disabled.color};
         background-color: ${inputfield.container.bgcolor.default.disabled};
         cursor: not-allowed;
 
@@ -191,7 +190,8 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
       }
 
       &.error-input.${theme} {
-        outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style} ${inputfield.container.border.error.rest.color};
+        outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+          ${inputfield.container.border.error.rest.color};
         color: ${inputfield.userinput.textcolor.error.rest};
         background-color: ${inputfield.container.bgcolor.error.rest};
 
@@ -200,7 +200,8 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
         }
 
         &:hover {
-          outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style} ${inputfield.container.border.error.hover.color};
+          outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style}
+            ${inputfield.container.border.error.hover.color};
           color: ${inputfield.userinput.textcolor.error.hover};
           background-color: ${inputfield.container.bgcolor.error.hover};
 
@@ -210,7 +211,8 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
         }
 
         &:active {
-          outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style} ${inputfield.container.border.error.pressed.color};
+          outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
+            ${inputfield.container.border.error.pressed.color};
           color: ${inputfield.userinput.textcolor.error.pressed};
           background-color: ${inputfield.container.bgcolor.error.pressed};
 
@@ -220,7 +222,8 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
         }
 
         &:focus-within {
-          outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style} ${inputfield.container.border.error.focus.color};
+          outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+            ${inputfield.container.border.error.focus.color};
           color: ${inputfield.userinput.textcolor.error.focus};
           background-color: ${inputfield.container.bgcolor.error.focus};
 
@@ -231,7 +234,8 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
       }
 
       &.readonly.${theme} {
-        outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style} ${inputfield.container.border.default.readonly.color};
+        outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style}
+          ${inputfield.container.border.default.readonly.color};
         color: ${inputfield.userinput.textcolor.default.readonly};
         background-color: ${inputfield.container.bgcolor.default.readonly};
 
@@ -243,11 +247,11 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
   })}
 `;
 
-export const staticComponentStyles = typeSafeNestedCss/* css */ `
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticComponentStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { StepperButton, StepperCombo, InputFieldNumber } = cmp;
 
-    return typeSafeCss/* css */ `
+    return css`
       .input-unit-container.${theme} {
         &.sm {
           gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.SM};

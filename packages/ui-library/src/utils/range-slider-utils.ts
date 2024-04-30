@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from './css-in-ts/nested-typesafe-css-literals.js';
+import { css } from './css-in-ts/nested-typesafe-css-literals.js';
 import { ThemeType } from '../foundation/_tokens-generated/index.themes.js';
 
 import { Cmp as ComponentTokens } from '../foundation/_tokens-generated/componentTokensType.generated.js';
@@ -44,7 +44,7 @@ export const generateRangeBar = (
   endValueToSlider: number,
   disabled?: boolean,
   twoKnobs?: string,
-  isMinLesserThanMax?: boolean
+  isMinLesserThanMax?: boolean,
 ) => {
   const { Slider } = ThemedTokens[theme];
 
@@ -76,7 +76,7 @@ export const generateRangeBar = (
           ${muteColor} 100%
         )`;
 
-  return typeSafeNestedCss/*css*/ `
+  return css`
     .blr-slider-bar {
       background: ${generateGradient};
     }

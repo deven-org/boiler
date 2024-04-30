@@ -1,11 +1,11 @@
 import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss/* css */ `
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { counter } = cmp;
 
-    return typeSafeCss/* css */ `
+    return css`
       .blr-counter.${theme} {
         word-break: initial;
         color: ${counter.text.textcolor.neutral};

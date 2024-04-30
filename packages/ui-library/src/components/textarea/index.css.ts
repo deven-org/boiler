@@ -1,7 +1,7 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   :host {
     display: inline-flex;
     flex-direction: column;
@@ -34,18 +34,16 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   .blr-textarea-info-container {
     display: flex;
     justify-content: right;
-    &.error{
+    &.error {
       justify-content: right;
     }
-    &.hint{
+    &.hint {
       justify-content: right;
     }
-    &.error-message
-    {
+    &.error-message {
       justify-content: space-between;
     }
-    &.hint-message
-    {
+    &.hint-message {
       justify-content: space-between;
     }
   }
@@ -74,10 +72,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     }
   }
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { labelslot, captionslot, inputfield } = sem.forms;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-textarea.${theme} {
         &.sm {
           & > .label-wrapper {

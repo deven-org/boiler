@@ -1,7 +1,7 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   .blr-label-toggleswitch {
     display: flex;
     align-items: flex-start;
@@ -68,12 +68,12 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           display: block;
           position: absolute;
         }
-      
+
         & > .toggle-icon {
           position: absolute;
           top: 0;
           display: flex;
-          align-items:center;
+          align-items: center;
         }
 
         & > .toggle-switch-unselect {
@@ -83,7 +83,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         & > .toggle-switch-select {
           right: 0;
         }
-        
+
         &:not(.checked) {
           &.active {
             .toggle-icon > .toggle-icon-class {
@@ -95,10 +95,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     }
   }
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { focusring } = sem.global;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-label-toggleswitch.${theme} {
         .focus-ring {
           &.focus {
@@ -109,10 +109,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     `;
   })}
 
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { ToggleSwitch, formlabel } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-label-toggleswitch.${theme} {
         .focus-ring {
           &.focus {
@@ -139,11 +139,11 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             .knob {
               background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
             }
-      
+
             & > .blr-form-label-inline {
               color: ${formlabel.inlinelabel.textcolor.rest};
             }
-            
+
             &:not(.checked) {
               background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
               outline-color: ${ToggleSwitch.Control.Container.BorderColor.Inactive.Rest};
@@ -361,7 +361,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest});
                 }
-                
+
                 &.hover {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover} * -1);
@@ -397,20 +397,22 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 }
               }
 
-              &  > .toggle-switch-slider {
+              & > .toggle-switch-slider {
                 & > .knob {
                   width: ${ToggleSwitch.Control.Knob.Size.SM};
                   height: ${ToggleSwitch.Control.Knob.Size.SM};
                   top: ${ToggleSwitch.Control.Container.Padding.SM};
-                  left: ${ToggleSwitch.Control.Container.Padding.SM};;
+                  left: ${ToggleSwitch.Control.Container.Padding.SM};
                 }
               }
 
               & > input:checked + .toggle-switch-slider > .knob {
-                transform: translateX( calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM}));
+                transform: translateX(
+                  calc(${ToggleSwitch.Control.Container.Width.SM} * 0.5 - ${ToggleSwitch.Control.Container.Padding.SM})
+                );
               }
 
-              &  > .toggle-icon {
+              & > .toggle-icon {
                 height: ${ToggleSwitch.Control.Container.Height.SM};
 
                 & > .toggle-icon-class {
@@ -444,7 +446,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest};
                 outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest} * -1);
               }
-              
+
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover} * -1);
@@ -532,12 +534,12 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 width: ${ToggleSwitch.Control.Knob.Size.MD};
                 height: ${ToggleSwitch.Control.Knob.Size.MD};
                 top: ${ToggleSwitch.Control.Container.Padding.MD};
-                left: ${ToggleSwitch.Control.Container.Padding.MD};;
+                left: ${ToggleSwitch.Control.Container.Padding.MD};
               }
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              transform: translateX( calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
+              transform: translateX(calc(${ToggleSwitch.Control.Container.Width.MD} * 0.5 - ${ToggleSwitch.Control.Container.Padding.MD}));
             }
 
             & > .toggle-icon {
@@ -550,7 +552,6 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
           }
         }
-
 
         &.lg {
           gap: ${ToggleSwitch.Container.ItemSpacing.LG};
@@ -572,15 +573,15 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest};
-                outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest} * -1);
+                outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest} * -1);
               }
-              
+
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover} * -1);
                 }
               }
 
@@ -589,7 +590,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Pressed} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Pressed};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Pressed} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Pressed} * -1);
                 }
               }
 
@@ -598,7 +599,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Disabled} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled} * -1);
                 }
               }
 
@@ -607,7 +608,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.ReadOnly} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly} * -1);
                 }
               }
             }
@@ -617,7 +618,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest} * -1);
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest};
-                outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest} * -1);
+                outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest} * -1);
               }
 
               &.hover {
@@ -625,7 +626,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover} * -1);
                 }
               }
 
@@ -634,7 +635,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Pressed} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Pressed};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Pressed} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Pressed} * -1);
                 }
               }
 
@@ -643,31 +644,31 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Disabled} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled} * -1);
                 }
               }
-              
+
               &.readonly {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.ReadOnly};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.ReadOnly} * -1);
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly};
-                  outline-offset: calc( ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly} * -1);
+                  outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly} * -1);
                 }
               }
             }
-            
+
             & > .toggle-switch-slider {
               & > .knob {
                 width: ${ToggleSwitch.Control.Knob.Size.LG};
                 height: ${ToggleSwitch.Control.Knob.Size.LG};
                 top: ${ToggleSwitch.Control.Container.Padding.LG};
-                left: ${ToggleSwitch.Control.Container.Padding.LG};;
+                left: ${ToggleSwitch.Control.Container.Padding.LG};
               }
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              transform: translateX( calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
+              transform: translateX(calc(${ToggleSwitch.Control.Container.Width.LG} * 0.5 - ${ToggleSwitch.Control.Container.Padding.LG}));
             }
 
             & > .toggle-icon {
