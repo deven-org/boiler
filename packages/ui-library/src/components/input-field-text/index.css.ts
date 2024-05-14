@@ -86,10 +86,11 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
             }
           }
 
-          &.disabled {
+          &[disabled] {
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.disabled};
             }
+            color: ${inputfield.placeholder.textcolor.default.disabled};
           }
 
           &.focus {
@@ -166,6 +167,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: ${inputfield.container.bgcolor.default.rest};
         border: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
           ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
@@ -203,7 +205,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
           background-color: ${inputfield.container.bgcolor.default.focus};
         }
 
-        &.disabled {
+        &.disabled { 
           border-width: ${inputfield.container.border.default.readonly.width};
           border-style: ${inputfield.container.border.default.disabled.style};
           border-color: transparent;
@@ -224,7 +226,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
         &[readonly] {
           border-width: ${inputfield.container.border.default.readonly.width};
           border-style: ${inputfield.container.border.default.readonly.style};
-          border-color: transparent;
+          border-color: ${inputfield.container.bordercolor.default.readonly};
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};

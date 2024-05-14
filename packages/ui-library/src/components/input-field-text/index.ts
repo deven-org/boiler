@@ -218,7 +218,7 @@ export class BlrInputFieldText extends LitElementCustom {
                 </div>
               `
             : nothing}
-          <div class="blr-input-wrapper ${inputContainerClasses}">
+          <div class="blr-input-wrapper ${inputContainerClasses}" ?readonly="${this.readonly}">
             <div class="blr-input-inner-container ${this.theme}">
               <input
                 class="blr-form-input ${inputClasses}"
