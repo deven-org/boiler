@@ -170,6 +170,7 @@ export class BlrInputFieldText extends LitElementCustom {
       });
 
       const inputClasses = classMap({
+        'error-input': this.hasError || false,
         [this.sizeVariant]: this.sizeVariant,
       });
 
