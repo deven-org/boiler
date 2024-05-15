@@ -256,10 +256,9 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
 
         &.focus {
-          border-width: ${inputfield.container.border.default.rest.width};
-          border-style: ${inputfield.container.border.default.rest.style};
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
-            ${inputfield.container.border.default.focus.color};
+            ${inputfield.container.border.default.focus.color};   
+          border-color: ${inputfield.container.border.default.focus.color};
           color: ${inputfield.userinput.textcolor.default.focus};
           background-color: ${inputfield.container.bgcolor.default.focus};
         }
@@ -284,8 +283,6 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         &:active {
           border-width: ${inputfield.container.border.default.pressed.width};
           border-style: ${inputfield.container.border.default.pressed.style};
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
         }
