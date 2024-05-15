@@ -223,7 +223,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
       }
 
       .blr-select-wrapper.${theme} {
-        border: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
+        outline: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
           ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
         background-color: ${inputfield.container.bgcolor.default.rest};
@@ -244,9 +244,9 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
 
         &:hover {
-          border-width: ${inputfield.container.border.default.hover.width};
-          border-style: ${inputfield.container.border.default.hover.style};
-          border-color: ${inputfield.container.border.default.hover.color};
+          outline: ${inputfield.container.border.default.hover.width}${inputfield.container.border.default.hover.style}${
+      inputfield.container.border.default.hover.color
+    }
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
 
@@ -257,15 +257,12 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
         &.focus {
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
-            ${inputfield.container.border.default.focus.color};   
-          border-color: ${inputfield.container.border.default.focus.color};
+            ${inputfield.container.border.default.focus.color};
           color: ${inputfield.userinput.textcolor.default.focus};
           background-color: ${inputfield.container.bgcolor.default.focus};
         }
 
         &.disabled {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.disabled.style};
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
@@ -273,29 +270,23 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
 
         &[readonly] {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.readonly.style};
-          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
+          outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};
         }
 
         &:active {
-          border-width: ${inputfield.container.border.default.pressed.width};
-          border-style: ${inputfield.container.border.default.pressed.style};
+          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
         }
 
         &.error-input {
-          border-width: ${inputfield.container.border.error.rest.width};
-          border-style: ${inputfield.container.border.error.rest.style};
-          border-color: ${inputfield.container.border.error.rest.color};
+          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+          ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
           &.focus {
-            border-width: ${inputfield.container.border.error.rest.width};
-            border-style: ${inputfield.container.border.error.rest.style};
             outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
               ${inputfield.container.border.error.focus.color};
             color: ${inputfield.userinput.textcolor.error.focus};
@@ -303,16 +294,13 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           }
 
           &:hover {
-            border-width: ${inputfield.container.border.error.hover.width};
-            border-style: ${inputfield.container.border.error.hover.style};
+            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style} 
+            border-color: ${inputfield.container.border.error.hover.color};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
           }
 
           &:active {
-            border-width: ${inputfield.container.border.error.pressed.width};
-            border-style: ${inputfield.container.border.error.pressed.style};
-            border-color: ${inputfield.container.border.error.pressed.color};
             outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
               ${inputfield.container.border.error.pressed.color};
             color: ${inputfield.userinput.textcolor.error.pressed};
