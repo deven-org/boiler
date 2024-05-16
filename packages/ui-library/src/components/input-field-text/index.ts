@@ -171,6 +171,7 @@ export class BlrInputFieldText extends LitElementCustom {
 
       const inputClasses = classMap({
         'error-input': this.hasError || false,
+        'disabled': this.disabled || false,
         [this.sizeVariant]: this.sizeVariant,
       });
 
