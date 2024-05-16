@@ -86,11 +86,10 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
             }
           }
 
-          &[disabled] {
+          &.disabled {
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.disabled};
             }
-            color: ${inputfield.placeholder.textcolor.default.disabled};
           }
 
           &.focus {
@@ -220,6 +219,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
             outline: none;
             background: transparent;
             cursor: not-allowed;
+            color: ${inputfield.placeholder.textcolor.default.disabled};
           }
         }
 
