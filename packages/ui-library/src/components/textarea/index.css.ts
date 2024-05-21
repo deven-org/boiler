@@ -34,10 +34,6 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   .blr-textarea-info-container {
     display: flex;
     justify-content: right;
-
-    &.error {
-      justify-content: right;
-    }
     &.hint {
       justify-content: space-between;
     }

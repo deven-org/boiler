@@ -292,7 +292,7 @@ describe('blr-textarea', () => {
     expect(hasCounter).to.be.equal(null);
   });
 
-  it('should align the counter to the right when hasError is true and hasCounter is true', async () => {
+  it('should align counter to the right when hasError is enabled and hasCounter is enabled', async () => {
     const element = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
@@ -300,33 +300,11 @@ describe('blr-textarea', () => {
         hasCounter: true,
       })
     );
-
-    const infoContainer = querySelectorDeep('.blr-textarea-info-container', element.getRootNode() as HTMLElement);
-
-    if (infoContainer) {
-      const style = getComputedStyle(infoContainer);
-      expect(style.justifyContent).to.be.equal('right');
-    } else {
-      throw new Error('Info container not found');
-    }
-  });
-
-  it('should align the counter to the right when hasError is false and hasCounter is true', async () => {
-    const element = await fixture(
-      BlrTextareaRenderFunction({
-        ...sampleParams,
-        hasError: false,
-        hasCounter: true,
-      })
+    const counterContainerWithError = querySelectorDeep(
+      '.blr-textarea-info-container',
+      element.getRootNode() as HTMLElement
     );
-
-    const infoContainer = querySelectorDeep('.blr-textarea-info-container', element.getRootNode() as HTMLElement);
-
-    if (infoContainer) {
-      const style = getComputedStyle(infoContainer);
-      expect(style.justifyContent).to.be.equal('right');
-    } else {
-      throw new Error('Info container not found');
-    }
+    const styleWithError = getComputedStyle(counterContainerWithError!);
+    expect(styleWithError.justifyContent).to.equal('right');
   });
 });
