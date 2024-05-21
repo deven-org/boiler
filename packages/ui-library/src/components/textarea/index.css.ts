@@ -35,7 +35,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     display: flex;
     justify-content: right;
 
-    &.hint, &.error {
+    &.error {
+      justify-content: right;
+    }
+    &.hint {
       justify-content: space-between;
     }
   }

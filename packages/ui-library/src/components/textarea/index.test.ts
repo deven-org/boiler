@@ -291,4 +291,42 @@ describe('blr-textarea', () => {
     // in html disabled will become an empty string when it's true
     expect(hasCounter).to.be.equal(null);
   });
+
+  it('should align the counter to the right when hasError is true and hasCounter is true', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        hasCounter: true,
+      })
+    );
+
+    const infoContainer = querySelectorDeep('.blr-textarea-info-container', element.getRootNode() as HTMLElement);
+
+    if (infoContainer) {
+      const style = getComputedStyle(infoContainer);
+      expect(style.justifyContent).to.be.equal('right');
+    } else {
+      throw new Error('Info container not found');
+    }
+  });
+
+  it('should align the counter to the right when hasError is false and hasCounter is true', async () => {
+    const element = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasError: false,
+        hasCounter: true,
+      })
+    );
+
+    const infoContainer = querySelectorDeep('.blr-textarea-info-container', element.getRootNode() as HTMLElement);
+
+    if (infoContainer) {
+      const style = getComputedStyle(infoContainer);
+      expect(style.justifyContent).to.be.equal('right');
+    } else {
+      throw new Error('Info container not found');
+    }
+  });
 });
