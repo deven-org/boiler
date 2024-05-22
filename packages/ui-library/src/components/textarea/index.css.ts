@@ -40,7 +40,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     &.hint{
       justify-content: space-between;
     }
-  } 
+  }
 
   .textarea-input-control {
     resize: none;
