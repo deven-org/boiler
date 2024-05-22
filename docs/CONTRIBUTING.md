@@ -147,13 +147,13 @@ yarn compile
 
 
 ## :mag: Pull requests & Code reviews
-Once you are happy with your implementation it is time to open a pull request (PR). After doing so, your code will be 
-reviewed by the B01LER core team. Once the PR has two approvals, your code will be merged to develop and will be part 
-of a future release. 
+Once you are happy with your implementation, all the acceptance criteria of your issue are solved and all tests are 
+passing, it is time to open a pull request (PR). After doing so, your code will be reviewed by the B01LER core team. 
+Once the PR has two approvals, your code will be merged to develop and will be part of a future release. 
 
 In case we find things we would like you to change we will leave comments. We kindly ask you to update your pull request 
-in regards to the requested changes. Once all comments have been solved the pull request will be merged. We will try our 
-best to respond within a week to new pull requests. 
+in regards to the requested changes. Once all comments have been solved, the pull request will be merged. We will try 
+our best to respond within a week to new pull requests. 
 
 Contributors are also invited to review other contributors pull requests, but in the end at least one member of the core 
 team needs to approve it, before it can be merged.
@@ -163,13 +163,14 @@ team needs to approve it, before it can be merged.
 - Make sure that a pull request is linked to the related issue by using a keyword and the issue number as
 explained [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 or by using the `Development` field.
-- Change your PR from `Draft` to `Ready for Review` (you can create Draft PRs at any time, but only open PRs will be
-reviewed).
+- Check off the acceptance criteria of the issue you are working on to track your progress (does not apply to bug issues).
+- Change your PR from `Draft` to `Ready for Review`, when all acceptance criteria are met and all tests are passing (you
+can create Draft PRs at any time, but only open PRs will be reviewed).
 - Leave the reviewers list on the right hand side untouched. We use this to track how many people are already looking at
 your PR.
 - Assign the label needs:reviewers (code) or needs:reviewers (design).
-- During iteration: Stay in touch with the reviewers that are on your case.
-- (only for Members of the Accenture Slack Channel) Post a link to the PR in the [#boiler-dev](https://song-asg.slack.com/archives/C0629BCDCSK)
+- (only for members of the core team) During iteration: Stay in touch with the reviewers that are on your case.
+- (only for members of the Accenture Slack Channel) Post a link to the PR in the [#boiler-dev](https://song-asg.slack.com/archives/C0629BCDCSK)
 Slack channel if the review is time critical.
 
 ### Steps for looking for a pull request to review

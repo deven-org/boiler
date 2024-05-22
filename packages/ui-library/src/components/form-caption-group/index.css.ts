@@ -1,28 +1,49 @@
-import { componentTokens } from "../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs";
-import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
 
-const { CaptionGroup } = componentTokens.cmp;
-const { captionslot } = semanticTokens.sem.forms;
-
-export const formCaptionGroupStyle = typeSafeNestedCss`
+export const staticStyles = typeSafeNestedCss/*css*/ `
   .blr-form-caption-group {
     display: flex;
     flex-direction: column;
-    
-    &.sm {
-      gap: ${CaptionGroup.Container.ItemSpacing.SM};
-      margin: ${captionslot.margin.sm};
-    }
-
-    &.md {
-      gap: ${CaptionGroup.Container.ItemSpacing.MD};
-      margin: ${captionslot.margin.sm};
-    }
-
-    &.lg {
-      gap: ${CaptionGroup.Container.ItemSpacing.LG};
-      margin: ${captionslot.margin.sm};
-    }
   }
+
+  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+    const { CaptionGroup } = cmp;
+
+    return typeSafeCss/*css*/ `
+      .blr-form-caption-group.${theme} {        
+        &.sm {
+          gap: ${CaptionGroup.Container.ItemSpacing.SM};
+        }
+    
+        &.md {
+          gap: ${CaptionGroup.Container.ItemSpacing.MD};
+        }
+    
+        &.lg {
+          gap: ${CaptionGroup.Container.ItemSpacing.LG};
+        }
+      }
+    `;
+  })}
+
+  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+    const { forms } = sem;
+
+    return typeSafeCss/*css*/ `
+      .blr-form-caption-group.${theme} {
+        &.sm {
+          margin: ${forms.captionslot.margin.sm};
+        }
+
+        &.md {
+          margin: ${forms.captionslot.margin.sm};
+        }
+
+        &.lg {
+          margin: ${forms.captionslot.margin.sm};
+        }
+      }
+    `;
+  })}
 `;

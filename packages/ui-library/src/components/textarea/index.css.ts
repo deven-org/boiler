@@ -1,11 +1,7 @@
-import { typeSafeNestedCss } from "../../utils/nested-typesafe-css-literals";
-import { renderThemedCssStrings } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
 
-import { semanticTokens } from "../../foundation/_tokens-generated/__semantic-tokens.Light.generated.mjs";
-
-const { captionslot, labelslot } = semanticTokens.sem.forms;
-
-export const styleCustom = typeSafeNestedCss`
+export const staticStyles = typeSafeNestedCss/*css*/ `
   :host {
     display: inline-flex;
     flex-direction: column;
@@ -21,19 +17,16 @@ export const styleCustom = typeSafeNestedCss`
     &.sm {
       & > .label-wrapper {
         display: flex;
-        padding: ${labelslot.padding.sm};
       }
     }
     &.md {
       & > .label-wrapper {
         display: flex;
-        padding: ${labelslot.padding.md};
       }
     }
     &.lg {
       & > .label-wrapper {
         display: flex;
-        padding: ${labelslot.padding.lg};
       }
     }
   }
@@ -45,66 +38,89 @@ export const styleCustom = typeSafeNestedCss`
     &.hint, &.error {
       justify-content: space-between;
     }
+  }
 
-    &.sm {
-      & > blr-counter {
-        margin: ${captionslot.margin.sm};
-      }
+  .textarea-input-control {
+    resize: none;
+    display: block;
+    max-width: 100%;
+    word-break: break-all;
+    width: 100%;
+
+    &.both {
+      resize: both;
     }
 
-    &.md {
-      & > blr-counter {
-        margin: ${captionslot.margin.md};
-      }
+    &.vertical {
+      resize: vertical;
     }
 
-    &.lg {
-      & > blr-counter {
-        margin: ${captionslot.margin.lg};
-      }
+    &.horizontal {
+      resize: horizontal;
+    }
+
+    &.none {
+      resize: none;
     }
   }
+
+  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+    const { labelslot, captionslot, inputfield } = sem.forms;
+
+    return typeSafeCss/*css*/ `
+      .blr-textarea.${theme} {
+        &.sm {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.sm};
+          }
+        }
+        &.md {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.md};
+          }
+        }
+        &.lg {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.lg};
+          }
+        }
+      }
+
+      .blr-textarea-info-container.${theme} {
+        &.sm {
+          & > blr-counter {
+            margin: ${captionslot.margin.sm};
+          }
+        }
+
+        &.md {
+          & > blr-counter {
+            margin: ${captionslot.margin.md};
+          }
+        }
+
+        &.lg {
+          & > blr-counter {
+            margin: ${captionslot.margin.lg};
+          }
+        }
+      }
+
+      .textarea-input-control.${theme} {
+        background-color: ${inputfield.container.bgcolor.default.rest};
+
+        &.sm {
+          min-height: ${captionslot.margin.sm};
+        }
+
+        &.md {
+          min-height: ${captionslot.margin.md};
+        }
+
+        &.lg {
+          min-height: ${captionslot.margin.lg};
+        }
+      }
+    `;
+  })}
 `;
-
-export const { tokenizedLight: textAreaLight, tokenizedDark: textAreaDark } = renderThemedCssStrings((componentTokens, semanticTokens) => {
-  const { inputfield } = semanticTokens.sem.forms;
-
-  return typeSafeNestedCss`
-    .textarea-input-control {
-      resize: none;
-      display: block;
-      max-width: 100%;
-      word-break: break-all;
-      width: 100%;
-      background-color: ${inputfield.container.bgcolor.default.rest};
-
-      &.both {
-        resize: both;
-      }
-  
-      &.vertical {
-        resize: vertical;
-      }
-  
-      &.horizontal {
-        resize: horizontal;
-      }
-  
-      &.none {
-        resize: none;
-      }
-
-      &.sm {
-        min-height: ${captionslot.margin.sm};
-      }
-
-      &.md {
-        min-height: ${captionslot.margin.md};
-      }
-
-      &.lg {
-        min-height: ${captionslot.margin.lg};
-      }
-    }
-  `;
-});

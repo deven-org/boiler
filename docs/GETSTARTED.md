@@ -67,7 +67,7 @@ exception is the B01LER Monthly, which is part of the
 | B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                                           | Discuss objectives and prepare a set of issues to finish int he next iteration      |
 | B01LER Weekly Checkup        | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general product topics and check the roadmap                  |
 | B01LER Marketing Weekly      | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general marketing topics                                      |
-| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev Lead, Product & Project Management, everyone from the B01LER Core Team that wants to join  | Discussing and deciding on dev issues or topcis that recently came up and need      |
+| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev Lead, Product & Project Management, everyone from the B01LER Core Team that wants to join  | Discussing and deciding on dev issues or topcis that recently came up              |
 | B01LER Monthly               | Last Thursday of a month                                          | Everyone who wants to join                                                                     | Giving an update, answering questions and sometimes deep dives into specific topics |
 
 

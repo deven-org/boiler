@@ -18,10 +18,10 @@ const testContent = html`<div
 ></div>`;
 
 describe('blr-tooltip', () => {
-  it('is having a tooltip bubble element', async () => {
+  it('is having a tooltip element', async () => {
     const element = await fixture(BlrTooltipRenderFunction(sampleParams, testContent));
 
-    const tooltip = querySelectorDeep('blr-tooltip-bubble', element.getRootNode() as HTMLElement);
+    const tooltip = querySelectorDeep('blr-tooltip', element.getRootNode() as HTMLElement);
 
     expect(tooltip).to.exist;
   });

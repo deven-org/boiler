@@ -3,10 +3,10 @@ import { property } from 'lit/decorators.js';
 import { IconMapping, IconType } from '@boiler/icons';
 import { styleCustom } from './index.css';
 import { SizesType } from '../../globals/types';
-import { DirectiveResult } from 'lit-html/directive';
-import { ClassMapDirective } from 'lit-html/directives/class-map';
-import { until } from 'lit-html/directives/until.js';
-import { unsafeSVG } from 'lit-html/directives/unsafe-svg.js';
+import { DirectiveResult } from 'lit/directive.js';
+import { ClassMapDirective, classMap } from 'lit/directives/class-map.js';
+import { until } from 'lit/directives/until.js';
+import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
 import { BlrClickEvent, createBlrClickEvent } from '../../globals/events';
@@ -35,6 +35,11 @@ export class BlrIcon extends LitElementCustom {
 
   protected render() {
     const sizeKey = this.fillParent ? 'full' : this.sizeVariant.toLowerCase();
+    const classes = classMap({
+      'blr-icon': true,
+      [sizeKey]: sizeKey,
+      [this.theme]: this.theme,
+    });
 
     const unfullfilledRenderResult = html`<span
       @click=${this.handleClick}
@@ -43,7 +48,7 @@ export class BlrIcon extends LitElementCustom {
           this.handleClick(event);
         }
       }}
-      class="blr-icon ${sizeKey}"
+      class="${classes}"
     >
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
     </span>`;
@@ -60,7 +65,7 @@ export class BlrIcon extends LitElementCustom {
                 this.handleClick(event);
               }
             }}
-            class="blr-icon ${sizeKey}"
+            class="${classes}"
             >${unsafeSVG(iconModule.default)}</span
           >`;
         })

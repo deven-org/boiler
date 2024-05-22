@@ -1,9 +1,7 @@
-import { html, nothing } from 'lit';
+import { PropertyValueMap, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property, query, state } from 'lit/decorators.js';
 import { styleCustom } from './index.css';
-import { formDark, formLight } from '../../foundation/semantic-tokens/form.css';
-import { inputFieldTextLight, inputFieldTextDark } from './index.css';
 import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
@@ -25,6 +23,7 @@ import {
   createBlrTextValueChangeEvent,
 } from '../../globals/events';
 import { LitElementCustom } from '../../utils/lit-element-custom';
+import { BlrIconEventHandlers } from '../icon';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -73,7 +72,17 @@ export class BlrInputFieldText extends LitElementCustom {
   @state() protected currentType: InputTypes = this.type;
   @state() protected isFocused = false;
 
+  protected willUpdate(_changedProperties: PropertyValueMap<never> | Map<PropertyKey, unknown>): void {
+    if (_changedProperties.get('type')) {
+      this.currentType = this.type;
+    }
+  }
+
   protected togglePassword = () => {
+    if (this.type !== 'password') {
+      return;
+    }
+
     this.currentType = this.currentType === 'password' ? 'text' : 'password';
   };
 
@@ -105,47 +114,75 @@ export class BlrInputFieldText extends LitElementCustom {
     }
   };
 
+  protected handleIconClick: BlrIconEventHandlers['blrClick'] = () => {
+    if (this.disabled) {
+      return;
+    }
+
+    this.togglePassword();
+  };
+
+  protected renderInputIcon() {
+    if (this.type !== 'password' && !this.hasIcon) {
+      return nothing;
+    }
+
+    const iconSizeVariant = getComponentConfigToken([
+      'sem',
+      'forms',
+      'inputfield',
+      'icon',
+      'sizevariant',
+      this.sizeVariant!,
+    ]).toLowerCase() as SizesType;
+
+    const iconClasses = classMap({
+      'icon-input': true,
+      [this.sizeVariant!]: this.sizeVariant!,
+      'no-pointer-events': Boolean(this.disabled || this.type !== 'password'),
+      [this.theme]: this.theme,
+    });
+
+    const iconName: SizelessIconType =
+      this.type === 'password' ? (this.currentType === 'password' ? 'blrEyeOff' : 'blrEyeOn') : this.icon;
+
+    return BlrIconRenderFunction(
+      {
+        icon: calculateIconName(iconName, iconSizeVariant),
+        sizeVariant: iconSizeVariant,
+        classMap: iconClasses,
+        fillParent: false,
+        blrClick: this.handleIconClick,
+      },
+      {
+        'aria-hidden': this.type !== 'password',
+      }
+    );
+  }
+
   protected render() {
     if (this.sizeVariant) {
-      const dynamicStyles = this.theme === 'Light' ? [formLight, inputFieldTextLight] : [formDark, inputFieldTextDark];
-
-      const wasInitialPasswordField = Boolean(this.type === 'password');
-
       const classes = classMap({
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        'blr-input-field-text': true,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
       const inputClasses = classMap({
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        'error-input': this.hasError || false,
+        'disabled': this.disabled || false,
+        [this.sizeVariant]: this.sizeVariant,
       });
 
       const inputContainerClasses = classMap({
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [`${this.sizeVariant}`]: this.sizeVariant,
+        [this.sizeVariant]: this.sizeVariant,
+        [this.theme]: this.theme,
       });
 
-      const iconClasses = classMap({
-        'blr-input-icon': true,
-        [`${this.sizeVariant}`]: this.sizeVariant,
-        'noPointerEvents': Boolean(this.disabled || this.readonly),
-      });
-
-      const getPasswordIcon = () => {
-        return this.currentType.includes('password') ? 'blrEyeOffSm' : 'blrEyeOnSm';
-      };
-
-      const iconSizeVariant = getComponentConfigToken([
-        'sem',
-        'forms',
-        'inputfield',
-        'icon',
-        'sizevariant',
-        this.sizeVariant,
-      ]).toLowerCase() as SizesType;
-
-      const getCaptionContent = () => html`
+      const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
@@ -167,10 +204,7 @@ export class BlrInputFieldText extends LitElementCustom {
       `;
 
       return html`
-        <style>
-          ${dynamicStyles}
-        </style>
-        <div class="blr-input-field-text ${classes}">
+        <div class="${classes}">
           ${this.hasLabel
             ? html`
                 <div class="label-wrapper">
@@ -185,8 +219,8 @@ export class BlrInputFieldText extends LitElementCustom {
                 </div>
               `
             : nothing}
-          <div class="blr-input-wrapper ${inputContainerClasses}">
-            <div class="blr-input-inner-container">
+          <div class="blr-input-wrapper ${inputContainerClasses}" ?readonly="${this.readonly}">
+            <div class="blr-input-inner-container ${this.theme}">
               <input
                 class="blr-form-input ${inputClasses}"
                 id=${this.inputFieldTextId}
@@ -207,44 +241,10 @@ export class BlrInputFieldText extends LitElementCustom {
                 @select=${this.handleSelect}
               />
             </div>
-            ${this.icon && !wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction(
-                  {
-                    icon: this.hasError
-                      ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                      : calculateIconName(this.icon, iconSizeVariant),
-                    sizeVariant: iconSizeVariant,
-                    classMap: iconClasses,
-                    fillParent: false,
-                  },
-                  {
-                    'aria-hidden': true,
-                    'name':
-                      (this.hasError
-                        ? calculateIconName(`blrErrorFilled`, iconSizeVariant)
-                        : calculateIconName(this.icon, iconSizeVariant)) || '',
-                  }
-                )}`
-              : nothing}
-            ${wasInitialPasswordField && !this.readonly
-              ? html`${BlrIconRenderFunction(
-                  {
-                    icon: this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon(),
-                    sizeVariant: iconSizeVariant,
-                    classMap: iconClasses,
-                    fillParent: false,
-                    blrClick: this.togglePassword,
-                  },
-                  {
-                    'aria-hidden': true,
-                    'name':
-                      (this.hasError ? calculateIconName(`blrErrorFilled`, iconSizeVariant) : getPasswordIcon()) || '',
-                  }
-                )}`
-              : nothing}
+            ${this.renderInputIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-            ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant }, getCaptionContent())
+            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </div>
       `;
