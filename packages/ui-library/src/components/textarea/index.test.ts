@@ -292,19 +292,63 @@ describe('blr-textarea', () => {
     expect(hasCounter).to.be.equal(null);
   });
 
-  it('should align counter to the right when hasError is enabled and hasCounter is enabled', async () => {
-    const element = await fixture(
+  it('should align counter to the right when hasError, hasHint is disabled and hasCounter is enabled', async () => {
+    const elementWithoutError = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasError: false,
+        hasHint: false,
+        hasCounter: true,
+      })
+    );
+    const counterContainerWithoutError = querySelectorDeep(
+      '.blr-textarea-info-container',
+      elementWithoutError.getRootNode() as HTMLElement
+    );
+
+    expect(counterContainerWithoutError?.classList.contains('error')).to.be.false;
+    expect(counterContainerWithoutError?.classList.contains('hint')).to.be.false;
+    const styleWithoutError = getComputedStyle(counterContainerWithoutError!);
+    expect(styleWithoutError.justifyContent).to.equal('right');
+  });
+
+  it('should align counter to the right when hasError, hasCounter is enabled and hasHint is disabled', async () => {
+    const elementWithError = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasError: true,
+        hasHint: false,
         hasCounter: true,
       })
     );
     const counterContainerWithError = querySelectorDeep(
       '.blr-textarea-info-container',
-      element.getRootNode() as HTMLElement
+      elementWithError.getRootNode() as HTMLElement
     );
+
+    expect(counterContainerWithError?.classList.contains('error')).to.be.true;
+    expect(counterContainerWithError?.classList.contains('hint')).to.be.false;
     const styleWithError = getComputedStyle(counterContainerWithError!);
     expect(styleWithError.justifyContent).to.equal('right');
+  });
+
+  it('should align counter to the right and justify hint message when hasError, hasCounter and hasHint is enabled', async () => {
+    const elementWithErrorAndHint = await fixture(
+      BlrTextareaRenderFunction({
+        ...sampleParams,
+        hasError: true,
+        hasHint: true,
+        hasCounter: true,
+      })
+    );
+    const counterContainerWithErrorAndHint = querySelectorDeep(
+      '.blr-textarea-info-container',
+      elementWithErrorAndHint.getRootNode() as HTMLElement
+    );
+
+    expect(counterContainerWithErrorAndHint?.classList.contains('error')).to.be.true;
+    expect(counterContainerWithErrorAndHint?.classList.contains('hint')).to.be.true;
+    const styleWithErrorAndHint = getComputedStyle(counterContainerWithErrorAndHint!);
+    expect(styleWithErrorAndHint.justifyContent).to.equal('space-between');
   });
 });
