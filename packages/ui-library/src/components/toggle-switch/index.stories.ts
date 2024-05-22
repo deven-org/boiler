@@ -413,7 +413,7 @@ Readonly.story = { name: ' ' };
 /**
  * ## Dependencies
  * ### Form Caption
- * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption](/docs/components-form-caption-group-formcaption--docs) component.
+ * The Toggle Switch component can display an optional hint message with or without icons. For more information have a look at the [Form Caption](/docs/components-form-caption--docs) component.
  */
 export const FormCaption = () => {
   return html`
