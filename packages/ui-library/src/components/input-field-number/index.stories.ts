@@ -353,7 +353,8 @@ export default {
         - [**Required**](#required)
         - [**Has Error**](#has-error)
       - [**Dependencies**](#dependencies)
-        - [**Button Icon**](#button-icon)
+        - [**Stepper Button**](#stepper-button)
+        - [**Stepper Combo**](#stepper-combo)
         - [**Form Label**](#form-label)
         - [**Form Caption Group**](#form-caption-group)
     </markdown>`,
@@ -607,9 +608,13 @@ export const HasError = (params: BlrInputFieldNumberType) => {
 /**
  * ## Dependencies
  * ### Button Icon
- * The Input Field Number component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/components-actions-buttons-button-icon--docs) component.
+ * The Input Field Number component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/components-button-icon--docs) component.
+ * ### Stepper Button
+ * The Input Field Number component makes use of the Stepper Button component when `stepperVariant='split'` for increasing or decreasing the value. For more information have a look at the [Stepper Button (Not yet implemented)](?path=/docs/components-stepper-button--docs) component.
+ *
+ * > Since the Stepper Button component is not yet implemented in code, the underlying elements reference the design tokens from the [Stepper Button Figma Component](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-B01LER---UI-Kit?type=design&node-id=3618-108974) component directly.
  */
-export const ButtonIcon = (params: BlrInputFieldNumberType) => {
+export const StepperButton = (params: BlrInputFieldNumberType) => {
   return html`
     ${sharedStyles}
     <div class="wrapper">
@@ -624,7 +629,39 @@ export const ButtonIcon = (params: BlrInputFieldNumberType) => {
   `;
 };
 
-ButtonIcon.story = { name: ' ' };
+StepperButton.story = { name: ' ' };
+
+/**
+ * ### Stepper Combo
+ * The Input Field Number component makes use of the Stepper Combo component when `stepperVariant='horizontal | vertical'` for increasing or decreasing the value. For more information have a look at the [Stepper Combo (Not yet implemented)](?path=/docs/components-stepper-combo--docs) component.
+ *
+ * > Since the Stepper Combo component is not yet implemented in code, the underlying elements reference the design tokens from the [Stepper Combo Figma Component](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-B01LER---UI-Kit?type=design&node-id=10636-18946) directly.
+ */
+export const StepperCombo = (params: BlrInputFieldNumberType) => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      ${BlrInputFieldNumberRenderFunction({
+        ...params,
+        unit: 'kg',
+        labelAppendix: undefined,
+        stepperVariant: 'horizontal',
+        inputFieldNumberId: 'test-icon',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrInputFieldNumberRenderFunction({
+        ...params,
+        unit: 'kg',
+        labelAppendix: undefined,
+        stepperVariant: 'vertical',
+        inputFieldNumberId: 'test-icon',
+      })}
+    </div>
+  `;
+};
+
+StepperCombo.story = { name: ' ' };
 
 /**
  * The Input Field Number component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/components-form-label--docs) component.
