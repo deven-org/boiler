@@ -34,15 +34,13 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   .blr-textarea-info-container {
     display: flex;
     justify-content: right;
-  }
-  
-  .blr-textarea-info-container.error {
-    justify-content: right;
-  }
-  
-  .blr-textarea-info-container.hint {
-    justify-content: space-between;
-  }  
+    &.error{
+      justify-content: right;
+    }
+    &.hint{
+      justify-content: space-between;
+    }
+  } 
 
   .textarea-input-control {
     resize: none;
