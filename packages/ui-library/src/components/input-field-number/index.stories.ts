@@ -607,8 +607,7 @@ export const HasError = (params: BlrInputFieldNumberType) => {
 
 /**
  * ## Dependencies
- * ### Button Icon
- * The Input Field Number component makes use of the Button Icon component for increasing or decreasing the value. For more information have a look at the [Button Icon](?path=/docs/components-button-icon--docs) component.
+ 
  * ### Stepper Button
  * The Input Field Number component makes use of the Stepper Button component when `stepperVariant='split'` for increasing or decreasing the value. For more information have a look at the [Stepper Button (Not yet implemented)](?path=/docs/components-stepper-button--docs) component.
  *
