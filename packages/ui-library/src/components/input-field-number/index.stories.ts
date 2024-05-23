@@ -118,6 +118,16 @@ export default {
         type: 'number',
       },
     },
+    unit: {
+      description: 'Select a unit which is displayed next to the input.',
+      options: [...Units],
+      control: {
+        type: 'select',
+      },
+      table: {
+        category: 'Content / Settings',
+      },
+    },
     unitPosition: {
       description: 'Choose if unit is displayed as a prefix or suffix.',
       options: ['prefix', 'suffix'],
@@ -131,16 +141,7 @@ export default {
           suffix: 'suffix',
         },
       },
-    },
-    unit: {
-      description: 'Select a unit which is displayed next to the input.',
-      options: [undefined, ...Units],
-      control: {
-        type: 'select',
-      },
-      table: {
-        category: 'Content / Settings',
-      },
+      if: { arg: 'unit', neq: undefined },
     },
     step: {
       description: 'Enter how much the value should change when the stepper buttons are used.',

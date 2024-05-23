@@ -4,6 +4,7 @@ export const FeedbackSizes = ['sm', 'md', 'lg'] as const;
 export const FormSizes = ['sm', 'md', 'lg'] as const;
 export const ActionSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
 export const Units = [
+  undefined,
   'USD',
   'EUR',
   'JPY',
@@ -22,6 +23,8 @@ export const Units = [
   'ml',
   's',
   'min',
+  '€',
+  '$',
 ] as const;
 export const InputTypes = ['text', 'email', 'password'] as const;
 export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;

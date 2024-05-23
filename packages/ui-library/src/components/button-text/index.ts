@@ -128,7 +128,7 @@ export class BlrButtonText extends LitElementCustom {
       ]).toLowerCase() as SizesType;
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">
-        ${this.iconPosition === 'leading'
+        ${this.icon && this.iconPosition === 'leading'
           ? BlrIconRenderFunction(
               {
                 icon: calculateIconName(this.icon, iconSizeVariant),
@@ -142,7 +142,7 @@ export class BlrButtonText extends LitElementCustom {
             )
           : nothing}
         <span class="label">${this.label} </span>
-        ${this.iconPosition === 'trailing'
+        ${this.icon && this.iconPosition === 'trailing'
           ? BlrIconRenderFunction(
               {
                 icon: calculateIconName(this.icon, iconSizeVariant),
