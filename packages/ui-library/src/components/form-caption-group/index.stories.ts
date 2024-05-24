@@ -74,6 +74,7 @@ BlrFormCaptionGroup.storyName = 'Form Caption Group';
 
 const args: BlrFormCaptionGroupType = {
   sizeVariant: 'sm',
+  theme: 'Light',
 };
 
 BlrFormCaptionGroup.args = args;

@@ -360,7 +360,7 @@ Disabled.story = {
 /**
  * ## Dependencies
  * ### Icon
- * The Button Text component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
+ * The Button Text component can display a leading or trailing icon next to the label. For more information have a look at the [Icon](?path=/docs/components-icon--docs) component.
  */
 
 export const Icon = () => {
@@ -389,7 +389,7 @@ Icon.argTypes = {
 };
 Icon.story = { name: ' ' };
 /**
- * The Button Text uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/design-system-web-components-feedback-loader--docs) component.
+ * The Button Text uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](?path=/docs/components-loader--docs) component.
  */
 export const Loader = () => {
   return html`

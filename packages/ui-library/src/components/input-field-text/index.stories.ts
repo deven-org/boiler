@@ -440,7 +440,7 @@ SizeVariant.story = {
 /**
  * ## Content / Settings
  * ### Type
- * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Field Number component. For more information have a look at the [Input Field Number](/docs/design-system-web-components-forms-input-field-number--docs) component.
+ * The Input Field Text component can have all the types an html input can have, except the number and the unit type, which is covered in the Input Field Number component. For more information have a look at the [Input Field Number](/docs/components-input-field-number--docs) component.
  */
 export const Type = () => {
   return html`
@@ -644,7 +644,7 @@ HasError.argTypes = {
 /**
  * ## Dependencies
  * ### Form Label
- * The Input Field Text component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Input Field Text component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/components-form-label--docs) component.
  */
 export const FormLabel = () => {
   return html`
@@ -672,7 +672,7 @@ FormLabel.story = {
   name: ' ',
 };
 /**
- * The Input Field Text component can have a trailing clickable Icon / Button Icon component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/design-system-web-components-ui-icon--docs) component.
+ * The Input Field Text component can have a trailing clickable Icon / Button Icon component. This could be used for example to show or hide the input, when it is used to enter a password. For more information have a look at the [Icon](?path=/docs/components-icon--docs) component.
  */
 export const Icon = () => {
   return html`
@@ -707,7 +707,7 @@ Icon.argTypes = {
   ...disabledArgTypes,
 };
 /**
- * The Form Caption Group component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Form Caption Group component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/components-form-caption-group--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`

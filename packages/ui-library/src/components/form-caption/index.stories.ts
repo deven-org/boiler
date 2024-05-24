@@ -78,11 +78,12 @@ export default {
           - [**Size Variant**](#size-variant)
         - [**Dependencies**](#dependencies)
           - [**Icon**](#icon)
+
         The Form Caption is intended to be used when creating new components. Currently, it is used like this in the following components:
         - [**Form Caption Group**](?path=/docs/components-form-caption-group--docs)
         - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
-        It is not intended to use the Form Caption directly when creating new applications.
+        It is not intended to use the Form Caption directly when creating new applications. 
       </Markdown>
       `,
       },
@@ -179,7 +180,7 @@ SizeVariant.story = { name: ' ' };
 /**
  *  ## Dependencies
  *  ### Icon
- *  The Form Caption component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon-icon--docs) component.
+ *  The Form Caption component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
  */
 
 export const Icon = () => {
