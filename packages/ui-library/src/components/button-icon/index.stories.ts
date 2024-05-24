@@ -286,7 +286,7 @@ Disabled.argTypes = {
 /**
  * ## Dependencies
  * ### Icon
- * The Button Icon component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
+ * The Button Icon component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
  */
 export const Icon = () => {
   return html`
@@ -305,7 +305,7 @@ Icon.argTypes = {
 };
 
 /**
- * The Button Icon uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](/docs/design-system-web-components-feedback-loader--docs) component.
+ * The Button Icon uses the Loader component in its loading state to inform users that the action they have taken is in progress. For more information have a look at the [Loader](/docs/components-loader--docs) component.
  */
 export const Loader = () => {
   return html`

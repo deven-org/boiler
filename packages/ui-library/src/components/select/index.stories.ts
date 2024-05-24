@@ -409,7 +409,7 @@ HasError.argTypes = {
  * ## Dependencies
  *
  * ### Form Label
- * The Select component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Select component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/components-form-label--docs) component.
  */
 export const FormLabel = () => {
   return html`
@@ -439,7 +439,7 @@ FormLabel.argTypes = {
   ...disabledArgTypes,
 };
 /**
- * The Select component makes use of the Icon component. For more information have a look at the [Icon](/docs/design-system-web-components-ui-icon--docs) component.
+ * The Select component makes use of the Icon component. For more information have a look at the [Icon](/docs/components-icon--docs) component.
  */
 
 export const Icon = () => {
@@ -471,7 +471,7 @@ Icon.argTypes = {
   ...disabledArgTypes,
 };
 /**
- * The Select component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component.
+ * The Select component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/components-form-caption-group--docs) component.
  */
 export const FormCaptionGroup = () => {
   return html`

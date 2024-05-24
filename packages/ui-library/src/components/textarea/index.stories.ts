@@ -700,7 +700,7 @@ HasError.argTypes = {
 /**
  * ## Dependencies
  * ### Form Label
- * The Text Area component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Text Area component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](?path=/docs/components-form-label--docs) component.
  */
 // States FormLabel
 export const FormLabel = () => {
@@ -738,7 +738,7 @@ FormLabel.story = {
   name: ' ',
 };
 /**
- * The Text Area component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal <a href="/docs/design-system-web-components-internal-components-formcaptiongroup--docs">Form Caption Group</a> component.
+ * The Text Area component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal <a href="/docs/components-form-caption-group--docs">Form Caption Group</a> component.
  */
 export const FormCaptionGroup = () => {
   return html`
@@ -779,7 +779,7 @@ FormCaptionGroup.argTypes = {
 
 // States Counter
 /**
- * The Text Area component can display an optional counter. The threshold for the warning and error message can be set individually. For more information have a look at the internal [Counter](?path=/docs/design-system-web-components-internal-components-counter--docs) component.
+ * The Text Area component can display an optional counter. The threshold for the warning and error message can be set individually. For more information have a look at the internal [Counter](?path=/docs/components-counter--docs) component.
  */
 export const Counter = () => {
   return html`
