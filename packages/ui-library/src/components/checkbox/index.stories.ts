@@ -397,7 +397,7 @@ Readonly.story = {
 //  * ## Validation
 //  *
 //  * ### Required
-//  * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Checkbox component was not checked, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component in the dependencies section below.
+//  * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Checkbox component was not checked, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/components-form-label--docs) component in the dependencies section below.
 //  */
 // export const Required = () => {
 //   return html`
@@ -444,7 +444,7 @@ HasError.story = {
  * ## Dependencies
  *
  * ### Form Label
- * The Checkbox component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/design-system-web-components-internal-components-formlabel--docs) component.
+ * The Checkbox component can display an optional Form Label component, consisting of a label and a label appendix. For more information have a look at the internal [Form Label](/docs/components-form-label--docs) component.
  */
 
 export const FormLabel = () => {
@@ -470,7 +470,7 @@ FormLabel.story = {
 
 /**
  * ### Form Caption Group
- * The Checkbox component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/design-system-web-components-internal-components-formcaptiongroup--docs) component. If the Checkbox component lacks a label (hasLabel=false), the Form Caption Group should remain hidden.
+ * The Checkbox component can display an optional hint message and error message with or without icons. Both captions can be combined. For more information have a look at the internal [Form Caption Group](/docs/components-form-caption-group--docs) component. If the Checkbox component lacks a label (hasLabel=false), the Form Caption Group should remain hidden.
  */
 export const FormCaptionGroup = () => {
   return html`
