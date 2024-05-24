@@ -524,11 +524,11 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
 };
 
 /**
- * ## States 
- *  Apart from states like rest, hover, pressed and focus, the Input Field Number component can also be disabled or readonly. The error state is documented under [validation](#validation).
+ * ## States
+ * Apart from states like rest, hover, pressed and focus, the Input Field Number component can also be disabled or readonly. The error state is documented under [validation](#validation).
  * ### Disabled
-The Input Field Number component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
-*/
+ * The Input Field Number component in the disabled state can not be interacted with. This means it can not receive focus or be selected.
+ */
 export const Disabled = (params: BlrInputFieldNumberType) => {
   return html`
     ${sharedStyles}
@@ -607,10 +607,8 @@ export const HasError = (params: BlrInputFieldNumberType) => {
 
 /**
  * ## Dependencies
- 
  * ### Stepper Button
  * The Input Field Number component makes use of the Stepper Button component when `stepperVariant='split'` for increasing or decreasing the value. For more information have a look at the [Stepper Button (Not yet implemented)](?path=/docs/components-stepper-button--docs) component.
- *
  * > Since the Stepper Button component is not yet implemented in code, the underlying elements reference the design tokens from the [Stepper Button Figma Component](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-B01LER---UI-Kit?type=design&node-id=3618-108974) component directly.
  */
 export const StepperButton = (params: BlrInputFieldNumberType) => {
@@ -633,7 +631,6 @@ StepperButton.story = { name: ' ' };
 /**
  * ### Stepper Combo
  * The Input Field Number component makes use of the Stepper Combo component when `stepperVariant='horizontal | vertical'` for increasing or decreasing the value. For more information have a look at the [Stepper Combo (Not yet implemented)](?path=/docs/components-stepper-combo--docs) component.
- *
  * > Since the Stepper Combo component is not yet implemented in code, the underlying elements reference the design tokens from the [Stepper Combo Figma Component](https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-B01LER---UI-Kit?type=design&node-id=10636-18946) directly.
  */
 export const StepperCombo = (params: BlrInputFieldNumberType) => {

@@ -73,19 +73,17 @@ export default {
       description: {
         component: `<Markdown>
         Form Caption provides either a brief hint or error message to a related form element such as Input Field Text or Select. It is typically displayed below the form element, and it can be used to provide additional information about the type of information a user has to provide, like an example of the correct data format.
-
         - [**Appearance**](#appearance)
           - [**Variant**](#variant)
           - [**Size Variant**](#size-variant)
         - [**Dependencies**](#dependencies)
           - [**Icon**](#icon)
-        
+
         The Form Caption is intended to be used when creating new components. Currently, it is used like this in the following components:
         - [**Form Caption Group**](?path=/docs/components-form-caption-group--docs)
         - [**Toggle Switch**](?path=/docs/components-toggle-switch--docs)
         
-        It is not intended to use the Form Caption directly when creating new applications.
-        
+        It is not intended to use the Form Caption directly when creating new applications. 
       </Markdown>
       `,
       },
