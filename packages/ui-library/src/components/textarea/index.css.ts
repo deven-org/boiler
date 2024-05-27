@@ -40,6 +40,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     &.hint{
       justify-content: space-between;
     }
+    &.error-message
+    {
+      justify-content: space-between;
+    }
   }
 
   .textarea-input-control {

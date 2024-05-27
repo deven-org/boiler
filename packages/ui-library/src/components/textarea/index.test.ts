@@ -292,12 +292,13 @@ describe('blr-textarea', () => {
     expect(hasCounter).to.be.equal(null);
   });
 
-  it('should align counter to the right when hasError, hasHint is disabled and hasCounter is enabled', async () => {
+  it('should align counter to the right when hasError, hasHint, errorMessage is disabled and hasCounter is enabled', async () => {
     const elementWithoutError = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasError: false,
         hasHint: false,
+        errorMessage: '',
         hasCounter: true,
       })
     );
@@ -308,16 +309,18 @@ describe('blr-textarea', () => {
 
     expect(counterContainerWithoutError?.classList.contains('error')).to.be.false;
     expect(counterContainerWithoutError?.classList.contains('hint')).to.be.false;
+    expect(counterContainerWithoutError?.classList.contains('error-message')).to.be.false;
     const styleWithoutError = getComputedStyle(counterContainerWithoutError!);
     expect(styleWithoutError.justifyContent).to.equal('right');
   });
 
-  it('should align counter to the right when hasError, hasCounter is enabled and hasHint is disabled', async () => {
+  it('should align counter to the right when hasError, hasCounter is enabled and hasHint, errormessage is disabled', async () => {
     const elementWithError = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasError: true,
         hasHint: false,
+        errorMessage: '',
         hasCounter: true,
       })
     );
@@ -328,11 +331,12 @@ describe('blr-textarea', () => {
 
     expect(counterContainerWithError?.classList.contains('error')).to.be.true;
     expect(counterContainerWithError?.classList.contains('hint')).to.be.false;
+    expect(counterContainerWithError?.classList.contains('error-message')).to.be.false;
     const styleWithError = getComputedStyle(counterContainerWithError!);
     expect(styleWithError.justifyContent).to.equal('right');
   });
 
-  it('should align counter to the right and justify hint message when hasError, hasCounter and hasHint is enabled', async () => {
+  it('should align counter to the right and adds a space between hint message and error message when hasError, hasCounter and hasHint is enabled', async () => {
     const elementWithErrorAndHint = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
