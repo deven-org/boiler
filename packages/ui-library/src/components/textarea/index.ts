@@ -173,6 +173,7 @@ export class BlrTextarea extends LitElementCustom {
         'hint': this.hasHint || false,
         'error': this.hasError || false,
         'error-message': this.errorMessage || false,
+        'hint-message': this.hintMessage || false,
         [this.sizeVariant]: this.sizeVariant,
       });
 

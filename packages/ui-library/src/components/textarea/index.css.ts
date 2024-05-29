@@ -38,9 +38,13 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
       justify-content: right;
     }
     &.hint{
-      justify-content: space-between;
+      justify-content: right;
     }
     &.error-message
+    {
+      justify-content: space-between;
+    }
+    &.hint-message
     {
       justify-content: space-between;
     }

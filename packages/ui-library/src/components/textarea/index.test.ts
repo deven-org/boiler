@@ -292,13 +292,14 @@ describe('blr-textarea', () => {
     expect(hasCounter).to.be.equal(null);
   });
 
-  it('should align counter to the right when hasError, hasHint, errorMessage is disabled and hasCounter is enabled', async () => {
+  it('should align counter to the right when hasError, hasHint, hintMessage, errorMessage is disabled and hasCounter is enabled', async () => {
     const elementWithoutError = await fixture(
       BlrTextareaRenderFunction({
         ...sampleParams,
         hasError: false,
         hasHint: false,
         errorMessage: '',
+        hintMessage: '',
         hasCounter: true,
       })
     );
@@ -310,6 +311,7 @@ describe('blr-textarea', () => {
     expect(counterContainerWithoutError?.classList.contains('error')).to.be.false;
     expect(counterContainerWithoutError?.classList.contains('hint')).to.be.false;
     expect(counterContainerWithoutError?.classList.contains('error-message')).to.be.false;
+    expect(counterContainerWithoutError?.classList.contains('hint-message')).to.be.false;
     const styleWithoutError = getComputedStyle(counterContainerWithoutError!);
     expect(styleWithoutError.justifyContent).to.equal('right');
   });
@@ -321,6 +323,7 @@ describe('blr-textarea', () => {
         hasError: true,
         hasHint: false,
         errorMessage: '',
+        hintMessage: '',
         hasCounter: true,
       })
     );
@@ -332,6 +335,7 @@ describe('blr-textarea', () => {
     expect(counterContainerWithError?.classList.contains('error')).to.be.true;
     expect(counterContainerWithError?.classList.contains('hint')).to.be.false;
     expect(counterContainerWithError?.classList.contains('error-message')).to.be.false;
+    expect(counterContainerWithError?.classList.contains('hint-message')).to.be.false;
     const styleWithError = getComputedStyle(counterContainerWithError!);
     expect(styleWithError.justifyContent).to.equal('right');
   });
