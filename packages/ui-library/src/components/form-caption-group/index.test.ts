@@ -10,6 +10,7 @@ import { html } from 'lit-html';
 
 const sampleParams: BlrFormCaptionGroupType = {
   sizeVariant: 'md',
+  theme: 'Light',
 };
 
 const hintCaption = BlrFormCaptionRenderFunction({

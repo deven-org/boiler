@@ -111,6 +111,7 @@ export const ButtonGroup = (
 };
 
 const defaultParams: BlrButtonGroupType = {
+  theme: 'Light',
   sizeVariant: 'md',
   alignment: 'left',
 };
