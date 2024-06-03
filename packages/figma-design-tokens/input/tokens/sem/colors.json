@@ -99,7 +99,7 @@
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.bgcolor.secondary.disabled}",
+              "value": "{sys.bgcolor.silent.disabled}",
               "type": "color"
             },
             "loading": {
@@ -401,27 +401,27 @@
           },
           "silent": {
             "rest": {
-              "value": "{sys.content.secondary.rest}",
+              "value": "{sys.content.silent.primary.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.content.secondary.hover}",
+              "value": "{sys.content.silent.primary.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.content.secondary.pressed}",
+              "value": "{sys.content.silent.primary.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.content.secondary.rest}",
+              "value": "{sys.content.silent.primary.rest}",
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.secondary.disabled}",
+              "value": "{sys.content.silent.primary.disabled}",
               "type": "color"
             },
             "loading": {
-              "value": "{sys.content.secondary.rest}",
+              "value": "{sys.content.silent.primary.rest}",
               "type": "color"
             }
           },
@@ -561,27 +561,27 @@
           },
           "silent": {
             "rest": {
-              "value": "{sys.content.secondary.rest}",
+              "value": "{sys.content.silent.primary.rest}",
               "type": "color"
             },
             "hover": {
-              "value": "{sys.content.secondary.hover}",
+              "value": "{sys.content.silent.primary.hover}",
               "type": "color"
             },
             "pressed": {
-              "value": "{sys.content.secondary.pressed}",
+              "value": "{sys.content.silent.primary.pressed}",
               "type": "color"
             },
             "focus": {
-              "value": "{sys.content.secondary.rest}",
+              "value": "{sys.content.silent.primary.rest}",
               "type": "color"
             },
             "disabled": {
-              "value": "{sys.content.secondary.disabled}",
+              "value": "{sys.content.silent.primary.disabled}",
               "type": "color"
             },
             "loading": {
-              "value": "{sys.content.secondary.rest}",
+              "value": "{sys.content.silent.primary.rest}",
               "type": "color"
             }
           },
