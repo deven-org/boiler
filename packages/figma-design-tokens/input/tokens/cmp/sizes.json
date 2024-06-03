@@ -184,431 +184,431 @@
         }
       }
     },
-    "Checkbox": {
-      "ContentCol": {
-        "ItemSpacing": {
-          "SM": {
+    "checkbox": {
+      "contentcol": {
+        "itemspacing": {
+          "sm": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between InlineLabel and the Caption."
+            "description": "controls the vertical spacing between inlinelabel and the caption."
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between InlineLabel and the Caption."
+            "description": "controls the vertical spacing between inlinelabel and the caption."
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between InlineLabel and the Caption."
+            "description": "controls the vertical spacing between inlinelabel and the caption."
           }
         },
-        "PaddingTop": {
-          "SM": {
+        "paddingtop": {
+          "sm": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+            "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+            "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+            "description": "can be used to verticaly align the content of the textcontainer against the control"
           }
         }
       },
-      "ContentRow": {
-        "ItemSpacing": {
-          "SM": {
+      "contentrow": {
+        "itemspacing": {
+          "sm": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label"
+            "description": "controls the horizontal spacing between the control and the label"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionPX.8}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label"
+            "description": "controls the horizontal spacing between the control and the label"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionPX.12}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label"
+            "description": "controls the horizontal spacing between the control and the label"
           }
         }
       },
-      "ControlWrapper": {
-        "PaddingTop": {
-          "SM": {
+      "controlwrapper": {
+        "paddingtop": {
+          "sm": {
             "value": "0",
             "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
+            "description": "can be used to align the checkbox control against the text"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.4}",
             "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
+            "description": "can be used to align the checkbox control against the text"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.2}",
             "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
+            "description": "can be used to align the checkbox control against the text"
           }
         }
       },
-      "Control": {
-        "Container": {
-          "BorderWidth": {
-            "SM": {
-              "Active": {
-                "Rest": {
+      "control": {
+        "container": {
+          "borderwidth": {
+            "sm": {
+              "active": {
+                "rest": {
                   "value": "{core.dimensionPX.0}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Hover": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Pressed": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Focus": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Disabled": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Error": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Active.Rest}",
+                "error": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{core.dimensionPX.1}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Hover": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Pressed": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Focus": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Disabled": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Error": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "error": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 }
               }
             },
-            "MD": {
-              "Active": {
-                "Rest": {
+            "md": {
+              "active": {
+                "rest": {
                   "value": "{core.dimensionPX.0}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Hover": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Pressed": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Focus": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Disabled": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Error": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Active.Rest}",
+                "error": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{core.dimensionPX.1}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Hover": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Pressed": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Focus": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Disabled": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Error": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "error": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 }
               }
             },
-            "LG": {
-              "Active": {
-                "Rest": {
+            "lg": {
+              "active": {
+                "rest": {
                   "value": "{core.dimensionPX.0}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Hover": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Pressed": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Focus": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Disabled": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Error": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Active.Rest}",
+                "error": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{core.dimensionPX.1}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Hover": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Pressed": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Focus": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Disabled": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 },
-                "Error": {
-                  "value": "{cmp.Checkbox.Control.Container.BorderWidth.LG.Inactive.Rest}",
+                "error": {
+                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
                   "type": "borderWidth",
-                  "description": "Figma Only! Do not apply on codes comps"
+                  "description": "figma only! do not apply on codes comps"
                 }
               }
             }
           },
-          "BorderRadius": {
-            "SM": {
-              "value": "{sys.borderRadius.sm}",
+          "borderradius": {
+            "sm": {
+              "value": "{sys.borderradius.sm}",
               "type": "borderRadius"
             },
-            "MD": {
-              "value": "{cmp.Checkbox.Control.Container.BorderRadius.SM}",
+            "md": {
+              "value": "{cmp.checkbox.control.container.borderradius.sm}",
               "type": "borderRadius"
             },
-            "LG": {
-              "value": "{cmp.Checkbox.Control.Container.BorderRadius.SM}",
+            "lg": {
+              "value": "{cmp.checkbox.control.container.borderradius.sm}",
               "type": "borderRadius"
             }
           },
-          "Size": {
-            "SM": {
+          "size": {
+            "sm": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
             },
-            "MD": {
+            "md": {
               "value": "{core.dimensionPX.16}",
               "type": "sizing"
             },
-            "LG": {
+            "lg": {
               "value": "{core.dimensionPX.20}",
               "type": "sizing"
             }
           }
         },
-        "Icon": {
-          "IconSize": {
-            "SM": {
-              "Rest": {
+        "icon": {
+          "iconsize": {
+            "sm": {
+              "rest": {
                 "value": "{core.dimensionPX.16}",
                 "type": "sizing"
               },
-              "Hover": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.SM.Rest}",
+              "hover": {
+                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
                 "type": "sizing"
               },
-              "Pressed": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.SM.Rest}",
+              "pressed": {
+                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
                 "type": "sizing"
               },
-              "Focus": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.SM.Rest}",
+              "focus": {
+                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
                 "type": "sizing"
               },
-              "Disabled": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.SM.Rest}",
+              "disabled": {
+                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
                 "type": "sizing"
               },
-              "ReadOnly": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.SM.Rest}",
+              "readonly": {
+                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
                 "type": "sizing"
               },
-              "Error": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.SM.Rest}",
+              "error": {
+                "value": "{cmp.checkbox.control.icon.iconsize.sm.rest}",
                 "type": "sizing"
               }
             },
-            "MD": {
-              "Rest": {
+            "md": {
+              "rest": {
                 "value": "{core.dimensionPX.16}",
                 "type": "sizing"
               },
-              "Hover": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.MD.Rest}",
+              "hover": {
+                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
                 "type": "sizing"
               },
-              "Pressed": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.MD.Rest}",
+              "pressed": {
+                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
                 "type": "sizing"
               },
-              "Focus": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.MD.Rest}",
+              "focus": {
+                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
                 "type": "sizing"
               },
-              "Disabled": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.MD.Rest}",
+              "disabled": {
+                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
                 "type": "sizing"
               },
-              "ReadOnly": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.MD.Rest}",
+              "readonly": {
+                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
                 "type": "sizing"
               },
-              "Error": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.MD.Rest}",
+              "error": {
+                "value": "{cmp.checkbox.control.icon.iconsize.md.rest}",
                 "type": "sizing"
               }
             },
-            "LG": {
-              "Rest": {
+            "lg": {
+              "rest": {
                 "value": "{core.dimensionPX.20}",
                 "type": "sizing"
               },
-              "Hover": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.LG.Rest}",
+              "hover": {
+                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
                 "type": "sizing"
               },
-              "Pressed": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.LG.Rest}",
+              "pressed": {
+                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
                 "type": "sizing"
               },
-              "Focus": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.LG.Rest}",
+              "focus": {
+                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
                 "type": "sizing"
               },
-              "Disabled": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.LG.Rest}",
+              "disabled": {
+                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
                 "type": "sizing"
               },
-              "ReadOnly": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.LG.Rest}",
+              "readonly": {
+                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
                 "type": "sizing"
               },
-              "Error": {
-                "value": "{cmp.Checkbox.Control.Icon.IconSize.LG.Rest}",
+              "error": {
+                "value": "{cmp.checkbox.control.icon.iconsize.lg.rest}",
                 "type": "sizing"
               }
             }
