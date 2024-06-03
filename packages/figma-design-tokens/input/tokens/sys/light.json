@@ -800,6 +800,16 @@
         },
         "inverted": {
           "regular": {
+            "link": {
+              "value": "{core.color.azure.700.solid}",
+              "type": "color",
+              "description": "Use for active text which can toggle. > Tab.Label"
+            },
+            "danger": {
+              "value": "{core.color.crimson.700.solid}",
+              "type": "color",
+              "description": "use on form captions, fieldset.legend, label"
+            },
             "disabled": {
               "value": "{core.color.coolgray.300.solid}",
               "type": "color",

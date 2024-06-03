@@ -785,14 +785,14 @@
             "description": "Forms"
           },
           "danger": {
-            "value": "{core.color.crimson.500.solid}",
+            "value": "{core.color.crimson.700.solid}",
             "type": "color",
             "description": "use on form captions, fieldset.legend, label"
           },
           "link": {
-            "value": "{core.color.azure.500.solid}",
+            "value": "{core.color.azure.700.solid}",
             "type": "color",
-            "description": "Use for active text which can toggle. > Tab.Label"
+            "description": "Use for link or active text"
           }
         },
         "inverted": {
@@ -806,6 +806,16 @@
               "value": "{core.color.coolgray.100.solid}",
               "type": "color",
               "description": "use on surface.inverted > Tooltip.Text"
+            },
+            "danger": {
+              "value": "{core.color.crimson.500.solid}",
+              "type": "color",
+              "description": "use on form captions, fieldset.legend, label"
+            },
+            "link": {
+              "value": "{core.color.azure.500.solid}",
+              "type": "color",
+              "description": "Use for link or active text"
             }
           },
           "subtle": {
