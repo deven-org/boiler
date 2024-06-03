@@ -808,7 +808,7 @@
               "description": "use on surface.inverted > Tooltip.Text"
             },
             "danger": {
-              "value": "{core.color.crimson.500.solid}",
+              "value": "{core.color.crimson.400.solid}",
               "type": "color",
               "description": "use on form captions, fieldset.legend, label"
             },
