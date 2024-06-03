@@ -26,7 +26,7 @@
         }
       }
     },
-    "captioncomponent": {
+    "formcaption": {
       "container": {
         "itemspacing": {
           "sm": {
@@ -72,15 +72,15 @@
         },
         "padding": {
           "sm": {
-            "value": "{cmp.captioncomponent.container.padding_v.sm} {cmp.captioncomponent.container.padding_h.sm}",
+            "value": "{cmp.formcaption.container.padding_v.sm} {cmp.formcaption.container.padding_h.sm}",
             "type": "spacing"
           },
           "md": {
-            "value": "{cmp.captioncomponent.container.padding_v.md} {cmp.captioncomponent.container.padding_h.md}",
+            "value": "{cmp.formcaption.container.padding_v.md} {cmp.formcaption.container.padding_h.md}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{cmp.captioncomponent.container.padding_v.lg} {cmp.captioncomponent.container.padding_h.lg}",
+            "value": "{cmp.formcaption.container.padding_v.lg} {cmp.formcaption.container.padding_h.lg}",
             "type": "spacing"
           }
         }
@@ -149,15 +149,15 @@
         },
         "padding": {
           "sm": {
-            "value": "{cmp.captioncomponent.textwrapper.padding_v.sm} {cmp.captioncomponent.textwrapper.padding_h.sm}",
+            "value": "{cmp.formcaption.textwrapper.padding_v.sm} {cmp.formcaption.textwrapper.padding_h.sm}",
             "type": "spacing"
           },
           "md": {
-            "value": "{cmp.captioncomponent.textwrapper.padding_v.md} {cmp.captioncomponent.textwrapper.padding_h.md}",
+            "value": "{cmp.formcaption.textwrapper.padding_v.md} {cmp.formcaption.textwrapper.padding_h.md}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{cmp.captioncomponent.textwrapper.padding_v.lg} {cmp.captioncomponent.textwrapper.padding_h.lg}",
+            "value": "{cmp.formcaption.textwrapper.padding_v.lg} {cmp.formcaption.textwrapper.padding_h.lg}",
             "type": "spacing"
           }
         }

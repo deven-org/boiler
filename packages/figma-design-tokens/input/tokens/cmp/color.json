@@ -7,7 +7,7 @@
         "description": "Apply on blanket component"
       }
     },
-    "captioncomponent": {
+    "formcaption": {
       "text": {
         "textcolor": {
           "hint": {
