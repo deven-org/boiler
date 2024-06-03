@@ -243,32 +243,32 @@
         }
       }
     },
-    "Counter": {
-      "Container": {
-        "BorderColor": {
-          "Neutral": {
+    "counter": {
+      "container": {
+        "bordercolor": {
+          "neutral": {
             "value": "{sys.bordercolor.container.informative}",
             "type": "color"
           },
-          "Warning": {
+          "warning": {
             "value": "{sys.bordercolor.container.warning}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.bordercolor.container.danger}",
             "type": "color"
           }
         },
-        "BackgroundColor": {
-          "Neutral": {
+        "backgroundcolor": {
+          "neutral": {
             "value": "{sys.bgcolor.container.informative}",
             "type": "color"
           },
-          "Warning": {
+          "warning": {
             "value": "{sys.bgcolor.container.warning}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           }

@@ -616,100 +616,100 @@
         }
       }
     },
-    "Counter": {
-      "Container": {
-        "Padding_V": {
-          "SM": {
+    "counter": {
+      "container": {
+        "padding_v": {
+          "sm": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
-          "MD": {
-            "value": "{cmp.Counter.Container.Padding_V.SM}",
+          "md": {
+            "value": "{cmp.counter.container.padding_v.sm}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
-          "LG": {
-            "value": "{cmp.Counter.Container.Padding_V.SM}",
+          "lg": {
+            "value": "{cmp.counter.container.padding_v.sm}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           }
         },
-        "Padding_H": {
-          "SM": {
+        "padding_h": {
+          "sm": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
-          "MD": {
-            "value": "{cmp.Counter.Container.Padding_H.SM}",
+          "md": {
+            "value": "{cmp.counter.container.padding_h.sm}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
-          "LG": {
-            "value": "{cmp.Counter.Container.Padding_H.SM}",
+          "lg": {
+            "value": "{cmp.counter.container.padding_h.sm}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           }
         },
-        "Padding": {
-          "SM": {
-            "value": "{cmp.Counter.Container.Padding_V.SM} {cmp.Counter.Container.Padding_H.SM}",
+        "padding": {
+          "sm": {
+            "value": "{cmp.counter.container.padding_v.sm} {cmp.counter.container.padding_h.sm}",
             "type": "spacing",
-            "description": "Coded Comps Only!"
+            "description": "coded comps only!"
           },
-          "MD": {
-            "value": "{cmp.Counter.Container.Padding_V.MD} {cmp.Counter.Container.Padding_H.MD}",
+          "md": {
+            "value": "{cmp.counter.container.padding_v.md} {cmp.counter.container.padding_h.md}",
             "type": "spacing",
-            "description": "Coded Comps Only!"
+            "description": "coded comps only!"
           },
-          "LG": {
-            "value": "{cmp.Counter.Container.Padding_V.LG} {cmp.Counter.Container.Padding_H.LG}",
+          "lg": {
+            "value": "{cmp.counter.container.padding_v.lg} {cmp.counter.container.padding_h.lg}",
             "type": "spacing",
-            "description": "Coded Comps Only!"
+            "description": "coded comps only!"
           }
         },
-        "BorderRadius": {
-          "SM": {
+        "borderradius": {
+          "sm": {
             "value": "{sys.borderradius.md}",
             "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> new"
+            "description": "border radius of counter container\n>>> new"
           },
-          "MD": {
+          "md": {
             "value": "{sys.borderradius.md}",
             "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
+            "description": "border radius of counter container\n>>> feedback.counter.borderradius"
           },
-          "LG": {
+          "lg": {
             "value": "{sys.borderradius.md}",
             "type": "borderRadius",
-            "description": "Border radius of counter container\n>>> new"
+            "description": "border radius of counter container\n>>> new"
           }
         },
-        "BorderWidth": {
-          "SM": {
+        "borderwidth": {
+          "sm": {
             "value": "{sys.borderwidth.medium}",
             "type": "borderWidth"
           },
-          "MD": {
+          "md": {
             "value": "{sys.borderwidth.medium}",
             "type": "borderWidth"
           },
-          "LG": {
+          "lg": {
             "value": "{sys.borderwidth.medium}",
             "type": "borderWidth"
           }
         },
-        "ItemSpacing": {
-          "SM": {
+        "itemspacing": {
+          "sm": {
             "value": "{core.dimensionPX.2}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionPX.2}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionPX.2}",
             "type": "spacing"
           }
