@@ -1,17 +1,17 @@
 {
   "cmp": {
-    "CaptionComponent": {
-      "Text": {
-        "Typography": {
-          "SM": {
+    "captioncomponent": {
+      "text": {
+        "typography": {
+          "sm": {
             "value": "{sem.ui.caption.s_100}",
             "type": "typography"
           },
-          "MD": {
+          "md": {
             "value": "{sem.ui.caption.s_200}",
             "type": "typography"
           },
-          "LG": {
+          "lg": {
             "value": "{sem.ui.caption.s_300}",
             "type": "typography"
           }

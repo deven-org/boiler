@@ -26,138 +26,138 @@
         }
       }
     },
-    "CaptionComponent": {
-      "Container": {
-        "ItemSpacing": {
-          "SM": {
+    "captioncomponent": {
+      "container": {
+        "itemspacing": {
+          "sm": {
             "value": "{core.dimensionREM.2}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.2}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.2}",
             "type": "spacing"
           }
         },
-        "Padding_H": {
-          "SM": {
+        "padding_h": {
+          "sm": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
           }
         },
-        "Padding_V": {
-          "SM": {
+        "padding_v": {
+          "sm": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
           }
         },
-        "Padding": {
-          "SM": {
-            "value": "{cmp.CaptionComponent.Container.Padding_V.SM} {cmp.CaptionComponent.Container.Padding_H.SM}",
+        "padding": {
+          "sm": {
+            "value": "{cmp.captioncomponent.container.padding_v.sm} {cmp.captioncomponent.container.padding_h.sm}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{cmp.CaptionComponent.Container.Padding_V.MD} {cmp.CaptionComponent.Container.Padding_H.MD}",
+          "md": {
+            "value": "{cmp.captioncomponent.container.padding_v.md} {cmp.captioncomponent.container.padding_h.md}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{cmp.CaptionComponent.Container.Padding_V.LG} {cmp.CaptionComponent.Container.Padding_H.LG}",
+          "lg": {
+            "value": "{cmp.captioncomponent.container.padding_v.lg} {cmp.captioncomponent.container.padding_h.lg}",
             "type": "spacing"
           }
         }
       },
-      "IconWrapper": {
-        "PaddingTop": {
-          "SM": {
+      "iconwrapper": {
+        "paddingtop": {
+          "sm": {
             "value": "{core.dimensionREM.1}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.0,5}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.5}",
             "type": "spacing"
           }
         }
       },
-      "Icon": {
-        "IconSize": {
-          "SM": {
+      "icon": {
+        "iconsize": {
+          "sm": {
             "value": "{core.dimensionREM.14}",
             "type": "sizing",
             "description": "Defines the physical size of the icon inside the captionComponent"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.16}",
             "type": "sizing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.16}",
             "type": "sizing"
           }
         }
       },
-      "TextWrapper": {
-        "Padding_H": {
-          "SM": {
+      "textwrapper": {
+        "padding_h": {
+          "sm": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
           }
         },
-        "Padding_V": {
-          "SM": {
+        "padding_v": {
+          "sm": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
           }
         },
-        "Padding": {
-          "SM": {
-            "value": "{cmp.CaptionComponent.TextWrapper.Padding_V.SM} {cmp.CaptionComponent.TextWrapper.Padding_H.SM}",
+        "padding": {
+          "sm": {
+            "value": "{cmp.captioncomponent.textwrapper.padding_v.sm} {cmp.captioncomponent.textwrapper.padding_h.sm}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{cmp.CaptionComponent.TextWrapper.Padding_V.MD} {cmp.CaptionComponent.TextWrapper.Padding_H.MD}",
+          "md": {
+            "value": "{cmp.captioncomponent.textwrapper.padding_v.md} {cmp.captioncomponent.textwrapper.padding_h.md}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{cmp.CaptionComponent.TextWrapper.Padding_V.LG} {cmp.CaptionComponent.TextWrapper.Padding_H.LG}",
+          "lg": {
+            "value": "{cmp.captioncomponent.textwrapper.padding_v.lg} {cmp.captioncomponent.textwrapper.padding_h.lg}",
             "type": "spacing"
           }
         }

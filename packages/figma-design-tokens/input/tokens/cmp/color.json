@@ -1,32 +1,32 @@
 {
   "cmp": {
-    "Blanket": {
-      "Surface": {
+    "blanket": {
+      "surface": {
         "value": "{sys.bgcolor.surface.blanket}",
         "type": "color",
         "description": "Apply on blanket component"
       }
     },
-    "CaptionComponent": {
-      "Text": {
-        "TextColor": {
-          "Hint": {
+    "captioncomponent": {
+      "text": {
+        "textcolor": {
+          "hint": {
             "value": "{sys.content.surface.subtle.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
       },
-      "Icon": {
-        "IconColor": {
-          "Hint": {
+      "icon": {
+        "iconcolor": {
+          "hint": {
             "value": "{sys.content.surface.subtle.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
