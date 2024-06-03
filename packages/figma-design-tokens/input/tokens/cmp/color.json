@@ -1133,23 +1133,23 @@
       "Container": {
         "BackgroundColor": {
           "Rest": {
-            "value": "{sys.bgcolor.silent.rest}",
+            "value": "{sem.buttons.container.bgcolor.silent.rest}",
             "type": "color"
           },
           "Hover": {
-            "value": "{sys.bgcolor.silent.hover}",
+            "value": "{sem.buttons.container.bgcolor.silent.hover}",
             "type": "color"
           },
           "Pressed": {
-            "value": "{sys.bgcolor.silent.pressed}",
+            "value": "{sem.buttons.container.bgcolor.silent.pressed}",
             "type": "color"
           },
           "Focus": {
-            "value": "{sys.bgcolor.silent.rest}",
+            "value": "{sem.buttons.container.bgcolor.silent.focus}",
             "type": "color"
           },
           "Disabled": {
-            "value": "{sys.bgcolor.secondary.disabled}",
+            "value": "{sem.buttons.container.bgcolor.silent.disabled}",
             "type": "color"
           }
         },
