@@ -19,7 +19,7 @@ import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.genera
 
 export const staticStyles = typeSafeNestedCss/*css*/ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Radio, RadioGroup, FormLabel, CaptionComponent } = cmp;
+    const { Radio, RadioGroup, FormLabel, formcaption } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-legend-wrapper.${theme} {
@@ -191,8 +191,8 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             gap: ${Radio.ContentCol.ItemSpacing.SM};
 
             .caption-wrapper {
-              padding: ${CaptionComponent.Container.Padding.SM};
-              gap: ${CaptionComponent.Container.ItemSpacing.SM};
+              padding: ${formcaption.container.padding.sm};
+              gap: ${formcaption.container.itemspacing.sm};
             }
 
             .blr-form-label-inline {
@@ -217,8 +217,8 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             gap: ${Radio.ContentCol.ItemSpacing.MD};
 
             .caption-wrapper {
-              padding: ${CaptionComponent.Container.Padding.MD};
-              gap: ${CaptionComponent.Container.ItemSpacing.MD};
+              padding: ${formcaption.container.padding.md};
+              gap: ${formcaption.container.itemspacing.md};
             }
 
             .blr-form-label-inline {
@@ -243,8 +243,8 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             gap: ${Radio.ContentCol.ItemSpacing.LG};
 
             .caption-wrapper {
-              padding: ${CaptionComponent.Container.Padding.LG};
-              gap: ${CaptionComponent.Container.ItemSpacing.LG};
+              padding: ${formcaption.container.padding.lg};
+              gap: ${formcaption.container.itemspacing.lg};
             }
 
             .blr-form-label-inline {
@@ -495,24 +495,24 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           margin-top: 0;
 
           &.sm {
-            padding: ${CaptionComponent.TextWrapper.Padding.SM};
-            font-family: ${CaptionComponent.Text.Typography.SM.fontFamily}, sans-serif;
-            font-size: ${CaptionComponent.Text.Typography.SM.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.SM.lineHeight};
+            padding: ${formcaption.textwrapper.padding.sm};
+            font-family: ${formcaption.text.typography.sm.fontFamily}, sans-serif;
+            font-size: ${formcaption.text.typography.sm.fontSize};
+            line-height: ${formcaption.text.typography.sm.lineHeight};
           }
 
           &.md {
-            padding: ${CaptionComponent.TextWrapper.Padding.MD};
-            font-family: ${CaptionComponent.Text.Typography.MD.fontFamily}, sans-serif;
-            font-size: ${CaptionComponent.Text.Typography.MD.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.MD.lineHeight};
+            padding: ${formcaption.textwrapper.padding.md};
+            font-family: ${formcaption.text.typography.md.fontFamily}, sans-serif;
+            font-size: ${formcaption.text.typography.md.fontSize};
+            line-height: ${formcaption.text.typography.md.lineHeight};
           }
 
           &.lg {
-            padding: ${CaptionComponent.TextWrapper.Padding.LG};
-            font-family: ${CaptionComponent.Text.Typography.LG.fontFamily}, sans-serif;
-            font-size: ${CaptionComponent.Text.Typography.LG.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.LG.lineHeight};
+            padding: ${formcaption.textwrapper.padding.lg};
+            font-family: ${formcaption.text.typography.lg.fontFamily}, sans-serif;
+            font-size: ${formcaption.text.typography.lg.fontSize};
+            line-height: ${formcaption.text.typography.lg.lineHeight};
           }
         }
       }

@@ -106,7 +106,7 @@
           "sm": {
             "value": "{core.dimensionREM.14}",
             "type": "sizing",
-            "description": "Defines the physical size of the icon inside the captionComponent"
+            "description": "Defines the physical size of the icon inside the formcaption"
           },
           "md": {
             "value": "{core.dimensionREM.16}",
