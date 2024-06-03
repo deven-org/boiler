@@ -350,98 +350,98 @@
         }
       }
     },
-    "FormLabel": {
-      "Label": {
-        "TextColor": {
-          "Rest": {
+    "formlabel": {
+      "label": {
+        "textcolor": {
+          "rest": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
-          "ReadOnly": {
+          "readonly": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
       },
-      "LabelAppendix": {
-        "TextColor": {
-          "Rest": {
+      "labelappendix": {
+        "textcolor": {
+          "rest": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
-          "ReadOnly": {
+          "readonly": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
       },
-      "InlineLabel": {
-        "TextColor": {
-          "Rest": {
+      "inlinelabel": {
+        "textcolor": {
+          "rest": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
-          "ReadOnly": {
+          "readonly": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }

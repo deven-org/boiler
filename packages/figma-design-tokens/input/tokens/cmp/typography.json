@@ -54,50 +54,50 @@
         }
       }
     },
-    "FormLabel": {
-      "Label": {
-        "Typography": {
-          "SM": {
+    "formlabel": {
+      "label": {
+        "typography": {
+          "sm": {
             "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
             "type": "typography"
           },
-          "MD": {
+          "md": {
             "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
             "type": "typography"
           },
-          "LG": {
+          "lg": {
             "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
             "type": "typography"
           }
         }
       },
-      "LabelAppendix": {
-        "Typography": {
-          "SM": {
+      "labelappendix": {
+        "typography": {
+          "sm": {
             "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
             "type": "typography"
           },
-          "MD": {
+          "md": {
             "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
             "type": "typography"
           },
-          "LG": {
+          "lg": {
             "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
             "type": "typography"
           }
         }
       },
-      "InlineLabel": {
-        "Typography": {
-          "SM": {
+      "inlinelabel": {
+        "typography": {
+          "sm": {
             "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
             "type": "typography"
           },
-          "MD": {
+          "md": {
             "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
             "type": "typography"
           },
-          "LG": {
+          "lg": {
             "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
             "type": "typography"
           }

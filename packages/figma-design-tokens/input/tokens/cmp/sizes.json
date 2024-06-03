@@ -163,20 +163,20 @@
         }
       }
     },
-    "CaptionGroup": {
-      "Container": {
-        "ItemSpacing": {
-          "SM": {
+    "captiongroup": {
+      "container": {
+        "itemspacing": {
+          "sm": {
             "value": "{core.dimensionREM.4}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.5}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.6}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
@@ -839,33 +839,33 @@
         }
       }
     },
-    "FormLabel": {
-      "Container": {
-        "ItemSpacing": {
-          "SM": {
+    "formlabel": {
+      "container": {
+        "itemspacing": {
+          "sm": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionPX.4}",
             "type": "spacing"
           }
         },
-        "Padding": {
-          "SM": {
-            "value": "0 0",
+        "padding": {
+          "sm": {
+            "value": "0",
             "type": "spacing"
           },
-          "MD": {
-            "value": "0 0",
+          "md": {
+            "value": "0",
             "type": "spacing"
           },
-          "LG": {
-            "value": "0 0",
+          "lg": {
+            "value": "0",
             "type": "spacing"
           }
         }
