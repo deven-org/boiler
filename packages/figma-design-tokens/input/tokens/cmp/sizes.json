@@ -671,32 +671,32 @@
         },
         "BorderRadius": {
           "SM": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius",
             "description": "Border radius of counter container\n>>> new"
           },
           "MD": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius",
             "description": "Border radius of counter container\n>>> Feedback.Counter.BorderRadius"
           },
           "LG": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius",
             "description": "Border radius of counter container\n>>> new"
           }
         },
         "BorderWidth": {
           "SM": {
-            "value": "{sys.borderWidth.medium}",
+            "value": "{sys.borderwidth.medium}",
             "type": "borderWidth"
           },
           "MD": {
-            "value": "{sys.borderWidth.medium}",
+            "value": "{sys.borderwidth.medium}",
             "type": "borderWidth"
           },
           "LG": {
-            "value": "{sys.borderWidth.medium}",
+            "value": "{sys.borderwidth.medium}",
             "type": "borderWidth"
           }
         },
@@ -768,7 +768,7 @@
           }
         },
         "BorderRadius": {
-          "value": "{sys.borderRadius.lg}",
+          "value": "{sys.borderradius.lg}",
           "type": "borderRadius"
         }
       },
@@ -1227,7 +1227,7 @@
     "Menu": {
       "Container": {
         "BorderRadius": {
-          "value": "{sys.borderRadius.lg}",
+          "value": "{sys.borderradius.lg}",
           "type": "borderRadius",
           "description": "Defines the border radius of the whole menu component"
         }
@@ -1240,7 +1240,7 @@
             "description": "Adds padding to the menu item"
           },
           "BorderRadius": {
-            "value": "{sys.borderRadius.lg}",
+            "value": "{sys.borderradius.lg}",
             "type": "borderRadius",
             "description": "Defines the border radius of a single menu item."
           },
@@ -1358,7 +1358,7 @@
             }
           },
           "BorderRadius": {
-            "value": "{sys.borderRadius.round}",
+            "value": "{sys.borderradius.round}",
             "type": "borderRadius"
           },
           "BorderWidth": {
@@ -2035,15 +2035,15 @@
         },
         "BorderRadius": {
           "SM": {
-            "value": "{sys.borderRadius.none}",
+            "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           },
           "MD": {
-            "value": "{sys.borderRadius.none}",
+            "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           },
           "LG": {
-            "value": "{sys.borderRadius.none}",
+            "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           }
         },
@@ -2711,7 +2711,7 @@
             "SM": {
               "Active": {
                 "Rest": {
-                  "value": "{sys.borderWidth.none}",
+                  "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2737,7 +2737,7 @@
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{sys.borderWidth.none}",
+                  "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2765,7 +2765,7 @@
             "MD": {
               "Active": {
                 "Rest": {
-                  "value": "{sys.borderWidth.none}",
+                  "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2791,7 +2791,7 @@
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{sys.borderWidth.none}",
+                  "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2819,7 +2819,7 @@
             "LG": {
               "Active": {
                 "Rest": {
-                  "value": "{sys.borderWidth.none}",
+                  "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2845,7 +2845,7 @@
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{sys.borderWidth.none}",
+                  "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2965,7 +2965,7 @@
             "SM": {
               "Active": {
                 "Rest": {
-                  "value": "{sys.borderWidth.medium}",
+                  "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -2991,7 +2991,7 @@
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{sys.borderWidth.medium}",
+                  "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -3019,7 +3019,7 @@
             "MD": {
               "Active": {
                 "Rest": {
-                  "value": "{sys.borderWidth.medium}",
+                  "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -3045,7 +3045,7 @@
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{sys.borderWidth.medium}",
+                  "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -3073,7 +3073,7 @@
             "LG": {
               "Active": {
                 "Rest": {
-                  "value": "{sys.borderWidth.medium}",
+                  "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -3099,7 +3099,7 @@
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{sys.borderWidth.medium}",
+                  "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
                 "Hover": {
@@ -3153,7 +3153,7 @@
           "type": "spacing"
         },
         "BorderRadius": {
-          "value": "{sys.borderRadius.md}",
+          "value": "{sys.borderradius.md}",
           "type": "borderRadius"
         },
         "MinWidth": {

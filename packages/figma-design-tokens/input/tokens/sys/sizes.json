@@ -1,6 +1,6 @@
 {
   "sys": {
-    "borderRadius": {
+    "borderradius": {
       "sm": {
         "value": "{core.borderradius.base}*0.5",
         "type": "borderRadius"
@@ -26,7 +26,7 @@
         "type": "borderRadius"
       }
     },
-    "borderWidth": {
+    "borderwidth": {
       "thin": {
         "value": "{core.borderwidth.base}*0.5",
         "type": "borderWidth"
