@@ -270,32 +270,32 @@
                   "description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 }
@@ -307,32 +307,32 @@
                   "description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.sm.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 }
@@ -346,32 +346,32 @@
                   "description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 }
@@ -383,32 +383,32 @@
                   "description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.md.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 }
@@ -422,32 +422,32 @@
                   "description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.active.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 }
@@ -459,32 +459,32 @@
                   "description": "figma only! do not apply on codes comps"
                 },
                 "hover": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "pressed": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "focus": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "disabled": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "readonly": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
                 "error": {
-                  "value": "{cmp.checkbox.control.container.BorderWidth.lg.inactive.rest}",
+                  "value": "{cmp.checkbox.control.container.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 }
