@@ -7,32 +7,6 @@
         "description": "Apply on blanket component"
       }
     },
-    "formcaption": {
-      "text": {
-        "textcolor": {
-          "hint": {
-            "value": "{sys.content.surface.subtle.neutral}",
-            "type": "color"
-          },
-          "error": {
-            "value": "{sys.content.surface.regular.danger}",
-            "type": "color"
-          }
-        }
-      },
-      "icon": {
-        "iconcolor": {
-          "hint": {
-            "value": "{sys.content.surface.subtle.neutral}",
-            "type": "color"
-          },
-          "error": {
-            "value": "{sys.content.surface.regular.danger}",
-            "type": "color"
-          }
-        }
-      }
-    },
     "checkbox": {
       "control": {
         "container": {
@@ -347,6 +321,32 @@
           "value": "{sys.bordercolor.container.neutral}",
           "type": "color",
           "description": "Color of the divider\n>>> UI.Divider.Stroke"
+        }
+      }
+    },
+    "formcaption": {
+      "text": {
+        "textcolor": {
+          "hint": {
+            "value": "{sys.content.surface.subtle.neutral}",
+            "type": "color"
+          },
+          "error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      },
+      "icon": {
+        "iconcolor": {
+          "hint": {
+            "value": "{sys.content.surface.subtle.neutral}",
+            "type": "color"
+          },
+          "error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
         }
       }
     },
