@@ -2346,12 +2346,12 @@
       "cmp.formcaption.container.padding_v.lg": "4a93a6a3271a926362ab01f15f7cb9a60a403d7e",
       "cmp.formcaption.iconwrapper.paddingtop.sm": "a649d69af6196794ad782ec7a917c2da575f1620",
       "cmp.formcaption.iconwrapper.paddingtop.md": "c73949c906fe3138dd635f091869ecf801313321",
-      "cmp.formcaption.textwrapper.padding-h.sm": "81bc6ca288c0c412629173a725fd2181fb553e9e",
-      "cmp.formcaption.textwrapper.padding-h.md": "64f894465088f6f12a69b7c1e0d2f550a2d3790b",
-      "cmp.formcaption.textwrapper.padding-h.lg": "7cd4baefc35eedb0b330e1f629b1275ac42021d7",
-      "cmp.formcaption.textwrapper.padding-v.sm": "5f5e0a53a014ec040e6d9db71c3465c6ae69bcc5",
-      "cmp.formcaption.textwrapper.padding-v.md": "87897013715be4ea4e650493b0665a9574f05a6d",
-      "cmp.formcaption.textwrapper.padding-v.lg": "952b713ff608c457fbc57e7d844b01693f147388"
+      "cmp.formcaption.textwrapper.padding_h.sm": "81bc6ca288c0c412629173a725fd2181fb553e9e",
+      "cmp.formcaption.textwrapper.padding_h.md": "64f894465088f6f12a69b7c1e0d2f550a2d3790b",
+      "cmp.formcaption.textwrapper.padding_h.lg": "7cd4baefc35eedb0b330e1f629b1275ac42021d7",
+      "cmp.formcaption.textwrapper.padding_v.sm": "5f5e0a53a014ec040e6d9db71c3465c6ae69bcc5",
+      "cmp.formcaption.textwrapper.padding_v.md": "87897013715be4ea4e650493b0665a9574f05a6d",
+      "cmp.formcaption.textwrapper.padding_v.lg": "952b713ff608c457fbc57e7d844b01693f147388"
     },
     "group": "Sizes"
   }

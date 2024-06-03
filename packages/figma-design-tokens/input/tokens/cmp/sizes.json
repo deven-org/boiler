@@ -119,7 +119,7 @@
         }
       },
       "textwrapper": {
-        "padding-h": {
+        "padding_h": {
           "sm": {
             "value": "{core.dimensionPX.0}",
             "type": "spacing"
@@ -133,7 +133,7 @@
             "type": "spacing"
           }
         },
-        "padding-v": {
+        "padding_v": {
           "sm": {
             "value": "{core.dimensionREM.0}",
             "type": "spacing"
@@ -149,15 +149,15 @@
         },
         "padding": {
           "sm": {
-            "value": "{cmp.formcaption.textwrapper.padding-v.sm} {cmp.formcaption.textwrapper.padding-h.sm}",
+            "value": "{cmp.formcaption.textwrapper.padding_v.sm} {cmp.formcaption.textwrapper.padding_h.sm}",
             "type": "spacing"
           },
           "md": {
-            "value": "{cmp.formcaption.textwrapper.padding-v.md} {cmp.formcaption.textwrapper.padding-h.md}",
+            "value": "{cmp.formcaption.textwrapper.padding_v.md} {cmp.formcaption.textwrapper.padding_h.md}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{cmp.formcaption.textwrapper.padding-v.lg} {cmp.formcaption.textwrapper.padding-h.lg}",
+            "value": "{cmp.formcaption.textwrapper.padding_v.lg} {cmp.formcaption.textwrapper.padding_h.lg}",
             "type": "spacing"
           }
         }
