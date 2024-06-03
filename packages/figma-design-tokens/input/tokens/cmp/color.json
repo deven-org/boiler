@@ -274,17 +274,17 @@
           }
         }
       },
-      "Text": {
-        "TextColor": {
-          "Neutral": {
+      "text": {
+        "textcolor": {
+          "neutral": {
             "value": "{sys.content.container.subtle.informative}",
             "type": "color"
           },
-          "Warning": {
+          "warning": {
             "value": "{sys.content.container.regular.warning}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.container.regular.danger}",
             "type": "color"
           }
