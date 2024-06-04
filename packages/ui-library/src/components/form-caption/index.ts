@@ -37,11 +37,12 @@ export class BlrFormCaption extends LitElementCustom {
 
       const iconSizeVariant = getComponentConfigToken([
         'cmp',
-        'CaptionComponent',
-        'Icon',
-        'SizeVariant',
-        this.sizeVariant.toUpperCase(),
-      ]).toLowerCase() as SizesType;
+        'formcaption',
+        'icon',
+        'sizevariant',
+        // this.sizeVariant.toUpperCase(),
+        this.sizeVariant,
+      ]) as SizesType;
 
       return html`
         <div class=${classes}>

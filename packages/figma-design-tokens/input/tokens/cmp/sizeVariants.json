@@ -1,19 +1,19 @@
 {
   "cmp": {
-    "CaptionComponent": {
-      "Icon": {
-        "SizeVariant": {
-          "SM": {
+    "formcaption": {
+      "icon": {
+        "sizevariant": {
+          "sm": {
             "value": "SM",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
-          "MD": {
+          "md": {
             "value": "SM",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
           },
-          "LG": {
+          "lg": {
             "value": "SM",
             "type": "componentConfig",
             "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
@@ -21,21 +21,21 @@
         }
       }
     },
-    "Checkbox": {
-      "Control": {
-        "Icon": {
-          "SizeVariant": {
-            "SM": {
+    "checkbox": {
+      "control": {
+        "icon": {
+          "sizevariant": {
+            "sm": {
               "value": "SM",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             },
-            "MD": {
+            "md": {
               "value": "SM",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"
             },
-            "LG": {
+            "lg": {
               "value": "MD",
               "type": "componentConfig",
               "description": "Defines which size-variant of the Icon Component should be used. (The default dimensions might be overrridden with a sizing token.)"

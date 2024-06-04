@@ -3,64 +3,64 @@ import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-lit
 
 export const staticStyles = typeSafeNestedCss/* css */ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Counter } = cmp;
+    const { counter } = cmp;
 
     return typeSafeCss/* css */ `
       .blr-counter.${theme} {
         word-break: initial;
-        color: ${Counter.Text.TextColor.Neutral};
-        background-color: ${Counter.Container.BackgroundColor.Neutral};
-        outline-color: ${Counter.Container.BorderColor.Neutral};
+        color: ${counter.text.textcolor.neutral};
+        background-color: ${counter.container.backgroundcolor.neutral};
+        outline-color: ${counter.container.bordercolor.neutral};
         outline-style: solid;
         white-space: nowrap;
         display: initial;
 
         &.sm {
-          padding: ${Counter.Container.Padding.SM};
-          gap: ${Counter.Container.ItemSpacing.SM};
-          border-radius: ${Counter.Container.BorderRadius.SM};
-          outline-width: ${Counter.Container.BorderWidth.SM};
+          padding: ${counter.container.padding.sm};
+          gap: ${counter.container.itemspacing.sm};
+          border-radius: ${counter.container.borderradius.sm};
+          outline-width: ${counter.container.borderwidth.sm};
 
-          font-family: ${Counter.Text.Typography.SM.fontFamily}, sans-serif;
-          font-weight: ${Counter.Text.Typography.SM.fontWeight};
-          font-size: ${Counter.Text.Typography.SM.fontSize};
-          line-height: ${Counter.Text.Typography.SM.lineHeight};
+          font-family: ${counter.text.typography.sm.fontFamily}, sans-serif;
+          font-weight: ${counter.text.typography.sm.fontWeight};
+          font-size: ${counter.text.typography.sm.fontSize};
+          line-height: ${counter.text.typography.sm.lineHeight};
         }
 
         &.md {
-          padding: ${Counter.Container.Padding.MD};
-          gap: ${Counter.Container.ItemSpacing.MD};
-          border-radius: ${Counter.Container.BorderRadius.MD};
-          outline-width: ${Counter.Container.BorderWidth.MD};
+          padding: ${counter.container.padding.md};
+          gap: ${counter.container.itemspacing.md};
+          border-radius: ${counter.container.borderradius.md};
+          outline-width: ${counter.container.borderwidth.md};
 
-          font-family: ${Counter.Text.Typography.MD.fontFamily}, sans-serif;
-          font-weight: ${Counter.Text.Typography.MD.fontWeight};
-          font-size: ${Counter.Text.Typography.MD.fontSize};
-          line-height: ${Counter.Text.Typography.MD.lineHeight};
+          font-family: ${counter.text.typography.md.fontFamily}, sans-serif;
+          font-weight: ${counter.text.typography.md.fontWeight};
+          font-size: ${counter.text.typography.md.fontSize};
+          line-height: ${counter.text.typography.md.lineHeight};
         }
 
         &.lg {
-          padding: ${Counter.Container.Padding.LG};
-          gap: ${Counter.Container.ItemSpacing.LG};
-          border-radius: ${Counter.Container.BorderRadius.LG};
-          outline-width: ${Counter.Container.BorderWidth.LG};
+          padding: ${counter.container.padding.lg};
+          gap: ${counter.container.itemspacing.lg};
+          border-radius: ${counter.container.borderradius.lg};
+          outline-width: ${counter.container.borderwidth.lg};
 
-          font-family: ${Counter.Text.Typography.LG.fontFamily}, sans-serif;
-          font-weight: ${Counter.Text.Typography.LG.fontWeight};
-          font-size: ${Counter.Text.Typography.LG.fontSize};
-          line-height: ${Counter.Text.Typography.LG.lineHeight};
+          font-family: ${counter.text.typography.lg.fontFamily}, sans-serif;
+          font-weight: ${counter.text.typography.lg.fontWeight};
+          font-size: ${counter.text.typography.lg.fontSize};
+          line-height: ${counter.text.typography.lg.lineHeight};
         }
 
         &.error {
-          color: ${Counter.Text.TextColor.Error};
-          outline-color: ${Counter.Container.BorderColor.Error};
-          background-color: ${Counter.Container.BackgroundColor.Error};
+          color: ${counter.text.textcolor.error};
+          outline-color: ${counter.container.bordercolor.error};
+          background-color: ${counter.container.backgroundcolor.error};
         }
 
         &.warn {
-          color: ${Counter.Text.TextColor.Warning};
-          outline-color: ${Counter.Container.BorderColor.Warning};
-          background-color: ${Counter.Container.BackgroundColor.Warning};
+          color: ${counter.text.textcolor.warning};
+          outline-color: ${counter.container.bordercolor.warning};
+          background-color: ${counter.container.backgroundcolor.warning};
         }
       }
     `;
