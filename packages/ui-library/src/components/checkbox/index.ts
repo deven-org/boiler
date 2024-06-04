@@ -184,12 +184,12 @@ export class BlrCheckbox extends LitElementCustom {
 
       const checkerIconSizeVariant = getComponentConfigToken([
         'cmp',
-        'Checkbox',
-        'Control',
-        'Icon',
-        'SizeVariant',
-        this.sizeVariant.toUpperCase(),
-      ]).toLowerCase() as FormSizesType;
+        'checkbox',
+        'control',
+        'icon',
+        'sizevariant',
+        this.sizeVariant,
+      ]) as FormSizesType;
 
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)

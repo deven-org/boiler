@@ -1,316 +1,290 @@
 {
   "cmp": {
-    "Blanket": {
-      "Surface": {
+    "blanket": {
+      "surface": {
         "value": "{sys.bgcolor.surface.blanket}",
         "type": "color",
         "description": "Apply on blanket component"
       }
     },
-    "CaptionComponent": {
-      "Text": {
-        "TextColor": {
-          "Hint": {
-            "value": "{sys.content.surface.subtle.neutral}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{sys.content.surface.regular.danger}",
-            "type": "color"
-          }
-        }
-      },
-      "Icon": {
-        "IconColor": {
-          "Hint": {
-            "value": "{sys.content.surface.subtle.neutral}",
-            "type": "color"
-          },
-          "Error": {
-            "value": "{sys.content.surface.regular.danger}",
-            "type": "color"
-          }
-        }
-      }
-    },
-    "Checkbox": {
-      "Control": {
-        "Container": {
-          "BackgroundColor": {
-            "Active": {
-              "Rest": {
+    "checkbox": {
+      "control": {
+        "container": {
+          "backgroundcolor": {
+            "active": {
+              "rest": {
                 "value": "{sys.bgcolor.bold.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Hover": {
+              "hover": {
                 "value": "{sys.bgcolor.bold.primary.hover}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Pressed": {
+              "pressed": {
                 "value": "{sys.bgcolor.bold.primary.pressed}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Focus": {
+              "focus": {
                 "value": "{sys.bgcolor.bold.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Disabled": {
+              "disabled": {
                 "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "ReadOnly": {
+              "readonly": {
                 "value": "{sys.bgcolor.bold.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Error": {
+              "error": {
                 "value": "{sys.bgcolor.bold.danger.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               }
             },
-            "Inactive": {
-              "Rest": {
+            "inactive": {
+              "rest": {
                 "value": "{sys.bgcolor.inverse.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Hover": {
+              "hover": {
                 "value": "{sys.bgcolor.inverse.primary.hover}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Pressed": {
+              "pressed": {
                 "value": "{sys.bgcolor.inverse.primary.pressed}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Focus": {
+              "focus": {
                 "value": "{sys.bgcolor.inverse.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Disabled": {
+              "disabled": {
                 "value": "{sys.bgcolor.inverse.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "ReadOnly": {
+              "readonly": {
                 "value": "{sys.bgcolor.inverse.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Error": {
+              "error": {
                 "value": "{sys.bgcolor.inverse.danger.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               }
             }
           },
-          "BorderColor": {
-            "Active": {
-              "Rest": {
+          "bordercolor": {
+            "active": {
+              "rest": {
                 "value": "{sys.bordercolor.bold.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Hover": {
+              "hover": {
                 "value": "{sys.bordercolor.bold.primary.hover}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Pressed": {
+              "pressed": {
                 "value": "{sys.bordercolor.bold.primary.pressed}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Focus": {
+              "focus": {
                 "value": "{sys.bordercolor.bold.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Disabled": {
+              "disabled": {
                 "value": "{sys.bordercolor.bold.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "ReadOnly": {
+              "readonly": {
                 "value": "{sys.bordercolor.bold.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Error": {
+              "error": {
                 "value": "{sys.bordercolor.bold.danger.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               }
             },
-            "Inactive": {
-              "Rest": {
+            "inactive": {
+              "rest": {
                 "value": "{sys.bordercolor.inverse.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Hover": {
+              "hover": {
                 "value": "{sys.bordercolor.inverse.primary.hover}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Pressed": {
+              "pressed": {
                 "value": "{sys.bordercolor.inverse.primary.pressed}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Focus": {
+              "focus": {
                 "value": "{sys.bordercolor.inverse.primary.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Disabled": {
+              "disabled": {
                 "value": "{sys.bordercolor.inverse.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "ReadOnly": {
+              "readonly": {
                 "value": "{sys.bordercolor.inverse.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Error": {
+              "error": {
                 "value": "{sys.bordercolor.inverse.danger.rest}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               }
             }
           }
         },
-        "Icon": {
-          "IconColor": {
-            "Active": {
-              "Rest": {
+        "icon": {
+          "iconcolor": {
+            "active": {
+              "rest": {
                 "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Hover": {
+              "hover": {
                 "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Pressed": {
+              "pressed": {
                 "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Focus": {
+              "focus": {
                 "value": "{sys.content.bold.regular.primary}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Disabled": {
+              "disabled": {
                 "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "ReadOnly": {
+              "readonly": {
                 "value": "{sys.content.bold.regular.disabled}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Error": {
+              "error": {
                 "value": "{sys.content.bold.regular.danger}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               }
             },
-            "Inactive": {
-              "Rest": {
+            "inactive": {
+              "rest": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Hover": {
+              "hover": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Pressed": {
+              "pressed": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Focus": {
+              "focus": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Disabled": {
+              "disabled": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "ReadOnly": {
+              "readonly": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               },
-              "Error": {
+              "error": {
                 "value": "{sys.content.inverse.transparent}",
                 "type": "color",
-                "description": "Also applies to indeterminate"
+                "description": "also applies to indeterminate"
               }
             }
           }
         }
       }
     },
-    "Counter": {
-      "Container": {
-        "BorderColor": {
-          "Neutral": {
+    "counter": {
+      "container": {
+        "bordercolor": {
+          "neutral": {
             "value": "{sys.bordercolor.container.informative}",
             "type": "color"
           },
-          "Warning": {
+          "warning": {
             "value": "{sys.bordercolor.container.warning}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.bordercolor.container.danger}",
             "type": "color"
           }
         },
-        "BackgroundColor": {
-          "Neutral": {
+        "backgroundcolor": {
+          "neutral": {
             "value": "{sys.bgcolor.container.informative}",
             "type": "color"
           },
-          "Warning": {
+          "warning": {
             "value": "{sys.bgcolor.container.warning}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.bgcolor.container.danger}",
             "type": "color"
           }
         }
       },
-      "Text": {
-        "TextColor": {
-          "Neutral": {
+      "text": {
+        "textcolor": {
+          "neutral": {
             "value": "{sys.content.container.subtle.informative}",
             "type": "color"
           },
-          "Warning": {
+          "warning": {
             "value": "{sys.content.container.regular.warning}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.container.regular.danger}",
             "type": "color"
           }
@@ -350,98 +324,124 @@
         }
       }
     },
-    "FormLabel": {
-      "Label": {
-        "TextColor": {
-          "Rest": {
-            "value": "{sys.content.surface.regular.neutral}",
+    "formcaption": {
+      "text": {
+        "textcolor": {
+          "hint": {
+            "value": "{sys.content.surface.subtle.neutral}",
             "type": "color"
           },
-          "Hover": {
-            "value": "{sys.content.surface.regular.neutral}",
-            "type": "color"
-          },
-          "Pressed": {
-            "value": "{sys.content.surface.regular.neutral}",
-            "type": "color"
-          },
-          "Focus": {
-            "value": "{sys.content.surface.regular.neutral}",
-            "type": "color"
-          },
-          "Disabled": {
-            "value": "{sys.content.surface.regular.disabled}",
-            "type": "color"
-          },
-          "ReadOnly": {
-            "value": "{sys.content.surface.regular.neutral}",
-            "type": "color"
-          },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
       },
-      "LabelAppendix": {
-        "TextColor": {
-          "Rest": {
+      "icon": {
+        "iconcolor": {
+          "hint": {
+            "value": "{sys.content.surface.subtle.neutral}",
+            "type": "color"
+          },
+          "error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "formlabel": {
+      "label": {
+        "textcolor": {
+          "rest": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
-          "ReadOnly": {
+          "readonly": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }
         }
       },
-      "InlineLabel": {
-        "TextColor": {
-          "Rest": {
+      "labelappendix": {
+        "textcolor": {
+          "rest": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sys.content.surface.regular.disabled}",
             "type": "color"
           },
-          "ReadOnly": {
+          "readonly": {
             "value": "{sys.content.surface.regular.neutral}",
             "type": "color"
           },
-          "Error": {
+          "error": {
+            "value": "{sys.content.surface.regular.danger}",
+            "type": "color"
+          }
+        }
+      },
+      "inlinelabel": {
+        "textcolor": {
+          "rest": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "pressed": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "focus": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "disabled": {
+            "value": "{sys.content.surface.regular.disabled}",
+            "type": "color"
+          },
+          "readonly": {
+            "value": "{sys.content.surface.regular.neutral}",
+            "type": "color"
+          },
+          "error": {
             "value": "{sys.content.surface.regular.danger}",
             "type": "color"
           }

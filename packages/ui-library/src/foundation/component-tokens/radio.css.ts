@@ -19,7 +19,7 @@ import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.genera
 
 export const staticStyles = typeSafeNestedCss/*css*/ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Radio, RadioGroup, FormLabel, CaptionComponent } = cmp;
+    const { Radio, RadioGroup, formlabel, formcaption } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-legend-wrapper.${theme} {
@@ -143,7 +143,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
         .blr-form-label-inline {
           _FIX?_: "LabelNextToControl states";
-          color: ${FormLabel.InlineLabel.TextColor.Rest};
+          color: ${formlabel.inlinelabel.textcolor.rest};
           transition: all 0.25s ease 0s;
           display: flex;
           align-items: center;
@@ -191,15 +191,15 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             gap: ${Radio.ContentCol.ItemSpacing.SM};
 
             .caption-wrapper {
-              padding: ${CaptionComponent.Container.Padding.SM};
-              gap: ${CaptionComponent.Container.ItemSpacing.SM};
+              padding: ${formcaption.container.padding.sm};
+              gap: ${formcaption.container.itemspacing.sm};
             }
 
             .blr-form-label-inline {
-              font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
-              font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
-              line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
-              font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
+              font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, sans-serif;
+              font-weight: ${formlabel.inlinelabel.typography.sm.fontWeight};
+              line-height: ${formlabel.inlinelabel.typography.sm.lineHeight};
+              font-size: ${formlabel.inlinelabel.typography.sm.fontSize};
             }
           }
         }
@@ -217,15 +217,15 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             gap: ${Radio.ContentCol.ItemSpacing.MD};
 
             .caption-wrapper {
-              padding: ${CaptionComponent.Container.Padding.MD};
-              gap: ${CaptionComponent.Container.ItemSpacing.MD};
+              padding: ${formcaption.container.padding.md};
+              gap: ${formcaption.container.itemspacing.md};
             }
 
             .blr-form-label-inline {
-              font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
-              font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
-              line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
-              font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
+              font-family: ${formlabel.inlinelabel.typography.md.fontFamily}, sans-serif;
+              font-weight: ${formlabel.inlinelabel.typography.md.fontWeight};
+              line-height: ${formlabel.inlinelabel.typography.md.lineHeight};
+              font-size: ${formlabel.inlinelabel.typography.md.fontSize};
             }
           }
         }
@@ -243,15 +243,15 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             gap: ${Radio.ContentCol.ItemSpacing.LG};
 
             .caption-wrapper {
-              padding: ${CaptionComponent.Container.Padding.LG};
-              gap: ${CaptionComponent.Container.ItemSpacing.LG};
+              padding: ${formcaption.container.padding.lg};
+              gap: ${formcaption.container.itemspacing.lg};
             }
 
             .blr-form-label-inline {
-              font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
-              font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
-              line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
-              font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
+              font-family: ${formlabel.inlinelabel.typography.lg.fontFamily}, sans-serif;
+              font-weight: ${formlabel.inlinelabel.typography.lg.fontWeight};
+              line-height: ${formlabel.inlinelabel.typography.lg.lineHeight};
+              font-size: ${formlabel.inlinelabel.typography.lg.fontSize};
             }
           }
         }
@@ -282,7 +282,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               & + .label-wrapper {
                 .blr-form-label-inline {
-                  color: ${FormLabel.InlineLabel.TextColor.Hover};
+                  color: ${formlabel.inlinelabel.textcolor.hover};
                 }
               }
             }
@@ -299,7 +299,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               & + .label-wrapper {
                 .blr-form-label-inline {
-                  color: ${FormLabel.InlineLabel.TextColor.Pressed};
+                  color: ${formlabel.inlinelabel.textcolor.pressed};
                 }
               }
             }
@@ -319,7 +319,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               & + .label-wrapper {
                 .blr-form-label-inline {
-                  color: ${FormLabel.InlineLabel.TextColor.Focus};
+                  color: ${formlabel.inlinelabel.textcolor.focus};
                 }
               }
             }
@@ -407,7 +407,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             & + .label-wrapper {
               .blr-form-label-inline {
                 cursor: not-allowed;
-                color: ${FormLabel.InlineLabel.TextColor.Disabled};
+                color: ${formlabel.inlinelabel.textcolor.disabled};
               }
             }
           }
@@ -425,7 +425,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${FormLabel.InlineLabel.TextColor.Error};
+                color: ${formlabel.inlinelabel.textcolor.error};
               }
             }
 
@@ -464,7 +464,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${FormLabel.InlineLabel.TextColor.Disabled};
+                color: ${formlabel.inlinelabel.textcolor.disabled};
               }
             }
           }
@@ -485,7 +485,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
             & + .label-wrapper {
               .blr-form-label-inline {
-                color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
+                color: ${formlabel.inlinelabel.textcolor.readonly};
               }
             }
           }
@@ -495,24 +495,24 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           margin-top: 0;
 
           &.sm {
-            padding: ${CaptionComponent.TextWrapper.Padding.SM};
-            font-family: ${CaptionComponent.Text.Typography.SM.fontFamily}, sans-serif;
-            font-size: ${CaptionComponent.Text.Typography.SM.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.SM.lineHeight};
+            padding: ${formcaption.textwrapper.padding.sm};
+            font-family: ${formcaption.text.typography.sm.fontFamily}, sans-serif;
+            font-size: ${formcaption.text.typography.sm.fontSize};
+            line-height: ${formcaption.text.typography.sm.lineHeight};
           }
 
           &.md {
-            padding: ${CaptionComponent.TextWrapper.Padding.MD};
-            font-family: ${CaptionComponent.Text.Typography.MD.fontFamily}, sans-serif;
-            font-size: ${CaptionComponent.Text.Typography.MD.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.MD.lineHeight};
+            padding: ${formcaption.textwrapper.padding.md};
+            font-family: ${formcaption.text.typography.md.fontFamily}, sans-serif;
+            font-size: ${formcaption.text.typography.md.fontSize};
+            line-height: ${formcaption.text.typography.md.lineHeight};
           }
 
           &.lg {
-            padding: ${CaptionComponent.TextWrapper.Padding.LG};
-            font-family: ${CaptionComponent.Text.Typography.LG.fontFamily}, sans-serif;
-            font-size: ${CaptionComponent.Text.Typography.LG.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.LG.lineHeight};
+            padding: ${formcaption.textwrapper.padding.lg};
+            font-family: ${formcaption.text.typography.lg.fontFamily}, sans-serif;
+            font-size: ${formcaption.text.typography.lg.fontSize};
+            line-height: ${formcaption.text.typography.lg.lineHeight};
           }
         }
       }
