@@ -4,28 +4,28 @@
       "container": {
         "borderradius": {
           "xs": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius"
           },
           "sm": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius"
           },
           "md": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius"
           },
           "lg": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius"
           },
           "xl": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius"
           }
         },
         "borderwidth": {
-          "value": "{sys.borderWidth.medium}",
+          "value": "{sys.borderwidth.medium}",
           "type": "borderWidth"
         }
       }
@@ -106,32 +106,32 @@
             }
           },
           "borderradius": {
-            "value": "{sys.borderRadius.md}",
+            "value": "{sys.borderradius.md}",
             "type": "borderRadius"
           },
           "borderwidth": {
             "rest": {
-              "value": "{sys.borderWidth.medium}",
+              "value": "{sys.borderwidth.medium}",
               "type": "borderWidth"
             },
             "hover": {
-              "value": "{sys.borderWidth.medium}",
+              "value": "{sys.borderwidth.medium}",
               "type": "borderWidth"
             },
             "pressed": {
-              "value": "{sys.borderWidth.medium}",
+              "value": "{sys.borderwidth.medium}",
               "type": "borderWidth"
             },
             "focus": {
-              "value": "{sys.borderWidth.bold}",
+              "value": "{sys.borderwidth.bold}",
               "type": "borderWidth"
             },
             "disabled": {
-              "value": "{sys.borderWidth.medium}",
+              "value": "{sys.borderwidth.medium}",
               "type": "borderWidth"
             },
             "readonly": {
-              "value": "{sys.borderWidth.medium}",
+              "value": "{sys.borderwidth.medium}",
               "type": "borderWidth"
             }
           }
@@ -231,7 +231,7 @@
     "global": {
       "focusring": {
         "borderwidth": {
-          "value": "{sys.borderWidth.heavy}",
+          "value": "{sys.borderwidth.heavy}",
           "type": "borderWidth"
         }
       }

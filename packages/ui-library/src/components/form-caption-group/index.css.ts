@@ -8,20 +8,20 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { CaptionGroup } = cmp;
+    const { captiongroup } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-form-caption-group.${theme} {        
         &.sm {
-          gap: ${CaptionGroup.Container.ItemSpacing.SM};
+          gap: ${captiongroup.container.itemspacing.sm};
         }
     
         &.md {
-          gap: ${CaptionGroup.Container.ItemSpacing.MD};
+          gap: ${captiongroup.container.itemspacing.md};
         }
     
         &.lg {
-          gap: ${CaptionGroup.Container.ItemSpacing.LG};
+          gap: ${captiongroup.container.itemspacing.lg};
         }
       }
     `;

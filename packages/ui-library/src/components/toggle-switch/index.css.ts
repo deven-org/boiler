@@ -110,7 +110,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   })}
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { ToggleSwitch, FormLabel } = cmp;
+    const { ToggleSwitch, formlabel } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-label-toggleswitch.${theme} {
@@ -122,7 +122,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
         & > .toggle-content-col {
           & > .blr-form-label-inline {
-            color: ${FormLabel.InlineLabel.TextColor.Rest};
+            color: ${formlabel.inlinelabel.textcolor.rest};
           }
         }
 
@@ -141,7 +141,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
       
             & > .blr-form-label-inline {
-              color: ${FormLabel.InlineLabel.TextColor.Rest};
+              color: ${formlabel.inlinelabel.textcolor.rest};
             }
             
             &:not(.checked) {
@@ -278,14 +278,14 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           }
 
           & > .blr-form-label-inline {
-            color: ${FormLabel.InlineLabel.TextColor.Rest};
+            color: ${formlabel.inlinelabel.textcolor.rest};
           }
         }
 
         &.disabled {
           & > .toggle-content-col {
             & > .blr-form-label-inline {
-              color: ${FormLabel.InlineLabel.TextColor.Disabled};
+              color: ${formlabel.inlinelabel.textcolor.disabled};
             }
           }
         }
@@ -293,7 +293,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         &.readonly {
           > .toggle-content-col {
             > .blr-form-label-inline {
-              color: ${FormLabel.InlineLabel.TextColor.ReadOnly};
+              color: ${formlabel.inlinelabel.textcolor.readonly};
             }
           }
         }
