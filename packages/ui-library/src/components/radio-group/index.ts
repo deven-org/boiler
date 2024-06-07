@@ -1,4 +1,4 @@
-import { html, nothing } from 'lit';
+import { PropertyValues, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from 'lit/decorators.js';
 import { staticStyles as componentSpecificStaticStyles } from './index.css';
@@ -16,38 +16,48 @@ import { LitElementCustom } from '../../utils/lit-element-custom';
 export class BlrRadioGroup extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() checked?: boolean;
-  @property() name?: string;
-  @property() sizeVariant: InputSizesType = 'md';
-  @property() hasLegend?: boolean;
-  @property() required?: boolean;
+  @property({ type: Boolean }) disabled = false;
+  @property({ type: Boolean }) readonly = false;
+  @property({ type: Boolean }) checked = false;
+  @property({ type: String }) name = '';
+  @property({ type: String }) sizeVariant: InputSizesType = 'md';
+  @property({ type: Boolean }) hasLegend = false;
+  @property({ type: Boolean }) required = false;
   @property() blrChange?: HTMLElement['oninput'];
   @property() blrBlur?: HTMLElement['blur'];
   @property() blrFocus?: HTMLElement['focus'];
-  @property() hasError?: boolean;
-  @property() errorIcon?: SizelessIconType;
-  @property() options!: RadioOption[];
-  @property() hasHint = true;
-  @property() groupHintMessageIcon?: SizelessIconType;
-  @property() groupErrorMessage?: string;
-  @property() groupHintMessage?: string;
-  @property() groupErrorMessageIcon?: SizelessIconType;
-  @property() legend?: string;
-  @property() direction: RadioGroupDirection = 'horizontal';
+  @property({ type: Boolean }) hasError = false;
+  @property({ type: String }) errorIcon?: SizelessIconType;
+  @property({ type: Array }) options: RadioOption[] = [];
+  @property({ type: Boolean }) hasHint = true;
+  @property({ type: String }) groupHintMessageIcon?: SizelessIconType;
+  @property({ type: String }) groupErrorMessage = '';
+  @property({ type: String }) groupHintMessage = '';
+  @property({ type: String }) groupErrorMessageIcon?: SizelessIconType;
+  @property({ type: String }) legend = '';
+  @property({ type: String }) direction: RadioGroupDirection = 'horizontal';
+  @property({ type: String }) theme: ThemeType = 'Light';
 
-  @property() theme: ThemeType = 'Light';
+  willUpdate(changedProperties: PropertyValues) {
+    if (changedProperties.has('sizeVariant') && !this.sizeVariant) {
+      this.sizeVariant = 'md';
+    }
+    if (changedProperties.has('theme') && !this.theme) {
+      this.theme = 'Light';
+    }
+    if (changedProperties.has('direction') && !this.direction) {
+      this.direction = 'horizontal';
+    }
+    if (changedProperties.has('options') && !this.options) {
+      this.options = [];
+    }
+  }
 
   protected render() {
-    if (!this.sizeVariant) {
-      return null;
-    }
-
     const legendClasses = classMap({
       'blr-legend': true,
       [this.sizeVariant]: this.sizeVariant,
-      'error': this.hasError || false,
+      'error': this.hasError,
     });
 
     const legendWrapperClasses = classMap({
@@ -59,22 +69,23 @@ export class BlrRadioGroup extends LitElementCustom {
     const radioClasses = classMap({
       [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
-      error: this.hasError || false,
+      error: this.hasError,
     });
 
     const classes = classMap({
       [this.theme]: this.theme,
       [this.sizeVariant]: this.sizeVariant,
-      disabled: this.disabled || false,
-      readonly: this.readonly || false,
-      checked: this.checked || false,
-      error: this.hasError || false,
+      disabled: this.disabled,
+      readonly: this.readonly,
+      checked: this.checked,
+      error: this.hasError,
       [this.direction]: this.direction,
     });
 
     const calculateOptionId = (label: string) => {
       return label.replace(/ /g, '_').toLowerCase();
     };
+
     const captionContent = html`
       ${this.hasHint && (this.groupHintMessage || this.groupHintMessageIcon)
         ? BlrFormCaptionRenderFunction({
@@ -109,7 +120,7 @@ export class BlrRadioGroup extends LitElementCustom {
             <div class="blr-radio ${radioClasses}">
               <input
                 id=${id || nothing}
-                class=" input-control ${radioClasses}"
+                class="input-control ${radioClasses}"
                 type="radio"
                 name=${this.name}
                 ?disabled=${this.disabled}
