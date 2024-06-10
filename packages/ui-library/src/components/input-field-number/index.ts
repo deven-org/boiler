@@ -155,11 +155,11 @@ export class BlrInputFieldNumber extends LitElementCustom {
 
     const iconSizeVariant = getComponentConfigToken([
       'cmp',
-      'StepperButton',
-      'Icon',
-      'SizeVariant',
-      this.sizeVariant.toUpperCase(),
-    ]).toLowerCase() as FormSizesType;
+      'stepperbutton',
+      'icon',
+      'sizevariant',
+      this.sizeVariant,
+    ]) as FormSizesType;
 
     const buttonClass = classMap({
       'custom-stepper-button': true,

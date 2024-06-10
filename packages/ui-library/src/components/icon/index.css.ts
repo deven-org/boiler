@@ -17,7 +17,7 @@ export const styleCustom = typeSafeNestedCss/* css */ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Icon } = cmp;
+    const { icon } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-icon.${theme} {
@@ -28,27 +28,27 @@ export const styleCustom = typeSafeNestedCss/* css */ `
         }
 
         &.xxs > svg {
-          width: ${Icon.Container.Size.XXS};
+          width: ${icon.container.size.xxs};
         }
 
         &.xs > svg {
-          width: ${Icon.Container.Size.XS};
+          width: ${icon.container.size.xs};
         }
 
         &.sm > svg {
-          width: ${Icon.Container.Size.SM};
+          width: ${icon.container.size.sm};
         }
 
         &.md > svg {
-          width: ${Icon.Container.Size.MD};
+          width: ${icon.container.size.md};
         }
 
         &.lg > svg {
-          width: ${Icon.Container.Size.LG};
+          width: ${icon.container.size.lg};
         }
 
         &.xl > svg {
-          width: ${Icon.Container.Size.XL};
+          width: ${icon.container.size.xl};
         }
       }
     `;

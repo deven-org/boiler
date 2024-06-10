@@ -245,7 +245,7 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
 
 export const staticComponentStyles = typeSafeNestedCss/* css */ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { StepperButton, StepperCombo, InputFieldNumber } = cmp;
+    const { stepperbutton, StepperCombo, InputFieldNumber } = cmp;
 
     return typeSafeCss/* css */ `
       .input-unit-container.${theme} {
@@ -265,19 +265,19 @@ export const staticComponentStyles = typeSafeNestedCss/* css */ `
       .split.${theme} {
         &.sm {
           & > .custom-stepper-button {
-            width: ${StepperButton.Container.Width.SM};
+            width: ${stepperbutton.container.width.sm};
           }
         }
   
         &.md {
           & > .custom-stepper-button {
-            width: ${StepperButton.Container.Width.MD};
+            width: ${stepperbutton.container.width.md};
           }
         }
   
         &.lg {
           & > .custom-stepper-button {
-            width: ${StepperButton.Container.Width.LG};
+            width: ${stepperbutton.container.width.lg};
           }
         }
       }
@@ -351,22 +351,22 @@ export const staticComponentStyles = typeSafeNestedCss/* css */ `
         border: none;
         padding: 0;
 
-        background-color: ${StepperButton.Container.BackgroundColor.Rest};
-        color: ${StepperButton.Icon.IconColor.Rest};
+        background-color: ${stepperbutton.container.bgcolor.rest};
+        color: ${stepperbutton.icon.iconcolor.rest};
 
         &:hover:not(:disabled) {
-          background-color: ${StepperButton.Container.BackgroundColor.Hover};
-          color: ${StepperButton.Icon.IconColor.Hover}
+          background-color: ${stepperbutton.container.bgcolor.hover};
+          color: ${stepperbutton.icon.iconcolor.hover}
         }
 
         &:active:not(:disabled) {
-          background-color: ${StepperButton.Container.BackgroundColor.Pressed};
-          color: ${StepperButton.Icon.IconColor.Pressed}
+          background-color: ${stepperbutton.container.bgcolor.pressed};
+          color: ${stepperbutton.icon.iconcolor.pressed}
         }
 
         &:disabled {
-          background-color: ${StepperButton.Container.BackgroundColor.Disabled};
-          color: ${StepperButton.Icon.IconColor.Disabled}
+          background-color: ${stepperbutton.container.bgcolor.disabled};
+          color: ${stepperbutton.icon.iconcolor.disabled}
           cursor: not-allowed;
         }
 
