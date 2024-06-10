@@ -1,9 +1,9 @@
 {
   "cmp": {
-    "Tooltip": {
-      "Container": {
-        "Elevation": {
-          "Elevated": {
+    "tooltip": {
+      "container": {
+        "elevation": {
+          "elevated": {
             "value": "{sem.elevation.lvl_1}",
             "type": "boxShadow"
           }
