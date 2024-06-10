@@ -2017,52 +2017,52 @@
         }
       }
     },
-    "StepperButton": {
-      "Container": {
-        "Width": {
-          "SM": {
+    "stepperbutton": {
+      "container": {
+        "width": {
+          "sm": {
             "value": "{core.dimensionREM.32}",
             "type": "sizing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.40}",
             "type": "sizing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.48}",
             "type": "sizing"
           }
         },
-        "BorderRadius": {
-          "SM": {
+        "borderradius": {
+          "sm": {
             "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           },
-          "MD": {
+          "md": {
             "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           },
-          "LG": {
+          "lg": {
             "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           }
         },
-        "BorderWidth": {
+        "borderwidth": {
           "value": "{sem.buttons.container.borderwidth}",
           "type": "borderWidth"
         }
       },
-      "Icon": {
-        "IconSize": {
-          "SM": {
+      "icon": {
+        "iconsize": {
+          "sm": {
             "value": "{core.dimensionREM.16}",
             "type": "sizing"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.16}",
             "type": "sizing"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.24}",
             "type": "sizing"
           }

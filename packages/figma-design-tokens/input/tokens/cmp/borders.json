@@ -503,36 +503,36 @@
         "Border": {
           "Rest": {
             "value": {
-              "color": "{cmp.StepperButton.Container.BorderColor.Rest}",
-              "width": "{cmp.StepperButton.Container.BorderWidth}"
+              "color": "{cmp.stepperbutton.container.bordercolor.rest}",
+              "width": "{cmp.stepperbutton.container.borderwidth}"
             },
             "type": "border"
           },
           "Hover": {
             "value": {
-              "color": "{cmp.StepperButton.Container.BorderColor.Hover}",
-              "width": "{cmp.StepperButton.Container.BorderWidth}"
+              "color": "{cmp.stepperbutton.container.bordercolor.hover}",
+              "width": "{cmp.stepperbutton.container.borderwidth}"
             },
             "type": "border"
           },
           "Pressed": {
             "value": {
-              "color": "{cmp.StepperButton.Container.BorderColor.Pressed}",
-              "width": "{cmp.StepperButton.Container.BorderWidth}"
+              "color": "{cmp.stepperbutton.container.bordercolor.pressed}",
+              "width": "{cmp.stepperbutton.container.borderwidth}"
             },
             "type": "border"
           },
           "Focus": {
             "value": {
-              "color": "{cmp.StepperButton.Container.BorderColor.Focus}",
-              "width": "{cmp.StepperButton.Container.BorderWidth}"
+              "color": "{cmp.stepperbutton.container.bordercolor.focus}",
+              "width": "{cmp.stepperbutton.container.borderwidth}"
             },
             "type": "border"
           },
           "Disabled": {
             "value": {
-              "color": "{cmp.StepperButton.Container.BorderColor.Disabled}",
-              "width": "{cmp.StepperButton.Container.BorderWidth}"
+              "color": "{cmp.stepperbutton.container.bordercolor.disabled}",
+              "width": "{cmp.stepperbutton.container.borderwidth}"
             },
             "type": "border"
           }

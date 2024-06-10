@@ -1129,72 +1129,72 @@
         }
       }
     },
-    "StepperButton": {
-      "Container": {
-        "BackgroundColor": {
-          "Rest": {
+    "stepperbutton": {
+      "container": {
+        "bgcolor": {
+          "rest": {
             "value": "{sem.buttons.container.bgcolor.silent.rest}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sem.buttons.container.bgcolor.silent.hover}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sem.buttons.container.bgcolor.silent.pressed}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sem.buttons.container.bgcolor.silent.focus}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sem.buttons.container.bgcolor.silent.disabled}",
             "type": "color"
           }
         },
-        "BorderColor": {
-          "Rest": {
+        "bordercolor": {
+          "rest": {
             "value": "{sem.buttons.container.bordercolor.silent.rest}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sem.buttons.container.bordercolor.silent.hover}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sem.buttons.container.bordercolor.silent.pressed}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sem.buttons.container.bordercolor.silent.focus}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sem.buttons.container.bordercolor.silent.focus}",
             "type": "color"
           }
         }
       },
-      "Icon": {
-        "IconColor": {
-          "Rest": {
+      "icon": {
+        "iconcolor": {
+          "rest": {
             "value": "{sem.buttons.icon.iconcolor.silent.rest}",
             "type": "color"
           },
-          "Hover": {
+          "hover": {
             "value": "{sem.buttons.icon.iconcolor.silent.hover}",
             "type": "color"
           },
-          "Pressed": {
+          "pressed": {
             "value": "{sem.buttons.icon.iconcolor.silent.pressed}",
             "type": "color"
           },
-          "Focus": {
+          "focus": {
             "value": "{sem.buttons.icon.iconcolor.silent.focus}",
             "type": "color"
           },
-          "Disabled": {
+          "disabled": {
             "value": "{sem.buttons.icon.iconcolor.silent.disabled}",
             "type": "color"
           }
