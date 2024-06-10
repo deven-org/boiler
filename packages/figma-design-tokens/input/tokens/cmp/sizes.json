@@ -871,35 +871,35 @@
         }
       }
     },
-    "Icon": {
-      "Container": {
-        "Size": {
-          "XXS": {
+    "icon": {
+      "container": {
+        "size": {
+          "xxs": {
             "value": "{core.dimensionREM.8}",
             "type": "sizing",
             "description": "size of XXS icon\n>>>: UI.Icon.XXS"
           },
-          "XS": {
+          "xs": {
             "value": "{core.dimensionREM.12}",
             "type": "sizing",
             "description": "size of XS icon\n>>> UI.Icon.XS"
           },
-          "SM": {
+          "sm": {
             "value": "{core.dimensionREM.16}",
             "type": "sizing",
             "description": "size of SM icon\n>>> UI.Icon.SM\n"
           },
-          "MD": {
+          "md": {
             "value": "{core.dimensionREM.24}",
             "type": "sizing",
             "description": "size of MD icon\n>>> UI.Icon.MD"
           },
-          "LG": {
+          "lg": {
             "value": "{core.dimensionREM.32}",
             "type": "sizing",
             "description": "size of LG icon\n>>> UI.Icon.LG"
           },
-          "XL": {
+          "xl": {
             "value": "{core.dimensionREM.48}",
             "type": "sizing",
             "description": "size of XL icon\n>>> UI.Icon.XL"
@@ -1269,7 +1269,7 @@
         },
         "ItemIcon": {
           "IconSize": {
-            "value": "{cmp.Icon.Container.Size.SM}",
+            "value": "{cmp.icon.container.size.sm}",
             "type": "sizing"
           }
         }
