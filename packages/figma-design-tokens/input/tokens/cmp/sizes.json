@@ -4,23 +4,23 @@
       "Container": {
         "ItemSpacing": {
           "XS": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "SM": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           },
           "XL": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           }
         }
@@ -30,43 +30,43 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           }
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         },
@@ -88,15 +88,15 @@
       "iconwrapper": {
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionREM.1}",
+            "value": "{core.dimensionrem.1}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0,5}",
+            "value": "{core.dimensionrem.0,5}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionrem.5}",
             "type": "spacing"
           }
         }
@@ -104,16 +104,16 @@
       "icon": {
         "iconsize": {
           "sm": {
-            "value": "{core.dimensionREM.14}",
+            "value": "{core.dimensionrem.14}",
             "type": "sizing",
             "description": "Defines the physical size of the icon inside the formcaption"
           },
           "md": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
           "lg": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           }
         }
@@ -121,29 +121,29 @@
       "textwrapper": {
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         },
@@ -167,17 +167,17 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
           "md": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionrem.5}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           },
           "lg": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
             "description": "Defines the gap between hint and error message"
           }
@@ -188,34 +188,34 @@
       "contentcol": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "controls the vertical spacing between inlinelabel and the caption."
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "controls the vertical spacing between inlinelabel and the caption."
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "controls the vertical spacing between inlinelabel and the caption."
           }
         },
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "can be used to verticaly align the content of the textcontainer against the control"
           }
@@ -224,17 +224,17 @@
       "contentrow": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "controls the horizontal spacing between the control and the label"
           },
           "md": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "controls the horizontal spacing between the control and the label"
           },
           "lg": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "controls the horizontal spacing between the control and the label"
           }
@@ -248,12 +248,12 @@
             "description": "can be used to align the checkbox control against the text"
           },
           "md": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "can be used to align the checkbox control against the text"
           },
           "lg": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing",
             "description": "can be used to align the checkbox control against the text"
           }
@@ -265,7 +265,7 @@
             "sm": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -302,7 +302,7 @@
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionPX.1}",
+                  "value": "{core.dimensionpx.1}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -341,7 +341,7 @@
             "md": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -378,7 +378,7 @@
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionPX.1}",
+                  "value": "{core.dimensionpx.1}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -417,7 +417,7 @@
             "lg": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -454,7 +454,7 @@
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionPX.1}",
+                  "value": "{core.dimensionpx.1}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -507,15 +507,15 @@
           },
           "size": {
             "sm": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
             "md": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
             "lg": {
-              "value": "{core.dimensionPX.20}",
+              "value": "{core.dimensionpx.20}",
               "type": "sizing"
             }
           }
@@ -524,7 +524,7 @@
           "iconsize": {
             "sm": {
               "rest": {
-                "value": "{core.dimensionPX.16}",
+                "value": "{core.dimensionpx.16}",
                 "type": "sizing"
               },
               "hover": {
@@ -554,7 +554,7 @@
             },
             "md": {
               "rest": {
-                "value": "{core.dimensionPX.16}",
+                "value": "{core.dimensionpx.16}",
                 "type": "sizing"
               },
               "hover": {
@@ -584,7 +584,7 @@
             },
             "lg": {
               "rest": {
-                "value": "{core.dimensionPX.20}",
+                "value": "{core.dimensionpx.20}",
                 "type": "sizing"
               },
               "hover": {
@@ -620,7 +620,7 @@
       "container": {
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
@@ -637,7 +637,7 @@
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing",
             "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
@@ -702,88 +702,84 @@
         },
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           }
         }
       }
     },
-    "Dialog": {
-      "Container": {
-        "MaxWidth": {
-          "XS": {
+    "dialog": {
+      "container": {
+        "maxwidth": {
+          "xs": {
             "value": "400px",
             "type": "sizing"
           },
-          "SM": {
+          "sm": {
             "value": "600px",
             "type": "sizing"
           },
-          "MD": {
+          "md": {
             "value": "900px",
             "type": "sizing"
           },
-          "LG": {
+          "lg": {
             "value": "1200px",
             "type": "sizing"
           },
-          "XL": {
+          "xl": {
             "value": "1556px",
             "type": "sizing"
           }
         },
-        "Padding": {
-          "XS": {
-            "value": "{core.dimensionPX.64}",
+        "padding": {
+          "xs": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "SM": {
-            "value": "{core.dimensionPX.64}",
+          "sm": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "MD": {
-            "value": "{core.dimensionPX.64}",
+          "md": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "LG": {
-            "value": "{core.dimensionPX.64}",
+          "lg": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "XL": {
-            "value": "{core.dimensionPX.64}",
+          "xl": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           }
-        },
-        "BorderRadius": {
-          "value": "{sys.borderradius.lg}",
-          "type": "borderRadius"
         }
       },
       "ContentSection": {
         "Container": {
           "Padding": {
-            "value": "{cmp.Dialog.ContentSection.Container.Padding_V} {cmp.Dialog.ContentSection.Container.Padding_H}",
+            "value": "{cmp.dialog.ContentSection.Container.Padding_V} {cmp.dialog.ContentSection.Container.Padding_H}",
             "type": "spacing"
           },
           "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           },
           "Padding_V": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           }
         }
@@ -791,15 +787,15 @@
       "HeaderSection": {
         "Container": {
           "Padding": {
-            "value": "{cmp.Dialog.HeaderSection.Container.Padding_V} {cmp.Dialog.HeaderSection.Container.Padding_H}",
+            "value": "{cmp.dialog.HeaderSection.Container.Padding_V} {cmp.dialog.HeaderSection.Container.Padding_H}",
             "type": "spacing"
           },
           "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           },
           "Padding_V": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           }
         }
@@ -807,17 +803,25 @@
       "FooterSection": {
         "Container": {
           "Padding": {
-            "value": "{cmp.Dialog.FooterSection.Container.Padding_V} {cmp.Dialog.FooterSection.Container.Padding_H}",
+            "value": "{cmp.dialog.FooterSection.Container.Padding_V} {cmp.dialog.FooterSection.Container.Padding_H}",
             "type": "spacing"
           },
           "Padding_H": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           },
           "Padding_V": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           }
+        }
+      }
+    },
+    "Dialog": {
+      "Container": {
+        "BorderRadius": {
+          "value": "{sys.borderradius.lg}",
+          "type": "borderRadius"
         }
       }
     },
@@ -825,7 +829,7 @@
       "Container": {
         "Horizontal": {
           "Height": {
-            "value": "{core.dimensionPX.1}",
+            "value": "{core.dimensionpx.1}",
             "type": "sizing",
             "description": "The thickness of the divider\n>>> new"
           }
@@ -843,15 +847,15 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           }
         },
@@ -875,32 +879,32 @@
       "container": {
         "size": {
           "xxs": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "sizing",
             "description": "size of XXS icon\n>>>: UI.Icon.XXS"
           },
           "xs": {
-            "value": "{core.dimensionREM.12}",
+            "value": "{core.dimensionrem.12}",
             "type": "sizing",
             "description": "size of XS icon\n>>> UI.Icon.XS"
           },
           "sm": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing",
             "description": "size of SM icon\n>>> UI.Icon.SM\n"
           },
           "md": {
-            "value": "{core.dimensionREM.24}",
+            "value": "{core.dimensionrem.24}",
             "type": "sizing",
             "description": "size of MD icon\n>>> UI.Icon.MD"
           },
           "lg": {
-            "value": "{core.dimensionREM.32}",
+            "value": "{core.dimensionrem.32}",
             "type": "sizing",
             "description": "size of LG icon\n>>> UI.Icon.LG"
           },
           "xl": {
-            "value": "{core.dimensionREM.48}",
+            "value": "{core.dimensionrem.48}",
             "type": "sizing",
             "description": "size of XL icon\n>>> UI.Icon.XL"
           }
@@ -911,23 +915,23 @@
       "Container": {
         "Padding": {
           "XS": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing"
           },
           "SM": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "XL": {
-            "value": "{core.dimensionREM.12}",
+            "value": "{core.dimensionrem.12}",
             "type": "spacing"
           }
         },
@@ -981,108 +985,108 @@
       "Container": {
         "PaddingTop": {
           "XS": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.12}",
+            "value": "{core.dimensionrem.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "PaddingRight": {
           "XS": {
-            "value": "{core.dimensionREM.1}",
+            "value": "{core.dimensionrem.1}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.1}",
+            "value": "{core.dimensionrem.1}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.1}",
+            "value": "{core.dimensionrem.1}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "PaddingBottom": {
           "XS": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.12}",
+            "value": "{core.dimensionrem.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "PaddingLeft": {
           "XS": {
-            "value": "{core.dimensionREM.3}",
+            "value": "{core.dimensionrem.3}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.3}",
+            "value": "{core.dimensionrem.3}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.3}",
+            "value": "{core.dimensionrem.3}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
@@ -1128,11 +1132,11 @@
             "type": "spacing"
           },
           "LG": {
-            "value": "-{core.dimensionREM.2}",
+            "value": "-{core.dimensionrem.2}",
             "type": "spacing"
           },
           "XL": {
-            "value": "-{core.dimensionREM.4}",
+            "value": "-{core.dimensionrem.4}",
             "type": "spacing"
           }
         },
@@ -1164,29 +1168,29 @@
       "Container": {
         "Size": {
           "SM": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
           "MD": {
-            "value": "{core.dimensionREM.24}",
+            "value": "{core.dimensionrem.24}",
             "type": "sizing"
           },
           "LG": {
-            "value": "{core.dimensionREM.32}",
+            "value": "{core.dimensionrem.32}",
             "type": "sizing"
           }
         },
         "Padding": {
           "SM": {
-            "value": "{core.dimensionREM.1}",
+            "value": "{core.dimensionrem.1}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionREM.3}",
+            "value": "{core.dimensionrem.3}",
             "type": "spacing"
           }
         }
@@ -1194,15 +1198,15 @@
       "Background": {
         "BorderWidth": {
           "SM": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
           "MD": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
           "LG": {
-            "value": "{core.dimensionPX.3}",
+            "value": "{core.dimensionpx.3}",
             "type": "borderWidth"
           }
         }
@@ -1210,15 +1214,15 @@
       "Foreground": {
         "BorderWidth": {
           "SM": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
           "MD": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
           "LG": {
-            "value": "{core.dimensionPX.3}",
+            "value": "{core.dimensionpx.3}",
             "type": "borderWidth"
           }
         }
@@ -1245,17 +1249,17 @@
             "description": "Defines the border radius of a single menu item."
           },
           "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           },
           "Padding_V": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           }
         },
         "ContentRow": {
           "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing",
             "description": "Adds space between Icons and ContentStack (Label & Description)"
           }
@@ -1282,36 +1286,36 @@
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
           },
           "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
           },
           "PaddingTop": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
           },
           "PaddingBottom": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
           }
         },
         "ItemStack": {
           "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         }
       },
       "MenuSectionStack": {
         "ItemSpacing": {
-          "value": "{core.dimensionPX.12}",
+          "value": "{core.dimensionpx.12}",
           "type": "spacing",
           "description": "Defines the space between each menu section"
         },
         "Padding": {
-          "value": "{core.dimensionPX.12}",
+          "value": "{core.dimensionpx.12}",
           "type": "spacing",
           "description": "Defines the padding around all stacked menu sections."
         }
@@ -1322,17 +1326,17 @@
         "TextWrapper": {
           "ItemSpacing": {
             "SM": {
-              "value": "{core.dimensionPX.4}",
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
               "description": "Defines spacing between Prefix, UserInputText and Suffix"
             },
             "MD": {
-              "value": "{core.dimensionPX.4}",
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
               "description": "Defines spacing between Prefix, UserInputText and Suffix"
             },
             "LG": {
-              "value": "{core.dimensionPX.4}",
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
               "description": "Defines spacing between Prefix, UserInputText and Suffix"
             }
@@ -1345,15 +1349,15 @@
         "Container": {
           "Size": {
             "SM": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
             "MD": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
             "LG": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             }
           },
@@ -1365,61 +1369,61 @@
             "SM": {
               "Active": {
                 "Rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               }
@@ -1427,61 +1431,61 @@
             "MD": {
               "Active": {
                 "Rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               }
@@ -1489,61 +1493,61 @@
             "LG": {
               "Active": {
                 "Rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               },
               "Inactive": {
                 "Rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               }
@@ -1555,61 +1559,61 @@
             "SM": {
               "Inactive": {
                 "Rest": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.12}",
+                  "value": "{core.dimensionpx.12}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 }
               },
               "Active": {
                 "Rest": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.8}",
+                  "value": "{core.dimensionpx.8}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 }
               }
@@ -1617,61 +1621,61 @@
             "MD": {
               "Inactive": {
                 "Rest": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.12}",
+                  "value": "{core.dimensionpx.12}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 }
               },
               "Active": {
                 "Rest": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.8}",
+                  "value": "{core.dimensionpx.8}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 }
               }
@@ -1679,61 +1683,61 @@
             "LG": {
               "Inactive": {
                 "Rest": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.12}",
+                  "value": "{core.dimensionpx.12}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.14}",
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 }
               },
               "Active": {
                 "Rest": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Hover": {
-                  "value": "{core.dimensionPX.8}",
+                  "value": "{core.dimensionpx.8}",
                   "type": "sizing"
                 },
                 "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
                 "Focus": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Disabled": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "ReadOnly": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
                 "Error": {
-                  "value": "{core.dimensionPX.6}",
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 }
               }
@@ -1744,34 +1748,34 @@
       "ContentCol": {
         "ItemSpacing": {
           "SM": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
           },
           "MD": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
           },
           "LG": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
           }
         },
         "PaddingTop": {
           "SM": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           },
           "MD": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
           },
           "LG": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
           }
@@ -1780,17 +1784,17 @@
       "ContentRow": {
         "ItemSpacing": {
           "SM": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           },
           "MD": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           },
           "LG": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
           }
@@ -1814,17 +1818,17 @@
         },
         "Padding_V": {
           "SM": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
           }
@@ -1833,17 +1837,17 @@
       "ControlWrapper": {
         "PaddingTop": {
           "SM": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           },
           "MD": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           },
           "LG": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Can be used to align the checkbox control against the text"
           }
@@ -1854,15 +1858,15 @@
       "CaptionSlot": {
         "PaddingTop": {
           "SM": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing"
           }
         }
@@ -1870,17 +1874,17 @@
       "LegendWrapper": {
         "PaddingBottom": {
           "SM": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
           },
           "MD": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
           },
           "LG": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
           }
@@ -1889,17 +1893,17 @@
       "RadioStackHorizontal": {
         "ItemSpacing": {
           "SM": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Defines the gap between each Radio Option inside <RadioStack>"
           },
           "MD": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Defines the gap between each Radio Option inside <RadioStack>"
           },
           "LG": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Defines the gap between each Radio Option inside <RadioStack>"
           }
@@ -1908,17 +1912,17 @@
       "RadioStackVertical": {
         "ItemSpacing": {
           "SM": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Defines the gap between each Radio Option inside <RadioStack>"
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Defines the gap between each Radio Option inside <RadioStack>"
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Defines the gap between each Radio Option inside <RadioStack>"
           }
@@ -1930,60 +1934,60 @@
         "Shape": {
           "BorderWidth": {
             "Rest": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             },
             "Hover": {
-              "value": "{core.dimensionPX.4}",
+              "value": "{core.dimensionpx.4}",
               "type": "borderWidth"
             },
             "Pressed": {
-              "value": "{core.dimensionPX.4}",
+              "value": "{core.dimensionpx.4}",
               "type": "borderWidth"
             },
             "Focus": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             },
             "Disabled": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             },
             "ReadOnly": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             }
           },
           "Size": {
             "Rest": {
-              "value": "{core.dimensionPX.14}",
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             },
             "Hover": {
-              "value": "{core.dimensionPX.20}",
+              "value": "{core.dimensionpx.20}",
               "type": "sizing"
             },
             "Pressed": {
-              "value": "{core.dimensionPX.20}",
+              "value": "{core.dimensionpx.20}",
               "type": "sizing"
             },
             "Focus": {
-              "value": "{core.dimensionPX.14}",
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             },
             "Disabled": {
-              "value": "{core.dimensionPX.14}",
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             },
             "ReadOnly": {
-              "value": "{core.dimensionPX.14}",
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             }
           }
         },
         "Container": {
           "Size": {
-            "value": "{core.dimensionPX.24}",
+            "value": "{core.dimensionpx.24}",
             "type": "sizing"
           }
         }
@@ -1992,27 +1996,27 @@
         "BorderWidth": {
           "Default": {
             "Active": {
-              "value": "{core.dimensionPX.1}",
+              "value": "{core.dimensionpx.1}",
               "type": "borderWidth"
             },
             "Inactive": {
-              "value": "{core.dimensionPX.1}1",
+              "value": "{core.dimensionpx.1}1",
               "type": "borderWidth"
             }
           },
           "Mute": {
             "Active": {
-              "value": "{core.dimensionPX.1}",
+              "value": "{core.dimensionpx.1}",
               "type": "borderWidth"
             },
             "Inactive": {
-              "value": "{core.dimensionPX.1}",
+              "value": "{core.dimensionpx.1}",
               "type": "borderWidth"
             }
           }
         },
         "Size": {
-          "value": "{core.dimensionPX.6}",
+          "value": "{core.dimensionpx.6}",
           "type": "sizing"
         }
       }
@@ -2021,15 +2025,15 @@
       "container": {
         "width": {
           "sm": {
-            "value": "{core.dimensionREM.32}",
+            "value": "{core.dimensionrem.32}",
             "type": "sizing"
           },
           "md": {
-            "value": "{core.dimensionREM.40}",
+            "value": "{core.dimensionrem.40}",
             "type": "sizing"
           },
           "lg": {
-            "value": "{core.dimensionREM.48}",
+            "value": "{core.dimensionrem.48}",
             "type": "sizing"
           }
         },
@@ -2055,15 +2059,15 @@
       "icon": {
         "iconsize": {
           "sm": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
           "md": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
           "lg": {
-            "value": "{core.dimensionREM.24}",
+            "value": "{core.dimensionrem.24}",
             "type": "sizing"
           }
         }
@@ -2074,29 +2078,29 @@
         "Width": {
           "Vertical": {
             "SM": {
-              "value": "{core.dimensionREM.32}",
+              "value": "{core.dimensionrem.32}",
               "type": "sizing"
             },
             "MD": {
-              "value": "{core.dimensionREM.40}",
+              "value": "{core.dimensionrem.40}",
               "type": "sizing"
             },
             "LG": {
-              "value": "{core.dimensionREM.48}",
+              "value": "{core.dimensionrem.48}",
               "type": "sizing"
             }
           },
           "Horizontal": {
             "SM": {
-              "value": "{core.dimensionREM.64}",
+              "value": "{core.dimensionrem.64}",
               "type": "sizing"
             },
             "MD": {
-              "value": "{core.dimensionREM.80}",
+              "value": "{core.dimensionrem.80}",
               "type": "sizing"
             },
             "LG": {
-              "value": "{core.dimensionREM.96}",
+              "value": "{core.dimensionrem.96}",
               "type": "sizing"
             }
           }
@@ -2105,34 +2109,34 @@
       "DividerWrapper": {
         "Padding_V": {
           "SM": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "apply only on layoutVariant Horizontal"
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "apply only on layoutVariant Horizontal"
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "apply only on layoutVariant Horizontal"
           }
         },
         "Padding_H": {
           "SM": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "apply only on layoutVariant Vertical"
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "apply only on layoutVariant Vertical"
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "apply only on layoutVariant Vertical"
           }
@@ -2173,17 +2177,17 @@
       "ButtonWrapper": {
         "InnerPadding": {
           "SM": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.12}",
+            "value": "{core.dimensionrem.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
           }
@@ -2229,17 +2233,17 @@
         "HighlightLine": {
           "Height": {
             "SM": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             },
             "MD": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             },
             "LG": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "sizing",
               "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
             }
@@ -2248,34 +2252,34 @@
         "ContentCol": {
           "PaddingTop": {
             "SM": {
-              "value": "{core.dimensionREM.4}",
+              "value": "{core.dimensionrem.4}",
               "type": "spacing",
               "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
             },
             "MD": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
               "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
             },
             "LG": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
               "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
             }
           },
           "ItemSpacing": {
             "SM": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
               "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             },
             "MD": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
               "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             },
             "LG": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
               "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
             }
@@ -2284,34 +2288,34 @@
         "ContentRow": {
           "Padding_H": {
             "SM": {
-              "value": "{core.dimensionPX.12}",
+              "value": "{core.dimensionpx.12}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             },
             "MD": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             },
             "LG": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "spacing",
               "description": "Defines the padding left and right of <ContentRow>"
             }
           },
           "ItemSpacing": {
             "SM": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             },
             "MD": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             },
             "LG": {
-              "value": "{core.dimensionPX.4}",
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
               "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
             }
@@ -2320,17 +2324,17 @@
         "Icon": {
           "IconSize": {
             "SM": {
-              "value": "{core.dimensionREM.12}",
+              "value": "{core.dimensionrem.12}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
             },
             "MD": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
             },
             "LG": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing",
               "description": "Defines height and width of the icon of a tab"
             }
@@ -2342,15 +2346,15 @@
       "InputField": {
         "MinHeight": {
           "SM": {
-            "value": "{core.dimensionREM.64}",
+            "value": "{core.dimensionrem.64}",
             "type": "sizing"
           },
           "MD": {
-            "value": "{core.dimensionREM.80}",
+            "value": "{core.dimensionrem.80}",
             "type": "sizing"
           },
           "LG": {
-            "value": "{core.dimensionREM.112}",
+            "value": "{core.dimensionrem.112}",
             "type": "sizing"
           }
         }
@@ -2360,54 +2364,54 @@
       "Container": {
         "Padding_V": {
           "XS": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "Padding_H": {
           "XS": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionPX.24}",
+            "value": "{core.dimensionpx.24}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionPX.40}",
+            "value": "{core.dimensionpx.40}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
@@ -2441,7 +2445,7 @@
         },
         "ItemSpacing": {
           "XS": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "SM": {
@@ -2489,108 +2493,108 @@
       "Container": {
         "PaddingTop": {
           "XS": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "PaddingRight": {
           "XS": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionPX.16}",
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionPX.32}",
+            "value": "{core.dimensionpx.32}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "PaddingBottom": {
           "XS": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
         },
         "PaddingLeft": {
           "XS": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "SM": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "MD": {
-            "value": "{core.dimensionPX.20}",
+            "value": "{core.dimensionpx.20}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "LG": {
-            "value": "{core.dimensionPX.24}",
+            "value": "{core.dimensionpx.24}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           },
           "XL": {
-            "value": "{core.dimensionPX.40}",
+            "value": "{core.dimensionpx.40}",
             "type": "spacing",
             "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
           }
@@ -2624,23 +2628,23 @@
         },
         "ItemSpacing": {
           "XS": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "SM": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "XL": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           }
         },
@@ -2672,15 +2676,15 @@
       "Container": {
         "ItemSpacing": {
           "SM": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           }
         }
@@ -2688,15 +2692,15 @@
       "ContentCol": {
         "ItemSpacing": {
           "SM": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "MD": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "LG": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         }
@@ -2704,7 +2708,7 @@
       "Control": {
         "Container": {
           "BorderRadius": {
-            "value": "{core.dimensionREM.40}",
+            "value": "{core.dimensionrem.40}",
             "type": "borderRadius"
           },
           "BorderWidth": {
@@ -2887,29 +2891,29 @@
           },
           "Height": {
             "SM": {
-              "value": "{core.dimensionREM.20}",
+              "value": "{core.dimensionrem.20}",
               "type": "sizing"
             },
             "MD": {
-              "value": "{core.dimensionREM.24}",
+              "value": "{core.dimensionrem.24}",
               "type": "sizing"
             },
             "LG": {
-              "value": "{core.dimensionREM.28}",
+              "value": "{core.dimensionrem.28}",
               "type": "sizing"
             }
           },
           "Padding": {
             "SM": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "spacing"
             },
             "MD": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "spacing"
             },
             "LG": {
-              "value": "{core.dimensionPX.2}",
+              "value": "{core.dimensionpx.2}",
               "type": "spacing"
             }
           }
@@ -2917,15 +2921,15 @@
         "AY11Icon": {
           "IconSize": {
             "SM": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
             "MD": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
             "LG": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             }
           }
@@ -2933,11 +2937,11 @@
         "AY11IconContainer": {
           "Padding_H": {
             "SM": {
-              "value": "{core.dimensionREM.0}",
+              "value": "{core.dimensionrem.0}",
               "type": "spacing"
             },
             "MD": {
-              "value": "{core.dimensionREM.2}",
+              "value": "{core.dimensionrem.2}",
               "type": "spacing"
             },
             "LG": {
@@ -2949,15 +2953,15 @@
         "Knob": {
           "Size": {
             "SM": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
             "MD": {
-              "value": "{core.dimensionREM.20}",
+              "value": "{core.dimensionrem.20}",
               "type": "sizing"
             },
             "LG": {
-              "value": "{core.dimensionREM.24}",
+              "value": "{core.dimensionrem.24}",
               "type": "sizing"
             }
           },
@@ -3131,15 +3135,15 @@
         "Container": {
           "ItemSpacing": {
             "SM": {
-              "value": "{core.dimensionPX.8}",
+              "value": "{core.dimensionpx.8}",
               "type": "spacing"
             },
             "MD": {
-              "value": "{core.dimensionPX.8}",
+              "value": "{core.dimensionpx.8}",
               "type": "spacing"
             },
             "LG": {
-              "value": "{core.dimensionPX.8}",
+              "value": "{core.dimensionpx.8}",
               "type": "spacing"
             }
           }
@@ -3157,32 +3161,32 @@
           "type": "borderRadius"
         },
         "MinWidth": {
-          "value": "{core.dimensionREM.40}",
+          "value": "{core.dimensionrem.40}",
           "type": "sizing",
           "description": "Defines the minimum width of the tooltip."
         },
         "MaxWidth": {
-          "value": "{core.dimensionREM.80}",
+          "value": "{core.dimensionrem.80}",
           "type": "sizing",
           "description": "Defines the maximum Width of the tooltip."
         },
         "Padding_V": {
-          "value": "{core.dimensionPX.6}",
+          "value": "{core.dimensionpx.6}",
           "type": "spacing"
         },
         "Padding_H": {
-          "value": "{core.dimensionPX.8}",
+          "value": "{core.dimensionpx.8}",
           "type": "spacing"
         }
       },
       "NoseWrapper": {
         "Padding_V": {
-          "value": "{core.dimensionPX.5}",
+          "value": "{core.dimensionpx.5}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
         },
         "Padding_H": {
-          "value": "{core.dimensionPX.8}",
+          "value": "{core.dimensionpx.8}",
           "type": "spacing",
           "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
         }

@@ -423,7 +423,7 @@
             "Active": {
               "value": {
                 "color": "{cmp.Slider.Track.BorderColor.Default.Active}",
-                "width": "{core.dimensionPX.4}",
+                "width": "{core.dimensionpx.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -431,7 +431,7 @@
             "Inactive": {
               "value": {
                 "color": "{cmp.Slider.Track.BorderColor.Default.Inactive}",
-                "width": "{core.dimensionPX.4}",
+                "width": "{core.dimensionpx.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -441,7 +441,7 @@
             "Active": {
               "value": {
                 "color": "{cmp.Slider.Track.BorderColor.Mute.Active}",
-                "width": "{core.dimensionPX.4}",
+                "width": "{core.dimensionpx.4}",
                 "style": "solid"
               },
               "type": "border"
@@ -449,7 +449,7 @@
             "Inactive": {
               "value": {
                 "color": "{cmp.Slider.Track.BorderColor.Mute.Inactive}",
-                "width": "{core.dimensionPX.4}",
+                "width": "{core.dimensionpx.4}",
                 "style": "solid"
               },
               "type": "border"

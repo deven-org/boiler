@@ -403,7 +403,7 @@
         "border": {
           "value": {
             "color": "{sem.global.focusring.bordercolor}",
-            "width": "{core.dimensionPX.2}",
+            "width": "{core.dimensionpx.2}",
             "style": "solid"
           },
           "type": "border"

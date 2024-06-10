@@ -58,15 +58,15 @@
       "label": {
         "typography": {
           "sm": {
-            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+            "value": "{core.typography.sourcesanspro.semibold.87fixheight}",
             "type": "typography"
           },
           "md": {
-            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+            "value": "{core.typography.sourcesanspro.semibold.100fixheight}",
             "type": "typography"
           },
           "lg": {
-            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+            "value": "{core.typography.sourcesanspro.semibold.125fixheight}",
             "type": "typography"
           }
         }
@@ -74,15 +74,15 @@
       "labelappendix": {
         "typography": {
           "sm": {
-            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.75fixheight}",
             "type": "typography"
           },
           "md": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.87fixheight}",
             "type": "typography"
           },
           "lg": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.100fixheight}",
             "type": "typography"
           }
         }
@@ -90,15 +90,15 @@
       "inlinelabel": {
         "typography": {
           "sm": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.87fixheight}",
             "type": "typography"
           },
           "md": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.100fixheight}",
             "type": "typography"
           },
           "lg": {
-            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.125fixheight}",
             "type": "typography"
           }
         }
@@ -122,7 +122,7 @@
       "MenuSection": {
         "SectionTitle": {
           "Typography": {
-            "value": "{core.typography.sourceSansPro.semibold.75}",
+            "value": "{core.typography.sourcesanspro.semibold.75}",
             "type": "typography"
           }
         }
@@ -150,7 +150,7 @@
     "Slider": {
       "Legend": {
         "Typography": {
-          "value": "{core.typography.sourceSansPro.regular.75}",
+          "value": "{core.typography.sourcesanspro.regular.75}",
           "type": "typography"
         }
       }
