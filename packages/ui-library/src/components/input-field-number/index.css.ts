@@ -245,20 +245,20 @@ export const staticSemanticStyles = typeSafeNestedCss/* css */ `
 
 export const staticComponentStyles = typeSafeNestedCss/* css */ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { stepperbutton, StepperCombo, InputFieldNumber } = cmp;
+    const { stepperbutton, steppercombo, inputfieldnumber } = cmp;
 
     return typeSafeCss/* css */ `
       .input-unit-container.${theme} {
         &.sm {
-          gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.SM};
+          gap: ${inputfieldnumber.inputfield.textwrapper.itemspacing.sm};
         }
 
         &.md {
-          gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.MD};
+          gap: ${inputfieldnumber.inputfield.textwrapper.itemspacing.md};
         }
 
         &.lg {
-          gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.LG};
+          gap: ${inputfieldnumber.inputfield.textwrapper.itemspacing.lg};
         }
       }
 
@@ -289,26 +289,26 @@ export const staticComponentStyles = typeSafeNestedCss/* css */ `
           justify-content: center;
 
           &.sm {
-            width: ${StepperCombo.Container.Width.Horizontal.SM};
+            width: ${steppercombo.container.width.horizontal.sm};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.SM};
+              padding: ${steppercombo.dividerwrapper.padding.horizontallayout.sm};
             }
           }
 
           &.md {
-            width: ${StepperCombo.Container.Width.Horizontal.MD};
+            width: ${steppercombo.container.width.horizontal.md};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.MD};
+              padding: ${steppercombo.dividerwrapper.padding.horizontallayout.md};
             }
           }
 
           &.lg {
-            width: ${StepperCombo.Container.Width.Horizontal.LG};
+            width: ${steppercombo.container.width.horizontal.lg};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.LG};
+              padding: ${steppercombo.dividerwrapper.padding.horizontallayout.lg};
             }
           }
         }
@@ -319,26 +319,26 @@ export const staticComponentStyles = typeSafeNestedCss/* css */ `
           justify-content: center;
 
           &.sm {
-            width: ${StepperCombo.Container.Width.Vertical.SM};
+            width: ${steppercombo.container.width.vertical.sm};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.SM};
+              padding: ${steppercombo.dividerwrapper.padding.verticallayout.sm};
             }
           }
 
           &.md {
-            width: ${StepperCombo.Container.Width.Vertical.MD};
+            width: ${steppercombo.container.width.vertical.md};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.MD};
+              padding: ${steppercombo.dividerwrapper.padding.verticallayout.md};
             }
           }
 
           &.lg {
-            width: ${StepperCombo.Container.Width.Vertical.LG};
+            width: ${steppercombo.container.width.vertical.lg};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.LG};
+              padding: ${steppercombo.dividerwrapper.padding.verticallayout.lg};
             }
           }
         }

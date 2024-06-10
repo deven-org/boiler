@@ -122,11 +122,11 @@ export class BlrButtonText extends LitElementCustom {
 
       const iconSizeVariant = getComponentConfigToken([
         'cmp',
-        'ButtonText',
-        'Icon',
-        'SizeVariant',
-        this.sizeVariant.toUpperCase(),
-      ]).toLowerCase() as SizesType;
+        'buttontext',
+        'icon',
+        'sizevariant',
+        this.sizeVariant,
+      ]) as SizesType;
 
       const labelAndIconGroup = html` <div class="${flexContainerClasses}">
         ${this.hasIcon && this.iconPosition === 'leading'

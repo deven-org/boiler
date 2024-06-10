@@ -3,8 +3,8 @@ import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-lit
 
 export const staticStyles = typeSafeNestedCss`
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { ButtonIcon } = cmp;
-    const { TabBar } = cmp;
+    const { buttonicon } = cmp;
+    const { tabbar } = cmp;
 
     return typeSafeCss/* css */ `
       .panel-wrapper {
@@ -65,39 +65,39 @@ export const staticStyles = typeSafeNestedCss`
           line-height: 0;
 
           &.sm {
-            padding: ${ButtonIcon.Container.Padding.SM};
+            padding: ${buttonicon.container.padding.sm};
 
             &.left {
-              margin: ${TabBar.ButtonWrapper.Padding.Leading.SM};
+              margin: ${tabbar.buttonwrapper.padding.leading.sm};
             }
 
             &.right {
-              margin: ${TabBar.ButtonWrapper.Padding.Trailing.SM};
+              margin: ${tabbar.buttonwrapper.padding.trailing.sm};
             }
           }
 
           &.md {
-            padding: ${ButtonIcon.Container.Padding.MD};
+            padding: ${buttonicon.container.padding.md};
 
             &.left {
-              margin: ${TabBar.ButtonWrapper.Padding.Leading.MD};
+              margin: ${tabbar.buttonwrapper.padding.leading.md};
             }
 
             &.right {
-              margin: ${TabBar.ButtonWrapper.Padding.Trailing.MD};
+              margin: ${tabbar.buttonwrapper.padding.trailing.md};
             }
             
           }
 
           &.lg {
-            padding: ${ButtonIcon.Container.Padding.LG};
+            padding: ${buttonicon.container.padding.lg};
 
             &.left {
-              margin: ${TabBar.ButtonWrapper.Padding.Leading.LG};
+              margin: ${tabbar.buttonwrapper.padding.leading.lg};
             }
 
             &.right {
-              margin: ${TabBar.ButtonWrapper.Padding.Trailing.LG};
+              margin: ${tabbar.buttonwrapper.padding.trailing.lg};
             }
           }
         }
@@ -157,7 +157,7 @@ export const staticStyles = typeSafeNestedCss`
 
               .nav-item-underline {
                 &.selected {
-                background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Pressed}
+                background-color: ${tabbar.tab.highlightline.backgroundcolor.active.pressed}
                 }
               }
 
@@ -179,11 +179,11 @@ export const staticStyles = typeSafeNestedCss`
                   &.selected {
 
                     & > blr-icon {
-                      color: ${TabBar.Tab.Icon.IconColor.Active.Rest};
+                      color: ${tabbar.tab.icon.iconcolor.active.rest};
                     }
 
                     & > label {
-                      color: ${TabBar.Tab.Label.TextColor.Active.Rest};
+                      color: ${tabbar.tab.label.textcolor.active.rest};
                     }
 
                     &:focus {
@@ -191,11 +191,11 @@ export const staticStyles = typeSafeNestedCss`
                       &:not(.disabled) {
 
                         & > blr-icon {
-                          color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
+                          color: ${tabbar.tab.icon.iconcolor.active.focus};
                         }
 
                         & > label {
-                          color: ${TabBar.Tab.Label.TextColor.Active.Focus};
+                          color: ${tabbar.tab.label.textcolor.active.focus};
                         }
                       }
                     }
@@ -205,11 +205,11 @@ export const staticStyles = typeSafeNestedCss`
                       &:not(.disabled) {
 
                         & > blr-icon {
-                          color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
+                          color: ${tabbar.tab.icon.iconcolor.active.hover};
                         }
 
                         & > label {
-                          color: ${TabBar.Tab.Label.TextColor.Active.Hover};
+                          color: ${tabbar.tab.label.textcolor.active.hover};
                         }
                       }
                     }
@@ -217,65 +217,65 @@ export const staticStyles = typeSafeNestedCss`
                     &:active {
 
                       & > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
+                        color: ${tabbar.tab.icon.iconcolor.active.pressed};
                       }
 
                       & > label {
-                        color: ${TabBar.Tab.Label.TextColor.Active.Pressed};
+                        color: ${tabbar.tab.label.textcolor.active.pressed};
                       }
                     }
                   }
                   &:not(.selected) {
 
                     & > blr-icon {
-                      color: ${TabBar.Tab.Icon.IconColor.Inactive.Rest};
+                      color: ${tabbar.tab.icon.iconcolor.inactive.rest};
                     }
 
                     & > label {
-                      color: ${TabBar.Tab.Label.TextColor.Inactive.Rest};
+                      color: ${tabbar.tab.label.textcolor.inactive.rest};
                     }
 
                     &:focus {
 
                       & > blr-icon {
                         color
-                        : ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
+                        : ${tabbar.tab.icon.iconcolor.inactive.focus};
                       }
                       & > label {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
+                        color: ${tabbar.tab.label.textcolor.inactive.focus};
                       }
                     }
 
                     &:hover {
 
                       & > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
+                        color: ${tabbar.tab.icon.iconcolor.inactive.hover};
                       }
 
                       & > label {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Hover};
+                        color: ${tabbar.tab.label.textcolor.inactive.hover};
                       }
                     }
 
                     &:active {
 
                       & > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
+                        color: ${tabbar.tab.icon.iconcolor.inactive.pressed};
                       }
 
                       & > label {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Pressed};
+                        color: ${tabbar.tab.label.textcolor.inactive.pressed};
                       }
                     }
 
                     &.disabled {
 
                       & > blr-icon {
-                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
+                        color: ${tabbar.tab.icon.iconcolor.inactive.disabled};
                       }
 
                       & > label {
-                        color: ${TabBar.Tab.Label.TextColor.Inactive.Disabled};
+                        color: ${tabbar.tab.label.textcolor.inactive.disabled};
                       }
                     }
                   }
@@ -295,74 +295,74 @@ export const staticStyles = typeSafeNestedCss`
               }
 
               &.sm {
-                padding-top: ${TabBar.Tab.ContentCol.PaddingTop.SM};
-                gap: ${TabBar.Tab.ContentCol.ItemSpacing.SM};
+                padding-top: ${tabbar.tab.contentcol.paddingtop.sm};
+                gap: ${tabbar.tab.contentcol.itemspacing.sm};
 
                 .nav-item-content-wrapper {
 
                   & > .nav-item {
-                    padding-left: ${TabBar.Tab.ContentRow.Padding_H.SM};
-                    padding-right: ${TabBar.Tab.ContentRow.Padding_H.SM};
-                    gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
-                    line-height:  ${TabBar.Tab.Label.Typography.SM.lineHeight};
+                    padding-left: ${tabbar.tab.contentrow.padding_h.sm};
+                    padding-right: ${tabbar.tab.contentrow.padding_h.sm};
+                    gap: ${tabbar.tab.contentrow.itemspacing.sm};
+                    line-height:  ${tabbar.tab.label.typography.sm.lineHeight};
 
                     & > blr-icon {
-                      width: ${TabBar.Tab.Icon.IconSize.SM};
-                      height: ${TabBar.Tab.Icon.IconSize.SM};
+                      width: ${tabbar.tab.icon.iconsize.sm};
+                      height: ${tabbar.tab.icon.iconsize.sm};
                     }
                   }
                 }
 
                 .nav-item-underline {
-                  height: ${TabBar.Tab.HighlightLine.Height.SM};
+                  height: ${tabbar.tab.highlightline.height.sm};
                 }
               }
 
               &.md {
-                padding-top: ${TabBar.Tab.ContentCol.PaddingTop.MD};
-                gap: ${TabBar.Tab.ContentCol.ItemSpacing.MD};
+                padding-top: ${tabbar.tab.contentcol.paddingtop.md};
+                gap: ${tabbar.tab.contentcol.itemspacing.md};
 
                 .nav-item-content-wrapper {
 
                   & .nav-item {
-                    padding-left: ${TabBar.Tab.ContentRow.Padding_H.MD};
-                    padding-right: ${TabBar.Tab.ContentRow.Padding_H.MD};
-                    gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
-                    line-height:  ${TabBar.Tab.Label.Typography.MD.lineHeight};
+                    padding-left: ${tabbar.tab.contentrow.padding_h.md};
+                    padding-right: ${tabbar.tab.contentrow.padding_h.md};
+                    gap: ${tabbar.tab.contentrow.itemspacing.md};
+                    line-height:  ${tabbar.tab.label.typography.md.lineHeight};
 
                     & blr-icon {
-                      width: ${TabBar.Tab.Icon.IconSize.MD};
-                      height: ${TabBar.Tab.Icon.IconSize.MD};
+                      width: ${tabbar.tab.icon.iconsize.md};
+                      height: ${tabbar.tab.icon.iconsize.md};
                     }
                   }
                 }
 
                 .nav-item-underline {
-                  height: ${TabBar.Tab.HighlightLine.Height.MD};
+                  height: ${tabbar.tab.highlightline.height.md};
                 }
               }
 
               &.lg {
-                padding-top: ${TabBar.Tab.ContentCol.PaddingTop.LG};
-                gap: ${TabBar.Tab.ContentCol.ItemSpacing.LG};
+                padding-top: ${tabbar.tab.contentcol.paddingtop.lg};
+                gap: ${tabbar.tab.contentcol.itemspacing.lg};
 
                 .nav-item-content-wrapper {
 
                   & > .nav-item {
-                    padding-left: ${TabBar.Tab.ContentRow.Padding_H.LG};
-                    padding-right: ${TabBar.Tab.ContentRow.Padding_H.LG};
-                    gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
-                    line-height:  ${TabBar.Tab.Label.Typography.LG.lineHeight};
+                    padding-left: ${tabbar.tab.contentrow.padding_h.lg};
+                    padding-right: ${tabbar.tab.contentrow.padding_h.lg};
+                    gap: ${tabbar.tab.contentrow.itemspacing.lg};
+                    line-height:  ${tabbar.tab.label.typography.lg.lineHeight};
 
                     & > blr-icon {
-                      width: ${TabBar.Tab.Icon.IconSize.LG};
-                      height: ${TabBar.Tab.Icon.IconSize.LG};
+                      width: ${tabbar.tab.icon.iconsize.lg};
+                      height: ${tabbar.tab.icon.iconsize.lg};
                     }
                   }
                 }
 
                 .nav-item-underline {
-                  height: ${TabBar.Tab.HighlightLine.Height.LG};
+                  height: ${tabbar.tab.highlightline.height.lg};
                 }
               }
             }

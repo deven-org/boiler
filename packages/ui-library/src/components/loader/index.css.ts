@@ -20,20 +20,20 @@ export const staticStyles = typeSafeNestedCss/* css */ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Loader } = cmp;
+    const { loader } = cmp;
 
     return typeSafeCss/* css */ `
       .loader-container.${theme} {
         &.sm {
-          padding: ${Loader.Container.Padding.SM};
+          padding: ${loader.container.padding.sm};
         }
     
         &.md {
-          padding: ${Loader.Container.Padding.MD};
+          padding: ${loader.container.padding.md};
         }
     
         &.lg {
-          padding: ${Loader.Container.Padding.LG};
+          padding: ${loader.container.padding.lg};
         }
       }
 
@@ -44,31 +44,31 @@ export const staticStyles = typeSafeNestedCss/* css */ `
         animation: rotation 1s linear infinite;
   
         &.default { 
-          border-color: ${Loader.Background.BorderColor.Default};
-          border-bottom-color: ${Loader.Foreground.BorderColor.Default};
+          border-color: ${loader.background.bordercolor.default};
+          border-bottom-color: ${loader.foreground.bordercolor.default};
         }
   
         &.inverted {
-          border-color: ${Loader.Background.BorderColor.Inverted};
-          border-bottom-color: ${Loader.Foreground.BorderColor.Inverted};
+          border-color: ${loader.background.bordercolor.inverted};
+          border-bottom-color: ${loader.foreground.bordercolor.inverted};
         }
   
         &.sm {
-          width: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
-          height: calc(${Loader.Container.Size.SM} - (${Loader.Container.Padding.SM} * 2));
-          border-width: ${Loader.Background.BorderWidth.SM};
+          width: calc(${loader.container.size.sm} - (${loader.container.padding.sm} * 2));
+          height: calc(${loader.container.size.sm} - (${loader.container.padding.sm} * 2));
+          border-width: ${loader.background.borderwidth.sm};
         }
   
         &.md {
-          width: calc(${Loader.Container.Size.MD} - (${Loader.Container.Padding.MD} * 2));
-          height: calc(${Loader.Container.Size.MD} - (${Loader.Container.Padding.MD} * 2));
-          border-width: ${Loader.Background.BorderWidth.MD};
+          width: calc(${loader.container.size.md} - (${loader.container.padding.md} * 2));
+          height: calc(${loader.container.size.md} - (${loader.container.padding.md} * 2));
+          border-width: ${loader.background.borderwidth.md};
         }
   
         &.lg {
-          width:  calc(${Loader.Container.Size.LG} - (${Loader.Container.Padding.LG} * 2));
-          height: calc(${Loader.Container.Size.LG} - (${Loader.Container.Padding.LG} * 2));
-          border-width: ${Loader.Background.BorderWidth.LG};
+          width:  calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
+          height: calc(${loader.container.size.lg} - (${loader.container.padding.lg} * 2));
+          border-width: ${loader.background.borderwidth.lg};
         }
       }
     `;

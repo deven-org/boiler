@@ -48,76 +48,76 @@ export const styleCustom = typeSafeNestedCss/* css */ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { ButtonText } = cmp;
+    const { buttontext } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-button-text.${theme} {
         &.xs {
-          padding: ${ButtonText.Container.Padding.XS};
-          border-radius: ${ButtonText.Container.BorderRadius.XS};
+          padding: ${buttontext.container.padding.xs};
+          border-radius: ${buttontext.container.borderradius.xs};
 
           & > .focus-layer {
-            border-radius: ${ButtonText.Container.BorderRadius.XS};
+            border-radius: ${buttontext.container.borderradius.xs};
           }
         }
 
         &.sm {
-          padding: ${ButtonText.Container.Padding.SM};
-          border-radius: ${ButtonText.Container.BorderRadius.SM};
+          padding: ${buttontext.container.padding.sm};
+          border-radius: ${buttontext.container.borderradius.sm};
 
           & > .focus-layer {
-            border-radius: ${ButtonText.Container.BorderRadius.SM};
+            border-radius: ${buttontext.container.borderradius.sm};
           }
         }
 
         &.md {
-          padding: ${ButtonText.Container.Padding.MD};
-          border-radius: ${ButtonText.Container.BorderRadius.MD};
+          padding: ${buttontext.container.padding.md};
+          border-radius: ${buttontext.container.borderradius.md};
           
 
           & > .focus-layer {
-            border-radius: ${ButtonText.Container.BorderRadius.MD};
+            border-radius: ${buttontext.container.borderradius.md};
           }
         }
 
         &.lg {
-          padding: ${ButtonText.Container.Padding.LG};
-          border-radius: ${ButtonText.Container.BorderRadius.LG};
+          padding: ${buttontext.container.padding.lg};
+          border-radius: ${buttontext.container.borderradius.lg};
 
           & > .focus-layer {
-            border-radius: ${ButtonText.Container.BorderRadius.LG};
+            border-radius: ${buttontext.container.borderradius.lg};
           }
         }
 
         &.xl {
-          padding: ${ButtonText.Container.Padding.XL};
-          border-radius: ${ButtonText.Container.BorderRadius.XL};
+          padding: ${buttontext.container.padding.xl};
+          border-radius: ${buttontext.container.borderradius.xl};
 
           & > .focus-layer {
-            border-radius: ${ButtonText.Container.BorderRadius.XL};
+            border-radius: ${buttontext.container.borderradius.xl};
           }
         }
       }
 
       .flex-container.${theme} {
         &.xs {
-          gap: ${ButtonText.Container.ItemSpacing.XS}
+          gap: ${buttontext.container.itemspacing.xs}
         }
 
         &.sm {
-          gap: ${ButtonText.Container.ItemSpacing.SM}
+          gap: ${buttontext.container.itemspacing.sm}
         }
 
         &.md {
-          gap: ${ButtonText.Container.ItemSpacing.MD}
+          gap: ${buttontext.container.itemspacing.md}
         }
 
         &.lg {
-          gap: ${ButtonText.Container.ItemSpacing.LG}
+          gap: ${buttontext.container.itemspacing.lg}
         }
 
         &.xl {
-          gap: ${ButtonText.Container.ItemSpacing.XL}
+          gap: ${buttontext.container.itemspacing.xl}
         }
       }
     `;

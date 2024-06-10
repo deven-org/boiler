@@ -7,35 +7,35 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Tooltip } = cmp;
+    const { tooltip } = cmp;
 
     return typeSafeCss/*css*/ `
       #tooltipElement.${theme} {
         left: 0;
         top: 0;
-        max-width: ${Tooltip.TextWrapper.MaxWidth};
-        min-width: ${Tooltip.TextWrapper.MinWidth};
+        max-width: ${tooltip.textwrapper.maxwidth};
+        min-width: ${tooltip.textwrapper.minwidth};
         position: absolute;
         transition: opacity 0.2s;
         visibility: hidden;
         width: max-content;
 
         .content {
-          background-color: ${Tooltip.Container.BackgroundColor};
-          border-radius: ${Tooltip.TextWrapper.BorderRadius};
-          color: ${Tooltip.Text.TextColor};
-          font-family: ${Tooltip.Text.Typography.fontFamily}, sans-serif;
-          font-size: ${Tooltip.Text.Typography.fontSize};
-          font-weight: ${Tooltip.Text.Typography.fontWeight};
-          line-height: ${Tooltip.Text.Typography.lineHeight};
-          padding: ${Tooltip.TextWrapper.Padding};
+          background-color: ${tooltip.container.backgroundcolor};
+          border-radius: ${tooltip.textwrapper.borderradius};
+          color: ${tooltip.text.textcolor};
+          font-family: ${tooltip.text.typography.fontFamily}, sans-serif;
+          font-size: ${tooltip.text.typography.fontSize};
+          font-weight: ${tooltip.text.typography.fontWeight};
+          line-height: ${tooltip.text.typography.lineHeight};
+          padding: ${tooltip.textwrapper.padding};
           text-align: center;
         }
 
         .elevation {
           filter: drop-shadow(
-            ${Tooltip.Container.Elevation.Elevated.x} ${Tooltip.Container.Elevation.Elevated.y} ${Tooltip.Container.Elevation.Elevated.blur}
-              ${Tooltip.Container.Elevation.Elevated.color}
+            ${tooltip.container.elevation.elevated.x} ${tooltip.container.elevation.elevated.y} ${tooltip.container.elevation.elevated.blur}
+              ${tooltip.container.elevation.elevated.color}
           );
         }
 
@@ -62,7 +62,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           z-index: 1;
 
           & > svg > path {
-            fill: ${Tooltip.Container.BackgroundColor};
+            fill: ${tooltip.container.backgroundcolor};
           }
         }
       }

@@ -161,12 +161,12 @@ export class BlrToggleSwitch extends LitElementCustom {
 
       const toggleIconSizeVariant = getComponentConfigToken([
         'cmp',
-        'ToggleSwitch',
-        'Control',
-        'AY11Icon',
-        'SizeVariant',
-        this.sizeVariant.toUpperCase(),
-      ]).toLowerCase() as FormSizesType;
+        'toggleswitch',
+        'control',
+        'ay11icon',
+        'sizevariant',
+        this.sizeVariant,
+      ]) as FormSizesType;
 
       return html` <div class=${classes}>
         <span class="toggle-content-col">

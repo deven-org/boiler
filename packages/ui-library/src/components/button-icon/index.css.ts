@@ -28,52 +28,52 @@ export const styleCustom = typeSafeNestedCss/* css */ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { ButtonIcon } = cmp;
+    const { buttonicon } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-button-icon.${theme} {
         &.xs {
-          padding: ${ButtonIcon.Container.Padding.XS};
-          border-radius: ${ButtonIcon.Container.BorderRadius.XS};
+          padding: ${buttonicon.container.padding.xs};
+          border-radius: ${buttonicon.container.borderradius.xs};
 
           & > .focus-layer {
-            border-radius: ${ButtonIcon.Container.BorderRadius.XS};
+            border-radius: ${buttonicon.container.borderradius.xs};
           }
         }
 
         &.sm {
-          padding: ${ButtonIcon.Container.Padding.SM};
-          border-radius: ${ButtonIcon.Container.BorderRadius.SM};
+          padding: ${buttonicon.container.padding.sm};
+          border-radius: ${buttonicon.container.borderradius.sm};
 
           & > .focus-layer {
-            border-radius: ${ButtonIcon.Container.BorderRadius.SM};
+            border-radius: ${buttonicon.container.borderradius.sm};
           }
         }
 
         &.md {
-          padding: ${ButtonIcon.Container.Padding.MD};
-          border-radius: ${ButtonIcon.Container.BorderRadius.MD};
+          padding: ${buttonicon.container.padding.md};
+          border-radius: ${buttonicon.container.borderradius.md};
 
           & > .focus-layer {
-            border-radius: ${ButtonIcon.Container.BorderRadius.MD};
+            border-radius: ${buttonicon.container.borderradius.md};
           }
         }
 
         &.lg {
-          padding: ${ButtonIcon.Container.Padding.LG};
-          border-radius: ${ButtonIcon.Container.BorderRadius.LG};
+          padding: ${buttonicon.container.padding.lg};
+          border-radius: ${buttonicon.container.borderradius.lg};
 
           & > .focus-layer {
-            border-radius: ${ButtonIcon.Container.BorderRadius.LG};
+            border-radius: ${buttonicon.container.borderradius.lg};
           }
         }
 
         &.xl {
-          padding: ${ButtonIcon.Container.Padding.XL};
-          border-radius: ${ButtonIcon.Container.BorderRadius.XL};
+          padding: ${buttonicon.container.padding.xl};
+          border-radius: ${buttonicon.container.borderradius.xl};
 
           & > .focus-layer {
-            border-radius: ${ButtonIcon.Container.BorderRadius.XL};
+            border-radius: ${buttonicon.container.borderradius.xl};
           }
         }
       }

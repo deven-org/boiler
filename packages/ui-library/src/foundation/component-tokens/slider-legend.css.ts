@@ -116,153 +116,153 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
   }
 
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { Slider } = cmp;
+    const { slider } = cmp;
 
     return typeSafeCss/*css*/ `
       .input-wrapper.${theme} {
         & > .min-max-value {
-          font-family: ${Slider.Legend.Typography.fontFamily}, Arial, sans-serif;
-          font-size: ${Slider.Legend.Typography.fontSize};
-          font-weight: ${Slider.Legend.Typography.fontWeight};
-          line-height: ${Slider.Legend.Typography.lineHeight};
-          color: ${Slider.Legend.TextColor.Default};
+          font-family: ${slider.legend.typography.fontFamily}, arial, sans-serif;
+          font-size: ${slider.legend.typography.fontSize};
+          font-weight: ${slider.legend.typography.fontWeight};
+          line-height: ${slider.legend.typography.lineHeight};
+          color: ${slider.legend.textcolor.default};
         }
       }
 
       input[type="range"].${theme} {
         &::-webkit-slider-thumb {
-          width: ${Slider.Thumb.Shape.Size.Rest};
-          height: ${Slider.Thumb.Shape.Size.Rest};
-          background-color: ${Slider.Thumb.Shape.BackgroundColor.Rest};
-          border-width: ${Slider.Thumb.Shape.Border.Rest.width};
-          border-style: ${Slider.Thumb.Shape.Border.Rest.style};
-          border-color: ${Slider.Thumb.Shape.Border.Rest.color};
+          width: ${slider.thumb.shape.size.rest};
+          height: ${slider.thumb.shape.size.rest};
+          background-color: ${slider.thumb.shape.backgroundcolor.rest};
+          border-width: ${slider.thumb.shape.border.rest.width};
+          border-style: ${slider.thumb.shape.border.rest.style};
+          border-color: ${slider.thumb.shape.border.rest.color};
         }
 
         &::-moz-range-thumb {
-          width: ${Slider.Thumb.Shape.Size.Rest};
-          height: ${Slider.Thumb.Shape.Size.Rest};
-          background-color: ${Slider.Thumb.Shape.BackgroundColor.Rest};
-          border-width: ${Slider.Thumb.Shape.Border.Rest.width};
-          border-style: ${Slider.Thumb.Shape.Border.Rest.style};
-          border-color: ${Slider.Thumb.Shape.Border.Rest.color};
+          width: ${slider.thumb.shape.size.rest};
+          height: ${slider.thumb.shape.size.rest};
+          background-color: ${slider.thumb.shape.backgroundcolor.rest};
+          border-width: ${slider.thumb.shape.border.rest.width};
+          border-style: ${slider.thumb.shape.border.rest.style};
+          border-color: ${slider.thumb.shape.border.rest.color};
         }
 
         &:active {
           &::-webkit-slider-thumb {
-            width: ${Slider.Thumb.Shape.Size.Pressed};
-            height: ${Slider.Thumb.Shape.Size.Pressed};
-            background-color: ${Slider.Thumb.Shape.BackgroundColor.Pressed};
-            border-width: ${Slider.Thumb.Shape.Border.Pressed.width};
-            border-style: ${Slider.Thumb.Shape.Border.Pressed.style};
-            border-color: ${Slider.Thumb.Shape.Border.Pressed.color};
+            width: ${slider.thumb.shape.size.pressed};
+            height: ${slider.thumb.shape.size.pressed};
+            background-color: ${slider.thumb.shape.backgroundcolor.pressed};
+            border-width: ${slider.thumb.shape.border.pressed.width};
+            border-style: ${slider.thumb.shape.border.pressed.style};
+            border-color: ${slider.thumb.shape.border.pressed.color};
           }
 
           &::-moz-range-thumb {
-            width: ${Slider.Thumb.Shape.Size.Pressed};
-            height: ${Slider.Thumb.Shape.Size.Pressed};
-            background-color: ${Slider.Thumb.Shape.BackgroundColor.Pressed};
-            border-width: ${Slider.Thumb.Shape.Border.Pressed.width};
-            border-style: ${Slider.Thumb.Shape.Border.Pressed.style};
-            border-color: ${Slider.Thumb.Shape.Border.Pressed.color};
+            width: ${slider.thumb.shape.size.pressed};
+            height: ${slider.thumb.shape.size.pressed};
+            background-color: ${slider.thumb.shape.backgroundcolor.pressed};
+            border-width: ${slider.thumb.shape.border.pressed.width};
+            border-style: ${slider.thumb.shape.border.pressed.style};
+            border-color: ${slider.thumb.shape.border.pressed.color};
           }
         }
 
         &:hover {
           &::-webkit-slider-thumb {
-            width: ${Slider.Thumb.Shape.Size.Hover};
-            height: ${Slider.Thumb.Shape.Size.Hover};
-            background-color: ${Slider.Thumb.Shape.BackgroundColor.Hover};
-            border-width: ${Slider.Thumb.Shape.Border.Hover.width};
-            border-style: ${Slider.Thumb.Shape.Border.Hover.style};
-            border-color: ${Slider.Thumb.Shape.Border.Hover.color};
+            width: ${slider.thumb.shape.size.hover};
+            height: ${slider.thumb.shape.size.hover};
+            background-color: ${slider.thumb.shape.backgroundcolor.hover};
+            border-width: ${slider.thumb.shape.border.hover.width};
+            border-style: ${slider.thumb.shape.border.hover.style};
+            border-color: ${slider.thumb.shape.border.hover.color};
           }
 
           &::-moz-range-thumb {
-            width: ${Slider.Thumb.Shape.Size.Hover};
-            height: ${Slider.Thumb.Shape.Size.Hover};
-            background-color: ${Slider.Thumb.Shape.BackgroundColor.Hover};
-            border-width: ${Slider.Thumb.Shape.Border.Hover.width};
-            border-style: ${Slider.Thumb.Shape.Border.Hover.style};
-            border-color: ${Slider.Thumb.Shape.Border.Hover.color};
+            width: ${slider.thumb.shape.size.hover};
+            height: ${slider.thumb.shape.size.hover};
+            background-color: ${slider.thumb.shape.backgroundcolor.hover};
+            border-width: ${slider.thumb.shape.border.hover.width};
+            border-style: ${slider.thumb.shape.border.hover.style};
+            border-color: ${slider.thumb.shape.border.hover.color};
           }
         }
 
         &:disabled {
           &::-webkit-slider-thumb {
-            width: ${Slider.Thumb.Shape.Size.Disabled};
-            height: ${Slider.Thumb.Shape.Size.Disabled};
-            background-color: ${Slider.Thumb.Shape.BackgroundColor.Disabled};
-            border-width: ${Slider.Thumb.Shape.Border.Disabled.width};
-            border-style: ${Slider.Thumb.Shape.Border.Disabled.style};
-            border-color: ${Slider.Thumb.Shape.Border.Disabled.color};
+            width: ${slider.thumb.shape.size.disabled};
+            height: ${slider.thumb.shape.size.disabled};
+            background-color: ${slider.thumb.shape.backgroundcolor.disabled};
+            border-width: ${slider.thumb.shape.border.disabled.width};
+            border-style: ${slider.thumb.shape.border.disabled.style};
+            border-color: ${slider.thumb.shape.border.disabled.color};
           }
 
           &::-moz-range-thumb {
-            width: ${Slider.Thumb.Shape.Size.Disabled};
-            height: ${Slider.Thumb.Shape.Size.Disabled};
-            background-color: ${Slider.Thumb.Shape.BackgroundColor.Disabled};
-            border-width: ${Slider.Thumb.Shape.Border.Disabled.width};
-            border-style: ${Slider.Thumb.Shape.Border.Disabled.style};
-            border-color: ${Slider.Thumb.Shape.Border.Disabled.color};
+            width: ${slider.thumb.shape.size.disabled};
+            height: ${slider.thumb.shape.size.disabled};
+            background-color: ${slider.thumb.shape.backgroundcolor.disabled};
+            border-width: ${slider.thumb.shape.border.disabled.width};
+            border-style: ${slider.thumb.shape.border.disabled.style};
+            border-color: ${slider.thumb.shape.border.disabled.color};
           }
         }
       }
 
       .range__container.${theme} {
         & > .range__pip {
-          width: ${Slider.TickMark.Size};
-          height: ${Slider.TickMark.Size};
+          width: ${slider.tickmark.size};
+          height: ${slider.tickmark.size};
 
           &.range__pip-selected {
-            border-color: ${Slider.TickMark.Border.Default.Active.color};
-            background-color: ${Slider.TickMark.BackgroundColor.Default.Active};
+            border-color: ${slider.tickmark.border.default.active.color};
+            background-color: ${slider.tickmark.backgroundcolor.default.active};
 
             &.pip-disabled {
-              border-color: ${Slider.TickMark.Border.Mute.Active.color};
-              background-color: ${Slider.TickMark.BackgroundColor.Mute.Active};
+              border-color: ${slider.tickmark.border.mute.active.color};
+              background-color: ${slider.tickmark.backgroundcolor.mute.active};
             }
           }
 
           &.range__pip-unselected {
-            border-color: ${Slider.TickMark.Border.Default.Inactive.color};
-            background-color: ${Slider.TickMark.BackgroundColor.Default.Inactive};
+            border-color: ${slider.tickmark.border.default.inactive.color};
+            background-color: ${slider.tickmark.backgroundcolor.default.inactive};
 
             &.pip-disabled {
-              border-color: ${Slider.TickMark.Border.Mute.Inactive.color};
-              background-color: ${Slider.TickMark.BackgroundColor.Mute.Inactive};
+              border-color: ${slider.tickmark.border.mute.inactive.color};
+              background-color: ${slider.tickmark.backgroundcolor.mute.inactive};
             }
           }
         }
 
         & > .range__point {
-          font-family: ${Slider.Legend.Typography.fontFamily}, Arial, sans-serif;
-          font-size: ${Slider.Legend.Typography.fontSize};
-          font-weight: ${Slider.Legend.Typography.fontWeight};
-          line-height: ${Slider.Legend.Typography.lineHeight};
-          color: ${Slider.Legend.TextColor.Default};
+          font-family: ${slider.legend.typography.fontFamily}, arial, sans-serif;
+          font-size: ${slider.legend.typography.fontSize};
+          font-weight: ${slider.legend.typography.fontWeight};
+          line-height: ${slider.legend.typography.lineHeight};
+          color: ${slider.legend.textcolor.default};
           margin: 5px 0 0;
 
           &.point-disabled {
-            color: ${Slider.Legend.TextColor.Disabled};
+            color: ${slider.legend.textcolor.disabled};
           }
         }
       }
 
       .range__bar.${theme} {
         &.range__bar-selected {
-          background-color: ${Slider.Track.Border.Default.Active.color};
+          background-color: ${slider.track.border.default.active.color};
 
           &.bar-disabled {
-            background-color: ${Slider.Track.Border.Mute.Active.color};
+            background-color: ${slider.track.border.mute.active.color};
           }
         }
 
         &.range__bar-unselected {
-          background-color: ${Slider.Track.Border.Default.Inactive.color};
+          background-color: ${slider.track.border.default.inactive.color};
 
           &.bar-disabled {
-            background-color: ${Slider.Track.Border.Mute.Inactive.color};
+            background-color: ${slider.track.border.mute.inactive.color};
           }
         }
       }

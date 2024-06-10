@@ -3,7 +3,7 @@ import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-lit
 
 export const staticStyles = typeSafeNestedCss/* css */ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { ButtonGroup } = cmp;
+    const { buttongroup } = cmp;
 
     return typeSafeCss/* css */ `
       .blr-button-group.${theme} {
@@ -22,23 +22,23 @@ export const staticStyles = typeSafeNestedCss/* css */ `
         }
     
         &.xs {
-          gap: ${ButtonGroup.Container.ItemSpacing.XS};
+          gap: ${buttongroup.container.itemspacing.xs};
         }
     
         &.sm {
-          gap: ${ButtonGroup.Container.ItemSpacing.SM};
+          gap: ${buttongroup.container.itemspacing.sm};
         }
     
         &.md {
-          gap: ${ButtonGroup.Container.ItemSpacing.MD};
+          gap: ${buttongroup.container.itemspacing.md};
         }
     
         &.lg {
-          gap: ${ButtonGroup.Container.ItemSpacing.LG};
+          gap: ${buttongroup.container.itemspacing.lg};
         }
     
         &.xl {
-          gap: ${ButtonGroup.Container.ItemSpacing.XL};
+          gap: ${buttongroup.container.itemspacing.xl};
         }
       }
     `;
