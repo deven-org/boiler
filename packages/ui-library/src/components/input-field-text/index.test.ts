@@ -17,7 +17,6 @@ const sampleParams: BlrInputFieldTextType = {
   hasLabel: true,
   label: 'Label',
   labelAppendix: '(Appendix)',
-  hasIcon: true,
   icon: 'blr360',
   hasHint: false,
   hintMessage: 'This is a small hint message',

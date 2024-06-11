@@ -9,7 +9,6 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 const sampleParams: BlrButtonTextType = {
   label: 'Button',
   icon: 'blr360',
-  hasIcon: true,
   iconPosition: 'leading',
   loading: false,
   disabled: false,
