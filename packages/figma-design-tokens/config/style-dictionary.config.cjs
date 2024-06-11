@@ -9,36 +9,6 @@ const themes = require('./themes.cjs');
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
 
-const semanticTypes = ['buttons', 'selectables', 'forms', 'global', 'ui'];
-
-const componentTypes = [
-  'ButtonGroup',
-  'ButtonText',
-  'ButtonIcon',
-  'CaptionComponent',
-  'CaptionGroup',
-  'Checkbox',
-  'Counter',
-  'Divider',
-  'FormLabel',
-  'Icon',
-  'IconDropdown',
-  'InputIcon',
-  'InputFieldNumber',
-  'InputFieldText',
-  'Loader',
-  'RadioGroup',
-  'Select',
-  'Slider',
-  'StepperButton',
-  'StepperCombo',
-  'Radio',
-  'TabBar',
-  'TextArea',
-  'ToggleSwitch',
-  'Tooltip',
-];
-
 StyleDictionaryPackage.registerFormat({
   name: 'custom/format/semanticTokens',
   formatter: ({ dictionary, file }) => {
@@ -73,41 +43,6 @@ const getStyleDictionaryConfig = (theme) => {
       'input/tokens/cmp/*.json',
     ],
     platforms: {
-      /*
-      scss: {
-        transforms: [
-          'attribute/cti',
-          'name/cti/kebab',
-          'transform/resolveMath',
-          'transform/size/px',
-          'transform/font-to-rem',
-        ],
-        prefix: 'blr',
-        buildPath: '../ui-library/src/foundation/_tokens-generated/',
-        files: [
-          ...types.map((type) => ({
-            format: 'css/variables',
-            destination: `_${kebabCase(type)}.generated.scss`,
-            filter: (token) => token.attributes.category === 'core' && token.attributes.type === type,
-          })),
-          {
-            format: 'css/variables',
-            destination: `_color.generated.scss`,
-            filter: (token) => {
-              const isCore = token.attributes.category === 'core';
-              const isColor = token.attributes.type === 'color';
-
-              // We want to filter out some base color values that the final colors are made of.
-              // We don't need them as css variables.
-              const isLgt = token.attributes.item === 'LGT';
-              const isSat = ['HUE', 'SAT'].includes(token.attributes.subitem);
-
-              return isCore && isColor && !isSat && !isLgt;
-            },
-          },
-        ],
-      },
-      */
       js: {
         transforms: [
           'attribute/cti',
@@ -123,16 +58,14 @@ const getStyleDictionaryConfig = (theme) => {
             format: 'custom/format/semanticTokens',
             destination: `__semantic-tokens.${theme}.generated.mjs`,
             filter: (token) => {
-              const typeToFilter = semanticTypes;
-              return typeToFilter.includes(token.attributes.type);
+              return token.attributes.category === 'sem';
             },
           },
           {
             format: 'custom/format/componentTokens',
             destination: `__component-tokens.${theme}.generated.mjs`,
             filter: (token) => {
-              const typeToFilter = componentTypes;
-              return typeToFilter.includes(token.attributes.type) && token.type !== 'componentConfig';
+              return token.attributes.category === 'cmp' && token.type !== 'componentConfig';
             },
           },
           {

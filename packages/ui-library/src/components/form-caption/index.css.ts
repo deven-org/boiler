@@ -3,73 +3,73 @@ import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index
 
 export const staticStyles = typeSafeNestedCss`
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { CaptionComponent } = cmp;
+    const { formcaption } = cmp;
 
     return typeSafeCss`
       .blr-form-caption.${theme} {
         width: 100%;
         display: flex;
         align-items: flex-start;
-        color: ${CaptionComponent.Text.TextColor.Hint};
+        color: ${formcaption.text.textcolor.hint};
 
         &.error {
-          color: ${CaptionComponent.Text.TextColor.Error};
+          color: ${formcaption.text.textcolor.error};
         }
 
         &.sm {
-          padding: ${CaptionComponent.Container.Padding.SM};
-          gap: ${CaptionComponent.Container.ItemSpacing.SM};
+          padding: ${formcaption.container.padding.sm};
+          gap: ${formcaption.container.itemspacing.sm};
 
           .blr-icon {
-            padding-top: ${CaptionComponent.IconWrapper.PaddingTop.SM};
-            height: ${CaptionComponent.Icon.IconSize.SM};
-            width: ${CaptionComponent.Icon.IconSize.SM};
+            padding-top: ${formcaption.iconwrapper.paddingtop.sm};
+            height: ${formcaption.icon.iconsize.sm};
+            width: ${formcaption.icon.iconsize.sm};
           }
 
           .blr-caption-text {
-            padding: ${CaptionComponent.TextWrapper.Padding.SM};
-            font-family: ${CaptionComponent.Text.Typography.SM.fontFamily}, sans-serif;
-            font-weight: ${CaptionComponent.Text.Typography.SM.fontWeight};
-            font-size: ${CaptionComponent.Text.Typography.SM.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.SM.lineHeight};
+            padding: ${formcaption.textwrapper.padding.sm};
+            font-family: ${formcaption.text.typography.sm.fontFamily}, sans-serif;
+            font-weight: ${formcaption.text.typography.sm.fontWeight};
+            font-size: ${formcaption.text.typography.sm.fontSize};
+            line-height: ${formcaption.text.typography.sm.lineHeight};
           }
         }
 
         &.md {
-          padding: ${CaptionComponent.Container.Padding.MD};
-          gap: ${CaptionComponent.Container.ItemSpacing.MD};
+          padding: ${formcaption.container.padding.md};
+          gap: ${formcaption.container.itemspacing.md};
 
           .blr-icon {
-            padding-top: ${CaptionComponent.IconWrapper.PaddingTop.MD};
-            height: ${CaptionComponent.Icon.IconSize.MD};
-            width: ${CaptionComponent.Icon.IconSize.MD};
+            padding-top: ${formcaption.iconwrapper.paddingtop.md};
+            height: ${formcaption.icon.iconsize.md};
+            width: ${formcaption.icon.iconsize.md};
           }
 
           .blr-caption-text {
-            padding: ${CaptionComponent.TextWrapper.Padding.MD};
-            font-family: ${CaptionComponent.Text.Typography.MD.fontFamily}, sans-serif;
-            font-weight: ${CaptionComponent.Text.Typography.MD.fontWeight};
-            font-size: ${CaptionComponent.Text.Typography.MD.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.MD.lineHeight};
+            padding: ${formcaption.textwrapper.padding.md};
+            font-family: ${formcaption.text.typography.md.fontFamily}, sans-serif;
+            font-weight: ${formcaption.text.typography.md.fontWeight};
+            font-size: ${formcaption.text.typography.md.fontSize};
+            line-height: ${formcaption.text.typography.md.lineHeight};
           }
         }
 
         &.lg {
-          padding: ${CaptionComponent.Container.Padding.LG};
-          gap: ${CaptionComponent.Container.ItemSpacing.LG};
+          padding: ${formcaption.container.padding.lg};
+          gap: ${formcaption.container.itemspacing.lg};
 
           .blr-icon {
-            padding-top: ${CaptionComponent.IconWrapper.PaddingTop.LG};
-            height: ${CaptionComponent.Icon.IconSize.LG};
-            width: ${CaptionComponent.Icon.IconSize.LG};
+            padding-top: ${formcaption.iconwrapper.paddingtop.lg};
+            height: ${formcaption.icon.iconsize.lg};
+            width: ${formcaption.icon.iconsize.lg};
           }
 
           .blr-caption-text {
-            padding: ${CaptionComponent.TextWrapper.Padding.LG};
-            font-family: ${CaptionComponent.Text.Typography.LG.fontFamily}, sans-serif;
-            font-weight: ${CaptionComponent.Text.Typography.LG.fontWeight};
-            font-size: ${CaptionComponent.Text.Typography.LG.fontSize};
-            line-height: ${CaptionComponent.Text.Typography.LG.lineHeight};
+            padding: ${formcaption.textwrapper.padding.lg};
+            font-family: ${formcaption.text.typography.lg.fontFamily}, sans-serif;
+            font-weight: ${formcaption.text.typography.lg.fontWeight};
+            font-size: ${formcaption.text.typography.lg.fontSize};
+            line-height: ${formcaption.text.typography.lg.lineHeight};
           }
         }
       }

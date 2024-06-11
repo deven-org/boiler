@@ -272,117 +272,117 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
 
 export const staticComponentStyles = typeSafeNestedCss/*css*/ `
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { FormLabel } = cmp;
+    const { formlabel } = cmp;
 
     return typeSafeCss/*css*/ `
       .blr-form-label.${theme} {
-        color: ${FormLabel.Label.TextColor.Rest};
+        color: ${formlabel.label.textcolor.rest};
 
         &:focus {
-          color: ${FormLabel.Label.TextColor.Focus};
+          color: ${formlabel.label.textcolor.focus};
           .blr-form-label-appendix {
-            color: ${FormLabel.LabelAppendix.TextColor.Focus};
+            color: ${formlabel.labelappendix.textcolor.focus};
           }
         }
 
         &:hover {
-          color: ${FormLabel.Label.TextColor.Hover};
+          color: ${formlabel.label.textcolor.hover};
           .blr-form-label-appendix {
-            color: ${FormLabel.LabelAppendix.TextColor.Hover};
+            color: ${formlabel.labelappendix.textcolor.hover};
           }
         }
 
         &:disabled {
-          color: ${FormLabel.Label.TextColor.Disabled};
+          color: ${formlabel.label.textcolor.disabled};
           .blr-form-label-appendix {
-            color: ${FormLabel.LabelAppendix.TextColor.Disabled};
+            color: ${formlabel.labelappendix.textcolor.disabled};
           }
         }
 
         &[readonly] {
-          color: ${FormLabel.Label.TextColor.ReadOnly};
+          color: ${formlabel.label.textcolor.readonly};
           .blr-form-label-appendix {
-            color: ${FormLabel.LabelAppendix.TextColor.ReadOnly};
+            color: ${formlabel.labelappendix.textcolor.readonly};
           }
         }
 
         &.error {
-          color: ${FormLabel.Label.TextColor.Error};
+          color: ${formlabel.label.textcolor.error};
           .blr-form-label-appendix {
-            color: ${FormLabel.LabelAppendix.TextColor.Error};
+            color: ${formlabel.labelappendix.textcolor.error};
           }
         }
 
         &.sm {
-          font-weight: ${FormLabel.Label.Typography.SM.fontWeight};
-          font-size: ${FormLabel.Label.Typography.SM.fontSize};
-          font-family: ${FormLabel.Label.Typography.SM.fontFamily}, sans-serif;
-          line-height: ${FormLabel.Label.Typography.SM.lineHeight};
-          gap: ${FormLabel.Container.ItemSpacing.SM};
+          font-weight: ${formlabel.label.typography.sm.fontWeight};
+          font-size: ${formlabel.label.typography.sm.fontSize};
+          font-family: ${formlabel.label.typography.sm.fontFamily}, sans-serif;
+          line-height: ${formlabel.label.typography.sm.lineHeight};
+          gap: ${formlabel.container.itemspacing.sm};
         }
 
         &.md {
-          font-weight: ${FormLabel.Label.Typography.MD.fontWeight};
-          font-size: ${FormLabel.Label.Typography.MD.fontSize};
-          font-family: ${FormLabel.Label.Typography.MD.fontFamily}, sans-serif;
-          line-height: ${FormLabel.Label.Typography.MD.lineHeight};
-          gap: ${FormLabel.Container.ItemSpacing.MD};
+          font-weight: ${formlabel.label.typography.md.fontWeight};
+          font-size: ${formlabel.label.typography.md.fontSize};
+          font-family: ${formlabel.label.typography.md.fontFamily}, sans-serif;
+          line-height: ${formlabel.label.typography.md.lineHeight};
+          gap: ${formlabel.container.itemspacing.md};
         }
 
         &.lg {
-          font-weight: ${FormLabel.Label.Typography.LG.fontWeight};
-          font-size: ${FormLabel.Label.Typography.LG.fontSize};
-          font-family: ${FormLabel.Label.Typography.LG.fontFamily}, sans-serif;
-          line-height: ${FormLabel.Label.Typography.LG.lineHeight};
-          gap: ${FormLabel.Container.ItemSpacing.LG};
+          font-weight: ${formlabel.label.typography.lg.fontWeight};
+          font-size: ${formlabel.label.typography.lg.fontSize};
+          font-family: ${formlabel.label.typography.lg.fontFamily}, sans-serif;
+          line-height: ${formlabel.label.typography.lg.lineHeight};
+          gap: ${formlabel.container.itemspacing.lg};
         }
       }
 
       .blr-form-label-inline.${theme} {
         &.sm {
-          font-weight: ${FormLabel.InlineLabel.Typography.SM.fontWeight};
-          font-size: ${FormLabel.InlineLabel.Typography.SM.fontSize};
-          font-family: ${FormLabel.InlineLabel.Typography.SM.fontFamily}, sans-serif;
-          line-height: ${FormLabel.InlineLabel.Typography.SM.lineHeight};
+          font-weight: ${formlabel.inlinelabel.typography.sm.fontWeight};
+          font-size: ${formlabel.inlinelabel.typography.sm.fontSize};
+          font-family: ${formlabel.inlinelabel.typography.sm.fontFamily}, sans-serif;
+          line-height: ${formlabel.inlinelabel.typography.sm.lineHeight};
         }
 
         &.md {
-          font-weight: ${FormLabel.InlineLabel.Typography.MD.fontWeight};
-          font-size: ${FormLabel.InlineLabel.Typography.MD.fontSize};
-          font-family: ${FormLabel.InlineLabel.Typography.MD.fontFamily}, sans-serif;
-          line-height: ${FormLabel.InlineLabel.Typography.MD.lineHeight};
+          font-weight: ${formlabel.inlinelabel.typography.md.fontWeight};
+          font-size: ${formlabel.inlinelabel.typography.md.fontSize};
+          font-family: ${formlabel.inlinelabel.typography.md.fontFamily}, sans-serif;
+          line-height: ${formlabel.inlinelabel.typography.md.lineHeight};
         }
 
         &.lg {
-          font-weight: ${FormLabel.InlineLabel.Typography.LG.fontWeight};
-          font-size: ${FormLabel.InlineLabel.Typography.LG.fontSize};
-          font-family: ${FormLabel.InlineLabel.Typography.LG.fontFamily}, sans-serif;
-          line-height: ${FormLabel.InlineLabel.Typography.LG.lineHeight};
+          font-weight: ${formlabel.inlinelabel.typography.lg.fontWeight};
+          font-size: ${formlabel.inlinelabel.typography.lg.fontSize};
+          font-family: ${formlabel.inlinelabel.typography.lg.fontFamily}, sans-serif;
+          line-height: ${formlabel.inlinelabel.typography.lg.lineHeight};
         }
       }
 
       .blr-form-label-appendix.${theme} {
-        color: ${FormLabel.LabelAppendix.TextColor.Rest};
+        color: ${formlabel.labelappendix.textcolor.rest};
 
         &.sm {
-          font-weight: ${FormLabel.LabelAppendix.Typography.SM.fontWeight};
-          font-size: ${FormLabel.LabelAppendix.Typography.SM.fontSize};
-          font-family: ${FormLabel.LabelAppendix.Typography.SM.fontFamily}, sans-serif;
-          line-height: ${FormLabel.LabelAppendix.Typography.SM.lineHeight};
+          font-weight: ${formlabel.labelappendix.typography.sm.fontWeight};
+          font-size: ${formlabel.labelappendix.typography.sm.fontSize};
+          font-family: ${formlabel.labelappendix.typography.sm.fontFamily}, sans-serif;
+          line-height: ${formlabel.labelappendix.typography.sm.lineHeight};
         }
 
         &.md {
-          font-weight: ${FormLabel.LabelAppendix.Typography.MD.fontWeight};
-          font-size: ${FormLabel.LabelAppendix.Typography.MD.fontSize};
-          font-family: ${FormLabel.LabelAppendix.Typography.MD.fontFamily}, sans-serif;
-          line-height: ${FormLabel.LabelAppendix.Typography.MD.lineHeight};
+          font-weight: ${formlabel.labelappendix.typography.md.fontWeight};
+          font-size: ${formlabel.labelappendix.typography.md.fontSize};
+          font-family: ${formlabel.labelappendix.typography.md.fontFamily}, sans-serif;
+          line-height: ${formlabel.labelappendix.typography.md.lineHeight};
         }
 
         &.lg {
-          font-weight: ${FormLabel.LabelAppendix.Typography.LG.fontWeight};
-          font-size: ${FormLabel.LabelAppendix.Typography.LG.fontSize};
-          font-family: ${FormLabel.LabelAppendix.Typography.LG.fontFamily}, sans-serif;
-          line-height: ${FormLabel.LabelAppendix.Typography.LG.lineHeight};
+          font-weight: ${formlabel.labelappendix.typography.lg.fontWeight};
+          font-size: ${formlabel.labelappendix.typography.lg.fontSize};
+          font-family: ${formlabel.labelappendix.typography.lg.fontFamily}, sans-serif;
+          line-height: ${formlabel.labelappendix.typography.lg.lineHeight};
         }
       }
     `;
