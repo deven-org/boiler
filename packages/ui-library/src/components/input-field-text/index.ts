@@ -60,7 +60,6 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() hasIcon = true;
   @property() icon: SizelessIconType = 'blr360';
   @property() hasHint = true;
   @property() hintMessage?: string;
@@ -124,7 +123,7 @@ export class BlrInputFieldText extends LitElementCustom {
   };
 
   protected renderInputIcon() {
-    if (this.type !== 'password' && !this.hasIcon) {
+    if (this.type !== 'password' && !this.icon) {
       return nothing;
     }
 

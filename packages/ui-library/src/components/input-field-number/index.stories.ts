@@ -25,8 +25,7 @@ const defaultParams: BlrInputFieldNumberType = {
   value: undefined,
   decimals: 0,
   leadingZeros: 0,
-  hasUnit: false,
-  unit: 'kg',
+  unit: undefined,
   unitPosition: 'prefix',
   step: 1,
   hasLabel: true,
@@ -119,8 +118,12 @@ export default {
         type: 'number',
       },
     },
-    hasUnit: {
-      description: 'Choose if component has a unit.',
+    unit: {
+      description: 'Select a unit which is displayed next to the input.',
+      options: [undefined, ...Units],
+      control: {
+        type: 'select',
+      },
       table: {
         category: 'Content / Settings',
       },
@@ -138,18 +141,7 @@ export default {
           suffix: 'suffix',
         },
       },
-      if: { arg: 'hasUnit', eq: true },
-    },
-    unit: {
-      description: 'Select a unit which is displayed next to the input.',
-      options: [undefined, ...Units],
-      control: {
-        type: 'select',
-      },
-      table: {
-        category: 'Content / Settings',
-      },
-      if: { arg: 'hasUnit', eq: true },
+      if: { arg: 'unit', neq: undefined },
     },
     step: {
       description: 'Enter how much the value should change when the stepper buttons are used.',
@@ -502,7 +494,6 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         label: 'Unit prefix',
-        hasUnit: true,
         unitPosition: 'prefix',
         unit: 'kg',
         labelAppendix: undefined,
@@ -513,7 +504,6 @@ export const HasUnit = (params: BlrInputFieldNumberType) => {
       ${BlrInputFieldNumberRenderFunction({
         ...params,
         label: 'Unit suffix',
-        hasUnit: true,
         unitPosition: 'suffix',
         unit: 'kg',
         labelAppendix: undefined,
