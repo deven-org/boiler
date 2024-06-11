@@ -120,7 +120,7 @@ export default {
     },
     unit: {
       description: 'Select a unit which is displayed next to the input.',
-      options: [...Units],
+      options: [undefined, ...Units],
       control: {
         type: 'select',
       },
