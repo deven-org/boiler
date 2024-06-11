@@ -13,7 +13,6 @@ export const staticStyles = typeSafeNestedCss/* css */ `
 
         .input-control {
           all: initial;
-          position: absolute;
         }
         
         .visual-checkbox {
