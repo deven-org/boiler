@@ -22,6 +22,8 @@ export const Units = [
   'ml',
   's',
   'min',
+  '€',
+  '$',
 ] as const;
 export const InputTypes = ['text', 'email', 'password'] as const;
 export const ButtonGroupSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;

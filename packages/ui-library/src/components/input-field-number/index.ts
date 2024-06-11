@@ -6,7 +6,7 @@ import { TAG_NAME } from './renderFunction';
 import { BlrDividerRenderFunction } from '../divider/renderFunction';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { FormSizesType, UnitVariantType } from '../../globals/types';
+import { FormSizesType, UnitType, UnitVariantType } from '../../globals/types';
 import { calculateIconName } from '../../utils/calculate-icon-name';
 import { getComponentConfigToken } from '../../utils/get-component-config-token';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
@@ -66,10 +66,9 @@ export class BlrInputFieldNumber extends LitElementCustom {
   @property() hintMessageIcon?: SizelessIconType;
   @property() value?: number;
   @property() step?: number;
-  @property() unit?: string;
+  @property() unit?: UnitType;
   @property() leadingZeros?: number;
   @property() decimals?: number;
-  @property() hasUnit?: boolean;
   @property() unitPosition?: UnitVariantType;
   @property() stepIncreaseAriaLabel?: string = '+';
   @property() stepDecreaseAriaLabel?: string = '\u2212'; // minus-sign (not minus-hyphen)
