@@ -11,9 +11,6 @@ import {
   BlrToggleSwitch,
 } from '@boiler/ui-library';
 
-await hydrate();
-init();
-
 async function hydrate() {
   // Start fetching the Lit hydration support module (note the absence
   // of "await" -- we don't want to block yet).
@@ -212,3 +209,6 @@ function init() {
     addLog('blr-tab-bar changed: ' + e.detail.changedValue);
   });
 }
+
+await hydrate();
+init();
