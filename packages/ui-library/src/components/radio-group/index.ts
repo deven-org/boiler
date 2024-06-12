@@ -16,41 +16,194 @@ import { LitElementCustom } from '../../utils/lit-element-custom';
 export class BlrRadioGroup extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
 
-  @property({ type: Boolean }) disabled = false;
-  @property({ type: Boolean }) readonly = false;
-  @property({ type: Boolean }) checked = false;
-  @property({ type: String }) name = '';
-  @property({ type: String }) sizeVariant: InputSizesType = 'md';
-  @property({ type: Boolean }) hasLegend = false;
-  @property({ type: Boolean }) required = false;
-  @property() blrChange?: HTMLElement['oninput'];
-  @property() blrBlur?: HTMLElement['blur'];
-  @property() blrFocus?: HTMLElement['focus'];
-  @property({ type: Boolean }) hasError = false;
-  @property({ type: String }) errorIcon?: SizelessIconType;
-  @property({ type: Array }) options: RadioOption[] = [];
-  @property({ type: Boolean }) hasHint = true;
-  @property({ type: String }) groupHintMessageIcon?: SizelessIconType;
-  @property({ type: String }) groupErrorMessage = '';
-  @property({ type: String }) groupHintMessage = '';
-  @property({ type: String }) groupErrorMessageIcon?: SizelessIconType;
-  @property({ type: String }) legend = '';
-  @property({ type: String }) direction: RadioGroupDirection = 'horizontal';
-  @property({ type: String }) theme: ThemeType = 'Light';
+  private _disabled = false;
+  private _readonly = false;
+  private _checked = false;
+  private _name = '';
+  private _sizeVariant: InputSizesType = 'md';
+  private _hasLegend = false;
+  private _required = false;
+  private _blrChange?: HTMLElement['oninput'];
+  private _blrBlur?: HTMLElement['blur'];
+  private _blrFocus?: HTMLElement['focus'];
+  private _hasError = false;
+  private _errorIcon?: SizelessIconType;
+  private _options: RadioOption[] = [];
+  private _hasHint = true;
+  private _groupHintMessageIcon?: SizelessIconType;
+  private _groupErrorMessage = '';
+  private _groupHintMessage = '';
+  private _groupErrorMessageIcon?: SizelessIconType;
+  private _legend = '';
+  private _direction: RadioGroupDirection = 'horizontal';
+  private _theme: ThemeType = 'Light';
 
-  willUpdate(changedProperties: PropertyValues) {
-    if (changedProperties.has('sizeVariant') && !this.sizeVariant) {
-      this.sizeVariant = 'md';
-    }
-    if (changedProperties.has('theme') && !this.theme) {
-      this.theme = 'Light';
-    }
-    if (changedProperties.has('direction') && !this.direction) {
-      this.direction = 'horizontal';
-    }
-    if (changedProperties.has('options') && !this.options) {
-      this.options = [];
-    }
+  @property({ type: Boolean })
+  get disabled() {
+    return this._disabled;
+  }
+  set disabled(value: boolean) {
+    this._disabled = value;
+  }
+
+  @property({ type: Boolean })
+  get readonly() {
+    return this._readonly;
+  }
+  set readonly(value: boolean) {
+    this._readonly = value;
+  }
+
+  @property({ type: Boolean })
+  get checked() {
+    return this._checked;
+  }
+  set checked(value: boolean) {
+    this._checked = value;
+  }
+
+  @property({ type: String })
+  get name() {
+    return this._name;
+  }
+  set name(value: string) {
+    this._name = value;
+  }
+
+  @property({ type: String })
+  get sizeVariant() {
+    return this._sizeVariant;
+  }
+  set sizeVariant(value: InputSizesType) {
+    this._sizeVariant = value || 'md';
+  }
+
+  @property({ type: Boolean })
+  get hasLegend() {
+    return this._hasLegend;
+  }
+  set hasLegend(value: boolean) {
+    this._hasLegend = value;
+  }
+
+  @property({ type: Boolean })
+  get required() {
+    return this._required;
+  }
+  set required(value: boolean) {
+    this._required = value;
+  }
+
+  @property()
+  get blrChange(): HTMLElement['oninput'] | undefined {
+    return this._blrChange;
+  }
+  set blrChange(value: HTMLElement['oninput'] | undefined) {
+    this._blrChange = value;
+  }
+
+  @property()
+  get blrBlur(): HTMLElement['blur'] | undefined {
+    return this._blrBlur;
+  }
+  set blrBlur(value: HTMLElement['blur'] | undefined) {
+    this._blrBlur = value;
+  }
+
+  @property()
+  get blrFocus(): HTMLElement['focus'] | undefined {
+    return this._blrFocus;
+  }
+  set blrFocus(value: HTMLElement['focus'] | undefined) {
+    this._blrFocus = value;
+  }
+
+  @property({ type: Boolean })
+  get hasError() {
+    return this._hasError;
+  }
+  set hasError(value: boolean) {
+    this._hasError = value;
+  }
+
+  @property({ type: String })
+  get errorIcon(): SizelessIconType | undefined {
+    return this._errorIcon;
+  }
+  set errorIcon(value: SizelessIconType | undefined) {
+    this._errorIcon = value;
+  }
+
+  @property({ type: Array })
+  get options() {
+    return this._options;
+  }
+  set options(value: RadioOption[]) {
+    this._options = value || [];
+  }
+
+  @property({ type: Boolean })
+  get hasHint() {
+    return this._hasHint;
+  }
+  set hasHint(value: boolean) {
+    this._hasHint = value;
+  }
+
+  @property({ type: String })
+  get groupHintMessageIcon(): SizelessIconType | undefined {
+    return this._groupHintMessageIcon;
+  }
+  set groupHintMessageIcon(value: SizelessIconType | undefined) {
+    this._groupHintMessageIcon = value;
+  }
+
+  @property({ type: String })
+  get groupErrorMessage() {
+    return this._groupErrorMessage;
+  }
+  set groupErrorMessage(value: string) {
+    this._groupErrorMessage = value;
+  }
+
+  @property({ type: String })
+  get groupHintMessage() {
+    return this._groupHintMessage;
+  }
+  set groupHintMessage(value: string) {
+    this._groupHintMessage = value;
+  }
+
+  @property({ type: String })
+  get groupErrorMessageIcon(): SizelessIconType | undefined {
+    return this._groupErrorMessageIcon;
+  }
+  set groupErrorMessageIcon(value: SizelessIconType | undefined) {
+    this._groupErrorMessageIcon = value;
+  }
+
+  @property({ type: String })
+  get legend() {
+    return this._legend;
+  }
+  set legend(value: string) {
+    this._legend = value;
+  }
+
+  @property({ type: String })
+  get direction() {
+    return this._direction;
+  }
+  set direction(value: RadioGroupDirection) {
+    this._direction = value || 'horizontal';
+  }
+
+  @property({ type: String })
+  get theme() {
+    return this._theme;
+  }
+  set theme(value: ThemeType) {
+    this._theme = value || 'Light';
   }
 
   protected render() {

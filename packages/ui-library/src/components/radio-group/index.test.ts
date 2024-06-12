@@ -5,7 +5,6 @@ import { BlrRadioGroupRenderFunction } from './renderFunction';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
 import { BlrRadioGroupType } from '.';
-import { PropertyValueMap } from 'lit';
 
 const sampleParams: BlrRadioGroupType = {
   theme: 'Light',
@@ -29,9 +28,10 @@ const sampleParams: BlrRadioGroupType = {
   checked: false,
   hasLegend: false,
   legend: '',
-  willUpdate: function (changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    throw new Error('Function not implemented.');
-  },
+  blrFocus: undefined,
+  blrBlur: undefined,
+  blrChange: undefined,
+  errorIcon: undefined,
 };
 
 describe('blr-radio-group', () => {
