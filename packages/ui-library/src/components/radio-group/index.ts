@@ -11,8 +11,7 @@ import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderF
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
 import { TAG_NAME } from './renderFunction.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { ElementInterface } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrRadioGroup extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];

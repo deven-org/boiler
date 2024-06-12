@@ -23,9 +23,8 @@ import {
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
 } from '../../globals/events.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { BlrIconEventHandlers } from '../icon/index.js';
-import { ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;

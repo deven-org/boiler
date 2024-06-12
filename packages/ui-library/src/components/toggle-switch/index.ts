@@ -21,8 +21,7 @@ import {
   createBlrCheckedChangeEvent,
   createBlrFocusEvent,
 } from '../../globals/events.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { ElementInterface } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrToggleSwitchEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;

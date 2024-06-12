@@ -5,9 +5,8 @@ import { staticStyles } from './index.css.js';
 import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/types.js';
 
 import { TAG_NAME } from './renderFunction.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
-import { ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrButtonGroup extends LitElementCustom {
   static styles = [staticStyles];

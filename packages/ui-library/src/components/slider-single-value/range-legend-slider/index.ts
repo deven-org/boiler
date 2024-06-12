@@ -13,8 +13,7 @@ import { staticStyles as staticSharedStyles } from '../../../foundation/componen
 import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types.js';
 import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils.js';
 import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction.js';
-import { LitElementCustom } from '../../../utils/lit/element.js';
-import { ElementInterface } from '../../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../../utils/lit/element.js';
 
 export class BlrRangeLegendSlider extends LitElementCustom {
   static styles = [staticSharedStyles, staticStyles];

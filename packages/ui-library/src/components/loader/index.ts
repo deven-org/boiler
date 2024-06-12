@@ -6,8 +6,7 @@ import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
 import { ActionSizesType, FeedbackVariantType } from '../../globals/types.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { ElementInterface } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrLoader extends LitElementCustom {
   static styles = [staticStyles];

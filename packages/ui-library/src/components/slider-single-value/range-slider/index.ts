@@ -16,8 +16,7 @@ import {
   findNearestValue,
 } from '../../../utils/range-slider-utils.js';
 import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction.js';
-import { LitElementCustom } from '../../../utils/lit/element.js';
-import { ElementInterface } from '../../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../../utils/lit/element.js';
 
 export class BlrRangeSlider extends LitElementCustom {
   static styles = [staticSharedStyles, staticStyles];

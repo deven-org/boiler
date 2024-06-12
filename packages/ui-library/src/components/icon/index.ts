@@ -9,8 +9,7 @@ import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import { TAG_NAME } from './renderFunction.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
 import { BlrClickEvent, createBlrClickEvent } from '../../globals/events.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { ElementInterface } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrIconEventHandlers = {
   blrClick?: (event: BlrClickEvent) => void;

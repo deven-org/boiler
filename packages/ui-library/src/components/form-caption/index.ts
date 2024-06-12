@@ -9,8 +9,7 @@ import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/type
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
 import { BlrIconRenderFunction } from '../icon/renderFunction.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { ElementInterface } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrFormCaption extends LitElementCustom {
   static styles = [staticStyles];

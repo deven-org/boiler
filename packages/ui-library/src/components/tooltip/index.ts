@@ -7,9 +7,8 @@ import { tooltipPosition } from './tooltip-position.js';
 import { staticStyles } from './index.css.js';
 import { TAG_NAME } from './renderFunction.js';
 
-import { LitElementCustom } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
-import { ElementInterface } from '../../utils/lit/element.js';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];

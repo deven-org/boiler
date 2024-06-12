@@ -6,8 +6,7 @@ import { property } from '../../utils/lit/decorators.js';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { InputSizesType } from '../../globals/types.js';
-import { LitElementCustom } from '../../utils/lit/element.js';
-import { ElementInterface } from '../../utils/lit/element.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrFormLabel extends LitElementCustom {
   static styles = [];
