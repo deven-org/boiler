@@ -1,11 +1,11 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrTabBarRenderFunction } from './renderFunction';
+import { BlrTabBarRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { html } from 'lit-html';
-import { BlrTabBarType } from '.';
+import { BlrTabBarType } from './index.js';
 
 const sampleParams: BlrTabBarType = {
   theme: 'Light',

@@ -1,10 +1,10 @@
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 import { html } from 'lit-html';
-import { BlrTooltipType } from './index';
-import { BlrTooltipRenderFunction } from './renderFunction';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { TooltipPlacement } from '../../globals/constants';
+import { BlrTooltipType } from './index.js';
+import { BlrTooltipRenderFunction } from './renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { TooltipPlacement } from '../../globals/constants.js';
 
 const sharedStyles = html`
   <style>

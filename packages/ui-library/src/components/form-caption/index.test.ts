@@ -1,7 +1,7 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrFormCaptionRenderFunction } from './renderFunction';
-import { BlrFormCaptionType } from './index';
+import { BlrFormCaptionRenderFunction } from './renderFunction.js';
+import { BlrFormCaptionType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

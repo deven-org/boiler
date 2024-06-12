@@ -1,5 +1,5 @@
-import type { BlrFormLabelType } from '.';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import type { BlrFormLabelType } from './index.js';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
 
 export const TAG_NAME = 'blr-form-label';
 

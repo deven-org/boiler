@@ -1,43 +1,45 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, query } from 'lit/decorators.js';
-import { InputSizesType } from '../../globals/types';
-import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
-import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css';
-import { TAG_NAME } from './renderFunction';
+import { query } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { InputSizesType } from '../../globals/types.js';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css.js';
+import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
-import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEvent } from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
+import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEvent } from '../../globals/events.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrRadio extends LitElementCustom {
   static styles = [staticFormStyles, staticRadioStyles];
 
   @query('input')
-  protected _radioNode!: HTMLInputElement;
+  protected accessor _radioNode!: HTMLInputElement;
 
-  @property() optionId!: string;
-  @property() label!: string;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() checked?: boolean;
-  @property() name?: string;
-  @property() sizeVariant?: InputSizesType = 'md';
-  @property() required?: boolean;
-  @property() blrChange?: HTMLElement['oninput'];
-  @property() blrBlur?: HTMLElement['blur'];
-  @property() blrFocus?: HTMLElement['focus'];
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() errorMessageIcon?: SizelessIconType;
-  @property() hasHint?: boolean;
-  @property() hintMessage?: string;
-  @property() hintMessageIcon?: SizelessIconType;
+  @property() accessor optionId!: string;
+  @property() accessor label!: string;
+  @property() accessor disabled: boolean | undefined;
+  @property() accessor readonly: boolean | undefined;
+  @property() accessor checked: boolean | undefined;
+  @property() accessor name: string | undefined;
+  @property() accessor sizeVariant: InputSizesType | undefined = 'md';
+  @property() accessor required: boolean | undefined;
+  @property() accessor blrChange: HTMLElement['oninput'] | undefined;
+  @property() accessor blrBlur: HTMLElement['blur'] | undefined;
+  @property() accessor blrFocus: HTMLElement['focus'] | undefined;
+  @property() accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
+  @property() accessor hasHint: boolean | undefined;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
@@ -134,4 +136,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadio);
 }
 
-export type BlrRadioType = Omit<BlrRadio, keyof LitElementCustom>;
+export type BlrRadioType = ElementInterface<BlrRadio>;

@@ -1,46 +1,48 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { html, nothing } from 'lit';
-import { property, state } from 'lit/decorators.js';
+import { state } from 'lit/decorators.js';
+import { property } from '../../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { map } from 'lit/directives/map.js';
-import { staticStyles } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { staticStyles } from './index.css.js';
+import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider-legend.css';
-import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types';
-import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils';
-import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction';
-import { LitElementCustom } from '../../../utils/lit-element-custom';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes.js';
+import { staticStyles as staticSharedStyles } from '../../../foundation/component-tokens/slider-legend.css.js';
+import { FormSizesType, ActionVariantType, RenderBtnProps } from '../../../globals/types.js';
+import { setOnclickValue, findToolTipPosition } from '../../../utils/range-slider-utils.js';
+import { BlrButtonIconRenderFunction } from '../../button-icon/renderFunction.js';
+import { LitElementCustom } from '../../../utils/lit/element.js';
+import { ElementInterface } from '../../../utils/lit/element.js';
 
 export class BlrRangeLegendMinMaxSlider extends LitElementCustom {
   static styles = [staticSharedStyles, staticStyles];
 
-  @property() onBtnClick?: (min: number, max: number) => void;
-  @property() onChange!: (minVal: number, maxVal: number, event: Event) => HTMLButtonElement['onchange'];
+  @property() accessor onBtnClick: ((min: number, max: number) => void) | undefined = undefined;
+  @property() accessor onChange!: (minVal: number, maxVal: number, event: Event) => HTMLButtonElement['onchange'];
 
-  @property() rangeInputId!: string;
+  @property() accessor rangeInputId!: string;
 
-  @property() startValue!: string;
-  @property() endValue!: string;
-  @property({ type: Array }) list!: Array<string>;
-  @property({ type: Number }) stepFactor!: number;
+  @property() accessor startValue!: string;
+  @property() accessor endValue!: string;
+  @property({ type: Array }) accessor list!: Array<string>;
+  @property({ type: Number }) accessor stepFactor!: number;
 
-  @property() size: FormSizesType = 'md';
-  @property() btnVariant: ActionVariantType = 'silent';
+  @property() accessor size: FormSizesType = 'md';
+  @property() accessor btnVariant: ActionVariantType = 'silent';
 
-  @property() incrementIcon!: SizelessIconType;
-  @property() decrementIcon!: SizelessIconType;
+  @property() accessor incrementIcon!: SizelessIconType;
+  @property() accessor decrementIcon!: SizelessIconType;
 
-  @property({ type: Boolean }) showLegend?: boolean = true;
-  @property({ type: Boolean }) disabled?: boolean = false;
+  @property({ type: Boolean }) accessor showLegend: boolean | undefined = true;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined = false;
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
-  @property({ type: Boolean }) isUpdated? = false;
+  @property({ type: Boolean }) accessor isUpdated: boolean | undefined = false;
 
-  @state() protected selectedStartIndex = 0;
-  @state() protected selectedEndIndex = 0;
+  @state() protected accessor selectedStartIndex = 0;
+  @state() protected accessor selectedEndIndex = 0;
 
   protected updated(changedProperties: Map<string, string>) {
     if ((changedProperties.has('selectedStartIndex') || changedProperties.has('selectedEndIndex')) && !this.isUpdated) {
@@ -228,4 +230,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRangeLegendMinMaxSlider);
 }
 
-export type BlrRangeLegendMinMaxSliderType = Omit<BlrRangeLegendMinMaxSlider, keyof LitElementCustom>;
+export type BlrRangeLegendMinMaxSliderType = ElementInterface<BlrRangeLegendMinMaxSlider>;

@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrButtonTextType } from './index';
-import { BlrButtonTextRenderFunction } from './renderFunction';
+import { BlrButtonTextType } from './index.js';
+import { BlrButtonTextRenderFunction } from './renderFunction.js';
 import { PureIconKeys } from '@boiler/icons';
-import '../../index';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { ActionVariants, ActionSizes, ButtonDisplayOptions, IconPositionVariant } from '../../globals/constants';
+import '../../index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { ActionVariants, ActionSizes, ButtonDisplayOptions, IconPositionVariant } from '../../globals/constants.js';
 // this loads the all components instances and registers their html tags
 
 // Shared Style inside the Stories

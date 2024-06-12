@@ -1,13 +1,15 @@
 import { html, nothing } from 'lit';
-import { property, state } from 'lit/decorators.js';
+import { state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
 import { Placement as PlacementType } from '@floating-ui/dom';
 import { classMap } from 'lit/directives/class-map.js';
-import { tooltipPosition } from './tooltip-position';
-import { staticStyles } from './index.css';
-import { TAG_NAME } from './renderFunction';
+import { tooltipPosition } from './tooltip-position.js';
+import { staticStyles } from './index.css.js';
+import { TAG_NAME } from './renderFunction.js';
 
-import { LitElementCustom } from '../../utils/lit-element-custom';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ElementInterface } from '../../utils/lit/element.js';
 
 const enterEvents = ['pointerenter', 'focus'];
 const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
@@ -15,14 +17,14 @@ const leaveEvents = ['pointerleave', 'blur', 'keydown', 'click'];
 export class BlrTooltip extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() theme: ThemeType = 'Light';
-  @property() message!: string;
-  @property() hasArrow?: boolean = true;
-  @property() elevation?: boolean = true;
-  @property() placement?: PlacementType = 'top';
-  @property() offset?: number | string = 4;
+  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor message!: string;
+  @property() accessor hasArrow: boolean | undefined = true;
+  @property() accessor elevation: boolean | undefined = true;
+  @property() accessor placement: PlacementType | undefined = 'top';
+  @property() accessor offset: number | string | undefined = 4;
 
-  @state() protected visible = false;
+  @state() protected accessor visible = false;
 
   protected _referenceElement: Element | undefined | null = null;
   protected _tooltipElement: HTMLElement | null = null;
@@ -78,4 +80,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTooltip);
 }
 
-export type BlrTooltipType = Omit<BlrTooltip, keyof LitElementCustom>;
+export type BlrTooltipType = ElementInterface<BlrTooltip>;

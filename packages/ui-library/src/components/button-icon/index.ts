@@ -1,18 +1,19 @@
 /* eslint-disable no-console */
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, state } from 'lit/decorators.js';
+import { state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
 import { SizelessIconType } from '@boiler/icons';
-import { styleCustom } from './index.css';
-import { TAG_NAME } from './renderFunction';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { staticActionStyles } from '../../foundation/semantic-tokens/action.css';
-import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { determineLoaderVariant } from '../../utils/determine-loader-variant';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { BlrLoaderRenderFunction } from '../loader/renderFunction';
+import { styleCustom } from './index.css.js';
+import { TAG_NAME } from './renderFunction.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
+import { ActionVariantType, ActionSizesType, FormSizesType, SizesType } from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { determineLoaderVariant } from '../../utils/determine-loader-variant.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { BlrLoaderRenderFunction } from '../loader/renderFunction.js';
 import {
   BlrBlurEvent,
   BlrClickEvent,
@@ -20,8 +21,9 @@ import {
   createBlrBlurEvent,
   createBlrClickEvent,
   createBlrFocusEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/events.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrButtonIconEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -37,17 +39,17 @@ export type BlrButtonIconEventHandlers = {
 export class BlrButtonIcon extends LitElementCustom {
   static styles = [styleCustom, staticActionStyles];
 
-  @property() arialabel!: string;
-  @property() icon?: SizelessIconType;
-  @property() loading?: boolean;
-  @property() disabled!: boolean;
-  @property() buttonIconId?: string;
-  @property() variant: ActionVariantType = 'primary';
-  @property() sizeVariant?: ActionSizesType = 'md';
+  @property() accessor arialabel!: string;
+  @property() accessor icon: SizelessIconType | undefined;
+  @property() accessor loading: boolean | undefined;
+  @property() accessor disabled!: boolean;
+  @property() accessor buttonIconId: string | undefined;
+  @property() accessor variant: ActionVariantType = 'primary';
+  @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected focused = false;
+  @state() protected accessor focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
@@ -149,4 +151,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrButtonIcon);
 }
 
-export type BlrButtonIconType = Omit<BlrButtonIcon, keyof LitElementCustom> & BlrButtonIconEventHandlers;
+export type BlrButtonIconType = ElementInterface<BlrButtonIcon>;

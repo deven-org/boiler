@@ -1,17 +1,18 @@
 import { html, nothing } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, query, state } from 'lit/decorators.js';
-import { staticStyles } from './index.css';
-import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../globals/types';
-import { TAG_NAME } from './renderFunction';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { staticStyles } from './index.css.js';
+import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../globals/types.js';
+import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
-import { BlrCounterRenderFunction } from '../counter/renderFunction';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { BlrCounterRenderFunction } from '../counter/renderFunction.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction.js';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -21,8 +22,9 @@ import {
   createBlrFocusEvent,
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/events.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrTextareaEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -41,41 +43,41 @@ export class BlrTextarea extends LitElementCustom {
   static styles = [staticFormStyles, staticStyles];
 
   @query('textarea')
-  protected _textareaNode!: HTMLInputElement;
+  protected accessor _textareaNode!: HTMLInputElement;
 
-  @property() textAreaId!: string;
-  @property() label!: string;
-  @property() labelAppendix?: string;
-  @property() arialabel?: string;
-  @property() value!: string;
-  @property() placeholder?: string;
-  @property({ type: Boolean }) disabled?: boolean;
-  @property({ type: Boolean }) readonly?: boolean;
-  @property({ type: Boolean }) hasLabel?: boolean;
-  @property() sizeVariant?: FormSizesType = 'md';
-  @property({ type: Boolean }) required?: boolean;
-  @property({ type: Number }) maxLength?: number;
-  @property({ type: Number }) minLength?: number;
-  @property() warningLimitType: WarningLimits = 'warningLimitInt';
-  @property({ type: Number }) warningLimitInt = 105;
-  @property({ type: Number }) warningLimitPer = 75;
-  @property() pattern?: string;
-  @property({ type: Boolean }) hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() errorMessageIcon?: SizelessIconType = undefined;
-  @property() hint?: string;
-  @property({ type: Boolean }) hasHint = true;
-  @property() hintMessage?: string;
-  @property({ type: Boolean }) hasCounter?: boolean;
-  @property() hintMessageIcon?: SizelessIconType;
-  @property() resize: ResizeType = 'none';
-  @property({ type: Number }) rows?: number;
-  @property({ type: Number }) cols?: number;
-  @property() name?: string;
-  @property() theme: ThemeType = 'Light';
+  @property() accessor textAreaId!: string;
+  @property() accessor label!: string;
+  @property() accessor labelAppendix: string | undefined;
+  @property() accessor arialabel: string | undefined;
+  @property() accessor value!: string;
+  @property() accessor placeholder: string | undefined;
+  @property({ type: Boolean }) accessor disabled: boolean | undefined;
+  @property({ type: Boolean }) accessor readonly: boolean | undefined;
+  @property({ type: Boolean }) accessor hasLabel: boolean | undefined;
+  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property({ type: Boolean }) accessor required: boolean | undefined;
+  @property({ type: Number }) accessor maxLength: number | undefined;
+  @property({ type: Number }) accessor minLength: number | undefined;
+  @property() accessor warningLimitType: WarningLimits = 'warningLimitInt';
+  @property({ type: Number }) accessor warningLimitInt = 105;
+  @property({ type: Number }) accessor warningLimitPer = 75;
+  @property() accessor pattern: string | undefined;
+  @property({ type: Boolean }) accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined = undefined;
+  @property() accessor hint: string | undefined;
+  @property({ type: Boolean }) accessor hasHint = true;
+  @property() accessor hintMessage: string | undefined;
+  @property({ type: Boolean }) accessor hasCounter: boolean | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor resize: ResizeType = 'none';
+  @property({ type: Number }) accessor rows: number | undefined;
+  @property({ type: Number }) accessor cols: number | undefined;
+  @property() accessor name: string | undefined;
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected count = 0;
-  @query('textarea') protected textareaElement: HTMLTextAreaElement | undefined;
+  @state() protected accessor count = 0;
+  @query('textarea') protected accessor textareaElement: HTMLTextAreaElement | null = null;
 
   connectedCallback() {
     super.connectedCallback();
@@ -261,4 +263,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTextarea);
 }
 
-export type BlrTextareaType = Omit<BlrTextarea, keyof LitElementCustom> & BlrTextareaEventHandlers;
+export type BlrTextareaType = ElementInterface<BlrTextarea>;

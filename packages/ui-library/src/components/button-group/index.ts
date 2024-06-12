@@ -1,19 +1,20 @@
 import { html } from 'lit';
-import { property } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { staticStyles } from './index.css';
-import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/types';
+import { staticStyles } from './index.css.js';
+import { ButtonGroupAlignmentType, ButtonGroupSizesType } from '../../globals/types.js';
 
-import { TAG_NAME } from './renderFunction';
-import { LitElementCustom } from '../../utils/lit-element-custom';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
+import { TAG_NAME } from './renderFunction.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrButtonGroup extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() sizeVariant: ButtonGroupSizesType = 'md';
-  @property() alignment: ButtonGroupAlignmentType = 'center';
-  @property() theme: ThemeType = 'Light';
+  @property() accessor sizeVariant: ButtonGroupSizesType = 'md';
+  @property() accessor alignment: ButtonGroupAlignmentType = 'center';
+  @property() accessor theme: ThemeType = 'Light';
 
   protected render() {
     const classes = classMap({
@@ -35,4 +36,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrButtonGroup);
 }
 
-export type BlrButtonGroupType = Omit<BlrButtonGroup, keyof LitElementCustom>;
+export type BlrButtonGroupType = ElementInterface<BlrButtonGroup>;

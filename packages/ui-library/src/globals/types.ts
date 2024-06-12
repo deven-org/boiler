@@ -23,7 +23,7 @@ import {
   ButtonDisplayOptions,
   UnitVariants,
   Units,
-} from './constants';
+} from './constants.js';
 
 export type SizesType = (typeof Sizes)[number];
 

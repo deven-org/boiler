@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import { BlrToggleSwitchType } from './index';
-import { BlrToggleSwitchRenderFunction } from './renderFunction';
+import { BlrToggleSwitchType } from './index.js';
+import { BlrToggleSwitchRenderFunction } from './renderFunction.js';
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes } from '../../globals/constants';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { FormSizes } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { html } from 'lit-html';
-import '../../index';
+import '../../index.js';
 
 const sharedStyles = html`
   <style>
