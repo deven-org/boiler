@@ -1,4 +1,3 @@
-// import { TAG_NAME } from './index.js';
 import type { BlrRangeSliderType } from './index.js';
 import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer.js';
 
