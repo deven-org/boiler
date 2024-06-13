@@ -60,7 +60,7 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() icon: SizelessIconType = 'blr360';
+  @property() icon?: SizelessIconType = 'blr360';
   @property() hasHint = true;
   @property() hintMessage?: string;
   @property() hintMessageIcon?: SizelessIconType;
