@@ -143,7 +143,7 @@ export class BlrInputFieldText extends LitElementCustom {
       [this.theme]: this.theme,
     });
 
-    const iconName: SizelessIconType =
+    const iconName: SizelessIconType | undefined =
       this.type === 'password' ? (this.currentType === 'password' ? 'blrEyeOff' : 'blrEyeOn') : this.icon;
 
     return BlrIconRenderFunction(
