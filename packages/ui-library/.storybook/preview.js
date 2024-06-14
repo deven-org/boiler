@@ -4,6 +4,14 @@ import { BADGE } from './badges';
 
 export default {
   parameters: {
+    a11y: {
+      options: {
+        runOnly: {
+          type: 'tag',
+          values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice', 'experimental'],
+        },
+      },
+    },
     options: {
       storySort: {
         method: 'alphabetical',
