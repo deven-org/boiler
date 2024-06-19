@@ -47,7 +47,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           gap: ${checkbox.contentrow.itemspacing.sm};
           
           .visual-checkbox {
-            width: ${checkbox.control.container.size.sm};
+            min-width: ${checkbox.control.container.size.sm};
             height: ${checkbox.control.container.size.sm};
             margin-top: ${checkbox.controlwrapper.paddingtop.sm};
             border-radius: ${checkbox.control.container.borderradius.sm};
@@ -72,7 +72,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           gap: ${checkbox.contentrow.itemspacing.md};
 
           .visual-checkbox {
-            width: ${checkbox.control.container.size.md};
+            min-width: ${checkbox.control.container.size.md};
             height: ${checkbox.control.container.size.md};
             margin-top: ${checkbox.controlwrapper.paddingtop.md};
             border-radius: ${checkbox.control.container.borderradius.md};
@@ -97,7 +97,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
           gap: ${checkbox.contentrow.itemspacing.lg};
 
           .visual-checkbox {
-            width: ${checkbox.control.container.size.lg};
+            min-width: ${checkbox.control.container.size.lg};
             height: ${checkbox.control.container.size.lg};
             margin-top: ${checkbox.controlwrapper.paddingtop.lg};
             border-radius: ${checkbox.control.container.borderradius.lg};

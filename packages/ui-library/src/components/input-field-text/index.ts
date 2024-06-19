@@ -60,7 +60,7 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() pattern?: string;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
-  @property() icon: SizelessIconType = 'blr360';
+  @property() icon?: SizelessIconType = 'blr360';
   @property() hasHint = true;
   @property() hintMessage?: string;
   @property() hintMessageIcon?: SizelessIconType;
@@ -143,7 +143,7 @@ export class BlrInputFieldText extends LitElementCustom {
       [this.theme]: this.theme,
     });
 
-    const iconName: SizelessIconType =
+    const iconName: SizelessIconType | undefined =
       this.type === 'password' ? (this.currentType === 'password' ? 'blrEyeOff' : 'blrEyeOn') : this.icon;
 
     return BlrIconRenderFunction(
