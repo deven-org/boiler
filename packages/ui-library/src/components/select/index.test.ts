@@ -1,10 +1,7 @@
 import '@boiler/ui-library/dist/';
-
 import { BlrSelectRenderFunction } from './renderFunction';
-
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { html } from 'lit-html';
 import { BlrSelectType } from '.';
 
 const sampleParams: BlrSelectType = {
@@ -19,21 +16,18 @@ const sampleParams: BlrSelectType = {
   selectId: 'Peter',
   errorMessageIcon: 'blrErrorFilled',
   theme: 'Light',
+  options: [
+    { label: 'option 1', value: 'option1' },
+    { label: 'option 2', value: 'option2' },
+    { label: 'option 3', value: 'option3', disabled: true },
+    { label: 'option 4', value: 'option4' },
+    { label: 'option 5', value: 'option5', selected: true },
+  ],
 };
-
-const optionsAsChildren = html`
-  <option value="" label="--Please choose an option--"></option>
-  <option value="option1" label="Option 1"></option>
-  <option value="option2" label="Option 2"></option>
-  <option value="option3" label="Option 3"></option>
-  <option value="option4" label="Option 4"></option>
-  <option value="option5" label="Option 5"></option>
-  <option value="option6" label="Option 6"></option>
-`;
 
 describe('blr-select', () => {
   it('is having a select containing the right className', async () => {
-    const element = await fixture(BlrSelectRenderFunction(sampleParams, optionsAsChildren));
+    const element = await fixture(BlrSelectRenderFunction(sampleParams));
 
     const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
     const className = select?.className;
@@ -99,12 +93,5 @@ describe('blr-select', () => {
     const className = selectWrapper?.className;
 
     expect(className).to.contain('sm');
-  });
-
-  it('is rendering options inside slot', async () => {
-    const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, sizeVariant: 'sm' }, optionsAsChildren));
-    const options = querySelectorAllDeep('.blr-select-option', element?.getRootNode() as HTMLElement);
-    const optionsLength = optionsAsChildren.strings[0].trim().split('</option>').filter(Boolean).length;
-    expect(options).to.be.lengthOf(optionsLength);
   });
 });

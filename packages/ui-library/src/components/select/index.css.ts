@@ -22,10 +22,6 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     display: flex;
   }
 
-  slot {
-    display: none;
-  }
-
   .blr-select-inner-container {
     flex-grow: 1;
     flex-shrink: 1;

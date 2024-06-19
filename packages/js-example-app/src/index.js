@@ -94,6 +94,15 @@ blrSelect.addEventListener('blrBlur', () => {
   addLog('blr-select blurred');
 });
 
+blrSelect.options = [
+  { label: '--Please choose an option--', value: '' },
+  { label: 'option 1', value: 'option1' },
+  { label: 'option 2', value: 'option2' },
+  { label: 'option 3', value: 'option3', disabled: true },
+  { label: 'option 4', value: 'option4' },
+  { label: 'option 5', value: 'option5', selected: true },
+];
+
 blrInputFieldText.addEventListener('blrFocus', () => {
   addLog('blr-text-input focused');
 });

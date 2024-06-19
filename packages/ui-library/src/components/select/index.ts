@@ -24,6 +24,13 @@ import {
 
 import { LitElementCustom } from '../../utils/lit-element-custom';
 
+type Options = {
+  label: string;
+  value: string;
+  disabled?: boolean;
+  selected?: boolean;
+};
+
 export type BlrSelectEventHandlers = {
   blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -52,7 +59,7 @@ export class BlrSelect extends LitElementCustom {
   @property() required?: boolean;
   @property() blrBlur?: HTMLElement['blur'];
   @property() blrFocus?: HTMLElement['focus'];
-
+  @property() options!: Options[] | JSON;
   @property() hasError?: boolean;
   @property() errorMessage?: string;
   @property() hintMessage?: string;
@@ -60,12 +67,8 @@ export class BlrSelect extends LitElementCustom {
   @property() errorMessageIcon?: SizelessIconType;
   @property() hasHint?: boolean;
   @property() icon?: SizelessIconType = 'blrChevronDown';
-
   @property() theme: ThemeType = 'Light';
-
   @state() protected isFocused = false;
-
-  protected _optionElements: Element[] | undefined;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
@@ -80,13 +83,6 @@ export class BlrSelect extends LitElementCustom {
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
-
-  protected handleSlotChange() {
-    const slot = this.renderRoot?.querySelector('slot');
-
-    this._optionElements = slot?.assignedElements({ flatten: false });
-    this.requestUpdate();
-  }
 
   protected handleChange(event: Event) {
     this.dispatchEvent(
@@ -162,8 +158,6 @@ export class BlrSelect extends LitElementCustom {
       });
 
       return html`
-        <slot @slotchange=${this.handleSlotChange}></slot>
-
         <div class="blr-select ${this.sizeVariant} ${this.theme}">
           ${this.hasLabel
             ? html`
@@ -192,15 +186,15 @@ export class BlrSelect extends LitElementCustom {
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >
-                ${this._optionElements?.map((opt: Element) => {
+                ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
                   return html`
                     <option
                       class="blr-select-option"
-                      value=${opt.getAttribute('value') || ''}
-                      ?selected=${opt.getAttribute('selected') === 'true'}
-                      ?disabled=${opt.getAttribute('disabled') === 'true'}
+                      value=${opt.value || ''}
+                      ?selected=${opt.selected ?? false}
+                      ?disabled=${opt.disabled ?? false}
                     >
-                      ${opt.getAttribute('label')}
+                      ${opt.label}
                     </option>
                   `;
                 })}
