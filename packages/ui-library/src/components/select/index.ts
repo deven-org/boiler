@@ -1,4 +1,4 @@
-import { html, nothing } from 'lit';
+import { PropertyValueMap, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { query, state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
@@ -81,6 +81,10 @@ export class BlrSelect extends LitElementCustom {
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
+
+  protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
+    this.handleSlotChange();
+  }
 
   protected handleSlotChange() {
     const slot = this.renderRoot?.querySelector('slot');
