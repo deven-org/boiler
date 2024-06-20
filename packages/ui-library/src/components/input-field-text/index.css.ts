@@ -205,9 +205,6 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
         }
 
         &.disabled { 
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.disabled.style};
-          border-color: transparent;
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
@@ -224,9 +221,6 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
         }
 
         &[readonly] {
-          border-width: ${inputfield.container.border.default.readonly.width};
-          border-style: ${inputfield.container.border.default.readonly.style};
-          border-color: ${inputfield.container.bordercolor.default.readonly};
           outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.readonly.style}
             ${inputfield.container.border.default.readonly.color};
           background-color: ${inputfield.container.bgcolor.default.readonly};
