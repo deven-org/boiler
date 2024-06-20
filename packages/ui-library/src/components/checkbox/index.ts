@@ -1,17 +1,18 @@
 import { html, nothing } from 'lit';
-import { property, query, state } from 'lit/decorators.js';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
+import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { FormSizesType } from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { staticStyles } from './index.css';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { FormSizesType } from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { staticStyles } from './index.css.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -19,8 +20,8 @@ import {
   createBlrCheckedChangeEvent,
   createBlrBlurEvent,
   createBlrFocusEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/events.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrCheckboxEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -37,33 +38,33 @@ export class BlrCheckbox extends LitElementCustom {
   static styles = [staticStyles];
 
   @query('input')
-  protected _checkboxNode!: HTMLInputElement;
+  protected accessor _checkboxNode!: HTMLInputElement;
 
-  @property() label!: string;
-  @property() checkboxId?: string = '';
-  @property() arialabel?: string;
+  @property() accessor label!: string;
+  @property() accessor checkboxId: string | undefined = '';
+  @property() accessor arialabel: string | undefined;
 
-  @property() disabled?: boolean;
-  @property() checked?: boolean;
-  @property() indeterminate?: boolean;
-  @property() readonly?: boolean;
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() errorMessageIcon?: SizelessIconType;
-  @property() hasHint?: boolean;
-  @property() hintMessageIcon?: SizelessIconType;
-  @property() hintMessage?: string;
-  @property() hasLabel!: boolean;
-  @property() name?: string;
-  @property() checkedIcon?: SizelessIconType = 'blrCheckmark';
-  @property() indeterminatedIcon?: SizelessIconType = 'blrMinus';
+  @property() accessor disabled: boolean | undefined;
+  @property() accessor checked: boolean | undefined = false;
+  @property() accessor indeterminate: boolean | undefined = false;
+  @property() accessor readonly: boolean | undefined;
+  @property() accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
+  @property() accessor hasHint: boolean | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hasLabel!: boolean;
+  @property() accessor name: string | undefined;
+  @property() accessor checkedIcon: SizelessIconType | undefined = 'blrCheckmark';
+  @property() accessor indeterminatedIcon: SizelessIconType | undefined = 'blrMinus';
 
-  @property() sizeVariant?: FormSizesType = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected currentCheckedState: boolean | undefined = this.checked;
-  @state() protected currentIndeterminateState: boolean | undefined = this.indeterminate;
+  @state() protected accessor currentCheckedState: boolean | undefined = this.checked;
+  @state() protected accessor currentIndeterminateState: boolean | undefined = this.indeterminate;
 
   protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('checked')) {
@@ -91,7 +92,7 @@ export class BlrCheckbox extends LitElementCustom {
     }
   }
 
-  @state() protected focused = false;
+  @state() protected accessor focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled && !this.readonly) {
@@ -109,7 +110,7 @@ export class BlrCheckbox extends LitElementCustom {
     }
   };
 
-  @state() protected hovered = false;
+  @state() protected accessor hovered = false;
 
   protected handleEnter = () => {
     if (!this.disabled && !this.readonly) {
@@ -123,7 +124,7 @@ export class BlrCheckbox extends LitElementCustom {
     }
   };
 
-  @state() protected active = false;
+  @state() protected accessor active = false;
 
   protected handlePress = () => {
     if (!this.disabled && !this.readonly) {
@@ -313,4 +314,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrCheckbox);
 }
 
-export type BlrCheckboxType = Omit<BlrCheckbox, keyof LitElementCustom> & BlrCheckboxEventHandlers;
+export type BlrCheckboxType = ElementInterface<BlrCheckbox>;

@@ -1,6 +1,6 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { SemanticThemeIterator, ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated";
+import { SemanticThemeIterator, ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
 export const staticBaseStyles = typeSafeNestedCss/*css*/ `
   .blr-form-element {

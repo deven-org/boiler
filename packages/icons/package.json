@@ -4,8 +4,17 @@
   "description": "",
   "author": "",
   "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "svgo:icons": "svgo -f icon-set -o icons-optimized --config svgo.config.js",
-    "compile:icons": "rimraf icons-optimized && yarn svgo:icons && node scripts/index.mjs && prettier ./icons-optimized/index.ts --write"
+    "compile:icons": "rimraf dist && rimraf icons-optimized && yarn svgo:icons && node scripts/index.mjs && prettier ./src/icons.generated.ts --write && tsc --project ./tsconfig.json"
   }
 }

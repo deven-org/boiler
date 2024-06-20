@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import { PureIconKeys } from '@boiler/icons';
-import { FormSizes, CaptionVariants } from '../../globals/constants';
-import { BlrFormCaptionType } from './index';
-import { BlrFormCaptionRenderFunction } from './renderFunction';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { FormSizes, CaptionVariants } from '../../globals/constants.js';
+import { BlrFormCaptionType } from './index.js';
+import { BlrFormCaptionRenderFunction } from './renderFunction.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { html } from 'lit-html';
-import '../../index';
+import '../../index.js';
 
 const sharedStyles = html`
   <style>

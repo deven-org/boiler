@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import { html } from 'lit-html';
-import { BlrSelectType } from './index';
-import { BlrSelectRenderFunction } from './renderFunction';
-import { FormSizes } from '../../globals/constants';
+import { BlrSelectType } from './index.js';
+import { BlrSelectRenderFunction } from './renderFunction.js';
+import { FormSizes } from '../../globals/constants.js';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import '../../index';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import '../../index.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

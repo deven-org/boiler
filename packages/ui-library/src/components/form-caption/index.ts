@@ -1,25 +1,25 @@
 import { TemplateResult, html, nothing } from 'lit';
-import { property } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
-import { staticStyles } from './index.css';
+import { TAG_NAME } from './renderFunction.js';
+import { staticStyles } from './index.css.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { CaptionVariantType, FormSizesType, SizesType } from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrFormCaption extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() message?: string;
-  @property() icon?: SizelessIconType;
-  @property() variant: CaptionVariantType = 'hint';
-  @property() sizeVariant?: FormSizesType = 'md';
-  @property() childElement?: TemplateResult<1>;
-  @property() theme: ThemeType = 'Light';
+  @property() accessor message: string | undefined = undefined;
+  @property() accessor icon: SizelessIconType | undefined = undefined;
+  @property() accessor variant: CaptionVariantType = 'hint';
+  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor childElement: TemplateResult<1> | undefined = undefined;
+  @property() accessor theme: ThemeType = 'Light';
 
   protected render() {
     if (this.sizeVariant) {
@@ -73,4 +73,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrFormCaption);
 }
 
-export type BlrFormCaptionType = Omit<BlrFormCaption, keyof LitElementCustom>;
+export type BlrFormCaptionType = ElementInterface<BlrFormCaption>;

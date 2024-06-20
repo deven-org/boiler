@@ -1,5 +1,5 @@
-import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticActionStyles = typeSafeNestedCss/* css */ `
   ${SemanticThemeIterator((theme, sem, typeSafeCss) => {

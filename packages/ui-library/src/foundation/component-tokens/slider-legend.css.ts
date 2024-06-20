@@ -1,6 +1,6 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated";
+import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
 export const staticStyles = typeSafeNestedCss/*css*/ `
   .range__field {

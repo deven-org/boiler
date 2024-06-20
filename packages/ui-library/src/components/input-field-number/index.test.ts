@@ -1,12 +1,12 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrInputFieldNumberRenderFunction } from './renderFunction';
-import type { BlrInputFieldNumberType } from '.';
+import { BlrInputFieldNumberRenderFunction } from './renderFunction.js';
+import type { BlrInputFieldNumberType } from './index.js';
 
 import { fixture, expect, nextFrame, oneEvent } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../utils/get-random.string';
-import { BlrFocusEvent } from '../../globals/events';
+import { getRandomString } from '../../utils/get-random.string.js';
+import { BlrFocusEvent } from '../../globals/events.js';
 
 const sampleParams: BlrInputFieldNumberType = {
   placeholder: 'Type your message here ..',

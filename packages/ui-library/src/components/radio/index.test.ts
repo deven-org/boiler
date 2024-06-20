@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRadioRenderFunction } from './renderFunction';
+import { BlrRadioRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrRadioType } from '.';
+import { BlrRadioType } from './index.js';
 
 const sampleParams: BlrRadioType = {
   checked: false,

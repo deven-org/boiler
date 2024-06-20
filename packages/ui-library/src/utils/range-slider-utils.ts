@@ -1,9 +1,9 @@
-import { typeSafeNestedCss } from './css-in-ts/nested-typesafe-css-literals';
-import { ThemeType } from '../foundation/_tokens-generated/index.themes';
+import { typeSafeNestedCss } from './css-in-ts/nested-typesafe-css-literals.js';
+import { ThemeType } from '../foundation/_tokens-generated/index.themes.js';
 
-import { Cmp as ComponentTokens } from '../foundation/_tokens-generated/componentTokensType.generated';
-import { componentTokens as componentTokensLight } from '../foundation/_tokens-generated/index.Light.generated';
-import { componentTokens as componentTokensDark } from '../foundation/_tokens-generated/index.Light.generated';
+import { Cmp as ComponentTokens } from '../foundation/_tokens-generated/componentTokensType.generated.js';
+import { componentTokens as componentTokensLight } from '../foundation/_tokens-generated/index.Light.generated.js';
+import { componentTokens as componentTokensDark } from '../foundation/_tokens-generated/index.Light.generated.js';
 
 export const findToolTipPosition = (minVal: string, maxVal: string, offsetWidthVal: number, value: number) => {
   const min = parseFloat(minVal);

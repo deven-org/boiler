@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { BlrCheckboxType } from './index';
-import { BlrCheckboxRenderFunction } from './renderFunction';
+import { BlrCheckboxType } from './index.js';
+import { BlrCheckboxRenderFunction } from './renderFunction.js';
 import { html } from 'lit-html';
 
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { InputSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { InputSizes } from '../../globals/constants.js';
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

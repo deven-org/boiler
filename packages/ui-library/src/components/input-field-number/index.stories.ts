@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { BlrInputFieldNumberType } from './index';
-import { BlrInputFieldNumberRenderFunction } from './renderFunction';
-import { FormSizes, Units } from '../../globals/constants';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { PureIconKeys } from '@boiler/icons/icons-optimized';
+import { BlrInputFieldNumberType } from './index.js';
+import { BlrInputFieldNumberRenderFunction } from './renderFunction.js';
+import { FormSizes, Units } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { PureIconKeys } from '@boiler/icons';
 import { html } from 'lit-html';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 const sharedStyles = html`
   <style>
