@@ -1,5 +1,5 @@
 /* eslint-disable lit/binding-positions */
-import { PropertyValueMap, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { query, queryAll, state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
@@ -94,8 +94,11 @@ export class BlrTabBar extends LitElementCustom {
     }
   }
 
-  protected firstUpdated(_changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>): void {
-    this.handleSlotChange();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected firstUpdated(...args: Parameters<LitElementCustom['firstUpdated']>): void {
+    if (!this._tabBarElements) {
+      this.handleSlotChange();
+    }
   }
 
   protected handleSlotChange() {
