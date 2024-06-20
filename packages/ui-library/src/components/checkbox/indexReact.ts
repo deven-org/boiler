@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrCheckbox } from '.';
+import { BlrCheckbox } from './index.js';
 
 export const BlrCheckboxReact = createComponent({
   tagName: 'blr-checkbox',

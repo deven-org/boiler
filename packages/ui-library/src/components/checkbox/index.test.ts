@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrCheckboxRenderFunction } from './renderFunction';
+import { BlrCheckboxRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrCheckboxType } from '.';
+import type { BlrCheckboxType } from './index.js';
 
 const sampleParams: BlrCheckboxType = {
   label: 'Checkbox Option',

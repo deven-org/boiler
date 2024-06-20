@@ -1,5 +1,5 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
 export const staticStyles = typeSafeNestedCss`
   ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {

@@ -1,7 +1,7 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction';
-import type { BlrRangeMinMaxSliderType } from '.';
+import { BlrRangeMinMaxSliderRenderFunction } from './renderFunction.js';
+import type { BlrRangeMinMaxSliderType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';

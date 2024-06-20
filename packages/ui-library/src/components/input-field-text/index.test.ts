@@ -1,11 +1,11 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrInputFieldTextRenderFunction } from './renderFunction';
-import type { BlrInputFieldTextType } from '.';
+import { BlrInputFieldTextRenderFunction } from './renderFunction.js';
+import type { BlrInputFieldTextType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
-import { getRandomString } from '../../utils/get-random.string';
+import { getRandomString } from '../../utils/get-random.string.js';
 
 const sampleParams: BlrInputFieldTextType = {
   theme: 'Light',

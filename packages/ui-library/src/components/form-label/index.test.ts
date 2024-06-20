@@ -1,11 +1,11 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrFormLabelRenderFunction } from './renderFunction';
-import type { BlrFormLabel, BlrFormLabelType } from '.';
+import { BlrFormLabelRenderFunction } from './renderFunction.js';
+import type { BlrFormLabel, BlrFormLabelType } from './index.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
 
 const sampleParams: BlrFormLabelType = {
   theme: 'Light',

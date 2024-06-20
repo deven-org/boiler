@@ -1,8 +1,8 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated";
-import { ThemeType } from "../../foundation/_tokens-generated/index.themes";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
+import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 
 export const styleCustom = typeSafeNestedCss/*css*/ `
   .blr-input-field-text {

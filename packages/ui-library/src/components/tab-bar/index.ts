@@ -1,12 +1,13 @@
 /* eslint-disable lit/binding-positions */
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, query, queryAll, state } from 'lit/decorators.js';
-import { staticStyles } from './index.css';
+import { query, queryAll, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { staticStyles } from './index.css.js';
 
-import { TAG_NAME } from './renderFunction';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { staticActionStyles } from '../../foundation/semantic-tokens/action.css';
+import { TAG_NAME } from './renderFunction.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
 import {
   OverflowVariantTypeStandard,
   OverflowVariantTypeFullWidth,
@@ -16,45 +17,45 @@ import {
   TabAlignmentVariantType,
   FormSizesType,
   SizesType,
-} from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrDividerRenderFunction } from '../divider/renderFunction';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { createBlrBlurEvent, createBlrChangeEvent, createBlrFocusEvent } from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrDividerRenderFunction } from '../divider/renderFunction.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { createBlrBlurEvent, createBlrChangeEvent, createBlrFocusEvent } from '../../globals/events.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrTabBar extends LitElementCustom {
   static styles = [staticStyles, staticActionStyles];
 
   @query('.blr-tab-bar')
-  protected _navList!: HTMLElement;
+  protected accessor _navList!: HTMLElement;
 
   @queryAll('.nav-list li')
-  protected _navItems!: HTMLElement[];
+  protected accessor _navItems!: NodeList;
 
   @queryAll('slot[name=tab]')
-  protected _navItemsSlots!: HTMLElement[];
+  protected accessor _navItemsSlots!: NodeList;
 
   @queryAll('[role=tabpanel]')
-  protected _panels!: HTMLElement[];
+  protected accessor _panels!: NodeList;
 
-  @property() overflowVariantStandard!: OverflowVariantTypeStandard;
-  @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
-  @property() iconPosition: IconPositionVariant = 'leading';
-  @property() variant: TabVariantType = 'standard';
-  @property() tabContent: TabContentVariantType = 'labelOnly';
-  @property() alignment: TabAlignmentVariantType = 'left';
-  @property() size?: FormSizesType = 'md';
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
-  @property() showDivider = true;
-  @property() onClick?: HTMLButtonElement['onclick'];
+  @property() accessor overflowVariantStandard!: OverflowVariantTypeStandard;
+  @property() accessor overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
+  @property() accessor iconPosition: IconPositionVariant = 'leading';
+  @property() accessor variant: TabVariantType = 'standard';
+  @property() accessor tabContent: TabContentVariantType = 'labelOnly';
+  @property() accessor alignment: TabAlignmentVariantType = 'left';
+  @property() accessor size: FormSizesType | undefined = 'md';
+  @property() accessor onChange: HTMLElement['oninput'] | undefined;
+  @property() accessor onBlur: HTMLElement['blur'] | undefined;
+  @property() accessor onFocus: HTMLElement['focus'] | undefined;
+  @property() accessor showDivider = true;
+  @property() accessor onClick: HTMLButtonElement['onclick'] | undefined;
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected selectedTabIndex: number | undefined;
+  @state() protected accessor selectedTabIndex: number | undefined;
 
   protected _tabBarElements: Element[] | undefined;
 
@@ -90,6 +91,13 @@ export class BlrTabBar extends LitElementCustom {
       this.selectedTabIndex = index;
       const changedTab = this._tabBarElements![this.selectedTabIndex!].getAttribute('label');
       this.dispatchEvent(createBlrChangeEvent({ originalEvent: event, changedValue: changedTab }));
+    }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected firstUpdated(...args: Parameters<LitElementCustom['firstUpdated']>): void {
+    if (!this._tabBarElements) {
+      this.handleSlotChange();
     }
   }
 
@@ -269,4 +277,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTabBar);
 }
 
-export type BlrTabBarType = Omit<BlrTabBar, keyof LitElementCustom>;
+export type BlrTabBarType = ElementInterface<BlrTabBar>;

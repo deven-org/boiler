@@ -1,6 +1,5 @@
-// import { TAG_NAME } from '.';
-import type { BlrRangeSliderType } from '.';
-import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer';
+import type { BlrRangeSliderType } from './index.js';
+import { genericBlrComponentRenderer } from '../../../utils/typesafe-generic-component-renderer.js';
 
 export const TAG_NAME = 'blr-range-slider';
 

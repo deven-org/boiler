@@ -1,20 +1,27 @@
 {
   "name": "@boiler/js-example-app",
   "version": "0.0.1",
+  "type": "module",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-index": "yarn run -T ejs src/index.ejs baseURL=. -o src/assets/index.html",
-    "build-index:prod": "yarn run -T ejs src/index.ejs baseURL=js-example-app -o src/assets/index.html",
-    "build": "yarn run build-index && webpack --config webpack.dev.js",
-    "build:prod": "yarn run build-index:prod && webpack --config webpack.prod.js",
-    "serve": "http-server ./dist"
+    "build:dev": "yarn run -T build:ui-library && yarn run -T tsc --project ./tsconfig.json --incremental",
+    "start:dev": "yarn build:dev && node --conditions=development ./dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@boiler/ui-library": "0.0.1"
+    "@boiler/ui-library": "^0.0.1",
+    "@koa/router": "^10.0.0",
+    "@lit-labs/ssr": "^3.1.2",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "koa": "^2.13.1",
+    "koa-node-resolve": "^1.0.0-pre.9",
+    "koa-static": "^5.0.0",
+    "lit": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/koa__router": "^12.0.4"
   }
 }

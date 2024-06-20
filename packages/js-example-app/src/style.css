@@ -1,0 +1,69 @@
+@import '../../assets/fonts/fonts.css';
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+.logoWrapper {
+  height: 200px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.componentWrapper {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logsWrapper {
+  flex: 1;
+  overflow: scroll;
+  font-family: '8BIT WONDER', sans-serif;
+  background-color: darkblue;
+  color: lightblue;
+  font-size: 12px;
+  padding: 12px;
+}
+
+h2 {
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  border-bottom: 1px solid #ececec;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#toggleLoadingState {
+  margin: 15px 0;
+}

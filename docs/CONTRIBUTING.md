@@ -142,7 +142,7 @@ Please, before submitting any contribution, be sure that your branch is passing 
 
 ```bash
 yarn test
-yarn compile
+yarn build:ui-library
 ```
 
 

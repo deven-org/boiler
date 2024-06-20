@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import './index';
-import type { BlrRangeSliderType } from './index';
-import { BlrRangeSliderRenderFunction } from './renderFunction';
+import './index.js';
+import type { BlrRangeSliderType } from './index.js';
+import { BlrRangeSliderRenderFunction } from './renderFunction.js';
 // this loads the all components instances and registers their html tags
-import '../../../index';
+import '../../../index.js';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../../foundation/_tokens-generated/index.themes';
-import { Sizes } from '../../../globals/constants';
+import { Themes } from '../../../foundation/_tokens-generated/index.themes.js';
+import { Sizes } from '../../../globals/constants.js';
 
 export default {
   title: 'Components/Slider Single Value',

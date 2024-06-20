@@ -5,6 +5,7 @@ import chalk from 'chalk';
 
 const __dirname = path.resolve();
 const iconDir = `${__dirname}/icons-optimized`;
+const srcDir = `${__dirname}/src`;
 
 let pureKeys = [];
 
@@ -31,9 +32,9 @@ fs.readdir(iconDir, (err, files) => {
         pureKeys.push(`"${nameWithoutSize}"`);
       }
 
-      iconTemplateStrings.push(
-        `const ${name} = () => import(\`!!raw-loader!@boiler/icons/icons-optimized/\$\{"${file}"\}\`); \n`
-      );
+      const svgFileContent = fs.readFileSync(path.resolve(iconDir, file), { encoding: 'utf-8' });
+
+      iconTemplateStrings.push(`export const ${name}: string = ${JSON.stringify(svgFileContent)};`);
     }
   });
 
@@ -54,5 +55,5 @@ fs.readdir(iconDir, (err, files) => {
     export type SizelessIconType = (typeof PureIconKeys)[number];
   `;
 
-  fs.writeFileSync(`${iconDir}/index.ts`, template, 'utf-8');
+  fs.writeFileSync(`${srcDir}/icons.generated.ts`, template, 'utf-8');
 });
