@@ -1,17 +1,17 @@
 import { html } from 'lit-html';
 import { IconKeys } from '@boiler/icons';
-import { BlrIconType } from '../../components/icon/index';
-import { BlrIconRenderFunction } from '../../components/icon/renderFunction';
+import { BlrIconType } from '../../components/icon/index.js';
+import { BlrIconRenderFunction } from '../../components/icon/renderFunction.js';
 
-import { Sizes } from '../../globals/constants';
-import { getIconName } from '../../utils/get-icon-name';
-import { calculateIconName } from '../../utils/calculate-icon-name';
+import { Sizes } from '../../globals/constants.js';
+import { getIconName } from '../../utils/get-icon-name.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { classMap } from 'lit/directives/class-map.js';
-import { SizesType } from '../../globals/types';
-import { Themes } from '../_tokens-generated/index.themes';
+import { SizesType } from '../../globals/types.js';
+import { Themes } from '../_tokens-generated/index.themes.js';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 export default {
   title: 'Foundation/Icons',

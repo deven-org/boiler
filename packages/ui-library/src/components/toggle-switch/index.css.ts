@@ -1,5 +1,5 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
 export const staticStyles = typeSafeNestedCss/*css*/ `
   .blr-label-toggleswitch {

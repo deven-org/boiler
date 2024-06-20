@@ -1,18 +1,19 @@
 import { TemplateResult, html, nothing } from 'lit';
-import { property, query, state } from 'lit/decorators.js';
-import { staticBaseStyles, staticSemanticStyles, staticComponentStyles } from './index.css';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { staticBaseStyles, staticSemanticStyles, staticComponentStyles } from './index.css.js';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { TAG_NAME } from './renderFunction';
-import { BlrDividerRenderFunction } from '../divider/renderFunction';
+import { TAG_NAME } from './renderFunction.js';
+import { BlrDividerRenderFunction } from '../divider/renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { FormSizesType, UnitType, UnitVariantType } from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { FormSizesType, UnitType, UnitVariantType } from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -24,8 +25,8 @@ import {
   createBlrNumberStepperClickEvent,
   createBlrNumberValueChangeEvent,
   createBlrSelectEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/events.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrNumberInputEventListeners = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -46,38 +47,38 @@ export class BlrInputFieldNumber extends LitElementCustom {
   static styles = [staticBaseStyles, staticSemanticStyles, staticComponentStyles];
 
   @query('input')
-  protected _numberFieldNode!: HTMLInputElement;
+  protected accessor _numberFieldNode!: HTMLInputElement;
 
-  @property() inputFieldNumberId!: string;
-  @property() stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
-  @property() label!: string;
-  @property() disabled?: boolean;
-  @property() placeholder?: string;
-  @property() readonly?: boolean;
-  @property() required?: boolean;
-  @property() hasLabel?: boolean;
-  @property() sizeVariant?: FormSizesType = 'md';
-  @property() labelAppendix?: string;
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() errorMessageIcon?: SizelessIconType;
-  @property() hasHint = true;
-  @property() hintMessage?: string;
-  @property() hintMessageIcon?: SizelessIconType;
-  @property() value?: number;
-  @property() step?: number;
-  @property() unit?: UnitType;
-  @property() leadingZeros?: number;
-  @property() decimals?: number;
-  @property() unitPosition?: UnitVariantType;
-  @property() stepIncreaseAriaLabel?: string = '+';
-  @property() stepDecreaseAriaLabel?: string = '\u2212'; // minus-sign (not minus-hyphen)
-  @property() name?: string;
+  @property() accessor inputFieldNumberId!: string;
+  @property() accessor stepperVariant: 'split' | 'horizontal' | 'vertical' = 'split';
+  @property() accessor label!: string;
+  @property() accessor disabled: boolean | undefined;
+  @property() accessor placeholder: string | undefined;
+  @property() accessor readonly: boolean | undefined;
+  @property() accessor required: boolean | undefined;
+  @property() accessor hasLabel: boolean | undefined;
+  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor labelAppendix: string | undefined;
+  @property() accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
+  @property() accessor hasHint = true;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor value: number | undefined;
+  @property() accessor step: number | undefined;
+  @property() accessor unit: UnitType | undefined;
+  @property() accessor leadingZeros: number | undefined;
+  @property() accessor decimals: number | undefined;
+  @property() accessor unitPosition: UnitVariantType | undefined;
+  @property() accessor stepIncreaseAriaLabel: string | undefined = '+';
+  @property() accessor stepDecreaseAriaLabel: string | undefined = '\u2212'; // minus-sign (not minus-hyphen)
+  @property() accessor name: string | undefined;
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected currentValue = 0;
-  @state() protected isFocused = false;
+  @state() protected accessor currentValue = 0;
+  @state() protected accessor isFocused = false;
 
   protected stepperUp(event: MouseEvent) {
     if (this.currentValue !== undefined && this.step !== undefined) {
@@ -350,4 +351,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldNumber);
 }
 
-export type BlrInputFieldNumberType = Omit<BlrInputFieldNumber, keyof LitElementCustom> & BlrNumberInputEventListeners;
+export type BlrInputFieldNumberType = ElementInterface<BlrInputFieldNumber>;

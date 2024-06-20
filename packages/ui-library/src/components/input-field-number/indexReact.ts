@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrInputFieldNumber } from '.';
+import { BlrInputFieldNumber } from './index.js';
 
 export const BlrInputFieldNumberReact = createComponent({
   tagName: 'blr-input-field-number',

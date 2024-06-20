@@ -43,7 +43,7 @@ themes.array.map((theme) => {
     (item) => `export {${convertToCamelCase(item.split('.')[0])}Wrapped as ${convertToCamelCase(item.split('.')[0])}}`
   );
 
-  const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css';
+  const fileOutPut = `import {wrapValuesWithCss} from '../../utils/wrap-values-with-css.js';
       ${importsPart.join('\n')}
   
       ${constsPart.join('\n')}

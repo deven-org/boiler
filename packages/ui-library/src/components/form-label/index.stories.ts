@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { FormSizes } from '../../globals/constants';
-import { BlrFormLabelType } from './index';
-import { BlrFormLabelRenderFunction } from './renderFunction';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { FormSizes } from '../../globals/constants.js';
+import { BlrFormLabelType } from './index.js';
+import { BlrFormLabelRenderFunction } from './renderFunction.js';
 import { html } from 'lit-html';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
-import '../../index';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
+import '../../index.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
 
 const sharedStyles = html`
   <style>

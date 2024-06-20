@@ -1,5 +1,5 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
-import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
+import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
 export const staticStyles = typeSafeNestedCss/*css*/ `
   :host {

@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrToggleSwitchRenderFunction } from './renderFunction';
+import { BlrToggleSwitchRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrToggleSwitchType } from '.';
+import { BlrToggleSwitchType } from './index.js';
 
 const sampleParams: BlrToggleSwitchType = {
   toogleSwitchId: 'switch',

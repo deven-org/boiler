@@ -1,6 +1,6 @@
 import { TemplateResult } from 'lit-html';
-import { BlrTabBarType } from '.';
-import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer';
+import { BlrTabBarType } from './index.js';
+import { genericBlrComponentRenderer } from '../../utils/typesafe-generic-component-renderer.js';
 
 export const TAG_NAME = 'blr-tab-bar';
 

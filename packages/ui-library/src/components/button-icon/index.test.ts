@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrButtonIconRenderFunction } from './renderFunction';
+import { BlrButtonIconRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrButtonIconType } from '.';
+import type { BlrButtonIconType } from './index.js';
 
 const sampleParams: BlrButtonIconType = {
   arialabel: 'Button',
