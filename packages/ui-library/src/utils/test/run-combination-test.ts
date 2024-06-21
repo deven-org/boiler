@@ -1,5 +1,5 @@
 import { fixture, expect } from '@open-wc/testing';
-import type { TaggedComponentRenderFunction } from '../typesafe-generic-component-renderer';
+import type { TaggedComponentRenderFunction } from '../typesafe-generic-component-renderer.js';
 
 export type RunCombinationTestsOptions<T> = {
   combinationList: T[];

@@ -1,4 +1,4 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
 import { BlrCounterRenderFunction } from './renderFunction';
 import type { BlrCounterType } from '.';
