@@ -8,7 +8,7 @@
             "type": "typography"
           },
           "sm": {
-            "value": "{core.typography.sourcesanspro.semibold.75Ffixheight}",
+            "value": "{core.typography.sourcesanspro.semibold.75fixheight}",
             "type": "typography"
           },
           "md": {
@@ -31,7 +31,7 @@
         "legend": {
           "typography": {
             "sm": {
-              "value": "{core.typography.sourcesanspro.semibold.75Ffixheight}",
+              "value": "{core.typography.sourcesanspro.semibold.75fixheight}",
               "type": "typography",
               "description": "Apply on forms group-legends eg.: <RadioGroup>"
             },

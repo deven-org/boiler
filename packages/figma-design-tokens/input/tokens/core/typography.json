@@ -294,7 +294,7 @@
             },
             "type": "typography"
           },
-          "75Ffixheight": {
+          "75fixheight": {
             "value": {
               "fontFamily": "{core.fontfamily.sourcesanspro}",
               "fontWeight": "{core.fontweight.semibold}",
