@@ -293,7 +293,7 @@
     },
     "dialog": {
       "container": {
-        "backgroundcolor": {
+        "bgcolor": {
           "value": "{sys.bgcolor.surface.level_2}",
           "type": "color"
         }
