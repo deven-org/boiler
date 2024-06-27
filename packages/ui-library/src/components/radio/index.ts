@@ -1,5 +1,4 @@
 import { html, nothing } from 'lit';
-import { unsafeStatic } from 'lit/static-html.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { query } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
