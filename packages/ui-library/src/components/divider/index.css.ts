@@ -7,7 +7,7 @@ export const staticStyles = typeSafeNestedCss`
 
     return typeSafeCss/*css*/ `
       .blr-divider.${theme} {
-        background-color: ${divider.container.backgroundcolor};
+        background-color: ${divider.container.bgcolor};
 
         &.vertical {
           width: ${divider.container.vertical.width};

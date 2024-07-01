@@ -133,7 +133,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         &::-webkit-slider-thumb {
           width: ${slider.thumb.shape.size.rest};
           height: ${slider.thumb.shape.size.rest};
-          background-color: ${slider.thumb.shape.backgroundcolor.rest};
+          background-color: ${slider.thumb.shape.bgcolor.rest};
           border-width: ${slider.thumb.shape.border.rest.width};
           border-style: ${slider.thumb.shape.border.rest.style};
           border-color: ${slider.thumb.shape.border.rest.color};
@@ -142,7 +142,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         &::-moz-range-thumb {
           width: ${slider.thumb.shape.size.rest};
           height: ${slider.thumb.shape.size.rest};
-          background-color: ${slider.thumb.shape.backgroundcolor.rest};
+          background-color: ${slider.thumb.shape.bgcolor.rest};
           border-width: ${slider.thumb.shape.border.rest.width};
           border-style: ${slider.thumb.shape.border.rest.style};
           border-color: ${slider.thumb.shape.border.rest.color};
@@ -152,7 +152,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &::-webkit-slider-thumb {
             width: ${slider.thumb.shape.size.pressed};
             height: ${slider.thumb.shape.size.pressed};
-            background-color: ${slider.thumb.shape.backgroundcolor.pressed};
+            background-color: ${slider.thumb.shape.bgcolor.pressed};
             border-width: ${slider.thumb.shape.border.pressed.width};
             border-style: ${slider.thumb.shape.border.pressed.style};
             border-color: ${slider.thumb.shape.border.pressed.color};
@@ -161,7 +161,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &::-moz-range-thumb {
             width: ${slider.thumb.shape.size.pressed};
             height: ${slider.thumb.shape.size.pressed};
-            background-color: ${slider.thumb.shape.backgroundcolor.pressed};
+            background-color: ${slider.thumb.shape.bgcolor.pressed};
             border-width: ${slider.thumb.shape.border.pressed.width};
             border-style: ${slider.thumb.shape.border.pressed.style};
             border-color: ${slider.thumb.shape.border.pressed.color};
@@ -172,7 +172,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &::-webkit-slider-thumb {
             width: ${slider.thumb.shape.size.hover};
             height: ${slider.thumb.shape.size.hover};
-            background-color: ${slider.thumb.shape.backgroundcolor.hover};
+            background-color: ${slider.thumb.shape.bgcolor.hover};
             border-width: ${slider.thumb.shape.border.hover.width};
             border-style: ${slider.thumb.shape.border.hover.style};
             border-color: ${slider.thumb.shape.border.hover.color};
@@ -181,7 +181,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &::-moz-range-thumb {
             width: ${slider.thumb.shape.size.hover};
             height: ${slider.thumb.shape.size.hover};
-            background-color: ${slider.thumb.shape.backgroundcolor.hover};
+            background-color: ${slider.thumb.shape.bgcolor.hover};
             border-width: ${slider.thumb.shape.border.hover.width};
             border-style: ${slider.thumb.shape.border.hover.style};
             border-color: ${slider.thumb.shape.border.hover.color};
@@ -192,7 +192,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &::-webkit-slider-thumb {
             width: ${slider.thumb.shape.size.disabled};
             height: ${slider.thumb.shape.size.disabled};
-            background-color: ${slider.thumb.shape.backgroundcolor.disabled};
+            background-color: ${slider.thumb.shape.bgcolor.disabled};
             border-width: ${slider.thumb.shape.border.disabled.width};
             border-style: ${slider.thumb.shape.border.disabled.style};
             border-color: ${slider.thumb.shape.border.disabled.color};
@@ -201,7 +201,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &::-moz-range-thumb {
             width: ${slider.thumb.shape.size.disabled};
             height: ${slider.thumb.shape.size.disabled};
-            background-color: ${slider.thumb.shape.backgroundcolor.disabled};
+            background-color: ${slider.thumb.shape.bgcolor.disabled};
             border-width: ${slider.thumb.shape.border.disabled.width};
             border-style: ${slider.thumb.shape.border.disabled.style};
             border-color: ${slider.thumb.shape.border.disabled.color};
@@ -216,21 +216,21 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
           &.range__pip-selected {
             border-color: ${slider.tickmark.border.default.active.color};
-            background-color: ${slider.tickmark.backgroundcolor.default.active};
+            background-color: ${slider.tickmark.bgcolor.default.active};
 
             &.pip-disabled {
               border-color: ${slider.tickmark.border.mute.active.color};
-              background-color: ${slider.tickmark.backgroundcolor.mute.active};
+              background-color: ${slider.tickmark.bgcolor.mute.active};
             }
           }
 
           &.range__pip-unselected {
             border-color: ${slider.tickmark.border.default.inactive.color};
-            background-color: ${slider.tickmark.backgroundcolor.default.inactive};
+            background-color: ${slider.tickmark.bgcolor.default.inactive};
 
             &.pip-disabled {
               border-color: ${slider.tickmark.border.mute.inactive.color};
-              background-color: ${slider.tickmark.backgroundcolor.mute.inactive};
+              background-color: ${slider.tickmark.bgcolor.mute.inactive};
             }
           }
         }

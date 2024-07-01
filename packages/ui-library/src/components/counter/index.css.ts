@@ -9,7 +9,7 @@ export const staticStyles = typeSafeNestedCss/* css */ `
       .blr-counter.${theme} {
         word-break: initial;
         color: ${counter.text.textcolor.neutral};
-        background-color: ${counter.container.backgroundcolor.neutral};
+        background-color: ${counter.container.bgcolor.neutral};
         outline-color: ${counter.container.bordercolor.neutral};
         outline-style: solid;
         white-space: nowrap;
@@ -54,13 +54,13 @@ export const staticStyles = typeSafeNestedCss/* css */ `
         &.error {
           color: ${counter.text.textcolor.error};
           outline-color: ${counter.container.bordercolor.error};
-          background-color: ${counter.container.backgroundcolor.error};
+          background-color: ${counter.container.bgcolor.error};
         }
 
         &.warn {
           color: ${counter.text.textcolor.warning};
           outline-color: ${counter.container.bordercolor.warning};
-          background-color: ${counter.container.backgroundcolor.warning};
+          background-color: ${counter.container.bgcolor.warning};
         }
       }
     `;

@@ -157,7 +157,7 @@ export const staticStyles = typeSafeNestedCss`
 
               .nav-item-underline {
                 &.selected {
-                background-color: ${tabbar.tab.highlightline.backgroundcolor.active.pressed}
+                background-color: ${tabbar.tab.highlightline.bgcolor.active.pressed}
                 }
               }
 

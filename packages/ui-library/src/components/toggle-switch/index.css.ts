@@ -137,7 +137,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             border-radius: ${toggleswitch.control.container.borderradius};
 
             .knob {
-              background-color: ${toggleswitch.control.knob.backgroundcolor.active.rest};
+              background-color: ${toggleswitch.control.knob.bgcolor.active.rest};
             }
       
             & > .blr-form-label-inline {
@@ -145,7 +145,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
             
             &:not(.checked) {
-              background-color: ${toggleswitch.control.container.backgroundcolor.inactive.rest};
+              background-color: ${toggleswitch.control.container.bgcolor.inactive.rest};
               outline-color: ${toggleswitch.control.container.bordercolor.inactive.rest};
               .knob {
                 outline-color: ${toggleswitch.control.knob.bordercolor.inactive.rest};
@@ -155,7 +155,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.focus {
-                background-color: ${toggleswitch.control.container.backgroundcolor.inactive.focus};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.focus};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.focus};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.focus};
@@ -166,7 +166,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.hover {
-                background-color: ${toggleswitch.control.container.backgroundcolor.inactive.hover};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.hover};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.hover};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.hover};
@@ -177,7 +177,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.active {
-                background-color: ${toggleswitch.control.container.backgroundcolor.inactive.pressed};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.pressed};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.pressed};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.pressed};
@@ -188,7 +188,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.disabled {
-                background-color: ${toggleswitch.control.container.backgroundcolor.inactive.disabled};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.disabled};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.disabled};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.disabled};
@@ -199,7 +199,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.readonly {
-                background-color: ${toggleswitch.control.container.backgroundcolor.inactive.readonly};
+                background-color: ${toggleswitch.control.container.bgcolor.inactive.readonly};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.readonly};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.readonly};
@@ -211,7 +211,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
 
             &.checked {
-              background-color: ${toggleswitch.control.container.backgroundcolor.active.rest};
+              background-color: ${toggleswitch.control.container.bgcolor.active.rest};
               outline-color: ${toggleswitch.control.container.bordercolor.active.rest};
               .knob {
                 outline-color: ${toggleswitch.control.knob.bordercolor.inactive.rest};
@@ -221,7 +221,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.focus {
-                background-color: ${toggleswitch.control.container.backgroundcolor.active.focus};
+                background-color: ${toggleswitch.control.container.bgcolor.active.focus};
                 outline-color: ${toggleswitch.control.container.bordercolor.active.focus};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.active.focus};
@@ -232,7 +232,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.hover {
-                background-color: ${toggleswitch.control.container.backgroundcolor.active.hover};
+                background-color: ${toggleswitch.control.container.bgcolor.active.hover};
                 outline-color: ${toggleswitch.control.container.bordercolor.active.hover};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.active.hover};
@@ -243,7 +243,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.active {
-                background-color: ${toggleswitch.control.container.backgroundcolor.active.pressed};
+                background-color: ${toggleswitch.control.container.bgcolor.active.pressed};
                 outline-color: ${toggleswitch.control.container.bordercolor.active.pressed};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.active.pressed};
@@ -254,7 +254,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.disabled {
-                background-color: ${toggleswitch.control.container.backgroundcolor.active.disabled};
+                background-color: ${toggleswitch.control.container.bgcolor.active.disabled};
                 outline-color: ${toggleswitch.control.container.bordercolor.active.disabled};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.active.disabled};
@@ -265,7 +265,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &.readonly {
-                background-color: ${toggleswitch.control.container.backgroundcolor.active.readonly};
+                background-color: ${toggleswitch.control.container.bgcolor.active.readonly};
                 outline-color: ${toggleswitch.control.container.bordercolor.active.readonly};
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.active.readonly};

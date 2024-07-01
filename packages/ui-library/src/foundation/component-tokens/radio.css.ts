@@ -257,7 +257,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
 
         .input-control {
-          background-color: ${radio.control.container.backgroundcolor.inactive.rest};
+          background-color: ${radio.control.container.bgcolor.inactive.rest};
           width: ${radio.control.container.size.sm};
           min-width: ${radio.control.container.size.sm};
           height: ${radio.control.container.size.sm};
@@ -271,7 +271,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
           &:not(.disabled):not(.readonly) {
             &:hover {
-              background-color: ${radio.control.container.backgroundcolor.inactive.hover};
+              background-color: ${radio.control.container.bgcolor.inactive.hover};
               
               &::before {
                 content: "";
@@ -288,7 +288,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
           
             &:active {
-              background-color: ${radio.control.container.backgroundcolor.inactive.pressed};
+              background-color: ${radio.control.container.bgcolor.inactive.pressed};
 
               &::before {
                 content: "";
@@ -305,7 +305,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
 
             &:focus {
-              background-color: ${radio.control.container.backgroundcolor.inactive.focus};
+              background-color: ${radio.control.container.bgcolor.inactive.focus};
               _FIX_: "needs focus ring";
               outline: black solid 2px;
               outline-offset: 2px;
@@ -326,7 +326,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           }
 
           &.checked, &:checked {
-            background-color: ${radio.control.container.backgroundcolor.active.rest};
+            background-color: ${radio.control.container.bgcolor.active.rest};
 
             &::before {
               content: "";
@@ -337,7 +337,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
             &:not(.disabled):not(.readonly) {
               &:hover {
-                background-color: ${radio.control.container.backgroundcolor.active.hover};
+                background-color: ${radio.control.container.bgcolor.active.hover};
 
                 &::before {
                   content: "";
@@ -348,7 +348,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &:active {
-                background-color: ${radio.control.container.backgroundcolor.active.pressed};
+                background-color: ${radio.control.container.bgcolor.active.pressed};
                 
                 &::before {
                   content: "";
@@ -359,7 +359,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               }
 
               &:focus {
-                background-color: ${radio.control.container.backgroundcolor.active.focus};
+                background-color: ${radio.control.container.bgcolor.active.focus};
                 
                 &::before {
                   content: "";
@@ -371,7 +371,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
 
             &:disabled {
-              background-color: ${radio.control.container.backgroundcolor.active.disabled};
+              background-color: ${radio.control.container.bgcolor.active.disabled};
 
               &::before {
                 content: "";
@@ -382,7 +382,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
 
             &[readonly] {
-              background-color: ${radio.control.container.backgroundcolor.active.readonly};
+              background-color: ${radio.control.container.bgcolor.active.readonly};
 
               &::before {
                 content: "";
@@ -395,7 +395,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
           &:disabled {
             cursor: not-allowed;
-            background-color: ${radio.control.container.backgroundcolor.inactive.disabled};
+            background-color: ${radio.control.container.bgcolor.inactive.disabled};
           
             &::before {
               content: "";
@@ -415,7 +415,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
         &.error {
           .input-control {
-            background-color: ${radio.control.container.backgroundcolor.inactive.error};
+            background-color: ${radio.control.container.bgcolor.inactive.error};
 
             &::before {
               background-color: ${radio.control.icon.iconcolor.inactive.error};
@@ -451,7 +451,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           pointer-events: none;
 
           .input-control {
-            background-color: ${radio.control.container.backgroundcolor.inactive.disabled};
+            background-color: ${radio.control.container.bgcolor.inactive.disabled};
             width: ${radio.control.container.size.sm};
             height: ${radio.control.container.size.sm};
 
@@ -472,7 +472,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
         &.readonly {
           .input-control {
-            background-color: ${radio.control.container.backgroundcolor.inactive.readonly};
+            background-color: ${radio.control.container.bgcolor.inactive.readonly};
             width: ${radio.control.icon.iconsize.sm.inactive.readonly};
             height: ${radio.control.icon.iconsize.sm.inactive.readonly};
 

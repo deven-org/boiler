@@ -21,7 +21,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         width: max-content;
 
         .content {
-          background-color: ${tooltip.container.backgroundcolor};
+          background-color: ${tooltip.container.bgcolor};
           border-radius: ${tooltip.textwrapper.borderradius};
           color: ${tooltip.text.textcolor};
           font-family: ${tooltip.text.typography.fontFamily}, sans-serif;
@@ -62,7 +62,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           z-index: 1;
 
           & > svg > path {
-            fill: ${tooltip.container.backgroundcolor};
+            fill: ${tooltip.container.bgcolor};
           }
         }
       }
