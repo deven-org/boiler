@@ -1,15 +1,15 @@
 import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   :host {
     display: inline-block;
   }
 
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { Tooltip } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       #tooltipElement.${theme} {
         left: 0;
         top: 0;

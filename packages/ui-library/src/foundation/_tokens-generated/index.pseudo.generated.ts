@@ -11,7 +11,7 @@
 
   This will make it possible to switch prebuild themes on the fly on a component level
 */
-import { makeIterator, typeSafeCss } from '../../utils/css-in-ts/make-token-part-iterator.js';
+import { makeIterator, joinCss } from '../../utils/css-in-ts/make-token-part-iterator.js';
 import { componentTokens as cmpLight } from './__component-tokens.Light.generated.mjs';
 import { componentTokens as cmpDark } from './__component-tokens.Dark.generated.mjs';
 import { semanticTokens as semLight } from './__semantic-tokens.Light.generated.mjs';
@@ -31,8 +31,8 @@ export const ComponentThemeIterator = (
   renderFunction: (
     theme: keyof typeof componentTokenTree,
     cmp: typeof componentTokenTree.Light,
-    css: typeof typeSafeCss
-  ) => string
+    css: typeof joinCss,
+  ) => string,
 ) => {
   const it = makeIterator<typeof componentTokenTree>();
 
@@ -43,8 +43,8 @@ export const SemanticThemeIterator = (
   renderFunction: (
     theme: keyof typeof semanticTokenTree,
     sem: typeof semanticTokenTree.Light,
-    css: typeof typeSafeCss
-  ) => string
+    css: typeof joinCss,
+  ) => string,
 ) => {
   const it = makeIterator<typeof semanticTokenTree>();
 

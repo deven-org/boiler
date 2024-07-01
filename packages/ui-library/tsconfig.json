@@ -21,7 +21,8 @@
         "strict": true,
         "rules": {
           "no-missing-import": "off"
-        }
+        },
+        "cssTemplateTags": []
       }
     ]
   },
