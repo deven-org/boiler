@@ -1,10 +1,10 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
 import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 
-export const styleCustom = typeSafeNestedCss/*css*/ `
+export const styleCustom = css`
   .blr-input-field-text {
     display: flex;
     flex-direction: column;
@@ -19,10 +19,10 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
     pointer-events: none;
   }
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { inputfield, inputslot, labelslot } = sem.forms;
 
-    return typeSafeCss/*css*/ `
+    return css`
       ${getInputIconStyles({ theme, semanticTokens: sem }).cssText}
 
       .blr-input-field-text.${theme} {
@@ -95,6 +95,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
           &.focus {
             border: none;
             outline: none;
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.focus};
             }
@@ -103,6 +104,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
           &.error-input {
             border: none;
             outline: none;
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.error.rest};
             }
@@ -120,6 +122,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
             &:hover {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.hover};
               }
@@ -128,6 +131,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
             &:active {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.pressed};
               }
@@ -136,6 +140,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
             &.focus {
               border: none;
               outline: none;
+
               &::placeholder {
                 color: ${inputfield.placeholder.textcolor.error.focus};
               }
@@ -191,9 +196,8 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
         }
 
         &:hover {
-          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style} ${
-      inputfield.container.border.default.hover.color
-    };
+          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style}
+            ${inputfield.container.border.default.hover.color};
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
         }
@@ -228,14 +232,14 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
 
         &:active {
           outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-          ${inputfield.container.border.default.pressed.color};
+            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
         }
 
         &.error-input {
           outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
-          ${inputfield.container.border.error.rest.color};
+            ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
           &.focus {
@@ -246,7 +250,7 @@ export const styleCustom = typeSafeNestedCss/*css*/ `
           }
 
           &:hover {
-            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style} 
+            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style};
             border-color: ${inputfield.container.border.error.hover.color};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
@@ -273,7 +277,7 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
   const iconClassName = "icon-input";
   const { inputfield } = semanticTokens.forms;
 
-  return typeSafeNestedCss/*css*/ `
+  return css`
     :host {
       .${iconClassName}.${theme} {
         cursor: pointer;
@@ -284,15 +288,17 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
           pointer-events: none;
           cursor: default;
         }
-  
+
         &.sm {
           height: ${inputfield.icon.iconsize.sm};
           width: ${inputfield.icon.iconsize.sm};
         }
+
         &.md {
           height: ${inputfield.icon.iconsize.md};
           width: ${inputfield.icon.iconsize.md};
         }
+
         &.lg {
           height: ${inputfield.icon.iconsize.lg};
           width: ${inputfield.icon.iconsize.lg};
@@ -316,23 +322,23 @@ function getInputIconStyles({ theme, semanticTokens }: { theme: ThemeType; seman
           color: ${inputfield.icon.iconcolor.default.readonly};
         }
 
-        &.disabled .${iconClassName}{
+        &.disabled .${iconClassName} {
           color: ${inputfield.icon.iconcolor.default.disabled};
         }
-    
+
         &.error-input {
           .${iconClassName} {
             color: ${inputfield.icon.iconcolor.error.rest};
           }
-  
+
           &:hover .${iconClassName} {
             color: ${inputfield.icon.iconcolor.error.hover};
           }
-    
+
           &:focus-within .${iconClassName} {
             color: ${inputfield.icon.iconcolor.error.focus};
           }
-    
+
           &:active .${iconClassName} {
             color: ${inputfield.icon.iconcolor.error.pressed};
           }

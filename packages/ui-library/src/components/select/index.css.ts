@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 import { semanticTokens } from "../../foundation/_tokens-generated/semanticTokensType.generated.js";
@@ -6,7 +6,7 @@ import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 
 const directionIndicatorIconClassName = "icon-direction-indicator";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   .${directionIndicatorIconClassName} {
     pointer-events: none;
     position: relative;
@@ -111,10 +111,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     }
   }
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { inputfield, inputslot, labelslot } = sem.forms;
 
-    return typeSafeCss/*css*/ `
+    return css`
       ${getDirectionIndicatorIconStyles({ theme, semanticTokens: sem }).cssText}
 
       .blr-select.${theme} {
@@ -123,11 +123,13 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             padding: ${labelslot.padding.sm};
           }
         }
+
         &.md {
           & > .label-wrapper {
             padding: ${labelslot.padding.md};
           }
         }
+
         &.lg {
           & > .label-wrapper {
             padding: ${labelslot.padding.lg};
@@ -164,6 +166,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
           &.disabled {
             color: ${inputfield.userinput.textcolor.default.disabled};
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.default.disabled};
             }
@@ -326,7 +329,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: ThemeType; semanticTokens: semanticTokens["sem"] }) {
   const { inputfield } = semanticTokens.forms;
 
-  return typeSafeNestedCss`
+  return css`
     .${directionIndicatorIconClassName}.${theme} {
       color: ${inputfield.icon.iconcolor.default.rest};
 
@@ -334,10 +337,12 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
         height: ${inputfield.icon.iconsize.sm};
         width: ${inputfield.icon.iconsize.sm};
       }
+
       &.md {
         height: ${inputfield.icon.iconsize.md};
         width: ${inputfield.icon.iconsize.md};
       }
+
       &.lg {
         height: ${inputfield.icon.iconsize.lg};
         width: ${inputfield.icon.iconsize.lg};
@@ -362,8 +367,9 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
           color: ${inputfield.icon.iconcolor.default.disabled};
         }
       }
-  
-      &.error, .error.disabled {
+
+      &.error,
+      .error.disabled {
         .${directionIndicatorIconClassName} {
           color: ${inputfield.icon.iconcolor.error.rest};
         }
@@ -371,11 +377,11 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
         &:hover .${directionIndicatorIconClassName} {
           color: ${inputfield.icon.iconcolor.error.hover};
         }
-  
+
         &:focus-within .${directionIndicatorIconClassName} {
           color: ${inputfield.icon.iconcolor.error.focus};
         }
-  
+
         &:active .${directionIndicatorIconClassName} {
           color: ${inputfield.icon.iconcolor.error.pressed};
         }

@@ -1,11 +1,11 @@
 import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticActionStyles = typeSafeNestedCss/* css */ `
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+export const staticActionStyles = css`
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { buttons } = sem;
 
-    return typeSafeCss/* css */ `
+    return css`
       .blr-semantic-action.${theme} {
         &.disabled {
           pointer-events: none;
