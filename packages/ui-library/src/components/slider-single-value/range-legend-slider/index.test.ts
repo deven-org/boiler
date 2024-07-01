@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRangeLegendSliderRenderFunction } from './renderFunction';
+import { BlrRangeLegendSliderRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
-import { BlrRangeLegendSliderType } from '.';
+import { BlrRangeLegendSliderType } from './index.js';
 
 const sampleParams: BlrRangeLegendSliderType = {
   theme: 'Light',

@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
-import { BlrTabBarType } from './index';
-import { BlrTabBarRenderFunction } from './renderFunction';
+import { BlrTabBarType } from './index.js';
+import { BlrTabBarRenderFunction } from './renderFunction.js';
 import {
   FormSizes,
   IconPositionVariant,
@@ -9,11 +9,11 @@ import {
   TabAlignmentVariants,
   TabContentVariants,
   TabVariants,
-} from '../../globals/constants';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+} from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 export default {
   title: 'Components/TabBar',

@@ -1,6 +1,6 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated";
+import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
 /* ToDos:
 
@@ -17,11 +17,11 @@ import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.genera
 
   */
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { radio, radiogroup, formlabel, formcaption } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-legend-wrapper.${theme} {
         &.sm {
           padding-bottom: ${radiogroup.legendwrapper.paddingbottom.sm};
@@ -49,21 +49,21 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             font-family: ${radiogroup.legend.sm.fontFamily}, sans-serif;
             line-height: ${radiogroup.legend.sm.lineHeight};
           }
-    
+
           &.md {
             font-weight: ${radiogroup.legend.md.fontWeight};
             font-size: ${radiogroup.legend.md.fontSize};
             font-family: ${radiogroup.legend.md.fontFamily}, sans-serif;
             line-height: ${radiogroup.legend.md.lineHeight};
           }
-    
+
           &.lg {
             font-weight: ${radiogroup.legend.lg.fontWeight};
             font-size: ${radiogroup.legend.lg.fontSize};
             font-family: ${radiogroup.legend.lg.fontFamily}, sans-serif;
             line-height: ${radiogroup.legend.lg.lineHeight};
           }
-    
+
           &.error {
             color: ${radiogroup.legend.textcolor.error};
           }
@@ -77,7 +77,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
         all: initial;
         margin: 0;
-      
+
         &.sm {
           ${
             // Can be merged with the .caption-group above
@@ -134,7 +134,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
       }
 
       .blr-radio.${theme} {
-        _FIX_: To override constructed margin;
+        /* FIX: to override constructed margin; */
         all: initial;
         margin: 0 !important;
         display: flex;
@@ -142,7 +142,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         transition: all 0.25s ease 0s;
 
         .blr-form-label-inline {
-          _FIX?_: "LabelNextToControl states";
+          /* FIX?: "LabelNextToControl states"; */
           color: ${formlabel.inlinelabel.textcolor.rest};
           transition: all 0.25s ease 0s;
           display: flex;
@@ -269,10 +269,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             height: ${radio.control.icon.iconsize.sm.inactive.rest};
           }
 
-          &:not(.disabled):not(.readonly) {
+          &:not(.disabled, .readonly) {
             &:hover {
               background-color: ${radio.control.container.bgcolor.inactive.hover};
-              
+
               &::before {
                 content: "";
                 background-color: ${radio.control.icon.iconcolor.inactive.hover};
@@ -286,7 +286,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 }
               }
             }
-          
+
             &:active {
               background-color: ${radio.control.container.bgcolor.inactive.pressed};
 
@@ -307,6 +307,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             &:focus {
               background-color: ${radio.control.container.bgcolor.inactive.focus};
               _FIX_: "needs focus ring";
+
               outline: black solid 2px;
               outline-offset: 2px;
 
@@ -325,7 +326,8 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
           }
 
-          &.checked, &:checked {
+          &.checked, 
+          &:checked {
             background-color: ${radio.control.container.bgcolor.active.rest};
 
             &::before {
@@ -335,7 +337,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               height: ${radio.control.icon.iconsize.sm.active.rest};
             }
 
-            &:not(.disabled):not(.readonly) {
+            &:not(.disabled, .readonly) {
               &:hover {
                 background-color: ${radio.control.container.bgcolor.active.hover};
 
@@ -349,7 +351,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               &:active {
                 background-color: ${radio.control.container.bgcolor.active.pressed};
-                
+
                 &::before {
                   content: "";
                   background-color: ${radio.control.icon.iconcolor.active.pressed};
@@ -360,7 +362,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               &:focus {
                 background-color: ${radio.control.container.bgcolor.active.focus};
-                
+
                 &::before {
                   content: "";
                   background-color: ${radio.control.icon.iconcolor.active.focus};
@@ -396,7 +398,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &:disabled {
             cursor: not-allowed;
             background-color: ${radio.control.container.bgcolor.inactive.disabled};
-          
+
             &::before {
               content: "";
               background-color: ${radio.control.icon.iconcolor.inactive.disabled};

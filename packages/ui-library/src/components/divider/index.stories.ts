@@ -1,9 +1,9 @@
 import { html } from 'lit-html';
-import { BlrDividerType } from './index';
-import { BlrDividerRenderFunction } from './renderFunction';
-import '../../index';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { DividerVariations } from '../../globals/constants';
+import { BlrDividerType } from './index.js';
+import { BlrDividerRenderFunction } from './renderFunction.js';
+import '../../index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { DividerVariations } from '../../globals/constants.js';
 
 const sharedStyles = html`
   <style>

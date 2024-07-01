@@ -1,17 +1,18 @@
 import { html, nothing } from 'lit';
-import { property, query, state } from 'lit/decorators.js';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { SizelessIconType } from '@boiler/icons';
-import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { TAG_NAME } from './renderFunction';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { FormSizesType } from '../../globals/types';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction';
-import { staticStyles } from './index.css';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { TAG_NAME } from './renderFunction.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { FormSizesType } from '../../globals/types.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
+import { staticStyles } from './index.css.js';
 import {
   BlrBlurEvent,
   BlrCheckedChangeEvent,
@@ -19,8 +20,8 @@ import {
   createBlrBlurEvent,
   createBlrCheckedChangeEvent,
   createBlrFocusEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/events.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export type BlrToggleSwitchEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -38,32 +39,32 @@ export class BlrToggleSwitch extends LitElementCustom {
   static styles = [staticFormStyles, staticStyles];
 
   @query('input')
-  protected _checkboxNode!: HTMLInputElement;
-  @property() arialabel?: string;
-  @property() label?: string;
-  @property() onLabel!: string;
-  @property() offLabel!: string;
+  protected accessor _checkboxNode!: HTMLInputElement;
+  @property() accessor arialabel: string | undefined;
+  @property() accessor label: string | undefined;
+  @property() accessor onLabel!: string;
+  @property() accessor offLabel!: string;
 
-  @property() toogleSwitchId!: string;
-  @property() name!: string;
-  @property() hasLabel?: boolean;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() active?: boolean;
+  @property() accessor toogleSwitchId!: string;
+  @property() accessor name!: string;
+  @property() accessor hasLabel: boolean | undefined;
+  @property() accessor disabled: boolean | undefined;
+  @property() accessor readonly: boolean | undefined;
+  @property() accessor active: boolean | undefined = undefined;
 
-  @property() hasHint?: boolean;
-  @property() hintMessage?: string;
-  @property() hintMessageIcon?: SizelessIconType;
+  @property() accessor hasHint: boolean | undefined;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
 
-  @property() sizeVariant?: FormSizesType = 'md';
-  @property() hasStateLabel: boolean = false;
+  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor hasStateLabel: boolean = false;
 
-  @property() toggleOnIcon?: SizelessIconType = 'blrOn';
-  @property() toggleOffIcon?: SizelessIconType = 'blrOff';
+  @property() accessor toggleOnIcon: SizelessIconType | undefined = 'blrOn';
+  @property() accessor toggleOffIcon: SizelessIconType | undefined = 'blrOff';
 
-  @property() theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected currentCheckedState: boolean | undefined = this.active;
+  @state() protected accessor currentCheckedState: boolean | undefined = this.active;
 
   protected updated(changedProperties: Map<string, boolean>) {
     if (changedProperties.has('active')) {
@@ -83,7 +84,7 @@ export class BlrToggleSwitch extends LitElementCustom {
     }
   }
 
-  @state() protected focused = false;
+  @state() protected accessor focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled && !this.readonly) {
@@ -99,7 +100,7 @@ export class BlrToggleSwitch extends LitElementCustom {
     }
   };
 
-  @state() protected hovered = false;
+  @state() protected accessor hovered = false;
 
   protected handleEnter = () => {
     if (!this.disabled && !this.readonly) {
@@ -113,7 +114,7 @@ export class BlrToggleSwitch extends LitElementCustom {
     }
   };
 
-  @state() protected pressed = false;
+  @state() protected accessor pressed = false;
 
   protected handlePress = () => {
     if (!this.disabled && !this.readonly) {
@@ -277,4 +278,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrToggleSwitch);
 }
 
-export type BlrToggleSwitchType = Omit<BlrToggleSwitch, keyof LitElementCustom> & BlrToggleSwitchEventHandlers;
+export type BlrToggleSwitchType = ElementInterface<BlrToggleSwitch>;

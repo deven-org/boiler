@@ -1,7 +1,7 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrButtonTextRenderFunction } from './renderFunction';
-import type { BlrButtonTextType } from '.';
+import { BlrButtonTextRenderFunction } from './renderFunction.js';
+import type { BlrButtonTextType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
@@ -9,7 +9,6 @@ import { querySelectorDeep } from 'query-selector-shadow-dom';
 const sampleParams: BlrButtonTextType = {
   label: 'Button',
   icon: 'blr360',
-  hasIcon: true,
   iconPosition: 'leading',
   loading: false,
   disabled: false,

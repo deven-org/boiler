@@ -1,8 +1,8 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated";
+import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   .range__field {
     border: 0;
   }
@@ -115,10 +115,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     }
   }
 
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { slider } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .input-wrapper.${theme} {
         & > .min-max-value {
           font-family: ${slider.legend.typography.fontFamily}, arial, sans-serif;

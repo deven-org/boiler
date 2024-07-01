@@ -1,11 +1,11 @@
 import { html } from 'lit-html';
-import { Sizes } from '../../globals/constants';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import '../../index';
-import { BlrIconRenderFunction } from './renderFunction';
-import { SizesType } from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { PureIconKeys, SizelessIconType } from '@boiler/icons/icons-optimized';
+import { Sizes } from '../../globals/constants.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import '../../index.js';
+import { BlrIconRenderFunction } from './renderFunction.js';
+import { SizesType } from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { PureIconKeys, SizelessIconType } from '@boiler/icons';
 
 const sharedStyles = html`
   <style>

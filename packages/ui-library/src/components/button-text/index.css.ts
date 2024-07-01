@@ -1,7 +1,7 @@
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const styleCustom = typeSafeNestedCss/* css */ `
+export const styleCustom = css`
   .focus-layer {
     position: absolute;
     inset: 0;
@@ -22,7 +22,8 @@ export const styleCustom = typeSafeNestedCss/* css */ `
       visibility: hidden;
     }
 
-    &.blr-button-text:hover, &.blr-button-text:focus {
+    &.blr-button-text:hover,
+    &.blr-button-text:focus {
       cursor: auto;
     }
   }
@@ -47,10 +48,10 @@ export const styleCustom = typeSafeNestedCss/* css */ `
     align-items: center;
   }
 
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { buttontext } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-button-text.${theme} {
         &.xs {
           padding: ${buttontext.container.padding.xs};
@@ -73,7 +74,6 @@ export const styleCustom = typeSafeNestedCss/* css */ `
         &.md {
           padding: ${buttontext.container.padding.md};
           border-radius: ${buttontext.container.borderradius.md};
-          
 
           & > .focus-layer {
             border-radius: ${buttontext.container.borderradius.md};
@@ -123,10 +123,10 @@ export const styleCustom = typeSafeNestedCss/* css */ `
     `;
   })}
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { global, buttons } = sem;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .focus-layer.${theme} {
         outline-color: ${global.focusring.border.color};
         outline-style: ${global.focusring.border.style};
@@ -134,7 +134,8 @@ export const styleCustom = typeSafeNestedCss/* css */ `
       }
 
       .loading.${theme} {
-        &.blr-button-text:hover, &.blr-button-text:focus {
+        &.blr-button-text:hover,
+        &.blr-button-text:focus {
           &.cta {
             background-color: ${buttons.container.bgcolor.cta.focus};
           }
@@ -150,7 +151,7 @@ export const styleCustom = typeSafeNestedCss/* css */ `
           &.silent {
             background-color: ${buttons.container.bgcolor.silent.focus};
           }
-          
+
           &.destructive {
             background-color: ${buttons.container.bgcolor.destructive.focus};
           }

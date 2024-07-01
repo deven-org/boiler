@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComponent, EventName } from '@lit-labs/react';
 
-import { BlrRadio } from '.';
+import { BlrRadio } from './index.js';
 
 export const BlrRadioInputReact = createComponent({
   tagName: 'blr-radio',

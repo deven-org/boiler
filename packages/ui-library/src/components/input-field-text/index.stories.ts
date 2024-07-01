@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { BlrInputFieldTextType } from './index';
-import { BlrInputFieldTextRenderFunction } from './renderFunction';
-import { FormSizes, InputTypes } from '../../globals/constants';
+import { BlrInputFieldTextType } from './index.js';
+import { BlrInputFieldTextRenderFunction } from './renderFunction.js';
+import { FormSizes, InputTypes } from '../../globals/constants.js';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { html } from 'lit-html';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`
@@ -111,19 +111,10 @@ export default {
       },
       if: { arg: 'hasLabel', eq: true },
     },
-    hasIcon: {
-      description: 'Choose if component has an icon.',
-      options: [undefined, ...PureIconKeys],
-      control: { type: 'boolean' },
-      table: {
-        category: 'Content / Settings',
-      },
-    },
     icon: {
       description: 'Select an icon which is displayed inside of the input.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
-      if: { arg: 'hasIcon', eq: true },
       table: {
         category: 'Content / Settings',
       },
@@ -323,7 +314,6 @@ const defaultParams: BlrInputFieldTextType = {
   hasLabel: true,
   label: 'Label-text',
   labelAppendix: '(Appendix)',
-  hasIcon: true,
   icon: 'blr360',
   hasHint: false,
   hintMessage: 'This is a small hint message',
@@ -403,7 +393,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           sizeVariant: 'sm',
           label: 'Input Field Text SM',
-          hasIcon: false,
+          icon: undefined,
           placeholder: '',
           value: '',
         })}
@@ -412,7 +402,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           sizeVariant: 'md',
           label: 'Input Field Text MD',
-          hasIcon: false,
+          icon: undefined,
           placeholder: '',
           value: '',
         })}
@@ -421,7 +411,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           sizeVariant: 'lg',
           label: 'Input Field Text LG',
-          hasIcon: false,
+          icon: undefined,
           placeholder: '',
           value: '',
         })}
@@ -453,7 +443,7 @@ export const Type = () => {
           type: 'text',
           sizeVariant: 'md',
           label: 'Enter text',
-          hasIcon: false,
+          icon: undefined,
           labelAppendix: '',
           placeholder: '',
           value: '',
@@ -493,7 +483,7 @@ export const Placeholder = () => {
           sizeVariant: 'md',
           label: 'With placeholder',
           placeholder: 'Add a message here',
-          hasIcon: false,
+          icon: undefined,
           labelAppendix: '',
           value: '',
         })}
@@ -503,7 +493,7 @@ export const Placeholder = () => {
           sizeVariant: 'md',
           label: 'Without placeholder',
           labelAppendix: '',
-          hasIcon: false,
+          icon: undefined,
           placeholder: '',
           value: '',
         })}
@@ -532,7 +522,7 @@ export const Disabled = () => {
           theme: 'Light',
           sizeVariant: 'md',
           label: 'Disabled',
-          hasIcon: false,
+          icon: undefined,
           placeholder: '',
           labelAppendix: '',
           disabled: true,
@@ -563,7 +553,7 @@ export const Readonly = () => {
           sizeVariant: 'md',
           label: 'Readonly',
           readonly: true,
-          hasIcon: false,
+          icon: undefined,
           placeholder: '',
           value: '',
         })}
@@ -593,7 +583,7 @@ export const Required = () => {
           placeholder: '',
           label: 'Label-text',
           labelAppendix: '(required)',
-          hasIcon: false,
+          icon: undefined,
           value: '',
         })}
       </div>
@@ -658,7 +648,7 @@ export const FormLabel = () => {
           placeholder: '',
           label: 'Label',
           labelAppendix: '(Appendix)',
-          hasIcon: false,
+          icon: undefined,
           value: '',
         })}
       </div>
@@ -695,7 +685,7 @@ export const Icon = () => {
           sizeVariant: 'md',
           placeholder: '',
           label: 'Without Icon',
-          hasIcon: false,
+          icon: undefined,
           labelAppendix: '',
           value: '',
         })}
@@ -722,7 +712,7 @@ export const FormCaptionGroup = () => {
           label: 'Hint message',
           labelAppendix: '',
           hasHint: true,
-          hasIcon: false,
+          icon: undefined,
           value: '',
         })}
         ${BlrInputFieldTextRenderFunction({
@@ -737,7 +727,7 @@ export const FormCaptionGroup = () => {
           hasError: true,
           errorMessage: "OMG it's an error",
           errorMessageIcon: 'blrErrorFilled',
-          hasIcon: false,
+          icon: undefined,
           value: '',
         })}
       </div>

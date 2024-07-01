@@ -1,5 +1,5 @@
-import { ThemeType } from '../../../foundation/_tokens-generated/index.themes';
-import { InputSizesType } from '../../../globals/types';
+import { ThemeType } from '../../../foundation/_tokens-generated/index.themes.js';
+import { InputSizesType } from '../../../globals/types.js';
 
 export type BlrFormLabelInlineType = {
   labelText: string;

@@ -1,8 +1,8 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated";
+import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   .blr-slider {
     margin: 0;
 
@@ -80,22 +80,22 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
       top: 2px;
       border-radius: 5px;
     }
-    
+
     ${
       /* Apply z-index property only in Firefox */
       ""
     }
     @-moz-document url-prefix("") {
       input[type="range"] {
-        z-index: 10; 
+        z-index: 10;
       }
     }
   }
-
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { slider } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-slider.${theme} {
         & .input-wrapper {
           & > .range-wrapper {

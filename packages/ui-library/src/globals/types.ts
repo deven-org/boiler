@@ -22,7 +22,8 @@ import {
   ButtonGroupAlignmentVariants,
   ButtonDisplayOptions,
   UnitVariants,
-} from './constants';
+  Units,
+} from './constants.js';
 
 export type SizesType = (typeof Sizes)[number];
 
@@ -31,7 +32,7 @@ export type FeedbackVariantType = (typeof FeedbackVariants)[number];
 export type CaptionVariantType = (typeof CaptionVariants)[number];
 export type CounterVariantType = (typeof CounterVariants)[number];
 export type UnitVariantType = (typeof UnitVariants)[number];
-
+export type UnitType = (typeof Units)[number];
 export type ActionSizesType = (typeof ActionSizes)[number];
 export type FeedbackSizesType = (typeof FeedbackSizes)[number];
 export type FormSizesType = (typeof FormSizes)[number];

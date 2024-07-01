@@ -1,23 +1,24 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss`
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { buttonicon } = cmp;
     const { tabbar } = cmp;
 
-    return typeSafeCss/* css */ `
+    return css`
       .panel-wrapper {
         margin-top: 2rem;
-    
+
         & > slot {
           display: none;
-    
+
           &.active {
             display: block;
           }
         }
-      } 
+      }
 
       slot {
         display: none;
@@ -34,10 +35,10 @@ export const staticStyles = typeSafeNestedCss`
         }
 
         &.browserOverflow {
-          padding: 0px 1rem;
+          padding: 0 1rem;
         }
       }
-      
+
       .blr-tab-bar-group.${theme} {
         width: 100%;
         display: flex;
@@ -86,7 +87,6 @@ export const staticStyles = typeSafeNestedCss`
             &.right {
               margin: ${tabbar.buttonwrapper.padding.trailing.md};
             }
-            
           }
 
           &.lg {
@@ -148,7 +148,6 @@ export const staticStyles = typeSafeNestedCss`
               flex-direction: column;
               justify-content: center;
 
-
               &:focus-within:not(.disabled) {
                 outline: 2px solid black;
                 outline-offset: -2px;
@@ -157,7 +156,7 @@ export const staticStyles = typeSafeNestedCss`
 
               .nav-item-underline {
                 &.selected {
-                background-color: ${tabbar.tab.highlightline.bgcolor.active.pressed}
+                  background-color: ${tabbar.tab.highlightline.bgcolor.active.pressed}
                 }
               }
 
@@ -177,7 +176,6 @@ export const staticStyles = typeSafeNestedCss`
                   flex-shrink: 0;
 
                   &.selected {
-
                     & > blr-icon {
                       color: ${tabbar.tab.icon.iconcolor.active.rest};
                     }
@@ -187,9 +185,7 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:focus {
-
                       &:not(.disabled) {
-
                         & > blr-icon {
                           color: ${tabbar.tab.icon.iconcolor.active.focus};
                         }
@@ -201,9 +197,7 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:hover {
-
                       &:not(.disabled) {
-
                         & > blr-icon {
                           color: ${tabbar.tab.icon.iconcolor.active.hover};
                         }
@@ -215,7 +209,6 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:active {
-
                       & > blr-icon {
                         color: ${tabbar.tab.icon.iconcolor.active.pressed};
                       }
@@ -225,8 +218,8 @@ export const staticStyles = typeSafeNestedCss`
                       }
                     }
                   }
-                  &:not(.selected) {
 
+                  &:not(.selected) {
                     & > blr-icon {
                       color: ${tabbar.tab.icon.iconcolor.inactive.rest};
                     }
@@ -236,18 +229,16 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:focus {
-
                       & > blr-icon {
-                        color
-                        : ${tabbar.tab.icon.iconcolor.inactive.focus};
+                        color: ${tabbar.tab.icon.iconcolor.inactive.focus};
                       }
+
                       & > label {
                         color: ${tabbar.tab.label.textcolor.inactive.focus};
                       }
                     }
 
                     &:hover {
-
                       & > blr-icon {
                         color: ${tabbar.tab.icon.iconcolor.inactive.hover};
                       }
@@ -258,7 +249,6 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:active {
-
                       & > blr-icon {
                         color: ${tabbar.tab.icon.iconcolor.inactive.pressed};
                       }
@@ -269,7 +259,6 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &.disabled {
-
                       & > blr-icon {
                         color: ${tabbar.tab.icon.iconcolor.inactive.disabled};
                       }
@@ -299,12 +288,12 @@ export const staticStyles = typeSafeNestedCss`
                 gap: ${tabbar.tab.contentcol.itemspacing.sm};
 
                 .nav-item-content-wrapper {
-
                   & > .nav-item {
                     padding-left: ${tabbar.tab.contentrow.padding_h.sm};
                     padding-right: ${tabbar.tab.contentrow.padding_h.sm};
                     gap: ${tabbar.tab.contentrow.itemspacing.sm};
                     line-height:  ${tabbar.tab.label.typography.sm.lineHeight};
+
 
                     & > blr-icon {
                       width: ${tabbar.tab.icon.iconsize.sm};
@@ -323,7 +312,6 @@ export const staticStyles = typeSafeNestedCss`
                 gap: ${tabbar.tab.contentcol.itemspacing.md};
 
                 .nav-item-content-wrapper {
-
                   & .nav-item {
                     padding-left: ${tabbar.tab.contentrow.padding_h.md};
                     padding-right: ${tabbar.tab.contentrow.padding_h.md};
@@ -347,7 +335,6 @@ export const staticStyles = typeSafeNestedCss`
                 gap: ${tabbar.tab.contentcol.itemspacing.lg};
 
                 .nav-item-content-wrapper {
-
                   & > .nav-item {
                     padding-left: ${tabbar.tab.contentrow.padding_h.lg};
                     padding-right: ${tabbar.tab.contentrow.padding_h.lg};

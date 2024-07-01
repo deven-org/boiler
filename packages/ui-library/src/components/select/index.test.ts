@@ -1,11 +1,11 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrSelectRenderFunction } from './renderFunction';
+import { BlrSelectRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { html } from 'lit-html';
-import { BlrSelectType } from '.';
+import { BlrSelectType } from './index.js';
 
 const sampleParams: BlrSelectType = {
   name: 'Input Field Text',
