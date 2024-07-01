@@ -23,6 +23,11 @@ module.exports = {
           },
           {
             group: ['lit', '!**/utils/lit'],
+            importNamePattern: '^css$',
+            message: `Don't use lit's css function. Use css from /utils/css-in-ts/nested-typesafe-css-literals instead`,
+          },
+          {
+            group: ['lit', '!**/utils/lit'],
             importNamePattern: '^property$',
             message: `Don't use the default @property decorator. Import property from /utils/lit/decorators.js instead`,
           },

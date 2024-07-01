@@ -1,4 +1,4 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
@@ -17,11 +17,11 @@ import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.genera
 
   */
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { Radio, RadioGroup, formlabel, formcaption } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-legend-wrapper.${theme} {
         &.sm {
           padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.SM};
@@ -49,21 +49,21 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             font-family: ${RadioGroup.Legend.SM.fontFamily}, sans-serif;
             line-height: ${RadioGroup.Legend.SM.lineHeight};
           }
-    
+
           &.md {
             font-weight: ${RadioGroup.Legend.MD.fontWeight};
             font-size: ${RadioGroup.Legend.MD.fontSize};
             font-family: ${RadioGroup.Legend.MD.fontFamily}, sans-serif;
             line-height: ${RadioGroup.Legend.MD.lineHeight};
           }
-    
+
           &.lg {
             font-weight: ${RadioGroup.Legend.LG.fontWeight};
             font-size: ${RadioGroup.Legend.LG.fontSize};
             font-family: ${RadioGroup.Legend.LG.fontFamily}, sans-serif;
             line-height: ${RadioGroup.Legend.LG.lineHeight};
           }
-    
+
           &.error {
             color: ${RadioGroup.Legend.textcolor.error};
           }
@@ -77,7 +77,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
         all: initial;
         margin: 0;
-      
+
         &.sm {
           ${
             // Can be merged with the .caption-group above
@@ -115,26 +115,26 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         }
 
         &.sm {
-          _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
           column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.SM};
           row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.SM};
         }
 
         &.md {
-          _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
           column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.MD};
           row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.MD};
         }
 
         &.lg {
-          _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
+          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
           column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.LG};
           row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.LG};
         }
       }
 
       .blr-radio.${theme} {
-        _FIX_: To override constructed margin;
+        /* FIX: to override constructed margin; */
         all: initial;
         margin: 0 !important;
         display: flex;
@@ -142,7 +142,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
         transition: all 0.25s ease 0s;
 
         .blr-form-label-inline {
-          _FIX?_: "LabelNextToControl states";
+          /* FIX?: "LabelNextToControl states"; */
           color: ${formlabel.inlinelabel.textcolor.rest};
           transition: all 0.25s ease 0s;
           display: flex;
@@ -269,10 +269,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             height: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
           }
 
-          &:not(.disabled):not(.readonly) {
+          &:not(.disabled, .readonly) {
             &:hover {
               background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Hover};
-              
+
               &::before {
                 content: "";
                 background-color: ${Radio.Control.Icon.IconColor.Inactive.Hover};
@@ -286,7 +286,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
                 }
               }
             }
-          
+
             &:active {
               background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Pressed};
 
@@ -306,7 +306,8 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
             &:focus {
               background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
-              _FIX_: "needs focus ring";
+
+              /* FIX: "needs focus ring"; */
               outline: black solid 2px;
               outline-offset: 2px;
 
@@ -325,7 +326,8 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
             }
           }
 
-          &.checked, &:checked {
+          &.checked,
+          &:checked {
             background-color: ${Radio.Control.Container.BackgroundColor.Active.Rest};
 
             &::before {
@@ -335,7 +337,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
               height: ${Radio.Control.Icon.IconSize.SM.Active.Rest};
             }
 
-            &:not(.disabled):not(.readonly) {
+            &:not(.disabled, .readonly) {
               &:hover {
                 background-color: ${Radio.Control.Container.BackgroundColor.Active.Hover};
 
@@ -349,7 +351,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               &:active {
                 background-color: ${Radio.Control.Container.BackgroundColor.Active.Pressed};
-                
+
                 &::before {
                   content: "";
                   background-color: ${Radio.Control.Icon.IconColor.Active.Pressed};
@@ -360,7 +362,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
 
               &:focus {
                 background-color: ${Radio.Control.Container.BackgroundColor.Active.Focus};
-                
+
                 &::before {
                   content: "";
                   background-color: ${Radio.Control.Icon.IconColor.Active.Focus};
@@ -396,7 +398,7 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
           &:disabled {
             cursor: not-allowed;
             background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Disabled};
-          
+
             &::before {
               content: "";
               background-color: ${Radio.Control.Icon.IconColor.Inactive.Disabled};
