@@ -10,7 +10,7 @@
     "checkbox": {
       "control": {
         "container": {
-          "backgroundcolor": {
+          "bgcolor": {
             "active": {
               "rest": {
                 "value": "{sys.bgcolor.bold.primary.rest}",
@@ -259,7 +259,7 @@
             "type": "color"
           }
         },
-        "backgroundcolor": {
+        "bgcolor": {
           "neutral": {
             "value": "{sys.bgcolor.container.informative}",
             "type": "color"
@@ -317,7 +317,7 @@
     },
     "divider": {
       "container": {
-        "backgroundcolor": {
+        "bgcolor": {
           "value": "{sys.bordercolor.container.neutral}",
           "type": "color",
           "description": "color of the divider\n>>> ui.divider.stroke"
@@ -476,14 +476,14 @@
     },
     "menu": {
       "container": {
-        "backgroundcolor": {
+        "bgcolor": {
           "value": "{sys.bgcolor.surface.level_2}",
           "type": "color"
         }
       },
       "menuitem": {
         "itemcontainer": {
-          "backgroundcolor": {
+          "bgcolor": {
             "active": {
               "rest": {
                 "value": "{sem.selectables.container.bgcolor.active.rest}",
@@ -712,7 +712,7 @@
     "radio": {
       "control": {
         "container": {
-          "backgroundcolor": {
+          "bgcolor": {
             "inactive": {
               "rest": {
                 "value": "{sys.bgcolor.bold.primary.rest}",
@@ -970,7 +970,7 @@
     "slider": {
       "thumb": {
         "shape": {
-          "backgroundcolor": {
+          "bgcolor": {
             "rest": {
               "value": "{sys.bgcolor.container.neutral}",
               "type": "color",
@@ -1093,7 +1093,7 @@
             }
           }
         },
-        "backgroundcolor": {
+        "bgcolor": {
           "default": {
             "active": {
               "value": "{sys.bgcolor.container.neutral}",
@@ -1204,7 +1204,7 @@
     "tabbar": {
       "tab": {
         "highlightline": {
-          "backgroundcolor": {
+          "bgcolor": {
             "active": {
               "rest": {
                 "value": "{sys.content.surface.regular.link}",
@@ -1400,7 +1400,7 @@
     },
     "tooltip": {
       "container": {
-        "backgroundcolor": {
+        "bgcolor": {
           "value": "{sys.bgcolor.surface.inverted}",
           "type": "color"
         }
@@ -1415,7 +1415,7 @@
     "toggleswitch": {
       "control": {
         "container": {
-          "backgroundcolor": {
+          "bgcolor": {
             "inactive": {
               "rest": {
                 "value": "{sys.bgcolor.bold.neutral.rest}",
@@ -1617,7 +1617,7 @@
           }
         },
         "knob": {
-          "backgroundcolor": {
+          "bgcolor": {
             "inactive": {
               "rest": {
                 "value": "{sys.static.regular.white}",
