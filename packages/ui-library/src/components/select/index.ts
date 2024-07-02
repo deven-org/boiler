@@ -91,6 +91,13 @@ export class BlrSelect extends LitElementCustom {
     );
   }
 
+  protected openSelectDropdown() {
+    if (!this.disabled) {
+      this._selectNode.focus();
+      this._selectNode.click();
+    }
+  }
+
   protected renderIcon() {
     const classes = classMap({
       'icon-direction-indicator': true,
@@ -98,7 +105,7 @@ export class BlrSelect extends LitElementCustom {
       [this.theme]: this.theme,
     });
 
-    if (this.sizeVariant) {
+    if (this.sizeVariant && this.icon) {
       const iconSizeVariant = getComponentConfigToken([
         'sem',
         'forms',
@@ -108,7 +115,7 @@ export class BlrSelect extends LitElementCustom {
         this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
-      const modifiedIcon = this.icon ? this.icon : 'blrChevronDown';
+      const modifiedIcon = this.icon;
       return BlrIconRenderFunction(
         {
           icon: calculateIconName(modifiedIcon, iconSizeVariant),
@@ -121,6 +128,14 @@ export class BlrSelect extends LitElementCustom {
           'aria-hidden': true,
         }
       );
+    }
+    return nothing;
+  }
+
+  protected handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.openSelectDropdown();
     }
   }
 
@@ -162,7 +177,13 @@ export class BlrSelect extends LitElementCustom {
         <div class="blr-select ${this.sizeVariant} ${this.theme}">
           ${this.hasLabel
             ? html`
-                <div class="label-wrapper">
+                <div
+                  class="label-wrapper"
+                  @click=${this.openSelectDropdown}
+                  @keydown=${this.handleKeyDown}
+                  tabindex="0"
+                  role="button"
+                >
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
                     labelAppendix: this.labelAppendix,
@@ -174,7 +195,13 @@ export class BlrSelect extends LitElementCustom {
                 </div>
               `
             : nothing}
-          <div class="blr-select-wrapper ${inputClasses}">
+          <div
+            class="blr-select-wrapper ${inputClasses}"
+            @click=${this.openSelectDropdown}
+            @keydown=${this.handleKeyDown}
+            tabindex="0"
+            role="button"
+          >
             <div class="blr-select-inner-container ${this.theme}">
               <select
                 aria-label=${this.ariaLabel || nothing}
