@@ -48,7 +48,6 @@ export const staticStyles = css`
     word-break: break-all;
     width: 100%;
     all: initial;
-    width: 100%;
     box-sizing: border-box;
 
     &:active {
@@ -97,6 +96,7 @@ export const staticStyles = css`
     return css`
       .blr-textarea.${theme} {
         max-width: fit-content;
+
         &.sm {
           & > .label-wrapper {
             padding: ${labelslot.padding.sm};
@@ -181,6 +181,7 @@ export const staticStyles = css`
           color: ${inputfield.userinput.textcolor.default.disabled};
           background-color: ${inputfield.container.bgcolor.default.disabled};
           cursor: not-allowed;
+
           &::placeholder {
             color: ${inputfield.placeholder.textcolor.default.disabled};
           }
