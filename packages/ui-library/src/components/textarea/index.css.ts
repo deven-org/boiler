@@ -96,7 +96,7 @@ export const staticStyles = css`
 
     return css`
       .blr-textarea.${theme} {
-      max-width: fit-content;
+        max-width: fit-content;
         &.sm {
           & > .label-wrapper {
             padding: ${labelslot.padding.sm};
@@ -139,12 +139,12 @@ export const staticStyles = css`
         }
       }
 
-      .textarea-input-control.${theme}{
+      .textarea-input-control.${theme} {
         color: ${inputfield.userinput.textcolor.default.rest};
         font-weight: ${inputfield.userinput.typography.md.fontWeight};
         font-size: ${inputfield.userinput.typography.md.fontSize};
         font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
-        background-color: ${inputfield.container.bgcolor.default.rest};       
+        background-color: ${inputfield.container.bgcolor.default.rest};
         border-radius: ${inputfield.container.borderradius};
         outline: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
           ${inputfield.container.border.default.rest.color};
@@ -154,7 +154,8 @@ export const staticStyles = css`
         }
 
         &:hover {
-          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style} ${inputfield.container.border.default.hover.color};
+          outline: ${inputfield.container.border.default.hover.width} ${inputfield.container.border.default.hover.style}
+            ${inputfield.container.border.default.hover.color};
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
 
@@ -165,7 +166,7 @@ export const staticStyles = css`
 
         &:active {
           outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.pressed.style}
-          ${inputfield.container.border.default.pressed.color};
+            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
 
@@ -174,7 +175,7 @@ export const staticStyles = css`
           }
         }
 
-        &.disabled { 
+        &.disabled {
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
@@ -194,7 +195,7 @@ export const staticStyles = css`
             color: ${inputfield.placeholder.textcolor.default.readonly};
           }
         }
-        
+
         &:focus {
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
             ${inputfield.container.border.default.focus.color};
@@ -229,8 +230,8 @@ export const staticStyles = css`
           }
 
           &:hover {
-            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style} 
-            border-color: ${inputfield.container.border.error.hover.color};
+            outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style}
+              ${inputfield.container.border.error.hover.color};
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
 
@@ -244,13 +245,13 @@ export const staticStyles = css`
               ${inputfield.container.border.error.pressed.color};
             color: ${inputfield.userinput.textcolor.error.pressed};
             background-color: ${inputfield.container.bgcolor.error.pressed};
-            
+
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.error.pressed};
             }
           }
         }
-        
+
         &.sm {
           font-weight: ${inputfield.userinput.typography.sm.fontWeight};
           font-size: ${inputfield.userinput.typography.sm.fontSize};
