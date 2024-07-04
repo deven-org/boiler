@@ -25,6 +25,13 @@ import {
 
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
+type Options = {
+  label: string;
+  value: string;
+  disabled?: boolean;
+  selected?: boolean;
+};
+
 export type BlrSelectEventHandlers = {
   blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -53,7 +60,6 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor required: boolean | undefined;
   @property() accessor blrBlur: HTMLElement['blur'] | undefined;
   @property() accessor blrFocus: HTMLElement['focus'] | undefined;
-
   @property() accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor hintMessage: string | undefined;
@@ -61,12 +67,9 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property() accessor hasHint: boolean | undefined;
   @property() accessor icon: SizelessIconType | undefined = 'blrChevronDown';
-
   @property() accessor theme: ThemeType = 'Light';
-
+  @property() accessor options!: Options[] | JSON;
   @state() protected accessor isFocused = false;
-
-  protected _optionElements: Element[] | undefined;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
@@ -81,20 +84,6 @@ export class BlrSelect extends LitElementCustom {
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  protected firstUpdated(...args: Parameters<LitElementCustom['firstUpdated']>): void {
-    if (!this._optionElements) {
-      this.handleSlotChange();
-    }
-  }
-
-  protected handleSlotChange() {
-    const slot = this.renderRoot?.querySelector('slot');
-
-    this._optionElements = slot?.assignedElements({ flatten: false });
-    this.requestUpdate();
-  }
 
   protected handleChange(event: Event) {
     this.dispatchEvent(
@@ -170,8 +159,6 @@ export class BlrSelect extends LitElementCustom {
       });
 
       return html`
-        <slot @slotchange=${this.handleSlotChange}></slot>
-
         <div class="blr-select ${this.sizeVariant} ${this.theme}">
           ${this.hasLabel
             ? html`
@@ -200,15 +187,15 @@ export class BlrSelect extends LitElementCustom {
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >
-                ${this._optionElements?.map((opt: Element) => {
+                ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
                   return html`
                     <option
                       class="blr-select-option"
-                      value=${opt.getAttribute('value') || ''}
-                      ?selected=${opt.getAttribute('selected') === 'true'}
-                      ?disabled=${opt.getAttribute('disabled') === 'true'}
+                      value=${opt.value || ''}
+                      ?selected=${opt.selected ?? false}
+                      ?disabled=${opt.disabled ?? false}
                     >
-                      ${opt.getAttribute('label')}
+                      ${opt.label}
                     </option>
                   `;
                 })}
