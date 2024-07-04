@@ -1,17 +1,18 @@
 import { PropertyValueMap, html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, query, state } from 'lit/decorators.js';
-import { styleCustom } from './index.css';
-import { InputTypes, FormSizesType, SizesType } from '../../globals/types';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { styleCustom } from './index.css.js';
+import { InputTypes, FormSizesType, SizesType } from '../../globals/types.js';
 import { SizelessIconType } from '@boiler/icons';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { TAG_NAME } from './renderFunction';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { TAG_NAME } from './renderFunction.js';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -21,9 +22,9 @@ import {
   createBlrFocusEvent,
   createBlrSelectEvent,
   createBlrTextValueChangeEvent,
-} from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
-import { BlrIconEventHandlers } from '../icon';
+} from '../../globals/events.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { BlrIconEventHandlers } from '../icon/index.js';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -42,35 +43,35 @@ export class BlrInputFieldText extends LitElementCustom {
   static styles = [styleCustom];
 
   @query('input')
-  protected _inputFieldTextNode!: HTMLInputElement;
+  protected accessor _inputFieldTextNode!: HTMLInputElement;
 
-  @property() inputFieldTextId!: string;
-  @property() type: InputTypes = 'text';
-  @property() arialabel!: string;
-  @property() hasLabel!: boolean;
-  @property() label!: string;
-  @property() labelAppendix?: string;
-  @property() value!: string;
-  @property() placeholder?: string;
-  @property() disabled?: boolean;
-  @property() readonly?: boolean;
-  @property() sizeVariant?: FormSizesType = 'md';
-  @property() required?: boolean;
-  @property() maxLength?: number;
-  @property() pattern?: string;
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() icon?: SizelessIconType = 'blr360';
-  @property() hasHint = true;
-  @property() hintMessage?: string;
-  @property() hintMessageIcon?: SizelessIconType;
-  @property() errorMessageIcon?: SizelessIconType;
+  @property() accessor inputFieldTextId!: string;
+  @property() accessor type: InputTypes = 'text';
+  @property() accessor arialabel!: string;
+  @property() accessor hasLabel!: boolean;
+  @property() accessor label!: string;
+  @property() accessor labelAppendix: string | undefined;
+  @property() accessor value!: string;
+  @property() accessor placeholder: string | undefined;
+  @property() accessor disabled: boolean | undefined;
+  @property() accessor readonly: boolean | undefined;
+  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor required: boolean | undefined;
+  @property() accessor maxLength: number | undefined;
+  @property() accessor pattern: string | undefined;
+  @property() accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor icon: SizelessIconType | undefined = 'blr360';
+  @property() accessor hasHint = true;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
 
-  @property() name!: string;
-  @property() theme: ThemeType = 'Light';
+  @property() accessor name!: string;
+  @property() accessor theme: ThemeType = 'Light';
 
-  @state() protected currentType: InputTypes = this.type;
-  @state() protected isFocused = false;
+  @state() protected accessor currentType: InputTypes = this.type;
+  @state() protected accessor isFocused = false;
 
   protected willUpdate(_changedProperties: PropertyValueMap<never> | Map<PropertyKey, unknown>): void {
     if (_changedProperties.get('type')) {
@@ -269,4 +270,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrInputFieldText);
 }
 
-export type BlrInputFieldTextType = Omit<BlrInputFieldText, keyof LitElementCustom> & BlrInputFieldTextEventHandlers;
+export type BlrInputFieldTextType = ElementInterface<BlrInputFieldText>;

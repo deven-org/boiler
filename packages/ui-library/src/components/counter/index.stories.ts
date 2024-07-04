@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { CounterVariants, FormSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { CounterVariants, FormSizes } from '../../globals/constants.js';
 import { html } from 'lit-html';
-import { BlrCounterType } from './index';
-import { BlrCounterRenderFunction } from './renderFunction';
+import { BlrCounterType } from './index.js';
+import { BlrCounterRenderFunction } from './renderFunction.js';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrRadioGroupRenderFunction } from './renderFunction';
+import { BlrRadioGroupRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import { BlrRadioGroupType } from '.';
+import { BlrRadioGroupType } from './index.js';
 
 const sampleParams: BlrRadioGroupType = {
   theme: 'Light',

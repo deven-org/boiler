@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import { html } from 'lit';
-import type { BlrButtonIconType } from './index';
-import { BlrButtonIconRenderFunction } from './renderFunction';
+import type { BlrButtonIconType } from './index.js';
+import { BlrButtonIconRenderFunction } from './renderFunction.js';
 import { PureIconKeys } from '@boiler/icons';
 // this loads the all components instances and registers their html tags
-import '../../index';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { ActionVariants, ActionSizes } from '../../globals/constants';
+import '../../index.js';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { ActionVariants, ActionSizes } from '../../globals/constants.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

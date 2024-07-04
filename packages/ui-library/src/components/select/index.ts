@@ -1,18 +1,19 @@
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, query, state } from 'lit/decorators.js';
-import { staticStyles } from './index.css';
-import { FormSizesType, SizesType } from '../../globals/types';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { staticStyles } from './index.css.js';
+import { FormSizesType, SizesType } from '../../globals/types.js';
 import { SizelessIconType } from '@boiler/icons';
-import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { TAG_NAME } from './renderFunction';
-import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction';
-import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction';
-import { BlrFormLabelRenderFunction } from '../form-label/renderFunction';
+import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { TAG_NAME } from './renderFunction.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
+import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormLabelRenderFunction } from '../form-label/renderFunction.js';
 import {
   BlrBlurEvent,
   BlrFocusEvent,
@@ -20,9 +21,16 @@ import {
   createBlrBlurEvent,
   createBlrFocusEvent,
   createBlrSelectedValueChangeEvent,
-} from '../../globals/events';
+} from '../../globals/events.js';
 
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+
+type Options = {
+  label: string;
+  value: string;
+  disabled?: boolean;
+  selected?: boolean;
+};
 
 export type BlrSelectEventHandlers = {
   blrSelectedValueChange?: (event: BlrSelectedValueChangeEvent) => void;
@@ -39,33 +47,29 @@ export class BlrSelect extends LitElementCustom {
   static styles = [staticFormStyles, staticStyles];
 
   @query('select')
-  protected _selectNode!: HTMLInputElement;
+  protected accessor _selectNode!: HTMLInputElement;
 
-  @property() arialabel?: string;
-  @property() selectId!: string;
-  @property() labelAppendix?: string;
-  @property() name!: string;
-  @property() hasLabel?: boolean;
-  @property() label!: string;
-  @property() disabled?: boolean;
-  @property() sizeVariant: FormSizesType = 'md';
-  @property() required?: boolean;
-  @property() blrBlur?: HTMLElement['blur'];
-  @property() blrFocus?: HTMLElement['focus'];
-
-  @property() hasError?: boolean;
-  @property() errorMessage?: string;
-  @property() hintMessage?: string;
-  @property() hintMessageIcon?: SizelessIconType;
-  @property() errorMessageIcon?: SizelessIconType;
-  @property() hasHint?: boolean;
-  @property() icon?: SizelessIconType = 'blrChevronDown';
-
-  @property() theme: ThemeType = 'Light';
-
-  @state() protected isFocused = false;
-
-  protected _optionElements: Element[] | undefined;
+  @property() accessor arialabel: string | undefined;
+  @property() accessor selectId!: string;
+  @property() accessor labelAppendix: string | undefined;
+  @property() accessor name!: string;
+  @property() accessor hasLabel: boolean | undefined;
+  @property() accessor label!: string;
+  @property() accessor disabled: boolean | undefined;
+  @property() accessor sizeVariant: FormSizesType = 'md';
+  @property() accessor required: boolean | undefined;
+  @property() accessor blrBlur: HTMLElement['blur'] | undefined;
+  @property() accessor blrFocus: HTMLElement['focus'] | undefined;
+  @property() accessor hasError: boolean | undefined;
+  @property() accessor errorMessage: string | undefined;
+  @property() accessor hintMessage: string | undefined;
+  @property() accessor hintMessageIcon: SizelessIconType | undefined;
+  @property() accessor errorMessageIcon: SizelessIconType | undefined;
+  @property() accessor hasHint: boolean | undefined;
+  @property() accessor icon: SizelessIconType | undefined = 'blrChevronDown';
+  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor options!: Options[] | JSON;
+  @state() protected accessor isFocused = false;
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {
@@ -80,13 +84,6 @@ export class BlrSelect extends LitElementCustom {
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
   };
-
-  protected handleSlotChange() {
-    const slot = this.renderRoot?.querySelector('slot');
-
-    this._optionElements = slot?.assignedElements({ flatten: false });
-    this.requestUpdate();
-  }
 
   protected handleChange(event: Event) {
     this.dispatchEvent(
@@ -162,8 +159,6 @@ export class BlrSelect extends LitElementCustom {
       });
 
       return html`
-        <slot @slotchange=${this.handleSlotChange}></slot>
-
         <div class="blr-select ${this.sizeVariant} ${this.theme}">
           ${this.hasLabel
             ? html`
@@ -192,15 +187,15 @@ export class BlrSelect extends LitElementCustom {
                 @focus=${this.handleFocus}
                 @blur=${this.handleBlur}
               >
-                ${this._optionElements?.map((opt: Element) => {
+                ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
                   return html`
                     <option
                       class="blr-select-option"
-                      value=${opt.getAttribute('value') || ''}
-                      ?selected=${opt.getAttribute('selected') === 'true'}
-                      ?disabled=${opt.getAttribute('disabled') === 'true'}
+                      value=${opt.value || ''}
+                      ?selected=${opt.selected ?? false}
+                      ?disabled=${opt.disabled ?? false}
                     >
-                      ${opt.getAttribute('label')}
+                      ${opt.label}
                     </option>
                   `;
                 })}
@@ -224,4 +219,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrSelect);
 }
 
-export type BlrSelectType = Omit<BlrSelect, keyof LitElementCustom> & BlrSelectEventHandlers;
+export type BlrSelectType = ElementInterface<BlrSelect>;

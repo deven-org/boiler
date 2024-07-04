@@ -26,8 +26,5 @@ jobs:
       - name: Install modules
         run: yarn
 
-      - name: Generate tokens
-        run: yarn tokens:generate
-
       - name: Run Compile
-        run: yarn compile
+        run: yarn build:ui-library

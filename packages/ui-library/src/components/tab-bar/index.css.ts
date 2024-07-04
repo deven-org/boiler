@@ -1,23 +1,23 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss`
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { ButtonIcon } = cmp;
     const { TabBar } = cmp;
 
-    return typeSafeCss/* css */ `
+    return css`
       .panel-wrapper {
         margin-top: 2rem;
-    
+
         & > slot {
           display: none;
-    
+
           &.active {
             display: block;
           }
         }
-      } 
+      }
 
       slot {
         display: none;
@@ -34,10 +34,10 @@ export const staticStyles = typeSafeNestedCss`
         }
 
         &.browserOverflow {
-          padding: 0px 1rem;
+          padding: 0 1rem;
         }
       }
-      
+
       .blr-tab-bar-group.${theme} {
         width: 100%;
         display: flex;
@@ -86,7 +86,6 @@ export const staticStyles = typeSafeNestedCss`
             &.right {
               margin: ${TabBar.ButtonWrapper.Padding.Trailing.MD};
             }
-            
           }
 
           &.lg {
@@ -148,7 +147,6 @@ export const staticStyles = typeSafeNestedCss`
               flex-direction: column;
               justify-content: center;
 
-
               &:focus-within:not(.disabled) {
                 outline: 2px solid black;
                 outline-offset: -2px;
@@ -157,7 +155,7 @@ export const staticStyles = typeSafeNestedCss`
 
               .nav-item-underline {
                 &.selected {
-                background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Pressed}
+                  background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Pressed};
                 }
               }
 
@@ -177,7 +175,6 @@ export const staticStyles = typeSafeNestedCss`
                   flex-shrink: 0;
 
                   &.selected {
-
                     & > blr-icon {
                       color: ${TabBar.Tab.Icon.IconColor.Active.Rest};
                     }
@@ -187,9 +184,7 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:focus {
-
                       &:not(.disabled) {
-
                         & > blr-icon {
                           color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
                         }
@@ -201,9 +196,7 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:hover {
-
                       &:not(.disabled) {
-
                         & > blr-icon {
                           color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
                         }
@@ -215,7 +208,6 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:active {
-
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
                       }
@@ -225,8 +217,8 @@ export const staticStyles = typeSafeNestedCss`
                       }
                     }
                   }
-                  &:not(.selected) {
 
+                  &:not(.selected) {
                     & > blr-icon {
                       color: ${TabBar.Tab.Icon.IconColor.Inactive.Rest};
                     }
@@ -236,18 +228,16 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:focus {
-
                       & > blr-icon {
-                        color
-                        : ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
+                        color: ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
                       }
+
                       & > label {
                         color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
                       }
                     }
 
                     &:hover {
-
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
                       }
@@ -258,7 +248,6 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &:active {
-
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
                       }
@@ -269,7 +258,6 @@ export const staticStyles = typeSafeNestedCss`
                     }
 
                     &.disabled {
-
                       & > blr-icon {
                         color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
                       }
@@ -299,12 +287,11 @@ export const staticStyles = typeSafeNestedCss`
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.SM};
 
                 .nav-item-content-wrapper {
-
                   & > .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.Padding_H.SM};
                     padding-right: ${TabBar.Tab.ContentRow.Padding_H.SM};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
-                    line-height:  ${TabBar.Tab.Label.Typography.SM.lineHeight};
+                    line-height: ${TabBar.Tab.Label.Typography.SM.lineHeight};
 
                     & > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.SM};
@@ -323,12 +310,11 @@ export const staticStyles = typeSafeNestedCss`
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.MD};
 
                 .nav-item-content-wrapper {
-
                   & .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.Padding_H.MD};
                     padding-right: ${TabBar.Tab.ContentRow.Padding_H.MD};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
-                    line-height:  ${TabBar.Tab.Label.Typography.MD.lineHeight};
+                    line-height: ${TabBar.Tab.Label.Typography.MD.lineHeight};
 
                     & blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.MD};
@@ -347,12 +333,11 @@ export const staticStyles = typeSafeNestedCss`
                 gap: ${TabBar.Tab.ContentCol.ItemSpacing.LG};
 
                 .nav-item-content-wrapper {
-
                   & > .nav-item {
                     padding-left: ${TabBar.Tab.ContentRow.Padding_H.LG};
                     padding-right: ${TabBar.Tab.ContentRow.Padding_H.LG};
                     gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
-                    line-height:  ${TabBar.Tab.Label.Typography.LG.lineHeight};
+                    line-height: ${TabBar.Tab.Label.Typography.LG.lineHeight};
 
                     & > blr-icon {
                       width: ${TabBar.Tab.Icon.IconSize.LG};

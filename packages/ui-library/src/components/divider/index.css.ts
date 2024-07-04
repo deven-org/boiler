@@ -1,11 +1,11 @@
-import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss`
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { Divider } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-divider.${theme} {
         background-color: ${Divider.Container.BackgroundColor};
 

@@ -1,13 +1,13 @@
-import { BlrRadioGroupType } from './index';
-import { BlrRadioGroupRenderFunction } from './renderFunction';
+import { BlrRadioGroupType } from './index.js';
+import { BlrRadioGroupRenderFunction } from './renderFunction.js';
 
 import { html } from 'lit';
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 import { action } from '@storybook/addon-actions';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { InputSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { InputSizes } from '../../globals/constants.js';
 
 const sharedStyles = html`
   <style>

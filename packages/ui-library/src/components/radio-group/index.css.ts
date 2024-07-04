@@ -1,6 +1,6 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss`
+export const staticStyles = css`
   .blr-radio,
   .blr-legend,
   .caption-group {
@@ -10,7 +10,7 @@ export const staticStyles = typeSafeNestedCss`
   .vertical {
     flex-direction: column;
   }
-  
+
   .horizontal {
     flex-direction: row;
   }

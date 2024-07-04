@@ -1,9 +1,9 @@
-import '@boiler/ui-library/dist/';
-import { BlrButtonGroupRenderFunction } from './renderFunction';
+import '@boiler/ui-library';
+import { BlrButtonGroupRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrButtonGroupType } from '.';
-import { BlrButtonTextRenderFunction } from '../button-text/renderFunction';
+import type { BlrButtonGroupType } from './index.js';
+import { BlrButtonTextRenderFunction } from '../button-text/renderFunction.js';
 
 const sampleParams: BlrButtonGroupType = {
   sizeVariant: 'md',

@@ -1,9 +1,9 @@
-import '@boiler/ui-library/dist/';
-import { getRandomString } from '../../utils/get-random.string';
-import { BlrTextareaRenderFunction } from './renderFunction';
+import '@boiler/ui-library';
+import { getRandomString } from '../../utils/get-random.string.js';
+import { BlrTextareaRenderFunction } from './renderFunction.js';
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-dom';
-import type { BlrTextareaType } from '.';
+import type { BlrTextareaType } from './index.js';
 
 const sampleParams: BlrTextareaType = {
   theme: 'Light',

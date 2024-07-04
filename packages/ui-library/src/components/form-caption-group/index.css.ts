@@ -1,25 +1,25 @@
-import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated";
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { ComponentThemeIterator, SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   .blr-form-caption-group {
     display: flex;
     flex-direction: column;
   }
 
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { captiongroup } = cmp;
 
-    return typeSafeCss/*css*/ `
-      .blr-form-caption-group.${theme} {        
+    return css`
+      .blr-form-caption-group.${theme} {
         &.sm {
           gap: ${captiongroup.container.itemspacing.sm};
         }
-    
+
         &.md {
           gap: ${captiongroup.container.itemspacing.md};
         }
-    
+
         &.lg {
           gap: ${captiongroup.container.itemspacing.lg};
         }
@@ -27,10 +27,10 @@ export const staticStyles = typeSafeNestedCss/*css*/ `
     `;
   })}
 
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { forms } = sem;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-form-caption-group.${theme} {
         &.sm {
           margin: ${forms.captionslot.margin.sm};
