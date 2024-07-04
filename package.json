@@ -6,6 +6,7 @@
   "types": "",
   "scripts": {
     "start:storybook": "yarn tokens:generate && yarn compile:icons && yarn workspace @boiler/ui-library start:storybook",
+    "build:js-example-app": "yarn workspace @boiler/js-example-app build:dev",
     "start:js-example-app": "yarn workspace @boiler/js-example-app start:dev",
     "build:storybook": "yarn tokens:generate && yarn compile:icons && yarn workspace @boiler/ui-library build:storybook",
     "build:ui-library": "yarn tokens:generate && yarn compile:icons && yarn workspace @boiler/ui-library build && yarn workspace @boiler/ui-library compile",
