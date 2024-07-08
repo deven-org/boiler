@@ -115,6 +115,19 @@ export class BlrInputFieldText extends LitElementCustom {
     }
   };
 
+  protected firstUpdated(): void {
+    const inputWrapper = this.shadowRoot?.querySelector('.blr-input-wrapper');
+    if (inputWrapper) {
+      inputWrapper.addEventListener('click', this.handleWrapperClick);
+    }
+  }
+
+  protected handleWrapperClick = (): void => {
+    if (!this.disabled) {
+      this._inputFieldTextNode.focus();
+    }
+  };
+
   protected handleIconClick: BlrIconEventHandlers['blrClick'] = () => {
     if (this.disabled) {
       return;
