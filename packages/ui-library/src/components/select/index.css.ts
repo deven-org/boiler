@@ -7,9 +7,17 @@ import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 const directionIndicatorIconClassName = "icon-direction-indicator";
 
 export const staticStyles = css`
-  .${directionIndicatorIconClassName} {
-    pointer-events: none;
+  .select-icon-wrapper {
     position: relative;
+    width: 100%;
+  }
+
+  .${directionIndicatorIconClassName} {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
   }
 
   .blr-select-option {
@@ -32,6 +40,8 @@ export const staticStyles = css`
       width: 100%;
       border: none;
       outline: none;
+      appearance: none;
+      padding-right: 30px;
 
       &.focus {
         border: none;
@@ -70,6 +80,8 @@ export const staticStyles = css`
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      appearance: none;
+      padding-right: 30px;
     }
 
     &.focus {
@@ -279,23 +291,20 @@ export const staticStyles = css`
         }
 
         &:active {
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.focus.style} ${
-      inputfield.container.border.default.pressed.color
-    };
+          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.focus.style}
+            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
         }
 
         &.error-input {
-          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style} ${
-      inputfield.container.border.error.rest.color
-    };
+          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+            ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
           &.focus {
-            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style} ${
-      inputfield.container.border.error.focus.color
-    };
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
             color: ${inputfield.userinput.textcolor.error.focus};
             background-color: ${inputfield.container.bgcolor.error.focus};
           }
@@ -306,9 +315,8 @@ export const staticStyles = css`
           }
 
           &:active {
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.focus.style} ${
-      inputfield.container.border.error.pressed.color
-    };
+            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.pressed.color};
             color: ${inputfield.userinput.textcolor.error.pressed};
             background-color: ${inputfield.container.bgcolor.error.pressed};
           }

@@ -87,7 +87,7 @@ export class BlrSelect extends LitElementCustom {
 
   protected handleChange(event: Event) {
     this.dispatchEvent(
-      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._selectNode.value })
+      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._selectNode.value }),
     );
   }
 
@@ -126,17 +126,10 @@ export class BlrSelect extends LitElementCustom {
         },
         {
           'aria-hidden': true,
-        }
+        },
       );
     }
     return nothing;
-  }
-
-  protected handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      this.openSelectDropdown();
-    }
   }
 
   protected renderCaptionContent() {
@@ -177,13 +170,7 @@ export class BlrSelect extends LitElementCustom {
         <div class="blr-select ${this.sizeVariant} ${this.theme}">
           ${this.hasLabel
             ? html`
-                <div
-                  class="label-wrapper"
-                  @click=${this.openSelectDropdown}
-                  @keydown=${this.handleKeyDown}
-                  tabindex="0"
-                  role="button"
-                >
+                <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
                     labelAppendix: this.labelAppendix,
@@ -195,45 +182,41 @@ export class BlrSelect extends LitElementCustom {
                 </div>
               `
             : nothing}
-          <div
-            class="blr-select-wrapper ${inputClasses}"
-            @click=${this.openSelectDropdown}
-            @keydown=${this.handleKeyDown}
-            tabindex="0"
-            role="button"
-          >
+          <div class="blr-select-wrapper ${inputClasses}">
             <div class="blr-select-inner-container ${this.theme}">
-              <select
-                aria-label=${this.ariaLabel || nothing}
-                class="blr-form-select ${inputClasses}"
-                id=${this.selectId || nothing}
-                name=${this.name || nothing}
-                ?disabled=${this.disabled}
-                ?required=${this.required}
-                @input=${this.handleChange}
-                @focus=${this.handleFocus}
-                @blur=${this.handleBlur}
-              >
-                ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
-                  return html`
-                    <option
-                      class="blr-select-option"
-                      value=${opt.value || ''}
-                      ?selected=${opt.selected ?? false}
-                      ?disabled=${opt.disabled ?? false}
-                    >
-                      ${opt.label}
-                    </option>
-                  `;
-                })}
-              </select>
+              <div class="select-icon-wrapper">
+                <select
+                  aria-label=${this.ariaLabel || nothing}
+                  class="blr-form-select ${inputClasses}"
+                  id=${this.selectId || nothing}
+                  name=${this.name || nothing}
+                  ?disabled=${this.disabled}
+                  ?required=${this.required}
+                  @input=${this.handleChange}
+                  @focus=${this.handleFocus}
+                  @blur=${this.handleBlur}
+                >
+                  ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
+                    return html`
+                      <option
+                        class="blr-select-option"
+                        value=${opt.value || ''}
+                        ?selected=${opt.selected ?? false}
+                        ?disabled=${opt.disabled ?? false}
+                      >
+                        ${opt.label}
+                      </option>
+                    `;
+                  })}
+                </select>
+                ${this.renderIcon()}
+              </div>
             </div>
-            ${this.renderIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
             ? BlrFormCaptionGroupRenderFunction(
                 { theme: this.theme, sizeVariant: this.sizeVariant },
-                this.renderCaptionContent()
+                this.renderCaptionContent(),
               )
             : nothing}
         </div>
