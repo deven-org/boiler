@@ -68,9 +68,9 @@ export const staticSemanticStyles = css`
         font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
         font-size: ${forms.inputfield.userinput.typography.md.fontSize};
         font-family: ${forms.inputfield.userinput.typography.md.fontFamily}, sans-serif;
-        border-width: ${forms.inputfield.container.border.default.rest.width};
-        border-style: ${forms.inputfield.container.border.default.rest.style};
-        border-color: ${forms.inputfield.container.border.default.rest.color};
+        outline-width: ${forms.inputfield.container.border.default.rest.width};
+        outline-style: ${forms.inputfield.container.border.default.rest.style};
+        outline-color: ${forms.inputfield.container.border.default.rest.color};
         border-radius: ${forms.inputfield.container.borderradius};
 
         &::placeholder {
@@ -78,9 +78,9 @@ export const staticSemanticStyles = css`
         }
 
         &:hover {
-          border-width: ${forms.inputfield.container.border.default.hover.width};
-          border-style: ${forms.inputfield.container.border.default.hover.style};
-          border-color: ${forms.inputfield.container.border.default.hover.color};
+          outline-width: ${forms.inputfield.container.border.default.hover.width};
+          outline-style: ${forms.inputfield.container.border.default.hover.style};
+          outline-color: ${forms.inputfield.container.border.default.hover.color};
           color: ${forms.inputfield.userinput.textcolor.default.hover};
           background-color: ${forms.inputfield.container.bgcolor.default.hover};
 
@@ -90,9 +90,7 @@ export const staticSemanticStyles = css`
         }
 
         &:active {
-          border-width: ${forms.inputfield.container.border.default.pressed.width};
-          border-style: ${forms.inputfield.container.border.default.pressed.style};
-          border-color: transparent;
+          outline-offset: calc(1px * -1);
           outline: ${forms.inputfield.container.border.default.pressed.width} ${forms.inputfield.container.border.default.pressed.style}
             ${forms.inputfield.container.border.default.pressed.color};
           color: ${forms.inputfield.userinput.textcolor.default.pressed};
@@ -104,9 +102,7 @@ export const staticSemanticStyles = css`
         }
 
         &[readonly] {
-          border-width: ${forms.inputfield.container.border.default.readonly.width};
-          border-style: ${forms.inputfield.container.border.default.readonly.style};
-          border-color: transparent;
+          outline-offset: calc(1px * -1);
           outline: ${forms.inputfield.container.border.default.hover.width} ${forms.inputfield.container.border.default.readonly.style}
             ${forms.inputfield.container.border.default.readonly.color};
           background-color: ${forms.inputfield.container.bgcolor.default.readonly};
@@ -117,9 +113,7 @@ export const staticSemanticStyles = css`
         }
 
         &:disabled {
-          border-width: ${forms.inputfield.container.border.default.readonly.width};
-          border-style: ${forms.inputfield.container.border.default.disabled.style};
-          border-color: transparent;
+          outline-offset: calc(1px * -1);
           outline: ${forms.inputfield.container.border.default.disabled.width} ${forms.inputfield.container.border.default.disabled.style}
             ${forms.inputfield.container.border.default.disabled.color};
           color: ${forms.inputfield.userinput.textcolor.default.disabled};
@@ -131,9 +125,7 @@ export const staticSemanticStyles = css`
         }
 
         &:focus {
-          border-width: ${forms.inputfield.container.border.default.rest.width};
-          border-style: ${forms.inputfield.container.border.default.rest.style};
-          border-color: transparent;
+          outline-offset: calc(1px * -1);
           outline: ${forms.inputfield.container.border.default.focus.width} ${forms.inputfield.container.border.default.focus.style}
             ${forms.inputfield.container.border.default.focus.color};
           color: ${forms.inputfield.userinput.textcolor.default.focus};
@@ -145,9 +137,9 @@ export const staticSemanticStyles = css`
         }
 
         &.error-input {
-          border-width: ${forms.inputfield.container.border.error.rest.width};
-          border-style: ${forms.inputfield.container.border.error.rest.style};
-          border-color: ${forms.inputfield.container.border.error.rest.color};
+          outline-offset: calc(1px * -1);
+          outline: ${forms.inputfield.container.border.error.rest.width} ${forms.inputfield.container.border.error.rest.style}
+            ${forms.inputfield.container.border.error.rest.color};
           color: ${forms.inputfield.userinput.textcolor.error.rest};
           background-color: ${forms.inputfield.container.bgcolor.error.rest};
 
@@ -156,9 +148,9 @@ export const staticSemanticStyles = css`
           }
 
           &:hover {
-            border-width: ${forms.inputfield.container.border.error.hover.width};
-            border-style: ${forms.inputfield.container.border.error.hover.style};
-            border-color: ${forms.inputfield.container.border.error.hover.color};
+            outline-offset: calc(1px * -1);
+            outline: ${forms.inputfield.container.border.error.hover.width} ${forms.inputfield.container.border.error.hover.style}
+              ${forms.inputfield.container.border.error.hover.color};
             color: ${forms.inputfield.userinput.textcolor.error.hover};
             background-color: ${forms.inputfield.container.bgcolor.error.hover};
 
@@ -168,9 +160,7 @@ export const staticSemanticStyles = css`
           }
 
           &:active {
-            border-width: ${forms.inputfield.container.border.error.pressed.width};
-            border-style: ${forms.inputfield.container.border.error.pressed.style};
-            border-style: ${forms.inputfield.container.border.error.pressed.color};
+            outline-offset: calc(1px * -1);
             outline: ${forms.inputfield.container.border.error.pressed.width} ${forms.inputfield.container.border.error.pressed.style}
               ${forms.inputfield.container.border.error.pressed.color};
             color: ${forms.inputfield.userinput.textcolor.error.pressed};
@@ -182,8 +172,7 @@ export const staticSemanticStyles = css`
           }
 
           &:focus {
-            border-width: ${forms.inputfield.container.border.error.rest.width};
-            border-style: ${forms.inputfield.container.border.error.rest.style};
+            outline-offset: calc(1px * -1);
             border-color: transparent;
             outline: ${forms.inputfield.container.border.error.focus.width} ${forms.inputfield.container.border.error.focus.style}
               ${forms.inputfield.container.border.error.focus.color};
