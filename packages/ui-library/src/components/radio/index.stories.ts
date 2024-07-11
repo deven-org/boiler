@@ -228,7 +228,7 @@ const args: BlrRadioType & {
 } = {
   theme: 'Light',
   sizeVariant: 'md',
-  value: '',
+  value: 'radioValue',
   checked: false,
   label: 'Label',
   hasHint: false,
@@ -243,8 +243,8 @@ const args: BlrRadioType & {
   errorMessageIcon: undefined,
   radioId: 'radioId',
   name: 'Radio Button',
-  blrChange: () => action('blrChange'),
-  blrFocus: () => action('blrFocus'),
+  blrSelectedValueChange: () => action('blrSelectedValueChangeEvent'),
+  blrFocus: () => action('focused'),
   blrBlur: () => action('blrBlr'),
 };
 
