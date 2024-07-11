@@ -11,10 +11,26 @@ import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
-import { createBlrBlurEvent, createBlrFocusEvent, createBlrSelectedValueChangeEvent } from '../../globals/events.js';
-import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import {
+  createBlrBlurEvent,
+  createBlrFocusEvent,
+  createBlrSelectedValueChangeEvent,
+  BlrBlurEvent,
+  BlrFocusEvent,
+  BlrCheckedChangeEvent,
+} from '../../globals/events.js';
+import { LitElementCustom } from '../../utils/lit/element.js';
+import { SignalHub } from '../../utils/lit/signals.js';
 
-export class BlrRadio extends LitElementCustom {
+/**
+ * @fires blrFocus Radio received focus
+ * @fires blrBlur Radio lost focus
+ * @fires blrSelectedValueChangeEvent Radio selected value changed
+ */
+
+export class BlrRadio extends LitElementCustom implements PublicReactiveProperties {
+  public declare signals: SignalHub<PublicReactiveProperties>;
+
   static styles = [staticFormStyles, staticRadioStyles];
 
   @query('input')
@@ -24,20 +40,17 @@ export class BlrRadio extends LitElementCustom {
   @property() accessor label!: string;
   @property() accessor disabled: boolean | undefined;
   @property() accessor readonly: boolean | undefined;
-  @property() accessor checked: boolean | undefined;
+  @property({ type: Boolean }) accessor checked: boolean | undefined;
   @property() accessor name: string | undefined;
   @property() accessor sizeVariant: InputSizesType | undefined = 'md';
   @property() accessor required: boolean | undefined;
-  @property() accessor blrChange: HTMLElement['oninput'] | undefined;
-  @property() accessor blrBlur: HTMLElement['blur'] | undefined;
-  @property() accessor blrFocus: HTMLElement['focus'] | undefined;
   @property() accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property() accessor hasHint: boolean | undefined;
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
-
+  @property() accessor value: string | undefined;
   @property() accessor theme: ThemeType = 'Light';
 
   protected handleFocus = (event: FocusEvent) => {
@@ -52,10 +65,21 @@ export class BlrRadio extends LitElementCustom {
     }
   };
 
-  protected handleChange(event: Event) {
-    this.dispatchEvent(
-      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._radioNode.value })
-    );
+  protected handleClick(event: Event) {
+    event.preventDefault();
+
+    if (!this.disabled) {
+      const changeEvent = createBlrSelectedValueChangeEvent({
+        originalEvent: event,
+        selectedValue: this._radioNode.value,
+      });
+
+      this.dispatchEvent(changeEvent);
+
+      if (!changeEvent.defaultPrevented) {
+        this.checked = true;
+      }
+    }
   }
 
   protected render() {
@@ -68,6 +92,10 @@ export class BlrRadio extends LitElementCustom {
         checked: this.checked || false,
         error: this.hasError || false,
       });
+
+      const calculateOptionId = (label: string) => {
+        return label.replace(/ /g, '_').toLowerCase();
+      };
 
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
@@ -97,11 +125,11 @@ export class BlrRadio extends LitElementCustom {
             `
           : nothing}
       `;
-
+      const id = calculateOptionId(this.label);
       return html`
         <div class="blr-radio ${classes}">
           <input
-            id=${this.optionId || nothing}
+            id=${id || nothing}
             class="${classes} input-control"
             type="radio"
             name=${this.name}
@@ -109,19 +137,21 @@ export class BlrRadio extends LitElementCustom {
             ?readonly=${this.readonly}
             ?invalid=${this.hasError}
             ?checked=${this.checked}
+            .checked=${this.checked || nothing}
             ?required=${this.required}
-            @input=${this.handleChange}
+            @click=${this.handleClick}
             @focus=${this.handleFocus}
             @blur=${this.handleBlur}
           />
           <div class="label-wrapper">
             ${BlrFormLabelInlineRenderFunction({
               labelText: this.label,
-              forValue: this.optionId,
+              forValue: id,
               labelSize: this.sizeVariant,
               theme: this.theme,
             })}
-            ${this.hasHint || this.hasError
+            ${(this.hasHint && (this.hintMessageIcon || this.hintMessage)) ||
+            (this.hasError && (this.errorMessageIcon || this.errorMessage))
               ? BlrFormCaptionGroupRenderFunction({ sizeVariant: this.sizeVariant, theme: this.theme }, captionContent)
               : nothing}
           </div>
@@ -135,4 +165,31 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrRadio);
 }
 
-export type BlrRadioType = ElementInterface<BlrRadio>;
+export type BlrRadioType = PublicReactiveProperties & PublicMethods & BlrRadioEventHandlers;
+
+export type PublicReactiveProperties = {
+  optionId: string;
+  label: string;
+  disabled?: boolean;
+  readonly?: boolean;
+  name?: string;
+  sizeVariant?: InputSizesType;
+  required?: boolean;
+  hasError?: boolean;
+  errorMessage?: string;
+  errorMessageIcon?: SizelessIconType;
+  hasHint?: boolean;
+  hintMessage?: string;
+  hintMessageIcon?: SizelessIconType;
+  value?: string;
+  theme: ThemeType;
+  checked?: boolean;
+};
+
+export type PublicMethods = unknown;
+
+export type BlrRadioEventHandlers = {
+  blrFocus?: (event: BlrFocusEvent) => void;
+  blrBlur?: (event: BlrBlurEvent) => void;
+  blrSelectedValueChangeEvent?: (event: BlrCheckedChangeEvent) => void;
+};
