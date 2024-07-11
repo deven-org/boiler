@@ -99,6 +99,7 @@ export class BlrRadioGroup extends LitElementCustom {
       item.disabled = this.disabled;
       item.readonly = this.readonly;
       item.theme = this.theme;
+      item.sizeVariant = this.sizeVariant;
 
       this._radioCheckedSignalSubscriptionDisposers.push(
         item.signals.checked.subscribe((value) => this.handleRadioCheckedSignal(item, value))
