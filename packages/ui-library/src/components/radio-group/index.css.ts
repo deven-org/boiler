@@ -7,11 +7,18 @@ export const staticStyles = css`
     margin: 0 1rem;
   }
 
-  .vertical {
-    flex-direction: column;
+  .blr-legend {
+    padding: 0;
   }
 
-  .horizontal {
+  .horizontal > slot {
+    display: flex;
     flex-direction: row;
+    column-gap: 1rem;
+    height: 40px;
+  }
+
+  .vertical > slot {
+    flex-direction: column;
   }
 `;
