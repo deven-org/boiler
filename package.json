@@ -97,6 +97,7 @@
   },
   "dependencies": {
     "@geometricpanda/storybook-addon-badges": "^2.0.2",
+    "@lit-labs/preact-signals": "^1.0.2",
     "http-server": "^14.1.1",
     "nested-css-to-flat": "^1.0.5",
     "rimraf": "^5.0.5"

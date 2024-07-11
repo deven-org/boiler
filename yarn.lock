@@ -1548,6 +1548,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:17.4.2"
     "@deven-org/documentation-skeleton": "npm:^2.1.0"
     "@geometricpanda/storybook-addon-badges": "npm:^2.0.2"
+    "@lit-labs/preact-signals": "npm:^1.0.2"
     "@open-wc/testing": "npm:3.1.7"
     "@storybook/addon-a11y": "npm:7.4.6"
     "@storybook/addon-actions": "npm:7.4.6"
@@ -2614,7 +2615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/preact-signals@npm:1.0.2":
+"@lit-labs/preact-signals@npm:1.0.2, @lit-labs/preact-signals@npm:^1.0.2":
   version: 1.0.2
   resolution: "@lit-labs/preact-signals@npm:1.0.2"
   dependencies:
