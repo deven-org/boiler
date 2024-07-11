@@ -219,17 +219,6 @@ export const staticStyles = css`
             color: ${inputfield.placeholder.textcolor.error.rest};
           }
 
-          &:focus {
-            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
-              ${inputfield.container.border.error.focus.color};
-            color: ${inputfield.userinput.textcolor.error.focus};
-            background-color: ${inputfield.container.bgcolor.error.focus};
-
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.error.focus};
-            }
-          }
-
           &:hover {
             outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style}
               ${inputfield.container.border.error.hover.color};
@@ -238,6 +227,17 @@ export const staticStyles = css`
 
             &::placeholder {
               color: ${inputfield.placeholder.textcolor.error.hover};
+            }
+          }
+
+          &:focus {
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
+            color: ${inputfield.userinput.textcolor.error.focus};
+            background-color: ${inputfield.container.bgcolor.error.focus};
+
+            &::placeholder {
+              color: ${inputfield.placeholder.textcolor.error.focus};
             }
           }
 
