@@ -7,14 +7,14 @@ import { ThemeType } from "../../foundation/_tokens-generated/index.themes.js";
 const directionIndicatorIconClassName = "icon-direction-indicator";
 
 export const staticStyles = css`
-  .select-icon-wrapper {
+  .select-wrapper {
     position: relative;
     width: 100%;
   }
 
   .${directionIndicatorIconClassName} {
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
@@ -30,92 +30,19 @@ export const staticStyles = css`
     display: flex;
   }
 
-  .blr-select-inner-container {
-    flex-grow: 1;
-    flex-shrink: 1;
-
-    .blr-form-select {
-      all: initial;
-      box-sizing: border-box;
-      width: 100%;
-      border: none;
-      outline: none;
-      appearance: none;
-      padding-right: 30px;
-
-      &.focus {
-        border: none;
-        outline: none;
-      }
-
-      &.error-select {
-        border: none;
-        outline: none;
-
-        &:hover {
-          border: none;
-          outline: none;
-        }
-
-        &:active {
-          border: none;
-          outline: none;
-        }
-
-        &.focus {
-          border: none;
-          outline: none;
-        }
-      }
-    }
-  }
-
-  .blr-select-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .blr-form-select {
+    all: initial;
     box-sizing: border-box;
-
-    .blr-form-select {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      appearance: none;
-      padding-right: 30px;
-    }
-
-    &.focus {
-      border-color: transparent;
-    }
+    width: 100%;
+    appearance: none;
+    padding-right: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
 
     &.disabled {
-      border-color: transparent;
       cursor: not-allowed;
-
-      .blr-form-select {
-        border: none;
-        outline: none;
-        background: transparent;
-        cursor: not-allowed;
-      }
-    }
-
-    &[readonly] {
-      border-color: transparent;
-    }
-
-    &:active {
-      border-color: transparent;
-    }
-
-    &.error-input {
-      &.focus {
-        border-color: transparent;
-      }
-
-      .blr-form-select {
-        background: transparent;
-      }
     }
   }
 
@@ -126,203 +53,102 @@ export const staticStyles = css`
       ${getDirectionIndicatorIconStyles({ theme, semanticTokens: sem }).cssText}
 
       .blr-select.${theme} {
-        &.sm {
-          & > .label-wrapper {
-            padding: ${labelslot.padding.sm};
-          }
+        &.sm > .label-wrapper {
+          padding: ${labelslot.padding.sm};
         }
 
-        &.md {
-          & > .label-wrapper {
-            padding: ${labelslot.padding.md};
-          }
+        &.md > .label-wrapper {
+          padding: ${labelslot.padding.md};
         }
 
-        &.lg {
-          & > .label-wrapper {
-            padding: ${labelslot.padding.lg};
-          }
+        &.lg > .label-wrapper {
+          padding: ${labelslot.padding.lg};
         }
       }
 
-      .blr-select-inner-container.${theme} {
-        .blr-form-select {
-          border-radius: ${inputfield.container.borderradius};
-          color: ${inputfield.userinput.textcolor.default.rest};
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.default.rest};
-          }
-
-          &:hover {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.hover};
-            }
-          }
-
-          &:active {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.pressed};
-            }
-          }
-
-          &[readonly] {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.readonly};
-            }
-          }
-
-          &.disabled {
-            color: ${inputfield.userinput.textcolor.default.disabled};
-
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.disabled};
-            }
-          }
-
-          &.focus {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.default.focus};
-            }
-          }
-
-          &.error-select {
-            &::placeholder {
-              color: ${inputfield.placeholder.textcolor.error.rest};
-            }
-
-            &:hover {
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.hover};
-              }
-            }
-
-            &:active {
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.pressed};
-              }
-            }
-
-            &.focus {
-              &::placeholder {
-                color: ${inputfield.placeholder.textcolor.error.focus};
-              }
-            }
-          }
-
-          &.sm {
-            font-weight: ${inputfield.userinput.typography.sm.fontWeight};
-            font-size: ${inputfield.userinput.typography.sm.fontSize};
-            font-family: ${inputfield.userinput.typography.sm.fontFamily}, sans-serif;
-            line-height: ${inputfield.userinput.typography.sm.lineHeight};
-          }
-
-          &.md {
-            font-weight: ${inputfield.userinput.typography.md.fontWeight};
-            font-size: ${inputfield.userinput.typography.md.fontSize};
-            font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
-            line-height: ${inputfield.userinput.typography.md.lineHeight};
-          }
-
-          &.lg {
-            font-weight: ${inputfield.userinput.typography.lg.fontWeight};
-            font-size: ${inputfield.userinput.typography.lg.fontSize};
-            font-family: ${inputfield.userinput.typography.lg.fontFamily}, sans-serif;
-            line-height: ${inputfield.userinput.typography.lg.lineHeight};
-          }
-        }
-      }
-
-      .blr-select-wrapper.${theme} {
-        outline-width: ${inputfield.container.border.default.rest.width};
-        outline-style: ${inputfield.container.border.default.rest.style};
-        outline-color: ${inputfield.container.border.default.rest.color};
+      .blr-form-select.${theme} {
         border-radius: ${inputfield.container.borderradius};
+        color: ${inputfield.userinput.textcolor.default.rest};
         background-color: ${inputfield.container.bgcolor.default.rest};
+        outline: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
+          ${inputfield.container.border.default.rest.color};
 
         &.sm {
           padding: ${inputfield.container.padding.sm};
           margin: ${inputslot.margin.sm};
+          font-weight: ${inputfield.userinput.typography.sm.fontWeight};
+          font-size: ${inputfield.userinput.typography.sm.fontSize};
+          font-family: ${inputfield.userinput.typography.sm.fontFamily}, sans-serif;
           line-height: ${inputfield.userinput.typography.sm.lineHeight};
         }
 
         &.md {
           padding: ${inputfield.container.padding.md};
           margin: ${inputslot.margin.md};
+          font-weight: ${inputfield.userinput.typography.md.fontWeight};
+          font-size: ${inputfield.userinput.typography.md.fontSize};
+          font-family: ${inputfield.userinput.typography.md.fontFamily}, sans-serif;
+          line-height: ${inputfield.userinput.typography.md.lineHeight};
         }
 
         &.lg {
           padding: ${inputfield.container.padding.lg};
           margin: ${inputslot.margin.lg};
+          font-weight: ${inputfield.userinput.typography.lg.fontWeight};
+          font-size: ${inputfield.userinput.typography.lg.fontSize};
+          font-family: ${inputfield.userinput.typography.lg.fontFamily}, sans-serif;
+          line-height: ${inputfield.userinput.typography.lg.lineHeight};
         }
 
         &:hover {
-          outline-width: ${inputfield.container.border.default.rest.width};
-          outline-style: ${inputfield.container.border.default.rest.style};
-          outline-color: ${inputfield.container.border.default.rest.color};
           color: ${inputfield.userinput.textcolor.default.hover};
           background-color: ${inputfield.container.bgcolor.default.hover};
-
-          &.error-select:not(.disabled) {
-            color: ${inputfield.container.border.error.rest.color};
-          }
+          border-color: ${inputfield.container.border.default.hover.color};
         }
 
         &.focus {
-          outline-width: ${inputfield.container.border.default.focus.width};
-          outline-style: ${inputfield.container.border.default.focus.style};
-          outline-color: ${inputfield.container.border.default.focus.color};
           color: ${inputfield.userinput.textcolor.default.focus};
           background-color: ${inputfield.container.bgcolor.default.focus};
-        }
-
-        &.disabled {
-          outline-width: ${inputfield.container.border.default.disabled.width};
-          outline-style: ${inputfield.container.border.default.disabled.style};
-          outline-color: ${inputfield.container.border.default.disabled.color};
-          color: ${inputfield.userinput.textcolor.default.disabled};
-          background-color: ${inputfield.container.bgcolor.default.disabled};
-        }
-
-        &[readonly] {
-          outline: ${inputfield.container.border.default.readonly.width} ${inputfield.container.border.default.readonly.style}
-            ${inputfield.container.border.default.readonly.color};
-          background-color: ${inputfield.container.bgcolor.default.readonly};
+          border-color: ${inputfield.container.border.default.focus.color};
+          outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
+            ${inputfield.container.border.default.focus.color};
         }
 
         &:active {
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.focus.style}
-            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
+          border-color: ${inputfield.container.border.default.pressed.color};
         }
 
-        &.error-input {
-          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
-            ${inputfield.container.border.error.rest.color};
-          background-color: ${inputfield.container.bgcolor.error.rest};
+        &.disabled {
+          color: ${inputfield.userinput.textcolor.default.disabled};
+          background-color: ${inputfield.container.bgcolor.default.disabled};
+          border-color: ${inputfield.container.border.default.disabled.color};
+        }
 
-          &.focus {
-            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
-              ${inputfield.container.border.error.focus.color};
-            color: ${inputfield.userinput.textcolor.error.focus};
-            background-color: ${inputfield.container.bgcolor.error.focus};
-          }
+        &.error-select {
+          color: ${inputfield.userinput.textcolor.error.rest};
+          background-color: ${inputfield.container.bgcolor.error.rest};
+          outline-color: ${inputfield.container.border.error.rest.color};
 
           &:hover {
             color: ${inputfield.userinput.textcolor.error.hover};
             background-color: ${inputfield.container.bgcolor.error.hover};
+            border-color: ${inputfield.container.border.error.hover.color};
           }
 
           &:active {
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.focus.style}
-              ${inputfield.container.border.error.pressed.color};
             color: ${inputfield.userinput.textcolor.error.pressed};
             background-color: ${inputfield.container.bgcolor.error.pressed};
+            border-color: ${inputfield.container.border.error.pressed.color};
           }
 
-          .blr-form-select {
-            color: ${inputfield.userinput.textcolor.error.rest};
+          &.focus {
+            color: ${inputfield.userinput.textcolor.error.focus};
+            background-color: ${inputfield.container.bgcolor.error.focus};
+            border-color: ${inputfield.container.border.error.focus.color};
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
           }
         }
       }
@@ -353,7 +179,7 @@ function getDirectionIndicatorIconStyles({ theme, semanticTokens }: { theme: The
       }
     }
 
-    .blr-select-wrapper.${theme} {
+    .select-wrapper.${theme} {
       &:hover .${directionIndicatorIconClassName} {
         color: ${inputfield.icon.iconcolor.default.hover};
       }
