@@ -1,4 +1,4 @@
-import { PropertyValues, html, nothing } from 'lit';
+import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { property } from '../../utils/lit/decorators.js';
 import { staticStyles as componentSpecificStaticStyles } from './index.css.js';
@@ -77,8 +77,7 @@ export class BlrRadioGroup extends LitElementCustom {
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  protected firstUpdated(_changedProperties: PropertyValues): void {
+  protected firstUpdated() {
     this.handleSlotChange();
   }
 
