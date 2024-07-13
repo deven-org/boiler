@@ -45,6 +45,8 @@ export { BlrFormLabel } from './components/form-label/index.js';
 // Navigation
 export { BlrTabBar } from './components/tab-bar/index.js';
 
+export { BlrTabBarItem } from './components/tab-bar-item/index.js';
+
 // UI
 export { BlrButtonGroup } from './components/button-group/index.js';
 
