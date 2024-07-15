@@ -1,5 +1,3 @@
-> ℹ️: If you forked the B01LER repository, you can either delete this file or update it, to also document the things we at B01LER documented here for our team.
-
 # Get Started
 Welcome to the B01LER team! 👋 We are thrilled to have you on board. This "Get Started" guide is designed to make your
 onboarding process smooth and enjoyable and to learn about all the neccessary organizational aspects. Whether you're a
