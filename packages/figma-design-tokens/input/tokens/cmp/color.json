@@ -277,7 +277,7 @@
       "text": {
         "textcolor": {
           "neutral": {
-            "value": "{sys.content.container.subtle.informative}",
+            "value": "{sys.content.container.regular.informative}",
             "type": "color"
           },
           "warning": {
