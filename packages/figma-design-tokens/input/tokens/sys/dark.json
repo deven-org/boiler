@@ -1201,7 +1201,7 @@
     },
     "content": {
       "onlightbg": {
-        "value": "#000000",
+        "value": "#FFFFFF",
         "type": "color"
       },
       "onactive": {
