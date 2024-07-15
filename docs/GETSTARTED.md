@@ -1,3 +1,5 @@
+> ℹ️: If you forked the B01LER repository, you can either delete this file or update it, to also document the things we at B01LER documented here for our team.
+
 # Get Started
 Welcome to the B01LER team! 👋 We are thrilled to have you on board. This "Get Started" guide is designed to make your
 onboarding process smooth and enjoyable and to learn about all the neccessary organizational aspects. Whether you're a
@@ -10,7 +12,10 @@ seasoned professional or a newcomer, we've got you covered. Let's dive in and un
     - [Designers](#designers)
     - [Developlers](#developers)
     - [Product & Project Management](#product--project-management)
-  - [Regular Meetings](#regular-meetings)
+  - [Meetings](#meetings)
+    - [Regular Meetings](#regular-meetings)
+    - [Optional Meetings](#optional-meetings)
+    - [Paused Meetings](#paused-meetings)
   - [Communication Channels](#communication-channels)
   - [Access Checklist](#access-checklist)
   - [Project Management Onboarding Checklist](#project-management-onboarding-checklist)
@@ -35,40 +40,50 @@ working at Accenture. You should also be able to join most of the [regular meeti
 ### Team Overview
 #### Designers
 - [Lars Erbach](https://github.com/larserbach) (Lead)
-- [Marcel Doering](https://github.com/m-nti) (Stand-in lead)
 - [Yik Cun Chung](https://github.com/yikcunchung)
 
 #### Developers
-- [Christian Hoffmann](https://github.com/ChristianHoffmannS2) (Lead)
-- [David Kennedy](https://github.com/davidken91) (Stand-in lead)
+- [Christian Hoffmann](https://github.com/ChristianHoffmannS2) (Lead, absent)
 - [Barkley Taylor](https://github.com/bar-tay)
 - [Ang Sherpa](https://github.com/angsherpa456)
-- [Julius Walther](https://github.com/faselbaum)
 
 #### Product & Project Management
 - [Thorben Hartmann](https://github.com/thrbnhrtmnn) (Lead, community leader)
 
 
-### Regular Meetings
-All regular B01LER team meetings are in our
+### Meetings
+All B01LER team meetings are in our
 [B01LER Core calendar](https://myemail.accenture.com/calendar/group/accenture.com/boiler-core/view/workweek). The only
 exception is the B01LER Monthly, which is part of the
 [B01LER calendar](https://myemail.accenture.com/calendar/group/accenture.com/boiler-ds/view/workweek).
 
+Regular meetings should be attended by every active team member that is avaiable. Optional meetings are optional and everyone can choose to join or not. We also have some paused meetings, which we are currently not facilitating but might will reactivate in the future.
+
+#### Regular Meetings
+| Meeting Name                 | When                                                              | Who                                                                                            | Why                                                                                      |
+| ---------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| B01LER Daily                 | Mondays, Wednesdays, & Fridays                                    | Complete B01LER Core Team                                                                      | Updating eachother                                                                       |
+| B01LER Marketing Weekly      | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general marketing topics                                          |
+| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev & Product & Project Management Leads, everyone from the B01LER Core Team that wants to join| Discussing and deciding on dev issues or topcis that recently came up            |
+| B01LER Monthly               | Last Thursday of a month                                          | Product & Project Management Lead, everyone at Accenture who wants to join                      | Giving an update, answering questions and sometimes deep dives into specific topics |
+
+#### Optional Meetings
 | Meeting Name                 | When                                                              | Who                                                                                            | Why                                                                                 |
 | ---------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| B01LER Daily                 | Wednesdays, Thursdays (part of Planning and Refinement) & Fridays | Complete B01LER Core Team                                                                      | Updating eachother                                                                  |
-| B01LER Planning              | Every 2nd Thursday (When there is no Refinement)                  | Complete B01LER Core Team                                                                      | Celebrate outcome of the last iteration, present outcome of the pre-planning        |
-| B01LER Refinement            | Every 2nd Thursday (When there is no Planning)                    | Complete B01LER Core Team                                                                      | Refining issues for upcomming iterations                                            |
-| B01LER Retro                 | Every 4th Thursday (After Planning)                               | Complete B01LER Core Team                                                                      | Looking back at the last two iterations to improve things in the future             |
-| B01LER Design Review (paused)| Currently Paused                                                  | B01LER Design Lead and every team member that needs a design review                            | Getting approval from design for code implementations                               |
 | B01LER Pair Programming Hour | Fridays                                                           | Everyone from the B01LER (Dev) Core Team that wants to join                                    | Collaborate and learn from each other by tackling coding challanges together        |
 | B01LER Open Door             | Mondays & Wednesdays                                              | Everyone from the B01LER (Dev) Core Team that wants to join                                    | Giving guidance and/or answering questions about issues junior devs are working on  |
+
+
+#### Paused Meetings
+| Meeting Name                 | When                                                              | Who                                                                                            | Why                                                                                 |
+| ---------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| B01LER Refinement            | Every 2nd Thursday (When there is no Planning)                    | Complete B01LER Core Team                                                                      | Refining issues for upcomming iterations                                         |
 | B01LER Pre-Planning          | Thursdays                                                         | B01LER Leadership (and/or stand-ins)                                                           | Discuss objectives and prepare a set of issues to finish int he next iteration      |
-| B01LER Weekly Checkup        | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general product topics and check the roadmap                  |
-| B01LER Marketing Weekly      | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general marketing topics                                      |
-| B01LER Dev Lead Touchpoint   | Thursdays                                                         | Dev Lead, Product & Project Management, everyone from the B01LER Core Team that wants to join  | Discussing and deciding on dev issues or topcis that recently came up              |
-| B01LER Monthly               | Last Thursday of a month                                          | Everyone who wants to join                                                                     | Giving an update, answering questions and sometimes deep dives into specific topics |
+| B01LER Planning              | Every 2nd Thursday (When there is no Refinement)                  | Complete B01LER Core Team                                                                      | Celebrate outcome of the last iteration, present outcome of the pre-planning      |
+| B01LER Retro                 | Every 4th Thursday (After Planning)                               | Complete B01LER Core Team                                                                      | Looking back at the last two iterations to improve things in the future          |
+| B01LER Design Review         | Every Tuesday and Thursday                                        | B01LER Design Lead and every team member that needs a design review                            | Getting approval from design for code implementations                              |
+| B01LER Weekly Checkup        | Mondays                                                           | B01LER Leadership (and/or stand-ins)                                                           | Discuss and decide on general product topics and check the roadmap                 |
+
 
 
 ### Communication Channels
