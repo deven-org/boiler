@@ -1183,6 +1183,34 @@
           "value": "#FF5AFFFF",
           "type": "color"
         }
+      },
+      "blue": {
+        "value": "#1969D5",
+        "type": "color"
+      }
+    },
+    "bgcolor": {
+      "default": {
+        "value": "#616060EE",
+        "type": "color"
+      },
+      "dimmed": {
+        "value": "#0A0A0A",
+        "type": "color"
+      }
+    },
+    "content": {
+      "onlightbg": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "onactive": {
+        "value": "#FFFFFF",
+        "type": "color"
+      },
+      "subtle": {
+        "value": "#858585",
+        "type": "color"
       }
     }
   }
