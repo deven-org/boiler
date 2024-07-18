@@ -64,6 +64,7 @@ export const staticSemanticStyles = css`
 
     return css`
       .blr-form-element.${theme} {
+        outline-offset: calc(1px * -1);
         color: ${forms.inputfield.userinput.textcolor.default.rest};
         font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
         font-size: ${forms.inputfield.userinput.typography.md.fontSize};

@@ -17,6 +17,7 @@ export const staticBaseStyles = css`
   }
 
   .input-wrapper {
+    outline-offset: calc(1px * -1);
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
@@ -273,13 +274,13 @@ export const staticComponentStyles = css`
             width: ${StepperButton.Container.Width.SM};
           }
         }
-  
+
         &.md {
           & > .custom-stepper-button {
             width: ${StepperButton.Container.Width.MD};
           }
         }
-  
+
         &.lg {
           & > .custom-stepper-button {
             width: ${StepperButton.Container.Width.LG};
@@ -360,12 +361,12 @@ export const staticComponentStyles = css`
 
         &:hover:not(:disabled) {
           background-color: ${StepperButton.Container.BackgroundColor.Hover};
-          color: ${StepperButton.Icon.IconColor.Hover}
+          color: ${StepperButton.Icon.IconColor.Hover};
         }
 
         &:active:not(:disabled) {
           background-color: ${StepperButton.Container.BackgroundColor.Pressed};
-          color: ${StepperButton.Icon.IconColor.Pressed}
+          color: ${StepperButton.Icon.IconColor.Pressed};
         }
 
         &:disabled {

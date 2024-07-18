@@ -171,6 +171,7 @@ export const styleCustom = css`
       }
 
       .blr-input-wrapper.${theme} {
+        outline-offset: calc(1px * -1);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -208,7 +209,7 @@ export const styleCustom = css`
           background-color: ${inputfield.container.bgcolor.default.focus};
         }
 
-        &.disabled { 
+        &.disabled {
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
