@@ -203,14 +203,6 @@ function init() {
     addLog('blr-toggleswitch changed: ' + e.detail.checkedState);
   });
 
-  blrTabBar.addEventListener('blrFocus', () => {
-    addLog('blr-tab-bar focused');
-  });
-
-  blrTabBar.addEventListener('blrBlur', () => {
-    addLog('blr-tab-bar blurred');
-  });
-
   blrTabBar.addEventListener('blrChange', (e) => {
     addLog('blr-tab-bar changed: ' + e.detail.changedValue);
   });
