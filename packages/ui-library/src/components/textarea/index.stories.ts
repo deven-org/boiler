@@ -165,7 +165,7 @@ export default {
     },
     hasHint: {
       description: ' Choose if component has a hint message. ',
-      defaultValue: true,
+      defaultValue: false,
       control: {
         type: 'boolean',
       },
@@ -451,6 +451,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           sizeVariant: 'sm',
           label: 'Text Area SM',
+          hintMessage: '',
           placeholder: '',
           value: '',
         })}
@@ -459,6 +460,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           sizeVariant: 'md',
           label: 'Text Area MD',
+          hintMessage: '',
           placeholder: '',
           value: '',
         })}
@@ -467,6 +469,7 @@ export const SizeVariant = () => {
           theme: 'Light',
           sizeVariant: 'lg',
           label: 'Text Area LG',
+          hintMessage: '',
           placeholder: '',
           value: '',
         })}
@@ -496,6 +499,7 @@ export const Resize = () => {
             label: 'Auto resize',
             placeholder: '',
             value: '',
+            hintMessage: '',
             resize: 'both',
           })}
         </div>
@@ -505,6 +509,7 @@ export const Resize = () => {
             theme: 'Light',
             sizeVariant: 'md',
             label: 'Horizontal resize',
+            hintMessage: '',
             placeholder: '',
             value: '',
             resize: 'horizontal',
@@ -517,6 +522,7 @@ export const Resize = () => {
             sizeVariant: 'md',
             label: 'Vertical resize',
             placeholder: '',
+            hintMessage: '',
             value: '',
             resize: 'vertical',
           })}
@@ -528,6 +534,7 @@ export const Resize = () => {
             sizeVariant: 'md',
             label: 'No resize',
             placeholder: '',
+            hintMessage: '',
             value: '',
             resize: 'none',
           })}
@@ -557,6 +564,7 @@ export const Placeholder = () => {
           sizeVariant: 'md',
           label: 'With placeholder',
           labelAppendix: '',
+          hintMessage: '',
           placeholder: 'Add a message here',
           value: '',
         })}
@@ -564,6 +572,7 @@ export const Placeholder = () => {
           ...defaultParams,
           theme: 'Light',
           sizeVariant: 'md',
+          hintMessage: '',
           label: 'Without placeholder',
           labelAppendix: '',
           placeholder: '',
@@ -596,6 +605,7 @@ export const Disabled = () => {
           sizeVariant: 'md',
           label: 'Disabled',
           placeholder: '',
+          hintMessage: '',
           labelAppendix: '',
           disabled: true,
           value: '',
@@ -625,6 +635,7 @@ export const Readonly = () => {
           theme: 'Light',
           sizeVariant: 'md',
           label: 'Readonly',
+          hintMessage: '',
           placeholder: '',
           readonly: true,
           value: '',
@@ -654,6 +665,7 @@ export const Required = () => {
           sizeVariant: 'md',
           label: 'Label-text',
           placeholder: '',
+          hintMessage: '',
           required: true,
           labelAppendix: '(required)',
           value: '',
@@ -684,6 +696,7 @@ export const HasError = () => {
           sizeVariant: 'md',
           placeholder: '',
           hasError: true,
+          hintMessage: '',
           errorMessageIcon: undefined,
           label: 'Error',
           value: '',
@@ -713,6 +726,7 @@ export const FormLabel = () => {
           theme: 'Light',
           sizeVariant: 'md',
           placeholder: '',
+          hintMessage: '',
           label: 'With label',
           labelAppendix: '(with appendix)',
           value: '',
@@ -724,6 +738,7 @@ export const FormLabel = () => {
           placeholder: 'Without label',
           label: ' ',
           labelAppendix: '',
+          hintMessage: '',
           hasHint: false,
           value: '',
         })}
@@ -751,6 +766,7 @@ export const FormCaptionGroup = () => {
           sizeVariant: 'md',
           placeholder: '',
           label: 'Hint message',
+          hintMessage: 'This is a hint message',
           hasHint: true,
           hintMessageIcon: 'blrInfo',
           labelAppendix: '',
@@ -796,6 +812,7 @@ export const Counter = () => {
           warningLimitType: 'warningLimitInt',
           warningLimitInt: 105,
           warningLimitPer: 75,
+          hintMessage: '',
         })}
       </div>
     </div>
