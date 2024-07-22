@@ -161,11 +161,11 @@ export class BlrTextarea extends LitElementCustom {
       });
 
       const textareaClasses = classMap({
-        'error': this.hasError || false,
-        'error-input': this.hasError || false,
         [this.theme]: this.theme,
-        [this.sizeVariant]: this.sizeVariant,
+        error: this.hasError || false,
         [this.resize]: this.resize,
+        [this.sizeVariant]: this.sizeVariant,
+        disabled: this.disabled || false,
       });
 
       const textareaInfoContainer = classMap({
@@ -217,7 +217,7 @@ export class BlrTextarea extends LitElementCustom {
             : nothing}
           <textarea
             .value=${this.value}
-            class="blr-form-element textarea-input-control ${textareaClasses}"
+            class="textarea-input-control ${textareaClasses}"
             id="${ifDefined(this.textAreaId ? this.textAreaId : undefined)}"
             name="${this.name || ''}"
             minlength="${this.minLength || ''}"
@@ -227,6 +227,7 @@ export class BlrTextarea extends LitElementCustom {
             rows="${this.rows || ' '}"
             placeholder="${ifDefined(this.placeholder ? this.placeholder : undefined)}"
             ?required="${this.required}"
+            ?error="${this.hasError}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
             @input=${this.handleChange}
