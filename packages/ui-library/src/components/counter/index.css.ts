@@ -14,6 +14,7 @@ export const staticStyles = css`
         outline-style: solid;
         white-space: nowrap;
         display: initial;
+        outline-offset: calc(1px * -1);
 
         &.sm {
           padding: ${counter.container.padding.sm};

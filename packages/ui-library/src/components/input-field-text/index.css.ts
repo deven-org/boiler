@@ -203,12 +203,13 @@ export const styleCustom = css`
         }
 
         &.focus {
+          outline-offset: calc(1px * -1);
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
             ${inputfield.container.border.default.focus.color};
           background-color: ${inputfield.container.bgcolor.default.focus};
         }
 
-        &.disabled { 
+        &.disabled {
           outline: ${inputfield.container.border.default.disabled.width} ${inputfield.container.border.default.disabled.style}
             ${inputfield.container.border.default.disabled.color};
           color: ${inputfield.userinput.textcolor.default.disabled};
