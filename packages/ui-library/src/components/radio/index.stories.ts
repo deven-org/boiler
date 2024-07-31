@@ -228,7 +228,7 @@ const args: BlrRadioType & {
 } = {
   theme: 'Light',
   sizeVariant: 'md',
-  value: '',
+  value: 'radioValue',
   checked: false,
   label: 'Label',
   hasHint: false,
@@ -243,8 +243,8 @@ const args: BlrRadioType & {
   errorMessageIcon: undefined,
   radioId: 'radioId',
   name: 'Radio Button',
-  blrChange: () => action('blrChange'),
-  blrFocus: () => action('blrFocus'),
+  blrSelectedValueChange: () => action('blrSelectedValueChangeEvent'),
+  blrFocus: () => action('focused'),
   blrBlur: () => action('blrBlr'),
 };
 
@@ -289,23 +289,22 @@ SizeVariant.story = { name: ' ' };
  * ### Checked
  * The Radio component can be checked or unchecked. The checked state indicates that the Radio component is selected or enabled. The unchecked state indicates that the Radio component is not selected. */
 
-export const Checked = () =>
-  html`
-    <div class="wrapper">
-      ${BlrRadio({
-        ...args,
-        checked: true,
-        label: 'Checked',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrRadio({
-        ...args,
-        checked: false,
-        label: 'Unchecked',
-      })}
-    </div>
-  `;
+export const Checked = () => html`
+  <div class="wrapper">
+    ${BlrRadio({
+      ...args,
+      checked: true,
+      label: 'Checked',
+    })}
+  </div>
+  <div class="wrapper">
+    ${BlrRadio({
+      ...args,
+      checked: false,
+      label: 'Unchecked',
+    })}
+  </div>
+`;
 
 Checked.story = { name: ' ' };
 /**

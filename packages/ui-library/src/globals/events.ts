@@ -68,15 +68,15 @@ export function createBlrCheckedChangeEvent(detail: BlrCheckedChangeEventDetail)
 }
 
 export type BlrSelectedValueChangeEventDetail = {
-  originalEvent: Event;
+  originalEvent?: Event;
   selectedValue: string;
 };
 export type BlrSelectedValueChangeEvent = CustomEvent<BlrSelectedValueChangeEventDetail>;
 export const BlrSelectedValueChangeEventName = 'blrSelectedValueChange';
 export function createBlrSelectedValueChangeEvent(
-  detail: BlrSelectedValueChangeEventDetail
+  detail: BlrSelectedValueChangeEventDetail,
 ): BlrSelectedValueChangeEvent {
-  return new CustomEvent(BlrSelectedValueChangeEventName, { bubbles: true, composed: true, detail });
+  return new CustomEvent(BlrSelectedValueChangeEventName, { bubbles: false, composed: true, detail, cancelable: true });
 }
 
 export type BlrTextValueChangeEventDetail = {

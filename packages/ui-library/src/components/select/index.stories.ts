@@ -38,12 +38,12 @@ const defaultParams: BlrSelectType = {
   selectId: 'selectId',
   name: 'select',
   options: [
-    { label: '--Please choose an option--', value: '' },
+    { label: '--Please choose an option--', value: '', selected: true },
     { label: 'option 1', value: 'option1' },
     { label: 'option 2', value: 'option2' },
     { label: 'option 3', value: 'option3', disabled: true },
     { label: 'option 4', value: 'option4' },
-    { label: 'option 5', value: 'option5', selected: true },
+    { label: 'option 5', value: 'option5' },
   ],
 };
 
@@ -216,7 +216,6 @@ export default {
       type: 'figma',
       url: 'https://www.figma.com/file/C4vgEKz8mKyulJ4gm3Qdql/%F0%9F%AB%A7-%5BBLR%5D-The-B01LER?node-id=3618%3A125198&mode=dev',
     },
-    layout: 'centered',
     viewMode: 'docs',
     docs: {
       description: {

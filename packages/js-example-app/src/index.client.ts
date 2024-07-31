@@ -9,6 +9,7 @@ import {
   BlrTabBar,
   BlrTextarea,
   BlrToggleSwitch,
+  BlrRadioGroup,
 } from '@boiler/ui-library';
 
 async function hydrate() {
@@ -44,6 +45,7 @@ function init() {
   const blrInputFieldNumber = document.getElementsByTagName('blr-input-field-number')[0] as BlrInputFieldNumber;
   const blrTextArea = document.getElementsByTagName('blr-textarea')[0] as BlrTextarea;
   const blrRadio = document.getElementsByTagName('blr-radio')[0] as BlrRadio;
+  const blrRadioGroup = document.getElementsByTagName('blr-radio-group')[0] as BlrRadioGroup;
   const blrToggleSwitch = document.getElementsByTagName('blr-label-toggleswitch')[0] as BlrToggleSwitch;
   const blrTabBar = document.getElementsByTagName('blr-tab-bar')[0] as BlrTabBar;
 
@@ -185,6 +187,10 @@ function init() {
     addLog('blr-radio changed: ' + e.detail.selectedValue);
   });
 
+  blrRadioGroup.addEventListener('blrSelectedValueChange', (e) => {
+    addLog('blr-radio value changed blrRadioGroupValueChange: ' + e.detail.selectedValue);
+  });
+
   blrToggleSwitch.addEventListener('blrFocus', () => {
     addLog('blr-toggleswitch focused');
   });
@@ -195,14 +201,6 @@ function init() {
 
   blrToggleSwitch.addEventListener('blrCheckedChange', (e) => {
     addLog('blr-toggleswitch changed: ' + e.detail.checkedState);
-  });
-
-  blrTabBar.addEventListener('blrFocus', () => {
-    addLog('blr-tab-bar focused');
-  });
-
-  blrTabBar.addEventListener('blrBlur', () => {
-    addLog('blr-tab-bar blurred');
   });
 
   blrTabBar.addEventListener('blrChange', (e) => {
