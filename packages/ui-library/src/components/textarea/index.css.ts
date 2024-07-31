@@ -61,6 +61,32 @@ export const staticStyles = css`
     max-width: 100%;
     word-break: break-all;
     width: 100%;
+    all: initial;
+    box-sizing: border-box;
+
+    &:active {
+      border-color: transparent;
+    }
+
+    &[readonly] {
+      border-color: transparent;
+    }
+
+    &:disabled {
+      border-color: transparent;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      outline-offset: calc(1px * -1);
+      border-color: transparent;
+    }
+
+    &.error-input {
+      &:focus {
+        border-color: transparent;
+      }
+    }
 
     &.both {
       resize: both;

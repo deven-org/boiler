@@ -61,6 +61,7 @@ export const staticStyles = css`
   }
 
   .blr-select-wrapper {
+    outline-offset: calc(1px * -1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,6 +74,7 @@ export const staticStyles = css`
     }
 
     &.focus {
+      outline-offset: calc(1px * -2);
       border-color: transparent;
     }
 
@@ -279,23 +281,20 @@ export const staticStyles = css`
         }
 
         &:active {
-          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.focus.style} ${
-      inputfield.container.border.default.pressed.color
-    };
+          outline: ${inputfield.container.border.default.pressed.width} ${inputfield.container.border.default.focus.style}
+            ${inputfield.container.border.default.pressed.color};
           color: ${inputfield.userinput.textcolor.default.pressed};
           background-color: ${inputfield.container.bgcolor.default.pressed};
         }
 
         &.error-input {
-          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style} ${
-      inputfield.container.border.error.rest.color
-    };
+          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+            ${inputfield.container.border.error.rest.color};
           background-color: ${inputfield.container.bgcolor.error.rest};
 
           &.focus {
-            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style} ${
-      inputfield.container.border.error.focus.color
-    };
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
             color: ${inputfield.userinput.textcolor.error.focus};
             background-color: ${inputfield.container.bgcolor.error.focus};
           }
@@ -306,9 +305,8 @@ export const staticStyles = css`
           }
 
           &:active {
-            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.focus.style} ${
-      inputfield.container.border.error.pressed.color
-    };
+            outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.pressed.color};
             color: ${inputfield.userinput.textcolor.error.pressed};
             background-color: ${inputfield.container.bgcolor.error.pressed};
           }
