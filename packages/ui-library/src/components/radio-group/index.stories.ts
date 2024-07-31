@@ -1,13 +1,13 @@
-import { BlrRadioGroupType } from './index';
-import { BlrRadioGroupRenderFunction } from './renderFunction';
+import { BlrRadioGroupType } from './index.js';
+import { BlrRadioGroupRenderFunction } from './renderFunction.js';
 
 import { html } from 'lit';
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 import { action } from '@storybook/addon-actions';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { InputSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { InputSizes } from '../../globals/constants.js';
 
 const sharedStyles = html`
   <style>
@@ -223,7 +223,12 @@ export default {
   },
 };
 
-export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params);
+const radioButtonsAsChildren = html`
+  <blr-radio label="male" value="male" @blrSelectedValueChange=${(e) => e.detail.selectedValue}></blr-radio>
+  <blr-radio label="female" value="female" @blrSelectedValueChange=${(e) => e.detail.selectedValue}></blr-radio>
+  <blr-radio label="other" value="other" @blrSelectedValueChange=${(e) => e.detail.selectedValue}></blr-radio>
+`;
+export const BlrRadioGroup = (params: BlrRadioGroupType) => BlrRadioGroupRenderFunction(params, radioButtonsAsChildren);
 
 BlrRadioGroup.storyName = 'Radio Group';
 
@@ -233,42 +238,12 @@ const defaultParams: BlrRadioGroupType & {
 } = {
   theme: 'Light',
   sizeVariant: 'md',
-  direction: 'horizontal',
+  direction: 'vertical',
   hasLegend: true,
   legend: 'Legend-text',
   hasHint: false,
   groupHintMessage: 'This is a small hint',
   groupHintMessageIcon: 'blrInfo',
-  options: [
-    {
-      value: '0',
-      label: 'Option 1',
-      checked: false,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-    {
-      value: '1',
-      label: 'Option 2',
-      checked: false,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-    {
-      value: '2',
-      label: 'Option 3',
-      checked: true,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-    {
-      value: '4',
-      label: 'Option 4',
-      checked: false,
-      errorMessage: 'OMG! An error!',
-      hintMessage: 'This is a small hint',
-    },
-  ],
   disabled: false,
   readonly: false,
   required: false,
@@ -278,7 +253,6 @@ const defaultParams: BlrRadioGroupType & {
   ariaLabel: 'Radio Group',
   radioGroupId: 'Radio Group',
   name: 'Radio Group ',
-  blrChange: () => action('blrChange'),
   blrFocus: () => action('blrFocus'),
   blrBlur: () => action('blrBlur'),
 };
@@ -322,25 +296,25 @@ SizeVariant.story = { name: ' ' };
 // /**
 //  * The Radio Group component can have a horizontal or a vertical direction.
 //  *  */
-// export const Direction = () => {
-//   return html`
-//     ${sharedStyles}
-//     <div class="wrapper">
-//       ${BlrRadioGroup({
-//         ...defaultParams,
-//         direction: 'vertical',
-//         legend: 'Vertical',
-//       })}
-//     </div>
-//     <div class="wrapper">
-//       ${BlrRadioGroup({
-//         ...defaultParams,
-//         direction: 'horizontal',
-//         legend: 'Horizontal',
-//       })}
-//     </div>
-//   `;
-// };
+export const Direction = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      ${BlrRadioGroup({
+        ...defaultParams,
+        direction: 'vertical',
+        legend: 'Vertical',
+      })}
+    </div>
+    <div class="wrapper">
+      ${BlrRadioGroup({
+        ...defaultParams,
+        direction: 'horizontal',
+        legend: 'Horizontal',
+      })}
+    </div>
+  `;
+};
 
 /**
  * ## Content / Settings
@@ -456,7 +430,7 @@ export const FormCaptionGroup = () => {
         groupErrorMessage: "OMG it's an error",
         hasHint: true,
         hasError: true,
-        groupErrorIcon: 'blrErrorFilled',
+        groupHintMessageIcon: 'blrErrorFilled',
       })}
     </div>
   `;

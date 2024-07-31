@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": false,
+    "emitDeclarationOnly": false,
+    "sourceMap": true,
+    "module": "NodeNext",
+    "target": "es2020",
+    "jsx": "react",
+    "allowJs": true,
+    "experimentalDecorators": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "useDefineForClassFields": true,
+    "plugins": [
+      {
+        "name": "ts-lit-plugin",
+        "strict": true,
+        "rules": {
+          "no-missing-import": "off"
+        }
+      }
+    ]
+  },
+  "include": ["./src"]
+}

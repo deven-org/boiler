@@ -1,7 +1,7 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrCounterRenderFunction } from './renderFunction';
-import type { BlrCounterType } from '.';
+import { BlrCounterRenderFunction } from './renderFunction.js';
+import type { BlrCounterType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';

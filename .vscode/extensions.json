@@ -4,6 +4,8 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "runem.lit-plugin",
-    "bierner.comment-tagged-templates"
+    "bierner.comment-tagged-templates",
+    "stylelint.vscode-stylelint",
+    "styled-components.vscode-styled-components"
   ]
 }

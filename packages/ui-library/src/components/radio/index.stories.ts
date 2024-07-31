@@ -1,14 +1,14 @@
-import { BlrRadioType } from './index';
-import { BlrRadioRenderFunction } from './renderFunction';
+import { BlrRadioType } from './index.js';
+import { BlrRadioRenderFunction } from './renderFunction.js';
 import { html } from 'lit-html';
 import { action } from '@storybook/addon-actions';
 import '../../index';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
-import { InputSizes } from '../../globals/constants';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
+import { InputSizes } from '../../globals/constants.js';
 
 const sharedStyles = html`
   <style>
@@ -228,7 +228,7 @@ const args: BlrRadioType & {
 } = {
   theme: 'Light',
   sizeVariant: 'md',
-  value: '',
+  value: 'radioValue',
   checked: false,
   label: 'Label',
   hasHint: false,
@@ -243,8 +243,8 @@ const args: BlrRadioType & {
   errorMessageIcon: undefined,
   radioId: 'radioId',
   name: 'Radio Button',
-  blrChange: () => action('blrChange'),
-  blrFocus: () => action('blrFocus'),
+  blrSelectedValueChange: () => action('blrSelectedValueChangeEvent'),
+  blrFocus: () => action('focused'),
   blrBlur: () => action('blrBlr'),
 };
 

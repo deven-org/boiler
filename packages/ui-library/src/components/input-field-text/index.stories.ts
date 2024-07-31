@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
-import { BlrInputFieldTextType } from './index';
-import { BlrInputFieldTextRenderFunction } from './renderFunction';
-import { FormSizes, InputTypes } from '../../globals/constants';
+import { BlrInputFieldTextType } from './index.js';
+import { BlrInputFieldTextRenderFunction } from './renderFunction.js';
+import { FormSizes, InputTypes } from '../../globals/constants.js';
 import { PureIconKeys } from '@boiler/icons';
-import { Themes } from '../../foundation/_tokens-generated/index.themes';
+import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
 import { html } from 'lit-html';
 
 // this loads the all components instances and registers their html tags
-import '../../index';
+import '../../index.js';
 
 // Shared Style inside the Stories
 const sharedStyles = html`

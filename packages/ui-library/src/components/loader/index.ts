@@ -1,19 +1,19 @@
 import { html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property } from 'lit/decorators.js';
-import { staticStyles } from './index.css';
+import { property } from '../../utils/lit/decorators.js';
+import { staticStyles } from './index.css.js';
 
-import { TAG_NAME } from './renderFunction';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { ActionSizesType, FeedbackVariantType } from '../../globals/types';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+import { TAG_NAME } from './renderFunction.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { ActionSizesType, FeedbackVariantType } from '../../globals/types.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 
 export class BlrLoader extends LitElementCustom {
   static styles = [staticStyles];
 
-  @property() sizeVariant?: ActionSizesType = 'md';
-  @property() variant?: FeedbackVariantType;
-  @property() theme: ThemeType = 'Light';
+  @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
+  @property() accessor variant: FeedbackVariantType | undefined;
+  @property() accessor theme: ThemeType = 'Light';
 
   protected render() {
     if (this.sizeVariant) {
@@ -41,4 +41,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrLoader);
 }
 
-export type BlrLoaderType = Omit<BlrLoader, keyof LitElementCustom>;
+export type BlrLoaderType = ElementInterface<BlrLoader>;

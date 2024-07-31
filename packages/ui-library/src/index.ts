@@ -1,53 +1,55 @@
 // Actions
-export { BlrButtonIcon } from './components/button-icon';
+export { BlrButtonIcon } from './components/button-icon/index.js';
 
-export { BlrButtonText } from './components/button-text';
+export { BlrButtonText } from './components/button-text/index.js';
 
 // Feedback
-export { BlrLoader } from './components/loader';
+export { BlrLoader } from './components/loader/index.js';
 
-export { BlrTooltip } from './components/tooltip';
+export { BlrTooltip } from './components/tooltip/index.js';
 
 // Forms
-export { BlrCheckbox } from './components/checkbox';
+export { BlrCheckbox } from './components/checkbox/index.js';
 
-export { BlrInputFieldNumber } from './components/input-field-number';
+export { BlrInputFieldNumber } from './components/input-field-number/index.js';
 
-export { BlrRadio } from './components/radio';
+export { BlrRadio } from './components/radio/index.js';
 
-export { BlrRadioGroup } from './components/radio-group';
+export { BlrRadioGroup } from './components/radio-group/index.js';
 
-export { BlrSelect } from './components/select';
+export { BlrSelect } from './components/select/index.js';
 
-export { BlrRangeSlider } from './components/slider-single-value/range-slider';
+export { BlrRangeSlider } from './components/slider-single-value/range-slider/index.js';
 
-export { BlrRangeLegendSlider } from './components/slider-single-value/range-legend-slider';
+export { BlrRangeLegendSlider } from './components/slider-single-value/range-legend-slider/index.js';
 
-export { BlrRangeMinMaxSlider } from './components/slider-two-values/range-min-max-slider';
+export { BlrRangeMinMaxSlider } from './components/slider-two-values/range-min-max-slider/index.js';
 
-export { BlrRangeLegendMinMaxSlider } from './components/slider-two-values/range-legend-min-max-slider';
+export { BlrRangeLegendMinMaxSlider } from './components/slider-two-values/range-legend-min-max-slider/index.js';
 
-export { BlrInputFieldText } from './components/input-field-text';
+export { BlrInputFieldText } from './components/input-field-text/index.js';
 
-export { BlrTextarea } from './components/textarea';
+export { BlrTextarea } from './components/textarea/index.js';
 
-export { BlrToggleSwitch } from './components/toggle-switch';
+export { BlrToggleSwitch } from './components/toggle-switch/index.js';
 
 // Internal
-export { BlrCounter } from './components/counter';
+export { BlrCounter } from './components/counter/index.js';
 
-export { BlrFormCaptionGroup } from './components/form-caption-group';
+export { BlrFormCaptionGroup } from './components/form-caption-group/index.js';
 
-export { BlrFormCaption } from './components/form-caption';
+export { BlrFormCaption } from './components/form-caption/index.js';
 
-export { BlrFormLabel } from './components/form-label';
+export { BlrFormLabel } from './components/form-label/index.js';
 
 // Navigation
-export { BlrTabBar } from './components/tab-bar';
+export { BlrTabBar } from './components/tab-bar/index.js';
+
+export { BlrTabBarItem } from './components/tab-bar-item/index.js';
 
 // UI
-export { BlrButtonGroup } from './components/button-group';
+export { BlrButtonGroup } from './components/button-group/index.js';
 
-export { BlrDivider } from './components/divider';
+export { BlrDivider } from './components/divider/index.js';
 
-export { BlrIcon } from './components/icon';
+export { BlrIcon } from './components/icon/index.js';

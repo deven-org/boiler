@@ -23,7 +23,7 @@ import {
   ButtonDisplayOptions,
   UnitVariants,
   Units,
-} from './constants';
+} from './constants.js';
 
 export type SizesType = (typeof Sizes)[number];
 
@@ -41,13 +41,7 @@ export type ButtonGroupSizesType = (typeof ButtonGroupSizes)[number];
 export type ResizeType = (typeof Resizes)[number];
 
 export type InputSizesType = (typeof InputSizes)[number];
-export type RadioOption = {
-  label: string;
-  value: string;
-  hintMessage?: string;
-  errorMessage?: string;
-  checked?: boolean;
-};
+
 export type IconPositionVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];

@@ -1,10 +1,10 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrDividerRenderFunction } from './renderFunction';
+import { BlrDividerRenderFunction } from './renderFunction.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { querySelectorDeep } from 'query-selector-shadow-dom';
-import type { BlrDividerType } from '.';
+import type { BlrDividerType } from './index.js';
 
 const sampleParams: BlrDividerType = { theme: 'Light', direction: 'vertical' };
 

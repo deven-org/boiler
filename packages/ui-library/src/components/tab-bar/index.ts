@@ -1,12 +1,12 @@
 /* eslint-disable lit/binding-positions */
 import { html, nothing } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
-import { property, query, queryAll, state } from 'lit/decorators.js';
-import { staticStyles } from './index.css';
-
-import { TAG_NAME } from './renderFunction';
-import { ThemeType } from '../../foundation/_tokens-generated/index.themes';
-import { staticActionStyles } from '../../foundation/semantic-tokens/action.css';
+import { query, state } from 'lit/decorators.js';
+import { property } from '../../utils/lit/decorators.js';
+import { staticStyles } from './index.css.js';
+import { TAG_NAME } from './renderFunction.js';
+import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
+import { staticActionStyles } from '../../foundation/semantic-tokens/action.css.js';
 import {
   OverflowVariantTypeStandard,
   OverflowVariantTypeFullWidth,
@@ -16,47 +16,39 @@ import {
   TabAlignmentVariantType,
   FormSizesType,
   SizesType,
-} from '../../globals/types';
-import { calculateIconName } from '../../utils/calculate-icon-name';
-import { getComponentConfigToken } from '../../utils/get-component-config-token';
-import { BlrDividerRenderFunction } from '../divider/renderFunction';
-import { BlrIconRenderFunction } from '../icon/renderFunction';
-import { createBlrBlurEvent, createBlrChangeEvent, createBlrFocusEvent } from '../../globals/events';
-import { LitElementCustom } from '../../utils/lit-element-custom';
+} from '../../globals/types.js';
+import { calculateIconName } from '../../utils/calculate-icon-name.js';
+import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
+import { BlrDividerRenderFunction } from '../divider/renderFunction.js';
+import { BlrIconRenderFunction } from '../icon/renderFunction.js';
+import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { BlrTabBarItem } from '../tab-bar-item/index.js';
+import { batch, Signal } from '@lit-labs/preact-signals';
+import { createBlrSelectedValueChangeEvent } from '../../globals/events.js';
+
+/**
+ * @fires blrSelectedValueChange TabBar selected value changed
+ */
 
 export class BlrTabBar extends LitElementCustom {
   static styles = [staticStyles, staticActionStyles];
 
   @query('.blr-tab-bar')
-  protected _navList!: HTMLElement;
+  protected accessor _navList!: HTMLElement;
 
-  @queryAll('.nav-list li')
-  protected _navItems!: HTMLElement[];
+  @property() accessor overflowVariantStandard!: OverflowVariantTypeStandard;
+  @property() accessor overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
+  @property() accessor iconPosition: IconPositionVariant = 'leading';
+  @property() accessor variant: TabVariantType = 'standard';
+  @property() accessor tabContent: TabContentVariantType = 'labelOnly';
+  @property() accessor alignment: TabAlignmentVariantType = 'left';
+  @property() accessor size: FormSizesType | undefined = 'md';
+  @property() accessor showDivider = true;
+  @property() accessor theme: ThemeType = 'Light';
 
-  @queryAll('slot[name=tab]')
-  protected _navItemsSlots!: HTMLElement[];
-
-  @queryAll('[role=tabpanel]')
-  protected _panels!: HTMLElement[];
-
-  @property() overflowVariantStandard!: OverflowVariantTypeStandard;
-  @property() overflowVariantFullWidth!: OverflowVariantTypeFullWidth;
-  @property() iconPosition: IconPositionVariant = 'leading';
-  @property() variant: TabVariantType = 'standard';
-  @property() tabContent: TabContentVariantType = 'labelOnly';
-  @property() alignment: TabAlignmentVariantType = 'left';
-  @property() size?: FormSizesType = 'md';
-  @property() onChange?: HTMLElement['oninput'];
-  @property() onBlur?: HTMLElement['blur'];
-  @property() onFocus?: HTMLElement['focus'];
-  @property() showDivider = true;
-  @property() onClick?: HTMLButtonElement['onclick'];
-
-  @property() theme: ThemeType = 'Light';
-
-  @state() protected selectedTabIndex: number | undefined;
-
-  protected _tabBarElements: Element[] | undefined;
+  @state() protected accessor _selectedTab: BlrTabBarItem | undefined;
+  protected _tabBarElements: BlrTabBarItem[] = [];
+  private _tabBarSelectedSignalSubscriptionDisposers: ReturnType<Signal['subscribe']>[] = [];
 
   protected scrollTab = (direction: string, speed: number, distance: number) => {
     let scrollAmount = 0;
@@ -73,31 +65,64 @@ export class BlrTabBar extends LitElementCustom {
     }, speed);
   };
 
-  protected handleFocus = (event: FocusEvent, isDisabled: boolean) => {
-    if (!isDisabled) {
-      this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
-    }
-  };
-
-  protected handleBlur = (event: FocusEvent, isDisabled: boolean) => {
-    if (!isDisabled) {
-      this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
-    }
-  };
-
-  protected handleSelect(event: Event, index: number | undefined, isDisabled: boolean) {
-    if (!isDisabled) {
-      this.selectedTabIndex = index;
-      const changedTab = this._tabBarElements![this.selectedTabIndex!].getAttribute('label');
-      this.dispatchEvent(createBlrChangeEvent({ originalEvent: event, changedValue: changedTab }));
-    }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected firstUpdated(...args: Parameters<LitElementCustom['firstUpdated']>): void {
+    this.handleSlotChange();
   }
 
+  protected handleTabBarSelectedSignal = (target: BlrTabBarItem, value?: boolean) => {
+    const selectedTab: BlrTabBarItem | undefined = value
+      ? target
+      : target === this._selectedTab && !value
+      ? undefined
+      : this._selectedTab;
+
+    batch(() => {
+      this._tabBarElements?.forEach((tab) => {
+        if (tab !== selectedTab) {
+          tab.selected = false;
+        }
+      });
+    });
+
+    if (this._selectedTab !== selectedTab) {
+      this.dispatchEvent(
+        createBlrSelectedValueChangeEvent({ selectedValue: (<BlrTabBarItem>selectedTab)?.label ?? '' })
+      );
+      this._selectedTab = selectedTab;
+    }
+  };
+
   protected handleSlotChange() {
+    // Cleanup signal listeners from previously slotted elements
+    this._tabBarSelectedSignalSubscriptionDisposers.forEach((cancelSubscription) => cancelSubscription());
     const slot = this.renderRoot?.querySelector('slot');
 
-    this._tabBarElements = slot?.assignedElements({ flatten: false });
-    this.requestUpdate();
+    this._tabBarElements = slot?.assignedElements({ flatten: false }) as BlrTabBarItem[];
+
+    // Add signal listeners to newly slotted elements
+    this._tabBarElements.forEach((item) => {
+      if (item instanceof BlrTabBarItem === false) {
+        throw new Error('child component of blr-tab-bar must be blr-tab-bar-item');
+      }
+
+      item.theme = this.theme;
+      item.size = this.size;
+      item.tabContent = this.tabContent;
+      item.iconPosition = this.iconPosition;
+
+      this._tabBarSelectedSignalSubscriptionDisposers.push(
+        item.signals.selected.subscribe((value) => this.handleTabBarSelectedSignal(item, value))
+      );
+    });
+  }
+
+  protected handleTabSelect(currentlySelected: string) {
+    this._tabBarElements?.forEach((item: BlrTabBarItem) => {
+      if (item.label !== currentlySelected && item.selected) {
+        item.selected = false;
+      }
+    });
   }
 
   protected render() {
@@ -119,15 +144,6 @@ export class BlrTabBar extends LitElementCustom {
         [this.overflowVariantFullWidth]: this.overflowVariantFullWidth,
         [this.alignment]: this.alignment,
       });
-
-      const iconSizeVariant = getComponentConfigToken([
-        'cmp',
-        'TabBar',
-        'Tab',
-        'Icon',
-        'SizeVariant',
-        this.size.toUpperCase(),
-      ]) as SizesType;
 
       const buttonIconSizeVariant = getComponentConfigToken([
         'cmp',
@@ -157,71 +173,6 @@ export class BlrTabBar extends LitElementCustom {
           <div class="${tabBarClasses}">
             <ul class="nav-list ${navListClasses}" role="tablist">
               <slot @slotchange=${this.handleSlotChange}></slot>
-              ${this._tabBarElements?.map((tab: Element, index) => {
-                const isDisabled = tab.hasAttribute('disabled') || tab.getAttribute('disabled') === 'true';
-
-                const navListItemClasses = classMap({
-                  'disabled': isDisabled,
-                  'nav-item': true,
-                  [this.size || 'md']: this.size || 'md',
-                  [this.iconPosition]: this.iconPosition,
-                  'selected': index === this.selectedTabIndex,
-                });
-
-                const navListItemContainer = classMap({
-                  'disabled': tab.getAttribute('disabled') === 'true',
-                  'nav-item-container': true,
-                  [this.size || 'md']: this.size || 'md',
-                  [this.iconPosition]: this.iconPosition,
-                });
-
-                const navListItemUnderline = classMap({
-                  'nav-item-underline': true,
-                  'selected': index === this.selectedTabIndex,
-                });
-
-                return html`
-                  <li class="${navListItemContainer}" role="presentation">
-                    <div class="nav-item-content-wrapper">
-                      <p
-                        id=${`#tab-${index}`}
-                        role="tab"
-                        aria-controls=${`panel-${index}`}
-                        class="${navListItemClasses}"
-                        @focus=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
-                        @blur=${(e: FocusEvent) => this.handleFocus(e, isDisabled)}
-                        @click=${(e: Event) => this.handleSelect(e, index, isDisabled)}
-                        @keydown=${(event: KeyboardEvent) => {
-                          if (event.code === 'Space') {
-                            this.handleSelect(event, index, isDisabled);
-                          }
-                        }}
-                        tabindex=${isDisabled ? '-1' : index}
-                      >
-                        ${this.tabContent !== 'labelOnly' && tab.hasAttribute('icon')
-                          ? BlrIconRenderFunction(
-                              {
-                                icon: calculateIconName(tab.getAttribute('icon')!, iconSizeVariant),
-                                sizeVariant: iconSizeVariant,
-                              },
-                              {
-                                'aria-hidden': true,
-                              }
-                            )
-                          : nothing}
-                        ${this.tabContent !== 'iconOnly'
-                          ? html` <label
-                              class="blr-semantic-action ${this.theme} ${this.size}"
-                              name="${tab.getAttribute('label')}"
-                              >${tab.getAttribute('label')}</label
-                            >`
-                          : nothing}
-                      </p>
-                    </div>
-                    <div class="${navListItemUnderline}"></div>
-                  </li>
-                `;
-              })}
             </ul>
           </div>
           ${this.overflowVariantStandard === 'buttons'
@@ -249,18 +200,17 @@ export class BlrTabBar extends LitElementCustom {
               })
             : nothing}
         </div>
-        ${this._tabBarElements?.map((tab, index) => {
-          return index === this.selectedTabIndex
-            ? html`<section
-                id=${`#panel-${index}`}
-                class="panel-wrapper"
-                role="tabpanel"
-                aria-labelledby="${`${tab.getAttribute('label')?.toLowerCase()}-tab`}"
-              >
-                <p>${tab.getAttribute('label')}</p>
-              </section>`
-            : nothing;
-        })}`;
+
+        ${this._selectedTab
+          ? html`<section
+              id=${`#panel-${this._selectedTab.getAttribute('label')}`}
+              class="panel-wrapper"
+              role="tabpanel"
+              aria-labelledby="${`${this._selectedTab.getAttribute('label')?.toLowerCase()}-tab`}"
+            >
+              <p>${this._selectedTab.getAttribute('label')}</p>
+            </section>`
+          : nothing}`;
     }
   }
 }
@@ -269,4 +219,4 @@ if (!customElements.get(TAG_NAME)) {
   customElements.define(TAG_NAME, BlrTabBar);
 }
 
-export type BlrTabBarType = Omit<BlrTabBar, keyof LitElementCustom>;
+export type BlrTabBarType = ElementInterface<BlrTabBar>;

@@ -202,7 +202,7 @@ component can also be viewed
    ```
 5. Now start up your app
    ```sh
-   $ yarn start
+   $ yarn start:storybook
    ```
 
 > Note: This command will also open up Storybook locally. This provides you with a full list of available components
@@ -260,7 +260,7 @@ your first icon:
    ```
 2. To check that your icon has been added run your project locally and inspect the Icons tab:
    ```sh
-   $ yarn start
+   $ yarn start:storybook
    ```
 
 #### Changing Icons
@@ -271,8 +271,7 @@ It is also possible to just change existing icon file without renaming it.
 3. Replace the `<svg>` and `<path>` tags with yours
 4. Compile and run your project locally with:
    ```sh
-   $ yarn compile:icons
-   $ yarn start
+   $ yarn start:storybook
    ```
 5. If now you navigate to the local Storybook and inspect Icons tab, you will see that the icon `blrBook` is updated
 
@@ -310,7 +309,7 @@ const defaultParams: BlrCheckboxType ={
 To check that changes have applied do the following:
 1. Run you project locally with:
    ```sh
-   $ yarn start
+   $ yarn start:storybook
    ```
 2. Navigate to the Checkbox tab in your local Storybook
 3. Check the checkbox

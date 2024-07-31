@@ -1,8 +1,8 @@
-import { typeSafeNestedCss } from "../../utils/css-in-ts/nested-typesafe-css-literals";
+import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-import { SemanticThemeIterator, ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated";
+import { SemanticThemeIterator, ComponentThemeIterator } from "../_tokens-generated/index.pseudo.generated.js";
 
-export const staticBaseStyles = typeSafeNestedCss/*css*/ `
+export const staticBaseStyles = css`
   .blr-form-element {
     all: initial;
     width: 100%;
@@ -58,17 +58,16 @@ export const staticBaseStyles = typeSafeNestedCss/*css*/ `
   }
 `;
 
-export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
-  ${SemanticThemeIterator((theme, sem, typeSafeCss) => {
+export const staticSemanticStyles = css`
+  ${SemanticThemeIterator((theme, sem, css) => {
     const { forms } = sem;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-form-element.${theme} {
         color: ${forms.inputfield.userinput.textcolor.default.rest};
         font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
         font-size: ${forms.inputfield.userinput.typography.md.fontSize};
         font-family: ${forms.inputfield.userinput.typography.md.fontFamily}, sans-serif;
-
         border-width: ${forms.inputfield.container.border.default.rest.width};
         border-style: ${forms.inputfield.container.border.default.rest.style};
         border-color: ${forms.inputfield.container.border.default.rest.color};
@@ -270,16 +269,17 @@ export const staticSemanticStyles = typeSafeNestedCss/*css*/ `
   })}
 `;
 
-export const staticComponentStyles = typeSafeNestedCss/*css*/ `
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
+export const staticComponentStyles = css`
+  ${ComponentThemeIterator((theme, cmp, css) => {
     const { formlabel } = cmp;
 
-    return typeSafeCss/*css*/ `
+    return css`
       .blr-form-label.${theme} {
         color: ${formlabel.label.textcolor.rest};
 
         &:focus {
           color: ${formlabel.label.textcolor.focus};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.focus};
           }
@@ -287,6 +287,7 @@ export const staticComponentStyles = typeSafeNestedCss/*css*/ `
 
         &:hover {
           color: ${formlabel.label.textcolor.hover};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.hover};
           }
@@ -294,6 +295,7 @@ export const staticComponentStyles = typeSafeNestedCss/*css*/ `
 
         &:disabled {
           color: ${formlabel.label.textcolor.disabled};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.disabled};
           }
@@ -301,6 +303,7 @@ export const staticComponentStyles = typeSafeNestedCss/*css*/ `
 
         &[readonly] {
           color: ${formlabel.label.textcolor.readonly};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.readonly};
           }
@@ -308,6 +311,7 @@ export const staticComponentStyles = typeSafeNestedCss/*css*/ `
 
         &.error {
           color: ${formlabel.label.textcolor.error};
+
           .blr-form-label-appendix {
             color: ${formlabel.labelappendix.textcolor.error};
           }
@@ -389,7 +393,7 @@ export const staticComponentStyles = typeSafeNestedCss/*css*/ `
   })}
 `;
 
-export const staticStyles = typeSafeNestedCss/*css*/ `
+export const staticStyles = css`
   ${staticBaseStyles.cssText}
   ${staticSemanticStyles.cssText}
   ${staticComponentStyles.cssText}

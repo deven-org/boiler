@@ -1,7 +1,7 @@
-import '@boiler/ui-library/dist/';
+import '@boiler/ui-library';
 
-import { BlrTooltipRenderFunction } from './renderFunction';
-import type { BlrTooltipType } from '.';
+import { BlrTooltipRenderFunction } from './renderFunction.js';
+import type { BlrTooltipType } from './index.js';
 
 import { fixture, expect } from '@open-wc/testing';
 import { html } from 'lit';
