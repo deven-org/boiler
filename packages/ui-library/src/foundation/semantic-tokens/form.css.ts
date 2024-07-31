@@ -64,7 +64,7 @@ export const staticSemanticStyles = css`
 
     return css`
       .blr-form-element.${theme} {
-        outline-offset: calc(1px * -1);
+        outline-offset: calc(${forms.inputfield.container.border.default.hover.width} * -1);
         color: ${forms.inputfield.userinput.textcolor.default.rest};
         font-weight: ${forms.inputfield.userinput.typography.md.fontWeight};
         font-size: ${forms.inputfield.userinput.typography.md.fontSize};
@@ -91,7 +91,7 @@ export const staticSemanticStyles = css`
         }
 
         &:active {
-          outline-offset: calc(1px * -1);
+          outline-offset: calc(${forms.inputfield.container.border.default.hover.width} * -1);
           outline: ${forms.inputfield.container.border.default.pressed.width} ${forms.inputfield.container.border.default.pressed.style}
             ${forms.inputfield.container.border.default.pressed.color};
           color: ${forms.inputfield.userinput.textcolor.default.pressed};
@@ -114,7 +114,7 @@ export const staticSemanticStyles = css`
         }
 
         &:disabled {
-          outline-offset: calc(1px * -1);
+          outline-offset: calc(${forms.inputfield.container.border.error.focus.width} * -1);
           outline: ${forms.inputfield.container.border.default.disabled.width} ${forms.inputfield.container.border.default.disabled.style}
             ${forms.inputfield.container.border.default.disabled.color};
           color: ${forms.inputfield.userinput.textcolor.default.disabled};
@@ -126,7 +126,7 @@ export const staticSemanticStyles = css`
         }
 
         &:focus {
-          outline-offset: calc(1px * -1);
+          outline-offset: calc(${forms.inputfield.container.border.default.hover.width}* -2);
           outline: ${forms.inputfield.container.border.default.focus.width} ${forms.inputfield.container.border.default.focus.style}
             ${forms.inputfield.container.border.default.focus.color};
           color: ${forms.inputfield.userinput.textcolor.default.focus};
@@ -138,7 +138,7 @@ export const staticSemanticStyles = css`
         }
 
         &.error-input {
-          outline-offset: calc(1px * -1);
+          outline-offset: calc(${forms.inputfield.container.border.default.hover.width} * -1);
           outline: ${forms.inputfield.container.border.error.rest.width} ${forms.inputfield.container.border.error.rest.style}
             ${forms.inputfield.container.border.error.rest.color};
           color: ${forms.inputfield.userinput.textcolor.error.rest};
@@ -149,7 +149,7 @@ export const staticSemanticStyles = css`
           }
 
           &:hover {
-            outline-offset: calc(1px * -1);
+            outline-offset: calc(${forms.inputfield.container.border.error.focus.width} * -1);
             outline: ${forms.inputfield.container.border.error.hover.width} ${forms.inputfield.container.border.error.hover.style}
               ${forms.inputfield.container.border.error.hover.color};
             color: ${forms.inputfield.userinput.textcolor.error.hover};
@@ -161,7 +161,7 @@ export const staticSemanticStyles = css`
           }
 
           &:active {
-            outline-offset: calc(1px * -1);
+            outline-offset: calc(${forms.inputfield.container.border.error.focus.width} * -1);
             outline: ${forms.inputfield.container.border.error.pressed.width} ${forms.inputfield.container.border.error.pressed.style}
               ${forms.inputfield.container.border.error.pressed.color};
             color: ${forms.inputfield.userinput.textcolor.error.pressed};
@@ -173,7 +173,7 @@ export const staticSemanticStyles = css`
           }
 
           &:focus {
-            outline-offset: calc(1px * -1);
+            outline-offset: calc(${forms.inputfield.container.border.error.focus.width} * -1);
             border-color: transparent;
             outline: ${forms.inputfield.container.border.error.focus.width} ${forms.inputfield.container.border.error.focus.style}
               ${forms.inputfield.container.border.error.focus.color};

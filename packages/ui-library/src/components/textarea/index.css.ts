@@ -78,7 +78,6 @@ export const staticStyles = css`
     }
 
     &:focus {
-      outline-offset: calc(1px * -1);
       border-color: transparent;
     }
 

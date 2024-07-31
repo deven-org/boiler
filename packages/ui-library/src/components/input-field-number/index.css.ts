@@ -17,7 +17,6 @@ export const staticBaseStyles = css`
   }
 
   .input-wrapper {
-    outline-offset: calc(1px * -1);
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
@@ -119,7 +118,7 @@ export const staticSemanticStyles = css`
         border-radius: ${inputfield.container.borderradius};
 
         &:focus-within {
-          outline-offset: calc(1px * -1);
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline-width: ${inputfield.container.border.default.focus.width};
           outline-style: ${inputfield.container.border.default.focus.style};
           outline-color: ${inputfield.container.border.default.focus.color};
