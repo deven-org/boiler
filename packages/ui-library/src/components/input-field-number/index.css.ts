@@ -113,6 +113,7 @@ export const staticSemanticStyles = css`
         box-sizing: border-box;
         width: 100%;
         outline-width: ${inputfield.container.border.default.rest.width};
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
         outline-style: ${inputfield.container.border.default.rest.style};
         outline-color: ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};

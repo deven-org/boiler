@@ -171,7 +171,7 @@ export const styleCustom = css`
       }
 
       .blr-input-wrapper.${theme} {
-        outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
         display: flex;
         justify-content: space-between;
         align-items: center;
