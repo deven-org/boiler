@@ -43,21 +43,19 @@ describe('blr-select', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      })
+      }),
     );
 
-    const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
-    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
-    const formCaptions = querySelectorAllDeep('blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
+    const captionGroup = querySelectorDeep('blr-form-caption-group', element.getRootNode() as HTMLElement);
+    const formCaptions = querySelectorAllDeep('blr-form-caption', captionGroup?.getRootNode() as HTMLElement);
 
-    const formCaptionHint = querySelectorDeep('.blr-form-caption', formCaptions[0] as HTMLElement);
-    const hintClassName = formCaptionHint?.className;
+    expect(formCaptions.length).to.equal(2);
 
-    const formCaptionError = querySelectorDeep('.blr-form-caption', formCaptions[1] as HTMLElement);
-    const errorClassName = formCaptionError?.className;
+    const hintCaption = formCaptions[0];
+    const errorCaption = formCaptions[1];
 
-    expect(hintClassName).to.contain('hint');
-    expect(errorClassName).to.contain('error');
+    expect(hintCaption.getAttribute('variant')).to.equal('hint');
+    expect(errorCaption.getAttribute('variant')).to.equal('error');
   });
 
   it('has error Icon set to undefined', async () => {
@@ -67,21 +65,19 @@ describe('blr-select', () => {
         hasHint: false,
         hasError: true,
         errorMessageIcon: undefined,
-      })
+      }),
     );
 
-    const labelWrapper = querySelectorDeep('.label-wrapper', element?.getRootNode() as HTMLElement);
-    const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
-    const formCaption = querySelectorDeep('.blr-form-caption', captionWrapper?.getRootNode() as HTMLElement);
-    const errorIcon = querySelectorDeep('blr-icon', formCaption?.getRootNode() as HTMLElement);
+    const errorCaption = querySelectorDeep('blr-form-caption[variant="error"]', element.getRootNode() as HTMLElement);
+    const errorIcon = querySelectorDeep('blr-icon', errorCaption?.getRootNode() as HTMLElement);
     expect(errorIcon).to.not.exist;
   });
 
   it('has a size md by default', async () => {
     const element = await fixture(BlrSelectRenderFunction(sampleParams));
 
-    const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
-    const className = selectWrapper?.className;
+    const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
+    const className = select?.className;
 
     expect(className).to.contain('md');
   });
@@ -89,8 +85,8 @@ describe('blr-select', () => {
   it('has a size sm when "size" is set to "sm" ', async () => {
     const element = await fixture(BlrSelectRenderFunction({ ...sampleParams, sizeVariant: 'sm' }));
 
-    const selectWrapper = querySelectorDeep('.blr-select-wrapper', element.getRootNode() as HTMLElement);
-    const className = selectWrapper?.className;
+    const select = querySelectorDeep('select', element.getRootNode() as HTMLElement);
+    const className = select?.className;
 
     expect(className).to.contain('sm');
   });
