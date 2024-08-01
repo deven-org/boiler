@@ -68,6 +68,7 @@ export const staticStyles = css`
 
       .blr-form-select.${theme} {
         border-radius: ${inputfield.container.borderradius};
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
         color: ${inputfield.userinput.textcolor.default.rest};
         background-color: ${inputfield.container.bgcolor.default.rest};
         outline: ${inputfield.container.border.default.rest.width} ${inputfield.container.border.default.rest.style}
@@ -109,6 +110,7 @@ export const staticStyles = css`
         &.focus {
           color: ${inputfield.userinput.textcolor.default.focus};
           background-color: ${inputfield.container.bgcolor.default.focus};
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           border-color: ${inputfield.container.border.default.focus.color};
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
             ${inputfield.container.border.default.focus.color};

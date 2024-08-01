@@ -74,7 +74,7 @@ export type BlrSelectedValueChangeEventDetail = {
 export type BlrSelectedValueChangeEvent = CustomEvent<BlrSelectedValueChangeEventDetail>;
 export const BlrSelectedValueChangeEventName = 'blrSelectedValueChange';
 export function createBlrSelectedValueChangeEvent(
-  detail: BlrSelectedValueChangeEventDetail
+  detail: BlrSelectedValueChangeEventDetail,
 ): BlrSelectedValueChangeEvent {
   return new CustomEvent(BlrSelectedValueChangeEventName, { bubbles: false, composed: true, detail, cancelable: true });
 }

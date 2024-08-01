@@ -12,7 +12,7 @@ import { registerSignal } from './signals.js';
 export function property(options?: PropertyDecoratorOptions) {
   return <C extends Interface<LitElementCustom>, V>(
     target: ClassAccessorDecoratorTarget<C, V> | ((this: C, value: V) => void),
-    context: ClassSetterDecoratorContext<C, V> | ClassAccessorDecoratorContext<C, V>
+    context: ClassSetterDecoratorContext<C, V> | ClassAccessorDecoratorContext<C, V>,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): any => {
     const { kind: decoratorKind, name: propertyName } = context;
@@ -64,7 +64,7 @@ export const camelCaseToKebabCase = (str: string) =>
     (upperCaseGroup, isNotFirstCharacter) =>
       // If not the first character and an uppercase group is found,
       // add a hyphen before the uppercase group and convert it to lowercase.
-      (isNotFirstCharacter ? '-' : '') + upperCaseGroup.toLowerCase()
+      (isNotFirstCharacter ? '-' : '') + upperCaseGroup.toLowerCase(),
   );
 
 export type PropertyDecoratorOptions = PropertyDeclaration & {
