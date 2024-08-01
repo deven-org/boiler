@@ -66,7 +66,7 @@ export class BlrSelect extends LitElementCustom {
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
   @property() accessor hasHint: boolean | undefined;
-  @property() accessor icon: SizelessIconType | undefined = 'blrChevronDown';
+  @property() accessor icon: SizelessIconType | undefined;
   @property() accessor theme: ThemeType = 'Light';
   @property() accessor options!: Options[] | JSON;
   @state() protected accessor isFocused = false;
@@ -87,7 +87,7 @@ export class BlrSelect extends LitElementCustom {
 
   protected handleChange(event: Event) {
     this.dispatchEvent(
-      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._selectNode.value })
+      createBlrSelectedValueChangeEvent({ originalEvent: event, selectedValue: this._selectNode.value }),
     );
   }
 
@@ -98,7 +98,7 @@ export class BlrSelect extends LitElementCustom {
       [this.theme]: this.theme,
     });
 
-    if (this.sizeVariant) {
+    if (this.sizeVariant && this.icon) {
       const iconSizeVariant = getComponentConfigToken([
         'sem',
         'forms',
@@ -108,10 +108,9 @@ export class BlrSelect extends LitElementCustom {
         this.sizeVariant,
       ]).toLowerCase() as SizesType;
 
-      const modifiedIcon = this.icon ? this.icon : 'blrChevronDown';
       return BlrIconRenderFunction(
         {
-          icon: calculateIconName(modifiedIcon, iconSizeVariant),
+          icon: calculateIconName(this.icon, iconSizeVariant),
           sizeVariant: iconSizeVariant,
           classMap: classes,
           fillParent: false,
@@ -119,7 +118,7 @@ export class BlrSelect extends LitElementCustom {
         },
         {
           'aria-hidden': true,
-        }
+        },
       );
     }
   }
@@ -149,9 +148,10 @@ export class BlrSelect extends LitElementCustom {
 
   protected render() {
     if (this.sizeVariant) {
-      const inputClasses = classMap({
+      const selectClasses = classMap({
+        'blr-form-select': true,
         'error': this.hasError || false,
-        'error-input': this.hasError || false,
+        'error-select': this.hasError || false,
         [this.sizeVariant]: this.sizeVariant,
         'disabled': this.disabled || false,
         'focus': this.isFocused || false,
@@ -174,39 +174,37 @@ export class BlrSelect extends LitElementCustom {
                 </div>
               `
             : nothing}
-          <div class="blr-select-wrapper ${inputClasses}">
-            <div class="blr-select-inner-container ${this.theme}">
-              <select
-                aria-label=${this.ariaLabel || nothing}
-                class="blr-form-select ${inputClasses}"
-                id=${this.selectId || nothing}
-                name=${this.name || nothing}
-                ?disabled=${this.disabled}
-                ?required=${this.required}
-                @input=${this.handleChange}
-                @focus=${this.handleFocus}
-                @blur=${this.handleBlur}
-              >
-                ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
-                  return html`
-                    <option
-                      class="blr-select-option"
-                      value=${opt.value || ''}
-                      ?selected=${opt.selected ?? false}
-                      ?disabled=${opt.disabled ?? false}
-                    >
-                      ${opt.label}
-                    </option>
-                  `;
-                })}
-              </select>
-            </div>
+          <div class="select-wrapper">
+            <select
+              aria-label=${this.ariaLabel || nothing}
+              class=${selectClasses}
+              id=${this.selectId || nothing}
+              name=${this.name || nothing}
+              ?disabled=${this.disabled}
+              ?required=${this.required}
+              @input=${this.handleChange}
+              @focus=${this.handleFocus}
+              @blur=${this.handleBlur}
+            >
+              ${(typeof this.options === 'string' ? JSON.parse(this.options) : this.options).map((opt: Options) => {
+                return html`
+                  <option
+                    class="blr-select-option"
+                    value=${opt.value || ''}
+                    ?selected=${opt.selected ?? false}
+                    ?disabled=${opt.disabled ?? false}
+                  >
+                    ${opt.label}
+                  </option>
+                `;
+              })}
+            </select>
             ${this.renderIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
             ? BlrFormCaptionGroupRenderFunction(
                 { theme: this.theme, sizeVariant: this.sizeVariant },
-                this.renderCaptionContent()
+                this.renderCaptionContent(),
               )
             : nothing}
         </div>

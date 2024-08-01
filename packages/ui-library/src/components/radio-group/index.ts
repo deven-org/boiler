@@ -60,8 +60,8 @@ export class BlrRadioGroup extends LitElementCustom {
     const selectedRadio: BlrRadio | undefined = value
       ? target
       : target === this._selectedRadio && !value
-      ? undefined
-      : this._selectedRadio;
+        ? undefined
+        : this._selectedRadio;
 
     batch(() => {
       this._radioElements?.forEach((radio) => {
@@ -101,7 +101,7 @@ export class BlrRadioGroup extends LitElementCustom {
       item.sizeVariant = this.sizeVariant;
 
       this._radioCheckedSignalSubscriptionDisposers.push(
-        item.signals.checked.subscribe((value) => this.handleRadioCheckedSignal(item, value))
+        item.signals.checked.subscribe((value) => this.handleRadioCheckedSignal(item, value)),
       );
     });
   };

@@ -74,8 +74,8 @@ export class BlrTabBar extends LitElementCustom {
     const selectedTab: BlrTabBarItem | undefined = value
       ? target
       : target === this._selectedTab && !value
-      ? undefined
-      : this._selectedTab;
+        ? undefined
+        : this._selectedTab;
 
     batch(() => {
       this._tabBarElements?.forEach((tab) => {
@@ -87,7 +87,7 @@ export class BlrTabBar extends LitElementCustom {
 
     if (this._selectedTab !== selectedTab) {
       this.dispatchEvent(
-        createBlrSelectedValueChangeEvent({ selectedValue: (<BlrTabBarItem>selectedTab)?.label ?? '' })
+        createBlrSelectedValueChangeEvent({ selectedValue: (<BlrTabBarItem>selectedTab)?.label ?? '' }),
       );
       this._selectedTab = selectedTab;
     }
@@ -112,7 +112,7 @@ export class BlrTabBar extends LitElementCustom {
       item.iconPosition = this.iconPosition;
 
       this._tabBarSelectedSignalSubscriptionDisposers.push(
-        item.signals.selected.subscribe((value) => this.handleTabBarSelectedSignal(item, value))
+        item.signals.selected.subscribe((value) => this.handleTabBarSelectedSignal(item, value)),
       );
     });
   }
@@ -165,7 +165,7 @@ export class BlrTabBar extends LitElementCustom {
                     },
                     {
                       'aria-hidden': true,
-                    }
+                    },
                   )}
                 </button>
               `
@@ -186,7 +186,7 @@ export class BlrTabBar extends LitElementCustom {
                     },
                     {
                       'aria-hidden': true,
-                    }
+                    },
                   )}
                 </button>
               `

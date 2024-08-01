@@ -322,22 +322,21 @@ export const Direction = () => {
  *The Radio Group component can display a label or no label.
  */
 
-export const HasGroupLabel = () =>
-  html`
-    <div class="wrapper">
-      ${BlrRadioGroup({
-        ...defaultParams,
-        hasLegend: true,
-        legend: 'With Group Label',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrRadioGroup({
-        ...defaultParams,
-        hasLegend: false,
-      })}
-    </div>
-  `;
+export const HasGroupLabel = () => html`
+  <div class="wrapper">
+    ${BlrRadioGroup({
+      ...defaultParams,
+      hasLegend: true,
+      legend: 'With Group Label',
+    })}
+  </div>
+  <div class="wrapper">
+    ${BlrRadioGroup({
+      ...defaultParams,
+      hasLegend: false,
+    })}
+  </div>
+`;
 
 HasGroupLabel.story = { name: ' ' };
 
