@@ -113,11 +113,13 @@ export const staticSemanticStyles = css`
         box-sizing: border-box;
         width: 100%;
         outline-width: ${inputfield.container.border.default.rest.width};
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
         outline-style: ${inputfield.container.border.default.rest.style};
         outline-color: ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
 
         &:focus-within {
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline-width: ${inputfield.container.border.default.focus.width};
           outline-style: ${inputfield.container.border.default.focus.style};
           outline-color: ${inputfield.container.border.default.focus.color};
@@ -273,13 +275,13 @@ export const staticComponentStyles = css`
             width: ${StepperButton.Container.Width.SM};
           }
         }
-  
+
         &.md {
           & > .custom-stepper-button {
             width: ${StepperButton.Container.Width.MD};
           }
         }
-  
+
         &.lg {
           & > .custom-stepper-button {
             width: ${StepperButton.Container.Width.LG};
@@ -360,12 +362,12 @@ export const staticComponentStyles = css`
 
         &:hover:not(:disabled) {
           background-color: ${StepperButton.Container.BackgroundColor.Hover};
-          color: ${StepperButton.Icon.IconColor.Hover}
+          color: ${StepperButton.Icon.IconColor.Hover};
         }
 
         &:active:not(:disabled) {
           background-color: ${StepperButton.Container.BackgroundColor.Pressed};
-          color: ${StepperButton.Icon.IconColor.Pressed}
+          color: ${StepperButton.Icon.IconColor.Pressed};
         }
 
         &:disabled {

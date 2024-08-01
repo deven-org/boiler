@@ -289,23 +289,22 @@ SizeVariant.story = { name: ' ' };
  * ### Checked
  * The Radio component can be checked or unchecked. The checked state indicates that the Radio component is selected or enabled. The unchecked state indicates that the Radio component is not selected. */
 
-export const Checked = () =>
-  html`
-    <div class="wrapper">
-      ${BlrRadio({
-        ...args,
-        checked: true,
-        label: 'Checked',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrRadio({
-        ...args,
-        checked: false,
-        label: 'Unchecked',
-      })}
-    </div>
-  `;
+export const Checked = () => html`
+  <div class="wrapper">
+    ${BlrRadio({
+      ...args,
+      checked: true,
+      label: 'Checked',
+    })}
+  </div>
+  <div class="wrapper">
+    ${BlrRadio({
+      ...args,
+      checked: false,
+      label: 'Unchecked',
+    })}
+  </div>
+`;
 
 Checked.story = { name: ' ' };
 /**

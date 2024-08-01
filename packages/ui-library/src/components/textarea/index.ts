@@ -240,7 +240,7 @@ export class BlrTextarea extends LitElementCustom {
             ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
               ? BlrFormCaptionGroupRenderFunction(
                   { sizeVariant: this.sizeVariant, theme: this.theme },
-                  getCaptionContent()
+                  getCaptionContent(),
                 )
               : nothing}
             ${this.hasCounter
