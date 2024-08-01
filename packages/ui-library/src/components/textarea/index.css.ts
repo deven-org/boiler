@@ -202,6 +202,7 @@ export const staticStyles = css`
           outline: ${inputfield.container.border.default.focus.width} ${inputfield.container.border.default.focus.style}
             ${inputfield.container.border.default.focus.color};
           color: ${inputfield.userinput.textcolor.default.focus};
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           background-color: ${inputfield.container.bgcolor.default.focus};
 
           &::placeholder {
