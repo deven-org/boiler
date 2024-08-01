@@ -111,7 +111,7 @@ export class BlrTabBarItem extends LitElementCustom implements PublicReactivePro
                   },
                   {
                     'aria-hidden': true,
-                  }
+                  },
                 )
               : nothing}
             ${this.tabContent !== 'iconOnly'

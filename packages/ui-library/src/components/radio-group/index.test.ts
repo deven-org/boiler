@@ -51,7 +51,7 @@ describe('blr-radio-group', () => {
 
   it('has a size sm when "size" is set to "sm" ', async () => {
     const element = await fixture(
-      BlrRadioGroupRenderFunction({ ...sampleParams, sizeVariant: 'sm' }, radioButtonsAsChildren)
+      BlrRadioGroupRenderFunction({ ...sampleParams, sizeVariant: 'sm' }, radioButtonsAsChildren),
     );
 
     const radioGroup = querySelectorDeep('.blr-radio-group', element.getRootNode() as HTMLElement);
@@ -67,8 +67,8 @@ describe('blr-radio-group', () => {
           ...sampleParams,
           hasError: true,
         },
-        radioButtonsAsChildren
-      )
+        radioButtonsAsChildren,
+      ),
     );
 
     const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
@@ -84,8 +84,8 @@ describe('blr-radio-group', () => {
           ...sampleParams,
           hasError: false,
         },
-        radioButtonsAsChildren
-      )
+        radioButtonsAsChildren,
+      ),
     );
 
     const radioGroup = querySelectorDeep('input[type="radio"]', element.getRootNode() as HTMLElement);
@@ -101,7 +101,7 @@ describe('blr-radio-group', () => {
         hasHint: false,
         hasError: true,
         errorIcon: undefined,
-      })
+      }),
     );
 
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
