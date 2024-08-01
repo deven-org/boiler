@@ -85,7 +85,7 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'rows',
-      description: 'Enter amount of rows the component should have.',
+      description: 'Enter amount of rows the component should have. The row height has a defined minimum limit.',
       defaultValue: '5',
       table: {
         category: 'Appearance',
