@@ -5,44 +5,52 @@ export const staticStyles = css`
   :host {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+  }
+
+  :host(.parent-width) {
     width: 100%;
   }
 
   .blr-textarea {
+    max-width: 100%;
+  }
+
+  .block {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+  }
+
+  .inline-block {
+    width: auto;
   }
 
   .blr-textarea-info-container {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: right;
 
-    &.error-message,
+    &.error {
+      justify-content: right;
+    }
+
+    &.hint {
+      justify-content: right;
+    }
+
+    &.error-message {
+      justify-content: space-between;
+    }
+
     &.hint-message {
       justify-content: space-between;
     }
   }
 
   .textarea-input-control {
+    display: block;
     width: 100%;
     box-sizing: border-box;
-    resize: none;
+    max-width: 100%;
     word-break: break-all;
-    all: initial;
-
-    &:active,
-    &[readonly],
-    &:disabled,
-    &:focus,
-    &.error-input:focus {
-      border-color: transparent;
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-    }
 
     &.both {
       resize: both;
@@ -55,6 +63,37 @@ export const staticStyles = css`
     &.horizontal {
       resize: horizontal;
     }
+
+    &.none {
+      resize: none;
+    }
+
+    &:active {
+      border-color: transparent;
+    }
+
+    &[readonly] {
+      border-color: transparent;
+    }
+
+    &:disabled {
+      border-color: transparent;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      border-color: transparent;
+    }
+
+    &.error-input {
+      &:focus {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .textarea-input-control.inline-block {
+    width: auto;
   }
 
   ${ComponentThemeIterator((theme, sem, css) => {
@@ -82,35 +121,47 @@ export const staticStyles = css`
 
     return css`
       .blr-textarea.${theme} {
-        &.sm,
-        &.md,
-        &.lg {
+        max-width: 100%;
+
+        &.sm {
           & > .label-wrapper {
-            display: flex;
             padding: ${labelslot.padding.sm};
+            display: flex;
           }
         }
 
-        &.md > .label-wrapper {
-          padding: ${labelslot.padding.md};
+        &.md {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.md};
+            display: flex;
+          }
         }
 
-        &.lg > .label-wrapper {
-          padding: ${labelslot.padding.lg};
+        &.lg {
+          & > .label-wrapper {
+            padding: ${labelslot.padding.lg};
+            display: flex;
+          }
         }
       }
 
       .blr-textarea-info-container.${theme} {
-        &.sm > blr-counter {
-          margin: ${captionslot.margin.sm};
+        &.sm {
+          & > blr-counter {
+            margin: ${captionslot.margin.sm};
+          }
         }
 
-        &.md > blr-counter {
-          margin: ${captionslot.margin.md};
+        &.md {
+          & > blr-counter {
+            margin: ${captionslot.margin.md};
+          }
         }
 
-        &.lg > blr-counter {
-          margin: ${captionslot.margin.lg};
+        &.lg {
+          & > blr-counter {
+            margin: ${captionslot.margin.lg};
+          }
         }
       }
 

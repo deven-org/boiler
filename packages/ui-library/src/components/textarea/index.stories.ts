@@ -7,19 +7,7 @@ import { PureIconKeys } from '@boiler/icons';
 // this loads the all components instances and registers their html tags
 import '../../index.js';
 import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { FormSizes, Resizes } from '../../globals/constants.js';
-
-// Shared Style inside the Stories
-const sharedStyles = html`
-  <style>
-    .stories-textarea {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  </style>
-`;
+import { DisplayOptions, FormSizes, Resizes } from '../../globals/constants.js';
 
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
@@ -51,6 +39,7 @@ const defaultParams: BlrTextareaType = {
   arialabel: 'Text Area',
   textAreaId: '#textAreaId',
   name: 'Text Area',
+  textareaDisplay: 'block',
 };
 
 //Main Showcase Storybook Textarea, main argType Table
@@ -85,6 +74,7 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'cols',
+      if: { arg: 'textareaDisplay', neq: 'block' },
       description: 'Enter amount of columns the component should hold.',
       defaultValue: '20',
       table: {
@@ -97,6 +87,14 @@ export default {
       name: 'rows',
       description: 'Enter amount of rows the component should have.',
       defaultValue: '5',
+      table: {
+        category: 'Appearance',
+      },
+    },
+    textareaDisplay: {
+      description: 'Choose if textarea should fill its parent container.',
+      options: DisplayOptions,
+      control: { type: 'select' },
       table: {
         category: 'Appearance',
       },
@@ -377,13 +375,7 @@ Text Area allows users to input and edit multiline text. Unlike a simple Input F
 };
 
 //Main Component for Textarea
-export const TextArea = (params: BlrTextareaType) =>
-  html`${sharedStyles}
-    <div class="wrapper">
-      ${BlrTextareaRenderFunction({
-        ...params,
-      })}
-    </div> `;
+export const TextArea = (params: BlrTextareaType) => html`${BlrTextareaRenderFunction({ ...params })}`;
 TextArea.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
