@@ -73,7 +73,7 @@ export class BlrTextarea extends LitElementCustom {
   @property({ type: Number }) accessor rows: number | undefined;
   @property({ type: Number }) accessor cols: number | undefined;
   @property() accessor name: string | undefined;
-  @property() accessor textareaDisplay: DisplayType | undefined = 'block';
+  @property() accessor textAreaDisplay: DisplayType | undefined = 'block';
   @property() accessor theme: ThemeType = 'Light';
 
   @state() protected accessor count = 0;
@@ -153,13 +153,13 @@ export class BlrTextarea extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant && this.textareaDisplay) {
+    if (this.sizeVariant && this.textAreaDisplay) {
       const classes = classMap({
         'blr-textarea': true,
         [this.theme]: true,
         'error': this.hasError || false,
         [this.sizeVariant]: this.sizeVariant,
-        [this.textareaDisplay]: this.textareaDisplay,
+        [this.textAreaDisplay]: this.textAreaDisplay,
       });
 
       const textareaClasses = classMap({
@@ -168,7 +168,7 @@ export class BlrTextarea extends LitElementCustom {
         'error': this.hasError || false,
         [this.resize]: this.resize,
         [this.sizeVariant]: this.sizeVariant,
-        [this.textareaDisplay]: this.textareaDisplay,
+        [this.textAreaDisplay]: this.textAreaDisplay,
         'disabled': this.disabled || false,
       });
 
@@ -228,9 +228,9 @@ export class BlrTextarea extends LitElementCustom {
             minlength="${ifDefined(this.minLength)}"
             maxlength="${ifDefined(this.maxLength && this.maxLength > 0 ? this.maxLength : undefined)}"
             aria-label="${ifDefined(this.arialabel)}"
-            cols="${this.textareaDisplay === 'inline-block' ? this.cols || '' : ''}"
+            cols="${this.textAreaDisplay === 'inline-block' ? this.cols || '' : ''}"
             rows="${ifDefined(this.rows)}"
-            placeholder="${ifDefined(this.placeholder)}"
+            placeholder=${ifDefined(this.placeholder ? this.placeholder : undefined)}
             ?required="${this.required}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"

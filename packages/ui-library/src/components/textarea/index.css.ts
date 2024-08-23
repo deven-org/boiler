@@ -21,7 +21,7 @@ export const staticStyles = css`
   }
 
   .inline-block {
-    width: auto;
+    width: min-content;
   }
 
   .blr-textarea-info-container {
