@@ -20,7 +20,7 @@ import {
   Resizes,
   ActionSizes,
   ButtonGroupAlignmentVariants,
-  ButtonDisplayOptions,
+  DisplayOptions,
   UnitVariants,
   Units,
 } from './constants.js';
@@ -70,4 +70,4 @@ export type ButtonOption = {
 };
 
 export type LabelVariantType = (typeof LabelVariants)[number];
-export type ButtonDisplayType = (typeof ButtonDisplayOptions)[number];
+export type DisplayType = (typeof DisplayOptions)[number];

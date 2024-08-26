@@ -357,6 +357,7 @@ export const staticComponentStyles = css`
 
       .blr-form-label-appendix.${theme} {
         color: ${formlabel.labelappendix.textcolor.rest};
+        white-space: nowrap;
 
         &.sm {
           font-weight: ${formlabel.labelappendix.typography.sm.fontWeight};
