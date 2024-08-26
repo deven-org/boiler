@@ -1,9 +1,9 @@
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
-import { SemanticThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
+import { SemanticThemeIterator, ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 
 export const staticStyles = css`
   :host {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     max-width: 100%;
   }
@@ -13,7 +13,15 @@ export const staticStyles = css`
   }
 
   .blr-textarea {
-    max-width: fit-content;
+    max-width: 100%;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  .inline-block {
+    width: min-content;
   }
 
   .blr-textarea-info-container {
@@ -39,16 +47,26 @@ export const staticStyles = css`
 
   .textarea-input-control {
     display: block;
-  }
-
-  .textarea-input-control {
-    resize: none;
-    display: block;
+    width: 100%;
+    box-sizing: border-box;
     max-width: 100%;
     word-break: break-all;
-    width: 100%;
-    all: initial;
-    box-sizing: border-box;
+
+    &.both {
+      resize: both;
+    }
+
+    &.vertical {
+      resize: vertical;
+    }
+
+    &.horizontal {
+      resize: horizontal;
+    }
+
+    &.none {
+      resize: none;
+    }
 
     &:active {
       border-color: transparent;
@@ -72,30 +90,38 @@ export const staticStyles = css`
         border-color: transparent;
       }
     }
-
-    &.both {
-      resize: both;
-    }
-
-    &.vertical {
-      resize: vertical;
-    }
-
-    &.horizontal {
-      resize: horizontal;
-    }
-
-    &.none {
-      resize: none;
-    }
   }
+
+  .textarea-input-control.inline-block {
+    width: auto;
+  }
+
+  ${ComponentThemeIterator((theme, sem, css) => {
+    const { InputField } = sem.TextArea;
+
+    return css`
+      .textarea-input-control.${theme} {
+        &.sm {
+          min-height: ${InputField.MinHeight.SM};
+        }
+
+        &.md {
+          min-height: ${InputField.MinHeight.MD};
+        }
+
+        &.lg {
+          min-height: ${InputField.MinHeight.LG};
+        }
+      }
+    `;
+  })}
 
   ${SemanticThemeIterator((theme, sem, css) => {
     const { labelslot, captionslot, inputfield } = sem.forms;
 
     return css`
       .blr-textarea.${theme} {
-        max-width: fit-content;
+        max-width: 100%;
 
         &.sm {
           & > .label-wrapper {
