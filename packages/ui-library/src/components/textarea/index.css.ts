@@ -74,11 +74,13 @@ export const staticStyles = css`
 
     &[readonly] {
       border-color: transparent;
+      resize: none;
     }
 
     &:disabled {
       border-color: transparent;
       cursor: not-allowed;
+      resize: none;
     }
 
     &:focus {
@@ -96,8 +98,8 @@ export const staticStyles = css`
     width: auto;
   }
 
-  ${ComponentThemeIterator((theme, sem, css) => {
-    const { InputField } = sem.TextArea;
+  ${ComponentThemeIterator((theme, cmp, css) => {
+    const { InputField } = cmp.TextArea;
 
     return css`
       .textarea-input-control.${theme} {
