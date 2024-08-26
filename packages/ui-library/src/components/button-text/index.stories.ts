@@ -5,7 +5,7 @@ import { BlrButtonTextRenderFunction } from './renderFunction.js';
 import { PureIconKeys } from '@boiler/icons';
 import '../../index.js';
 import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { ActionVariants, ActionSizes, ButtonDisplayOptions, IconPositionVariant } from '../../globals/constants.js';
+import { ActionVariants, ActionSizes, DisplayOptions, IconPositionVariant } from '../../globals/constants.js';
 // this loads the all components instances and registers their html tags
 
 // Shared Style inside the Stories
@@ -66,7 +66,7 @@ export default {
     },
     buttonDisplay: {
       description: 'Choose if button should fill its parent container or hug its content.',
-      options: ButtonDisplayOptions,
+      options: DisplayOptions,
       control: { type: 'radio' },
       table: {
         category: 'Appearance',
