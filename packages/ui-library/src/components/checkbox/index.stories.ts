@@ -64,7 +64,7 @@ export default {
         category: 'Content / Settings',
       },
     },
-    indeterminatedIcon: {
+    indeterminateIcon: {
       description: 'Select an icon which is displayed when checkbox is indeterminate.',
       options: [undefined, ...PureIconKeys],
       control: { type: 'select' },
@@ -82,6 +82,17 @@ export default {
     },
     label: {
       description: 'Enter string used as label text.',
+      table: {
+        category: 'Content / Settings',
+      },
+      if: { arg: 'hasLabel', eq: true },
+    },
+    labelAppendix: {
+      description:
+        ' Enter string used as an appendix to the label. Use this to inform the user if this field is required or not.',
+      control: {
+        type: 'text',
+      },
       table: {
         category: 'Content / Settings',
       },
@@ -124,6 +135,15 @@ export default {
       defaultValue: false,
       table: {
         category: 'States',
+      },
+    },
+
+    //Validation
+    required: {
+      description: 'Choose if the component must hold a value after an interaction or a submit.',
+      defaultValue: false,
+      table: {
+        category: 'Validation',
       },
     },
     hasError: {
@@ -221,6 +241,7 @@ export default {
  - [**Disabled**](#disabled) 
  - [**Readonly**](#readonly)
 - [**Validation**](#validation)
+ - [**Required**](#required) 
  - [**Has Error**](#has-error)  
 - [**Dependencies**](#dependencies)
  - [**Form-Label**](#form-label) 
@@ -238,7 +259,7 @@ const defaultParams: BlrCheckboxType = {
   checked: false,
   checkedIcon: 'blrCheckmark',
   indeterminate: false,
-  indeterminatedIcon: 'blrMinus',
+  indeterminateIcon: 'blrMinus',
   hasLabel: true,
   label: 'Label-text',
   hasHint: false,
@@ -246,6 +267,7 @@ const defaultParams: BlrCheckboxType = {
   hintMessageIcon: 'blrInfo',
   disabled: false,
   readonly: false,
+  required: false,
   hasError: false,
   errorMessage: ' ',
   errorMessageIcon: undefined,
@@ -257,6 +279,42 @@ const defaultParams: BlrCheckboxType = {
 export const BlrCheckbox = (params: BlrCheckboxType) => BlrCheckboxRenderFunction(params);
 BlrCheckbox.storyName = 'Checkbox';
 BlrCheckbox.args = defaultParams;
+
+//disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
+const argTypesToDisable = [
+  'theme',
+  'sizeVariant',
+  'checked',
+  'checkedIcon',
+  'indeterminate',
+  'indeterminateIcon',
+  'hasLabel',
+  'label',
+  'hasHint',
+  'hintMessage',
+  'hintMessageIcon',
+  'disabled',
+  'readonly',
+  'required',
+  'hasError',
+  'errorMessage',
+  'errorMessageIcon',
+  'arialabel',
+  'checkboxId',
+  'name',
+];
+const generateDisabledArgTypes = (argTypes: string[]) => {
+  const disabledArgTypes = {};
+  argTypes.forEach((argType: string) => {
+    disabledArgTypes[argType] = {
+      table: {
+        disable: true,
+      },
+    };
+  });
+  return disabledArgTypes;
+};
+const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
 
 // All Stories
 //Appearance Size Story
@@ -392,32 +450,39 @@ export const Readonly = () => {
 Readonly.story = {
   name: ' ',
 };
-// todo will be implemented with ticket no. #673
-// /**
-//  * ## Validation
-//  *
-//  * ### Required
-//  * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Checkbox component was not checked, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](/docs/components-form-label--docs) component in the dependencies section below.
-//  */
-// export const Required = () => {
-//   return html`
-//     ${sharedStyles}
-//     <div class="wrapper">
-//       <div class="stories-checkbox">
-//         ${BlrCheckboxRenderFunction({
-//           ...defaultParams,
-//           label: 'Required',
-//         })}
-//       </div>
-//     </div>
-//   `;
-// };
-// Required.story = {
-//   name: ' ',
-// };
-
 /**
  * ## Validation
+ * ### Required
+ * The Checkbox component can be set as required. If set as required, an error should be thrown, when the Text Area component was not filled, before it was submitted. It is recommended to indicate in the label appendix, whether a component is required or not. For more information on the label and label appendix have a look at the [Form Label](#form-label) component in the dependencies section below.
+ */
+export const Required = () => {
+  return html`
+    ${sharedStyles}
+    <div class="wrapper">
+      <div class="stories-checkbox">
+        ${BlrCheckboxRenderFunction({
+          ...defaultParams,
+          theme: 'Light',
+          sizeVariant: 'md',
+          label: 'Required',
+          placeholder: '',
+          hintMessage: '',
+          required: true,
+          labelAppendix: '(required)',
+          value: '',
+        })}
+      </div>
+    </div>
+  `;
+};
+Required.argTypes = {
+  ...disabledArgTypes,
+};
+Required.story = {
+  name: ' ',
+};
+
+/**
  * ### Has Error
  * The Checkbox component can be set to have an error. An error can be displayed after submitting a wrong value, after leaving/deselecting the Checkbox or in case the Checkbox was set as required and has not been checked before submitting. For more information on the error message have a look at the [Form Caption Group](#form-caption-group) in the dependencies section below.
  */
