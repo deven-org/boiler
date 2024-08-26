@@ -4,7 +4,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { query, state } from 'lit/decorators.js';
 import { property } from '../../utils/lit/decorators.js';
 import { staticStyles } from './index.css.js';
-import { CounterVariantType, FormSizesType, WarningLimits, ResizeType } from '../../globals/types.js';
+import { CounterVariantType, FormSizesType, WarningLimits, ResizeType, DisplayType } from '../../globals/types.js';
 import { TAG_NAME } from './renderFunction.js';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
@@ -73,6 +73,7 @@ export class BlrTextarea extends LitElementCustom {
   @property({ type: Number }) accessor rows: number | undefined;
   @property({ type: Number }) accessor cols: number | undefined;
   @property() accessor name: string | undefined;
+  @property() accessor textAreaDisplay: DisplayType | undefined = 'block';
   @property() accessor theme: ThemeType = 'Light';
 
   @state() protected accessor count = 0;
@@ -152,20 +153,23 @@ export class BlrTextarea extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant) {
+    if (this.sizeVariant && this.textAreaDisplay) {
       const classes = classMap({
         'blr-textarea': true,
-        [this.theme]: this.theme,
+        [this.theme]: true,
         'error': this.hasError || false,
         [this.sizeVariant]: this.sizeVariant,
+        [this.textAreaDisplay]: this.textAreaDisplay,
       });
 
       const textareaClasses = classMap({
-        [this.theme]: this.theme,
-        error: this.hasError || false,
+        'textarea-input-control': true,
+        [this.theme]: true,
+        'error': this.hasError || false,
         [this.resize]: this.resize,
         [this.sizeVariant]: this.sizeVariant,
-        disabled: this.disabled || false,
+        [this.textAreaDisplay]: this.textAreaDisplay,
+        'disabled': this.disabled || false,
       });
 
       const textareaInfoContainer = classMap({
@@ -215,19 +219,19 @@ export class BlrTextarea extends LitElementCustom {
                 })}
               </div>`
             : nothing}
+
           <textarea
             .value=${this.value}
-            class="textarea-input-control ${textareaClasses}"
-            id="${ifDefined(this.textAreaId ? this.textAreaId : undefined)}"
-            name="${this.name || ''}"
-            minlength="${this.minLength || ''}"
-            maxlength="${ifDefined(this.maxLength ?? 0 > 0 ? this.maxLength : undefined)}"
-            aria-label="${this.arialabel || ''}"
-            cols="${this.cols || ' '}"
-            rows="${this.rows || ' '}"
-            placeholder="${ifDefined(this.placeholder ? this.placeholder : undefined)}"
+            class="${textareaClasses}"
+            id="${ifDefined(this.textAreaId)}"
+            name="${ifDefined(this.name)}"
+            minlength="${ifDefined(this.minLength)}"
+            maxlength="${ifDefined(this.maxLength && this.maxLength > 0 ? this.maxLength : undefined)}"
+            aria-label="${ifDefined(this.arialabel)}"
+            cols="${this.textAreaDisplay === 'inline-block' ? this.cols || '' : ''}"
+            rows="${ifDefined(this.rows)}"
+            placeholder=${ifDefined(this.placeholder ? this.placeholder : undefined)}
             ?required="${this.required}"
-            ?error="${this.hasError}"
             ?disabled="${this.disabled}"
             ?readonly="${this.readonly}"
             @input=${this.handleChange}

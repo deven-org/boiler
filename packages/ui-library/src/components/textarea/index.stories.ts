@@ -7,25 +7,14 @@ import { PureIconKeys } from '@boiler/icons';
 // this loads the all components instances and registers their html tags
 import '../../index.js';
 import { Themes } from '../../foundation/_tokens-generated/index.themes.js';
-import { FormSizes, Resizes } from '../../globals/constants.js';
-
-// Shared Style inside the Stories
-const sharedStyles = html`
-  <style>
-    .stories-textarea {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  </style>
-`;
+import { DisplayOptions, FormSizes, Resizes } from '../../globals/constants.js';
 
 // Default parameters for Textarea component
 const defaultParams: BlrTextareaType = {
   theme: 'Light',
   sizeVariant: 'md',
   resize: 'both',
+  textAreaDisplay: 'block',
   cols: 40,
   rows: 4,
   placeholder: 'Placeholder-text',
@@ -85,6 +74,7 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'cols',
+      if: { arg: 'textAreaDisplay', neq: 'block' },
       description: 'Enter amount of columns the component should hold.',
       defaultValue: '20',
       table: {
@@ -95,8 +85,16 @@ export default {
       options: FormSizes,
       control: { type: 'number' },
       name: 'rows',
-      description: 'Enter amount of rows the component should have.',
+      description: 'Enter amount of rows the component should have. The row height has a defined minimum limit.',
       defaultValue: '5',
+      table: {
+        category: 'Appearance',
+      },
+    },
+    textAreaDisplay: {
+      description: 'Choose if textarea should fill its parent container.',
+      options: DisplayOptions,
+      control: { type: 'radio' },
       table: {
         category: 'Appearance',
       },
@@ -377,13 +375,7 @@ Text Area allows users to input and edit multiline text. Unlike a simple Input F
 };
 
 //Main Component for Textarea
-export const TextArea = (params: BlrTextareaType) =>
-  html`${sharedStyles}
-    <div class="wrapper">
-      ${BlrTextareaRenderFunction({
-        ...params,
-      })}
-    </div> `;
+export const TextArea = (params: BlrTextareaType) => html`${BlrTextareaRenderFunction({ ...params })}`;
 TextArea.args = defaultParams;
 
 //disabledArgTypesTable to deactivate the controls-Panel for a story in storybook
@@ -443,7 +435,6 @@ const disabledArgTypes = generateDisabledArgTypes(argTypesToDisable);
  */
 export const SizeVariant = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -488,7 +479,6 @@ SizeVariant.story = { name: ' ' };
  */
 export const Resize = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         <div>
@@ -555,7 +545,6 @@ Resize.argTypes = {
  */
 export const Placeholder = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -596,7 +585,6 @@ Placeholder.story = { name: ' ' };
  */
 export const Disabled = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -627,7 +615,6 @@ Disabled.story = {
  */
 export const Readonly = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -656,7 +643,6 @@ Readonly.argTypes = {
  */
 export const Required = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -687,7 +673,6 @@ Required.story = {
  */
 export const HasError = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -718,7 +703,6 @@ HasError.argTypes = {
 // States FormLabel
 export const FormLabel = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -757,7 +741,6 @@ FormLabel.story = {
  */
 export const FormCaptionGroup = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -799,7 +782,6 @@ FormCaptionGroup.argTypes = {
  */
 export const Counter = () => {
   return html`
-    ${sharedStyles}
     <div class="wrapper">
       <div class="stories-textarea">
         ${BlrTextareaRenderFunction({
@@ -818,9 +800,11 @@ export const Counter = () => {
     </div>
   `;
 };
+
 Counter.argTypes = {
   ...disabledArgTypes,
 };
+
 Counter.parameters = {
   backgrounds: {
     default: '',
