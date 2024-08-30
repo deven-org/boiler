@@ -79,7 +79,7 @@ export class BlrToggleSwitch extends LitElementCustom {
         createBlrCheckedChangeEvent({
           originalEvent: event,
           checkedState: this.currentCheckedState,
-        })
+        }),
       );
     }
   }
@@ -244,7 +244,7 @@ export class BlrToggleSwitch extends LitElementCustom {
                 },
                 {
                   'aria-hidden': true,
-                }
+                },
               )}
             </span>
             <span class="toggle-switch-select toggle-icon">
@@ -256,7 +256,7 @@ export class BlrToggleSwitch extends LitElementCustom {
                 },
                 {
                   'aria-hidden': true,
-                }
+                },
               )}
             </span>
           </label>
