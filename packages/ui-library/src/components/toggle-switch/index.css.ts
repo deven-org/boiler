@@ -140,8 +140,10 @@ export const staticStyles = css`
               background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
             }
 
-            & > .blr-form-label-inline {
-              color: ${formlabel.inlinelabel.textcolor.rest};
+            & > .toggle-content-col {
+              & > .blr-form-label-inline {
+                color: ${formlabel.inlinelabel.textcolor.rest};
+              }
             }
 
             &:not(.checked) {
@@ -214,6 +216,7 @@ export const staticStyles = css`
 
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.ReadOnly};
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.ReadOnly};
                 }
 
                 .toggle-icon > .toggle-icon-class {
@@ -261,15 +264,15 @@ export const staticStyles = css`
               }
 
               &.active {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Pressed};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Pressed};
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
+                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Rest};
 
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Pressed};
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Rest};
                 }
 
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Pressed};
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
                 }
               }
 
@@ -307,10 +310,8 @@ export const staticStyles = css`
         }
 
         &.disabled {
-          & > .toggle-content-col {
-            & > .blr-form-label-inline {
-              color: ${formlabel.inlinelabel.textcolor.disabled};
-            }
+          .blr-form-label-inline {
+            color: ${formlabel.inlinelabel.textcolor.disabled};
           }
         }
 
@@ -372,6 +373,7 @@ export const staticStyles = css`
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled};
                     outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled});
+                    background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                   }
                 }
 
@@ -514,6 +516,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                 }
               }
 
@@ -653,6 +656,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                 }
               }
 
