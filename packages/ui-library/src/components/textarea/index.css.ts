@@ -99,20 +99,20 @@ export const staticStyles = css`
   }
 
   ${ComponentThemeIterator((theme, cmp, css) => {
-    const { InputField } = cmp.TextArea;
+    const { inputfield } = cmp.textarea;
 
     return css`
       .textarea-input-control.${theme} {
         &.sm {
-          min-height: ${InputField.MinHeight.SM};
+          min-height: ${inputfield.minheight.sm};
         }
 
         &.md {
-          min-height: ${InputField.MinHeight.MD};
+          min-height: ${inputfield.minheight.md};
         }
 
         &.lg {
-          min-height: ${InputField.MinHeight.LG};
+          min-height: ${inputfield.minheight.lg};
         }
       }
     `;
