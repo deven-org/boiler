@@ -340,6 +340,7 @@ export const staticStyles = css`
               &:not(.checked) {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest} * -1);
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
 
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest};
@@ -393,6 +394,7 @@ export const staticStyles = css`
               &.checked {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest} * -1);
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
 
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest};
@@ -488,6 +490,7 @@ export const staticStyles = css`
             &:not(.checked) {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest} * -1);
+              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
 
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest};
@@ -541,6 +544,7 @@ export const staticStyles = css`
             &.checked {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest} * -1);
+              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
 
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest};
@@ -633,6 +637,7 @@ export const staticStyles = css`
             &:not(.checked) {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Rest} * -1);
+              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Rest};
 
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest};
@@ -686,6 +691,7 @@ export const staticStyles = css`
             &.checked {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest} * -1);
+              background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
 
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest};
