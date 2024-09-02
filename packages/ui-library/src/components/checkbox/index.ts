@@ -57,11 +57,12 @@ export class BlrCheckbox extends LitElementCustom {
   @property() accessor hasLabel!: boolean;
   @property() accessor name: string | undefined;
   @property() accessor checkedIcon: SizelessIconType | undefined = 'blrCheckmark';
-  @property() accessor indeterminatedIcon: SizelessIconType | undefined = 'blrMinus';
+  @property() accessor indeterminateIcon: SizelessIconType | undefined = 'blrMinus';
 
   @property() accessor sizeVariant: FormSizesType | undefined = 'md';
 
   @property() accessor theme: ThemeType = 'Light';
+  @property({ type: Boolean }) accessor required: boolean | undefined;
 
   @state() protected accessor currentCheckedState: boolean | undefined = this.checked;
   @state() protected accessor currentIndeterminateState: boolean | undefined = this.indeterminate;
@@ -87,7 +88,7 @@ export class BlrCheckbox extends LitElementCustom {
         createBlrCheckedChangeEvent({
           originalEvent: event,
           checkedState: this.currentCheckedState,
-        })
+        }),
       );
     }
   }
@@ -95,7 +96,7 @@ export class BlrCheckbox extends LitElementCustom {
   @state() protected accessor focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.focused = true;
 
       this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
@@ -103,7 +104,7 @@ export class BlrCheckbox extends LitElementCustom {
   };
 
   protected handleBlur = (event: FocusEvent) => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.focused = false;
 
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
@@ -157,6 +158,7 @@ export class BlrCheckbox extends LitElementCustom {
         'hover': this.hovered || false,
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
+        'required': this.required || false,
         'readonly': this.readonly || false,
         'indeterminate': this.currentIndeterminateState || false,
       });
@@ -168,6 +170,7 @@ export class BlrCheckbox extends LitElementCustom {
         'hover': this.hovered || false,
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
+        'required': this.required || false,
         'readonly': this.readonly || false,
         'indeterminate': this.currentIndeterminateState || false,
         'focus': this.focused || false,
@@ -262,6 +265,7 @@ export class BlrCheckbox extends LitElementCustom {
             ?checked=${this.currentCheckedState}
             ?indeterminate=${this.currentIndeterminateState}
             ?readonly=${this.readonly}
+            ?required="${this.required}"
             ?hasError=${this.hasError}
             @change=${this.handleChange}
             aria-hidden="true"
@@ -271,12 +275,12 @@ export class BlrCheckbox extends LitElementCustom {
             ${this.currentIndeterminateState
               ? BlrIconRenderFunction(
                   {
-                    icon: calculateIconName(this.indeterminatedIcon, checkerIconSizeVariant),
+                    icon: calculateIconName(this.indeterminateIcon, checkerIconSizeVariant),
                     classMap: checkerIconClasses,
                   },
                   {
                     'aria-hidden': true,
-                  }
+                  },
                 )
               : BlrIconRenderFunction(
                   {
@@ -285,7 +289,7 @@ export class BlrCheckbox extends LitElementCustom {
                   },
                   {
                     'aria-hidden': true,
-                  }
+                  },
                 )}
 
             <div class="${focusRingClasses}"></div>

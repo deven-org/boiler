@@ -61,14 +61,15 @@ export function* renderIndex() {
                 aria-label="Select"
                 select-id="selectId"
                 name="select"
+                options=${JSON.stringify([
+                  { label: '--Please choose an option--', value: '' },
+                  { label: 'option 1', value: 'option1' },
+                  { label: 'option 2', value: 'option2' },
+                  { label: 'option 3', value: 'option3', disabled: true },
+                  { label: 'option 4', value: 'option4' },
+                  { label: 'option 5', value: 'option5', selected: true },
+                ])}
               >
-                <option value="" label="--Please choose an option--"></option>
-                <option value="option1" label="Option 1"></option>
-                <option value="option2" label="Option 2"></option>
-                <option value="option3" label="Option 3"></option>
-                <option value="option4" label="Option 4"></option>
-                <option value="option5" label="Option 5"></option>
-                <option value="option6" label="Option 6"></option>
               </blr-select>
             </div>
 
@@ -176,13 +177,30 @@ export function* renderIndex() {
               <blr-radio
                 theme="Light"
                 size-variant="md"
-                value=""
+                value="radioValue"
                 label="Label"
                 aria-label=""
                 radio-id="radioId"
                 name="Radio Button"
               >
               </blr-radio>
+            </div>
+
+            <div class="component">
+              <p>Radio Group</p>
+              <blr-radio-group
+                theme="Light"
+                size-variant="md"
+                value=""
+                label="Label"
+                aria-label=""
+                radio-id="radioId"
+                name="Radio Group"
+              >
+                <blr-radio label="male" value="male" checked></blr-radio>
+                <blr-radio label="female" value="female"></blr-radio>
+                <blr-radio label="other" value="other"></blr-radio>
+              </blr-radio-group>
             </div>
 
             <div class="component">
@@ -196,17 +214,17 @@ export function* renderIndex() {
                 tab-content="labelAndIcon"
                 icon-position="leading"
                 alignment="left"
-                ><p disabled label="Tab 1" icon="blr360">Tab 1</p>
-                <p label="Tab 2" icon="blr360">Tab 2</p>
-                <p label="Tab 3" icon="blr360">Tab 3</p>
-                <p label="Tab 4" icon="blr360">Tab 4</p>
-                <p label="Tab 5" icon="blr360">Tab 5</p>
-                <p label="Tab 6" icon="blr360">Tab 6</p>
-                <p label="Tab 7" icon="blr360">Tab 7</p>
-                <p label="Tab 8" icon="blr360">Tab 8</p>
-                <p label="Tab 9" icon="blr360">Tab 9</p>
-                <p label="Tab 10" icon="blr360">Tab 10</p>
-                <p label="Tab 11" icon="blr360">Tab 11</p>
+                ><blr-tab-bar-item disabled="true" label="Tab 1" icon="blr360">Tab 1</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 2" icon="blr360">Tab 2</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 3" icon="blr360">Tab 3</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 4" icon="blr360">Tab 4</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 5" icon="blr360">Tab 5</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 6" icon="blr360">Tab 6</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 7" icon="blr360">Tab 7</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 8" icon="blr360">Tab 8</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 9" icon="blr360">Tab 9</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 10" icon="blr360">Tab 10</blr-tab-bar-item>
+                <blr-tab-bar-item label="Tab 11" icon="blr360">Tab 11</blr-tab-bar-item>
               </blr-tab-bar>
             </div>
 

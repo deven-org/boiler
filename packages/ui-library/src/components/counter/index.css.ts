@@ -24,6 +24,7 @@ export const staticStyles = css`
           font-weight: ${counter.text.typography.sm.fontWeight};
           font-size: ${counter.text.typography.sm.fontSize};
           line-height: ${counter.text.typography.sm.lineHeight};
+          outline-offset: calc(${counter.container.borderwidth.sm} * -1);
         }
 
         &.md {
@@ -35,6 +36,7 @@ export const staticStyles = css`
           font-weight: ${counter.text.typography.md.fontWeight};
           font-size: ${counter.text.typography.md.fontSize};
           line-height: ${counter.text.typography.md.lineHeight};
+          outline-offset: calc(${counter.container.borderwidth.md} * -1);
         }
 
         &.lg {
@@ -46,6 +48,7 @@ export const staticStyles = css`
           font-weight: ${counter.text.typography.lg.fontWeight};
           font-size: ${counter.text.typography.lg.fontSize};
           line-height: ${counter.text.typography.lg.lineHeight};
+          outline-offset: calc(${counter.container.borderwidth.lg} * -1);
         }
 
         &.error {

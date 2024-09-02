@@ -113,11 +113,13 @@ export const staticSemanticStyles = css`
         box-sizing: border-box;
         width: 100%;
         outline-width: ${inputfield.container.border.default.rest.width};
+        outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
         outline-style: ${inputfield.container.border.default.rest.style};
         outline-color: ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
 
         &:focus-within {
+          outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline-width: ${inputfield.container.border.default.focus.width};
           outline-style: ${inputfield.container.border.default.focus.style};
           outline-color: ${inputfield.container.border.default.focus.color};
@@ -273,13 +275,13 @@ export const staticComponentStyles = css`
             width: ${stepperbutton.container.width.sm};
           }
         }
-  
+
         &.md {
           & > .custom-stepper-button {
             width: ${stepperbutton.container.width.md};
           }
         }
-  
+
         &.lg {
           & > .custom-stepper-button {
             width: ${stepperbutton.container.width.lg};
@@ -366,6 +368,7 @@ export const staticComponentStyles = css`
         &:active:not(:disabled) {
           background-color: ${stepperbutton.container.bgcolor.pressed};
           color: ${stepperbutton.icon.iconcolor.pressed}
+
         }
 
         &:disabled {

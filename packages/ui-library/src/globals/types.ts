@@ -20,7 +20,7 @@ import {
   Resizes,
   ActionSizes,
   ButtonGroupAlignmentVariants,
-  ButtonDisplayOptions,
+  DisplayOptions,
   UnitVariants,
   Units,
 } from './constants.js';
@@ -41,13 +41,7 @@ export type ButtonGroupSizesType = (typeof ButtonGroupSizes)[number];
 export type ResizeType = (typeof Resizes)[number];
 
 export type InputSizesType = (typeof InputSizes)[number];
-export type RadioOption = {
-  label: string;
-  value: string;
-  hintMessage?: string;
-  errorMessage?: string;
-  checked?: boolean;
-};
+
 export type IconPositionVariant = 'leading' | 'trailing';
 export type WarningLimits = 'warningLimitInt' | 'warningLimitPer';
 export type DividerVariationTypes = (typeof DividerVariations)[number];
@@ -76,4 +70,4 @@ export type ButtonOption = {
 };
 
 export type LabelVariantType = (typeof LabelVariants)[number];
-export type ButtonDisplayType = (typeof ButtonDisplayOptions)[number];
+export type DisplayType = (typeof DisplayOptions)[number];

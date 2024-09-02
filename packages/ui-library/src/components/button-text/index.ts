@@ -10,9 +10,9 @@ import {
   IconPositionVariant,
   ActionVariantType,
   ActionSizesType,
-  ButtonDisplayType,
   FormSizesType,
   SizesType,
+  DisplayType,
 } from '../../globals/types.js';
 import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { determineLoaderVariant } from '../../utils/determine-loader-variant.js';
@@ -52,7 +52,7 @@ export class BlrButtonText extends LitElementCustom {
   @property() accessor buttonTextId: string | undefined;
   @property() accessor variant: ActionVariantType = 'primary';
   @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
-  @property() accessor buttonDisplay: ButtonDisplayType | undefined = 'inline-block';
+  @property() accessor buttonDisplay: DisplayType | undefined = 'inline-block';
 
   @property() accessor theme: ThemeType = 'Light';
 
@@ -139,7 +139,7 @@ export class BlrButtonText extends LitElementCustom {
               },
               {
                 'aria-hidden': true,
-              }
+              },
             )
           : nothing}
         <span class="label">${this.label} </span>
@@ -153,7 +153,7 @@ export class BlrButtonText extends LitElementCustom {
               },
               {
                 'aria-hidden': true,
-              }
+              },
             )
           : nothing}
       </div>`;
