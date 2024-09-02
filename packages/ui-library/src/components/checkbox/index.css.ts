@@ -199,7 +199,6 @@ export const staticStyles = css`
               &.hover {
                 &:not(.disabled, .readonly) {
                   background-color: ${checkbox.control.container.bgcolor.active.hover};
-
                   outline-color: ${checkbox.control.container.bordercolor.active.hover};
 
                   & .checker-icon {
@@ -249,7 +248,6 @@ export const staticStyles = css`
 
             &:not(.checked, .indeterminate) {
               background-color: ${checkbox.control.container.bgcolor.inactive.rest};
-
               outline-color: ${checkbox.control.container.bordercolor.inactive.rest};
 
               & .checker-icon {

@@ -1,7 +1,6 @@
 import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
-
 export const staticStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
     const { buttonicon } = cmp;
@@ -10,7 +9,7 @@ export const staticStyles = css`
     return css`
       .panel-wrapper {
         margin-top: 2rem;
-      } 
+      }
 
       .wrapper-horizontal {
         position: relative;
@@ -23,10 +22,10 @@ export const staticStyles = css`
         }
 
         &.browserOverflow {
-          padding: 0px 1rem;
+          padding: 0 1rem;
         }
       }
-      
+
       .blr-tab-bar-group.${theme} {
         width: 100%;
         display: flex;
@@ -75,7 +74,6 @@ export const staticStyles = css`
             &.right {
               margin: ${tabbar.buttonwrapper.padding.trailing.md};
             }
-            
           }
 
           &.lg {

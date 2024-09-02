@@ -253,7 +253,7 @@ export const staticSemanticStyles = css`
 export const staticComponentStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
     const { stepperbutton, steppercombo, inputfieldnumber } = cmp;
-    
+
     return css`
       .input-unit-container.${theme} {
         &.sm {
@@ -362,19 +362,17 @@ export const staticComponentStyles = css`
 
         &:hover:not(:disabled) {
           background-color: ${stepperbutton.container.bgcolor.hover};
-          color: ${stepperbutton.icon.iconcolor.hover}
+          color: ${stepperbutton.icon.iconcolor.hover};
         }
 
         &:active:not(:disabled) {
           background-color: ${stepperbutton.container.bgcolor.pressed};
-          color: ${stepperbutton.icon.iconcolor.pressed}
-
+          color: ${stepperbutton.icon.iconcolor.pressed};
         }
 
         &:disabled {
           background-color: ${stepperbutton.container.bgcolor.disabled};
-          color: ${stepperbutton.icon.iconcolor.disabled}
-
+          color: ${stepperbutton.icon.iconcolor.disabled};
           cursor: not-allowed;
         }
 

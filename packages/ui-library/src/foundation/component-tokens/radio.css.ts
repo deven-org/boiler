@@ -115,26 +115,22 @@ export const staticStyles = css`
         }
 
         &.sm {
-          _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
           column-gap: ${radiogroup.radiostackhorizontal.itemspacing.sm};
           row-gap: ${radiogroup.radiostackvertical.itemspacing.sm};
         }
 
         &.md {
-          _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
           column-gap: ${radiogroup.radiostackhorizontal.itemspacing.md};
           row-gap: ${radiogroup.radiostackvertical.itemspacing.md};
         }
 
         &.lg {
-          _FIX_: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow";
           column-gap: ${radiogroup.radiostackhorizontal.itemspacing.lg};
           row-gap: ${radiogroup.radiostackvertical.itemspacing.lg};
         }
       }
 
       .blr-radio.${theme} {
-        /* FIX: to override constructed margin; */
         all: initial;
         margin: 0 !important;
         display: flex;
@@ -142,7 +138,6 @@ export const staticStyles = css`
         transition: all 0.25s ease 0s;
 
         .blr-form-label-inline {
-          /* FIX?: "LabelNextToControl states"; */
           color: ${formlabel.inlinelabel.textcolor.rest};
           transition: all 0.25s ease 0s;
           display: flex;
@@ -306,8 +301,6 @@ export const staticStyles = css`
 
             &:focus {
               background-color: ${radio.control.container.bgcolor.inactive.focus};
-              _FIX_: "needs focus ring";
-
               outline: black solid 2px;
               outline-offset: 2px;
 
@@ -326,7 +319,7 @@ export const staticStyles = css`
             }
           }
 
-          &.checked, 
+          &.checked,
           &:checked {
             background-color: ${radio.control.container.bgcolor.active.rest};
 

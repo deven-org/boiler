@@ -145,7 +145,6 @@ export const staticStyles = css`
             }
 
             &:not(.checked) {
-
               background-color: ${toggleswitch.control.container.bgcolor.inactive.rest};
               outline-color: ${toggleswitch.control.container.bordercolor.inactive.rest};
 
@@ -160,7 +159,7 @@ export const staticStyles = css`
               &.focus {
                 background-color: ${toggleswitch.control.container.bgcolor.inactive.focus};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.focus};
-                
+
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.focus};
                 }
@@ -173,7 +172,7 @@ export const staticStyles = css`
               &.hover {
                 background-color: ${toggleswitch.control.container.bgcolor.inactive.hover};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.hover};
-                
+
                 .knob {
                   outline-color: ${toggleswitch.control.knob.bordercolor.inactive.hover};
                 }
@@ -197,7 +196,6 @@ export const staticStyles = css`
               }
 
               &.disabled {
-
                 background-color: ${toggleswitch.control.container.bgcolor.inactive.disabled};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.disabled};
 
@@ -211,7 +209,6 @@ export const staticStyles = css`
               }
 
               &.readonly {
-
                 background-color: ${toggleswitch.control.container.bgcolor.inactive.readonly};
                 outline-color: ${toggleswitch.control.container.bordercolor.inactive.readonly};
 
@@ -226,7 +223,6 @@ export const staticStyles = css`
             }
 
             &.checked {
-
               background-color: ${toggleswitch.control.container.bgcolor.active.rest};
               outline-color: ${toggleswitch.control.container.bordercolor.active.rest};
 
@@ -291,7 +287,6 @@ export const staticStyles = css`
               }
 
               &.readonly {
-
                 background-color: ${toggleswitch.control.container.bgcolor.active.readonly};
                 outline-color: ${toggleswitch.control.container.bordercolor.active.readonly};
 
@@ -421,7 +416,6 @@ export const staticStyles = css`
                 }
 
                 &.disabled {
-
                   outline-width: ${toggleswitch.control.container.borderwidth.sm.active.disabled};
                   outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.disabled} * -1);
 
@@ -432,10 +426,9 @@ export const staticStyles = css`
                 }
 
                 &.readonly {
-
                   outline-width: ${toggleswitch.control.container.borderwidth.sm.active.readonly};
                   outline-offset: calc(${toggleswitch.control.container.borderwidth.sm.active.readonly} * -1);
-                  
+
                   .knob {
                     outline-width: ${toggleswitch.control.knob.borderwidth.sm.active.readonly};
                     outline-offset: calc(${toggleswitch.control.knob.borderwidth.sm.active.readonly});
@@ -448,7 +441,7 @@ export const staticStyles = css`
                   width: ${toggleswitch.control.knob.size.sm};
                   height: ${toggleswitch.control.knob.size.sm};
                   top: ${toggleswitch.control.container.padding.sm};
-                  left: ${toggleswitch.control.container.padding.sm};;
+                  left: ${toggleswitch.control.container.padding.sm};
                 }
               }
 
@@ -458,7 +451,7 @@ export const staticStyles = css`
                 );
               }
 
-              &  > .toggle-icon {
+              & > .toggle-icon {
                 height: ${toggleswitch.control.container.height.sm};
 
                 & > .toggle-icon-class {
@@ -488,6 +481,7 @@ export const staticStyles = css`
             &:not(.checked) {
               outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.rest};
               outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.rest} * -1);
+
               .knob {
                 outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.rest};
                 outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.rest} * -1);
@@ -496,7 +490,7 @@ export const staticStyles = css`
               &.hover {
                 outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.hover};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.hover} * -1);
-                
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.hover};
                   outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.hover} * -1);
@@ -516,7 +510,7 @@ export const staticStyles = css`
               &.disabled {
                 outline-width: ${toggleswitch.control.container.borderwidth.md.inactive.disabled};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.md.inactive.disabled} * -1);
-                
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.md.inactive.disabled};
                   outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.inactive.disabled} * -1);
@@ -556,7 +550,7 @@ export const staticStyles = css`
               &.active {
                 outline-width: ${toggleswitch.control.container.borderwidth.md.active.pressed};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.md.active.pressed} * -1);
-                
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.md.active.pressed};
                   outline-offset: calc(${toggleswitch.control.knob.borderwidth.md.active.pressed} * -1);
@@ -589,12 +583,12 @@ export const staticStyles = css`
                 width: ${toggleswitch.control.knob.size.md};
                 height: ${toggleswitch.control.knob.size.md};
                 top: ${toggleswitch.control.container.padding.md};
-                left: ${toggleswitch.control.container.padding.md};;
+                left: ${toggleswitch.control.container.padding.md};
               }
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              transform: translateX( calc(${toggleswitch.control.container.width.md} * 0.5 - ${toggleswitch.control.container.padding.md}));
+              transform: translateX(calc(${toggleswitch.control.container.width.md} * 0.5 - ${toggleswitch.control.container.padding.md}));
             }
 
             & > .toggle-icon {
@@ -626,35 +620,39 @@ export const staticStyles = css`
             &:not(.checked) {
               outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.rest};
               outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.rest} * -1);
+
               .knob {
                 outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.rest};
-                outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.inactive.rest} * -1);
+                outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.rest} * -1);
               }
 
               &.hover {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.hover};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.hover} * -1);
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.hover};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.inactive.hover} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.hover} * -1);
                 }
               }
 
               &.active {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.pressed};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.pressed} * -1);
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.pressed};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.inactive.pressed} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.pressed} * -1);
                 }
               }
 
               &.disabled {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.inactive.disabled};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.inactive.disabled} * -1);
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.disabled};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.inactive.disabled} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.disabled} * -1);
                 }
               }
 
@@ -664,7 +662,7 @@ export const staticStyles = css`
 
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.inactive.readonly};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.inactive.readonly} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.inactive.readonly} * -1);
                 }
               }
             }
@@ -672,46 +670,49 @@ export const staticStyles = css`
             &.checked {
               outline-width: ${toggleswitch.control.container.borderwidth.lg.active.rest};
               outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.rest} * -1);
-              
+
               .knob {
                 outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.rest};
-                outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.active.rest} * -1);
+                outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.rest} * -1);
               }
 
               &.hover {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.active.hover};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.hover} * -1);
-                
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.hover};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.active.hover} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.hover} * -1);
                 }
               }
 
               &.active {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.active.pressed};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.pressed} * -1);
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.pressed};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.active.pressed} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.pressed} * -1);
                 }
               }
 
               &.disabled {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.active.disabled};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.disabled} * -1);
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.disabled};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.active.disabled} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.disabled} * -1);
                 }
               }
 
               &.readonly {
                 outline-width: ${toggleswitch.control.container.borderwidth.lg.active.readonly};
                 outline-offset: calc(${toggleswitch.control.container.borderwidth.lg.active.readonly} * -1);
+
                 .knob {
                   outline-width: ${toggleswitch.control.knob.borderwidth.lg.active.readonly};
-                  outline-offset: calc( ${toggleswitch.control.knob.borderwidth.lg.active.readonly} * -1);
+                  outline-offset: calc(${toggleswitch.control.knob.borderwidth.lg.active.readonly} * -1);
                 }
               }
             }
@@ -721,12 +722,12 @@ export const staticStyles = css`
                 width: ${toggleswitch.control.knob.size.lg};
                 height: ${toggleswitch.control.knob.size.lg};
                 top: ${toggleswitch.control.container.padding.lg};
-                left: ${toggleswitch.control.container.padding.lg};;
+                left: ${toggleswitch.control.container.padding.lg};
               }
             }
 
             & > input:checked + .toggle-switch-slider > .knob {
-              transform: translateX( calc(${toggleswitch.control.container.width.lg} * 0.5 - ${toggleswitch.control.container.padding.lg}));
+              transform: translateX(calc(${toggleswitch.control.container.width.lg} * 0.5 - ${toggleswitch.control.container.padding.lg}));
             }
 
             & > .toggle-icon {
