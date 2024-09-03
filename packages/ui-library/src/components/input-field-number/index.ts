@@ -164,6 +164,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
     const buttonClass = classMap({
       'custom-stepper-button': true,
       [iconSizeVariant]: true,
+      [this.sizeVariant]: true,
       [this.stepperVariant]: true,
       [this.theme]: this.theme,
     });

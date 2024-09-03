@@ -147,6 +147,7 @@ export const staticSemanticStyles = css`
           }
         }
       }
+
       input.${theme} {
         all: inherit;
         color: ${inputfield.userinput.textcolor.default.rest};
@@ -399,7 +400,17 @@ export const staticComponentStyles = css`
         }
 
         &.horizontal {
-          width: unset;
+          &.sm {
+            width: ${StepperButton.Container.Width.SM};
+          }
+
+          &.md {
+            width: ${StepperButton.Container.Width.MD};
+          }
+
+          &.lg {
+            width: ${StepperButton.Container.Width.LG};
+          }
         }
 
         &.vertical {
