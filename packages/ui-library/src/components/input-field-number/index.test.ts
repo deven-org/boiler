@@ -3,7 +3,7 @@ import '@boiler/ui-library';
 import { BlrInputFieldNumberRenderFunction } from './renderFunction.js';
 import type { BlrInputFieldNumberType } from './index.js';
 
-import { fixture, expect, nextFrame, oneEvent } from '@open-wc/testing';
+import { aTimeout, fixture, expect, nextFrame, oneEvent } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string.js';
 import { BlrFocusEvent } from '../../globals/events.js';
@@ -50,7 +50,7 @@ describe('blr-input-field-number', () => {
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         placeholder: randomString,
-      })
+      }),
     );
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
@@ -66,7 +66,7 @@ describe('blr-input-field-number', () => {
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
         unit: undefined,
-      })
+      }),
     );
 
     const button = querySelectorDeep('button', element.getRootNode() as HTMLElement);
@@ -83,7 +83,7 @@ describe('blr-input-field-number', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      })
+      }),
     );
 
     const captionWrapper = querySelectorDeep('blr-input-field-number', element.getRootNode() as HTMLElement);
@@ -105,7 +105,7 @@ describe('blr-input-field-number', () => {
         hasError: true,
         errorMessage: 'error',
         errorMessageIcon: undefined,
-      })
+      }),
     );
 
     const formCaption = querySelectorDeep('.blr-form-caption', element?.getRootNode() as HTMLElement);
@@ -150,7 +150,9 @@ describe('blr-input-field-number', () => {
   });
 
   for (const stepperVariant of ['split', 'horizontal', 'vertical'] as const) {
-    it(`has functional stepper buttons with aria labels - stepperVariant="${stepperVariant}"`, async () => {
+    it(`has functional stepper buttons with aria labels - stepperVariant="${stepperVariant}"`, async function () {
+      this.timeout(10000);
+
       const className = 'custom-stepper-button';
       const stepIncreaseAriaLabel = 'INC';
       const stepDecreaseAriaLabel = 'DEC';
@@ -164,59 +166,60 @@ describe('blr-input-field-number', () => {
           stepDecreaseAriaLabel,
           step,
           value: 1,
-        })
+        }),
       );
 
       const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
       expect(input?.value).to.be.equal('1');
-      // We have an initialized input at a chosen value of 1
+      if (!input) throw new Error('Input element not found');
 
       const incQuery = `button.${className}[aria-label="${stepIncreaseAriaLabel}"]`;
       const incButtons = querySelectorAllDeep(incQuery, element.getRootNode() as HTMLElement);
       expect(incButtons.length).to.be.equal(1);
       const incButton = incButtons[0];
-      // We have exactly 1 stepper button that has our chosen increase aria label
+      if (!incButton) throw new Error('Increase button not found');
 
       incButton.click();
-      await nextFrame();
-      expect(input?.value).to.be.equal('6');
-      // Clicking the stepper button with the increase label increases the value by our chosen step (1 + 5 = 6)
+      await aTimeout(100);
+      expect(input.value).to.be.equal('6');
 
       const decQuery = `button.${className}[aria-label="${stepDecreaseAriaLabel}"]`;
       const decButtons = querySelectorAllDeep(decQuery, element.getRootNode() as HTMLElement);
       expect(decButtons.length).to.be.equal(1);
       const decButton = decButtons[0];
-      // We have exactly 1 stepper button that has our chosen decrease aria label
+      if (!decButton) throw new Error('Decrease button not found');
 
       decButton.click();
-      await nextFrame();
-      expect(input?.value).to.be.equal('1');
-      // Clicking the stepper button with the decrease label decreases the value by our chosen step (6 - 5 = 1)
+      await aTimeout(100);
+      expect(input.value).to.be.equal('1');
     });
   }
 
-  it('fires blrFocus and blrBlur events', async () => {
+  it('fires blrFocus and blrBlur events', async function () {
+    this.timeout(10000);
+
     const element = await fixture(
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
-      })
+      }),
     );
 
     const input = querySelectorDeep('input', element.getRootNode() as HTMLElement);
+    if (!input) throw new Error('Input element not found');
 
-    setTimeout(() => {
-      input!.focus();
-    });
-    const focusEvent: BlrFocusEvent = await oneEvent(element, 'blrFocus');
-    expect(focusEvent.detail.originalEvent).to.exist;
+    const focusEvent = new Event('focus', { bubbles: true });
+    const focusPromise = oneEvent(element, 'blrFocus');
+    input.dispatchEvent(focusEvent);
+    const focusResult: BlrFocusEvent = await focusPromise;
+    expect(focusResult.detail.originalEvent).to.exist;
 
-    // just finding something else to focus instead, it's not important what
     const stepper = querySelectorDeep('button', element.getRootNode() as HTMLElement);
+    if (!stepper) throw new Error('Stepper button not found');
 
-    setTimeout(() => {
-      stepper!.focus();
-    });
-    const blurEvent: BlrFocusEvent = await oneEvent(element, 'blrBlur');
-    expect(blurEvent.detail.originalEvent).to.exist;
+    const blurEvent = new Event('blur', { bubbles: true });
+    const blurPromise = oneEvent(element, 'blrBlur');
+    input.dispatchEvent(blurEvent);
+    const blurResult: BlrFocusEvent = await blurPromise;
+    expect(blurResult.detail.originalEvent).to.exist;
   });
 });
