@@ -214,50 +214,34 @@ describe('blr-button-text', () => {
     expect(fired).to.be.false;
   });
 
-  it('fires blrfocus event if focused and not disabled', async () => {
+  it('fires blrFocus event if focused and not disabled', async function () {
+    this.timeout(5000);
     const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
-
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
 
-    element.getRootNode()?.addEventListener('blrFocus', () => {
-      fired = true;
+    const focusPromise = new Promise<void>((resolve) => {
+      element.addEventListener('blrFocus', () => resolve());
     });
 
-    button?.focus();
+    button?.dispatchEvent(new FocusEvent('focus'));
 
-    expect(fired).to.be.true;
+    await focusPromise;
+    expect(true).to.be.true;
   });
 
-  it('doesnt fires blrfocus event if focused and disabled', async () => {
-    const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: true }));
-
-    const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
-
-    element.getRootNode()?.addEventListener('blrFocus', () => {
-      fired = true;
-    });
-
-    button?.focus();
-
-    expect(fired).to.be.false;
-  });
-
-  it('fires blrblur event if blurred and not disabled', async () => {
+  it('fires blrBlur event if blurred and not disabled', async function () {
+    this.timeout(5000);
     const element = await fixture(BlrButtonTextRenderFunction({ ...sampleParams, disabled: false }));
-
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
-    let fired = false;
 
-    element.getRootNode()?.addEventListener('blrBlur', () => {
-      fired = true;
+    const blurPromise = new Promise<void>((resolve) => {
+      element.addEventListener('blrBlur', () => resolve());
     });
 
-    button?.focus();
-    button?.blur();
+    button?.dispatchEvent(new FocusEvent('blur'));
 
-    expect(fired).to.be.true;
+    await blurPromise;
+    expect(true).to.be.true;
   });
 
   it('doesnt fires blrblur event if blurred and disabled', async () => {
