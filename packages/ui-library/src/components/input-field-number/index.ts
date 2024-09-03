@@ -189,7 +189,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
           },
           {
             'aria-hidden': true,
-          }
+          },
         )}
       </button>
     `;
@@ -335,7 +335,7 @@ export class BlrInputFieldNumber extends LitElementCustom {
                 ? html`<div class="${unitClasses}">${this.unit}</div>`
                 : nothing}
             </div>
-            ${this.renderMode()}
+            ${!this.readonly ? this.renderMode() : nothing}
           </div>
         </div>
 

@@ -118,6 +118,19 @@ export const staticSemanticStyles = css`
         outline-color: ${inputfield.container.border.default.rest.color};
         border-radius: ${inputfield.container.borderradius};
 
+        &.readonly {
+          color: ${inputfield.userinput.textcolor.default.readonly};
+          background-color: ${inputfield.container.bgcolor.default.readonly};
+
+          & > input {
+            color: ${inputfield.userinput.textcolor.default.readonly};
+
+            &::placeholder {
+              color: ${inputfield.placeholder.textcolor.default.readonly};
+            }
+          }
+        }
+
         &:focus-within {
           outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline-width: ${inputfield.container.border.default.focus.width};
@@ -134,13 +147,31 @@ export const staticSemanticStyles = css`
           }
         }
       }
-
       input.${theme} {
-        all: initial;
+        all: inherit;
         color: ${inputfield.userinput.textcolor.default.rest};
+        border: none;
 
         &::placeholder {
           color: ${inputfield.placeholder.textcolor.default.rest};
+        }
+
+        &.readonly {
+          color: ${inputfield.userinput.textcolor.default.readonly};
+          background-color: ${inputfield.container.bgcolor.default.readonly};
+
+          &::placeholder {
+            color: ${inputfield.placeholder.textcolor.default.readonly};
+          }
+        }
+
+        &:disabled {
+          color: ${inputfield.userinput.textcolor.default.disabled};
+          background-color: ${inputfield.container.bgcolor.default.disabled};
+
+          &::placeholder {
+            color: ${inputfield.placeholder.textcolor.default.disabled};
+          }
         }
       }
 
@@ -181,15 +212,6 @@ export const staticSemanticStyles = css`
           ${inputfield.container.border.default.disabled.color};
         background-color: ${inputfield.container.bgcolor.default.disabled};
         cursor: not-allowed;
-
-        & > input {
-          color: ${inputfield.userinput.textcolor.default.disabled};
-          cursor: not-allowed;
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.default.disabled};
-          }
-        }
       }
 
       &.error-input.${theme} {
