@@ -3,7 +3,7 @@ import '@boiler/ui-library';
 import { BlrInputFieldNumberRenderFunction } from './renderFunction.js';
 import type { BlrInputFieldNumberType } from './index.js';
 
-import { aTimeout, fixture, expect, nextFrame, oneEvent } from '@open-wc/testing';
+import { aTimeout, fixture, expect, oneEvent } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string.js';
 import { BlrFocusEvent } from '../../globals/events.js';
