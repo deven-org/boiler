@@ -212,7 +212,7 @@ export class BlrToggleSwitch extends LitElementCustom {
           @focusout=${this.handleBlur}
           @keydown=${(event: KeyboardEvent) => {
             if (event.code === 'Space') {
-              //this.handlePress();
+              this.handlePress();
             }
           }}
           @keyup=${(event: KeyboardEvent) => {
