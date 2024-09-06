@@ -16,6 +16,10 @@ export const staticBaseStyles = css`
     margin: 0;
   }
 
+  input[type="number"]::-moz-number-spin-box {
+    -moz-appearance: none;
+  }
+
   .input-wrapper {
     display: flex;
     overflow: hidden;
