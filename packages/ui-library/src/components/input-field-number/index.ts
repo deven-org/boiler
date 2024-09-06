@@ -236,8 +236,10 @@ export class BlrInputFieldNumber extends LitElementCustom {
     if (this.sizeVariant) {
       const inputClasses = classMap({
         [this.sizeVariant]: this.sizeVariant,
-        prepend: this.unitPosition === 'prefix',
-        suffix: this.unitPosition === 'suffix',
+        'prepend': this.unitPosition === 'prefix',
+        'suffix': this.unitPosition === 'suffix',
+        'readonly': this.readonly || false,
+        'error-input': this.hasError || false,
         [this.theme]: this.theme,
       });
 

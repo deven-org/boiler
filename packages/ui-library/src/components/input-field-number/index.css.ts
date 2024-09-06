@@ -111,6 +111,7 @@ export const staticSemanticStyles = css`
 
       .input-wrapper.${theme} {
         box-sizing: border-box;
+        background-color: ${inputfield.container.bgcolor.default.rest};
         width: 100%;
         outline-width: ${inputfield.container.border.default.rest.width};
         outline-offset: calc(${inputfield.container.border.default.rest.width} * -1);
@@ -131,7 +132,7 @@ export const staticSemanticStyles = css`
           }
         }
 
-        &:focus-within {
+        &:focus-within.${theme} {
           outline-offset: calc(${inputfield.container.border.default.focus.width} * -1);
           outline-width: ${inputfield.container.border.default.focus.width};
           outline-style: ${inputfield.container.border.default.focus.style};
@@ -146,10 +147,23 @@ export const staticSemanticStyles = css`
             }
           }
         }
+
+        &.error-input {
+          outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
+            ${inputfield.container.border.error.rest.color};
+          background-color: ${inputfield.container.bgcolor.error.rest};
+
+          &:focus-within {
+            outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
+              ${inputfield.container.border.error.focus.color};
+            background-color: ${inputfield.container.bgcolor.error.focus};
+          }
+        }
       }
 
       input.${theme} {
-        all: inherit;
+        outline: none;
+        background-color: ${inputfield.container.bgcolor.default.rest};
         color: ${inputfield.userinput.textcolor.default.rest};
         border: none;
 
@@ -216,8 +230,7 @@ export const staticSemanticStyles = css`
       }
 
       &.error-input.${theme} {
-        outline: ${inputfield.container.border.error.rest.width} ${inputfield.container.border.error.rest.style}
-          ${inputfield.container.border.error.rest.color};
+        outline: none;
         color: ${inputfield.userinput.textcolor.error.rest};
         background-color: ${inputfield.container.bgcolor.error.rest};
 
@@ -225,20 +238,8 @@ export const staticSemanticStyles = css`
           color: ${inputfield.placeholder.textcolor.error.rest};
         }
 
-        &:hover {
-          outline: ${inputfield.container.border.error.hover.width} ${inputfield.container.border.error.hover.style}
-            ${inputfield.container.border.error.hover.color};
-          color: ${inputfield.userinput.textcolor.error.hover};
-          background-color: ${inputfield.container.bgcolor.error.hover};
-
-          &::placeholder {
-            color: ${inputfield.placeholder.textcolor.error.hover};
-          }
-        }
-
         &:active {
-          outline: ${inputfield.container.border.error.pressed.width} ${inputfield.container.border.error.pressed.style}
-            ${inputfield.container.border.error.pressed.color};
+          outline: none;
           color: ${inputfield.userinput.textcolor.error.pressed};
           background-color: ${inputfield.container.bgcolor.error.pressed};
 
@@ -248,8 +249,7 @@ export const staticSemanticStyles = css`
         }
 
         &:focus-within {
-          outline: ${inputfield.container.border.error.focus.width} ${inputfield.container.border.error.focus.style}
-            ${inputfield.container.border.error.focus.color};
+          outline: none;
           color: ${inputfield.userinput.textcolor.error.focus};
           background-color: ${inputfield.container.bgcolor.error.focus};
 
