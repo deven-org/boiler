@@ -126,7 +126,7 @@ export class BlrToggleSwitch extends LitElementCustom {
 
   protected handleRelease = () => {
     if (!this.disabled && !this.readonly) {
-      this.pressed = true;
+      this.pressed = false;
     }
   };
 

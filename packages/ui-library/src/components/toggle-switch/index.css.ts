@@ -78,10 +78,12 @@ export const staticStyles = css`
 
         & > .toggle-switch-unselect {
           left: 0;
+          pointer-events: none;
         }
 
         & > .toggle-switch-select {
           right: 0;
+          pointer-events: none;
         }
 
         &:not(.checked) {
@@ -264,15 +266,15 @@ export const staticStyles = css`
               }
 
               &.active {
-                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Rest};
-                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Rest};
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Pressed};
+                outline-color: ${ToggleSwitch.Control.Container.BorderColor.Active.Pressed};
 
                 .knob {
-                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Rest};
+                  outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Active.Pressed};
                 }
 
                 .toggle-icon > .toggle-icon-class {
-                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Rest};
+                  color: ${ToggleSwitch.Control.AY11Icon.IconColor.Active.Pressed};
                 }
               }
 
