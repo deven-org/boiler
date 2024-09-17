@@ -688,6 +688,7 @@ export const staticStyles = css`
             &.checked {
               outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest};
               outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest} * -1);
+
               .knob {
                 outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest};
                 outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest} * -1);
