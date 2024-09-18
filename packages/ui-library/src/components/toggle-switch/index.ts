@@ -11,6 +11,7 @@ import { calculateIconName } from '../../utils/calculate-icon-name.js';
 import { getComponentConfigToken } from '../../utils/get-component-config-token.js';
 import { FormSizesType } from '../../globals/types.js';
 import { BlrFormCaptionRenderFunction } from '../form-caption/renderFunction.js';
+import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
 import { BlrFormLabelInlineRenderFunction } from '../form-label/form-label-inline/renderFunction.js';
 import { staticStyles } from './index.css.js';
 import {
@@ -79,7 +80,7 @@ export class BlrToggleSwitch extends LitElementCustom {
         createBlrCheckedChangeEvent({
           originalEvent: event,
           checkedState: this.currentCheckedState,
-        })
+        }),
       );
     }
   }
@@ -87,14 +88,14 @@ export class BlrToggleSwitch extends LitElementCustom {
   @state() protected accessor focused = false;
 
   protected handleFocus = (event: FocusEvent) => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.focused = true;
       this.dispatchEvent(createBlrFocusEvent({ originalEvent: event }));
     }
   };
 
   protected handleBlur = (event: FocusEvent) => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.focused = false;
       this.dispatchEvent(createBlrBlurEvent({ originalEvent: event }));
     }
@@ -125,7 +126,7 @@ export class BlrToggleSwitch extends LitElementCustom {
 
   protected handleRelease = () => {
     if (!this.disabled && !this.readonly) {
-      this.pressed = true;
+      this.pressed = false;
     }
   };
 
@@ -169,6 +170,18 @@ export class BlrToggleSwitch extends LitElementCustom {
         this.sizeVariant.toUpperCase(),
       ]).toLowerCase() as FormSizesType;
 
+      const captionContent = html`
+        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
+          ? BlrFormCaptionRenderFunction({
+              variant: 'hint',
+              theme: this.theme,
+              sizeVariant: this.sizeVariant,
+              message: this.hintMessage,
+              icon: this.hintMessageIcon,
+            })
+          : nothing}
+      `;
+
       return html` <div class=${classes}>
         <span class="toggle-content-col">
           ${this.hasLabel
@@ -180,13 +193,7 @@ export class BlrToggleSwitch extends LitElementCustom {
               })}`
             : nothing}
           ${this.hasHint && this.hintMessage
-            ? BlrFormCaptionRenderFunction({
-                message: this.hintMessage,
-                variant: 'hint',
-                icon: this.hintMessageIcon,
-                sizeVariant: this.sizeVariant || 'sm',
-                theme: this.theme,
-              })
+            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
             : nothing}
         </span>
         <div
@@ -205,7 +212,7 @@ export class BlrToggleSwitch extends LitElementCustom {
           @focusout=${this.handleBlur}
           @keydown=${(event: KeyboardEvent) => {
             if (event.code === 'Space') {
-              //this.handlePress();
+              this.handlePress();
             }
           }}
           @keyup=${(event: KeyboardEvent) => {
@@ -227,8 +234,6 @@ export class BlrToggleSwitch extends LitElementCustom {
               ?readonly=${this.readonly}
               .checked=${this.currentCheckedState || nothing}
               @change=${this.handleChange}
-              @focus=${this.handleFocus}
-              @blur=${this.handleBlur}
               tabindex="-1"
             />
             <span class="toggle-switch-slider">
@@ -244,7 +249,7 @@ export class BlrToggleSwitch extends LitElementCustom {
                 },
                 {
                   'aria-hidden': true,
-                }
+                },
               )}
             </span>
             <span class="toggle-switch-select toggle-icon">
@@ -256,7 +261,7 @@ export class BlrToggleSwitch extends LitElementCustom {
                 },
                 {
                   'aria-hidden': true,
-                }
+                },
               )}
             </span>
           </label>
