@@ -25,6 +25,8 @@ import {
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
 import { BlrIconEventHandlers } from '../icon/index.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrInputFieldTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -33,6 +35,13 @@ export type BlrInputFieldTextEventHandlers = {
   blrSelect?: (event: BlrSelectEvent) => void;
 };
 
+// Define the property sanitizer for BlrInputFieldText
+const propertySanitizer = makeSanitizer((unsanitized: BlrInputFieldTextType) => ({
+  type: unsanitized.type ?? 'text',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  theme: unsanitized.theme ?? 'Light',
+}));
+
 /**
  * @fires blrFocus InputFieldText received focus
  * @fires blrBlur InputFieldText lost focus
@@ -40,13 +49,31 @@ export type BlrInputFieldTextEventHandlers = {
  * @fires blrSelect Text in InputFieldText got selected
  */
 export class BlrInputFieldText extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrInputFieldTextType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrInputFieldTextType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
   static styles = [styleCustom];
 
   @query('input')
   protected accessor _inputFieldTextNode!: HTMLInputElement;
 
   @property() accessor inputFieldTextId!: string;
-  @property() accessor type: InputTypes = 'text';
+  @property() accessor type: InputTypes | undefined;
   @property() accessor arialabel!: string;
   @property() accessor hasLabel!: boolean;
   @property() accessor label!: string;
@@ -55,7 +82,7 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor placeholder: string | undefined;
   @property() accessor disabled: boolean | undefined;
   @property() accessor readonly: boolean | undefined;
-  @property() accessor sizeVariant: FormSizesType | undefined = 'md';
+  @property() accessor sizeVariant: FormSizesType | undefined;
   @property() accessor required: boolean | undefined;
   @property() accessor maxLength: number | undefined;
   @property() accessor pattern: string | undefined;
@@ -68,9 +95,9 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
 
   @property() accessor name!: string;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType | undefined;
 
-  @state() protected accessor currentType: InputTypes = this.type;
+  @state() protected accessor currentType: InputTypes | undefined;
   @state() protected accessor isFocused = false;
 
   protected willUpdate(_changedProperties: PropertyValueMap<never> | Map<PropertyKey, unknown>): void {
@@ -104,7 +131,7 @@ export class BlrInputFieldText extends LitElementCustom {
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
       this.dispatchEvent(
-        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value })
+        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value }),
       );
     }
   };
@@ -154,7 +181,7 @@ export class BlrInputFieldText extends LitElementCustom {
       'icon-input': true,
       [this.sizeVariant!]: this.sizeVariant!,
       'no-pointer-events': Boolean(this.disabled || this.type !== 'password'),
-      [this.theme]: this.theme,
+      [this.theme!]: this.theme!,
     });
 
     const iconName: SizelessIconType | undefined =
@@ -170,38 +197,40 @@ export class BlrInputFieldText extends LitElementCustom {
       },
       {
         'aria-hidden': this.type !== 'password',
-      }
+      },
     );
   }
 
   protected render() {
-    if (this.sizeVariant) {
+    const sanitized = this.sanitizedController.values;
+
+    if (sanitized.sizeVariant) {
       const classes = classMap({
         'blr-input-field-text': true,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const inputClasses = classMap({
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [this.sizeVariant]: this.sizeVariant,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
       });
 
       const inputContainerClasses = classMap({
         'focus': this.isFocused || false,
         'error-input': this.hasError || false,
         'disabled': this.disabled || false,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
+        [sanitized.sizeVariant]: sanitized.sizeVariant,
+        [sanitized.theme]: sanitized.theme,
       });
 
       const captionContent = html`
         ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'hint',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
+              theme: sanitized.theme,
+              sizeVariant: sanitized.sizeVariant,
               message: this.hintMessage,
               icon: this.hintMessageIcon,
             })
@@ -209,8 +238,8 @@ export class BlrInputFieldText extends LitElementCustom {
         ${this.hasError && (this.errorMessage || this.errorMessageIcon)
           ? BlrFormCaptionRenderFunction({
               variant: 'error',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
+              theme: sanitized.theme,
+              sizeVariant: sanitized.sizeVariant,
               message: this.errorMessage,
               icon: this.errorMessageIcon,
             })
@@ -224,41 +253,43 @@ export class BlrInputFieldText extends LitElementCustom {
                 <div class="label-wrapper">
                   ${BlrFormLabelRenderFunction({
                     label: this.label,
-                    sizeVariant: this.sizeVariant,
+                    sizeVariant: sanitized.sizeVariant,
                     labelAppendix: this.labelAppendix,
                     forValue: this.inputFieldTextId,
-                    theme: this.theme,
+                    theme: sanitized.theme,
                     hasError: Boolean(this.hasError),
                   })}
                 </div>
               `
             : nothing}
-          <div class="blr-input-wrapper ${inputContainerClasses}" ?readonly="${this.readonly}">
-            <div class="blr-input-inner-container ${this.theme}">
+          <div class="input-container ${inputContainerClasses}">
+            <div class="blr-input-wrapper">
               <input
-                class="blr-form-input ${inputClasses}"
-                id=${this.inputFieldTextId}
-                name="${this.name || nothing}"
-                aria-label=${this.arialabel}
-                type="${this.currentType}"
-                .value="${this.value}"
-                placeholder="${this.placeholder}"
+                type="${sanitized.type === 'password' ? this.currentType : sanitized.type}"
+                id="${this.inputFieldTextId}"
+                class="${inputClasses}"
+                aria-label="${this.arialabel || nothing}"
+                placeholder="${this.placeholder || nothing}"
+                maxlength="${this.maxLength || nothing}"
+                pattern="${this.pattern || nothing}"
                 ?disabled="${this.disabled}"
                 ?readonly="${this.readonly}"
                 ?required="${this.required}"
-                @input=${this.handleChange}
-                @blur=${this.handleBlur}
-                @focus=${this.handleFocus}
-                maxlength="${this.maxLength}"
-                pattern="${this.pattern}"
-                hasError="${this.hasError}"
-                @select=${this.handleSelect}
+                .value="${this.value || ''}"
+                @focus="${this.handleFocus}"
+                @blur="${this.handleBlur}"
+                @change="${this.handleChange}"
+                @select="${this.handleSelect}"
+                name="${this.name || nothing}"
               />
+              ${this.renderInputIcon()}
             </div>
-            ${this.renderInputIcon()}
           </div>
           ${(this.hasHint && this.hintMessage) || (this.hasError && this.errorMessage)
-            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
+            ? BlrFormCaptionGroupRenderFunction(
+                { theme: sanitized.theme, sizeVariant: sanitized.sizeVariant },
+                captionContent,
+              )
             : nothing}
         </div>
       `;

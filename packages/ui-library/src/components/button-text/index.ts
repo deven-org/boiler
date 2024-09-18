@@ -29,6 +29,8 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { makeSanitizer } from '../../utils/lit/sanitize.js';
+import { SanitizationController } from '../../utils/lit/sanitization-controller.js';
 
 export type BlrButtonTextEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -36,23 +38,47 @@ export type BlrButtonTextEventHandlers = {
   blrClick?: (event: BlrClickEvent) => void;
 };
 
+const propertySanitizer = makeSanitizer((unsanitized: BlrButtonTextType) => ({
+  iconPosition: unsanitized.iconPosition ?? 'leading',
+  sizeVariant: unsanitized.sizeVariant ?? 'md',
+  buttonDisplay: unsanitized.buttonDisplay ?? 'inline-block',
+}));
+
 /**
  * @fires blrFocus Button received focus
  * @fires blrBlur Button lost focus
  * @fires blrClick Button was clicked
  */
 export class BlrButtonText extends LitElementCustom {
+  private sanitizedController: SanitizationController<
+    BlrButtonTextType,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    any
+  >;
+
+  constructor() {
+    super();
+    this.sanitizedController = new SanitizationController<
+      BlrButtonTextType,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      any
+    >({
+      host: this,
+      sanitize: propertySanitizer,
+    });
+  }
+
   static styles = [styleCustom, staticActionStyles];
 
   @property() accessor label = 'Button Label';
-  @property() accessor icon: SizelessIconType | undefined = undefined;
-  @property() accessor iconPosition: IconPositionVariant | undefined = 'leading';
+  @property() accessor icon: SizelessIconType | undefined;
+  @property() accessor iconPosition: IconPositionVariant | undefined;
   @property({ type: Boolean }) accessor loading!: boolean;
   @property({ type: Boolean }) accessor disabled!: boolean;
   @property() accessor buttonTextId: string | undefined;
   @property() accessor variant: ActionVariantType = 'primary';
-  @property() accessor sizeVariant: ActionSizesType | undefined = 'md';
-  @property() accessor buttonDisplay: DisplayType | undefined = 'inline-block';
+  @property() accessor sizeVariant: ActionSizesType | undefined;
+  @property() accessor buttonDisplay: DisplayType | undefined;
 
   @property() accessor theme: ThemeType = 'Light';
 
@@ -79,116 +105,114 @@ export class BlrButtonText extends LitElementCustom {
   };
 
   protected render() {
-    if (this.sizeVariant && this.buttonDisplay) {
-      const classes = classMap({
-        'blr-semantic-action': true,
-        'blr-button-text': true,
-        [this.variant]: this.variant,
-        [this.sizeVariant]: this.sizeVariant,
-        'disabled': this.disabled,
-        'loading': this.loading,
-        [this.buttonDisplay]: this.buttonDisplay,
-        [this.theme]: this.theme,
-      });
+    const sanitized = this.sanitizedController.values;
 
-      const iconClasses = classMap({
-        'icon': true,
-        'leading-icon-class': this.iconPosition === 'leading',
-        'trailing-icon-class': this.iconPosition === 'trailing',
-      });
+    const classes = classMap({
+      'blr-semantic-action': true,
+      'blr-button-text': true,
+      [this.variant]: this.variant,
+      [sanitized.sizeVariant]: sanitized.sizeVariant,
+      'disabled': this.disabled,
+      'loading': this.loading,
+      [sanitized.buttonDisplay]: sanitized.buttonDisplay,
+      [this.theme]: this.theme,
+    });
 
-      const flexContainerClasses = classMap({
-        'flex-container': true,
-        [this.sizeVariant]: this.sizeVariant,
-        [this.theme]: this.theme,
-      });
+    const iconClasses = classMap({
+      'icon': true,
+      'leading-icon-class': sanitized.iconPosition === 'leading',
+      'trailing-icon-class': sanitized.iconPosition === 'trailing',
+    });
 
-      const focusLayerClasses = classMap({
-        'focus-layer': true,
-        [this.theme]: this.theme,
-      });
+    const flexContainerClasses = classMap({
+      'flex-container': true,
+      [sanitized.sizeVariant]: sanitized.sizeVariant,
+      [this.theme]: this.theme,
+    });
 
-      focusLayerClasses;
+    const focusLayerClasses = classMap({
+      'focus-layer': true,
+      [this.theme]: this.theme,
+    });
 
-      const loaderVariant = determineLoaderVariant(this.variant);
+    const loaderVariant = determineLoaderVariant(this.variant);
 
-      const loaderSizeVariant = getComponentConfigToken([
-        'sem',
-        'buttons',
-        'loader',
-        'sizevariant',
-        this.sizeVariant,
-      ]).toLowerCase() as FormSizesType;
+    const loaderSizeVariant = getComponentConfigToken([
+      'sem',
+      'buttons',
+      'loader',
+      'sizevariant',
+      sanitized.sizeVariant,
+    ]).toLowerCase() as FormSizesType;
 
-      const iconSizeVariant = getComponentConfigToken([
-        'cmp',
-        'ButtonText',
-        'Icon',
-        'SizeVariant',
-        this.sizeVariant.toUpperCase(),
-      ]).toLowerCase() as SizesType;
+    const iconSizeVariant = getComponentConfigToken([
+      'cmp',
+      'ButtonText',
+      'Icon',
+      'SizeVariant',
+      sanitized.sizeVariant.toUpperCase(),
+    ]).toLowerCase() as SizesType;
 
-      const labelAndIconGroup = html` <div class="${flexContainerClasses}">
-        ${this.icon && this.iconPosition === 'leading'
-          ? BlrIconRenderFunction(
-              {
-                icon: calculateIconName(this.icon, iconSizeVariant),
-                sizeVariant: iconSizeVariant,
-                classMap: iconClasses,
-                fillParent: false,
-              },
-              {
-                'aria-hidden': true,
-              },
-            )
-          : nothing}
-        <span class="label">${this.label} </span>
-        ${this.icon && this.iconPosition === 'trailing'
-          ? BlrIconRenderFunction(
-              {
-                icon: calculateIconName(this.icon, iconSizeVariant),
-                sizeVariant: iconSizeVariant,
-                classMap: iconClasses,
-                fillParent: false,
-              },
-              {
-                'aria-hidden': true,
-              },
-            )
-          : nothing}
-      </div>`;
+    const labelAndIconGroup = html` <div class="${flexContainerClasses}">
+      ${this.icon && sanitized.iconPosition === 'leading'
+        ? BlrIconRenderFunction(
+            {
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              sizeVariant: iconSizeVariant,
+              classMap: iconClasses,
+              fillParent: false,
+            },
+            {
+              'aria-hidden': true,
+            },
+          )
+        : nothing}
+      <span class="label">${this.label} </span>
+      ${this.icon && sanitized.iconPosition === 'trailing'
+        ? BlrIconRenderFunction(
+            {
+              icon: calculateIconName(this.icon, iconSizeVariant),
+              sizeVariant: iconSizeVariant,
+              classMap: iconClasses,
+              fillParent: false,
+            },
+            {
+              'aria-hidden': true,
+            },
+          )
+        : nothing}
+    </div>`;
 
-      return html`
-        <span
-          class="${classes}"
-          aria-disabled=${this.disabled ? 'true' : nothing}
-          aria-label=${this.label}
-          @click="${this.handleClick}"
-          tabindex=${this.disabled ? nothing : '0'}
-          @focus=${this.handleFocus}
-          @blur=${this.handleBlur}
-          role="button"
-          @keydown=${(event: KeyboardEvent) => {
-            if (event.code === 'Space') {
-              this.handleClick(event);
-            }
-          }}
-          id=${this.buttonTextId || nothing}
-        >
-          ${this.focused && !this.loading ? html`<span class="${focusLayerClasses}"></span>` : nothing}
-          ${this.loading
-            ? html`
-                ${BlrLoaderRenderFunction({
-                  sizeVariant: loaderSizeVariant,
-                  variant: loaderVariant,
-                  theme: this.theme,
-                })}
-                ${labelAndIconGroup}
-              `
-            : labelAndIconGroup}
-        </span>
-      `;
-    }
+    return html`
+      <span
+        class="${classes}"
+        aria-disabled=${this.disabled ? 'true' : nothing}
+        aria-label=${this.label}
+        @click="${this.handleClick}"
+        tabindex=${this.disabled ? nothing : '0'}
+        @focus=${this.handleFocus}
+        @blur=${this.handleBlur}
+        role="button"
+        @keydown=${(event: KeyboardEvent) => {
+          if (event.code === 'Space') {
+            this.handleClick(event);
+          }
+        }}
+        id=${this.buttonTextId || nothing}
+      >
+        ${this.focused && !this.loading ? html`<span class="${focusLayerClasses}"></span>` : nothing}
+        ${this.loading
+          ? html`
+              ${BlrLoaderRenderFunction({
+                sizeVariant: loaderSizeVariant,
+                variant: loaderVariant,
+                theme: this.theme,
+              })}
+              ${labelAndIconGroup}
+            `
+          : labelAndIconGroup}
+      </span>
+    `;
   }
 }
 
