@@ -220,11 +220,15 @@ describe('blr-button-text', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrFocus', () => {
+    element.addEventListener('blrFocus', () => {
       fired = true;
     });
 
-    button?.focus();
+    expect(button).to.exist;
+
+    if (button) {
+      button.dispatchEvent(new FocusEvent('focus'));
+    }
 
     expect(fired).to.be.true;
   });
@@ -250,12 +254,16 @@ describe('blr-button-text', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrBlur', () => {
+    element.addEventListener('blrBlur', () => {
       fired = true;
     });
 
-    button?.focus();
-    button?.blur();
+    expect(button).to.exist;
+
+    if (button) {
+      button.dispatchEvent(new FocusEvent('focus'));
+      button.dispatchEvent(new FocusEvent('blur'));
+    }
 
     expect(fired).to.be.true;
   });

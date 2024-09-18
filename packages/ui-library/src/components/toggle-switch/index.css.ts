@@ -78,10 +78,12 @@ export const staticStyles = css`
 
         & > .toggle-switch-unselect {
           left: 0;
+          pointer-events: none;
         }
 
         & > .toggle-switch-select {
           right: 0;
+          pointer-events: none;
         }
 
         &:not(.checked) {
@@ -140,8 +142,10 @@ export const staticStyles = css`
               background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.Rest};
             }
 
-            & > .blr-form-label-inline {
-              color: ${formlabel.inlinelabel.textcolor.rest};
+            & > .toggle-content-col {
+              & > .blr-form-label-inline {
+                color: ${formlabel.inlinelabel.textcolor.rest};
+              }
             }
 
             &:not(.checked) {
@@ -214,6 +218,7 @@ export const staticStyles = css`
 
                 .knob {
                   outline-color: ${ToggleSwitch.Control.Knob.BorderColor.Inactive.ReadOnly};
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.ReadOnly};
                 }
 
                 .toggle-icon > .toggle-icon-class {
@@ -307,10 +312,8 @@ export const staticStyles = css`
         }
 
         &.disabled {
-          & > .toggle-content-col {
-            & > .blr-form-label-inline {
-              color: ${formlabel.inlinelabel.textcolor.disabled};
-            }
+          .blr-form-label-inline {
+            color: ${formlabel.inlinelabel.textcolor.disabled};
           }
         }
 
@@ -348,6 +351,7 @@ export const staticStyles = css`
                 &.hover {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Hover} * -1);
+                  background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
 
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Hover};
@@ -372,6 +376,7 @@ export const staticStyles = css`
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled};
                     outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Disabled});
+                    background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                   }
                 }
 
@@ -382,6 +387,7 @@ export const staticStyles = css`
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.ReadOnly};
                     outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.ReadOnly});
+                    background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.ReadOnly};
                   }
                 }
               }
@@ -398,6 +404,7 @@ export const staticStyles = css`
                 &.hover {
                   outline-width: ${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover};
                   outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.SM.Active.Hover} * -1);
+                  background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
 
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Hover};
@@ -422,6 +429,7 @@ export const staticStyles = css`
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Disabled};
                     outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Disabled});
+                    background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                   }
                 }
 
@@ -432,6 +440,7 @@ export const staticStyles = css`
                   .knob {
                     outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.ReadOnly};
                     outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.SM.Active.ReadOnly});
+                    background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.ReadOnly};
                   }
                 }
               }
@@ -490,6 +499,7 @@ export const staticStyles = css`
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Hover} * -1);
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
 
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Hover};
@@ -514,6 +524,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Disabled} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                 }
               }
 
@@ -524,6 +535,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.ReadOnly};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.ReadOnly} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.ReadOnly};
                 }
               }
             }
@@ -540,6 +552,7 @@ export const staticStyles = css`
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.MD.Active.Hover} * -1);
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
 
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Hover};
@@ -564,6 +577,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Disabled};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Disabled} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                 }
               }
 
@@ -574,6 +588,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.ReadOnly};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.MD.Active.ReadOnly} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.ReadOnly};
                 }
               }
             }
@@ -629,6 +644,7 @@ export const staticStyles = css`
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Inactive.Hover} * -1);
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Inactive.Hover};
 
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Hover};
@@ -653,6 +669,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Disabled} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                 }
               }
 
@@ -663,6 +680,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.ReadOnly} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.ReadOnly};
                 }
               }
             }
@@ -679,6 +697,7 @@ export const staticStyles = css`
               &.hover {
                 outline-width: ${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover};
                 outline-offset: calc(${ToggleSwitch.Control.Container.BorderWidth.LG.Active.Hover} * -1);
+                background-color: ${ToggleSwitch.Control.Container.BackgroundColor.Active.Hover};
 
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Hover};
@@ -703,6 +722,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Disabled} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Inactive.Disabled};
                 }
               }
 
@@ -713,6 +733,7 @@ export const staticStyles = css`
                 .knob {
                   outline-width: ${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly};
                   outline-offset: calc(${ToggleSwitch.Control.Knob.BorderWidth.LG.Active.ReadOnly} * -1);
+                  background-color: ${ToggleSwitch.Control.Knob.BackgroundColor.Active.ReadOnly};
                 }
               }
             }

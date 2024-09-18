@@ -67,7 +67,7 @@ describe('blr-button-icon', () => {
       BlrButtonIconRenderFunction({
         ...sampleParams,
         loading: true,
-      })
+      }),
     );
 
     const buttonIcon = querySelectorDeep('.blr-button-icon', element.getRootNode() as HTMLElement);
@@ -81,7 +81,7 @@ describe('blr-button-icon', () => {
       BlrButtonIconRenderFunction({
         ...sampleParams,
         loading: false,
-      })
+      }),
     );
     const buttonIcon = querySelectorDeep('.blr-button-icon', element.getRootNode() as HTMLElement);
     const loader = querySelectorDeep('blr-loader', buttonIcon?.getRootNode() as HTMLElement);
@@ -142,11 +142,14 @@ describe('blr-button-icon', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrFocus', () => {
+    element.addEventListener('blrFocus', () => {
       fired = true;
     });
 
-    button?.focus();
+    // Simulate the focus event
+    if (button) {
+      button.dispatchEvent(new FocusEvent('focus'));
+    }
 
     expect(fired).to.be.true;
   });
@@ -172,12 +175,17 @@ describe('blr-button-icon', () => {
     const button = querySelectorDeep('span', element.getRootNode() as HTMLElement);
     let fired = false;
 
-    element.getRootNode()?.addEventListener('blrBlur', () => {
+    // Attach the listener for the custom blrBlur event
+    element.addEventListener('blrBlur', () => {
       fired = true;
     });
 
-    button?.focus();
-    button?.blur();
+    expect(button).to.exist;
+
+    if (button) {
+      button.dispatchEvent(new FocusEvent('focus'));
+      button.dispatchEvent(new FocusEvent('blur'));
+    }
 
     expect(fired).to.be.true;
   });
