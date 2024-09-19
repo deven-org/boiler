@@ -1,11 +1,11 @@
 import '@boiler/ui-library';
-
 import { BlrInputFieldNumberRenderFunction } from './renderFunction.js';
 import type { BlrInputFieldNumberType } from './index.js';
 
 import { aTimeout, fixture, expect, oneEvent } from '@open-wc/testing';
 import { querySelectorAllDeep, querySelectorDeep } from 'query-selector-shadow-dom';
 import { getRandomString } from '../../utils/get-random.string.js';
+
 import { BlrFocusEvent } from '../../globals/events.js';
 
 const sampleParams: BlrInputFieldNumberType = {
@@ -26,7 +26,7 @@ const sampleParams: BlrInputFieldNumberType = {
   errorMessageIcon: 'blrInfo',
   errorMessage: "OMG it's an error",
   value: 4,
-  unit: 'gr',
+  unit: 'g',
   decimals: 0,
   leadingZeros: 0,
   stepIncreaseAriaLabel: '+',
@@ -59,20 +59,16 @@ describe('blr-input-field-number', () => {
     expect(placeholder).to.be.equal(randomString);
   });
 
-  it('is showing the stepper when unit is undefined and readonly is true', async () => {
-    const className = 'custom-stepper-button';
-
+  it('is not showing the stepper when readonly is true', async () => {
     const element = await fixture(
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
-        unit: undefined,
+        readonly: true,
       }),
     );
 
-    const button = querySelectorDeep('button', element.getRootNode() as HTMLElement);
-    const classNames = button?.getAttribute('class');
-
-    expect(classNames).to.include(className);
+    const buttons = querySelectorAllDeep('button.custom-stepper-button', element.getRootNode() as HTMLElement);
+    expect(buttons.length).to.equal(0);
   });
 
   it('is shows adjacent caption components in caption group slot', async () => {
@@ -166,6 +162,7 @@ describe('blr-input-field-number', () => {
           stepDecreaseAriaLabel,
           step,
           value: 1,
+          readonly: false,
         }),
       );
 
@@ -201,6 +198,7 @@ describe('blr-input-field-number', () => {
     const element = await fixture(
       BlrInputFieldNumberRenderFunction({
         ...sampleParams,
+        readonly: false,
       }),
     );
 
@@ -213,7 +211,7 @@ describe('blr-input-field-number', () => {
     const focusResult: BlrFocusEvent = await focusPromise;
     expect(focusResult.detail.originalEvent).to.exist;
 
-    const stepper = querySelectorDeep('button', element.getRootNode() as HTMLElement);
+    const stepper = querySelectorDeep('button.custom-stepper-button', element.getRootNode() as HTMLElement);
     if (!stepper) throw new Error('Stepper button not found');
 
     const blurEvent = new Event('blur', { bubbles: true });
