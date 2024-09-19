@@ -50,22 +50,22 @@
             },
             "inactive": {
               "rest": {
-                "value": "{sys.bgcolor.inverse.primary.rest}",
+                "value": "{sys.bgcolor.inverse.rest}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "hover": {
-                "value": "{sys.bgcolor.inverse.primary.hover}",
+                "value": "{sys.bgcolor.inverse.hover}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "pressed": {
-                "value": "{sys.bgcolor.inverse.primary.pressed}",
+                "value": "{sys.bgcolor.inverse.pressed}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "focus": {
-                "value": "{sys.bgcolor.inverse.primary.rest}",
+                "value": "{sys.bgcolor.inverse.rest}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
@@ -80,7 +80,7 @@
                 "description": "also applies to indeterminate"
               },
               "error": {
-                "value": "{sys.bgcolor.inverse.danger.rest}",
+                "value": "{sys.bgcolor.inverse.rest}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               }
@@ -126,22 +126,22 @@
             },
             "inactive": {
               "rest": {
-                "value": "{sys.bordercolor.inverse.primary.rest}",
+                "value": "{sys.bordercolor.inverse.rest}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "hover": {
-                "value": "{sys.bordercolor.inverse.primary.hover}",
+                "value": "{sys.bordercolor.inverse.hover}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "pressed": {
-                "value": "{sys.bordercolor.inverse.primary.pressed}",
+                "value": "{sys.bordercolor.inverse.pressed}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "focus": {
-                "value": "{sys.bordercolor.inverse.primary.rest}",
+                "value": "{sys.bordercolor.inverse.rest}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
@@ -156,7 +156,7 @@
                 "description": "also applies to indeterminate"
               },
               "error": {
-                "value": "{sys.bordercolor.inverse.danger.rest}",
+                "value": "{sys.bgcolor.bold.danger.rest}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               }
@@ -167,37 +167,37 @@
           "iconcolor": {
             "active": {
               "rest": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "hover": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "pressed": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "focus": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "disabled": {
-                "value": "{sys.content.bold.regular.disabled}",
+                "value": "{sys.content.bold.disabled.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "readonly": {
-                "value": "{sys.content.bold.regular.disabled}",
+                "value": "{sys.content.bold.disabled.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               },
               "error": {
-                "value": "{sys.content.bold.regular.danger}",
+                "value": "{sys.content.bold.danger.regular}",
                 "type": "color",
                 "description": "also applies to indeterminate"
               }
@@ -277,15 +277,15 @@
       "text": {
         "textcolor": {
           "neutral": {
-            "value": "{sys.content.container.regular.informative}",
+            "value": "{sys.content.container.informative.regular}",
             "type": "color"
           },
           "warning": {
-            "value": "{sys.content.container.regular.warning}",
+            "value": "{sys.content.container.warning.regular}",
             "type": "color"
           },
           "error": {
-            "value": "{sys.content.container.regular.danger}",
+            "value": "{sys.content.container.danger.regular}",
             "type": "color"
           }
         }
@@ -745,7 +745,7 @@
                 "description": "forms.radio.control.background.unselected.fill.readonly"
               },
               "error": {
-                "value": "{sys.bordercolor.container.danger}",
+                "value": "{sys.bgcolor.bold.danger.rest}",
                 "type": "color",
                 "description": "forms.radio.control.background.unselected.fill.error"
               }
@@ -782,7 +782,7 @@
                 "description": "forms.radio.control.background.selected.fill.readonly"
               },
               "error": {
-                "value": "{sys.bordercolor.container.danger}",
+                "value": "{sys.bgcolor.bold.danger.rest}",
                 "type": "color",
                 "description": "forms.radio.control.background.unselected.fill.error"
               }
@@ -821,7 +821,7 @@
                 "description": "forms.radio.control.background.unselected.fill.readonly"
               },
               "error": {
-                "value": "{sys.bordercolor.container.danger}",
+                "value": "{sys.bgcolor.bold.danger.rest}",
                 "type": "color",
                 "description": "forms.radio.control.background.unselected.fill.error"
               }
@@ -858,7 +858,7 @@
                 "description": "forms.radio.control.background.selected.fill.readonly"
               },
               "error": {
-                "value": "{sys.bordercolor.container.danger}",
+                "value": "{sys.bgcolor.bold.danger.rest}",
                 "type": "color",
                 "description": "forms.radio.control.background.unselected.fill.error"
               }
@@ -869,74 +869,74 @@
           "iconcolor": {
             "inactive": {
               "rest": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.rest"
               },
               "hover": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.hover"
               },
               "pressed": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.pressed"
               },
               "focus": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.focus"
               },
               "disabled": {
-                "value": "{sys.content.bold.regular.disabled}",
+                "value": "{sys.content.bold.disabled.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.disabled"
               },
               "readonly": {
-                "value": "{sys.content.bold.regular.disabled}",
+                "value": "{sys.content.bold.disabled.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.readonly"
               },
               "error": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.error"
               }
             },
             "active": {
               "rest": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.selected.fill.rest"
               },
               "hover": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.selected.fill.hover"
               },
               "pressed": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.selected.fill.pressed"
               },
               "focus": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.selected.fill.focus"
               },
               "disabled": {
-                "value": "{sys.content.bold.regular.disabled}",
+                "value": "{sys.content.bold.disabled.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.selected.fill.disabled"
               },
               "readonly": {
-                "value": "{sys.content.bold.regular.disabled}",
+                "value": "{sys.content.bold.disabled.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.selected.fill.readonly"
               },
               "error": {
-                "value": "{sys.content.bold.regular.primary}",
+                "value": "{sys.content.bold.primary.regular}",
                 "type": "color",
                 "description": "forms.radio.control.foreground.unselected.fill.error"
               }
@@ -1060,7 +1060,7 @@
           },
           "mute": {
             "active": {
-              "value": "{sys.content.container.regular.disabled}",
+              "value": "{sys.content.container.disabled.regular}",
               "type": "color"
             },
             "inactive": {
@@ -1084,7 +1084,7 @@
           },
           "mute": {
             "active": {
-              "value": "{sys.content.container.regular.disabled}",
+              "value": "{sys.content.container.disabled.regular}",
               "type": "color"
             },
             "inactive": {
@@ -1123,7 +1123,7 @@
             "type": "color"
           },
           "disabled": {
-            "value": "{sys.content.container.regular.disabled}",
+            "value": "{sys.content.container.disabled.regular}",
             "type": "color"
           }
         }
@@ -1249,7 +1249,7 @@
                 "description": "apply as fill on hightlightline"
               },
               "disabled": {
-                "value": "{sys.content.container.regular.disabled}",
+                "value": "{sys.content.container.disabled.regular}",
                 "type": "color",
                 "description": "apply as fill on hightlightline"
               }
@@ -1324,23 +1324,23 @@
             },
             "inactive": {
               "rest": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "hover": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "pressed": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "focus": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "disabled": {
-                "value": "{sys.content.container.regular.disabled}",
+                "value": "{sys.content.container.disabled.regular}",
                 "type": "color",
                 "description": "defines the color of the label of a tab. apply on <label>"
               }
@@ -1373,23 +1373,23 @@
             },
             "inactive": {
               "rest": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "hover": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "pressed": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "focus": {
-                "value": "{sys.content.container.regular.neutral}",
+                "value": "{sys.content.container.neutral.regular}",
                 "type": "color"
               },
               "disabled": {
-                "value": "{sys.content.container.regular.disabled}",
+                "value": "{sys.content.container.disabled.regular}",
                 "type": "color",
                 "description": "defines the color of the label of a tab. apply on <label>"
               }
@@ -1552,64 +1552,64 @@
           "iconcolor": {
             "inactive": {
               "rest": {
-                "value": "{sys.content.bold.subtle.neutral}",
+                "value": "{sys.content.bold.neutral.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.rest"
               },
               "hover": {
-                "value": "{sys.content.bold.subtle.neutral}",
+                "value": "{sys.content.bold.neutral.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.hover"
               },
               "pressed": {
-                "value": "{sys.content.bold.subtle.neutral}",
+                "value": "{sys.content.bold.neutral.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.pressed"
               },
               "focus": {
-                "value": "{sys.content.bold.subtle.neutral}",
+                "value": "{sys.content.bold.neutral.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.focus"
               },
               "disabled": {
-                "value": "{sys.content.bold.subtle.disabled}",
+                "value": "{sys.content.bold.disabled.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.disabled"
               },
               "readonly": {
-                "value": "{sys.content.bold.subtle.disabled}",
+                "value": "{sys.content.bold.disabled.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.readonly"
               }
             },
             "active": {
               "rest": {
-                "value": "{sys.content.bold.subtle.safe}",
+                "value": "{sys.content.bold.safe.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.rest"
               },
               "hover": {
-                "value": "{sys.content.bold.subtle.safe}",
+                "value": "{sys.content.bold.safe.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.hover"
               },
               "pressed": {
-                "value": "{sys.content.bold.subtle.safe}",
+                "value": "{sys.content.bold.safe.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.pressed"
               },
               "focus": {
-                "value": "{sys.content.bold.subtle.safe}",
+                "value": "{sys.content.bold.safe.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.focus"
               },
               "disabled": {
-                "value": "{sys.content.bold.subtle.disabled}",
+                "value": "{sys.content.bold.disabled.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.disabled"
               },
               "readonly": {
-                "value": "{sys.content.bold.subtle.disabled}",
+                "value": "{sys.content.bold.disabled.subtle}",
                 "type": "color",
                 "description": "forms.toggleswitch.control.foreground.selected.fill.readonly"
               }
