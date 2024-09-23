@@ -98,11 +98,11 @@ export class BlrButtonIcon extends LitElementCustom {
 
       const iconSizeVariant = getComponentConfigToken([
         'cmp',
-        'ButtonIcon',
-        'Icon',
-        'SizeVariant',
-        this.sizeVariant.toUpperCase(),
-      ]).toLowerCase() as SizesType;
+        'buttonicon',
+        'icon',
+        'sizevariant',
+        this.sizeVariant,
+      ]) as SizesType;
 
       return html`
         <span

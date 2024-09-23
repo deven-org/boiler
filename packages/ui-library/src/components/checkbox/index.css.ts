@@ -189,7 +189,7 @@ export const staticStyles = css`
           &:not(.error) {
             &.checked,
             &.indeterminate {
-              background-color: ${checkbox.control.container.backgroundcolor.active.rest};
+              background-color: ${checkbox.control.container.bgcolor.active.rest};
               outline-color: ${checkbox.control.container.bordercolor.active.rest};
 
               & .checker-icon {
@@ -198,7 +198,7 @@ export const staticStyles = css`
 
               &.hover {
                 &:not(.disabled, .readonly) {
-                  background-color: ${checkbox.control.container.backgroundcolor.active.hover};
+                  background-color: ${checkbox.control.container.bgcolor.active.hover};
                   outline-color: ${checkbox.control.container.bordercolor.active.hover};
 
                   & .checker-icon {
@@ -208,7 +208,7 @@ export const staticStyles = css`
               }
 
               &.focus {
-                background-color: ${checkbox.control.container.backgroundcolor.active.focus};
+                background-color: ${checkbox.control.container.bgcolor.active.focus};
                 outline-color: ${checkbox.control.container.bordercolor.active.focus};
 
                 & .checker-icon {
@@ -218,7 +218,7 @@ export const staticStyles = css`
 
               &.active {
                 &:not(:disabled, [readonly]) {
-                  background-color: ${checkbox.control.container.backgroundcolor.active.pressed};
+                  background-color: ${checkbox.control.container.bgcolor.active.pressed};
                   outline-color: ${checkbox.control.container.bordercolor.active.pressed};
 
                   & .checker-icon {
@@ -228,7 +228,7 @@ export const staticStyles = css`
               }
 
               &.disabled {
-                background-color: ${checkbox.control.container.backgroundcolor.active.disabled};
+                background-color: ${checkbox.control.container.bgcolor.active.disabled};
                 outline-color: ${checkbox.control.container.bordercolor.active.disabled};
 
                 & .checker-icon {
@@ -237,7 +237,7 @@ export const staticStyles = css`
               }
 
               &.readonly {
-                background-color: ${checkbox.control.container.backgroundcolor.active.readonly};
+                background-color: ${checkbox.control.container.bgcolor.active.readonly};
                 outline-color: ${checkbox.control.container.bordercolor.active.readonly};
 
                 & .checker-icon {
@@ -247,7 +247,7 @@ export const staticStyles = css`
             }
 
             &:not(.checked, .indeterminate) {
-              background-color: ${checkbox.control.container.backgroundcolor.inactive.rest};
+              background-color: ${checkbox.control.container.bgcolor.inactive.rest};
               outline-color: ${checkbox.control.container.bordercolor.inactive.rest};
 
               & .checker-icon {
@@ -256,7 +256,7 @@ export const staticStyles = css`
 
               &.hover {
                 &:not(.disabled, .readonly) {
-                  background-color: ${checkbox.control.container.backgroundcolor.inactive.hover};
+                  background-color: ${checkbox.control.container.bgcolor.inactive.hover};
                   outline-color: ${checkbox.control.container.bordercolor.inactive.hover};
 
                   & .checker-icon {
@@ -266,7 +266,7 @@ export const staticStyles = css`
               }
 
               &.focus {
-                background-color: ${checkbox.control.container.backgroundcolor.inactive.focus};
+                background-color: ${checkbox.control.container.bgcolor.inactive.focus};
                 outline-color: ${checkbox.control.container.bordercolor.inactive.focus};
 
                 & .checker-icon {
@@ -276,7 +276,7 @@ export const staticStyles = css`
 
               &.active {
                 &:not(.disabled, .readonly) {
-                  background-color: ${checkbox.control.container.backgroundcolor.inactive.pressed};
+                  background-color: ${checkbox.control.container.bgcolor.inactive.pressed};
                   outline-color: ${checkbox.control.container.bordercolor.inactive.pressed};
 
                   & .checker-icon {
@@ -286,7 +286,7 @@ export const staticStyles = css`
               }
 
               &.disabled {
-                background-color: ${checkbox.control.container.backgroundcolor.inactive.disabled};
+                background-color: ${checkbox.control.container.bgcolor.inactive.disabled};
                 outline-color: ${checkbox.control.container.bordercolor.inactive.disabled};
 
                 & .checker-icon {
@@ -295,7 +295,7 @@ export const staticStyles = css`
               }
 
               &.readonly {
-                background-color: ${checkbox.control.container.backgroundcolor.inactive.readonly};
+                background-color: ${checkbox.control.container.bgcolor.inactive.readonly};
                 outline-color: ${checkbox.control.container.bordercolor.inactive.readonly};
 
                 & .checker-icon {
@@ -307,7 +307,7 @@ export const staticStyles = css`
 
           &.error {
             &.checked {
-              background-color: ${checkbox.control.container.backgroundcolor.active.error};
+              background-color: ${checkbox.control.container.bgcolor.active.error};
               outline-color: ${checkbox.control.container.bordercolor.active.error};
 
               & .checker-icon {
@@ -316,7 +316,7 @@ export const staticStyles = css`
             }
 
             &:not(.checked) {
-              background-color: ${checkbox.control.container.backgroundcolor.inactive.error};
+              background-color: ${checkbox.control.container.bgcolor.inactive.error};
               outline-color: ${checkbox.control.container.bordercolor.inactive.error};
 
               & .checker-icon {

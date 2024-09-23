@@ -59,11 +59,11 @@ export class BlrTabBarItem extends LitElementCustom implements PublicReactivePro
     if (this.size) {
       const iconSizeVariant = getComponentConfigToken([
         'cmp',
-        'TabBar',
-        'Tab',
-        'Icon',
-        'SizeVariant',
-        this.size.toUpperCase(),
+        'tabbar',
+        'tab',
+        'icon',
+        'sizevariant',
+        this.size,
       ]) as SizesType;
 
       const navListItemContainer = classMap({

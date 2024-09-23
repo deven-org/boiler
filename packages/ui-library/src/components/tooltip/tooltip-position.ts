@@ -9,7 +9,7 @@ import {
 } from '@floating-ui/dom';
 import { componentTokens } from '../../foundation/_tokens-generated/__component-tokens.Light.generated.mjs';
 
-const { Tooltip } = componentTokens.cmp;
+const toolTip = componentTokens.cmp.tooltip;
 
 const getArrowSettings = (tooltip: HTMLElement, paddingTopBottom: number, paddingLeftRight: number, side: string) => {
   const element = tooltip.querySelector('.arrow') as HTMLElement;
@@ -37,8 +37,8 @@ export const tooltipPosition = (
 
     const arrowSettings = getArrowSettings(
       tooltip,
-      parseFloat(Tooltip.NoseWrapper.Padding_V),
-      parseFloat(Tooltip.NoseWrapper.Padding_H),
+      parseFloat(toolTip.nosewrapper.padding_v),
+      parseFloat(toolTip.nosewrapper.padding_h),
       side
     );
 

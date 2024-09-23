@@ -1,6 +1,6 @@
 {
   "core": {
-    "dimensionPX": {
+    "dimensionpx": {
       "0": {
         "value": "0px",
         "type": "dimension"
@@ -114,7 +114,7 @@
         "type": "dimension"
       }
     },
-    "dimensionREM": {
+    "dimensionrem": {
       "0": {
         "value": "0rem",
         "type": "dimension"
