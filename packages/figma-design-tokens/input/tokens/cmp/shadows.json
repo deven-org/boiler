@@ -4,8 +4,8 @@
       "container": {
         "elevation": {
           "elevated": {
-            "value": "{sem.elevation.lvl_1}",
-            "type": "boxShadow"
+            "$type": "boxShadow",
+            "$value": "{sem.elevation.lvl_1}"
           }
         }
       }
