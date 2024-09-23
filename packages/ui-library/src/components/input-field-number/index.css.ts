@@ -405,15 +405,15 @@ export const staticComponentStyles = css`
 
         &.horizontal {
           &.sm {
-            width: ${StepperButton.Container.Width.SM};
+            width: ${stepperbutton.container.width.sm};
           }
 
           &.md {
-            width: ${StepperButton.Container.Width.MD};
+            width: ${stepperbutton.container.width.md};
           }
 
           &.lg {
-            width: ${StepperButton.Container.Width.LG};
+            width: ${stepperbutton.container.width.lg};
           }
         }
 
