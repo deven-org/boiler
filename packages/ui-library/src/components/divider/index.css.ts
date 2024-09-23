@@ -3,20 +3,20 @@ import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
-    const { Divider } = cmp;
+    const { divider } = cmp;
 
     return css`
       .blr-divider.${theme} {
-        background-color: ${Divider.Container.BackgroundColor};
+        background-color: ${divider.container.bgcolor};
 
         &.vertical {
-          width: ${Divider.Container.Vertical.Width};
+          width: ${divider.container.vertical.width};
           height: 100%;
         }
 
         &.horizontal {
           width: 100%;
-          height: ${Divider.Container.Horizontal.Height};
+          height: ${divider.container.horizontal.height};
         }
       }
     `;

@@ -252,39 +252,39 @@ export const staticSemanticStyles = css`
 
 export const staticComponentStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
-    const { StepperButton, StepperCombo, InputFieldNumber } = cmp;
+    const { stepperbutton, steppercombo, inputfieldnumber } = cmp;
 
     return css`
       .input-unit-container.${theme} {
         &.sm {
-          gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.SM};
+          gap: ${inputfieldnumber.inputfield.textwrapper.itemspacing.sm};
         }
 
         &.md {
-          gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.MD};
+          gap: ${inputfieldnumber.inputfield.textwrapper.itemspacing.md};
         }
 
         &.lg {
-          gap: ${InputFieldNumber.InputField.TextWrapper.ItemSpacing.LG};
+          gap: ${inputfieldnumber.inputfield.textwrapper.itemspacing.lg};
         }
       }
 
       .split.${theme} {
         &.sm {
           & > .custom-stepper-button {
-            width: ${StepperButton.Container.Width.SM};
+            width: ${stepperbutton.container.width.sm};
           }
         }
 
         &.md {
           & > .custom-stepper-button {
-            width: ${StepperButton.Container.Width.MD};
+            width: ${stepperbutton.container.width.md};
           }
         }
 
         &.lg {
           & > .custom-stepper-button {
-            width: ${StepperButton.Container.Width.LG};
+            width: ${stepperbutton.container.width.lg};
           }
         }
       }
@@ -296,26 +296,26 @@ export const staticComponentStyles = css`
           justify-content: center;
 
           &.sm {
-            width: ${StepperCombo.Container.Width.Horizontal.SM};
+            width: ${steppercombo.container.width.horizontal.sm};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.SM};
+              padding: ${steppercombo.dividerwrapper.padding.horizontallayout.sm};
             }
           }
 
           &.md {
-            width: ${StepperCombo.Container.Width.Horizontal.MD};
+            width: ${steppercombo.container.width.horizontal.md};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.MD};
+              padding: ${steppercombo.dividerwrapper.padding.horizontallayout.md};
             }
           }
 
           &.lg {
-            width: ${StepperCombo.Container.Width.Horizontal.LG};
+            width: ${steppercombo.container.width.horizontal.lg};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.HorizontalLayout.LG};
+              padding: ${steppercombo.dividerwrapper.padding.horizontallayout.lg};
             }
           }
         }
@@ -326,26 +326,26 @@ export const staticComponentStyles = css`
           justify-content: center;
 
           &.sm {
-            width: ${StepperCombo.Container.Width.Vertical.SM};
+            width: ${steppercombo.container.width.vertical.sm};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.SM};
+              padding: ${steppercombo.dividerwrapper.padding.verticallayout.sm};
             }
           }
 
           &.md {
-            width: ${StepperCombo.Container.Width.Vertical.MD};
+            width: ${steppercombo.container.width.vertical.md};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.MD};
+              padding: ${steppercombo.dividerwrapper.padding.verticallayout.md};
             }
           }
 
           &.lg {
-            width: ${StepperCombo.Container.Width.Vertical.LG};
+            width: ${steppercombo.container.width.vertical.lg};
 
             & > blr-divider {
-              padding: ${StepperCombo.DividerWrapper.Padding.VerticalLayout.LG};
+              padding: ${steppercombo.dividerwrapper.padding.verticallayout.lg};
             }
           }
         }
@@ -357,22 +357,22 @@ export const staticComponentStyles = css`
         align-items: center;
         border: none;
         padding: 0;
-        background-color: ${StepperButton.Container.BackgroundColor.Rest};
-        color: ${StepperButton.Icon.IconColor.Rest};
+        background-color: ${stepperbutton.container.bgcolor.rest};
+        color: ${stepperbutton.icon.iconcolor.rest};
 
         &:hover:not(:disabled) {
-          background-color: ${StepperButton.Container.BackgroundColor.Hover};
-          color: ${StepperButton.Icon.IconColor.Hover};
+          background-color: ${stepperbutton.container.bgcolor.hover};
+          color: ${stepperbutton.icon.iconcolor.hover};
         }
 
         &:active:not(:disabled) {
-          background-color: ${StepperButton.Container.BackgroundColor.Pressed};
-          color: ${StepperButton.Icon.IconColor.Pressed};
+          background-color: ${stepperbutton.container.bgcolor.pressed};
+          color: ${stepperbutton.icon.iconcolor.pressed};
         }
 
         &:disabled {
-          background-color: ${StepperButton.Container.BackgroundColor.Disabled};
-          color: ${StepperButton.Icon.IconColor.Disabled};
+          background-color: ${stepperbutton.container.bgcolor.disabled};
+          color: ${stepperbutton.icon.iconcolor.disabled};
           cursor: not-allowed;
         }
 

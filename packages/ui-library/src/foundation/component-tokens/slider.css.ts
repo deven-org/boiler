@@ -91,9 +91,9 @@ export const staticStyles = css`
       }
     }
   }
-
+  
   ${ComponentThemeIterator((theme, cmp, css) => {
-    const { Slider } = cmp;
+    const { slider } = cmp;
 
     return css`
       .blr-slider.${theme} {
@@ -101,95 +101,95 @@ export const staticStyles = css`
           & > .range-wrapper {
             & > input[type="range"] {
               &::-webkit-slider-thumb {
-                width: ${Slider.Thumb.Shape.Size.Rest};
-                height: ${Slider.Thumb.Shape.Size.Rest};
-                background-color: ${Slider.Thumb.Shape.BackgroundColor.Rest};
-                border-width: ${Slider.Thumb.Shape.Border.Rest.width};
-                border-style: ${Slider.Thumb.Shape.Border.Rest.style};
-                border-color: ${Slider.Thumb.Shape.Border.Rest.color};
+                width: ${slider.thumb.shape.size.rest};
+                height: ${slider.thumb.shape.size.rest};
+                background-color: ${slider.thumb.shape.bgcolor.rest};
+                border-width: ${slider.thumb.shape.border.rest.width};
+                border-style: ${slider.thumb.shape.border.rest.style};
+                border-color: ${slider.thumb.shape.border.rest.color};
               }
 
               &::-moz-range-thumb {
-                width: ${Slider.Thumb.Shape.Size.Rest};
-                height: ${Slider.Thumb.Shape.Size.Rest};
-                background-color: ${Slider.Thumb.Shape.BackgroundColor.Rest};
-                border-width: ${Slider.Thumb.Shape.Border.Rest.width};
-                border-style: ${Slider.Thumb.Shape.Border.Rest.style};
-                border-color: ${Slider.Thumb.Shape.Border.Rest.color};
+                width: ${slider.thumb.shape.size.rest};
+                height: ${slider.thumb.shape.size.rest};
+                background-color: ${slider.thumb.shape.bgcolor.rest};
+                border-width: ${slider.thumb.shape.border.rest.width};
+                border-style: ${slider.thumb.shape.border.rest.style};
+                border-color: ${slider.thumb.shape.border.rest.color};
               }
 
               &:active {
                 &::-webkit-slider-thumb {
-                  width: ${Slider.Thumb.Shape.Size.Pressed};
-                  height: ${Slider.Thumb.Shape.Size.Pressed};
-                  background-color: ${Slider.Thumb.Shape.BackgroundColor.Pressed};
-                  border-width: ${Slider.Thumb.Shape.Border.Pressed.width};
-                  border-style: ${Slider.Thumb.Shape.Border.Pressed.style};
-                  border-color: ${Slider.Thumb.Shape.Border.Pressed.color};
+                  width: ${slider.thumb.shape.size.pressed};
+                  height: ${slider.thumb.shape.size.pressed};
+                  background-color: ${slider.thumb.shape.bgcolor.pressed};
+                  border-width: ${slider.thumb.shape.border.pressed.width};
+                  border-style: ${slider.thumb.shape.border.pressed.style};
+                  border-color: ${slider.thumb.shape.border.pressed.color};
                 }
 
                 &::-moz-range-thumb {
-                  width: ${Slider.Thumb.Shape.Size.Pressed};
-                  height: ${Slider.Thumb.Shape.Size.Pressed};
-                  background-color: ${Slider.Thumb.Shape.BackgroundColor.Pressed};
-                  border-width: ${Slider.Thumb.Shape.Border.Pressed.width};
-                  border-style: ${Slider.Thumb.Shape.Border.Pressed.style};
-                  border-color: ${Slider.Thumb.Shape.Border.Pressed.color};
+                  width: ${slider.thumb.shape.size.pressed};
+                  height: ${slider.thumb.shape.size.pressed};
+                  background-color: ${slider.thumb.shape.bgcolor.pressed};
+                  border-width: ${slider.thumb.shape.border.pressed.width};
+                  border-style: ${slider.thumb.shape.border.pressed.style};
+                  border-color: ${slider.thumb.shape.border.pressed.color};
                 }
               }
 
               &:hover {
                 &::-webkit-slider-thumb {
-                  width: ${Slider.Thumb.Shape.Size.Hover};
-                  height: ${Slider.Thumb.Shape.Size.Hover};
-                  background-color: ${Slider.Thumb.Shape.BackgroundColor.Hover};
-                  border-width: ${Slider.Thumb.Shape.Border.Hover.width};
-                  border-style: ${Slider.Thumb.Shape.Border.Hover.style};
-                  border-color: ${Slider.Thumb.Shape.Border.Hover.color};
+                  width: ${slider.thumb.shape.size.hover};
+                  height: ${slider.thumb.shape.size.hover};
+                  background-color: ${slider.thumb.shape.bgcolor.hover};
+                  border-width: ${slider.thumb.shape.border.hover.width};
+                  border-style: ${slider.thumb.shape.border.hover.style};
+                  border-color: ${slider.thumb.shape.border.hover.color};
                 }
 
                 &::-moz-range-thumb {
-                  width: ${Slider.Thumb.Shape.Size.Hover};
-                  height: ${Slider.Thumb.Shape.Size.Hover};
-                  background-color: ${Slider.Thumb.Shape.BackgroundColor.Hover};
-                  border-width: ${Slider.Thumb.Shape.Border.Hover.width};
-                  border-style: ${Slider.Thumb.Shape.Border.Hover.style};
-                  border-color: ${Slider.Thumb.Shape.Border.Hover.color};
+                  width: ${slider.thumb.shape.size.hover};
+                  height: ${slider.thumb.shape.size.hover};
+                  background-color: ${slider.thumb.shape.bgcolor.hover};
+                  border-width: ${slider.thumb.shape.border.hover.width};
+                  border-style: ${slider.thumb.shape.border.hover.style};
+                  border-color: ${slider.thumb.shape.border.hover.color};
                 }
               }
 
               &:disabled {
                 &::-webkit-slider-thumb {
-                  width: ${Slider.Thumb.Shape.Size.Disabled};
-                  height: ${Slider.Thumb.Shape.Size.Disabled};
-                  background-color: ${Slider.Thumb.Shape.BackgroundColor.Disabled};
-                  border-width: ${Slider.Thumb.Shape.Border.Disabled.width};
-                  border-style: ${Slider.Thumb.Shape.Border.Disabled.style};
-                  border-color: ${Slider.Thumb.Shape.Border.Disabled.color};
+                  width: ${slider.thumb.shape.size.disabled};
+                  height: ${slider.thumb.shape.size.disabled};
+                  background-color: ${slider.thumb.shape.bgcolor.disabled};
+                  border-width: ${slider.thumb.shape.border.disabled.width};
+                  border-style: ${slider.thumb.shape.border.disabled.style};
+                  border-color: ${slider.thumb.shape.border.disabled.color};
                 }
 
                 &::-moz-range-thumb {
-                  width: ${Slider.Thumb.Shape.Size.Disabled};
-                  height: ${Slider.Thumb.Shape.Size.Disabled};
-                  background-color: ${Slider.Thumb.Shape.BackgroundColor.Disabled};
-                  border-width: ${Slider.Thumb.Shape.Border.Disabled.width};
-                  border-style: ${Slider.Thumb.Shape.Border.Disabled.style};
-                  border-color: ${Slider.Thumb.Shape.Border.Disabled.color};
+                  width: ${slider.thumb.shape.size.disabled};
+                  height: ${slider.thumb.shape.size.disabled};
+                  background-color: ${slider.thumb.shape.bgcolor.disabled};
+                  border-width: ${slider.thumb.shape.border.disabled.width};
+                  border-style: ${slider.thumb.shape.border.disabled.style};
+                  border-color: ${slider.thumb.shape.border.disabled.color};
                 }
               }
             }
           }
 
           & > .inline-legend {
-            font-family: ${Slider.Legend.Typography.fontFamily}, Arial, sans-serif;
-            font-size: ${Slider.Legend.Typography.fontSize};
-            font-weight: ${Slider.Legend.Typography.fontWeight};
-            line-height: ${Slider.Legend.Typography.lineHeight};
-            color: ${Slider.Legend.TextColor.Default};
+            font-family: ${slider.legend.typography.fontFamily}, arial, sans-serif;
+            font-size: ${slider.legend.typography.fontSize};
+            font-weight: ${slider.legend.typography.fontWeight};
+            line-height: ${slider.legend.typography.lineHeight};
+            color: ${slider.legend.textcolor.default};
           }
 
           & > .inline-legend-disabled {
-            color: ${Slider.Legend.TextColor.Disabled};
+            color: ${slider.legend.textcolor.disabled};
           }
         }
       }

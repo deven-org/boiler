@@ -147,11 +147,11 @@ export class BlrTabBar extends LitElementCustom {
 
       const buttonIconSizeVariant = getComponentConfigToken([
         'cmp',
-        'ButtonIcon',
-        'Icon',
-        'SizeVariant',
-        this.size.toUpperCase(),
-      ]).toLowerCase() as SizesType;
+        'buttonicon',
+        'icon',
+        'sizevariant',
+        this.size,
+      ]) as SizesType;
 
       return html` <div class="${wrapperClasses}">
           ${this.overflowVariantStandard === 'buttons'
