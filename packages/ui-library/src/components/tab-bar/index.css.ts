@@ -2,14 +2,14 @@ import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticStyles = css`
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { ButtonIcon } = cmp;
-    const { TabBar } = cmp;
+  ${ComponentThemeIterator((theme, cmp, css) => {
+    const { buttonicon } = cmp;
+    const { tabbar } = cmp;
 
-    return typeSafeCss/* css */ `
+    return css`
       .panel-wrapper {
         margin-top: 2rem;
-      } 
+      }
 
       .wrapper-horizontal {
         position: relative;
@@ -22,10 +22,10 @@ export const staticStyles = css`
         }
 
         &.browserOverflow {
-          padding: 0px 1rem;
+          padding: 0 1rem;
         }
       }
-      
+
       .blr-tab-bar-group.${theme} {
         width: 100%;
         display: flex;
@@ -53,39 +53,38 @@ export const staticStyles = css`
           line-height: 0;
 
           &.sm {
-            padding: ${ButtonIcon.Container.Padding.SM};
+            padding: ${buttonicon.container.padding.sm};
 
             &.left {
-              margin: ${TabBar.ButtonWrapper.Padding.Leading.SM};
+              margin: ${tabbar.buttonwrapper.padding.leading.sm};
             }
 
             &.right {
-              margin: ${TabBar.ButtonWrapper.Padding.Trailing.SM};
+              margin: ${tabbar.buttonwrapper.padding.trailing.sm};
             }
           }
 
           &.md {
-            padding: ${ButtonIcon.Container.Padding.MD};
+            padding: ${buttonicon.container.padding.md};
 
             &.left {
-              margin: ${TabBar.ButtonWrapper.Padding.Leading.MD};
+              margin: ${tabbar.buttonwrapper.padding.leading.md};
             }
 
             &.right {
-              margin: ${TabBar.ButtonWrapper.Padding.Trailing.MD};
+              margin: ${tabbar.buttonwrapper.padding.trailing.md};
             }
-            
           }
 
           &.lg {
-            padding: ${ButtonIcon.Container.Padding.LG};
+            padding: ${buttonicon.container.padding.lg};
 
             &.left {
-              margin: ${TabBar.ButtonWrapper.Padding.Leading.LG};
+              margin: ${tabbar.buttonwrapper.padding.leading.lg};
             }
 
             &.right {
-              margin: ${TabBar.ButtonWrapper.Padding.Trailing.LG};
+              margin: ${tabbar.buttonwrapper.padding.trailing.lg};
             }
           }
         }

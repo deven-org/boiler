@@ -2,230 +2,219 @@ import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
 export const staticStyles = css`
-  ${ComponentThemeIterator((theme, cmp, typeSafeCss) => {
-    const { TabBar } = cmp;
+  ${ComponentThemeIterator((theme, cmp, css) => {
+    const { tabbar } = cmp;
 
-    return typeSafeCss/* css */ `
-    .nav-item-container.${theme} {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      &:focus-within:not(.disabled) {
-        outline: 2px solid black;
-        outline-offset: -2px;
-        border-radius: 4px;
-      }
-
-      .nav-item-underline {
-        &.selected {
-        background-color: ${TabBar.Tab.HighlightLine.BackgroundColor.Active.Pressed}
-        }
-      }
-
-      .nav-item-content-wrapper {
+    return css`
+      .nav-item-container.${theme} {
         display: flex;
+        flex-direction: column;
         justify-content: center;
 
-        &:focus-visible {
-          outline: none;
+        &:focus-within:not(.disabled) {
+          outline: 2px solid black;
+          outline-offset: -2px;
+          border-radius: 4px;
         }
 
-        & > .nav-item {
-          all: initial;
-          display: flex;
-          text-decoration: none;
-          align-items: center;
-          flex-shrink: 0;
-
+        .nav-item-underline {
           &.selected {
-
-            & > blr-icon {
-              color: ${TabBar.Tab.Icon.IconColor.Active.Rest};
-            }
-
-            & > label {
-              color: ${TabBar.Tab.Label.TextColor.Active.Rest};
-            }
-
-            &:focus {
-
-              &:not(.disabled) {
-
-                & > blr-icon {
-                  color: ${TabBar.Tab.Icon.IconColor.Active.Focus};
-                }
-
-                & > label {
-                  color: ${TabBar.Tab.Label.TextColor.Active.Focus};
-                }
-              }
-            }
-
-            &:hover {
-
-              &:not(.disabled) {
-
-                & > blr-icon {
-                  color: ${TabBar.Tab.Icon.IconColor.Active.Hover};
-                }
-
-                & > label {
-                  color: ${TabBar.Tab.Label.TextColor.Active.Hover};
-                }
-              }
-            }
-
-            &:active {
-
-              & > blr-icon {
-                color: ${TabBar.Tab.Icon.IconColor.Active.Pressed};
-              }
-
-              & > label {
-                color: ${TabBar.Tab.Label.TextColor.Active.Pressed};
-              }
-            }
+            background-color: ${tabbar.tab.highlightline.bgcolor.active.pressed};
           }
-          &:not(.selected) {
+        }
 
-            & > blr-icon {
-              color: ${TabBar.Tab.Icon.IconColor.Inactive.Rest};
-            }
-
-            & > label {
-              color: ${TabBar.Tab.Label.TextColor.Inactive.Rest};
-            }
-
-            &:focus {
-
-              & > blr-icon {
-                color
-                : ${TabBar.Tab.Icon.IconColor.Inactive.Focus};
-              }
-              & > label {
-                color: ${TabBar.Tab.Label.TextColor.Inactive.Focus};
-              }
-            }
-
-            &:hover {
-
-              & > blr-icon {
-                color: ${TabBar.Tab.Icon.IconColor.Inactive.Hover};
-              }
-
-              & > label {
-                color: ${TabBar.Tab.Label.TextColor.Inactive.Hover};
-              }
-            }
-
-            &:active {
-
-              & > blr-icon {
-                color: ${TabBar.Tab.Icon.IconColor.Inactive.Pressed};
-              }
-
-              & > label {
-                color: ${TabBar.Tab.Label.TextColor.Inactive.Pressed};
-              }
-            }
-
-            &.disabled {
-
-              & > blr-icon {
-                color: ${TabBar.Tab.Icon.IconColor.Inactive.Disabled};
-              }
-
-              & > label {
-                color: ${TabBar.Tab.Label.TextColor.Inactive.Disabled};
-              }
-            }
-          }
+        .nav-item-content-wrapper {
+          display: flex;
+          justify-content: center;
 
           &:focus-visible {
             outline: none;
           }
 
-          &.leading {
-            flex-direction: row;
-          }
-
-          &.trailing {
-            flex-direction: row-reverse;
-          }
-        }
-      }
-
-      &.sm {
-        padding-top: ${TabBar.Tab.ContentCol.PaddingTop.SM};
-        gap: ${TabBar.Tab.ContentCol.ItemSpacing.SM};
-
-        .nav-item-content-wrapper {
           & > .nav-item {
-            padding-left: ${TabBar.Tab.ContentRow.Padding_H.SM};
-            padding-right: ${TabBar.Tab.ContentRow.Padding_H.SM};
-            gap: ${TabBar.Tab.ContentRow.ItemSpacing.SM};
-            line-height:  ${TabBar.Tab.Label.Typography.SM.lineHeight};
+            all: initial;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            flex-shrink: 0;
 
-            & > blr-icon {
-              width: ${TabBar.Tab.Icon.IconSize.SM};
-              height: ${TabBar.Tab.Icon.IconSize.SM};
+            &.selected {
+              & > blr-icon {
+                color: ${tabbar.tab.icon.iconcolor.active.rest};
+              }
+
+              & > label {
+                color: ${tabbar.tab.label.textcolor.active.rest};
+              }
+
+              &:focus {
+                &:not(.disabled) {
+                  & > blr-icon {
+                    color: ${tabbar.tab.icon.iconcolor.active.focus};
+                  }
+
+                  & > label {
+                    color: ${tabbar.tab.label.textcolor.active.focus};
+                  }
+                }
+              }
+
+              &:hover {
+                &:not(.disabled) {
+                  & > blr-icon {
+                    color: ${tabbar.tab.icon.iconcolor.active.hover};
+                  }
+
+                  & > label {
+                    color: ${tabbar.tab.label.textcolor.active.hover};
+                  }
+                }
+              }
+
+              &:active {
+                & > blr-icon {
+                  color: ${tabbar.tab.icon.iconcolor.active.pressed};
+                }
+
+                & > label {
+                  color: ${tabbar.tab.label.textcolor.active.pressed};
+                }
+              }
+            }
+
+            &:not(.selected) {
+              & > blr-icon {
+                color: ${tabbar.tab.icon.iconcolor.inactive.rest};
+              }
+
+              & > label {
+                color: ${tabbar.tab.label.textcolor.inactive.rest};
+              }
+
+              &:focus {
+                & > blr-icon {
+                  color: ${tabbar.tab.icon.iconcolor.inactive.focus};
+                }
+
+                & > label {
+                  color: ${tabbar.tab.label.textcolor.inactive.focus};
+                }
+              }
+
+              &:hover {
+                & > blr-icon {
+                  color: ${tabbar.tab.icon.iconcolor.inactive.hover};
+                }
+
+                & > label {
+                  color: ${tabbar.tab.label.textcolor.inactive.hover};
+                }
+              }
+
+              &:active {
+                & > blr-icon {
+                  color: ${tabbar.tab.icon.iconcolor.inactive.pressed};
+                }
+
+                & > label {
+                  color: ${tabbar.tab.label.textcolor.inactive.pressed};
+                }
+              }
+
+              &.disabled {
+                & > blr-icon {
+                  color: ${tabbar.tab.icon.iconcolor.inactive.disabled};
+                }
+
+                & > label {
+                  color: ${tabbar.tab.label.textcolor.inactive.disabled};
+                }
+              }
+            }
+
+            &:focus-visible {
+              outline: none;
+            }
+
+            &.leading {
+              flex-direction: row;
+            }
+
+            &.trailing {
+              flex-direction: row-reverse;
             }
           }
         }
 
-        .nav-item-underline {
-          height: ${TabBar.Tab.HighlightLine.Height.SM};
-        }
-      }
+        &.sm {
+          padding-top: ${tabbar.tab.contentcol.paddingtop.sm};
+          gap: ${tabbar.tab.contentcol.itemspacing.sm};
 
-      &.md {
-        padding-top: ${TabBar.Tab.ContentCol.PaddingTop.MD};
-        gap: ${TabBar.Tab.ContentCol.ItemSpacing.MD};
+          .nav-item-content-wrapper {
+            & > .nav-item {
+              padding-left: ${tabbar.tab.contentrow.padding_h.sm};
+              padding-right: ${tabbar.tab.contentrow.padding_h.sm};
+              gap: ${tabbar.tab.contentrow.itemspacing.sm};
+              line-height: ${tabbar.tab.label.typography.sm.lineHeight};
 
-        .nav-item-content-wrapper {
-
-          & .nav-item {
-            padding-left: ${TabBar.Tab.ContentRow.Padding_H.MD};
-            padding-right: ${TabBar.Tab.ContentRow.Padding_H.MD};
-            gap: ${TabBar.Tab.ContentRow.ItemSpacing.MD};
-            line-height:  ${TabBar.Tab.Label.Typography.MD.lineHeight};
-
-            & blr-icon {
-              width: ${TabBar.Tab.Icon.IconSize.MD};
-              height: ${TabBar.Tab.Icon.IconSize.MD};
+              & > blr-icon {
+                width: ${tabbar.tab.icon.iconsize.sm};
+                height: ${tabbar.tab.icon.iconsize.sm};
+              }
             }
+          }
+
+          .nav-item-underline {
+            height: ${tabbar.tab.highlightline.height.sm};
           }
         }
 
-        .nav-item-underline {
-          height: ${TabBar.Tab.HighlightLine.Height.MD};
-        }
-      }
+        &.md {
+          padding-top: ${tabbar.tab.contentcol.paddingtop.md};
+          gap: ${tabbar.tab.contentcol.itemspacing.md};
 
-      &.lg {
-        padding-top: ${TabBar.Tab.ContentCol.PaddingTop.LG};
-        gap: ${TabBar.Tab.ContentCol.ItemSpacing.LG};
+          .nav-item-content-wrapper {
+            & .nav-item {
+              padding-left: ${tabbar.tab.contentrow.padding_h.md};
+              padding-right: ${tabbar.tab.contentrow.padding_h.md};
+              gap: ${tabbar.tab.contentrow.itemspacing.md};
+              line-height: ${tabbar.tab.label.typography.md.lineHeight};
 
-        .nav-item-content-wrapper {
-          & > .nav-item {
-            padding-left: ${TabBar.Tab.ContentRow.Padding_H.LG};
-            padding-right: ${TabBar.Tab.ContentRow.Padding_H.LG};
-            gap: ${TabBar.Tab.ContentRow.ItemSpacing.LG};
-            line-height:  ${TabBar.Tab.Label.Typography.LG.lineHeight};
-
-            & > blr-icon {
-              width: ${TabBar.Tab.Icon.IconSize.LG};
-              height: ${TabBar.Tab.Icon.IconSize.LG};
+              & blr-icon {
+                width: ${tabbar.tab.icon.iconsize.md};
+                height: ${tabbar.tab.icon.iconsize.md};
+              }
             }
+          }
+
+          .nav-item-underline {
+            height: ${tabbar.tab.highlightline.height.md};
           }
         }
 
-        .nav-item-underline {
-          height: ${TabBar.Tab.HighlightLine.Height.LG};
+        &.lg {
+          padding-top: ${tabbar.tab.contentcol.paddingtop.lg};
+          gap: ${tabbar.tab.contentcol.itemspacing.lg};
+
+          .nav-item-content-wrapper {
+            & > .nav-item {
+              padding-left: ${tabbar.tab.contentrow.padding_h.lg};
+              padding-right: ${tabbar.tab.contentrow.padding_h.lg};
+              gap: ${tabbar.tab.contentrow.itemspacing.lg};
+              line-height: ${tabbar.tab.label.typography.lg.lineHeight};
+
+              & > blr-icon {
+                width: ${tabbar.tab.icon.iconsize.lg};
+                height: ${tabbar.tab.icon.iconsize.lg};
+              }
+            }
+          }
+
+          .nav-item-underline {
+            height: ${tabbar.tab.highlightline.height.lg};
+          }
         }
       }
-    }
     `;
   })}
 `;

@@ -46,13 +46,13 @@ export const generateRangeBar = (
   twoKnobs?: string,
   isMinLesserThanMax?: boolean,
 ) => {
-  const { Slider } = ThemedTokens[theme];
+  const { slider } = ThemedTokens[theme];
 
-  const activeDefaultColor = Slider.Track.Border.Default.Active.color;
-  const activeMuteColor = Slider.Track.Border.Default.Inactive.color;
+  const activeDefaultColor = slider.track.border.default.active.color;
+  const activeMuteColor = slider.track.border.default.inactive.color;
 
-  const disabledDefaultColor = Slider.Track.Border.Mute.Active.color;
-  const disabledMuteColor = Slider.Track.Border.Mute.Inactive.color;
+  const disabledDefaultColor = slider.track.border.mute.active.color;
+  const disabledMuteColor = slider.track.border.mute.inactive.color;
 
   const defaultColor = disabled ? disabledDefaultColor : activeDefaultColor;
   const muteColor = disabled ? disabledMuteColor : activeMuteColor;

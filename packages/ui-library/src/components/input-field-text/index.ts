@@ -148,7 +148,7 @@ export class BlrInputFieldText extends LitElementCustom {
       'icon',
       'sizevariant',
       this.sizeVariant!,
-    ]).toLowerCase() as SizesType;
+    ]) as SizesType;
 
     const iconClasses = classMap({
       'icon-input': true,

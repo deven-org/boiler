@@ -4,8 +4,8 @@
       "lvl_1": {
         "value": {
           "x": "0",
-          "y": "{core.dimensionPX.4}",
-          "blur": "{core.dimensionPX.4}",
+          "y": "{core.dimensionpx.4}",
+          "blur": "{core.dimensionpx.4}",
           "spread": "0",
           "color": "{sys.shadow.100}",
           "type": "dropShadow"

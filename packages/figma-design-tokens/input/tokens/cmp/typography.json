@@ -36,18 +36,18 @@
         }
       }
     },
-    "Dialog": {
-      "ContentSection": {
-        "Text": {
-          "Typography": {
+    "dialog": {
+      "contentsection": {
+        "text": {
+          "typography": {
             "value": "{sem.ui.paragraph.s_200.regular}",
             "type": "typography"
           }
         }
       },
-      "HeaderSection": {
-        "Headline": {
-          "Typography": {
+      "headersection": {
+        "headline": {
+          "typography": {
             "value": "{sem.ui.headline.h5}",
             "type": "typography"
           }
@@ -58,15 +58,15 @@
       "label": {
         "typography": {
           "sm": {
-            "value": "{core.typography.sourceSansPro.semibold.87FixHeight}",
+            "value": "{core.typography.sourcesanspro.semibold.87fixheight}",
             "type": "typography"
           },
           "md": {
-            "value": "{core.typography.sourceSansPro.semibold.100FixHeight}",
+            "value": "{core.typography.sourcesanspro.semibold.100fixheight}",
             "type": "typography"
           },
           "lg": {
-            "value": "{core.typography.sourceSansPro.semibold.125FixHeight}",
+            "value": "{core.typography.sourcesanspro.semibold.125fixheight}",
             "type": "typography"
           }
         }
@@ -74,15 +74,15 @@
       "labelappendix": {
         "typography": {
           "sm": {
-            "value": "{core.typography.sourceSansPro.regular.75FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.75fixheight}",
             "type": "typography"
           },
           "md": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.87fixheight}",
             "type": "typography"
           },
           "lg": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.100fixheight}",
             "type": "typography"
           }
         }
@@ -90,97 +90,97 @@
       "inlinelabel": {
         "typography": {
           "sm": {
-            "value": "{core.typography.sourceSansPro.regular.87FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.87fixheight}",
             "type": "typography"
           },
           "md": {
-            "value": "{core.typography.sourceSansPro.regular.100FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.100fixheight}",
             "type": "typography"
           },
           "lg": {
-            "value": "{core.typography.sourceSansPro.regular.125FixHeight}",
+            "value": "{core.typography.sourcesanspro.regular.125fixheight}",
             "type": "typography"
           }
         }
       }
     },
-    "Menu": {
-      "MenuItem": {
-        "ItemLabel": {
-          "Typography": {
+    "menu": {
+      "menuitem": {
+        "itemlabel": {
+          "typography": {
             "value": "{sem.buttons.label.typography.md}",
             "type": "typography"
           }
         },
-        "ItemDescription": {
-          "Typography": {
+        "itemdescription": {
+          "typography": {
             "value": "{sem.ui.caption.s_200}",
             "type": "typography"
           }
         }
       },
-      "MenuSection": {
-        "SectionTitle": {
-          "Typography": {
-            "value": "{core.typography.sourceSansPro.semibold.75}",
+      "menusection": {
+        "sectiontitle": {
+          "typography": {
+            "value": "{core.typography.sourcesanspro.semibold.75}",
             "type": "typography"
           }
         }
       }
     },
-    "RadioGroup": {
-      "Legend": {
-        "SM": {
+    "radiogroup": {
+      "legend": {
+        "sm": {
           "value": "{sem.buttons.label.typography.sm}",
           "type": "typography",
-          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+          "description": "apply on <...radiogroup/.../legendwrapper/legend>"
         },
-        "MD": {
+        "md": {
           "value": "{sem.buttons.label.typography.md}",
           "type": "typography",
-          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+          "description": "apply on <...radiogroup/.../legendwrapper/legend>"
         },
-        "LG": {
+        "lg": {
           "value": "{sem.buttons.label.typography.lg}",
           "type": "typography",
-          "description": "Apply on <...RadioGroup/.../LegendWrapper/Legend>"
+          "description": "apply on <...radiogroup/.../legendwrapper/legend>"
         }
       }
     },
-    "Slider": {
-      "Legend": {
-        "Typography": {
-          "value": "{core.typography.sourceSansPro.regular.75}",
+    "slider": {
+      "legend": {
+        "typography": {
+          "value": "{core.typography.sourcesanspro.regular.75}",
           "type": "typography"
         }
       }
     },
-    "TabBar": {
-      "Tab": {
-        "Label": {
-          "Typography": {
-            "SM": {
+    "tabbar": {
+      "tab": {
+        "label": {
+          "typography": {
+            "sm": {
               "value": "{sem.buttons.label.typography.sm}",
               "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
+              "description": "typography of the label of a tab-button"
             },
-            "MD": {
+            "md": {
               "value": "{sem.buttons.label.typography.md}",
               "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
+              "description": "typography of the label of a tab-button"
             },
-            "LG": {
+            "lg": {
               "value": "{sem.buttons.label.typography.lg}",
               "type": "typography",
-              "description": "Typography of the Label of a Tab-Button"
+              "description": "typography of the label of a tab-button"
             }
           }
         }
       }
     },
-    "Tooltip": {
-      "Text": {
-        "Typography": {
+    "tooltip": {
+      "text": {
+        "typography": {
           "value": "{sem.ui.caption.s_100}",
           "type": "typography"
         }

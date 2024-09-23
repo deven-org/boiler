@@ -1,26 +1,26 @@
 {
   "cmp": {
-    "ButtonGroup": {
-      "Container": {
-        "ItemSpacing": {
-          "XS": {
-            "value": "{core.dimensionPX.4}",
+    "buttongroup": {
+      "container": {
+        "itemspacing": {
+          "xs": {
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
-          "SM": {
-            "value": "{core.dimensionPX.4}",
+          "sm": {
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionPX.8}",
+          "md": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionPX.8}",
+          "lg": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           },
-          "XL": {
-            "value": "{core.dimensionPX.8}",
+          "xl": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           }
         }
@@ -30,43 +30,43 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           }
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         },
@@ -88,15 +88,15 @@
       "iconwrapper": {
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionREM.1}",
+            "value": "{core.dimensionrem.1}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0,5}",
+            "value": "{core.dimensionrem.0,5}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionrem.5}",
             "type": "spacing"
           }
         }
@@ -104,16 +104,16 @@
       "icon": {
         "iconsize": {
           "sm": {
-            "value": "{core.dimensionREM.14}",
+            "value": "{core.dimensionrem.14}",
             "type": "sizing",
-            "description": "Defines the physical size of the icon inside the formcaption"
+            "description": "defines the physical size of the icon inside the formcaption"
           },
           "md": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
           "lg": {
-            "value": "{core.dimensionREM.16}",
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           }
         }
@@ -121,29 +121,29 @@
       "textwrapper": {
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         },
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         },
@@ -167,19 +167,19 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Defines the gap between hint and error message"
+            "description": "defines the gap between hint and error message"
           },
           "md": {
-            "value": "{core.dimensionREM.5}",
+            "value": "{core.dimensionrem.5}",
             "type": "spacing",
-            "description": "Defines the gap between hint and error message"
+            "description": "defines the gap between hint and error message"
           },
           "lg": {
-            "value": "{core.dimensionREM.6}",
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
-            "description": "Defines the gap between hint and error message"
+            "description": "defines the gap between hint and error message"
           }
         }
       }
@@ -188,34 +188,34 @@
       "contentcol": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "controls the vertical spacing between inlinelabel and the caption."
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "controls the vertical spacing between inlinelabel and the caption."
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "controls the vertical spacing between inlinelabel and the caption."
           }
         },
         "paddingtop": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
             "description": "can be used to verticaly align the content of the textcontainer against the control"
           }
@@ -224,17 +224,17 @@
       "contentrow": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "controls the horizontal spacing between the control and the label"
           },
           "md": {
-            "value": "{core.dimensionPX.8}",
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
             "description": "controls the horizontal spacing between the control and the label"
           },
           "lg": {
-            "value": "{core.dimensionPX.12}",
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
             "description": "controls the horizontal spacing between the control and the label"
           }
@@ -248,12 +248,12 @@
             "description": "can be used to align the checkbox control against the text"
           },
           "md": {
-            "value": "{core.dimensionREM.4}",
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
             "description": "can be used to align the checkbox control against the text"
           },
           "lg": {
-            "value": "{core.dimensionREM.2}",
+            "value": "{core.dimensionrem.2}",
             "type": "spacing",
             "description": "can be used to align the checkbox control against the text"
           }
@@ -265,7 +265,7 @@
             "sm": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -302,7 +302,7 @@
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionPX.1}",
+                  "value": "{core.dimensionpx.1}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -341,7 +341,7 @@
             "md": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -378,7 +378,7 @@
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionPX.1}",
+                  "value": "{core.dimensionpx.1}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -417,7 +417,7 @@
             "lg": {
               "active": {
                 "rest": {
-                  "value": "{core.dimensionPX.0}",
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -454,7 +454,7 @@
               },
               "inactive": {
                 "rest": {
-                  "value": "{core.dimensionPX.1}",
+                  "value": "{core.dimensionpx.1}",
                   "type": "borderWidth",
                   "description": "figma only! do not apply on codes comps"
                 },
@@ -507,15 +507,15 @@
           },
           "size": {
             "sm": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
             "md": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
             "lg": {
-              "value": "{core.dimensionPX.20}",
+              "value": "{core.dimensionpx.20}",
               "type": "sizing"
             }
           }
@@ -524,7 +524,7 @@
           "iconsize": {
             "sm": {
               "rest": {
-                "value": "{core.dimensionPX.16}",
+                "value": "{core.dimensionpx.16}",
                 "type": "sizing"
               },
               "hover": {
@@ -554,7 +554,7 @@
             },
             "md": {
               "rest": {
-                "value": "{core.dimensionPX.16}",
+                "value": "{core.dimensionpx.16}",
                 "type": "sizing"
               },
               "hover": {
@@ -584,7 +584,7 @@
             },
             "lg": {
               "rest": {
-                "value": "{core.dimensionPX.20}",
+                "value": "{core.dimensionpx.20}",
                 "type": "sizing"
               },
               "hover": {
@@ -620,7 +620,7 @@
       "container": {
         "padding_v": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
             "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
@@ -637,7 +637,7 @@
         },
         "padding_h": {
           "sm": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing",
             "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
@@ -702,139 +702,139 @@
         },
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.2}",
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           }
         }
       }
     },
-    "Dialog": {
-      "Container": {
-        "MaxWidth": {
-          "XS": {
+    "dialog": {
+      "container": {
+        "maxwidth": {
+          "xs": {
             "value": "400px",
             "type": "sizing"
           },
-          "SM": {
+          "sm": {
             "value": "600px",
             "type": "sizing"
           },
-          "MD": {
+          "md": {
             "value": "900px",
             "type": "sizing"
           },
-          "LG": {
+          "lg": {
             "value": "1200px",
             "type": "sizing"
           },
-          "XL": {
+          "xl": {
             "value": "1556px",
             "type": "sizing"
           }
         },
-        "Padding": {
-          "XS": {
-            "value": "{core.dimensionPX.64}",
+        "padding": {
+          "xs": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "SM": {
-            "value": "{core.dimensionPX.64}",
+          "sm": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "MD": {
-            "value": "{core.dimensionPX.64}",
+          "md": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "LG": {
-            "value": "{core.dimensionPX.64}",
+          "lg": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           },
-          "XL": {
-            "value": "{core.dimensionPX.64}",
+          "xl": {
+            "value": "{core.dimensionpx.64}",
             "type": "spacing",
             "description": "Defines the margin of Dialog Combined"
           }
         },
-        "BorderRadius": {
+        "borderradius": {
           "value": "{sys.borderradius.lg}",
           "type": "borderRadius"
         }
       },
-      "ContentSection": {
-        "Container": {
-          "Padding": {
-            "value": "{cmp.Dialog.ContentSection.Container.Padding_V} {cmp.Dialog.ContentSection.Container.Padding_H}",
+      "contentsection": {
+        "container": {
+          "padding": {
+            "value": "{cmp.dialog.contentsection.container.padding_v} {cmp.dialog.contentsection.container.padding_h}",
             "type": "spacing"
           },
-          "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+          "padding_h": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           },
-          "Padding_V": {
-            "value": "{core.dimensionPX.8}",
+          "padding_v": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           }
         }
       },
-      "HeaderSection": {
-        "Container": {
-          "Padding": {
-            "value": "{cmp.Dialog.HeaderSection.Container.Padding_V} {cmp.Dialog.HeaderSection.Container.Padding_H}",
+      "headersection": {
+        "container": {
+          "padding": {
+            "value": "{cmp.dialog.headersection.container.padding_v} {cmp.dialog.headersection.container.padding_h}",
             "type": "spacing"
           },
-          "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+          "padding_h": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           },
-          "Padding_V": {
-            "value": "{core.dimensionPX.16}",
+          "padding_v": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           }
         }
       },
-      "FooterSection": {
-        "Container": {
-          "Padding": {
-            "value": "{cmp.Dialog.FooterSection.Container.Padding_V} {cmp.Dialog.FooterSection.Container.Padding_H}",
+      "footersection": {
+        "container": {
+          "padding": {
+            "value": "{cmp.dialog.footersection.container.padding_v} {cmp.dialog.footersection.container.padding_h}",
             "type": "spacing"
           },
-          "Padding_H": {
-            "value": "{core.dimensionPX.8}",
+          "padding_h": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           },
-          "Padding_V": {
-            "value": "{core.dimensionPX.8}",
+          "padding_v": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing"
           }
         }
       }
     },
-    "Divider": {
-      "Container": {
-        "Horizontal": {
-          "Height": {
-            "value": "{core.dimensionPX.1}",
+    "divider": {
+      "container": {
+        "horizontal": {
+          "height": {
+            "value": "{core.dimensionpx.1}",
             "type": "sizing",
-            "description": "The thickness of the divider\n>>> new"
+            "description": "the thickness of the divider\n>>> new"
           }
         },
-        "Vertical": {
-          "Width": {
-            "value": "{cmp.Divider.Container.Horizontal.Height}",
+        "vertical": {
+          "width": {
+            "value": "{cmp.divider.container.horizontal.height}",
             "type": "sizing",
-            "description": "The thickness of the divider\n>>> new"
+            "description": "the thickness of the divider\n>>> new"
           }
         }
       }
@@ -843,15 +843,15 @@
       "container": {
         "itemspacing": {
           "sm": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.4}",
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           }
         },
@@ -871,869 +871,869 @@
         }
       }
     },
-    "Icon": {
-      "Container": {
-        "Size": {
-          "XXS": {
-            "value": "{core.dimensionREM.8}",
+    "icon": {
+      "container": {
+        "size": {
+          "xxs": {
+            "value": "{core.dimensionrem.8}",
             "type": "sizing",
-            "description": "size of XXS icon\n>>>: UI.Icon.XXS"
+            "description": "size of xxs icon\n>>>: ui.icon.xxs"
           },
-          "XS": {
-            "value": "{core.dimensionREM.12}",
+          "xs": {
+            "value": "{core.dimensionrem.12}",
             "type": "sizing",
-            "description": "size of XS icon\n>>> UI.Icon.XS"
+            "description": "size of xs icon\n>>> ui.icon.xs"
           },
-          "SM": {
-            "value": "{core.dimensionREM.16}",
+          "sm": {
+            "value": "{core.dimensionrem.16}",
             "type": "sizing",
-            "description": "size of SM icon\n>>> UI.Icon.SM\n"
+            "description": "size of sm icon\n>>> ui.icon.sm\n"
           },
-          "MD": {
-            "value": "{core.dimensionREM.24}",
+          "md": {
+            "value": "{core.dimensionrem.24}",
             "type": "sizing",
-            "description": "size of MD icon\n>>> UI.Icon.MD"
+            "description": "size of md icon\n>>> ui.icon.md"
           },
-          "LG": {
-            "value": "{core.dimensionREM.32}",
+          "lg": {
+            "value": "{core.dimensionrem.32}",
             "type": "sizing",
-            "description": "size of LG icon\n>>> UI.Icon.LG"
+            "description": "size of lg icon\n>>> ui.icon.lg"
           },
-          "XL": {
-            "value": "{core.dimensionREM.48}",
+          "xl": {
+            "value": "{core.dimensionrem.48}",
             "type": "sizing",
-            "description": "size of XL icon\n>>> UI.Icon.XL"
+            "description": "size of xl icon\n>>> ui.icon.xl"
           }
         }
       }
     },
-    "ButtonIcon": {
-      "Container": {
-        "Padding": {
-          "XS": {
-            "value": "{core.dimensionREM.6}",
+    "buttonicon": {
+      "container": {
+        "padding": {
+          "xs": {
+            "value": "{core.dimensionrem.6}",
             "type": "spacing"
           },
-          "SM": {
-            "value": "{core.dimensionREM.6}",
+          "sm": {
+            "value": "{core.dimensionrem.6}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
-          "XL": {
-            "value": "{core.dimensionREM.12}",
+          "xl": {
+            "value": "{core.dimensionrem.12}",
             "type": "spacing"
           }
         },
-        "ItemSpacing": {
-          "XS": {
+        "itemspacing": {
+          "xs": {
             "value": "0",
             "type": "spacing"
           },
-          "SM": {
+          "sm": {
             "value": "0",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "0",
             "type": "spacing"
           },
-          "LG": {
+          "lg": {
             "value": "0",
             "type": "spacing"
           },
-          "XL": {
+          "xl": {
             "value": "0",
             "type": "spacing"
           }
         },
-        "BorderRadius": {
-          "XS": {
+        "borderradius": {
+          "xs": {
             "value": "{sem.buttons.container.borderradius.xs}",
             "type": "borderRadius"
           },
-          "SM": {
+          "sm": {
             "value": "{sem.buttons.container.borderradius.sm}",
             "type": "borderRadius"
           },
-          "MD": {
+          "md": {
             "value": "{sem.buttons.container.borderradius.md}",
             "type": "borderRadius"
           },
-          "LG": {
+          "lg": {
             "value": "{sem.buttons.container.borderradius.lg}",
             "type": "borderRadius"
           },
-          "XL": {
+          "xl": {
             "value": "{sem.buttons.container.borderradius.xl}",
             "type": "borderRadius"
           }
         }
       }
     },
-    "IconDropdown": {
-      "Container": {
-        "PaddingTop": {
-          "XS": {
-            "value": "{core.dimensionREM.6}",
+    "icondropdown": {
+      "container": {
+        "paddingtop": {
+          "xs": {
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.6}",
+          "sm": {
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.12}",
+          "xl": {
+            "value": "{core.dimensionrem.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "PaddingRight": {
-          "XS": {
-            "value": "{core.dimensionREM.1}",
+        "paddingright": {
+          "xs": {
+            "value": "{core.dimensionrem.1}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.1}",
+          "sm": {
+            "value": "{core.dimensionrem.1}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.1}",
+          "md": {
+            "value": "{core.dimensionrem.1}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.0}",
+          "lg": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.0}",
+          "xl": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "PaddingBottom": {
-          "XS": {
-            "value": "{core.dimensionREM.6}",
+        "paddingbottom": {
+          "xs": {
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.6}",
+          "sm": {
+            "value": "{core.dimensionrem.6}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.12}",
+          "xl": {
+            "value": "{core.dimensionrem.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "PaddingLeft": {
-          "XS": {
-            "value": "{core.dimensionREM.3}",
+        "paddingleft": {
+          "xs": {
+            "value": "{core.dimensionrem.3}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.3}",
+          "sm": {
+            "value": "{core.dimensionrem.3}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.3}",
+          "md": {
+            "value": "{core.dimensionrem.3}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.2}",
+          "lg": {
+            "value": "{core.dimensionrem.2}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.4}",
+          "xl": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "Padding": {
-          "XS": {
-            "value": "{cmp.IconDropdown.Container.PaddingTop.XS} {cmp.IconDropdown.Container.PaddingRight.XS} {cmp.IconDropdown.Container.PaddingBottom.XS} {cmp.IconDropdown.Container.PaddingLeft.XS}",
+        "padding": {
+          "xs": {
+            "value": "{cmp.icondropdown.container.paddingtop.xs} {cmp.icondropdown.container.paddingright.xs} {cmp.icondropdown.container.paddingbottom.xs} {cmp.icondropdown.container.paddingleft.xs}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "SM": {
-            "value": "{cmp.IconDropdown.Container.PaddingTop.SM} {cmp.IconDropdown.Container.PaddingRight.SM} {cmp.IconDropdown.Container.PaddingBottom.SM} {cmp.IconDropdown.Container.PaddingLeft.SM}",
+          "sm": {
+            "value": "{cmp.icondropdown.container.paddingtop.sm} {cmp.icondropdown.container.paddingright.sm} {cmp.icondropdown.container.paddingbottom.sm} {cmp.icondropdown.container.paddingleft.sm}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "MD": {
-            "value": "{cmp.IconDropdown.Container.PaddingTop.MD} {cmp.IconDropdown.Container.PaddingRight.MD} {cmp.IconDropdown.Container.PaddingBottom.MD} {cmp.IconDropdown.Container.PaddingLeft.MD}",
+          "md": {
+            "value": "{cmp.icondropdown.container.paddingtop.md} {cmp.icondropdown.container.paddingright.md} {cmp.icondropdown.container.paddingbottom.md} {cmp.icondropdown.container.paddingleft.md}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "LG": {
-            "value": "{cmp.IconDropdown.Container.PaddingTop.LG} {cmp.IconDropdown.Container.PaddingRight.LG} {cmp.IconDropdown.Container.PaddingBottom.LG} {cmp.IconDropdown.Container.PaddingLeft.LG}",
+          "lg": {
+            "value": "{cmp.icondropdown.container.paddingtop.lg} {cmp.icondropdown.container.paddingright.lg} {cmp.icondropdown.container.paddingbottom.lg} {cmp.icondropdown.container.paddingleft.lg}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "XL": {
-            "value": "{cmp.IconDropdown.Container.PaddingTop.XL} {cmp.IconDropdown.Container.PaddingRight.XL} {cmp.IconDropdown.Container.PaddingBottom.XL} {cmp.IconDropdown.Container.PaddingLeft.XL}",
+          "xl": {
+            "value": "{cmp.icondropdown.container.paddingtop.xl} {cmp.icondropdown.container.paddingright.xl} {cmp.icondropdown.container.paddingbottom.xl} {cmp.icondropdown.container.paddingleft.xl}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           }
         },
-        "ItemSpacing": {
-          "XS": {
+        "itemspacing": {
+          "xs": {
             "value": "0",
             "type": "spacing"
           },
-          "SM": {
+          "sm": {
             "value": "0",
             "type": "spacing"
           },
-          "MD": {
+          "md": {
             "value": "0",
             "type": "spacing"
           },
-          "LG": {
-            "value": "-{core.dimensionREM.2}",
+          "lg": {
+            "value": "-{core.dimensionrem.2}",
             "type": "spacing"
           },
-          "XL": {
-            "value": "-{core.dimensionREM.4}",
+          "xl": {
+            "value": "-{core.dimensionrem.4}",
             "type": "spacing"
           }
         },
-        "BorderRadius": {
-          "XS": {
+        "borderradius": {
+          "xs": {
             "value": "{sem.buttons.container.borderradius.xs}",
             "type": "borderRadius"
           },
-          "SM": {
+          "sm": {
             "value": "{sem.buttons.container.borderradius.sm}",
             "type": "borderRadius"
           },
-          "MD": {
+          "md": {
             "value": "{sem.buttons.container.borderradius.md}",
             "type": "borderRadius"
           },
-          "LG": {
+          "lg": {
             "value": "{sem.buttons.container.borderradius.lg}",
             "type": "borderRadius"
           },
-          "XL": {
+          "xl": {
             "value": "{sem.buttons.container.borderradius.xl}",
             "type": "borderRadius"
           }
         }
       }
     },
-    "Loader": {
-      "Container": {
-        "Size": {
-          "SM": {
-            "value": "{core.dimensionREM.16}",
+    "loader": {
+      "container": {
+        "size": {
+          "sm": {
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.24}",
+          "md": {
+            "value": "{core.dimensionrem.24}",
             "type": "sizing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.32}",
+          "lg": {
+            "value": "{core.dimensionrem.32}",
             "type": "sizing"
           }
         },
-        "Padding": {
-          "SM": {
-            "value": "{core.dimensionREM.1}",
+        "padding": {
+          "sm": {
+            "value": "{core.dimensionrem.1}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.2}",
+          "md": {
+            "value": "{core.dimensionrem.2}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.3}",
+          "lg": {
+            "value": "{core.dimensionrem.3}",
             "type": "spacing"
           }
         }
       },
-      "Background": {
-        "BorderWidth": {
-          "SM": {
-            "value": "{core.dimensionPX.2}",
+      "background": {
+        "borderwidth": {
+          "sm": {
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
+          "md": {
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
-          "LG": {
-            "value": "{core.dimensionPX.3}",
+          "lg": {
+            "value": "{core.dimensionpx.3}",
             "type": "borderWidth"
           }
         }
       },
-      "Foreground": {
-        "BorderWidth": {
-          "SM": {
-            "value": "{core.dimensionPX.2}",
+      "foreground": {
+        "borderwidth": {
+          "sm": {
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
+          "md": {
+            "value": "{core.dimensionpx.2}",
             "type": "borderWidth"
           },
-          "LG": {
-            "value": "{core.dimensionPX.3}",
+          "lg": {
+            "value": "{core.dimensionpx.3}",
             "type": "borderWidth"
           }
         }
       }
     },
-    "Menu": {
-      "Container": {
-        "BorderRadius": {
+    "menu": {
+      "container": {
+        "borderradius": {
           "value": "{sys.borderradius.lg}",
           "type": "borderRadius",
-          "description": "Defines the border radius of the whole menu component"
+          "description": "defines the border radius of the whole menu component"
         }
       },
-      "MenuItem": {
-        "ItemContainer": {
-          "Padding": {
-            "value": "{cmp.Menu.MenuItem.ItemContainer.Padding_V} {cmp.Menu.MenuItem.ItemContainer.Padding_H}",
+      "menuitem": {
+        "itemcontainer": {
+          "padding": {
+            "value": "{cmp.menu.menuitem.itemcontainer.padding_v} {cmp.menu.menuitem.itemcontainer.padding_h}",
             "type": "spacing",
-            "description": "Adds padding to the menu item"
+            "description": "adds padding to the menu item"
           },
-          "BorderRadius": {
+          "borderradius": {
             "value": "{sys.borderradius.lg}",
             "type": "borderRadius",
-            "description": "Defines the border radius of a single menu item."
+            "description": "defines the border radius of a single menu item."
           },
-          "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+          "padding_h": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing"
           },
-          "Padding_V": {
-            "value": "{core.dimensionREM.8}",
+          "padding_v": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           }
         },
-        "ContentRow": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.4}",
+        "contentrow": {
+          "itemspacing": {
+            "value": "{core.dimensionpx.4}",
             "type": "spacing",
-            "description": "Adds space between Icons and ContentStack (Label & Description)"
+            "description": "adds space between icons and contentstack (label & description)"
           }
         },
-        "ContentStack": {
-          "ItemSpacing": {
+        "contentstack": {
+          "itemspacing": {
             "value": "0",
             "type": "spacing",
-            "description": "Adds space between Label & Description"
+            "description": "adds space between label & description"
           }
         },
-        "ItemIcon": {
-          "IconSize": {
-            "value": "{cmp.Icon.Container.Size.SM}",
+        "itemicon": {
+          "iconsize": {
+            "value": "{cmp.icon.container.size.sm}",
             "type": "sizing"
           }
         }
       },
-      "MenuSection": {
-        "SectionTitleWrapper": {
-          "Padding": {
-            "value": "{cmp.Menu.MenuSection.SectionTitleWrapper.PaddingTop} {cmp.Menu.MenuSection.SectionTitleWrapper.Padding_H} {cmp.Menu.MenuSection.SectionTitleWrapper.PaddingBottom} {cmp.Menu.MenuSection.SectionTitleWrapper.Padding_H}",
+      "menusection": {
+        "sectiontitlewrapper": {
+          "padding": {
+            "value": "{cmp.menu.menusection.sectiontitlewrapper.paddingtop} {cmp.menu.menusection.sectiontitlewrapper.padding_h} {cmp.menu.menusection.sectiontitlewrapper.paddingbottom} {cmp.menu.menusection.sectiontitlewrapper.padding_h}",
             "type": "spacing",
-            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           },
-          "Padding_H": {
-            "value": "{core.dimensionPX.16}",
+          "padding_h": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
-            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           },
-          "PaddingTop": {
-            "value": "{core.dimensionPX.16}",
+          "paddingtop": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
-            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           },
-          "PaddingBottom": {
-            "value": "{core.dimensionPX.8}",
+          "paddingbottom": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
-            "description": "Defines the padding around the section title text. Apply on SectionTitleWrapper"
+            "description": "defines the padding around the section title text. apply on sectiontitlewrapper"
           }
         },
-        "ItemStack": {
-          "ItemSpacing": {
-            "value": "{core.dimensionPX.0}",
+        "itemstack": {
+          "itemspacing": {
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         }
       },
-      "MenuSectionStack": {
-        "ItemSpacing": {
-          "value": "{core.dimensionPX.12}",
+      "menusectionstack": {
+        "itemspacing": {
+          "value": "{core.dimensionpx.12}",
           "type": "spacing",
-          "description": "Defines the space between each menu section"
+          "description": "defines the space between each menu section"
         },
-        "Padding": {
-          "value": "{core.dimensionPX.12}",
+        "padding": {
+          "value": "{core.dimensionpx.12}",
           "type": "spacing",
-          "description": "Defines the padding around all stacked menu sections."
+          "description": "defines the padding around all stacked menu sections."
         }
       }
     },
-    "InputFieldNumber": {
-      "InputField": {
-        "TextWrapper": {
-          "ItemSpacing": {
-            "SM": {
-              "value": "{core.dimensionPX.4}",
+    "inputfieldnumber": {
+      "inputfield": {
+        "textwrapper": {
+          "itemspacing": {
+            "sm": {
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
-              "description": "Defines spacing between Prefix, UserInputText and Suffix"
+              "description": "defines spacing between prefix, userinputtext and suffix"
             },
-            "MD": {
-              "value": "{core.dimensionPX.4}",
+            "md": {
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
-              "description": "Defines spacing between Prefix, UserInputText and Suffix"
+              "description": "defines spacing between prefix, userinputtext and suffix"
             },
-            "LG": {
-              "value": "{core.dimensionPX.4}",
+            "lg": {
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
-              "description": "Defines spacing between Prefix, UserInputText and Suffix"
+              "description": "defines spacing between prefix, userinputtext and suffix"
             }
           }
         }
       }
     },
-    "Radio": {
-      "Control": {
-        "Container": {
-          "Size": {
-            "SM": {
-              "value": "{core.dimensionPX.16}",
+    "radio": {
+      "control": {
+        "container": {
+          "size": {
+            "sm": {
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
-            "MD": {
-              "value": "{core.dimensionPX.16}",
+            "md": {
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             },
-            "LG": {
-              "value": "{core.dimensionPX.16}",
+            "lg": {
+              "value": "{core.dimensionpx.16}",
               "type": "sizing"
             }
           },
-          "BorderRadius": {
+          "borderradius": {
             "value": "{sys.borderradius.round}",
             "type": "borderRadius"
           },
-          "BorderWidth": {
-            "SM": {
-              "Active": {
-                "Rest": {
-                  "value": "{core.dimensionPX.0}",
+          "borderwidth": {
+            "sm": {
+              "active": {
+                "rest": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                "hover": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                "pressed": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                "focus": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                "disabled": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                "readonly": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.0}",
+                "error": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
-                  "value": "{core.dimensionPX.0}",
+              "inactive": {
+                "rest": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                "hover": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                "pressed": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                "focus": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                "disabled": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                "readonly": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.0}",
+                "error": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               }
             },
-            "MD": {
-              "Active": {
-                "Rest": {
-                  "value": "{core.dimensionPX.0}",
+            "md": {
+              "active": {
+                "rest": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                "hover": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                "pressed": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                "focus": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                "disabled": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                "readonly": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.0}",
+                "error": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
-                  "value": "{core.dimensionPX.0}",
+              "inactive": {
+                "rest": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                "hover": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                "pressed": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                "focus": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                "disabled": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                "readonly": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.0}",
+                "error": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               }
             },
-            "LG": {
-              "Active": {
-                "Rest": {
-                  "value": "{core.dimensionPX.0}",
+            "lg": {
+              "active": {
+                "rest": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                "hover": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                "pressed": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                "focus": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                "disabled": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                "readonly": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.0}",
+                "error": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
-                  "value": "{core.dimensionPX.0}",
+              "inactive": {
+                "rest": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.0}",
+                "hover": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.0}",
+                "pressed": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.0}",
+                "focus": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.0}",
+                "disabled": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.0}",
+                "readonly": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.0}",
+                "error": {
+                  "value": "{core.dimensionpx.0}",
                   "type": "borderWidth"
                 }
               }
             }
           }
         },
-        "Icon": {
-          "IconSize": {
-            "SM": {
-              "Inactive": {
-                "Rest": {
-                  "value": "{core.dimensionPX.14}",
+        "icon": {
+          "iconsize": {
+            "sm": {
+              "inactive": {
+                "rest": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.12}",
+                "hover": {
+                  "value": "{core.dimensionpx.12}",
                   "type": "sizing"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                "pressed": {
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.14}",
+                "focus": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.14}",
+                "disabled": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.14}",
+                "readonly": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.14}",
+                "error": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 }
               },
-              "Active": {
-                "Rest": {
-                  "value": "{core.dimensionPX.6}",
+              "active": {
+                "rest": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.8}",
+                "hover": {
+                  "value": "{core.dimensionpx.8}",
                   "type": "sizing"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                "pressed": {
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.6}",
+                "focus": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.6}",
+                "disabled": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.6}",
+                "readonly": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.6}",
+                "error": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 }
               }
             },
-            "MD": {
-              "Inactive": {
-                "Rest": {
-                  "value": "{core.dimensionPX.14}",
+            "md": {
+              "inactive": {
+                "rest": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.12}",
+                "hover": {
+                  "value": "{core.dimensionpx.12}",
                   "type": "sizing"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                "pressed": {
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.14}",
+                "focus": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.14}",
+                "disabled": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.14}",
+                "readonly": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.14}",
+                "error": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 }
               },
-              "Active": {
-                "Rest": {
-                  "value": "{core.dimensionPX.6}",
+              "active": {
+                "rest": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.8}",
+                "hover": {
+                  "value": "{core.dimensionpx.8}",
                   "type": "sizing"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                "pressed": {
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.6}",
+                "focus": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.6}",
+                "disabled": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.6}",
+                "readonly": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.6}",
+                "error": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 }
               }
             },
-            "LG": {
-              "Inactive": {
-                "Rest": {
-                  "value": "{core.dimensionPX.14}",
+            "lg": {
+              "inactive": {
+                "rest": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.12}",
+                "hover": {
+                  "value": "{core.dimensionpx.12}",
                   "type": "sizing"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                "pressed": {
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.14}",
+                "focus": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.14}",
+                "disabled": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.14}",
+                "readonly": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.14}",
+                "error": {
+                  "value": "{core.dimensionpx.14}",
                   "type": "sizing"
                 }
               },
-              "Active": {
-                "Rest": {
-                  "value": "{core.dimensionPX.6}",
+              "active": {
+                "rest": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Hover": {
-                  "value": "{core.dimensionPX.8}",
+                "hover": {
+                  "value": "{core.dimensionpx.8}",
                   "type": "sizing"
                 },
-                "Pressed": {
-                  "value": "{core.dimensionPX.10}",
+                "pressed": {
+                  "value": "{core.dimensionpx.10}",
                   "type": "sizing"
                 },
-                "Focus": {
-                  "value": "{core.dimensionPX.6}",
+                "focus": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Disabled": {
-                  "value": "{core.dimensionPX.6}",
+                "disabled": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "ReadOnly": {
-                  "value": "{core.dimensionPX.6}",
+                "readonly": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 },
-                "Error": {
-                  "value": "{core.dimensionPX.6}",
+                "error": {
+                  "value": "{core.dimensionpx.6}",
                   "type": "sizing"
                 }
               }
@@ -1741,1385 +1741,1385 @@
           }
         }
       },
-      "ContentCol": {
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionPX.0}",
+      "contentcol": {
+        "itemspacing": {
+          "sm": {
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
+            "description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
           },
-          "MD": {
-            "value": "{core.dimensionPX.0}",
+          "md": {
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+            "description": "controls the vertical spacing between labelnexttocontrol and the caption.\napplied on: textcontainer"
           },
-          "LG": {
-            "value": "{core.dimensionPX.0}",
+          "lg": {
+            "value": "{core.dimensionpx.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between LabelNextToControl and the Caption.\nApplied on: TextContainer"
+            "description": "controls the vertical spacing between labelnexttocontrol and the caption.\napplied on: textcontainer"
           }
         },
-        "PaddingTop": {
-          "SM": {
-            "value": "{core.dimensionREM.0}",
+        "paddingtop": {
+          "sm": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+            "description": "can be used to verticaly align the content of the textcontainer against the control"
           },
-          "MD": {
-            "value": "{core.dimensionREM.0}",
+          "md": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
-            "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
+            "description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
           },
-          "LG": {
-            "value": "{core.dimensionREM.0}",
+          "lg": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
-            "description": "Can be used to verticaly align the Content of the TextContainer against the Control"
+            "description": "can be used to verticaly align the content of the textcontainer against the control"
           }
         }
       },
-      "ContentRow": {
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionPX.8}",
+      "contentrow": {
+        "itemspacing": {
+          "sm": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+            "description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
           },
-          "MD": {
-            "value": "{core.dimensionPX.8}",
+          "md": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+            "description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
           },
-          "LG": {
-            "value": "{core.dimensionPX.12}",
+          "lg": {
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
-            "description": "Controls the horizontal spacing between the Control and the Label; applied to <ControlLabelContainer>"
+            "description": "controls the horizontal spacing between the control and the label; applied to <controllabelcontainer>"
           }
         },
-        "Padding": {
-          "SM": {
-            "value": "{cmp.Radio.ContentRow.Padding_V.SM} 0",
+        "padding": {
+          "sm": {
+            "value": "{cmp.radio.contentrow.padding_v.sm} 0",
             "type": "spacing",
-            "description": "Controls the vertical spacing between InlineLabel and the Caption.\nApplied on: TextContainer"
+            "description": "controls the vertical spacing between inlinelabel and the caption.\napplied on: textcontainer"
           },
-          "MD": {
-            "value": "{cmp.Radio.ContentRow.Padding_V.MD} 0",
+          "md": {
+            "value": "{cmp.radio.contentrow.padding_v.md} 0",
             "type": "spacing",
-            "description": "Coded comps only!"
+            "description": "coded comps only!"
           },
-          "LG": {
-            "value": "{cmp.Radio.ContentRow.Padding_V.LG} 0",
+          "lg": {
+            "value": "{cmp.radio.contentrow.padding_v.lg} 0",
             "type": "spacing",
-            "description": "Coded comps only!"
+            "description": "coded comps only!"
           }
         },
-        "Padding_V": {
-          "SM": {
-            "value": "{core.dimensionREM.8}",
+        "padding_v": {
+          "sm": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma Only! Do not apply on codes comps. Use <Padding> instead"
+            "description": "figma only! do not apply on codes comps. use <padding> instead"
           }
         }
       },
-      "ControlWrapper": {
-        "PaddingTop": {
-          "SM": {
-            "value": "{core.dimensionREM.0}",
+      "controlwrapper": {
+        "paddingtop": {
+          "sm": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
+            "description": "can be used to align the checkbox control against the text"
           },
-          "MD": {
-            "value": "{core.dimensionREM.4}",
+          "md": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
+            "description": "can be used to align the checkbox control against the text"
           },
-          "LG": {
-            "value": "{core.dimensionREM.4}",
+          "lg": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Can be used to align the checkbox control against the text"
+            "description": "can be used to align the checkbox control against the text"
           }
         }
       }
     },
-    "RadioGroup": {
-      "CaptionSlot": {
-        "PaddingTop": {
-          "SM": {
-            "value": "{core.dimensionREM.16}",
+    "radiogroup": {
+      "captionslot": {
+        "paddingtop": {
+          "sm": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.16}",
+          "md": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.16}",
+          "lg": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing"
           }
         }
       },
-      "LegendWrapper": {
-        "PaddingBottom": {
-          "SM": {
-            "value": "{core.dimensionREM.16}",
+      "legendwrapper": {
+        "paddingbottom": {
+          "sm": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+            "description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
           },
-          "MD": {
-            "value": "{core.dimensionREM.16}",
+          "md": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+            "description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
           },
-          "LG": {
-            "value": "{core.dimensionREM.16}",
+          "lg": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Defines the space between Legend and RadioStack. Apply on RadioGroup/LegendWrapper as bottom-padding."
+            "description": "defines the space between legend and radiostack. apply on radiogroup/legendwrapper as bottom-padding."
           }
         }
       },
-      "RadioStackHorizontal": {
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionREM.16}",
+      "radiostackhorizontal": {
+        "itemspacing": {
+          "sm": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            "description": "defines the gap between each radio option inside <radiostack>"
           },
-          "MD": {
-            "value": "{core.dimensionREM.16}",
+          "md": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            "description": "defines the gap between each radio option inside <radiostack>"
           },
-          "LG": {
-            "value": "{core.dimensionREM.16}",
+          "lg": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            "description": "defines the gap between each radio option inside <radiostack>"
           }
         }
       },
-      "RadioStackVertical": {
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionREM.8}",
+      "radiostackvertical": {
+        "itemspacing": {
+          "sm": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            "description": "defines the gap between each radio option inside <radiostack>"
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            "description": "defines the gap between each radio option inside <radiostack>"
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Defines the gap between each Radio Option inside <RadioStack>"
+            "description": "defines the gap between each radio option inside <radiostack>"
           }
         }
       }
     },
-    "Slider": {
-      "Thumb": {
-        "Shape": {
-          "BorderWidth": {
-            "Rest": {
-              "value": "{core.dimensionPX.2}",
+    "slider": {
+      "thumb": {
+        "shape": {
+          "borderwidth": {
+            "rest": {
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             },
-            "Hover": {
-              "value": "{core.dimensionPX.4}",
+            "hover": {
+              "value": "{core.dimensionpx.4}",
               "type": "borderWidth"
             },
-            "Pressed": {
-              "value": "{core.dimensionPX.4}",
+            "pressed": {
+              "value": "{core.dimensionpx.4}",
               "type": "borderWidth"
             },
-            "Focus": {
-              "value": "{core.dimensionPX.2}",
+            "focus": {
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             },
-            "Disabled": {
-              "value": "{core.dimensionPX.2}",
+            "disabled": {
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.2}",
+            "readonly": {
+              "value": "{core.dimensionpx.2}",
               "type": "borderWidth"
             }
           },
-          "Size": {
-            "Rest": {
-              "value": "{core.dimensionPX.14}",
+          "size": {
+            "rest": {
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             },
-            "Hover": {
-              "value": "{core.dimensionPX.20}",
+            "hover": {
+              "value": "{core.dimensionpx.20}",
               "type": "sizing"
             },
-            "Pressed": {
-              "value": "{core.dimensionPX.20}",
+            "pressed": {
+              "value": "{core.dimensionpx.20}",
               "type": "sizing"
             },
-            "Focus": {
-              "value": "{core.dimensionPX.14}",
+            "focus": {
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             },
-            "Disabled": {
-              "value": "{core.dimensionPX.14}",
+            "disabled": {
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             },
-            "ReadOnly": {
-              "value": "{core.dimensionPX.14}",
+            "readonly": {
+              "value": "{core.dimensionpx.14}",
               "type": "sizing"
             }
           }
         },
-        "Container": {
-          "Size": {
-            "value": "{core.dimensionPX.24}",
+        "container": {
+          "size": {
+            "value": "{core.dimensionpx.24}",
             "type": "sizing"
           }
         }
       },
-      "TickMark": {
-        "BorderWidth": {
-          "Default": {
-            "Active": {
-              "value": "{core.dimensionPX.1}",
+      "tickmark": {
+        "borderwidth": {
+          "default": {
+            "active": {
+              "value": "{core.dimensionpx.1}",
               "type": "borderWidth"
             },
-            "Inactive": {
-              "value": "{core.dimensionPX.1}1",
+            "inactive": {
+              "value": "{core.dimensionpx.1}1",
               "type": "borderWidth"
             }
           },
-          "Mute": {
-            "Active": {
-              "value": "{core.dimensionPX.1}",
+          "mute": {
+            "active": {
+              "value": "{core.dimensionpx.1}",
               "type": "borderWidth"
             },
-            "Inactive": {
-              "value": "{core.dimensionPX.1}",
+            "inactive": {
+              "value": "{core.dimensionpx.1}",
               "type": "borderWidth"
             }
           }
         },
-        "Size": {
-          "value": "{core.dimensionPX.6}",
+        "size": {
+          "value": "{core.dimensionpx.6}",
           "type": "sizing"
         }
       }
     },
-    "StepperButton": {
-      "Container": {
-        "Width": {
-          "SM": {
-            "value": "{core.dimensionREM.32}",
+    "stepperbutton": {
+      "container": {
+        "width": {
+          "sm": {
+            "value": "{core.dimensionrem.32}",
             "type": "sizing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.40}",
+          "md": {
+            "value": "{core.dimensionrem.40}",
             "type": "sizing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.48}",
+          "lg": {
+            "value": "{core.dimensionrem.48}",
             "type": "sizing"
           }
         },
-        "BorderRadius": {
-          "SM": {
+        "borderradius": {
+          "sm": {
             "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           },
-          "MD": {
+          "md": {
             "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           },
-          "LG": {
+          "lg": {
             "value": "{sys.borderradius.none}",
             "type": "borderRadius"
           }
         },
-        "BorderWidth": {
+        "borderwidth": {
           "value": "{sem.buttons.container.borderwidth}",
           "type": "borderWidth"
         }
       },
-      "Icon": {
-        "IconSize": {
-          "SM": {
-            "value": "{core.dimensionREM.16}",
+      "icon": {
+        "iconsize": {
+          "sm": {
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.16}",
+          "md": {
+            "value": "{core.dimensionrem.16}",
             "type": "sizing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.24}",
+          "lg": {
+            "value": "{core.dimensionrem.24}",
             "type": "sizing"
           }
         }
       }
     },
-    "StepperCombo": {
-      "Container": {
-        "Width": {
-          "Vertical": {
-            "SM": {
-              "value": "{core.dimensionREM.32}",
+    "steppercombo": {
+      "container": {
+        "width": {
+          "vertical": {
+            "sm": {
+              "value": "{core.dimensionrem.32}",
               "type": "sizing"
             },
-            "MD": {
-              "value": "{core.dimensionREM.40}",
+            "md": {
+              "value": "{core.dimensionrem.40}",
               "type": "sizing"
             },
-            "LG": {
-              "value": "{core.dimensionREM.48}",
+            "lg": {
+              "value": "{core.dimensionrem.48}",
               "type": "sizing"
             }
           },
-          "Horizontal": {
-            "SM": {
-              "value": "{core.dimensionREM.64}",
+          "horizontal": {
+            "sm": {
+              "value": "{core.dimensionrem.64}",
               "type": "sizing"
             },
-            "MD": {
-              "value": "{core.dimensionREM.80}",
+            "md": {
+              "value": "{core.dimensionrem.80}",
               "type": "sizing"
             },
-            "LG": {
-              "value": "{core.dimensionREM.96}",
+            "lg": {
+              "value": "{core.dimensionrem.96}",
               "type": "sizing"
             }
           }
         }
       },
-      "DividerWrapper": {
-        "Padding_V": {
-          "SM": {
-            "value": "{core.dimensionREM.8}",
+      "dividerwrapper": {
+        "padding_v": {
+          "sm": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "apply only on layoutVariant Horizontal"
+            "description": "apply only on layoutvariant horizontal"
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "apply only on layoutVariant Horizontal"
+            "description": "apply only on layoutvariant horizontal"
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "apply only on layoutVariant Horizontal"
+            "description": "apply only on layoutvariant horizontal"
           }
         },
-        "Padding_H": {
-          "SM": {
-            "value": "{core.dimensionREM.8}",
+        "padding_h": {
+          "sm": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "apply only on layoutVariant Vertical"
+            "description": "apply only on layoutvariant vertical"
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "apply only on layoutVariant Vertical"
+            "description": "apply only on layoutvariant vertical"
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "apply only on layoutVariant Vertical"
+            "description": "apply only on layoutvariant vertical"
           }
         },
-        "Padding": {
-          "VerticalLayout": {
-            "SM": {
-              "value": "0 {cmp.StepperCombo.DividerWrapper.Padding_H.SM}",
+        "padding": {
+          "verticallayout": {
+            "sm": {
+              "value": "0 {cmp.steppercombo.dividerwrapper.padding_h.sm}",
               "type": "spacing"
             },
-            "MD": {
-              "value": "0 {cmp.StepperCombo.DividerWrapper.Padding_H.MD}",
+            "md": {
+              "value": "0 {cmp.steppercombo.dividerwrapper.padding_h.md}",
               "type": "spacing"
             },
-            "LG": {
-              "value": "0 {cmp.StepperCombo.DividerWrapper.Padding_H.LG}",
+            "lg": {
+              "value": "0 {cmp.steppercombo.dividerwrapper.padding_h.lg}",
               "type": "spacing"
             }
           },
-          "HorizontalLayout": {
-            "SM": {
-              "value": "{cmp.StepperCombo.DividerWrapper.Padding_V.SM} 0",
+          "horizontallayout": {
+            "sm": {
+              "value": "{cmp.steppercombo.dividerwrapper.padding_v.sm} 0",
               "type": "spacing"
             },
-            "MD": {
-              "value": "{cmp.StepperCombo.DividerWrapper.Padding_V.MD} 0",
+            "md": {
+              "value": "{cmp.steppercombo.dividerwrapper.padding_v.md} 0",
               "type": "spacing"
             },
-            "LG": {
-              "value": "{cmp.StepperCombo.DividerWrapper.Padding_V.LG} 0",
+            "lg": {
+              "value": "{cmp.steppercombo.dividerwrapper.padding_v.lg} 0",
               "type": "spacing"
             }
           }
         }
       }
     },
-    "TabBar": {
-      "ButtonWrapper": {
-        "InnerPadding": {
-          "SM": {
-            "value": "{core.dimensionREM.8}",
+    "tabbar": {
+      "buttonwrapper": {
+        "innerpadding": {
+          "sm": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.12}",
+          "lg": {
+            "value": "{core.dimensionrem.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use <Padding> in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use <padding> in coded comps."
           }
         },
-        "Padding": {
-          "Leading": {
-            "SM": {
-              "value": "0 {cmp.TabBar.ButtonWrapper.InnerPadding.SM}",
+        "padding": {
+          "leading": {
+            "sm": {
+              "value": "0 {cmp.tabbar.buttonwrapper.innerpadding.sm}",
               "type": "spacing",
-              "description": "Coded comps only!"
+              "description": "coded comps only!"
             },
-            "MD": {
-              "value": "0 {cmp.TabBar.ButtonWrapper.InnerPadding.MD} 0 0",
+            "md": {
+              "value": "0 {cmp.tabbar.buttonwrapper.innerpadding.md} 0 0",
               "type": "spacing",
-              "description": "Coded comps only!."
+              "description": "coded comps only!."
             },
-            "LG": {
-              "value": "0 {cmp.TabBar.ButtonWrapper.InnerPadding.LG} 0 0",
+            "lg": {
+              "value": "0 {cmp.tabbar.buttonwrapper.innerpadding.lg} 0 0",
               "type": "spacing",
-              "description": "Coded comps only!."
+              "description": "coded comps only!."
             }
           },
-          "Trailing": {
-            "SM": {
-              "value": "0 0 0 {cmp.TabBar.ButtonWrapper.InnerPadding.SM}",
+          "trailing": {
+            "sm": {
+              "value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.sm}",
               "type": "spacing",
-              "description": "Coded comps only!"
+              "description": "coded comps only!"
             },
-            "MD": {
-              "value": "0 0 0 {cmp.TabBar.ButtonWrapper.InnerPadding.MD}",
+            "md": {
+              "value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.md}",
               "type": "spacing",
-              "description": "Coded comps only!."
+              "description": "coded comps only!."
             },
-            "LG": {
-              "value": "0 0 0 {cmp.TabBar.ButtonWrapper.InnerPadding.LG}",
+            "lg": {
+              "value": "0 0 0 {cmp.tabbar.buttonwrapper.innerpadding.lg}",
               "type": "spacing",
-              "description": "Coded comps only!."
+              "description": "coded comps only!."
             }
           }
         }
       },
-      "Tab": {
-        "HighlightLine": {
-          "Height": {
-            "SM": {
-              "value": "{core.dimensionPX.2}",
+      "tab": {
+        "highlightline": {
+          "height": {
+            "sm": {
+              "value": "{core.dimensionpx.2}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+              "description": "defines the thickness of the highlight line.\napply on <highlightline>"
             },
-            "MD": {
-              "value": "{core.dimensionPX.2}",
+            "md": {
+              "value": "{core.dimensionpx.2}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+              "description": "defines the thickness of the highlight line.\napply on <highlightline>"
             },
-            "LG": {
-              "value": "{core.dimensionPX.2}",
+            "lg": {
+              "value": "{core.dimensionpx.2}",
               "type": "sizing",
-              "description": "Defines the thickness of the highlight line.\nApply on <HighlightLine>"
+              "description": "defines the thickness of the highlight line.\napply on <highlightline>"
             }
           }
         },
-        "ContentCol": {
-          "PaddingTop": {
-            "SM": {
-              "value": "{core.dimensionREM.4}",
+        "contentcol": {
+          "paddingtop": {
+            "sm": {
+              "value": "{core.dimensionrem.4}",
               "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+              "description": "defines the toppadding of a tab; apply on <contentcol>"
             },
-            "MD": {
-              "value": "{core.dimensionREM.8}",
+            "md": {
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+              "description": "defines the toppadding of a tab; apply on <contentcol>"
             },
-            "LG": {
-              "value": "{core.dimensionREM.8}",
+            "lg": {
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
-              "description": "Defines the topPadding of a tab; Apply on <ContentCol>"
+              "description": "defines the toppadding of a tab; apply on <contentcol>"
             }
           },
-          "ItemSpacing": {
-            "SM": {
-              "value": "{core.dimensionREM.8}",
+          "itemspacing": {
+            "sm": {
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+              "description": "defines the gap beteen the tabs label/icon and the <highlightline>"
             },
-            "MD": {
-              "value": "{core.dimensionREM.8}",
+            "md": {
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+              "description": "defines the gap beteen the tabs label/icon and the <highlightline>"
             },
-            "LG": {
-              "value": "{core.dimensionREM.8}",
+            "lg": {
+              "value": "{core.dimensionrem.8}",
               "type": "spacing",
-              "description": "Defines the gap beteen the tabs label/icon and the <HighlightLIne>"
+              "description": "defines the gap beteen the tabs label/icon and the <highlightline>"
             }
           }
         },
-        "ContentRow": {
-          "Padding_H": {
-            "SM": {
-              "value": "{core.dimensionPX.12}",
+        "contentrow": {
+          "padding_h": {
+            "sm": {
+              "value": "{core.dimensionpx.12}",
               "type": "spacing",
-              "description": "Defines the padding left and right of <ContentRow>"
+              "description": "defines the padding left and right of <contentrow>"
             },
-            "MD": {
-              "value": "{core.dimensionPX.16}",
+            "md": {
+              "value": "{core.dimensionpx.16}",
               "type": "spacing",
-              "description": "Defines the padding left and right of <ContentRow>"
+              "description": "defines the padding left and right of <contentrow>"
             },
-            "LG": {
-              "value": "{core.dimensionPX.16}",
+            "lg": {
+              "value": "{core.dimensionpx.16}",
               "type": "spacing",
-              "description": "Defines the padding left and right of <ContentRow>"
+              "description": "defines the padding left and right of <contentrow>"
             }
           },
-          "ItemSpacing": {
-            "SM": {
-              "value": "{core.dimensionPX.2}",
+          "itemspacing": {
+            "sm": {
+              "value": "{core.dimensionpx.2}",
               "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+              "description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
             },
-            "MD": {
-              "value": "{core.dimensionPX.2}",
+            "md": {
+              "value": "{core.dimensionpx.2}",
               "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+              "description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
             },
-            "LG": {
-              "value": "{core.dimensionPX.4}",
+            "lg": {
+              "value": "{core.dimensionpx.4}",
               "type": "spacing",
-              "description": "Defines the gap between the icon and the label of a tab. Apply on <ContentRow>"
+              "description": "defines the gap between the icon and the label of a tab. apply on <contentrow>"
             }
           }
         },
-        "Icon": {
-          "IconSize": {
-            "SM": {
-              "value": "{core.dimensionREM.12}",
+        "icon": {
+          "iconsize": {
+            "sm": {
+              "value": "{core.dimensionrem.12}",
               "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
+              "description": "defines height and width of the icon of a tab"
             },
-            "MD": {
-              "value": "{core.dimensionREM.16}",
+            "md": {
+              "value": "{core.dimensionrem.16}",
               "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
+              "description": "defines height and width of the icon of a tab"
             },
-            "LG": {
-              "value": "{core.dimensionREM.16}",
+            "lg": {
+              "value": "{core.dimensionrem.16}",
               "type": "sizing",
-              "description": "Defines height and width of the icon of a tab"
+              "description": "defines height and width of the icon of a tab"
             }
           }
         }
       }
     },
-    "TextArea": {
-      "InputField": {
-        "MinHeight": {
-          "SM": {
-            "value": "{core.dimensionREM.64}",
+    "textarea": {
+      "inputfield": {
+        "minheight": {
+          "sm": {
+            "value": "{core.dimensionrem.64}",
             "type": "sizing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.80}",
+          "md": {
+            "value": "{core.dimensionrem.80}",
             "type": "sizing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.112}",
+          "lg": {
+            "value": "{core.dimensionrem.112}",
             "type": "sizing"
           }
         }
       }
     },
-    "ButtonText": {
-      "Container": {
-        "Padding_V": {
-          "XS": {
-            "value": "{core.dimensionREM.4}",
+    "buttontext": {
+      "container": {
+        "padding_v": {
+          "xs": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.4}",
+          "sm": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.16}",
+          "xl": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "Padding_H": {
-          "XS": {
-            "value": "{core.dimensionPX.12}",
+        "padding_h": {
+          "xs": {
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionPX.12}",
+          "sm": {
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionPX.16}",
+          "md": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionPX.24}",
+          "lg": {
+            "value": "{core.dimensionpx.24}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionPX.40}",
+          "xl": {
+            "value": "{core.dimensionpx.40}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "Padding": {
-          "XS": {
-            "value": "{cmp.ButtonText.Container.Padding_V.XS} {cmp.ButtonText.Container.Padding_H.XS}",
+        "padding": {
+          "xs": {
+            "value": "{cmp.buttontext.container.padding_v.xs} {cmp.buttontext.container.padding_h.xs}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "SM": {
-            "value": "{cmp.ButtonText.Container.Padding_V.SM} {cmp.ButtonText.Container.Padding_H.SM}",
+          "sm": {
+            "value": "{cmp.buttontext.container.padding_v.sm} {cmp.buttontext.container.padding_h.sm}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "MD": {
-            "value": "{cmp.ButtonText.Container.Padding_V.MD} {cmp.ButtonText.Container.Padding_H.MD}",
+          "md": {
+            "value": "{cmp.buttontext.container.padding_v.md} {cmp.buttontext.container.padding_h.md}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "LG": {
-            "value": "{cmp.ButtonText.Container.Padding_V.LG} {cmp.ButtonText.Container.Padding_H.LG}",
+          "lg": {
+            "value": "{cmp.buttontext.container.padding_v.lg} {cmp.buttontext.container.padding_h.lg}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "XL": {
-            "value": "{cmp.ButtonText.Container.Padding_V.XL} {cmp.ButtonText.Container.Padding_H.XL}",
+          "xl": {
+            "value": "{cmp.buttontext.container.padding_v.xl} {cmp.buttontext.container.padding_h.xl}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           }
         },
-        "ItemSpacing": {
-          "XS": {
-            "value": "{core.dimensionPX.4}",
+        "itemspacing": {
+          "xs": {
+            "value": "{core.dimensionpx.4}",
             "type": "spacing"
           },
-          "SM": {
-            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
+          "sm": {
+            "value": "{cmp.buttontext.container.itemspacing.xs}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
+          "md": {
+            "value": "{cmp.buttontext.container.itemspacing.xs}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
+          "lg": {
+            "value": "{cmp.buttontext.container.itemspacing.xs}",
             "type": "spacing"
           },
-          "XL": {
-            "value": "{cmp.ButtonText.Container.ItemSpacing.XS}",
+          "xl": {
+            "value": "{cmp.buttontext.container.itemspacing.xs}",
             "type": "spacing"
           }
         },
-        "BorderRadius": {
-          "XS": {
+        "borderradius": {
+          "xs": {
             "value": "{sem.buttons.container.borderradius.xs}",
             "type": "borderRadius"
           },
-          "SM": {
+          "sm": {
             "value": "{sem.buttons.container.borderradius.sm}",
             "type": "borderRadius"
           },
-          "MD": {
+          "md": {
             "value": "{sem.buttons.container.borderradius.md}",
             "type": "borderRadius"
           },
-          "LG": {
+          "lg": {
             "value": "{sem.buttons.container.borderradius.lg}",
             "type": "borderRadius"
           },
-          "XL": {
+          "xl": {
             "value": "{sem.buttons.container.borderradius.xl}",
             "type": "borderRadius"
           }
         }
       }
     },
-    "TextDropdown": {
-      "Container": {
-        "PaddingTop": {
-          "XS": {
-            "value": "{core.dimensionREM.4}",
+    "textdropdown": {
+      "container": {
+        "paddingtop": {
+          "xs": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.4}",
+          "sm": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.16}",
+          "xl": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "PaddingRight": {
-          "XS": {
-            "value": "{core.dimensionPX.8}",
+        "paddingright": {
+          "xs": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionPX.8}",
+          "sm": {
+            "value": "{core.dimensionpx.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionPX.12}",
+          "md": {
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionPX.16}",
+          "lg": {
+            "value": "{core.dimensionpx.16}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionPX.32}",
+          "xl": {
+            "value": "{core.dimensionpx.32}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "PaddingBottom": {
-          "XS": {
-            "value": "{core.dimensionREM.4}",
+        "paddingbottom": {
+          "xs": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionREM.4}",
+          "sm": {
+            "value": "{core.dimensionrem.4}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionREM.16}",
+          "xl": {
+            "value": "{core.dimensionrem.16}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "PaddingLeft": {
-          "XS": {
-            "value": "{core.dimensionPX.12}",
+        "paddingleft": {
+          "xs": {
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "SM": {
-            "value": "{core.dimensionPX.12}",
+          "sm": {
+            "value": "{core.dimensionpx.12}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "MD": {
-            "value": "{core.dimensionPX.20}",
+          "md": {
+            "value": "{core.dimensionpx.20}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "LG": {
-            "value": "{core.dimensionPX.24}",
+          "lg": {
+            "value": "{core.dimensionpx.24}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           },
-          "XL": {
-            "value": "{core.dimensionPX.40}",
+          "xl": {
+            "value": "{core.dimensionpx.40}",
             "type": "spacing",
-            "description": "Figma only! Do not use in coded comps. Allways use \"Padding\" in coded Comps."
+            "description": "figma only! do not use in coded comps. allways use \"padding\" in coded comps."
           }
         },
-        "Padding": {
-          "XS": {
-            "value": "{cmp.TextDropdown.Container.PaddingTop.XS} {cmp.TextDropdown.Container.PaddingRight.XS} {cmp.TextDropdown.Container.PaddingBottom.XS} {cmp.TextDropdown.Container.PaddingLeft.XS}",
+        "padding": {
+          "xs": {
+            "value": "{cmp.textdropdown.container.paddingtop.xs} {cmp.textdropdown.container.paddingright.xs} {cmp.textdropdown.container.paddingbottom.xs} {cmp.textdropdown.container.paddingleft.xs}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "SM": {
-            "value": "{cmp.TextDropdown.Container.PaddingTop.SM} {cmp.TextDropdown.Container.PaddingRight.SM} {cmp.TextDropdown.Container.PaddingBottom.SM} {cmp.TextDropdown.Container.PaddingLeft.SM}",
+          "sm": {
+            "value": "{cmp.textdropdown.container.paddingtop.sm} {cmp.textdropdown.container.paddingright.sm} {cmp.textdropdown.container.paddingbottom.sm} {cmp.textdropdown.container.paddingleft.sm}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "MD": {
-            "value": "{cmp.TextDropdown.Container.PaddingTop.MD} {cmp.TextDropdown.Container.PaddingRight.MD} {cmp.TextDropdown.Container.PaddingBottom.MD} {cmp.TextDropdown.Container.PaddingLeft.MD}",
+          "md": {
+            "value": "{cmp.textdropdown.container.paddingtop.md} {cmp.textdropdown.container.paddingright.md} {cmp.textdropdown.container.paddingbottom.md} {cmp.textdropdown.container.paddingleft.md}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "LG": {
-            "value": "{cmp.TextDropdown.Container.PaddingTop.LG} {cmp.TextDropdown.Container.PaddingRight.LG} {cmp.TextDropdown.Container.PaddingBottom.LG} {cmp.TextDropdown.Container.PaddingLeft.LG}",
+          "lg": {
+            "value": "{cmp.textdropdown.container.paddingtop.lg} {cmp.textdropdown.container.paddingright.lg} {cmp.textdropdown.container.paddingbottom.lg} {cmp.textdropdown.container.paddingleft.lg}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           },
-          "XL": {
-            "value": "{cmp.TextDropdown.Container.PaddingTop.XL} {cmp.TextDropdown.Container.PaddingRight.XL} {cmp.TextDropdown.Container.PaddingBottom.XL} {cmp.TextDropdown.Container.PaddingLeft.XL}",
+          "xl": {
+            "value": "{cmp.textdropdown.container.paddingtop.xl} {cmp.textdropdown.container.paddingright.xl} {cmp.textdropdown.container.paddingbottom.xl} {cmp.textdropdown.container.paddingleft.xl}",
             "type": "spacing",
-            "description": "Do not apply in Figma, use aliases instead."
+            "description": "do not apply in figma, use aliases instead."
           }
         },
-        "ItemSpacing": {
-          "XS": {
-            "value": "{core.dimensionPX.2}",
+        "itemspacing": {
+          "xs": {
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
-          "SM": {
-            "value": "{core.dimensionPX.2}",
+          "sm": {
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionPX.2}",
+          "md": {
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionPX.2}",
+          "lg": {
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           },
-          "XL": {
-            "value": "{core.dimensionPX.2}",
+          "xl": {
+            "value": "{core.dimensionpx.2}",
             "type": "spacing"
           }
         },
-        "BorderRadius": {
-          "XS": {
+        "borderradius": {
+          "xs": {
             "value": "{sem.buttons.container.borderradius.xs}",
             "type": "borderRadius"
           },
-          "SM": {
+          "sm": {
             "value": "{sem.buttons.container.borderradius.sm}",
             "type": "borderRadius"
           },
-          "MD": {
+          "md": {
             "value": "{sem.buttons.container.borderradius.md}",
             "type": "borderRadius"
           },
-          "LG": {
+          "lg": {
             "value": "{sem.buttons.container.borderradius.lg}",
             "type": "borderRadius"
           },
-          "XL": {
+          "xl": {
             "value": "{sem.buttons.container.borderradius.xl}",
             "type": "borderRadius"
           }
         }
       }
     },
-    "ToggleSwitch": {
-      "Container": {
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionREM.8}",
+    "toggleswitch": {
+      "container": {
+        "itemspacing": {
+          "sm": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.8}",
+          "md": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.8}",
+          "lg": {
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           }
         }
       },
-      "ContentCol": {
-        "ItemSpacing": {
-          "SM": {
-            "value": "{core.dimensionREM.0}",
+      "contentcol": {
+        "itemspacing": {
+          "sm": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
-          "MD": {
-            "value": "{core.dimensionREM.0}",
+          "md": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
-          "LG": {
-            "value": "{core.dimensionREM.0}",
+          "lg": {
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         }
       },
-      "Control": {
-        "Container": {
-          "BorderRadius": {
-            "value": "{core.dimensionREM.40}",
+      "control": {
+        "container": {
+          "borderradius": {
+            "value": "{core.dimensionrem.40}",
             "type": "borderRadius"
           },
-          "BorderWidth": {
-            "SM": {
-              "Active": {
-                "Rest": {
+          "borderwidth": {
+            "sm": {
+              "active": {
+                "rest": {
                   "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.SM.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 }
               }
             },
-            "MD": {
-              "Active": {
-                "Rest": {
+            "md": {
+              "active": {
+                "rest": {
                   "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.MD.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 }
               }
             },
-            "LG": {
-              "Active": {
-                "Rest": {
+            "lg": {
+              "active": {
+                "rest": {
                   "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{sys.borderwidth.none}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Container.BorderWidth.LG.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.container.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 }
               }
             }
           },
-          "Width": {
-            "SM": {
+          "width": {
+            "sm": {
               "value": "2.25rem",
               "type": "sizing"
             },
-            "MD": {
+            "md": {
               "value": "2.75rem",
               "type": "sizing"
             },
-            "LG": {
+            "lg": {
               "value": "3.25rem",
               "type": "sizing"
             }
           },
-          "Height": {
-            "SM": {
-              "value": "{core.dimensionREM.20}",
+          "height": {
+            "sm": {
+              "value": "{core.dimensionrem.20}",
               "type": "sizing"
             },
-            "MD": {
-              "value": "{core.dimensionREM.24}",
+            "md": {
+              "value": "{core.dimensionrem.24}",
               "type": "sizing"
             },
-            "LG": {
-              "value": "{core.dimensionREM.28}",
+            "lg": {
+              "value": "{core.dimensionrem.28}",
               "type": "sizing"
             }
           },
-          "Padding": {
-            "SM": {
-              "value": "{core.dimensionPX.2}",
+          "padding": {
+            "sm": {
+              "value": "{core.dimensionpx.2}",
               "type": "spacing"
             },
-            "MD": {
-              "value": "{core.dimensionPX.2}",
+            "md": {
+              "value": "{core.dimensionpx.2}",
               "type": "spacing"
             },
-            "LG": {
-              "value": "{core.dimensionPX.2}",
+            "lg": {
+              "value": "{core.dimensionpx.2}",
               "type": "spacing"
             }
           }
         },
-        "AY11Icon": {
-          "IconSize": {
-            "SM": {
-              "value": "{core.dimensionREM.16}",
+        "ay11icon": {
+          "iconsize": {
+            "sm": {
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
-            "MD": {
-              "value": "{core.dimensionREM.16}",
+            "md": {
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
-            "LG": {
-              "value": "{core.dimensionREM.16}",
+            "lg": {
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             }
           }
         },
-        "AY11IconContainer": {
-          "Padding_H": {
-            "SM": {
-              "value": "{core.dimensionREM.0}",
+        "ay11iconcontainer": {
+          "padding_h": {
+            "sm": {
+              "value": "{core.dimensionrem.0}",
               "type": "spacing"
             },
-            "MD": {
-              "value": "{core.dimensionREM.2}",
+            "md": {
+              "value": "{core.dimensionrem.2}",
               "type": "spacing"
             },
-            "LG": {
+            "lg": {
               "value": "0.21875rem",
               "type": "spacing"
             }
           }
         },
-        "Knob": {
-          "Size": {
-            "SM": {
-              "value": "{core.dimensionREM.16}",
+        "knob": {
+          "size": {
+            "sm": {
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
-            "MD": {
-              "value": "{core.dimensionREM.20}",
+            "md": {
+              "value": "{core.dimensionrem.20}",
               "type": "sizing"
             },
-            "LG": {
-              "value": "{core.dimensionREM.24}",
+            "lg": {
+              "value": "{core.dimensionrem.24}",
               "type": "sizing"
             }
           },
-          "BorderWidth": {
-            "SM": {
-              "Active": {
-                "Rest": {
+          "borderwidth": {
+            "sm": {
+              "active": {
+                "rest": {
                   "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.active.rest}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.SM.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.sm.inactive.rest}",
                   "type": "borderWidth"
                 }
               }
             },
-            "MD": {
-              "Active": {
-                "Rest": {
+            "md": {
+              "active": {
+                "rest": {
                   "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.active.rest}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.MD.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.md.inactive.rest}",
                   "type": "borderWidth"
                 }
               }
             },
-            "LG": {
-              "Active": {
-                "Rest": {
+            "lg": {
+              "active": {
+                "rest": {
                   "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Active.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.active.rest}",
                   "type": "borderWidth"
                 }
               },
-              "Inactive": {
-                "Rest": {
+              "inactive": {
+                "rest": {
                   "value": "{sys.borderwidth.medium}",
                   "type": "borderWidth"
                 },
-                "Hover": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                "hover": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Pressed": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                "pressed": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Focus": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                "focus": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "Disabled": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                "disabled": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth"
                 },
-                "ReadOnly": {
-                  "value": "{cmp.ToggleSwitch.Control.Knob.BorderWidth.LG.Inactive.Rest}",
+                "readonly": {
+                  "value": "{cmp.toggleswitch.control.knob.borderwidth.lg.inactive.rest}",
                   "type": "borderWidth"
                 }
               }
@@ -3127,64 +3127,64 @@
           }
         }
       },
-      "ControlWithStateLabel": {
-        "Container": {
-          "ItemSpacing": {
-            "SM": {
-              "value": "{core.dimensionPX.8}",
+      "controlwithstatelabel": {
+        "container": {
+          "itemspacing": {
+            "sm": {
+              "value": "{core.dimensionpx.8}",
               "type": "spacing"
             },
-            "MD": {
-              "value": "{core.dimensionPX.8}",
+            "md": {
+              "value": "{core.dimensionpx.8}",
               "type": "spacing"
             },
-            "LG": {
-              "value": "{core.dimensionPX.8}",
+            "lg": {
+              "value": "{core.dimensionpx.8}",
               "type": "spacing"
             }
           }
         }
       }
     },
-    "Tooltip": {
-      "TextWrapper": {
-        "Padding": {
-          "value": "{cmp.Tooltip.TextWrapper.Padding_V} {cmp.Tooltip.TextWrapper.Padding_H}",
+    "tooltip": {
+      "textwrapper": {
+        "padding": {
+          "value": "{cmp.tooltip.textwrapper.padding_v} {cmp.tooltip.textwrapper.padding_h}",
           "type": "spacing"
         },
-        "BorderRadius": {
+        "borderradius": {
           "value": "{sys.borderradius.md}",
           "type": "borderRadius"
         },
-        "MinWidth": {
-          "value": "{core.dimensionREM.40}",
+        "minwidth": {
+          "value": "{core.dimensionrem.40}",
           "type": "sizing",
-          "description": "Defines the minimum width of the tooltip."
+          "description": "defines the minimum width of the tooltip."
         },
-        "MaxWidth": {
-          "value": "{core.dimensionREM.80}",
+        "maxwidth": {
+          "value": "{core.dimensionrem.80}",
           "type": "sizing",
-          "description": "Defines the maximum Width of the tooltip."
+          "description": "defines the maximum width of the tooltip."
         },
-        "Padding_V": {
-          "value": "{core.dimensionPX.6}",
+        "padding_v": {
+          "value": "{core.dimensionpx.6}",
           "type": "spacing"
         },
-        "Padding_H": {
-          "value": "{core.dimensionPX.8}",
+        "padding_h": {
+          "value": "{core.dimensionpx.8}",
           "type": "spacing"
         }
       },
-      "NoseWrapper": {
-        "Padding_V": {
-          "value": "{core.dimensionPX.5}",
+      "nosewrapper": {
+        "padding_v": {
+          "value": "{core.dimensionpx.5}",
           "type": "spacing",
-          "description": "Apply on tooltips where the nose is either left or right. The pading defines the inset of the nose."
+          "description": "apply on tooltips where the nose is either left or right. the pading defines the inset of the nose."
         },
-        "Padding_H": {
-          "value": "{core.dimensionPX.8}",
+        "padding_h": {
+          "value": "{core.dimensionpx.8}",
           "type": "spacing",
-          "description": "Apply on tooltips where the nose is either top or bottom. The pading defines the inset of the nose."
+          "description": "apply on tooltips where the nose is either top or bottom. the pading defines the inset of the nose."
         }
       }
     }
