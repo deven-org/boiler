@@ -34,29 +34,29 @@
       "captionslot": {
         "margintop": {
           "sm": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           }
         },
         "margin": {
           "sm": {
-            "value": "{sem.forms.captionslot.margintop.sm} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "value": "{sem.forms.captionslot.margintop.sm} {core.dimensionpx.0} {core.dimensionrem.0} {core.dimensionpx.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{sem.forms.captionslot.margintop.md} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "value": "{sem.forms.captionslot.margintop.md} {core.dimensionpx.0} {core.dimensionrem.0} {core.dimensionpx.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{sem.forms.captionslot.margintop.lg} {core.dimensionPX.0} {core.dimensionREM.0} {core.dimensionPX.0}",
+            "value": "{sem.forms.captionslot.margintop.lg} {core.dimensionpx.0} {core.dimensionrem.0} {core.dimensionpx.0}",
             "type": "spacing"
           }
         }
@@ -65,29 +65,29 @@
         "container": {
           "padding_v": {
             "sm": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing"
             },
             "md": {
-              "value": "{core.dimensionREM.8}",
+              "value": "{core.dimensionrem.8}",
               "type": "spacing"
             },
             "lg": {
-              "value": "{core.dimensionREM.12}",
+              "value": "{core.dimensionrem.12}",
               "type": "spacing"
             }
           },
           "padding_h": {
             "sm": {
-              "value": "{core.dimensionPX.12}",
+              "value": "{core.dimensionpx.12}",
               "type": "spacing"
             },
             "md": {
-              "value": "{core.dimensionPX.12}",
+              "value": "{core.dimensionpx.12}",
               "type": "spacing"
             },
             "lg": {
-              "value": "{core.dimensionPX.16}",
+              "value": "{core.dimensionpx.16}",
               "type": "spacing"
             }
           },
@@ -139,15 +139,15 @@
         "icon": {
           "iconsize": {
             "sm": {
-              "value": "{core.dimensionREM.16}",
+              "value": "{core.dimensionrem.16}",
               "type": "sizing"
             },
             "md": {
-              "value": "{core.dimensionREM.24}",
+              "value": "{core.dimensionrem.24}",
               "type": "sizing"
             },
             "lg": {
-              "value": "{core.dimensionREM.24}",
+              "value": "{core.dimensionrem.24}",
               "type": "sizing"
             }
           }
@@ -156,29 +156,29 @@
       "inputslot": {
         "margin_v": {
           "sm": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.0}",
+            "value": "{core.dimensionrem.0}",
             "type": "spacing"
           }
         },
         "margin_h": {
           "sm": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionPX.0}",
+            "value": "{core.dimensionpx.0}",
             "type": "spacing"
           }
         },
@@ -214,15 +214,15 @@
         },
         "padding_bottom": {
           "sm": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "md": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           },
           "lg": {
-            "value": "{core.dimensionREM.8}",
+            "value": "{core.dimensionrem.8}",
             "type": "spacing"
           }
         }

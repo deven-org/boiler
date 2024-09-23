@@ -19,20 +19,20 @@ import { ComponentThemeIterator } from "../_tokens-generated/index.pseudo.genera
 
 export const staticStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
-    const { Radio, RadioGroup, formlabel, formcaption } = cmp;
+    const { radio, radiogroup, formlabel, formcaption } = cmp;
 
     return css`
       .blr-legend-wrapper.${theme} {
         &.sm {
-          padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.SM};
+          padding-bottom: ${radiogroup.legendwrapper.paddingbottom.sm};
         }
 
         &.md {
-          padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.MD};
+          padding-bottom: ${radiogroup.legendwrapper.paddingbottom.md};
         }
 
         &.lg {
-          padding-bottom: ${RadioGroup.LegendWrapper.PaddingBottom.LG};
+          padding-bottom: ${radiogroup.legendwrapper.paddingbottom.lg};
         }
 
         .blr-legend {
@@ -41,31 +41,31 @@ export const staticStyles = css`
             ""
           }
           margin: 0 !important;
-          color: ${RadioGroup.Legend.textcolor.default};
+          color: ${radiogroup.legend.textcolor.default};
 
           &.sm {
-            font-weight: ${RadioGroup.Legend.SM.fontWeight};
-            font-size: ${RadioGroup.Legend.SM.fontSize};
-            font-family: ${RadioGroup.Legend.SM.fontFamily}, sans-serif;
-            line-height: ${RadioGroup.Legend.SM.lineHeight};
+            font-weight: ${radiogroup.legend.sm.fontWeight};
+            font-size: ${radiogroup.legend.sm.fontSize};
+            font-family: ${radiogroup.legend.sm.fontFamily}, sans-serif;
+            line-height: ${radiogroup.legend.sm.lineHeight};
           }
 
           &.md {
-            font-weight: ${RadioGroup.Legend.MD.fontWeight};
-            font-size: ${RadioGroup.Legend.MD.fontSize};
-            font-family: ${RadioGroup.Legend.MD.fontFamily}, sans-serif;
-            line-height: ${RadioGroup.Legend.MD.lineHeight};
+            font-weight: ${radiogroup.legend.md.fontWeight};
+            font-size: ${radiogroup.legend.md.fontSize};
+            font-family: ${radiogroup.legend.md.fontFamily}, sans-serif;
+            line-height: ${radiogroup.legend.md.lineHeight};
           }
 
           &.lg {
-            font-weight: ${RadioGroup.Legend.LG.fontWeight};
-            font-size: ${RadioGroup.Legend.LG.fontSize};
-            font-family: ${RadioGroup.Legend.LG.fontFamily}, sans-serif;
-            line-height: ${RadioGroup.Legend.LG.lineHeight};
+            font-weight: ${radiogroup.legend.lg.fontWeight};
+            font-size: ${radiogroup.legend.lg.fontSize};
+            font-family: ${radiogroup.legend.lg.fontFamily}, sans-serif;
+            line-height: ${radiogroup.legend.lg.lineHeight};
           }
 
           &.error {
-            color: ${RadioGroup.Legend.textcolor.error};
+            color: ${radiogroup.legend.textcolor.error};
           }
         }
       }
@@ -83,7 +83,7 @@ export const staticStyles = css`
             // Can be merged with the .caption-group above
             ""
           }
-          padding-top: ${RadioGroup.CaptionSlot.PaddingTop.SM};
+          padding-top: ${radiogroup.captionslot.paddingtop.sm};
         }
 
         &.md {
@@ -91,7 +91,7 @@ export const staticStyles = css`
             // Can be merged with the .caption-group above
             ""
           }
-          padding-top: ${RadioGroup.CaptionSlot.PaddingTop.MD};
+          padding-top: ${radiogroup.captionslot.paddingtop.md};
         }
 
         &.lg {
@@ -99,7 +99,7 @@ export const staticStyles = css`
             // Can be merged with the .caption-group above
             ""
           }
-          padding-top: ${RadioGroup.CaptionSlot.PaddingTop.LG};
+          padding-top: ${radiogroup.captionslot.paddingtop.lg};
         }
       }
 
@@ -115,26 +115,22 @@ export const staticStyles = css`
         }
 
         &.sm {
-          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
-          column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.SM};
-          row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.SM};
+          column-gap: ${radiogroup.radiostackhorizontal.itemspacing.sm};
+          row-gap: ${radiogroup.radiostackvertical.itemspacing.sm};
         }
 
         &.md {
-          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
-          column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.MD};
-          row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.MD};
+          column-gap: ${radiogroup.radiostackhorizontal.itemspacing.md};
+          row-gap: ${radiogroup.radiostackvertical.itemspacing.md};
         }
 
         &.lg {
-          /* FIX: "We need to differentiate between horizontal and vertical gaps, but this seems all wrong anyhow"; */
-          column-gap: ${RadioGroup.RadioStackHorizontal.ItemSpacing.LG};
-          row-gap: ${RadioGroup.RadioStackVertical.ItemSpacing.LG};
+          column-gap: ${radiogroup.radiostackhorizontal.itemspacing.lg};
+          row-gap: ${radiogroup.radiostackvertical.itemspacing.lg};
         }
       }
 
       .blr-radio.${theme} {
-        /* FIX: to override constructed margin; */
         all: initial;
         margin: 0 !important;
         display: flex;
@@ -142,7 +138,6 @@ export const staticStyles = css`
         transition: all 0.25s ease 0s;
 
         .blr-form-label-inline {
-          /* FIX?: "LabelNextToControl states"; */
           color: ${formlabel.inlinelabel.textcolor.rest};
           transition: all 0.25s ease 0s;
           display: flex;
@@ -154,14 +149,14 @@ export const staticStyles = css`
           transition: all 0.25s ease 0s;
           appearance: none;
           margin: 0;
-          border-radius: ${Radio.Control.Container.BorderRadius};
+          border-radius: ${radio.control.container.borderradius};
           display: grid;
           place-content: center;
 
           &::before {
             content: "";
             transition: all 0.25s ease 0s;
-            border-radius: ${Radio.Control.Container.BorderRadius};
+            border-radius: ${radio.control.container.borderradius};
           }
         }
 
@@ -179,16 +174,16 @@ export const staticStyles = css`
         }
 
         &.sm {
-          gap: ${Radio.ContentRow.ItemSpacing.SM};
-          padding: ${Radio.ContentRow.Padding.SM};
+          gap: ${radio.contentrow.itemspacing.sm};
+          padding: ${radio.contentrow.padding.sm};
 
           .input-control {
-            margin-top: ${Radio.ControlWrapper.PaddingTop.SM};
+            margin-top: ${radio.controlwrapper.paddingtop.sm};
           }
 
           .label-wrapper {
-            padding-top: ${Radio.ContentCol.PaddingTop.SM};
-            gap: ${Radio.ContentCol.ItemSpacing.SM};
+            padding-top: ${radio.contentcol.paddingtop.sm};
+            gap: ${radio.contentcol.itemspacing.sm};
 
             .caption-wrapper {
               padding: ${formcaption.container.padding.sm};
@@ -205,16 +200,16 @@ export const staticStyles = css`
         }
 
         &.md {
-          gap: ${Radio.ContentRow.ItemSpacing.MD};
-          padding: ${Radio.ContentRow.Padding.MD};
+          gap: ${radio.contentrow.itemspacing.md};
+          padding: ${radio.contentrow.padding.md};
 
           .input-control {
-            margin-top: ${Radio.ControlWrapper.PaddingTop.MD};
+            margin-top: ${radio.controlwrapper.paddingtop.md};
           }
 
           .label-wrapper {
-            padding-top: ${Radio.ContentCol.PaddingTop.MD};
-            gap: ${Radio.ContentCol.ItemSpacing.MD};
+            padding-top: ${radio.contentcol.paddingtop.md};
+            gap: ${radio.contentcol.itemspacing.md};
 
             .caption-wrapper {
               padding: ${formcaption.container.padding.md};
@@ -231,16 +226,16 @@ export const staticStyles = css`
         }
 
         &.lg {
-          gap: ${Radio.ContentRow.ItemSpacing.LG};
-          padding: ${Radio.ContentRow.Padding.LG};
+          gap: ${radio.contentrow.itemspacing.lg};
+          padding: ${radio.contentrow.padding.lg};
 
           .input-control {
-            margin-top: ${Radio.ControlWrapper.PaddingTop.LG};
+            margin-top: ${radio.controlwrapper.paddingtop.lg};
           }
 
           .label-wrapper {
-            padding-top: ${Radio.ContentCol.PaddingTop.LG};
-            gap: ${Radio.ContentCol.ItemSpacing.LG};
+            padding-top: ${radio.contentcol.paddingtop.lg};
+            gap: ${radio.contentcol.itemspacing.lg};
 
             .caption-wrapper {
               padding: ${formcaption.container.padding.lg};
@@ -257,27 +252,27 @@ export const staticStyles = css`
         }
 
         .input-control {
-          background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Rest};
-          width: ${Radio.Control.Container.Size.SM};
-          min-width: ${Radio.Control.Container.Size.SM};
-          height: ${Radio.Control.Container.Size.SM};
-          min-height: ${Radio.Control.Container.Size.SM};
+          background-color: ${radio.control.container.bgcolor.inactive.rest};
+          width: ${radio.control.container.size.sm};
+          min-width: ${radio.control.container.size.sm};
+          height: ${radio.control.container.size.sm};
+          min-height: ${radio.control.container.size.sm};
 
           &::before {
-            background-color: ${Radio.Control.Icon.IconColor.Inactive.Rest};
-            width: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
-            height: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
+            background-color: ${radio.control.icon.iconcolor.inactive.rest};
+            width: ${radio.control.icon.iconsize.sm.inactive.rest};
+            height: ${radio.control.icon.iconsize.sm.inactive.rest};
           }
 
           &:not(.disabled, .readonly) {
             &:hover {
-              background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Hover};
+              background-color: ${radio.control.container.bgcolor.inactive.hover};
 
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Icon.IconColor.Inactive.Hover};
-                width: ${Radio.Control.Icon.IconSize.SM.Inactive.Hover};
-                height: ${Radio.Control.Icon.IconSize.SM.Inactive.Hover};
+                background-color: ${radio.control.icon.iconcolor.inactive.hover};
+                width: ${radio.control.icon.iconsize.sm.inactive.hover};
+                height: ${radio.control.icon.iconsize.sm.inactive.hover};
               }
 
               & + .label-wrapper {
@@ -288,13 +283,13 @@ export const staticStyles = css`
             }
 
             &:active {
-              background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Pressed};
+              background-color: ${radio.control.container.bgcolor.inactive.pressed};
 
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Icon.IconColor.Inactive.Pressed};
-                width: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
-                height: ${Radio.Control.Icon.IconSize.SM.Inactive.Pressed};
+                background-color: ${radio.control.icon.iconcolor.inactive.pressed};
+                width: ${radio.control.icon.iconsize.sm.inactive.pressed};
+                height: ${radio.control.icon.iconsize.sm.inactive.pressed};
               }
 
               & + .label-wrapper {
@@ -305,17 +300,15 @@ export const staticStyles = css`
             }
 
             &:focus {
-              background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Focus};
-
-              /* FIX: "needs focus ring"; */
+              background-color: ${radio.control.container.bgcolor.inactive.focus};
               outline: black solid 2px;
               outline-offset: 2px;
 
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Icon.IconColor.Inactive.Focus};
-                width: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
-                height: ${Radio.Control.Icon.IconSize.SM.Inactive.Focus};
+                background-color: ${radio.control.icon.iconcolor.inactive.focus};
+                width: ${radio.control.icon.iconsize.sm.inactive.focus};
+                height: ${radio.control.icon.iconsize.sm.inactive.focus};
               }
 
               & + .label-wrapper {
@@ -328,82 +321,82 @@ export const staticStyles = css`
 
           &.checked,
           &:checked {
-            background-color: ${Radio.Control.Container.BackgroundColor.Active.Rest};
+            background-color: ${radio.control.container.bgcolor.active.rest};
 
             &::before {
               content: "";
-              background-color: ${Radio.Control.Icon.IconColor.Active.Rest};
-              width: ${Radio.Control.Icon.IconSize.SM.Active.Rest};
-              height: ${Radio.Control.Icon.IconSize.SM.Active.Rest};
+              background-color: ${radio.control.icon.iconcolor.active.rest};
+              width: ${radio.control.icon.iconsize.sm.active.rest};
+              height: ${radio.control.icon.iconsize.sm.active.rest};
             }
 
             &:not(.disabled, .readonly) {
               &:hover {
-                background-color: ${Radio.Control.Container.BackgroundColor.Active.Hover};
+                background-color: ${radio.control.container.bgcolor.active.hover};
 
                 &::before {
                   content: "";
-                  background-color: ${Radio.Control.Icon.IconColor.Active.Hover};
-                  width: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
-                  height: ${Radio.Control.Icon.IconSize.SM.Active.Hover};
+                  background-color: ${radio.control.icon.iconcolor.active.hover};
+                  width: ${radio.control.icon.iconsize.sm.active.hover};
+                  height: ${radio.control.icon.iconsize.sm.active.hover};
                 }
               }
 
               &:active {
-                background-color: ${Radio.Control.Container.BackgroundColor.Active.Pressed};
+                background-color: ${radio.control.container.bgcolor.active.pressed};
 
                 &::before {
                   content: "";
-                  background-color: ${Radio.Control.Icon.IconColor.Active.Pressed};
-                  width: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
-                  height: ${Radio.Control.Icon.IconSize.SM.Active.Pressed};
+                  background-color: ${radio.control.icon.iconcolor.active.pressed};
+                  width: ${radio.control.icon.iconsize.sm.active.pressed};
+                  height: ${radio.control.icon.iconsize.sm.active.pressed};
                 }
               }
 
               &:focus {
-                background-color: ${Radio.Control.Container.BackgroundColor.Active.Focus};
+                background-color: ${radio.control.container.bgcolor.active.focus};
 
                 &::before {
                   content: "";
-                  background-color: ${Radio.Control.Icon.IconColor.Active.Focus};
-                  width: ${Radio.Control.Icon.IconSize.SM.Active.Focus};
-                  height: ${Radio.Control.Icon.IconSize.SM.Active.Focus};
+                  background-color: ${radio.control.icon.iconcolor.active.focus};
+                  width: ${radio.control.icon.iconsize.sm.active.focus};
+                  height: ${radio.control.icon.iconsize.sm.active.focus};
                 }
               }
             }
 
             &:disabled {
-              background-color: ${Radio.Control.Container.BackgroundColor.Active.Disabled};
+              background-color: ${radio.control.container.bgcolor.active.disabled};
 
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Icon.IconColor.Active.Disabled};
-                width: ${Radio.Control.Icon.IconSize.SM.Active.Disabled};
-                height: ${Radio.Control.Icon.IconSize.SM.Active.Disabled};
+                background-color: ${radio.control.icon.iconcolor.active.disabled};
+                width: ${radio.control.icon.iconsize.sm.active.disabled};
+                height: ${radio.control.icon.iconsize.sm.active.disabled};
               }
             }
 
             &[readonly] {
-              background-color: ${Radio.Control.Container.BackgroundColor.Active.ReadOnly};
+              background-color: ${radio.control.container.bgcolor.active.readonly};
 
               &::before {
                 content: "";
-                background-color: ${Radio.Control.Icon.IconColor.Active.ReadOnly};
-                width: ${Radio.Control.Icon.IconSize.SM.Active.ReadOnly};
-                height: ${Radio.Control.Icon.IconSize.SM.Active.ReadOnly};
+                background-color: ${radio.control.icon.iconcolor.active.readonly};
+                width: ${radio.control.icon.iconsize.sm.active.readonly};
+                height: ${radio.control.icon.iconsize.sm.active.readonly};
               }
             }
           }
 
           &:disabled {
             cursor: not-allowed;
-            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Disabled};
+            background-color: ${radio.control.container.bgcolor.inactive.disabled};
 
             &::before {
               content: "";
-              background-color: ${Radio.Control.Icon.IconColor.Inactive.Disabled};
-              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Disabled};
-              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Disabled};
+              background-color: ${radio.control.icon.iconcolor.inactive.disabled};
+              width: ${radio.control.icon.iconsize.sm.inactive.disabled};
+              height: ${radio.control.icon.iconsize.sm.inactive.disabled};
             }
 
             & + .label-wrapper {
@@ -417,12 +410,12 @@ export const staticStyles = css`
 
         &.error {
           .input-control {
-            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Error};
+            background-color: ${radio.control.container.bgcolor.inactive.error};
 
             &::before {
-              background-color: ${Radio.Control.Icon.IconColor.Inactive.Error};
-              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Error};
-              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Error};
+              background-color: ${radio.control.icon.iconcolor.inactive.error};
+              width: ${radio.control.icon.iconsize.sm.inactive.error};
+              height: ${radio.control.icon.iconsize.sm.inactive.error};
             }
 
             & + .label-wrapper {
@@ -434,16 +427,16 @@ export const staticStyles = css`
             &.checked,
             &:checked {
               &::before {
-                width: ${Radio.Control.Icon.IconSize.SM.Active.Error};
-                height: ${Radio.Control.Icon.IconSize.SM.Active.Error};
+                width: ${radio.control.icon.iconsize.sm.active.error};
+                height: ${radio.control.icon.iconsize.sm.active.error};
               }
             }
 
             &.checked,
             &:checked {
               &::before {
-                width: ${Radio.Control.Icon.IconSize.SM.Active.Error};
-                height: ${Radio.Control.Icon.IconSize.SM.Active.Error};
+                width: ${radio.control.icon.iconsize.sm.active.error};
+                height: ${radio.control.icon.iconsize.sm.active.error};
               }
             }
           }
@@ -453,15 +446,15 @@ export const staticStyles = css`
           pointer-events: none;
 
           .input-control {
-            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.Disabled};
-            width: ${Radio.Control.Container.Size.SM};
-            height: ${Radio.Control.Container.Size.SM};
+            background-color: ${radio.control.container.bgcolor.inactive.disabled};
+            width: ${radio.control.container.size.sm};
+            height: ${radio.control.container.size.sm};
 
             &::before {
               content: "";
-              background-color: ${Radio.Control.Icon.IconColor.Inactive.Disabled};
-              width: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
-              height: ${Radio.Control.Icon.IconSize.SM.Inactive.Rest};
+              background-color: ${radio.control.icon.iconcolor.inactive.disabled};
+              width: ${radio.control.icon.iconsize.sm.inactive.rest};
+              height: ${radio.control.icon.iconsize.sm.inactive.rest};
             }
 
             & + .label-wrapper {
@@ -474,15 +467,15 @@ export const staticStyles = css`
 
         &.readonly {
           .input-control {
-            background-color: ${Radio.Control.Container.BackgroundColor.Inactive.ReadOnly};
-            width: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
-            height: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
+            background-color: ${radio.control.container.bgcolor.inactive.readonly};
+            width: ${radio.control.icon.iconsize.sm.inactive.readonly};
+            height: ${radio.control.icon.iconsize.sm.inactive.readonly};
 
             &::before {
               content: "";
-              background-color: ${Radio.Control.Icon.IconColor.Inactive.ReadOnly};
-              width: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
-              height: ${Radio.Control.Icon.IconSize.SM.Inactive.ReadOnly};
+              background-color: ${radio.control.icon.iconcolor.inactive.readonly};
+              width: ${radio.control.icon.iconsize.sm.inactive.readonly};
+              height: ${radio.control.icon.iconsize.sm.inactive.readonly};
             }
 
             & + .label-wrapper {

@@ -1,9 +1,11 @@
 import { ComponentThemeIterator } from "../../foundation/_tokens-generated/index.pseudo.generated.js";
 import { css } from "../../utils/css-in-ts/nested-typesafe-css-literals.js";
 
+
 export const staticStyles = css`
   ${ComponentThemeIterator((theme, cmp, css) => {
-    const { ButtonGroup } = cmp;
+    const { buttongroup } = cmp;
+
 
     return css`
       .blr-button-group.${theme} {
@@ -22,23 +24,23 @@ export const staticStyles = css`
         }
 
         &.xs {
-          gap: ${ButtonGroup.Container.ItemSpacing.XS};
+          gap: ${buttongroup.container.itemspacing.xs};
         }
 
         &.sm {
-          gap: ${ButtonGroup.Container.ItemSpacing.SM};
+          gap: ${buttongroup.container.itemspacing.sm};
         }
 
         &.md {
-          gap: ${ButtonGroup.Container.ItemSpacing.MD};
+          gap: ${buttongroup.container.itemspacing.md};
         }
 
         &.lg {
-          gap: ${ButtonGroup.Container.ItemSpacing.LG};
+          gap: ${buttongroup.container.itemspacing.lg};
         }
 
         &.xl {
-          gap: ${ButtonGroup.Container.ItemSpacing.XL};
+          gap: ${buttongroup.container.itemspacing.xl};
         }
       }
     `;
