@@ -1,9 +1,9 @@
-const StyleDictionary = require('style-dictionary');
+import StyleDictionary from "style-dictionary";
 const buildInTransforms = require('style-dictionary/lib/common/transforms');
 
 StyleDictionary.registerTransform({
-  type: `value`,
+  type: `$value`,
   name: `transform/font-to-rem`,
-  matcher: (token) => typeof token.value === 'string' && token.original.type === 'fontSizes',
-  transformer: (token, options) => buildInTransforms['size/pxToRem'].transformer(token, options),
+  filter: (token) => typeof token.value === 'string' && token.original.type === 'fontSizes',
+  transform: (token, options) => buildInTransforms['size/pxToRem'].transformer(token, options),
 });

@@ -1,10 +1,13 @@
+// THIS IS OLD
+
 // const kebabCase = require('lodash.kebabcase');
+
 const StyleDictionaryPackage = require('style-dictionary');
 const sdTransforms = require('@tokens-studio/sd-transforms');
+const themes = require('./themes.cjs');
+
 const { minifyDictionary, fileHeader } = StyleDictionaryPackage.formatHelpers;
 require('./transforms/index');
-
-const themes = require('./themes.cjs');
 
 const { registerTransforms } = sdTransforms;
 registerTransforms(StyleDictionaryPackage);
@@ -83,7 +86,7 @@ const getStyleDictionaryConfig = (theme) => {
 
 themes.array.map((theme) => {
   console.log('\n==============================================');
-  console.log(`\nProcessing: [${theme}]`);
+  console.log(`\nStyleDictionary Processing: [${theme}]`);
 
   const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(theme));
 

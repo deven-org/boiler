@@ -1,9 +1,9 @@
-const StyleDictionary = require('style-dictionary');
+import StyleDictionary from "style-dictionary";
 
 StyleDictionary.registerTransform({
   type: `value`,
   name: `transform/strReplace`,
   transitive: true,
-  matcher: (token) => typeof token.value === 'string',
-  transformer: (token) => token.value.replace('pxpx', 'px'),
+  filter: (token) => typeof token.value === 'string',
+  transform: (token) => token.value.replace('pxpx', 'px'),
 });
