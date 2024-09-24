@@ -9,7 +9,7 @@ const semanticFileOutput = JSON.stringify(semanticTokens);
 fs.writeFileSync(
   `../ui-library/src/foundation/_tokens-generated/component.generated.json`,
   componentFileOutput,
-  'utf-8'
+  'utf-8',
 );
 
 fs.writeFileSync(`../ui-library/src/foundation/_tokens-generated/semantic.generated.json`, semanticFileOutput, 'utf-8');

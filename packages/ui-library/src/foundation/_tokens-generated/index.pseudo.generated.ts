@@ -11,6 +11,8 @@
 
   This will make it possible to switch prebuild themes on the fly on a component level
 */
+
+console.log('# # # pseudo generated');
 import { makeIterator, joinCss } from '../../utils/css-in-ts/make-token-part-iterator.js';
 import { componentTokens as cmpLight } from './__component-tokens.Light.generated.mjs';
 import { componentTokens as cmpDark } from './__component-tokens.Dark.generated.mjs';
