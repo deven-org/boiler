@@ -12,7 +12,7 @@ import * as fs from 'fs';
 //   /* options here if needed */
 // });
 
-register(StyleDictionary);
+register(StyleDictionary, {});
 
 //-- registered formats
 StyleDictionary.registerFormat({
@@ -90,7 +90,7 @@ async function run() {
       },
       platforms: {
         js: {
-          transformGroup: 'tokens-studio',
+          // transformGroup: 'tokens-studio',
           transforms: [
             'attribute/cti',
             'name/pascal',
