@@ -7,12 +7,11 @@ import { register, permutateThemes, expandTypesMap, excludeParentKeys } from '@t
 import StyleDictionary from 'style-dictionary';
 import { fileHeader, minifyDictionary } from 'style-dictionary/utils';
 import * as fs from 'fs';
+import { Buffer } from 'node:buffer';
 
-// register(StyleDictionary, {
-//   /* options here if needed */
-// });
-
-register(StyleDictionary, {});
+register(StyleDictionary, {
+  /* options here if needed */
+});
 
 //-- registered formats
 StyleDictionary.registerFormat({
@@ -49,7 +48,7 @@ StyleDictionary.registerFormat({
   },
 });
 
-//-- registered custom transforms
+//registered custom transforms
 StyleDictionary.registerTransform({
   type: `value`,
   name: `custom/strReplace`,
@@ -61,6 +60,21 @@ StyleDictionary.registerTransform({
 // directory where our tokens live
 const tokenDir = './input/tokens/';
 
+// generate themes file
+function writeThemesFile(themesObj) {
+  console.log('themes:');
+  console.log(themesObj);
+  const themes = JSON.stringify(Object.keys(themesObj));
+
+  console.log(`Themes: ${themes}`);
+
+  const data = new Uint8Array(Buffer.from(`const themes = ${themes} \nexports.array = themes;`));
+  fs.writeFile('themes_generated.cjs', data, (err) => {
+    if (err) throw err;
+    console.log(`\nThe file 'themes_generated.cjs' has been saved!`);
+  });
+}
+
 // # # # # # # # # # #
 // main process
 // # # # # # # # # # #
@@ -68,16 +82,14 @@ const tokenDir = './input/tokens/';
 async function run() {
   const $themes = JSON.parse(fs.readFileSync(`${tokenDir}$themes.json`, 'utf-8'));
 
-  // This would be better since it dynamicaly gets the theme from the $themes file
   const themes = permutateThemes($themes, { separator: '_' });
+  writeThemesFile(themes);
 
+  // This is an interim solution. We should switch to using permutatedThemes everywhere
   const translateThemesToHardCoded = {
     Light_value: 'Light',
     Dark_value: 'Dark',
   };
-
-  console.log('themes:');
-  console.log(themes);
 
   const config = Object.entries(themes).map(([name, tokensets]) => {
     // const src = tokensets.map((tokenset) => `${tokenset}.json`);
@@ -90,7 +102,6 @@ async function run() {
       },
       platforms: {
         js: {
-          // transformGroup: 'tokens-studio',
           transforms: [
             'attribute/cti',
             'name/pascal',
@@ -110,7 +121,6 @@ async function run() {
             },
             {
               format: 'custom/format/componentTokens',
-              // format: 'css/variables',
               destination: `__component-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
