@@ -34,8 +34,8 @@ export const findPercentage = (min: number, max: number, value: number) => {
 };
 
 const ThemedTokens: { [P in ThemeType]: ComponentTokens } = {
-  Dark: componentTokensDark.cmp,
-  Light: componentTokensLight.cmp,
+  Dark_value: componentTokensDark.cmp,
+  Light_value: componentTokensLight.cmp,
 };
 
 export const generateRangeBar = (

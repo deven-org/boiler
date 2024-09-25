@@ -34,8 +34,8 @@ export const staticStyles = css`
 
         .elevation {
           filter: drop-shadow(
-            ${tooltip.container.elevation.elevated.x} ${tooltip.container.elevation.elevated.y} ${tooltip.container.elevation.elevated.blur}
-              ${tooltip.container.elevation.elevated.color}
+            ${tooltip.container.elevation.elevated.offsetX} ${tooltip.container.elevation.elevated.offsetY}
+              ${tooltip.container.elevation.elevated.blur} ${tooltip.container.elevation.elevated.color}
           );
         }
 
