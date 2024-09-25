@@ -11,7 +11,7 @@ export class BlrDivider extends LitElementCustom {
   static styles = [staticStyles];
 
   @property() accessor direction: DividerVariationTypes = 'vertical';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected render() {
     const dividerClasses = classMap({

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import chalk from 'chalk';
-import themes from './themes.cjs';
+import themes from './themes_generated.cjs';
 
 const files = fs.readdirSync(`../ui-library/src/foundation/_tokens-generated`);
 

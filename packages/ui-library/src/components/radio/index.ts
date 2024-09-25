@@ -51,7 +51,7 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property() accessor hintMessage: string | undefined;
   @property() accessor hintMessageIcon: SizelessIconType | undefined;
   @property() accessor value: string | undefined;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected handleFocus = (event: FocusEvent) => {
     if (!this.disabled) {

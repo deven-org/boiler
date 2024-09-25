@@ -1,7 +1,6 @@
 // get an themes array not needed anymore if we derive themes from $themes.json
-import * as hardCodedThemes from './themes.cjs';
-
-console.log(hardCodedThemes.array);
+// import * as hardCodedThemes from './themes.cjs';
+// console.log(hardCodedThemes.array);
 
 import { register, permutateThemes, expandTypesMap, excludeParentKeys } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
@@ -69,7 +68,7 @@ function writeThemesFile(themesObj) {
   console.log(`Themes: ${themes}`);
 
   const data = new Uint8Array(Buffer.from(`const themes = ${themes} \nexports.array = themes;`));
-  fs.writeFile('themes_generated.cjs', data, (err) => {
+  fs.writeFile('./config/themes_generated.cjs', data, (err) => {
     if (err) throw err;
     console.log(`\nThe file 'themes_generated.cjs' has been saved!`);
   });
@@ -86,10 +85,10 @@ async function run() {
   writeThemesFile(themes);
 
   // This is an interim solution. We should switch to using permutatedThemes everywhere
-  const translateThemesToHardCoded = {
-    Light_value: 'Light',
-    Dark_value: 'Dark',
-  };
+  // const translateThemesToHardCoded = {
+  //   Light_value: 'Light',
+  //   Dark_value: 'Dark',
+  // };
 
   const config = Object.entries(themes).map(([name, tokensets]) => {
     // const src = tokensets.map((tokenset) => `${tokenset}.json`);
@@ -114,14 +113,16 @@ async function run() {
           files: [
             {
               format: 'custom/format/semanticTokens',
-              destination: `__semantic-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
+              destination: `__semantic-tokens.${name}.generated.mjs`,
+              // destination: `__semantic-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'sem';
               },
             },
             {
               format: 'custom/format/componentTokens',
-              destination: `__component-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
+              destination: `__component-tokens.${name}.generated.mjs`,
+              // destination: `__component-tokens.${translateThemesToHardCoded[name]}.generated.mjs`,
               filter: (token) => {
                 return token.attributes.category === 'cmp' && token.$type !== 'componentConfig';
               },

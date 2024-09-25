@@ -68,7 +68,7 @@ export class BlrInputFieldText extends LitElementCustom {
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
 
   @property() accessor name!: string;
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   @state() protected accessor currentType: InputTypes = this.type;
   @state() protected accessor isFocused = false;
@@ -104,7 +104,7 @@ export class BlrInputFieldText extends LitElementCustom {
   protected handleChange = (event: Event) => {
     if (!this.disabled) {
       this.dispatchEvent(
-        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value })
+        createBlrTextValueChangeEvent({ originalEvent: event, inputValue: this._inputFieldTextNode.value }),
       );
     }
   };
@@ -170,7 +170,7 @@ export class BlrInputFieldText extends LitElementCustom {
       },
       {
         'aria-hidden': this.type !== 'password',
-      }
+      },
     );
   }
 

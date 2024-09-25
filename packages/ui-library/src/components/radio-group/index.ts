@@ -50,7 +50,7 @@ export class BlrRadioGroup extends LitElementCustom {
   @property() accessor groupErrorMessageIcon: SizelessIconType | undefined;
   @property() accessor legend: string | undefined;
   @property() accessor direction: RadioGroupDirection = 'horizontal';
-  @property() accessor theme: ThemeType = 'Light';
+  @property() accessor theme: ThemeType = 'Light_value';
 
   protected _radioElements: BlrRadio[] = [];
   private _selectedRadio?: BlrRadio;
