@@ -18,7 +18,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrInputFieldNumberType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   stepperVariant: 'vertical',
   placeholder: 'Placeholder-text',
@@ -404,42 +404,41 @@ SizeVariant.story = { name: ' ' };
 The Input Field Number component has 3 stepper variants: vertical, horizontal and split.
  */
 
-export const StepperVariant = (params: BlrInputFieldNumberType) =>
-  html`
-    <div class="wrapper">
-      ${BlrInputFieldNumberRenderFunction({
-        ...params,
-        stepperVariant: 'vertical',
-        label: 'Vertical',
-        labelAppendix: undefined,
-        unit: 'kg',
-        value: undefined,
-        inputFieldNumberId: 'test-vert',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrInputFieldNumberRenderFunction({
-        ...params,
-        stepperVariant: 'horizontal',
-        label: 'Horizontal',
-        labelAppendix: undefined,
-        unit: 'kg',
-        value: undefined,
-        inputFieldNumberId: 'test-hor',
-      })}
-    </div>
-    <div class="wrapper">
-      ${BlrInputFieldNumberRenderFunction({
-        ...params,
-        stepperVariant: 'split',
-        label: 'Split',
-        labelAppendix: undefined,
-        unit: 'kg',
-        value: undefined,
-        inputFieldNumberId: 'test-split',
-      })}
-    </div>
-  `;
+export const StepperVariant = (params: BlrInputFieldNumberType) => html`
+  <div class="wrapper">
+    ${BlrInputFieldNumberRenderFunction({
+      ...params,
+      stepperVariant: 'vertical',
+      label: 'Vertical',
+      labelAppendix: undefined,
+      unit: 'kg',
+      value: undefined,
+      inputFieldNumberId: 'test-vert',
+    })}
+  </div>
+  <div class="wrapper">
+    ${BlrInputFieldNumberRenderFunction({
+      ...params,
+      stepperVariant: 'horizontal',
+      label: 'Horizontal',
+      labelAppendix: undefined,
+      unit: 'kg',
+      value: undefined,
+      inputFieldNumberId: 'test-hor',
+    })}
+  </div>
+  <div class="wrapper">
+    ${BlrInputFieldNumberRenderFunction({
+      ...params,
+      stepperVariant: 'split',
+      label: 'Split',
+      labelAppendix: undefined,
+      unit: 'kg',
+      value: undefined,
+      inputFieldNumberId: 'test-split',
+    })}
+  </div>
+`;
 
 /**
  * ## Content / Settings 

@@ -19,7 +19,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrToggleSwitchType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   hasStateLabel: false,
   active: false,

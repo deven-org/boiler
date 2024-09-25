@@ -6,7 +6,7 @@ import { querySelectorDeep, querySelectorAllDeep } from 'query-selector-shadow-d
 import type { BlrTextareaType } from './index.js';
 
 const sampleParams: BlrTextareaType = {
-  theme: 'Light',
+  theme: 'Light_value',
   sizeVariant: 'md',
   resize: 'both',
   cols: 40,

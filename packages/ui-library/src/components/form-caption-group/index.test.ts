@@ -10,7 +10,7 @@ import { html } from 'lit-html';
 
 const sampleParams: BlrFormCaptionGroupType = {
   sizeVariant: 'md',
-  theme: 'Light',
+  theme: 'Light_value',
 };
 
 const hintCaption = BlrFormCaptionRenderFunction({
@@ -18,7 +18,7 @@ const hintCaption = BlrFormCaptionRenderFunction({
   variant: 'hint',
   icon: 'blrInfo',
   sizeVariant: 'md',
-  theme: 'Light',
+  theme: 'Light_value',
 });
 
 const errorCaption = BlrFormCaptionRenderFunction({
@@ -26,7 +26,7 @@ const errorCaption = BlrFormCaptionRenderFunction({
   variant: 'error',
   icon: 'blrInfo',
   sizeVariant: 'md',
-  theme: 'Light',
+  theme: 'Light_value',
 });
 
 const mixedCaptions = html` ${hintCaption} ${errorCaption} `;

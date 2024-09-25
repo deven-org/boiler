@@ -25,7 +25,7 @@ const sharedStyles = html`
 `;
 
 const defaultParams: BlrButtonTextType = {
-  theme: 'Light',
+  theme: 'Light_value',
   variant: 'primary',
   sizeVariant: 'md',
   label: 'Label-text',
