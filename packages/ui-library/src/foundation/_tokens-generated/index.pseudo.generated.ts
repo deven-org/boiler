@@ -20,19 +20,19 @@ import { semanticTokens as semLight } from './__semantic-tokens.Light_value.gene
 import { semanticTokens as semDark } from './__semantic-tokens.Dark_value.generated.mjs';
 
 export const componentTokenTree = {
-  Light: cmpLight.cmp,
-  Dark: cmpDark.cmp,
+  Light_value: cmpLight.cmp,
+  Dark_value: cmpDark.cmp,
 };
 
 export const semanticTokenTree = {
-  Light: semLight.sem,
-  Dark: semDark.sem,
+  Light_value: semLight.sem,
+  Dark_value: semDark.sem,
 };
 
 export const ComponentThemeIterator = (
   renderFunction: (
     theme: keyof typeof componentTokenTree,
-    cmp: typeof componentTokenTree.Light,
+    cmp: typeof componentTokenTree.Light_value,
     css: typeof joinCss,
   ) => string,
 ) => {
@@ -44,7 +44,7 @@ export const ComponentThemeIterator = (
 export const SemanticThemeIterator = (
   renderFunction: (
     theme: keyof typeof semanticTokenTree,
-    sem: typeof semanticTokenTree.Light,
+    sem: typeof semanticTokenTree.Light_value,
     css: typeof joinCss,
   ) => string,
 ) => {
