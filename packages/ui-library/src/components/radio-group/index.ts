@@ -4,7 +4,6 @@ import { property } from '../../utils/lit/decorators.js';
 import { staticStyles as componentSpecificStaticStyles } from './index.css.js';
 import { SizelessIconType } from '@boiler/icons';
 import { ThemeType } from '../../foundation/_tokens-generated/index.themes.js';
-import { staticStyles as staticRadioStyles } from '../../foundation/component-tokens/radio.css.js';
 import { staticStyles as staticFormStyles } from '../../foundation/semantic-tokens/form.css.js';
 import { InputSizesType, RadioGroupDirection } from '../../globals/types.js';
 import { BlrFormCaptionGroupRenderFunction } from '../form-caption-group/renderFunction.js';
@@ -33,7 +32,7 @@ export type BlrRadioGroupEventHandlers = {
  */
 
 export class BlrRadioGroup extends LitElementCustom {
-  static styles = [staticFormStyles, staticRadioStyles, componentSpecificStaticStyles];
+  static styles = [staticFormStyles, componentSpecificStaticStyles];
 
   @property() accessor disabled: boolean | undefined;
   @property() accessor readonly: boolean | undefined;
