@@ -23,6 +23,7 @@ import {
   createBlrFocusEvent,
 } from '../../globals/events.js';
 import { LitElementCustom, ElementInterface } from '../../utils/lit/element.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type BlrToggleSwitchEventHandlers = {
   blrFocus?: (event: BlrFocusEvent) => void;
@@ -170,111 +171,114 @@ export class BlrToggleSwitch extends LitElementCustom {
         this.sizeVariant,
       ]) as FormSizesType;
 
-      const captionContent = html`
-        ${this.hasHint && (this.hintMessage || this.hintMessageIcon)
-          ? BlrFormCaptionRenderFunction({
-              variant: 'hint',
-              theme: this.theme,
-              sizeVariant: this.sizeVariant,
-              message: this.hintMessage,
-              icon: this.hintMessageIcon,
-            })
-          : nothing}
-      `;
+      const mainLabelId = `${this.toogleSwitchId}-label`;
+      const stateLabelId = this.hasStateLabel ? `${this.toogleSwitchId}-state` : undefined;
 
-      return html` <div class=${classes}>
-        <span class="toggle-content-col">
-          ${this.hasLabel
-            ? html` ${BlrFormLabelInlineRenderFunction({
-                labelText: this.label || '',
-                forValue: this.toogleSwitchId,
-                labelSize: this.sizeVariant || 'md',
-                theme: this.theme,
-              })}`
-            : nothing}
-          ${this.hasHint && this.hintMessage
-            ? BlrFormCaptionGroupRenderFunction({ theme: this.theme, sizeVariant: this.sizeVariant }, captionContent)
-            : nothing}
-        </span>
-        <div
-          class="label-container"
-          @mouseenter=${this.handleEnter}
-          @mouseleave=${this.handleLeave}
-          @mousedown=${(event: MouseEvent) => {
-            if (event.which === 1) {
-              //this.handlePress();
-            }
-          }}
-          @mouseup=${this.handleRelease}
-          @touchstart=${this.handlePress}
-          @touchend=${this.handleRelease}
-          @focusin=${this.handleFocus}
-          @focusout=${this.handleBlur}
-          @keydown=${(event: KeyboardEvent) => {
-            if (event.code === 'Space') {
-              this.handlePress();
-            }
-          }}
-          @keyup=${(event: KeyboardEvent) => {
-            if (event.code === 'Space') {
-              //this.handleRelease();
-            }
-          }}
-          tabindex="0"
-        >
-          <label for=${this.toogleSwitchId || nothing} class=${wrapperClass}>
-            <div class="${focusRingClasses}"></div>
-            <input
-              aria-label=${this.ariaLabel || nothing}
-              type="checkbox"
-              class="input-control"
-              id=${this.toogleSwitchId || nothing}
-              name=${this.toogleSwitchId || nothing}
-              ?disabled=${this.disabled || this.readonly}
-              ?readonly=${this.readonly}
-              .checked=${this.currentCheckedState || nothing}
-              @change=${this.handleChange}
-              tabindex="-1"
-            />
-            <span class="toggle-switch-slider">
-              <span class="knob"></span>
-            </span>
-
-            <span class="toggle-switch-unselect toggle-icon">
-              ${BlrIconRenderFunction(
-                {
-                  icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
-                  sizeVariant: this.sizeVariant,
-                  classMap: toggleIconsClass,
-                },
-                {
-                  'aria-hidden': true,
-                },
-              )}
-            </span>
-            <span class="toggle-switch-select toggle-icon">
-              ${BlrIconRenderFunction(
-                {
-                  icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
-                  sizeVariant: this.sizeVariant,
-                  classMap: toggleIconsClass,
-                },
-                {
-                  'aria-hidden': true,
-                },
-              )}
-            </span>
-          </label>
-          ${this.hasStateLabel
-            ? html` ${BlrFormLabelInlineRenderFunction({
-                labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
-                forValue: this.toogleSwitchId,
-                labelSize: this.sizeVariant || 'md',
-                theme: this.theme,
-              })}`
-            : nothing}
+      return html`
+        <div class=${classes}>
+          <span class="toggle-content-col">
+            ${this.hasLabel
+              ? html`<span id=${mainLabelId}
+                  >${BlrFormLabelInlineRenderFunction({
+                    labelText: this.label || '',
+                    forValue: this.toogleSwitchId,
+                    labelSize: this.sizeVariant || 'md',
+                    theme: this.theme,
+                  })}</span
+                >`
+              : nothing}
+            ${this.hasHint && this.hintMessage
+              ? BlrFormCaptionGroupRenderFunction(
+                  { theme: this.theme, sizeVariant: this.sizeVariant },
+                  BlrFormCaptionRenderFunction({
+                    variant: 'hint',
+                    theme: this.theme,
+                    sizeVariant: this.sizeVariant,
+                    message: this.hintMessage,
+                    icon: this.hintMessageIcon,
+                  }),
+                )
+              : nothing}
+          </span>
+          <div
+            class="label-container"
+            @mouseenter=${this.handleEnter}
+            @mouseleave=${this.handleLeave}
+            @mousedown=${this.handlePress}
+            @mouseup=${this.handleRelease}
+            @touchstart=${this.handlePress}
+            @touchend=${this.handleRelease}
+            @focusin=${this.handleFocus}
+            @focusout=${this.handleBlur}
+            @keydown=${(event: KeyboardEvent) => {
+              if (event.code === 'Space') {
+                this.handlePress();
+              }
+            }}
+            @keyup=${(event: KeyboardEvent) => {
+              if (event.code === 'Space') {
+                this.handleRelease();
+              }
+            }}
+            tabindex="0"
+          >
+            <div class=${wrapperClass}>
+              <div class="${focusRingClasses}"></div>
+              <input
+                aria-label=${ifDefined(this.ariaLabel)}
+                aria-labelledby=${ifDefined(this.hasLabel ? mainLabelId : undefined)}
+                aria-describedby=${ifDefined(stateLabelId)}
+                type="checkbox"
+                class="input-control"
+                id=${ifDefined(this.toogleSwitchId)}
+                name=${ifDefined(this.toogleSwitchId)}
+                ?disabled=${this.disabled || this.readonly}
+                ?readonly=${this.readonly}
+                .checked=${this.currentCheckedState || false}
+                @change=${this.handleChange}
+                tabindex="-1"
+              />
+              <span class="toggle-switch-slider">
+                <span class="knob"></span>
+              </span>
+              <span class="toggle-switch-unselect toggle-icon">
+                ${BlrIconRenderFunction(
+                  {
+                    icon: calculateIconName(this.toggleOnIcon, toggleIconSizeVariant),
+                    sizeVariant: this.sizeVariant,
+                    classMap: toggleIconsClass,
+                  },
+                  {
+                    'aria-hidden': true,
+                  },
+                )}
+              </span>
+              <span class="toggle-switch-select toggle-icon">
+                ${BlrIconRenderFunction(
+                  {
+                    icon: calculateIconName(this.toggleOffIcon, toggleIconSizeVariant),
+                    sizeVariant: this.sizeVariant,
+                    classMap: toggleIconsClass,
+                  },
+                  {
+                    'aria-hidden': true,
+                  },
+                )}
+              </span>
+            </div>
+            ${this.hasStateLabel
+              ? html`<span id=${ifDefined(stateLabelId)}>
+                  ${BlrFormLabelInlineRenderFunction({
+                    labelText: this.currentCheckedState ? this.onLabel : this.offLabel,
+                    forValue: this.toogleSwitchId,
+                    labelSize: this.sizeVariant || 'md',
+                    theme: this.theme,
+                  })}
+                </span>`
+              : nothing}
+          </div>
         </div>
-      </div>`;
+      `;
     }
   }
 }
