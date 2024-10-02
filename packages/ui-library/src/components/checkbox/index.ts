@@ -47,7 +47,6 @@ export class BlrCheckbox extends LitElementCustom {
   @property() accessor disabled: boolean | undefined;
   @property() accessor checked: boolean | undefined = false;
   @property() accessor indeterminate: boolean | undefined = false;
-  @property() accessor readonly: boolean | undefined;
   @property() accessor hasError: boolean | undefined;
   @property() accessor errorMessage: string | undefined;
   @property() accessor errorMessageIcon: SizelessIconType | undefined;
@@ -81,7 +80,7 @@ export class BlrCheckbox extends LitElementCustom {
   }
 
   protected handleChange(event: Event) {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.currentIndeterminateState = false;
 
       this.dispatchEvent(
@@ -114,13 +113,13 @@ export class BlrCheckbox extends LitElementCustom {
   @state() protected accessor hovered = false;
 
   protected handleEnter = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.hovered = true;
     }
   };
 
   protected handleLeave = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.hovered = false;
     }
   };
@@ -128,14 +127,14 @@ export class BlrCheckbox extends LitElementCustom {
   @state() protected accessor active = false;
 
   protected handlePress = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.active = true;
       this.currentCheckedState = !this.currentCheckedState;
     }
   };
 
   protected handleRelease = () => {
-    if (!this.disabled && !this.readonly) {
+    if (!this.disabled) {
       this.active = false;
     }
   };
@@ -159,7 +158,6 @@ export class BlrCheckbox extends LitElementCustom {
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'required': this.required || false,
-        'readonly': this.readonly || false,
         'indeterminate': this.currentIndeterminateState || false,
       });
 
@@ -171,7 +169,6 @@ export class BlrCheckbox extends LitElementCustom {
         'active': this.active || false,
         'checked': this.currentCheckedState || false,
         'required': this.required || false,
-        'readonly': this.readonly || false,
         'indeterminate': this.currentIndeterminateState || false,
         'focus': this.focused || false,
       });
@@ -264,7 +261,6 @@ export class BlrCheckbox extends LitElementCustom {
             ?disabled=${this.disabled}
             ?checked=${this.currentCheckedState}
             ?indeterminate=${this.currentIndeterminateState}
-            ?readonly=${this.readonly}
             ?required="${this.required}"
             ?hasError=${this.hasError}
             @change=${this.handleChange}

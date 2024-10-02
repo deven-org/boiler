@@ -10,7 +10,6 @@ const sampleParams: BlrToggleSwitchType = {
   toogleSwitchId: 'switch',
   label: 'Toggle Switch Option',
   disabled: false,
-  readonly: false,
   active: false,
   onLabel: 'On',
   offLabel: 'Off',
@@ -55,7 +54,7 @@ describe('blr-label-toggleswitch', () => {
       BlrToggleSwitchRenderFunction({
         ...sampleParams,
         hasHint: true,
-      })
+      }),
     );
 
     const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);
@@ -68,7 +67,7 @@ describe('blr-label-toggleswitch', () => {
       BlrToggleSwitchRenderFunction({
         ...sampleParams,
         hasHint: false,
-      })
+      }),
     );
 
     const hint = querySelectorDeep('blr-form-caption', element.getRootNode() as HTMLElement);

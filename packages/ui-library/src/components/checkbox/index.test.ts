@@ -12,7 +12,6 @@ const sampleParams: BlrCheckboxType = {
   disabled: false,
   checked: false,
   indeterminate: false,
-  readonly: false,
   hasError: false,
   sizeVariant: 'md',
   errorMessage: 'This is a sample error message',
@@ -40,7 +39,7 @@ describe('blr-checkbox', () => {
         ...sampleParams,
         hasError: true,
         errorIcon: undefined,
-      })
+      }),
     );
     const labelWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
     const captionWrapper = querySelectorDeep('.caption-wraper', labelWrapper?.getRootNode() as HTMLElement);
@@ -57,7 +56,7 @@ describe('blr-checkbox', () => {
         hintMessageIcon: 'blrInfo',
         hasError: true,
         errorMessageIcon: 'blrErrorFilled',
-      })
+      }),
     );
 
     const captionWrapper = querySelectorDeep('.label-wrapper', element.getRootNode() as HTMLElement);
@@ -95,7 +94,7 @@ describe('blr-checkbox', () => {
       BlrCheckboxRenderFunction({
         ...sampleParams,
         hasError: true,
-      })
+      }),
     );
 
     const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);
@@ -109,7 +108,7 @@ describe('blr-checkbox', () => {
       BlrCheckboxRenderFunction({
         ...sampleParams,
         hasError: false,
-      })
+      }),
     );
 
     const checkbox = querySelectorDeep('div.blr-checkbox', element.getRootNode() as HTMLElement);

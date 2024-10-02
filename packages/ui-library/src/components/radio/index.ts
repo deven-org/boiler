@@ -39,7 +39,6 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
   @property() accessor optionId!: string;
   @property() accessor label!: string;
   @property() accessor disabled: boolean | undefined;
-  @property() accessor readonly: boolean | undefined;
   @property({ type: Boolean }) accessor checked: boolean | undefined;
   @property() accessor name: string | undefined;
   @property() accessor sizeVariant: InputSizesType | undefined = 'md';
@@ -88,7 +87,6 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
         [this.sizeVariant]: this.sizeVariant,
         [this.theme]: this.theme,
         disabled: this.disabled || false,
-        readonly: this.readonly || false,
         checked: this.checked || false,
         error: this.hasError || false,
       });
@@ -134,7 +132,6 @@ export class BlrRadio extends LitElementCustom implements PublicReactiveProperti
             type="radio"
             name=${this.name}
             ?disabled=${this.disabled}
-            ?readonly=${this.readonly}
             ?invalid=${this.hasError}
             ?checked=${this.checked}
             .checked=${this.checked || nothing}
@@ -171,7 +168,6 @@ export type PublicReactiveProperties = {
   optionId: string;
   label: string;
   disabled?: boolean;
-  readonly?: boolean;
   name?: string;
   sizeVariant?: InputSizesType;
   required?: boolean;
